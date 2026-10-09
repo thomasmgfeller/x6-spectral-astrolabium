@@ -1,46 +1,60 @@
-name: Publish unpacked X6 source
+name: Prepare X6 source preview
 on:
-  push:
-    paths:
-      - '.github/workflows/unpack-x6.yml'
   workflow_dispatch:
 permissions:
   contents: write
+concurrency:
+  group: x6-source-preview
+  cancel-in-progress: false
 jobs:
   publish:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           fetch-depth: 0
-      - name: Recover previously uploaded ZIP from Git history
+          persist-credentials: true
+      - name: Extract archived research sources to preview
+        shell: bash
         run: |
+          set -euo pipefail
           git show 0a66d7fe7bd79b4ca054f9b36bbfdb44ffe3adcc^:X6_GitHub_Public_Research_Repository.zip > /tmp/x6-source.zip
           python3 - <<'PY'
-          from pathlib import Path
-          import zipfile
-          archive=Path('/tmp/x6-source.zip')
+          from pathlib import Path, PurePosixPath
+          import zipfile, stat
+          archive = Path('/tmp/x6-source.zip')
           with zipfile.ZipFile(archive) as z:
-              names=[x for x in z.infolist() if not x.is_dir()]
-              if len(names)>100 or sum(x.file_size for x in names)>20_000_000:
+              entries = [e for e in z.infolist() if not e.is_dir()]
+              if len(entries) > 100 or sum(e.file_size for e in entries) > 20_000_000:
                   raise SystemExit('Unexpected archive size')
-              for item in names:
-                  name=Path(item.filename)
-                  if name.is_absolute() or '..' in name.parts or name.parts[0]=='.git':
-                      raise SystemExit('Unsafe archive path: '+item.filename)
-                  if name.as_posix()=='.github/workflows/unpack-x6.yml':
+              for item in entries:
+                  p = PurePosixPath(item.filename)
+                  if p.is_absolute() or '..' in p.parts or '\\' in item.filename or not p.parts:
+                      raise SystemExit('Unsafe archive path: ' + item.filename)
+                  if p.parts[0] == '.git':
+                      raise SystemExit('Forbidden .git path')
+                  if p.parts[:2] == ('.github', 'workflows'):
+                      print('Skipping workflow (requires separate authorized review):', p)
                       continue
-                  dest=Path.cwd()/name
-                  dest.parent.mkdir(parents=True,exist_ok=True)
-                  dest.write_bytes(z.read(item))
-          print('Extracted',len(names),'entries')
+                  mode = item.external_attr >> 16
+                  if stat.S_ISLNK(mode):
+                      raise SystemExit('Symlink prohibited: ' + item.filename)
+                  target = Path.cwd().joinpath(*p.parts)
+                  target.parent.mkdir(parents=True, exist_ok=True)
+                  if target.is_symlink():
+                      raise SystemExit('Existing symlink target: ' + str(target))
+                  target.write_bytes(z.read(item))
+          print('Source extraction complete')
           PY
-      - name: Commit research source and tests
+      - name: Commit to dedicated preview branch only
+        shell: bash
         run: |
+          set -euo pipefail
+          git switch -C x6-source-preview
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A
           if ! git diff --cached --quiet; then
-            git commit -m "Publish X6 research source, documentation and validation tests"
-            git push
+            git commit -m "Prepare X6 source preview for review"
+            git push origin HEAD:refs/heads/x6-source-preview
           fi
