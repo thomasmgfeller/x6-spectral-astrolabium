@@ -14,6 +14,15 @@ jobs:
         with:
           fetch-depth: 0
           persist-credentials: true
+      - name: Create isolated preview branch
+        shell: bash
+        run: |
+          set -euo pipefail
+          if git ls-remote --exit-code --heads origin x6-source-preview; then
+            echo 'Preview branch already exists; refusing to overwrite it' >&2
+            exit 1
+          fi
+          git switch -c x6-source-preview
       - name: Extract archived research sources to preview
         shell: bash
         run: |
@@ -21,9 +30,10 @@ jobs:
           git show 0a66d7fe7bd79b4ca054f9b36bbfdb44ffe3adcc^:X6_GitHub_Public_Research_Repository.zip > /tmp/x6-source.zip
           python3 - <<'PY'
           from pathlib import Path, PurePosixPath
-          import zipfile, stat
+          import zipfile, stat, hashlib
           archive = Path('/tmp/x6-source.zip')
           with zipfile.ZipFile(archive) as z:
+              seen = set()
               entries = [e for e in z.infolist() if not e.is_dir()]
               if len(entries) > 100 or sum(e.file_size for e in entries) > 20_000_000:
                   raise SystemExit('Unexpected archive size')
@@ -31,6 +41,11 @@ jobs:
                   p = PurePosixPath(item.filename)
                   if p.is_absolute() or '..' in p.parts or '\\' in item.filename or not p.parts:
                       raise SystemExit('Unsafe archive path: ' + item.filename)
+                  if not p.name or ':' in p.parts[0] or '\\x00' in item.filename:
+                      raise SystemExit('Invalid archive path: ' + item.filename)
+                  if p.as_posix() in seen:
+                      raise SystemExit('Duplicate archive entry: ' + item.filename)
+                  seen.add(p.as_posix())
                   if p.parts[0] == '.git':
                       raise SystemExit('Forbidden .git path')
                   if p.parts[:2] == ('.github', 'workflows'):
@@ -40,9 +55,12 @@ jobs:
                   if stat.S_ISLNK(mode):
                       raise SystemExit('Symlink prohibited: ' + item.filename)
                   target = Path.cwd().joinpath(*p.parts)
+                  if target.exists() or target.is_symlink():
+                      if p.as_posix() != 'README.md':
+                          raise SystemExit('Refusing to overwrite existing path: ' + str(target))
                   target.parent.mkdir(parents=True, exist_ok=True)
-                  if target.is_symlink():
-                      raise SystemExit('Existing symlink target: ' + str(target))
+                  if any(parent.is_symlink() for parent in target.parents if parent != Path.cwd().parent):
+                      raise SystemExit('Symlink parent path: ' + str(target))
                   target.write_bytes(z.read(item))
           print('Source extraction complete')
           PY
@@ -50,7 +68,6 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          git switch -C x6-source-preview
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A
