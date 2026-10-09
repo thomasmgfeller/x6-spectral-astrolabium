@@ -1,6 +1,6 @@
 # X6 Spectral Astrolabium: Verified Finite-Graph Spectral Methods and an Open Research Agenda
 
-**Status:** Working paper / research-program orientation, version 0.2 (2026-10-09).
+**Status:** Working paper / research-program orientation, version 0.3 (2026-10-09).
 **Software:** X6 v4.2 RC; community audit kit v4.3.
 **Attribution:** Maintainer-led, AI-assisted development; formal author list and citation metadata pending confirmation.
 **License:** Not yet granted. Apache-2.0 intended for code, subject to provenance review.
@@ -269,3 +269,104 @@ established their hypotheses or conclusions.
 
 **Document classification: WORKING PAPER v0.2 — not peer reviewed,
 not a certified physics result, and not yet submission-ready.**
+
+## 11. Industry-facing research opportunities (proposals, not validated products)
+
+The research agenda now distinguishes mathematical core capabilities from
+industry use cases. No performance advantage or cryptographic security
+claim is made without independent benchmarks or proofs.
+
+### X6-N1 — Certified graph-assisted signal denoising
+
+**Industrial question:** Can graph-regularized denoising improve the
+quality of noisy industrial sensor, acoustic or vibration signals
+without suppressing relevant events?
+
+**Baseline:** Given noisy measurements `y` and a fixed positive
+semidefinite graph Laplacian `L`, compare the regularized estimate
+`x=(I+alpha L)^(-1)y` with Wiener, Butterworth, moving-average and
+wavelet baselines. Graph construction and hyperparameters must be
+fitted on training data only.
+
+**Evidence gate:** Predeclared held-out data, SNR improvement, RMSE,
+event preservation, latency and energy/computation costs. Report
+negative results and distribution shift. Exact graph-gap certificates
+do not by themselves prove superior denoising.
+
+### X6-Q1 — Graph analysis of quantum readout noise
+
+**Industrial question:** Can spectral features of measurement-derived
+graphs improve detection of drift, correlated readout errors or
+classification reliability in superconducting-qubit experiments?
+
+**Protocol:** Start with synthetic I/Q traces under specified noise
+models, then use authorized, non-sensitive experimental datasets.
+Compare to conventional calibrated discriminators and drift detectors.
+Keep train/test splits separated by acquisition session to avoid
+leakage.
+
+**Evidence gate:** Held-out classification error, calibration,
+robustness across devices, uncertainty and runtime. A classical
+analysis pipeline is not quantum error correction, and no improvement
+to physical qubit fidelity is presumed.
+
+### X6-C1 — Certified spectral expansion for cryptographic graph analysis
+
+**Industrial question:** Can a small independently checkable rational
+certificate improve auditing of spectral properties of graphs used
+in coding, pseudorandomness or cryptographic research?
+
+**Protocol:** Generate small regular and weighted graph benchmarks.
+For a d-regular undirected graph, `L=dI-A`, hence
+`lambda_2(L)=d-mu_2(A)` with adjacency eigenvalues sorted
+descending. Produce numerical candidate bounds and verify them with
+an exact rational checker. Compare verifier time, memory, proof size
+and false-positive rejection with independently implemented baselines.
+
+**Evidence gate:** Every accepted bound passes independent exact
+verification, including deliberately tampered certificates, graph
+disconnection and equality cases. No claim that spectral expansion
+alone proves encryption security or post-quantum resistance.
+Established cryptographic schemes remain the reference for deployed
+security; no new cipher is proposed by this module.
+
+### X6-S1 — Defensive side-channel measurement analysis
+
+**Industrial question:** Can spectral signal analysis help
+characterize noise, repeatability and drift in power or
+electromagnetic measurements of authorized cryptographic hardware?
+
+**Protocol:** Use owned test boards and synthetic/open benchmark
+traces, document measurement setup and baseline signal processing,
+and measure diagnostic sensitivity without assuming security
+improvement. Respect device authorization and data confidentiality.
+
+**Evidence gate:** Repeatable diagnostic metrics and false-alarm
+rates on independent hardware sessions. No inference of resistance
+to side-channel attacks without a separate threat model and
+security evaluation.
+
+### Industry pilot selection
+
+| Pilot | First deliverable | Readiness |
+| --- | --- | --- |
+| N1 industrial denoising | Open reproducible signal benchmark | Proposed |
+| Q1 quantum readout | Synthetic-to-real measurement study | Proposed |
+| C1 cryptographic graph audit | Exact expander-certificate corpus | Proposed |
+| S1 defensive side-channel | Authorized measurement quality benchmark | Proposed |
+
+**Suggested order:** N1 and C1 first because they can be tested with
+synthetic/open data and existing exact arithmetic. Q1 and S1 require
+additional domain-specific datasets, controls and collaborators.
+
+## 12. Technology-transfer conditions
+
+Before presenting an industrial prototype, define (i) a measurable
+customer problem, (ii) the comparison baseline, (iii) an auditable
+metric and cost budget, (iv) independent replication, (v) data/IP
+permissions and (vi) a negative-result publication policy.
+Commercial suitability, legal rights and scientific novelty remain
+unverified until these gates are met.
+
+**Updated classification: WORKING PAPER v0.3 — exploratory research and
+industry pilot proposals, not peer reviewed and not a product claim.**
