@@ -1,0 +1,229 @@
+{
+  "schema": "x6-release-4.0-rc",
+  "qualification": {
+    "schema": "x6-qualification-1",
+    "version": "3.9-rc",
+    "model": {
+      "schema": "x6-signal-graph-model-1",
+      "kind": "derived-graph",
+      "source": "user-provided-samples",
+      "samples": [
+        0,
+        1,
+        0,
+        -1
+      ],
+      "sigma": 1,
+      "digits": 6,
+      "model": "weighted path graph; w(i,i+1)=round(exp(-((x[i+1]-x[i])/sigma)^2),digits)",
+      "graph": {
+        "edgeText": "s0 s1 0.367879\ns1 s2 0.367879\ns2 s3 0.367879",
+        "edges": [
+          {
+            "a": "s0",
+            "b": "s1",
+            "weight": "0.367879"
+          },
+          {
+            "a": "s1",
+            "b": "s2",
+            "weight": "0.367879"
+          },
+          {
+            "a": "s2",
+            "b": "s3",
+            "weight": "0.367879"
+          }
+        ]
+      },
+      "limitations": [
+        "The graph is a modeling choice, not a physical causal relation",
+        "Decimal rounding is part of the definition of the exported graph",
+        "The exact spectral certificate applies to the rounded rational graph, not the unrounded exponential weights"
+      ],
+      "certification": "NOT_CERTIFIED_BY_MAPPING",
+      "external": {
+        "julia": "NOT_EXECUTED",
+        "wolfram": "NOT_EXECUTED"
+      }
+    },
+    "certificate": {
+      "status": "COMPUTED_IN_BROWSER_NOT_EXTERNALLY_VERIFIED",
+      "exact": {
+        "version": "X6-2.4",
+        "method": "exact BigInt rational LDL^T of L+(b+1)J/n-bI",
+        "assumptions": "undirected graph, positive decimal weights, no self-loops",
+        "componentResults": [
+          {
+            "vertices": [
+              "s0",
+              "s1",
+              "s2",
+              "s3"
+            ],
+            "lowerStrict": "367879/6000000",
+            "status": "EXACT_POSITIVE_DEFINITE",
+            "ldl": {
+              "pass": true,
+              "pivots": [
+                "4575153/8000000",
+                "862255769303/935826750000",
+                "1006622444707499/1237556496000000",
+                "793147124/2736286781"
+              ]
+            }
+          }
+        ],
+        "allNontrivialCertified": true,
+        "note": "Exact rational certificate for the mathematical matrix defined by input decimals; no claim of interval-rounded floating-point eigenvalues."
+      },
+      "upper": {
+        "schema": "x6.spectral.enclosure.v1",
+        "version": "2.8",
+        "scope": "global-connected-graph",
+        "source": "s0 s1 0.367879\ns1 s2 0.367879\ns2 s3 0.367879",
+        "requestedLower": "0.5",
+        "strictLowerCertified": false,
+        "upperBound": "367879/1000000",
+        "upperWitnessPair": [
+          "s0",
+          "s3"
+        ],
+        "lowerMethod": "exact rational LDL via existing X6 core",
+        "upperMethod": "exact rational Rayleigh quotient of e_i-e_j",
+        "status": "LOWER_NOT_CERTIFIED",
+        "externalPython": "PENDING",
+        "externalWolfram": "PENDING"
+      },
+      "refined": {
+        "schema": "x6.spectral.audit.v2",
+        "version": "2.9",
+        "scope": "connected-undirected-positive-rational-weights",
+        "source": "s0 s1 0.367879\ns1 s2 0.367879\ns2 s3 0.367879",
+        "strictLower": "220359521/1024000000",
+        "strictLowerCertified": true,
+        "upperBound": "367879/1000000",
+        "upperWitnessPair": [
+          "s0",
+          "s3"
+        ],
+        "upperCertifiedBy": "exact rational Rayleigh quotient",
+        "searchTrace": [
+          {
+            "bound": "188354048/1024000000",
+            "positiveDefinite": true
+          },
+          {
+            "bound": "282531072/1024000000",
+            "positiveDefinite": false
+          },
+          {
+            "bound": "235442560/1024000000",
+            "positiveDefinite": false
+          },
+          {
+            "bound": "211898304/1024000000",
+            "positiveDefinite": true
+          },
+          {
+            "bound": "223670432/1024000000",
+            "positiveDefinite": false
+          },
+          {
+            "bound": "217784368/1024000000",
+            "positiveDefinite": true
+          },
+          {
+            "bound": "220727400/1024000000",
+            "positiveDefinite": false
+          },
+          {
+            "bound": "219255884/1024000000",
+            "positiveDefinite": true
+          },
+          {
+            "bound": "219991642/1024000000",
+            "positiveDefinite": true
+          },
+          {
+            "bound": "220359521/1024000000",
+            "positiveDefinite": true
+          }
+        ],
+        "claim": "strictLower < lambda2 <= upperBound",
+        "externalPython": "NOT_EXECUTED",
+        "externalWolfram": "NOT_EXECUTED",
+        "browserE2E": "NOT_EXECUTED"
+      },
+      "source": "x6-spectral-v3.1",
+      "external": {
+        "python": "NOT_EXECUTED_FOR_THIS_RESULT",
+        "wolfram": "NOT_EXECUTED_FOR_THIS_RESULT",
+        "julia": "NOT_EXECUTED_FOR_THIS_RESULT"
+      }
+    },
+    "checks": [
+      {
+        "name": "Signal frame",
+        "pass": true,
+        "detail": ""
+      },
+      {
+        "name": "Spectral frame",
+        "pass": true,
+        "detail": ""
+      },
+      {
+        "name": "DE help",
+        "pass": true,
+        "detail": ""
+      },
+      {
+        "name": "EN help",
+        "pass": true,
+        "detail": ""
+      },
+      {
+        "name": "FR help",
+        "pass": true,
+        "detail": ""
+      },
+      {
+        "name": "Graph model schema",
+        "pass": true,
+        "detail": ""
+      },
+      {
+        "name": "Three path edges",
+        "pass": true,
+        "detail": ""
+      },
+      {
+        "name": "Spectral reply",
+        "pass": true,
+        "detail": ""
+      },
+      {
+        "name": "Rational certificate object",
+        "pass": true,
+        "detail": ""
+      },
+      {
+        "name": "External audit not falsely claimed",
+        "pass": true,
+        "detail": ""
+      }
+    ],
+    "external": {
+      "python": "NOT_EXECUTED",
+      "wolfram": "NOT_EXECUTED_FOR_THIS_EXPORT",
+      "julia": "NOT_EXECUTED"
+    },
+    "status": "LOCAL_GATE_ONLY",
+    "passed": 10,
+    "total": 10,
+    "allPassed": true
+  },
+  "releaseApproved": false,
+  "externalVerification": "PENDING"
+}

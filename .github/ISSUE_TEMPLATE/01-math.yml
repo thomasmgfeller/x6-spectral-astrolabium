@@ -1,0 +1,22 @@
+name: Mathematical certificate audit
+description: Independent exact proof check or counterexample
+title: '[Math audit] '
+body:
+  - type: textarea
+    id: statement
+    attributes:
+      label: Exact statement, graph and assumptions
+    validations:
+      required: true
+  - type: textarea
+    id: method
+    attributes:
+      label: Independent method, commands and environment
+    validations:
+      required: true
+  - type: textarea
+    id: output
+    attributes:
+      label: Output and PASS/FAIL/NOT_EXECUTED
+    validations:
+      required: true

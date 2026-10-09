@@ -1,0 +1,16 @@
+name: Julia independent verification
+description: Report Julia numerical reproduction
+title: '[Julia] '
+body:
+  - type: input
+    id: env
+    attributes:
+      label: Julia version, BLAS and operating system
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Inputs, commands, tolerance and actual results
+    validations:
+      required: true
