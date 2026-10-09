@@ -14,6 +14,7 @@ MANIFEST = ROOT / "SHA256_REPOSITORY.json"
 EXCLUDED = {
     ".github/workflows/validation.yml": "historical archived workflow omitted; separately installed CI differs",
     "docs/RELEASE_CHECKLIST.md": "updated release checklist; historical digest retained only as provenance",
+    "README.md": "updated public preview and license disclosure; historical digest retained as provenance",
     "tests/python/python_results.local.json": "generated local test output; not part of published source checkout",
 }
 
