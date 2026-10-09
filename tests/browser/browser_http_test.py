@@ -74,10 +74,10 @@ def main():
                     output = Path(evidence_dir)
                     output.mkdir(parents=True, exist_ok=True)
                     (output / "browser_http_summary.json").write_text(
-                        json.dumps(summary, indent=2) + "\\n", encoding="utf-8"
+                        json.dumps(summary, indent=2) + "\n", encoding="utf-8"
                     )
                     (output / "qualification39.json").write_text(
-                        json.dumps(report, indent=2) + "\\n", encoding="utf-8"
+                        json.dumps(report, indent=2) + "\n", encoding="utf-8"
                     )
                 assert summary["status"] == "PASS", "Qualification gate failed"
             finally:
