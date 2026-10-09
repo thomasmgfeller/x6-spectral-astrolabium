@@ -37,6 +37,10 @@ def main():
                 assert response is not None and response.status == 200, "HTTP load failed"
                 for selector in ("#tab-signal", "#tab-spectrum", "#tab-audit"):
                     assert page.locator(selector).count() == 1, selector
+                page.wait_for_function("""() => {
+                  const f = document.querySelector("#spectrumFrame");
+                  return !!(f && f.contentDocument && f.contentDocument.readyState === "complete");
+                }""", timeout=20000)
                 page.locator("#tab-audit").click()
                 page.locator("#run39").click()
                 page.wait_for_function(
