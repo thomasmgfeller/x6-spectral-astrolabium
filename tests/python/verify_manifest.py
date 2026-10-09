@@ -12,7 +12,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 MANIFEST = ROOT / "SHA256_REPOSITORY.json"
 EXCLUDED = {
-    ".github/workflows/validation.yml": "workflow independently installed; differs from historical archived workflow",
+    ".github/workflows/validation.yml": "historical archived workflow omitted; separately installed CI differs",
+    "docs/RELEASE_CHECKLIST.md": "updated release checklist; historical digest retained only as provenance",
     "tests/python/python_results.local.json": "generated local test output; not part of published source checkout",
 }
 
