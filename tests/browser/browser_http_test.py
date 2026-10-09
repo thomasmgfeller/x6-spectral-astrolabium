@@ -6,6 +6,7 @@ Run from repository root:
     python tests/browser/browser_http_test.py
 """
 import json
+import os
 from functools import partial
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
@@ -27,7 +28,12 @@ def main():
     worker.start()
     try:
         with sync_playwright() as pw:
-            browser = pw.chromium.launch(headless=True)
+            system_chromium = Path('/usr/bin/chromium')
+            launch = {'headless': True}
+            if system_chromium.exists():
+                launch['executable_path'] = str(system_chromium)
+                launch['args'] = ['--no-sandbox']
+            browser = pw.chromium.launch(**launch)
             try:
                 page = browser.new_page(accept_downloads=True)
                 errors = []
@@ -63,6 +69,16 @@ def main():
                     "origin": "http://127.0.0.1:<ephemeral>/index.html",
                 }
                 print(json.dumps(summary, indent=2))
+                evidence_dir = os.environ.get("X6_EVIDENCE_DIR")
+                if evidence_dir:
+                    output = Path(evidence_dir)
+                    output.mkdir(parents=True, exist_ok=True)
+                    (output / "browser_http_summary.json").write_text(
+                        json.dumps(summary, indent=2) + "\\n", encoding="utf-8"
+                    )
+                    (output / "qualification39.json").write_text(
+                        json.dumps(report, indent=2) + "\\n", encoding="utf-8"
+                    )
                 assert summary["status"] == "PASS", "Qualification gate failed"
             finally:
                 browser.close()
