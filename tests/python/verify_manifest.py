@@ -39,7 +39,7 @@ def main():
         else:
             verified += 1
     # The manifest itself is deliberately not self-hashed.
-    expected_tracked = set(expected) | {"SHA256_REPOSITORY.json", ".github/workflows/unpack-x6.yml", "tests/python/verify_manifest.py", "docs/CI_VALIDATION_PLAN.md", "docs/M1_6_EXECUTION_REPORT.md", "tests/browser/browser_http_test.py", "docs/M1_7_VALIDATION_REPORT.md", "tests/python/static_ui_preflight.py", "docs/M1_9_BROWSER_AUDIT.md", "docs/M1_11_BROWSER_EXECUTION.md", "tests/python/run_validation.py", "docs/M1_12_VALIDATION_RUNNER.md", "tests/python/test_validation_runner.py", "docs/M1_13_RUNNER_AUDIT.md"}
+    expected_tracked = set(expected) | {"SHA256_REPOSITORY.json", ".github/workflows/unpack-x6.yml", "tests/python/verify_manifest.py", "docs/CI_VALIDATION_PLAN.md", "docs/M1_6_EXECUTION_REPORT.md", "tests/browser/browser_http_test.py", "docs/M1_7_VALIDATION_REPORT.md", "tests/python/static_ui_preflight.py", "docs/M1_9_BROWSER_AUDIT.md", "docs/M1_11_BROWSER_EXECUTION.md", "tests/python/run_validation.py", "docs/M1_12_VALIDATION_RUNNER.md", "tests/python/test_validation_runner.py", "docs/M1_13_RUNNER_AUDIT.md", "docs/M1_14_CI_SETUP.md"}
     unlisted = sorted(tracked - expected_tracked)
     result = {
         "status": "FAIL" if failed or unlisted else "PASS_WITH_EXCLUSIONS",
