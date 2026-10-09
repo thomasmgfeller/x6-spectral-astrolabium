@@ -6,6 +6,8 @@ This repository publishes the actual **X6 v4.2 RC** browser application, alongsi
 
 ## Run
 
+**Experimental software.** Do not enter confidential data; this is not a production-hardened service. The browser's local qualification is not independent scientific certification.
+
 Open `app/index.html` in a browser, or run `python -m http.server 8000` and visit `http://localhost:8000/app/`.
 
 ## Reproduce
@@ -28,12 +30,16 @@ For a connected graph Laplacian L, n vertices, and J the all-ones matrix:
 
 This certifies the **rounded rational graph**, not unrounded signal values or a quantum-gravity theory. Disconnected graphs require special treatment. Read [scientific scope](docs/SCIENTIFIC_SCOPE.md).
 
+## Open research agenda
+
+See the [X6 Working Paper v0.3](docs/X6_OPEN_RESEARCH_AGENDA_DRAFT.md) for falsifiable research questions and proposed industrial pilots in signal denoising, quantum readout analysis, and cryptographic graph verification. These are proposals, not validated product performance or physical claims.
+
 ## Help wanted
 
 We invite independent Julia reproductions, exact certificate audits, browser/translation/accessibility tests, security reviews and counterexamples. Use the GitHub issue forms and [community guide](docs/COMMUNITY_VALIDATION.md). Report PASS, FAIL and NOT_EXECUTED distinctly.
 
 ## License status
 
-**License selection pending.** Public visibility is not permission to reuse or redistribute. Maintainer must review [license options](docs/LICENSE_OPTIONS.md), copyright ownership and bundled dependencies before adding a real `LICENSE` file. Code contributions should wait until contribution terms are confirmed; audit reports and issues are welcome.
+**Apache-2.0 is intended but NOT yet granted.** Rights and provenance clearance is still in progress; no `LICENSE` file has been added. Public visibility does not itself grant permission to copy, modify, or redistribute code. Inspect the project online and submit audit findings or issues; do not assume open-source reuse rights. See [rights clearance](docs/APACHE_2_0_RIGHTS_CLEARANCE.md) and [dependency audit](docs/M1_20_DEPENDENCY_LICENSE_AUDIT.md).
 
 See [provenance](docs/PROVENANCE.md), [release checklist](docs/RELEASE_CHECKLIST.md), and draft [citation metadata](CITATION.cff).
