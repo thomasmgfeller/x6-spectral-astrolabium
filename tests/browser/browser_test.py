@@ -12,7 +12,7 @@ with sync_playwright() as pw:
     page=browser.new_page(accept_downloads=True)
     errors=[]
     page.on('pageerror',lambda error:errors.append(str(error)))
-    page.set_content(p.read_text(encoding='utf-8'),wait_until='domcontentloaded',timeout=30000)
+    page.goto(f'http://127.0.0.1:{server.server_address[1]}/index.html',wait_until='domcontentloaded',timeout=30000)
     assert page.locator('#tab-signal').count()==1
     assert page.locator('#tab-spectrum').count()==1
     assert page.locator('#tab-audit').count()==1
