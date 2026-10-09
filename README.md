@@ -1,0 +1,1 @@
+X6 Spektral-Astrolabium ist eine offene wissenschaftliche Forschungsplattform für Signalanalyse, Spektralgraphentheorie, exakte Eigenwertschranken und reproduzierbare mathematische Validierung. Unabhängige Prüfungen und Beiträge der Forschungsgemeinschaft sind willkommen.
