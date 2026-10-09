@@ -1,0 +1,57 @@
+name: X6 Validation
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - 'app/**'
+      - 'tests/**'
+      - 'data/**'
+      - 'SHA256_REPOSITORY.json'
+      - '.github/workflows/x6-validation.yml'
+permissions:
+  contents: read
+jobs:
+  python:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Integrity and rational checks
+        run: |
+          python tests/python/verify_manifest.py
+          python tests/python/static_ui_preflight.py
+          python tests/python/independent_audit.py
+          python -m unittest discover -s tests/python -p 'test_validation_runner.py' -v
+  julia:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v5
+      - uses: julia-actions/setup-julia@v2
+        with:
+          version: '1.10'
+      - name: Numerical eigenvalue reference
+        run: julia tests/julia/reference.jl
+  browser:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Install Playwright
+        run: |
+          python -m pip install -r requirements-test.txt
+          python -m playwright install --with-deps chromium
+      - name: X6 HTTP qualification smoke
+        env:
+          X6_EVIDENCE_DIR: x6-evidence
+        run: python tests/browser/browser_http_test.py
+      - name: Preserve browser evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: x6-browser-evidence
+          path: x6-evidence/
+          if-no-files-found: warn
