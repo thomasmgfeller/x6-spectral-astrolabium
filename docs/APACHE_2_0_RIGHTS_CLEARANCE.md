@@ -1,7 +1,7 @@
 # X6 — Apache-2.0 rights clearance (DRAFT; no license granted yet)
 
 **Owner preference:** Apache License, Version 2.0.
-**Decision:** HOLD until ownership and third-party rights are confirmed.
+**Decision:** Apache-2.0 selected by maintainer; final rights clearance pending.
 **Scope:** repository branch `x6-source-preview` reviewed on 2026-10-09.
 This document is an audit checklist, not legal advice or a LICENSE file.
 
@@ -50,3 +50,22 @@ that all inline code and documentation are original.
 
 **No LICENSE file was added in this step.** Public repository visibility
 does not itself grant an open-source license. PR #2 stays draft.
+
+## Maintainer statement — 2026-10-09
+
+The repository owner stated in the project conversation that X6 was developed
+by the owner with assistance from ChatGPT, GitHub Copilot and Google AI.
+This is a **maintainer statement**, not independent proof of title or a
+third-party rights audit. Use of AI tools does not by itself establish that
+every output is protectable by copyright, exclusively owned, or free of
+third-party material. Review pasted/generated snippets, datasets, fonts and
+embedded assets for provenance before making a blanket rights warranty.
+
+**Selected intended license:** Apache License, Version 2.0.
+**Remaining gate:** confirm no unlicensed third-party, employer-owned or
+confidential material is included; decide whether data and documentation
+share the code license; verify attribution/NOTICE needs.
+
+**Status: APACHE-2.0 SELECTED, FINAL CLEARANCE PENDING.**
+Do not describe the repository as Apache-2.0 licensed until an authorized
+LICENSE file has actually been committed and scope documented.
