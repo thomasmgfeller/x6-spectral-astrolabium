@@ -1,0 +1,16 @@
+name: Browser, translation or accessibility audit
+description: Report browser failures or UI review
+title: '[Browser] '
+body:
+  - type: input
+    id: env
+    attributes:
+      label: Browser version and OS
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Reproduction steps, expected and actual results
+    validations:
+      required: true

@@ -1,0 +1,16 @@
+name: Bug or falsification report
+description: Minimal reproducible counterexample
+title: '[Bug] '
+body:
+  - type: textarea
+    id: repro
+    attributes:
+      label: Minimal input, commands and environment
+    validations:
+      required: true
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Expected and actual behavior with evidence
+    validations:
+      required: true
