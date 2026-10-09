@@ -51,3 +51,24 @@ Collect Chromium and Playwright versions, stdout/stderr and the JSON
 qualification output. Keep PR #2 draft until the actual runtime tests and
 other release gates pass. Do not confuse the browser's `allPassed` local
 gate with independent scientific certification.
+
+## M1.10 — Sandbox iframe compatibility correction
+
+**Static bug found:** `#spectrumFrame` uses `sandbox="allow-scripts allow-downloads allow-modals"`
+without `allow-same-origin`. Therefore parent-page JavaScript cannot inspect
+`frame.contentDocument.readyState`; the earlier HTTP test readiness wait would
+time out even if the iframe loaded successfully.
+
+**Correction committed:** `tests/browser/browser_http_test.py` now waits
+through Playwright's `frame_locator("#spectrumFrame").locator("body")` rather
+than attempting forbidden parent-page DOM access. This preserves the iframe
+sandbox boundary. The app itself and historical test fixture were not changed.
+
+**Execution limitations:** Browser/Chromium runtime was available in the
+isolated environment, but the complete application could not be downloaded
+there: DNS lookup of raw.githubusercontent.com failed. GitHub connector source
+inspection was available; full browser E2E remains **NOT_EXECUTED**.
+Julia and full manifest checkout verification also remain **NOT_EXECUTED**.
+
+**Release decision: HOLD.** No GitHub Actions workflow was run and PR #2
+remains draft.
