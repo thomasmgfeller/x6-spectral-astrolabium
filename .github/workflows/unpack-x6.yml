@@ -1,4 +1,4 @@
-name: Unpack X6 research repository
+name: Publish unpacked X6 source
 on:
   push:
     paths:
@@ -7,36 +7,40 @@ on:
 permissions:
   contents: write
 jobs:
-  unpack:
+  publish:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Extract existing X6 ZIP into repository root
+        with:
+          fetch-depth: 0
+      - name: Recover previously uploaded ZIP from Git history
         run: |
+          git show 0a66d7fe7bd79b4ca054f9b36bbfdb44ffe3adcc^:X6_GitHub_Public_Research_Repository.zip > /tmp/x6-source.zip
           python3 - <<'PY'
           from pathlib import Path
           import zipfile
-          archive=Path("X6_GitHub_Public_Research_Repository.zip")
-          if not archive.is_file():
-              raise SystemExit("ZIP archive not found")
+          archive=Path('/tmp/x6-source.zip')
           with zipfile.ZipFile(archive) as z:
-              for item in z.infolist():
+              names=[x for x in z.infolist() if not x.is_dir()]
+              if len(names)>100 or sum(x.file_size for x in names)>20_000_000:
+                  raise SystemExit('Unexpected archive size')
+              for item in names:
                   name=Path(item.filename)
-                  if name.is_absolute() or ".." in name.parts:
-                      raise SystemExit(f"Unsafe archive path: {item.filename}")
-                  if item.is_dir():
+                  if name.is_absolute() or '..' in name.parts or name.parts[0]=='.git':
+                      raise SystemExit('Unsafe archive path: '+item.filename)
+                  if name.as_posix()=='.github/workflows/unpack-x6.yml':
                       continue
                   dest=Path.cwd()/name
                   dest.parent.mkdir(parents=True,exist_ok=True)
                   dest.write_bytes(z.read(item))
-          archive.unlink()
+          print('Extracted',len(names),'entries')
           PY
-      - name: Commit extracted project files
+      - name: Commit research source and tests
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A
           if ! git diff --cached --quiet; then
-            git commit -m "Publish unpacked X6 public research preview"
+            git commit -m "Publish X6 research source, documentation and validation tests"
             git push
           fi
