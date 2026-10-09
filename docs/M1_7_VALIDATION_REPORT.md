@@ -56,3 +56,25 @@ New scripts/docs are not covered by that historical manifest.
 4. Separately authorize and review the CI workflow; do not bypass GitHub's
    workflow-write permission requirement.
 5. Keep PR #2 draft until the evidence and license decisions are reviewed.
+
+## M1.8 follow-up — independently executed analytic stress cases
+
+Execution environment: isolated Python container (not a GitHub checkout).
+A faithful copy of the checked-in rational Laplacian / positive-definiteness
+functions was tested against analytic complete-graph spectra.
+
+- Original five reference fixtures: **5/5 PASS**.
+- Complete graphs with n=2..8, 20 deterministic rational weights per n:
+  **140/140 PASS** (seed 20261009).
+- For each graph with known spectral gap n*w, tested three bounds:
+  n*w-1/100000 accepted, n*w rejected, n*w+1/100000 rejected.
+- This is 420 boundary assertions across 140 analytic cases.
+- These checks are numerical-program execution with exact Fraction arithmetic,
+  not a formal proof of the implementation for arbitrary inputs.
+- Full repository clone was attempted but blocked by DNS resolution for
+  github.com in the execution container.
+- Julia: NOT_EXECUTED (runtime absent).
+- Browser smoke: NOT_EXECUTED (full app unavailable in the local checkout).
+- SHA-256 full checkout: NOT_EXECUTED.
+
+**Release decision remains HOLD.** No workflow or release triggered.
