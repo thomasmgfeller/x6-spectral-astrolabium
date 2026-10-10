@@ -2,21 +2,8 @@ name: X6 Source Agents
 
 on:
   schedule:
-    - cron: '37 6 * * *'
+    - cron: '37 6 11-13 10 *'
   workflow_dispatch:
-  push:
-    branches: [main]
-    paths:
-      - 'agent/**'
-      - 'app/**'
-      - 'tests/python/test_source_agents.py'
-      - '.github/workflows/x6-source-agents.yml'
-  pull_request:
-    paths:
-      - 'agent/**'
-      - 'app/**'
-      - 'tests/python/test_source_agents.py'
-      - '.github/workflows/x6-source-agents.yml'
 
 permissions:
   contents: read
@@ -35,27 +22,49 @@ jobs:
       matrix:
         source: [atlas, qutech, nasa]
     steps:
+      - name: Enforce authorised three-day window
+        id: window
+        run: |
+          python3 - <<'PY'
+          import os
+          from datetime import datetime, timedelta, timezone
+          start = datetime.fromisoformat('2026-10-10T22:26:52+00:00')
+          stop = datetime.fromisoformat('2026-10-13T22:26:52+00:00')
+          now = datetime.now(timezone.utc)
+          # Reserve the entire job timeout so admitted work finishes by the cutoff.
+          active = start <= now and now + timedelta(minutes=25) <= stop
+          with open(os.environ['GITHUB_OUTPUT'], 'a') as f:
+              f.write('active=' + str(active).lower() + '\n')
+          if not active:
+              with open(os.environ['GITHUB_STEP_SUMMARY'], 'a') as f:
+                  f.write('STOPPED: outside the authorised three-day window, or too close to its end. No data-agent work executed.\n')
+          PY
       - uses: actions/checkout@v5
+        if: steps.window.outputs.active == 'true'
       - uses: actions/setup-python@v6
+        if: steps.window.outputs.active == 'true'
         with:
           python-version: '3.12'
       - name: Install fixed scientific and browser dependencies
+        if: steps.window.outputs.active == 'true'
         run: |
           python -m pip install -r agent/source-requirements.txt
           python -m playwright install --with-deps chromium --only-shell
           python -c 'import libarchive, h5py, networkx, numpy'
       - name: Restore small verified NASA subset
-        if: matrix.source == 'nasa'
+        if: steps.window.outputs.active == 'true' && matrix.source == 'nasa'
         uses: actions/cache@v4
         with:
           path: .agent-cache/nasa-ims-subset-v1
           key: x6-nasa-ims-subset-v1-${{ hashFiles('agent/measurement_sources.py') }}
       - name: Test rejection gates and source adapters
+        if: steps.window.outputs.active == 'true'
         run: python -m unittest tests/python/test_data_agent.py tests/python/test_source_agents.py -v
       - name: Run source against actual X6 application
+        if: steps.window.outputs.active == 'true'
         run: python -u agent/run_sources.py --source '${{ matrix.source }}' --output source-agent-output
       - name: Publish run summary
-        if: always()
+        if: always() && steps.window.outputs.active == 'true'
         run: |
           if [ -f source-agent-output/summary.md ]; then
             cat source-agent-output/summary.md >> "$GITHUB_STEP_SUMMARY"
@@ -63,7 +72,7 @@ jobs:
             echo 'NOT_EXECUTED: inspect setup/test logs. No successful source run is claimed.' >> "$GITHUB_STEP_SUMMARY"
           fi
       - name: Upload original subset and evidence, including failures
-        if: always()
+        if: always() && steps.window.outputs.active == 'true'
         uses: actions/upload-artifact@v4
         with:
           name: x6-${{ matrix.source }}-agent-${{ github.run_id }}-${{ github.run_attempt }}

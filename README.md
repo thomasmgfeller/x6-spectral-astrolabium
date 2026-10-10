@@ -32,6 +32,11 @@ This certifies the **rounded rational graph**, not unrounded signal values or a 
 
 ## Automated public-data checks
 
+**Current run window: 11–13 October 2026.** All four agents stop by
+14 October 2026, 00:26:52 Europe/Zurich. Their workflows enforce the cutoff
+before any data work; automatic runs on code changes are disabled. Existing
+results keep the retention periods below.
+
 The [X6 Data Agent](docs/DATA_AGENT.md) downloads public NOAA GOES X-ray observations, drives the actual browser app, and separately checks its exported rational graph certificate in Python. The bounded daily workflow uploads inputs and evidence as Actions artifacts for 30 days. PASS means the named software checks passed; it does not establish denoising performance or physical validity.
 
 Three additional [source agents](docs/SOURCE_AGENTS.md) check the complete NetworkX Graph Atlas and fixed experimental subsets from QuTech and NASA/IMS. They run daily as separate jobs, preserve original inputs and failure evidence for 14 days, and label archival measurements explicitly. They do not claim fresh quantum measurements, improved coherence or bearing-failure prediction.

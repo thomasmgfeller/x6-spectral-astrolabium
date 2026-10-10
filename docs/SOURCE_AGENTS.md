@@ -9,8 +9,13 @@ The existing live NOAA workflow is separate.
 
 Workflow: `.github/workflows/x6-source-agents.yml` (**X6 Source Agents**).
 Three independent jobs: `atlas`, `qutech`, `nasa`; a failed job does not cancel
-the others. Scheduled daily at **06:37 UTC** (08:37 Swiss summer time, 07:37
-Swiss winter time), with manual and relevant code-change triggers. GitHub may
+the others. Scheduled on **11, 12 and 13 October 2026 at 06:37 UTC**
+(08:37 Europe/Zurich). The authorised trial ends **14 October 2026 at
+00:26:52 Europe/Zurich** (`2026-10-13T22:26:52Z`). A date guard before checkout
+reserves the complete 25-minute job timeout and skips all agent work outside
+the window, including manual launches. Push and pull-request triggers are removed.
+An end-of-trial cleanup is scheduled to remove cron; the full-year date guard
+also prevents an annual restart if that cleanup is delayed. GitHub may
 delay scheduled runs or disable schedules after prolonged public-repository
 inactivity. Scheduling is not a real-time service guarantee.
 

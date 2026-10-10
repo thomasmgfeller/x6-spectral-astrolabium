@@ -8,8 +8,14 @@ approve a release, or claim a physical discovery.
 ## Schedule and destination
 
 - GitHub workflow: **X6 Data Agent**.
-- Daily at **06:17 UTC** (08:17 Swiss summer time, 07:17 Swiss winter time).
-- Also on relevant changes to main and pull requests, and manually with **Run workflow**.
+- Limited trial: **11–13 October 2026**, at **06:17 UTC** (08:17 Europe/Zurich).
+- Authorised window ends **14 October 2026, 00:26:52 Europe/Zurich**
+  (`2026-10-13T22:26:52Z`). A first-step date guard checks the full year and
+  reserves the 15-minute job timeout. Outside the window even manual workflow
+  runs skip installation, downloads, tests and uploads, with a STOPPED summary.
+- Push and pull-request triggers have been removed. A scheduled end-of-trial
+  cleanup will remove the cron trigger; the date guard also prevents an annual
+  restart if cleanup is delayed. Existing evidence keeps its normal retention.
 - Standard `ubuntu-24.04` runner; maximum 15 minutes; no overlapping runs per ref.
 - Data and reports are uploaded as an **Actions artifact**, retained **30 days**.
   Open the workflow run under **Actions**, then its **Artifacts** section.

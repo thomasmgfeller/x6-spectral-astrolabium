@@ -2,21 +2,8 @@ name: X6 Data Agent
 
 on:
   schedule:
-    - cron: '17 6 * * *'
+    - cron: '17 6 11-13 10 *'
   workflow_dispatch:
-  push:
-    branches: [main]
-    paths:
-      - 'agent/**'
-      - 'app/**'
-      - 'tests/python/test_data_agent.py'
-      - '.github/workflows/x6-data-agent.yml'
-  pull_request:
-    paths:
-      - 'agent/**'
-      - 'app/**'
-      - 'tests/python/test_data_agent.py'
-      - '.github/workflows/x6-data-agent.yml'
 
 permissions:
   contents: read
@@ -30,20 +17,42 @@ jobs:
     runs-on: ubuntu-24.04
     timeout-minutes: 15
     steps:
+      - name: Enforce authorised three-day window
+        id: window
+        run: |
+          python3 - <<'PY'
+          import os
+          from datetime import datetime, timedelta, timezone
+          start = datetime.fromisoformat('2026-10-10T22:26:52+00:00')
+          stop = datetime.fromisoformat('2026-10-13T22:26:52+00:00')
+          now = datetime.now(timezone.utc)
+          # Reserve the entire job timeout so admitted work finishes by the cutoff.
+          active = start <= now and now + timedelta(minutes=15) <= stop
+          with open(os.environ['GITHUB_OUTPUT'], 'a') as f:
+              f.write('active=' + str(active).lower() + '\n')
+          if not active:
+              with open(os.environ['GITHUB_STEP_SUMMARY'], 'a') as f:
+                  f.write('STOPPED: outside the authorised three-day window, or too close to its end. No data-agent work executed.\n')
+          PY
       - uses: actions/checkout@v5
+        if: steps.window.outputs.active == 'true'
       - uses: actions/setup-python@v6
+        if: steps.window.outputs.active == 'true'
         with:
           python-version: '3.12'
       - name: Install bounded browser runtime
+        if: steps.window.outputs.active == 'true'
         run: |
           python -m pip install -r agent/requirements.txt
           python -m playwright install --with-deps chromium --only-shell
       - name: Verify data and certificate rejection gates
+        if: steps.window.outputs.active == 'true'
         run: python -m unittest tests/python/test_data_agent.py -v
       - name: Fetch public data and exercise actual X6 application
+        if: steps.window.outputs.active == 'true'
         run: python agent/run_agent.py --output agent-output
       - name: Add run summary
-        if: always()
+        if: always() && steps.window.outputs.active == 'true'
         run: |
           if [ -f agent-output/summary.md ]; then
             cat agent-output/summary.md >> "$GITHUB_STEP_SUMMARY"
@@ -51,7 +60,7 @@ jobs:
             echo 'Agent NOT_EXECUTED: inspect setup/test logs. No successful data run is claimed.' >> "$GITHUB_STEP_SUMMARY"
           fi
       - name: Upload data and evidence (including failures)
-        if: always()
+        if: always() && steps.window.outputs.active == 'true'
         uses: actions/upload-artifact@v4
         with:
           name: x6-data-agent-${{ github.run_id }}-${{ github.run_attempt }}
