@@ -1,0 +1,61 @@
+name: X6 Data Agent
+
+on:
+  schedule:
+    - cron: '17 6 * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'agent/**'
+      - 'app/**'
+      - 'tests/python/test_data_agent.py'
+      - '.github/workflows/x6-data-agent.yml'
+  pull_request:
+    paths:
+      - 'agent/**'
+      - 'app/**'
+      - 'tests/python/test_data_agent.py'
+      - '.github/workflows/x6-data-agent.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: x6-data-agent-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  collect-test-upload:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Install bounded browser runtime
+        run: |
+          python -m pip install -r agent/requirements.txt
+          python -m playwright install --with-deps chromium --only-shell
+      - name: Verify data and certificate rejection gates
+        run: python -m unittest tests/python/test_data_agent.py -v
+      - name: Fetch public data and exercise actual X6 application
+        run: python agent/run_agent.py --output agent-output
+      - name: Add run summary
+        if: always()
+        run: |
+          if [ -f agent-output/summary.md ]; then
+            cat agent-output/summary.md >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo 'Agent NOT_EXECUTED: inspect setup/test logs. No successful data run is claimed.' >> "$GITHUB_STEP_SUMMARY"
+          fi
+      - name: Upload data and evidence (including failures)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: x6-data-agent-${{ github.run_id }}-${{ github.run_attempt }}
+          path: agent-output/
+          if-no-files-found: warn
+          retention-days: 30
+          compression-level: 9
