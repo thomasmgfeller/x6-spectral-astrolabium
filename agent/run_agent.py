@@ -237,6 +237,9 @@ def wait_json(page, selector, predicate="x => !!x"):
 
 def browser_run(out, prepared):
     from playwright.sync_api import sync_playwright
+    sample_count = len(prepared["values"]) if prepared is not None else SAMPLE_COUNT
+    require(32 <= sample_count <= 1024 and sample_count & (sample_count - 1) == 0,
+            "Browser requires a power-of-two sample count in 32..1024")
     server = ThreadingHTTPServer(("127.0.0.1", 0), partial(QuietHandler, directory=str(ROOT / "app")))
     thread = Thread(target=server.serve_forever, daemon=True)
     thread.start()
@@ -288,7 +291,7 @@ def browser_run(out, prepared):
                 signal.locator("#mc").fill("20")
                 signal.locator("#seed").fill("104729")
                 signal.locator("#file").set_input_files(str(out / "signal.csv"))
-                signal.locator("#fileInfo").filter(has_text="128 Werte").wait_for()
+                signal.locator("#fileInfo").filter(has_text=f"{sample_count} Werte").wait_for()
                 require("Fehler:" not in signal.locator("#status").inner_text(), "Signal analysis failed")
                 signal.locator("#test").click()
                 with page.expect_download() as event:
@@ -312,7 +315,7 @@ def browser_run(out, prepared):
                 write_json(out / "sample_handoff.json", capture)
                 provenance = capture["provenance"]
                 indices = provenance["indices"]
-                expected_indices = list(range(0, SAMPLE_COUNT, math.ceil(SAMPLE_COUNT / 24)))
+                expected_indices = list(range(0, sample_count, math.ceil(sample_count / 24)))
                 require(indices == expected_indices and
                         provenance["samples"] == [prepared["values"][i] for i in indices],
                         "Browser subsampling differs from declared stride")

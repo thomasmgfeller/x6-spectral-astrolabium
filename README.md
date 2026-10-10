@@ -34,6 +34,8 @@ This certifies the **rounded rational graph**, not unrounded signal values or a 
 
 The [X6 Data Agent](docs/DATA_AGENT.md) downloads public NOAA GOES X-ray observations, drives the actual browser app, and separately checks its exported rational graph certificate in Python. The bounded daily workflow uploads inputs and evidence as Actions artifacts for 30 days. PASS means the named software checks passed; it does not establish denoising performance or physical validity.
 
+Three additional [source agents](docs/SOURCE_AGENTS.md) check the complete NetworkX Graph Atlas and fixed experimental subsets from QuTech and NASA/IMS. They run daily as separate jobs, preserve original inputs and failure evidence for 14 days, and label archival measurements explicitly. They do not claim fresh quantum measurements, improved coherence or bearing-failure prediction.
+
 ## Open research agenda
 
 See the [X6 Working Paper v0.3](docs/X6_OPEN_RESEARCH_AGENDA_DRAFT.md) for falsifiable research questions and proposed industrial pilots in signal denoising, quantum readout analysis, and cryptographic graph verification. These are proposals, not validated product performance or physical claims.

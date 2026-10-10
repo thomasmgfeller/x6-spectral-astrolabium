@@ -44,6 +44,12 @@ def main():
     expected_tracked = set(expected) | {"agent/__init__.py", "agent/run_agent.py", "agent/requirements.txt", "tests/python/test_data_agent.py", "docs/DATA_AGENT.md", ".github/workflows/x6-data-agent.yml", "SHA256_REPOSITORY.json", ".github/workflows/unpack-x6.yml", "tests/python/verify_manifest.py", "docs/CI_VALIDATION_PLAN.md", "docs/M1_6_EXECUTION_REPORT.md", "tests/browser/browser_http_test.py", "docs/M1_7_VALIDATION_REPORT.md", "tests/python/static_ui_preflight.py", "docs/M1_9_BROWSER_AUDIT.md", "docs/M1_11_BROWSER_EXECUTION.md", "tests/python/run_validation.py", "docs/M1_12_VALIDATION_RUNNER.md", "tests/python/test_validation_runner.py", "docs/M1_13_RUNNER_AUDIT.md", "docs/M1_14_CI_SETUP.md", ".github/workflows/x6-validation.yml", "docs/M1_16_RELEASE_READINESS.md", "docs/APACHE_2_0_RIGHTS_CLEARANCE.md", "docs/M1_18_PROVENANCE_AUDIT.md", "docs/M1_19_COMPONENT_PROVENANCE.md", "docs/M1_20_DEPENDENCY_LICENSE_AUDIT.md", "docs/X6_OPEN_RESEARCH_AGENDA_DRAFT.md"}
     # The public portal predates the data agent and is not in the historical archive.
     expected_tracked |= {".nojekyll", "index.html"}
+    # New automation sources have their own per-run hashes, not historical archive digests.
+    expected_tracked |= {
+        "agent/source_transport.py", "agent/measurement_sources.py", "agent/atlas_checks.py",
+        "agent/run_sources.py", "agent/source-requirements.txt", "docs/SOURCE_AGENTS.md",
+        "tests/python/test_source_agents.py", ".github/workflows/x6-source-agents.yml",
+    }
     unlisted = sorted(tracked - expected_tracked)
     result = {
         "status": "FAIL" if failed or unlisted else "PASS_WITH_EXCLUSIONS",
