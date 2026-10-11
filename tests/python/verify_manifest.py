@@ -23,17 +23,32 @@ def main():
     if doc.get("algorithm") != "sha256" or not isinstance(doc.get("files"), dict):
         raise SystemExit("FAIL: malformed SHA-256 manifest")
     expected = doc["files"]
+    integration_path = ROOT / "SAGNAC_SOURCE_MANIFEST.json"
+    integration = json.loads(integration_path.read_text(encoding="utf-8")) if integration_path.exists() else None
+    if integration is not None:
+        if (integration.get("schema") != "x6.sagnac.source-manifest/1"
+                or integration.get("base_app_sha256") != expected.get("app/index.html")
+                or not isinstance(integration.get("files"), dict)
+                or not {"app/index.html", "app/sagnac-core.js", "app/sagnac-ui.js",
+                        "device/sagnac_bridge.py", "tests/python/verify_manifest.py"}
+                       .issubset(integration.get("files", {}))):
+            raise SystemExit("FAIL: malformed Sagnac integration manifest or incorrect baseline")
     tracked = set(subprocess.check_output(
         ["git", "ls-files", "-z"], cwd=ROOT).decode("utf-8").strip("\0").split("\0"))
     failed = []
     verified = 0
     excluded = []
+    superseded = []
     for rel, digest in sorted(expected.items()):
         if rel in EXCLUDED:
             excluded.append({"path": rel, "reason": EXCLUDED[rel]})
             continue
         if rel not in tracked:
             failed.append({"path": rel, "reason": "manifest file missing from checkout"})
+            continue
+        if rel == "app/index.html" and integration is not None:
+            superseded.append({"path": rel, "historical_sha256": digest,
+                               "reason": "Sagnac integration; current content checked by separate versioned manifest"})
             continue
         actual = hashlib.sha256((ROOT / rel).read_bytes()).hexdigest()
         if actual != digest:
@@ -59,11 +74,22 @@ def main():
         "agent/lorentz_spectral.py", "tests/python/test_lorentz_spectral.py",
         "docs/LORENTZ_RESEARCH.md",
     }
+    if integration is not None:
+        expected_tracked |= set(integration['files']) | {'SAGNAC_SOURCE_MANIFEST.json'}
+        for rel, digest in sorted(integration['files'].items()):
+            candidate = ROOT / rel
+            if Path(rel).is_absolute() or '..' in Path(rel).parts or rel not in tracked or not candidate.is_file():
+                failed.append({'path': rel, 'reason': 'integration manifest path missing or invalid'})
+            elif hashlib.sha256(candidate.read_bytes()).hexdigest() != digest:
+                failed.append({'path': rel, 'reason': 'integration SHA-256 mismatch'})
+            else:
+                verified += 1
     unlisted = sorted(tracked - expected_tracked)
     result = {
         "status": "FAIL" if failed or unlisted else "PASS_WITH_EXCLUSIONS",
         "verified": verified,
         "excluded": excluded,
+        "superseded": superseded,
         "failed": failed,
         "unlisted_tracked": unlisted,
     }

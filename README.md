@@ -10,7 +10,22 @@ This repository publishes the actual **X6 v4.2 RC** browser application, alongsi
 
 Open `app/index.html` in a browser, or run `python -m http.server 8000` and visit `http://localhost:8000/app/`.
 
-## Reproduce
+## Experimental Sagnac integration preview 0.1
+
+This experimental extension adds tab **07 · Sagnac**: validated SGNCv007 binary
+capture import, an explicitly synthetic example, and a loopback-only Linux
+UART receiver. Start `python3 device/sagnac_bridge.py` and open its URL.
+All quantum/physical claims remain NOT_ASSESSED. Optical control is unavailable;
+no command path or qualified actuators are implemented. Physical hardware
+qualification remains open. No scheduled research agent is activated or modified.
+
+The **X6 Validation** workflow checks the decoder, local bridge, Chromium UI,
+mobile viewport and existing scientific modules. Consult the checks on the
+specific commit; software success does not establish physical validity.
+
+Read [Sagnac integration and test scope](docs/SAGNAC_INTEGRATION.md).
+
+## Reproduce existing scientific modules
 
 ```bash
 python tests/python/independent_audit.py
