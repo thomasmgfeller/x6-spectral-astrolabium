@@ -1,0 +1,72 @@
+name: X6 Bounded Math Agent
+
+on:
+  schedule:
+    - cron: '23 */6 11-13 10 *'
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - 'agent/run_math_agent.py'
+      - 'agent/math*'
+      - 'tests/python/test_math_agent.py'
+      - '.github/workflows/x6-math-agent.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'agent/run_math_agent.py'
+      - 'agent/math*'
+      - 'tests/python/test_math_agent.py'
+      - '.github/workflows/x6-math-agent.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: x6-bounded-math-agent
+  cancel-in-progress: false
+
+jobs:
+  falsification:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v5
+      - name: Enforce window and kill switch before dependency installation
+        id: window
+        run: python3 agent/run_math_agent.py --guard
+      - uses: actions/setup-python@v6
+        if: steps.window.outputs.active == 'true'
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        if: steps.window.outputs.active == 'true'
+        with:
+          node-version: '24'
+      - name: Install pinned numerical dependency
+        if: steps.window.outputs.active == 'true'
+        run: python -m pip install -r agent/math-requirements.txt
+      - name: Check operating limits and scientific counterexamples
+        if: steps.window.outputs.active == 'true'
+        run: timeout 45s python -m unittest tests/python/test_math_agent.py -v
+      - name: Run bounded adaptive search
+        if: steps.window.outputs.active == 'true'
+        run: timeout 135s python agent/run_math_agent.py --output math-agent-output
+      - name: Publish truthful run status
+        if: always()
+        run: |
+          if [ -f math-agent-output/summary.md ]; then
+            cat math-agent-output/summary.md >> "$GITHUB_STEP_SUMMARY"
+          elif [ '${{ steps.window.outputs.active }}' = 'false' ]; then
+            echo 'STOPPED: disabled or outside authorised window. No search ran.' >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo 'NOT_EXECUTED or INTERRUPTED: inspect failed steps; no research result claimed.' >> "$GITHUB_STEP_SUMMARY"
+          fi
+      - name: Preserve all results including failed hypotheses and execution errors
+        if: always() && steps.window.outputs.active == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: x6-math-agent-${{ github.run_id }}-${{ github.run_attempt }}
+          path: math-agent-output/
+          if-no-files-found: warn
+          retention-days: 30
+          compression-level: 9
