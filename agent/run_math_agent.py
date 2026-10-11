@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Bounded, adaptive falsification of three explicit X6 hypotheses.
+"""Bounded Lorentzian replication and adaptive X6 falsification controls.
 
 This is a search program, not an autonomous theorem prover or an LLM. It cannot
 promote finite tests to theorems, assert novelty, or infer physical laws.
@@ -354,16 +354,27 @@ def run(config, output, replay_slot=None):
                        "git_dirty": bool(subprocess.check_output(["git", "status", "--porcelain"], cwd=ROOT, text=True))})
         import numpy as np
         report["numpy"] = np.__version__
+        # Lazy import preserves a stdlib-only admission guard. When invoked as
+        # a script, Python places agent/ on sys.path; as a module use its package.
+        if __package__:
+            from .lorentz_spectral import finite_order_track, propagator_track
+        else:
+            from lorentz_spectral import finite_order_track, propagator_track
+        report["priority"] = "LORENTZIAN_SPECTRAL_GEOMETRY"
         for index, (name, fn) in enumerate([
+            ("lorentz_orders", lambda r: finite_order_track(r, budget)),
+            ("lorentz_propagator", lambda r: propagator_track(seed_slot, budget)),
             ("mapping", lambda r: mapping_track(r, config["cases_per_track"], mapping, budget)),
             ("perturbation", lambda r: perturbation_track(r, config["cases_per_track"], budget)),
             ("phase", lambda r: phase_track(r, config["cases_per_track"], functions, budget)),
         ]):
             budget.check()
+            track_started = time.monotonic()
             finding = fn(random.Random(effective_seed + index*7919))
+            finding["elapsed_seconds"] = time.monotonic() - track_started
             write_json(output / f"{name}.json", finding)
             report["tracks"][name] = {k: v for k, v in finding.items() if k not in
-                                      ("records", "witnesses", "minimal_witness", "analytically_explained_control")}
+                                      ("records", "witnesses", "collisions", "minimal_witness", "analytically_explained_control")}
         report["status"] = "PASS"
         return 0
     except Exception as exc:
@@ -378,6 +389,21 @@ def run(config, output, replay_slot=None):
                    "PASS describes execution/checks, not truth of hypotheses or mathematical novelty.", ""]
         for name, track in report["tracks"].items():
             summary.append(f"- {name}: {track['finding']}")
+        if "lorentz_orders" in report["tracks"]:
+            summary += ["", "## Exact Lorentzian reference", "",
+                        "| Elements | Orders | Spectral classes | With endpoint counts |",
+                        "|---|---:|---:|---:|"]
+            for row in report["tracks"]["lorentz_orders"]["rows"]:
+                summary.append(f"| {row['n']} | {row['nonisomorphic_orders']} | {row['spectral_classes']} | {row['classes_with_minimal_maximal_counts']} |")
+        if "lorentz_propagator" in report["tracks"]:
+            summary += ["", "## Numerical diamond comparison", "",
+                        "Mean relative L2 error of the largest eight positive eigenvalues against the analytic spectrum; three samples per cell.", "",
+                        "| Elements | Frozen reference | Independent comparison |",
+                        "|---|---:|---:|"]
+            for row in report["tracks"]["lorentz_propagator"]["comparisons"]:
+                errors = row["mean_relative_l2_error"]
+                summary.append(f"| {row['n']} | {errors['reference']:.2%} | {errors['comparison']:.2%} |")
+            summary += ["", "Small finite samples; no convergence rate or general spectral-density theorem inferred."]
         if "error" in report:
             summary.append("- Error: " + report["error"])
         summary += ["", "No physical validation or denoising superiority is claimed.",
@@ -386,6 +412,7 @@ def run(config, output, replay_slot=None):
         hashes = {p.name: hashlib.sha256(p.read_bytes()).hexdigest() for p in output.iterdir() if p.is_file()}
         hashes["source_files"] = {str(p.relative_to(ROOT)): hashlib.sha256(p.read_bytes()).hexdigest()
                                   for p in [ROOT/"agent/run_math_agent.py", ROOT/"agent/math_core_runner.cjs",
+                                            ROOT/"agent/lorentz_spectral.py",
                                             ROOT/"agent/math-requirements.txt", ROOT/"agent/math-agent-config.json"]}
         write_json(output / "SHA256.json", hashes)
 

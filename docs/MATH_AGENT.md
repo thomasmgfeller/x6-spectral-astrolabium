@@ -1,6 +1,7 @@
 # X6 bounded mathematical falsification agent
 
-Version 1, 11 October 2026. A small adaptive search program with explicit
+Version 2, 11 October 2026. Lorentzian priority with bounded replication and
+adaptive controls. A small search program with explicit
 hypotheses, reproducible counterexamples and a compulsory stop time. This is
 experimental mathematics infrastructure, not an autonomous theorem prover.
 
@@ -34,7 +35,14 @@ experimental mathematics infrastructure, not an autonomous theorem prover.
 
 ## What is implemented
 
-Three predefined hypotheses are searched, with 96 cases per track per run.
+Two Lorentzian tracks run first: exact small-order literature replication and
+two finite-diamond sequences against an analytic spectrum. Definitions,
+research status, metrics and next steps are in `LORENTZ_RESEARCH.md`.
+
+Three supporting hypotheses are searched with **24 cases per track**, reduced
+from version 1's 96 to prioritize Lorentzian work within the unchanged budget.
+Their per-track seeds also change with the new position in the run sequence;
+compare versions using recorded hashes.
 Every six-hour slot has a distinct deterministic seed derived from the fixed
 base seed. Within the phase and perturbation searches, half of the candidates
 are new, and half mutate a strong previously observed witness. This allocation
@@ -130,6 +138,9 @@ same as undoing a time shift, since the phase shift depends on frequency.
 - `NUMERICAL_COUNTEREXAMPLE`: floating-point evidence; inspect the analytic
   control separately. No exact proof status is assigned from floating point.
 - `SURVIVED_FINITE_SEARCH`: no counterexample in this bounded search; no proof.
+- `LITERATURE_REPLICATION_EXACT_SMALL_ORDERS`: exact n=3..5 published counts match.
+- `FINITE_SIZE_NUMERICAL_COMPARISON`: sequences checked against the known 1+1
+  diamond spectrum; no asymptotic or physical claim.
 - `FAIL`: execution or cross-check failure; inspect the report.
 - `INCOMPLETE`: budget exhausted; completed tracks remain available, not a PASS.
 - `STOPPED`: no research execution was admitted.
@@ -153,7 +164,7 @@ Requires Node 24 and Python 3.12 (Linux for the Unix deadline alarm).
 
 ```bash
 python -m pip install -r agent/math-requirements.txt
-python -m unittest tests/python/test_math_agent.py -v
+python -m unittest tests/python/test_math_agent.py tests/python/test_lorentz_spectral.py -v
 python agent/run_math_agent.py --guard
 python agent/run_math_agent.py --output /tmp/x6-math-new
 python agent/run_math_agent.py --replay-slot 0 --output /tmp/x6-math-replay

@@ -56,6 +56,8 @@ def main():
         "agent/math-agent-config.json", "agent/math-requirements.txt",
         "tests/python/test_math_agent.py", ".github/workflows/x6-math-agent.yml",
         "docs/MATH_AGENT.md", "docs/MATH_FORECAST_2026_10.md",
+        "agent/lorentz_spectral.py", "tests/python/test_lorentz_spectral.py",
+        "docs/LORENTZ_RESEARCH.md",
     }
     unlisted = sorted(tracked - expected_tracked)
     result = {

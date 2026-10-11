@@ -1,5 +1,10 @@
 # Conditional research forecast, 11 October 2026
 
+**Priority revision, same day:** Lorentzian spectral geometry now runs first.
+See `LORENTZ_RESEARCH.md` for the literature-informed program and implemented
+comparisons. The ranges below retain their finite-signal/graph scope; they
+are not estimates for Lorentzian geometry or quantum-gravity discoveries.
+
 These are subjective judgment ranges, not calibrated statistical probabilities,
 not an external assessment, and not a promise of discovery. The resolution
 horizon is **11 October 2027**. Conditions: sustained work on the finite-signal
@@ -58,8 +63,8 @@ dimension or physical interaction.
 
 ## Pilot scope
 
-The bounded agent implements three falsification/calibration tracks described
-in `MATH_AGENT.md`. It does not implement the complete proposed denoising
+The bounded agent now implements two Lorentzian calibration tracks followed by
+three falsification controls in `MATH_AGENT.md`. It does not implement the complete proposed denoising
 benchmark, generate arbitrary conjectures, train a language model, search for
 unexplained physical anomalies or automatically prove new theorems. The fixed
 pilot ends at the existing cutoff, not at the forecast horizon.
