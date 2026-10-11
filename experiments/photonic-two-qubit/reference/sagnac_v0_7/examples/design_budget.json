@@ -1,0 +1,36 @@
+{
+  "status": "ASSUMED_DESIGN_BUDGET_NOT_HARDWARE_QUALIFIED",
+  "assumed_core_clock_hz": 50000000,
+  "max_logic_cycles_per_item": 5,
+  "conditional_service_events_per_second": 10000000.0,
+  "assumed_counts_per_second_per_channel": [
+    100000,
+    100000,
+    100000,
+    100000
+  ],
+  "watermarks_per_second": 1000,
+  "conditional_nominal_load_fraction": 0.0401,
+  "fifo_arrival_envelope": {
+    "burst_events": 512,
+    "sustained_event_rate": 4000000,
+    "max_service_pause_seconds": 0.0001,
+    "bound_b_plus_rT": 912,
+    "selected_depth_for_this_example": 1024
+  },
+  "uart": {
+    "frame_bytes": 244,
+    "clocks_per_bit": 50,
+    "bits_per_byte_8N1": 10,
+    "baud_at_assumed_clock": 1000000.0,
+    "upper_scheduling_clocks_per_byte": 501,
+    "approx_frame_time_seconds_with_interbyte_clock": 0.00244488
+  },
+  "unverified": [
+    "Quartus timing of division, multiplication, CRC and output mux",
+    "TDC, channel merge and CDC latency and throughput",
+    "detector pulse acquisition",
+    "actual burst envelope and service interruption bound",
+    "physical UART bit error rate"
+  ]
+}

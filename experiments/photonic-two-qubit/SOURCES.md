@@ -1,0 +1,19 @@
+# Quellen und Geltungsbereich
+
+Für die Veröffentlichung am 12.10.2026 geprüft. Fremde Fachartikel und Datenblätter werden verlinkt, nicht als eigene Unterlagen oder eigene Ergebnisse ausgegeben. Literaturbefunde gelten zunächst für die dort beschriebenen Systeme.
+
+| Primärquelle | Was sie begründet / Grenze |
+|---|---|
+| T. Kim, M. Fiorentino, F. N. C. Wong (2006), *Phase-stable source of polarization-entangled photons using a polarization Sagnac interferometer*, Phys. Rev. A 73, 012316. [DOI](https://doi.org/10.1103/PhysRevA.73.012316), [APS-Volltext](https://harvest.aps.org/v2/journals/articles/10.1103/PhysRevA.73.012316/fulltext) | Physikalische Grundlage einer Typ-II-Sagnac-Quelle. Die dort gemessenen Raten und Visibilitäten sind keine Leistungsdaten unseres Entwurfs. |
+| D. F. V. James, P. G. Kwiat, W. J. Munro, A. G. White (2001), *Measurement of qubits*, Phys. Rev. A 64, 052312. [DOI](https://doi.org/10.1103/PhysRevA.64.052312), [Preprint](https://arxiv.org/abs/quant-ph/0103121) | Zustandsrekonstruktion und Unsicherheiten für photonische Qubits; Hintergrund der optionalen Tomografie, keine Implementierungsbestätigung. |
+| L. K. Shalm et al. (2015), *Strong Loophole-Free Test of Local Realism*. [NIST](https://www.nist.gov/publications/strong-loophole-free-test-local-realism), [DOI](https://doi.org/10.1103/PhysRevLett.115.250402) | Beispiel dafür, welche zusätzlichen experimentellen Bedingungen eine starke Bell-Aussage verlangt. Diese Bedingungen sind hier nicht erfüllt. |
+| *Analysis of Coincidence-Time Loopholes in Experimental Bell Tests*. [NIST](https://www.nist.gov/publications/analysis-coincidence-time-loopholes-experimental-bell-tests), [Preprint](https://arxiv.org/abs/1503.07573) | Motiviert die explizite Ereignis-/Zeitfensterdefinition; feste Fenster allein schließen nicht alle Loopholes. |
+| Excelitas, SPCM-AQRH-Datenblatt. [Hersteller-PDF](https://www.excelitas.com/de/sites/default/files/assets/product/document/27464.pdf) | Elektrische und optische Produktspezifikationen; exakte bestellte Variante und Revision vor Anschluss prüfen. |
+| Swabian Instruments, Time Tagger Hardware. [Herstellerdokumentation](https://www.swabianinstruments.com/static/documentation/TimeTagger/sections/hardware.html) | Referenz für mögliche externe Zeitmesshardware, keine Wahl oder Kalibrierung eines konkreten Geräts. |
+| Raspberry Pi, UART-Konfiguration. [Offizielle Dokumentation](https://www.raspberrypi.com/documentation/computers/configuration.html#configuring-uarts) | Host-UART-Konfiguration; kein Freibrief für ungeprüfte Spannungspegel oder Pinbelegungen. |
+| M. Stipčević, aktive Quenchschaltung (2009). [Preprint](https://arxiv.org/html/0805.2727v1), [DOI](https://doi.org/10.1364/AO.48.001705) | Hintergrund der separaten SPAD/AQC-Entwicklung; nicht Validierung unserer v0.2-Schaltung. |
+| Analog Devices, ADCMP606/607. [Datenblatt](https://www.analog.com/media/en/technical-documentation/data-sheets/adcmp606_607.pdf) | Eigenschaften des Komparators; keine garantierte Gesamtzeitauflösung einer Messkette. |
+| Norland, NOA61. [Hersteller-TDS](https://norlandproducts.com/wp-content/uploads/2025/02/Norland-Products-NOA-61-TDS.pdf) | Material-/Belichtungsangaben; reale Klebfuge, Zugänglichkeit und vollständige Härtung bleiben nachzuweisen. |
+| OSHA, Laser Hazards. [Behördliche Übersicht](https://www.osha.gov/laser-hazards/hazards) | Allgemeine Laborgefährdungen; ersetzt keine lokale Beurteilung des konkreten Aufbaus. |
+
+Weitere komponentenbezogene Quellen stehen in den unveränderten Paketdokumenten. Historische Preisbeobachtungen im Hardwareplan stammen von [DigiKey](https://www.digikey.com/en/products/detail/excelitas-technologies/SPCM-AQRH-14/5885848); der im Jig-Paket genannte [FabLab-Bern-Tarif](https://www.fablab-bern.ch/preise/) konnte bei dieser Veröffentlichung nicht erneut abgerufen werden. Beide sind keine neuen Preiszusagen.
