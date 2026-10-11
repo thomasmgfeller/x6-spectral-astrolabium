@@ -25,6 +25,10 @@ specific commit; software success does not establish physical validity.
 
 Read [Sagnac integration and test scope](docs/SAGNAC_INTEGRATION.md).
 
+## Photonic two-qubit experiment — design preview
+
+[Complete experimental design and supporting materials](experiments/photonic-two-qubit/README.md): Sagnac source concept, v0.7 RTL/host reference, fabrication CAD and corrected Jig manual, detector-development archives, source literature and staged laboratory protocol. The **Photonic Reference** workflow checks software and mechanical models. No physical measurements, demonstrated entanglement, quantum processor or hardware qualification are claimed.
+
 ## Reproduce existing scientific modules
 
 ```bash

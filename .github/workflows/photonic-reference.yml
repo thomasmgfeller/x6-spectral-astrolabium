@@ -1,0 +1,48 @@
+name: Photonic Reference
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - 'experiments/photonic-two-qubit/**'
+      - 'tests/photonics/**'
+      - 'device/vendor/sagnac_v0_7/**'
+      - 'SAGNAC_SOURCE_MANIFEST.json'
+      - '.github/workflows/photonic-reference.yml'
+permissions:
+  contents: read
+jobs:
+  software-and-models:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - uses: ghdl/setup-ghdl@29a77b3cd7a547947bc81539d4f7eb60913affdb
+        with:
+          version: '5.0.1'
+          backend: mcode
+          install-directory: ${{ runner.temp }}/ghdl
+      - name: Install reference dependencies
+        run: python -m pip install -r tests/photonics/requirements.txt
+      - name: Locate packaged VHDL libraries
+        run: |
+          if [ -d "$GHDL_PREFIX/vhdl" ]; then
+            echo "GHDL_PREFIX=$GHDL_PREFIX/vhdl" >> "$GITHUB_ENV"
+          fi
+      - name: Verify source inventory
+        run: python tests/python/verify_manifest.py
+      - name: Reproduce digital and mechanical reference checks
+        run: |
+          mkdir -p photonic-evidence
+          git rev-parse HEAD > photonic-evidence/source-commit.txt
+          python tests/photonics/validate_release.py --ghdl --cad --output photonic-evidence
+      - name: Preserve fresh software and model evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: photonic-reference-evidence
+          path: photonic-evidence/
+          retention-days: 7
+          if-no-files-found: warn

@@ -1,0 +1,74 @@
+v0.8: Tomografie und Driftcharakterisierung
+Optionaler Weiterentwicklungsvektor für den photonischen Quantenkern
+
+Entscheidung vom 12. Oktober 2026 (Europe/Zurich)
+
+Auf Wunsch von Thomas Gfeller als optionale Entwicklungsrichtung aufgenommen.
+Status: Planungsoption; keine Implementierung oder experimentelle Freigabe.
+Die bestehende v0.7 bleibt die digitale Referenz. Der bereits vorgesehene
+physische Aufbau und die Qualifikation der Messkette behalten Vorrang.
+
+Ziel
+
+Den kontrollierten photonischen Zwei-Qubit-Aufbau durch kalibrierte
+Zustandsrekonstruktion und Driftcharakterisierung unterstützen. Geometrische
+Kennzahlen dienen der Diagnose und Optimierung, ohne daraus topologischen
+Schutz oder kryptografische Sicherheit abzuleiten.
+
+Optionaler Umfang
+
+1. Neun lokale Polarisations-Messkonfigurationen XX, XY, XZ, YX, YY, YZ,
+   ZX, ZY und ZZ mit kalibrierten Analysatoren und Randverteilungen erfassen.
+   Diese Konfigurationen sind von den Ereigniskategorien zu unterscheiden.
+2. Physikalisch zulässige Zwei-Qubit-Dichtematrizen mit Unsicherheiten
+   rekonstruieren. Detektionsannahmen, Verluste, Mehrpaarereignisse und
+   zeitliche Stationarität ausdrücklich berücksichtigen.
+3. Die Korrelationsmatrix T_ij = Tr(rho (sigma_i tensor sigma_j)) und ihre
+   Singularwerte bestimmen. Änderungen von Achsenkorrelationen und
+   rotationsinvarianten Kennzahlen gemeinsam untersuchen.
+4. Kontrollierte lokale Rotationen, zeitlich wechselnde Rotationen,
+   Mischung, polarisationsabhängige Verluste und polarisationsunabhängige
+   Verluste als getrennte Prüfmodelle verwenden. Ergebnisse dürfen nur
+   innerhalb des geprüften Messmodells interpretiert werden.
+5. Rohdaten, Kalibrierkennungen, Präparations- und Messkennungen sowie
+   Zeit- und Zählunsicherheiten nachvollziehbar dokumentieren.
+6. Die bestehende Zwei-Bit-Einstellungskennung bei Umsetzung erweitern;
+   RTL, Transportformat und Hostauswertung gemeinsam versionieren.
+   Alle 16 Portmuster, Wiederholungen und Fehlerdiagnosen weiter erhalten.
+
+Voraussetzungen und Abnahmekriterien
+
+- Physische Zeitstempelerfassung und Detektorkette sind charakterisiert;
+  Jitter, Totzeit, Ratenverhalten und Erfassungsverluste sind dokumentiert.
+- Präparation und Analysatoren besitzen ein nachvollziehbares Messmodell.
+- Kalibrier- und Abnahmedaten sind getrennt; statistische Kriterien werden
+  vor der Abnahme festgelegt und bei Drift auf ihre Voraussetzungen geprüft.
+- Bekannte Testzustände und kontrollierte Störungen werden reproduziert.
+  Numerische Tests und physische Messungen werden getrennt ausgewiesen.
+- Verschränkungszeugen werden mit Unsicherheit und Detektionsannahmen
+  berichtet. Reine Diagnosekennzahlen erhalten keinen Sicherheitsstatus.
+- TDC-Fehler bleiben sichtbar; betroffene Daten oder Messblöcke werden nach
+  vorab festgelegten Regeln behandelt, ohne stille ergebnisabhängige Auswahl.
+
+Fachliche Grenzen
+
+Lokale unitäre Polarisationsrotationen erhalten die Singularwerte von T.
+Bei zeitlicher Mittelung wechselnder Rotationen muss diese Invarianz für
+den rekonstruierten gemittelten Zustand nicht bestehen. Eine Veränderung
+der Kennzahlen identifiziert weder eindeutig eine Störursache noch einen
+Angriff. Bei Koinzidenz-Postselektion gelten die jeweiligen Detektionsannahmen.
+
+Das zuvor vorgeschlagene Skript zur Fubini-Study-Schleifensumme wird nicht
+übernommen: Es verwirft gemeinsame Korrelationen und akzeptiert einen
+unverschränkten Produktzustand als vermeintlich geschützt.
+
+Nicht Bestandteil dieser Planungsentscheidung sind ein optischer
+Phasenakkumulator aus Klickabständen, White-Rabbit-Integration, ein Wechsel
+auf 1550 nm, ein QKD-Sicherheitsversprechen oder eine Beschaffung.
+
+Aktivierung
+
+Die Option wird bei einer späteren Entscheidung über die nächste Ausbaustufe
+erneut anhand des physischen Messstands, verfügbarer Komponenten und des
+Frugalitätsbudgets bewertet. Diese Aufnahme startet keine Umsetzung und
+keinen automatischen Folgeauftrag.
