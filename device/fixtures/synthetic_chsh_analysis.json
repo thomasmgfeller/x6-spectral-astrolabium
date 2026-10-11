@@ -1,0 +1,206 @@
+{
+  "format": "sagnac.analysis.v0.6",
+  "integrity": "VALIDATED_COUNTER_IDENTITIES",
+  "physical_quantum_claim": "NOT_ASSESSED",
+  "origin": "synthetic",
+  "protocol": "CHSH_PSI_MINUS_V1",
+  "analyzer_angles_degrees": [
+    [
+      0.0,
+      22.5
+    ],
+    [
+      0.0,
+      -22.5
+    ],
+    [
+      45.0,
+      22.5
+    ],
+    [
+      45.0,
+      -22.5
+    ]
+  ],
+  "sign_convention": "S=E00+E01+E10-E11; T=-S (predeclared singlet)",
+  "settings": [
+    {
+      "setting_index": 0,
+      "calibration_id": 7,
+      "window_ps": 1000,
+      "origin": "synthetic",
+      "trials": 4000,
+      "nine_categories": {
+        "00": 277,
+        "0+": 393,
+        "0-": 381,
+        "+0": 371,
+        "++": 183,
+        "+-": 923,
+        "-0": 354,
+        "-+": 945,
+        "--": 173
+      },
+      "multiport_trials": 0,
+      "repeat_trials": 0,
+      "extra_same_channel_clicks": 0,
+      "repeat_fraction_observed": 0.0,
+      "conditional_coincidences": {
+        "n": 2224,
+        "positive": 356,
+        "negative": 1868,
+        "E": -0.6798561151079137,
+        "sigma_normal_approx": 0.015550388952062278
+      },
+      "all_trials_fixed_assignment": {
+        "n": 4000,
+        "positive": 1397,
+        "negative": 2603,
+        "E": -0.3015,
+        "sigma_normal_approx": 0.015075623950603172
+      }
+    },
+    {
+      "setting_index": 1,
+      "calibration_id": 7,
+      "window_ps": 1000,
+      "origin": "synthetic",
+      "trials": 4000,
+      "nine_categories": {
+        "00": 255,
+        "0+": 350,
+        "0-": 357,
+        "+0": 371,
+        "++": 157,
+        "+-": 988,
+        "-0": 366,
+        "-+": 983,
+        "--": 173
+      },
+      "multiport_trials": 0,
+      "repeat_trials": 0,
+      "extra_same_channel_clicks": 0,
+      "repeat_fraction_observed": 0.0,
+      "conditional_coincidences": {
+        "n": 2301,
+        "positive": 330,
+        "negative": 1971,
+        "E": -0.7131681877444589,
+        "sigma_normal_approx": 0.014613537210103649
+      },
+      "all_trials_fixed_assignment": {
+        "n": 4000,
+        "positive": 1306,
+        "negative": 2694,
+        "E": -0.347,
+        "sigma_normal_approx": 0.014828949726801289
+      }
+    },
+    {
+      "setting_index": 2,
+      "calibration_id": 7,
+      "window_ps": 1000,
+      "origin": "synthetic",
+      "trials": 4000,
+      "nine_categories": {
+        "00": 248,
+        "0+": 398,
+        "0-": 396,
+        "+0": 403,
+        "++": 161,
+        "+-": 927,
+        "-0": 369,
+        "-+": 946,
+        "--": 152
+      },
+      "multiport_trials": 0,
+      "repeat_trials": 0,
+      "extra_same_channel_clicks": 0,
+      "repeat_fraction_observed": 0.0,
+      "conditional_coincidences": {
+        "n": 2186,
+        "positive": 313,
+        "negative": 1873,
+        "E": -0.7136322049405307,
+        "sigma_normal_approx": 0.014982897784351953
+      },
+      "all_trials_fixed_assignment": {
+        "n": 4000,
+        "positive": 1362,
+        "negative": 2638,
+        "E": -0.319,
+        "sigma_normal_approx": 0.01498531781444758
+      }
+    },
+    {
+      "setting_index": 3,
+      "calibration_id": 7,
+      "window_ps": 1000,
+      "origin": "synthetic",
+      "trials": 4000,
+      "nine_categories": {
+        "00": 247,
+        "0+": 355,
+        "0-": 388,
+        "+0": 345,
+        "++": 988,
+        "+-": 163,
+        "-0": 404,
+        "-+": 155,
+        "--": 955
+      },
+      "multiport_trials": 0,
+      "repeat_trials": 0,
+      "extra_same_channel_clicks": 0,
+      "repeat_fraction_observed": 0.0,
+      "conditional_coincidences": {
+        "n": 2261,
+        "positive": 1943,
+        "negative": 318,
+        "E": 0.7187085360459974,
+        "sigma_normal_approx": 0.014622751931305616
+      },
+      "all_trials_fixed_assignment": {
+        "n": 4000,
+        "positive": 2890,
+        "negative": 1110,
+        "E": 0.445,
+        "sigma_normal_approx": 0.01415958156161403
+      }
+    }
+  ],
+  "conditional_coincidences": {
+    "status": "MODEL_CONDITIONAL_DIAGNOSTIC",
+    "S": -2.8253650438389006,
+    "singlet_T": 2.8253650438389006,
+    "sigma_normal_approx": 0.02989451733031235,
+    "singlet_T_lower_hoeffding": 2.5025865648002004,
+    "hoeffding_alpha": 0.0027,
+    "model_conditional_gate": true,
+    "normal_3sigma_gate": true
+  },
+  "all_trials_fixed_assignment": {
+    "status": "MODEL_CONDITIONAL_DIAGNOSTIC",
+    "S": -1.4125,
+    "singlet_T": 1.4125,
+    "sigma_normal_approx": 0.02953346724480551,
+    "singlet_T_lower_hoeffding": 1.1708258744988742,
+    "hoeffding_alpha": 0.0027,
+    "model_conditional_gate": false,
+    "normal_3sigma_gate": false
+  },
+  "assumptions_not_tested": [
+    "correct detector and analyzer calibration",
+    "independent identically distributed trials within each setting for stated bounds",
+    "independence of settings from source; stationarity across separate blocks",
+    "representative coincident subset (fair sampling) for conditional result",
+    "physical locality and freedom-of-choice conditions are not established"
+  ],
+  "processing": {
+    "background_subtraction": false,
+    "efficiency_compensation": false,
+    "automatic_five_percent_rejection": false,
+    "data_selected_window": false
+  },
+  "input_sha256": "7ab69353ec15cce7b1a82ec679c4ea8c20543c6ff78d4859f10ce61cd70ebcc3"
+}

@@ -1,0 +1,114 @@
+{
+  "schema": "x6.sagnac.integration-validation/1",
+  "base_repository": "thomasmgfeller/x6-spectral-astrolabium",
+  "base_commit": "e1c701c85a326917c6224d5977311fdba25a3a98",
+  "integration_version": "0.1",
+  "source": "PRIVATE_UNPUBLISHED_REVIEW_BUILD",
+  "recorded_at_utc": "2026-10-11T23:01:36.928Z",
+  "conclusion": "SOFTWARE_CHECKS_PASS_WITH_UNEXECUTED_BROWSER_AND_PHYSICAL_VALIDATION",
+  "physical_quantum_claim": "NOT_ASSESSED",
+  "control": "UNAVAILABLE",
+  "runs": [
+    {
+      "name": "sagnac_core",
+      "command": "node tests/sagnac/test_core.cjs",
+      "status": "PASS",
+      "exit_code": 0,
+      "output": "{\n  \"status\": \"PASS\",\n  \"tests\": 9,\n  \"assertions_include_1952_bit_flips\": true,\n  \"results\": [\n    {\n      \"name\": \"Python reference: all raw counters, sequences and both Hoeffding statistics\",\n      \"passed\": true\n    },\n    {\n      \"name\": \"Every one-bit corruption of a 244-byte frame is rejected (1952 cases)\",\n      \"passed\": true\n    },\n    {\n      \"name\": \"Missing, duplicated, reordered and wrong initial sequences are rejected\",\n      \"passed\": true\n    },\n    {\n      \"name\": \"Empty, truncated, oversized data and missing provenance are rejected\",\n      \"passed\": true\n    },\n    {\n      \"name\": \"Recomputed CRC cannot hide integrity flags or inconsistent counters\",\n      \"passed\": true\n    },\n    {\n      \"name\": \"Version, reserved field and setting are checked independently of CRC\",\n      \"passed\": true\n    },\n    {\n      \"name\": \"Calibration or bin-width mismatches cannot produce combined CHSH\",\n      \"passed\": true\n    },\n    {\n      \"name\": \"uint64 counts above 2^53 remain exact; sequence overflow is rejected\",\n      \"passed\": true\n    },\n    {\n      \"name\": \"Missing settings stay diagnostic; physical and control claims never become PASS\",\n      \"passed\": true\n    }\n  ]\n}\n"
+    },
+    {
+      "name": "sagnac_bridge",
+      "command": "python3 -m unittest discover -s tests/sagnac -p 'test_*.py' -v",
+      "status": "PASS",
+      "exit_code": 0,
+      "output": "test_cancel_preserves_partial_raw (test_bridge.BridgeTests.test_cancel_preserves_partial_raw) ... ok\ntest_chunked_serial_receive (test_bridge.BridgeTests.test_chunked_serial_receive) ... ok\ntest_existing_raw_file_cannot_be_overwritten (test_bridge.BridgeTests.test_existing_raw_file_cannot_be_overwritten) ... ok\ntest_http_read_only_loopback_and_no_filesystem_exposure (test_bridge.BridgeTests.test_http_read_only_loopback_and_no_filesystem_exposure) ... ok\ntest_invalid_capture_clears_previous_success_and_keeps_bad_bytes (test_bridge.BridgeTests.test_invalid_capture_clears_previous_success_and_keeps_bad_bytes) ... ok\ntest_replay_complete_with_exact_raw_and_no_control (test_bridge.BridgeTests.test_replay_complete_with_exact_raw_and_no_control) ... ok\ntest_timeout_preserves_partial_raw (test_bridge.BridgeTests.test_timeout_preserves_partial_raw) ... ok\n\n----------------------------------------------------------------------\nRan 7 tests in 1.122s\n\nOK\n"
+    },
+    {
+      "name": "existing_ui_preflight",
+      "command": "python3 tests/python/static_ui_preflight.py",
+      "status": "PASS",
+      "exit_code": 0,
+      "output": "{\n  \"schema\": \"x6-m1-9-static-preflight-1\",\n  \"scope\": \"static HTML structure only; not a browser execution\",\n  \"passed\": 15,\n  \"total\": 15,\n  \"checks\": {\n    \"id:signalFrame\": true,\n    \"id:spectrumFrame\": true,\n    \"id:ack34\": true,\n    \"id:samples34\": true,\n    \"id:sigma34\": true,\n    \"id:digits34\": true,\n    \"id:modelRun34\": true,\n    \"id:modelOut34\": true,\n    \"id:tab-audit\": true,\n    \"id:run39\": true,\n    \"id:out39\": true,\n    \"bridge-schema-present\": true,\n    \"certify-message-present\": true,\n    \"qualification-report-schema-present\": true,\n    \"two-iframe-tags\": true\n  },\n  \"status\": \"PASS\"\n}\n"
+    },
+    {
+      "name": "existing_exact_graph_audit",
+      "command": "python3 tests/python/independent_audit.py",
+      "status": "PASS",
+      "exit_code": 0,
+      "output": "{\n  \"schema\": \"x6-community-audit-1\",\n  \"engine\": \"Python stdlib fractions\",\n  \"results\": [\n    {\n      \"name\": \"path4\",\n      \"valid_bound\": \"1/2\",\n      \"valid_accepted\": true,\n      \"expected_valid\": true,\n      \"invalid_bound\": \"3/5\",\n      \"invalid_rejected\": true,\n      \"upper\": \"1\",\n      \"pass_\": true\n    },\n    {\n      \"name\": \"triangle\",\n      \"valid_bound\": \"2\",\n      \"valid_accepted\": true,\n      \"expected_valid\": true,\n      \"invalid_bound\": \"3\",\n      \"invalid_rejected\": true,\n      \"upper\": \"3\",\n      \"pass_\": true\n    },\n    {\n      \"name\": \"weighted2\",\n      \"valid_bound\": \"1/8\",\n      \"valid_accepted\": true,\n      \"expected_valid\": true,\n      \"invalid_bound\": \"1/4\",\n      \"invalid_rejected\": true,\n      \"upper\": \"1/4\",\n      \"pass_\": true\n    },\n    {\n      \"name\": \"rounded_signal_path\",\n      \"valid_bound\": \"367879/6000000\",\n      \"valid_accepted\": true,\n      \"expected_valid\": true,\n      \"invalid_bound\": \"1/2\",\n      \"invalid_rejected\": true,\n      \"upper\": \"367879/1000000\",\n      \"pass_\": true\n    },\n    {\n      \"name\": \"disconnected\",\n      \"valid_bound\": \"1/10\",\n      \"valid_accepted\": false,\n      \"expected_valid\": false,\n      \"invalid_bound\": \"1/2\",\n      \"invalid_rejected\": true,\n      \"upper\": \"1\",\n      \"pass_\": true\n    }\n  ],\n  \"passed\": 5,\n  \"total\": 5\n}\n"
+    },
+    {
+      "name": "sagnac_ui_syntax",
+      "command": "node --check app/sagnac-ui.js",
+      "status": "PASS",
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "name": "browser_test_syntax",
+      "command": "node --check tests/sagnac/browser_test.cjs",
+      "status": "PASS",
+      "exit_code": 0,
+      "output": ""
+    }
+  ],
+  "not_executed": [
+    {
+      "name": "browser_and_mobile_rendering",
+      "status": "NOT_EXECUTED",
+      "reason": "No browser installed. Playwright Chromium download failed with an invalid/truncated archive. Authored browser_test.cjs was syntax-checked only."
+    },
+    {
+      "name": "physical_uart_board_detector_optics",
+      "status": "NOT_EXECUTED",
+      "reason": "No physical hardware available. Serial tests use Linux pseudo-terminals and synthetic data."
+    },
+    {
+      "name": "closed_loop_optical_control",
+      "status": "NOT_IMPLEMENTED",
+      "reason": "No v0.7 command path or qualified actuators/calibration."
+    }
+  ],
+  "limitations": [
+    "Software tests do not establish quantum advantage, a Bell-test result or calibrated physical operation.",
+    "Static preflight does not replace browser execution.",
+    "Existing scientific and scheduled-agent sources are not intentionally changed."
+  ],
+  "static_source_preservation": {
+    "status": "PASS",
+    "existing_srcdoc_modules": 2,
+    "original_and_current_sha256": [
+      "4e7777d807c8b49e90ccb458e25704c29e234520313933dc85fabb55206f28e0",
+      "b4908f07fdfe1178e0356b39bbfaabdd399e58ff6d658e06d515a253f49bfcfe"
+    ],
+    "new_ui_id_bindings": 11,
+    "browser_execution": false
+  },
+  "tested_source_sha256": {
+    "README.md": "f2b6b62e2810181924bf715e3d2d52e4d98fe32eed6a2262f41d36b27f9545b3",
+    "app/index.html": "f3795c05292b0fc6d144b7afcf7ef4a957d88ac38ab4fda0c1e985f4455eadb8",
+    "app/sagnac-core.js": "842576f5e2661e42d19bb064cc7e1e27ce8219659d7c73c619ce6d08c1288d72",
+    "app/sagnac-ui.js": "1f0b934dd47b2e9f964dda40118a87cf32e1b914310d20a95afc2541784e9f4d",
+    "device/fixtures/synthetic_chsh_analysis.json": "9cae9f186f91b16978db88571545fb7438c70062e2bdce89409d6ff6c90d8d5b",
+    "device/fixtures/synthetic_chsh_capture.bin": "cc74c62abdbe1fd38c0960ca98462308a81f94d4d6733c2ba64219c3a5ec900b",
+    "device/sagnac_bridge.py": "12ed953eeb421bfb265c7dcdf529a83c8df02051fd9d2b8525af2c9d9fe425cf",
+    "device/vendor/sagnac_v0_7/LICENSE": "c84da18ecdedc903f95ab290bdeb581450124ddc62458bad477972faa6ef96f6",
+    "device/vendor/sagnac_v0_7/analyze.py": "30cb1bc6ef71f27c8b49c8eed0fa78784651d9689285a75700d1cbf39cf0c95f",
+    "device/vendor/sagnac_v0_7/capture_serial.py": "18ee2ed12916e78956dbb9c0edcdf323bb0446d4fb742ec6b9185c46e806493c",
+    "device/vendor/sagnac_v0_7/frame_codec.py": "4c618af421745186cbcef1f3bba142b7d5f7b535a16dd73d2cea5bac57c28e4a",
+    "docs/SAGNAC_INTEGRATION.md": "9678b3bdd592a71b52c3e0b74b5357c917d3944731a29c99ee1caad8c8386d3e",
+    "tests/python/verify_manifest.py": "aba430b7d6b651450c48171dd5850bd3f376ec97def1f2080d2bd55978090fa5",
+    "tests/sagnac/browser_test.cjs": "3c728c4e1b8b5e925e063cf14709c385328f244c212b6c8e56dce6e82e7bb2cd",
+    "tests/sagnac/test_bridge.py": "f3d81dfdd626b44bb224f1b93993ebc1f6255b12ac2165ee61420eab660cade9",
+    "tests/sagnac/test_core.cjs": "7a665f2b3378d9a86f74af4a580a6afb4e3ec8517d4d2431a9ed34a9adac82d1"
+  },
+  "unchanged_mit_vendor_files": {
+    "status": "PASS",
+    "sha256": {
+      "device/vendor/sagnac_v0_7/analyze.py": "30cb1bc6ef71f27c8b49c8eed0fa78784651d9689285a75700d1cbf39cf0c95f",
+      "device/vendor/sagnac_v0_7/frame_codec.py": "4c618af421745186cbcef1f3bba142b7d5f7b535a16dd73d2cea5bac57c28e4a",
+      "device/vendor/sagnac_v0_7/capture_serial.py": "18ee2ed12916e78956dbb9c0edcdf323bb0446d4fb742ec6b9185c46e806493c",
+      "device/vendor/sagnac_v0_7/LICENSE": "c84da18ecdedc903f95ab290bdeb581450124ddc62458bad477972faa6ef96f6"
+    }
+  }
+}
