@@ -50,6 +50,15 @@ def main():
         "agent/run_sources.py", "agent/source-requirements.txt", "docs/SOURCE_AGENTS.md",
         "tests/python/test_source_agents.py", ".github/workflows/x6-source-agents.yml",
     }
+    # Bounded mathematical-search sources carry their own per-run SHA-256 record.
+    expected_tracked |= {
+        "agent/run_math_agent.py", "agent/math_core_runner.cjs",
+        "agent/math-agent-config.json", "agent/math-requirements.txt",
+        "tests/python/test_math_agent.py", ".github/workflows/x6-math-agent.yml",
+        "docs/MATH_AGENT.md", "docs/MATH_FORECAST_2026_10.md",
+        "agent/lorentz_spectral.py", "tests/python/test_lorentz_spectral.py",
+        "docs/LORENTZ_RESEARCH.md",
+    }
     unlisted = sorted(tracked - expected_tracked)
     result = {
         "status": "FAIL" if failed or unlisted else "PASS_WITH_EXCLUSIONS",

@@ -43,6 +43,16 @@ Three additional [source agents](docs/SOURCE_AGENTS.md) check the complete Netwo
 
 ## Open research agenda
 
+**Current priority: Lorentzian spectral geometry.** The
+[bounded research agent](docs/MATH_AGENT.md) reproduces exact small-causal-order
+classification and compares independent 1+1-dimensional diamond samples with
+the known causal-propagator spectrum. Signal/graph controls continue alongside.
+See [definitions, literature and next research gates](docs/LORENTZ_RESEARCH.md).
+Runs are attempted every six hours during the same pilot window, with a
+90-second research budget and mandatory cutoff at 14 October 2026,
+00:26:52 Europe/Zurich. These are replication/calibration results; no new
+theorem, general continuum limit or physical validation is claimed.
+
 See the [X6 Working Paper v0.3](docs/X6_OPEN_RESEARCH_AGENDA_DRAFT.md) for falsifiable research questions and proposed industrial pilots in signal denoising, quantum readout analysis, and cryptographic graph verification. These are proposals, not validated product performance or physical claims.
 
 ## Help wanted
