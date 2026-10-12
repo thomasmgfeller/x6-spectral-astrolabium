@@ -56,5 +56,7 @@ jobs:
         with:
           name: x6-signal-lab-${{ github.run_id }}-${{ github.run_attempt }}
           path: signal-lab-evidence/
+          # Preserve the public workflow copied into source_snapshot/.github/.
+          include-hidden-files: true
           if-no-files-found: warn
           retention-days: 30
