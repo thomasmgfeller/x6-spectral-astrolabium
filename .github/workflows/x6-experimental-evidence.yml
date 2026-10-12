@@ -30,7 +30,7 @@ jobs:
         shell: bash
         run: |
           set -o pipefail
-          python -m unittest experimental.evidence_calibration.test_core experimental.evidence_calibration.test_extensions experimental.evidence_calibration.test_benchmarks -v 2>&1 | tee evidence-tests.log
+          python -m unittest experimental.evidence_calibration.test_core experimental.evidence_calibration.test_extensions experimental.evidence_calibration.test_benchmarks experimental.evidence_calibration.test_recorded -v 2>&1 | tee evidence-tests.log
       - name: Confirm pinned X6 app SHA-256 without changing it
         run: |
           python - <<'PY'
