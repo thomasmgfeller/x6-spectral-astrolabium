@@ -1,0 +1,43 @@
+name: Photonic Link Research
+on:
+  workflow_dispatch:
+  push:
+    branches: ['research/photonic-link']
+    paths:
+      - 'research/photonic-link/**'
+      - 'experiments/photonic-two-qubit/reference/sagnac_v0_7/**'
+      - '.github/workflows/photonic-link-research.yml'
+  pull_request:
+    paths:
+      - 'research/photonic-link/**'
+      - 'experiments/photonic-two-qubit/reference/sagnac_v0_7/**'
+      - '.github/workflows/photonic-link-research.yml'
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: '3.12'
+      - uses: ghdl/setup-ghdl@29a77b3cd7a547947bc81539d4f7eb60913affdb
+        with:
+          version: '5.0.1'
+          backend: mcode
+          install-directory: ${{ runner.temp }}/ghdl
+      - name: Locate packaged VHDL libraries
+        run: |
+          if [ -d "$GHDL_PREFIX/vhdl" ]; then
+            echo "GHDL_PREFIX=$GHDL_PREFIX/vhdl" >> "$GITHUB_ENV"
+          fi
+      - name: Install pinned numerical dependency
+        run: python -m pip install -r research/photonic-link/requirements.txt
+      - name: Validate model and inherited digital references
+        working-directory: research/photonic-link
+        run: python validate.py --ghdl ghdl --output "$RUNNER_TEMP/plvl-validation.json"
+      - name: Reproduce synthetic scenarios
+        working-directory: research/photonic-link
+        run: python experiments.py --output "$RUNNER_TEMP/plvl-experiments.json"

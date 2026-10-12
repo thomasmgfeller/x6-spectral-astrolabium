@@ -1,0 +1,535 @@
+{
+  "schema": "plvl.validation.v1",
+  "reproducibility": {
+    "version": "0.1.0",
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "rng": "NumPy PCG64 / SeedSequence; bitwise replication requires matching environment",
+    "source_sha256": {
+      "__init__.py": "e691f161078d9122c32f3cd567c19316a8a629cacb60c499747068dd96ee5936",
+      "__main__.py": "b3bcde12c4baf4d0684baa158af48b1ad66137380ef845f5abc45a19f0ca8a1f",
+      "bridge.py": "b01c0a2167244976c73087c36c3f75a79c16af37a08a30537601207be3b2f862",
+      "config.py": "9176d6443526da0531f10f02424bef36925d6d3545041fe05099e7e05c907981",
+      "counting.py": "26e444ee017869278079ba2cba16bb166ae0282e4dcafc6cba677f295ba59951",
+      "physics.py": "2873e1c8f20ac1fc247f8bf6ad3384cd6e95d50924f068f840fc085f8139fbac",
+      "simulation.py": "41b930f2ee4dd21f53169d96ebabfa13e546db68ca935bd7d5c761afa283f3a2",
+      "timing.py": "dd3c331fdeb2841f527e5537e7745da5c3cb8c38827eaf959ef4437e13c72603"
+    }
+  },
+  "adopted_files": [
+    {
+      "path": "experiments/photonic-two-qubit/reference/sagnac_v0_7/LICENSE",
+      "sha256": "c84da18ecdedc903f95ab290bdeb581450124ddc62458bad477972faa6ef96f6",
+      "status": "PASS"
+    },
+    {
+      "path": "experiments/photonic-two-qubit/reference/sagnac_v0_7/README.md",
+      "sha256": "e29ada3f6c5c60f51c490f56cb5c4f78936a4fc9ceae4005a71a97d48cfc8f87",
+      "status": "PASS"
+    },
+    {
+      "path": "experiments/photonic-two-qubit/reference/sagnac_v0_7/VALIDATION.md",
+      "sha256": "d60f188eefcc0d8c47d372b4f33ceb47c28943f0221a507af84d83f857904072",
+      "status": "PASS"
+    },
+    {
+      "path": "experiments/photonic-two-qubit/reference/sagnac_v0_7/docs/HARDWARE.md",
+      "sha256": "3a50e7fc1e5e672133f40b94053a4a1cac44a7f1834d066f80daf9e2d566f15c",
+      "status": "PASS"
+    },
+    {
+      "path": "experiments/photonic-two-qubit/reference/sagnac_v0_7/docs/INTERFACE.md",
+      "sha256": "0a19b8944d41d8886275fea35d6eb60e55ccefd06515ce82db7c6c7d7dc14cac",
+      "status": "PASS"
+    },
+    {
+      "path": "experiments/photonic-two-qubit/reference/sagnac_v0_7/docs/METROLOGY.md",
+      "sha256": "a242ef3bf28e7a827fd9ab981f6d24cbceb07928b68fa1d98264ab82e140a88a",
+      "status": "PASS"
+    },
+    {
+      "path": "experiments/photonic-two-qubit/reference/sagnac_v0_7/docs/MIRROR_TEST.md",
+      "sha256": "2683d99a92676ab7435824f8def55b7ae2e4528f341479c1bd22126be7fe42c9",
+      "status": "PASS"
+    },
+    {
+      "path": "experiments/photonic-two-qubit/reference/sagnac_v0_7/docs/NEXT_GATE.md",
+      "sha256": "05f39c596b699b6e5d7b17d72ddf31e066f77ea0bc81555929afba7113f924ca",
+      "status": "PASS"
+    },
+    {
+      "path": "experiments/photonic-two-qubit/reference/sagnac_v0_7/docs/SOURCES.md",
+      "sha256": "bd4cdd4239cb54f03d838bb02f7057e14cd9cb7413fee2404db31128c98696cc",
+      "status": "PASS"
+    },
+    {
+      "path": "experiments/photonic-two-qubit/reference/sagnac_v0_7/docs/THROUGHPUT.md",
+      "sha256": "3006c015f34d8ef840e4e65c289e139103eac8ea3895acc9947b477545514d6e",
+      "status": "PASS"
+    },
+    {
+      "path": "experiments/photonic-two-qubit/reference/sagnac_v0_7/docs/TRANSPORT.md",
+      "sha256": "88b72c33bd114a4f9a045eb7c449a3f0cd44b4757ce7ca2cafd6d45210549f09",
+      "status": "PASS"
+    },
+    {
+      "path": "experiments/photonic-two-qubit/reference/sagnac_v0_7/examples/design_budget.json",
+      "sha256": "48ff4532309af2d4cdf656f718c5260163a91649edb1f958422f5716cf3ddc45",
+      "status": "PASS"
+    },
+    {
+      "path": "experiments/photonic-two-qubit/reference/sagnac_v0_7/examples/invalid_source_loss.json",
+      "sha256": "387d9149497bb6244369c1700b7de3b90d2f05990e564190714726e4d79a7139",
+      "status": "PASS"
+    },
+    {
+      "path": "experiments/photonic-two-qubit/reference/sagnac_v0_7/examples/invalid_source_loss_analysis.json",
+      "sha256": "5c6682401e8809d7f01bae379ca8bfc64496e9b19fb841813e99cdfb3e649acc",
+      "status": "PASS"
+    },
+    {
+      "path": "experiments/photonic-two-qubit/reference/sagnac_v0_7/examples/mirror_run_template.json",
+      "sha256": "6708750525c48832229374eb74ed56b41a87f1aa87ee7aff66953b6d1af39281",
+      "status": "PASS"
+    },
+    {
+      "path": "experiments/photonic-two-qubit/reference/sagnac_v0_7/examples/synthetic_chsh_analysis.json",
+      "sha256": "9cae9f186f91b16978db88571545fb7438c70062e2bdce89409d6ff6c90d8d5b",
+      "status": "PASS"
+    },
+    {
+      "path": "experiments/photonic-two-qubit/reference/sagnac_v0_7/examples/synthetic_chsh_capture.bin",
+      "sha256": "cc74c62abdbe1fd38c0960ca98462308a81f94d4d6733c2ba64219c3a5ec900b",
+      "status": "PASS"
+    },
+    {
+      "path": "experiments/photonic-two-qubit/reference/sagnac_v0_7/examples/synthetic_chsh_snapshots.json",
+      "sha256": "7ab69353ec15cce7b1a82ec679c4ea8c20543c6ff78d4859f10ce61cd70ebcc3",
+      "status": "PASS"
+    },
+    {
+      "path": "experiments/photonic-two-qubit/reference/sagnac_v0_7/host/analyze.py",
+      "sha256": "30cb1bc6ef71f27c8b49c8eed0fa78784651d9689285a75700d1cbf39cf0c95f",
+      "status": "PASS"
+    },
+    {
+      "path": "experiments/photonic-two-qubit/reference/sagnac_v0_7/host/budget.py",
+      "sha256": "e7574907fcf29cc733961af94a8ed53a262a0da80ef4577bb46144e9f2eaea1e",
+      "status": "PASS"
+    },
+    {
+      "path": "experiments/photonic-two-qubit/reference/sagnac_v0_7/host/capture_serial.py",
+      "sha256": "18ee2ed12916e78956dbb9c0edcdf323bb0446d4fb742ec6b9185c46e806493c",
+      "status": "PASS"
+    },
+    {
+      "path": "experiments/photonic-two-qubit/reference/sagnac_v0_7/host/frame_codec.py",
+      "sha256": "4c618af421745186cbcef1f3bba142b7d5f7b535a16dd73d2cea5bac57c28e4a",
+      "status": "PASS"
+    },
+    {
+      "path": "experiments/photonic-two-qubit/reference/sagnac_v0_7/host/test_analyze.py",
+      "sha256": "0a6a5dae58ecdec5a047a1f73d31941cff81f74e716b6125bc18f04543df5069",
+      "status": "PASS"
+    },
+    {
+      "path": "experiments/photonic-two-qubit/reference/sagnac_v0_7/host/test_capture_serial.py",
+      "sha256": "1c29f862382c290b8d00407dc99e2206788654057c5b432b9f2b2bc34b3354b0",
+      "status": "PASS"
+    },
+    {
+      "path": "experiments/photonic-two-qubit/reference/sagnac_v0_7/host/test_frame_codec.py",
+      "sha256": "6118e792f4bd0d3bbac62300e0381880ce1af315081666e10f1009b029ccb45f",
+      "status": "PASS"
+    },
+    {
+      "path": "experiments/photonic-two-qubit/reference/sagnac_v0_7/rtl/sagnac_core.vhd",
+      "sha256": "5ebf45551b3c78dcf445ed24733ab6ca77119c9f3472ffea39ae62be70c415a4",
+      "status": "PASS"
+    },
+    {
+      "path": "experiments/photonic-two-qubit/reference/sagnac_v0_7/rtl/sagnac_pkg.vhd",
+      "sha256": "7d8f281c3fb31eb7bca09eab33ecbfae4f9720e7a1a7f40d5277e9cfbf838ef9",
+      "status": "PASS"
+    },
+    {
+      "path": "experiments/photonic-two-qubit/reference/sagnac_v0_7/rtl/sagnac_uart_top.vhd",
+      "sha256": "0b16fb2007bbdfdfa71e37fe7c8e5ad71a3e491285e72cf2addbd6d57144ae06",
+      "status": "PASS"
+    },
+    {
+      "path": "experiments/photonic-two-qubit/reference/sagnac_v0_7/rtl/snapshot_framer.vhd",
+      "sha256": "ced24be2399619c24a1b2a437caa49600c72427cf59122b3f041aba2dab9cd04",
+      "status": "PASS"
+    },
+    {
+      "path": "experiments/photonic-two-qubit/reference/sagnac_v0_7/rtl/uart_tx.vhd",
+      "sha256": "41e4980eb088caab08245d67071d019be29bc755a2d5391b44d5804c7dded680",
+      "status": "PASS"
+    },
+    {
+      "path": "experiments/photonic-two-qubit/reference/sagnac_v0_7/sim/reference.py",
+      "sha256": "df9df2ef6dc541bb5f319dda06619eee7440b4563309a5e328a4b83b00d70536",
+      "status": "PASS"
+    },
+    {
+      "path": "experiments/photonic-two-qubit/reference/sagnac_v0_7/sim/run_tests.py",
+      "sha256": "2fc6c0812c4627a74c3197a8e033992a54d3c255a9f97b27c89199a411dc4c37",
+      "status": "PASS"
+    },
+    {
+      "path": "experiments/photonic-two-qubit/reference/sagnac_v0_7/sim/tb_sagnac.vhd",
+      "sha256": "d0fe1c49bdfb12e4dfadf80adb681bece9ffe61afcfa9154627ef931733c6a24",
+      "status": "PASS"
+    },
+    {
+      "path": "experiments/photonic-two-qubit/reference/sagnac_v0_7/sim/tb_uart_top.vhd",
+      "sha256": "8d5189dfb68dc303849332e1cd8bd5f4bce3a71fbf0ed318a9200ee6560ddf6a",
+      "status": "PASS"
+    },
+    {
+      "path": "experiments/photonic-two-qubit/SCIENTIFIC_STATUS.md",
+      "sha256": "ea162f5eddd4f6a386db2b5e1a9fca2ae9ed0f1a55e7cdf7b1d3fc4ee08d8447",
+      "status": "PASS"
+    },
+    {
+      "path": "experiments/photonic-two-qubit/LAB_PROTOCOL.md",
+      "sha256": "e4086534c65b19a292e7ae7a7554f30c30db4e1f6c189a07adc659c59571709d",
+      "status": "PASS"
+    },
+    {
+      "path": "research/photonic-link/vendor/nqk/LICENSE",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "status": "PASS"
+    },
+    {
+      "path": "research/photonic-link/vendor/nqk/NOTICE",
+      "sha256": "447cdfca12ead68d0816e6e20a827648f546305e1719e26b0582c89e9495e18d",
+      "status": "PASS"
+    },
+    {
+      "path": "research/photonic-link/vendor/nqk/quantum_core.py",
+      "sha256": "12467b7c2db324af373ec9f056e3e8665c029acd1d9c46e4cb51d35c65b30687",
+      "status": "PASS"
+    }
+  ],
+  "model_tests": {
+    "count": 38,
+    "passed": [
+      "test_model.CLITests.test_cli_duplicate_or_unwritable_outputs_leave_no_report",
+      "test_model.CLITests.test_cli_exports_and_refuses_overwrite",
+      "test_model.ConfigTests.test_duplicate_json_rejected",
+      "test_model.ConfigTests.test_invalid_parameters_and_unknown_fields",
+      "test_model.ConfigTests.test_roundtrip",
+      "test_model.CountingTests.test_bad_order_range_and_fractional_timestamps_rejected",
+      "test_model.CountingTests.test_boundaries_empty_repeat_multiport_and_reference",
+      "test_model.CountingTests.test_dead_time_stationary_rate_law",
+      "test_model.CountingTests.test_large_uint64_epoch_preserves_exact_bins",
+      "test_model.CountingTests.test_nonparalyzable_dead_time_per_port",
+      "test_model.CountingTests.test_random_differential_reference",
+      "test_model.CountingTests.test_sparse_huge_number_of_empty_bins",
+      "test_model.IntegrationTests.test_clock_calibration_restores_coincidences",
+      "test_model.IntegrationTests.test_joint_drift_changes_weighted_state_without_security_claim",
+      "test_model.IntegrationTests.test_loss_against_poisson_thinning_multiple_seeds",
+      "test_model.IntegrationTests.test_no_photons_no_dark_returns_null_not_success",
+      "test_model.IntegrationTests.test_realized_unphysical_environment_is_rejected",
+      "test_model.IntegrationTests.test_reproducibility_and_event_accounting",
+      "test_model.IntegrationTests.test_simulator_deterministic_cell_convergence",
+      "test_model.IntegrationTests.test_snapshot_roundtrip_crc_and_integrity",
+      "test_model.PhysicsTests.test_born_probabilities_analytic_singlet",
+      "test_model.PhysicsTests.test_common_rotation_preserves_singlet",
+      "test_model.PhysicsTests.test_dephasing_matches_adopted_kraus_reference",
+      "test_model.PhysicsTests.test_geometric_marginal_false_positive_regression",
+      "test_model.PhysicsTests.test_invalid_state_is_not_repaired",
+      "test_model.PhysicsTests.test_local_unitaries_preserve_negativity",
+      "test_model.PhysicsTests.test_loss_decibels_and_pair_product",
+      "test_model.PhysicsTests.test_mixture_can_erase_entanglement",
+      "test_model.PhysicsTests.test_ou_stationarity_and_lag",
+      "test_model.PhysicsTests.test_shared_loss_mean_is_not_factorized",
+      "test_model.PhysicsTests.test_werner_negativity_known_solution_and_nqk",
+      "test_model.TimingTests.test_affine_clock_holdout",
+      "test_model.TimingTests.test_degenerate_or_extrapolated_calibration_rejected",
+      "test_model.TimingTests.test_fixed_bin_retention_limits",
+      "test_model.TimingTests.test_nonlinearity_visible_in_holdout",
+      "test_model.TimingTests.test_quantizer_bounds",
+      "test_model.TimingTests.test_retention_against_event_monte_carlo",
+      "test_model.TimingTests.test_retention_against_independent_quadrature"
+    ],
+    "failures": [],
+    "skipped": [],
+    "log": "test_cli_duplicate_or_unwritable_outputs_leave_no_report (test_model.CLITests.test_cli_duplicate_or_unwritable_outputs_leave_no_report) ... ok\ntest_cli_exports_and_refuses_overwrite (test_model.CLITests.test_cli_exports_and_refuses_overwrite) ... ok\ntest_duplicate_json_rejected (test_model.ConfigTests.test_duplicate_json_rejected) ... ok\ntest_invalid_parameters_and_unknown_fields (test_model.ConfigTests.test_invalid_parameters_and_unknown_fields) ... ok\ntest_roundtrip (test_model.ConfigTests.test_roundtrip) ... ok\ntest_bad_order_range_and_fractional_timestamps_rejected (test_model.CountingTests.test_bad_order_range_and_fractional_timestamps_rejected) ... ok\ntest_boundaries_empty_repeat_multiport_and_reference (test_model.CountingTests.test_boundaries_empty_repeat_multiport_and_reference) ... ok\ntest_dead_time_stationary_rate_law (test_model.CountingTests.test_dead_time_stationary_rate_law) ... ok\ntest_large_uint64_epoch_preserves_exact_bins (test_model.CountingTests.test_large_uint64_epoch_preserves_exact_bins) ... ok\ntest_nonparalyzable_dead_time_per_port (test_model.CountingTests.test_nonparalyzable_dead_time_per_port) ... ok\ntest_random_differential_reference (test_model.CountingTests.test_random_differential_reference) ... ok\ntest_sparse_huge_number_of_empty_bins (test_model.CountingTests.test_sparse_huge_number_of_empty_bins) ... ok\ntest_clock_calibration_restores_coincidences (test_model.IntegrationTests.test_clock_calibration_restores_coincidences) ... ok\ntest_joint_drift_changes_weighted_state_without_security_claim (test_model.IntegrationTests.test_joint_drift_changes_weighted_state_without_security_claim) ... ok\ntest_loss_against_poisson_thinning_multiple_seeds (test_model.IntegrationTests.test_loss_against_poisson_thinning_multiple_seeds) ... ok\ntest_no_photons_no_dark_returns_null_not_success (test_model.IntegrationTests.test_no_photons_no_dark_returns_null_not_success) ... ok\ntest_realized_unphysical_environment_is_rejected (test_model.IntegrationTests.test_realized_unphysical_environment_is_rejected) ... ok\ntest_reproducibility_and_event_accounting (test_model.IntegrationTests.test_reproducibility_and_event_accounting) ... ok\ntest_simulator_deterministic_cell_convergence (test_model.IntegrationTests.test_simulator_deterministic_cell_convergence) ... ok\ntest_snapshot_roundtrip_crc_and_integrity (test_model.IntegrationTests.test_snapshot_roundtrip_crc_and_integrity) ... ok\ntest_born_probabilities_analytic_singlet (test_model.PhysicsTests.test_born_probabilities_analytic_singlet) ... ok\ntest_common_rotation_preserves_singlet (test_model.PhysicsTests.test_common_rotation_preserves_singlet) ... ok\ntest_dephasing_matches_adopted_kraus_reference (test_model.PhysicsTests.test_dephasing_matches_adopted_kraus_reference) ... ok\ntest_geometric_marginal_false_positive_regression (test_model.PhysicsTests.test_geometric_marginal_false_positive_regression) ... ok\ntest_invalid_state_is_not_repaired (test_model.PhysicsTests.test_invalid_state_is_not_repaired) ... ok\ntest_local_unitaries_preserve_negativity (test_model.PhysicsTests.test_local_unitaries_preserve_negativity) ... ok\ntest_loss_decibels_and_pair_product (test_model.PhysicsTests.test_loss_decibels_and_pair_product) ... ok\ntest_mixture_can_erase_entanglement (test_model.PhysicsTests.test_mixture_can_erase_entanglement) ... ok\ntest_ou_stationarity_and_lag (test_model.PhysicsTests.test_ou_stationarity_and_lag) ... ok\ntest_shared_loss_mean_is_not_factorized (test_model.PhysicsTests.test_shared_loss_mean_is_not_factorized) ... ok\ntest_werner_negativity_known_solution_and_nqk (test_model.PhysicsTests.test_werner_negativity_known_solution_and_nqk) ... ok\ntest_affine_clock_holdout (test_model.TimingTests.test_affine_clock_holdout) ... ok\ntest_degenerate_or_extrapolated_calibration_rejected (test_model.TimingTests.test_degenerate_or_extrapolated_calibration_rejected) ... ok\ntest_fixed_bin_retention_limits (test_model.TimingTests.test_fixed_bin_retention_limits) ... ok\ntest_nonlinearity_visible_in_holdout (test_model.TimingTests.test_nonlinearity_visible_in_holdout) ... ok\ntest_quantizer_bounds (test_model.TimingTests.test_quantizer_bounds) ... ok\ntest_retention_against_event_monte_carlo (test_model.TimingTests.test_retention_against_event_monte_carlo) ... ok\ntest_retention_against_independent_quadrature (test_model.TimingTests.test_retention_against_independent_quadrature) ... ok\n\n----------------------------------------------------------------------\nRan 38 tests in 0.784s\n\nOK\n"
+  },
+  "physical_validation": "NOT_ASSESSED",
+  "qkd_security": "NOT_ASSESSED",
+  "independent_group_replication": "NOT_ASSESSED",
+  "rtl": {
+    "exit_code": 0,
+    "status": "PASS",
+    "log": "{\n  \"status\": \"PASS\",\n  \"case_count\": 28,\n  \"host_integration\": \"PASS_RTL_UART_CRC_JSON_ANALYSIS_AND_INVALID\",\n  \"origin\": \"synthetic\",\n  \"physical_quantum_claim\": \"NOT_ASSESSED\",\n  \"conditional_S\": -2.8253650438389006,\n  \"all_trials_S\": -1.4125\n}\n",
+    "summary": {
+      "status": "PASS",
+      "rtl_cases": [
+        {
+          "name": "all_16_masks",
+          "status": "PASS",
+          "events": 33,
+          "flags": 0,
+          "core_cycles": 117,
+          "stimulus_sha256": "79e3b34e35921f7a344d556a4e028f85adc84aaaac74ab149de2d835d7a96ab2"
+        },
+        {
+          "name": "same_channel_repeat_61",
+          "status": "PASS",
+          "events": 123,
+          "flags": 0,
+          "core_cycles": 432,
+          "stimulus_sha256": "9a0e68cd51baba167f3f3aeb3016c9e619f8cd4e3ad43bcbeff936db02850dae"
+        },
+        {
+          "name": "half_open_boundaries",
+          "status": "PASS",
+          "events": 7,
+          "flags": 0,
+          "core_cycles": 27,
+          "stimulus_sha256": "ca35646753b69288f170d194bcfb3f41688d601923c02dffbd74ca3f3087a35d"
+        },
+        {
+          "name": "equal_timestamps_forward",
+          "status": "PASS",
+          "events": 5,
+          "flags": 0,
+          "core_cycles": 19,
+          "stimulus_sha256": "c90c8970473d9ee9f929e0a10ef77fc7d105c432bf01bf534d1a2795d62f6287"
+        },
+        {
+          "name": "equal_timestamps_reverse",
+          "status": "PASS",
+          "events": 5,
+          "flags": 0,
+          "core_cycles": 19,
+          "stimulus_sha256": "a2f6bc59042b1d91177b58989874d8074cbd2ea0a65cbd0637f96419f56b4abc"
+        },
+        {
+          "name": "empty_windows",
+          "status": "PASS",
+          "events": 1,
+          "flags": 0,
+          "core_cycles": 6,
+          "stimulus_sha256": "91cbaf7b2c4d2178dd468e5b15485ede747a936236ea3067b8152391c4ca36bd"
+        },
+        {
+          "name": "billion_empty_windows",
+          "status": "PASS",
+          "events": 1,
+          "flags": 0,
+          "core_cycles": 6,
+          "stimulus_sha256": "473393241e8f00598b2ec932280ee5ab3214b83d45b1f8c53b0477fca6eb3c43"
+        },
+        {
+          "name": "billion_windows_two_hits",
+          "status": "PASS",
+          "events": 3,
+          "flags": 0,
+          "core_cycles": 14,
+          "stimulus_sha256": "c91bb759b0feadc4ed478b9737e3bd42d47138eb1fe3545009439ed61bc1b092"
+        },
+        {
+          "name": "bulk_saturation",
+          "status": "PASS",
+          "events": 1,
+          "flags": 1,
+          "core_cycles": 6,
+          "stimulus_sha256": "473393241e8f00598b2ec932280ee5ab3214b83d45b1f8c53b0477fca6eb3c43"
+        },
+        {
+          "name": "near_u64_limit",
+          "status": "PASS",
+          "events": 3,
+          "flags": 0,
+          "core_cycles": 14,
+          "stimulus_sha256": "a5866a37a3f0cc3a77cb3aaac0b0d1935c636ba3802527c5969efe4609d62441"
+        },
+        {
+          "name": "source_loss",
+          "status": "PASS",
+          "events": 2,
+          "flags": 4,
+          "core_cycles": 10,
+          "stimulus_sha256": "17fca8b085b1bfc428e0598f95962cdc8d071da46430ea567972269fcfa7651f"
+        },
+        {
+          "name": "calibration_mismatch",
+          "status": "PASS",
+          "events": 2,
+          "flags": 8,
+          "core_cycles": 7,
+          "stimulus_sha256": "f1f5614d9c441b6445d0938a7fa8882d97d25daf59d04f095f0920c98c8b006b"
+        },
+        {
+          "name": "nonmonotonic_time",
+          "status": "PASS",
+          "events": 3,
+          "flags": 2,
+          "core_cycles": 11,
+          "stimulus_sha256": "821b7a12c178cee3a3029486a220f45e3d34e85b9cfa83f5d0d52ff861c4a674"
+        },
+        {
+          "name": "before_run",
+          "status": "PASS",
+          "events": 2,
+          "flags": 2,
+          "core_cycles": 7,
+          "stimulus_sha256": "c2c5bb6d924bd99d38a466ab3b2f003e6c30c1942c8b5bdceeb9bdd72ef038c2"
+        },
+        {
+          "name": "hit_at_stop",
+          "status": "PASS",
+          "events": 2,
+          "flags": 32,
+          "core_cycles": 9,
+          "stimulus_sha256": "c0e7c6b9455b2d42266a10eef8e7661efc13953852d6e426323f28dc3bb09a9a"
+        },
+        {
+          "name": "invalid_kind",
+          "status": "PASS",
+          "events": 2,
+          "flags": 32,
+          "core_cycles": 7,
+          "stimulus_sha256": "f3f8aec82dd6fbf272965163dbbadc93a271773896d3b75841154aecded630c7"
+        },
+        {
+          "name": "counter_saturation",
+          "status": "PASS",
+          "events": 1,
+          "flags": 1,
+          "core_cycles": 6,
+          "stimulus_sha256": "0d3c378b37bf416dbdc6ae1b22025c140bd3147c37623662832bb85b84c00102"
+        },
+        {
+          "name": "invalid_zero_duration",
+          "status": "PASS",
+          "events": 0,
+          "flags": 16,
+          "core_cycles": 2,
+          "stimulus_sha256": "a4b0ff329b4f635df4470c5ad8d82acc9306660bd3e2f64a30f966ed008289fb"
+        },
+        {
+          "name": "invalid_partial_window",
+          "status": "PASS",
+          "events": 0,
+          "flags": 16,
+          "core_cycles": 2,
+          "stimulus_sha256": "f4ba4e41c3780a426022277cb857ec7c4d35274ab67abd520f426cf3f02c7e1e"
+        },
+        {
+          "name": "missing_final_watermark",
+          "status": "PASS_EXPECTED_TIMEOUT",
+          "events": 1
+        },
+        {
+          "name": "random_seed_104729",
+          "status": "PASS",
+          "events": 989,
+          "flags": 0,
+          "core_cycles": 3223,
+          "stimulus_sha256": "a802076a6d30ad030ed2e26a1c68f6c3f40f11dae46d44b0c293e18e1936e33d"
+        },
+        {
+          "name": "random_seed_37",
+          "status": "PASS",
+          "events": 1038,
+          "flags": 0,
+          "core_cycles": 3371,
+          "stimulus_sha256": "416b1ef568660cdeffd989537939b6e614db2a96ce3d40ccddff614d220703ba"
+        },
+        {
+          "name": "random_seed_8191",
+          "status": "PASS",
+          "events": 1018,
+          "flags": 0,
+          "core_cycles": 3313,
+          "stimulus_sha256": "b2703195914f68c427429e3beb490d817b2c17a5e98de93585c7d6ac88ef8171"
+        },
+        {
+          "name": "synthetic_chsh_0",
+          "status": "PASS",
+          "events": 5948,
+          "flags": 0,
+          "core_cycles": 21820,
+          "stimulus_sha256": "790b9c51fa41b4a3159b68bbfac2f44829e335f3cdaf94bc3d5d8548b594c628"
+        },
+        {
+          "name": "synthetic_chsh_1",
+          "status": "PASS",
+          "events": 6047,
+          "flags": 0,
+          "core_cycles": 22131,
+          "stimulus_sha256": "700fbc2bef407276063dcc700e8279e1a089b01f6f9d47143b761d49b737c93b"
+        },
+        {
+          "name": "synthetic_chsh_2",
+          "status": "PASS",
+          "events": 5939,
+          "flags": 0,
+          "core_cycles": 21807,
+          "stimulus_sha256": "6058f494326de2877afbeecfc1471ec3f39b86f77aedde8ba2e836efab5afb27"
+        },
+        {
+          "name": "synthetic_chsh_3",
+          "status": "PASS",
+          "events": 6015,
+          "flags": 0,
+          "core_cycles": 22036,
+          "stimulus_sha256": "b6d2d40b44572c8e94267763805c42c90ba4a7cc707ad0254c46681944176b04"
+        },
+        {
+          "name": "top_integration",
+          "status": "PASS",
+          "events": 2
+        }
+      ],
+      "case_count": 28,
+      "host_integration": "PASS_RTL_UART_CRC_JSON_ANALYSIS_AND_INVALID",
+      "origin": "synthetic",
+      "physical_quantum_claim": "NOT_ASSESSED",
+      "conditional_S": -2.8253650438389006,
+      "all_trials_S": -1.4125
+    },
+    "ghdl_version": "GHDL 5.0.1 (4.1.0.r602.g37ad91899) [Dunoon edition]\n Compiled with GNAT Version: 13.3.0\n static elaboration, mcode JIT code generator\nWritten by Tristan Gingold.\n\nCopyright (C) 2003 - 2025 Tristan Gingold.\nGHDL is free software, covered by the GNU General Public License.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"
+  },
+  "adopted_host_tests": {
+    "exit_code": 0,
+    "status": "PASS",
+    "log": "test_alpha_validation (test_analyze.HostTests.test_alpha_validation) ... ok\ntest_boundaries_no_zero_sigma (test_analyze.HostTests.test_boundaries_no_zero_sigma) ... ok\ntest_classical_always_minus (test_analyze.HostTests.test_classical_always_minus) ... ok\ntest_conditional_is_not_all_trials (test_analyze.HostTests.test_conditional_is_not_all_trials) ... ok\ntest_counter_and_configuration_tampering (test_analyze.HostTests.test_counter_and_configuration_tampering) ... ok\ntest_every_integrity_bit_blocks (test_analyze.HostTests.test_every_integrity_bit_blocks) ... ok\ntest_missing_coincidences (test_analyze.HostTests.test_missing_coincidences) ... ok\ntest_no_automatic_five_percent_rule (test_analyze.HostTests.test_no_automatic_five_percent_rule) ... ok\ntest_chunked_pseudoterminal_capture (test_capture_serial.CaptureTests.test_chunked_pseudoterminal_capture) ... ok\ntest_partial_capture_is_retained (test_capture_serial.CaptureTests.test_partial_capture_is_retained) ... ok\ntest_all_single_bit_corruptions (test_frame_codec.FrameTests.test_all_single_bit_corruptions) ... ok\ntest_crc_does_not_replace_semantic_checks (test_frame_codec.FrameTests.test_crc_does_not_replace_semantic_checks) ... ok\ntest_loss_flag_survives_transport (test_frame_codec.FrameTests.test_loss_flag_survives_transport) ... ok\ntest_missing_duplicated_reordered (test_frame_codec.FrameTests.test_missing_duplicated_reordered) ... ok\ntest_rtl_uart_frame (test_frame_codec.FrameTests.test_rtl_uart_frame) ... ok\ntest_truncation_and_garbage (test_frame_codec.FrameTests.test_truncation_and_garbage) ... ok\ntest_version_and_reserved_even_with_recomputed_crc (test_frame_codec.FrameTests.test_version_and_reserved_even_with_recomputed_crc) ... ok\n\n----------------------------------------------------------------------\nRan 17 tests in 0.282s\n\nOK\n"
+  },
+  "status": "PASS_FULL_SOFTWARE_SCOPE",
+  "file_inventory_sha256": {
+    "README.md": "b316a3acd772d2b03707ed5a04edc72d8bdfc2c0859daad7de47c276d1a20aa8",
+    "adoption_manifest.json": "e9ceac44af6c632aa9cba547e14e353ba92731640cf02aa4dfc3cb2833c94f7e",
+    "configs/baseline.json": "c841e86dbd86e669fd7883460b633e4c26059005a4eda25be9d5fe4cc41d7219",
+    "configs/clock_error.json": "9312eaa16e97ffbd7ebb4632e54974dd13d62eb712c04d9ba4069cf8af5b1bbb",
+    "configs/coupled.json": "d9bec7903194e958f27f6014d915ea89989ca23d2b175abe272a72780f34c522",
+    "configs/nonlinear_clock_stress.json": "600c78e4c219b39045611732921287c25ad4272cb937a41a3cdb3a88d6f2d694",
+    "docs/ADOPTION.md": "e496fdd65e6be05c77ae2a121ecda71d2223fc38159f088ea615420ca4b78e2a",
+    "docs/METROLOGY.md": "42bfc36ed1191a589d74be641da2856d825918d1cf8a5b4fe6c6ccb9a881e436",
+    "docs/MODEL.md": "ab6e000186e850e39d09ec72a67489734e77bcc64b2fc3f9848e0fd78ed90489",
+    "docs/REFERENCES.md": "5f5c24cc4ebfb35d83bf9e17a20ed188e0ba67db4cae47a6d95bb8d4d6225be4",
+    "docs/RESEARCH_PROGRAM.md": "6df1568552808ac0eedceff12827af3ae34752944f34a09857a43aaf8d265326",
+    "docs/RESULTS.md": "b5a5d7a8f5330b6fef4b917516e1da6e30b0ec57e0079535f1627f82e53e559c",
+    "experiments.py": "15ecef0ca69e6bc68a1a3426c30eb667ff1f152fdf6e972dc44dd97148df106d",
+    "plvl/__init__.py": "e691f161078d9122c32f3cd567c19316a8a629cacb60c499747068dd96ee5936",
+    "plvl/__main__.py": "b3bcde12c4baf4d0684baa158af48b1ad66137380ef845f5abc45a19f0ca8a1f",
+    "plvl/bridge.py": "b01c0a2167244976c73087c36c3f75a79c16af37a08a30537601207be3b2f862",
+    "plvl/config.py": "9176d6443526da0531f10f02424bef36925d6d3545041fe05099e7e05c907981",
+    "plvl/counting.py": "26e444ee017869278079ba2cba16bb166ae0282e4dcafc6cba677f295ba59951",
+    "plvl/physics.py": "2873e1c8f20ac1fc247f8bf6ad3384cd6e95d50924f068f840fc085f8139fbac",
+    "plvl/simulation.py": "41b930f2ee4dd21f53169d96ebabfa13e546db68ca935bd7d5c761afa283f3a2",
+    "plvl/timing.py": "dd3c331fdeb2841f527e5537e7745da5c3cb8c38827eaf959ef4437e13c72603",
+    "requirements.txt": "7bd6b8946940b79948c548c8048e545684b91c8edc9444d8dfc0c8f76a97c0a7",
+    "tests/test_model.py": "837bd49ecdc2c1efe15748c6961dff6bdca69ed83fee9b9580e799777e2fab3d",
+    "validate.py": "33612143f7558f3397e78d0266d1f7de80e69e61f264775f017ecdc43c42655d",
+    "vendor/nqk/LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "vendor/nqk/NOTICE": "447cdfca12ead68d0816e6e20a827648f546305e1719e26b0582c89e9495e18d",
+    "vendor/nqk/quantum_core.py": "12467b7c2db324af373ec9f056e3e8665c029acd1d9c46e4cb51d35c65b30687"
+  }
+}

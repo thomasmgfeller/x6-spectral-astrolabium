@@ -1,0 +1,2466 @@
+{
+  "schema": "plvl.experiments.v1",
+  "origin": "synthetic",
+  "claim": "model illustration, not fitted hardware predictions",
+  "reproducibility": {
+    "version": "0.1.0",
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "rng": "NumPy PCG64 / SeedSequence; bitwise replication requires matching environment",
+    "source_sha256": {
+      "__init__.py": "e691f161078d9122c32f3cd567c19316a8a629cacb60c499747068dd96ee5936",
+      "__main__.py": "b3bcde12c4baf4d0684baa158af48b1ad66137380ef845f5abc45a19f0ca8a1f",
+      "bridge.py": "b01c0a2167244976c73087c36c3f75a79c16af37a08a30537601207be3b2f862",
+      "config.py": "9176d6443526da0531f10f02424bef36925d6d3545041fe05099e7e05c907981",
+      "counting.py": "26e444ee017869278079ba2cba16bb166ae0282e4dcafc6cba677f295ba59951",
+      "physics.py": "2873e1c8f20ac1fc247f8bf6ad3384cd6e95d50924f068f840fc085f8139fbac",
+      "simulation.py": "41b930f2ee4dd21f53169d96ebabfa13e546db68ca935bd7d5c761afa283f3a2",
+      "timing.py": "dd3c331fdeb2841f527e5537e7745da5c3cb8c38827eaf959ef4437e13c72603"
+    }
+  },
+  "seed_sequence": [
+    2000,
+    2001,
+    2002,
+    2003,
+    2004,
+    2005,
+    2006,
+    2007,
+    2008,
+    2009,
+    2010,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026,
+    2027,
+    2028,
+    2029
+  ],
+  "ensemble_uncertainty": "independent synthetic runs at fixed assumed parameters; no hardware confidence statement",
+  "scenarios": {
+    "baseline": {
+      "single_seed_report": {
+        "schema": "plvl.report.v1",
+        "origin": "synthetic",
+        "config": {
+          "schema": "plvl.config.v1",
+          "provenance": "synthetic_design_assumption",
+          "duration_ps": 100000000000,
+          "window_ps": 2000,
+          "cell_ps": 5000000000,
+          "pair_rate_hz": 200000.0,
+          "singlet_visibility": 0.98,
+          "environment_sigma": 1.0,
+          "environment_tau_s": 0.1,
+          "calibration_anchors": 101,
+          "calibration_jitter_sigma_s": 1e-10,
+          "seed": 1701,
+          "arm_a": {
+            "length_km": 1.0,
+            "attenuation_db_per_km": 0.2,
+            "insertion_loss_db": 1.0,
+            "coupling": 0.7,
+            "detector_efficiency": 0.7,
+            "dark_rate_per_port_hz": 100.0,
+            "dead_time_s": 5e-08,
+            "jitter_sigma_s": 2e-10,
+            "group_index": 1.468,
+            "electronics_delay_s": 0.0,
+            "loss_db_per_environment": 0.0,
+            "delay_s_per_environment": 0.0,
+            "rotation_y_rad": 0.0,
+            "rotation_z_rad": 0.0,
+            "rotation_y_rate_rad_per_s": 0.0,
+            "rotation_y_rad_per_environment": 0.0,
+            "rotation_z_rad_per_environment": 0.0,
+            "dephasing_probability": 0.0,
+            "analyzer_angle_deg": 0.0,
+            "clock": {
+              "offset_s": 0.0,
+              "skew_ppm": 0.0,
+              "drift_ppm_per_s": 0.0,
+              "tick_ps": 100
+            }
+          },
+          "arm_b": {
+            "length_km": 1.0,
+            "attenuation_db_per_km": 0.2,
+            "insertion_loss_db": 1.0,
+            "coupling": 0.7,
+            "detector_efficiency": 0.7,
+            "dark_rate_per_port_hz": 100.0,
+            "dead_time_s": 5e-08,
+            "jitter_sigma_s": 2e-10,
+            "group_index": 1.468,
+            "electronics_delay_s": 0.0,
+            "loss_db_per_environment": 0.0,
+            "delay_s_per_environment": 0.0,
+            "rotation_y_rad": 0.0,
+            "rotation_z_rad": 0.0,
+            "rotation_y_rate_rad_per_s": 0.0,
+            "rotation_y_rad_per_environment": 0.0,
+            "rotation_z_rad_per_environment": 0.0,
+            "dephasing_probability": 0.0,
+            "analyzer_angle_deg": 0.0,
+            "clock": {
+              "offset_s": 0.0,
+              "skew_ppm": 0.0,
+              "drift_ppm_per_s": 0.0,
+              "tick_ps": 100
+            }
+          }
+        },
+        "physical_validation": "NOT_ASSESSED",
+        "qkd_security": "NOT_ASSESSED",
+        "novel_physics": "NOT_ASSESSED",
+        "topological_protection": "NOT_CLAIMED",
+        "calibration": [
+          {
+            "fit": {
+              "reference_center_s": 0.05,
+              "local_center_s": 0.05000489672745099,
+              "scale": 1.0000000001674207,
+              "training_min_s": 0.0,
+              "training_max_s": 0.09999999999999999
+            },
+            "training_n": 51,
+            "holdout": {
+              "n": 50,
+              "mean_s": 5.490150001286053e-13,
+              "rms_s": 1.19852599850564e-10,
+              "max_abs_s": 2.74390642152067e-10
+            },
+            "source": "independent_synthetic_reference_pulses"
+          },
+          {
+            "fit": {
+              "reference_center_s": 0.05,
+              "local_center_s": 0.050004896737254896,
+              "scale": 0.999999999683258,
+              "training_min_s": 0.0,
+              "training_max_s": 0.09999999999999999
+            },
+            "training_n": 51,
+            "holdout": {
+              "n": 50,
+              "mean_s": -1.3254891767511267e-11,
+              "rms_s": 1.0252206971119594e-10,
+              "max_abs_s": 3.363046646720491e-10
+            },
+            "source": "independent_synthetic_reference_pulses"
+          }
+        ],
+        "detectors": [
+          {
+            "signal_candidates_before_dead_time": 7578,
+            "dark_candidates_before_dead_time": 23,
+            "dead_time_rejected": 15,
+            "recorded": 7586
+          },
+          {
+            "signal_candidates_before_dead_time": 7405,
+            "dark_candidates_before_dead_time": 11,
+            "dead_time_rejected": 14,
+            "recorded": 7402
+          }
+        ],
+        "timing_screen": {
+          "criterion": "max absolute held-out residual per arm <= W/4",
+          "budget_s": 5e-10,
+          "within_assumed_budget": true,
+          "meaning": "engineering screen on synthetic anchors; not a guarantee"
+        },
+        "uncalibrated": {
+          "counters": [
+            49987447,
+            2543,
+            2608,
+            0,
+            2493,
+            18,
+            1240,
+            0,
+            2474,
+            1167,
+            10,
+            0,
+            0,
+            0,
+            0,
+            0,
+            50000000,
+            0,
+            3728,
+            3858,
+            3751,
+            3651,
+            0,
+            0
+          ],
+          "excluded_outside_gate_by_arm": [
+            0,
+            0
+          ],
+          "diagnostics": {
+            "conditional_port_bins": 2435,
+            "conditional_same_port_fraction": 0.011498973305954825,
+            "conditional_correlation": -0.9770020533880903,
+            "repeat_bins": 0,
+            "multiport_bins": 0,
+            "uncertainty": "NOT_ESTIMATED_NONIID_POSSIBLE",
+            "interpretation": "Port occupancy diagnostic; not unique photon pairs, not a secret-key estimate"
+          }
+        },
+        "calibrated": {
+          "counters": [
+            49987496,
+            2506,
+            2596,
+            0,
+            2479,
+            19,
+            1253,
+            0,
+            2439,
+            1203,
+            9,
+            0,
+            0,
+            0,
+            0,
+            0,
+            50000000,
+            0,
+            3728,
+            3858,
+            3751,
+            3651,
+            0,
+            0
+          ],
+          "excluded_outside_gate_by_arm": [
+            0,
+            0
+          ],
+          "diagnostics": {
+            "conditional_port_bins": 2484,
+            "conditional_same_port_fraction": 0.011272141706924315,
+            "conditional_correlation": -0.9774557165861514,
+            "repeat_bins": 0,
+            "multiport_bins": 0,
+            "uncertainty": "NOT_ESTIMATED_NONIID_POSSIBLE",
+            "interpretation": "Port occupancy diagnostic; not unique photon pairs, not a secret-key estimate"
+          }
+        },
+        "latent_truth": {
+          "label": "SIMULATOR_LATENT_TRUTH_NOT_AN_ESTIMATE_FROM_CLICKS",
+          "generated_pairs": 20030,
+          "environment": [
+            -0.8851263302770762,
+            -0.9760435586440008,
+            -0.5172219479319569,
+            -0.7088949255354376,
+            -0.4842810227276305,
+            -0.2792743439107447,
+            -0.15186884948548937,
+            -0.21167804704083715,
+            -0.31230241092193045,
+            -0.5320648538139795,
+            0.2806707603196247,
+            0.4993182702331615,
+            0.31585595247558984,
+            0.2331158239143483,
+            0.15449222686783123,
+            -0.06926985332121474,
+            -0.12059791450896237,
+            -0.2094854004921186,
+            0.39911364154603246,
+            0.4416460290909784
+          ],
+          "realized_pair_survivals_before_dead_time_and_timing": 2772,
+          "efficiency_a": [
+            0.3717030117643,
+            0.3717030117643,
+            0.3717030117643,
+            0.3717030117643,
+            0.3717030117643,
+            0.3717030117643,
+            0.3717030117643,
+            0.3717030117643,
+            0.3717030117643,
+            0.3717030117643,
+            0.3717030117643,
+            0.3717030117643,
+            0.3717030117643,
+            0.3717030117643,
+            0.3717030117643,
+            0.3717030117643,
+            0.3717030117643,
+            0.3717030117643,
+            0.3717030117643,
+            0.3717030117643
+          ],
+          "efficiency_b": [
+            0.3717030117643,
+            0.3717030117643,
+            0.3717030117643,
+            0.3717030117643,
+            0.3717030117643,
+            0.3717030117643,
+            0.3717030117643,
+            0.3717030117643,
+            0.3717030117643,
+            0.3717030117643,
+            0.3717030117643,
+            0.3717030117643,
+            0.3717030117643,
+            0.3717030117643,
+            0.3717030117643,
+            0.3717030117643,
+            0.3717030117643,
+            0.3717030117643,
+            0.3717030117643,
+            0.3717030117643
+          ],
+          "delay_a_s": [
+            4.8967209175088724e-06,
+            4.8967209175088724e-06,
+            4.8967209175088724e-06,
+            4.8967209175088724e-06,
+            4.8967209175088724e-06,
+            4.8967209175088724e-06,
+            4.8967209175088724e-06,
+            4.8967209175088724e-06,
+            4.8967209175088724e-06,
+            4.8967209175088724e-06,
+            4.8967209175088724e-06,
+            4.8967209175088724e-06,
+            4.8967209175088724e-06,
+            4.8967209175088724e-06,
+            4.8967209175088724e-06,
+            4.8967209175088724e-06,
+            4.8967209175088724e-06,
+            4.8967209175088724e-06,
+            4.8967209175088724e-06,
+            4.8967209175088724e-06
+          ],
+          "delay_b_s": [
+            4.8967209175088724e-06,
+            4.8967209175088724e-06,
+            4.8967209175088724e-06,
+            4.8967209175088724e-06,
+            4.8967209175088724e-06,
+            4.8967209175088724e-06,
+            4.8967209175088724e-06,
+            4.8967209175088724e-06,
+            4.8967209175088724e-06,
+            4.8967209175088724e-06,
+            4.8967209175088724e-06,
+            4.8967209175088724e-06,
+            4.8967209175088724e-06,
+            4.8967209175088724e-06,
+            4.8967209175088724e-06,
+            4.8967209175088724e-06,
+            4.8967209175088724e-06,
+            4.8967209175088724e-06,
+            4.8967209175088724e-06,
+            4.8967209175088724e-06
+          ],
+          "mean_instantaneous_negativity": 0.48499999999999976,
+          "negativity_time_averaged_state": 0.4850000000000001,
+          "negativity_survival_weighted_state": 0.48500000000000004,
+          "singlet_overlap_time_averaged": 0.9849999999999998,
+          "ideal_same_port_probability_by_cell": [
+            0.01000000000000001,
+            0.01000000000000001,
+            0.01000000000000001,
+            0.01000000000000001,
+            0.01000000000000001,
+            0.01000000000000001,
+            0.01000000000000001,
+            0.01000000000000001,
+            0.01000000000000001,
+            0.01000000000000001,
+            0.01000000000000001,
+            0.01000000000000001,
+            0.01000000000000001,
+            0.01000000000000001,
+            0.01000000000000001,
+            0.01000000000000001,
+            0.01000000000000001,
+            0.01000000000000001,
+            0.01000000000000001,
+            0.01000000000000001
+          ],
+          "expected_signal_candidates_by_arm": [
+            7434.060235286,
+            7434.060235286
+          ],
+          "expected_pair_survivals_before_dead_time_and_timing": 2763.262579093027,
+          "factorized_mean_loss_pair_prediction": 2763.2625790930265
+        }
+      },
+      "replicates": [
+        {
+          "seed": 2000,
+          "calibrated_port_bins": 2343,
+          "uncalibrated_port_bins": 2369,
+          "same_port_fraction": 0.011523687580025609,
+          "timing_screen_pass": true
+        },
+        {
+          "seed": 2001,
+          "calibrated_port_bins": 2350,
+          "uncalibrated_port_bins": 2352,
+          "same_port_fraction": 0.00978723404255319,
+          "timing_screen_pass": true
+        },
+        {
+          "seed": 2002,
+          "calibrated_port_bins": 2434,
+          "uncalibrated_port_bins": 2415,
+          "same_port_fraction": 0.011503697617091208,
+          "timing_screen_pass": true
+        },
+        {
+          "seed": 2003,
+          "calibrated_port_bins": 2530,
+          "uncalibrated_port_bins": 2516,
+          "same_port_fraction": 0.013043478260869565,
+          "timing_screen_pass": true
+        },
+        {
+          "seed": 2004,
+          "calibrated_port_bins": 2435,
+          "uncalibrated_port_bins": 2441,
+          "same_port_fraction": 0.010677618069815195,
+          "timing_screen_pass": true
+        },
+        {
+          "seed": 2005,
+          "calibrated_port_bins": 2446,
+          "uncalibrated_port_bins": 2416,
+          "same_port_fraction": 0.013900245298446443,
+          "timing_screen_pass": true
+        },
+        {
+          "seed": 2006,
+          "calibrated_port_bins": 2358,
+          "uncalibrated_port_bins": 2398,
+          "same_port_fraction": 0.01102629346904156,
+          "timing_screen_pass": true
+        },
+        {
+          "seed": 2007,
+          "calibrated_port_bins": 2366,
+          "uncalibrated_port_bins": 2344,
+          "same_port_fraction": 0.01098901098901099,
+          "timing_screen_pass": true
+        },
+        {
+          "seed": 2008,
+          "calibrated_port_bins": 2402,
+          "uncalibrated_port_bins": 2423,
+          "same_port_fraction": 0.008742714404662781,
+          "timing_screen_pass": true
+        },
+        {
+          "seed": 2009,
+          "calibrated_port_bins": 2492,
+          "uncalibrated_port_bins": 2468,
+          "same_port_fraction": 0.007624398073836276,
+          "timing_screen_pass": true
+        },
+        {
+          "seed": 2010,
+          "calibrated_port_bins": 2403,
+          "uncalibrated_port_bins": 2426,
+          "same_port_fraction": 0.008322929671244279,
+          "timing_screen_pass": true
+        },
+        {
+          "seed": 2011,
+          "calibrated_port_bins": 2370,
+          "uncalibrated_port_bins": 2424,
+          "same_port_fraction": 0.008016877637130802,
+          "timing_screen_pass": true
+        },
+        {
+          "seed": 2012,
+          "calibrated_port_bins": 2436,
+          "uncalibrated_port_bins": 2476,
+          "same_port_fraction": 0.007389162561576354,
+          "timing_screen_pass": true
+        },
+        {
+          "seed": 2013,
+          "calibrated_port_bins": 2433,
+          "uncalibrated_port_bins": 2430,
+          "same_port_fraction": 0.009864364981504316,
+          "timing_screen_pass": true
+        },
+        {
+          "seed": 2014,
+          "calibrated_port_bins": 2407,
+          "uncalibrated_port_bins": 2436,
+          "same_port_fraction": 0.009140008309098464,
+          "timing_screen_pass": true
+        },
+        {
+          "seed": 2015,
+          "calibrated_port_bins": 2411,
+          "uncalibrated_port_bins": 2387,
+          "same_port_fraction": 0.009124844462878473,
+          "timing_screen_pass": true
+        },
+        {
+          "seed": 2016,
+          "calibrated_port_bins": 2392,
+          "uncalibrated_port_bins": 2370,
+          "same_port_fraction": 0.010451505016722408,
+          "timing_screen_pass": true
+        },
+        {
+          "seed": 2017,
+          "calibrated_port_bins": 2418,
+          "uncalibrated_port_bins": 2431,
+          "same_port_fraction": 0.009925558312655087,
+          "timing_screen_pass": true
+        },
+        {
+          "seed": 2018,
+          "calibrated_port_bins": 2457,
+          "uncalibrated_port_bins": 2455,
+          "same_port_fraction": 0.01098901098901099,
+          "timing_screen_pass": true
+        },
+        {
+          "seed": 2019,
+          "calibrated_port_bins": 2443,
+          "uncalibrated_port_bins": 2504,
+          "same_port_fraction": 0.011051985264019648,
+          "timing_screen_pass": true
+        },
+        {
+          "seed": 2020,
+          "calibrated_port_bins": 2462,
+          "uncalibrated_port_bins": 2483,
+          "same_port_fraction": 0.012591389114541024,
+          "timing_screen_pass": true
+        },
+        {
+          "seed": 2021,
+          "calibrated_port_bins": 2471,
+          "uncalibrated_port_bins": 2462,
+          "same_port_fraction": 0.010117361392148928,
+          "timing_screen_pass": true
+        },
+        {
+          "seed": 2022,
+          "calibrated_port_bins": 2510,
+          "uncalibrated_port_bins": 2480,
+          "same_port_fraction": 0.014342629482071713,
+          "timing_screen_pass": true
+        },
+        {
+          "seed": 2023,
+          "calibrated_port_bins": 2458,
+          "uncalibrated_port_bins": 2470,
+          "same_port_fraction": 0.012205044751830757,
+          "timing_screen_pass": true
+        },
+        {
+          "seed": 2024,
+          "calibrated_port_bins": 2393,
+          "uncalibrated_port_bins": 2377,
+          "same_port_fraction": 0.012536564981195153,
+          "timing_screen_pass": true
+        },
+        {
+          "seed": 2025,
+          "calibrated_port_bins": 2535,
+          "uncalibrated_port_bins": 2488,
+          "same_port_fraction": 0.009861932938856016,
+          "timing_screen_pass": true
+        },
+        {
+          "seed": 2026,
+          "calibrated_port_bins": 2481,
+          "uncalibrated_port_bins": 2484,
+          "same_port_fraction": 0.012898024989923419,
+          "timing_screen_pass": true
+        },
+        {
+          "seed": 2027,
+          "calibrated_port_bins": 2455,
+          "uncalibrated_port_bins": 2495,
+          "same_port_fraction": 0.010590631364562118,
+          "timing_screen_pass": true
+        },
+        {
+          "seed": 2028,
+          "calibrated_port_bins": 2428,
+          "uncalibrated_port_bins": 2430,
+          "same_port_fraction": 0.006589785831960461,
+          "timing_screen_pass": true
+        },
+        {
+          "seed": 2029,
+          "calibrated_port_bins": 2414,
+          "uncalibrated_port_bins": 2392,
+          "same_port_fraction": 0.009113504556752278,
+          "timing_screen_pass": true
+        }
+      ],
+      "summary": {
+        "calibrated_port_bins": {
+          "n": 30,
+          "mean": 2431.1,
+          "sample_sd": 49.70835633628588,
+          "standard_error_of_mean": 9.075462687296211
+        },
+        "same_port_fraction": {
+          "n": 30,
+          "mean": 0.010464716480501183,
+          "sample_sd": 0.001927874949175113,
+          "standard_error_of_mean": 0.000351980199237445
+        },
+        "paired_calibration_count_change": {
+          "n": 30,
+          "mean": -3.6333333333333333,
+          "sample_sd": 27.452131797546887,
+          "standard_error_of_mean": 5.012050612373758
+        },
+        "timing_screen_passes": 30
+      }
+    },
+    "clock_error": {
+      "single_seed_report": {
+        "schema": "plvl.report.v1",
+        "origin": "synthetic",
+        "config": {
+          "schema": "plvl.config.v1",
+          "provenance": "synthetic_design_assumption",
+          "duration_ps": 100000000000,
+          "window_ps": 2000,
+          "cell_ps": 5000000000,
+          "pair_rate_hz": 200000.0,
+          "singlet_visibility": 0.98,
+          "environment_sigma": 1.0,
+          "environment_tau_s": 0.1,
+          "calibration_anchors": 101,
+          "calibration_jitter_sigma_s": 1e-10,
+          "seed": 1701,
+          "arm_a": {
+            "length_km": 1.0,
+            "attenuation_db_per_km": 0.2,
+            "insertion_loss_db": 1.0,
+            "coupling": 0.7,
+            "detector_efficiency": 0.7,
+            "dark_rate_per_port_hz": 100.0,
+            "dead_time_s": 5e-08,
+            "jitter_sigma_s": 2e-10,
+            "group_index": 1.468,
+            "electronics_delay_s": 0.0,
+            "loss_db_per_environment": 0.0,
+            "delay_s_per_environment": 0.0,
+            "rotation_y_rad": 0.0,
+            "rotation_z_rad": 0.0,
+            "rotation_y_rate_rad_per_s": 0.0,
+            "rotation_y_rad_per_environment": 0.0,
+            "rotation_z_rad_per_environment": 0.0,
+            "dephasing_probability": 0.0,
+            "analyzer_angle_deg": 0.0,
+            "clock": {
+              "offset_s": 0.0,
+              "skew_ppm": 0.0,
+              "drift_ppm_per_s": 0.0,
+              "tick_ps": 100
+            }
+          },
+          "arm_b": {
+            "length_km": 1.0,
+            "attenuation_db_per_km": 0.2,
+            "insertion_loss_db": 1.0,
+            "coupling": 0.7,
+            "detector_efficiency": 0.7,
+            "dark_rate_per_port_hz": 100.0,
+            "dead_time_s": 5e-08,
+            "jitter_sigma_s": 2e-10,
+            "group_index": 1.468,
+            "electronics_delay_s": 0.0,
+            "loss_db_per_environment": 0.0,
+            "delay_s_per_environment": 0.0,
+            "rotation_y_rad": 0.0,
+            "rotation_z_rad": 0.0,
+            "rotation_y_rate_rad_per_s": 0.0,
+            "rotation_y_rad_per_environment": 0.0,
+            "rotation_z_rad_per_environment": 0.0,
+            "dephasing_probability": 0.0,
+            "analyzer_angle_deg": 0.0,
+            "clock": {
+              "offset_s": 8e-08,
+              "skew_ppm": 3,
+              "drift_ppm_per_s": 0.02,
+              "tick_ps": 100
+            }
+          }
+        },
+        "physical_validation": "NOT_ASSESSED",
+        "qkd_security": "NOT_ASSESSED",
+        "novel_physics": "NOT_ASSESSED",
+        "topological_protection": "NOT_CLAIMED",
+        "calibration": [
+          {
+            "fit": {
+              "reference_center_s": 0.05,
+              "local_center_s": 0.05000489672745099,
+              "scale": 1.0000000001674207,
+              "training_min_s": 0.0,
+              "training_max_s": 0.09999999999999999
+            },
+            "training_n": 51,
+            "holdout": {
+              "n": 50,
+              "mean_s": 5.490150001286053e-13,
+              "rms_s": 1.19852599850564e-10,
+              "max_abs_s": 2.74390642152067e-10
+            },
+            "source": "independent_synthetic_reference_pulses"
+          },
+          {
+            "fit": {
+              "reference_center_s": 0.05,
+              "local_center_s": 0.05000512678431373,
+              "scale": 1.0000030005339369,
+              "training_min_s": 0.0,
+              "training_max_s": 0.09999999999999999
+            },
+            "training_n": 51,
+            "holdout": {
+              "n": 50,
+              "mean_s": -1.2313688124709898e-11,
+              "rms_s": 1.0268632874250234e-10,
+              "max_abs_s": 2.8591467388094927e-10
+            },
+            "source": "independent_synthetic_reference_pulses"
+          }
+        ],
+        "detectors": [
+          {
+            "signal_candidates_before_dead_time": 7578,
+            "dark_candidates_before_dead_time": 23,
+            "dead_time_rejected": 15,
+            "recorded": 7586
+          },
+          {
+            "signal_candidates_before_dead_time": 7405,
+            "dark_candidates_before_dead_time": 11,
+            "dead_time_rejected": 14,
+            "recorded": 7402
+          }
+        ],
+        "timing_screen": {
+          "criterion": "max absolute held-out residual per arm <= W/4",
+          "budget_s": 5e-10,
+          "within_assumed_budget": true,
+          "meaning": "engineering screen on synthetic anchors; not a guarantee"
+        },
+        "uncalibrated": {
+          "counters": [
+            49985014,
+            3726,
+            3858,
+            0,
+            3750,
+            1,
+            0,
+            0,
+            3650,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            50000000,
+            0,
+            3728,
+            3858,
+            3751,
+            3651,
+            0,
+            0
+          ],
+          "excluded_outside_gate_by_arm": [
+            0,
+            0
+          ],
+          "diagnostics": {
+            "conditional_port_bins": 2,
+            "conditional_same_port_fraction": 0.5,
+            "conditional_correlation": 0.0,
+            "repeat_bins": 0,
+            "multiport_bins": 0,
+            "uncertainty": "NOT_ESTIMATED_NONIID_POSSIBLE",
+            "interpretation": "Port occupancy diagnostic; not unique photon pairs, not a secret-key estimate"
+          }
+        },
+        "calibrated": {
+          "counters": [
+            49987496,
+            2507,
+            2595,
+            0,
+            2479,
+            18,
+            1254,
+            0,
+            2439,
+            1203,
+            9,
+            0,
+            0,
+            0,
+            0,
+            0,
+            50000000,
+            0,
+            3728,
+            3858,
+            3751,
+            3651,
+            0,
+            0
+          ],
+          "excluded_outside_gate_by_arm": [
+            0,
+            0
+          ],
+          "diagnostics": {
+            "conditional_port_bins": 2484,
+            "conditional_same_port_fraction": 0.010869565217391304,
+            "conditional_correlation": -0.9782608695652174,
+            "repeat_bins": 0,
+            "multiport_bins": 0,
+            "uncertainty": "NOT_ESTIMATED_NONIID_POSSIBLE",
+            "interpretation": "Port occupancy diagnostic; not unique photon pairs, not a secret-key estimate"
+          }
+        },
+        "latent_truth": {
+          "label": "SIMULATOR_LATENT_TRUTH_NOT_AN_ESTIMATE_FROM_CLICKS",
+          "generated_pairs": 20030,
+          "environment": [
+            -0.8851263302770762,
+            -0.9760435586440008,
+            -0.5172219479319569,
+            -0.7088949255354376,
+            -0.4842810227276305,
+            -0.2792743439107447,
+            -0.15186884948548937,
+            -0.21167804704083715,
+            -0.31230241092193045,
+            -0.5320648538139795,
+            0.2806707603196247,
+            0.4993182702331615,
+            0.31585595247558984,
+            0.2331158239143483,
+            0.15449222686783123,
+            -0.06926985332121474,
+            -0.12059791450896237,
+            -0.2094854004921186,
+            0.39911364154603246,
+            0.4416460290909784
+          ],
+          "realized_pair_survivals_before_dead_time_and_timing": 2772,
+          "efficiency_a": [
+            0.3717030117643,
+            0.3717030117643,
+            0.3717030117643,
+            0.3717030117643,
+            0.3717030117643,
+            0.3717030117643,
+            0.3717030117643,
+            0.3717030117643,
+            0.3717030117643,
+            0.3717030117643,
+            0.3717030117643,
+            0.3717030117643,
+            0.3717030117643,
+            0.3717030117643,
+            0.3717030117643,
+            0.3717030117643,
+            0.3717030117643,
+            0.3717030117643,
+            0.3717030117643,
+            0.3717030117643
+          ],
+          "efficiency_b": [
+            0.3717030117643,
+            0.3717030117643,
+            0.3717030117643,
+            0.3717030117643,
+            0.3717030117643,
+            0.3717030117643,
+            0.3717030117643,
+            0.3717030117643,
+            0.3717030117643,
+            0.3717030117643,
+            0.3717030117643,
+            0.3717030117643,
+            0.3717030117643,
+            0.3717030117643,
+            0.3717030117643,
+            0.3717030117643,
+            0.3717030117643,
+            0.3717030117643,
+            0.3717030117643,
+            0.3717030117643
+          ],
+          "delay_a_s": [
+            4.8967209175088724e-06,
+            4.8967209175088724e-06,
+            4.8967209175088724e-06,
+            4.8967209175088724e-06,
+            4.8967209175088724e-06,
+            4.8967209175088724e-06,
+            4.8967209175088724e-06,
+            4.8967209175088724e-06,
+            4.8967209175088724e-06,
+            4.8967209175088724e-06,
+            4.8967209175088724e-06,
+            4.8967209175088724e-06,
+            4.8967209175088724e-06,
+            4.8967209175088724e-06,
+            4.8967209175088724e-06,
+            4.8967209175088724e-06,
+            4.8967209175088724e-06,
+            4.8967209175088724e-06,
+            4.8967209175088724e-06,
+            4.8967209175088724e-06
+          ],
+          "delay_b_s": [
+            4.8967209175088724e-06,
+            4.8967209175088724e-06,
+            4.8967209175088724e-06,
+            4.8967209175088724e-06,
+            4.8967209175088724e-06,
+            4.8967209175088724e-06,
+            4.8967209175088724e-06,
+            4.8967209175088724e-06,
+            4.8967209175088724e-06,
+            4.8967209175088724e-06,
+            4.8967209175088724e-06,
+            4.8967209175088724e-06,
+            4.8967209175088724e-06,
+            4.8967209175088724e-06,
+            4.8967209175088724e-06,
+            4.8967209175088724e-06,
+            4.8967209175088724e-06,
+            4.8967209175088724e-06,
+            4.8967209175088724e-06,
+            4.8967209175088724e-06
+          ],
+          "mean_instantaneous_negativity": 0.48499999999999976,
+          "negativity_time_averaged_state": 0.4850000000000001,
+          "negativity_survival_weighted_state": 0.48500000000000004,
+          "singlet_overlap_time_averaged": 0.9849999999999998,
+          "ideal_same_port_probability_by_cell": [
+            0.01000000000000001,
+            0.01000000000000001,
+            0.01000000000000001,
+            0.01000000000000001,
+            0.01000000000000001,
+            0.01000000000000001,
+            0.01000000000000001,
+            0.01000000000000001,
+            0.01000000000000001,
+            0.01000000000000001,
+            0.01000000000000001,
+            0.01000000000000001,
+            0.01000000000000001,
+            0.01000000000000001,
+            0.01000000000000001,
+            0.01000000000000001,
+            0.01000000000000001,
+            0.01000000000000001,
+            0.01000000000000001,
+            0.01000000000000001
+          ],
+          "expected_signal_candidates_by_arm": [
+            7434.060235286,
+            7434.060235286
+          ],
+          "expected_pair_survivals_before_dead_time_and_timing": 2763.262579093027,
+          "factorized_mean_loss_pair_prediction": 2763.2625790930265
+        }
+      },
+      "replicates": [
+        {
+          "seed": 2000,
+          "calibrated_port_bins": 2345,
+          "uncalibrated_port_bins": 3,
+          "same_port_fraction": 0.011087420042643924,
+          "timing_screen_pass": true
+        },
+        {
+          "seed": 2001,
+          "calibrated_port_bins": 2361,
+          "uncalibrated_port_bins": 1,
+          "same_port_fraction": 0.009741634900465904,
+          "timing_screen_pass": true
+        },
+        {
+          "seed": 2002,
+          "calibrated_port_bins": 2424,
+          "uncalibrated_port_bins": 2,
+          "same_port_fraction": 0.011138613861386138,
+          "timing_screen_pass": true
+        },
+        {
+          "seed": 2003,
+          "calibrated_port_bins": 2523,
+          "uncalibrated_port_bins": 0,
+          "same_port_fraction": 0.013476020610384463,
+          "timing_screen_pass": true
+        },
+        {
+          "seed": 2004,
+          "calibrated_port_bins": 2427,
+          "uncalibrated_port_bins": 0,
+          "same_port_fraction": 0.010712814173877214,
+          "timing_screen_pass": true
+        },
+        {
+          "seed": 2005,
+          "calibrated_port_bins": 2445,
+          "uncalibrated_port_bins": 0,
+          "same_port_fraction": 0.014314928425357873,
+          "timing_screen_pass": true
+        },
+        {
+          "seed": 2006,
+          "calibrated_port_bins": 2363,
+          "uncalibrated_port_bins": 0,
+          "same_port_fraction": 0.011002962336013541,
+          "timing_screen_pass": true
+        },
+        {
+          "seed": 2007,
+          "calibrated_port_bins": 2359,
+          "uncalibrated_port_bins": 2,
+          "same_port_fraction": 0.0105977108944468,
+          "timing_screen_pass": true
+        },
+        {
+          "seed": 2008,
+          "calibrated_port_bins": 2411,
+          "uncalibrated_port_bins": 1,
+          "same_port_fraction": 0.00829531314807134,
+          "timing_screen_pass": true
+        },
+        {
+          "seed": 2009,
+          "calibrated_port_bins": 2483,
+          "uncalibrated_port_bins": 0,
+          "same_port_fraction": 0.008054772452678213,
+          "timing_screen_pass": true
+        },
+        {
+          "seed": 2010,
+          "calibrated_port_bins": 2409,
+          "uncalibrated_port_bins": 1,
+          "same_port_fraction": 0.008302200083022002,
+          "timing_screen_pass": true
+        },
+        {
+          "seed": 2011,
+          "calibrated_port_bins": 2367,
+          "uncalibrated_port_bins": 1,
+          "same_port_fraction": 0.008027038445289396,
+          "timing_screen_pass": true
+        },
+        {
+          "seed": 2012,
+          "calibrated_port_bins": 2445,
+          "uncalibrated_port_bins": 0,
+          "same_port_fraction": 0.007361963190184049,
+          "timing_screen_pass": true
+        },
+        {
+          "seed": 2013,
+          "calibrated_port_bins": 2425,
+          "uncalibrated_port_bins": 0,
+          "same_port_fraction": 0.009484536082474227,
+          "timing_screen_pass": true
+        },
+        {
+          "seed": 2014,
+          "calibrated_port_bins": 2405,
+          "uncalibrated_port_bins": 1,
+          "same_port_fraction": 0.008731808731808732,
+          "timing_screen_pass": true
+        },
+        {
+          "seed": 2015,
+          "calibrated_port_bins": 2414,
+          "uncalibrated_port_bins": 0,
+          "same_port_fraction": 0.009113504556752278,
+          "timing_screen_pass": true
+        },
+        {
+          "seed": 2016,
+          "calibrated_port_bins": 2391,
+          "uncalibrated_port_bins": 1,
+          "same_port_fraction": 0.010455876202425763,
+          "timing_screen_pass": true
+        },
+        {
+          "seed": 2017,
+          "calibrated_port_bins": 2420,
+          "uncalibrated_port_bins": 1,
+          "same_port_fraction": 0.009917355371900827,
+          "timing_screen_pass": true
+        },
+        {
+          "seed": 2018,
+          "calibrated_port_bins": 2462,
+          "uncalibrated_port_bins": 3,
+          "same_port_fraction": 0.010966693744922826,
+          "timing_screen_pass": true
+        },
+        {
+          "seed": 2019,
+          "calibrated_port_bins": 2450,
+          "uncalibrated_port_bins": 0,
+          "same_port_fraction": 0.01183673469387755,
+          "timing_screen_pass": true
+        },
+        {
+          "seed": 2020,
+          "calibrated_port_bins": 2471,
+          "uncalibrated_port_bins": 4,
+          "same_port_fraction": 0.01254552812626467,
+          "timing_screen_pass": true
+        },
+        {
+          "seed": 2021,
+          "calibrated_port_bins": 2478,
+          "uncalibrated_port_bins": 2,
+          "same_port_fraction": 0.010088781275221953,
+          "timing_screen_pass": true
+        },
+        {
+          "seed": 2022,
+          "calibrated_port_bins": 2509,
+          "uncalibrated_port_bins": 0,
+          "same_port_fraction": 0.01434834595456357,
+          "timing_screen_pass": true
+        },
+        {
+          "seed": 2023,
+          "calibrated_port_bins": 2470,
+          "uncalibrated_port_bins": 1,
+          "same_port_fraction": 0.012145748987854251,
+          "timing_screen_pass": true
+        },
+        {
+          "seed": 2024,
+          "calibrated_port_bins": 2400,
+          "uncalibrated_port_bins": 1,
+          "same_port_fraction": 0.0125,
+          "timing_screen_pass": true
+        },
+        {
+          "seed": 2025,
+          "calibrated_port_bins": 2529,
+          "uncalibrated_port_bins": 3,
+          "same_port_fraction": 0.009885330170027679,
+          "timing_screen_pass": true
+        },
+        {
+          "seed": 2026,
+          "calibrated_port_bins": 2467,
+          "uncalibrated_port_bins": 0,
+          "same_port_fraction": 0.012971220105391163,
+          "timing_screen_pass": true
+        },
+        {
+          "seed": 2027,
+          "calibrated_port_bins": 2449,
+          "uncalibrated_port_bins": 4,
+          "same_port_fraction": 0.010616578195181707,
+          "timing_screen_pass": true
+        },
+        {
+          "seed": 2028,
+          "calibrated_port_bins": 2437,
+          "uncalibrated_port_bins": 1,
+          "same_port_fraction": 0.006565449322938038,
+          "timing_screen_pass": true
+        },
+        {
+          "seed": 2029,
+          "calibrated_port_bins": 2417,
+          "uncalibrated_port_bins": 1,
+          "same_port_fraction": 0.008688456764584195,
+          "timing_screen_pass": true
+        }
+      ],
+      "summary": {
+        "calibrated_port_bins": {
+          "n": 30,
+          "mean": 2431.866666666667,
+          "sample_sd": 47.90848555846602,
+          "standard_error_of_mean": 8.746852745427441
+        },
+        "same_port_fraction": {
+          "n": 30,
+          "mean": 0.010432511361667007,
+          "sample_sd": 0.00200086922732586,
+          "standard_error_of_mean": 0.00036530707014143524
+        },
+        "paired_calibration_count_change": {
+          "n": 30,
+          "mean": 2430.733333333333,
+          "sample_sd": 47.913667572310565,
+          "standard_error_of_mean": 8.747798847386095
+        },
+        "timing_screen_passes": 30
+      }
+    },
+    "coupled": {
+      "single_seed_report": {
+        "schema": "plvl.report.v1",
+        "origin": "synthetic",
+        "config": {
+          "schema": "plvl.config.v1",
+          "provenance": "synthetic_design_assumption",
+          "duration_ps": 100000000000,
+          "window_ps": 2000,
+          "cell_ps": 5000000000,
+          "pair_rate_hz": 200000.0,
+          "singlet_visibility": 0.98,
+          "environment_sigma": 1.0,
+          "environment_tau_s": 0.02,
+          "calibration_anchors": 101,
+          "calibration_jitter_sigma_s": 1e-10,
+          "seed": 1701,
+          "arm_a": {
+            "length_km": 1.0,
+            "attenuation_db_per_km": 0.2,
+            "insertion_loss_db": 4,
+            "coupling": 0.7,
+            "detector_efficiency": 0.7,
+            "dark_rate_per_port_hz": 100.0,
+            "dead_time_s": 5e-08,
+            "jitter_sigma_s": 2e-10,
+            "group_index": 1.468,
+            "electronics_delay_s": 0.0,
+            "loss_db_per_environment": 0.6,
+            "delay_s_per_environment": 5e-11,
+            "rotation_y_rad": 0.0,
+            "rotation_z_rad": 0.0,
+            "rotation_y_rate_rad_per_s": 0.0,
+            "rotation_y_rad_per_environment": 0.1,
+            "rotation_z_rad_per_environment": 0.0,
+            "dephasing_probability": 0.0,
+            "analyzer_angle_deg": 0.0,
+            "clock": {
+              "offset_s": 0.0,
+              "skew_ppm": 0.0,
+              "drift_ppm_per_s": 0.0,
+              "tick_ps": 100
+            }
+          },
+          "arm_b": {
+            "length_km": 1.0,
+            "attenuation_db_per_km": 0.2,
+            "insertion_loss_db": 4,
+            "coupling": 0.7,
+            "detector_efficiency": 0.7,
+            "dark_rate_per_port_hz": 100.0,
+            "dead_time_s": 5e-08,
+            "jitter_sigma_s": 2e-10,
+            "group_index": 1.468,
+            "electronics_delay_s": 0.0,
+            "loss_db_per_environment": 0.6,
+            "delay_s_per_environment": 2e-10,
+            "rotation_y_rad": 0.0,
+            "rotation_z_rad": 0.0,
+            "rotation_y_rate_rad_per_s": 2,
+            "rotation_y_rad_per_environment": 0.8,
+            "rotation_z_rad_per_environment": 0.0,
+            "dephasing_probability": 0.0,
+            "analyzer_angle_deg": 0.0,
+            "clock": {
+              "offset_s": 8e-08,
+              "skew_ppm": 3,
+              "drift_ppm_per_s": 0.02,
+              "tick_ps": 100
+            }
+          }
+        },
+        "physical_validation": "NOT_ASSESSED",
+        "qkd_security": "NOT_ASSESSED",
+        "novel_physics": "NOT_ASSESSED",
+        "topological_protection": "NOT_CLAIMED",
+        "calibration": [
+          {
+            "fit": {
+              "reference_center_s": 0.05,
+              "local_center_s": 0.05000489674705883,
+              "scale": 1.000000000280543,
+              "training_min_s": 0.0,
+              "training_max_s": 0.09999999999999999
+            },
+            "training_n": 51,
+            "holdout": {
+              "n": 50,
+              "mean_s": -1.305882811608594e-11,
+              "rms_s": 1.2114858914289266e-10,
+              "max_abs_s": 2.5602715086892047e-10
+            },
+            "source": "independent_synthetic_reference_pulses"
+          },
+          {
+            "fit": {
+              "reference_center_s": 0.05,
+              "local_center_s": 0.05000512683137255,
+              "scale": 1.0000030028552036,
+              "training_min_s": 0.0,
+              "training_max_s": 0.09999999999999999
+            },
+            "training_n": 51,
+            "holdout": {
+              "n": 50,
+              "mean_s": -2.537247148493016e-11,
+              "rms_s": 1.4656001939835959e-10,
+              "max_abs_s": 4.4292928352840377e-10
+            },
+            "source": "independent_synthetic_reference_pulses"
+          }
+        ],
+        "detectors": [
+          {
+            "signal_candidates_before_dead_time": 3615,
+            "dark_candidates_before_dead_time": 23,
+            "dead_time_rejected": 3,
+            "recorded": 3635
+          },
+          {
+            "signal_candidates_before_dead_time": 3611,
+            "dark_candidates_before_dead_time": 11,
+            "dead_time_rejected": 4,
+            "recorded": 3618
+          }
+        ],
+        "timing_screen": {
+          "criterion": "max absolute held-out residual per arm <= W/4",
+          "budget_s": 5e-10,
+          "within_assumed_budget": true,
+          "meaning": "engineering screen on synthetic anchors; not a guarantee"
+        },
+        "uncalibrated": {
+          "counters": [
+            49992748,
+            1759,
+            1875,
+            0,
+            1809,
+            1,
+            0,
+            0,
+            1808,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            50000000,
+            0,
+            1760,
+            1875,
+            1810,
+            1808,
+            0,
+            0
+          ],
+          "excluded_outside_gate_by_arm": [
+            0,
+            0
+          ],
+          "diagnostics": {
+            "conditional_port_bins": 1,
+            "conditional_same_port_fraction": 1.0,
+            "conditional_correlation": 1.0,
+            "repeat_bins": 0,
+            "multiport_bins": 0,
+            "uncertainty": "NOT_ESTIMATED_NONIID_POSSIBLE",
+            "interpretation": "Port occupancy diagnostic; not unique photon pairs, not a secret-key estimate"
+          }
+        },
+        "calibrated": {
+          "counters": [
+            49993318,
+            1473,
+            1591,
+            0,
+            1540,
+            16,
+            254,
+            0,
+            1507,
+            271,
+            30,
+            0,
+            0,
+            0,
+            0,
+            0,
+            50000000,
+            0,
+            1760,
+            1875,
+            1810,
+            1808,
+            0,
+            0
+          ],
+          "excluded_outside_gate_by_arm": [
+            0,
+            0
+          ],
+          "diagnostics": {
+            "conditional_port_bins": 571,
+            "conditional_same_port_fraction": 0.08056042031523643,
+            "conditional_correlation": -0.8388791593695272,
+            "repeat_bins": 0,
+            "multiport_bins": 0,
+            "uncertainty": "NOT_ESTIMATED_NONIID_POSSIBLE",
+            "interpretation": "Port occupancy diagnostic; not unique photon pairs, not a secret-key estimate"
+          }
+        },
+        "latent_truth": {
+          "label": "SIMULATOR_LATENT_TRUTH_NOT_AN_ESTIMATE_FROM_CLICKS",
+          "generated_pairs": 20030,
+          "environment": [
+            -0.8851263302770762,
+            -0.9619859267931611,
+            0.08697722191451562,
+            -0.37330236380753434,
+            0.09570013813222861,
+            0.44336532460784484,
+            0.5766636778027476,
+            0.3124294051021581,
+            0.017718802098679154,
+            -0.4640360649592846,
+            1.238458263695814,
+            1.436943735138366,
+            0.7955584230337758,
+            0.4826613591327418,
+            0.23914208989689514,
+            -0.2534322741953279,
+            -0.3086131079718945,
+            -0.43305143739871244,
+            0.8794884656546407,
+            0.8110116585646718
+          ],
+          "realized_pair_survivals_before_dead_time_and_timing": 668,
+          "efficiency_a": [
+            0.21052499215623194,
+            0.21277237223782466,
+            0.18406764110761473,
+            0.19615266900699785,
+            0.1838459519639775,
+            0.17522423013825397,
+            0.17202685885505423,
+            0.17842278571345063,
+            0.1858373277534367,
+            0.198626982036626,
+            0.1569959988309383,
+            0.1527493799210992,
+            0.16690239727708464,
+            0.17427552450658673,
+            0.1802384959476238,
+            0.19293100050497597,
+            0.19440743332470062,
+            0.1977785398471842,
+            0.16497828022213673,
+            0.1665464502064795
+          ],
+          "efficiency_b": [
+            0.21052499215623194,
+            0.21277237223782466,
+            0.18406764110761473,
+            0.19615266900699785,
+            0.1838459519639775,
+            0.17522423013825397,
+            0.17202685885505423,
+            0.17842278571345063,
+            0.1858373277534367,
+            0.198626982036626,
+            0.1569959988309383,
+            0.1527493799210992,
+            0.16690239727708464,
+            0.17427552450658673,
+            0.1802384959476238,
+            0.19293100050497597,
+            0.19440743332470062,
+            0.1977785398471842,
+            0.16497828022213673,
+            0.1665464502064795
+          ],
+          "delay_a_s": [
+            4.896676661192359e-06,
+            4.896672818212533e-06,
+            4.896725266369968e-06,
+            4.896702252390682e-06,
+            4.896725702515779e-06,
+            4.8967430857751025e-06,
+            4.896749750692762e-06,
+            4.896736538979127e-06,
+            4.896721803448977e-06,
+            4.8966977157056245e-06,
+            4.896782840422057e-06,
+            4.896792764695629e-06,
+            4.896760695430024e-06,
+            4.896745050576829e-06,
+            4.8967328746133676e-06,
+            4.896708245895162e-06,
+            4.896705486853474e-06,
+            4.896699264937002e-06,
+            4.896764891932155e-06,
+            4.8967614680918004e-06
+          ],
+          "delay_b_s": [
+            4.896543892242817e-06,
+            4.896528520323514e-06,
+            4.896738312953255e-06,
+            4.896646257036111e-06,
+            4.896740057536499e-06,
+            4.896809590573794e-06,
+            4.896836250244433e-06,
+            4.896783403389893e-06,
+            4.896724461269292e-06,
+            4.896628110295881e-06,
+            4.896968609161612e-06,
+            4.8970083062559e-06,
+            4.896880029193479e-06,
+            4.896817449780699e-06,
+            4.896768745926852e-06,
+            4.896670231054033e-06,
+            4.896659194887278e-06,
+            4.896634307221392e-06,
+            4.8968968152020034e-06,
+            4.896883119840585e-06
+          ],
+          "mean_instantaneous_negativity": 0.48499999999999976,
+          "negativity_time_averaged_state": 0.4316960361635071,
+          "negativity_survival_weighted_state": 0.4324622042366418,
+          "singlet_overlap_time_averaged": 0.920104102595235,
+          "ideal_same_port_probability_by_cell": [
+            0.09966469043442856,
+            0.11242066518400268,
+            0.01180602686088494,
+            0.022494691243238815,
+            0.01306952640688545,
+            0.04234160451366925,
+            0.06283557842292584,
+            0.03098222797561536,
+            0.012322569957483924,
+            0.022883952081255113,
+            0.2237801098361747,
+            0.28689525373075464,
+            0.11957264993709033,
+            0.06376865810585322,
+            0.03371656241848852,
+            0.010122954508286767,
+            0.010637835879126822,
+            0.01401711396304453,
+            0.1588394225947996,
+            0.14574585404128426
+          ],
+          "expected_signal_candidates_by_arm": [
+            3645.305311558278,
+            3645.305311558278
+          ],
+          "expected_pair_survivals_before_dead_time_and_timing": 669.6515323902854,
+          "factorized_mean_loss_pair_prediction": 664.4125407237497
+        }
+      },
+      "replicates": [
+        {
+          "seed": 2000,
+          "calibrated_port_bins": 799,
+          "uncalibrated_port_bins": 0,
+          "same_port_fraction": 0.18147684605757197,
+          "timing_screen_pass": false
+        },
+        {
+          "seed": 2001,
+          "calibrated_port_bins": 577,
+          "uncalibrated_port_bins": 0,
+          "same_port_fraction": 0.15771230502599654,
+          "timing_screen_pass": false
+        },
+        {
+          "seed": 2002,
+          "calibrated_port_bins": 373,
+          "uncalibrated_port_bins": 1,
+          "same_port_fraction": 0.3002680965147453,
+          "timing_screen_pass": true
+        },
+        {
+          "seed": 2003,
+          "calibrated_port_bins": 455,
+          "uncalibrated_port_bins": 0,
+          "same_port_fraction": 0.1824175824175824,
+          "timing_screen_pass": true
+        },
+        {
+          "seed": 2004,
+          "calibrated_port_bins": 514,
+          "uncalibrated_port_bins": 0,
+          "same_port_fraction": 0.18093385214007782,
+          "timing_screen_pass": true
+        },
+        {
+          "seed": 2005,
+          "calibrated_port_bins": 812,
+          "uncalibrated_port_bins": 0,
+          "same_port_fraction": 0.15886699507389163,
+          "timing_screen_pass": true
+        },
+        {
+          "seed": 2006,
+          "calibrated_port_bins": 459,
+          "uncalibrated_port_bins": 0,
+          "same_port_fraction": 0.13507625272331156,
+          "timing_screen_pass": false
+        },
+        {
+          "seed": 2007,
+          "calibrated_port_bins": 708,
+          "uncalibrated_port_bins": 0,
+          "same_port_fraction": 0.1059322033898305,
+          "timing_screen_pass": false
+        },
+        {
+          "seed": 2008,
+          "calibrated_port_bins": 668,
+          "uncalibrated_port_bins": 0,
+          "same_port_fraction": 0.08383233532934131,
+          "timing_screen_pass": true
+        },
+        {
+          "seed": 2009,
+          "calibrated_port_bins": 571,
+          "uncalibrated_port_bins": 0,
+          "same_port_fraction": 0.050788091068301226,
+          "timing_screen_pass": true
+        },
+        {
+          "seed": 2010,
+          "calibrated_port_bins": 625,
+          "uncalibrated_port_bins": 0,
+          "same_port_fraction": 0.0928,
+          "timing_screen_pass": true
+        },
+        {
+          "seed": 2011,
+          "calibrated_port_bins": 507,
+          "uncalibrated_port_bins": 0,
+          "same_port_fraction": 0.06903353057199212,
+          "timing_screen_pass": true
+        },
+        {
+          "seed": 2012,
+          "calibrated_port_bins": 528,
+          "uncalibrated_port_bins": 0,
+          "same_port_fraction": 0.11742424242424243,
+          "timing_screen_pass": false
+        },
+        {
+          "seed": 2013,
+          "calibrated_port_bins": 615,
+          "uncalibrated_port_bins": 0,
+          "same_port_fraction": 0.09268292682926829,
+          "timing_screen_pass": false
+        },
+        {
+          "seed": 2014,
+          "calibrated_port_bins": 557,
+          "uncalibrated_port_bins": 0,
+          "same_port_fraction": 0.0933572710951526,
+          "timing_screen_pass": true
+        },
+        {
+          "seed": 2015,
+          "calibrated_port_bins": 618,
+          "uncalibrated_port_bins": 0,
+          "same_port_fraction": 0.06472491909385113,
+          "timing_screen_pass": true
+        },
+        {
+          "seed": 2016,
+          "calibrated_port_bins": 420,
+          "uncalibrated_port_bins": 0,
+          "same_port_fraction": 0.23333333333333334,
+          "timing_screen_pass": true
+        },
+        {
+          "seed": 2017,
+          "calibrated_port_bins": 491,
+          "uncalibrated_port_bins": 0,
+          "same_port_fraction": 0.17311608961303462,
+          "timing_screen_pass": false
+        },
+        {
+          "seed": 2018,
+          "calibrated_port_bins": 519,
+          "uncalibrated_port_bins": 0,
+          "same_port_fraction": 0.13102119460500963,
+          "timing_screen_pass": false
+        },
+        {
+          "seed": 2019,
+          "calibrated_port_bins": 622,
+          "uncalibrated_port_bins": 0,
+          "same_port_fraction": 0.0932475884244373,
+          "timing_screen_pass": false
+        },
+        {
+          "seed": 2020,
+          "calibrated_port_bins": 694,
+          "uncalibrated_port_bins": 1,
+          "same_port_fraction": 0.07492795389048991,
+          "timing_screen_pass": true
+        },
+        {
+          "seed": 2021,
+          "calibrated_port_bins": 636,
+          "uncalibrated_port_bins": 0,
+          "same_port_fraction": 0.09276729559748427,
+          "timing_screen_pass": true
+        },
+        {
+          "seed": 2022,
+          "calibrated_port_bins": 623,
+          "uncalibrated_port_bins": 0,
+          "same_port_fraction": 0.04975922953451043,
+          "timing_screen_pass": true
+        },
+        {
+          "seed": 2023,
+          "calibrated_port_bins": 531,
+          "uncalibrated_port_bins": 0,
+          "same_port_fraction": 0.128060263653484,
+          "timing_screen_pass": true
+        },
+        {
+          "seed": 2024,
+          "calibrated_port_bins": 657,
+          "uncalibrated_port_bins": 0,
+          "same_port_fraction": 0.0334855403348554,
+          "timing_screen_pass": true
+        },
+        {
+          "seed": 2025,
+          "calibrated_port_bins": 668,
+          "uncalibrated_port_bins": 1,
+          "same_port_fraction": 0.07634730538922156,
+          "timing_screen_pass": true
+        },
+        {
+          "seed": 2026,
+          "calibrated_port_bins": 512,
+          "uncalibrated_port_bins": 0,
+          "same_port_fraction": 0.1015625,
+          "timing_screen_pass": true
+        },
+        {
+          "seed": 2027,
+          "calibrated_port_bins": 602,
+          "uncalibrated_port_bins": 2,
+          "same_port_fraction": 0.1362126245847176,
+          "timing_screen_pass": false
+        },
+        {
+          "seed": 2028,
+          "calibrated_port_bins": 471,
+          "uncalibrated_port_bins": 0,
+          "same_port_fraction": 0.1316348195329087,
+          "timing_screen_pass": true
+        },
+        {
+          "seed": 2029,
+          "calibrated_port_bins": 573,
+          "uncalibrated_port_bins": 0,
+          "same_port_fraction": 0.13089005235602094,
+          "timing_screen_pass": true
+        }
+      ],
+      "summary": {
+        "calibrated_port_bins": {
+          "n": 30,
+          "mean": 580.1666666666666,
+          "sample_sd": 102.86049586306399,
+          "standard_error_of_mean": 18.77967128678899
+        },
+        "same_port_fraction": {
+          "n": 30,
+          "mean": 0.12178977468682216,
+          "sample_sd": 0.057422361389884845,
+          "standard_error_of_mean": 0.010483840879484544
+        },
+        "paired_calibration_count_change": {
+          "n": 30,
+          "mean": 580.0,
+          "sample_sd": 102.84873392009023,
+          "standard_error_of_mean": 18.777523859626715
+        },
+        "timing_screen_passes": 20
+      }
+    },
+    "nonlinear_clock_stress": {
+      "single_seed_report": {
+        "schema": "plvl.report.v1",
+        "origin": "synthetic",
+        "config": {
+          "schema": "plvl.config.v1",
+          "provenance": "synthetic_design_assumption",
+          "duration_ps": 100000000000,
+          "window_ps": 2000,
+          "cell_ps": 5000000000,
+          "pair_rate_hz": 200000.0,
+          "singlet_visibility": 0.98,
+          "environment_sigma": 1.0,
+          "environment_tau_s": 0.1,
+          "calibration_anchors": 101,
+          "calibration_jitter_sigma_s": 1e-10,
+          "seed": 1701,
+          "arm_a": {
+            "length_km": 1.0,
+            "attenuation_db_per_km": 0.2,
+            "insertion_loss_db": 1.0,
+            "coupling": 0.7,
+            "detector_efficiency": 0.7,
+            "dark_rate_per_port_hz": 100.0,
+            "dead_time_s": 5e-08,
+            "jitter_sigma_s": 2e-10,
+            "group_index": 1.468,
+            "electronics_delay_s": 0.0,
+            "loss_db_per_environment": 0.0,
+            "delay_s_per_environment": 0.0,
+            "rotation_y_rad": 0.0,
+            "rotation_z_rad": 0.0,
+            "rotation_y_rate_rad_per_s": 0.0,
+            "rotation_y_rad_per_environment": 0.0,
+            "rotation_z_rad_per_environment": 0.0,
+            "dephasing_probability": 0.0,
+            "analyzer_angle_deg": 0.0,
+            "clock": {
+              "offset_s": 0.0,
+              "skew_ppm": 0.0,
+              "drift_ppm_per_s": 0.0,
+              "tick_ps": 100
+            }
+          },
+          "arm_b": {
+            "length_km": 1.0,
+            "attenuation_db_per_km": 0.2,
+            "insertion_loss_db": 1.0,
+            "coupling": 0.7,
+            "detector_efficiency": 0.7,
+            "dark_rate_per_port_hz": 100.0,
+            "dead_time_s": 5e-08,
+            "jitter_sigma_s": 2e-10,
+            "group_index": 1.468,
+            "electronics_delay_s": 0.0,
+            "loss_db_per_environment": 0.0,
+            "delay_s_per_environment": 0.0,
+            "rotation_y_rad": 0.0,
+            "rotation_z_rad": 0.0,
+            "rotation_y_rate_rad_per_s": 0.0,
+            "rotation_y_rad_per_environment": 0.0,
+            "rotation_z_rad_per_environment": 0.0,
+            "dephasing_probability": 0.0,
+            "analyzer_angle_deg": 0.0,
+            "clock": {
+              "offset_s": 8e-08,
+              "skew_ppm": 3,
+              "drift_ppm_per_s": 20,
+              "tick_ps": 100
+            }
+          }
+        },
+        "physical_validation": "NOT_ASSESSED",
+        "qkd_security": "NOT_ASSESSED",
+        "novel_physics": "NOT_ASSESSED",
+        "topological_protection": "NOT_CLAIMED",
+        "calibration": [
+          {
+            "fit": {
+              "reference_center_s": 0.05,
+              "local_center_s": 0.05000489672745099,
+              "scale": 1.0000000001674207,
+              "training_min_s": 0.0,
+              "training_max_s": 0.09999999999999999
+            },
+            "training_n": 51,
+            "holdout": {
+              "n": 50,
+              "mean_s": 5.490150001286053e-13,
+              "rms_s": 1.19852599850564e-10,
+              "max_abs_s": 2.74390642152067e-10
+            },
+            "source": "independent_synthetic_reference_pulses"
+          },
+          {
+            "fit": {
+              "reference_center_s": 0.05,
+              "local_center_s": 0.05000516041960784,
+              "scale": 1.000003999669683,
+              "training_min_s": 0.0,
+              "training_max_s": 0.09999999999999999
+            },
+            "training_n": 51,
+            "holdout": {
+              "n": 50,
+              "mean_s": -3.3560649551067633e-10,
+              "rms_s": 7.455771379996782e-09,
+              "max_abs_s": 1.5496515709534364e-08
+            },
+            "source": "independent_synthetic_reference_pulses"
+          }
+        ],
+        "detectors": [
+          {
+            "signal_candidates_before_dead_time": 7578,
+            "dark_candidates_before_dead_time": 23,
+            "dead_time_rejected": 15,
+            "recorded": 7586
+          },
+          {
+            "signal_candidates_before_dead_time": 7405,
+            "dark_candidates_before_dead_time": 11,
+            "dead_time_rejected": 14,
+            "recorded": 7402
+          }
+        ],
+        "timing_screen": {
+          "criterion": "max absolute held-out residual per arm <= W/4",
+          "budget_s": 5e-10,
+          "within_assumed_budget": false,
+          "meaning": "engineering screen on synthetic anchors; not a guarantee"
+        },
+        "uncalibrated": {
+          "counters": [
+            49985014,
+            3726,
+            3858,
+            0,
+            3750,
+            1,
+            0,
+            0,
+            3650,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            50000000,
+            0,
+            3728,
+            3858,
+            3751,
+            3651,
+            0,
+            0
+          ],
+          "excluded_outside_gate_by_arm": [
+            0,
+            0
+          ],
+          "diagnostics": {
+            "conditional_port_bins": 2,
+            "conditional_same_port_fraction": 0.5,
+            "conditional_correlation": 0.0,
+            "repeat_bins": 0,
+            "multiport_bins": 0,
+            "uncertainty": "NOT_ESTIMATED_NONIID_POSSIBLE",
+            "interpretation": "Port occupancy diagnostic; not unique photon pairs, not a secret-key estimate"
+          }
+        },
+        "calibrated": {
+          "counters": [
+            49985193,
+            3650,
+            3755,
+            0,
+            3648,
+            1,
+            102,
+            0,
+            3573,
+            77,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            50000000,
+            0,
+            3728,
+            3858,
+            3751,
+            3651,
+            0,
+            0
+          ],
+          "excluded_outside_gate_by_arm": [
+            0,
+            0
+          ],
+          "diagnostics": {
+            "conditional_port_bins": 181,
+            "conditional_same_port_fraction": 0.011049723756906077,
+            "conditional_correlation": -0.9779005524861878,
+            "repeat_bins": 0,
+            "multiport_bins": 0,
+            "uncertainty": "NOT_ESTIMATED_NONIID_POSSIBLE",
+            "interpretation": "Port occupancy diagnostic; not unique photon pairs, not a secret-key estimate"
+          }
+        },
+        "latent_truth": {
+          "label": "SIMULATOR_LATENT_TRUTH_NOT_AN_ESTIMATE_FROM_CLICKS",
+          "generated_pairs": 20030,
+          "environment": [
+            -0.8851263302770762,
+            -0.9760435586440008,
+            -0.5172219479319569,
+            -0.7088949255354376,
+            -0.4842810227276305,
+            -0.2792743439107447,
+            -0.15186884948548937,
+            -0.21167804704083715,
+            -0.31230241092193045,
+            -0.5320648538139795,
+            0.2806707603196247,
+            0.4993182702331615,
+            0.31585595247558984,
+            0.2331158239143483,
+            0.15449222686783123,
+            -0.06926985332121474,
+            -0.12059791450896237,
+            -0.2094854004921186,
+            0.39911364154603246,
+            0.4416460290909784
+          ],
+          "realized_pair_survivals_before_dead_time_and_timing": 2772,
+          "efficiency_a": [
+            0.3717030117643,
+            0.3717030117643,
+            0.3717030117643,
+            0.3717030117643,
+            0.3717030117643,
+            0.3717030117643,
+            0.3717030117643,
+            0.3717030117643,
+            0.3717030117643,
+            0.3717030117643,
+            0.3717030117643,
+            0.3717030117643,
+            0.3717030117643,
+            0.3717030117643,
+            0.3717030117643,
+            0.3717030117643,
+            0.3717030117643,
+            0.3717030117643,
+            0.3717030117643,
+            0.3717030117643
+          ],
+          "efficiency_b": [
+            0.3717030117643,
+            0.3717030117643,
+            0.3717030117643,
+            0.3717030117643,
+            0.3717030117643,
+            0.3717030117643,
+            0.3717030117643,
+            0.3717030117643,
+            0.3717030117643,
+            0.3717030117643,
+            0.3717030117643,
+            0.3717030117643,
+            0.3717030117643,
+            0.3717030117643,
+            0.3717030117643,
+            0.3717030117643,
+            0.3717030117643,
+            0.3717030117643,
+            0.3717030117643,
+            0.3717030117643
+          ],
+          "delay_a_s": [
+            4.8967209175088724e-06,
+            4.8967209175088724e-06,
+            4.8967209175088724e-06,
+            4.8967209175088724e-06,
+            4.8967209175088724e-06,
+            4.8967209175088724e-06,
+            4.8967209175088724e-06,
+            4.8967209175088724e-06,
+            4.8967209175088724e-06,
+            4.8967209175088724e-06,
+            4.8967209175088724e-06,
+            4.8967209175088724e-06,
+            4.8967209175088724e-06,
+            4.8967209175088724e-06,
+            4.8967209175088724e-06,
+            4.8967209175088724e-06,
+            4.8967209175088724e-06,
+            4.8967209175088724e-06,
+            4.8967209175088724e-06,
+            4.8967209175088724e-06
+          ],
+          "delay_b_s": [
+            4.8967209175088724e-06,
+            4.8967209175088724e-06,
+            4.8967209175088724e-06,
+            4.8967209175088724e-06,
+            4.8967209175088724e-06,
+            4.8967209175088724e-06,
+            4.8967209175088724e-06,
+            4.8967209175088724e-06,
+            4.8967209175088724e-06,
+            4.8967209175088724e-06,
+            4.8967209175088724e-06,
+            4.8967209175088724e-06,
+            4.8967209175088724e-06,
+            4.8967209175088724e-06,
+            4.8967209175088724e-06,
+            4.8967209175088724e-06,
+            4.8967209175088724e-06,
+            4.8967209175088724e-06,
+            4.8967209175088724e-06,
+            4.8967209175088724e-06
+          ],
+          "mean_instantaneous_negativity": 0.48499999999999976,
+          "negativity_time_averaged_state": 0.4850000000000001,
+          "negativity_survival_weighted_state": 0.48500000000000004,
+          "singlet_overlap_time_averaged": 0.9849999999999998,
+          "ideal_same_port_probability_by_cell": [
+            0.01000000000000001,
+            0.01000000000000001,
+            0.01000000000000001,
+            0.01000000000000001,
+            0.01000000000000001,
+            0.01000000000000001,
+            0.01000000000000001,
+            0.01000000000000001,
+            0.01000000000000001,
+            0.01000000000000001,
+            0.01000000000000001,
+            0.01000000000000001,
+            0.01000000000000001,
+            0.01000000000000001,
+            0.01000000000000001,
+            0.01000000000000001,
+            0.01000000000000001,
+            0.01000000000000001,
+            0.01000000000000001,
+            0.01000000000000001
+          ],
+          "expected_signal_candidates_by_arm": [
+            7434.060235286,
+            7434.060235286
+          ],
+          "expected_pair_survivals_before_dead_time_and_timing": 2763.262579093027,
+          "factorized_mean_loss_pair_prediction": 2763.2625790930265
+        }
+      },
+      "replicates": [
+        {
+          "seed": 2000,
+          "calibrated_port_bins": 209,
+          "uncalibrated_port_bins": 1,
+          "same_port_fraction": 0.009569377990430622,
+          "timing_screen_pass": false
+        },
+        {
+          "seed": 2001,
+          "calibrated_port_bins": 201,
+          "uncalibrated_port_bins": 3,
+          "same_port_fraction": 0.004975124378109453,
+          "timing_screen_pass": false
+        },
+        {
+          "seed": 2002,
+          "calibrated_port_bins": 188,
+          "uncalibrated_port_bins": 0,
+          "same_port_fraction": 0.02127659574468085,
+          "timing_screen_pass": false
+        },
+        {
+          "seed": 2003,
+          "calibrated_port_bins": 185,
+          "uncalibrated_port_bins": 0,
+          "same_port_fraction": 0.021621621621621623,
+          "timing_screen_pass": false
+        },
+        {
+          "seed": 2004,
+          "calibrated_port_bins": 203,
+          "uncalibrated_port_bins": 0,
+          "same_port_fraction": 0.019704433497536946,
+          "timing_screen_pass": false
+        },
+        {
+          "seed": 2005,
+          "calibrated_port_bins": 180,
+          "uncalibrated_port_bins": 1,
+          "same_port_fraction": 0.027777777777777776,
+          "timing_screen_pass": false
+        },
+        {
+          "seed": 2006,
+          "calibrated_port_bins": 186,
+          "uncalibrated_port_bins": 1,
+          "same_port_fraction": 0.016129032258064516,
+          "timing_screen_pass": false
+        },
+        {
+          "seed": 2007,
+          "calibrated_port_bins": 190,
+          "uncalibrated_port_bins": 2,
+          "same_port_fraction": 0.005263157894736842,
+          "timing_screen_pass": false
+        },
+        {
+          "seed": 2008,
+          "calibrated_port_bins": 187,
+          "uncalibrated_port_bins": 1,
+          "same_port_fraction": 0.0106951871657754,
+          "timing_screen_pass": false
+        },
+        {
+          "seed": 2009,
+          "calibrated_port_bins": 175,
+          "uncalibrated_port_bins": 1,
+          "same_port_fraction": 0.005714285714285714,
+          "timing_screen_pass": false
+        },
+        {
+          "seed": 2010,
+          "calibrated_port_bins": 179,
+          "uncalibrated_port_bins": 0,
+          "same_port_fraction": 0.0111731843575419,
+          "timing_screen_pass": false
+        },
+        {
+          "seed": 2011,
+          "calibrated_port_bins": 191,
+          "uncalibrated_port_bins": 1,
+          "same_port_fraction": 0.005235602094240838,
+          "timing_screen_pass": false
+        },
+        {
+          "seed": 2012,
+          "calibrated_port_bins": 218,
+          "uncalibrated_port_bins": 1,
+          "same_port_fraction": 0.009174311926605505,
+          "timing_screen_pass": false
+        },
+        {
+          "seed": 2013,
+          "calibrated_port_bins": 204,
+          "uncalibrated_port_bins": 0,
+          "same_port_fraction": 0.024509803921568627,
+          "timing_screen_pass": false
+        },
+        {
+          "seed": 2014,
+          "calibrated_port_bins": 188,
+          "uncalibrated_port_bins": 1,
+          "same_port_fraction": 0.010638297872340425,
+          "timing_screen_pass": false
+        },
+        {
+          "seed": 2015,
+          "calibrated_port_bins": 162,
+          "uncalibrated_port_bins": 1,
+          "same_port_fraction": 0.006172839506172839,
+          "timing_screen_pass": false
+        },
+        {
+          "seed": 2016,
+          "calibrated_port_bins": 200,
+          "uncalibrated_port_bins": 1,
+          "same_port_fraction": 0.015,
+          "timing_screen_pass": false
+        },
+        {
+          "seed": 2017,
+          "calibrated_port_bins": 186,
+          "uncalibrated_port_bins": 0,
+          "same_port_fraction": 0.016129032258064516,
+          "timing_screen_pass": false
+        },
+        {
+          "seed": 2018,
+          "calibrated_port_bins": 206,
+          "uncalibrated_port_bins": 1,
+          "same_port_fraction": 0.014563106796116505,
+          "timing_screen_pass": false
+        },
+        {
+          "seed": 2019,
+          "calibrated_port_bins": 192,
+          "uncalibrated_port_bins": 1,
+          "same_port_fraction": 0.015625,
+          "timing_screen_pass": false
+        },
+        {
+          "seed": 2020,
+          "calibrated_port_bins": 210,
+          "uncalibrated_port_bins": 2,
+          "same_port_fraction": 0.014285714285714285,
+          "timing_screen_pass": false
+        },
+        {
+          "seed": 2021,
+          "calibrated_port_bins": 198,
+          "uncalibrated_port_bins": 0,
+          "same_port_fraction": 0.025252525252525252,
+          "timing_screen_pass": false
+        },
+        {
+          "seed": 2022,
+          "calibrated_port_bins": 206,
+          "uncalibrated_port_bins": 1,
+          "same_port_fraction": 0.019417475728155338,
+          "timing_screen_pass": false
+        },
+        {
+          "seed": 2023,
+          "calibrated_port_bins": 179,
+          "uncalibrated_port_bins": 0,
+          "same_port_fraction": 0.0,
+          "timing_screen_pass": false
+        },
+        {
+          "seed": 2024,
+          "calibrated_port_bins": 180,
+          "uncalibrated_port_bins": 0,
+          "same_port_fraction": 0.027777777777777776,
+          "timing_screen_pass": false
+        },
+        {
+          "seed": 2025,
+          "calibrated_port_bins": 203,
+          "uncalibrated_port_bins": 0,
+          "same_port_fraction": 0.009852216748768473,
+          "timing_screen_pass": false
+        },
+        {
+          "seed": 2026,
+          "calibrated_port_bins": 187,
+          "uncalibrated_port_bins": 4,
+          "same_port_fraction": 0.016042780748663103,
+          "timing_screen_pass": false
+        },
+        {
+          "seed": 2027,
+          "calibrated_port_bins": 203,
+          "uncalibrated_port_bins": 0,
+          "same_port_fraction": 0.014778325123152709,
+          "timing_screen_pass": false
+        },
+        {
+          "seed": 2028,
+          "calibrated_port_bins": 174,
+          "uncalibrated_port_bins": 2,
+          "same_port_fraction": 0.0,
+          "timing_screen_pass": false
+        },
+        {
+          "seed": 2029,
+          "calibrated_port_bins": 193,
+          "uncalibrated_port_bins": 1,
+          "same_port_fraction": 0.015544041450777202,
+          "timing_screen_pass": false
+        }
+      ],
+      "summary": {
+        "calibrated_port_bins": {
+          "n": 30,
+          "mean": 192.1,
+          "sample_sd": 12.753228124134177,
+          "standard_error_of_mean": 2.3284102415325276
+        },
+        "same_port_fraction": {
+          "n": 30,
+          "mean": 0.0137966209963735,
+          "sample_sd": 0.007555615569692814,
+          "standard_error_of_mean": 0.0013794603611193335
+        },
+        "paired_calibration_count_change": {
+          "n": 30,
+          "mean": 191.2,
+          "sample_sd": 12.774975538137051,
+          "standard_error_of_mean": 2.3323807579381204
+        },
+        "timing_screen_passes": 0
+      }
+    }
+  },
+  "deterministic_convergence": {
+    "scope": "deterministic midpoint discretization only; OU convergence remains open",
+    "exact": 0.20833387927868574,
+    "rows": [
+      {
+        "cells": 10,
+        "same_port_probability": 0.2079823683879604,
+        "abs_error": 0.0003515108907253539
+      },
+      {
+        "cells": 20,
+        "same_port_probability": 0.2082460571172779,
+        "abs_error": 8.782216140784671e-05
+      },
+      {
+        "cells": 40,
+        "same_port_probability": 0.2083119272084332,
+        "abs_error": 2.195207025254553e-05
+      },
+      {
+        "cells": 80,
+        "same_port_probability": 0.20832839147796509,
+        "abs_error": 5.487800720654912e-06
+      }
+    ]
+  }
+}
