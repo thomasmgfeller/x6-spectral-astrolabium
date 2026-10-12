@@ -27,7 +27,10 @@ jobs:
       - name: Compile experimental modules
         run: python -m compileall -q experimental/evidence_calibration
       - name: Execute isolated deterministic unit tests
-        run: python -m unittest experimental.evidence_calibration.test_core experimental.evidence_calibration.test_extensions experimental.evidence_calibration.test_benchmarks -v
+        shell: bash
+        run: |
+          set -o pipefail
+          python -m unittest experimental.evidence_calibration.test_core experimental.evidence_calibration.test_extensions experimental.evidence_calibration.test_benchmarks -v 2>&1 | tee evidence-tests.log
       - name: Confirm pinned X6 app SHA-256 without changing it
         run: |
           python - <<'PY'
@@ -38,3 +41,11 @@ jobs:
           assert actual == config['app_sha256'], 'X6 app hash mismatch; research pilot requires review'
           print('PINNED_APP_HASH_OK',actual)
           PY
+      - name: Preserve test evidence including failures
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: x6-experimental-evidence-${{ github.run_id }}-${{ github.run_attempt }}
+          path: evidence-tests.log
+          if-no-files-found: warn
+          retention-days: 30
