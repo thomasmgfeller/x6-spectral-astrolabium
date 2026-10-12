@@ -8,7 +8,7 @@ from experimental.evidence_calibration.core import (
 
 
 class EvidenceCalibrationTests(unittest.TestCase):
-    def test_integrity_and_replay(self):
+    def test_integrity_and_repeatability(self):
         with tempfile.TemporaryDirectory() as d:
             p = Path(d) / "sample.bin"
             p.write_bytes(b"reproducible")
