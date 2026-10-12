@@ -6,6 +6,7 @@ excluded files are reported, never silently treated as PASS.
 """
 import hashlib
 import json
+import re
 import subprocess
 from pathlib import Path
 
@@ -33,6 +34,33 @@ def main():
                         "device/sagnac_bridge.py", "tests/python/verify_manifest.py"}
                        .issubset(integration.get("files", {}))):
             raise SystemExit("FAIL: malformed Sagnac integration manifest or incorrect baseline")
+    # Isolated extensions have explicit inventories; do not weaken the unknown-file
+    # check or change the app pin used by the bounded research agents.
+    extension_specs = {
+        "EVIDENCE_CALIBRATION_SOURCE_MANIFEST.json": (
+            "x6.evidence-calibration.source-manifest/1",
+            {"experimental/evidence_calibration/core.py", "experimental/evidence_calibration/run_qualification.py",
+             ".github/workflows/x6-experimental-evidence.yml"}),
+        "SIGNAL_LAB_SOURCE_MANIFEST.json": (
+            "x6.signal-lab.source-manifest/1",
+            {"app/signal-lab.html", "app/signal-lab-core.js", "app/signal-lab-ui.js",
+             "app/signal-lab-evidence.js", "app/signal-lab-build.js", "app/signal-lab.css",
+             "tests/signal-lab/test_core.cjs", "tests/signal-lab/reference_validation.py",
+             "tests/signal-lab/browser_test.cjs"}),
+    }
+    extensions = {}
+    for name, (schema, required) in extension_specs.items():
+        path = ROOT / name
+        if not path.is_file():
+            raise SystemExit("FAIL: missing extension manifest: " + name)
+        ext = json.loads(path.read_text(encoding="utf-8"))
+        if (ext.get("schema") != schema or ext.get("algorithm") != "sha256"
+                or not isinstance(ext.get("files"), dict)
+                or not required.issubset(ext["files"])
+                or any(not isinstance(h, str) or not re.fullmatch(r"[0-9a-f]{64}", h)
+                       for h in ext["files"].values())):
+            raise SystemExit("FAIL: malformed extension manifest: " + name)
+        extensions[name] = ext
     tracked = set(subprocess.check_output(
         ["git", "ls-files", "-z"], cwd=ROOT).decode("utf-8").strip("\0").split("\0"))
     failed = []
@@ -82,6 +110,17 @@ def main():
                 failed.append({'path': rel, 'reason': 'integration manifest path missing or invalid'})
             elif hashlib.sha256(candidate.read_bytes()).hexdigest() != digest:
                 failed.append({'path': rel, 'reason': 'integration SHA-256 mismatch'})
+            else:
+                verified += 1
+    for name, ext in extensions.items():
+        expected_tracked |= set(ext["files"]) | {name}
+        for rel, digest in sorted(ext["files"].items()):
+            candidate = ROOT / rel
+            if (Path(rel).is_absolute() or ".." in Path(rel).parts
+                    or rel not in tracked or not candidate.is_file() or candidate.is_symlink()):
+                failed.append({"path": rel, "reason": "extension manifest path missing or invalid"})
+            elif hashlib.sha256(candidate.read_bytes()).hexdigest() != digest:
+                failed.append({"path": rel, "reason": "extension SHA-256 mismatch"})
             else:
                 verified += 1
     unlisted = sorted(tracked - expected_tracked)

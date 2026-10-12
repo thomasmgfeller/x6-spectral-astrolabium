@@ -10,6 +10,33 @@ This repository publishes the actual **X6 v4.2 RC** browser application, alongsi
 
 Open `app/index.html` in a browser, or run `python -m http.server 8000` and visit `http://localhost:8000/app/`.
 
+## Signal Validation Lab
+
+Open the [Signal Validation Lab](https://thomasmgfeller.github.io/x6-spectral-astrolabium/app/signal-lab.html)
+or `app/signal-lab.html` locally. This isolated DE/EN/FR extension compares known
+synthetic signals with identity, centered moving average, periodic FFT low-pass
+and the original X6 phase-selection method. Noise, gain, phase, signed delay,
+clipping and quantization are explicit, seeded and reproducible. The comparison
+uses actual time-series errors, Welch spectra, cross-phase and coherence with
+declared acceptance limits and explicit undefined/ambiguous results.
+
+Eight adversarial cases expose false quality judgments, including polarity
+inversion with unchanged PSD/coherence, periodic delay ambiguity and removal of
+a clean signal by the X6 phase filter. JSON exports preserve all input/output
+arrays, parameters, results, source hashes and optional counterexamples; import
+checks the digest and actually recomputes the experiment. CSV exports contain
+every sample from all four methods.
+
+The app runs without external frontend dependencies or a backend. The existing
+Astrolabium app, scheduled agents and their pinned research sources are unchanged.
+The lab's own **X6 Signal Lab** CI checks numerical reference results and browser
+behavior; it does not activate research agents or hardware.
+
+Read [usage, exports and qualification](docs/SIGNAL_VALIDATION_LAB.md) and
+[mathematical definitions and limitations](docs/SIGNAL_LAB_METHODS.md).
+These are synthetic software experiments, not measured device performance or
+physical/quantum qualification. A hash or a successful replay is not authenticity.
+
 ## Experimental Sagnac integration preview 0.1
 
 This experimental extension adds tab **07 · Sagnac**: validated SGNCv007 binary
