@@ -1,0 +1,67 @@
+{
+  "schema": "nqk.research-baseline/1",
+  "document_version": "2.0",
+  "roadmap_version": "0.1",
+  "date": "2026-10-12",
+  "evidence_class": "INTERNAL_RESEARCH_REPORT",
+  "independent_external_review": "NOT_PERFORMED",
+  "historical_tests_001_013": "UNCONFIRMED",
+  "new_reference_runs": 3812,
+  "additional_robustness_runs": 10908,
+  "robustness_components": {
+    "held_out_runs": 3812,
+    "sensitivity_runs": 7096
+  },
+  "quantum_state_channel_cases": 454,
+  "ideal_measurement_datasets": 192,
+  "initial_reference_tests": {
+    "metric": 20,
+    "embedding": 6
+  },
+  "documentation_consistency_checks": 171,
+  "new_scientific_runs_in_this_publication": 0,
+  "implemented_transfer_features_in_this_publication": 0,
+  "report": {
+    "path": "NQK_Forschungsfassung_2_0.pdf",
+    "pages": 17,
+    "sha256": "d6aa25ea0f1a2778c44b1b5ad285676b619668c1cc3e1236d93af52dd34da66e"
+  },
+  "source_archives": [
+    {
+      "name": "NQK_Neue_Testserie_001_013_Pruefpaket.zip",
+      "sha256": "68bc8bb54f8771f66f97b0124fb16a37770bbf69aaf8857fea19ab8952fe3196",
+      "bytes": 2924467,
+      "included_in_this_git_publication": false
+    },
+    {
+      "name": "NQK_Robustheit_001_013_Pruefpaket.zip",
+      "sha256": "199b4f0335a63ffd8b48941dd30dae9d17cae088a6a1f09947ef7aa6e7bdc8a6",
+      "bytes": 4948176,
+      "included_in_this_git_publication": false
+    },
+    {
+      "name": "NQK_Sanierung_Schritte_1_2.zip",
+      "sha256": "ade721a708f2cc884779d3438e59a522060c703e0a25e173aa7bc4166fa80d41",
+      "bytes": 237475,
+      "included_in_this_git_publication": false
+    },
+    {
+      "name": "NQK_Schritt_5_Quantenbezug_Pruefpaket.zip",
+      "sha256": "34f9bb5f97325ab1a7135a87365fee956d19ac9ca169fad4fd21b8c940dda105",
+      "bytes": 1755989,
+      "included_in_this_git_publication": false
+    }
+  ],
+  "limitations": [
+    "Partly dependent synthetic cases; counts are not independent observations.",
+    "Quantum calculations use classical simulation of 3 to 6 qubits.",
+    "No new hardware data, spacetime emergence, 4D limit or quantum advantage established.",
+    "Full previous source/data archives are not included in this roadmap-only publication; controlled source import and clean-checkout reproduction are milestone M1."
+  ],
+  "repository_context": {
+    "repository": "thomasmgfeller/x6-spectral-astrolabium",
+    "base_commit": "7c70771936acf52237c658da3d0b566859143aa6",
+    "research_branch": "research/nqk",
+    "astrolabium_integration": "PROPOSED_ONLY"
+  }
+}
