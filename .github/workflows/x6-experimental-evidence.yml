@@ -1,0 +1,40 @@
+name: X6 Experimental Evidence CI
+
+on:
+  pull_request:
+    paths:
+      - 'experimental/evidence_calibration/**'
+      - '.github/workflows/x6-experimental-evidence.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'experimental/evidence_calibration/**'
+      - '.github/workflows/x6-experimental-evidence.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  isolated-evidence-tests:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Compile experimental modules
+        run: python -m compileall -q experimental/evidence_calibration
+      - name: Execute isolated deterministic unit tests
+        run: python -m unittest experimental.evidence_calibration.test_core experimental.evidence_calibration.test_extensions -v
+      - name: Confirm pinned X6 app SHA-256 without changing it
+        run: |
+          python - <<'PY'
+          import hashlib, json
+          from pathlib import Path
+          config=json.loads(Path('agent/math-agent-config.json').read_text())
+          actual=hashlib.sha256(Path('app/index.html').read_bytes()).hexdigest()
+          assert actual == config['app_sha256'], 'X6 app hash mismatch; research pilot requires review'
+          print('PINNED_APP_HASH_OK',actual)
+          PY
