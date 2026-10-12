@@ -53,8 +53,12 @@ ist daher noch kein ausführbares öffentliches Reproduktionspaket.
 
 Die NQK-Dokumente wurden mit KI-Unterstützung erstellt. Externe Replikation,
 fachliches Review und die Bewertung möglicher Neuheit bleiben offen.
-Der bestehende [Lizenzstatus des Repositorys](../../README.md#license-status)
-gilt weiter; dieses Dossier erteilt keine zusätzliche Nutzungslizenz.
+Seit 13. Oktober 2026 sind die eigenen Inhalte dieses NQK-Dossiers, einschließlich
+des eigenen Forschungsberichts, unter [Apache-2.0](LICENSE) freigegeben, soweit
+lizenzierbare Rechte bestehen. Siehe [NOTICE](NOTICE) und
+[Lizenzumfang](LICENSE_SCOPE.md). Fremdmaterialien und separat lizenzierte
+Bestandteile behalten ihre eigenen Bedingungen. Die Freigabe ist kein
+wissenschaftlicher oder unabhängiger rechtlicher Prüfbeleg.
 
 ## Nächster Arbeitsabschnitt
 
