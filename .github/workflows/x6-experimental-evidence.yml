@@ -20,32 +20,26 @@ jobs:
     runs-on: ubuntu-24.04
     timeout-minutes: 5
     steps:
-      - uses: actions/checkout@v5
-      - uses: actions/setup-python@v6
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5, previously executed revision
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6, previously executed revision
         with:
           python-version: '3.12'
       - name: Compile experimental modules
         run: python -m compileall -q experimental/evidence_calibration
-      - name: Execute isolated deterministic unit tests
+      - name: Run regression and independent reference qualification
         shell: bash
         run: |
-          set -o pipefail
-          python -m unittest experimental.evidence_calibration.test_core experimental.evidence_calibration.test_extensions experimental.evidence_calibration.test_benchmarks experimental.evidence_calibration.test_recorded -v 2>&1 | tee evidence-tests.log
-      - name: Confirm pinned X6 app SHA-256 without changing it
-        run: |
-          python - <<'PY'
-          import hashlib, json
-          from pathlib import Path
-          config=json.loads(Path('agent/math-agent-config.json').read_text())
-          actual=hashlib.sha256(Path('app/index.html').read_bytes()).hexdigest()
-          assert actual == config['app_sha256'], 'X6 app hash mismatch; research pilot requires review'
-          print('PINNED_APP_HASH_OK',actual)
-          PY
-      - name: Preserve test evidence including failures
+          set -euo pipefail
+          python -m experimental.evidence_calibration.run_qualification --output evidence-output --protect-research 2>&1 | tee qualification-console.log
+      - name: Preserve sources, environment and failed or successful results
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4, previously executed revision
         with:
           name: x6-experimental-evidence-${{ github.run_id }}-${{ github.run_attempt }}
-          path: evidence-tests.log
-          if-no-files-found: warn
+          path: |
+            evidence-output/
+            qualification-console.log
+          if-no-files-found: error
           retention-days: 30

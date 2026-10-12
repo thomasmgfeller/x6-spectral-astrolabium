@@ -9,9 +9,9 @@ class RecordedTests(unittest.TestCase):
             a=Path(d)/"a.csv";b=Path(d)/"b.csv"
             a.write_text("0,0,0\n0,10,0\n0,0,0\n")
             b.write_text("0,0,0\n0,0,10\n0,0,0\n")
-            m=dict(instrument_id="fixture",pixel_pitch_um=2,acquired_utc="2026-10-12T00:00:00Z",calibration_id="not-verified")
+            m=dict(instrument_id="fixture",pixel_pitch_um=2,acquired_utc="2026-10-12T00:00:00Z",calibration_id="not-verified",evidence_class="SYNTHETIC",coordinate_plane="synthetic_grid",scale_model="effective_isotropic_um_per_input_pixel")
             result=compare_recorded_frames(a,b,m)
-            self.assertEqual(result["status"],"UNVERIFIED_MEASUREMENT")
+            self.assertEqual(result["status"],"SYNTHETIC_RESULT")
             self.assertEqual(result["drift_um"],2)
             self.assertEqual(compare_recorded_frames(a,b,{})["status"],"UNQUALIFIED_METADATA")
             b.write_text("0,0\n0,0\n")
