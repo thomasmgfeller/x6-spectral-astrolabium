@@ -1,0 +1,60 @@
+name: X6 Signal Lab
+
+on:
+  pull_request:
+    paths:
+      - 'app/signal-lab*'
+      - 'tests/signal-lab/**'
+      - 'tools/build_signal_lab.py'
+      - 'docs/SIGNAL_LAB*'
+      - 'docs/SIGNAL_VALIDATION_LAB.md'
+      - '*SOURCE_MANIFEST.json'
+      - 'tests/python/verify_manifest.py'
+      - '.github/workflows/x6-signal-lab.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'app/signal-lab*'
+      - 'tests/signal-lab/**'
+      - 'tools/build_signal_lab.py'
+      - 'docs/SIGNAL_LAB*'
+      - 'docs/SIGNAL_VALIDATION_LAB.md'
+      - '*SOURCE_MANIFEST.json'
+      - 'tests/python/verify_manifest.py'
+      - '.github/workflows/x6-signal-lab.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  numerical-and-browser:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install fixed reference and browser dependencies
+        run: |
+          python -m pip install -r tests/signal-lab/requirements.txt
+          npm install --prefix "$RUNNER_TEMP/x6-signal-lab" --no-save --no-package-lock --no-audit --no-fund playwright@1.62.1
+          node "$RUNNER_TEMP/x6-signal-lab/node_modules/playwright/cli.js" install --with-deps chromium
+      - name: Verify sources, numerical references, replay and browser behavior
+        env:
+          NODE_PATH: ${{ runner.temp }}/x6-signal-lab/node_modules
+        run: python tests/signal-lab/qualify.py --output signal-lab-evidence
+      - name: Preserve source snapshots and successful or failed evidence
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: x6-signal-lab-${{ github.run_id }}-${{ github.run_attempt }}
+          path: signal-lab-evidence/
+          if-no-files-found: warn
+          retention-days: 30

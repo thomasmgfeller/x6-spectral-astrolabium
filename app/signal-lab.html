@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="X6 Signal Validation Lab: reproducible synthetic signal benchmarks, explicit acceptance criteria, counterexamples and evidence replay. Works offline.">
+  <meta name="color-scheme" content="dark">
+  <title>Signal Validation Lab · X6</title>
+  <link rel="stylesheet" href="./signal-lab.css">
+</head>
+<body>
+  <a class="skip-link" href="#sl-main" data-i18n="skip">Zum Inhalt</a>
+  <header class="site-header">
+    <a class="brand" href="../index.html" aria-label="X6 Spectral Astrolabium"><span class="brand-mark" aria-hidden="true">X6</span><span>SPECTRAL<br><strong>ASTROLABIUM</strong></span></a>
+    <nav class="header-nav" aria-label="Navigation">
+      <a href="./index.html" class="back-link"><span aria-hidden="true">↗</span> <span data-i18n="openX6">X6 öffnen</span></a>
+      <label class="language-label" for="sl-language"><span class="sr-only" data-i18n="language">Sprache</span>
+        <select id="sl-language"><option value="de">DE</option><option value="en">EN</option><option value="fr">FR</option></select>
+      </label>
+    </nav>
+  </header>
+
+  <main id="sl-main">
+    <section class="hero" aria-labelledby="sl-title">
+      <div>
+        <p class="eyebrow"><span class="live-dot" aria-hidden="true"></span><span data-i18n="eyebrow">Research companion / Signalprüfung</span></p>
+        <h1 id="sl-title">Signal Validation <span>Lab</span><span class="version" id="sl-version"></span></h1>
+        <p class="hero-lead" data-i18n="intro">Erzeuge einen bekannten Sollverlauf, füge definierte Störungen hinzu und prüfe vier Verfahren am unveränderten Referenzsignal.</p>
+      </div>
+      <aside class="scope-card">
+        <span class="scope-tag" data-i18n="synthetic">SYNTHETISCH</span>
+        <p data-i18n="scope">Bekannte Sollwerte. Reproduzierbare Fehlerfälle. Ergebnisse gelten für den gewählten Test.</p>
+        <span class="scope-foot" data-i18n="scopeFoot">Lokale Auswertung · keine physische Messung</span>
+      </aside>
+    </section>
+
+    <div class="workflow" aria-hidden="true"><span><b>01</b> <span data-i18n="stepSetup">Signal definieren</span></span><span><b>02</b> <span data-i18n="stepCompare">Verfahren vergleichen</span></span><span><b>03</b> <span data-i18n="stepEvidence">Prüfen & exportieren</span></span></div>
+
+    <div class="lab-layout">
+      <aside class="setup-panel panel" aria-labelledby="sl-setup-title">
+        <div class="section-heading"><div><p class="eyebrow" data-i18n="configuration">KONFIGURATION</p><h2 id="sl-setup-title" data-i18n="setupTitle">Dein Testsignal</h2></div><button type="button" id="sl-reset" class="text-button" data-i18n="reset">Standard</button></div>
+        <form id="sl-form" novalidate>
+          <div class="field"><label for="sl-signal" data-i18n="signal">Sollsignal</label><select id="sl-signal" data-param="signal"><option value="sine" data-i18n="sine">Sinus</option><option value="multitone" data-i18n="multitone">Mehrtonsignal</option><option value="chirp" data-i18n="chirp">Chirp</option><option value="pulse" data-i18n="pulse">Puls</option><option value="zero" data-i18n="zero">Kein Signal / Nullkontrolle</option></select></div>
+          <div class="field-grid"><div class="field"><label for="sl-frequency" data-i18n="frequency">Grundfrequenz (Hz)</label><input id="sl-frequency" data-param="frequency" type="number" step="0.1" inputmode="decimal"></div><div class="field"><label for="sl-amplitude" data-i18n="amplitude">Amplitude (a.u.)</label><input id="sl-amplitude" data-param="amplitude" type="number" step="0.1" inputmode="decimal"></div></div>
+          <div class="field-grid"><div class="field"><label for="sl-samples" data-i18n="samples">Abtastwerte N</label><select id="sl-samples" data-param="samples" data-number="true"><option>128</option><option>256</option><option>512</option><option>1024</option><option>2048</option><option>4096</option></select></div><div class="field"><label for="sl-sample-rate" data-i18n="sampleRate">Abtastrate (Hz)</label><input id="sl-sample-rate" data-param="sampleRate" type="number" step="1" inputmode="decimal"></div></div>
+          <p class="field-help" data-i18n="frequencyHelp">Mehrtonsignal und Chirp reichen bis 2,5 × Grundfrequenz. Diese muss unter der Nyquist-Grenze bleiben.</p>
+          <div class="field-grid"><div class="field"><label for="sl-seed" data-i18n="seed">Zufallsseed</label><input id="sl-seed" data-param="seed" type="number" step="1" inputmode="numeric"></div><div class="field"><label for="sl-noise" data-i18n="noise">Rausch-σ (a.u.)</label><input id="sl-noise" data-param="noiseStd" type="number" step="0.01" inputmode="decimal"></div></div>
+          <p class="field-help" data-i18n="noiseHelp">Gaußsches weißes Rauschen; gleicher Seed und gleiche Parameter erzeugen dieselben Daten.</p>
+
+          <details class="control-group"><summary data-i18n="distortions">Weitere Störungen</summary><div class="details-body">
+            <div class="field-grid"><div class="field"><label for="sl-gain" data-i18n="gain">Verstärkung</label><input id="sl-gain" data-param="gain" type="number" step="0.05" inputmode="decimal"></div><div class="field"><label for="sl-phase" data-i18n="phase">Phasenfehler (°)</label><input id="sl-phase" data-param="phaseDeg" type="number" step="1" inputmode="decimal"></div></div>
+            <div class="field-grid"><div class="field"><label for="sl-delay" data-i18n="delay">Zeitversatz (Samples)</label><input id="sl-delay" data-param="delaySamples" type="number" step="1" inputmode="numeric"></div><div class="field"><label for="sl-clipping" data-i18n="clipping">Clipping ± (a.u.)</label><input id="sl-clipping" data-param="clipLevel" type="number" step="0.1" inputmode="decimal"></div></div>
+            <div class="field-grid"><div class="field"><label for="sl-quant-bits" data-i18n="quantBits">Quantisierung (Bit)</label><input id="sl-quant-bits" data-param="quantBits" type="number" step="1" inputmode="numeric"></div><div class="field"><label for="sl-quant-range" data-i18n="quantRange">Quantisierungsbereich ±</label><input id="sl-quant-range" data-param="quantRange" type="number" step="0.1" inputmode="decimal"></div></div>
+            <p class="field-help" data-i18n="distortionHelp">Clipping = 0 und Bit = 0 deaktivieren die Störung. Für Puls und Nullsignal muss der Phasenfehler 0 sein. a.u. bezeichnet willkürliche Amplitudeneinheiten.</p>
+          </div></details>
+
+          <details class="control-group"><summary data-i18n="processing">Parameter der Verfahren</summary><div class="details-body">
+            <div class="field"><label for="sl-window" data-i18n="maWindow">Gleitender Mittelwert: Fenster</label><input id="sl-window" data-param="movingAverageWindow" type="number" step="2" inputmode="numeric"></div>
+            <div class="field"><label for="sl-cutoff" data-i18n="cutoff">FFT-Tiefpass: Grenze (Hz)</label><input id="sl-cutoff" data-param="cutoffHz" type="number" step="1" inputmode="decimal"></div>
+            <div class="field-grid"><div class="field"><label for="sl-phase-center" data-i18n="phaseCenter">X6: Winkelmitte (°)</label><input id="sl-phase-center" data-param="phaseCenterDeg" type="number" step="1" inputmode="decimal"></div><div class="field"><label for="sl-phase-width" data-i18n="phaseWidth">X6: gesamte Breite (°)</label><input id="sl-phase-width" data-param="phaseWidthDeg" type="number" step="1" inputmode="decimal"></div></div>
+            <div class="field"><label for="sl-phase-mode" data-i18n="phaseMode">X6: Winkelmodus</label><select id="sl-phase-mode" data-param="phaseMode"><option value="pass" data-i18n="phasePass">Winkelbereich durchlassen</option><option value="stop" data-i18n="phaseStop">Winkelbereich sperren</option></select></div>
+            <p class="field-help" data-i18n="processingHelp">Alle vier Verfahren erhalten dieselben gestörten Daten. Die X6-Winkelmaske ist ein experimenteller Vergleichskandidat.</p>
+          </div></details>
+
+          <details class="control-group"><summary data-i18n="acceptance">Akzeptanzgrenzen festlegen</summary><div class="details-body">
+            <p class="field-help" data-i18n="acceptanceHelp">Diese veränderbaren Startwerte sind Prüfkriterien für diesen Test, keine allgemeine Qualitätsnorm. Lege sie vor dem Vergleich fest.</p>
+            <div class="field-grid"><div class="field"><label for="sl-nrmse-max">NRMSE ≤</label><input id="sl-nrmse-max" data-param="acceptance.nrmseMax" type="number" step="0.01" inputmode="decimal"></div><div class="field"><label for="sl-gain-max" data-i18n="gainMax">Verstärkungsfehler % ≤</label><input id="sl-gain-max" data-param="acceptance.gainErrorPctMax" type="number" step="1" inputmode="decimal"></div></div>
+            <div class="field-grid"><div class="field"><label for="sl-phase-max" data-i18n="phaseMax">Phasenfehler ° ≤</label><input id="sl-phase-max" data-param="acceptance.phaseErrorDegMax" type="number" step="1" inputmode="decimal"></div><div class="field"><label for="sl-delay-max" data-i18n="delayMax">Zeitversatz Samples ≤</label><input id="sl-delay-max" data-param="acceptance.delaySamplesMax" type="number" step="1" inputmode="numeric"></div></div>
+            <div class="field-grid"><div class="field"><label for="sl-spectral-max" data-i18n="spectralMax">Spektralfehler ≤</label><input id="sl-spectral-max" data-param="acceptance.spectralErrorMax" type="number" step="0.01" inputmode="decimal"></div><div class="field"><label for="sl-coherence-min" data-i18n="coherenceMin">Kohärenz ≥</label><input id="sl-coherence-min" data-param="acceptance.coherenceMin" type="number" step="0.01" inputmode="decimal"></div></div>
+            <div class="field"><label for="sl-phase-coherence-min" data-i18n="phaseCoherenceMin">Mindestkohärenz für Phasenwertung</label><input id="sl-phase-coherence-min" data-param="acceptance.phaseCoherenceMin" type="number" step="0.01" inputmode="decimal"></div>
+          </div></details>
+
+          <div id="sl-errors" class="validation-errors" role="alert" hidden></div>
+          <div class="run-actions"><button id="sl-run" class="button primary" type="submit"><span aria-hidden="true">▶</span> <span data-i18n="run">Test ausführen</span></button><p class="field-help" data-i18n="runHelp">Änderungen verwerfen die vorherige Auswertung. Berechnet wird erst beim Start.</p></div>
+        </form>
+      </aside>
+
+      <div class="results-column">
+        <section class="run-status panel" aria-label="Status"><div class="status-icon" aria-hidden="true">◎</div><div><strong id="sl-status" role="status" aria-live="polite" aria-atomic="true" data-state="idle">Bereit für den ersten Test</strong><p id="sl-status-detail" data-i18n="idleDetail">Wähle ein Sollsignal und starte die Auswertung.</p></div><span id="sl-run-meta" class="run-meta"></span></section>
+
+        <section class="panel plot-panel" aria-labelledby="sl-wave-title">
+          <div class="section-heading"><div><p class="eyebrow" data-i18n="actualArrays">BERECHNETE DATEN</p><h2 id="sl-wave-title" data-i18n="waveTitle">Soll, Eingang und Ergebnis</h2></div><div class="method-field"><label for="sl-method" data-i18n="displayMethod">Angezeigtes Verfahren</label><select id="sl-method"><option value="identity" data-i18n="identity">Identität / unverändert</option><option value="moving_average" data-i18n="moving_average">Gleitender Mittelwert</option><option value="fft_lowpass" data-i18n="fft_lowpass">FFT-Tiefpass</option><option value="x6_phase" data-i18n="x6_phase">X6-Winkelmaske</option></select></div></div>
+          <div class="plot-legend"><span><i class="legend-line reference"></i><span data-i18n="reference">Bekannter Sollverlauf</span></span><span><i class="legend-line observed"></i><span data-i18n="observed">Gestörter Eingang</span></span><span><i class="legend-line output"></i><span data-i18n="output">Verfahrensergebnis</span></span></div>
+          <div class="chart-wrap"><canvas id="sl-time-chart" role="img" aria-describedby="sl-time-caption"></canvas><div class="chart-empty" id="sl-time-empty"><span class="empty-glyph" aria-hidden="true">∿</span><strong data-i18n="emptyTitle">Hier erscheinen deine Testdaten</strong><span data-i18n="emptyDetail">Keine Beispielkurve vor der Berechnung.</span></div></div>
+          <p class="chart-caption" id="sl-time-caption" data-i18n="timeCaption">Alle Kurven stammen aus den exportierbaren Arrays. Keine nachträgliche Phasen- oder Zeitkorrektur zur Verbesserung der Fehlerwerte.</p>
+          <div class="metric-strip"><div><span data-i18n="selectedCriteria">Kriterien dieses Verfahrens</span><strong id="sl-selected-status">—</strong></div><div><span>NRMSE</span><strong id="sl-selected-nrmse">—</strong></div><div><span data-i18n="gainError">Verstärkungsfehler</span><strong id="sl-selected-gain">—</strong></div><div><span data-i18n="phaseError">Phasenfehler</span><strong id="sl-selected-phase">—</strong></div></div>
+        </section>
+
+        <section class="panel" aria-labelledby="sl-compare-title"><div class="section-heading"><div><p class="eyebrow" data-i18n="sameInput">IDENTISCHER EINGANG</p><h2 id="sl-compare-title" data-i18n="compareTitle">Vier Verfahren, ein Maßstab</h2></div></div><p class="section-intro" data-i18n="comparisonHelp">Fehler werden gegen das bekannte Sollsignal gemessen. Hohe Kohärenz allein belegt keine korrekte Rekonstruktion. „Offen“ kennzeichnet fehlende oder mehrdeutige Diagnosen.</p>
+          <div class="table-scroll" tabindex="0" role="region" aria-labelledby="sl-compare-title"><table id="sl-comparison"><thead><tr><th scope="col" data-i18n="method">Verfahren</th><th scope="col">NRMSE</th><th scope="col" data-i18n="gainColumn">Gainfehler %</th><th scope="col" data-i18n="phaseColumn">Phase °</th><th scope="col" data-i18n="delayColumn">Versatz</th><th scope="col" data-i18n="coherenceColumn">Kohärenz</th><th scope="col" data-i18n="criteria">Kriterien</th></tr></thead><tbody></tbody></table></div>
+          <p class="table-help" data-i18n="tableHelp">Wähle ein Verfahren in der Tabelle, um dessen Kurven und Einzelkriterien zu sehen.</p>
+          <details class="result-details"><summary data-i18n="individualCriteria">Einzelkriterien und Diagnosen des angezeigten Verfahrens</summary><div class="details-body"><div id="sl-gates" class="gates-list"></div><div id="sl-metrics-detail" class="metrics-detail"></div></div></details>
+        </section>
+
+        <section class="spectral-grid" aria-label="Spectral diagnostics">
+          <article class="panel spectral-panel"><p class="eyebrow" data-i18n="spectralView">SPEKTRALDIAGNOSE</p><h2 data-i18n="psdTitle">Leistungsdichte</h2><div class="plot-legend compact"><span><i class="legend-line reference"></i><span data-i18n="referenceShort">Soll</span></span><span><i class="legend-line output"></i><span data-i18n="outputShort">Ergebnis</span></span></div><div class="chart-wrap small"><canvas id="sl-psd-chart" role="img" aria-describedby="sl-psd-caption"></canvas><div class="chart-empty minimal" id="sl-psd-empty" data-i18n="awaitingData">Wartet auf Berechnung</div></div><p class="chart-caption" id="sl-psd-caption" data-i18n="psdCaption">Welch-Leistungsdichte, logarithmische y-Achse. Eine ähnliche PSD schließt Zeit- und Phasenfehler nicht aus.</p></article>
+          <article class="panel spectral-panel"><p class="eyebrow" data-i18n="relationToTruth">BEZUG ZUM SOLLSIGNAL</p><h2 data-i18n="coherenceTitle">Kohärenz & Phase</h2><div class="plot-legend compact"><span><i class="legend-line coherence"></i><span data-i18n="coherenceColumn">Kohärenz</span></span><span><i class="legend-line phase"></i><span data-i18n="phaseShort">Phase</span></span></div><div class="chart-wrap small"><canvas id="sl-coherence-chart" role="img" aria-describedby="sl-coherence-caption"></canvas><div class="chart-empty minimal" id="sl-coherence-empty" data-i18n="awaitingData">Wartet auf Berechnung</div></div><p class="chart-caption" id="sl-coherence-caption" data-i18n="coherenceCaption">Kohärenz links (0–1), Kreuzspektralphase rechts (°). Undefinierte Werte bleiben Lücken. Hohe Kohärenz kann trotz falscher Verstärkung oder Phase auftreten.</p></article>
+        </section>
+
+        <section class="panel counterexample-panel" aria-labelledby="sl-suite-title"><div class="section-heading"><div><p class="eyebrow" data-i18n="challengeAssumptions">ANNAHMEN PRÜFEN</p><h2 id="sl-suite-title" data-i18n="suiteTitle">Gegenbeispiele statt guter Noten</h2></div><span class="small-tag" data-i18n="boundedSuite">Begrenzte Prüfsuite</span></div><p class="section-intro" data-i18n="suiteIntro">Prüfe gezielte Fälle, in denen PSD oder Kohärenz allein ein irreführendes Urteil erlauben. Ein bestandener Prüffall bedeutet, dass der erwartete Fehler erkannt wurde.</p><button class="button secondary" type="button" id="sl-counterexamples"><span aria-hidden="true">↗</span> <span data-i18n="runSuite">Gegenbeispiele prüfen</span></button><p id="sl-suite-status" class="suite-status" role="status" aria-live="polite" data-i18n="suiteIdle">Noch nicht ausgeführt.</p><div id="sl-suite-results" class="suite-results"></div></section>
+
+        <section class="panel evidence-panel" aria-labelledby="sl-evidence-title"><div class="section-heading"><div><p class="eyebrow" data-i18n="reproducibility">REPRODUZIERBARKEIT</p><h2 id="sl-evidence-title" data-i18n="evidenceTitle">Ergebnis mit Herkunft</h2></div></div><p class="section-intro" data-i18n="evidenceIntro">JSON enthält Parameter, Arrays, Diagnosen und Prüfinformationen für die erneute Berechnung. CSV enthält die tatsächlich berechneten Zeitreihen.</p><div class="export-actions"><button id="sl-export-json" class="button secondary" type="button" disabled><span aria-hidden="true">↓</span> <span data-i18n="exportJson">Prüfbericht JSON</span></button><button id="sl-export-csv" class="button secondary" type="button" disabled><span aria-hidden="true">↓</span> <span data-i18n="exportCsv">Zeitreihen CSV</span></button></div><div class="import-box"><label for="sl-import-file" data-i18n="importLabel">JSON-Prüfbericht wiederholen</label><div class="import-actions"><input type="file" id="sl-import-file" accept="application/json,.json"><button id="sl-import" class="button quiet" type="button" data-i18n="replay">Prüfen & wiederholen</button></div><p class="field-help" data-i18n="importHelp">Der Import verwirft vorherige Ergebnisse. Erst nach Integritätsprüfung und Neuberechnung werden Ergebnisse und Exporte freigegeben. Eine Prüfsumme bestätigt keine physische Herkunft.</p></div><p id="sl-verification" class="verification-note"></p><details class="result-details"><summary data-i18n="methodology">Methodik, Grenzen & Versionsdaten</summary><div class="details-body"><p data-i18n="methodologyHelp">Einzelne synthetische Läufe sind keine allgemeine Validierung. PSD, Kohärenz und Zeitfehler beantworten unterschiedliche Fragen. Vergleiche auf neue, vorab festgelegte Seeds und echte Messdaten übertragen, bevor du Aussagen verallgemeinerst.</p><pre id="sl-methodology"></pre><a href="../docs/SIGNAL_VALIDATION_LAB.md" data-i18n="readDocs">Dokumentation öffnen ↗</a></div></details></section>
+      </div>
+    </div>
+  </main>
+  <footer class="site-footer"><span>© X6 · <span data-i18n="footer">Experimentelle Signalprüfung · keine Hardwaresteuerung</span></span><a href="../index.html" data-i18n="backProject">Zur Projektübersicht ↗</a></footer>
+  <noscript><p class="noscript-message">JavaScript is required for local signal calculations. No result has been computed.</p></noscript>
+  <script src="./signal-lab-core.js"></script>
+  <script src="./signal-lab-build.js"></script>
+  <script src="./signal-lab-evidence.js"></script>
+  <script src="./signal-lab-ui.js"></script>
+</body>
+</html>
