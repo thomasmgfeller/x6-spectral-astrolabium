@@ -1,3 +1,7 @@
+> **Current status — 13 October 2026:** Apache-2.0 has been granted by the maintainer. See [LICENSE](../LICENSE), [scope](../LICENSE_SCOPE.md), and [activation record](LICENSE_ACTIVATION_2026-10-13.md). The document below records the historical pre-activation assessment; its pending-license status is superseded. Unresolved provenance questions are not reclassified as verified.
+
+---
+
 # License decision pending
 
 | Option | Meaning | Tradeoff |

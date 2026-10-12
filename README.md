@@ -107,6 +107,15 @@ We invite independent Julia reproductions, exact certificate audits, browser/tra
 
 ## License status
 
-**Apache-2.0 is intended but NOT yet granted.** Rights and provenance clearance is still in progress; no `LICENSE` file has been added. Public visibility does not itself grant permission to copy, modify, or redistribute code. Inspect the project online and submit audit findings or issues; do not assume open-source reuse rights. See [rights clearance](docs/APACHE_2_0_RIGHTS_CLEARANCE.md) and [dependency audit](docs/M1_20_DEPENDENCY_LICENSE_AUDIT.md).
+**Apache License 2.0 — granted by the maintainer on 13 October 2026.**
+Original project code, documentation, reports and original data are licensed
+under [Apache-2.0](LICENSE), subject to the [licensing scope](LICENSE_SCOPE.md).
+Copyright 2026 Thomas Gfeller. See [NOTICE](NOTICE).
+
+Separately licensed components, including MIT Sagnac/photonic reference
+packages, retain their own licenses. External datasets and third-party works
+are not relicensed. This licensing decision is not scientific certification
+or a completed independent rights audit. See the
+[dated activation record](docs/LICENSE_ACTIVATION_2026-10-13.md).
 
 See [provenance](docs/PROVENANCE.md), [release checklist](docs/RELEASE_CHECKLIST.md), and draft [citation metadata](CITATION.cff).
