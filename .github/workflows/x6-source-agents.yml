@@ -2,7 +2,7 @@ name: X6 Source Agents
 
 on:
   schedule:
-    - cron: '37 6 11-13 10 *'
+    - cron: '37 6 11-15 10 *'
   workflow_dispatch:
 
 permissions:
@@ -29,7 +29,7 @@ jobs:
           import os
           from datetime import datetime, timedelta, timezone
           start = datetime.fromisoformat('2026-10-10T22:26:52+00:00')
-          stop = datetime.fromisoformat('2026-10-13T22:26:52+00:00')
+          stop = datetime.fromisoformat('2026-10-15T22:26:52+00:00')
           now = datetime.now(timezone.utc)
           # Reserve the entire job timeout so admitted work finishes by the cutoff.
           active = start <= now and now + timedelta(minutes=25) <= stop
