@@ -17,7 +17,7 @@ from unittest.mock import patch
 
 
 ROOT = Path(__file__).resolve().parents[2]
-REVIEWED_MAP_SHA256 = "91fb5b68fd04650be82e272d4ea607a8eda0f52165e3e65fb5555d20a5fd1c66"
+REVIEWED_MAP_SHA256 = "57695a5d97357a75dd3a92ffbfca770689ddad1a6f6f883ce8cbdc48f377525a"
 
 
 def load_module(name, filename):
@@ -29,6 +29,7 @@ def load_module(name, filename):
 
 BUILD = load_module("x6_signal_build_provenance_test", "tools/build_signal_lab.py")
 QUALIFY = load_module("x6_signal_qualify_provenance_test", "tests/signal-lab/qualify.py")
+VERIFY = load_module("x6_manifest_provenance_test", "tests/python/verify_manifest.py")
 
 
 class SourceProvenanceTests(unittest.TestCase):
@@ -68,6 +69,31 @@ class SourceProvenanceTests(unittest.TestCase):
         candidate = self.baseline()
         del candidate["protected_research"]["agent/run_math_agent.py"]
         self.reject_baseline_without_reads(candidate)
+
+    def test_original_baseline_cannot_be_rewritten_by_amendment(self):
+        candidate = self.baseline()
+        candidate["protected_research_baseline"]["agent/run_math_agent.py"] = "0" * 64
+        self.reject_baseline_without_reads(candidate)
+
+    def test_old_pre_repair_inventory_is_not_current_evidence(self):
+        candidate = self.baseline()
+        candidate["protected_research"] = candidate["protected_research_baseline"].copy()
+        self.reject_baseline_without_reads(candidate)
+
+    def test_superseded_licensing_documents_still_reject_changed_bytes(self):
+        original = Path.read_bytes
+        for name in ["CITATION.cff", "CONTRIBUTING.md", "docs/LICENSE_OPTIONS.md", "LICENSE"]:
+            target = ROOT / name
+            def changed(path):
+                data = original(path)
+                return data + b"tamper" if path == target else data
+            stream = io.StringIO()
+            with self.subTest(path=name), patch.object(Path, "read_bytes", changed), redirect_stdout(stream):
+                with self.assertRaises(SystemExit) as result:
+                    VERIFY.main()
+                self.assertEqual(result.exception.code, 1)
+            report = json.loads(stream.getvalue())
+            self.assertIn({"path": name, "reason": "extension SHA-256 mismatch"}, report["failed"])
 
     def test_rehashing_a_changed_agent_cannot_refresh_the_baseline(self):
         candidate = self.baseline()

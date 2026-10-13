@@ -239,10 +239,16 @@ das ist kein unveränderliches Langzeitarchiv.
 Die Erweiterung verwendet eigene `signal-lab*`-Dateien. Der ursprüngliche
 `app/index.html`-Hash bleibt
 `f3795c05292b0fc6d144b7afcf7ef4a957d88ac38ab4fda0c1e985f4455eadb8`.
-Zusätzlich sind die 17 betroffenen App-/Agent-/Workflowdateien des Ausgangsstands
-`1735a85dfd5bdb7a4b59e5c00595d2d300ce1e05` unverändert festgehalten. Eine Änderung
-dieses Forschungsstands kann nicht durch automatisches Neuschreiben der
-Signal-Lab-Hashes verdeckt werden.
+Die ursprünglichen Hashes der 17 App-/Agent-/Workflowdateien des Ausgangsstands
+`1735a85dfd5bdb7a4b59e5c00595d2d300ce1e05` bleiben unter
+`protected_research_baseline` erhalten. Am 13. Oktober 2026 hat der Maintainer
+die Reparatur und Verlängerung des Betriebsfensters ausdrücklich autorisiert.
+Genau fünf abweichende Dateien (drei Agentenworkflows, Mathematikkonfiguration,
+Konfigurationsprüfung) sind nun mit separaten festen Hashes im Buildwerkzeug
+zugelassen. Das aktuelle 17-Dateien-Inventar steht in `protected_research`.
+Anwendung, Datenadapter und mathematische Algorithmen bleiben unverändert.
+Keine weitere Änderung wird durch automatisches Neuschreiben freigezeichnet.
+Siehe [Betriebsreparatur](AGENT_WINDOW_REPAIR_2026_10_13.md).
 
 `python tools/build_signal_lab.py` erzeugt nach einer absichtlichen Labänderung
 den Build und das eigene Inventar neu. Das Werkzeug aktualisiert außerdem nur

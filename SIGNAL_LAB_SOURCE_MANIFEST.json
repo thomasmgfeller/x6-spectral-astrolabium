@@ -3,7 +3,7 @@
   "algorithm": "sha256",
   "base_commit": "1735a85dfd5bdb7a4b59e5c00595d2d300ce1e05",
   "scope": "Isolated Signal Validation Lab implementation and qualification sources. Content inventory only; not authenticity or scientific certification.",
-  "protected_research": {
+  "protected_research_baseline": {
     ".github/workflows/x6-data-agent.yml": "1f28da9ede48254ceb37e61fffd8834405bd2c0fbf61e6908c6e0a570aa434ce",
     ".github/workflows/x6-math-agent.yml": "b555a7cf7dbdb5be1f068ea4549956ede266ac2fcd9f477ab496cf2e3c1ec423",
     ".github/workflows/x6-source-agents.yml": "d9e3f0497fd3880c23124cadea3d74ad41734501e4a10b963321db76aec85674",
@@ -22,6 +22,25 @@
     "agent/source_transport.py": "4c0021005f2acf5f07d865ddb30f7800c1776b478bb90b491de8ea55bfcaf373",
     "app/index.html": "f3795c05292b0fc6d144b7afcf7ef4a957d88ac38ab4fda0c1e985f4455eadb8"
   },
+  "protected_research": {
+    ".github/workflows/x6-data-agent.yml": "b5d1c96c3ac8fa7c629e6240b09b1993cc6c893b679070721c79a707d001519e",
+    ".github/workflows/x6-math-agent.yml": "c739f1a95b5dbdb9f90df012d9e9659a5f716b6d9b1b20d7d1e9a7343a6ef662",
+    ".github/workflows/x6-source-agents.yml": "e8dd7f84b0e528a9bdcd13d3d5d7aa14bbd772635cc183b43226bdba4a50ca78",
+    "agent/__init__.py": "5f64e92f9394ee60f55a6881580b52b36d5e41c373bcaf88de1b14721d1d1da9",
+    "agent/atlas_checks.py": "02e9da16cbbe2923a581eb4d1e37e1360990d26981538ddc242904546689b0c7",
+    "agent/lorentz_spectral.py": "984d569a9c55035540402a20a188a0baea5a338988b134d5e64a8d86f7bdf704",
+    "agent/math-agent-config.json": "182d8cacf13a6e2387bf9a190e0a8f846fce531bf8157e5ba6a47eba5096317e",
+    "agent/math-requirements.txt": "7bd6b8946940b79948c548c8048e545684b91c8edc9444d8dfc0c8f76a97c0a7",
+    "agent/math_core_runner.cjs": "49f8a26ef3c18dbf6d55714508617e9f293f0ef8c175b6b91ffcf2ccee6da236",
+    "agent/measurement_sources.py": "169abefcd2e16ee3fc77d1285b27baf901b7251f8ba9af7ac064e4f4d264f325",
+    "agent/requirements.txt": "ebeb483138ed507c6d6d57c4006b13a2bafbde6b20abc9829b0fd160059c368d",
+    "agent/run_agent.py": "6bd28262d927a65279e64b9ffb7eb130f4ea0512a9e7e7b9bb6c6b2f27062f4c",
+    "agent/run_math_agent.py": "14867b1dbe66d925177395820c0ed0ff36b8a164ec499cb1aee5c8e4e54f99df",
+    "agent/run_sources.py": "4cf68cfd8b679252c297771f7eb5e8da27725f0bc2796043ba3d421097b3e986",
+    "agent/source-requirements.txt": "2f2aaad37ca64815873cbf097e5a01f7290fb6b3716de257d2f44f9ddaa3f137",
+    "agent/source_transport.py": "4c0021005f2acf5f07d865ddb30f7800c1776b478bb90b491de8ea55bfcaf373",
+    "app/index.html": "f3795c05292b0fc6d144b7afcf7ef4a957d88ac38ab4fda0c1e985f4455eadb8"
+  },
   "files": {
     ".github/workflows/x6-signal-lab.yml": "eebbc810d43d1be95637b0a8cb8c9b2b1bad618967a115288c12a4440b5a0067",
     "app/signal-lab-build.js": "3124639558e3bdfc169b222547e24452c6585d9e938d383de742be0627ba3fb3",
@@ -31,15 +50,15 @@
     "app/signal-lab.css": "e8811a7e012ccd46ce5d98c8f3c1280b02a673fdf2048f320a569a84cfd0d656",
     "app/signal-lab.html": "eaf919bd30bf2f8b52a6a4c753011112b8757ea783e48f56a6369822a45337df",
     "docs/SIGNAL_LAB_METHODS.md": "ee25e2ab145a461f91cb395ad9f0f6ec9257a3e40b7e602c068b3bad47974967",
-    "docs/SIGNAL_VALIDATION_LAB.md": "350bbe9aac5acbda67d2c755a4d391e61812a49550486f35f45d5988dbf5872c",
+    "docs/SIGNAL_VALIDATION_LAB.md": "986d8f287d5b30ddc31ed9f9540d6e3440a97aad5483f9e22ec4ce6539e491ea",
     "tests/signal-lab/browser_test.cjs": "589ddc44bc8500d761b7bbd01ca2d3862f24b33d90df79efdb9ad2db9f76a14a",
-    "tests/signal-lab/qualify.py": "f10ac7ade624f389692902abf2f3270fc0b48fc12491d645169ced045233cae4",
+    "tests/signal-lab/qualify.py": "71c631ea1411c34bfb7f08b540aa6fe442fa749ce3c7b2977ca69c92074c4a29",
     "tests/signal-lab/reference_fixture.cjs": "aacc934cfbd8ed95cc9c670aaac6e49573f2c04b4efed3a255a087afa03f05c0",
     "tests/signal-lab/reference_validation.py": "7c066eaaec37035f6aa068cf1595c927fbf5cd3d3eddde01a0c38571d0fe08ff",
     "tests/signal-lab/requirements.txt": "8b8ed57f6334aa321c72f76b29637397cbd9aa54340a82585879e2f78d8355e7",
     "tests/signal-lab/test_core.cjs": "0ea5808aa19b0d12707f582c8628729b4e751f56086597d8d5cf7e5e05cb59f3",
     "tests/signal-lab/test_evidence.cjs": "072d63e0e813173f640c2a94282831ee225e820c44f965b90b0ae1011db61d0d",
-    "tests/signal-lab/test_provenance.py": "a56211112be20efc9de42da0738d8c10bd2b3e827144e5b9071abf744f0cd347",
-    "tools/build_signal_lab.py": "089d298463c5b5ff2b2b3f8baf629ddd7de069bda1a504cbc3d14cb798aa285c"
+    "tests/signal-lab/test_provenance.py": "716139e29d35bd6b9e4468d64278f203848064552bb501cb63d6485f8c501e9c",
+    "tools/build_signal_lab.py": "f5c399c6a0f8d3e293b9242bd0f681fdd6a315e14d09f18e4847604a9414defd"
   }
 }

@@ -1,12 +1,18 @@
 """Scientific witnesses and fail-closed operating limits, not UI snapshots."""
 import copy
+import datetime as dt
 import json
+import os
 import random
+import re
 import tempfile
+import textwrap
 import unittest
 from datetime import timedelta
 from fractions import Fraction as F
 from pathlib import Path
+from unittest.mock import patch
+from zoneinfo import ZoneInfo
 
 from agent import run_math_agent as m
 from agent.run_agent import lower_holds
@@ -38,6 +44,22 @@ class MathAgentTests(unittest.TestCase):
                 p.write_text(json.dumps({**self.c, **patch}))
                 with self.assertRaises(ValueError):
                     m.load_config(p)
+
+    def test_authorised_sunday_and_finite_eight_day_ceiling(self):
+        stop = m.parse_time(self.c["stop_utc"])
+        self.assertEqual(stop, m.datetime(2026, 10, 19, tzinfo=ZoneInfo("Europe/Zurich")))
+        self.assertTrue(m.admitted(self.c, m.parse_time("2026-10-18T18:23:00Z"), 360))
+        self.assertFalse(m.admitted(self.c, stop - timedelta(seconds=360), 360))
+        self.assertFalse(m.admitted(self.c, stop + timedelta(days=365), 360))
+        start = m.parse_time(self.c["start_utc"])
+        with tempfile.TemporaryDirectory() as t:
+            path = Path(t) / "window.json"
+            path.write_text(json.dumps({**self.c, "stop_utc": (start + timedelta(days=8)).isoformat()}))
+            m.load_config(path)
+            for duration in [timedelta(0), timedelta(seconds=-1), timedelta(days=8, seconds=1)]:
+                path.write_text(json.dumps({**self.c, "stop_utc": (start + duration).isoformat()}))
+                with self.assertRaises(ValueError):
+                    m.load_config(path)
 
     def test_expired_run_never_claims_pass(self):
         c = {**self.c, "start_utc": "2020-01-01T00:00:00Z", "stop_utc": "2020-01-02T00:00:00Z"}
@@ -92,6 +114,50 @@ class MathAgentTests(unittest.TestCase):
     def test_extractor_fails_on_changed_structure(self):
         with self.assertRaises((ValueError, KeyError)):
             m.core_functions("<html>not the audited application</html>")
+
+
+class WorkflowWindowTests(unittest.TestCase):
+    """Execute the real pre-checkout guards at authorised and forbidden times."""
+
+    def guard(self, filename, now):
+        workflow = (m.ROOT / ".github/workflows" / filename).read_text()
+        source = textwrap.dedent(workflow.split("          python3 - <<'PY'\n", 1)[1]
+                                .split("          PY\n", 1)[0])
+
+        class Clock(dt.datetime):
+            @classmethod
+            def now(cls, tz=None):
+                return now.astimezone(tz)
+
+        with tempfile.TemporaryDirectory() as t:
+            output, summary = Path(t) / "output", Path(t) / "summary"
+            with patch.object(dt, "datetime", Clock), patch.dict(os.environ, {
+                "GITHUB_OUTPUT": str(output), "GITHUB_STEP_SUMMARY": str(summary)
+            }):
+                exec(compile(source, filename, "exec"), {})
+            active = output.read_text() == "active=true\n"
+            if not active:
+                self.assertIn("STOPPED", summary.read_text())
+            return active
+
+    def test_actual_daily_guards_reserve_full_timeout_and_reject_next_year(self):
+        start = m.parse_time("2026-10-10T22:26:52Z")
+        stop = m.parse_time("2026-10-18T22:00:00Z")
+        sunday = m.parse_time("2026-10-18T06:37:00Z")
+        for name, reserve in [("x6-data-agent.yml", 15), ("x6-source-agents.yml", 25)]:
+            for now, expected in [(start-timedelta(seconds=1), False), (start, True), (sunday, True),
+                                  (stop-timedelta(minutes=reserve), True),
+                                  (stop-timedelta(minutes=reserve)+timedelta(seconds=1), False),
+                                  (stop, False), (sunday.replace(year=2027), False)]:
+                with self.subTest(workflow=name, time=now):
+                    self.assertEqual(self.guard(name, now), expected)
+
+    def test_cron_includes_sunday_with_existing_cadence(self):
+        for name, expected in [("x6-data-agent.yml", "17 6 11-18 10 *"),
+                               ("x6-source-agents.yml", "37 6 11-18 10 *"),
+                               ("x6-math-agent.yml", "23 */6 11-18 10 *")]:
+            source = (m.ROOT / ".github/workflows" / name).read_text()
+            self.assertEqual(re.findall(r"cron: '([^']+)'", source), [expected])
 
 
 if __name__ == "__main__":

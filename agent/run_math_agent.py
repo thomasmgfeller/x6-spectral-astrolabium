@@ -49,7 +49,8 @@ def load_config(path):
     require(c.get("schema") == SCHEMA, "unknown config schema")
     require(type(c.get("enabled")) is bool, "enabled must be a boolean")
     start, stop = parse_time(c["start_utc"]), parse_time(c["stop_utc"])
-    require(timedelta(0) < stop-start <= timedelta(hours=72), "window must be 0..72 hours")
+    # Maintainer-authorised extension on 2026-10-13; retain a finite ceiling.
+    require(timedelta(0) < stop-start <= timedelta(days=8), "window must be >0 and <=8 days")
     for key, lo, hi in [("max_seconds", 5, 120), ("cases_per_track", 8, 128),
                         ("seed", 0, 2**32-1), ("slot_hours", 1, 24)]:
         require(type(c.get(key)) is int and lo <= c[key] <= hi, f"invalid {key}")

@@ -37,6 +37,11 @@ def main():
     # Isolated extensions have explicit inventories; do not weaken the unknown-file
     # check or change the app pin used by the bounded research agents.
     extension_specs = {
+        "LICENSE_SOURCE_MANIFEST.json": (
+            "x6.license.source-manifest/1",
+            {"CITATION.cff", "CONTRIBUTING.md", "docs/LICENSE_OPTIONS.md", "LICENSE",
+             "LICENSE_SCOPE.md", "NOTICE", "LICENSE_ACTIVATION_MANIFEST.json",
+             "docs/LICENSE_ACTIVATION_2026-10-13.md"}),
         "EVIDENCE_CALIBRATION_SOURCE_MANIFEST.json": (
             "x6.evidence-calibration.source-manifest/1",
             {"experimental/evidence_calibration/core.py", "experimental/evidence_calibration/run_qualification.py",
@@ -74,6 +79,10 @@ def main():
         if rel not in tracked:
             failed.append({"path": rel, "reason": "manifest file missing from checkout"})
             continue
+        if rel in {"CITATION.cff", "CONTRIBUTING.md", "docs/LICENSE_OPTIONS.md"}:
+            superseded.append({"path": rel, "historical_sha256": digest,
+                               "reason": "authorised Apache-2.0 activation; current bytes checked by LICENSE_SOURCE_MANIFEST.json"})
+            continue
         if rel == "app/index.html" and integration is not None:
             superseded.append({"path": rel, "historical_sha256": digest,
                                "reason": "Sagnac integration; current content checked by separate versioned manifest"})
@@ -101,6 +110,7 @@ def main():
         "docs/MATH_AGENT.md", "docs/MATH_FORECAST_2026_10.md",
         "agent/lorentz_spectral.py", "tests/python/test_lorentz_spectral.py",
         "docs/LORENTZ_RESEARCH.md",
+        "docs/AGENT_WINDOW_REPAIR_2026_10_13.md",
     }
     if integration is not None:
         expected_tracked |= set(integration['files']) | {'SAGNAC_SOURCE_MANIFEST.json'}

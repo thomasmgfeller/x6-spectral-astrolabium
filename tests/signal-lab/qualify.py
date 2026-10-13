@@ -21,6 +21,7 @@ ROOT = Path(__file__).resolve().parents[2]
 def source_path(name):
     """Reject unexpected inventory paths before reading/archiving any bytes."""
     exact = {"SIGNAL_LAB_SOURCE_MANIFEST.json", "SAGNAC_SOURCE_MANIFEST.json",
+             "LICENSE_SOURCE_MANIFEST.json", "LICENSE_ACTIVATION_MANIFEST.json",
              "EVIDENCE_CALIBRATION_SOURCE_MANIFEST.json", "app/index.html",
              "tests/python/verify_manifest.py", "SHA256_REPOSITORY.json", "index.html", "README.md",
              "agent/math-agent-config.json", "tools/build_signal_lab.py",
@@ -74,6 +75,7 @@ def main():
     try:
         manifest = json.loads(source_path("SIGNAL_LAB_SOURCE_MANIFEST.json").read_text())
         paths = sorted(set(manifest["files"]) | {"SIGNAL_LAB_SOURCE_MANIFEST.json", "SAGNAC_SOURCE_MANIFEST.json",
+                       "LICENSE_SOURCE_MANIFEST.json", "LICENSE_ACTIVATION_MANIFEST.json",
                        "EVIDENCE_CALIBRATION_SOURCE_MANIFEST.json", "app/index.html", "agent/math-agent-config.json",
                        "tests/python/verify_manifest.py", "SHA256_REPOSITORY.json", "index.html", "README.md"})
         checked_paths = {name: source_path(name) for name in paths}

@@ -2,7 +2,8 @@
 """Build/check the Signal Lab source inventory without moving research pins.
 
 Run after an intentional source edit. --check is read-only and used by CI.
-The baseline is the reviewed pre-lab commit; it is never inferred from HEAD.
+The pre-lab baseline is retained verbatim. Only the five explicitly pinned
+2026-10-13 operating-window amendments are allowed; never infer approval from HEAD.
 """
 import argparse
 import hashlib
@@ -17,8 +18,16 @@ PROTECTED_MAP_SHA = "91fb5b68fd04650be82e272d4ea607a8eda0f52165e3e65fb5555d20a5f
 RUNTIME = ["app/signal-lab-core.js", "app/signal-lab-evidence.js", "app/signal-lab-ui.js",
            "app/signal-lab.html", "app/signal-lab.css"]
 INTEGRATION = ["index.html", "README.md", "tests/python/verify_manifest.py"]
-PROTECTED_PREFIXES = ["app/index.html", "agent/", ".github/workflows/x6-data-agent.yml",
-                      ".github/workflows/x6-source-agents.yml", ".github/workflows/x6-math-agent.yml"]
+# Explicit maintainer-authorised repair; no app, data adapter or math algorithm changes.
+# Original digests remain in protected_research_baseline in the source manifest.
+AUTHORISED_WINDOW_UPDATES = {
+    ".github/workflows/x6-data-agent.yml": "b5d1c96c3ac8fa7c629e6240b09b1993cc6c893b679070721c79a707d001519e",
+    ".github/workflows/x6-math-agent.yml": "c739f1a95b5dbdb9f90df012d9e9659a5f716b6d9b1b20d7d1e9a7343a6ef662",
+    ".github/workflows/x6-source-agents.yml": "e8dd7f84b0e528a9bdcd13d3d5d7aa14bbd772635cc183b43226bdba4a50ca78",
+    "agent/math-agent-config.json": "182d8cacf13a6e2387bf9a190e0a8f846fce531bf8157e5ba6a47eba5096317e",
+    "agent/run_math_agent.py": "14867b1dbe66d925177395820c0ed0ff36b8a164ec499cb1aee5c8e4e54f99df"
+}
+
 
 
 def sha(data):
@@ -34,18 +43,14 @@ def encoded(value):
 
 
 def protected_baseline(existing, check):
-    if check:
-        if not existing or existing.get("base_commit") != BASE or not isinstance(existing.get("protected_research"), dict):
-            raise ValueError("missing reviewed research baseline")
-        protected = existing["protected_research"]
-    else:
-        names = subprocess.check_output(["git", "ls-tree", "-r", "--name-only", BASE], cwd=ROOT, text=True).splitlines()
-        names = [name for name in names if any(name == prefix or name.startswith(prefix) for prefix in PROTECTED_PREFIXES)]
-        protected = {name: sha(subprocess.check_output(["git", "show", BASE + ":" + name], cwd=ROOT)) for name in names}
-        if existing and existing.get("protected_research") != protected:
-            raise ValueError("reviewed research baseline changed; refusing to refresh it")
-    if sha(canonical(protected).encode()) != PROTECTED_MAP_SHA:
-        raise ValueError("research baseline inventory does not match the reviewed 17-file baseline")
+    if not existing or existing.get("base_commit") != BASE:
+        raise ValueError("missing reviewed research baseline")
+    baseline = existing.get("protected_research_baseline")
+    if not isinstance(baseline, dict) or sha(canonical(baseline).encode()) != PROTECTED_MAP_SHA:
+        raise ValueError("original 17-file research baseline changed")
+    protected = {**baseline, **AUTHORISED_WINDOW_UPDATES}
+    if existing.get("protected_research") != protected:
+        raise ValueError("research inventory differs from the explicitly authorised amendment")
     for name, expected in protected.items():
         path = ROOT / name
         if path.is_symlink() or not path.is_file() or sha(path.read_bytes()) != expected:
@@ -91,6 +96,7 @@ def main():
     manifest = {
         "schema": "x6.signal-lab.source-manifest/1", "algorithm": "sha256", "base_commit": BASE,
         "scope": "Isolated Signal Validation Lab implementation and qualification sources. Content inventory only; not authenticity or scientific certification.",
+        "protected_research_baseline": existing["protected_research_baseline"],
         "protected_research": protected,
         "files": hashes,
     }

@@ -8,9 +8,10 @@ approve a release, or claim a physical discovery.
 ## Schedule and destination
 
 - GitHub workflow: **X6 Data Agent**.
-- Limited trial: **11–13 October 2026**, at **06:17 UTC** (08:17 Europe/Zurich).
-- Authorised window ends **14 October 2026, 00:26:52 Europe/Zurich**
-  (`2026-10-13T22:26:52Z`). A first-step date guard checks the full year and
+- Limited trial: **11–18 October 2026**, at **06:17 UTC** (08:17 Europe/Zurich).
+- Authorised through **Sunday, 18 October 2026**, with exclusive cutoff
+  **19 October 2026, 00:00:00 Europe/Zurich** (`2026-10-18T22:00:00Z`).
+  This extension was explicitly authorised on 13 October. A first-step date guard checks the full year and
   reserves the 15-minute job timeout. Outside the window even manual workflow
   runs skip installation, downloads, tests and uploads, with a STOPPED summary.
 - Push and pull-request triggers have been removed. A scheduled end-of-trial

@@ -1,6 +1,6 @@
 # X6 bounded mathematical falsification agent
 
-Version 2, 11 October 2026. Lorentzian priority with bounded replication and
+Version 2, 11 October 2026; operating window repaired 13 October 2026. Lorentzian priority with bounded replication and
 adaptive controls. A small search program with explicit
 hypotheses, reproducible counterexamples and a compulsory stop time. This is
 experimental mathematics infrastructure, not an autonomous theorem prover.
@@ -8,11 +8,12 @@ experimental mathematics infrastructure, not an autonomous theorem prover.
 ## Operating contract
 
 - Configuration: `agent/math-agent-config.json`.
-- Pilot window: 11 October 2026, 10:13:02 to **14 October 2026,
-  00:26:52 Europe/Zurich** (`2026-10-13T22:26:52Z`). The inherited cutoff is
-  shared with the earlier data-agent trial; the new agent does not extend it.
+- Pilot window: 11 October 2026, 10:13:02 Europe/Zurich through **Sunday,
+  18 October 2026**. Exclusive cutoff: **19 October 2026, 00:00:00
+  Europe/Zurich** (`2026-10-18T22:00:00Z`). The maintainer explicitly
+  authorised this extension on 13 October; all three workflows share the cutoff.
 - Scheduled attempts: **every six hours**, at 00:23, 06:23, 12:23 and 18:23 UTC,
-  only on 11–13 October. The full date guard rejects earlier/expired attempts.
+  only on 11–18 October 2026. The full date guard rejects earlier/expired attempts.
   GitHub may delay or omit scheduled attempts. This is periodic execution,
   not a continuously running process or a delivery guarantee.
 - An initial main-branch push of the new source triggers a qualification run.
@@ -26,8 +27,9 @@ experimental mathematics infrastructure, not an autonomous theorem prover.
   before the end, before installing dependencies. The research process has
   a 90-second budget by default, Unix alarm, per-case checks and subprocess
   timeouts. The configurable ceiling is 120 seconds and 128 cases per track.
-- The config reader refuses windows longer than 72 hours. Changing a future
-  window also requires explicitly adapting the cron dates. Neither extension
+- The config reader refuses windows longer than 8 days (192 hours). Changing a future
+  window also requires explicitly adapting the cron dates, source pins and
+  monitoring/shutdown schedules. Neither extension
   happens automatically. No automatic self-modification or self-extension.
 - No overlapping workflow jobs; readonly repository permissions. No LLM,
   paid API, private data, model training or source-data downloads. Standard
