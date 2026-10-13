@@ -1,0 +1,44 @@
+{
+  "schema": "astrolabium.acvm.records.publication/1",
+  "concept_version": "0.1",
+  "publication_date": "2026-10-13",
+  "artifact_type": "engineering_concept",
+  "scientific_status": "CONCEPT_ONLY",
+  "records_implementation_status": "NOT_IMPLEMENTED_BY_THIS_PUBLICATION",
+  "records_acceptance_tests_status": "NOT_RUN",
+  "records_hardware_qualification_status": "NOT_PERFORMED",
+  "reference_baseline_commit": "c20c2b306e8785f79a431bdd9becec57acb95cec",
+  "source_document_sha256": "9623274b2cba0518a45e987bd8812fac30bc990a75ee566bbe15a7a391172b10",
+  "publication_checks": {
+    "docx_byte_identity": "PASS",
+    "markdown_prose_and_table_content_preservation": "PASS",
+    "source_hyperlink_preservation": "PASS",
+    "scope": "publication packaging only; not Records scientific, software or hardware qualification"
+  },
+  "conversion": {
+    "tool": "pandoc 3.1.3",
+    "formatting_changes": [
+      "restore title and subtitle",
+      "normalize heading levels",
+      "normalize multiline table cells to slash-separated text"
+    ]
+  },
+  "files": [
+    {
+      "path": "ACVM_EXPERIMENT_RECORDS_CONCEPT_v0_1_DE.md",
+      "size_bytes": 37645,
+      "sha256": "85c3e7df3fd93c27121a153f93a5230ffea3ad7da1168a99138194228542352d"
+    },
+    {
+      "path": "ACVM_Experiment_Records_Konzept_v0_1.docx",
+      "size_bytes": 54136,
+      "sha256": "9623274b2cba0518a45e987bd8812fac30bc990a75ee566bbe15a7a391172b10"
+    },
+    {
+      "path": "README.md",
+      "size_bytes": 4201,
+      "sha256": "a295025caf12546654155235200eba05e3632b3c4acda329c254de29047ab5dd"
+    }
+  ],
+  "manifest_self_hash_included": false
+}

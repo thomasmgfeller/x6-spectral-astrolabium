@@ -47,6 +47,11 @@ document. **Concept only: implementation and hardware qualification are pending.
 Its ten proposed checks are NOT RUN; publication does not establish working
 device control, validated photonics or a quantum processor.
 
+[ACVM Experiment Records — concept 0.1](docs/acvm/experiment-records/README.md)
+specifies the proposed Run Archive data model, provenance and acceptance plan.
+Its fourteen Records checks are NOT_RUN; implementation and adapter qualification
+remain pending. The German Markdown and unchanged Word concept are included.
+
 ## Experimental Sagnac integration preview 0.1
 
 This experimental extension adds tab **07 · Sagnac**: validated SGNCv007 binary
