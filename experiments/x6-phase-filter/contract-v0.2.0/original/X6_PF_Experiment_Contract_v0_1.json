@@ -1,0 +1,73 @@
+{
+  "schema": "X6-PF-EXPERIMENT-CONTRACT",
+  "schema_version": "0.1.0",
+  "experiment": {
+    "experiment_id": "X6-PF-EXP-000001",
+    "title": "X6 Phase Filter Validation",
+    "description": "Controlled validation of X6 phase-domain filtering against predefined reference methods.",
+    "status": "PLANNED",
+    "evidence_class": "EXPLORATORY",
+    "created_utc": null
+  },
+  "claim": {
+    "claim_id": "X6-PF-C01",
+    "statement": "X6 phase filtering improves predefined signal-quality metrics within a specified operating region without exceeding predefined signal-preservation limits.",
+    "scope": "signal_processing",
+    "claim_boundary": ["No diagnostic claim", "No universal superiority claim", "No hardware-independence claim until portability validation passes"]
+  },
+  "input": {
+    "source_type": "synthetic", "source_id": null, "file_name": null, "file_hash_sha256": null,
+    "sampling": {"sample_rate_hz": 1000, "sample_count": 4096, "duration_s": 4.096},
+    "signal": {"signal_class": "chirp", "amplitude": 1.0, "frequency_hz": {"start": 5.0, "end": 120.0}, "phase_rad": 0.0, "ground_truth_available": true}
+  },
+  "noise": {"enabled": true, "noise_class": "pink", "spectral_beta": 1.0, "target_snr_db": -5.0, "amplitude": null, "phase_offset_deg": 0.0, "seed": 104729},
+  "algorithm": {
+    "algorithm_id": "X6-PF-A", "algorithm_version": "0.1.0", "algorithm_hash_sha256": null, "transform": "DFT",
+    "filter": {"type": "binary_phase_gate", "center_angle_deg": 40.0, "width_deg": 30.0, "mode": "pass", "phase_wrapping": "[-pi,+pi]", "preserve_conjugate_symmetry": true},
+    "parameters_locked": true
+  },
+  "baselines": [
+    {"id": "RAW", "enabled": true}, {"id": "MOVING_AVERAGE", "enabled": true},
+    {"id": "SAVITZKY_GOLAY", "enabled": true}, {"id": "BUTTERWORTH", "enabled": true},
+    {"id": "LINEAR_PHASE_FIR", "enabled": true}, {"id": "WIENER", "enabled": true},
+    {"id": "WAVELET", "enabled": true}, {"id": "ADAPTIVE_LMS", "enabled": true}
+  ],
+  "monte_carlo": {"enabled": true, "runs": 1000, "seed_policy": "deterministic", "master_seed": 104729, "paired_seeds_across_algorithms": true},
+  "sweep": {
+    "enabled": true, "snr_db": [-20, -15, -10, -5, 0, 5, 10, 20, 30],
+    "phase_angle_deg": {"start": -180, "stop": 180, "step": 10},
+    "filter_width_deg": [10, 20, 30, 45, 60, 90],
+    "noise_classes": ["white", "pink", "red", "blue", "narrowband", "impulse", "baseline_drift", "mixed"]
+  },
+  "metrics": {
+    "primary": ["delta_snr_db", "rmse", "correlation"],
+    "preservation": ["amplitude_error", "peak_time_error", "phase_error", "spectral_distortion", "energy_ratio"],
+    "secondary": ["spectral_entropy", "ringing", "overshoot", "processing_latency"]
+  },
+  "validation_gates": {
+    "PF_G0_NUMERICAL_INTEGRITY": {"enabled": true, "requirements": {"finite_output": true, "ifft_reconstruction_error_max": 1e-10, "imaginary_residual_max": 1e-10}},
+    "PF_G1_SYNTHETIC_BENEFIT": {"enabled": true, "thresholds": {"minimum_delta_snr_db": null, "maximum_rmse": null, "minimum_correlation": null}},
+    "PF_G2_ROBUSTNESS": {"enabled": true, "thresholds": {"maximum_failure_rate": null, "minimum_success_probability": null}},
+    "PF_G3_HOLDOUT": {"enabled": true, "holdout_locked": true, "parameter_changes_allowed": false},
+    "PF_G4_REAL_SIGNAL": {"enabled": false},
+    "PF_G5_TASK_PRESERVATION": {"enabled": false, "thresholds": {"maximum_peak_time_error": null, "maximum_amplitude_error": null}},
+    "PF_G6_PORTABILITY": {"enabled": false, "implementations": ["javascript", "wasm", "webgpu", "python"], "numerical_tolerance": null},
+    "PF_G7_CROSS_DOMAIN": {"enabled": false}
+  },
+  "holdout": {"enabled": true, "dataset_id": null, "dataset_hash_sha256": null, "algorithm_locked": true, "parameters_locked": true, "metrics_locked": true, "thresholds_locked": true, "baseline_definitions_locked": true},
+  "runtime": {
+    "execution_target": "LOCAL_JS", "precision": "float64",
+    "fingerprint": {"platform": null, "architecture": null, "browser": null, "browser_version": null, "gpu": null, "webgpu_available": null, "wasm_available": null}
+  },
+  "provenance": {"contract_hash_sha256": null, "input_hash_sha256": null, "result_hash_sha256": null, "parent_experiment_id": null, "software_commit": null},
+  "results": {
+    "status": "NOT_RUN",
+    "x6": {"delta_snr_db": null, "rmse": null, "correlation": null, "amplitude_error": null, "peak_time_error": null, "phase_error": null, "spectral_distortion": null, "energy_ratio": null},
+    "baselines": {}, "monte_carlo": {"median": null, "q05": null, "q95": null, "failure_rate": null}
+  },
+  "decision": {
+    "gate_results": {"PF_G0": "NOT_RUN", "PF_G1": "NOT_RUN", "PF_G2": "NOT_RUN", "PF_G3": "NOT_RUN", "PF_G4": "NOT_APPLICABLE", "PF_G5": "NOT_APPLICABLE", "PF_G6": "NOT_APPLICABLE", "PF_G7": "NOT_APPLICABLE"},
+    "overall": "NOT_RUN", "allowed_values": ["PASS", "LIMIT", "INCONCLUSIVE", "FAIL", "NOT_RUN", "NOT_APPLICABLE"],
+    "claim_status": "UNVALIDATED", "claim_status_allowed_values": ["UNVALIDATED", "SUPPORTED_WITHIN_SCOPE", "INCONCLUSIVE", "REJECTED"], "failure_reason": null
+  }
+}

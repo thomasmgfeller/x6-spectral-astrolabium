@@ -1,0 +1,321 @@
+{
+  "schema": "X6-PF-EXPERIMENT-CONTRACT",
+  "schema_version": "0.2.0",
+  "experiment": {
+    "experiment_id": "X6-PF-EXP-000001",
+    "title": "X6 Phase Filter Validation",
+    "state": "DRAFT",
+    "evidence_class": "EXPLORATORY",
+    "created_utc": null,
+    "parent_experiment_id": null
+  },
+  "claim": {
+    "claim_id": "X6-PF-C01",
+    "statement": "Test scoped quality benefit over a declared baseline subject to signal-preservation limits.",
+    "scope": "synthetic_signal_processing",
+    "preservation_required": true,
+    "boundaries": [
+      "No diagnostic claim",
+      "No universal superiority claim",
+      "No physical validation",
+      "No novelty claim",
+      "No hardware portability claim from schema validation"
+    ]
+  },
+  "integrity": {
+    "hash_policy": "SHA256_EXACT_FILE_BYTES_V1",
+    "anchor_policy": "EXTERNAL_TRUSTED_CONTRACT_SHA256",
+    "results_location": "SEPARATE_EXECUTION_RECORD"
+  },
+  "sampling": {
+    "sample_rate_hz": 1000,
+    "sample_count": 4096,
+    "duration_s": 4.096,
+    "duration_convention": "N_OVER_FS",
+    "sample_times": "n/fs; n=0..N-1"
+  },
+  "input": {
+    "source_type": "synthetic",
+    "signal_class": "chirp",
+    "amplitude": 1.0,
+    "frequency_start_hz": 5.0,
+    "frequency_end_hz": 120.0,
+    "chirp_law": null,
+    "chirp_end_time_convention": null,
+    "generator_specification": null,
+    "dataset_manifest": null,
+    "input_encoding": "IEEE754_BINARY64_LITTLE_ENDIAN_CONTIGUOUS",
+    "pairing": "SAME_MATERIALIZED_INPUT_ACROSS_METHODS_AND_FILTER_SETTINGS",
+    "master_seed": 104729,
+    "rng_specification": null
+  },
+  "algorithm": {
+    "algorithm_id": "X6-PF-A",
+    "algorithm_version": "0.1.0",
+    "source": null,
+    "mathematical_specification": null,
+    "filter_type": "binary_phase_gate",
+    "mode": "pass",
+    "phase_interval": "[-pi,pi)",
+    "conjugate_pair_rule": null,
+    "dc_policy": null,
+    "nyquist_policy": null,
+    "zero_magnitude_phase_policy": null,
+    "boundary_comparison": null
+  },
+  "baselines": [
+    {
+      "id": "RAW",
+      "version": null,
+      "enabled": true,
+      "source": null,
+      "parameter_schema": null,
+      "parameters": null
+    },
+    {
+      "id": "MOVING_AVERAGE",
+      "version": null,
+      "enabled": true,
+      "source": null,
+      "parameter_schema": null,
+      "parameters": null
+    },
+    {
+      "id": "SAVITZKY_GOLAY",
+      "version": null,
+      "enabled": true,
+      "source": null,
+      "parameter_schema": null,
+      "parameters": null
+    },
+    {
+      "id": "BUTTERWORTH",
+      "version": null,
+      "enabled": true,
+      "source": null,
+      "parameter_schema": null,
+      "parameters": null
+    },
+    {
+      "id": "LINEAR_PHASE_FIR",
+      "version": null,
+      "enabled": true,
+      "source": null,
+      "parameter_schema": null,
+      "parameters": null
+    },
+    {
+      "id": "WIENER",
+      "version": null,
+      "enabled": true,
+      "source": null,
+      "parameter_schema": null,
+      "parameters": null
+    },
+    {
+      "id": "WAVELET",
+      "version": null,
+      "enabled": true,
+      "source": null,
+      "parameter_schema": null,
+      "parameters": null
+    },
+    {
+      "id": "ADAPTIVE_LMS",
+      "version": null,
+      "enabled": true,
+      "source": null,
+      "parameter_schema": null,
+      "parameters": null
+    }
+  ],
+  "design": {
+    "noise_models": [
+      {
+        "id": "white",
+        "specification": null
+      },
+      {
+        "id": "pink",
+        "specification": null
+      },
+      {
+        "id": "red",
+        "specification": null
+      },
+      {
+        "id": "blue",
+        "specification": null
+      },
+      {
+        "id": "narrowband",
+        "specification": null
+      },
+      {
+        "id": "impulse",
+        "specification": null
+      },
+      {
+        "id": "baseline_drift",
+        "specification": null
+      },
+      {
+        "id": "mixed",
+        "specification": null
+      }
+    ],
+    "snr_db": [
+      -20,
+      -15,
+      -10,
+      -5,
+      0,
+      5,
+      10,
+      20,
+      30
+    ],
+    "signal_phase_rad": [
+      0.0
+    ],
+    "circular_time_shifts_samples": [
+      0
+    ],
+    "filter_center_angle_deg": [
+      -180,
+      -170,
+      -160,
+      -150,
+      -140,
+      -130,
+      -120,
+      -110,
+      -100,
+      -90,
+      -80,
+      -70,
+      -60,
+      -50,
+      -40,
+      -30,
+      -20,
+      -10,
+      0,
+      10,
+      20,
+      30,
+      40,
+      50,
+      60,
+      70,
+      80,
+      90,
+      100,
+      110,
+      120,
+      130,
+      140,
+      150,
+      160,
+      170
+    ],
+    "filter_width_deg": [
+      10,
+      20,
+      30,
+      45,
+      60,
+      90
+    ],
+    "runs_per_input_cell": 1000,
+    "split": "DEVELOPMENT",
+    "split_policy": null,
+    "baseline_reuse": "ONCE_PER_INPUT_CASE",
+    "independence_unit": null
+  },
+  "metrics": {
+    "definition_file": null,
+    "primary_candidates": [
+      "delta_snr_db",
+      "rmse",
+      "correlation"
+    ],
+    "primary_selected": null,
+    "preservation": [
+      "amplitude_error",
+      "peak_time_error",
+      "phase_error",
+      "spectral_distortion",
+      "energy_ratio"
+    ],
+    "secondary": [
+      "spectral_entropy",
+      "ringing",
+      "overshoot",
+      "processing_latency"
+    ],
+    "comparison": "PAIRED_AGAINST_PREDECLARED_BASELINE",
+    "primary_baseline_id": null,
+    "benefit_direction": "POSITIVE_MEANS_CANDIDATE_BETTER",
+    "minimum_relevant_benefit": null,
+    "preservation_limits": null
+  },
+  "statistics": {
+    "analysis_plan": null,
+    "alpha": null,
+    "multiplicity_policy": null,
+    "sample_size_justification": null,
+    "stopping_rule": null,
+    "maximum_failure_rate": null,
+    "interval_method": null
+  },
+  "gates": {
+    "required_for_scoped_claim": [
+      "PF_G0",
+      "PF_G1",
+      "PF_G2",
+      "PF_G3",
+      "PF_G5"
+    ],
+    "definitions": null,
+    "missing_required_result": "INCONCLUSIVE",
+    "execution_failure": "ERROR_NOT_SCIENTIFIC_FAIL",
+    "real_signal": "NOT_APPLICABLE",
+    "cross_domain": "NOT_APPLICABLE"
+  },
+  "holdout": {
+    "registry_record": null,
+    "independence_evidence": null,
+    "selection_uses_holdout": false,
+    "reuse_after_inspection": "NEW_EXPLORATORY_STUDY_REQUIRED"
+  },
+  "portability": {
+    "profiles": [
+      {
+        "id": "float64",
+        "precision": "float64",
+        "relative_tolerance": null,
+        "absolute_tolerance": null,
+        "mask_boundary_policy": null,
+        "phase_boundary_margin_rad": null
+      },
+      {
+        "id": "float32",
+        "precision": "float32",
+        "relative_tolerance": null,
+        "absolute_tolerance": null,
+        "mask_boundary_policy": null,
+        "phase_boundary_margin_rad": null
+      }
+    ],
+    "reference_solver": null,
+    "status": "NOT_VALIDATED",
+    "native_webgpu_float64": false
+  },
+  "budget": {
+    "max_evaluations": null,
+    "max_wall_seconds": null,
+    "max_memory_mib": null,
+    "on_exceed": "BLOCK_OR_ABORT_WITHOUT_PASS"
+  }
+}

@@ -1,0 +1,128 @@
+{
+  "type": "object",
+  "properties": {
+    "schema": {
+      "const": "X6-PF-INPUT-MANIFEST"
+    },
+    "schema_version": {
+      "const": "0.2.0"
+    },
+    "encoding": {
+      "const": "IEEE754_BINARY64_LITTLE_ENDIAN_CONTIGUOUS"
+    },
+    "sample_rate_hz": {
+      "type": "number",
+      "exclusiveMinimum": 0
+    },
+    "sample_count": {
+      "type": "integer",
+      "minimum": 2,
+      "maximum": 9007199254740991
+    },
+    "split": {
+      "enum": [
+        "DEVELOPMENT",
+        "VALIDATION",
+        "HOLDOUT"
+      ]
+    },
+    "cases": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "case_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "source_realization_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "trial_index": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 9007199254740991
+          },
+          "noise_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "snr_db": {
+            "type": "number"
+          },
+          "signal_phase_rad": {
+            "type": "number"
+          },
+          "circular_time_shift_samples": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 9007199254740991
+          },
+          "clean": {
+            "type": "object",
+            "properties": {
+              "path": {
+                "type": "string",
+                "minLength": 1
+              },
+              "sha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              }
+            },
+            "required": [
+              "path",
+              "sha256"
+            ],
+            "additionalProperties": false
+          },
+          "observed": {
+            "type": "object",
+            "properties": {
+              "path": {
+                "type": "string",
+                "minLength": 1
+              },
+              "sha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              }
+            },
+            "required": [
+              "path",
+              "sha256"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "case_id",
+          "source_realization_id",
+          "trial_index",
+          "noise_id",
+          "snr_db",
+          "signal_phase_rad",
+          "circular_time_shift_samples",
+          "clean",
+          "observed"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    }
+  },
+  "required": [
+    "schema",
+    "schema_version",
+    "encoding",
+    "sample_rate_hz",
+    "sample_count",
+    "split",
+    "cases"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:x6:pf:input-manifest:0.2.0"
+}
