@@ -52,6 +52,12 @@ specifies the proposed Run Archive data model, provenance and acceptance plan.
 Its fourteen Records checks are NOT_RUN; implementation and adapter qualification
 remain pending. The German Markdown and unchanged Word concept are included.
 
+[ACVM Electrical & Thermal Test Fixture — concept 0.1](docs/acvm/electrical-thermal-fixture/README.md)
+adds a proposed electrical/thermal bench fixture, its original Word concept,
+two separate illustrative design images and the complete download package.
+ETF-T01–ETF-T14 remain NOT_RUN. The separate Astrolabium QD-01 chip image is a
+provisional research concept, not a fabricated device or demonstrated qubit.
+
 ## Experimental Sagnac integration preview 0.1
 
 This experimental extension adds tab **07 · Sagnac**: validated SGNCv007 binary
