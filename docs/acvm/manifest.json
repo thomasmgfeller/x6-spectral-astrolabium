@@ -1,0 +1,45 @@
+{
+  "schema": "astrolabium.acvm.publication/1",
+  "concept_version": "0.1",
+  "publication_date": "2026-10-13",
+  "artifact_type": "engineering_concept",
+  "scientific_status": "CONCEPT_ONLY",
+  "acvm_implementation_status": "NOT_IMPLEMENTED",
+  "acvm_validation_tests_status": "NOT_RUN",
+  "hardware_measurements_status": "NOT_PERFORMED",
+  "source_document_sha256": "63f900357f845f6d78c65936a69bc9720ed1bd1a37bb2d056e6ad96e3acf4ecb",
+  "publication_checks": {
+    "docx_byte_identity": "PASS",
+    "markdown_prose_and_table_content_preservation": "PASS",
+    "equation_conversion": "6 equations manually checked against rendered source",
+    "local_link_targets": "PASS against the publication files and the pinned repository tree",
+    "scope": "publication packaging only; not ACVM scientific or hardware validation"
+  },
+  "conversion": {
+    "tool": "pandoc 3.1.3",
+    "formatting_changes": [
+      "restore title and subtitle",
+      "normalize heading levels",
+      "normalize six display equations for GitHub",
+      "normalize multiline table cells to slash-separated text"
+    ]
+  },
+  "files": [
+    {
+      "path": "ACVM_CONCEPT_v0_1_DE.md",
+      "size_bytes": 31119,
+      "sha256": "620ee6d28c6352cb5de047cd04e5bebe8abba4bc796cb7159f49058d08ca9088"
+    },
+    {
+      "path": "Astrolabium_ACVM_Konzept_v0_1.docx",
+      "size_bytes": 53065,
+      "sha256": "63f900357f845f6d78c65936a69bc9720ed1bd1a37bb2d056e6ad96e3acf4ecb"
+    },
+    {
+      "path": "README.md",
+      "size_bytes": 4085,
+      "sha256": "aa06627ed2205b94a49c5782c072be8e7f2326da9a44e6c8d85d278b9be4e37a"
+    }
+  ],
+  "manifest_self_hash_included": false
+}

@@ -37,6 +37,16 @@ Read [usage, exports and qualification](docs/SIGNAL_VALIDATION_LAB.md) and
 These are synthetic software experiments, not measured device performance or
 physical/quantum qualification. A hash or a successful replay is not authenticity.
 
+## Astrolabium Control and Validation Module — concept 0.1
+
+[ACVM concept and evidence status](docs/acvm/README.md) describes a proposed
+control and validation module for reproducible experiment sequences, FPGA
+execution, independent acquisition and explicit acceptance criteria.
+The German concept is available as readable Markdown and as the original Word
+document. **Concept only: implementation and hardware qualification are pending.**
+Its ten proposed checks are NOT RUN; publication does not establish working
+device control, validated photonics or a quantum processor.
+
 ## Experimental Sagnac integration preview 0.1
 
 This experimental extension adds tab **07 · Sagnac**: validated SGNCv007 binary
@@ -119,3 +129,4 @@ or a completed independent rights audit. See the
 [dated activation record](docs/LICENSE_ACTIVATION_2026-10-13.md).
 
 See [provenance](docs/PROVENANCE.md), [release checklist](docs/RELEASE_CHECKLIST.md), and draft [citation metadata](CITATION.cff).
+
