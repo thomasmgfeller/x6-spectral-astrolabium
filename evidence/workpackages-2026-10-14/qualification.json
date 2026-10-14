@@ -1,0 +1,71 @@
+{
+  "schema": "x6.workpackages.qualification/1",
+  "status": "SOFTWARE_QUALIFICATION_PASS",
+  "physical_validation": "NOT_PERFORMED",
+  "v1_real_profile": "NOT_READY",
+  "python": "3.12.14",
+  "dependencies": {
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "jsonschema": "4.25.1"
+  },
+  "qualifier_sha256": "63f38d094bc0009ae3ff5c49f428734281ef3a51837b9e891a5d55a07fde1b8f",
+  "checks": [
+    {
+      "name": "lorentz_and_agent_regression",
+      "expected_exit_code": 0,
+      "observed_exit_code": 0,
+      "status": "PASS",
+      "log_sha256": "aab6f74cf1bec066ae087f8acbb965d509513caa973e6c97a3612ec036c97321"
+    },
+    {
+      "name": "v1_contract",
+      "expected_exit_code": 0,
+      "observed_exit_code": 0,
+      "status": "PASS",
+      "log_sha256": "8ac56401cbc5a6a5c3dcf08e1595e89e285da10d7e588a9d9451c4f5c6ce613e"
+    },
+    {
+      "name": "signal_lab_provenance",
+      "expected_exit_code": 0,
+      "observed_exit_code": 0,
+      "status": "PASS",
+      "log_sha256": "17b87f61299c280f99aa65920e4bbf1581ab2bcd63cd03878c7751db31bcc819"
+    },
+    {
+      "name": "signal_lab_inventory",
+      "expected_exit_code": 0,
+      "observed_exit_code": 0,
+      "status": "PASS",
+      "log_sha256": "340cdd6d9f1f3c049ec0a2b2c829422300c512e9168d4eb0da9e191ad87c78af"
+    },
+    {
+      "name": "edge_reference",
+      "expected_exit_code": 0,
+      "observed_exit_code": 0,
+      "status": "PASS",
+      "log_sha256": "d9f665236d81baa74b90ba279bd521af9b164204ee486097ebd5fde620fd55ab"
+    },
+    {
+      "name": "v1_real_readiness",
+      "expected_exit_code": 3,
+      "observed_exit_code": 3,
+      "status": "PASS",
+      "log_sha256": "0bfd2217bacc0e541efa5ad6b28b5f51f52992a3a738ec96e83e475abf037d29"
+    },
+    {
+      "name": "control_generation",
+      "expected_exit_code": 0,
+      "observed_exit_code": 0,
+      "status": "PASS",
+      "log_sha256": "d89a0c5a77610e7e47fb054daa0079d344a0b10297ca74741c6c760a0c25d3e8"
+    },
+    {
+      "name": "v1_control_assessment",
+      "expected_exit_code": 4,
+      "observed_exit_code": 4,
+      "status": "PASS",
+      "log_sha256": "f4bd78c9b24b84eefd576001aa14d8d5f522cb456e7f2327ddb55b5712c35888"
+    }
+  ]
+}

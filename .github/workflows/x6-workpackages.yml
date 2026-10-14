@@ -1,0 +1,47 @@
+name: X6 Lorentz n6 and Industrial V1
+on:
+  push:
+    branches: [main, research/lorentz-v1-workpackages]
+    paths:
+      - 'research/lorentz_n6/**'
+      - 'experiments/industrial-v1/**'
+      - 'tests/python/test_lorentz_n6.py'
+      - 'tools/qualify_workpackages.py'
+      - '.github/workflows/x6-workpackages.yml'
+  pull_request:
+    paths:
+      - 'research/lorentz_n6/**'
+      - 'experiments/industrial-v1/**'
+      - 'tests/python/test_lorentz_n6.py'
+      - 'tools/qualify_workpackages.py'
+      - '.github/workflows/x6-workpackages.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  qualification:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: python -m pip install -r experiments/industrial-v1/requirements.txt
+      - run: python tests/python/verify_manifest.py
+      - run: python tools/qualify_workpackages.py --output workpackage-ci
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: x6-workpackages-${{ github.run_id }}-${{ github.run_attempt }}
+          path: workpackage-ci/
+          if-no-files-found: warn
+          retention-days: 30

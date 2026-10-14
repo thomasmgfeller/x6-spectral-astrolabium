@@ -1,0 +1,636 @@
+{
+  "type": "object",
+  "properties": {
+    "schema": {
+      "const": "x6.industrial.v1.profile/1"
+    },
+    "profile_id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 1000
+    },
+    "status": {
+      "enum": [
+        "DRAFT",
+        "FROZEN"
+      ]
+    },
+    "frozen_utc": {
+      "anyOf": [
+        {
+          "type": "string",
+          "format": "date-time",
+          "pattern": "Z$"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "evidence_class": {
+      "enum": [
+        "REAL_MEASURED",
+        "SYNTHETIC_CONTROL"
+      ]
+    },
+    "primary_route": {
+      "const": "D"
+    },
+    "sampling": {
+      "type": "object",
+      "properties": {
+        "channels": {
+          "const": 4
+        },
+        "sample_rate_hz": {
+          "const": 25600
+        },
+        "block_samples": {
+          "const": 256
+        },
+        "dtype": {
+          "const": "float32-le"
+        },
+        "unit": {
+          "const": "m/s^2"
+        },
+        "record_samples_per_channel": {
+          "const": 256000
+        }
+      },
+      "required": [
+        "channels",
+        "sample_rate_hz",
+        "block_samples",
+        "dtype",
+        "unit",
+        "record_samples_per_channel"
+      ],
+      "additionalProperties": false
+    },
+    "processing": {
+      "type": "object",
+      "properties": {
+        "causal": {
+          "const": true
+        },
+        "lookahead_samples": {
+          "const": 0
+        },
+        "diagnostic_unit": {
+          "const": "one_preselected_record_per_independent_bearing"
+        },
+        "decision_rule": {
+          "const": "score_gte_frozen_threshold"
+        },
+        "candidate_id": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 1000
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "baseline_id": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 1000
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "candidate_threshold": {
+          "anyOf": [
+            {
+              "type": "number",
+              "minimum": -1e+100,
+              "maximum": 1e+100
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "baseline_threshold": {
+          "anyOf": [
+            {
+              "type": "number",
+              "minimum": -1e+100,
+              "maximum": 1e+100
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "causal",
+        "lookahead_samples",
+        "diagnostic_unit",
+        "decision_rule",
+        "candidate_id",
+        "baseline_id",
+        "candidate_threshold",
+        "baseline_threshold"
+      ],
+      "additionalProperties": false
+    },
+    "statistics": {
+      "type": "object",
+      "properties": {
+        "family_alpha": {
+          "const": 0.05
+        },
+        "registered_claim_count": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 2
+        },
+        "sensitivity_min": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "sensitivity_gain_min": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "false_positive_rate_max": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 0.01
+        },
+        "min_positive_units": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 100000
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "min_negative_units": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 100000
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "target_power": {
+          "type": "number",
+          "minimum": 0.8,
+          "maximum": 1
+        }
+      },
+      "required": [
+        "family_alpha",
+        "registered_claim_count",
+        "sensitivity_min",
+        "sensitivity_gain_min",
+        "false_positive_rate_max",
+        "min_positive_units",
+        "min_negative_units",
+        "target_power"
+      ],
+      "additionalProperties": false
+    },
+    "limits": {
+      "type": "object",
+      "properties": {
+        "latency_max_ms": {
+          "type": "number",
+          "minimum": 0.001,
+          "maximum": 50
+        },
+        "mean_service_exclusive_ms": {
+          "const": 10
+        },
+        "p99_service_max_ms": {
+          "type": "number",
+          "minimum": 0.001,
+          "maximum": 10
+        },
+        "additional_state_max_bytes": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 8388608
+        },
+        "max_backlog_blocks": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 4
+        },
+        "resource_blocks": {
+          "type": "integer",
+          "minimum": 6000,
+          "maximum": 100000
+        },
+        "amplitude_relative_error_max": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "timing_error_max_samples": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 256
+        }
+      },
+      "required": [
+        "latency_max_ms",
+        "mean_service_exclusive_ms",
+        "p99_service_max_ms",
+        "additional_state_max_bytes",
+        "max_backlog_blocks",
+        "resource_blocks",
+        "amplitude_relative_error_max",
+        "timing_error_max_samples"
+      ],
+      "additionalProperties": false
+    },
+    "references": {
+      "type": "object",
+      "properties": {
+        "machine_and_sensor": {
+          "anyOf": [
+            {
+              "type": "object",
+              "properties": {
+                "path": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 1000
+                },
+                "sha256": {
+                  "type": "string",
+                  "pattern": "^[a-f0-9]{64}$"
+                }
+              },
+              "required": [
+                "path",
+                "sha256"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "acquisition_and_calibration": {
+          "anyOf": [
+            {
+              "type": "object",
+              "properties": {
+                "path": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 1000
+                },
+                "sha256": {
+                  "type": "string",
+                  "pattern": "^[a-f0-9]{64}$"
+                }
+              },
+              "required": [
+                "path",
+                "sha256"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "data_rights": {
+          "anyOf": [
+            {
+              "type": "object",
+              "properties": {
+                "path": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 1000
+                },
+                "sha256": {
+                  "type": "string",
+                  "pattern": "^[a-f0-9]{64}$"
+                }
+              },
+              "required": [
+                "path",
+                "sha256"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "ground_truth_definition": {
+          "anyOf": [
+            {
+              "type": "object",
+              "properties": {
+                "path": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 1000
+                },
+                "sha256": {
+                  "type": "string",
+                  "pattern": "^[a-f0-9]{64}$"
+                }
+              },
+              "required": [
+                "path",
+                "sha256"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "split_and_access_registry": {
+          "anyOf": [
+            {
+              "type": "object",
+              "properties": {
+                "path": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 1000
+                },
+                "sha256": {
+                  "type": "string",
+                  "pattern": "^[a-f0-9]{64}$"
+                }
+              },
+              "required": [
+                "path",
+                "sha256"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "power_plan": {
+          "anyOf": [
+            {
+              "type": "object",
+              "properties": {
+                "path": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 1000
+                },
+                "sha256": {
+                  "type": "string",
+                  "pattern": "^[a-f0-9]{64}$"
+                }
+              },
+              "required": [
+                "path",
+                "sha256"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "protocol_review": {
+          "anyOf": [
+            {
+              "type": "object",
+              "properties": {
+                "path": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 1000
+                },
+                "sha256": {
+                  "type": "string",
+                  "pattern": "^[a-f0-9]{64}$"
+                }
+              },
+              "required": [
+                "path",
+                "sha256"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "candidate_source": {
+          "anyOf": [
+            {
+              "type": "object",
+              "properties": {
+                "path": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 1000
+                },
+                "sha256": {
+                  "type": "string",
+                  "pattern": "^[a-f0-9]{64}$"
+                }
+              },
+              "required": [
+                "path",
+                "sha256"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "baseline_source": {
+          "anyOf": [
+            {
+              "type": "object",
+              "properties": {
+                "path": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 1000
+                },
+                "sha256": {
+                  "type": "string",
+                  "pattern": "^[a-f0-9]{64}$"
+                }
+              },
+              "required": [
+                "path",
+                "sha256"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "resource_protocol": {
+          "anyOf": [
+            {
+              "type": "object",
+              "properties": {
+                "path": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 1000
+                },
+                "sha256": {
+                  "type": "string",
+                  "pattern": "^[a-f0-9]{64}$"
+                }
+              },
+              "required": [
+                "path",
+                "sha256"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "machine_and_sensor",
+        "acquisition_and_calibration",
+        "data_rights",
+        "ground_truth_definition",
+        "split_and_access_registry",
+        "power_plan",
+        "protocol_review",
+        "candidate_source",
+        "baseline_source",
+        "resource_protocol"
+      ],
+      "additionalProperties": false
+    },
+    "preservation_cases": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 1000
+          },
+          "reference_amplitude": {
+            "type": "number",
+            "exclusiveMinimum": 0
+          },
+          "reference_sample": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "reference_kind": {
+            "enum": [
+              "DESIGN_ONLY",
+              "SYNTHETIC_FLOAT32"
+            ]
+          },
+          "sample_count": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 100000
+          },
+          "peak_window": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "minItems": 2,
+            "maxItems": 2
+          },
+          "reference": {
+            "type": "object",
+            "properties": {
+              "path": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 1000
+              },
+              "sha256": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              }
+            },
+            "required": [
+              "path",
+              "sha256"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "id",
+          "reference_amplitude",
+          "reference_sample",
+          "reference_kind",
+          "sample_count",
+          "peak_window",
+          "reference"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1,
+      "maxItems": 10000
+    }
+  },
+  "required": [
+    "schema",
+    "profile_id",
+    "status",
+    "frozen_utc",
+    "evidence_class",
+    "primary_route",
+    "sampling",
+    "processing",
+    "statistics",
+    "limits",
+    "references",
+    "preservation_cases"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

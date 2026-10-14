@@ -1,0 +1,75 @@
+{
+  "schema": "x6.industrial.v1.profile/1",
+  "profile_id": "V1-BEARING-D-0.1.0",
+  "status": "DRAFT",
+  "frozen_utc": null,
+  "evidence_class": "REAL_MEASURED",
+  "primary_route": "D",
+  "sampling": {
+    "channels": 4,
+    "sample_rate_hz": 25600,
+    "block_samples": 256,
+    "dtype": "float32-le",
+    "unit": "m/s^2",
+    "record_samples_per_channel": 256000
+  },
+  "processing": {
+    "causal": true,
+    "lookahead_samples": 0,
+    "diagnostic_unit": "one_preselected_record_per_independent_bearing",
+    "decision_rule": "score_gte_frozen_threshold",
+    "candidate_id": null,
+    "baseline_id": null,
+    "candidate_threshold": null,
+    "baseline_threshold": null
+  },
+  "statistics": {
+    "family_alpha": 0.05,
+    "registered_claim_count": 2,
+    "sensitivity_min": 0.8,
+    "sensitivity_gain_min": 0.05,
+    "false_positive_rate_max": 0.01,
+    "min_positive_units": null,
+    "min_negative_units": null,
+    "target_power": 0.8
+  },
+  "limits": {
+    "latency_max_ms": 50,
+    "mean_service_exclusive_ms": 10,
+    "p99_service_max_ms": 10,
+    "additional_state_max_bytes": 8388608,
+    "max_backlog_blocks": 4,
+    "resource_blocks": 6000,
+    "amplitude_relative_error_max": 0.05,
+    "timing_error_max_samples": 2
+  },
+  "references": {
+    "machine_and_sensor": null,
+    "acquisition_and_calibration": null,
+    "data_rights": null,
+    "ground_truth_definition": null,
+    "split_and_access_registry": null,
+    "power_plan": null,
+    "protocol_review": null,
+    "candidate_source": null,
+    "baseline_source": null,
+    "resource_protocol": null
+  },
+  "preservation_cases": [
+    {
+      "id": "DESIGN_SENTINEL_REQUIRES_MEASURED_OR_MATERIALIZED_REFERENCE",
+      "reference_amplitude": 1,
+      "reference_sample": 256,
+      "reference": {
+        "path": "examples/preservation_design.json",
+        "sha256": "2d7c8b6339f27081b898b9dd5088fa9833b4bb834cd92921488078de97c71018"
+      },
+      "reference_kind": "DESIGN_ONLY",
+      "sample_count": 1024,
+      "peak_window": [
+        0,
+        1024
+      ]
+    }
+  ]
+}

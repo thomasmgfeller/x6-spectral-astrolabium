@@ -155,3 +155,14 @@ or a completed independent rights audit. See the
 
 See [provenance](docs/PROVENANCE.md), [release checklist](docs/RELEASE_CHECKLIST.md), and draft [citation metadata](CITATION.cff).
 
+# Implemented research workpackages — 14 October 2026
+
+- [Lorentz n=6 exact atlas and independent quill replication](research/lorentz_n6/README.md):
+  318 orders, exact characteristic polynomials, independent enumeration and verification.
+- [Industrial V1 profile and executable result assessment](experiments/industrial-v1/README.md):
+  strict JSON contracts, uncertainty bounds and rejection controls. Real-study status:
+  **NOT_READY** pending measured inputs and the documented AP1 prerequisites.
+
+These are bounded research tools. The existing scheduled agents retain their
+authorised window and source pins. No new filter superiority or physical result is claimed.
+

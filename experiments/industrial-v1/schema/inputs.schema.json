@@ -1,0 +1,87 @@
+{
+  "type": "object",
+  "properties": {
+    "schema": {
+      "const": "x6.industrial.v1.inputs/1"
+    },
+    "evidence_class": {
+      "enum": [
+        "REAL_MEASURED",
+        "SYNTHETIC_CONTROL"
+      ]
+    },
+    "profile_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "units": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "record_id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 1000
+          },
+          "bearing_id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 1000
+          },
+          "split": {
+            "enum": [
+              "development",
+              "validation",
+              "holdout",
+              "external"
+            ]
+          },
+          "label": {
+            "enum": [
+              "healthy",
+              "damaged"
+            ]
+          },
+          "samples": {
+            "type": "object",
+            "properties": {
+              "path": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 1000
+              },
+              "sha256": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              }
+            },
+            "required": [
+              "path",
+              "sha256"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "record_id",
+          "bearing_id",
+          "split",
+          "label",
+          "samples"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1,
+      "maxItems": 10000
+    }
+  },
+  "required": [
+    "schema",
+    "evidence_class",
+    "profile_sha256",
+    "units"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

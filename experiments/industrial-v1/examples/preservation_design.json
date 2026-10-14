@@ -1,0 +1,13 @@
+{
+  "schema": "x6.industrial.v1.preservation-design/1",
+  "evidence": "SYNTHETIC_DESIGN_NOT_MEASURED",
+  "signal": "unit-peak damped sinusoidal burst",
+  "formula": "exp(-t/0.002)*sin(2*pi*3000*t), t>=0; normalized peak=1; four channels tested independently",
+  "cases": [
+    "weak impulse",
+    "block boundary",
+    "startup",
+    "reset"
+  ],
+  "note": "Prospective sentinel definition. No measured waveform or candidate output is supplied. The frozen protocol must materialize and hash actual reference arrays and define peak localization before a real claim."
+}

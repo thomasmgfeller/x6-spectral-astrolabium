@@ -37,6 +37,11 @@ def main():
     # Isolated extensions have explicit inventories; do not weaken the unknown-file
     # check or change the app pin used by the bounded research agents.
     extension_specs = {
+        "WORKPACKAGES_SOURCE_MANIFEST.json": (
+            "x6.workpackages.source-manifest/1",
+            {"research/lorentz_n6/atlas.py", "research/lorentz_n6/verify.py",
+             "experiments/industrial-v1/evaluate.py", "experiments/industrial-v1/V1_PROFILE_DRAFT.json",
+             "tests/python/test_lorentz_n6.py", ".github/workflows/x6-workpackages.yml"}),
         "EDGE_REFERENCE_SOURCE_MANIFEST.json": (
             "x6.edge-reference.source-manifest/1",
             {"experimental/edge_reference/runner.cjs", "experimental/edge_reference/test_runner.cjs",

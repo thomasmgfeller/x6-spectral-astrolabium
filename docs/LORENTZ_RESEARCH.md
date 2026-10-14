@@ -1,9 +1,22 @@
 # Lorentzian priority: reference, comparison and research gates
 
-Research snapshot: 11 October 2026. The user's priority is Lorentzian spectral
+Research snapshot: 14 October 2026. The user's priority is Lorentzian spectral
 geometry. Both Lorentzian tracks run first; the three existing signal/graph
-controls follow with 24 cases each. The original pilot deadline remains
-13 October 2026 at 22:26:52 UTC. See `MATH_AGENT.md` for control.
+controls follow with 24 cases each. The authorised pilot ends after Sunday
+18 October 2026, at 22:00 UTC (19 October 00:00 Europe/Zurich).
+See `MATH_AGENT.md` for control. The standalone workpackage below does not
+change this window or the scheduled agent's small-order scope.
+
+## Completed standalone n=6 workpackage
+
+The [exact n=6 atlas](../research/lorentz_n6/README.md) now enumerates 318
+nonisomorphic orders, reproduces the 286 three-spectrum classes and 314 classes
+with endpoint counts, and resolves all 33 pairs in the paper's distinct quill
+comparison basis using maximal quills. A separate verifier uses order-ideal
+enumeration, directed isomorphism search and determinant interpolation to
+check all 4,824 naturally labeled orders and 4,208 polynomials. Full artifacts,
+collision membership, source hashes and reproduction commands are included.
+This is finite literature replication, not a theorem or external peer review.
 
 ## Research reference and exact replication
 
@@ -86,13 +99,13 @@ eigenvalues near the discreteness scale require a justified cutoff later.
 | Priority | Work | Completion criterion |
 |---|---|---|
 | 1, implemented | Exact n=3..5 replication and two finite-diamond sequences | Literature counts match; complete artifacts and numerical checks |
-| 2, next | Larger collision corpus and quill-response invariants | Independently checked isomorphism; explicit unresolved pairs; comparison to 2021 method |
+| 2, implemented for n=6 | Larger collision corpus and maximal-quill replication | Independent enumeration/isomorphism and polynomial check; see standalone package |
 | 3 | Finite-size study of the 1+1 propagator | Preregistered sizes/ranks, more seeds, justified cutoff, uncertainty estimates and compute budget |
 | 4 | Restricted stability or identifiability theorem | Explicit assumptions, proof, counterexamples and novelty review |
 | 5 | Other geometries or dimensions | Correct dimension-dependent Green function, volume measure and independent controls |
 | Supporting | Held-out denoising benchmark and source agents | Untouched test sequences, clean targets or defensible proxies, fair comparator tuning |
 
-Items 2–5 and the full denoising comparison remain subsequent work. Good finite
+Larger sizes beyond item 2, items 3–5 and the full denoising comparison remain subsequent work. Good finite
 tests do not automatically extend the runtime window or establish a physical
 interpretation. A useful near-term output is an independently checkable
 benchmark and negative-result corpus. New mathematics requires a proved
