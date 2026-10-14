@@ -143,6 +143,15 @@ simultaneous superiority decisions remain inconclusive. The approved ten-page
 report and complete raw-data/source archive are available. This is a finite
 synthetic control, without external review or physical validation.
 
+**Methods review:** [RAX-M1 v0.1](docs/research/rax/method-review-v0.1/README.md)
+reproduces two validation defects: acceptance of a negative-index duplicate row
+and an ineffective holdout-isolation unit test. It also documents callback-access
+and freeze-attestation limits, with exact dependence and selection counterexamples.
+The original data pass stricter coverage checks and full replay; all eight B1
+primary conclusions remain inconclusive. The seven-page report, executable
+examples and supplemental guards are published with the complete evidence package.
+This is internal post-hoc review, without independent personnel or physical evidence.
+
 Open discovery (RAX-U2), geometry and singularity investigations remain planned.
 Lorentzian and other structures remain competing candidates under the same rules.
 

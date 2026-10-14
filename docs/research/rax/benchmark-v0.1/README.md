@@ -69,6 +69,17 @@ python -c "import reference; print(reference.verify('evidence/campaign-v0.1', 't
 
 ## Geltungsgrenzen
 
+**Nachträglicher Methodenbefund:** Die [RAX-M1-Methodenprüfung](../method-review-v0.1/README.md)
+belegt, dass der bisherige Isolationstest einen absichtlich prüfdatenabhängigen
+Planer nicht erkennt und der Referenzprüfer eine gezielt erzeugte negative
+Index-Aliaszeile akzeptiert. Das historische Bestehen der Prüfungen ist daher
+kein umfassender Isolations- oder Vollständigkeitsnachweis. Die Originaldaten
+bestehen die mit M1 ergänzte strengere Abdeckungsprüfung und die vollständige
+Nachrechnung; sämtliche acht Hauptentscheidungen bleiben unentschieden.
+Weitere Grenzen betreffen den Mess-Callback und die Freeze-Selbstauskunft.
+Die eingefrorenen B1-Dateien bleiben unverändert; Zusatzprüfer und reproduzierbare
+Gegenbeispiele liegen im separat versionierten Methodenpaket.
+
 - Kleiner endlicher synthetischer Kontrollversuch mit bekanntem Leserauschen;
   keine physikalische Validierung und kein ausgeführtes RAX-U2.
 - Greedy-EIG ist kein globales Mehrschrittoptimum. Unentschiedenheit beweist

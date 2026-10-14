@@ -8,6 +8,8 @@
 
 [RAX-B1-Benchmarking v0.1: gleiche Budgets, getrennte Prüfdaten und vollständige Ergebnisse](benchmark-v0.1/README.md)
 
+[RAX-M1-Methodenprüfung v0.1: Datenlecks, Unabhängigkeit und Aussagegrenzen mit reproduzierbaren Gegenbeispielen](method-review-v0.1/README.md)
+
 Das unveränderte Forschungsprogramm dokumentiert den Planungsstand vor den
 U1-Läufen. Der später ausgeführte U1-Kontrollversuch und seine Gegenprüfung
 werden im separat versionierten Paket dokumentiert. Die interne Gegenprüfung
@@ -86,6 +88,23 @@ Intervalle bestätigen keine Überlegenheit. Quellcode, sämtliche Rohdaten und
 Nachrechnungen liegen im Reproduktionspaket. Das ist ein endlicher synthetischer
 Vergleich der Messplanung und kein ausgeführtes RAX-U2. Rechenzeiten sind
 Diagnostik; externe Begutachtung und physikalische Nachweise fehlen.
+
+## Methodenprüfung RAX-M1
+
+Die [interne nachträgliche Methodenprüfung](method-review-v0.1/README.md)
+belegt zwei Validierungsfehler: Der Referenzprüfer akzeptiert eine gezielt
+veränderte Kopie mit negativem Episodenindex und doppelter Kontrollzeile; ein
+absichtlich prüfdatenabhängiger Planer besteht den bisherigen Isolationstest.
+Weitere Versuche zeigen Grenzen der Callback-Abschottung und der Freeze-
+Selbstauskunft. Exakte statistische Gegenbeispiele verdeutlichen die Folgen
+falscher Unabhängigkeitsannahmen und selektiver Auswertung.
+
+Die Originaldaten bestehen die strengere Abdeckungsprüfung und vollständige
+Nachrechnung. Alle acht B1-Hauptentscheidungen bleiben unentschieden. Neun
+Prüfblöcke wurden in einem frischen Verzeichnis reproduziert; ergänzende
+Prüfregeln sind mitgeliefert. Die eingefrorenen Benchmarkquellen bleiben
+unverändert. Externe Begutachtung oder physikalische Nachweise sind damit
+nicht erbracht.
 
 ## Dokumentstand und Lizenz
 

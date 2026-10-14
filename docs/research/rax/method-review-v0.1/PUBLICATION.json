@@ -1,0 +1,41 @@
+{
+  "schema": "rax.m1.methods-publication/1",
+  "review": "RAX-M1-20261014-001",
+  "review_date": "2026-10-14",
+  "approval_date_local": "2026-10-14",
+  "approval_timezone": "Europe/Zurich",
+  "files": {
+    "RAX_M1_Methodenpruefung_v0_1.pdf": {
+      "sha256": "a9010c12977e5a75537bc2eb880d226ebfd53e459a764217c35ad90688c21702",
+      "bytes": 84932
+    },
+    "RAX_M1_Methodenpruefung_v0_1_Paket.zip": {
+      "sha256": "8f74c7b4133d85369178d6f3edf25b46c9c6f6aaf899576d5150fdb6a0c00d7a",
+      "bytes": 10247478
+    }
+  },
+  "approved_artifacts_unchanged": true,
+  "review_type": "internal post-hoc adversarial methods review",
+  "baseline_publication_commit": "564f694378c8429e40b51e67c6fd437b5a6c8a99",
+  "baseline_zip_sha256": "26609c78549be636b770196ca18d8185a8d072c47606726b71d6bda2a81f7d7f",
+  "local_review_source_commit": "265973e4d86d00435df9ba13a5a4b1da0fa36d06",
+  "original_baseline_files_unchanged": 36,
+  "audit_blocks_reproduced": 9,
+  "supplemental_guard_test_methods": 6,
+  "original_primary_conclusions": {
+    "INCONCLUSIVE": 8
+  },
+  "findings": {
+    "M1": "Negative-index alias bypasses exact row-coverage validation in a synthetic copied fixture.",
+    "M2": "Existing isolation unit test accepts the supplied intentionally holdout-dependent planner; full replay rejects the tested changed prediction.",
+    "M3": "Same-process callback introspection exposes unacquired outcomes to a substituted probe; no such use in original frozen planner.",
+    "M4": "Freeze self-attestation can report no inspection after visible test data were read; full reference rejects the tested chronology."
+  },
+  "counterexamples_are_not_observed_original_data_failures": true,
+  "supplemental_guards_retrofitted_into_frozen_B1": false,
+  "external_review": false,
+  "blind_review": false,
+  "physical_validation": false,
+  "RAX_U2_executed": false,
+  "publication_note": "The unchanged approved PDF and ZIP retain their pre-publication snapshot. Statements that RAX-M1 had not yet been published on GitHub apply to that snapshot; this record and its repository commit establish the subsequent publication. The local review source commit is an identifier of the preparation checkout; the executable review sources and evidence are supplied in the ZIP, without a claim that this local commit is a GitHub commit."
+}
