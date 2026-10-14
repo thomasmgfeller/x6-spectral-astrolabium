@@ -2,6 +2,11 @@
 
 ## Zweck und Einstieg
 
+Gemeinsame Installation und lokaler Start: [X6 Integration](INTEGRATION.md).
+`python3 x6.py serve` öffnet den gemeinsamen Einstieg. Native Lab-JSONs lassen
+sich mit `x6.py import-signal` prüfen und in dasselbe Exportpaket wie lokale
+CLI-Läufe übernehmen; die nativen Formate bleiben erhalten.
+
 Das Signal Validation Lab ist eine eigenständig aufrufbare Erweiterung des X6
 Spectral Astrolabium. Es prüft bekannte synthetische Signale, kontrollierte
 Störungen und die tatsächlichen Ergebnisse von vier Verarbeitungsverfahren.

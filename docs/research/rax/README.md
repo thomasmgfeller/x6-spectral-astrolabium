@@ -10,6 +10,11 @@
 
 [RAX-M1-Methodenprüfung v0.1: Datenlecks, Unabhängigkeit und Aussagegrenzen mit reproduzierbaren Gegenbeispielen](method-review-v0.1/README.md)
 
+Der [gemeinsame lokale Ablauf](../../INTEGRATION.md) installiert die Umgebung
+und führt die vollständige B1/M1-Nachrechnung mit `python3 x6.py run rax` aus.
+Prüfung und ZIP-Export verwenden dieselben Kommandos wie die Signal- und
+Spektraladapter. Die veröffentlichten Forschungsarchive bleiben unverändert.
+
 Das unveränderte Forschungsprogramm dokumentiert den Planungsstand vor den
 U1-Läufen. Der später ausgeführte U1-Kontrollversuch und seine Gegenprüfung
 werden im separat versionierten Paket dokumentiert. Die interne Gegenprüfung

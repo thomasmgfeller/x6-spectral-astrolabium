@@ -8,7 +8,21 @@ This repository publishes the actual **X6 v4.2 RC** browser application, alongsi
 
 **Experimental software.** Do not enter confidential data; this is not a production-hardened service. The browser's local qualification is not independent scientific certification.
 
-Open `app/index.html` in a browser, or run `python -m http.server 8000` and visit `http://localhost:8000/app/`.
+Use the [unified local workflow](docs/INTEGRATION.md) from a checkout of this
+integration revision (Python 3.12, Git and Node.js 22 or newer):
+
+```sh
+python3 x6.py setup --profile research
+python3 x6.py doctor --profile research
+python3 x6.py serve
+```
+
+Open the reported loopback URL for Astrolabium and Signal Validation Lab.
+The same entry point runs `signal`, `spectral` and `rax`, verifies directories
+or exported ZIPs, and imports native Signal Lab JSON without losing its format.
+The [documented fresh-checkout procedure](docs/INTEGRATION.md#6-abnahme-aus-einem-frischen-checkout-wiederholen)
+checks installation, execution, export and replay. Directly opening
+`app/index.html` remains available for the existing browser-only application.
 
 ## X6 Edge Reference — experimental development perspective
 

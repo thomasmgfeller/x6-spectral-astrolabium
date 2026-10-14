@@ -10,12 +10,17 @@ It is not an implementation of the complete platform.
 
 ## Run from a fresh checkout
 
+For the common installation, browser entry, native JSON/CSV and ZIP export
+workflow, use [X6 Integration](../../docs/INTEGRATION.md). The commands below
+remain the module-level reference interface; the unified `run signal` adapter
+uses this runner unchanged.
+
 Prerequisite: Node.js 22 or later. No npm packages, server, account or hardware
 are required. The exact tested runtime/architecture is in the
 [validation record](../../docs/perspectives/edge-platform/VALIDATION.md).
 
 ```bash
-git clone --branch research/x6-edge-reference https://github.com/thomasmgfeller/x6-spectral-astrolabium.git
+git clone https://github.com/thomasmgfeller/x6-spectral-astrolabium.git
 cd x6-spectral-astrolabium
 node experimental/edge_reference/runner.cjs run experimental/edge_reference/examples/synthetic-signal.json x6-edge-run
 node experimental/edge_reference/runner.cjs verify x6-edge-run

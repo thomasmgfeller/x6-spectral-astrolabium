@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>X6 · Lokaler Einstieg</title>
+<style>body{margin:0;background:#f4f6f8;color:#173044;font:17px/1.6 system-ui,sans-serif}main{max-width:980px;margin:6vh auto;padding:24px}h1{font-size:clamp(32px,5vw,54px);line-height:1.1}h2{font-size:23px}a{color:#075f83}nav{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin:32px 0}article,section{padding:25px;border:1px solid #d4e0e7;background:white;border-radius:12px}article a{font-size:21px;font-weight:700}code{font:14px/1.6 ui-monospace,monospace;overflow-wrap:anywhere}pre{overflow:auto;background:#edf3f7;padding:16px}small{color:#526473}.tag{font-size:13px;letter-spacing:.12em;text-transform:uppercase}</style></head>
+<body><main><p class="tag">X6 · Lokaler Arbeitsablauf · v0.1</p><h1>Ein Einstieg.<br>Nachvollziehbare Ergebnisse.</h1>
+<p>Oberfläche öffnen, einen lokalen Versuch ausführen und seine Ergebnisse exportieren. Die Prüfurteile der einzelnen Module bleiben sichtbar.</p>
+<nav aria-label="Anwendungen"><article><a href="/app/index.html">Spektral-Astrolabium →</a><p>Signal- und Fourierlabor, Graphmodell, Spektralprüfung und Sagnac-Dateiimport.</p><small>Forschungssoftware; die Modellannahmen bestimmen die Aussage der Ergebnisse.</small></article><article><a href="/app/signal-lab.html">Signal Validation Lab →</a><p>Vier Filter vergleichen, Gegenbeispiele prüfen und JSON oder CSV exportieren.</p><small>Synthetische Signale. JSON lässt sich im Lab importieren und nachrechnen.</small></article></nav>
+<section><h2>Einheitlicher Ablauf im Terminal</h2><pre><code>python3 x6.py doctor --profile research
+python3 x6.py run signal --output runs/signal-001
+python3 x6.py verify runs/signal-001
+python3 x6.py export runs/signal-001 --output exports/signal-001.zip
+python3 x6.py verify exports/signal-001.zip</code></pre><p><code>run spectral</code> führt fünf exakte rationale Referenzfälle aus. <code>run rax</code> reproduziert den veröffentlichten Benchmark und die Methodenprüfung. Für jeden Lauf einen neuen Ausgabeordner wählen.</p><p>Ein Exportpaket enthält <code>run.json</code>, <code>summary.json</code>, Protokolle und die vollständigen nativen Belege unter <code>native/</code>. Den Signalbericht unter <code>native/signal/evidence.json</code> können Sie direkt im Signal Lab importieren.</p><small>Vollständige Anleitung: <code>docs/INTEGRATION.md</code> im Checkout. Beenden des lokalen Servers: Strg+C.</small></section>
+<p><small>Erfolgreiche Ausführung oder Nachrechnung ist keine physikalische Validierung. Die acht primären RAX-B1-Vergleiche bleiben unentschieden. Dieser Einstieg aktiviert keine Forschungsagenten oder Geräte.</small></p>
+</main></body></html>

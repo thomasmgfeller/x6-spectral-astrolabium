@@ -37,6 +37,13 @@ def main():
     # Isolated extensions have explicit inventories; do not weaken the unknown-file
     # check or change the app pin used by the bounded research agents.
     extension_specs = {
+        "INTEGRATION_SOURCE_MANIFEST.json": (
+            "x6.integration.source-manifest/1",
+            {"x6.py", "tools/workflow/cli.py", "tools/workflow/backends.py",
+             "tools/workflow/signal_adapter.cjs", "tools/workflow/start.html",
+             "tools/workflow/requirements-research.txt", "docs/INTEGRATION.md",
+             "tests/integration/test_workflow.py", "tests/integration/qualify_checkout.py",
+             "tests/integration/browser_workflow.cjs", ".gitignore"}),
         "EDGE_REFERENCE_SOURCE_MANIFEST.json": (
             "x6.edge-reference.source-manifest/1",
             {"experimental/edge_reference/runner.cjs", "experimental/edge_reference/test_runner.cjs",
@@ -77,6 +84,10 @@ def main():
     excluded = []
     superseded = []
     for rel, digest in sorted(expected.items()):
+        if rel == ".gitignore":
+            superseded.append({"path": rel, "historical_sha256": digest,
+                               "reason": "integration output directories; current bytes checked by INTEGRATION_SOURCE_MANIFEST.json"})
+            continue
         if rel in EXCLUDED:
             excluded.append({"path": rel, "reason": EXCLUDED[rel]})
             continue
