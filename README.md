@@ -135,6 +135,14 @@ All 160 matrices and 3.2 million transitions were rechecked; the 40 decisions
 remain 8 supported, 16 rejected and 16 inconclusive. The archive-loss incident
 remains unresolved, and full acquisition qualification is not claimed.
 This is internal, post-hoc checking, not external review or new physical evidence.
+**Measurement-plan benchmark:** [RAX-B1 v0.1](docs/research/rax/benchmark-v0.1/README.md)
+compares adaptive, optimized fixed and random plans at equal measurement budgets
+with separate heldout data. All 67,584 test runs were independently replayed in
+code. Adaptive plans have lower observed mean Brier scores; all eight prespecified
+simultaneous superiority decisions remain inconclusive. The approved ten-page
+report and complete raw-data/source archive are available. This is a finite
+synthetic control, without external review or physical validation.
+
 Open discovery (RAX-U2), geometry and singularity investigations remain planned.
 Lorentzian and other structures remain competing candidates under the same rules.
 

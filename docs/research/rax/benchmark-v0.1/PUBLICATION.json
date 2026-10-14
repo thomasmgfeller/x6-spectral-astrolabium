@@ -1,0 +1,43 @@
+{
+  "schema": "rax.b1.benchmark-publication/1",
+  "date": "2026-10-14",
+  "campaign": "RAX-B1-20261014-001",
+  "files": {
+    "RAX_B1_Benchmarking_v0_1.pdf": {
+      "sha256": "64795dcf88dbad085a254ff599242d42ed95400e42bf1db12840b25e414c18f8",
+      "bytes": 146796
+    },
+    "RAX_B1_Benchmarking_v0_1_Paket.zip": {
+      "sha256": "26609c78549be636b770196ca18d8185a8d072c47606726b71d6bda2a81f7d7f",
+      "bytes": 10125075
+    }
+  },
+  "approved_artifacts_unchanged": true,
+  "evidence_kind": "SYNTHETIC_CONTROL",
+  "test_episodes": 5632,
+  "policy_budget_runs": 67584,
+  "primary_in_model_episodes": 4608,
+  "primary_contrasts": 8,
+  "confirmatory_conclusions": {
+    "ADAPTIVE_BETTER": 0,
+    "ADAPTIVE_WORSE": 0,
+    "INCONCLUSIVE": 8
+  },
+  "budgets": [
+    4,
+    8,
+    16,
+    32
+  ],
+  "holdout_observations_per_episode": 128,
+  "source_freeze_commit": "1ecbda74df9a332a623c5b41d8800f06a503733f",
+  "local_results_commit": "7acb0733e625502dc5f80b5056e1fa4f18a389d0",
+  "all_test_runs_replayed": true,
+  "independent_implementation": true,
+  "external_review": false,
+  "blind_review": false,
+  "physical_validation": false,
+  "RAX_U2_executed": false,
+  "power_loss_qualified": false,
+  "publication_note": "The unchanged approved PDF and ZIP retain their pre-publication snapshot. Statements that this benchmark had not yet been published on GitHub apply to that snapshot; this publication record and repository commit establish the subsequent publication. The two local research commits are preserved in the bundled research-history.bundle, with its documented base prerequisite."
+}

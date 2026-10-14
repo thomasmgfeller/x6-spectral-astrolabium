@@ -1,10 +1,12 @@
 # RAX — Relationales Forschungsprogramm v0.1
 
-**Forschungsfassung vom 14. Oktober 2026. Aktueller Stand: RAX-U1 als synthetische Kontrolle ausgeführt und intern gegengeprüft; technische Gesamtabnahme offen. RAX-U2 und die weiteren Forschungsversuche bleiben geplant.**
+**Forschungsfassung vom 14. Oktober 2026. Aktueller Stand: RAX-U1 als synthetische Kontrolle ausgeführt und intern gegengeprüft; technische Gesamtabnahme offen. RAX-B1-Messplanbenchmark ausgeführt, acht primäre Überlegenheitsentscheidungen unentschieden. RAX-U2 und die weiteren Forschungsversuche bleiben geplant.**
 
 [Forschungsprogramm herunterladen (DOCX, 14 Seiten)](RAX_Relationales_Forschungsprogramm_v0_1.docx)
 
 [RAX-U1-Gegenprüfung v0.1: Bericht und vollständiges Reproduktionspaket](countercheck-v0.1/README.md)
+
+[RAX-B1-Benchmarking v0.1: gleiche Budgets, getrennte Prüfdaten und vollständige Ergebnisse](benchmark-v0.1/README.md)
 
 Das unveränderte Forschungsprogramm dokumentiert den Planungsstand vor den
 U1-Läufen. Der später ausgeführte U1-Kontrollversuch und seine Gegenprüfung
@@ -73,6 +75,17 @@ Gegenprüfer und maschinenlesbaren Befunde. Der nächste technische Schritt ist
 die Qualifikation dauerhafter Speicherung und einer vereinheitlichten
 Ressourcenprüfung. U2 benötigt einen eigenen Prüfvertrag; physikalische
 Nachweise bleiben ausstehend.
+
+## Messplanbenchmark RAX-B1
+
+Der separat ausgeführte [RAX-B1-Benchmark](benchmark-v0.1/README.md) vergleicht
+adaptive, vorab optimierte feste und zufällige Messpläne bei Budgets 4, 8, 16
+und 32. Alle 67.584 Testläufe wurden separat nachgerechnet. Adaptive Pläne
+zeigen die kleinsten mittleren Prüf-Brier-Scores; die konservativen simultanen
+Intervalle bestätigen keine Überlegenheit. Quellcode, sämtliche Rohdaten und
+Nachrechnungen liegen im Reproduktionspaket. Das ist ein endlicher synthetischer
+Vergleich der Messplanung und kein ausgeführtes RAX-U2. Rechenzeiten sind
+Diagnostik; externe Begutachtung und physikalische Nachweise fehlen.
 
 ## Dokumentstand und Lizenz
 
