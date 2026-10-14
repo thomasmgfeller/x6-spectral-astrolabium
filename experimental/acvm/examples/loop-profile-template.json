@@ -1,0 +1,29 @@
+{
+  "evidence_kind": "TEMPLATE_NOT_EXECUTABLE",
+  "commissioning_record": "",
+  "motor": {
+    "address": "0",
+    "serial": "12345678",
+    "pulses_per_degree": 1000,
+    "zero_deg": 0,
+    "min_deg": 0,
+    "max_deg": 90,
+    "tolerance_deg": 0.05,
+    "timeout_s": 0.2,
+    "scale_evidence": "TEST_FIXTURE_NOT_HARDWARE"
+  },
+  "meter_serial": "REPLACE",
+  "sensor_serial": "REPLACE",
+  "loop": {
+    "target_w": 0.0005,
+    "normalization_w": 0.001,
+    "steps": 20,
+    "period_s": 1,
+    "kp": 0.25,
+    "ki": 0.65,
+    "slew_per_s": 0.1,
+    "initial_fraction": 0.5,
+    "park_fraction": 0.05,
+    "max_query_s": 0.5
+  }
+}

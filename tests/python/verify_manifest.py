@@ -37,6 +37,12 @@ def main():
     # Isolated extensions have explicit inventories; do not weaken the unknown-file
     # check or change the app pin used by the bounded research agents.
     extension_specs = {
+        "ACVM_OPTICAL_SOURCE_MANIFEST.json": (
+            "x6.acvm-optical.source-manifest/1",
+            {"experimental/acvm/engine.py", "experimental/acvm/archive.py",
+             "experimental/acvm/devices.py", "experimental/acvm/feedback.py",
+             "tests/acvm/test_acvm.py", "tests/acvm/qualify_checkout.py",
+             "docs/acvm/optical-v0.2/README.md", ".github/workflows/x6-acvm-optical.yml"}),
         "CONTROL_CHANNEL_SOURCE_MANIFEST.json": (
             "x6.control-channel.source-manifest/1",
             {"experimental/control_channel/channel.py", "experimental/control_channel/reference.py",

@@ -1,0 +1,101 @@
+{
+  "schema": "acvm.electrical/1",
+  "evidence_kind": "SIMULATED",
+  "instrument": "SYNTHETIC_SCOPE",
+  "timebase": "INDEPENDENT_CALIBRATED",
+  "uncertainty_method": "ASSUMED fixture uncertainties; no physical calibration",
+  "voltage_limit_v": 0.01,
+  "timing_limit_s": 0.001,
+  "runs": [
+    {
+      "run_id": "synthetic-e1",
+      "points": [
+        {
+          "target_v": 0,
+          "measured_v": 0.001,
+          "target_s": 0.0,
+          "measured_s": 0.0001,
+          "uncertainty_v": 0.002,
+          "uncertainty_s": 0.0002
+        },
+        {
+          "target_v": 0.5,
+          "measured_v": 0.501,
+          "target_s": 0.2,
+          "measured_s": 0.2001,
+          "uncertainty_v": 0.002,
+          "uncertainty_s": 0.0002
+        },
+        {
+          "target_v": 1,
+          "measured_v": 1.001,
+          "target_s": 0.4,
+          "measured_s": 0.4001,
+          "uncertainty_v": 0.002,
+          "uncertainty_s": 0.0002
+        },
+        {
+          "target_v": 1.5,
+          "measured_v": 1.501,
+          "target_s": 0.6000000000000001,
+          "measured_s": 0.6001000000000001,
+          "uncertainty_v": 0.002,
+          "uncertainty_s": 0.0002
+        },
+        {
+          "target_v": 1.99,
+          "measured_v": 1.9909999999999999,
+          "target_s": 0.8,
+          "measured_s": 0.8001,
+          "uncertainty_v": 0.002,
+          "uncertainty_s": 0.0002
+        }
+      ]
+    },
+    {
+      "run_id": "synthetic-e2",
+      "points": [
+        {
+          "target_v": 0,
+          "measured_v": 0.001,
+          "target_s": 0.0,
+          "measured_s": 0.0001,
+          "uncertainty_v": 0.002,
+          "uncertainty_s": 0.0002
+        },
+        {
+          "target_v": 0.5,
+          "measured_v": 0.501,
+          "target_s": 0.2,
+          "measured_s": 0.2001,
+          "uncertainty_v": 0.002,
+          "uncertainty_s": 0.0002
+        },
+        {
+          "target_v": 1,
+          "measured_v": 1.001,
+          "target_s": 0.4,
+          "measured_s": 0.4001,
+          "uncertainty_v": 0.002,
+          "uncertainty_s": 0.0002
+        },
+        {
+          "target_v": 1.5,
+          "measured_v": 1.501,
+          "target_s": 0.6000000000000001,
+          "measured_s": 0.6001000000000001,
+          "uncertainty_v": 0.002,
+          "uncertainty_s": 0.0002
+        },
+        {
+          "target_v": 1.99,
+          "measured_v": 1.9909999999999999,
+          "target_s": 0.8,
+          "measured_s": 0.8001,
+          "uncertainty_v": 0.002,
+          "uncertainty_s": 0.0002
+        }
+      ]
+    }
+  ]
+}

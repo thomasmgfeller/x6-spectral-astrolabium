@@ -1,0 +1,63 @@
+{
+  "evidence_kind": "TEMPLATE_NOT_EXECUTABLE",
+  "commissioning_record": "",
+  "motors": {
+    "q1": {
+      "address": "0",
+      "serial": "12345678",
+      "pulses_per_degree": 1000,
+      "zero_deg": 0,
+      "min_deg": 0,
+      "max_deg": 180,
+      "tolerance_deg": 0.05,
+      "timeout_s": 0.2,
+      "scale_evidence": "TEST_FIXTURE_NOT_HARDWARE"
+    },
+    "h": {
+      "address": "1",
+      "serial": "12345678",
+      "pulses_per_degree": 1000,
+      "zero_deg": 0,
+      "min_deg": 0,
+      "max_deg": 180,
+      "tolerance_deg": 0.05,
+      "timeout_s": 0.2,
+      "scale_evidence": "TEST_FIXTURE_NOT_HARDWARE"
+    },
+    "q2": {
+      "address": "2",
+      "serial": "12345678",
+      "pulses_per_degree": 1000,
+      "zero_deg": 0,
+      "min_deg": 0,
+      "max_deg": 180,
+      "tolerance_deg": 0.05,
+      "timeout_s": 0.2,
+      "scale_evidence": "TEST_FIXTURE_NOT_HARDWARE"
+    }
+  },
+  "phase_calibration": {
+    "evidence_kind": "TEMPLATE_NOT_EXECUTABLE",
+    "calibration_id": "",
+    "wavelength_nm": 810,
+    "max_phase_error_rad": 0.02,
+    "max_crosstalk_amplitude": 0.01,
+    "axes": {
+      "q1": {
+        "zero_deg": 0,
+        "direction": 1,
+        "retardance_rad": 1.5707963267948966
+      },
+      "h": {
+        "zero_deg": 0,
+        "direction": 1,
+        "retardance_rad": 3.141592653589793
+      },
+      "q2": {
+        "zero_deg": 0,
+        "direction": 1,
+        "retardance_rad": 1.5707963267948966
+      }
+    }
+  }
+}
