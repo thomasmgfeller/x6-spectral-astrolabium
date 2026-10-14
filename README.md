@@ -166,6 +166,15 @@ primary conclusions remain inconclusive. The seven-page report, executable
 examples and supplemental guards are published with the complete evidence package.
 This is internal post-hoc review, without independent personnel or physical evidence.
 
+**Exact Wolfram cross-check:** [RAX-W1 v0.1](docs/research/rax/wolfram-check-v0.1/README.md)
+reconstructs 44 selected U1 matrices in Wolfram Language and matches their exact
+hashes and properties against the published results and both historical Python
+implementations. Ten valid reductions and 34 intended violations are identified;
+symbolic conditions and explicit counterexamples are included. The approved
+four-page report, all tool responses and complete offline verification package
+are available. This is internal post-hoc checking with another computation
+engine, without external personnel review or physical validation.
+
 Open discovery (RAX-U2), geometry and singularity investigations remain planned.
 Lorentzian and other structures remain competing candidates under the same rules.
 
