@@ -37,6 +37,12 @@ def main():
     # Isolated extensions have explicit inventories; do not weaken the unknown-file
     # check or change the app pin used by the bounded research agents.
     extension_specs = {
+        "CONTROL_CHANNEL_SOURCE_MANIFEST.json": (
+            "x6.control-channel.source-manifest/1",
+            {"experimental/control_channel/channel.py", "experimental/control_channel/reference.py",
+             "experimental/control_channel/firmware/core.hpp", "experimental/control_channel/firmware/pico.cpp",
+             "experimental/control_channel/qualification.py", "tests/control-channel/test_channel.py",
+             "docs/acvm/control-channel-v0.1/README.md", ".github/workflows/x6-control-channel.yml"}),
         "INTEGRATION_SOURCE_MANIFEST.json": (
             "x6.integration.source-manifest/1",
             {"x6.py", "tools/workflow/cli.py", "tools/workflow/backends.py",
