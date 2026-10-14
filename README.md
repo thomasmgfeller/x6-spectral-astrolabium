@@ -129,11 +129,14 @@ introduce a staged investigation of predictive reductions, competing generators,
 possible geometric representations and independent falsification tests.
 The approved 14-page German research programme is available as a Word document.
 
-**Planned research:** RAX-U1 first qualifies the method on a constructed Markov
-control; open discovery, geometry and singularity investigations follow separate
-gates. The RAX experiments have not been executed. Lorentzian and other
-structures are competing candidates under the same evidence rules, with no
-preferred target geometry.
+**Executed synthetic control:** The [RAX-U1 countercheck v0.1](docs/research/rax/countercheck-v0.1/README.md)
+publishes the approved four-page report and a complete reproducibility archive.
+All 160 matrices and 3.2 million transitions were rechecked; the 40 decisions
+remain 8 supported, 16 rejected and 16 inconclusive. The archive-loss incident
+remains unresolved, and full acquisition qualification is not claimed.
+This is internal, post-hoc checking, not external review or new physical evidence.
+Open discovery (RAX-U2), geometry and singularity investigations remain planned.
+Lorentzian and other structures remain competing candidates under the same rules.
 
 ## Open research agenda
 

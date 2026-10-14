@@ -1,8 +1,17 @@
 # RAX — Relationales Forschungsprogramm v0.1
 
-**Forschungsfassung vom 14. Oktober 2026. Status: geplant; RAX-Experimente nicht durchgeführt.**
+**Forschungsfassung vom 14. Oktober 2026. Aktueller Stand: RAX-U1 als synthetische Kontrolle ausgeführt und intern gegengeprüft; technische Gesamtabnahme offen. RAX-U2 und die weiteren Forschungsversuche bleiben geplant.**
 
 [Forschungsprogramm herunterladen (DOCX, 14 Seiten)](RAX_Relationales_Forschungsprogramm_v0_1.docx)
+
+[RAX-U1-Gegenprüfung v0.1: Bericht und vollständiges Reproduktionspaket](countercheck-v0.1/README.md)
+
+Das unveränderte Forschungsprogramm dokumentiert den Planungsstand vor den
+U1-Läufen. Der später ausgeführte U1-Kontrollversuch und seine Gegenprüfung
+werden im separat versionierten Paket dokumentiert. Die interne Gegenprüfung
+bestätigt 160 Matrizen, 3,2 Millionen Übergänge und die Entscheidungen
+8 gestützt / 16 verworfen / 16 unentschieden. Der Archivvorfall bleibt ungeklärt;
+eine störungsfreie Erfassung und externe Begutachtung sind nicht nachgewiesen.
 
 RAX untersucht, ob verschiedene relationale Mikrostrukturen eine gemeinsame
 reduzierte Beschreibung zulassen, die neue Beobachtungen und kontrollierte
@@ -57,9 +66,13 @@ verteilte Messnodes und ein unabhängiges Widerlegungsgate verbinden. Der
 ist ein methodischer Vorläufer mit engerem Prüfbereich. Seine Softwareergebnisse
 sind keine ausgeführten RAX-U1- oder RAX-U2-Ergebnisse.
 
-Diese Veröffentlichung enthält das freigegebene Forschungsprogramm und diese
-Übersicht. Die geplanten RAX-Implementierungen, Datenläufe und physikalischen
-Nachweise sind ausstehend. Die nächsten Umsetzungsschritte stehen in AP1.
+Neben dem freigegebenen Forschungsprogramm ist nun das vollständige
+[U1-Gegenprüfungspaket](countercheck-v0.1/README.md) verfügbar. Es enthält die
+U1-Quellen, eingefrorenen Verträge, vollständigen und beschädigten Rohdaten,
+Gegenprüfer und maschinenlesbaren Befunde. Der nächste technische Schritt ist
+die Qualifikation dauerhafter Speicherung und einer vereinheitlichten
+Ressourcenprüfung. U2 benötigt einen eigenen Prüfvertrag; physikalische
+Nachweise bleiben ausstehend.
 
 ## Dokumentstand und Lizenz
 
