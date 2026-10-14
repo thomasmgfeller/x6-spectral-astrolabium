@@ -1,0 +1,1937 @@
+{
+  "schema": "x6.neutral-discovery/0.1.0",
+  "scope": "FINITE_LOGICAL_CONTROL_NOT_PHYSICS_DISCOVERY",
+  "controls": [
+    {
+      "schema": "x6.neutral-discovery/0.1.0",
+      "evidence_kind": "SYNTHETIC_CONTROL",
+      "contract": {
+        "schema": "x6.neutral-discovery/0.1.0",
+        "evidence_kind": "SYNTHETIC_CONTROL",
+        "objective": "JOINT_INFORMATION_ABOUT_EXPLANATION_CLASS",
+        "class_rule": "EXACT_PREDICTIVE_EQUALITY_ON_REGISTERED_CATALOGUE",
+        "prior_rule": "UNIFORM_OVER_DISTINCT_CLASSES",
+        "dependence": "INDEPENDENT_REPLICAS_GIVEN_CLASS",
+        "classes": [
+          {
+            "id": "C-d0657933acfb",
+            "p_one": {
+              "observe": "1",
+              "do_x_1": "1",
+              "do_y_1": "1/2"
+            },
+            "prior": "1/3"
+          },
+          {
+            "id": "C-afefff3b0190",
+            "p_one": {
+              "observe": "1",
+              "do_x_1": "1/2",
+              "do_y_1": "1"
+            },
+            "prior": "1/3"
+          },
+          {
+            "id": "C-8e428945531e",
+            "p_one": {
+              "observe": "1",
+              "do_x_1": "1/2",
+              "do_y_1": "1/2"
+            },
+            "prior": "1/3"
+          }
+        ],
+        "interventions": [
+          "observe",
+          "do_x_1",
+          "do_y_1"
+        ],
+        "design": {
+          "batch_size": 2,
+          "rounds": 4,
+          "cost_per_observation": 1,
+          "cost_budget_per_batch": 2
+        },
+        "falsification": {
+          "rule": "FIXED_N_EXACT_BINOMIAL_BONFERRONI",
+          "alpha": "1/20",
+          "n_per_intervention": 24,
+          "interventions": [
+            "do_x_1",
+            "do_y_1"
+          ],
+          "looks": 1
+        },
+        "claims": {
+          "geometry": "NOT_IDENTIFIED",
+          "theory": "NOT_ESTABLISHED",
+          "physical": "NOT_TESTED"
+        }
+      },
+      "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+      "simulation_truth": "x_to_y",
+      "seed": 20261014,
+      "proposal_rows": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "law_candidates": [
+        {
+          "coefficients_c_x_y": [
+            0,
+            1,
+            -1
+          ],
+          "status": "OBSERVATIONAL_RELATION_CANDIDATE",
+          "domain": "registered binary support only",
+          "units": [
+            "1",
+            "1",
+            "1"
+          ]
+        }
+      ],
+      "selection": [
+        {
+          "plan": {
+            "interventions": [
+              "do_x_1",
+              "do_y_1"
+            ],
+            "expected_information_bits": 0.4916778774908437,
+            "status": "PLANNED"
+          },
+          "outcomes": [
+            1,
+            0
+          ],
+          "evidence_ids": [
+            "selection.0.0",
+            "selection.0.1"
+          ],
+          "predictive_probability": "1/4"
+        },
+        {
+          "plan": {
+            "interventions": [
+              "do_x_1",
+              "do_x_1"
+            ],
+            "expected_information_bits": 0.5408520829727552,
+            "status": "PLANNED"
+          },
+          "outcomes": [
+            1,
+            1
+          ],
+          "evidence_ids": [
+            "selection.1.0",
+            "selection.1.1"
+          ],
+          "predictive_probability": "3/4"
+        },
+        {
+          "plan": {
+            "interventions": [
+              "do_x_1",
+              "do_x_1"
+            ],
+            "expected_information_bits": 0.3236748364748412,
+            "status": "PLANNED"
+          },
+          "outcomes": [
+            1,
+            1
+          ],
+          "evidence_ids": [
+            "selection.2.0",
+            "selection.2.1"
+          ],
+          "predictive_probability": "11/12"
+        },
+        {
+          "plan": {
+            "interventions": [
+              "do_x_1",
+              "do_x_1"
+            ],
+            "expected_information_bits": 0.13190687731603082,
+            "status": "PLANNED"
+          },
+          "outcomes": [
+            1,
+            1
+          ],
+          "evidence_ids": [
+            "selection.3.0",
+            "selection.3.1"
+          ],
+          "predictive_probability": "43/44"
+        }
+      ],
+      "relative_class_weights": {
+        "C-d0657933acfb": "128/129",
+        "C-afefff3b0190": "0",
+        "C-8e428945531e": "1/129"
+      },
+      "challenge_priority": {
+        "leader": "C-d0657933acfb",
+        "probes": [
+          {
+            "intervention": "do_x_1",
+            "expected_rejection_power_against_leader": 0.9999999403953552
+          },
+          {
+            "intervention": "do_y_1",
+            "expected_rejection_power_against_leader": 0.006610751152038574
+          }
+        ],
+        "status": "RANKED"
+      },
+      "challenge_records": [
+        {
+          "id": "challenge.do_x_1.0",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_x_1",
+          "outcome": 1
+        },
+        {
+          "id": "challenge.do_x_1.1",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_x_1",
+          "outcome": 1
+        },
+        {
+          "id": "challenge.do_x_1.2",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_x_1",
+          "outcome": 1
+        },
+        {
+          "id": "challenge.do_x_1.3",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_x_1",
+          "outcome": 1
+        },
+        {
+          "id": "challenge.do_x_1.4",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_x_1",
+          "outcome": 1
+        },
+        {
+          "id": "challenge.do_x_1.5",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_x_1",
+          "outcome": 1
+        },
+        {
+          "id": "challenge.do_x_1.6",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_x_1",
+          "outcome": 1
+        },
+        {
+          "id": "challenge.do_x_1.7",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_x_1",
+          "outcome": 1
+        },
+        {
+          "id": "challenge.do_x_1.8",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_x_1",
+          "outcome": 1
+        },
+        {
+          "id": "challenge.do_x_1.9",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_x_1",
+          "outcome": 1
+        },
+        {
+          "id": "challenge.do_x_1.10",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_x_1",
+          "outcome": 1
+        },
+        {
+          "id": "challenge.do_x_1.11",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_x_1",
+          "outcome": 1
+        },
+        {
+          "id": "challenge.do_x_1.12",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_x_1",
+          "outcome": 1
+        },
+        {
+          "id": "challenge.do_x_1.13",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_x_1",
+          "outcome": 1
+        },
+        {
+          "id": "challenge.do_x_1.14",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_x_1",
+          "outcome": 1
+        },
+        {
+          "id": "challenge.do_x_1.15",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_x_1",
+          "outcome": 1
+        },
+        {
+          "id": "challenge.do_x_1.16",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_x_1",
+          "outcome": 1
+        },
+        {
+          "id": "challenge.do_x_1.17",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_x_1",
+          "outcome": 1
+        },
+        {
+          "id": "challenge.do_x_1.18",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_x_1",
+          "outcome": 1
+        },
+        {
+          "id": "challenge.do_x_1.19",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_x_1",
+          "outcome": 1
+        },
+        {
+          "id": "challenge.do_x_1.20",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_x_1",
+          "outcome": 1
+        },
+        {
+          "id": "challenge.do_x_1.21",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_x_1",
+          "outcome": 1
+        },
+        {
+          "id": "challenge.do_x_1.22",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_x_1",
+          "outcome": 1
+        },
+        {
+          "id": "challenge.do_x_1.23",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_x_1",
+          "outcome": 1
+        },
+        {
+          "id": "challenge.do_y_1.0",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_y_1",
+          "outcome": 1
+        },
+        {
+          "id": "challenge.do_y_1.1",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_y_1",
+          "outcome": 0
+        },
+        {
+          "id": "challenge.do_y_1.2",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_y_1",
+          "outcome": 0
+        },
+        {
+          "id": "challenge.do_y_1.3",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_y_1",
+          "outcome": 1
+        },
+        {
+          "id": "challenge.do_y_1.4",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_y_1",
+          "outcome": 0
+        },
+        {
+          "id": "challenge.do_y_1.5",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_y_1",
+          "outcome": 1
+        },
+        {
+          "id": "challenge.do_y_1.6",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_y_1",
+          "outcome": 0
+        },
+        {
+          "id": "challenge.do_y_1.7",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_y_1",
+          "outcome": 0
+        },
+        {
+          "id": "challenge.do_y_1.8",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_y_1",
+          "outcome": 1
+        },
+        {
+          "id": "challenge.do_y_1.9",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_y_1",
+          "outcome": 0
+        },
+        {
+          "id": "challenge.do_y_1.10",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_y_1",
+          "outcome": 0
+        },
+        {
+          "id": "challenge.do_y_1.11",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_y_1",
+          "outcome": 0
+        },
+        {
+          "id": "challenge.do_y_1.12",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_y_1",
+          "outcome": 1
+        },
+        {
+          "id": "challenge.do_y_1.13",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_y_1",
+          "outcome": 0
+        },
+        {
+          "id": "challenge.do_y_1.14",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_y_1",
+          "outcome": 1
+        },
+        {
+          "id": "challenge.do_y_1.15",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_y_1",
+          "outcome": 1
+        },
+        {
+          "id": "challenge.do_y_1.16",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_y_1",
+          "outcome": 0
+        },
+        {
+          "id": "challenge.do_y_1.17",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_y_1",
+          "outcome": 0
+        },
+        {
+          "id": "challenge.do_y_1.18",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_y_1",
+          "outcome": 0
+        },
+        {
+          "id": "challenge.do_y_1.19",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_y_1",
+          "outcome": 0
+        },
+        {
+          "id": "challenge.do_y_1.20",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_y_1",
+          "outcome": 1
+        },
+        {
+          "id": "challenge.do_y_1.21",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_y_1",
+          "outcome": 1
+        },
+        {
+          "id": "challenge.do_y_1.22",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_y_1",
+          "outcome": 1
+        },
+        {
+          "id": "challenge.do_y_1.23",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_y_1",
+          "outcome": 0
+        }
+      ],
+      "falsification": {
+        "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+        "evidence_sha256": "f61a4bbaa22abe520fefb433649be1df66bd36b4dcd92b5c307b1912cdceef69",
+        "per_test_threshold": "1/120",
+        "classes": [
+          {
+            "class_id": "C-d0657933acfb",
+            "status": "NOT_REJECTED",
+            "tests": [
+              {
+                "intervention": "do_x_1",
+                "n": 24,
+                "ones": 24,
+                "p_value": "1",
+                "rejected": false
+              },
+              {
+                "intervention": "do_y_1",
+                "n": 24,
+                "ones": 10,
+                "p_value": "2270193/4194304",
+                "rejected": false
+              }
+            ]
+          },
+          {
+            "class_id": "C-afefff3b0190",
+            "status": "REJECTED_WITHIN_REGISTERED_TEST",
+            "tests": [
+              {
+                "intervention": "do_x_1",
+                "n": 24,
+                "ones": 24,
+                "p_value": "1/8388608",
+                "rejected": true
+              },
+              {
+                "intervention": "do_y_1",
+                "n": 24,
+                "ones": 10,
+                "p_value": "0",
+                "rejected": true
+              }
+            ]
+          },
+          {
+            "class_id": "C-8e428945531e",
+            "status": "REJECTED_WITHIN_REGISTERED_TEST",
+            "tests": [
+              {
+                "intervention": "do_x_1",
+                "n": 24,
+                "ones": 24,
+                "p_value": "1/8388608",
+                "rejected": true
+              },
+              {
+                "intervention": "do_y_1",
+                "n": 24,
+                "ones": 10,
+                "p_value": "2270193/4194304",
+                "rejected": false
+              }
+            ]
+          }
+        ],
+        "status": "SURVIVORS_REQUIRE_FURTHER_TESTS",
+        "geometry": "NOT_IDENTIFIED",
+        "theory": "NOT_ESTABLISHED",
+        "physical": "NOT_TESTED"
+      }
+    },
+    {
+      "schema": "x6.neutral-discovery/0.1.0",
+      "evidence_kind": "SYNTHETIC_CONTROL",
+      "contract": {
+        "schema": "x6.neutral-discovery/0.1.0",
+        "evidence_kind": "SYNTHETIC_CONTROL",
+        "objective": "JOINT_INFORMATION_ABOUT_EXPLANATION_CLASS",
+        "class_rule": "EXACT_PREDICTIVE_EQUALITY_ON_REGISTERED_CATALOGUE",
+        "prior_rule": "UNIFORM_OVER_DISTINCT_CLASSES",
+        "dependence": "INDEPENDENT_REPLICAS_GIVEN_CLASS",
+        "classes": [
+          {
+            "id": "C-d0657933acfb",
+            "p_one": {
+              "observe": "1",
+              "do_x_1": "1",
+              "do_y_1": "1/2"
+            },
+            "prior": "1/3"
+          },
+          {
+            "id": "C-afefff3b0190",
+            "p_one": {
+              "observe": "1",
+              "do_x_1": "1/2",
+              "do_y_1": "1"
+            },
+            "prior": "1/3"
+          },
+          {
+            "id": "C-8e428945531e",
+            "p_one": {
+              "observe": "1",
+              "do_x_1": "1/2",
+              "do_y_1": "1/2"
+            },
+            "prior": "1/3"
+          }
+        ],
+        "interventions": [
+          "observe",
+          "do_x_1",
+          "do_y_1"
+        ],
+        "design": {
+          "batch_size": 2,
+          "rounds": 4,
+          "cost_per_observation": 1,
+          "cost_budget_per_batch": 2
+        },
+        "falsification": {
+          "rule": "FIXED_N_EXACT_BINOMIAL_BONFERRONI",
+          "alpha": "1/20",
+          "n_per_intervention": 24,
+          "interventions": [
+            "do_x_1",
+            "do_y_1"
+          ],
+          "looks": 1
+        },
+        "claims": {
+          "geometry": "NOT_IDENTIFIED",
+          "theory": "NOT_ESTABLISHED",
+          "physical": "NOT_TESTED"
+        }
+      },
+      "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+      "simulation_truth": "y_to_x",
+      "seed": 20261015,
+      "proposal_rows": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "law_candidates": [
+        {
+          "coefficients_c_x_y": [
+            0,
+            1,
+            -1
+          ],
+          "status": "OBSERVATIONAL_RELATION_CANDIDATE",
+          "domain": "registered binary support only",
+          "units": [
+            "1",
+            "1",
+            "1"
+          ]
+        }
+      ],
+      "selection": [
+        {
+          "plan": {
+            "interventions": [
+              "do_x_1",
+              "do_y_1"
+            ],
+            "expected_information_bits": 0.4916778774908437,
+            "status": "PLANNED"
+          },
+          "outcomes": [
+            0,
+            1
+          ],
+          "evidence_ids": [
+            "selection.0.0",
+            "selection.0.1"
+          ],
+          "predictive_probability": "1/4"
+        },
+        {
+          "plan": {
+            "interventions": [
+              "do_y_1",
+              "do_y_1"
+            ],
+            "expected_information_bits": 0.5408520829727552,
+            "status": "PLANNED"
+          },
+          "outcomes": [
+            1,
+            1
+          ],
+          "evidence_ids": [
+            "selection.1.0",
+            "selection.1.1"
+          ],
+          "predictive_probability": "3/4"
+        },
+        {
+          "plan": {
+            "interventions": [
+              "do_y_1",
+              "do_y_1"
+            ],
+            "expected_information_bits": 0.3236748364748412,
+            "status": "PLANNED"
+          },
+          "outcomes": [
+            1,
+            1
+          ],
+          "evidence_ids": [
+            "selection.2.0",
+            "selection.2.1"
+          ],
+          "predictive_probability": "11/12"
+        },
+        {
+          "plan": {
+            "interventions": [
+              "do_y_1",
+              "do_y_1"
+            ],
+            "expected_information_bits": 0.13190687731603082,
+            "status": "PLANNED"
+          },
+          "outcomes": [
+            1,
+            1
+          ],
+          "evidence_ids": [
+            "selection.3.0",
+            "selection.3.1"
+          ],
+          "predictive_probability": "43/44"
+        }
+      ],
+      "relative_class_weights": {
+        "C-d0657933acfb": "0",
+        "C-afefff3b0190": "128/129",
+        "C-8e428945531e": "1/129"
+      },
+      "challenge_priority": {
+        "leader": "C-afefff3b0190",
+        "probes": [
+          {
+            "intervention": "do_y_1",
+            "expected_rejection_power_against_leader": 0.9999999403953552
+          },
+          {
+            "intervention": "do_x_1",
+            "expected_rejection_power_against_leader": 0.006610751152038574
+          }
+        ],
+        "status": "RANKED"
+      },
+      "challenge_records": [
+        {
+          "id": "challenge.do_x_1.0",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_x_1",
+          "outcome": 1
+        },
+        {
+          "id": "challenge.do_x_1.1",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_x_1",
+          "outcome": 1
+        },
+        {
+          "id": "challenge.do_x_1.2",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_x_1",
+          "outcome": 0
+        },
+        {
+          "id": "challenge.do_x_1.3",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_x_1",
+          "outcome": 0
+        },
+        {
+          "id": "challenge.do_x_1.4",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_x_1",
+          "outcome": 0
+        },
+        {
+          "id": "challenge.do_x_1.5",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_x_1",
+          "outcome": 1
+        },
+        {
+          "id": "challenge.do_x_1.6",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_x_1",
+          "outcome": 1
+        },
+        {
+          "id": "challenge.do_x_1.7",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_x_1",
+          "outcome": 0
+        },
+        {
+          "id": "challenge.do_x_1.8",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_x_1",
+          "outcome": 0
+        },
+        {
+          "id": "challenge.do_x_1.9",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_x_1",
+          "outcome": 0
+        },
+        {
+          "id": "challenge.do_x_1.10",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_x_1",
+          "outcome": 0
+        },
+        {
+          "id": "challenge.do_x_1.11",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_x_1",
+          "outcome": 1
+        },
+        {
+          "id": "challenge.do_x_1.12",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_x_1",
+          "outcome": 0
+        },
+        {
+          "id": "challenge.do_x_1.13",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_x_1",
+          "outcome": 1
+        },
+        {
+          "id": "challenge.do_x_1.14",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_x_1",
+          "outcome": 1
+        },
+        {
+          "id": "challenge.do_x_1.15",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_x_1",
+          "outcome": 0
+        },
+        {
+          "id": "challenge.do_x_1.16",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_x_1",
+          "outcome": 1
+        },
+        {
+          "id": "challenge.do_x_1.17",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_x_1",
+          "outcome": 1
+        },
+        {
+          "id": "challenge.do_x_1.18",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_x_1",
+          "outcome": 0
+        },
+        {
+          "id": "challenge.do_x_1.19",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_x_1",
+          "outcome": 1
+        },
+        {
+          "id": "challenge.do_x_1.20",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_x_1",
+          "outcome": 0
+        },
+        {
+          "id": "challenge.do_x_1.21",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_x_1",
+          "outcome": 1
+        },
+        {
+          "id": "challenge.do_x_1.22",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_x_1",
+          "outcome": 1
+        },
+        {
+          "id": "challenge.do_x_1.23",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_x_1",
+          "outcome": 1
+        },
+        {
+          "id": "challenge.do_y_1.0",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_y_1",
+          "outcome": 1
+        },
+        {
+          "id": "challenge.do_y_1.1",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_y_1",
+          "outcome": 1
+        },
+        {
+          "id": "challenge.do_y_1.2",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_y_1",
+          "outcome": 1
+        },
+        {
+          "id": "challenge.do_y_1.3",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_y_1",
+          "outcome": 1
+        },
+        {
+          "id": "challenge.do_y_1.4",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_y_1",
+          "outcome": 1
+        },
+        {
+          "id": "challenge.do_y_1.5",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_y_1",
+          "outcome": 1
+        },
+        {
+          "id": "challenge.do_y_1.6",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_y_1",
+          "outcome": 1
+        },
+        {
+          "id": "challenge.do_y_1.7",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_y_1",
+          "outcome": 1
+        },
+        {
+          "id": "challenge.do_y_1.8",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_y_1",
+          "outcome": 1
+        },
+        {
+          "id": "challenge.do_y_1.9",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_y_1",
+          "outcome": 1
+        },
+        {
+          "id": "challenge.do_y_1.10",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_y_1",
+          "outcome": 1
+        },
+        {
+          "id": "challenge.do_y_1.11",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_y_1",
+          "outcome": 1
+        },
+        {
+          "id": "challenge.do_y_1.12",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_y_1",
+          "outcome": 1
+        },
+        {
+          "id": "challenge.do_y_1.13",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_y_1",
+          "outcome": 1
+        },
+        {
+          "id": "challenge.do_y_1.14",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_y_1",
+          "outcome": 1
+        },
+        {
+          "id": "challenge.do_y_1.15",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_y_1",
+          "outcome": 1
+        },
+        {
+          "id": "challenge.do_y_1.16",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_y_1",
+          "outcome": 1
+        },
+        {
+          "id": "challenge.do_y_1.17",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_y_1",
+          "outcome": 1
+        },
+        {
+          "id": "challenge.do_y_1.18",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_y_1",
+          "outcome": 1
+        },
+        {
+          "id": "challenge.do_y_1.19",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_y_1",
+          "outcome": 1
+        },
+        {
+          "id": "challenge.do_y_1.20",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_y_1",
+          "outcome": 1
+        },
+        {
+          "id": "challenge.do_y_1.21",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_y_1",
+          "outcome": 1
+        },
+        {
+          "id": "challenge.do_y_1.22",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_y_1",
+          "outcome": 1
+        },
+        {
+          "id": "challenge.do_y_1.23",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_y_1",
+          "outcome": 1
+        }
+      ],
+      "falsification": {
+        "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+        "evidence_sha256": "82eb4b09a064741f86c3550063b111ae8659c68f0cc5d4890d527a817914e344",
+        "per_test_threshold": "1/120",
+        "classes": [
+          {
+            "class_id": "C-d0657933acfb",
+            "status": "REJECTED_WITHIN_REGISTERED_TEST",
+            "tests": [
+              {
+                "intervention": "do_x_1",
+                "n": 24,
+                "ones": 13,
+                "p_value": "0",
+                "rejected": true
+              },
+              {
+                "intervention": "do_y_1",
+                "n": 24,
+                "ones": 24,
+                "p_value": "1/8388608",
+                "rejected": true
+              }
+            ]
+          },
+          {
+            "class_id": "C-afefff3b0190",
+            "status": "NOT_REJECTED",
+            "tests": [
+              {
+                "intervention": "do_x_1",
+                "n": 24,
+                "ones": 13,
+                "p_value": "3518265/4194304",
+                "rejected": false
+              },
+              {
+                "intervention": "do_y_1",
+                "n": 24,
+                "ones": 24,
+                "p_value": "1",
+                "rejected": false
+              }
+            ]
+          },
+          {
+            "class_id": "C-8e428945531e",
+            "status": "REJECTED_WITHIN_REGISTERED_TEST",
+            "tests": [
+              {
+                "intervention": "do_x_1",
+                "n": 24,
+                "ones": 13,
+                "p_value": "3518265/4194304",
+                "rejected": false
+              },
+              {
+                "intervention": "do_y_1",
+                "n": 24,
+                "ones": 24,
+                "p_value": "1/8388608",
+                "rejected": true
+              }
+            ]
+          }
+        ],
+        "status": "SURVIVORS_REQUIRE_FURTHER_TESTS",
+        "geometry": "NOT_IDENTIFIED",
+        "theory": "NOT_ESTABLISHED",
+        "physical": "NOT_TESTED"
+      }
+    },
+    {
+      "schema": "x6.neutral-discovery/0.1.0",
+      "evidence_kind": "SYNTHETIC_CONTROL",
+      "contract": {
+        "schema": "x6.neutral-discovery/0.1.0",
+        "evidence_kind": "SYNTHETIC_CONTROL",
+        "objective": "JOINT_INFORMATION_ABOUT_EXPLANATION_CLASS",
+        "class_rule": "EXACT_PREDICTIVE_EQUALITY_ON_REGISTERED_CATALOGUE",
+        "prior_rule": "UNIFORM_OVER_DISTINCT_CLASSES",
+        "dependence": "INDEPENDENT_REPLICAS_GIVEN_CLASS",
+        "classes": [
+          {
+            "id": "C-d0657933acfb",
+            "p_one": {
+              "observe": "1",
+              "do_x_1": "1",
+              "do_y_1": "1/2"
+            },
+            "prior": "1/3"
+          },
+          {
+            "id": "C-afefff3b0190",
+            "p_one": {
+              "observe": "1",
+              "do_x_1": "1/2",
+              "do_y_1": "1"
+            },
+            "prior": "1/3"
+          },
+          {
+            "id": "C-8e428945531e",
+            "p_one": {
+              "observe": "1",
+              "do_x_1": "1/2",
+              "do_y_1": "1/2"
+            },
+            "prior": "1/3"
+          }
+        ],
+        "interventions": [
+          "observe",
+          "do_x_1",
+          "do_y_1"
+        ],
+        "design": {
+          "batch_size": 2,
+          "rounds": 4,
+          "cost_per_observation": 1,
+          "cost_budget_per_batch": 2
+        },
+        "falsification": {
+          "rule": "FIXED_N_EXACT_BINOMIAL_BONFERRONI",
+          "alpha": "1/20",
+          "n_per_intervention": 24,
+          "interventions": [
+            "do_x_1",
+            "do_y_1"
+          ],
+          "looks": 1
+        },
+        "claims": {
+          "geometry": "NOT_IDENTIFIED",
+          "theory": "NOT_ESTABLISHED",
+          "physical": "NOT_TESTED"
+        }
+      },
+      "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+      "simulation_truth": "common_cause",
+      "seed": 20261016,
+      "proposal_rows": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "law_candidates": [
+        {
+          "coefficients_c_x_y": [
+            0,
+            1,
+            -1
+          ],
+          "status": "OBSERVATIONAL_RELATION_CANDIDATE",
+          "domain": "registered binary support only",
+          "units": [
+            "1",
+            "1",
+            "1"
+          ]
+        }
+      ],
+      "selection": [
+        {
+          "plan": {
+            "interventions": [
+              "do_x_1",
+              "do_y_1"
+            ],
+            "expected_information_bits": 0.4916778774908437,
+            "status": "PLANNED"
+          },
+          "outcomes": [
+            0,
+            1
+          ],
+          "evidence_ids": [
+            "selection.0.0",
+            "selection.0.1"
+          ],
+          "predictive_probability": "1/4"
+        },
+        {
+          "plan": {
+            "interventions": [
+              "do_y_1",
+              "do_y_1"
+            ],
+            "expected_information_bits": 0.5408520829727552,
+            "status": "PLANNED"
+          },
+          "outcomes": [
+            1,
+            1
+          ],
+          "evidence_ids": [
+            "selection.1.0",
+            "selection.1.1"
+          ],
+          "predictive_probability": "3/4"
+        },
+        {
+          "plan": {
+            "interventions": [
+              "do_y_1",
+              "do_y_1"
+            ],
+            "expected_information_bits": 0.3236748364748412,
+            "status": "PLANNED"
+          },
+          "outcomes": [
+            0,
+            0
+          ],
+          "evidence_ids": [
+            "selection.2.0",
+            "selection.2.1"
+          ],
+          "predictive_probability": "1/36"
+        }
+      ],
+      "relative_class_weights": {
+        "C-d0657933acfb": "0",
+        "C-afefff3b0190": "0",
+        "C-8e428945531e": "1"
+      },
+      "challenge_priority": {
+        "leader": "C-8e428945531e",
+        "probes": [
+          {
+            "intervention": "do_x_1",
+            "expected_rejection_power_against_leader": 0.0
+          },
+          {
+            "intervention": "do_y_1",
+            "expected_rejection_power_against_leader": 0.0
+          }
+        ],
+        "status": "NO_WEIGHTED_ALTERNATIVE_EXTERNAL_CHALLENGES_NEEDED"
+      },
+      "challenge_records": [
+        {
+          "id": "challenge.do_x_1.0",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_x_1",
+          "outcome": 0
+        },
+        {
+          "id": "challenge.do_x_1.1",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_x_1",
+          "outcome": 1
+        },
+        {
+          "id": "challenge.do_x_1.2",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_x_1",
+          "outcome": 0
+        },
+        {
+          "id": "challenge.do_x_1.3",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_x_1",
+          "outcome": 0
+        },
+        {
+          "id": "challenge.do_x_1.4",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_x_1",
+          "outcome": 0
+        },
+        {
+          "id": "challenge.do_x_1.5",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_x_1",
+          "outcome": 0
+        },
+        {
+          "id": "challenge.do_x_1.6",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_x_1",
+          "outcome": 0
+        },
+        {
+          "id": "challenge.do_x_1.7",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_x_1",
+          "outcome": 1
+        },
+        {
+          "id": "challenge.do_x_1.8",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_x_1",
+          "outcome": 1
+        },
+        {
+          "id": "challenge.do_x_1.9",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_x_1",
+          "outcome": 1
+        },
+        {
+          "id": "challenge.do_x_1.10",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_x_1",
+          "outcome": 1
+        },
+        {
+          "id": "challenge.do_x_1.11",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_x_1",
+          "outcome": 1
+        },
+        {
+          "id": "challenge.do_x_1.12",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_x_1",
+          "outcome": 1
+        },
+        {
+          "id": "challenge.do_x_1.13",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_x_1",
+          "outcome": 1
+        },
+        {
+          "id": "challenge.do_x_1.14",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_x_1",
+          "outcome": 0
+        },
+        {
+          "id": "challenge.do_x_1.15",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_x_1",
+          "outcome": 0
+        },
+        {
+          "id": "challenge.do_x_1.16",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_x_1",
+          "outcome": 0
+        },
+        {
+          "id": "challenge.do_x_1.17",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_x_1",
+          "outcome": 0
+        },
+        {
+          "id": "challenge.do_x_1.18",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_x_1",
+          "outcome": 0
+        },
+        {
+          "id": "challenge.do_x_1.19",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_x_1",
+          "outcome": 1
+        },
+        {
+          "id": "challenge.do_x_1.20",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_x_1",
+          "outcome": 0
+        },
+        {
+          "id": "challenge.do_x_1.21",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_x_1",
+          "outcome": 1
+        },
+        {
+          "id": "challenge.do_x_1.22",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_x_1",
+          "outcome": 1
+        },
+        {
+          "id": "challenge.do_x_1.23",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_x_1",
+          "outcome": 1
+        },
+        {
+          "id": "challenge.do_y_1.0",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_y_1",
+          "outcome": 0
+        },
+        {
+          "id": "challenge.do_y_1.1",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_y_1",
+          "outcome": 0
+        },
+        {
+          "id": "challenge.do_y_1.2",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_y_1",
+          "outcome": 0
+        },
+        {
+          "id": "challenge.do_y_1.3",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_y_1",
+          "outcome": 0
+        },
+        {
+          "id": "challenge.do_y_1.4",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_y_1",
+          "outcome": 0
+        },
+        {
+          "id": "challenge.do_y_1.5",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_y_1",
+          "outcome": 0
+        },
+        {
+          "id": "challenge.do_y_1.6",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_y_1",
+          "outcome": 1
+        },
+        {
+          "id": "challenge.do_y_1.7",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_y_1",
+          "outcome": 0
+        },
+        {
+          "id": "challenge.do_y_1.8",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_y_1",
+          "outcome": 0
+        },
+        {
+          "id": "challenge.do_y_1.9",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_y_1",
+          "outcome": 1
+        },
+        {
+          "id": "challenge.do_y_1.10",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_y_1",
+          "outcome": 1
+        },
+        {
+          "id": "challenge.do_y_1.11",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_y_1",
+          "outcome": 0
+        },
+        {
+          "id": "challenge.do_y_1.12",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_y_1",
+          "outcome": 1
+        },
+        {
+          "id": "challenge.do_y_1.13",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_y_1",
+          "outcome": 1
+        },
+        {
+          "id": "challenge.do_y_1.14",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_y_1",
+          "outcome": 1
+        },
+        {
+          "id": "challenge.do_y_1.15",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_y_1",
+          "outcome": 0
+        },
+        {
+          "id": "challenge.do_y_1.16",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_y_1",
+          "outcome": 0
+        },
+        {
+          "id": "challenge.do_y_1.17",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_y_1",
+          "outcome": 1
+        },
+        {
+          "id": "challenge.do_y_1.18",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_y_1",
+          "outcome": 0
+        },
+        {
+          "id": "challenge.do_y_1.19",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_y_1",
+          "outcome": 1
+        },
+        {
+          "id": "challenge.do_y_1.20",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_y_1",
+          "outcome": 1
+        },
+        {
+          "id": "challenge.do_y_1.21",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_y_1",
+          "outcome": 0
+        },
+        {
+          "id": "challenge.do_y_1.22",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_y_1",
+          "outcome": 0
+        },
+        {
+          "id": "challenge.do_y_1.23",
+          "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+          "phase": "SEALED_CHALLENGE",
+          "evidence_kind": "SYNTHETIC_CONTROL",
+          "intervention": "do_y_1",
+          "outcome": 1
+        }
+      ],
+      "falsification": {
+        "contract_sha256": "d153065511755b2203f563d10011fde0bba1bb40ac7a51277d10dcf135eb4b25",
+        "evidence_sha256": "9b3ba58e468207476552677803df2f57420d5ae4c67b2f9c6c42bb19cea0933e",
+        "per_test_threshold": "1/120",
+        "classes": [
+          {
+            "class_id": "C-d0657933acfb",
+            "status": "REJECTED_WITHIN_REGISTERED_TEST",
+            "tests": [
+              {
+                "intervention": "do_x_1",
+                "n": 24,
+                "ones": 12,
+                "p_value": "0",
+                "rejected": true
+              },
+              {
+                "intervention": "do_y_1",
+                "n": 24,
+                "ones": 10,
+                "p_value": "2270193/4194304",
+                "rejected": false
+              }
+            ]
+          },
+          {
+            "class_id": "C-afefff3b0190",
+            "status": "REJECTED_WITHIN_REGISTERED_TEST",
+            "tests": [
+              {
+                "intervention": "do_x_1",
+                "n": 24,
+                "ones": 12,
+                "p_value": "1",
+                "rejected": false
+              },
+              {
+                "intervention": "do_y_1",
+                "n": 24,
+                "ones": 10,
+                "p_value": "0",
+                "rejected": true
+              }
+            ]
+          },
+          {
+            "class_id": "C-8e428945531e",
+            "status": "NOT_REJECTED",
+            "tests": [
+              {
+                "intervention": "do_x_1",
+                "n": 24,
+                "ones": 12,
+                "p_value": "1",
+                "rejected": false
+              },
+              {
+                "intervention": "do_y_1",
+                "n": 24,
+                "ones": 10,
+                "p_value": "2270193/4194304",
+                "rejected": false
+              }
+            ]
+          }
+        ],
+        "status": "SURVIVORS_REQUIRE_FURTHER_TESTS",
+        "geometry": "NOT_IDENTIFIED",
+        "theory": "NOT_ESTABLISHED",
+        "physical": "NOT_TESTED"
+      }
+    }
+  ]
+}

@@ -37,6 +37,11 @@ def main():
     # Isolated extensions have explicit inventories; do not weaken the unknown-file
     # check or change the app pin used by the bounded research agents.
     extension_specs = {
+        "DISCOVERY_SOURCE_MANIFEST.json": (
+            "x6.neutral-discovery.source-manifest/1",
+            {"experimental/neutral_discovery/discovery.py", "experimental/neutral_discovery/contract.schema.json",
+             "experimental/neutral_discovery/README.md", "experimental/neutral_discovery/tests/test_discovery.py",
+             ".github/workflows/x6-neutral-discovery.yml"}),
         "FABRIC_SOURCE_MANIFEST.json": (
             "x6.experiment-fabric.source-manifest/1",
             {"experimental/experiment_fabric/core.mjs", "experimental/experiment_fabric/worker.mjs",

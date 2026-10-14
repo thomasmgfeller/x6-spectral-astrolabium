@@ -1,0 +1,45 @@
+name: X6 neutral discovery
+on:
+  push:
+    branches: [main, research/x6-neutral-discovery-v1]
+    paths:
+      - 'experimental/neutral_discovery/**'
+      - 'DISCOVERY_SOURCE_MANIFEST.json'
+      - '.github/workflows/x6-neutral-discovery.yml'
+  pull_request:
+    paths:
+      - 'experimental/neutral_discovery/**'
+      - 'DISCOVERY_SOURCE_MANIFEST.json'
+      - '.github/workflows/x6-neutral-discovery.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  qualification:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install validation dependencies
+        run: python -m pip install -r experiments/industrial-v1/requirements.txt
+      - name: Verify sources and protected research baseline
+        run: |
+          python tests/python/verify_manifest.py
+          python tools/build_signal_lab.py --check
+          python -m unittest discover -s tests/signal-lab -p test_provenance.py
+      - name: Qualify neutral discovery and falsification
+        run: |
+          python -m unittest discover -s experimental/neutral_discovery/tests -p 'test_*.py' -v
+          python experimental/neutral_discovery/discovery.py verify experimental/neutral_discovery/examples/control.json
+      - name: Existing planner and fingerprint regression
+        run: |
+          node --test experimental/experiment_fabric/tests/test_core.mjs
+          python -m unittest discover -s research/fingerprint_v1/tests -p 'test_*.py'

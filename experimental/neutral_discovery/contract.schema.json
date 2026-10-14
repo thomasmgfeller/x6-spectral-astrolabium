@@ -1,0 +1,124 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:x6:neutral-discovery:contract:0.1.0",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "evidence_kind",
+    "objective",
+    "class_rule",
+    "prior_rule",
+    "dependence",
+    "interventions",
+    "design",
+    "falsification",
+    "claims",
+    "classes"
+  ],
+  "properties": {
+    "schema": {
+      "const": "x6.neutral-discovery/0.1.0"
+    },
+    "evidence_kind": {
+      "const": "SYNTHETIC_CONTROL"
+    },
+    "objective": {
+      "const": "JOINT_INFORMATION_ABOUT_EXPLANATION_CLASS"
+    },
+    "class_rule": {
+      "const": "EXACT_PREDICTIVE_EQUALITY_ON_REGISTERED_CATALOGUE"
+    },
+    "prior_rule": {
+      "const": "UNIFORM_OVER_DISTINCT_CLASSES"
+    },
+    "dependence": {
+      "const": "INDEPENDENT_REPLICAS_GIVEN_CLASS"
+    },
+    "interventions": {
+      "const": [
+        "observe",
+        "do_x_1",
+        "do_y_1"
+      ]
+    },
+    "design": {
+      "const": {
+        "batch_size": 2,
+        "rounds": 4,
+        "cost_per_observation": 1,
+        "cost_budget_per_batch": 2
+      }
+    },
+    "falsification": {
+      "const": {
+        "rule": "FIXED_N_EXACT_BINOMIAL_BONFERRONI",
+        "alpha": "1/20",
+        "n_per_intervention": 24,
+        "interventions": [
+          "do_x_1",
+          "do_y_1"
+        ],
+        "looks": 1
+      }
+    },
+    "claims": {
+      "const": {
+        "geometry": "NOT_IDENTIFIED",
+        "theory": "NOT_ESTABLISHED",
+        "physical": "NOT_TESTED"
+      }
+    },
+    "classes": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 16,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "p_one",
+          "prior"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^C-[0-9a-f]{12}$"
+          },
+          "p_one": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "observe",
+              "do_x_1",
+              "do_y_1"
+            ],
+            "properties": {
+              "observe": {
+                "type": "string",
+                "pattern": "^(0|[1-9][0-9]*)(/[1-9][0-9]*)?$",
+                "maxLength": 32
+              },
+              "do_x_1": {
+                "type": "string",
+                "pattern": "^(0|[1-9][0-9]*)(/[1-9][0-9]*)?$",
+                "maxLength": 32
+              },
+              "do_y_1": {
+                "type": "string",
+                "pattern": "^(0|[1-9][0-9]*)(/[1-9][0-9]*)?$",
+                "maxLength": 32
+              }
+            }
+          },
+          "prior": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)(/[1-9][0-9]*)?$",
+            "maxLength": 32
+          }
+        }
+      }
+    }
+  }
+}
