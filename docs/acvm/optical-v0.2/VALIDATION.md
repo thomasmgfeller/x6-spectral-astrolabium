@@ -71,10 +71,10 @@ fordert einen sauberen Checkout ohne `.venv`. Es erstellt eine isolierte
 Umgebung mit `x6.py setup --profile core` und führt zwölf Schritte einschließlich Qualifikation, Export/Import,
 Messauswertern, Vorlagenverweigerung, bestehenden Integrationsregressionen und
 Quellinventar aus. Protokoll und Quellcommit stehen im beigefügten Nachweis.
-Der erste Checkout-Versuch deckte eine fehlende X6-Profilregistrierung im neuen
-Prüfskript auf: Ein bloßes `python -m venv` genügte den bestehenden
-Integrationsregressionen nicht. Der Ablauf wurde auf den offiziellen Setup-Pfad
-korrigiert; der fehlgeschlagene Versuch wird separat erhalten.
+Die ersten Checkout-Versuche deckten einen Interpreterfehler im neuen Prüfskript
+auf: Die Umgebung existierte, direkte Integrationsregressionen liefen aber noch
+unter dem Basis-Python. Der Ablauf verwendet jetzt den offiziellen Setup-Pfad
+und danach ausdrücklich `.venv/bin/python`. Beide Fehlversuche bleiben erhalten.
 
 Nicht ausgeführt: realer Motorlauf, PM100D-USB/VISA-Verbindung, automatisierter
 Kalibrierscan, Pico-SDK-Zielbuild, unabhängige elektrische Aufnahme, optischer

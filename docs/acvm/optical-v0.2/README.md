@@ -21,7 +21,7 @@ Keine zusätzlichen Python-Pakete und kein angeschlossenes Gerät erforderlich.
 Die bestehende `setup --profile core`-Umgebung kann verwendet werden.
 Der vollständige Checkout-Test einschließlich bestehender X6-Integrationsmodule
 benötigt zusätzlich Git und Node.js ab Version 22 und verwendet genau diesen
-Setup-Befehl; ein manuell erzeugtes venv ersetzt dessen Profilregistrierung nicht.
+Setup-Befehl. Direkte Python-Tests müssen anschließend mit dessen Interpreter laufen.
 
 ```sh
 python3 x6.py acvm qualify --output runs/acvm-v02

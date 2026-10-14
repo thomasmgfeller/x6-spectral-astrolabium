@@ -34,11 +34,13 @@ def main():
               'hardware_accessed': False, 'physical_qualification': 'NOT_PERFORMED'}
     def run(name, args, expected=0):
         start = time.monotonic()
-        result = subprocess.run([sys.executable, *map(str, args)], cwd=ROOT,
+        interpreter = ROOT/'.venv/bin/python'
+        executable = str(interpreter) if interpreter.exists() else sys.executable
+        result = subprocess.run([executable, *map(str, args)], cwd=ROOT,
                                 capture_output=True, text=True, timeout=90)
         (output/(name+'.log')).write_text(result.stdout+result.stderr)
         passed = result.returncode == expected
-        report['steps'].append({'name': name, 'command': list(map(str, args)),
+        report['steps'].append({'name': name, 'command': [executable, *map(str, args)],
                                 'exit_code': result.returncode, 'expected_exit_code': expected,
                                 'passed': passed, 'seconds': time.monotonic()-start})
         print(json.dumps({'step': name, 'passed': passed}), flush=True)
