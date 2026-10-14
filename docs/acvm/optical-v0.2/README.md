@@ -85,6 +85,8 @@ PM100D2/PM100D3, LCC25, TFLN-Treiber und beliebige SCPI-Geräte sind nicht freig
 
 ## Unterlagen
 
+- [Ausführbares Quellpaket mit Rohberichten](ACVM_Optik_Referenz_v0_2.zip),
+  [Paket-Prüfnachweis](PACKAGE.json); nach Entpacken zuerst `START_HERE.txt` lesen.
 - [Aufbau und konkrete Komponenten](HARDWARE.md)
 - [Kalibrierung und Laborabnahme](CALIBRATION.md)
 - [Architektur, Formate und Nachweisgrenzen](ARCHITECTURE.md)

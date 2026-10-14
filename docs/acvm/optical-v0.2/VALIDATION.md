@@ -12,6 +12,10 @@ Integrationsregressionen. Sämtliche getrackten Dateien blieben unverändert.
 Maßgeblicher Lauf: `evidence/fresh-checkout/fresh-checkout.json` mit allen
 zugehörigen Logs und Ergebnissen. Insgesamt 35 + 27 + 18 + 12 bestandene
 Testfälle; dies sind Softwaretests, keine 92 physischen Versuche.
+Das separate Quell-ZIP mit 107 Dateien wurde entpackt, gegen sein vollständiges
+Dateiinventar geprüft und erneut erfolgreich mit `acvm qualify` ausgeführt.
+Paketstand, SHA-256 und Ergebnis stehen in `PACKAGE.json`. Die Source-Hashes des
+frischen Checkout-Nachweises stimmen mit dem ausgelieferten Programmcode überein.
 
 ## V01–V10
 
