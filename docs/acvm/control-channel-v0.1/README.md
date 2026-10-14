@@ -92,3 +92,13 @@ SGNCv007-Auslese bleibt ein getrenntes, lesendes Protokoll; es werden keine
 Steuerbefehle an einen Sagnac-Snapshot-Anschluss gesendet.
 
 Originalcode und Dokumentation: Apache-2.0 gemäss Repository-Lizenz.
+
+## Veröffentlichung und Herkunft
+
+[PUBLICATION.json](PUBLICATION.json) ordnet die lokal geprüften Commits ihren
+inhaltlich identischen GitHub-Commits zu. Das [Git-Bundle](implementation.bundle)
+bewahrt zusätzlich die ursprünglichen Commit-IDs für eine exakte Rekonstruktion.
+Es setzt den dort angegebenen öffentlichen Basiscommit voraus.
+Das unveränderte ZIP enthält den Stand vor dieser Veröffentlichung; sein damaliger
+Hinweis „noch nicht veröffentlicht“ ist eine historische Verpackungsangabe.
+Die Übertragung und Veröffentlichung ergänzen keinen Hardware-Nachweis.
