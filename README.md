@@ -75,6 +75,14 @@ document. **Concept only: implementation and hardware qualification are pending.
 Its ten proposed checks are NOT RUN; publication does not establish working
 device control, validated photonics or a quantum processor.
 
+[ACVM C1 — executable single-channel reference](docs/acvm/control-channel-v0.1/README.md)
+adds a bounded host-to-device command protocol, sequence compiler, portable C++
+sequencer, Pico/MCP4921 target source and independent software tests.
+Run `python3 x6.py control qualify --output runs/c1-qualification`.
+The native core and virtual serial path are tested; the Pico target build,
+electrical measurements and optical actuation remain unperformed. This limited
+implementation does not complete the full ACVM concept validation programme.
+
 [ACVM Experiment Records — concept 0.1](docs/acvm/experiment-records/README.md)
 specifies the proposed Run Archive data model, provenance and acceptance plan.
 Its fourteen Records checks are NOT_RUN; implementation and adapter qualification

@@ -1,0 +1,35 @@
+name: ACVM C1 software channel
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - 'experimental/control_channel/**'
+      - 'tests/control-channel/**'
+      - 'tools/workflow/cli.py'
+      - 'x6.py'
+      - 'docs/acvm/control-channel-v0.1/**'
+      - 'CONTROL_CHANNEL_SOURCE_MANIFEST.json'
+      - '.github/workflows/x6-control-channel.yml'
+permissions:
+  contents: read
+jobs:
+  software-channel:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Run software qualification without attached devices
+        run: python3 x6.py control qualify --output runs/c1-qualification
+      - name: Preserve complete results including failures
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: acvm-c1-software-evidence
+          path: runs/c1-qualification/
+          if-no-files-found: warn
+          retention-days: 30
