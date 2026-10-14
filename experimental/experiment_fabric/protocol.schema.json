@@ -1,0 +1,205 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:x6:fabric:messages:0.1.0",
+  "title": "X6 experimental fabric simulation messages",
+  "$defs": {
+    "job": {
+      "type": "object",
+      "properties": {
+        "schema": {
+          "const": "x6.fabric.job/0.1.0"
+        },
+        "campaign_sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "job_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,95}$"
+        },
+        "batch_revision": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 4294967295
+        },
+        "attempt": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "node_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,95}$"
+        },
+        "specimen_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,95}$"
+        },
+        "experiment_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,95}$"
+        },
+        "replicate_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,95}$"
+        },
+        "deadline_epoch_ms": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "execution_mode": {
+          "const": "SIMULATION_ONLY"
+        },
+        "seed": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 4294967295
+        }
+      },
+      "required": [
+        "schema",
+        "campaign_sha256",
+        "job_id",
+        "batch_revision",
+        "attempt",
+        "node_id",
+        "specimen_id",
+        "experiment_id",
+        "replicate_id",
+        "deadline_epoch_ms",
+        "execution_mode",
+        "seed"
+      ],
+      "additionalProperties": false
+    },
+    "result": {
+      "type": "object",
+      "properties": {
+        "schema": {
+          "const": "x6.fabric.result/0.1.0"
+        },
+        "campaign_sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "job_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,95}$"
+        },
+        "batch_revision": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 4294967295
+        },
+        "attempt": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "node_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,95}$"
+        },
+        "specimen_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,95}$"
+        },
+        "experiment_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,95}$"
+        },
+        "replicate_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,95}$"
+        },
+        "observation_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,95}$"
+        },
+        "evidence_kind": {
+          "const": "SYNTHETIC_CONTROL"
+        },
+        "quality": {
+          "const": "PASS"
+        },
+        "outcome": {
+          "enum": [
+            0,
+            1
+          ]
+        },
+        "raw": {
+          "type": "object",
+          "properties": {
+            "replicate_id": {
+              "type": "string",
+              "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,95}$"
+            },
+            "experiment_id": {
+              "type": "string",
+              "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,95}$"
+            },
+            "seed": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 4294967295
+            },
+            "measured_accelerance": {
+              "type": "number"
+            },
+            "unit": {
+              "const": "(m/s^2)/N"
+            },
+            "threshold": {
+              "type": "number"
+            },
+            "outcome": {
+              "enum": [
+                0,
+                1
+              ]
+            }
+          },
+          "required": [
+            "replicate_id",
+            "experiment_id",
+            "seed",
+            "measured_accelerance",
+            "unit",
+            "threshold",
+            "outcome"
+          ],
+          "additionalProperties": false
+        },
+        "raw_sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        }
+      },
+      "required": [
+        "schema",
+        "campaign_sha256",
+        "job_id",
+        "batch_revision",
+        "attempt",
+        "node_id",
+        "specimen_id",
+        "experiment_id",
+        "replicate_id",
+        "observation_id",
+        "evidence_kind",
+        "quality",
+        "outcome",
+        "raw",
+        "raw_sha256"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "oneOf": [
+    {
+      "$ref": "#/$defs/job"
+    },
+    {
+      "$ref": "#/$defs/result"
+    }
+  ]
+}

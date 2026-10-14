@@ -37,6 +37,11 @@ def main():
     # Isolated extensions have explicit inventories; do not weaken the unknown-file
     # check or change the app pin used by the bounded research agents.
     extension_specs = {
+        "FABRIC_SOURCE_MANIFEST.json": (
+            "x6.experiment-fabric.source-manifest/1",
+            {"experimental/experiment_fabric/core.mjs", "experimental/experiment_fabric/worker.mjs",
+             "experimental/experiment_fabric/run.mjs", "experimental/experiment_fabric/README.md",
+             "experimental/experiment_fabric/verify_reference.py", ".github/workflows/x6-experiment-fabric.yml"}),
         "FINGERPRINT_SOURCE_MANIFEST.json": (
             "x6.fingerprint.source-manifest/1",
             {"research/fingerprint_v1/x6-fingerprint.schema.json",

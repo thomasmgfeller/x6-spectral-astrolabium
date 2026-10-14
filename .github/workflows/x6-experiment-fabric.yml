@@ -1,0 +1,53 @@
+name: X6 experimental fabric
+on:
+  push:
+    branches: [main, research/x6-experiment-fabric-v1]
+    paths:
+      - 'experimental/experiment_fabric/**'
+      - 'FABRIC_SOURCE_MANIFEST.json'
+      - '.github/workflows/x6-experiment-fabric.yml'
+  pull_request:
+    paths:
+      - 'experimental/experiment_fabric/**'
+      - 'FABRIC_SOURCE_MANIFEST.json'
+      - '.github/workflows/x6-experiment-fabric.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  qualification:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install reference and browser dependencies
+        run: |
+          python -m pip install -r experiments/industrial-v1/requirements.txt
+          npm install --prefix "$RUNNER_TEMP/x6-fabric" --no-save --no-package-lock --no-audit --no-fund playwright@1.62.1
+          node "$RUNNER_TEMP/x6-fabric/node_modules/playwright/cli.js" install --with-deps chromium
+      - name: Verify source inventory
+        run: python tests/python/verify_manifest.py
+      - name: Qualify planner and failure controls
+        run: node --test experimental/experiment_fabric/tests/test_core.mjs
+      - name: Replay published control and check independent reference
+        run: |
+          node experimental/experiment_fabric/run.mjs verify experimental/experiment_fabric/examples/control-run.json
+          python experimental/experiment_fabric/verify_reference.py experimental/experiment_fabric/examples/control-run.json
+      - name: Qualify browser workers
+        run: |
+          NODE_PATH="$RUNNER_TEMP/x6-fabric/node_modules" X6_FABRIC_SCREENSHOT="$RUNNER_TEMP/x6-fabric-browser.png" node experimental/experiment_fabric/tests/browser_test.cjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: x6-fabric-browser-${{ github.run_id }}
+          path: ${{ runner.temp }}/x6-fabric-browser.png
+          if-no-files-found: warn
+          retention-days: 30

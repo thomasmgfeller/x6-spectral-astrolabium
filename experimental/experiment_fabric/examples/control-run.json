@@ -1,0 +1,1082 @@
+{
+  "schema": "x6.fabric.run/0.1.0",
+  "evidence_kind": "SYNTHETIC_CONTROL",
+  "runtime": "v24.19.0",
+  "execution": "TWO_LOCAL_WORKER_THREADS_NOT_A_NETWORK_DEPLOYMENT",
+  "campaign": {
+    "schema": "x6.experiment-fabric/0.1.0",
+    "campaign_id": "X6-MECHANICAL-CONTROL-001",
+    "evidence_kind": "SYNTHETIC_CONTROL",
+    "simulation_seed": 104729,
+    "dependence": "INDEPENDENT_GIVEN_PERSISTENT_LATENT_STATE",
+    "description": "Four point hypotheses in one linear oscillator family, plus a limited discrepancy model. Not four validated physical theories.",
+    "observation_model": "m*x_ddot+c*x_dot+k*x=F; scalar accelerance magnitude plus logistic noise, thresholded to one bit; no time-domain sensor/DAQ simulation.",
+    "nuisance_model": "One persistent shared multiplicative calibration gain for the entire campaign. Independent observation noise conditional on model and gain.",
+    "specimen_model": "Identical simulated replicas share the same parameters and gain; real replica variation is not modelled.",
+    "models": [
+      {
+        "id": "M_K100_C1",
+        "mass_kg": 1,
+        "stiffness_n_m": 100,
+        "damping_ns_m": 1
+      },
+      {
+        "id": "M_K100_C3",
+        "mass_kg": 1,
+        "stiffness_n_m": 100,
+        "damping_ns_m": 3
+      },
+      {
+        "id": "M_K144_C1",
+        "mass_kg": 1,
+        "stiffness_n_m": 144,
+        "damping_ns_m": 1
+      },
+      {
+        "id": "M_K144_C3",
+        "mass_kg": 1,
+        "stiffness_n_m": 144,
+        "damping_ns_m": 3
+      },
+      {
+        "id": "OTHER",
+        "description": "Independent fair binary outcomes: a limited discrepancy sentinel, not all unknown physics."
+      }
+    ],
+    "states": [
+      {
+        "id": "M_K100_C1.g0",
+        "model_id": "M_K100_C1",
+        "prior": 0.075,
+        "gain": 0.92
+      },
+      {
+        "id": "M_K100_C1.g1",
+        "model_id": "M_K100_C1",
+        "prior": 0.075,
+        "gain": 1
+      },
+      {
+        "id": "M_K100_C1.g2",
+        "model_id": "M_K100_C1",
+        "prior": 0.075,
+        "gain": 1.08
+      },
+      {
+        "id": "M_K100_C3.g0",
+        "model_id": "M_K100_C3",
+        "prior": 0.075,
+        "gain": 0.92
+      },
+      {
+        "id": "M_K100_C3.g1",
+        "model_id": "M_K100_C3",
+        "prior": 0.075,
+        "gain": 1
+      },
+      {
+        "id": "M_K100_C3.g2",
+        "model_id": "M_K100_C3",
+        "prior": 0.075,
+        "gain": 1.08
+      },
+      {
+        "id": "M_K144_C1.g0",
+        "model_id": "M_K144_C1",
+        "prior": 0.075,
+        "gain": 0.92
+      },
+      {
+        "id": "M_K144_C1.g1",
+        "model_id": "M_K144_C1",
+        "prior": 0.075,
+        "gain": 1
+      },
+      {
+        "id": "M_K144_C1.g2",
+        "model_id": "M_K144_C1",
+        "prior": 0.075,
+        "gain": 1.08
+      },
+      {
+        "id": "M_K144_C3.g0",
+        "model_id": "M_K144_C3",
+        "prior": 0.075,
+        "gain": 0.92
+      },
+      {
+        "id": "M_K144_C3.g1",
+        "model_id": "M_K144_C3",
+        "prior": 0.075,
+        "gain": 1
+      },
+      {
+        "id": "M_K144_C3.g2",
+        "model_id": "M_K144_C3",
+        "prior": 0.075,
+        "gain": 1.08
+      },
+      {
+        "id": "OTHER",
+        "model_id": "OTHER",
+        "prior": 0.1,
+        "gain": 1
+      }
+    ],
+    "experiments": [
+      {
+        "id": "omega7.low",
+        "capability": "OSCILLATOR_SIM",
+        "cost": 1,
+        "omega_rad_s": 7,
+        "force_n": 0.01,
+        "threshold": 0.509013190548333,
+        "noise_scale": 0.3,
+        "observable": "noisy accelerance estimate >= threshold",
+        "unit": "(m/s^2)/N",
+        "p_one": [
+          0.7724728240902353,
+          0.8139913430054451,
+          0.8494106150679676,
+          0.7364825104709531,
+          0.7798301316992037,
+          0.8178111609456821,
+          0.47022706326750496,
+          0.5044846755742721,
+          0.5387002310405483,
+          0.46201311621825614,
+          0.4955153244257279,
+          0.5290578530665311,
+          0.5
+        ]
+      },
+      {
+        "id": "omega7.high",
+        "capability": "OSCILLATOR_SIM",
+        "cost": 1,
+        "omega_rad_s": 7,
+        "force_n": 0.01,
+        "threshold": 0.92013817868507,
+        "noise_scale": 0.3,
+        "observable": "noisy accelerance estimate >= threshold",
+        "unit": "(m/s^2)/N",
+        "p_one": [
+          0.4630451408714877,
+          0.5264103689114484,
+          0.5889361600807432,
+          0.4151656911565307,
+          0.47358963108855157,
+          0.5327458372363223,
+          0.18397435200313872,
+          0.2054656352015434,
+          0.22876365771840218,
+          0.17907051840339788,
+          0.1996703720701743,
+          0.22199914470372017,
+          0.5
+        ]
+      },
+      {
+        "id": "omega9.low",
+        "capability": "OSCILLATOR_SIM",
+        "cost": 1,
+        "omega_rad_s": 9,
+        "force_n": 0.01,
+        "threshold": 1.2272750509366444,
+        "noise_scale": 0.3,
+        "observable": "noisy accelerance estimate >= threshold",
+        "unit": "(m/s^2)/N",
+        "p_one": [
+          0.9995582242474075,
+          0.9998418286611764,
+          0.9999433793815381,
+          0.9687171371132727,
+          0.9834900997701239,
+          0.9913490066150681,
+          0.45321540672210825,
+          0.5378583651507314,
+          0.6203737977430147,
+          0.3853598765285376,
+          0.46214163484926846,
+          0.540762230062365,
+          0.5
+        ]
+      },
+      {
+        "id": "omega9.high",
+        "capability": "OSCILLATOR_SIM",
+        "cost": 1,
+        "omega_rad_s": 9,
+        "force_n": 0.01,
+        "threshold": 3.1530981802768507,
+        "noise_scale": 0.3,
+        "observable": "noisy accelerance estimate >= threshold",
+        "unit": "(m/s^2)/N",
+        "p_one": [
+          0.7866510798537973,
+          0.9115140378030031,
+          0.9664200789005567,
+          0.04803912240144056,
+          0.08848596219699702,
+          0.15735810482910062,
+          0.0013489245002001645,
+          0.001893020844716944,
+          0.002655997850226151,
+          0.0010206751926548046,
+          0.0013982504384380935,
+          0.0019152331536787732,
+          0.5
+        ]
+      },
+      {
+        "id": "omega10.low",
+        "capability": "OSCILLATOR_SIM",
+        "cost": 1,
+        "omega_rad_s": 10,
+        "force_n": 0.01,
+        "threshold": 2.0470002256806903,
+        "noise_scale": 0.3,
+        "observable": "noisy accelerance estimate >= threshold",
+        "unit": "(m/s^2)/N",
+        "p_one": [
+          0.9999999999558458,
+          0.999999999996932,
+          0.9999999999997868,
+          0.96766976875138,
+          0.9864506807724338,
+          0.9943849053424892,
+          0.49326201403613235,
+          0.637385885392376,
+          0.7604276737050916,
+          0.25639707389897226,
+          0.3626141146076242,
+          0.48418223253938397,
+          0.5
+        ]
+      },
+      {
+        "id": "omega10.high",
+        "capability": "OSCILLATOR_SIM",
+        "cost": 1,
+        "omega_rad_s": 10,
+        "force_n": 0.01,
+        "threshold": 6.666666666666667,
+        "noise_scale": 0.3,
+        "observable": "noisy accelerance estimate >= threshold",
+        "unit": "(m/s^2)/N",
+        "p_one": [
+          0.9997849541965821,
+          0.999985054884835,
+          0.999998961547378,
+          0.000006144174602214718,
+          0.000014945115164975994,
+          0.00003635210032737929,
+          1.9982139148330497e-7,
+          3.6083232383693355e-7,
+          6.515816353150352e-7,
+          7.078150596470238e-8,
+          1.1678580722319326e-7,
+          1.9269050827719008e-7,
+          0.5
+        ]
+      },
+      {
+        "id": "omega11.low",
+        "capability": "OSCILLATOR_SIM",
+        "cost": 1,
+        "omega_rad_s": 11,
+        "force_n": 0.01,
+        "threshold": 3.0507760332538396,
+        "noise_scale": 0.3,
+        "observable": "noisy accelerance estimate >= threshold",
+        "unit": "(m/s^2)/N",
+        "p_one": [
+          0.9958613944407957,
+          0.9989356609324156,
+          0.999726906594191,
+          0.3356480941583189,
+          0.5354814458507378,
+          0.7245367369548811,
+          0.9876926955043027,
+          0.9964975412728998,
+          0.9990095737640132,
+          0.2800261630302036,
+          0.46451855414926185,
+          0.6592609179599556,
+          0.5
+        ]
+      },
+      {
+        "id": "omega11.high",
+        "capability": "OSCILLATOR_SIM",
+        "cost": 1,
+        "omega_rad_s": 11,
+        "force_n": 0.01,
+        "threshold": 4.9250437058600935,
+        "noise_scale": 0.3,
+        "observable": "noisy accelerance estimate >= threshold",
+        "unit": "(m/s^2)/N",
+        "p_one": [
+          0.3177113088049335,
+          0.644918692379092,
+          0.8763016712129822,
+          0.0009767450942488804,
+          0.0022258364825228326,
+          0.005064206646501499,
+          0.1344258563124881,
+          0.35508130762090795,
+          0.6612400833824189,
+          0.00075209859979138,
+          0.0016759066769554745,
+          0.0037301988903620646,
+          0.5
+        ]
+      },
+      {
+        "id": "omega12.low",
+        "capability": "OSCILLATOR_SIM",
+        "cost": 1,
+        "omega_rad_s": 12,
+        "force_n": 0.01,
+        "threshold": 2.845180015267178,
+        "noise_scale": 0.3,
+        "observable": "noisy accelerance estimate >= threshold",
+        "unit": "(m/s^2)/N",
+        "p_one": [
+          0.5495337784625611,
+          0.7389971711948294,
+          0.8679253649449831,
+          0.15235914574229603,
+          0.2610028288051706,
+          0.4096749675315818,
+          0.9999999999986298,
+          0.999999999999944,
+          0.9999999999999978,
+          0.941735599937698,
+          0.9791514096076827,
+          0.9927254097814147,
+          0.5
+        ]
+      },
+      {
+        "id": "omega12.high",
+        "capability": "OSCILLATOR_SIM",
+        "cost": 1,
+        "omega_rad_s": 12,
+        "force_n": 0.01,
+        "threshold": 8,
+        "noise_scale": 0.3,
+        "observable": "noisy accelerance estimate >= threshold",
+        "unit": "(m/s^2)/N",
+        "p_one": [
+          4.2069359016163496e-8,
+          9.764078686426048e-8,
+          2.2661915423925004e-7,
+          6.198554116907106e-9,
+          1.2179688592827319e-8,
+          2.393216394731093e-8,
+          0.9999602687714186,
+          0.9999983804058309,
+          0.9999999339816695,
+          5.573900585856081e-7,
+          0.0000016195941692230886,
+          0.000004706004211764365,
+          0.5
+        ]
+      },
+      {
+        "id": "omega14.low",
+        "capability": "OSCILLATOR_SIM",
+        "cost": 1,
+        "omega_rad_s": 14,
+        "force_n": 0.01,
+        "threshold": 1.9453921975480846,
+        "noise_scale": 0.3,
+        "observable": "noisy accelerance estimate >= threshold",
+        "unit": "(m/s^2)/N",
+        "p_one": [
+          0.4282328554925717,
+          0.5620979870333447,
+          0.687493424015573,
+          0.3211530733174016,
+          0.43790201296665543,
+          0.5619588456183937,
+          0.9907778956148565,
+          0.9964859112966398,
+          0.9986657121592319,
+          0.9246702118222042,
+          0.9640665641160948,
+          0.9832328234020168,
+          0.5
+        ]
+      },
+      {
+        "id": "omega14.high",
+        "capability": "OSCILLATOR_SIM",
+        "cost": 1,
+        "omega_rad_s": 14,
+        "force_n": 0.01,
+        "threshold": 3.285934230672891,
+        "noise_scale": 0.3,
+        "observable": "noisy accelerance estimate >= threshold",
+        "unit": "(m/s^2)/N",
+        "p_one": [
+          0.008513618458366085,
+          0.014502973305727489,
+          0.024601307966462566,
+          0.005394580626221703,
+          0.008852578931312147,
+          0.014494896392894727,
+          0.5519156402145384,
+          0.7647645939144232,
+          0.8956266213319672,
+          0.12336838781638533,
+          0.23523540608557683,
+          0.4020211459338488,
+          0.5
+        ]
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "id": "node-A",
+      "specimen_id": "replica-A",
+      "available": true,
+      "execution_mode": "SIMULATION_ONLY",
+      "capabilities": [
+        "OSCILLATOR_SIM"
+      ]
+    },
+    {
+      "id": "node-B",
+      "specimen_id": "replica-B",
+      "available": true,
+      "execution_mode": "SIMULATION_ONLY",
+      "capabilities": [
+        "OSCILLATOR_SIM"
+      ]
+    }
+  ],
+  "synthetic_truth": {
+    "mass_kg": 1,
+    "stiffness_n_m": 144,
+    "damping_ns_m": 3,
+    "gain": 1.08
+  },
+  "campaign_sha256": "3827e83a200c46dc737277a07e1f3977344e20b77fa4072cae94a7422d86ec81",
+  "events": [
+    {
+      "event": {
+        "schema": "x6.fabric.event/0.1.0",
+        "campaign_sha256": "3827e83a200c46dc737277a07e1f3977344e20b77fa4072cae94a7422d86ec81",
+        "revision": 0,
+        "previous_event_sha256": null,
+        "plan": {
+          "assignments": [
+            {
+              "node_id": "node-A",
+              "specimen_id": "replica-A",
+              "experiment_id": "omega10.high"
+            },
+            {
+              "node_id": "node-B",
+              "specimen_id": "replica-B",
+              "experiment_id": "omega12.high"
+            }
+          ],
+          "cost": 2,
+          "expected_information_bits": 1.4427803858858004,
+          "utility": 1.4227803858858004,
+          "status": "PLANNED",
+          "candidates_evaluated": 168,
+          "objective": "JOINT_MODEL_INFORMATION_MINUS_COST"
+        },
+        "jobs": [
+          {
+            "schema": "x6.fabric.job/0.1.0",
+            "campaign_sha256": "3827e83a200c46dc737277a07e1f3977344e20b77fa4072cae94a7422d86ec81",
+            "job_id": "X6-MECHANICAL-CONTROL-001.r0.j0",
+            "batch_revision": 0,
+            "attempt": 1,
+            "node_id": "node-A",
+            "specimen_id": "replica-A",
+            "experiment_id": "omega10.high",
+            "replicate_id": "X6-MECHANICAL-CONTROL-001.r0.sample0",
+            "deadline_epoch_ms": 1791989364688,
+            "execution_mode": "SIMULATION_ONLY",
+            "seed": 104729
+          },
+          {
+            "schema": "x6.fabric.job/0.1.0",
+            "campaign_sha256": "3827e83a200c46dc737277a07e1f3977344e20b77fa4072cae94a7422d86ec81",
+            "job_id": "X6-MECHANICAL-CONTROL-001.r0.j1",
+            "batch_revision": 0,
+            "attempt": 1,
+            "node_id": "node-B",
+            "specimen_id": "replica-B",
+            "experiment_id": "omega12.high",
+            "replicate_id": "X6-MECHANICAL-CONTROL-001.r0.sample1",
+            "deadline_epoch_ms": 1791989364688,
+            "execution_mode": "SIMULATION_ONLY",
+            "seed": 170266
+          }
+        ],
+        "results": [
+          {
+            "schema": "x6.fabric.result/0.1.0",
+            "observation_id": "X6-MECHANICAL-CONTROL-001.r0.sample0.observation",
+            "evidence_kind": "SYNTHETIC_CONTROL",
+            "quality": "PASS",
+            "outcome": 0,
+            "raw": {
+              "replicate_id": "X6-MECHANICAL-CONTROL-001.r0.sample0",
+              "experiment_id": "omega10.high",
+              "seed": 104729,
+              "measured_accelerance": 1.2774594175263707,
+              "unit": "(m/s^2)/N",
+              "threshold": 6.666666666666667,
+              "outcome": 0
+            },
+            "raw_sha256": "fa70556c18f1c00714ff4c8f288bfed175728a297bc321439ccbb5468605e9c0",
+            "job_id": "X6-MECHANICAL-CONTROL-001.r0.j0",
+            "campaign_sha256": "3827e83a200c46dc737277a07e1f3977344e20b77fa4072cae94a7422d86ec81",
+            "batch_revision": 0,
+            "attempt": 1,
+            "node_id": "node-A",
+            "specimen_id": "replica-A",
+            "experiment_id": "omega10.high",
+            "replicate_id": "X6-MECHANICAL-CONTROL-001.r0.sample0"
+          },
+          {
+            "schema": "x6.fabric.result/0.1.0",
+            "observation_id": "X6-MECHANICAL-CONTROL-001.r0.sample1.observation",
+            "evidence_kind": "SYNTHETIC_CONTROL",
+            "quality": "PASS",
+            "outcome": 0,
+            "raw": {
+              "replicate_id": "X6-MECHANICAL-CONTROL-001.r0.sample1",
+              "experiment_id": "omega12.high",
+              "seed": 170266,
+              "measured_accelerance": 4.446059091367834,
+              "unit": "(m/s^2)/N",
+              "threshold": 8,
+              "outcome": 0
+            },
+            "raw_sha256": "dcfb18b50c0258c6f661ef2de8d032725b54cb4d3fead4760aad54fc1a833bc7",
+            "job_id": "X6-MECHANICAL-CONTROL-001.r0.j1",
+            "campaign_sha256": "3827e83a200c46dc737277a07e1f3977344e20b77fa4072cae94a7422d86ec81",
+            "batch_revision": 0,
+            "attempt": 1,
+            "node_id": "node-B",
+            "specimen_id": "replica-B",
+            "experiment_id": "omega12.high",
+            "replicate_id": "X6-MECHANICAL-CONTROL-001.r0.sample1"
+          }
+        ],
+        "prior": [
+          0.075,
+          0.075,
+          0.075,
+          0.075,
+          0.075,
+          0.075,
+          0.075,
+          0.075,
+          0.075,
+          0.075,
+          0.075,
+          0.075,
+          0.1
+        ],
+        "posterior": [
+          0.000033953485619625524,
+          0.00000235967741092097,
+          1.6396078928498373e-7,
+          0.15788858783460807,
+          0.15788719731364861,
+          0.1578838155187191,
+          0.0000062731449023261676,
+          2.557169167101661e-7,
+          1.0423598286186349e-8,
+          0.1578894597325818,
+          0.15788928475806813,
+          0.15788878546170143,
+          0.052629852971435624
+        ],
+        "predictive_probability": 0.4750155774436331,
+        "status": "UPDATED",
+        "model_probabilities": {
+          "M_K100_C1": 0.00003647712381983148,
+          "M_K100_C3": 0.47365960066697577,
+          "M_K144_C1": 0.00000653928541732252,
+          "M_K144_C3": 0.47366752995235134,
+          "OTHER": 0.052629852971435624
+        },
+        "physical_claim": "NONE_SYNTHETIC_CONTROL"
+      },
+      "sha256": "5057e821892682ac31fe83a5465be3bdbff785222b66647efbb3c51a596a0538"
+    },
+    {
+      "event": {
+        "schema": "x6.fabric.event/0.1.0",
+        "campaign_sha256": "3827e83a200c46dc737277a07e1f3977344e20b77fa4072cae94a7422d86ec81",
+        "revision": 1,
+        "previous_event_sha256": "5057e821892682ac31fe83a5465be3bdbff785222b66647efbb3c51a596a0538",
+        "plan": {
+          "assignments": [
+            {
+              "node_id": "node-A",
+              "specimen_id": "replica-A",
+              "experiment_id": "omega12.low"
+            },
+            {
+              "node_id": "node-B",
+              "specimen_id": "replica-B",
+              "experiment_id": "omega12.low"
+            }
+          ],
+          "cost": 2,
+          "expected_information_bits": 0.6416710110861257,
+          "utility": 0.6216710110861257,
+          "status": "PLANNED",
+          "candidates_evaluated": 168,
+          "objective": "JOINT_MODEL_INFORMATION_MINUS_COST"
+        },
+        "jobs": [
+          {
+            "schema": "x6.fabric.job/0.1.0",
+            "campaign_sha256": "3827e83a200c46dc737277a07e1f3977344e20b77fa4072cae94a7422d86ec81",
+            "job_id": "X6-MECHANICAL-CONTROL-001.r1.j0",
+            "batch_revision": 1,
+            "attempt": 1,
+            "node_id": "node-A",
+            "specimen_id": "replica-A",
+            "experiment_id": "omega12.low",
+            "replicate_id": "X6-MECHANICAL-CONTROL-001.r1.sample0",
+            "deadline_epoch_ms": 1791989364766,
+            "execution_mode": "SIMULATION_ONLY",
+            "seed": 112648
+          },
+          {
+            "schema": "x6.fabric.job/0.1.0",
+            "campaign_sha256": "3827e83a200c46dc737277a07e1f3977344e20b77fa4072cae94a7422d86ec81",
+            "job_id": "X6-MECHANICAL-CONTROL-001.r1.j1",
+            "batch_revision": 1,
+            "attempt": 1,
+            "node_id": "node-B",
+            "specimen_id": "replica-B",
+            "experiment_id": "omega12.low",
+            "replicate_id": "X6-MECHANICAL-CONTROL-001.r1.sample1",
+            "deadline_epoch_ms": 1791989364766,
+            "execution_mode": "SIMULATION_ONLY",
+            "seed": 178185
+          }
+        ],
+        "results": [
+          {
+            "schema": "x6.fabric.result/0.1.0",
+            "observation_id": "X6-MECHANICAL-CONTROL-001.r1.sample0.observation",
+            "evidence_kind": "SYNTHETIC_CONTROL",
+            "quality": "PASS",
+            "outcome": 1,
+            "raw": {
+              "replicate_id": "X6-MECHANICAL-CONTROL-001.r1.sample0",
+              "experiment_id": "omega12.low",
+              "seed": 112648,
+              "measured_accelerance": 4.206214757355375,
+              "unit": "(m/s^2)/N",
+              "threshold": 2.845180015267178,
+              "outcome": 1
+            },
+            "raw_sha256": "5f1710b905d2ae2e2721b2962fa942f407683795f03ec3dec79ee52428b2e701",
+            "job_id": "X6-MECHANICAL-CONTROL-001.r1.j0",
+            "campaign_sha256": "3827e83a200c46dc737277a07e1f3977344e20b77fa4072cae94a7422d86ec81",
+            "batch_revision": 1,
+            "attempt": 1,
+            "node_id": "node-A",
+            "specimen_id": "replica-A",
+            "experiment_id": "omega12.low",
+            "replicate_id": "X6-MECHANICAL-CONTROL-001.r1.sample0"
+          },
+          {
+            "schema": "x6.fabric.result/0.1.0",
+            "observation_id": "X6-MECHANICAL-CONTROL-001.r1.sample1.observation",
+            "evidence_kind": "SYNTHETIC_CONTROL",
+            "quality": "PASS",
+            "outcome": 1,
+            "raw": {
+              "replicate_id": "X6-MECHANICAL-CONTROL-001.r1.sample1",
+              "experiment_id": "omega12.low",
+              "seed": 178185,
+              "measured_accelerance": 3.6235341480409566,
+              "unit": "(m/s^2)/N",
+              "threshold": 2.845180015267178,
+              "outcome": 1
+            },
+            "raw_sha256": "4b3c9378e46d1986fd1a5c06273ecf15712ab665a56c52a99919a9b807af7954",
+            "job_id": "X6-MECHANICAL-CONTROL-001.r1.j1",
+            "campaign_sha256": "3827e83a200c46dc737277a07e1f3977344e20b77fa4072cae94a7422d86ec81",
+            "batch_revision": 1,
+            "attempt": 1,
+            "node_id": "node-B",
+            "specimen_id": "replica-B",
+            "experiment_id": "omega12.low",
+            "replicate_id": "X6-MECHANICAL-CONTROL-001.r1.sample1"
+          }
+        ],
+        "prior": [
+          0.000033953485619625524,
+          0.00000235967741092097,
+          1.6396078928498373e-7,
+          0.15788858783460807,
+          0.15788719731364861,
+          0.1578838155187191,
+          0.0000062731449023261676,
+          2.557169167101661e-7,
+          1.0423598286186349e-8,
+          0.1578894597325818,
+          0.15788928475806813,
+          0.15788878546170143,
+          0.052629852971435624
+        ],
+        "posterior": [
+          0.000020462202704140834,
+          0.000002571682913899673,
+          2.4648131038099633e-7,
+          0.007314203355330581,
+          0.021464292437322167,
+          0.05288051811601809,
+          0.000012518853344345025,
+          5.103154203857138e-7,
+          2.080160753454014e-8,
+          0.2794411419433004,
+          0.3020866942947933,
+          0.31051943900168383,
+          0.02625738051425104
+        ],
+        "predictive_probability": 0.5010958056428275,
+        "status": "UPDATED",
+        "model_probabilities": {
+          "M_K100_C1": 0.000023280366928421502,
+          "M_K100_C3": 0.08165901390867084,
+          "M_K144_C1": 0.000013049970372265278,
+          "M_K144_C3": 0.8920472752397774,
+          "OTHER": 0.02625738051425104
+        },
+        "physical_claim": "NONE_SYNTHETIC_CONTROL"
+      },
+      "sha256": "3df225aed91c995ef0b1383de04aea05caeb41a0c720301f2becbcd4ca380e2e"
+    },
+    {
+      "event": {
+        "schema": "x6.fabric.event/0.1.0",
+        "campaign_sha256": "3827e83a200c46dc737277a07e1f3977344e20b77fa4072cae94a7422d86ec81",
+        "revision": 2,
+        "previous_event_sha256": "3df225aed91c995ef0b1383de04aea05caeb41a0c720301f2becbcd4ca380e2e",
+        "plan": {
+          "assignments": [
+            {
+              "node_id": "node-A",
+              "specimen_id": "replica-A",
+              "experiment_id": "omega12.low"
+            },
+            {
+              "node_id": "node-B",
+              "specimen_id": "replica-B",
+              "experiment_id": "omega12.low"
+            }
+          ],
+          "cost": 2,
+          "expected_information_bits": 0.27166722387468845,
+          "utility": 0.25166722387468843,
+          "status": "PLANNED",
+          "candidates_evaluated": 168,
+          "objective": "JOINT_MODEL_INFORMATION_MINUS_COST"
+        },
+        "jobs": [
+          {
+            "schema": "x6.fabric.job/0.1.0",
+            "campaign_sha256": "3827e83a200c46dc737277a07e1f3977344e20b77fa4072cae94a7422d86ec81",
+            "job_id": "X6-MECHANICAL-CONTROL-001.r2.j0",
+            "batch_revision": 2,
+            "attempt": 1,
+            "node_id": "node-A",
+            "specimen_id": "replica-A",
+            "experiment_id": "omega12.low",
+            "replicate_id": "X6-MECHANICAL-CONTROL-001.r2.sample0",
+            "deadline_epoch_ms": 1791989364827,
+            "execution_mode": "SIMULATION_ONLY",
+            "seed": 120567
+          },
+          {
+            "schema": "x6.fabric.job/0.1.0",
+            "campaign_sha256": "3827e83a200c46dc737277a07e1f3977344e20b77fa4072cae94a7422d86ec81",
+            "job_id": "X6-MECHANICAL-CONTROL-001.r2.j1",
+            "batch_revision": 2,
+            "attempt": 1,
+            "node_id": "node-B",
+            "specimen_id": "replica-B",
+            "experiment_id": "omega12.low",
+            "replicate_id": "X6-MECHANICAL-CONTROL-001.r2.sample1",
+            "deadline_epoch_ms": 1791989364827,
+            "execution_mode": "SIMULATION_ONLY",
+            "seed": 186104
+          }
+        ],
+        "results": [
+          {
+            "schema": "x6.fabric.result/0.1.0",
+            "observation_id": "X6-MECHANICAL-CONTROL-001.r2.sample0.observation",
+            "evidence_kind": "SYNTHETIC_CONTROL",
+            "quality": "PASS",
+            "outcome": 1,
+            "raw": {
+              "replicate_id": "X6-MECHANICAL-CONTROL-001.r2.sample0",
+              "experiment_id": "omega12.low",
+              "seed": 120567,
+              "measured_accelerance": 4.704991129298271,
+              "unit": "(m/s^2)/N",
+              "threshold": 2.845180015267178,
+              "outcome": 1
+            },
+            "raw_sha256": "452bdcbc62b008283efc2579410f478819ab3b38e622284751d6325f603e52c4",
+            "job_id": "X6-MECHANICAL-CONTROL-001.r2.j0",
+            "campaign_sha256": "3827e83a200c46dc737277a07e1f3977344e20b77fa4072cae94a7422d86ec81",
+            "batch_revision": 2,
+            "attempt": 1,
+            "node_id": "node-A",
+            "specimen_id": "replica-A",
+            "experiment_id": "omega12.low",
+            "replicate_id": "X6-MECHANICAL-CONTROL-001.r2.sample0"
+          },
+          {
+            "schema": "x6.fabric.result/0.1.0",
+            "observation_id": "X6-MECHANICAL-CONTROL-001.r2.sample1.observation",
+            "evidence_kind": "SYNTHETIC_CONTROL",
+            "quality": "PASS",
+            "outcome": 1,
+            "raw": {
+              "replicate_id": "X6-MECHANICAL-CONTROL-001.r2.sample1",
+              "experiment_id": "omega12.low",
+              "seed": 186104,
+              "measured_accelerance": 4.314975914967514,
+              "unit": "(m/s^2)/N",
+              "threshold": 2.845180015267178,
+              "outcome": 1
+            },
+            "raw_sha256": "673f63b463f30611f974d2daa773218482f5c2849a133647ec0c86e20fc6c738",
+            "job_id": "X6-MECHANICAL-CONTROL-001.r2.j1",
+            "campaign_sha256": "3827e83a200c46dc737277a07e1f3977344e20b77fa4072cae94a7422d86ec81",
+            "batch_revision": 2,
+            "attempt": 1,
+            "node_id": "node-B",
+            "specimen_id": "replica-B",
+            "experiment_id": "omega12.low",
+            "replicate_id": "X6-MECHANICAL-CONTROL-001.r2.sample1"
+          }
+        ],
+        "prior": [
+          0.000020462202704140834,
+          0.000002571682913899673,
+          2.4648131038099633e-7,
+          0.007314203355330581,
+          0.021464292437322167,
+          0.05288051811601809,
+          0.000012518853344345025,
+          5.103154203857138e-7,
+          2.080160753454014e-8,
+          0.2794411419433004,
+          0.3020866942947933,
+          0.31051943900168383,
+          0.02625738051425104
+        ],
+        "posterior": [
+          0.000007180596270984257,
+          0.0000016320081110113868,
+          2.1575859088903325e-7,
+          0.00019729833950392106,
+          0.0016991289786537735,
+          0.010313210902601134,
+          0.000014547350182767186,
+          5.930045603889087e-7,
+          2.4172203383704064e-8,
+          0.2879835394833215,
+          0.3365508139066598,
+          0.3556038143813993,
+          0.0076280011179412225
+        ],
+        "predictive_probability": 0.860559015011584,
+        "status": "UPDATED",
+        "model_probabilities": {
+          "M_K100_C1": 0.000009028362972884677,
+          "M_K100_C3": 0.01220963822075883,
+          "M_K144_C1": 0.0000151645269465398,
+          "M_K144_C3": 0.9801381677713806,
+          "OTHER": 0.0076280011179412225
+        },
+        "physical_claim": "NONE_SYNTHETIC_CONTROL"
+      },
+      "sha256": "212f3f6779ff0dbffbf0e1462967d72f62cbd917da19ff9f897a2ffcae23ff55"
+    },
+    {
+      "event": {
+        "schema": "x6.fabric.event/0.1.0",
+        "campaign_sha256": "3827e83a200c46dc737277a07e1f3977344e20b77fa4072cae94a7422d86ec81",
+        "revision": 3,
+        "previous_event_sha256": "212f3f6779ff0dbffbf0e1462967d72f62cbd917da19ff9f897a2ffcae23ff55",
+        "plan": {
+          "assignments": [
+            {
+              "node_id": "node-A",
+              "specimen_id": "replica-A",
+              "experiment_id": "omega12.low"
+            },
+            {
+              "node_id": "node-B",
+              "specimen_id": "replica-B",
+              "experiment_id": "omega12.low"
+            }
+          ],
+          "cost": 2,
+          "expected_information_bits": 0.06309423558805402,
+          "utility": 0.04309423558805402,
+          "status": "PLANNED",
+          "candidates_evaluated": 168,
+          "objective": "JOINT_MODEL_INFORMATION_MINUS_COST"
+        },
+        "jobs": [
+          {
+            "schema": "x6.fabric.job/0.1.0",
+            "campaign_sha256": "3827e83a200c46dc737277a07e1f3977344e20b77fa4072cae94a7422d86ec81",
+            "job_id": "X6-MECHANICAL-CONTROL-001.r3.j0",
+            "batch_revision": 3,
+            "attempt": 1,
+            "node_id": "node-A",
+            "specimen_id": "replica-A",
+            "experiment_id": "omega12.low",
+            "replicate_id": "X6-MECHANICAL-CONTROL-001.r3.sample0",
+            "deadline_epoch_ms": 1791989364897,
+            "execution_mode": "SIMULATION_ONLY",
+            "seed": 128486
+          },
+          {
+            "schema": "x6.fabric.job/0.1.0",
+            "campaign_sha256": "3827e83a200c46dc737277a07e1f3977344e20b77fa4072cae94a7422d86ec81",
+            "job_id": "X6-MECHANICAL-CONTROL-001.r3.j1",
+            "batch_revision": 3,
+            "attempt": 1,
+            "node_id": "node-B",
+            "specimen_id": "replica-B",
+            "experiment_id": "omega12.low",
+            "replicate_id": "X6-MECHANICAL-CONTROL-001.r3.sample1",
+            "deadline_epoch_ms": 1791989364897,
+            "execution_mode": "SIMULATION_ONLY",
+            "seed": 194023
+          }
+        ],
+        "results": [
+          {
+            "schema": "x6.fabric.result/0.1.0",
+            "observation_id": "X6-MECHANICAL-CONTROL-001.r3.sample0.observation",
+            "evidence_kind": "SYNTHETIC_CONTROL",
+            "quality": "PASS",
+            "outcome": 1,
+            "raw": {
+              "replicate_id": "X6-MECHANICAL-CONTROL-001.r3.sample0",
+              "experiment_id": "omega12.low",
+              "seed": 128486,
+              "measured_accelerance": 3.8855107039468146,
+              "unit": "(m/s^2)/N",
+              "threshold": 2.845180015267178,
+              "outcome": 1
+            },
+            "raw_sha256": "847ebf7433a495674901bbb872c238dcb1991100897b29ea0eddb9a284a45e8e",
+            "job_id": "X6-MECHANICAL-CONTROL-001.r3.j0",
+            "campaign_sha256": "3827e83a200c46dc737277a07e1f3977344e20b77fa4072cae94a7422d86ec81",
+            "batch_revision": 3,
+            "attempt": 1,
+            "node_id": "node-A",
+            "specimen_id": "replica-A",
+            "experiment_id": "omega12.low",
+            "replicate_id": "X6-MECHANICAL-CONTROL-001.r3.sample0"
+          },
+          {
+            "schema": "x6.fabric.result/0.1.0",
+            "observation_id": "X6-MECHANICAL-CONTROL-001.r3.sample1.observation",
+            "evidence_kind": "SYNTHETIC_CONTROL",
+            "quality": "PASS",
+            "outcome": 1,
+            "raw": {
+              "replicate_id": "X6-MECHANICAL-CONTROL-001.r3.sample1",
+              "experiment_id": "omega12.low",
+              "seed": 194023,
+              "measured_accelerance": 3.6103917127779726,
+              "unit": "(m/s^2)/N",
+              "threshold": 2.845180015267178,
+              "outcome": 1
+            },
+            "raw_sha256": "67d6062edfd9cd5799807cf5f887f5923d9b54263227ec423a7ee76a580c252a",
+            "job_id": "X6-MECHANICAL-CONTROL-001.r3.j1",
+            "campaign_sha256": "3827e83a200c46dc737277a07e1f3977344e20b77fa4072cae94a7422d86ec81",
+            "batch_revision": 3,
+            "attempt": 1,
+            "node_id": "node-B",
+            "specimen_id": "replica-B",
+            "experiment_id": "omega12.low",
+            "replicate_id": "X6-MECHANICAL-CONTROL-001.r3.sample1"
+          }
+        ],
+        "prior": [
+          0.000007180596270984257,
+          0.0000016320081110113868,
+          2.1575859088903325e-7,
+          0.00019729833950392106,
+          0.0016991289786537735,
+          0.010313210902601134,
+          0.000014547350182767186,
+          5.930045603889087e-7,
+          2.4172203383704064e-8,
+          0.2879835394833215,
+          0.3365508139066598,
+          0.3556038143813993,
+          0.0076280011179412225
+        ],
+        "posterior": [
+          0.000002325933280118595,
+          9.559954453410033e-7,
+          1.7433348698911936e-7,
+          0.000004912566546927886,
+          0.00012415514856078144,
+          0.0018566101199992268,
+          0.000015603853049518528,
+          6.360715801691838e-7,
+          2.5927712246195334e-8,
+          0.2739514476930171,
+          0.3460973791011778,
+          0.37590027687689176,
+          0.0020454963792519874
+        ],
+        "predictive_probability": 0.93229218043528,
+        "status": "UPDATED",
+        "model_probabilities": {
+          "M_K100_C1": 0.0000034562622124487174,
+          "M_K100_C3": 0.0019856778351069362,
+          "M_K144_C1": 0.000016265852341933907,
+          "M_K144_C3": 0.9959491036710867,
+          "OTHER": 0.0020454963792519874
+        },
+        "physical_claim": "NONE_SYNTHETIC_CONTROL"
+      },
+      "sha256": "94c23c2856fefe4a9af1153a733eeb66c98aa43d819cc65c475fe3a4a87c5d16"
+    }
+  ],
+  "final_model_probabilities": {
+    "M_K100_C1": 0.0000034562622124487174,
+    "M_K100_C3": 0.0019856778351069362,
+    "M_K144_C1": 0.000016265852341933907,
+    "M_K144_C3": 0.9959491036710867,
+    "OTHER": 0.0020454963792519874
+  },
+  "conclusion": "RELATIVE_MODEL_WEIGHTS_ONLY_NO_PHYSICAL_ELIMINATION"
+}
