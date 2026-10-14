@@ -122,6 +122,19 @@ The [X6 Data Agent](docs/DATA_AGENT.md) downloads public NOAA GOES X-ray observa
 
 Three additional [source agents](docs/SOURCE_AGENTS.md) check the complete NetworkX Graph Atlas and fixed experimental subsets from QuTech and NASA/IMS. They run daily as separate jobs, preserve original inputs and failure evidence for 14 days, and label archival measurements explicitly. They do not claim fresh quantum measurements, improved coherence or bearing-failure prediction.
 
+## RAX — relational research programme v0.1
+
+[Programme, work packages and evidence status](docs/research/rax/README.md)
+introduce a staged investigation of predictive reductions, competing generators,
+possible geometric representations and independent falsification tests.
+The approved 14-page German research programme is available as a Word document.
+
+**Planned research:** RAX-U1 first qualifies the method on a constructed Markov
+control; open discovery, geometry and singularity investigations follow separate
+gates. The RAX experiments have not been executed. Lorentzian and other
+structures are competing candidates under the same evidence rules, with no
+preferred target geometry.
+
 ## Open research agenda
 
 **Current priority: Lorentzian spectral geometry.** The
