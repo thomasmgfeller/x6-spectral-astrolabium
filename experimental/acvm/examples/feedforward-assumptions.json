@@ -1,0 +1,38 @@
+{
+  "schema": "acvm.feedforward.budget/1",
+  "evidence_kind": "ASSUMED",
+  "available_ns": 500,
+  "reserve_ns": 100,
+  "stages": {
+    "detector": {
+      "latency_ns": 40,
+      "jitter_bound_ns": 10,
+      "evidence": "DESIGN_ALLOCATION_NOT_MEASURED"
+    },
+    "input": {
+      "latency_ns": 20,
+      "jitter_bound_ns": 10,
+      "evidence": "DESIGN_ALLOCATION_NOT_MEASURED"
+    },
+    "logic": {
+      "latency_ns": 40,
+      "jitter_bound_ns": 10,
+      "evidence": "DESIGN_ALLOCATION_NOT_MEASURED"
+    },
+    "output": {
+      "latency_ns": 20,
+      "jitter_bound_ns": 10,
+      "evidence": "DESIGN_ALLOCATION_NOT_MEASURED"
+    },
+    "driver": {
+      "latency_ns": 80,
+      "jitter_bound_ns": 20,
+      "evidence": "DESIGN_ALLOCATION_NOT_MEASURED"
+    },
+    "actuator": {
+      "latency_ns": 80,
+      "jitter_bound_ns": 10,
+      "evidence": "DESIGN_ALLOCATION_NOT_MEASURED"
+    }
+  }
+}

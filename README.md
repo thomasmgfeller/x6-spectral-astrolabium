@@ -65,15 +65,23 @@ Read [usage, exports and qualification](docs/SIGNAL_VALIDATION_LAB.md) and
 These are synthetic software experiments, not measured device performance or
 physical/quantum qualification. A hash or a successful replay is not authenticity.
 
-## Astrolabium Control and Validation Module — concept 0.1
+## Astrolabium Control and Validation Module — reference 0.2
 
 [ACVM concept and evidence status](docs/acvm/README.md) describes a proposed
 control and validation module for reproducible experiment sequences, FPGA
 execution, independent acquisition and explicit acceptance criteria.
 The German concept is available as readable Markdown and as the original Word
-document. **Concept only: implementation and hardware qualification are pending.**
-Its ten proposed checks are NOT RUN; publication does not establish working
-device control, validated photonics or a quantum processor.
+document. The original 0.1 concept is retained as a historical specification.
+Current implementation and evidence are tracked in the following separate modules;
+publication does not establish validated photonics or a quantum processor.
+
+[ACVM 0.2 — optical/reference workflow](docs/acvm/optical-v0.2/README.md)
+adds a complex-signal reference core, full-byte archives, ELL14 motor and legacy
+PM100D adapters, calibrated QHQ phase mapping and bounded slow power feedback.
+Run `python3 x6.py acvm qualify --output runs/acvm-v02`.
+V01–V08 are exercised in software; V09/V10 and physical closed-loop/feed-forward
+remain unperformed. Component choices and concrete laboratory acceptance steps
+are documented; hardware adapters are not yet device-qualified.
 
 [ACVM C1 — executable single-channel reference](docs/acvm/control-channel-v0.1/README.md)
 adds a bounded host-to-device command protocol, sequence compiler, portable C++

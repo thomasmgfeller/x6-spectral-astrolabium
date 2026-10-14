@@ -1,0 +1,49 @@
+{
+  "schema": "acvm.optical.publication/1",
+  "authorized_by": "Explicit user approval in conversation",
+  "base_commit": "6df5b9f40c839fca6aa6f3a325074eea8f4f7cad",
+  "scientific_status": "SOFTWARE_PASS_PHYSICAL_GATES_OPEN",
+  "physical_validation": "NOT_PERFORMED",
+  "V09": "NOT_PERFORMED_NO_INDEPENDENT_ELECTRICAL_DATA",
+  "V10": "NOT_PERFORMED_NO_HELD_OUT_OPTICAL_DATA",
+  "physical_closed_loop": "NOT_PERFORMED",
+  "fast_photonic_feedforward": "NOT_PERFORMED",
+  "commit_mapping": [
+    {
+      "local_commit": "5ecf096f310d8c71d10168f2cb0a222f8da02191",
+      "github_commit": "134a58625ac6781c7fe942e3bd3e5eb8edd3e664",
+      "tree": "9611f595174ced8b9297d9654a6422d2f84ca529"
+    },
+    {
+      "local_commit": "a464f8ca2b3fbc35a046f6942f520b9901e9129d",
+      "github_commit": "5a14ad6d00c0908e74dd34e113323e6ce84a03be",
+      "tree": "9c7247127f32b385638487145a6c0b0f10b51ee3"
+    },
+    {
+      "local_commit": "509c994b157508e598a853f868442b542129dfc3",
+      "github_commit": "3ce4ced4a1ae281d7c89d780ac81b972038f1611",
+      "tree": "3e545a27d66f567771e8692c69a72271e49a7989"
+    },
+    {
+      "local_commit": "705dbd84acba8855dbb6a377d6bef52e3e4ac124",
+      "github_commit": "9f9cc97083a7b5b8a2d96eac9d4be2a23ef2d56a",
+      "tree": "3a748e5810557ed6fece3672b32b4c11192a171e"
+    },
+    {
+      "local_commit": "694a7000f97b526164ac44f07ff2dab33d61aa61",
+      "github_commit": "49dab0eacaf375da37d3c737a9ce79a7b3e44fe2",
+      "tree": "b0c4cf35cbf2687169312eb5e029a97c53afe2b7"
+    }
+  ],
+  "note": "GitHub API-created commits have different commit metadata. Every mapped source tree was checked for exact identity. implementation.bundle preserves all five original local commits referenced by the evidence and package, and requires the base_commit. The qualified source ZIP is unchanged. This receipt records publication provenance, not physical qualification or CI results.",
+  "artifacts": {
+    "ACVM_Optik_Referenz_v0_2.zip": {
+      "bytes": 422523,
+      "sha256": "a5125ca5d380f8179cfb3534e151fae0c954f7c049c9af5ddb60c4930733b332"
+    },
+    "implementation.bundle": {
+      "bytes": 644400,
+      "sha256": "debb5c6b42ded5a16a2cb9c42c4572e620a17b0ed7b21dc71c66d37977dc4816"
+    }
+  }
+}

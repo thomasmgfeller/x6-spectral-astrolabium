@@ -377,12 +377,16 @@ def serve(port):
 
 def main(argv=None):
     argv = list(sys.argv[1:] if argv is None else argv)
+    if argv and argv[0] == 'acvm':
+        from experimental.acvm.cli import main as acvm_main
+        return acvm_main(argv[1:])
     if argv and argv[0] == 'control':
         from experimental.control_channel.cli import main as control_main
         return control_main(argv[1:])
     parser = argparse.ArgumentParser(description='X6 local workflow: setup, doctor, serve, run, import-signal, verify, export, control')
     commands = parser.add_subparsers(dest='command', required=True)
     commands.add_parser('control', help='ACVM command channel: use control --help')
+    commands.add_parser('acvm', help='ACVM 0.2 optical/reference workflow: use acvm --help')
     for name in ['setup', 'doctor']:
         p = commands.add_parser(name)
         p.add_argument('--profile', choices=['core', 'research'], default='core')

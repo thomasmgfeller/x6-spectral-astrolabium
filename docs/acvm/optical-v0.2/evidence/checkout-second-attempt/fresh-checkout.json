@@ -1,0 +1,177 @@
+{
+  "schema": "acvm.fresh-checkout/1",
+  "status": "FAILED",
+  "source_commit": "a464f8ca2b3fbc35a046f6942f520b9901e9129d",
+  "started_utc": "2026-10-14T21:34:22.490224+00:00",
+  "steps": [
+    {
+      "name": "01-isolated-environment",
+      "command": [
+        "x6.py",
+        "setup",
+        "--profile",
+        "core"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "passed": true,
+      "seconds": 1.8497765569991316
+    },
+    {
+      "name": "02-qualification",
+      "command": [
+        "x6.py",
+        "acvm",
+        "qualify",
+        "--output",
+        "/workspace/scratch/031977d69552/optical-fresh-evidence-v2/qualification"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "passed": true,
+      "seconds": 3.9874644390001777
+    },
+    {
+      "name": "03-verify",
+      "command": [
+        "x6.py",
+        "acvm",
+        "verify",
+        "/workspace/scratch/031977d69552/optical-fresh-evidence-v2/qualification/D01"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "passed": true,
+      "seconds": 0.12872507399879396
+    },
+    {
+      "name": "04-export",
+      "command": [
+        "x6.py",
+        "acvm",
+        "export",
+        "/workspace/scratch/031977d69552/optical-fresh-evidence-v2/qualification/D01",
+        "--output",
+        "/workspace/scratch/031977d69552/optical-fresh-evidence-v2/D01.zip"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "passed": true,
+      "seconds": 0.1096060799973202
+    },
+    {
+      "name": "05-import-verify",
+      "command": [
+        "x6.py",
+        "acvm",
+        "verify",
+        "/workspace/scratch/031977d69552/optical-fresh-evidence-v2/D01.zip"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "passed": true,
+      "seconds": 0.10896019099891419
+    },
+    {
+      "name": "06-assess-electrical",
+      "command": [
+        "x6.py",
+        "acvm",
+        "assess-electrical",
+        "experimental/acvm/examples/electrical-simulated.json",
+        "--output",
+        "/workspace/scratch/031977d69552/optical-fresh-evidence-v2/assess-electrical.json"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "passed": true,
+      "seconds": 0.10431355200125836
+    },
+    {
+      "name": "07-assess-optical",
+      "command": [
+        "x6.py",
+        "acvm",
+        "assess-optical",
+        "experimental/acvm/examples/optical-measurements-simulated.json",
+        "--output",
+        "/workspace/scratch/031977d69552/optical-fresh-evidence-v2/assess-optical.json"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "passed": true,
+      "seconds": 0.10651423399394844
+    },
+    {
+      "name": "08-fit-hwp",
+      "command": [
+        "x6.py",
+        "acvm",
+        "fit-hwp",
+        "experimental/acvm/examples/hwp-scan-simulated.json",
+        "--output",
+        "/workspace/scratch/031977d69552/optical-fresh-evidence-v2/fit-hwp.json"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "passed": true,
+      "seconds": 0.10314818500046385
+    },
+    {
+      "name": "09-feedforward-budget",
+      "command": [
+        "x6.py",
+        "acvm",
+        "feedforward-budget",
+        "experimental/acvm/examples/feedforward-assumptions.json",
+        "--output",
+        "/workspace/scratch/031977d69552/optical-fresh-evidence-v2/feedforward-budget.json"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "passed": true,
+      "seconds": 0.10376316199835856
+    },
+    {
+      "name": "10-template-refused",
+      "command": [
+        "x6.py",
+        "acvm",
+        "move",
+        "--profile",
+        "experimental/acvm/examples/loop-profile-template.json",
+        "--port",
+        "/THIS_PORT_MUST_NOT_BE_OPENED",
+        "--degrees",
+        "22.5",
+        "--output",
+        "/workspace/scratch/031977d69552/optical-fresh-evidence-v2/must-not-exist"
+      ],
+      "exit_code": 1,
+      "expected_exit_code": 1,
+      "passed": true,
+      "seconds": 0.1063597070024116
+    },
+    {
+      "name": "11-integration-regressions",
+      "command": [
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests/integration",
+        "-v"
+      ],
+      "exit_code": 1,
+      "expected_exit_code": 0,
+      "passed": false,
+      "seconds": 0.6996346919986536
+    }
+  ],
+  "initial_checkout_clean": true,
+  "initial_environment_absent": true,
+  "hardware_accessed": false,
+  "physical_qualification": "NOT_PERFORMED",
+  "error": "RuntimeError: 11-integration-regressions failed",
+  "finished_utc": "2026-10-14T21:34:29.899476+00:00"
+}

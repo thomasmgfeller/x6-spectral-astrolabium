@@ -1,0 +1,86 @@
+{
+  "V01_V08": {
+    "V01": "MODEL_PASS",
+    "V02": "MODEL_PASS",
+    "V03": "MODEL_PASS",
+    "V04": "MODEL_PASS",
+    "V05": "MODEL_PASS",
+    "V06": "MODEL_PASS",
+    "V07": "MODEL_PASS",
+    "V08": "MODEL_PASS"
+  },
+  "V09": "NOT_PERFORMED_NO_INDEPENDENT_ELECTRICAL_DATA",
+  "V10": "NOT_PERFORMED_NO_HELD_OUT_OPTICAL_DATA",
+  "checks": {
+    "C1": "SOFTWARE_PASS_HARDWARE_OPEN",
+    "D01": {
+      "authenticity": "NOT_ASSESSED",
+      "files": 3,
+      "samples": 512,
+      "status": "VERIFIED_SIMULATION"
+    },
+    "feedback": [
+      {
+        "feedback_rmse": 0.004366319431373048,
+        "fixed_rmse": 0.05671118518813217,
+        "pass": true,
+        "run_id": "test-101"
+      },
+      {
+        "feedback_rmse": 0.004244998686053261,
+        "fixed_rmse": 0.05653133602523908,
+        "pass": true,
+        "run_id": "test-102"
+      },
+      {
+        "feedback_rmse": 0.004370491616349857,
+        "fixed_rmse": 0.05672068776821009,
+        "pass": true,
+        "run_id": "test-103"
+      },
+      {
+        "feedback_rmse": 0.0042560602969447855,
+        "fixed_rmse": 0.05677269388418521,
+        "pass": true,
+        "run_id": "test-104"
+      },
+      {
+        "feedback_rmse": 0.004272037694215457,
+        "fixed_rmse": 0.05662287193286127,
+        "pass": true,
+        "run_id": "test-105"
+      }
+    ],
+    "tests": 35
+  },
+  "environment": {
+    "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]"
+  },
+  "fast_feedforward": "NOT_PERFORMED",
+  "hardware_adapters": "MODEL_AND_PTY_TESTED_NOT_DEVICE_QUALIFIED",
+  "physical_closed_loop": "NOT_PERFORMED",
+  "schema": "acvm.qualification/2",
+  "sources": {
+    "experimental/acvm/__init__.py": "9b466af155a1a5f4009fa1ec454febcfc15c01d7ee544b2bfb009429be41f369",
+    "experimental/acvm/archive.py": "1b8c2e48eba62617cfd489ea456b7cc6a243f1550ec092b2c5ab13b45f4a0351",
+    "experimental/acvm/cli.py": "02bbbc9e5f3c81570bb465c2bb144c1524add73e3327ed8b087d84f5464159b1",
+    "experimental/acvm/devices.py": "050a37ea5a96097bf5615c7f50e646b16d34877a2c473909508c06eab8c472c9",
+    "experimental/acvm/engine.py": "3e8d4692bb757bf5f89992434ff3e3b03b373bae1aad5458728b92b018934d68",
+    "experimental/acvm/evidence.py": "1ff1c3a8aab62cc4fa963c89856fb243b5649fb6e8f076e87d6aca0119de7de6",
+    "experimental/acvm/examples/calibration-simulated.json": "b9cc72c916dad5e96f96955f2f8d9d06b69b01e88289d2865d6d4fe7bf78c038",
+    "experimental/acvm/examples/electrical-simulated.json": "59a9f27866087b73424a0e6ebf72de4a4073de9cc7a4de9a9bfead9d930cda84",
+    "experimental/acvm/examples/feedforward-assumptions.json": "f83e294ff0ef0fd27e56902cc216b26cd043ddb8892a2e21638ddaff12fb840a",
+    "experimental/acvm/examples/hwp-scan-simulated.json": "80d5f38b5e0591d121f9efe5b24fb73bb1cdfdabb41c5c8b395591af64af30e9",
+    "experimental/acvm/examples/loop-profile-template.json": "2656b3d3b4d3da66970f3ce7fe81bf1968f4eb8b7e1d25686d354a2f6652bdb8",
+    "experimental/acvm/examples/optical-measurements-simulated.json": "c0e4e6510cdf0060175ae94876a3ad55a914cd1e8367088dc2e93c7942d59f25",
+    "experimental/acvm/examples/phase-profile-template.json": "014fe6dc1dcf05ce77b25b67a3ae64b57e2434c60398ab6a85b113030908e42b",
+    "experimental/acvm/feedback.py": "2e6fce9c295006064460024dcf36fd42f34f0d8c16480a09d1b82e190a3595b2",
+    "experimental/acvm/optics.py": "eab3e79e35e6c227ba291b3f517e060486b7cc61905f8f347a8207b43165ebae",
+    "experimental/acvm/qualification.py": "9fd7dd776a3a06c337253858209f4e556a76264d73edfe354455b1c1699a116c",
+    "experimental/acvm/signals.py": "806654c9239d423505a2565595acb66f53dcee96328b0a4c88a86cf3b35a4f1c",
+    "tests/acvm/qualify_checkout.py": "23f665018d051216fb2f5383a5bc6166a03baa9df6e94317eccac72bf2978380",
+    "tests/acvm/test_acvm.py": "dd8caedcb8c55b1871942769f5663fdc30ebf8414f89504caf17714f933f3709"
+  },
+  "status": "SOFTWARE_PASS_PHYSICAL_GATES_OPEN"
+}

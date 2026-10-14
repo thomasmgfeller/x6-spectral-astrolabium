@@ -1,0 +1,134 @@
+{
+  "schema": "acvm.measurements/1",
+  "evidence_kind": "SIMULATED",
+  "bench": "OPTICAL",
+  "unit": "transmission_fraction",
+  "criteria": {
+    "max_prediction_error": 0.02,
+    "max_drift": 0.03,
+    "max_loss_db": 3
+  },
+  "criteria_sha256": "cdc752a4a63d2ef66d261e240a5d4c59da5f749790e4942b541c285ef943e529",
+  "calibration_runs": [
+    {
+      "run_id": "c1",
+      "points": [
+        {
+          "time_s": 0,
+          "input": 0.1,
+          "output": 0.18000000000000002,
+          "uncertainty": 0.001,
+          "loss_db": 1,
+          "loss_uncertainty_db": 0.1
+        },
+        {
+          "time_s": 1,
+          "input": 0.5,
+          "output": 0.5,
+          "uncertainty": 0.001,
+          "loss_db": 1,
+          "loss_uncertainty_db": 0.1
+        },
+        {
+          "time_s": 2,
+          "input": 0.9,
+          "output": 0.8200000000000001,
+          "uncertainty": 0.001,
+          "loss_db": 1,
+          "loss_uncertainty_db": 0.1
+        }
+      ]
+    },
+    {
+      "run_id": "c2",
+      "points": [
+        {
+          "time_s": 0,
+          "input": 0.1,
+          "output": 0.18000000000000002,
+          "uncertainty": 0.001,
+          "loss_db": 1,
+          "loss_uncertainty_db": 0.1
+        },
+        {
+          "time_s": 1,
+          "input": 0.5,
+          "output": 0.5,
+          "uncertainty": 0.001,
+          "loss_db": 1,
+          "loss_uncertainty_db": 0.1
+        },
+        {
+          "time_s": 2,
+          "input": 0.9,
+          "output": 0.8200000000000001,
+          "uncertainty": 0.001,
+          "loss_db": 1,
+          "loss_uncertainty_db": 0.1
+        }
+      ]
+    }
+  ],
+  "test_runs": [
+    {
+      "run_id": "t1",
+      "points": [
+        {
+          "time_s": 0,
+          "input": 0.1,
+          "output": 0.18000000000000002,
+          "uncertainty": 0.001,
+          "loss_db": 1,
+          "loss_uncertainty_db": 0.1
+        },
+        {
+          "time_s": 1,
+          "input": 0.5,
+          "output": 0.5,
+          "uncertainty": 0.001,
+          "loss_db": 1,
+          "loss_uncertainty_db": 0.1
+        },
+        {
+          "time_s": 2,
+          "input": 0.9,
+          "output": 0.8200000000000001,
+          "uncertainty": 0.001,
+          "loss_db": 1,
+          "loss_uncertainty_db": 0.1
+        }
+      ]
+    },
+    {
+      "run_id": "t2",
+      "points": [
+        {
+          "time_s": 0,
+          "input": 0.1,
+          "output": 0.18000000000000002,
+          "uncertainty": 0.001,
+          "loss_db": 1,
+          "loss_uncertainty_db": 0.1
+        },
+        {
+          "time_s": 1,
+          "input": 0.5,
+          "output": 0.5,
+          "uncertainty": 0.001,
+          "loss_db": 1,
+          "loss_uncertainty_db": 0.1
+        },
+        {
+          "time_s": 2,
+          "input": 0.9,
+          "output": 0.8200000000000001,
+          "uncertainty": 0.001,
+          "loss_db": 1,
+          "loss_uncertainty_db": 0.1
+        }
+      ]
+    }
+  ],
+  "instrument": "SIMULATED_FIXTURE",
+  "uncertainty_method": "Synthetic absolute envelope; no coverage claim"
+}

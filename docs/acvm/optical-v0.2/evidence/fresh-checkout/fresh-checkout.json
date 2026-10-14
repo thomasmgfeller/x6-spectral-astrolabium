@@ -1,0 +1,199 @@
+{
+  "schema": "acvm.fresh-checkout/1",
+  "status": "PASS_SOFTWARE_WORKFLOW_PHYSICAL_OPEN",
+  "source_commit": "509c994b157508e598a853f868442b542129dfc3",
+  "started_utc": "2026-10-14T21:35:03.863395+00:00",
+  "steps": [
+    {
+      "name": "01-isolated-environment",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "x6.py",
+        "setup",
+        "--profile",
+        "core"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "passed": true,
+      "seconds": 1.912939447996905
+    },
+    {
+      "name": "02-qualification",
+      "command": [
+        "/workspace/scratch/031977d69552/optical-fresh-checkout-v3/.venv/bin/python",
+        "x6.py",
+        "acvm",
+        "qualify",
+        "--output",
+        "/workspace/scratch/031977d69552/optical-fresh-evidence-v3/qualification"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "passed": true,
+      "seconds": 3.9230450870018103
+    },
+    {
+      "name": "03-verify",
+      "command": [
+        "/workspace/scratch/031977d69552/optical-fresh-checkout-v3/.venv/bin/python",
+        "x6.py",
+        "acvm",
+        "verify",
+        "/workspace/scratch/031977d69552/optical-fresh-evidence-v3/qualification/D01"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "passed": true,
+      "seconds": 0.08323440499952994
+    },
+    {
+      "name": "04-export",
+      "command": [
+        "/workspace/scratch/031977d69552/optical-fresh-checkout-v3/.venv/bin/python",
+        "x6.py",
+        "acvm",
+        "export",
+        "/workspace/scratch/031977d69552/optical-fresh-evidence-v3/qualification/D01",
+        "--output",
+        "/workspace/scratch/031977d69552/optical-fresh-evidence-v3/D01.zip"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "passed": true,
+      "seconds": 0.08433385200623889
+    },
+    {
+      "name": "05-import-verify",
+      "command": [
+        "/workspace/scratch/031977d69552/optical-fresh-checkout-v3/.venv/bin/python",
+        "x6.py",
+        "acvm",
+        "verify",
+        "/workspace/scratch/031977d69552/optical-fresh-evidence-v3/D01.zip"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "passed": true,
+      "seconds": 0.08561532299790997
+    },
+    {
+      "name": "06-assess-electrical",
+      "command": [
+        "/workspace/scratch/031977d69552/optical-fresh-checkout-v3/.venv/bin/python",
+        "x6.py",
+        "acvm",
+        "assess-electrical",
+        "experimental/acvm/examples/electrical-simulated.json",
+        "--output",
+        "/workspace/scratch/031977d69552/optical-fresh-evidence-v3/assess-electrical.json"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "passed": true,
+      "seconds": 0.0995965839974815
+    },
+    {
+      "name": "07-assess-optical",
+      "command": [
+        "/workspace/scratch/031977d69552/optical-fresh-checkout-v3/.venv/bin/python",
+        "x6.py",
+        "acvm",
+        "assess-optical",
+        "experimental/acvm/examples/optical-measurements-simulated.json",
+        "--output",
+        "/workspace/scratch/031977d69552/optical-fresh-evidence-v3/assess-optical.json"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "passed": true,
+      "seconds": 0.10474811900348868
+    },
+    {
+      "name": "08-fit-hwp",
+      "command": [
+        "/workspace/scratch/031977d69552/optical-fresh-checkout-v3/.venv/bin/python",
+        "x6.py",
+        "acvm",
+        "fit-hwp",
+        "experimental/acvm/examples/hwp-scan-simulated.json",
+        "--output",
+        "/workspace/scratch/031977d69552/optical-fresh-evidence-v3/fit-hwp.json"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "passed": true,
+      "seconds": 0.09266065400152002
+    },
+    {
+      "name": "09-feedforward-budget",
+      "command": [
+        "/workspace/scratch/031977d69552/optical-fresh-checkout-v3/.venv/bin/python",
+        "x6.py",
+        "acvm",
+        "feedforward-budget",
+        "experimental/acvm/examples/feedforward-assumptions.json",
+        "--output",
+        "/workspace/scratch/031977d69552/optical-fresh-evidence-v3/feedforward-budget.json"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "passed": true,
+      "seconds": 0.08672270399983972
+    },
+    {
+      "name": "10-template-refused",
+      "command": [
+        "/workspace/scratch/031977d69552/optical-fresh-checkout-v3/.venv/bin/python",
+        "x6.py",
+        "acvm",
+        "move",
+        "--profile",
+        "experimental/acvm/examples/loop-profile-template.json",
+        "--port",
+        "/THIS_PORT_MUST_NOT_BE_OPENED",
+        "--degrees",
+        "22.5",
+        "--output",
+        "/workspace/scratch/031977d69552/optical-fresh-evidence-v3/must-not-exist"
+      ],
+      "exit_code": 1,
+      "expected_exit_code": 1,
+      "passed": true,
+      "seconds": 0.1000004030065611
+    },
+    {
+      "name": "11-integration-regressions",
+      "command": [
+        "/workspace/scratch/031977d69552/optical-fresh-checkout-v3/.venv/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests/integration",
+        "-v"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "passed": true,
+      "seconds": 2.013311574999534
+    },
+    {
+      "name": "12-source-inventory",
+      "command": [
+        "/workspace/scratch/031977d69552/optical-fresh-checkout-v3/.venv/bin/python",
+        "tests/python/verify_manifest.py"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "passed": true,
+      "seconds": 0.09054617899528239
+    }
+  ],
+  "initial_checkout_clean": true,
+  "initial_environment_absent": true,
+  "hardware_accessed": false,
+  "physical_qualification": "NOT_PERFORMED",
+  "all_tracked_files_unchanged": true,
+  "finished_utc": "2026-10-14T21:35:12.758063+00:00"
+}
