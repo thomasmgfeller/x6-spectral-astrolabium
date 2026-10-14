@@ -6,6 +6,13 @@ unabhängig geprüften C1-Ende-zu-Ende-Laufs und seiner Manipulationskontrollen.
 Die 35 Fälle enthalten mehrere Parametervarianten; diese werden nicht als
 zusätzliche unabhängige Experimente gezählt.
 
+**Frischer Checkout bestanden:** Commit `509c994`, zwölf von zwölf Schritten,
+isolierte Python-3.12-Umgebung, zusätzlich alle zwölf bestehenden
+Integrationsregressionen. Sämtliche getrackten Dateien blieben unverändert.
+Maßgeblicher Lauf: `evidence/fresh-checkout/fresh-checkout.json` mit allen
+zugehörigen Logs und Ergebnissen. Insgesamt 35 + 27 + 18 + 12 bestandene
+Testfälle; dies sind Softwaretests, keine 92 physischen Versuche.
+
 ## V01–V10
 
 | ID | Ausführung / reproduzierbarer Gegenfall | Status |
