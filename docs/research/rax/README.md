@@ -10,6 +10,8 @@
 
 [RAX-M1-Methodenprüfung v0.1: Datenlecks, Unabhängigkeit und Aussagegrenzen mit reproduzierbaren Gegenbeispielen](method-review-v0.1/README.md)
 
+[RAX-W1-Wolfram-Gegenprüfung v0.1: 44 exakte Matrixfälle, symbolische Bedingungen und Gegenkontrollen](wolfram-check-v0.1/README.md)
+
 Der [gemeinsame lokale Ablauf](../../INTEGRATION.md) installiert die Umgebung
 und führt die vollständige B1/M1-Nachrechnung mit `python3 x6.py run rax` aus.
 Prüfung und ZIP-Export verwenden dieselben Kommandos wie die Signal- und
@@ -110,6 +112,24 @@ Prüfblöcke wurden in einem frischen Verzeichnis reproduziert; ergänzende
 Prüfregeln sind mitgeliefert. Die eingefrorenen Benchmarkquellen bleiben
 unverändert. Externe Begutachtung oder physikalische Nachweise sind damit
 nicht erbracht.
+
+## Exakte Gegenprüfung mit Wolfram RAX-W1
+
+Die [RAX-W1-Gegenprüfung](wolfram-check-v0.1/README.md) rekonstruiert 44 von
+160 veröffentlichten U1-Matrixfällen separat in Wolfram Language. Alle
+Matrix-Hashes und exakten Eigenschaften stimmen mit dem historischen Bericht
+und beiden Python-Rechenwegen überein: zehn gültige starke Reduktionen und
+34 erwartete Verletzungen bei positiver Störstärke. Symbolische Bedingungen,
+verschobene Modelle, ein konstanter Wechselprädiktor und verdeckende Mittelung
+werden mit exakten Gegenkontrollen untersucht.
+
+Der vierseitige Bericht und das vollständige Paket enthalten alle Eingaben und
+Antworten einschliesslich einer bei der Übertragung gekürzten Ausgabe. Die
+vollständigen Teilausgaben sowie acht Manipulationsprüfungen des Abgleichs
+bestanden. W1 ist eine interne nachträgliche Gegenprüfung mit anderem Rechenkern;
+es ersetzt keine externe personelle Begutachtung oder physikalischen Nachweis.
+U1- und B1-Entscheidungen bleiben unverändert. Die separate Offline-Nachprüfung
+ist auf der W1-Seite dokumentiert.
 
 ## Dokumentstand und Lizenz
 
