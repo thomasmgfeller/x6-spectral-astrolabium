@@ -1,0 +1,36 @@
+{
+  "id": "x6-fingerprint-protocol-1",
+  "version": "1.0.0",
+  "status": "EXACT_REFERENCE_AND_PHYSICAL_DESIGN",
+  "scope": "Exact finite causal orders and a proposed mechanical identification experiment are separate comparison domains.",
+  "exact": {
+    "input": "C is the strict transitive causal matrix; C[i,j]=1 iff i precedes j. No reflexive diagonal. Relabelling is gauge; order reversal is not identified.",
+    "operators": {"S": "C+C^T", "A": "C-C^T", "K": "S*A-A*S", "S2": "C^2+(C^2)^T using integer matrix multiplication"},
+    "spectrum": "det(xI-O), all coefficients in descending order, arbitrary precision decimal integer strings, no rounding, unit 1",
+    "endpoints": "[number of minimal elements, number of maximal elements, number of isolated elements]",
+    "directed_degrees": "Lexicographically sorted multiset of (column sum, row sum) pairs of C, flattened. Degrees count all causal relations, not only Hasse links. Pairing and multiplicity retained.",
+    "comparison": "Exact equality of registered complete feature values under identical definitions and context. Hashes bind artifacts; hash inequality is not itself a physical discriminator.",
+    "selection": "Among admissible candidates, use maximum expected eliminated pairs divided by registered cost; deterministic feature-id tie break. If no predictive model exists use a fixed predeclared low-cost order, without claiming optimality.",
+    "demo_selection": "Fixed low-cost order: S; add A,K; add endpoints; add directed degree multiset. Demonstration on a preselected known pair, not an unbiased benchmark of adaptive policy.",
+    "stop": "Separated within registered corpus, no admissible observable, or budget exhausted. Separation does not prove general injectivity or physical equivalence."
+  },
+  "physical_pilot": {
+    "status": "DESIGN_ONLY_NOT_CALIBRATED_NOT_RUN",
+    "profile": "MODAL_2R1F",
+    "response_channels": 2,
+    "force_reference_channels": 1,
+    "coordinate_frame": "Fixture Cartesian metres; axes and force direction fixed before acquisition.",
+    "sample_rate_hz": 25600,
+    "samples_per_channel": 256000,
+    "analysis_band_hz": [20, 2000],
+    "max_interchannel_skew_s": 0.000001,
+    "excitation": "Measured stationary broadband force in the registered linear regime; actuator settings and mounting documented separately.",
+    "estimator": "Demean; Welch Hann, 16384 samples, 50% overlap; one-sided spectra; S_xy = mean(conj(X)*Y); H1_i=S_Fai/S_FF; coherence=|S_Fai|^2/(S_FF*S_aiai). No automatic time alignment.",
+    "independent_records_per_configuration_discovery": 5,
+    "independent_records_per_configuration_confirmation": 5,
+    "quality": "No clipped or missing samples; verified calibration, time skew and anti-alias response; input exceeds a preregistered measured noise-floor margin; confirmation records acquired independently. Coherence >=0.9 is a proposed bin-use gate, not proof of linearity or equivalence.",
+    "comparison": "Register feature distance, practical effect threshold and uncertainty method before confirmation. Only a simultaneous confidence interval for the between-object difference entirely outside the equivalence band supports separation; overlap or non-rejection means unresolved/inconclusive. Unknown uncertainty cannot confirm separation.",
+    "adaptive_budget": "At most 3 additional registered acquisition configurations per object; reserve an untouched confirmation set. Multiple-test error budget across tested observables must be specified before a physical decision.",
+    "not_claimed": ["full mode shape", "physical degeneracy from peaks", "unique dispersion relation", "Lorentzian spacetime validation", "physical equivalence", "industrial-v1 acceptance"]
+  }
+}

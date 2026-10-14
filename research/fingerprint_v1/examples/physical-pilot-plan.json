@@ -1,0 +1,141 @@
+{
+  "schema_version": "x6.fingerprint/1.0.0",
+  "fingerprint_id": "fp-modal-pilot-design",
+  "created_utc": "2026-10-14T14:21:20Z",
+  "subject": {
+    "id": "bench-undesignated",
+    "kind": "PHYSICAL_SYSTEM",
+    "description": "Proposed two-position mechanical response experiment; no hardware or data acquired."
+  },
+  "context": {
+    "protocol_artifact_id": "protocol",
+    "comparison_domain": "mechanical-modal-pilot-design-v1",
+    "model": {
+      "status": "DEFINED",
+      "id": "small-signal-lti-hypothesis",
+      "definition": "Linear time-invariant response is a hypothesis to test within registered amplitudes and mounting."
+    },
+    "state_or_ensemble": {
+      "status": "UNDEFINED",
+      "reason": "Operating point and repeat ensemble must be registered before acquisition."
+    },
+    "geometry": {
+      "status": "UNDEFINED",
+      "reason": "Actual fixture, coordinates and sensor axes must be surveyed."
+    },
+    "scale": "Proposed analysis band 20–2000 Hz; 10 s records.",
+    "invariances": [
+      "Common acquisition time origin; no independent per-channel phase alignment."
+    ]
+  },
+  "acquisition": {
+    "profile": "MODAL_2R1F",
+    "status": "PLANNED",
+    "evidence_kind": "PHYSICAL_MEASUREMENT",
+    "channels": [
+      {
+        "id": "a1",
+        "quantity": "acceleration",
+        "unit": "m/s^2",
+        "sensor_id": "UNASSIGNED",
+        "position_m": [
+          0,
+          0,
+          0
+        ],
+        "axis": "Proposed +z; must be surveyed"
+      },
+      {
+        "id": "a2",
+        "quantity": "acceleration",
+        "unit": "m/s^2",
+        "sensor_id": "UNASSIGNED",
+        "position_m": [
+          0.1,
+          0,
+          0
+        ],
+        "axis": "Proposed +z; must be surveyed"
+      },
+      {
+        "id": "F",
+        "quantity": "force",
+        "unit": "N",
+        "sensor_id": "UNASSIGNED",
+        "position_m": [
+          0.05,
+          0,
+          0
+        ],
+        "axis": "Proposed +z; must be surveyed"
+      }
+    ],
+    "raw_artifact_ids": [],
+    "clock": {
+      "status": "UNDEFINED",
+      "reason": "DAQ hardware not assigned or calibrated; see protocol for design targets."
+    },
+    "quality": {
+      "status": "NOT_RUN",
+      "report_artifact_ids": []
+    }
+  },
+  "layers": {
+    "spectrum": {
+      "status": "NOT_MEASURED",
+      "reason": "Design only; no physical acquisition."
+    },
+    "degeneracy": {
+      "status": "NOT_MEASURED",
+      "reason": "Design only; no physical acquisition."
+    },
+    "sector": {
+      "status": "NOT_MEASURED",
+      "reason": "Design only; no physical acquisition."
+    },
+    "mode_structure": {
+      "status": "NOT_MEASURED",
+      "reason": "Design only; no physical acquisition."
+    },
+    "correlation": {
+      "status": "NOT_MEASURED",
+      "reason": "Design only; no physical acquisition."
+    },
+    "dispersion": {
+      "status": "NOT_MEASURED",
+      "reason": "Design only; no physical acquisition."
+    },
+    "dynamics": {
+      "status": "NOT_MEASURED",
+      "reason": "Design only; no physical acquisition."
+    }
+  },
+  "artifacts": [
+    {
+      "id": "protocol",
+      "path": "research/fingerprint_v1/protocol.json",
+      "sha256": "a511d0b248009d4e02e1d6645367b29d36dd858c92039297c6c157ce1aa4c806",
+      "media_type": "application/json",
+      "role": "protocol"
+    },
+    {
+      "id": "generator",
+      "path": "research/fingerprint_v1/make_examples.py",
+      "sha256": "a24b2478595a976e842d8345beeeb6eac5afc5e6b591e8fc528f2406d7f54998",
+      "media_type": "text/x-python",
+      "role": "code"
+    }
+  ],
+  "provenance": {
+    "code_artifact_ids": [
+      "generator"
+    ],
+    "method_version": "x6-fingerprint-reference-1.0.0",
+    "command": "python research/fingerprint_v1/make_examples.py",
+    "runtime": "Python 3.12.14"
+  },
+  "claim": {
+    "scope": "Proposed acquisition design only. Coordinates are placeholders, not measured geometry.",
+    "physical_equivalence": "NOT_ASSESSED"
+  }
+}

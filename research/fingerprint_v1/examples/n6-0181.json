@@ -1,0 +1,311 @@
+{
+  "schema_version": "x6.fingerprint/1.0.0",
+  "fingerprint_id": "fp-n6-0181",
+  "created_utc": "2026-10-14T14:21:20Z",
+  "subject": {
+    "id": "n6-0181",
+    "kind": "CAUSAL_ORDER",
+    "description": "Exact six-element order from the independently algorithm-checked project atlas."
+  },
+  "context": {
+    "protocol_artifact_id": "protocol",
+    "comparison_domain": "lorentz-n6-order-oriented-v1",
+    "model": {
+      "status": "DEFINED",
+      "id": "finite-poset",
+      "definition": "Strict finite partial order; no field dynamics or continuum identification."
+    },
+    "state_or_ensemble": {
+      "status": "UNDEFINED",
+      "reason": "No physical state specified."
+    },
+    "geometry": {
+      "status": "UNDEFINED",
+      "reason": "No embedding into a continuum assigned."
+    },
+    "scale": "n=6; dimensionless finite order",
+    "invariances": [
+      "Simultaneous permutation of rows and columns of all operators."
+    ]
+  },
+  "acquisition": {
+    "profile": "CAUSAL_ORDER_EXACT",
+    "status": "COMPLETE",
+    "evidence_kind": "EXACT_COMPUTATION",
+    "channels": [],
+    "raw_artifact_ids": [
+      "atlas"
+    ],
+    "clock": {
+      "status": "UNDEFINED",
+      "reason": "Exact computation has no acquisition clock."
+    },
+    "quality": {
+      "status": "PASS",
+      "report_artifact_ids": [
+        "verification"
+      ]
+    }
+  },
+  "layers": {
+    "spectrum": {
+      "status": "AVAILABLE",
+      "features": [
+        {
+          "id": "spectrum.S",
+          "kind": "operator_polynomial",
+          "definition": "Complete monic det(xI-S), as defined in protocol.exact.operators.",
+          "unit": "1",
+          "evidence_kind": "EXACT_COMPUTATION",
+          "source_ids": [
+            "atlas",
+            "protocol"
+          ],
+          "depends_on": [],
+          "assumptions": [
+            "Strict causal relation; time orientation retained."
+          ],
+          "uncertainty": {
+            "kind": "EXACT"
+          },
+          "value": {
+            "format": "INTEGER_POLYNOMIAL",
+            "operator_id": "S",
+            "dimension": 6,
+            "coefficient_order": "DESCENDING",
+            "coefficients": [
+              "1",
+              "0",
+              "-5",
+              "0",
+              "4",
+              "0",
+              "0"
+            ]
+          }
+        },
+        {
+          "id": "spectrum.A",
+          "kind": "operator_polynomial",
+          "definition": "Complete monic det(xI-A), as defined in protocol.exact.operators.",
+          "unit": "1",
+          "evidence_kind": "EXACT_COMPUTATION",
+          "source_ids": [
+            "atlas",
+            "protocol"
+          ],
+          "depends_on": [],
+          "assumptions": [
+            "Strict causal relation; time orientation retained."
+          ],
+          "uncertainty": {
+            "kind": "EXACT"
+          },
+          "value": {
+            "format": "INTEGER_POLYNOMIAL",
+            "operator_id": "A",
+            "dimension": 6,
+            "coefficient_order": "DESCENDING",
+            "coefficients": [
+              "1",
+              "0",
+              "5",
+              "0",
+              "4",
+              "0",
+              "0"
+            ]
+          }
+        },
+        {
+          "id": "spectrum.K",
+          "kind": "operator_polynomial",
+          "definition": "Complete monic det(xI-K), as defined in protocol.exact.operators.",
+          "unit": "1",
+          "evidence_kind": "EXACT_COMPUTATION",
+          "source_ids": [
+            "atlas",
+            "protocol"
+          ],
+          "depends_on": [],
+          "assumptions": [
+            "Strict causal relation; time orientation retained."
+          ],
+          "uncertainty": {
+            "kind": "EXACT"
+          },
+          "value": {
+            "format": "INTEGER_POLYNOMIAL",
+            "operator_id": "K",
+            "dimension": 6,
+            "coefficient_order": "DESCENDING",
+            "coefficients": [
+              "1",
+              "0",
+              "-68",
+              "0",
+              "256",
+              "0",
+              "0"
+            ]
+          }
+        }
+      ]
+    },
+    "degeneracy": {
+      "status": "AVAILABLE",
+      "features": [
+        {
+          "id": "degeneracy.encoded",
+          "kind": "multiplicity_encoding",
+          "definition": "Algebraic eigenvalue multiplicities are encoded by the full characteristic polynomials; no new independent evidence.",
+          "unit": "1",
+          "evidence_kind": "EXACT_COMPUTATION",
+          "source_ids": [
+            "atlas",
+            "protocol"
+          ],
+          "depends_on": [
+            "spectrum.S",
+            "spectrum.A",
+            "spectrum.K"
+          ],
+          "assumptions": [
+            "Strict causal relation; time orientation retained."
+          ],
+          "uncertainty": {
+            "kind": "EXACT"
+          },
+          "value": {
+            "format": "CATEGORY",
+            "value": "ENCODED_IN_COMPLETE_CHARACTERISTIC_POLYNOMIALS"
+          }
+        }
+      ]
+    },
+    "sector": {
+      "status": "AVAILABLE",
+      "features": [
+        {
+          "id": "sector.endpoints",
+          "kind": "structural_signature",
+          "definition": "Ordered minimal,maximal,isolated element counts.",
+          "unit": "1",
+          "evidence_kind": "EXACT_COMPUTATION",
+          "source_ids": [
+            "atlas",
+            "protocol"
+          ],
+          "depends_on": [],
+          "assumptions": [
+            "Strict causal relation; time orientation retained."
+          ],
+          "uncertainty": {
+            "kind": "EXACT"
+          },
+          "value": {
+            "format": "INTEGER_VECTOR",
+            "values": [
+              "3",
+              "3",
+              "0"
+            ]
+          }
+        },
+        {
+          "id": "sector.directed_degrees",
+          "kind": "structural_signature",
+          "definition": "Lexicographically sorted (past-size,future-size) pairs, flattened; full causal relation, not Hasse links.",
+          "unit": "1",
+          "evidence_kind": "EXACT_COMPUTATION",
+          "source_ids": [
+            "atlas",
+            "protocol"
+          ],
+          "depends_on": [],
+          "assumptions": [
+            "Strict causal relation; time orientation retained."
+          ],
+          "uncertainty": {
+            "kind": "EXACT"
+          },
+          "value": {
+            "format": "INTEGER_VECTOR",
+            "values": [
+              "0",
+              "1",
+              "0",
+              "2",
+              "0",
+              "2",
+              "1",
+              "0",
+              "2",
+              "0",
+              "2",
+              "0"
+            ]
+          }
+        }
+      ]
+    },
+    "mode_structure": {
+      "status": "NOT_MEASURED",
+      "reason": "No projector or mode-shape comparison has been run for this record."
+    },
+    "correlation": {
+      "status": "NOT_APPLICABLE",
+      "reason": "No field observable and state/ensemble specified for this order-only experiment."
+    },
+    "dispersion": {
+      "status": "NOT_APPLICABLE",
+      "reason": "No momentum, spatial coordinate, embedding or time-translation model specified."
+    },
+    "dynamics": {
+      "status": "NOT_APPLICABLE",
+      "reason": "No evolution law or controlled dynamical probe in this fingerprint."
+    }
+  },
+  "artifacts": [
+    {
+      "id": "protocol",
+      "path": "research/fingerprint_v1/protocol.json",
+      "sha256": "a511d0b248009d4e02e1d6645367b29d36dd858c92039297c6c157ce1aa4c806",
+      "media_type": "application/json",
+      "role": "protocol"
+    },
+    {
+      "id": "atlas",
+      "path": "research/lorentz_n6/results/atlas_n6.json",
+      "sha256": "e77890222a59e50844e9c4b0ab3bc51d0ff2bc349d84dd59d4cb7842db6a1d9b",
+      "media_type": "application/json",
+      "role": "raw"
+    },
+    {
+      "id": "verification",
+      "path": "research/lorentz_n6/results/independent_verification.json",
+      "sha256": "a0fca9b37d6736b594438e1fe06857630052a7cd5c3ec564a96cf7d83a10a107",
+      "media_type": "application/json",
+      "role": "report"
+    },
+    {
+      "id": "generator",
+      "path": "research/fingerprint_v1/make_examples.py",
+      "sha256": "a24b2478595a976e842d8345beeeb6eac5afc5e6b591e8fc528f2406d7f54998",
+      "media_type": "text/x-python",
+      "role": "code"
+    }
+  ],
+  "provenance": {
+    "code_artifact_ids": [
+      "generator"
+    ],
+    "method_version": "x6-fingerprint-reference-1.0.0",
+    "command": "python research/fingerprint_v1/make_examples.py",
+    "runtime": "Python 3.12.14"
+  },
+  "claim": {
+    "scope": "Finite n=6 atlas; exact registered invariants, with multiplicities derived from spectrum. No physical measurement.",
+    "physical_equivalence": "NOT_ASSESSED"
+  }
+}

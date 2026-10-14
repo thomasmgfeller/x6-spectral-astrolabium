@@ -37,6 +37,12 @@ def main():
     # Isolated extensions have explicit inventories; do not weaken the unknown-file
     # check or change the app pin used by the bounded research agents.
     extension_specs = {
+        "FINGERPRINT_SOURCE_MANIFEST.json": (
+            "x6.fingerprint.source-manifest/1",
+            {"research/fingerprint_v1/x6-fingerprint.schema.json",
+             "research/fingerprint_v1/comparison-event.schema.json",
+             "research/fingerprint_v1/validate.py", "research/fingerprint_v1/README.md",
+             "research/fingerprint_v1/tests/test_fingerprint.py", ".github/workflows/x6-fingerprint.yml"}),
         "WORKPACKAGES_SOURCE_MANIFEST.json": (
             "x6.workpackages.source-manifest/1",
             {"research/lorentz_n6/atlas.py", "research/lorentz_n6/verify.py",

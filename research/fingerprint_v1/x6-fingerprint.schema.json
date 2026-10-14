@@ -1,0 +1,1595 @@
+{
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "x6.fingerprint/1.0.0"
+    },
+    "fingerprint_id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]*$"
+    },
+    "created_utc": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "Z$"
+    },
+    "subject": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]*$"
+        },
+        "kind": {
+          "enum": [
+            "CAUSAL_ORDER",
+            "PHYSICAL_SYSTEM",
+            "SIMULATION"
+          ]
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "id",
+        "kind",
+        "description"
+      ],
+      "additionalProperties": false
+    },
+    "context": {
+      "type": "object",
+      "properties": {
+        "protocol_artifact_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]*$"
+        },
+        "comparison_domain": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]*$"
+        },
+        "model": {
+          "$ref": "#/$defs/definition"
+        },
+        "state_or_ensemble": {
+          "$ref": "#/$defs/definition"
+        },
+        "geometry": {
+          "$ref": "#/$defs/definition"
+        },
+        "scale": {
+          "type": "string",
+          "minLength": 1
+        },
+        "invariances": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "protocol_artifact_id",
+        "comparison_domain",
+        "model",
+        "state_or_ensemble",
+        "geometry",
+        "scale",
+        "invariances"
+      ],
+      "additionalProperties": false
+    },
+    "acquisition": {
+      "$ref": "#/$defs/acquisition"
+    },
+    "layers": {
+      "type": "object",
+      "properties": {
+        "spectrum": {
+          "$ref": "#/$defs/spectrum"
+        },
+        "degeneracy": {
+          "$ref": "#/$defs/degeneracy"
+        },
+        "sector": {
+          "$ref": "#/$defs/sector"
+        },
+        "mode_structure": {
+          "$ref": "#/$defs/mode_structure"
+        },
+        "correlation": {
+          "$ref": "#/$defs/correlation"
+        },
+        "dispersion": {
+          "$ref": "#/$defs/dispersion"
+        },
+        "dynamics": {
+          "$ref": "#/$defs/dynamics"
+        }
+      },
+      "required": [
+        "spectrum",
+        "degeneracy",
+        "sector",
+        "mode_structure",
+        "correlation",
+        "dispersion",
+        "dynamics"
+      ],
+      "additionalProperties": false
+    },
+    "artifacts": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/artifact"
+      },
+      "minItems": 1
+    },
+    "provenance": {
+      "type": "object",
+      "properties": {
+        "code_artifact_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]*$"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "method_version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "command": {
+          "type": "string",
+          "minLength": 1
+        },
+        "runtime": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "code_artifact_ids",
+        "method_version",
+        "command",
+        "runtime"
+      ],
+      "additionalProperties": false
+    },
+    "claim": {
+      "type": "object",
+      "properties": {
+        "scope": {
+          "type": "string",
+          "minLength": 1
+        },
+        "physical_equivalence": {
+          "const": "NOT_ASSESSED"
+        }
+      },
+      "required": [
+        "scope",
+        "physical_equivalence"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "schema_version",
+    "fingerprint_id",
+    "created_utc",
+    "subject",
+    "context",
+    "acquisition",
+    "layers",
+    "artifacts",
+    "provenance",
+    "claim"
+  ],
+  "additionalProperties": false,
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "acquisition": {
+            "properties": {
+              "status": {
+                "const": "PLANNED"
+              }
+            }
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "layers": {
+            "properties": {
+              "spectrum": {
+                "properties": {
+                  "status": {
+                    "enum": [
+                      "NOT_MEASURED",
+                      "NOT_APPLICABLE"
+                    ]
+                  }
+                }
+              },
+              "degeneracy": {
+                "properties": {
+                  "status": {
+                    "enum": [
+                      "NOT_MEASURED",
+                      "NOT_APPLICABLE"
+                    ]
+                  }
+                }
+              },
+              "sector": {
+                "properties": {
+                  "status": {
+                    "enum": [
+                      "NOT_MEASURED",
+                      "NOT_APPLICABLE"
+                    ]
+                  }
+                }
+              },
+              "mode_structure": {
+                "properties": {
+                  "status": {
+                    "enum": [
+                      "NOT_MEASURED",
+                      "NOT_APPLICABLE"
+                    ]
+                  }
+                }
+              },
+              "correlation": {
+                "properties": {
+                  "status": {
+                    "enum": [
+                      "NOT_MEASURED",
+                      "NOT_APPLICABLE"
+                    ]
+                  }
+                }
+              },
+              "dispersion": {
+                "properties": {
+                  "status": {
+                    "enum": [
+                      "NOT_MEASURED",
+                      "NOT_APPLICABLE"
+                    ]
+                  }
+                }
+              },
+              "dynamics": {
+                "properties": {
+                  "status": {
+                    "enum": [
+                      "NOT_MEASURED",
+                      "NOT_APPLICABLE"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  ],
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:x6:fingerprint:1.0.0",
+  "$defs": {
+    "artifact": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]*$"
+        },
+        "path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "media_type": {
+          "type": "string",
+          "minLength": 1
+        },
+        "role": {
+          "enum": [
+            "protocol",
+            "raw",
+            "code",
+            "derived",
+            "calibration",
+            "report"
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "path",
+        "sha256",
+        "media_type",
+        "role"
+      ],
+      "additionalProperties": false
+    },
+    "definition": {
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "status": {
+              "const": "UNDEFINED"
+            },
+            "reason": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "status",
+            "reason"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "status": {
+              "const": "DEFINED"
+            },
+            "id": {
+              "type": "string",
+              "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]*$"
+            },
+            "definition": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "status",
+            "id",
+            "definition"
+          ],
+          "additionalProperties": false
+        }
+      ]
+    },
+    "uncertainty": {
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "const": "EXACT"
+            }
+          },
+          "required": [
+            "kind"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "const": "BOUNDED"
+            },
+            "absolute_bound": {
+              "type": "number",
+              "minimum": 0
+            },
+            "method": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "kind",
+            "absolute_bound",
+            "method"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "const": "INTERVAL"
+            },
+            "lower": {
+              "type": "number"
+            },
+            "upper": {
+              "type": "number"
+            },
+            "coverage": {
+              "type": "number",
+              "exclusiveMinimum": 0,
+              "exclusiveMaximum": 1
+            },
+            "method": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "kind",
+            "lower",
+            "upper",
+            "coverage",
+            "method"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "const": "ARTIFACT"
+            },
+            "artifact_id": {
+              "type": "string",
+              "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]*$"
+            },
+            "method": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "kind",
+            "artifact_id",
+            "method"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "const": "UNKNOWN"
+            },
+            "reason": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "kind",
+            "reason"
+          ],
+          "additionalProperties": false
+        }
+      ]
+    },
+    "polynomial": {
+      "type": "object",
+      "properties": {
+        "format": {
+          "const": "INTEGER_POLYNOMIAL"
+        },
+        "operator_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]*$"
+        },
+        "dimension": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "coefficient_order": {
+          "const": "DESCENDING"
+        },
+        "coefficients": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^(0|-[1-9][0-9]*|[1-9][0-9]*)$"
+          },
+          "minItems": 2
+        }
+      },
+      "required": [
+        "format",
+        "operator_id",
+        "dimension",
+        "coefficient_order",
+        "coefficients"
+      ],
+      "additionalProperties": false
+    },
+    "integer_vector": {
+      "type": "object",
+      "properties": {
+        "format": {
+          "const": "INTEGER_VECTOR"
+        },
+        "values": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^(0|-[1-9][0-9]*|[1-9][0-9]*)$"
+          },
+          "minItems": 1
+        }
+      },
+      "required": [
+        "format",
+        "values"
+      ],
+      "additionalProperties": false
+    },
+    "scalar": {
+      "type": "object",
+      "properties": {
+        "format": {
+          "const": "SCALAR"
+        },
+        "value": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "format",
+        "value"
+      ],
+      "additionalProperties": false
+    },
+    "rational": {
+      "type": "object",
+      "properties": {
+        "format": {
+          "const": "RATIONAL"
+        },
+        "numerator": {
+          "type": "string",
+          "pattern": "^(0|-[1-9][0-9]*|[1-9][0-9]*)$"
+        },
+        "denominator": {
+          "type": "string",
+          "pattern": "^[1-9][0-9]*$"
+        }
+      },
+      "required": [
+        "format",
+        "numerator",
+        "denominator"
+      ],
+      "additionalProperties": false
+    },
+    "category": {
+      "type": "object",
+      "properties": {
+        "format": {
+          "const": "CATEGORY"
+        },
+        "value": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "format",
+        "value"
+      ],
+      "additionalProperties": false
+    },
+    "series": {
+      "type": "object",
+      "properties": {
+        "format": {
+          "enum": [
+            "REAL_SERIES",
+            "COMPLEX_SERIES"
+          ]
+        },
+        "axis_name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "axis_unit": {
+          "type": "string",
+          "minLength": 1
+        },
+        "axis": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          },
+          "minItems": 1
+        },
+        "real": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          },
+          "minItems": 1
+        },
+        "imaginary": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          },
+          "minItems": 1
+        },
+        "channel_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]*$"
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "format",
+        "axis_name",
+        "axis_unit",
+        "axis",
+        "real",
+        "channel_ids"
+      ],
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "format": {
+                "const": "COMPLEX_SERIES"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "imaginary"
+            ]
+          },
+          "else": {
+            "not": {
+              "required": [
+                "imaginary"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "feature": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]*$"
+        },
+        "kind": {
+          "enum": [
+            "operator_polynomial",
+            "psd",
+            "resonance_frequencies",
+            "multiplicity_encoding",
+            "resolved_multiplicities",
+            "structural_signature",
+            "symmetry_sector",
+            "projector_overlap",
+            "sampled_mode_shape",
+            "subspace_signature",
+            "cross_correlation",
+            "cross_spectrum",
+            "coherence",
+            "state_two_point_function",
+            "dispersion_relation",
+            "transfer_function",
+            "impulse_response",
+            "decay_rates",
+            "quill_response"
+          ]
+        },
+        "definition": {
+          "type": "string",
+          "minLength": 1
+        },
+        "unit": {
+          "type": "string",
+          "minLength": 1
+        },
+        "evidence_kind": {
+          "enum": [
+            "EXACT_COMPUTATION",
+            "NUMERICAL_COMPUTATION",
+            "PHYSICAL_MEASUREMENT",
+            "SYNTHETIC_CONTROL"
+          ]
+        },
+        "source_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]*$"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "depends_on": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]*$"
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "assumptions": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "uncertainty": {
+          "$ref": "#/$defs/uncertainty"
+        },
+        "value": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/polynomial"
+            },
+            {
+              "$ref": "#/$defs/integer_vector"
+            },
+            {
+              "$ref": "#/$defs/scalar"
+            },
+            {
+              "$ref": "#/$defs/rational"
+            },
+            {
+              "$ref": "#/$defs/category"
+            },
+            {
+              "$ref": "#/$defs/series"
+            }
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "kind",
+        "definition",
+        "unit",
+        "evidence_kind",
+        "source_ids",
+        "depends_on",
+        "assumptions",
+        "uncertainty",
+        "value"
+      ],
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "operator_polynomial"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "value": {
+                "$ref": "#/$defs/polynomial"
+              },
+              "unit": {
+                "const": "1"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "multiplicity_encoding"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "value": {
+                "$ref": "#/$defs/category"
+              },
+              "depends_on": {
+                "minItems": 1
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "enum": [
+                  "psd",
+                  "sampled_mode_shape",
+                  "cross_correlation",
+                  "cross_spectrum",
+                  "coherence",
+                  "state_two_point_function",
+                  "dispersion_relation",
+                  "transfer_function",
+                  "impulse_response"
+                ]
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "value": {
+                "$ref": "#/$defs/series"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "evidence_kind": {
+                "const": "EXACT_COMPUTATION"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "uncertainty": {
+                "properties": {
+                  "kind": {
+                    "const": "EXACT"
+                  }
+                }
+              },
+              "value": {
+                "oneOf": [
+                  {
+                    "$ref": "#/$defs/polynomial"
+                  },
+                  {
+                    "$ref": "#/$defs/integer_vector"
+                  },
+                  {
+                    "$ref": "#/$defs/rational"
+                  },
+                  {
+                    "$ref": "#/$defs/category"
+                  }
+                ]
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "uncertainty": {
+                "not": {
+                  "properties": {
+                    "kind": {
+                      "const": "EXACT"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "spectrum": {
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "status": {
+              "const": "AVAILABLE"
+            },
+            "features": {
+              "type": "array",
+              "items": {
+                "allOf": [
+                  {
+                    "$ref": "#/$defs/feature"
+                  },
+                  {
+                    "properties": {
+                      "kind": {
+                        "enum": [
+                          "operator_polynomial",
+                          "psd",
+                          "resonance_frequencies"
+                        ]
+                      }
+                    }
+                  }
+                ]
+              },
+              "minItems": 1
+            }
+          },
+          "required": [
+            "status",
+            "features"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "status": {
+              "enum": [
+                "NOT_MEASURED",
+                "NOT_APPLICABLE",
+                "INVALID"
+              ]
+            },
+            "reason": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "status",
+            "reason"
+          ],
+          "additionalProperties": false
+        }
+      ]
+    },
+    "degeneracy": {
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "status": {
+              "const": "AVAILABLE"
+            },
+            "features": {
+              "type": "array",
+              "items": {
+                "allOf": [
+                  {
+                    "$ref": "#/$defs/feature"
+                  },
+                  {
+                    "properties": {
+                      "kind": {
+                        "enum": [
+                          "multiplicity_encoding",
+                          "resolved_multiplicities"
+                        ]
+                      }
+                    }
+                  }
+                ]
+              },
+              "minItems": 1
+            }
+          },
+          "required": [
+            "status",
+            "features"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "status": {
+              "enum": [
+                "NOT_MEASURED",
+                "NOT_APPLICABLE",
+                "INVALID"
+              ]
+            },
+            "reason": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "status",
+            "reason"
+          ],
+          "additionalProperties": false
+        }
+      ]
+    },
+    "sector": {
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "status": {
+              "const": "AVAILABLE"
+            },
+            "features": {
+              "type": "array",
+              "items": {
+                "allOf": [
+                  {
+                    "$ref": "#/$defs/feature"
+                  },
+                  {
+                    "properties": {
+                      "kind": {
+                        "enum": [
+                          "structural_signature",
+                          "symmetry_sector"
+                        ]
+                      }
+                    }
+                  }
+                ]
+              },
+              "minItems": 1
+            }
+          },
+          "required": [
+            "status",
+            "features"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "status": {
+              "enum": [
+                "NOT_MEASURED",
+                "NOT_APPLICABLE",
+                "INVALID"
+              ]
+            },
+            "reason": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "status",
+            "reason"
+          ],
+          "additionalProperties": false
+        }
+      ]
+    },
+    "mode_structure": {
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "status": {
+              "const": "AVAILABLE"
+            },
+            "features": {
+              "type": "array",
+              "items": {
+                "allOf": [
+                  {
+                    "$ref": "#/$defs/feature"
+                  },
+                  {
+                    "properties": {
+                      "kind": {
+                        "enum": [
+                          "projector_overlap",
+                          "sampled_mode_shape",
+                          "subspace_signature"
+                        ]
+                      }
+                    }
+                  }
+                ]
+              },
+              "minItems": 1
+            }
+          },
+          "required": [
+            "status",
+            "features"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "status": {
+              "enum": [
+                "NOT_MEASURED",
+                "NOT_APPLICABLE",
+                "INVALID"
+              ]
+            },
+            "reason": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "status",
+            "reason"
+          ],
+          "additionalProperties": false
+        }
+      ]
+    },
+    "correlation": {
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "status": {
+              "const": "AVAILABLE"
+            },
+            "features": {
+              "type": "array",
+              "items": {
+                "allOf": [
+                  {
+                    "$ref": "#/$defs/feature"
+                  },
+                  {
+                    "properties": {
+                      "kind": {
+                        "enum": [
+                          "cross_correlation",
+                          "cross_spectrum",
+                          "coherence",
+                          "state_two_point_function"
+                        ]
+                      }
+                    }
+                  }
+                ]
+              },
+              "minItems": 1
+            }
+          },
+          "required": [
+            "status",
+            "features"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "status": {
+              "enum": [
+                "NOT_MEASURED",
+                "NOT_APPLICABLE",
+                "INVALID"
+              ]
+            },
+            "reason": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "status",
+            "reason"
+          ],
+          "additionalProperties": false
+        }
+      ]
+    },
+    "dispersion": {
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "status": {
+              "const": "AVAILABLE"
+            },
+            "features": {
+              "type": "array",
+              "items": {
+                "allOf": [
+                  {
+                    "$ref": "#/$defs/feature"
+                  },
+                  {
+                    "properties": {
+                      "kind": {
+                        "enum": [
+                          "dispersion_relation"
+                        ]
+                      }
+                    }
+                  }
+                ]
+              },
+              "minItems": 1
+            }
+          },
+          "required": [
+            "status",
+            "features"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "status": {
+              "enum": [
+                "NOT_MEASURED",
+                "NOT_APPLICABLE",
+                "INVALID"
+              ]
+            },
+            "reason": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "status",
+            "reason"
+          ],
+          "additionalProperties": false
+        }
+      ]
+    },
+    "dynamics": {
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "status": {
+              "const": "AVAILABLE"
+            },
+            "features": {
+              "type": "array",
+              "items": {
+                "allOf": [
+                  {
+                    "$ref": "#/$defs/feature"
+                  },
+                  {
+                    "properties": {
+                      "kind": {
+                        "enum": [
+                          "transfer_function",
+                          "impulse_response",
+                          "decay_rates",
+                          "quill_response"
+                        ]
+                      }
+                    }
+                  }
+                ]
+              },
+              "minItems": 1
+            }
+          },
+          "required": [
+            "status",
+            "features"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "status": {
+              "enum": [
+                "NOT_MEASURED",
+                "NOT_APPLICABLE",
+                "INVALID"
+              ]
+            },
+            "reason": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "status",
+            "reason"
+          ],
+          "additionalProperties": false
+        }
+      ]
+    },
+    "channel": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]*$"
+        },
+        "quantity": {
+          "type": "string",
+          "minLength": 1
+        },
+        "unit": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sensor_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "position_m": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          },
+          "minItems": 3,
+          "maxItems": 3
+        },
+        "axis": {
+          "type": "string",
+          "minLength": 1
+        },
+        "calibration_artifact_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]*$"
+        }
+      },
+      "required": [
+        "id",
+        "quantity",
+        "unit",
+        "sensor_id",
+        "position_m",
+        "axis"
+      ],
+      "additionalProperties": false
+    },
+    "acquisition": {
+      "type": "object",
+      "properties": {
+        "profile": {
+          "enum": [
+            "CAUSAL_ORDER_EXACT",
+            "SIGNAL_SINGLE_POINT",
+            "MODAL_2R1F",
+            "DISPERSION_SPATIAL",
+            "MODEL_SIMULATION"
+          ]
+        },
+        "status": {
+          "enum": [
+            "PLANNED",
+            "COMPLETE"
+          ]
+        },
+        "evidence_kind": {
+          "enum": [
+            "EXACT_COMPUTATION",
+            "NUMERICAL_COMPUTATION",
+            "PHYSICAL_MEASUREMENT",
+            "SYNTHETIC_CONTROL"
+          ]
+        },
+        "channels": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/channel"
+          },
+          "minItems": 0
+        },
+        "raw_artifact_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]*$"
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "clock": {
+          "oneOf": [
+            {
+              "type": "object",
+              "properties": {
+                "status": {
+                  "const": "UNDEFINED"
+                },
+                "reason": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "required": [
+                "status",
+                "reason"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "type": "object",
+              "properties": {
+                "status": {
+                  "const": "DEFINED"
+                },
+                "sample_rate_hz": {
+                  "type": "number",
+                  "exclusiveMinimum": 0
+                },
+                "samples_per_channel": {
+                  "type": "integer",
+                  "minimum": 1
+                },
+                "synchronization": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "max_skew_s": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "anti_alias_filter": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "required": [
+                "status",
+                "sample_rate_hz",
+                "samples_per_channel",
+                "synchronization",
+                "max_skew_s",
+                "anti_alias_filter"
+              ],
+              "additionalProperties": false
+            }
+          ]
+        },
+        "quality": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "enum": [
+                "NOT_RUN",
+                "PASS",
+                "FAIL"
+              ]
+            },
+            "report_artifact_ids": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]*$"
+              },
+              "minItems": 0,
+              "uniqueItems": true
+            }
+          },
+          "required": [
+            "status",
+            "report_artifact_ids"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "profile",
+        "status",
+        "evidence_kind",
+        "channels",
+        "raw_artifact_ids",
+        "clock",
+        "quality"
+      ],
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "profile": {
+                "const": "CAUSAL_ORDER_EXACT"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "evidence_kind": {
+                "const": "EXACT_COMPUTATION"
+              },
+              "channels": {
+                "maxItems": 0
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "status": {
+                "const": "COMPLETE"
+              },
+              "evidence_kind": {
+                "const": "PHYSICAL_MEASUREMENT"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "channels": {
+                "minItems": 1,
+                "items": {
+                  "required": [
+                    "calibration_artifact_id"
+                  ]
+                }
+              },
+              "raw_artifact_ids": {
+                "minItems": 1
+              },
+              "clock": {
+                "properties": {
+                  "status": {
+                    "const": "DEFINED"
+                  }
+                }
+              },
+              "quality": {
+                "properties": {
+                  "status": {
+                    "enum": [
+                      "PASS",
+                      "FAIL"
+                    ]
+                  },
+                  "report_artifact_ids": {
+                    "minItems": 1
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "status": {
+                "const": "COMPLETE"
+              },
+              "profile": {
+                "const": "MODAL_2R1F"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "channels": {
+                "minItems": 3
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "title": "X6 multilayer fingerprint v1.0.0",
+  "$comment": "Run validate.py as well: cross-references, array dimensions, evidence constraints and local hashes are semantic checks. Schema validity does not certify a physical claim."
+}

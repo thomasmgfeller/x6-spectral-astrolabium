@@ -1,0 +1,75 @@
+{
+  "schema_version": "x6.comparison-event/1.0.0",
+  "event_id": "n6-0073-vs-0181",
+  "fingerprints": [
+    {
+      "id": "fp-n6-0073",
+      "path": "research/fingerprint_v1/examples/n6-0073.json",
+      "sha256": "977a9ea7f28e07a632460c7e99dcdc4f9bf7afb46667d594bd4b851036479f26"
+    },
+    {
+      "id": "fp-n6-0181",
+      "path": "research/fingerprint_v1/examples/n6-0181.json",
+      "sha256": "b89884220f368fa4357cd27a53768a8715239d30354854506d9868f818516120"
+    }
+  ],
+  "comparison_domain": "lorentz-n6-order-oriented-v1",
+  "protocol_sha256": "a511d0b248009d4e02e1d6645367b29d36dd858c92039297c6c157ce1aa4c806",
+  "scope": "This pair of distinct atlas orders; no universal uniqueness claim.",
+  "comparison_kind": "EXACT",
+  "steps": [
+    {
+      "index": 0,
+      "feature_ids": [
+        "spectrum.S"
+      ],
+      "outcome": "EXACT_COLLISION",
+      "witness_feature_ids": [],
+      "reason": "Identical exact values for all accumulated observables.",
+      "selection_basis": "Predeclared low-cost demonstration order; no learned information-gain claim."
+    },
+    {
+      "index": 1,
+      "feature_ids": [
+        "spectrum.S",
+        "spectrum.A",
+        "spectrum.K"
+      ],
+      "outcome": "EXACT_COLLISION",
+      "witness_feature_ids": [],
+      "reason": "Identical exact values for all accumulated observables.",
+      "selection_basis": "Predeclared low-cost demonstration order; no learned information-gain claim."
+    },
+    {
+      "index": 2,
+      "feature_ids": [
+        "spectrum.S",
+        "spectrum.A",
+        "spectrum.K",
+        "sector.endpoints"
+      ],
+      "outcome": "EXACT_COLLISION",
+      "witness_feature_ids": [],
+      "reason": "Identical exact values for all accumulated observables.",
+      "selection_basis": "Predeclared low-cost demonstration order; no learned information-gain claim."
+    },
+    {
+      "index": 3,
+      "feature_ids": [
+        "spectrum.S",
+        "spectrum.A",
+        "spectrum.K",
+        "sector.endpoints",
+        "sector.directed_degrees"
+      ],
+      "outcome": "SEPARATED",
+      "witness_feature_ids": [
+        "sector.directed_degrees"
+      ],
+      "reason": "Different paired degree multisets.",
+      "selection_basis": "Predeclared low-cost demonstration order; no learned information-gain claim."
+    }
+  ],
+  "stop_reason": "SEPARATED_WITHIN_SCOPE",
+  "physical_equivalence": "NOT_ASSESSED"
+}

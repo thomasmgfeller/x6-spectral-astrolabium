@@ -1,0 +1,141 @@
+{
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "x6.comparison-event/1.0.0"
+    },
+    "event_id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]*$"
+    },
+    "fingerprints": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]*$"
+          },
+          "path": {
+            "type": "string",
+            "minLength": 1
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          }
+        },
+        "required": [
+          "id",
+          "path",
+          "sha256"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 2,
+      "maxItems": 2
+    },
+    "comparison_domain": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]*$"
+    },
+    "protocol_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "scope": {
+      "type": "string",
+      "minLength": 1
+    },
+    "comparison_kind": {
+      "enum": [
+        "EXACT",
+        "EMPIRICAL"
+      ]
+    },
+    "steps": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "index": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "feature_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]*$"
+            },
+            "minItems": 1,
+            "uniqueItems": true
+          },
+          "outcome": {
+            "enum": [
+              "EXACT_COLLISION",
+              "OBSERVATIONALLY_UNRESOLVED",
+              "SEPARATED",
+              "INCONCLUSIVE"
+            ]
+          },
+          "witness_feature_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]*$"
+            },
+            "minItems": 0,
+            "uniqueItems": true
+          },
+          "reason": {
+            "type": "string",
+            "minLength": 1
+          },
+          "selection_basis": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "index",
+          "feature_ids",
+          "outcome",
+          "witness_feature_ids",
+          "reason",
+          "selection_basis"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1
+    },
+    "stop_reason": {
+      "enum": [
+        "SEPARATED_WITHIN_SCOPE",
+        "BUDGET_EXHAUSTED",
+        "NO_ADMISSIBLE_OBSERVABLE",
+        "NEEDS_CONFIRMATION"
+      ]
+    },
+    "physical_equivalence": {
+      "const": "NOT_ASSESSED"
+    }
+  },
+  "required": [
+    "schema_version",
+    "event_id",
+    "fingerprints",
+    "comparison_domain",
+    "protocol_sha256",
+    "scope",
+    "comparison_kind",
+    "steps",
+    "stop_reason",
+    "physical_equivalence"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:x6:comparison-event:1.0.0",
+  "title": "X6 comparison event"
+}
