@@ -68,9 +68,13 @@ auf einen realen Sagnac-Aufbau behauptet.
 
 `python3 tests/acvm/qualify_checkout.py --output /absoluter/neuer/pfad`
 fordert einen sauberen Checkout ohne `.venv`. Es erstellt eine isolierte
-Umgebung und führt zwölf Schritte einschließlich Qualifikation, Export/Import,
+Umgebung mit `x6.py setup --profile core` und führt zwölf Schritte einschließlich Qualifikation, Export/Import,
 Messauswertern, Vorlagenverweigerung, bestehenden Integrationsregressionen und
 Quellinventar aus. Protokoll und Quellcommit stehen im beigefügten Nachweis.
+Der erste Checkout-Versuch deckte eine fehlende X6-Profilregistrierung im neuen
+Prüfskript auf: Ein bloßes `python -m venv` genügte den bestehenden
+Integrationsregressionen nicht. Der Ablauf wurde auf den offiziellen Setup-Pfad
+korrigiert; der fehlgeschlagene Versuch wird separat erhalten.
 
 Nicht ausgeführt: realer Motorlauf, PM100D-USB/VISA-Verbindung, automatisierter
 Kalibrierscan, Pico-SDK-Zielbuild, unabhängige elektrische Aufnahme, optischer

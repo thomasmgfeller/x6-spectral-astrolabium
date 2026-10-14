@@ -45,7 +45,7 @@ def main():
         if not passed:
             raise RuntimeError(name+' failed')
     try:
-        run('01-isolated-environment', ['-m', 'venv', '.venv'])
+        run('01-isolated-environment', ['x6.py', 'setup', '--profile', 'core'])
         if 'include-system-site-packages = false' not in (ROOT/'.venv/pyvenv.cfg').read_text().lower():
             raise ValueError('Venv inherits global packages')
         run('02-qualification', ['x6.py', 'acvm', 'qualify', '--output', output/'qualification'])

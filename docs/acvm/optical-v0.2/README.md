@@ -19,6 +19,9 @@ das veröffentlichte C1-Paket bleiben historische, unveränderte Dokumente.
 Linux, Python 3.12 und `g++` (C++17) genügen für die ACVM-Softwareprüfung.
 Keine zusätzlichen Python-Pakete und kein angeschlossenes Gerät erforderlich.
 Die bestehende `setup --profile core`-Umgebung kann verwendet werden.
+Der vollständige Checkout-Test einschließlich bestehender X6-Integrationsmodule
+benötigt zusätzlich Git und Node.js ab Version 22 und verwendet genau diesen
+Setup-Befehl; ein manuell erzeugtes venv ersetzt dessen Profilregistrierung nicht.
 
 ```sh
 python3 x6.py acvm qualify --output runs/acvm-v02
