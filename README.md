@@ -10,6 +10,20 @@ This repository publishes the actual **X6 v4.2 RC** browser application, alongsi
 
 Open `app/index.html` in a browser, or run `python -m http.server 8000` and visit `http://localhost:8000/app/`.
 
+## X6 Edge Reference — experimental development perspective
+
+[Concept, roadmap and evidence status](docs/perspectives/edge-platform/README.md)
+introduce X6 as one reference application for a proposed generic Edge Application
+Platform. The [local Node.js adapter](experimental/edge_reference/README.md)
+executes a bounded synthetic signal job, exports its evidence and verifies it by
+computational replay. The existing Signal Lab kernel is reused unchanged.
+
+Further development starts on
+[`research/x6-edge-reference`](https://github.com/thomasmgfeller/x6-spectral-astrolabium/tree/research/x6-edge-reference).
+This is an experimental software baseline: hardware adapters, a generic scheduler,
+cross-architecture qualification, measured savings and security profiles remain
+open. Read the [executed checks](docs/perspectives/edge-platform/VALIDATION.md).
+
 ## Signal Validation Lab
 
 Open the [Signal Validation Lab](https://thomasmgfeller.github.io/x6-spectral-astrolabium/app/signal-lab.html)

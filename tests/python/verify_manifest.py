@@ -37,6 +37,10 @@ def main():
     # Isolated extensions have explicit inventories; do not weaken the unknown-file
     # check or change the app pin used by the bounded research agents.
     extension_specs = {
+        "EDGE_REFERENCE_SOURCE_MANIFEST.json": (
+            "x6.edge-reference.source-manifest/1",
+            {"experimental/edge_reference/runner.cjs", "experimental/edge_reference/test_runner.cjs",
+             "docs/perspectives/edge-platform/README.md", ".github/workflows/x6-edge-reference.yml"}),
         "LICENSE_SOURCE_MANIFEST.json": (
             "x6.license.source-manifest/1",
             {"CITATION.cff", "CONTRIBUTING.md", "docs/LICENSE_OPTIONS.md", "LICENSE",

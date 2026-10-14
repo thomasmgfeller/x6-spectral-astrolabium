@@ -1,0 +1,1393 @@
+{
+  "schema": "x6-signal-independent-validation-1",
+  "status": "PASS",
+  "scope": "Numerical software validation against NumPy/SciPy and unchanged original X6 filter; synthetic fixtures only",
+  "versions": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "node": "v24.19.0"
+  },
+  "hashes": {
+    "core_sha256": "df6755fc89f2d7ad324435f47ceec2b00647910810b69008c305b0fa5682691e",
+    "original_filter_sha256": "c87f5093f397ef9370bddba2f9c4c497591af8c4248682f10e19cb86aa870789",
+    "application_sha256": "ff60231155f0fc869564ec0eb24c87568943cdd96e154094ae9abd9877bd7ff8",
+    "oracle_sha256": "7c066eaaec37035f6aa068cf1595c927fbf5cd3d3eddde01a0c38571d0fe08ff",
+    "fixture_sha256": "aacc934cfbd8ed95cc9c670aaac6e49573f2c04b4efed3a255a087afa03f05c0",
+    "requirements_sha256": "8b8ed57f6334aa321c72f76b29637397cbd9aa54340a82585879e2f78d8355e7"
+  },
+  "tolerances": {
+    "array_rtol": 2e-10,
+    "array_atol": 2e-12,
+    "psd_rtol": 2e-09,
+    "psd_atol": 2e-12,
+    "metric_rtol": 2e-09,
+    "metric_atol": 2e-11,
+    "phase_atol_degrees": 2e-06,
+    "coherence_atol": 2e-08
+  },
+  "diagnostic_eligibility": {
+    "individual_psd_peak_ratio": 1e-12,
+    "pairwise_psd_peak_ratio": 1e-24,
+    "centered_norm_ratio": 1e-12,
+    "comparison": "strictly greater than; declared software policy, not a physical noise floor"
+  },
+  "run_fixtures": 16,
+  "evaluation_fixtures": 23,
+  "passed": 198,
+  "total": 198,
+  "checks": [
+    {
+      "name": "run/default/waveform_pipeline_baselines_original_x6",
+      "status": "PASS",
+      "samples": 1024,
+      "original_x6_max_abs_error": 0.0
+    },
+    {
+      "name": "run/default/identity/scipy_spectrum",
+      "status": "PASS",
+      "reference_psd_max_abs_error": 1.734723475976807e-17,
+      "output_psd_max_abs_error": 2.0816681711721685e-17,
+      "cross_real_max_abs_error": 2.0816681711721685e-17,
+      "cross_imag_max_abs_error": 8.673617379884035e-19,
+      "scaled_spectral_max_abs_error": 7.771561172376096e-16,
+      "cross_bins_compared": 9
+    },
+    {
+      "name": "run/default/identity/metrics",
+      "status": "PASS"
+    },
+    {
+      "name": "run/default/moving_average/scipy_spectrum",
+      "status": "PASS",
+      "reference_psd_max_abs_error": 1.734723475976807e-17,
+      "output_psd_max_abs_error": 1.0408340855860843e-17,
+      "cross_real_max_abs_error": 1.734723475976807e-17,
+      "cross_imag_max_abs_error": 8.673617379884035e-19,
+      "scaled_spectral_max_abs_error": 7.771561172376096e-16,
+      "cross_bins_compared": 9
+    },
+    {
+      "name": "run/default/moving_average/metrics",
+      "status": "PASS"
+    },
+    {
+      "name": "run/default/fft_lowpass/scipy_spectrum",
+      "status": "PASS",
+      "reference_psd_max_abs_error": 1.734723475976807e-17,
+      "output_psd_max_abs_error": 1.734723475976807e-17,
+      "cross_real_max_abs_error": 2.42861286636753e-17,
+      "cross_imag_max_abs_error": 5.421010862427522e-19,
+      "scaled_spectral_max_abs_error": 8.881784197001252e-16,
+      "cross_bins_compared": 9
+    },
+    {
+      "name": "run/default/fft_lowpass/metrics",
+      "status": "PASS"
+    },
+    {
+      "name": "run/default/x6_phase/scipy_spectrum",
+      "status": "PASS",
+      "reference_psd_max_abs_error": 1.734723475976807e-17,
+      "output_psd_max_abs_error": 7.453889935837843e-20,
+      "cross_real_max_abs_error": 1.179512533903776e-19,
+      "cross_imag_max_abs_error": 9.534317554913534e-20,
+      "scaled_spectral_max_abs_error": 2.4424906541753444e-15,
+      "cross_bins_compared": 9
+    },
+    {
+      "name": "run/default/x6_phase/metrics",
+      "status": "PASS"
+    },
+    {
+      "name": "run/default_repeat/waveform_pipeline_baselines_original_x6",
+      "status": "PASS",
+      "samples": 1024,
+      "original_x6_max_abs_error": 0.0
+    },
+    {
+      "name": "run/default_repeat/identity/scipy_spectrum",
+      "status": "PASS",
+      "reference_psd_max_abs_error": 1.734723475976807e-17,
+      "output_psd_max_abs_error": 2.0816681711721685e-17,
+      "cross_real_max_abs_error": 2.0816681711721685e-17,
+      "cross_imag_max_abs_error": 8.673617379884035e-19,
+      "scaled_spectral_max_abs_error": 7.771561172376096e-16,
+      "cross_bins_compared": 9
+    },
+    {
+      "name": "run/default_repeat/identity/metrics",
+      "status": "PASS"
+    },
+    {
+      "name": "run/default_repeat/moving_average/scipy_spectrum",
+      "status": "PASS",
+      "reference_psd_max_abs_error": 1.734723475976807e-17,
+      "output_psd_max_abs_error": 1.0408340855860843e-17,
+      "cross_real_max_abs_error": 1.734723475976807e-17,
+      "cross_imag_max_abs_error": 8.673617379884035e-19,
+      "scaled_spectral_max_abs_error": 7.771561172376096e-16,
+      "cross_bins_compared": 9
+    },
+    {
+      "name": "run/default_repeat/moving_average/metrics",
+      "status": "PASS"
+    },
+    {
+      "name": "run/default_repeat/fft_lowpass/scipy_spectrum",
+      "status": "PASS",
+      "reference_psd_max_abs_error": 1.734723475976807e-17,
+      "output_psd_max_abs_error": 1.734723475976807e-17,
+      "cross_real_max_abs_error": 2.42861286636753e-17,
+      "cross_imag_max_abs_error": 5.421010862427522e-19,
+      "scaled_spectral_max_abs_error": 8.881784197001252e-16,
+      "cross_bins_compared": 9
+    },
+    {
+      "name": "run/default_repeat/fft_lowpass/metrics",
+      "status": "PASS"
+    },
+    {
+      "name": "run/default_repeat/x6_phase/scipy_spectrum",
+      "status": "PASS",
+      "reference_psd_max_abs_error": 1.734723475976807e-17,
+      "output_psd_max_abs_error": 7.453889935837843e-20,
+      "cross_real_max_abs_error": 1.179512533903776e-19,
+      "cross_imag_max_abs_error": 9.534317554913534e-20,
+      "scaled_spectral_max_abs_error": 2.4424906541753444e-15,
+      "cross_bins_compared": 9
+    },
+    {
+      "name": "run/default_repeat/x6_phase/metrics",
+      "status": "PASS"
+    },
+    {
+      "name": "run/different_seed/waveform_pipeline_baselines_original_x6",
+      "status": "PASS",
+      "samples": 1024,
+      "original_x6_max_abs_error": 0.0
+    },
+    {
+      "name": "run/different_seed/identity/scipy_spectrum",
+      "status": "PASS",
+      "reference_psd_max_abs_error": 1.734723475976807e-17,
+      "output_psd_max_abs_error": 2.0816681711721685e-17,
+      "cross_real_max_abs_error": 2.7755575615628914e-17,
+      "cross_imag_max_abs_error": 7.589415207398531e-19,
+      "scaled_spectral_max_abs_error": 9.992007221626409e-16,
+      "cross_bins_compared": 9
+    },
+    {
+      "name": "run/different_seed/identity/metrics",
+      "status": "PASS"
+    },
+    {
+      "name": "run/different_seed/moving_average/scipy_spectrum",
+      "status": "PASS",
+      "reference_psd_max_abs_error": 1.734723475976807e-17,
+      "output_psd_max_abs_error": 1.734723475976807e-17,
+      "cross_real_max_abs_error": 1.734723475976807e-17,
+      "cross_imag_max_abs_error": 4.336808689942018e-19,
+      "scaled_spectral_max_abs_error": 8.881784197001252e-16,
+      "cross_bins_compared": 9
+    },
+    {
+      "name": "run/different_seed/moving_average/metrics",
+      "status": "PASS"
+    },
+    {
+      "name": "run/different_seed/fft_lowpass/scipy_spectrum",
+      "status": "PASS",
+      "reference_psd_max_abs_error": 1.734723475976807e-17,
+      "output_psd_max_abs_error": 2.42861286636753e-17,
+      "cross_real_max_abs_error": 2.0816681711721685e-17,
+      "cross_imag_max_abs_error": 3.5236570605778894e-19,
+      "scaled_spectral_max_abs_error": 8.881784197001252e-16,
+      "cross_bins_compared": 9
+    },
+    {
+      "name": "run/different_seed/fft_lowpass/metrics",
+      "status": "PASS"
+    },
+    {
+      "name": "run/different_seed/x6_phase/scipy_spectrum",
+      "status": "PASS",
+      "reference_psd_max_abs_error": 1.734723475976807e-17,
+      "output_psd_max_abs_error": 1.3552527156068805e-19,
+      "cross_real_max_abs_error": 1.216737582898207e-19,
+      "cross_imag_max_abs_error": 1.2390503614954425e-19,
+      "scaled_spectral_max_abs_error": 1.9984014443252818e-15,
+      "cross_bins_compared": 9
+    },
+    {
+      "name": "run/different_seed/x6_phase/metrics",
+      "status": "PASS"
+    },
+    {
+      "name": "run/multitone_clean/waveform_pipeline_baselines_original_x6",
+      "status": "PASS",
+      "samples": 1024,
+      "original_x6_max_abs_error": 0.0
+    },
+    {
+      "name": "run/multitone_clean/identity/scipy_spectrum",
+      "status": "PASS",
+      "reference_psd_max_abs_error": 1.734723475976807e-17,
+      "output_psd_max_abs_error": 1.734723475976807e-17,
+      "cross_real_max_abs_error": 1.734723475976807e-17,
+      "cross_imag_max_abs_error": 9.432264803350224e-34,
+      "scaled_spectral_max_abs_error": 6.661338147750939e-16,
+      "cross_bins_compared": 9
+    },
+    {
+      "name": "run/multitone_clean/identity/metrics",
+      "status": "PASS"
+    },
+    {
+      "name": "run/multitone_clean/moving_average/scipy_spectrum",
+      "status": "PASS",
+      "reference_psd_max_abs_error": 1.734723475976807e-17,
+      "output_psd_max_abs_error": 1.0408340855860843e-17,
+      "cross_real_max_abs_error": 1.734723475976807e-17,
+      "cross_imag_max_abs_error": 2.814862537293451e-19,
+      "scaled_spectral_max_abs_error": 6.661338147750939e-16,
+      "cross_bins_compared": 9
+    },
+    {
+      "name": "run/multitone_clean/moving_average/metrics",
+      "status": "PASS"
+    },
+    {
+      "name": "run/multitone_clean/fft_lowpass/scipy_spectrum",
+      "status": "PASS",
+      "reference_psd_max_abs_error": 1.734723475976807e-17,
+      "output_psd_max_abs_error": 1.734723475976807e-17,
+      "cross_real_max_abs_error": 2.0816681711721685e-17,
+      "cross_imag_max_abs_error": 1.3551043316044776e-19,
+      "scaled_spectral_max_abs_error": 6.661338147750939e-16,
+      "cross_bins_compared": 9
+    },
+    {
+      "name": "run/multitone_clean/fft_lowpass/metrics",
+      "status": "PASS"
+    },
+    {
+      "name": "run/multitone_clean/x6_phase/scipy_spectrum",
+      "status": "PASS",
+      "reference_psd_max_abs_error": 1.734723475976807e-17,
+      "output_psd_max_abs_error": 1.642146637880645e-46,
+      "cross_real_max_abs_error": 1.0145691741947163e-33,
+      "cross_imag_max_abs_error": 2.541171597248904e-33,
+      "scaled_spectral_max_abs_error": 3.552713678800501e-15,
+      "cross_bins_compared": 0
+    },
+    {
+      "name": "run/multitone_clean/x6_phase/metrics",
+      "status": "PASS"
+    },
+    {
+      "name": "run/sine_phase_removed/waveform_pipeline_baselines_original_x6",
+      "status": "PASS",
+      "samples": 1024,
+      "original_x6_max_abs_error": 0.0
+    },
+    {
+      "name": "run/sine_phase_removed/identity/scipy_spectrum",
+      "status": "PASS",
+      "reference_psd_max_abs_error": 6.938893903907228e-17,
+      "output_psd_max_abs_error": 6.938893903907228e-17,
+      "cross_real_max_abs_error": 6.938893903907228e-17,
+      "cross_imag_max_abs_error": 5.50079849950487e-33,
+      "scaled_spectral_max_abs_error": 8.881784197001252e-16,
+      "cross_bins_compared": 3
+    },
+    {
+      "name": "run/sine_phase_removed/identity/metrics",
+      "status": "PASS"
+    },
+    {
+      "name": "run/sine_phase_removed/moving_average/scipy_spectrum",
+      "status": "PASS",
+      "reference_psd_max_abs_error": 6.938893903907228e-17,
+      "output_psd_max_abs_error": 4.163336342344337e-17,
+      "cross_real_max_abs_error": 6.938893903907228e-17,
+      "cross_imag_max_abs_error": 1.9392753152938202e-18,
+      "scaled_spectral_max_abs_error": 8.881784197001252e-16,
+      "cross_bins_compared": 3
+    },
+    {
+      "name": "run/sine_phase_removed/moving_average/metrics",
+      "status": "PASS"
+    },
+    {
+      "name": "run/sine_phase_removed/fft_lowpass/scipy_spectrum",
+      "status": "PASS",
+      "reference_psd_max_abs_error": 6.938893903907228e-17,
+      "output_psd_max_abs_error": 4.163336342344337e-17,
+      "cross_real_max_abs_error": 6.938893903907228e-17,
+      "cross_imag_max_abs_error": 4.268479593015608e-19,
+      "scaled_spectral_max_abs_error": 8.881784197001252e-16,
+      "cross_bins_compared": 3
+    },
+    {
+      "name": "run/sine_phase_removed/fft_lowpass/metrics",
+      "status": "PASS"
+    },
+    {
+      "name": "run/sine_phase_removed/x6_phase/scipy_spectrum",
+      "status": "PASS",
+      "reference_psd_max_abs_error": 6.938893903907228e-17,
+      "output_psd_max_abs_error": 4.816963471116559e-46,
+      "cross_real_max_abs_error": 7.336495342352061e-34,
+      "cross_imag_max_abs_error": 1.4444474582904269e-33,
+      "scaled_spectral_max_abs_error": 3.552713678800501e-15,
+      "cross_bins_compared": 0
+    },
+    {
+      "name": "run/sine_phase_removed/x6_phase/metrics",
+      "status": "PASS"
+    },
+    {
+      "name": "run/sine_gain_phase_delay/waveform_pipeline_baselines_original_x6",
+      "status": "PASS",
+      "samples": 1024,
+      "original_x6_max_abs_error": 0.0
+    },
+    {
+      "name": "run/sine_gain_phase_delay/identity/scipy_spectrum",
+      "status": "PASS",
+      "reference_psd_max_abs_error": 5.551115123125783e-17,
+      "output_psd_max_abs_error": 9.71445146547012e-17,
+      "cross_real_max_abs_error": 6.938893903907228e-17,
+      "cross_imag_max_abs_error": 2.7755575615628914e-17,
+      "scaled_spectral_max_abs_error": 8.881784197001252e-16,
+      "cross_bins_compared": 21
+    },
+    {
+      "name": "run/sine_gain_phase_delay/identity/metrics",
+      "status": "PASS"
+    },
+    {
+      "name": "run/sine_gain_phase_delay/moving_average/scipy_spectrum",
+      "status": "PASS",
+      "reference_psd_max_abs_error": 5.551115123125783e-17,
+      "output_psd_max_abs_error": 5.551115123125783e-17,
+      "cross_real_max_abs_error": 5.551115123125783e-17,
+      "cross_imag_max_abs_error": 3.469446951953614e-17,
+      "scaled_spectral_max_abs_error": 6.661338147750939e-16,
+      "cross_bins_compared": 21
+    },
+    {
+      "name": "run/sine_gain_phase_delay/moving_average/metrics",
+      "status": "PASS"
+    },
+    {
+      "name": "run/sine_gain_phase_delay/fft_lowpass/scipy_spectrum",
+      "status": "PASS",
+      "reference_psd_max_abs_error": 5.551115123125783e-17,
+      "output_psd_max_abs_error": 8.326672684688674e-17,
+      "cross_real_max_abs_error": 5.551115123125783e-17,
+      "cross_imag_max_abs_error": 4.85722573273506e-17,
+      "scaled_spectral_max_abs_error": 6.661338147750939e-16,
+      "cross_bins_compared": 21
+    },
+    {
+      "name": "run/sine_gain_phase_delay/fft_lowpass/metrics",
+      "status": "PASS"
+    },
+    {
+      "name": "run/sine_gain_phase_delay/x6_phase/scipy_spectrum",
+      "status": "PASS",
+      "reference_psd_max_abs_error": 5.551115123125783e-17,
+      "output_psd_max_abs_error": 3.520480687025686e-21,
+      "cross_real_max_abs_error": 6.776263578034403e-20,
+      "cross_imag_max_abs_error": 8.131516293641283e-20,
+      "scaled_spectral_max_abs_error": 2.7478019859472624e-15,
+      "cross_bins_compared": 21
+    },
+    {
+      "name": "run/sine_gain_phase_delay/x6_phase/metrics",
+      "status": "PASS"
+    },
+    {
+      "name": "run/sine_advance/waveform_pipeline_baselines_original_x6",
+      "status": "PASS",
+      "samples": 1024,
+      "original_x6_max_abs_error": 0.0
+    },
+    {
+      "name": "run/sine_advance/identity/scipy_spectrum",
+      "status": "PASS",
+      "reference_psd_max_abs_error": 3.469446951953614e-17,
+      "output_psd_max_abs_error": 2.7755575615628914e-17,
+      "cross_real_max_abs_error": 2.7755575615628914e-17,
+      "cross_imag_max_abs_error": 1.0408340855860843e-17,
+      "scaled_spectral_max_abs_error": 6.661338147750939e-16,
+      "cross_bins_compared": 20
+    },
+    {
+      "name": "run/sine_advance/identity/metrics",
+      "status": "PASS"
+    },
+    {
+      "name": "run/sine_advance/moving_average/scipy_spectrum",
+      "status": "PASS",
+      "reference_psd_max_abs_error": 3.469446951953614e-17,
+      "output_psd_max_abs_error": 2.7755575615628914e-17,
+      "cross_real_max_abs_error": 1.3877787807814457e-17,
+      "cross_imag_max_abs_error": 6.938893903907228e-18,
+      "scaled_spectral_max_abs_error": 6.661338147750939e-16,
+      "cross_bins_compared": 20
+    },
+    {
+      "name": "run/sine_advance/moving_average/metrics",
+      "status": "PASS"
+    },
+    {
+      "name": "run/sine_advance/fft_lowpass/scipy_spectrum",
+      "status": "PASS",
+      "reference_psd_max_abs_error": 3.469446951953614e-17,
+      "output_psd_max_abs_error": 2.7755575615628914e-17,
+      "cross_real_max_abs_error": 3.469446951953614e-17,
+      "cross_imag_max_abs_error": 1.3877787807814457e-17,
+      "scaled_spectral_max_abs_error": 6.661338147750939e-16,
+      "cross_bins_compared": 20
+    },
+    {
+      "name": "run/sine_advance/fft_lowpass/metrics",
+      "status": "PASS"
+    },
+    {
+      "name": "run/sine_advance/x6_phase/scipy_spectrum",
+      "status": "PASS",
+      "reference_psd_max_abs_error": 3.469446951953614e-17,
+      "output_psd_max_abs_error": 1.885971796620903e-22,
+      "cross_real_max_abs_error": 7.22624983126325e-21,
+      "cross_imag_max_abs_error": 2.691270897032489e-21,
+      "scaled_spectral_max_abs_error": 5.551115123125783e-15,
+      "cross_bins_compared": 20
+    },
+    {
+      "name": "run/sine_advance/x6_phase/metrics",
+      "status": "PASS"
+    },
+    {
+      "name": "run/chirp/waveform_pipeline_baselines_original_x6",
+      "status": "PASS",
+      "samples": 512,
+      "original_x6_max_abs_error": 0.0
+    },
+    {
+      "name": "run/chirp/identity/scipy_spectrum",
+      "status": "PASS",
+      "reference_psd_max_abs_error": 2.6020852139652106e-17,
+      "output_psd_max_abs_error": 2.6020852139652106e-17,
+      "cross_real_max_abs_error": 2.6020852139652106e-17,
+      "cross_imag_max_abs_error": 5.795977468500304e-19,
+      "scaled_spectral_max_abs_error": 2.220446049250313e-15,
+      "cross_bins_compared": 45
+    },
+    {
+      "name": "run/chirp/identity/metrics",
+      "status": "PASS"
+    },
+    {
+      "name": "run/chirp/moving_average/scipy_spectrum",
+      "status": "PASS",
+      "reference_psd_max_abs_error": 2.6020852139652106e-17,
+      "output_psd_max_abs_error": 5.204170427930421e-18,
+      "cross_real_max_abs_error": 8.673617379884035e-18,
+      "cross_imag_max_abs_error": 8.402566836762659e-19,
+      "scaled_spectral_max_abs_error": 2.220446049250313e-15,
+      "cross_bins_compared": 37
+    },
+    {
+      "name": "run/chirp/moving_average/metrics",
+      "status": "PASS"
+    },
+    {
+      "name": "run/chirp/fft_lowpass/scipy_spectrum",
+      "status": "PASS",
+      "reference_psd_max_abs_error": 2.6020852139652106e-17,
+      "output_psd_max_abs_error": 2.7755575615628914e-17,
+      "cross_real_max_abs_error": 2.6020852139652106e-17,
+      "cross_imag_max_abs_error": 1.7870608476942623e-18,
+      "scaled_spectral_max_abs_error": 2.3314683517128287e-15,
+      "cross_bins_compared": 45
+    },
+    {
+      "name": "run/chirp/fft_lowpass/metrics",
+      "status": "PASS"
+    },
+    {
+      "name": "run/chirp/x6_phase/scipy_spectrum",
+      "status": "PASS",
+      "reference_psd_max_abs_error": 2.6020852139652106e-17,
+      "output_psd_max_abs_error": 3.469446951953614e-18,
+      "cross_real_max_abs_error": 5.204170427930421e-18,
+      "cross_imag_max_abs_error": 1.3010426069826053e-18,
+      "scaled_spectral_max_abs_error": 2.220446049250313e-15,
+      "cross_bins_compared": 43
+    },
+    {
+      "name": "run/chirp/x6_phase/metrics",
+      "status": "PASS"
+    },
+    {
+      "name": "run/pulse/waveform_pipeline_baselines_original_x6",
+      "status": "PASS",
+      "samples": 512,
+      "original_x6_max_abs_error": 0.0
+    },
+    {
+      "name": "run/pulse/identity/scipy_spectrum",
+      "status": "PASS",
+      "reference_psd_max_abs_error": 3.903127820947816e-17,
+      "output_psd_max_abs_error": 3.903127820947816e-17,
+      "cross_real_max_abs_error": 3.859759734048396e-17,
+      "cross_imag_max_abs_error": 3.6454777297327496e-21,
+      "scaled_spectral_max_abs_error": 3.941291737419306e-15,
+      "cross_bins_compared": 22
+    },
+    {
+      "name": "run/pulse/identity/metrics",
+      "status": "PASS"
+    },
+    {
+      "name": "run/pulse/moving_average/scipy_spectrum",
+      "status": "PASS",
+      "reference_psd_max_abs_error": 3.903127820947816e-17,
+      "output_psd_max_abs_error": 3.903127820947816e-17,
+      "cross_real_max_abs_error": 3.859759734048396e-17,
+      "cross_imag_max_abs_error": 2.413338038885377e-19,
+      "scaled_spectral_max_abs_error": 3.941291737419306e-15,
+      "cross_bins_compared": 22
+    },
+    {
+      "name": "run/pulse/moving_average/metrics",
+      "status": "PASS"
+    },
+    {
+      "name": "run/pulse/fft_lowpass/scipy_spectrum",
+      "status": "PASS",
+      "reference_psd_max_abs_error": 3.903127820947816e-17,
+      "output_psd_max_abs_error": 4.2500725161431774e-17,
+      "cross_real_max_abs_error": 3.9898639947466563e-17,
+      "cross_imag_max_abs_error": 3.573434950738394e-19,
+      "scaled_spectral_max_abs_error": 4.218847493575595e-15,
+      "cross_bins_compared": 22
+    },
+    {
+      "name": "run/pulse/fft_lowpass/metrics",
+      "status": "PASS"
+    },
+    {
+      "name": "run/pulse/x6_phase/scipy_spectrum",
+      "status": "PASS",
+      "reference_psd_max_abs_error": 3.903127820947816e-17,
+      "output_psd_max_abs_error": 4.7704895589362195e-18,
+      "cross_real_max_abs_error": 2.0816681711721685e-17,
+      "cross_imag_max_abs_error": 1.061614627225391e-19,
+      "scaled_spectral_max_abs_error": 3.941291737419306e-15,
+      "cross_bins_compared": 11
+    },
+    {
+      "name": "run/pulse/x6_phase/metrics",
+      "status": "PASS"
+    },
+    {
+      "name": "run/zero/waveform_pipeline_baselines_original_x6",
+      "status": "PASS",
+      "samples": 256,
+      "original_x6_max_abs_error": 0.0
+    },
+    {
+      "name": "run/zero/identity/scipy_spectrum",
+      "status": "PASS",
+      "reference_psd_max_abs_error": 0.0,
+      "output_psd_max_abs_error": 0.0,
+      "cross_real_max_abs_error": 0.0,
+      "cross_imag_max_abs_error": 0.0,
+      "scaled_spectral_max_abs_error": 0,
+      "cross_bins_compared": 0
+    },
+    {
+      "name": "run/zero/identity/metrics",
+      "status": "PASS"
+    },
+    {
+      "name": "run/zero/moving_average/scipy_spectrum",
+      "status": "PASS",
+      "reference_psd_max_abs_error": 0.0,
+      "output_psd_max_abs_error": 0.0,
+      "cross_real_max_abs_error": 0.0,
+      "cross_imag_max_abs_error": 0.0,
+      "scaled_spectral_max_abs_error": 0,
+      "cross_bins_compared": 0
+    },
+    {
+      "name": "run/zero/moving_average/metrics",
+      "status": "PASS"
+    },
+    {
+      "name": "run/zero/fft_lowpass/scipy_spectrum",
+      "status": "PASS",
+      "reference_psd_max_abs_error": 0.0,
+      "output_psd_max_abs_error": 0.0,
+      "cross_real_max_abs_error": 0.0,
+      "cross_imag_max_abs_error": 0.0,
+      "scaled_spectral_max_abs_error": 0,
+      "cross_bins_compared": 0
+    },
+    {
+      "name": "run/zero/fft_lowpass/metrics",
+      "status": "PASS"
+    },
+    {
+      "name": "run/zero/x6_phase/scipy_spectrum",
+      "status": "PASS",
+      "reference_psd_max_abs_error": 0.0,
+      "output_psd_max_abs_error": 0.0,
+      "cross_real_max_abs_error": 0.0,
+      "cross_imag_max_abs_error": 0.0,
+      "scaled_spectral_max_abs_error": 0,
+      "cross_bins_compared": 0
+    },
+    {
+      "name": "run/zero/x6_phase/metrics",
+      "status": "PASS"
+    },
+    {
+      "name": "run/hard_clip/waveform_pipeline_baselines_original_x6",
+      "status": "PASS",
+      "samples": 1024,
+      "original_x6_max_abs_error": 0.0
+    },
+    {
+      "name": "run/hard_clip/identity/scipy_spectrum",
+      "status": "PASS",
+      "reference_psd_max_abs_error": 6.938893903907228e-17,
+      "output_psd_max_abs_error": 1.0408340855860843e-17,
+      "cross_real_max_abs_error": 2.0816681711721685e-17,
+      "cross_imag_max_abs_error": 5.204170427930421e-18,
+      "scaled_spectral_max_abs_error": 8.881784197001252e-16,
+      "cross_bins_compared": 3
+    },
+    {
+      "name": "run/hard_clip/identity/metrics",
+      "status": "PASS"
+    },
+    {
+      "name": "run/hard_clip/moving_average/scipy_spectrum",
+      "status": "PASS",
+      "reference_psd_max_abs_error": 6.938893903907228e-17,
+      "output_psd_max_abs_error": 1.3877787807814457e-17,
+      "cross_real_max_abs_error": 3.469446951953614e-17,
+      "cross_imag_max_abs_error": 8.673617379884035e-18,
+      "scaled_spectral_max_abs_error": 8.881784197001252e-16,
+      "cross_bins_compared": 3
+    },
+    {
+      "name": "run/hard_clip/moving_average/metrics",
+      "status": "PASS"
+    },
+    {
+      "name": "run/hard_clip/fft_lowpass/scipy_spectrum",
+      "status": "PASS",
+      "reference_psd_max_abs_error": 6.938893903907228e-17,
+      "output_psd_max_abs_error": 1.3877787807814457e-17,
+      "cross_real_max_abs_error": 2.7755575615628914e-17,
+      "cross_imag_max_abs_error": 6.938893903907228e-18,
+      "scaled_spectral_max_abs_error": 8.881784197001252e-16,
+      "cross_bins_compared": 3
+    },
+    {
+      "name": "run/hard_clip/fft_lowpass/metrics",
+      "status": "PASS"
+    },
+    {
+      "name": "run/hard_clip/x6_phase/scipy_spectrum",
+      "status": "PASS",
+      "reference_psd_max_abs_error": 6.938893903907228e-17,
+      "output_psd_max_abs_error": 9.75781955236954e-19,
+      "cross_real_max_abs_error": 7.803576103365157e-19,
+      "cross_imag_max_abs_error": 1.9919778794085943e-18,
+      "scaled_spectral_max_abs_error": 1.9984014443252818e-15,
+      "cross_bins_compared": 0
+    },
+    {
+      "name": "run/hard_clip/x6_phase/metrics",
+      "status": "PASS"
+    },
+    {
+      "name": "run/quantize_saturate/waveform_pipeline_baselines_original_x6",
+      "status": "PASS",
+      "samples": 1024,
+      "original_x6_max_abs_error": 0.0
+    },
+    {
+      "name": "run/quantize_saturate/identity/scipy_spectrum",
+      "status": "PASS",
+      "reference_psd_max_abs_error": 1.734723475976807e-17,
+      "output_psd_max_abs_error": 5.551115123125783e-17,
+      "cross_real_max_abs_error": 3.469446951953614e-17,
+      "cross_imag_max_abs_error": 7.57729807001896e-19,
+      "scaled_spectral_max_abs_error": 8.881784197001252e-16,
+      "cross_bins_compared": 9
+    },
+    {
+      "name": "run/quantize_saturate/identity/metrics",
+      "status": "PASS"
+    },
+    {
+      "name": "run/quantize_saturate/moving_average/scipy_spectrum",
+      "status": "PASS",
+      "reference_psd_max_abs_error": 1.734723475976807e-17,
+      "output_psd_max_abs_error": 2.7755575615628914e-17,
+      "cross_real_max_abs_error": 2.0816681711721685e-17,
+      "cross_imag_max_abs_error": 1.3010426069826053e-18,
+      "scaled_spectral_max_abs_error": 6.661338147750939e-16,
+      "cross_bins_compared": 9
+    },
+    {
+      "name": "run/quantize_saturate/moving_average/metrics",
+      "status": "PASS"
+    },
+    {
+      "name": "run/quantize_saturate/fft_lowpass/scipy_spectrum",
+      "status": "PASS",
+      "reference_psd_max_abs_error": 1.734723475976807e-17,
+      "output_psd_max_abs_error": 4.163336342344337e-17,
+      "cross_real_max_abs_error": 2.7755575615628914e-17,
+      "cross_imag_max_abs_error": 1.2468324983583301e-18,
+      "scaled_spectral_max_abs_error": 7.771561172376096e-16,
+      "cross_bins_compared": 9
+    },
+    {
+      "name": "run/quantize_saturate/fft_lowpass/metrics",
+      "status": "PASS"
+    },
+    {
+      "name": "run/quantize_saturate/x6_phase/scipy_spectrum",
+      "status": "PASS",
+      "reference_psd_max_abs_error": 1.734723475976807e-17,
+      "output_psd_max_abs_error": 6.776263578034403e-20,
+      "cross_real_max_abs_error": 8.968647638983825e-20,
+      "cross_imag_max_abs_error": 1.0842021724855044e-19,
+      "scaled_spectral_max_abs_error": 1.9984014443252818e-15,
+      "cross_bins_compared": 1
+    },
+    {
+      "name": "run/quantize_saturate/x6_phase/metrics",
+      "status": "PASS"
+    },
+    {
+      "name": "run/clip_then_quantize/waveform_pipeline_baselines_original_x6",
+      "status": "PASS",
+      "samples": 1024,
+      "original_x6_max_abs_error": 0.0
+    },
+    {
+      "name": "run/clip_then_quantize/identity/scipy_spectrum",
+      "status": "PASS",
+      "reference_psd_max_abs_error": 6.938893903907228e-17,
+      "output_psd_max_abs_error": 4.163336342344337e-17,
+      "cross_real_max_abs_error": 6.938893903907228e-17,
+      "cross_imag_max_abs_error": 7.977564603221011e-18,
+      "scaled_spectral_max_abs_error": 8.881784197001252e-16,
+      "cross_bins_compared": 3
+    },
+    {
+      "name": "run/clip_then_quantize/identity/metrics",
+      "status": "PASS"
+    },
+    {
+      "name": "run/clip_then_quantize/moving_average/scipy_spectrum",
+      "status": "PASS",
+      "reference_psd_max_abs_error": 6.938893903907228e-17,
+      "output_psd_max_abs_error": 6.245004513516506e-17,
+      "cross_real_max_abs_error": 5.551115123125783e-17,
+      "cross_imag_max_abs_error": 2.574106656926217e-18,
+      "scaled_spectral_max_abs_error": 1.1102230246251565e-15,
+      "cross_bins_compared": 3
+    },
+    {
+      "name": "run/clip_then_quantize/moving_average/metrics",
+      "status": "PASS"
+    },
+    {
+      "name": "run/clip_then_quantize/fft_lowpass/scipy_spectrum",
+      "status": "PASS",
+      "reference_psd_max_abs_error": 6.938893903907228e-17,
+      "output_psd_max_abs_error": 5.551115123125783e-17,
+      "cross_real_max_abs_error": 2.7755575615628914e-17,
+      "cross_imag_max_abs_error": 7.977564603220959e-18,
+      "scaled_spectral_max_abs_error": 8.881784197001252e-16,
+      "cross_bins_compared": 3
+    },
+    {
+      "name": "run/clip_then_quantize/fft_lowpass/metrics",
+      "status": "PASS"
+    },
+    {
+      "name": "run/clip_then_quantize/x6_phase/scipy_spectrum",
+      "status": "PASS",
+      "reference_psd_max_abs_error": 6.938893903907228e-17,
+      "output_psd_max_abs_error": 0.0,
+      "cross_real_max_abs_error": 0.0,
+      "cross_imag_max_abs_error": 0.0,
+      "scaled_spectral_max_abs_error": 8.881784197001252e-16,
+      "cross_bins_compared": 0
+    },
+    {
+      "name": "run/clip_then_quantize/x6_phase/metrics",
+      "status": "PASS"
+    },
+    {
+      "name": "run/lowpass_nyquist/waveform_pipeline_baselines_original_x6",
+      "status": "PASS",
+      "samples": 1024,
+      "original_x6_max_abs_error": 0.0
+    },
+    {
+      "name": "run/lowpass_nyquist/identity/scipy_spectrum",
+      "status": "PASS",
+      "reference_psd_max_abs_error": 1.734723475976807e-17,
+      "output_psd_max_abs_error": 2.0816681711721685e-17,
+      "cross_real_max_abs_error": 2.0816681711721685e-17,
+      "cross_imag_max_abs_error": 8.673617379884035e-19,
+      "scaled_spectral_max_abs_error": 7.771561172376096e-16,
+      "cross_bins_compared": 9
+    },
+    {
+      "name": "run/lowpass_nyquist/identity/metrics",
+      "status": "PASS"
+    },
+    {
+      "name": "run/lowpass_nyquist/moving_average/scipy_spectrum",
+      "status": "PASS",
+      "reference_psd_max_abs_error": 1.734723475976807e-17,
+      "output_psd_max_abs_error": 1.0408340855860843e-17,
+      "cross_real_max_abs_error": 1.734723475976807e-17,
+      "cross_imag_max_abs_error": 8.673617379884035e-19,
+      "scaled_spectral_max_abs_error": 7.771561172376096e-16,
+      "cross_bins_compared": 9
+    },
+    {
+      "name": "run/lowpass_nyquist/moving_average/metrics",
+      "status": "PASS"
+    },
+    {
+      "name": "run/lowpass_nyquist/fft_lowpass/scipy_spectrum",
+      "status": "PASS",
+      "reference_psd_max_abs_error": 1.734723475976807e-17,
+      "output_psd_max_abs_error": 2.0816681711721685e-17,
+      "cross_real_max_abs_error": 1.734723475976807e-17,
+      "cross_imag_max_abs_error": 5.421010862427522e-19,
+      "scaled_spectral_max_abs_error": 6.661338147750939e-16,
+      "cross_bins_compared": 9
+    },
+    {
+      "name": "run/lowpass_nyquist/fft_lowpass/metrics",
+      "status": "PASS"
+    },
+    {
+      "name": "run/lowpass_nyquist/x6_phase/scipy_spectrum",
+      "status": "PASS",
+      "reference_psd_max_abs_error": 1.734723475976807e-17,
+      "output_psd_max_abs_error": 7.453889935837843e-20,
+      "cross_real_max_abs_error": 1.179512533903776e-19,
+      "cross_imag_max_abs_error": 9.534317554913534e-20,
+      "scaled_spectral_max_abs_error": 2.4424906541753444e-15,
+      "cross_bins_compared": 9
+    },
+    {
+      "name": "run/lowpass_nyquist/x6_phase/metrics",
+      "status": "PASS"
+    },
+    {
+      "name": "run/phase_stop/waveform_pipeline_baselines_original_x6",
+      "status": "PASS",
+      "samples": 1024,
+      "original_x6_max_abs_error": 0.0
+    },
+    {
+      "name": "run/phase_stop/identity/scipy_spectrum",
+      "status": "PASS",
+      "reference_psd_max_abs_error": 1.734723475976807e-17,
+      "output_psd_max_abs_error": 2.0816681711721685e-17,
+      "cross_real_max_abs_error": 2.0816681711721685e-17,
+      "cross_imag_max_abs_error": 8.673617379884035e-19,
+      "scaled_spectral_max_abs_error": 7.771561172376096e-16,
+      "cross_bins_compared": 9
+    },
+    {
+      "name": "run/phase_stop/identity/metrics",
+      "status": "PASS"
+    },
+    {
+      "name": "run/phase_stop/moving_average/scipy_spectrum",
+      "status": "PASS",
+      "reference_psd_max_abs_error": 1.734723475976807e-17,
+      "output_psd_max_abs_error": 1.0408340855860843e-17,
+      "cross_real_max_abs_error": 1.734723475976807e-17,
+      "cross_imag_max_abs_error": 8.673617379884035e-19,
+      "scaled_spectral_max_abs_error": 7.771561172376096e-16,
+      "cross_bins_compared": 9
+    },
+    {
+      "name": "run/phase_stop/moving_average/metrics",
+      "status": "PASS"
+    },
+    {
+      "name": "run/phase_stop/fft_lowpass/scipy_spectrum",
+      "status": "PASS",
+      "reference_psd_max_abs_error": 1.734723475976807e-17,
+      "output_psd_max_abs_error": 1.734723475976807e-17,
+      "cross_real_max_abs_error": 2.42861286636753e-17,
+      "cross_imag_max_abs_error": 5.421010862427522e-19,
+      "scaled_spectral_max_abs_error": 8.881784197001252e-16,
+      "cross_bins_compared": 9
+    },
+    {
+      "name": "run/phase_stop/fft_lowpass/metrics",
+      "status": "PASS"
+    },
+    {
+      "name": "run/phase_stop/x6_phase/scipy_spectrum",
+      "status": "PASS",
+      "reference_psd_max_abs_error": 1.734723475976807e-17,
+      "output_psd_max_abs_error": 2.7755575615628914e-17,
+      "cross_real_max_abs_error": 2.0816681711721685e-17,
+      "cross_imag_max_abs_error": 3.7947076036992655e-19,
+      "scaled_spectral_max_abs_error": 1.1102230246251565e-15,
+      "cross_bins_compared": 9
+    },
+    {
+      "name": "run/phase_stop/x6_phase/metrics",
+      "status": "PASS"
+    },
+    {
+      "name": "run/short128/waveform_pipeline_baselines_original_x6",
+      "status": "PASS",
+      "samples": 128,
+      "original_x6_max_abs_error": 0.0
+    },
+    {
+      "name": "run/short128/identity/scipy_spectrum",
+      "status": "PASS",
+      "reference_psd_max_abs_error": 1.0408340855860843e-17,
+      "output_psd_max_abs_error": 6.938893903907228e-18,
+      "cross_real_max_abs_error": 6.938893903907228e-18,
+      "cross_imag_max_abs_error": 1.734723475976807e-18,
+      "scaled_spectral_max_abs_error": 3.3306690738754696e-16,
+      "cross_bins_compared": 9
+    },
+    {
+      "name": "run/short128/identity/metrics",
+      "status": "PASS"
+    },
+    {
+      "name": "run/short128/moving_average/scipy_spectrum",
+      "status": "PASS",
+      "reference_psd_max_abs_error": 1.0408340855860843e-17,
+      "output_psd_max_abs_error": 1.0408340855860843e-17,
+      "cross_real_max_abs_error": 1.3877787807814457e-17,
+      "cross_imag_max_abs_error": 6.505213034913027e-19,
+      "scaled_spectral_max_abs_error": 6.661338147750939e-16,
+      "cross_bins_compared": 9
+    },
+    {
+      "name": "run/short128/moving_average/metrics",
+      "status": "PASS"
+    },
+    {
+      "name": "run/short128/fft_lowpass/scipy_spectrum",
+      "status": "PASS",
+      "reference_psd_max_abs_error": 1.0408340855860843e-17,
+      "output_psd_max_abs_error": 2.0816681711721685e-17,
+      "cross_real_max_abs_error": 1.3877787807814457e-17,
+      "cross_imag_max_abs_error": 4.336808689942018e-19,
+      "scaled_spectral_max_abs_error": 7.771561172376096e-16,
+      "cross_bins_compared": 9
+    },
+    {
+      "name": "run/short128/fft_lowpass/metrics",
+      "status": "PASS"
+    },
+    {
+      "name": "run/short128/x6_phase/scipy_spectrum",
+      "status": "PASS",
+      "reference_psd_max_abs_error": 1.0408340855860843e-17,
+      "output_psd_max_abs_error": 5.421010862427522e-20,
+      "cross_real_max_abs_error": 9.486769009248164e-20,
+      "cross_imag_max_abs_error": 1.0842021724855044e-19,
+      "scaled_spectral_max_abs_error": 4.440892098500626e-16,
+      "cross_bins_compared": 9
+    },
+    {
+      "name": "run/short128/x6_phase/metrics",
+      "status": "PASS"
+    },
+    {
+      "name": "reproducibility_seed_and_complementary_filters",
+      "status": "PASS"
+    },
+    {
+      "name": "evaluate/identity_broadband/scipy_spectrum",
+      "status": "PASS",
+      "reference_psd_max_abs_error": 2.6020852139652106e-17,
+      "output_psd_max_abs_error": 2.6020852139652106e-17,
+      "cross_real_max_abs_error": 2.6020852139652106e-17,
+      "cross_imag_max_abs_error": 1.0052240047305151e-19,
+      "scaled_spectral_max_abs_error": 5.995204332975845e-15,
+      "cross_bins_compared": 129
+    },
+    {
+      "name": "evaluate/identity_broadband/metrics",
+      "status": "PASS"
+    },
+    {
+      "name": "evaluate/inverted_broadband/scipy_spectrum",
+      "status": "PASS",
+      "reference_psd_max_abs_error": 2.6020852139652106e-17,
+      "output_psd_max_abs_error": 2.6020852139652106e-17,
+      "cross_real_max_abs_error": 2.6020852139652106e-17,
+      "cross_imag_max_abs_error": 1.0052240047305151e-19,
+      "scaled_spectral_max_abs_error": 5.995204332975845e-15,
+      "cross_bins_compared": 129
+    },
+    {
+      "name": "evaluate/inverted_broadband/metrics",
+      "status": "PASS"
+    },
+    {
+      "name": "evaluate/gain20pct/scipy_spectrum",
+      "status": "PASS",
+      "reference_psd_max_abs_error": 2.6020852139652106e-17,
+      "output_psd_max_abs_error": 3.469446951953614e-17,
+      "cross_real_max_abs_error": 3.0357660829594124e-17,
+      "cross_imag_max_abs_error": 6.49578830915564e-19,
+      "scaled_spectral_max_abs_error": 5.995204332975845e-15,
+      "cross_bins_compared": 129
+    },
+    {
+      "name": "evaluate/gain20pct/metrics",
+      "status": "PASS"
+    },
+    {
+      "name": "evaluate/phase_plus30/scipy_spectrum",
+      "status": "PASS",
+      "reference_psd_max_abs_error": 6.938893903907228e-17,
+      "output_psd_max_abs_error": 6.938893903907228e-17,
+      "cross_real_max_abs_error": 5.551115123125783e-17,
+      "cross_imag_max_abs_error": 3.469446951953614e-17,
+      "scaled_spectral_max_abs_error": 8.881784197001252e-16,
+      "cross_bins_compared": 3
+    },
+    {
+      "name": "evaluate/phase_plus30/metrics",
+      "status": "PASS"
+    },
+    {
+      "name": "evaluate/phase_minus30/scipy_spectrum",
+      "status": "PASS",
+      "reference_psd_max_abs_error": 6.938893903907228e-17,
+      "output_psd_max_abs_error": 1.3877787807814457e-17,
+      "cross_real_max_abs_error": 4.163336342344337e-17,
+      "cross_imag_max_abs_error": 3.469446951953614e-17,
+      "scaled_spectral_max_abs_error": 8.881784197001252e-16,
+      "cross_bins_compared": 3
+    },
+    {
+      "name": "evaluate/phase_minus30/metrics",
+      "status": "PASS"
+    },
+    {
+      "name": "evaluate/delay_plus7/scipy_spectrum",
+      "status": "PASS",
+      "reference_psd_max_abs_error": 2.6020852139652106e-17,
+      "output_psd_max_abs_error": 2.168404344971009e-17,
+      "cross_real_max_abs_error": 2.3418766925686896e-17,
+      "cross_imag_max_abs_error": 1.0842021724855044e-17,
+      "scaled_spectral_max_abs_error": 5.995204332975845e-15,
+      "cross_bins_compared": 129
+    },
+    {
+      "name": "evaluate/delay_plus7/metrics",
+      "status": "PASS"
+    },
+    {
+      "name": "evaluate/delay_minus7/scipy_spectrum",
+      "status": "PASS",
+      "reference_psd_max_abs_error": 2.6020852139652106e-17,
+      "output_psd_max_abs_error": 2.2551405187698492e-17,
+      "cross_real_max_abs_error": 2.3418766925686896e-17,
+      "cross_imag_max_abs_error": 1.1275702593849246e-17,
+      "scaled_spectral_max_abs_error": 5.995204332975845e-15,
+      "cross_bins_compared": 129
+    },
+    {
+      "name": "evaluate/delay_minus7/metrics",
+      "status": "PASS"
+    },
+    {
+      "name": "evaluate/pulse_delay_plus7/scipy_spectrum",
+      "status": "PASS",
+      "reference_psd_max_abs_error": 2.168404344971009e-18,
+      "output_psd_max_abs_error": 1.0625181290357943e-17,
+      "cross_real_max_abs_error": 4.336808689942018e-18,
+      "cross_imag_max_abs_error": 7.589415207398531e-19,
+      "scaled_spectral_max_abs_error": 2.942091015256665e-15,
+      "cross_bins_compared": 21
+    },
+    {
+      "name": "evaluate/pulse_delay_plus7/metrics",
+      "status": "PASS"
+    },
+    {
+      "name": "evaluate/periodic_ambiguity/scipy_spectrum",
+      "status": "PASS",
+      "reference_psd_max_abs_error": 6.938893903907228e-17,
+      "output_psd_max_abs_error": 6.938893903907228e-17,
+      "cross_real_max_abs_error": 6.938893903907228e-17,
+      "cross_imag_max_abs_error": 2.6516881472608557e-33,
+      "scaled_spectral_max_abs_error": 8.881784197001252e-16,
+      "cross_bins_compared": 3
+    },
+    {
+      "name": "evaluate/periodic_ambiguity/metrics",
+      "status": "PASS"
+    },
+    {
+      "name": "evaluate/all_zero/scipy_spectrum",
+      "status": "PASS",
+      "reference_psd_max_abs_error": 0.0,
+      "output_psd_max_abs_error": 0.0,
+      "cross_real_max_abs_error": 0.0,
+      "cross_imag_max_abs_error": 0.0,
+      "scaled_spectral_max_abs_error": 0,
+      "cross_bins_compared": 0
+    },
+    {
+      "name": "evaluate/all_zero/metrics",
+      "status": "PASS"
+    },
+    {
+      "name": "evaluate/zero_reference_noise/scipy_spectrum",
+      "status": "PASS",
+      "reference_psd_max_abs_error": 0.0,
+      "output_psd_max_abs_error": 2.6020852139652106e-17,
+      "cross_real_max_abs_error": 0.0,
+      "cross_imag_max_abs_error": 0.0,
+      "scaled_spectral_max_abs_error": 5.995204332975845e-15,
+      "cross_bins_compared": 0
+    },
+    {
+      "name": "evaluate/zero_reference_noise/metrics",
+      "status": "PASS"
+    },
+    {
+      "name": "evaluate/constant/scipy_spectrum",
+      "status": "PASS",
+      "reference_psd_max_abs_error": 0.0,
+      "output_psd_max_abs_error": 0.0,
+      "cross_real_max_abs_error": 0.0,
+      "cross_imag_max_abs_error": 0.0,
+      "scaled_spectral_max_abs_error": 0,
+      "cross_bins_compared": 0
+    },
+    {
+      "name": "evaluate/constant/metrics",
+      "status": "PASS"
+    },
+    {
+      "name": "evaluate/constant_decimal/scipy_spectrum",
+      "status": "PASS",
+      "reference_psd_max_abs_error": 3.209883240645393e-35,
+      "output_psd_max_abs_error": 3.209883240645393e-35,
+      "cross_real_max_abs_error": 3.2098832406453924e-35,
+      "cross_imag_max_abs_error": 1.8546030753437107e-68,
+      "scaled_spectral_max_abs_error": 0,
+      "cross_bins_compared": 0
+    },
+    {
+      "name": "evaluate/constant_decimal/metrics",
+      "status": "PASS"
+    },
+    {
+      "name": "evaluate/dc_offset/scipy_spectrum",
+      "status": "PASS",
+      "reference_psd_max_abs_error": 2.6020852139652106e-17,
+      "output_psd_max_abs_error": 2.5153490401663703e-17,
+      "cross_real_max_abs_error": 2.5153490401663703e-17,
+      "cross_imag_max_abs_error": 4.504599197445152e-19,
+      "scaled_spectral_max_abs_error": 5.995204332975845e-15,
+      "cross_bins_compared": 129
+    },
+    {
+      "name": "evaluate/dc_offset/metrics",
+      "status": "PASS"
+    },
+    {
+      "name": "evaluate/decorrelated/scipy_spectrum",
+      "status": "PASS",
+      "reference_psd_max_abs_error": 2.6020852139652106e-17,
+      "output_psd_max_abs_error": 1.9949319973733282e-17,
+      "cross_real_max_abs_error": 8.023096076392733e-18,
+      "cross_imag_max_abs_error": 6.938893903907228e-18,
+      "scaled_spectral_max_abs_error": 5.995204332975845e-15,
+      "cross_bins_compared": 129
+    },
+    {
+      "name": "evaluate/decorrelated/metrics",
+      "status": "PASS"
+    },
+    {
+      "name": "evaluate/small_n128/scipy_spectrum",
+      "status": "PASS",
+      "reference_psd_max_abs_error": 1.3877787807814457e-17,
+      "output_psd_max_abs_error": 1.214306433183765e-17,
+      "cross_real_max_abs_error": 1.3877787807814457e-17,
+      "cross_imag_max_abs_error": 2.9917203697021888e-18,
+      "scaled_spectral_max_abs_error": 8.881784197001252e-16,
+      "cross_bins_compared": 33
+    },
+    {
+      "name": "evaluate/small_n128/metrics",
+      "status": "PASS"
+    },
+    {
+      "name": "evaluate/attenuated_above_floor_1e8/scipy_spectrum",
+      "status": "PASS",
+      "reference_psd_max_abs_error": 2.6020852139652106e-17,
+      "output_psd_max_abs_error": 2.5037089277034066e-33,
+      "cross_real_max_abs_error": 2.455692443516801e-25,
+      "cross_imag_max_abs_error": 7.337033107085671e-27,
+      "scaled_spectral_max_abs_error": 5.995204332975845e-15,
+      "cross_bins_compared": 129
+    },
+    {
+      "name": "evaluate/attenuated_above_floor_1e8/metrics",
+      "status": "PASS"
+    },
+    {
+      "name": "evaluate/attenuated_above_floor_1e11/scipy_spectrum",
+      "status": "PASS",
+      "reference_psd_max_abs_error": 2.6020852139652106e-17,
+      "output_psd_max_abs_error": 2.571393892423754e-39,
+      "cross_real_max_abs_error": 2.461246024289557e-28,
+      "cross_imag_max_abs_error": 5.6493077526453715e-30,
+      "scaled_spectral_max_abs_error": 5.995204332975845e-15,
+      "cross_bins_compared": 129
+    },
+    {
+      "name": "evaluate/attenuated_above_floor_1e11/metrics",
+      "status": "PASS"
+    },
+    {
+      "name": "evaluate/attenuated_below_floor_1e13/scipy_spectrum",
+      "status": "PASS",
+      "reference_psd_max_abs_error": 2.6020852139652106e-17,
+      "output_psd_max_abs_error": 2.4102333586386854e-43,
+      "cross_real_max_abs_error": 2.514494135391975e-30,
+      "cross_imag_max_abs_error": 1.1351987947011678e-31,
+      "scaled_spectral_max_abs_error": 5.995204332975845e-15,
+      "cross_bins_compared": 0
+    },
+    {
+      "name": "evaluate/attenuated_below_floor_1e13/metrics",
+      "status": "PASS"
+    },
+    {
+      "name": "evaluate/amplified_above_contrast_limit/scipy_spectrum",
+      "status": "PASS",
+      "reference_psd_max_abs_error": 2.4102333586386854e-43,
+      "output_psd_max_abs_error": 2.6020852139652106e-17,
+      "cross_real_max_abs_error": 2.514494135391975e-30,
+      "cross_imag_max_abs_error": 1.1381586010388063e-31,
+      "scaled_spectral_max_abs_error": 5.995204332975845e-15,
+      "cross_bins_compared": 0
+    },
+    {
+      "name": "evaluate/amplified_above_contrast_limit/metrics",
+      "status": "PASS"
+    },
+    {
+      "name": "evaluate/balanced_tiny_identity/scipy_spectrum",
+      "status": "PASS",
+      "reference_psd_max_abs_error": 2.5495624686265645e-217,
+      "output_psd_max_abs_error": 2.5495624686265645e-217,
+      "cross_real_max_abs_error": 2.5495624686265645e-217,
+      "cross_imag_max_abs_error": 6.777353659711825e-220,
+      "scaled_spectral_max_abs_error": 5.773159728050814e-15,
+      "cross_bins_compared": 129
+    },
+    {
+      "name": "evaluate/balanced_tiny_identity/metrics",
+      "status": "PASS"
+    },
+    {
+      "name": "evaluate/balanced_tiny_gain20pct/scipy_spectrum",
+      "status": "PASS",
+      "reference_psd_max_abs_error": 2.5495624686265645e-217,
+      "output_psd_max_abs_error": 3.1727888498463914e-217,
+      "cross_real_max_abs_error": 2.9461610748573634e-217,
+      "cross_imag_max_abs_error": 1.1907611554942283e-218,
+      "scaled_spectral_max_abs_error": 5.773159728050814e-15,
+      "cross_bins_compared": 129
+    },
+    {
+      "name": "evaluate/balanced_tiny_gain20pct/metrics",
+      "status": "PASS"
+    },
+    {
+      "name": "evaluate/balanced_tiny_delay_plus7/scipy_spectrum",
+      "status": "PASS",
+      "reference_psd_max_abs_error": 2.5495624686265645e-217,
+      "output_psd_max_abs_error": 2.0963069186485086e-217,
+      "cross_real_max_abs_error": 2.3229346936375365e-217,
+      "cross_imag_max_abs_error": 1.1331388749451398e-217,
+      "scaled_spectral_max_abs_error": 5.773159728050814e-15,
+      "cross_bins_compared": 129
+    },
+    {
+      "name": "evaluate/balanced_tiny_delay_plus7/metrics",
+      "status": "PASS"
+    },
+    {
+      "name": "analytic/inversion_psd_coherence_trap",
+      "status": "PASS"
+    },
+    {
+      "name": "analytic/csd_phase_sign_and_absolute_phase_error",
+      "status": "PASS"
+    },
+    {
+      "name": "analytic/signed_delay_and_periodic_ambiguity",
+      "status": "PASS"
+    },
+    {
+      "name": "analytic/undefined_zero_constant_and_dc_guard",
+      "status": "PASS"
+    },
+    {
+      "name": "analytic/true_attenuation_above_diagnostic_floor_keeps_coherence",
+      "status": "PASS"
+    },
+    {
+      "name": "analytic/contrast_guard_is_symmetric_and_preserves_raw_residuals",
+      "status": "PASS"
+    },
+    {
+      "name": "analytic/balanced_tiny_scale_preserves_normalized_diagnostics",
+      "status": "PASS"
+    }
+  ],
+  "limitations": [
+    "No physical measurement or quantum inference",
+    "Floating-point comparisons, not formal interval certification",
+    "No statistical coverage claim from the fixed seeds",
+    "This command does not execute browser UI tests"
+  ]
+}

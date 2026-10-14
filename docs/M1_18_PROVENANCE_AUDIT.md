@@ -1,5 +1,7 @@
 > **Current status — 13 October 2026:** Apache-2.0 has been granted by the maintainer. See [LICENSE](../LICENSE), [scope](../LICENSE_SCOPE.md), and [activation record](LICENSE_ACTIVATION_2026-10-13.md). The document below records the historical pre-activation assessment; its pending-license status is superseded. Unresolved provenance questions are not reclassified as verified.
 
+License-notice amendment, 14 October 2026: obsolete project reservations were removed with the maintainer's approval. The findings below remain a historical assessment.
+
 ---
 
 # X6 M1.18 — Source provenance and license audit
@@ -26,7 +28,7 @@ Apache-2.0 grant added. PR #2 remains draft and unmerged.
 | --- | --- | --- |
 | HTML script/style imports | No `<script src>` or `<link href>` references found | No direct external imports detected; does not establish authorship |
 | Inline application | Two `srcdoc` iframes with embedded JavaScript | Large bundled code; attribution/origin not proven |
-| Copyright strings | Three embedded strings: `© 2026 Thomas Gfeller. All rights reserved.` | Review consistency with intended Apache-2.0 grant; don't remove without approval |
+| Copyright strings | Three embedded strings: maintainer attribution with a former general rights reservation | Review consistency with intended Apache-2.0 grant; don't remove without approval |
 | External network | Localhost endpoint `http://127.0.0.1:8765`, `fetch` in optional Julia adapter | Not an external vendor library; security/CORS review still needed |
 | Dynamic execution | No literal `eval(` or `new Function(` found | Limited static signal only |
 | Base64 embedded assets | No `data:image/font/application;...base64` found | Limited static signal only |
@@ -54,7 +56,7 @@ be reviewed before adoption.
 4. Decide which datasets and documents, if any, are excluded from Apache-2.0.
 5. Confirm contributor/employer claims, attribution and `CITATION.cff`.
 6. Only after clearance, commit the authoritative Apache-2.0 LICENSE and
-   applicable NOTICE; review any `All rights reserved` notices in context.
+   applicable NOTICE; review any legacy rights reservations in context.
 7. Run CI again; keep stable release HOLD until scientific/security gates pass.
 
 **No LICENSE file added. No merge performed.**

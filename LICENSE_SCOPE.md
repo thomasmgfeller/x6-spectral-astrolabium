@@ -26,10 +26,10 @@ not a finding that an exhaustive independent rights audit has been completed.
   of exclusive ownership, copyrightability, or freedom from third-party claims.
   It does not restrict uses otherwise permitted by law.
 
-Older project-owned files may carry an "All rights reserved" notice. For
-project-owned material covered by this distribution, the express Apache-2.0
-grant above applies notwithstanding that older general reservation. Copyright
-attribution remains intact. Third-party notices are not overridden.
+On 14 October 2026 the maintainer authorised removal of obsolete general
+rights reservations from current X6 project files. The Apache-2.0 grant above
+applies to covered project-owned material. Copyright attribution remains
+intact. Third-party notices are not overridden.
 
 ## Scientific scope
 

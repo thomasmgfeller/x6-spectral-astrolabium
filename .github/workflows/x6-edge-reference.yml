@@ -1,0 +1,35 @@
+name: X6 Edge Reference
+on:
+  push:
+    branches: [main, research/x6-edge-reference]
+    paths:
+      - 'experimental/edge_reference/**'
+      - 'app/signal-lab*'
+      - 'docs/perspectives/edge-platform/**'
+      - '.github/workflows/x6-edge-reference.yml'
+  pull_request:
+    paths:
+      - 'experimental/edge_reference/**'
+      - 'app/signal-lab*'
+      - '.github/workflows/x6-edge-reference.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  local-reference:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Reference adapter, negative controls and evidence replay
+        run: |
+          node --test experimental/edge_reference/test_runner.cjs
+          node tests/signal-lab/test_core.cjs
+          node tests/signal-lab/test_evidence.cjs
+          node experimental/edge_reference/runner.cjs run experimental/edge_reference/examples/synthetic-signal.json x6-edge-ci-run
+          node experimental/edge_reference/runner.cjs verify x6-edge-ci-run

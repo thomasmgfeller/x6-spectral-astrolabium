@@ -2,8 +2,8 @@
 """Build/check the Signal Lab source inventory without moving research pins.
 
 Run after an intentional source edit. --check is read-only and used by CI.
-The pre-lab baseline is retained verbatim. Only the five explicitly pinned
-2026-10-13 operating-window amendments are allowed; never infer approval from HEAD.
+The pre-lab baseline is retained verbatim. Only explicitly pinned operating-window and 2026-10-14 license-notice
+amendments are allowed; never infer approval from HEAD.
 """
 import argparse
 import hashlib
@@ -13,7 +13,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE = "1735a85dfd5bdb7a4b59e5c00595d2d300ce1e05"
-APP_SHA = "f3795c05292b0fc6d144b7afcf7ef4a957d88ac38ab4fda0c1e985f4455eadb8"
+APP_SHA = "ff60231155f0fc869564ec0eb24c87568943cdd96e154094ae9abd9877bd7ff8"
 PROTECTED_MAP_SHA = "91fb5b68fd04650be82e272d4ea607a8eda0f52165e3e65fb5555d20a5fd1c66"
 RUNTIME = ["app/signal-lab-core.js", "app/signal-lab-evidence.js", "app/signal-lab-ui.js",
            "app/signal-lab.html", "app/signal-lab.css"]
@@ -27,6 +27,10 @@ AUTHORISED_WINDOW_UPDATES = {
     "agent/math-agent-config.json": "182d8cacf13a6e2387bf9a190e0a8f846fce531bf8157e5ba6a47eba5096317e",
     "agent/run_math_agent.py": "14867b1dbe66d925177395820c0ed0ff36b8a164ec499cb1aee5c8e4e54f99df"
 }
+
+# User-authorised notice cleanup; numerical application source is unchanged.
+# Only the exact amended app bytes and the matching agent pin are accepted.
+AUTHORISED_NOTICE_UPDATES = {'app/index.html': 'ff60231155f0fc869564ec0eb24c87568943cdd96e154094ae9abd9877bd7ff8', 'agent/math-agent-config.json': '3e883422b518730a5d4e85197283c31f468d1f77c5a62a4b61b9af44744ccc99'}
 
 
 
@@ -48,7 +52,7 @@ def protected_baseline(existing, check):
     baseline = existing.get("protected_research_baseline")
     if not isinstance(baseline, dict) or sha(canonical(baseline).encode()) != PROTECTED_MAP_SHA:
         raise ValueError("original 17-file research baseline changed")
-    protected = {**baseline, **AUTHORISED_WINDOW_UPDATES}
+    protected = {**baseline, **AUTHORISED_WINDOW_UPDATES, **AUTHORISED_NOTICE_UPDATES}
     if existing.get("protected_research") != protected:
         raise ValueError("research inventory differs from the explicitly authorised amendment")
     for name, expected in protected.items():

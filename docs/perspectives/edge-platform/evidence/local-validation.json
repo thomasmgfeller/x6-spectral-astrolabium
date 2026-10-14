@@ -1,0 +1,51 @@
+{
+  "schema": "x6.edge-reference.local-validation/0.1",
+  "created_utc": "2026-10-14T12:26:50.761262+00:00",
+  "base_commit": "9c8ef27f73bcd5f11157a4cdd15c4e5a07f737cc",
+  "environment": {
+    "os": "Linux",
+    "arch": "x86_64",
+    "node": "v24.19.0",
+    "python": "3.12.14"
+  },
+  "checks": {
+    "adapter": {
+      "passed": 11,
+      "total": 11
+    },
+    "signal_core": {
+      "passed": 25,
+      "total": 25
+    },
+    "evidence_replay": {
+      "passed": 25,
+      "total": 25
+    },
+    "independent_reference": {
+      "passed": 198,
+      "total": 198
+    },
+    "license_only_app_diff": "PASS",
+    "static_preflight": {
+      "passed": 15,
+      "total": 15
+    },
+    "protected_source_provenance": {
+      "passed": 16,
+      "total": 16
+    }
+  },
+  "example_quality": {
+    "identity": "PASS",
+    "moving_average": "PASS",
+    "fft_lowpass": "PASS",
+    "x6_phase": "FAIL"
+  },
+  "limitations": [
+    "Synthetic software tests only",
+    "No browser E2E in this publication",
+    "No ARM64 or physical device validation",
+    "No independent security review",
+    "No measured cost or performance advantage"
+  ]
+}

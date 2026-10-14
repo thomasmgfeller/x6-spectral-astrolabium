@@ -1,0 +1,108 @@
+{
+  "schema": "x6.signal-lab.evidence-tests/1",
+  "status": "PASS",
+  "total": 25,
+  "passed": 25,
+  "cases": [
+    {
+      "name": "SHA-256 abc published test vector",
+      "passed": true
+    },
+    {
+      "name": "canonical JSON ignores object insertion order, preserves arrays",
+      "passed": true
+    },
+    {
+      "name": "every declared runtime source hash matches bytes",
+      "passed": true
+    },
+    {
+      "name": "complete evidence survives JSON export and computational replay",
+      "passed": true
+    },
+    {
+      "name": "changed bytes fail SHA-256 before replay",
+      "passed": true
+    },
+    {
+      "name": "rehashing a forged output still fails computational replay",
+      "passed": true
+    },
+    {
+      "name": "rehashing a forged reference still fails computational replay",
+      "passed": true
+    },
+    {
+      "name": "rehashing a forged reported metric still fails replay",
+      "passed": true
+    },
+    {
+      "name": "changed seed cannot retain old arrays",
+      "passed": true
+    },
+    {
+      "name": "null and zero have different metric meanings",
+      "passed": true
+    },
+    {
+      "name": "changed result lengths are rejected",
+      "passed": true
+    },
+    {
+      "name": "evidence cannot widen its own replay tolerance",
+      "passed": true
+    },
+    {
+      "name": "weak-bin phase roundoff has a separate fixed degree tolerance",
+      "passed": true
+    },
+    {
+      "name": "wrapped phase representation remains within its declared range",
+      "passed": true
+    },
+    {
+      "name": "synthetic evidence cannot be relabeled recorded or measured",
+      "passed": true
+    },
+    {
+      "name": "unsupported engine versions fail explicitly",
+      "passed": true
+    },
+    {
+      "name": "source revision drift cannot be silently replayed",
+      "passed": true
+    },
+    {
+      "name": "removing the limitations cannot yield verified evidence",
+      "passed": true
+    },
+    {
+      "name": "invalid declared timestamp rejected even with matching digest",
+      "passed": true
+    },
+    {
+      "name": "unknown envelope fields do not disappear silently",
+      "passed": true
+    },
+    {
+      "name": "snapshot precedes asynchronous hashing and caller mutation",
+      "passed": true
+    },
+    {
+      "name": "forged completed runs cannot be exported as fresh evidence",
+      "passed": true
+    },
+    {
+      "name": "non-finite, undefined, sparse and cyclic values are rejected",
+      "passed": true
+    },
+    {
+      "name": "CSV contains every actual sample and all four actual method arrays",
+      "passed": true
+    },
+    {
+      "name": "full counterexample evidence preserves every case and replays",
+      "passed": true
+    }
+  ]
+}
