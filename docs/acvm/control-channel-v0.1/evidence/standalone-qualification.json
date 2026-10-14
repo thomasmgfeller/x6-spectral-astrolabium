@@ -1,0 +1,104 @@
+{
+  "acvm_V01_V08_full_suite": "NOT_CLAIMED",
+  "archive_sha256": "960b77b3fb991e0e3c38d6332afdedf70c48c062792db9ed3fa1e014cd2bf811",
+  "checks": {
+    "end_to_end": {
+      "authenticity": "NOT_ASSESSED",
+      "electrical_validation": "NOT_PERFORMED",
+      "execution_status": "MODEL_EXECUTION_PASS",
+      "independent_oracle": {
+        "max_model_lateness_ms": 0,
+        "measurement_class": "SOFTWARE_MODEL_CLOCK",
+        "output_events": 9,
+        "points": 6,
+        "status": "PASS"
+      },
+      "optical_validation": "NOT_PERFORMED",
+      "scope": "Recorded software execution and integrity; no device re-execution",
+      "status": "VERIFIED"
+    },
+    "export_reimport": {
+      "authenticity": "NOT_ASSESSED",
+      "electrical_validation": "NOT_PERFORMED",
+      "execution_status": "MODEL_EXECUTION_PASS",
+      "independent_oracle": {
+        "max_model_lateness_ms": 0,
+        "measurement_class": "SOFTWARE_MODEL_CLOCK",
+        "output_events": 9,
+        "points": 6,
+        "status": "PASS"
+      },
+      "optical_validation": "NOT_PERFORMED",
+      "scope": "Recorded software execution and integrity; no device re-execution",
+      "status": "VERIFIED"
+    },
+    "firmware_core": {
+      "cases": [
+        "boot_and_open_output_zero",
+        "nominal_sequence_exact_output",
+        "duplicate_start_is_idempotent",
+        "completed_sequence_cannot_restart",
+        "lease_expires_at_500ms",
+        "poll_renews_lease",
+        "replayed_poll_does_not_renew",
+        "stop_survives_sequence_gap",
+        "wrong_session_stops_running_output",
+        "out_of_order_stops_running_output",
+        "same_sequence_changed_payload_rejected",
+        "plan_crc_rejected_before_ready",
+        "partial_load_cannot_start",
+        "buffer_capacity_and_duration_bounds",
+        "dac_code_bounds",
+        "point_time_and_order_bounds",
+        "timing_overrun_latches_fault",
+        "clock_reversal_latches_fault",
+        "64bit_clock_crosses_32bit_boundary",
+        "corrupt_crc_stops_running_output",
+        "every_single_bit_corruption_rejected",
+        "reserved_request_fields_rejected",
+        "stream_resynchronizes_after_noise",
+        "new_session_required_after_fault",
+        "unknown_profile_rejected",
+        "full_buffer_executes_64_points",
+        "plan_corruption_after_byte_256_rejected"
+      ],
+      "status": "PASS"
+    },
+    "host_tests": {
+      "status": "PASS",
+      "tests": 18
+    },
+    "receipt_mutations": {
+      "hardware_relabelling": "REJECTED",
+      "model_output_rehashed": "REJECTED",
+      "plan_rehashed": "REJECTED",
+      "summary_value": "REJECTED"
+    },
+    "tampered_export_rejected": "PASS"
+  },
+  "electrical_validation": "NOT_PERFORMED",
+  "environment": {
+    "compiler": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0",
+    "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+    "python": "3.12.14"
+  },
+  "optical_validation": "NOT_PERFORMED",
+  "pico_firmware_build": "NOT_PERFORMED",
+  "schema": "acvm.channel.qualification/1",
+  "sources": {
+    "experimental/control_channel/__init__.py": "447e05d21754d5997c43c36888c0e32cf0b954a5bca7a15ddd7f25818652fe46",
+    "experimental/control_channel/__main__.py": "f0c660d7c8ec21c24f92b689ac93c67e0d1804284c4126b0a52efcd96f5b2ae0",
+    "experimental/control_channel/channel.py": "dc8942cb27e5b2066ce4a6d393d6db6832d568e47ccc8b869433b1388bbef437",
+    "experimental/control_channel/cli.py": "e8a5c23b5fb544aa03c10a5ce5bd85d811797a89ab2886475ea7b8093478f107",
+    "experimental/control_channel/examples/step-plan.json": "804a86f19023ec2d9173241918ea8d115b889001965f3f4a1ae363615ed81db6",
+    "experimental/control_channel/firmware/CMakeLists.txt": "590f1b53e36dcb4285a275b09dc94401d8b59fbdce07d284cdc09429979f01ed",
+    "experimental/control_channel/firmware/core.hpp": "3885a31927984c48d4b512e7ed8bdc350e4eb80f07ebcdcf974d4ee6d34961c5",
+    "experimental/control_channel/firmware/core_tests.cpp": "ad8bc98d844d0675f2265ceb2cd7ef3ba092483eae98da9c8e27ddfc9d48cab6",
+    "experimental/control_channel/firmware/native.cpp": "ff98f2c602c1080b6500fd58989d6d714e509edbcde016570ea1b2983b39b59a",
+    "experimental/control_channel/firmware/pico.cpp": "f1854798848209b36420be8c6cded057f357dabed8c69c8508b6961ead2e047d",
+    "experimental/control_channel/qualification.py": "fee7f0eb0a5c3da3861ab98e9546c0a93b66460c720a4a9ad929b0413ec9f6b6",
+    "experimental/control_channel/reference.py": "4477f4aa63314a99c95b5e6d450e06b6ca91be3bdf1789866a49e8eea52990c9",
+    "tests/control-channel/test_channel.py": "057699a2114c54718bdb0268855bf8e50a6fe45a66489deb15c1a99bb6c85884"
+  },
+  "status": "SOFTWARE_PASS_HARDWARE_OPEN"
+}
