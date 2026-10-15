@@ -52,3 +52,10 @@ They are excluded from this repository’s Apache-2.0 grant. Attribution, source
 license link and extraction changes are in that folder’s `LICENSE.txt`.
 This pilot is limited to noncommercial research; commercial permission is not
 asserted. Original project code and documentation remain Apache-2.0.
+
+## Preserved agent evidence
+
+Original project reports in `docs/agent-archive/2026-10-15/` retain Apache-2.0.
+The stored NOAA response retains its NOAA/NWS SWPC attribution. NetworkX graph
+atlas material retains the accompanying NetworkX BSD-3-Clause notice. Original
+ZIP bytes, source attributions and scientific limitations are preserved.

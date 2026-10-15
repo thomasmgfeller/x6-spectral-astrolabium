@@ -12,9 +12,19 @@ Wolfram-Gegenrechnung, Offline-Replay und Gegenbeispiele bei n=7/n=8 sind enthal
 Die nächste Hypothese betrifft beide gerichteten Zählgrößen bei n≤7;
 n=7 mit Höhe ≥3 bleibt offen. Die gemeinsame Referenzsuite umfasst jetzt neun Berichte.
 
+## Frozen reference edition and validation hardening
+
+The [2026-10-15 reference edition](https://github.com/thomasmgfeller/x6-spectral-astrolabium/releases/tag/reference-2026.10.15)
+provides a small [documented external reproduction](docs/validation-v1/EXTERNAL_REPRODUCTION.md),
+the nine-case offline suite, a [guarded declarative RAX runner](docs/validation-v1/README.md)
+with 33 adversarial controls, and [three preserved original agent artifacts](docs/agent-archive/2026-10-15/README.md).
+The [error budget](docs/validation-v1/ERROR_BUDGET.json) keeps historical findings and
+remaining limits visible. Person-level external replication is **NOT_PERFORMED**.
+This research reference edition does not qualify industrial performance or hardware.
+
 ## Start here: actual module and evidence status
 
-The [central module register](docs/MODULE_REGISTRY.md) lists **34 modules** with
+The [central module register](docs/MODULE_REGISTRY.md) lists **36 modules** with
 their authoritative branch and commit, prerequisites, executable entry point,
 expected result, available evidence and next acceptance gate. Its
 [machine-readable source](MODULE_REGISTRY.json) is a dated snapshot, not a live

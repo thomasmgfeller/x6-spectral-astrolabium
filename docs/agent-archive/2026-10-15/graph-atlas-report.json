@@ -1,0 +1,60 @@
+{
+  "schema": "x6-source-agent-1",
+  "source": "atlas",
+  "status": "PASS",
+  "started_at": "2026-10-15T07:17:18.636828Z",
+  "mode": "FIXED_BENCHMARK",
+  "physical_validation": "NOT_CLAIMED",
+  "denoising_improvement": "NOT_EVALUATED_WITH_CLEAN_REFERENCE",
+  "runtime": {
+    "python": "3.12.15",
+    "numpy": "2.3.5",
+    "networkx": "3.4.2",
+    "h5py": "3.12.1",
+    "playwright": "1.58.0",
+    "py7zr": "0.22.0",
+    "libarchive-c": "5.3"
+  },
+  "provenance": {
+    "app_sha256": "ff60231155f0fc869564ec0eb24c87568943cdd96e154094ae9abd9877bd7ff8",
+    "agent_files_sha256": {
+      "__init__.py": "5f64e92f9394ee60f55a6881580b52b36d5e41c373bcaf88de1b14721d1d1da9",
+      "atlas_checks.py": "02e9da16cbbe2923a581eb4d1e37e1360990d26981538ddc242904546689b0c7",
+      "lorentz_spectral.py": "984d569a9c55035540402a20a188a0baea5a338988b134d5e64a8d86f7bdf704",
+      "measurement_sources.py": "169abefcd2e16ee3fc77d1285b27baf901b7251f8ba9af7ac064e4f4d264f325",
+      "run_agent.py": "6bd28262d927a65279e64b9ffb7eb130f4ea0512a9e7e7b9bb6c6b2f27062f4c",
+      "run_math_agent.py": "14867b1dbe66d925177395820c0ed0ff36b8a164ec499cb1aee5c8e4e54f99df",
+      "run_sources.py": "4cf68cfd8b679252c297771f7eb5e8da27725f0bc2796043ba3d421097b3e986",
+      "source_transport.py": "4c0021005f2acf5f07d865ddb30f7800c1776b478bb90b491de8ea55bfcaf373"
+    },
+    "git_commit": "90b74509f2b65de08a77de8a7057204834951fc2",
+    "tracked_working_tree_dirty": false
+  },
+  "windows": [],
+  "limits": [
+    "Historical data, not new live measurements",
+    "Imported SNR uses a moving-average proxy; it is not a clean-reference accuracy metric",
+    "Signal-to-graph mapping is a model; certificate covers only its rounded rational graph",
+    "No health classification, qubit-state classification, coherence improvement or external peer review claimed"
+  ],
+  "atlas": {
+    "status": "PASS",
+    "counts": {
+      "total": 1253,
+      "checked": 1253,
+      "connected_certificates": 995,
+      "expected_global_rejections": 258,
+      "failures": 0
+    },
+    "page_errors": [],
+    "chromium": "145.0.7632.6",
+    "networkx": "3.4.2",
+    "numpy": "2.3.5",
+    "input_sha256": "81627a2fbe613d9398555a05e5f1dff583490e6dfed4aeea4d8e67e0dc675d69",
+    "source": "NetworkX 3.4.2 bundled Graph Atlas, Read and Wilson (1998)",
+    "scope": "All unweighted simple undirected graphs up to 7 nodes; no claim for all weighted/large graphs",
+    "reference": "NumPy eigvalsh is numerical; Fraction checks are exact for these integer graphs"
+  },
+  "finished_at": "2026-10-15T07:17:29.317511Z",
+  "elapsed_seconds": 10.681
+}

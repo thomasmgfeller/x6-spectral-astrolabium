@@ -1,0 +1,160 @@
+{
+  "schema": "x6-data-agent-1",
+  "started_at": "2026-10-15T06:48:34.594647Z",
+  "status": "PASS",
+  "mode": "LIVE",
+  "physical_validation": "NOT_CLAIMED",
+  "independent_peer_review": "NOT_CLAIMED",
+  "release_approval": false,
+  "limits": [
+    "One 128-minute window from the public six-hour feed",
+    "Imported SNR uses a moving-average proxy, not ground truth",
+    "Graph is a model of a decimated transformed signal",
+    "Exact certificate covers rounded rational weights only",
+    "Same-project automation is not independent scientific validation"
+  ],
+  "runtime": {
+    "python": "3.12.15",
+    "platform": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+    "playwright": "1.58.0"
+  },
+  "provenance": {
+    "app_sha256": "ff60231155f0fc869564ec0eb24c87568943cdd96e154094ae9abd9877bd7ff8",
+    "agent_sha256": "6bd28262d927a65279e64b9ffb7eb130f4ea0512a9e7e7b9bb6c6b2f27062f4c",
+    "git_commit": "90b74509f2b65de08a77de8a7057204834951fc2",
+    "working_tree_dirty": false
+  },
+  "source": {
+    "url": "https://services.swpc.noaa.gov/json/goes/primary/xrays-6-hour.json",
+    "http_status": 200,
+    "retrieved_at": "2026-10-15T06:48:34.936658Z",
+    "attempts": 1,
+    "etag": "\"27df2-65ddb6c4b6cf5\"",
+    "last_modified": "Thu, 15 Oct 2026 06:47:36 GMT",
+    "sha256": "b0d9187b5bf78989658f9f24be128fb5e477947d57121f0e76770003cc515a9b",
+    "bytes": 163314,
+    "attribution": "NOAA / NWS Space Weather Prediction Center, GOES XRS",
+    "endorsement": "No NOAA endorsement or affiliation is implied"
+  },
+  "data_status": "PASS",
+  "browser": {
+    "status": "PASS",
+    "page_errors": [],
+    "controls": [
+      {
+        "name": "path4_lower",
+        "pass": true,
+        "output": {
+          "schema": "x6.spectral.enclosure.v1",
+          "version": "2.8",
+          "scope": "global-connected-graph",
+          "source": "a b 1\nb c 1\nc d 1",
+          "requestedLower": "0.5",
+          "strictLowerCertified": true,
+          "upperBound": "1/1",
+          "upperWitnessPair": [
+            "a",
+            "d"
+          ],
+          "lowerMethod": "exact rational LDL via existing X6 core",
+          "upperMethod": "exact rational Rayleigh quotient of e_i-e_j",
+          "status": "CERTIFIED_ENCLOSURE",
+          "externalPython": "PENDING",
+          "externalWolfram": "PENDING"
+        }
+      },
+      {
+        "name": "path4_too_high",
+        "pass": true,
+        "output": {
+          "schema": "x6.spectral.enclosure.v1",
+          "version": "2.8",
+          "scope": "global-connected-graph",
+          "source": "a b 1\nb c 1\nc d 1",
+          "requestedLower": "0.6",
+          "strictLowerCertified": false,
+          "upperBound": "1/1",
+          "upperWitnessPair": [
+            "a",
+            "d"
+          ],
+          "lowerMethod": "exact rational LDL via existing X6 core",
+          "upperMethod": "exact rational Rayleigh quotient of e_i-e_j",
+          "status": "LOWER_NOT_CERTIFIED",
+          "externalPython": "PENDING",
+          "externalWolfram": "PENDING"
+        }
+      },
+      {
+        "name": "triangle_equality",
+        "pass": true,
+        "output": {
+          "schema": "x6.spectral.enclosure.v1",
+          "version": "2.8",
+          "scope": "global-connected-graph",
+          "source": "a b 1\nb c 1\na c 1",
+          "requestedLower": "3",
+          "strictLowerCertified": false,
+          "upperBound": "3/1",
+          "upperWitnessPair": [
+            "a",
+            "b"
+          ],
+          "lowerMethod": "exact rational LDL via existing X6 core",
+          "upperMethod": "exact rational Rayleigh quotient of e_i-e_j",
+          "status": "LOWER_NOT_CERTIFIED",
+          "externalPython": "PENDING",
+          "externalWolfram": "PENDING"
+        }
+      },
+      {
+        "name": "weighted2_equality",
+        "pass": true,
+        "output": {
+          "schema": "x6.spectral.enclosure.v1",
+          "version": "2.8",
+          "scope": "global-connected-graph",
+          "source": "a b 0.125",
+          "requestedLower": "0.25",
+          "strictLowerCertified": false,
+          "upperBound": "1/4",
+          "upperWitnessPair": [
+            "a",
+            "b"
+          ],
+          "lowerMethod": "exact rational LDL via existing X6 core",
+          "upperMethod": "exact rational Rayleigh quotient of e_i-e_j",
+          "status": "LOWER_NOT_CERTIFIED",
+          "externalPython": "PENDING",
+          "externalWolfram": "PENDING"
+        }
+      }
+    ],
+    "chromium_version": "145.0.7632.6",
+    "controls_status": "PASS",
+    "signal_selftests": 15,
+    "signal_observables": {
+      "snr_db": 0.0280187927311122,
+      "spectral_entropy": 0.6516775942790125,
+      "dominant_bin": 54,
+      "imaginary_residual": 6.7242218737550985e-16
+    },
+    "signal_gate_interpretation": "SNR/MC thresholds are observations, not agent success criteria",
+    "certificate_check": {
+      "status": "PASS",
+      "vertices": 22,
+      "strict_lower": "8724037/512000000",
+      "upper": "1246291/2000000",
+      "trace_decisions_checked": 10,
+      "arithmetic": "Python fractions.Fraction",
+      "scope": "rounded rational graph only; software cross-check, not external peer review"
+    },
+    "mapping": {
+      "sigma": 1.0,
+      "digits": 6,
+      "sigma_rule": "max(1, largest adjacent captured-sample difference)",
+      "physical_interpretation": "NONE"
+    }
+  },
+  "finished_at": "2026-10-15T06:48:38.008427Z"
+}

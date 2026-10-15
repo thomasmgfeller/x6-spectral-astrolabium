@@ -1,7 +1,41 @@
 cff-version: 1.2.0
-message: "Please cite the eventual archived release; metadata pending maintainer approval."
-title: "X6 Spectral Astrolabium: Research Preview"
+message: "Please cite this reference edition and the exact commit or release asset used. Cite third-party datasets separately."
+title: "X6 Spectral Astrolabium: Finite Reference Edition"
 type: software
-version: "4.2-rc"
-# TODO add verified author(s), ORCID, repository-code and DOI
+authors:
+  - family-names: Gfeller
+    given-names: Thomas
+version: "2026.10.15-reference"
+date-released: "2026-10-15"
+repository-code: "https://github.com/thomasmgfeller/x6-spectral-astrolabium"
+url: "https://github.com/thomasmgfeller/x6-spectral-astrolabium/releases/tag/reference-2026.10.15"
 license: Apache-2.0
+abstract: >-
+  Reproducible finite mathematical and software references, including Lorentzian
+  causal-order checks, stored Wolfram counterchecks, and guarded declarative RAX
+  execution. No physical validation, industrial superiority or independent
+  person-level replication is implied. Apache-2.0 covers original project
+  contributions; separately identified data and dependencies retain their own
+  licenses as documented in LICENSE_SCOPE.md. AI-assisted implementation and
+  internal checking are distinguished from external scientific review.
+keywords:
+  - causal sets
+  - Lorentzian spectral geometry
+  - reproducibility
+  - falsification
+references:
+  - type: article
+    title: "Lorentzian Spectral Geometry with Causal Sets"
+    authors:
+      - family-names: Yazdi
+        given-names: "Yasaman K."
+      - family-names: Letizia
+        given-names: Marco
+      - family-names: Kempf
+        given-names: Achim
+    year: 2021
+    journal: "Classical and Quantum Gravity"
+    volume: "38"
+    start: "015011"
+    doi: "10.1088/1361-6382/abc3f8"
+    url: "https://arxiv.org/abs/2008.02291"

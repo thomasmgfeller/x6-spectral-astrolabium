@@ -1,0 +1,105 @@
+{
+  "schema": "x6.agent-archive/1",
+  "archived_utc": "2026-10-15T14:00:14.491879+00:00",
+  "selection": "Purposive small preservation set: latest observed math, complete graph atlas, and one raw NOAA window. Not a complete archive of every run. NASA/QuTech runs and later scheduled runs are outside this snapshot.",
+  "storage": "Original ZIP bytes committed to Git and included in the reference release. No Actions retention deadline for these repository copies; no DOI repository or deletion-proof permanence claimed.",
+  "artifacts": [
+    {
+      "name": "math-lorentz.zip",
+      "artifact_id": 11976331593,
+      "run_id": 38740481854,
+      "source_commit": "d94f99ca6b49f07e3c7c8d3a79b696fa9bca4d6c",
+      "original_artifact_name": "x6-math-agent-38740481854-1",
+      "original_bytes": 79615,
+      "sha256": "582edce6644daefbe8e3bd9bbf22542a1f29937e973b889f9fc52b47db8d9315",
+      "github_digest": "sha256:582edce6644daefbe8e3bd9bbf22542a1f29937e973b889f9fc52b47db8d9315",
+      "originally_created_utc": "2026-10-15T13:10:52Z",
+      "originally_expires_utc": "2026-11-14T13:10:52Z",
+      "selection_reason": "Lorentz priority: exact small orders and bounded mathematical falsification",
+      "report_status": "PASS",
+      "internal_files_sha256": {
+        "mapping.json": "c306bac9bab1573f8b9b40793d9fc3875fce13c333d6b8f324a8053194ba8bc1",
+        "perturbation.json": "568a194245ff2f1d96a013d704e9bec2dd3332545dc69350cc7541980dd7325e",
+        "lorentz_propagator.json": "a41e98316a8afbf4410e292bcd7f8f10787aa07343547d4f55fe2cd6b98c3541",
+        "report.json": "6b8783a4c332c6a924555f8dad503728a7c949a1d9b88ba67a7d1c23756c7606",
+        "lorentz_orders.json": "533cd252fc30df915dea161226afeb71424776db14f4474478d9b275244c8198",
+        "summary.md": "f8f75fc59f0b46a282c2aacb986eb338a4e0837e1c78ae70762511763b0cc74b",
+        "phase.json": "9ecee03e75601c860c6ccc6cb81dd5fcb539e6b7c3c7eae9c5130e105ad98601"
+      },
+      "verified_historical_sources": {
+        "agent/run_math_agent.py": "14867b1dbe66d925177395820c0ed0ff36b8a164ec499cb1aee5c8e4e54f99df",
+        "agent/math_core_runner.cjs": "49f8a26ef3c18dbf6d55714508617e9f293f0ef8c175b6b91ffcf2ccee6da236",
+        "agent/lorentz_spectral.py": "984d569a9c55035540402a20a188a0baea5a338988b134d5e64a8d86f7bdf704",
+        "agent/math-requirements.txt": "7bd6b8946940b79948c548c8048e545684b91c8edc9444d8dfc0c8f76a97c0a7",
+        "agent/math-agent-config.json": "3e883422b518730a5d4e85197283c31f468d1f77c5a62a4b61b9af44744ccc99",
+        "app/index.html": "ff60231155f0fc869564ec0eb24c87568943cdd96e154094ae9abd9877bd7ff8"
+      },
+      "run_url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/actions/runs/38740481854"
+    },
+    {
+      "name": "graph-atlas.zip",
+      "artifact_id": 11954852618,
+      "run_id": 38697674497,
+      "source_commit": "90b74509f2b65de08a77de8a7057204834951fc2",
+      "original_artifact_name": "x6-atlas-agent-38697674497-1",
+      "original_bytes": 316070,
+      "sha256": "5cba730bf7ffbccb5653677b24a15b9179ee33be5fb6cf20804c4b18915b3ef5",
+      "github_digest": "sha256:5cba730bf7ffbccb5653677b24a15b9179ee33be5fb6cf20804c4b18915b3ef5",
+      "originally_created_utc": "2026-10-15T07:17:30Z",
+      "originally_expires_utc": "2026-10-29T07:17:29Z",
+      "selection_reason": "Complete fixed graph atlas with all expected rejections",
+      "report_status": "PASS",
+      "internal_files_sha256": {
+        "atlas_inputs.json": "81627a2fbe613d9398555a05e5f1dff583490e6dfed4aeea4d8e67e0dc675d69",
+        "atlas_results.jsonl": "e8fb4c65635c516364120b012c099aedcd4cb819adf2cf2400abd6f7c32855cf",
+        "atlas_summary.json": "8a39ab4d70a2ed9ff347a30b6c686992a33c4ad55a6fb3fc90c1323136de4d95",
+        "report.json": "7abe4c6d285fbfbf13da787ffea56e4cb6ec732e1841defa59e1999fdb1f2d8e",
+        "summary.md": "9cebff747771db879a51fb179acdfcff00f53bad2aaa6629694fa89ad64d53ee"
+      },
+      "verified_historical_sources": {
+        "agent/__init__.py": "5f64e92f9394ee60f55a6881580b52b36d5e41c373bcaf88de1b14721d1d1da9",
+        "agent/atlas_checks.py": "02e9da16cbbe2923a581eb4d1e37e1360990d26981538ddc242904546689b0c7",
+        "agent/lorentz_spectral.py": "984d569a9c55035540402a20a188a0baea5a338988b134d5e64a8d86f7bdf704",
+        "agent/measurement_sources.py": "169abefcd2e16ee3fc77d1285b27baf901b7251f8ba9af7ac064e4f4d264f325",
+        "agent/run_agent.py": "6bd28262d927a65279e64b9ffb7eb130f4ea0512a9e7e7b9bb6c6b2f27062f4c",
+        "agent/run_math_agent.py": "14867b1dbe66d925177395820c0ed0ff36b8a164ec499cb1aee5c8e4e54f99df",
+        "agent/run_sources.py": "4cf68cfd8b679252c297771f7eb5e8da27725f0bc2796043ba3d421097b3e986",
+        "agent/source_transport.py": "4c0021005f2acf5f07d865ddb30f7800c1776b478bb90b491de8ea55bfcaf373",
+        "app/index.html": "ff60231155f0fc869564ec0eb24c87568943cdd96e154094ae9abd9877bd7ff8"
+      },
+      "run_url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/actions/runs/38697674497"
+    },
+    {
+      "name": "noaa.zip",
+      "artifact_id": 11953457593,
+      "run_id": 38694613614,
+      "source_commit": "90b74509f2b65de08a77de8a7057204834951fc2",
+      "original_artifact_name": "x6-data-agent-38694613614-1",
+      "original_bytes": 43318,
+      "sha256": "74dea09f87b0541f97c6de95361255edf1bbcd2528f64dd72b7a9c65a35156b3",
+      "github_digest": "sha256:74dea09f87b0541f97c6de95361255edf1bbcd2528f64dd72b7a9c65a35156b3",
+      "originally_created_utc": "2026-10-15T06:48:38Z",
+      "originally_expires_utc": "2026-11-14T06:48:38Z",
+      "selection_reason": "Raw NOAA data window and actual application evidence",
+      "report_status": "PASS",
+      "internal_files_sha256": {
+        "browser_certificate.json": "d47b9da6e99e3573f84c96bbd83389ff6cbf7dece36cf921fe4192898afc2b8d",
+        "browser_controls.json": "6015a2e488c44e3a51eba93df87c96f76b70ef62fcfedefd0773141ee612f561",
+        "browser_run.json": "c9dd27f57e7cdbb1b31239e4956b5d27fc80b57d0c785b9fdf72254c62b93357",
+        "noaa_raw.json": "b0d9187b5bf78989658f9f24be128fb5e477947d57121f0e76770003cc515a9b",
+        "python_certificate_check.json": "ff474e5f9fcd47180ae1b68f0fbf871233493e52358cacc68521b8f0f8c1f80d",
+        "report.json": "8ecbd21b013f91e9500c13bbb8eae66bc0c1b59b502e19b97bd8260ea91bb036",
+        "sample_handoff.json": "37a67c02d742e995fd71a401ce7b2251f1f50e453c431318172c1c6c91ec28b2",
+        "selected_samples.json": "2491185229a325b854f805c8d9175caf4a332bc1c311ea4ece39ea2ff6a6522d",
+        "signal.csv": "125b3d07a7b9f309794303b2e4e2a962bee67c2ee0115ed4fdd93bf372c23e71",
+        "signal_evidence.json": "32c70ae746fdb108a3002278dbb5b084c56c022862a73bea4326fd7b9d0bfa4c",
+        "summary.md": "610c55137bc56c37eb8ed470da315eafccd0863876fb77cad2fe82040793466e"
+      },
+      "verified_historical_sources": {
+        "agent/run_agent.py": "6bd28262d927a65279e64b9ffb7eb130f4ea0512a9e7e7b9bb6c6b2f27062f4c",
+        "app/index.html": "ff60231155f0fc869564ec0eb24c87568943cdd96e154094ae9abd9877bd7ff8"
+      },
+      "run_url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/actions/runs/38694613614"
+    }
+  ]
+}

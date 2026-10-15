@@ -1,0 +1,27 @@
+name: External reference reproduction
+description: Report a personal reproduction of the frozen finite reference edition.
+title: "Reference reproduction: "
+body:
+  - type: markdown
+    attributes:
+      value: "Use docs/validation-v1/EXTERNAL_REPRODUCTION.md. CI and same-project runs do not count as independent person-level reproduction. Preserve failures and deviations."
+  - type: textarea
+    id: identity
+    attributes:
+      label: Public identifier and relationship to this project
+      description: State whether you developed the implementation, executed the commands personally, and received assistance. No private address needed.
+    validations:
+      required: true
+  - type: textarea
+    id: source
+    attributes:
+      label: Release, source commit, archive SHA-256 and runtime
+    validations:
+      required: true
+  - type: textarea
+    id: results
+    attributes:
+      label: Complete results and deviations
+      description: Attach REPRODUCTION.json, logs and the filled external-report template; provide the full result bundle location. Include failed steps.
+    validations:
+      required: true
