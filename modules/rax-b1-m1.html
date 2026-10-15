@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>RAX-B1/M1: Benchmark und Methodenreview | X6 Research Hub</title>
+<meta name="description" content="67.584 Benchmarkläufe und Methoden-Gegenbeispiele werden nachgerechnet. Alle acht primären Überlegenheitsentscheidungen bleiben INCONCLUSIVE.">
+<link rel="canonical" href="https://thomasmgfeller.github.io/x6-spectral-astrolabium/modules/rax-b1-m1.html">
+<link rel="alternate" type="text/markdown" href="rax-b1-m1.md">
+<link rel="describedby" href="../llms.txt" type="text/plain">
+<link rel="sitemap" href="../sitemap.xml" type="application/xml">
+<meta property="og:type" content="website">
+<meta property="og:title" content="RAX-B1/M1: Benchmark und Methodenreview">
+<meta property="og:description" content="67.584 Benchmarkläufe und Methoden-Gegenbeispiele werden nachgerechnet. Alle acht primären Überlegenheitsentscheidungen bleiben INCONCLUSIVE.">
+<meta property="og:url" content="https://thomasmgfeller.github.io/x6-spectral-astrolabium/modules/rax-b1-m1.html">
+<meta property="og:site_name" content="X6 Spectral Astrolabium">
+<meta name="twitter:card" content="summary">
+<link rel="stylesheet" href="../assets/hub.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "RAX-B1/M1: Benchmark und Methodenreview", "description": "67.584 Benchmarkläufe und Methoden-Gegenbeispiele werden nachgerechnet. Alle acht primären Überlegenheitsentscheidungen bleiben INCONCLUSIVE.", "url": "https://thomasmgfeller.github.io/x6-spectral-astrolabium/modules/rax-b1-m1.html", "inLanguage": "de", "isPartOf": {"@type": "WebSite", "name": "X6 Spectral Astrolabium", "url": "https://thomasmgfeller.github.io/x6-spectral-astrolabium/"}}</script>
+
+</head>
+<body>
+<a class="skip" href="#main">Zum Inhalt</a>
+<header><a class="brand" href="../de/index.html">X6 <span>Spectral Astrolabium</span></a>
+<nav aria-label="Hauptnavigation"><a href="../de/index.html">Übersicht</a><a href="../de/guide.html">Einstieg</a><a href="index.html">Module</a><a href="../index.html" hreflang="en">English</a><a href="https://github.com/thomasmgfeller/x6-spectral-astrolabium">GitHub</a></nav></header>
+<main id="main"><p class="eyebrow">MODULREGISTER · 2026-10-15</p><h1>RAX-B1/M1: Benchmark und Methodenreview</h1><p><span class="tag">MAIN</span> <span class="tag">SOFTWARE</span></p><p>Datierter Registerstand, kein Live-Prüfsiegel. SOFTWARE bezeichnet den ausführbaren Prüfweg, nicht eine validierte physische Anwendung. Die Originalangaben bleiben in Deutsch.</p><section class="prose"><h2>1. Was wird untersucht?</h2><p>RAX-B1/M1: Benchmark und Methodenreview</p><p><a href="https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/a81e62fb077ef5e8fd7774682a400cbef6ed5aa1/docs/research/rax/method-review-v0.1/README.md">Gepinnte Originaldokumentation</a> · <a href="https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/a81e62fb077ef5e8fd7774682a400cbef6ed5aa1">Quellencommit a81e62fb077e</a></p><p>Branch: <code>main</code>. <code>a81e62fb077ef5e8fd7774682a400cbef6ed5aa1</code></p></section><section class="prose"><h2>2. Was ist dokumentiert?</h2><p>67.584 Benchmarkläufe und Methoden-Gegenbeispiele werden nachgerechnet. Alle acht primären Überlegenheitsentscheidungen bleiben INCONCLUSIVE.</p><ul><li><a href="https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/a81e62fb077ef5e8fd7774682a400cbef6ed5aa1/docs/research/rax/benchmark-v0.1/RAX_B1_Benchmarking_v0_1_Paket.zip">docs/research/rax/benchmark-v0.1/RAX_B1_Benchmarking_v0_1_Paket.zip</a><p>Eingefrorene B1-Daten und Referenzprüfer.</p></li><li><a href="https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/a81e62fb077ef5e8fd7774682a400cbef6ed5aa1/docs/research/rax/method-review-v0.1/RAX_M1_Methodenpruefung_v0_1_Paket.zip">docs/research/rax/method-review-v0.1/RAX_M1_Methodenpruefung_v0_1_Paket.zip</a><p>Zwei nachgewiesene Validierungsfehler und Zusatzguards; ursprüngliche Daten bestehen Nachprüfung.</p></li></ul><p>Evidenzberichte behalten ihre eigenen Prüfrevisionen. Ein Quellenpin belegt weder einen neuen Lauf noch unabhängige externe Begutachtung.</p></section><section class="prose"><h2>3. Wie lässt sich das prüfen?</h2><p>setup --profile research; Python 3.12, NumPy/SciPy. Der Replay kann mehrere Minuten dauern.</p><p>In einem neuen Ordner ausführen; vorhandene Ausgabeordner nicht überschreiben. Voraussetzungen und paketbezogene Hinweise in der Originaldokumentation beachten.</p><pre><code>git clone --branch main https://github.com/thomasmgfeller/x6-spectral-astrolabium.git x6-rax-b1-m1
+cd x6-rax-b1-m1
+git checkout --detach a81e62fb077ef5e8fd7774682a400cbef6ed5aa1
+python3 x6.py run rax --output runs/register-rax
+python3 x6.py verify runs/register-rax</code></pre><h3>Erwartete Ausgabe</h3><p>Exit 0; nur die unten genannte Softwareaussage.</p></section><section class="note"><h2>4. Was bleibt offen?</h2><p>Historische Quellen bleiben unverändert. Neuer deklarativer RAX-G1-Runner mit 33 Angriffskontrollen im Modul rax-guarded; unabhängige personelle Wiederholung und allgemeine Isolation fremden Python-Codes bleiben offen.</p></section></main>
+<footer><p>Thomas Gfeller · Offene Forschung · <a href="../CITATION.cff">CITATION.cff</a> · <a href="rax-b1-m1.md">Markdown</a> · <a href="../llms.txt">llms.txt</a></p>
+<p>Eigene Beiträge: Apache-2.0. Drittinhalte und Daten behalten ihre eigenen Bedingungen. <a href="https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/LICENSE_SCOPE.md">Lizenzumfang</a>.</p>
+<p>Forschungssoftware und endliche Referenzrechnungen. Keine abgeschlossene physische Gerätequalifikation oder unabhängige externe Begutachtung.</p></footer>
+</body></html>

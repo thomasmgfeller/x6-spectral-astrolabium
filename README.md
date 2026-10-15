@@ -4,6 +4,30 @@
 
 This repository publishes the actual **X6 v4.2 RC** browser application, alongside the **v4.3 community audit kit**. The application combines experimental signal/Fourier analysis, a model-dependent signal-to-graph mapping, and exact rational lower bounds for finite weighted undirected graph Laplacians.
 
+## Start here — understand, try, verify
+
+X6 is an open research hub for **signal validation, finite spectral graph
+references and Lorentzian causal-order research**. It offers browser experiments,
+executable reference calculations and research plans with explicit evidence limits.
+
+**[Research portal](https://thomasmgfeller.github.io/x6-spectral-astrolabium/)** ·
+**[Deutsch](https://thomasmgfeller.github.io/x6-spectral-astrolabium/de/)** ·
+[All modules](https://thomasmgfeller.github.io/x6-spectral-astrolabium/modules/)
+
+| Your goal | Start here |
+| --- | --- |
+| Understand the questions and scientific limits | [Plain-language guide](https://thomasmgfeller.github.io/x6-spectral-astrolabium/guide/#understand) |
+| Try a synthetic signal experiment | [Signal Validation Lab](https://thomasmgfeller.github.io/x6-spectral-astrolabium/app/signal-lab.html) |
+| Reproduce a documented reference | [Pinned reference edition](https://thomasmgfeller.github.io/x6-spectral-astrolabium/modules/reference-edition.html) |
+| Inspect sources, evidence and open acceptance gates | [Searchable module catalogue](https://thomasmgfeller.github.io/x6-spectral-astrolabium/modules/) |
+| Use machine-readable navigation | [Authoritative register](MODULE_REGISTRY.json) · [Derived index](hub-index.json) · [Optional llms.txt](llms.txt) |
+
+**Read scope with results:** source availability is not maturity; software checks,
+exact finite calculations, simulations and physical measurements are distinct.
+Independent external replication and physical device qualification remain open.
+The catalogue renders the dated register without changing its claims or source pins.
+Detailed research updates and reproduction instructions follow below.
+
 ## Lorentz: die vier n=6-Restpaare
 
 Die [gezielte Restpaaranalyse](research/lorentz_n6_residuals/README.md) trennt alle vier

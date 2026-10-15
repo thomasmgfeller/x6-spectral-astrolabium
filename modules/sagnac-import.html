@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sagnac-Aufnahme und Import | X6 Research Hub</title>
+<meta name="description" content="SGNCv007-Decoder, synthetischer Import und Loopback-Bridge; optische Stellbefehle gehören zum separaten ACVM-Modul.">
+<link rel="canonical" href="https://thomasmgfeller.github.io/x6-spectral-astrolabium/modules/sagnac-import.html">
+<link rel="alternate" type="text/markdown" href="sagnac-import.md">
+<link rel="describedby" href="../llms.txt" type="text/plain">
+<link rel="sitemap" href="../sitemap.xml" type="application/xml">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Sagnac-Aufnahme und Import">
+<meta property="og:description" content="SGNCv007-Decoder, synthetischer Import und Loopback-Bridge; optische Stellbefehle gehören zum separaten ACVM-Modul.">
+<meta property="og:url" content="https://thomasmgfeller.github.io/x6-spectral-astrolabium/modules/sagnac-import.html">
+<meta property="og:site_name" content="X6 Spectral Astrolabium">
+<meta name="twitter:card" content="summary">
+<link rel="stylesheet" href="../assets/hub.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Sagnac-Aufnahme und Import", "description": "SGNCv007-Decoder, synthetischer Import und Loopback-Bridge; optische Stellbefehle gehören zum separaten ACVM-Modul.", "url": "https://thomasmgfeller.github.io/x6-spectral-astrolabium/modules/sagnac-import.html", "inLanguage": "de", "isPartOf": {"@type": "WebSite", "name": "X6 Spectral Astrolabium", "url": "https://thomasmgfeller.github.io/x6-spectral-astrolabium/"}}</script>
+
+</head>
+<body>
+<a class="skip" href="#main">Zum Inhalt</a>
+<header><a class="brand" href="../de/index.html">X6 <span>Spectral Astrolabium</span></a>
+<nav aria-label="Hauptnavigation"><a href="../de/index.html">Übersicht</a><a href="../de/guide.html">Einstieg</a><a href="index.html">Module</a><a href="../index.html" hreflang="en">English</a><a href="https://github.com/thomasmgfeller/x6-spectral-astrolabium">GitHub</a></nav></header>
+<main id="main"><p class="eyebrow">MODULREGISTER · 2026-10-15</p><h1>Sagnac-Aufnahme und Import</h1><p><span class="tag">MAIN</span> <span class="tag">SOFTWARE</span></p><p>Datierter Registerstand, kein Live-Prüfsiegel. SOFTWARE bezeichnet den ausführbaren Prüfweg, nicht eine validierte physische Anwendung. Die Originalangaben bleiben in Deutsch.</p><section class="prose"><h2>1. Was wird untersucht?</h2><p>Sagnac-Aufnahme und Import</p><p><a href="https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/a81e62fb077ef5e8fd7774682a400cbef6ed5aa1/docs/SAGNAC_INTEGRATION.md">Gepinnte Originaldokumentation</a> · <a href="https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/a81e62fb077ef5e8fd7774682a400cbef6ed5aa1">Quellencommit a81e62fb077e</a></p><p>Branch: <code>main</code>. <code>a81e62fb077ef5e8fd7774682a400cbef6ed5aa1</code></p></section><section class="prose"><h2>2. Was ist dokumentiert?</h2><p>SGNCv007-Decoder, synthetischer Import und Loopback-Bridge; optische Stellbefehle gehören zum separaten ACVM-Modul.</p><ul><li><a href="https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/a81e62fb077ef5e8fd7774682a400cbef6ed5aa1/evidence/sagnac_integration_validation.json">evidence/sagnac_integration_validation.json</a><p>Gespeicherte Softwarevalidierung des Integrationsstands; keine Hardwaremessung.</p></li></ul><p>Evidenzberichte behalten ihre eigenen Prüfrevisionen. Ein Quellenpin belegt weder einen neuen Lauf noch unabhängige externe Begutachtung.</p></section><section class="prose"><h2>3. Wie lässt sich das prüfen?</h2><p>Python 3.12, Browser; Standardstart ohne angeschlossenes Gerät.</p><p>In einem neuen Ordner ausführen; vorhandene Ausgabeordner nicht überschreiben. Voraussetzungen und paketbezogene Hinweise in der Originaldokumentation beachten.</p><pre><code>git clone --branch main https://github.com/thomasmgfeller/x6-spectral-astrolabium.git x6-sagnac-import
+cd x6-sagnac-import
+git checkout --detach a81e62fb077ef5e8fd7774682a400cbef6ed5aa1
+python3 device/sagnac_bridge.py</code></pre><h3>Erwartete Ausgabe</h3><p>http://127.0.0.1:8766/app/; Tab 07 Sagnac, synthetisches Beispiel. Server endet mit Strg+C.</p></section><section class="note"><h2>4. Was bleibt offen?</h2><p>Reale serielle Aufnahme und Zähler-/Zeitkalibrierung mit unabhängiger Referenz; optische Claims separat prüfen.</p></section></main>
+<footer><p>Thomas Gfeller · Offene Forschung · <a href="../CITATION.cff">CITATION.cff</a> · <a href="sagnac-import.md">Markdown</a> · <a href="../llms.txt">llms.txt</a></p>
+<p>Eigene Beiträge: Apache-2.0. Drittinhalte und Daten behalten ihre eigenen Bedingungen. <a href="https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/LICENSE_SCOPE.md">Lizenzumfang</a>.</p>
+<p>Forschungssoftware und endliche Referenzrechnungen. Keine abgeschlossene physische Gerätequalifikation oder unabhängige externe Begutachtung.</p></footer>
+</body></html>

@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mehrschichtiger Fingerprint | X6 Research Hub</title>
+<meta name="description" content="n6-0073 und n6-0181 werden durch gerichtete Gradmultimengen getrennt. Physischer MODAL_2R1F-Pilot ist ungemessen.">
+<link rel="canonical" href="https://thomasmgfeller.github.io/x6-spectral-astrolabium/modules/fingerprint.html">
+<link rel="alternate" type="text/markdown" href="fingerprint.md">
+<link rel="describedby" href="../llms.txt" type="text/plain">
+<link rel="sitemap" href="../sitemap.xml" type="application/xml">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Mehrschichtiger Fingerprint">
+<meta property="og:description" content="n6-0073 und n6-0181 werden durch gerichtete Gradmultimengen getrennt. Physischer MODAL_2R1F-Pilot ist ungemessen.">
+<meta property="og:url" content="https://thomasmgfeller.github.io/x6-spectral-astrolabium/modules/fingerprint.html">
+<meta property="og:site_name" content="X6 Spectral Astrolabium">
+<meta name="twitter:card" content="summary">
+<link rel="stylesheet" href="../assets/hub.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Mehrschichtiger Fingerprint", "description": "n6-0073 und n6-0181 werden durch gerichtete Gradmultimengen getrennt. Physischer MODAL_2R1F-Pilot ist ungemessen.", "url": "https://thomasmgfeller.github.io/x6-spectral-astrolabium/modules/fingerprint.html", "inLanguage": "de", "isPartOf": {"@type": "WebSite", "name": "X6 Spectral Astrolabium", "url": "https://thomasmgfeller.github.io/x6-spectral-astrolabium/"}}</script>
+
+</head>
+<body>
+<a class="skip" href="#main">Zum Inhalt</a>
+<header><a class="brand" href="../de/index.html">X6 <span>Spectral Astrolabium</span></a>
+<nav aria-label="Hauptnavigation"><a href="../de/index.html">Übersicht</a><a href="../de/guide.html">Einstieg</a><a href="index.html">Module</a><a href="../index.html" hreflang="en">English</a><a href="https://github.com/thomasmgfeller/x6-spectral-astrolabium">GitHub</a></nav></header>
+<main id="main"><p class="eyebrow">MODULREGISTER · 2026-10-15</p><h1>Mehrschichtiger Fingerprint</h1><p><span class="tag">BRANCH_ONLY</span> <span class="tag">SOFTWARE</span></p><p>Datierter Registerstand, kein Live-Prüfsiegel. SOFTWARE bezeichnet den ausführbaren Prüfweg, nicht eine validierte physische Anwendung. Die Originalangaben bleiben in Deutsch.</p><section class="prose"><h2>1. Was wird untersucht?</h2><p>Mehrschichtiger Fingerprint</p><p><a href="https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/f22030f2dae0aa670cdbc450c5e881ce250b36b8/research/fingerprint_v1/README.md">Gepinnte Originaldokumentation</a> · <a href="https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/f22030f2dae0aa670cdbc450c5e881ce250b36b8">Quellencommit f22030f2dae0</a></p><p>Branch: <code>research/x6-fingerprint-v1</code>. <code>f22030f2dae0aa670cdbc450c5e881ce250b36b8</code></p></section><section class="prose"><h2>2. Was ist dokumentiert?</h2><p>n6-0073 und n6-0181 werden durch gerichtete Gradmultimengen getrennt. Physischer MODAL_2R1F-Pilot ist ungemessen.</p><ul><li><a href="https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/f22030f2dae0aa670cdbc450c5e881ce250b36b8/research/fingerprint_v1/examples/separation-event.json">research/fingerprint_v1/examples/separation-event.json</a><p>Exakter Vergleich gebundener gespeicherter Werte; Validator berechnet nicht jedes Polynom aus Rohmatrizen neu.</p></li><li><a href="https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/f22030f2dae0aa670cdbc450c5e881ce250b36b8/research/fingerprint_v1/examples/physical-pilot-plan.json">research/fingerprint_v1/examples/physical-pilot-plan.json</a><p>Expliziter Messplan ohne erfundene Messwerte.</p></li></ul><p>Evidenzberichte behalten ihre eigenen Prüfrevisionen. Ein Quellenpin belegt weder einen neuen Lauf noch unabhängige externe Begutachtung.</p></section><section class="prose"><h2>3. Wie lässt sich das prüfen?</h2><p>Python 3.12 und Anforderungen aus industrial-v1; nur validieren, keine Beispielregeneration nötig.</p><p>In einem neuen Ordner ausführen; vorhandene Ausgabeordner nicht überschreiben. Voraussetzungen und paketbezogene Hinweise in der Originaldokumentation beachten.</p><pre><code>git clone --branch research/x6-fingerprint-v1 https://github.com/thomasmgfeller/x6-spectral-astrolabium.git x6-fingerprint
+cd x6-fingerprint
+git checkout --detach f22030f2dae0aa670cdbc450c5e881ce250b36b8
+python3 -m pip install -r experiments/industrial-v1/requirements.txt
+python3 research/fingerprint_v1/validate.py research/fingerprint_v1/examples/n6-0073.json research/fingerprint_v1/examples/n6-0181.json research/fingerprint_v1/examples/separation-event.json research/fingerprint_v1/examples/physical-pilot-plan.json</code></pre><h3>Erwartete Ausgabe</h3><p>Exit 0; nur die unten genannte Softwareaussage.</p></section><section class="note"><h2>4. Was bleibt offen?</h2><p>Empirischen Assessor mit Unsicherheit/Bestätigungsdaten implementieren; Pilot kalibrieren und Rohdaten prüfen.</p></section></main>
+<footer><p>Thomas Gfeller · Offene Forschung · <a href="../CITATION.cff">CITATION.cff</a> · <a href="fingerprint.md">Markdown</a> · <a href="../llms.txt">llms.txt</a></p>
+<p>Eigene Beiträge: Apache-2.0. Drittinhalte und Daten behalten ihre eigenen Bedingungen. <a href="https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/LICENSE_SCOPE.md">Lizenzumfang</a>.</p>
+<p>Forschungssoftware und endliche Referenzrechnungen. Keine abgeschlossene physische Gerätequalifikation oder unabhängige externe Begutachtung.</p></footer>
+</body></html>
