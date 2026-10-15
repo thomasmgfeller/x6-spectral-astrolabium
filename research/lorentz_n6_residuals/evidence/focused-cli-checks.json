@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "source_commit": "5eaffee5a594e2c2c5b86db28a1406dc29168087",
+  "probes": [
+    {
+      "case": "missing-pair",
+      "python_optimized": true,
+      "exit_code": 1,
+      "rejection": "FAIL: Supplied report differs from complete replay"
+    },
+    {
+      "case": "hidden-n8-counterexample",
+      "python_optimized": true,
+      "exit_code": 1,
+      "rejection": "FAIL: Supplied report differs from complete replay"
+    }
+  ]
+}

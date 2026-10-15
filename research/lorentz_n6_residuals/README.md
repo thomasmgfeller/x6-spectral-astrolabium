@@ -5,6 +5,9 @@ getrennt. Die gerichteten Gradpaare `D` genügen; sogar die einzelne ganze Zahl
 `W_future` trennt jedes dieser vier Paare. Das ist eine endliche Aussage über
 den vollständig geprüften n=6-Korpus. Drei Paare sind Zeitumkehrungen voneinander.
 
+Die [ausgeführte Abnahme](ACCEPTANCE.md) belegt den frischen lokalen Checkout und
+den erfolgreichen CI-Lauf ohne Netzwerk mit identischem vollständigem Bundle.
+
 ## Ausführen und erwartetes Ergebnis
 
 Aus dem Repository-Hauptverzeichnis, Python 3.12, ausschließlich Standardbibliothek:
