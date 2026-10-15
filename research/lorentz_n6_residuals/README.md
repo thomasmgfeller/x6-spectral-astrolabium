@@ -187,9 +187,13 @@ vorhanden. Er wird hier bestätigt und auf alle Restpaare erweitert.
 Yazdi, Letizia und Kempf, [*Lorentzian Spectral Geometry with Causal Sets*](https://arxiv.org/abs/2008.02291),
 Abschnitt 3.2 und Tabelle 2, definieren bereits gepaarte Ein-/Ausgangsgrade und
 berichten die vollständige Trennung mit Spektren bis n=7. Bei n=8 bleiben dort
-Kollisionen. Die Verwendung von `D` ist daher eine Replikation. Unser konkreter
-Zusatz sind die prüfbaren vier Paarzeugen, die Kompression zu `W±` und die
-expliziten Grenzen dieser Kompression.
+Kollisionen. Für unsere vier Höhe-zwei-Paare ist der Gradansatz eine Replikation;
+Hasse- und Kausalrelation fallen dort zusammen. Bei größeren Höhen verwenden wir
+explizit die Vollrelation. Das Gradbeispiel zu Abbildung 1 des Artikels zählt
+Hasse-Kanten; wir setzen diese Konvention daher nicht ungeprüft mit unseren
+Vollrelationsgraden gleich. Die Literaturzählung ist kein unabhängiger Nachweis
+für unsere `W±`-Hypothese. Unser konkreter Zusatz sind die prüfbaren vier
+Paarzeugen, die Kompression zu `W±` und deren explizite Grenzen.
 
 [contract.json](contract.json) und die drei `freeze*.json` dokumentieren die
 vor jedem Wolfram-Aufruf festgeschriebenen Quellen. Die lokalen Entdeckungen
