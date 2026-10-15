@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>RAX-U1: Reduktionskontrolle | X6 Research Hub</title>
+<meta name="description" content="160 Matrizen/3,2 Mio. Übergänge; Entscheidungen 8 gestützt, 16 verworfen, 16 unentschieden. Archivvorfall bleibt offen.">
+<link rel="canonical" href="https://thomasmgfeller.github.io/x6-spectral-astrolabium/modules/rax-u1.html">
+<link rel="alternate" type="text/markdown" href="rax-u1.md">
+<link rel="describedby" href="../llms.txt" type="text/plain">
+<link rel="sitemap" href="../sitemap.xml" type="application/xml">
+<meta property="og:type" content="website">
+<meta property="og:title" content="RAX-U1: Reduktionskontrolle">
+<meta property="og:description" content="160 Matrizen/3,2 Mio. Übergänge; Entscheidungen 8 gestützt, 16 verworfen, 16 unentschieden. Archivvorfall bleibt offen.">
+<meta property="og:url" content="https://thomasmgfeller.github.io/x6-spectral-astrolabium/modules/rax-u1.html">
+<meta property="og:site_name" content="X6 Spectral Astrolabium">
+<meta name="twitter:card" content="summary">
+<link rel="stylesheet" href="../assets/hub.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "RAX-U1: Reduktionskontrolle", "description": "160 Matrizen/3,2 Mio. Übergänge; Entscheidungen 8 gestützt, 16 verworfen, 16 unentschieden. Archivvorfall bleibt offen.", "url": "https://thomasmgfeller.github.io/x6-spectral-astrolabium/modules/rax-u1.html", "inLanguage": "de", "isPartOf": {"@type": "WebSite", "name": "X6 Spectral Astrolabium", "url": "https://thomasmgfeller.github.io/x6-spectral-astrolabium/"}}</script>
+
+</head>
+<body>
+<a class="skip" href="#main">Zum Inhalt</a>
+<header><a class="brand" href="../de/index.html">X6 <span>Spectral Astrolabium</span></a>
+<nav aria-label="Hauptnavigation"><a href="../de/index.html">Übersicht</a><a href="../de/guide.html">Einstieg</a><a href="index.html">Module</a><a href="../index.html" hreflang="en">English</a><a href="https://github.com/thomasmgfeller/x6-spectral-astrolabium">GitHub</a></nav></header>
+<main id="main"><p class="eyebrow">MODULREGISTER · 2026-10-15</p><h1>RAX-U1: Reduktionskontrolle</h1><p><span class="tag">MAIN</span> <span class="tag">SOFTWARE</span></p><p>Datierter Registerstand, kein Live-Prüfsiegel. SOFTWARE bezeichnet den ausführbaren Prüfweg, nicht eine validierte physische Anwendung. Die Originalangaben bleiben in Deutsch.</p><section class="prose"><h2>1. Was wird untersucht?</h2><p>RAX-U1: Reduktionskontrolle</p><p><a href="https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/a81e62fb077ef5e8fd7774682a400cbef6ed5aa1/docs/research/rax/countercheck-v0.1/README.md">Gepinnte Originaldokumentation</a> · <a href="https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/a81e62fb077ef5e8fd7774682a400cbef6ed5aa1">Quellencommit a81e62fb077e</a></p><p>Branch: <code>main</code>. <code>a81e62fb077ef5e8fd7774682a400cbef6ed5aa1</code></p></section><section class="prose"><h2>2. Was ist dokumentiert?</h2><p>160 Matrizen/3,2 Mio. Übergänge; Entscheidungen 8 gestützt, 16 verworfen, 16 unentschieden. Archivvorfall bleibt offen.</p><ul><li><a href="https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/a81e62fb077ef5e8fd7774682a400cbef6ed5aa1/docs/research/rax/countercheck-v0.1/RAX_U1_Gegenpruefung_v0_1_Paket.zip">docs/research/rax/countercheck-v0.1/RAX_U1_Gegenpruefung_v0_1_Paket.zip</a><p>Originalquellen, Rohdaten, audit-final und Gegenproben im Paket.</p></li></ul><p>Evidenzberichte behalten ihre eigenen Prüfrevisionen. Ein Quellenpin belegt weder einen neuen Lauf noch unabhängige externe Begutachtung.</p></section><section class="prose"><h2>3. Wie lässt sich das prüfen?</h2><p>Linux, Python 3.12, NumPy/SciPy aus enthaltenen requirements.</p><p>In einem neuen Ordner ausführen; vorhandene Ausgabeordner nicht überschreiben. Voraussetzungen und paketbezogene Hinweise in der Originaldokumentation beachten.</p><pre><code>git clone --branch main https://github.com/thomasmgfeller/x6-spectral-astrolabium.git x6-rax-u1
+cd x6-rax-u1
+git checkout --detach a81e62fb077ef5e8fd7774682a400cbef6ed5aa1
+python3 -m zipfile -e docs/research/rax/countercheck-v0.1/RAX_U1_Gegenpruefung_v0_1_Paket.zip /tmp/x6-hub-rax-u1
+cd /tmp/x6-hub-rax-u1/RAX_U1_Gegenpruefung_v0_1
+python3 -m pip install -r research/rax_u1_countercheck/requirements.txt
+python3 research/rax_u1_countercheck/audit.py --output audit-reproduced.json
+python3 research/rax_u1/reference.py research/rax_u1/evidence/qualification</code></pre><h3>Erwartete Ausgabe</h3><p>Exit 0; nur die unten genannte Softwareaussage.</p></section><section class="note"><h2>4. Was bleibt offen?</h2><p>Dauerhafte Speicherung mit Flush/fsync, Reopen/Hashprüfung sowie Abbruch-/Kürzungs-/Neustarttests qualifizieren.</p></section></main>
+<footer><p>Thomas Gfeller · Offene Forschung · <a href="../CITATION.cff">CITATION.cff</a> · <a href="rax-u1.md">Markdown</a> · <a href="../llms.txt">llms.txt</a></p>
+<p>Eigene Beiträge: Apache-2.0. Drittinhalte und Daten behalten ihre eigenen Bedingungen. <a href="https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/LICENSE_SCOPE.md">Lizenzumfang</a>.</p>
+<p>Forschungssoftware und endliche Referenzrechnungen. Keine abgeschlossene physische Gerätequalifikation oder unabhängige externe Begutachtung.</p></footer>
+</body></html>

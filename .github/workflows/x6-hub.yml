@@ -1,0 +1,49 @@
+name: X6 Research Hub
+on:
+  pull_request:
+    paths: ['index.html', 'index.md', 'de/**', 'guide/**', 'modules/**', 'assets/hub.*', 'docs/hub/**', 'MODULE_REGISTRY.json', 'hub-index.json', 'sitemap.xml', 'llms.txt', 'tools/*hub*', '.github/workflows/x6-hub.yml']
+  push:
+    branches: [main]
+    paths: ['index.html', 'index.md', 'de/**', 'guide/**', 'modules/**', 'assets/hub.*', 'docs/hub/**', 'MODULE_REGISTRY.json', 'hub-index.json', 'sitemap.xml', 'llms.txt', 'tools/*hub*', '.github/workflows/x6-hub.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  navigation:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Check generated content and all local links
+        run: |
+          python3 tools/build_hub.py --check
+          python3 tools/check_hub.py
+          python3 tests/python/verify_manifest.py
+  browser:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Install pinned browser test runner
+        run: |
+          npm install --no-save --package-lock=false --ignore-scripts playwright@1.62.1
+          npx playwright install --with-deps chromium
+      - name: Check navigation, mobile layout, filters and no-JavaScript reading
+        run: node tools/check_hub_browser.cjs "$RUNNER_TEMP/x6-hub-browser"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: x6-hub-browser
+          path: ${{ runner.temp }}/x6-hub-browser
+          retention-days: 30
+          if-no-files-found: error

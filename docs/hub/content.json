@@ -1,0 +1,414 @@
+{
+  "en": {
+    "title": "Signals, graphs and reproducible research",
+    "description": "Explore X6 research software, signal validation and finite spectral references. Find runnable examples, pinned sources, evidence and open research questions.",
+    "headline": "Explore the question.\nInspect the evidence.",
+    "lead": "X6 Spectral Astrolabium is an open research hub for signals, graphs and causal orders. Start with a browser experiment, explore a research module, or reproduce a finite reference calculation.",
+    "launch": "Try Signal Validation Lab →",
+    "browse": "Browse all modules →",
+    "paths_title": "Choose your starting point",
+    "paths": [
+      {
+        "id": "understand",
+        "title": "Understand",
+        "text": "What is being studied, and what do the results actually say? A plain-language introduction to the research and its limits.",
+        "link": "Understand the project →"
+      },
+      {
+        "id": "try",
+        "title": "Try",
+        "text": "Compare signals and reference filters in your browser. Use synthetic examples to see both successful checks and counterexamples.",
+        "link": "Run a first experiment →"
+      },
+      {
+        "id": "verify",
+        "title": "Verify",
+        "text": "Follow pinned sources, reproduce documented calculations and inspect the next acceptance gate. Negative results remain visible.",
+        "link": "Reproduce and review →"
+      }
+    ],
+    "priority_label": "CURRENT RESEARCH PRIORITY",
+    "priority_title": "Lorentzian spectral geometry",
+    "priority_text": "Can spectral information distinguish finite causal orders? The programme tests explicit examples and counterexamples. Finite classifications do not establish a spacetime continuum or a physical theory.",
+    "priority_link": "Inspect the finite Lorentz reference →",
+    "limits_title": "Read the scope with the result",
+    "limits": "This is experimental research software. A passing software test is not physical validation. Hardware qualification, independent external replication and industrial performance qualification remain separate open tasks.",
+    "topics_title": "Explore the research",
+    "topics": [
+      {
+        "module": "signal-lab",
+        "title": "Signals & validation",
+        "text": "Synthetic signals, reference methods, replayable evidence."
+      },
+      {
+        "module": "x6-qe",
+        "title": "Spectral graph references",
+        "text": "Exact finite examples and limits of spectral distinguishability."
+      },
+      {
+        "module": "rax-programme",
+        "title": "RAX · relational research",
+        "text": "Predictive reductions, competing models and falsification."
+      },
+      {
+        "module": "acvm-optical",
+        "title": "Photonics & control",
+        "text": "Software references and planned physical acceptance tests."
+      },
+      {
+        "module": "industrial-pilot",
+        "title": "Industrial data pilot",
+        "text": "A bounded laboratory-data feasibility study with explicit limits."
+      },
+      {
+        "module": "nqk",
+        "title": "NQK research dossier",
+        "text": "A separate research direction with incomplete reproduction archives."
+      }
+    ],
+    "status_title": "Find the authoritative source",
+    "snapshot": "{count} modules are described in the register dated {date}. The register records source locations and evidence; it is not a live qualification badge.",
+    "register": "Full source and evidence register",
+    "window": "The configured research-agent window includes Sunday, 18 October 2026. The exclusive cutoff below is a schedule limit, not evidence of execution. After this cutoff the window is closed.",
+    "guide_label": "START HERE · ENGLISH",
+    "guide_title": "A clear route into the research",
+    "guide_lead": "Choose a practical starting point, understand the evidence classes, and find the exact sources behind a result.",
+    "guide": [
+      {
+        "id": "understand",
+        "title": "1. Understand the project",
+        "paragraphs": [
+          "A signal is a sequence of measurements, such as vibration over time. A graph describes elements and their connections. A causal order describes which events precede others. X6 explores methods for analysing these mathematical objects and checking their results.",
+          "A spectrum is a collection of values derived from a matrix. Different structures can share a spectrum; the project includes explicit counterexamples. A pattern in an image alone is not evidence for prime numbers or a new physical mechanism.",
+          "The current priority is Lorentzian spectral geometry. Signal processing, RAX, photonics and industrial data studies have their own scopes and acceptance gates. There is no claim of a completed quantum computer or a proven quantum-gravity theory."
+        ],
+        "links": [
+          {
+            "url": "modules/lorentz-n6-residuals.html",
+            "label": "Lorentz: exact finite causal-order references"
+          },
+          {
+            "url": "modules/x6-qe.html",
+            "label": "X6-QE: structures with the same spectrum"
+          },
+          {
+            "url": "modules/index.html",
+            "label": "Browse every registered research module"
+          }
+        ]
+      },
+      {
+        "id": "try",
+        "title": "2. Try a browser experiment",
+        "paragraphs": [
+          "Open Signal Validation Lab. Start with a synthetic example whose clean signal is known. Compare the original signal, a noisy version and the reference-filter outputs. Inspect reconstruction errors as well as spectral summaries.",
+          "Explore the documented counterexamples, including polarity inversion: a signal and its negative can share a power spectrum. Similar-looking spectral summaries do not establish faithful signal recovery.",
+          "Export the experiment evidence and use the documented import/replay workflow to check the calculation. A successful replay shows computational consistency within that workflow; it does not prove data authenticity or physical device performance."
+        ],
+        "links": [
+          {
+            "url": "app/signal-lab.html",
+            "label": "Open Signal Validation Lab (DE / EN / FR)"
+          },
+          {
+            "url": "modules/signal-lab.html",
+            "label": "Read the Signal Lab scope and expected results"
+          },
+          {
+            "url": "app/index.html",
+            "label": "Open the original Astrolabium application"
+          },
+          {
+            "url": "modules/integration.html",
+            "label": "Install and run the local workflow"
+          }
+        ]
+      },
+      {
+        "id": "verify",
+        "title": "3. Reproduce a reference calculation",
+        "paragraphs": [
+          "For the common offline reference suite, install Git, Python 3.12 and Node.js 24 first. Cloning requires network access; the reference computation itself needs no package download or new Wolfram call. Use a fresh output directory.",
+          "The commands below reproduce the current main checkout. For a versioned result, use the reference-edition page and its pinned source commit or immutable release package. Record the commit and runtime versions in any report.",
+          "Expected status: PASS_OFFLINE_REFERENCE_REPLAY. Read the individual report scopes and rejection controls. Reproducing a negative or inconclusive scientific result can be the correct software outcome."
+        ],
+        "code": "git clone --branch main https://github.com/thomasmgfeller/x6-spectral-astrolabium.git x6\ncd x6\npython3 -S -B x6.py reference qualify --output /tmp/x6-reference-evidence",
+        "links": [
+          {
+            "url": "modules/reference-edition.html",
+            "label": "Pinned reference edition and external reproduction instructions"
+          },
+          {
+            "url": "modules/offline-reference.html",
+            "label": "Offline suite: prerequisites, evidence and next acceptance gate"
+          },
+          {
+            "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/docs/OFFLINE_REFERENCE.md",
+            "label": "Full offline-suite documentation"
+          },
+          {
+            "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/issues/new/choose",
+            "label": "Report a reproducible result or counterexample"
+          }
+        ]
+      },
+      {
+        "id": "evidence",
+        "title": "4. Interpret status and evidence",
+        "paragraphs": [
+          "MAIN means the registered source is available in the main branch. BRANCH_ONLY means the documented research source requires the named branch and pinned commit. These are source-location labels, not quality ratings.",
+          "SOFTWARE means a bounded executable checking path is documented. CONCEPT and DOSSIER describe plans or documents without a standalone executable whole. A photonics module can be SOFTWARE because its digital reference is testable while the physical device remains unqualified.",
+          "An exact finite computation concerns its specified finite objects. A numerical simulation concerns its model and assumptions. Archived laboratory data are measurements from their original acquisition context. None of these automatically establish a new physical measurement, industrial superiority or independent external review.",
+          "PASS, FAIL, NOT_RUN, NOT_READY and INCONCLUSIVE have different meanings. Read the stated claim, the evidence report and the next acceptance gate together. Each evidence report retains its own checked revision; a newer source pin does not retroactively qualify changed code."
+        ],
+        "links": [
+          {
+            "url": "modules/index.html",
+            "label": "Read all module scopes"
+          },
+          {
+            "url": "MODULE_REGISTRY.json",
+            "label": "Machine-readable source of truth"
+          }
+        ]
+      },
+      {
+        "id": "cite",
+        "title": "5. Cite, reuse and contribute",
+        "paragraphs": [
+          "Cite the precise release or commit you used, and cite external datasets separately. CITATION.cff describes the selected finite reference edition; it is not a certification of every module.",
+          "Original project contributions use Apache-2.0. Separately licensed components and datasets keep their own conditions. Included Paderborn data retain CC BY-NC 4.0; the portal does not grant commercial rights to those data.",
+          "Useful contributions include independent reproductions, counterexamples, accessibility improvements and clearer documentation. The optional llms.txt and JSON index help navigation; they do not guarantee indexing, ranking or inclusion in an AI answer."
+        ],
+        "links": [
+          {
+            "url": "CITATION.cff",
+            "label": "Citation metadata"
+          },
+          {
+            "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/LICENSE_SCOPE.md",
+            "label": "License scope and third-party terms"
+          },
+          {
+            "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/CONTRIBUTING.md",
+            "label": "Contribution guide"
+          },
+          {
+            "url": "llms.txt",
+            "label": "Optional navigation for AI tools"
+          },
+          {
+            "url": "sitemap.xml",
+            "label": "Documentation sitemap"
+          }
+        ]
+      }
+    ]
+  },
+  "de": {
+    "title": "Signale, Graphen und nachvollziehbare Forschung",
+    "description": "X6-Forschungsportal für Signalvalidierung, endliche Spektralreferenzen und kausale Ordnungen. Mit Beispielen, Quellenpins, Evidenz und offenen Prüfungen.",
+    "headline": "Die Frage verstehen.\nDie Evidenz prüfen.",
+    "lead": "X6 Spectral Astrolabium ist ein offener Forschungshub für Signale, Graphen und kausale Ordnungen. Beginne mit einem Browserexperiment, erkunde einen Forschungszweig oder rechne eine endliche Referenz nach.",
+    "launch": "Signal Validation Lab ausprobieren →",
+    "browse": "Alle Module erkunden →",
+    "paths_title": "Wähle deinen Einstieg",
+    "paths": [
+      {
+        "id": "understand",
+        "title": "Verstehen",
+        "text": "Was wird untersucht, und was sagen die Ergebnisse tatsächlich aus? Ein verständlicher Einstieg in die Forschung und ihre Grenzen.",
+        "link": "Das Projekt verstehen →"
+      },
+      {
+        "id": "try",
+        "title": "Ausprobieren",
+        "text": "Vergleiche Signale und Referenzfilter im Browser. Synthetische Beispiele zeigen bestandene Prüfungen und aufschlussreiche Gegenbeispiele.",
+        "link": "Ein erstes Experiment starten →"
+      },
+      {
+        "id": "verify",
+        "title": "Prüfen",
+        "text": "Folge gepinnten Quellen, rechne dokumentierte Ergebnisse nach und prüfe die nächste Abnahme. Negative Ergebnisse bleiben sichtbar.",
+        "link": "Nachrechnen und überprüfen →"
+      }
+    ],
+    "priority_label": "AKTUELLER FORSCHUNGSSCHWERPUNKT",
+    "priority_title": "Lorentzsche Spektralgeometrie",
+    "priority_text": "Kann spektrale Information endliche kausale Ordnungen unterscheiden? Das Programm untersucht konkrete Beispiele und Gegenbeispiele. Endliche Klassifikationen belegen weder ein Raumzeitkontinuum noch eine physikalische Theorie.",
+    "priority_link": "Die endliche Lorentz-Referenz prüfen →",
+    "limits_title": "Ergebnis und Geltungsbereich zusammen lesen",
+    "limits": "Dies ist experimentelle Forschungssoftware. Ein bestandener Softwaretest ist kein physikalischer Nachweis. Gerätequalifikation, unabhängige externe Replikation und industrielle Leistungsqualifikation bleiben eigene offene Aufgaben.",
+    "topics_title": "Die Forschungszweige erkunden",
+    "topics": [
+      {
+        "module": "signal-lab",
+        "title": "Signale & Validierung",
+        "text": "Synthetische Signale, Referenzverfahren und nachrechenbare Evidenz."
+      },
+      {
+        "module": "x6-qe",
+        "title": "Spektrale Graphreferenzen",
+        "text": "Exakte endliche Beispiele und Grenzen spektraler Unterscheidbarkeit."
+      },
+      {
+        "module": "rax-programme",
+        "title": "RAX · relationale Forschung",
+        "text": "Prädiktive Reduktionen, konkurrierende Modelle und Falsifikation."
+      },
+      {
+        "module": "acvm-optical",
+        "title": "Photonik & Steuerung",
+        "text": "Softwarereferenzen und geplante physische Abnahmen."
+      },
+      {
+        "module": "industrial-pilot",
+        "title": "Industrieller Datenpilot",
+        "text": "Begrenzte Machbarkeitsstudie mit Labordaten und expliziten Grenzen."
+      },
+      {
+        "module": "nqk",
+        "title": "NQK-Forschungsdossier",
+        "text": "Eigenständiger Forschungszweig mit unvollständigen Reproduktionsarchiven."
+      }
+    ],
+    "status_title": "Die massgebliche Quelle finden",
+    "snapshot": "Das Register vom {date} beschreibt {count} Module. Es dokumentiert Quellenorte und Evidenz; es ist kein Live-Prüfsiegel.",
+    "register": "Vollständiges Quellen- und Evidenzregister",
+    "window": "Das konfigurierte Agentenfenster schliesst Sonntag, den 18. Oktober 2026, ein. Das exklusive Ende unten begrenzt den Zeitplan und belegt keine Ausführung. Danach ist das Fenster geschlossen.",
+    "guide_label": "HIER STARTEN · DEUTSCH",
+    "guide_title": "Ein klarer Weg in die Forschung",
+    "guide_lead": "Wähle einen praktischen Einstieg, verstehe die Evidenzklassen und finde die genauen Quellen hinter einem Ergebnis.",
+    "guide": [
+      {
+        "id": "understand",
+        "title": "1. Das Projekt verstehen",
+        "paragraphs": [
+          "Ein Signal ist eine Folge von Messwerten, etwa eine Schwingung im Zeitverlauf. Ein Graph beschreibt Elemente und ihre Verbindungen. Eine kausale Ordnung beschreibt, welche Ereignisse vor anderen liegen. X6 untersucht Methoden, solche mathematischen Objekte zu analysieren und die Ergebnisse zu prüfen.",
+          "Ein Spektrum ist eine aus einer Matrix berechnete Sammlung von Werten. Unterschiedliche Strukturen können dasselbe Spektrum besitzen; das Projekt enthält konkrete Gegenbeispiele. Ein sichtbares Muster allein belegt weder Primzahlstrukturen noch einen neuen physikalischen Mechanismus.",
+          "Der aktuelle Schwerpunkt ist die lorentzsche Spektralgeometrie. Signalverarbeitung, RAX, Photonik und industrielle Datenstudien haben jeweils eigene Geltungsbereiche und Abnahmekriterien. Ein fertiger Quantencomputer oder eine bewiesene Quantengravitationstheorie werden nicht behauptet."
+        ],
+        "links": [
+          {
+            "url": "modules/lorentz-n6-residuals.html",
+            "label": "Lorentz: exakte endliche Referenzen kausaler Ordnungen"
+          },
+          {
+            "url": "modules/x6-qe.html",
+            "label": "X6-QE: unterschiedliche Strukturen mit gleichem Spektrum"
+          },
+          {
+            "url": "modules/index.html",
+            "label": "Alle registrierten Forschungsmodule"
+          }
+        ]
+      },
+      {
+        "id": "try",
+        "title": "2. Ein Browserexperiment ausprobieren",
+        "paragraphs": [
+          "Öffne das Signal Validation Lab. Beginne mit einem synthetischen Beispiel, dessen sauberes Signal bekannt ist. Vergleiche Original, verrauschte Version und Ausgaben der Referenzfilter. Prüfe Rekonstruktionsfehler ebenso wie spektrale Zusammenfassungen.",
+          "Erkunde die dokumentierten Gegenbeispiele, etwa die Vorzeichenumkehr: Ein Signal und sein Negatives können dasselbe Leistungsspektrum besitzen. Ähnliche spektrale Kennzahlen belegen deshalb keine originalgetreue Signalrekonstruktion.",
+          "Exportiere die Experimentdaten und prüfe die Rechnung über den dokumentierten Import- und Replay-Weg. Erfolgreiches Nachrechnen zeigt rechnerische Konsistenz in diesem Verfahren; es beweist weder Datenauthentizität noch physische Geräteleistung."
+        ],
+        "links": [
+          {
+            "url": "app/signal-lab.html",
+            "label": "Signal Validation Lab öffnen (DE / EN / FR)"
+          },
+          {
+            "url": "modules/signal-lab.html",
+            "label": "Geltungsbereich und erwartete Ergebnisse lesen"
+          },
+          {
+            "url": "app/index.html",
+            "label": "Die ursprüngliche Astrolabium-Anwendung öffnen"
+          },
+          {
+            "url": "modules/integration.html",
+            "label": "Den lokalen Arbeitsablauf installieren und starten"
+          }
+        ]
+      },
+      {
+        "id": "verify",
+        "title": "3. Eine Referenzrechnung reproduzieren",
+        "paragraphs": [
+          "Für die gemeinsame Offline-Referenzsuite werden zunächst Git, Python 3.12 und Node.js 24 benötigt. Das Klonen braucht Netzwerkzugriff; die Referenzrechnung selbst benötigt keinen Paketdownload und keinen neuen Wolfram-Aufruf. Verwende einen neuen Ausgabeordner.",
+          "Die Befehle unten prüfen den aktuellen main-Checkout. Für ein versioniertes Ergebnis verwende die Seite zur Referenzausgabe und deren gepinnten Quellencommit oder unveränderliches Release-Paket. Halte Commit und Laufzeitversionen im Prüfbericht fest.",
+          "Erwarteter Status: PASS_OFFLINE_REFERENCE_REPLAY. Lies die Geltungsbereiche der Einzelberichte und die Negativkontrollen. Auch die korrekte Reproduktion eines negativen oder unentschiedenen wissenschaftlichen Ergebnisses kann eine bestandene Softwareprüfung sein."
+        ],
+        "code": "git clone --branch main https://github.com/thomasmgfeller/x6-spectral-astrolabium.git x6\ncd x6\npython3 -S -B x6.py reference qualify --output /tmp/x6-reference-evidence",
+        "links": [
+          {
+            "url": "modules/reference-edition.html",
+            "label": "Gepinnte Referenzausgabe und externe Nachrechnungsanleitung"
+          },
+          {
+            "url": "modules/offline-reference.html",
+            "label": "Offline-Suite: Voraussetzungen, Evidenz und nächste Abnahme"
+          },
+          {
+            "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/docs/OFFLINE_REFERENCE.md",
+            "label": "Vollständige Dokumentation der Offline-Suite"
+          },
+          {
+            "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/issues/new/choose",
+            "label": "Ein reproduzierbares Ergebnis oder Gegenbeispiel melden"
+          }
+        ]
+      },
+      {
+        "id": "evidence",
+        "title": "4. Status und Evidenz richtig lesen",
+        "paragraphs": [
+          "MAIN bedeutet, dass die registrierte Quelle im Hauptzweig liegt. BRANCH_ONLY bedeutet, dass der dokumentierte Forschungsstand den genannten Branch und Quellencommit benötigt. Das sind Angaben zum Quellenort, keine Qualitätsbewertungen.",
+          "SOFTWARE bezeichnet einen begrenzten ausführbaren Prüfweg. CONCEPT und DOSSIER bezeichnen Pläne oder Dokumente ohne eigenständig ausführbares Gesamtpaket. Ein Photonikmodul kann SOFTWARE sein, weil seine digitale Referenz prüfbar ist, während der physische Aufbau noch unqualifiziert bleibt.",
+          "Eine exakte endliche Rechnung betrifft ihre festgelegten endlichen Objekte. Eine numerische Simulation betrifft ihr Modell und dessen Annahmen. Archivierte Labordaten sind Messungen aus ihrem ursprünglichen Erhebungskontext. Daraus folgen nicht automatisch eine neue physische Messung, industrielle Überlegenheit oder unabhängige externe Begutachtung.",
+          "PASS, FAIL, NOT_RUN, NOT_READY und INCONCLUSIVE haben verschiedene Bedeutungen. Lies Aussage, Evidenzbericht und nächste Abnahme gemeinsam. Jeder Evidenzbericht behält seine eigene Prüfrevision; ein neuer Quellenpin qualifiziert veränderten Code nicht rückwirkend."
+        ],
+        "links": [
+          {
+            "url": "modules/index.html",
+            "label": "Die Geltungsbereiche aller Module lesen"
+          },
+          {
+            "url": "MODULE_REGISTRY.json",
+            "label": "Massgebliches maschinenlesbares Register"
+          }
+        ]
+      },
+      {
+        "id": "cite",
+        "title": "5. Zitieren, nachnutzen und beitragen",
+        "paragraphs": [
+          "Zitiere das tatsächlich verwendete Release oder den genauen Commit und externe Datensätze separat. CITATION.cff beschreibt die ausgewählte endliche Referenzausgabe; es ist keine Zertifizierung aller Module.",
+          "Eigene Projektbeiträge stehen unter Apache-2.0. Separat lizenzierte Komponenten und Daten behalten ihre Bedingungen. Enthaltene Paderborn-Daten bleiben CC BY-NC 4.0; das Portal erteilt dafür keine kommerziellen Nutzungsrechte.",
+          "Sinnvolle Beiträge sind unabhängige Reproduktionen, Gegenbeispiele, Verbesserungen der Zugänglichkeit und verständlichere Dokumentation. Die optionale llms.txt und der JSON-Index helfen bei der Orientierung; sie garantieren keine Indexierung, Rangfolge oder Aufnahme in KI-Antworten."
+        ],
+        "links": [
+          {
+            "url": "CITATION.cff",
+            "label": "Zitationsmetadaten"
+          },
+          {
+            "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/LICENSE_SCOPE.md",
+            "label": "Lizenzumfang und Bedingungen für Drittinhalte"
+          },
+          {
+            "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/CONTRIBUTING.md",
+            "label": "Hinweise für Beiträge"
+          },
+          {
+            "url": "llms.txt",
+            "label": "Optionaler Wegweiser für KI-Werkzeuge"
+          },
+          {
+            "url": "sitemap.xml",
+            "label": "Sitemap der Dokumentation"
+          }
+        ]
+      }
+    ]
+  }
+}

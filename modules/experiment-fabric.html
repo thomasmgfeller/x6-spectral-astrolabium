@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Experiment Fabric | X6 Research Hub</title>
+<meta name="description" content="Gemeinsamer EIG-Planer, lokale Simulationsworker und Replay; ein Kontrollfall, kein reales Gerätenetz oder Nutzenvergleich.">
+<link rel="canonical" href="https://thomasmgfeller.github.io/x6-spectral-astrolabium/modules/experiment-fabric.html">
+<link rel="alternate" type="text/markdown" href="experiment-fabric.md">
+<link rel="describedby" href="../llms.txt" type="text/plain">
+<link rel="sitemap" href="../sitemap.xml" type="application/xml">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Experiment Fabric">
+<meta property="og:description" content="Gemeinsamer EIG-Planer, lokale Simulationsworker und Replay; ein Kontrollfall, kein reales Gerätenetz oder Nutzenvergleich.">
+<meta property="og:url" content="https://thomasmgfeller.github.io/x6-spectral-astrolabium/modules/experiment-fabric.html">
+<meta property="og:site_name" content="X6 Spectral Astrolabium">
+<meta name="twitter:card" content="summary">
+<link rel="stylesheet" href="../assets/hub.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Experiment Fabric", "description": "Gemeinsamer EIG-Planer, lokale Simulationsworker und Replay; ein Kontrollfall, kein reales Gerätenetz oder Nutzenvergleich.", "url": "https://thomasmgfeller.github.io/x6-spectral-astrolabium/modules/experiment-fabric.html", "inLanguage": "de", "isPartOf": {"@type": "WebSite", "name": "X6 Spectral Astrolabium", "url": "https://thomasmgfeller.github.io/x6-spectral-astrolabium/"}}</script>
+
+</head>
+<body>
+<a class="skip" href="#main">Zum Inhalt</a>
+<header><a class="brand" href="../de/index.html">X6 <span>Spectral Astrolabium</span></a>
+<nav aria-label="Hauptnavigation"><a href="../de/index.html">Übersicht</a><a href="../de/guide.html">Einstieg</a><a href="index.html">Module</a><a href="../index.html" hreflang="en">English</a><a href="https://github.com/thomasmgfeller/x6-spectral-astrolabium">GitHub</a></nav></header>
+<main id="main"><p class="eyebrow">MODULREGISTER · 2026-10-15</p><h1>Experiment Fabric</h1><p><span class="tag">BRANCH_ONLY</span> <span class="tag">SOFTWARE</span></p><p>Datierter Registerstand, kein Live-Prüfsiegel. SOFTWARE bezeichnet den ausführbaren Prüfweg, nicht eine validierte physische Anwendung. Die Originalangaben bleiben in Deutsch.</p><section class="prose"><h2>1. Was wird untersucht?</h2><p>Experiment Fabric</p><p><a href="https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/a34c59f2b0e2d30c73936363040669941aa8ce09/experimental/experiment_fabric/README.md">Gepinnte Originaldokumentation</a> · <a href="https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/a34c59f2b0e2d30c73936363040669941aa8ce09">Quellencommit a34c59f2b0e2</a></p><p>Branch: <code>research/x6-experiment-fabric-v1</code>. <code>a34c59f2b0e2d30c73936363040669941aa8ce09</code></p></section><section class="prose"><h2>2. Was ist dokumentiert?</h2><p>Gemeinsamer EIG-Planer, lokale Simulationsworker und Replay; ein Kontrollfall, kein reales Gerätenetz oder Nutzenvergleich.</p><ul><li><a href="https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/a34c59f2b0e2d30c73936363040669941aa8ce09/experimental/experiment_fabric/examples/control-run.json">experimental/experiment_fabric/examples/control-run.json</a><p>Gespeicherter synthetischer Kontrolllauf.</p></li><li><a href="https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/a34c59f2b0e2d30c73936363040669941aa8ce09/experimental/experiment_fabric/VALIDATION.md">experimental/experiment_fabric/VALIDATION.md</a><p>Dokumentierte Referenz- und Browserprüfung, begrenzter Geltungsbereich.</p></li></ul><p>Evidenzberichte behalten ihre eigenen Prüfrevisionen. Ein Quellenpin belegt weder einen neuen Lauf noch unabhängige externe Begutachtung.</p></section><section class="prose"><h2>3. Wie lässt sich das prüfen?</h2><p>Node &gt;=22, Python 3.12 und Anforderungen aus industrial-v1.</p><p>In einem neuen Ordner ausführen; vorhandene Ausgabeordner nicht überschreiben. Voraussetzungen und paketbezogene Hinweise in der Originaldokumentation beachten.</p><pre><code>git clone --branch research/x6-experiment-fabric-v1 https://github.com/thomasmgfeller/x6-spectral-astrolabium.git x6-experiment-fabric
+cd x6-experiment-fabric
+git checkout --detach a34c59f2b0e2d30c73936363040669941aa8ce09
+node experimental/experiment_fabric/run.mjs run /tmp/register-fabric
+node experimental/experiment_fabric/run.mjs verify /tmp/register-fabric/run.json
+python3 -m pip install -r experiments/industrial-v1/requirements.txt
+python3 experimental/experiment_fabric/verify_reference.py /tmp/register-fabric/run.json</code></pre><h3>Erwartete Ausgabe</h3><p>Exit 0; nur die unten genannte Softwareaussage.</p></section><section class="note"><h2>4. Was bleibt offen?</h2><p>Zwei echte Rechennodes mit persistenten Jobs, Wiederanlauf und Tests für doppelte/verspätete Zustellung; anschliessend gleich budgetierter Nutzenvergleich.</p></section></main>
+<footer><p>Thomas Gfeller · Offene Forschung · <a href="../CITATION.cff">CITATION.cff</a> · <a href="experiment-fabric.md">Markdown</a> · <a href="../llms.txt">llms.txt</a></p>
+<p>Eigene Beiträge: Apache-2.0. Drittinhalte und Daten behalten ihre eigenen Bedingungen. <a href="https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/LICENSE_SCOPE.md">Lizenzumfang</a>.</p>
+<p>Forschungssoftware und endliche Referenzrechnungen. Keine abgeschlossene physische Gerätequalifikation oder unabhängige externe Begutachtung.</p></footer>
+</body></html>

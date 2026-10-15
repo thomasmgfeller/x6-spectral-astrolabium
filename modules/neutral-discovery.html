@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Neutral Discovery | X6 Research Hub</title>
+<meta name="description" content="Drei synthetische Kontrollen und Challenge-Gates in endlichem Modellraum; hohe vorherige Gewichtung verhindert keine Verwerfung.">
+<link rel="canonical" href="https://thomasmgfeller.github.io/x6-spectral-astrolabium/modules/neutral-discovery.html">
+<link rel="alternate" type="text/markdown" href="neutral-discovery.md">
+<link rel="describedby" href="../llms.txt" type="text/plain">
+<link rel="sitemap" href="../sitemap.xml" type="application/xml">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Neutral Discovery">
+<meta property="og:description" content="Drei synthetische Kontrollen und Challenge-Gates in endlichem Modellraum; hohe vorherige Gewichtung verhindert keine Verwerfung.">
+<meta property="og:url" content="https://thomasmgfeller.github.io/x6-spectral-astrolabium/modules/neutral-discovery.html">
+<meta property="og:site_name" content="X6 Spectral Astrolabium">
+<meta name="twitter:card" content="summary">
+<link rel="stylesheet" href="../assets/hub.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Neutral Discovery", "description": "Drei synthetische Kontrollen und Challenge-Gates in endlichem Modellraum; hohe vorherige Gewichtung verhindert keine Verwerfung.", "url": "https://thomasmgfeller.github.io/x6-spectral-astrolabium/modules/neutral-discovery.html", "inLanguage": "de", "isPartOf": {"@type": "WebSite", "name": "X6 Spectral Astrolabium", "url": "https://thomasmgfeller.github.io/x6-spectral-astrolabium/"}}</script>
+
+</head>
+<body>
+<a class="skip" href="#main">Zum Inhalt</a>
+<header><a class="brand" href="../de/index.html">X6 <span>Spectral Astrolabium</span></a>
+<nav aria-label="Hauptnavigation"><a href="../de/index.html">Übersicht</a><a href="../de/guide.html">Einstieg</a><a href="index.html">Module</a><a href="../index.html" hreflang="en">English</a><a href="https://github.com/thomasmgfeller/x6-spectral-astrolabium">GitHub</a></nav></header>
+<main id="main"><p class="eyebrow">MODULREGISTER · 2026-10-15</p><h1>Neutral Discovery</h1><p><span class="tag">BRANCH_ONLY</span> <span class="tag">SOFTWARE</span></p><p>Datierter Registerstand, kein Live-Prüfsiegel. SOFTWARE bezeichnet den ausführbaren Prüfweg, nicht eine validierte physische Anwendung. Die Originalangaben bleiben in Deutsch.</p><section class="prose"><h2>1. Was wird untersucht?</h2><p>Neutral Discovery</p><p><a href="https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/1a02c482d59a42d554337fb83e0f6d6e6d84b516/experimental/neutral_discovery/README.md">Gepinnte Originaldokumentation</a> · <a href="https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/1a02c482d59a42d554337fb83e0f6d6e6d84b516">Quellencommit 1a02c482d59a</a></p><p>Branch: <code>research/x6-neutral-discovery-v1</code>. <code>1a02c482d59a42d554337fb83e0f6d6e6d84b516</code></p></section><section class="prose"><h2>2. Was ist dokumentiert?</h2><p>Drei synthetische Kontrollen und Challenge-Gates in endlichem Modellraum; hohe vorherige Gewichtung verhindert keine Verwerfung.</p><ul><li><a href="https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/1a02c482d59a42d554337fb83e0f6d6e6d84b516/experimental/neutral_discovery/VALIDATION.md">experimental/neutral_discovery/VALIDATION.md</a><p>17 Python-Tests, neun Zweierbatches/36 Ausgangsbelegungen, vollständige endliche Testgrössenprüfung.</p></li><li><a href="https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/1a02c482d59a42d554337fb83e0f6d6e6d84b516/experimental/neutral_discovery/examples/control.json">experimental/neutral_discovery/examples/control.json</a><p>Deterministische publizierte Kontrollen.</p></li></ul><p>Evidenzberichte behalten ihre eigenen Prüfrevisionen. Ein Quellenpin belegt weder einen neuen Lauf noch unabhängige externe Begutachtung.</p></section><section class="prose"><h2>3. Wie lässt sich das prüfen?</h2><p>Python 3.12/jsonschema, Node &gt;=22 für die JS-Gegenprüfung.</p><p>In einem neuen Ordner ausführen; vorhandene Ausgabeordner nicht überschreiben. Voraussetzungen und paketbezogene Hinweise in der Originaldokumentation beachten.</p><pre><code>git clone --branch research/x6-neutral-discovery-v1 https://github.com/thomasmgfeller/x6-spectral-astrolabium.git x6-neutral-discovery
+cd x6-neutral-discovery
+git checkout --detach 1a02c482d59a42d554337fb83e0f6d6e6d84b516
+python3 -m pip install -r experiments/industrial-v1/requirements.txt
+python3 experimental/neutral_discovery/discovery.py verify experimental/neutral_discovery/examples/control.json
+python3 -m unittest discover -s experimental/neutral_discovery/tests -v</code></pre><h3>Erwartete Ausgabe</h3><p>Exit 0; nur die unten genannte Softwareaussage.</p></section><section class="note"><h2>4. Was bleibt offen?</h2><p>Persistente Präregistrierung und kampagnenübergreifendes Fehlerbudget; unabhängige Bestätigung unter erweitertem Modellraum.</p></section></main>
+<footer><p>Thomas Gfeller · Offene Forschung · <a href="../CITATION.cff">CITATION.cff</a> · <a href="neutral-discovery.md">Markdown</a> · <a href="../llms.txt">llms.txt</a></p>
+<p>Eigene Beiträge: Apache-2.0. Drittinhalte und Daten behalten ihre eigenen Bedingungen. <a href="https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/LICENSE_SCOPE.md">Lizenzumfang</a>.</p>
+<p>Forschungssoftware und endliche Referenzrechnungen. Keine abgeschlossene physische Gerätequalifikation oder unabhängige externe Begutachtung.</p></footer>
+</body></html>
