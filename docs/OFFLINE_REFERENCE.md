@@ -22,7 +22,7 @@ Nach dem Klonen kann das Netzwerk getrennt werden. Für denselben Quellenstand
 den vollständigen Commit aus dem [Modulregister](MODULE_REGISTRY.md) auschecken.
 Der Zielordner muss neu sein. `-S` deaktiviert Python-Site-Pakete;
 die Checkout-Abnahme verlangt zusätzlich, dass keine `.venv` existiert.
-Die Suite läuft normalerweise in deutlich unter einer Minute.
+Die Laufzeit hängt vom Rechner ab; die Checkout-Abnahme wiederholt die Suite mehrfach.
 
 Erwartete Abschlussmeldung und Exitcode **0**:
 
@@ -36,7 +36,7 @@ Erwartete Abschlussmeldung und Exitcode **0**:
 
 Die tatsächliche Meldung enthält zusätzlich Geltungsbereich und Runtime-Versionen.
 `qualify` führt einen vollständigen Lauf aus, schreibt die Ergebnisse und prüft
-diese durch einen zweiten, unabhängigen Lauf derselben Prüfer. Ein Fehler beendet
+diese durch einen erneuten Lauf derselben Prüfer. Ein Fehler beendet
 den Befehl mit Exitcode **1** und `FAIL`; falsche CLI-Argumente haben Exitcode **2**.
 Ein erwartetes fachliches `FAIL` innerhalb eines Referenzfalls ist kein Suitefehler.
 
@@ -140,3 +140,6 @@ Bei neuen Quellen auch die vollständige Dateiliste und CI-Pfadfilter ergänzen.
 Anschließend die Repository-Inventare nach deren bestehenden Regeln aktualisieren,
 frischen Checkout qualifizieren und Evidenz samt geprüfter Revision im Modulregister
 nachführen. Automatisches Akzeptieren neuer Referenzwerte ist nicht vorgesehen.
+
+Der [gespeicherte Abnahmebeleg](reference-suite/README.md) nennt den tatsächlich
+geprüften Commit, den lokalen Lauf und den Netzwerk-isolierten CI-Lauf.

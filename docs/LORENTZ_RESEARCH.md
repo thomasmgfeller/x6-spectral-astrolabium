@@ -9,8 +9,10 @@ Sunday 18 October. See `MATH_AGENT.md` for control and the
 [central module register](MODULE_REGISTRY.md) for source pins and evidence.
 
 This page describes the scheduled main-branch n=3..5/propagator baseline.
-The separately executable n=6 atlas is already available on
-`research/lorentz-v1-workpackages`; fingerprints, Fabric and Neutral Discovery
+The full n=6 atlas generator remains on `research/lorentz-v1-workpackages`.
+The byte-identical independent verifier and fixed atlas are also available in
+main through the [offline reference suite](OFFLINE_REFERENCE.md), with exact
+source provenance. Fingerprints, Fabric and Neutral Discovery
 have later branch sources. Their exact entry points, finite results and next
 acceptance gates are in the register. They are not automatically part of this
 scheduled agent or evidence of a general reconstruction theorem.
