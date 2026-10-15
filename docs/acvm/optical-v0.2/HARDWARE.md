@@ -6,6 +6,16 @@ abgeschwächten klassischen 810-nm-Referenzstrahl abgenommen; erst danach folgt
 die Einzelphotonenmessung. Komponenten sind ausgewählt, nicht beschafft oder
 als vorhandener Besitz vorausgesetzt. Quellen/Versionsgrenzen: [SOURCES](SOURCES.md).
 
+## Ergänzung vom 15. Oktober 2026
+
+Die [Kristall-, Schleifen- und Ofenspezifikation O02 KSO 01, Revision 0.1](../sagnac-components-v0.1/README.md)
+konkretisiert K1, L1, M1/M2 und O1. Für die darin gewählte Dreiecksschleife gilt
+**AOI 22,5° zur Flächennormalen** an beiden Aussenspiegeln; die ursprüngliche
+45°-Angabe wird für diese Geometrie ersetzt. Die Spezifikation ist anfragefähig,
+Herstellerbestätigung, Kollisionsprüfung und KSO01–KSO12 bleiben offen.
+Das historische ZIP-Paket bleibt unverändert. Diese Dokumentergänzung
+implementiert keinen Ofenadapter und liefert keinen neuen Hardwarebeleg.
+
 ## Komponenten und mechanische Schnittstellen
 
 | Funktion / Menge | Konkrete Auswahl | Abgleich vor Bestellung/Inbetriebnahme |
@@ -16,7 +26,7 @@ als vorhandener Besitz vorausgesetzt. Quellen/Versionsgrenzen: [SOURCES](SOURCES
 | Kristalltemperatur, 1 | Zum angebotenen Raicol-Kristall passender Ofen mit geregeltem Temperaturfühler | Mechanische Schnittstelle, zulässige Temperatur und Stabilität gemeinsam mit O02-K1 festlegen; Host steuert diesen Ofen hier nicht. |
 | Sagnac-PBS, 1 | Newlight PBS0025-405/810 | Tatsächliches Extinktionsverhältnis und Phasenwirkung bei beiden Wellenlängen und beiden Richtungen prüfen. Ein 810-nm-PBS allein ersetzt ihn nicht. |
 | Sagnac-Wellenplatte, 1 | Newlight WPD03-H810-H405 | Halbwelleneffekt bei **beiden** Wellenlängen. H810-F405 ist ein anderes Bauteil und kein stiller Ersatz. |
-| Schleifenspiegel, 2 | O02-M1: duale HR-Beschichtung 405/810 nm, 25.4 mm, tatsächlicher Einfallswinkel 45°, s und p | Lieferant/Angebot noch offen. R und s/p-Phasenverschiebung für beide Farben verlangen und messen. BB1-E02 (nur 400–750 nm garantiert) ist für diesen Platz nicht freigegeben. |
+| Schleifenspiegel, 2 | O02-M1/M2: duale HR-Beschichtung 405/810 nm, 25.4 mm, AOI 22,5° zur Normalen für die L1-Dreiecksschleife, s und p | Lieferant/Angebot noch offen. R und s/p-Phasenverschiebung für beide Farben verlangen und messen. BB1-E02 (nur 400–750 nm garantiert) ist für diesen Platz nicht freigegeben. |
 | Pumpentrennung | Thorlabs DMLP650, danach FELH0750, anschließend FBH810-10 je Analysearm | DMLP bei spezifiziertem Einfallswinkel; Filter nahe Normalinzidenz. Gemessene Pumpenunterdrückung und Gesamtverlust bestimmen, keine Addition nomineller OD ohne Streulichtprüfung. |
 | Analyse QWP/HWP, je 2 | Newlight WPA03-Q-810 / WPA03-H-810, 1-Zoll-Fassungen | Nominal genau 810 nm; Retardanz am tatsächlichen Spektrum messen. Alternative WPQ05M-808/WPH05M-808 verlangt expliziten 808→810-Abgleich. |
 | Analyse-PBS, 2 | Thorlabs CCM1-PBS252/M | 620–1000 nm, vier SM1-Ports. Kanalzuordnung T/R ↔ +/− kalibrieren. |
