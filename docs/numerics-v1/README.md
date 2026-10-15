@@ -3,7 +3,8 @@
 **2026-10-15: historical 25/27 FAIL preserved; repaired solver passes the frozen 27/27 suite.**
 
 See the [repair report](repair/REPORT.md) for exact Sage and actual-browser evidence.
-The broader 120-vertex qualification remains a separate next gate.
+The [separate check-4 report](extended/README.md) covers the 120-vertex boundary,
+weight contrasts, relabeling and input-order invariance.
 
 This audit concerns the finite positive-weight undirected graph Laplacian in
 `app/index.html`, `spectrumFrame`, at commit
@@ -59,15 +60,15 @@ with one observation-only return field, `vector:v`. All original fields matched
 the unchanged kernel exactly after timestamps were removed. This is an internal
 eigenvector check, not qualification of a public eigenvector-export interface.
 
-## Next gates
+## Completed work sequence
 
-1. Preserve this finding before changing the solver.
-2. Correct scale handling and add a regression test on a separate branch.
-3. Reuse the frozen numerical criteria: 27/27 cases, 11/11 negative controls,
-   2/2 positive controls, plus threshold-neighbour cases and Sage confirmation.
-4. Test actual browser input, parser, solver, displayed result and JSON export.
-5. Extend to 120 vertices, weight contrasts, relabeling/input-order invariance
-   and explicit limits on resolving very small positive gaps.
+1. Historical results and the scaling finding were preserved before repair (PR #26).
+2. Scale handling was corrected and targeted regressions added on a separate branch (PR #28).
+3. Frozen criteria pass: 27/27 cases, 11/11 negative controls, 2/2 positive
+   controls, plus 23 regressions and two exact Sage confirmations.
+4. Actual browser input, solver, display, JSON export and error handling pass 37/37 checks.
+5. The independent check-4 corpus extends to 120 vertices, weight contrasts,
+   relabeling/input-order invariance and explicit unresolved-gap diagnostics (PR #29).
 
 Repeated/clustered eigenvalues are assessed through eigenspace projectors. A
 passing cluster check does not resolve every individual eigenvector or a gap

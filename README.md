@@ -6,7 +6,8 @@
 was reproduced and repaired. Historical 25/27 FAIL evidence remains preserved;
 the repaired solver passes 27/27 frozen cases, 23 regression checks, two exact Sage
 checks and 37 browser checks. See the [repair report](docs/numerics-v1/repair/REPORT.md)
-for source bindings and limits.
+for source bindings and limits. [Check 4](docs/numerics-v1/extended/README.md)
+extends qualification through 120 vertices and records the unresolved-gap limits.
 
 This repository publishes the actual **X6 v4.2 RC** browser application, alongside the **v4.3 community audit kit**. The application combines experimental signal/Fourier analysis, a model-dependent signal-to-graph mapping, and exact rational lower bounds for finite weighted undirected graph Laplacians.
 
