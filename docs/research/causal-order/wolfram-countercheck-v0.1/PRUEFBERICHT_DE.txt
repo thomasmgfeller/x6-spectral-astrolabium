@@ -1,0 +1,213 @@
+FALL 5 — GLEICHE SPEKTREN, UNTERSCHIEDLICHE KAUSALORDNUNG
+Ausführungsdatum: 15. Oktober 2026
+Paket v0.1; dokumentierte Konventionskorrektur des Wolfram-Adapters v0.1.1
+
+ERGEBNIS
+PASS_WITH_SCOPE_LIMITS.
+Der abschließende Wolfram-Lauf besteht 16 von 16 Prüfaussagen ohne
+Meldungen. Eine getrennte Python-Implementierung rekonstruiert sämtliche
+ausgegebenen Matrizen, sechs charakteristischen Polynome, Extremalmengen
+und sechs Permutationsdatensätze exakt. Die Toleranz ist null; es werden
+ausschließlich ganze Zahlen und exakte Polynome verwendet.
+
+Die V-Ordnung aus drei Ereignissen und ihre duale Ordnung besitzen
+dieselben drei ausgewählten Spektren, sind aber als gerichtete Ordnungen
+nicht isomorph. Damit ist die behauptete allgemeine eindeutige
+Rekonstruktion einer gerichteten Ordnung aus genau diesen drei Spektren
+durch ein endliches Gegenbeispiel widerlegt.
+
+MODELLE UND KONVENTIONEN
+Die Ereignisse heißen 1,2,3. C_ij=1 bedeutet: i liegt strikt vor j.
+Es gilt 1 vor 2 und 1 vor 3; 2 und 3 sind unvergleichbar.
+Die Gegenordnung D=C^T enthält 2 vor 1 und 3 vor 1.
+
+Beide Relationen sind irreflexiv und transitiv, also strikte partielle
+Ordnungen. In diesem kleinen Fall gibt es keine Ketten mit zwei
+aufeinanderfolgenden Relationsschritten. Daher stimmen Relationsmatrix
+und Hasse-Kantenmatrix hier überein; das gilt nicht für beliebige Ordnungen.
+
+Die geprüften Operatoren lauten:
+  S = C + C^T,
+  A = C - C^T,
+  K = SA - AS.
+
+Matrixeinträge in Zeilenform:
+  C = [[0,1,1], [0,0,0], [0,0,0]]
+  S = [[0,1,1], [1,0,0], [1,0,0]]
+  A = [[0,1,1], [-1,0,0], [-1,0,0]]
+  K = [[-4,0,0], [0,2,2], [0,2,2]].
+
+Für die duale Ordnung gilt exakt:
+  S_dual = S, A_dual = -A, K_dual = -K.
+
+S und K sind reell symmetrisch; A ist reell schiefsymmetrisch.
+A ist in dieser Definition kein hermitescher Observable-Operator.
+Sein nichtreelles Spektrum ist hier mathematisch beabsichtigt.
+
+SPEKTRALE ERGEBNISSE
+Verwendete Konvention: chi_M(z)=det(z I-M).
+Für beide Ordnungen ergeben sich:
+  chi_S(z) = z(z^2-2),
+  chi_A(z) = z(z^2+2),
+  chi_K(z) = z(z^2-16).
+
+Aus diesen exakten Faktorisierungen folgen die Eigenwerte einschließlich
+ihrer Vielfachheiten:
+  S: -sqrt(2), 0, sqrt(2);
+  A: -i sqrt(2), 0, i sqrt(2);
+  K: -4, 0, 4.
+Alle Eigenwerte sind in diesem Beispiel einfach.
+
+Die JSON-Dateien speichern die Polynomkoeffizienten in aufsteigender
+Reihenfolge, einschließlich Nullkoeffizienten:
+  S: [0,-2,0,1], A: [0,2,0,1], K: [0,-16,0,1].
+Das verhindert Mehrdeutigkeiten durch unterschiedliche Ausdrucksformen.
+
+NICHTISOMORPHIE UND KONTROLLEN
+In C sind die minimalen Elemente {1}, die maximalen Elemente {2,3}.
+In D sind die minimalen Elemente {2,3}, die maximalen Elemente {1}.
+Jede ordnungserhaltende Bijektion erhält diese beiden Anzahlen.
+Die verschiedenen Paare (1,2) und (2,1) beweisen daher bereits, dass
+kein ordnungserhaltender Isomorphismus existiert.
+
+Zusätzlich wurden sämtliche 3!=6 Umbenennungen vollständig geprüft:
+  Ordnungserhaltende Abbildungen C auf D: 0.
+  Automorphismen von C: 2.
+  Automorphismen von D: 2.
+  Ordnungsumkehrende Abbildungen C auf D: 2.
+
+Die Automorphismen und die Umkehrabbildungen dienen als Positivkontrollen.
+Die sechs direkten C-zu-D-Vergleiche haben jeweils 4,4,2,2,2,2 abweichende
+Matrixeinträge in lexikographischer Permutationsreihenfolge.
+Die Spektren aller drei Operatoren bleiben unter jeder Umbenennung
+unverändert, ebenfalls für beide Ordnungen geprüft.
+
+Der Unterschied liegt in der Verdichtung auf Eigenwertmengen.
+Aus den vollständigen Matrizen S und A in derselben beschrifteten Basis
+lässt sich C=(S+A)/2 exakt zurückgewinnen. Auch diese Identität wird geprüft.
+
+RECHENWEG UND PROVENIENZ
+Wolfram Language meldete:
+  15.0.1 for Linux x86 (64-bit) (July 2, 2026).
+Python-Version des ausgeführten lokalen Prüfers: 3.12.14.
+
+Wolfram verwendet die eingebaute CharacteristicPolynomial-Funktion mit
+expliziter Konventionsanpassung. Python berechnet die Determinante von
+z I-M über die Leibniz-Summe mit selbst implementierter ganzzahliger
+Polynommultiplikation und itertools.permutations. Es werden keine
+Wolfram-Ausgaben als Python-Sollwerte eingesetzt; die Modellvorgaben,
+Matrizen und Polynome stehen vorher im Prüfvertrag.
+
+Die erwarteten Resultate waren aus dem vorgeschlagenen Referenzfall
+bekannt. Eine exakte Python-Vorrechnung wurde vor dem ersten Wolfram-Lauf
+gespeichert. Vertrag, Ausgangscode, Python-Prüfer und Vorrechnung wurden
+vor dem ersten Rechenaufruf gehasht. Dies ist eine Fixierung des
+Prüfumfangs, keine Vorregistrierung einer neuen Entdeckung.
+
+VOLLSTÄNDIGER FEHLERVERLAUF
+1. Der vorbereitende Wolfram-Kontextabruf scheiterte mit einem internen
+   Dienstfehler. Er war kein mathematischer Rechenlauf. Die Antwort ist
+   unverändert unter wolfram_context_response.json erhalten.
+2. Der erste Kernel-Lauf bestand 15/16 Aussagen. Der Koeffizientenvergleich
+   schlug fehl: Der Prüfadapter hatte die dokumentierte Wolfram-Konvention
+   CharacteristicPolynomial[M,z]=det(M-z I) nicht auf die festgelegte
+   Konvention det(z I-M) umgerechnet.
+3. Für n=3 unterscheiden sich die Polynome exakt um ein globales Minus.
+   Die Nullstellen und der Nichtisomorphie-Nachweis waren bereits korrekt.
+   Dennoch bleibt der erste Lauf FAIL_SIGN_CONVENTION.
+4. Der zweite Adapter multipliziert das Wolfram-Polynom mit (-1)^n vor
+   der Koeffizientenextraktion. Modelle, Erwartungswerte, alle 16 Prüf-IDs,
+   exakte Arithmetik und Nulltoleranz wurden nicht geändert.
+5. Die Änderung und ihre Dateien wurden vor dem zweiten Aufruf gehasht.
+   Dieser Lauf besteht 16/16 Aussagen ohne Meldungen. verify_release.py
+   prüft zusätzlich, dass der erhaltene erste Lauf genau diese
+   Vorzeichendifferenz und sonst dieselben mathematischen Daten enthält.
+
+Es wurden keine fehlgeschlagenen Läufe gelöscht und keine Toleranzen
+gelockert. Der Prüfadapter wurde nach Einsicht in den ersten Lauf
+korrigiert; die Prüfung ist damit ausdrücklich nicht blind.
+
+REPRODUKTION OHNE NETZWERK ODER KOSTENPFLICHTIGE API
+ZIP vollständig entpacken. Im Verzeichnis X6_Wolfram_Fall5_v0_1 ausführen:
+  python3 verify_release.py
+
+Erwartet: PASS_WITH_SCOPE_LIMITS, 16 Wolfram- und 16 Python-Prüfaussagen,
+sechs verglichene Polynome, sechs verglichene Permutationsdatensätze,
+beide Freeze-Prüfungen und vollständiges Dateimanifest bestätigt.
+
+Das Programm benötigt ausschließlich die Python-Standardbibliothek,
+berechnet die mathematischen Ergebnisse neu und prüft die gespeicherte
+Wolfram-Antwort. Es startet Wolfram nicht erneut.
+Für eine frische Wolfram-Ausführung ist wolfram_check_v0_1_1.wl vorgesehen.
+
+Weitere Aufrufe:
+  python3 verify.py --reference-only
+    Nur unabhängige Python-Rechnung; keine Wolfram-Antwort erforderlich.
+  python3 verify.py
+    Mathematische Gegenprüfung, ursprünglicher Freeze und Dateimanifest.
+    Für die zusätzliche Prüfung der dokumentierten Änderung und des
+    erhaltenen Fehlversuchs bitte verify_release.py verwenden.
+
+verification_result.json wurde vor der Erstellung von SHA256.json
+gespeichert und meldet deshalb package_manifest_verified=false.
+Die abschließende Prüfung nach Entpacken des endgültigen ZIP prüft
+zusätzlich das Gesamtmanifest und meldet dafür true.
+Hashes sichern Inhaltskonsistenz, nicht Urheberschaft, externe
+Zeitstempelbeglaubigung oder wissenschaftliche Zertifizierung.
+
+BEDEUTUNG FÜR DAS FORSCHUNGSPROGRAMM
+Der Fall ist als exakter Regressionstest für spektrale Verfahren zur
+Rekonstruktion gerichteter Ereignisordnungen geeignet. Ein Verfahren,
+das nur diese Spektren erhält, muss die Mehrdeutigkeit zulassen oder
+zusätzliche Information verlangen. Die Anzahlen minimaler und maximaler
+Elemente unterscheiden dieses Paar bereits. Ihre allgemeine Eignung
+als vollständige Invarianten wird damit nicht behauptet.
+
+Wenn ein Forschungsmodell Ordnungsumkehr ausdrücklich als Äquivalenz
+zulässt, gehören C und D in diesem anderen Äquivalenzbegriff zusammen.
+Der vorliegende Gegenbeweis betrifft ordnungserhaltende Isomorphie.
+Er behauptet keine Mehrdeutigkeit modulo Ordnungsumkehr.
+
+Dies widerlegt keine beliebige spektrale Rekonstruktionsmethode.
+Geprüft wurde genau das Tripel aus den Spektren von S, A und K.
+Andere Operatoren, gemeinsame Eigenvektorinformation, zusätzliche
+Invarianten oder Modellrestriktionen können andere Aussagen erlauben.
+
+Es gibt keinen neuen allgemeinen Grenzwertsatz, keinen Nachweis eines
+Lorentzschen Kontinuums und keine physikalische Quantengravitations-
+Validierung. Es wurden keine realen Projektdaten oder X6-Produktionsläufe
+auditiert. Getrennte Rechenkerne bedeuten hier getrennte Implementierungen;
+Testentwurf und Auswertung stammen von derselben Assistenz. Eine externe
+personelle Begutachtung oder Zertifizierung durch Wolfram Research liegt
+nicht vor.
+
+DATEIÜBERSICHT
+contract.json: unveränderter Prüfvertrag.
+freeze.json: ursprüngliche Hash-Fixierung.
+verify.py: ursprüngliche unabhängige Python-Rechnung und Ergebnisprüfung.
+python_reference.json: vor dem ersten Wolfram-Lauf gespeicherte Rechnung.
+wolfram_check.wl: ursprünglicher Prüfadapter mit Konventionsfehler.
+wolfram_response_attempt1.json / wolfram_result_attempt1.json:
+  vollständige erste Rohantwort und ihr normalisiertes Ergebnis.
+amendment.json / amendment_freeze.json: Änderung und Hash-Fixierung.
+wolfram_check_v0_1_1.wl: erfolgreich ausgeführter korrigierter Adapter.
+wolfram_response.json / wolfram_result.json:
+  vollständige finale Rohantwort und ihr normalisiertes Ergebnis.
+verify_release.py: zusätzlicher Prüfer für Änderung und Fehlversuch.
+verification_result.json: gespeicherte lokale Gesamtprüfung.
+wolfram_context_response.json: dokumentierter Fehler des Kontextabrufs.
+SHA256.json: Prüfsummen aller anderen Paketdateien.
+BERICHT.txt: dieser Bericht.
+
+PRIMÄRQUELLEN ZUR SOFTWAREKONVENTION
+Wolfram Language: CharacteristicPolynomial.
+Die Dokumentation definiert die Funktion über det(M-z I).
+Abgerufen am 15. Oktober 2026:
+https://reference.wolfram.com/language/ref/CharacteristicPolynomial.html
+
+Wolfram Language: Permutations.
+https://reference.wolfram.com/language/ref/Permutations.html
+
+Die Matrizen, Ergebnisse und das Nichtisomorphieargument dieses
+Referenzfalls sind im Paket vollständig und ohne externe Quelle prüfbar.
+

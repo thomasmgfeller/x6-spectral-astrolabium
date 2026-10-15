@@ -151,6 +151,12 @@ Python tests exact rational bounds; Julia tests numerical eigenvalues (not a for
 
 ## Mathematical scope
 
+[Executed Wolfram causal-order countercheck](docs/research/causal-order/wolfram-countercheck-v0.1/README.md)
+provides an exact three-event example with equal spectra of S, A and their
+commutator but no order-preserving isomorphism. Sixteen Wolfram assertions and an
+independent integer-polynomial Python calculation verify this finite limitation
+of the selected spectral fingerprint. No continuum or physical validation is claimed.
+
 For a connected graph Laplacian L, n vertices, and J the all-ones matrix:
 
 `M(b) = L + ((b+1)/n) J - b I` is positive definite exactly when `lambda_2(L) > b`.
@@ -242,4 +248,5 @@ or a completed independent rights audit. See the
 [dated activation record](docs/LICENSE_ACTIVATION_2026-10-13.md).
 
 See [provenance](docs/PROVENANCE.md), [release checklist](docs/RELEASE_CHECKLIST.md), and draft [citation metadata](CITATION.cff).
+
 
