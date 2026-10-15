@@ -1,0 +1,61 @@
+{
+  "claims_excluded": [
+    "General completeness",
+    "Continuum Lorentz geometry reconstruction",
+    "Physical validation",
+    "Independent external review"
+  ],
+  "conventions": {
+    "A": "C - transpose(C)",
+    "C": "C[i][j]=1 iff i precedes j; full strict transitive relation, not Hasse links",
+    "D": "Sorted multiset of paired (past size, future size), with multiplicities",
+    "F0": "(n, chi_S, chi_A, chi_K, number_minimal, number_maximal)",
+    "K": "S A - A S = 2 (transpose(C) C - C transpose(C))",
+    "S": "C + transpose(C)",
+    "W_future": "sum_v binomial(future_size(v),2)",
+    "W_past": "sum_v binomial(past_size(v),2)",
+    "isomorphism": "Order preserving; time reversal is a separate test, not an equivalence imposed on the data",
+    "polynomials": "det(t I - operator), integer coefficients in descending order"
+  },
+  "hypothesis": {
+    "id": "H7-bidirectional-moments",
+    "next_acceptance": "Enumerate all 2045 nonisomorphic seven-element posets, independently verify completeness, and test all F0 collision classes with both moments. Record every remaining pair; do not substitute full D for the scalar hypothesis.",
+    "statement": "For any strict finite posets P,Q of equal cardinality n<=7 with time orientation retained, equality of (F0,W_future,W_past) implies order-preserving isomorphism.",
+    "status": "OPEN_FOR_N7_HEIGHT_GE_3",
+    "universal_extension": "Refuted at n=8 by the explicit connected degree-control pair."
+  },
+  "literature": {
+    "note": "Paired incoming/outgoing degree sequence combined with spectra already reported complete through n=7. This work supplies explicit four-pair witnesses and tests its scalar compression; no novelty claim for D.",
+    "section": "3.2, Table 2",
+    "url": "https://arxiv.org/abs/2008.02291"
+  },
+  "local_scope": {
+    "n6": "All 318 existing representatives, independently recalculate spectra and new observables; existing atlas verifier certifies enumeration",
+    "n7": "All height <= 2 orders on exactly seven vertices, including isolates; all binary p by q matrices, no empty row/column, p+q<=7, quotient by independent row/column permutations",
+    "n8": "One explicit connected height-two dual pair. No complete n=8 search claim."
+  },
+  "prior_separator": {
+    "branch": "research/x6-fingerprint-v1",
+    "commit": "f22030f2dae0aa670cdbc450c5e881ce250b36b8",
+    "pair": [
+      "n6-0073",
+      "n6-0181"
+    ],
+    "path": "research/fingerprint_v1/README.md"
+  },
+  "schema": "x6.lorentz-residual-contract/1",
+  "selection": "All four residual pairs of the existing complete n=6 atlas; exploratory n=7/n=8 controls found locally before the frozen Wolfram request. This is a confirmatory cross-engine check, not a preregistration of discovery.",
+  "source_atlas": {
+    "original_branch": "research/lorentz-v1-workpackages",
+    "original_commit": "f5116b9970a6b7dc788c18623a8386b4cde33ad4",
+    "path": "references/causal-order-n6/atlas_n6.json",
+    "sha256": "e77890222a59e50844e9c4b0ab3bc51d0ff2bc349d84dd59d4cb7842db6a1d9b"
+  },
+  "wolfram_scope": {
+    "characteristic_polynomials": 36,
+    "independent_method": "Wolfram CharacteristicPolynomial and directed IsomorphicGraphQ; Python Faddeev-LeVerrier and exhaustive permutations",
+    "primary_pairs": 4,
+    "scope_pairs": 2,
+    "selected_matrices": 12
+  }
+}

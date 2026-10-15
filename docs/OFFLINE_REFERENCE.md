@@ -1,7 +1,8 @@
 # Gemeinsame Offline-Referenzsuite
 
 Die Suite verbindet die vorhandenen rationalen Graphprüfungen, vier eingefrorene
-Wolfram-Pakete, den aktuellen Signal-Lab-Kern und den unabhängigen n=6-Prüfer.
+Wolfram-Pakete, den aktuellen Signal-Lab-Kern und den unabhängigen n=6-Prüfer. Hinzu kommt die gezielte Analyse der vier
+n=6-Restkollisionen mit eingefrorener neuer Wolfram-Gegenprüfung.
 Sie rechnet gespeicherte Ergebnisse lokal nach. Es gibt keine neuen Wolfram-Aufrufe,
 keine Paketinstallation und keinen Download während der Prüfung.
 
@@ -29,7 +30,7 @@ Erwartete Abschlussmeldung und Exitcode **0**:
 ```json
 {
   "status": "PASS_OFFLINE_REFERENCE_REPLAY",
-  "cases": 8,
+  "cases": 9,
   "negative_controls": 26
 }
 ```
@@ -51,8 +52,11 @@ Ein erwartetes fachliches `FAIL` innerhalb eines Referenzfalls ist kein Suitefeh
 | `current-polarity.json` | `tools/reference_current.cjs` mit **aktuellem** `app/signal-lab-core.js`, verglichen durch den archivierten Fall-2-Prüfer | Dieselben 12 Metriken, Masken, Undefined-Semantik und 33 Spektralbins innerhalb des eingefrorenen Vertrags. Vollständige neue Eingaben und Ergebnisse im Bericht. So erfasst die CI auch spätere Kernänderungen. |
 | `wolfram-dependence.json` | Fall-4-Archiv: `verify.py` | 12 Wolfram-Prüfungen, 7 lokale Gegenrechnungen, exakte Wurzeleinschließung und 60-Dezimalstellen-Toleranz; ursprüngliches INCONCLUSIVE bleibt sichtbar. Konstruiertes Abhängigkeitsbeispiel, keine Prüfung echter Projektdaten. |
 | `wolfram-causal3.json` | Fall-5-Archiv: `verify_release.py` | 16/16 Wolfram/Python, 6 charakteristische Polynome, 6 Permutationen. Isospektrale, nicht ordnungserhaltend isomorphe Dreierordnungen; ursprünglicher Vorzeichenfehler bleibt dokumentiert. |
+| `lorentz-residuals.json` | [Restpaar-Prüfer](../research/lorentz_n6_residuals/README.md): 36 gespeicherte Wolfram-Polynome unabhängig gegenrechnen, alle n=6-Observablen und Höhe-zwei-n=7-Enumeration | Vier Paare getrennt; 17 zusätzliche interne Fehlerkontrollen. Zukunftsseparator scheitert bei n=7, volle Gradpaare plus Spektren bei einem verbundenen n=8-Dualpaar. Hypothese für beide Zählgrößen bei n=7/Höhe ≥3 offen. |
 | `failure-controls.json` | 13 fachliche Mutationen plus 13 beschädigte/manipulierte Ausgaben | Alle 26 müssen abgelehnt werden. Akzeptiert ein Prüfer eine davon, scheitert die gesamte Suite. |
 
+Die 26 übergreifenden Fehlerkontrollen bleiben bestehen; die 17 neuen fachlichen
+Kontrollen sind zusätzlich im Bericht `lorentz-residuals.json` enthalten.
 Die vier Original-ZIPs bleiben unverändert. Ihre Pfade und SHA-256-Werte stehen
 in [REFERENCE_SOURCE_MANIFEST.json](../REFERENCE_SOURCE_MANIFEST.json).
 Für n=6 dokumentiert [PROVENANCE.json](../references/causal-order-n6/PROVENANCE.json)
@@ -67,7 +71,7 @@ ursprünglichen Branch; dessen relative Generatorpfade sind keine neuen Suite-Ei
 python3 -S -B x6.py reference verify /tmp/x6-reference-evidence
 ```
 
-Der Ordner enthält genau **acht Berichte und `complete.json`**. Letztere bindet
+Der Ordner enthält genau **neun Berichte und `complete.json`**. Letztere bindet
 die vollständige Fallliste, alle Berichtslängen und SHA-256-Werte, den Geltungsbereich
 und die Quellen. Sie wird erst nach erfolgreichen Rechnungen und Fehlerkontrollen
 als letzte Datei geschrieben. Fehlende, zusätzliche, verlinkte, gekürzte oder
@@ -143,3 +147,10 @@ nachführen. Automatisches Akzeptieren neuer Referenzwerte ist nicht vorgesehen.
 
 Der [gespeicherte Abnahmebeleg](reference-suite/README.md) nennt den tatsächlich
 geprüften Commit, den lokalen Lauf und den Netzwerk-isolierten CI-Lauf.
+
+Die ursprüngliche Acht-Berichte-Abnahme unter `docs/reference-suite/` bleibt
+historische Evidenz ihres dort genannten Commits. Die aktuelle Erweiterung und
+ihre unveränderten Wolfram-Rohantworten stehen unter
+[research/lorentz_n6_residuals/](../research/lorentz_n6_residuals/README.md).
+Alte Bundles werden auf der zugehörigen alten Quellenrevision wiederholt,
+nicht gegen das inzwischen erweiterte Neun-Berichte-Inventar.

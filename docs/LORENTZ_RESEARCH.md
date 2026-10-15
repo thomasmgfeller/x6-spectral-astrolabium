@@ -124,3 +124,12 @@ research goal.
 The scheduled review reads evidence and primary literature, explains changes
 and proposes the next falsifiable question. It cannot promote a conjecture to
 a theorem, self-modify code or extend the pilot.
+
+## Fortsetzung: vier Restpaare bei n=6
+
+Die [exakte Restpaaranalyse](../research/lorentz_n6_residuals/README.md) ist in main
+ausführbar und Teil der gemeinsamen Offline-Suite. Alle vier Paare sind getrennt;
+drei sind Zeitumkehrpaare. Der Bericht enthält die neue Wolfram-Gegenprüfung,
+n=7/n=8-Gegenbeispiele und die ausdrücklich offene Hypothese
+H7-bidirectional-moments für n=7 mit Höhe ≥3. Die ursprünglichen Agentenläufe
+n=3–5 bleiben historische Replikationsevidenz.

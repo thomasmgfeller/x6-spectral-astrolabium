@@ -14,7 +14,7 @@ import zipfile
 ROOT = Path(__file__).resolve().parents[1]
 MANIFEST = 'REFERENCE_SOURCE_MANIFEST.json'
 CASES = ('rational-graphs', 'causal-n6', 'rax-w1', 'wolfram-polarity',
-         'current-polarity', 'wolfram-dependence', 'wolfram-causal3', 'failure-controls')
+         'current-polarity', 'wolfram-dependence', 'wolfram-causal3', 'lorentz-residuals', 'failure-controls')
 FILES = tuple('reports/' + case + '.json' for case in CASES)
 LIMIT = 16 * 1024 * 1024
 SCOPE = 'FINITE_REFERENCE_CHECKS; NO_NEW_WOLFRAM_CALLS; NO_PHYSICAL_VALIDATION; NO_EXTERNAL_REVIEW'
@@ -77,6 +77,13 @@ def sources():
                 'tools/reference_current.cjs', 'tests/python/independent_audit.py',
                 'app/signal-lab-core.js', 'references/causal-order-n6/verify.py',
                 'references/causal-order-n6/atlas_n6.json'}
+    required.update('research/lorentz_n6_residuals/' + name for name in (
+        'core.py', 'verify.py', 'inputs.json', 'contract.json',
+        'freeze.json', 'freeze-compact.json', 'freeze-monic.json',
+        'wolfram_check.wl', 'wolfram_check_compact.wl', 'wolfram_check_monic.wl',
+        'evidence/wolfram-response-attempt1.json', 'evidence/wolfram-response-attempt2.json',
+        'evidence/wolfram-response-attempt3.json', 'evidence/wolfram-result-attempt2.json',
+        'evidence/wolfram-result.json', 'evidence/local-results.json'))
     from tools.reference_cases import ARCHIVES
     required.update(value[0] for value in ARCHIVES.values())
     require(required <= set(doc['files']), 'Incomplete source manifest')
