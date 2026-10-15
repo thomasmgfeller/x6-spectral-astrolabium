@@ -1,7 +1,7 @@
 # X6-QE-Abnahme
 
 **Lokal PASS, 15. Oktober 2026.** Geprüfte Implementierung:
-`f2c1fb583dfb8f15db8c11f37866f24a9436eb56`.
+`a81e62fb077ef5e8fd7774682a400cbef6ed5aa1`.
 Spätere Register-/Evidenzänderungen ändern diese ausführbaren Quellen nicht.
 
 | Prüfung | Ergebnis | Beleg |
