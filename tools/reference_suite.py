@@ -14,7 +14,7 @@ import zipfile
 ROOT = Path(__file__).resolve().parents[1]
 MANIFEST = 'REFERENCE_SOURCE_MANIFEST.json'
 CASES = ('rational-graphs', 'causal-n6', 'rax-w1', 'wolfram-polarity',
-         'current-polarity', 'wolfram-dependence', 'wolfram-causal3', 'lorentz-residuals', 'failure-controls')
+         'current-polarity', 'wolfram-dependence', 'wolfram-causal3', 'lorentz-residuals', 'qe-graphs', 'failure-controls')
 FILES = tuple('reports/' + case + '.json' for case in CASES)
 LIMIT = 16 * 1024 * 1024
 SCOPE = 'FINITE_REFERENCE_CHECKS; NO_NEW_WOLFRAM_CALLS; NO_PHYSICAL_VALIDATION; NO_EXTERNAL_REVIEW'
@@ -85,6 +85,8 @@ def sources():
         'evidence/wolfram-response-attempt3.json', 'evidence/wolfram-result-attempt2.json',
         'evidence/wolfram-result.json', 'evidence/local-results.json'))
     from tools.reference_cases import ARCHIVES
+    required.update('research/x6_qe/' + name for name in (
+        'core.py', 'independent.py', 'verify.py', 'inputs.json', 'contract.json'))
     required.update(value[0] for value in ARCHIVES.values())
     require(required <= set(doc['files']), 'Incomplete source manifest')
     for name, expected in doc['files'].items():
@@ -182,7 +184,7 @@ BUNDLE_CONTROLS = ('missing-completion', 'missing-case', 'extra-file', 'truncate
                    'duplicate-json-key', 'nonfinite-json', 'changed-unhashed-result',
                    'rehash-wrong-graph-bound', 'rehash-missing-wolfram-row',
                    'rehash-false-causal-count', 'rehash-false-all-pass',
-                   'wrong-source-binding', 'symlink-result')
+                   'wrong-source-binding', 'symlink-result', 'rehash-false-qe-motif')
 
 
 def rejected(action, label):
@@ -226,6 +228,11 @@ def bundle_controls(good, source_files, work):
             bad[name] = encode(doc); rehash = True
         elif label == 'rehash-false-all-pass':
             bad[graph] = encode({'status': 'PASS', 'passed': 5, 'total': 5}); rehash = True
+        elif label == 'rehash-false-qe-motif':
+            name = 'reports/qe-graphs.json'; doc = decode(bad[name])
+            doc['result']['graphs'][2]['k4_count'] = 0
+            doc['result_sha256'] = sha(encode(doc['result']))
+            bad[name] = encode(doc); rehash = True
         elif label == 'wrong-source-binding':
             doc = decode(bad['complete.json']); doc['source_files']['x6.py'] = '0'*64
             bad['complete.json'] = encode(doc)

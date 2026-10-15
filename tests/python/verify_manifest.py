@@ -37,6 +37,11 @@ def main():
     # Isolated extensions have explicit inventories; do not weaken the unknown-file
     # check or change the app pin used by the bounded research agents.
     extension_specs = {
+        "QE_SOURCE_MANIFEST.json": (
+            "x6.qe.source-manifest/1",
+            {"research/x6_qe/core.py", "research/x6_qe/independent.py",
+             "research/x6_qe/verify.py", "research/x6_qe/inputs.json",
+             "research/x6_qe/contract.json", "research/x6_qe/README.md"}),
         "VALIDATION_SOURCE_MANIFEST.json": (
             "x6.validation.source-manifest/1",
             {"experimental/rax_guarded/runner.py", "experimental/rax_guarded/worker.py",

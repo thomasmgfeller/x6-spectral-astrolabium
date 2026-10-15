@@ -8,7 +8,7 @@ import subprocess
 import zipfile
 
 ROOT=Path(__file__).resolve().parents[2]
-TAG='reference-2026.10.15'
+TAG='reference-2026.10.15-qe1'
 
 def build(output):
     status=subprocess.check_output(['git','status','--porcelain','--untracked-files=normal'],cwd=ROOT)
@@ -16,11 +16,11 @@ def build(output):
     commit=subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT).decode().strip()
     names=set(json.loads((ROOT/'REFERENCE_SOURCE_MANIFEST.json').read_text())['files'])
     names.update(['REFERENCE_SOURCE_MANIFEST.json','CITATION.cff','LICENSE','LICENSE_SCOPE.md','NOTICE','docs/OFFLINE_REFERENCE.md'])
-    for folder in ['experimental/rax_guarded','tests/rax-guarded','docs/validation-v1','docs/agent-archive/2026-10-15','tools/release']:
+    for folder in ['experimental/rax_guarded','tests/rax-guarded','docs/validation-v1','docs/agent-archive/2026-10-15','tools/release','research/x6_qe','docs/reference-qe-v0.1']:
         names.update(str(p.relative_to(ROOT)) for p in (ROOT/folder).rglob('*') if p.is_file() and '__pycache__' not in p.parts)
     payload={n:(ROOT/n).read_bytes() for n in sorted(names)}
     manifest={'schema':'x6.reference-bundle/1','release_tag':TAG,'source_commit':commit,
-      'scope':'Nine finite reference reports, guarded declarative runner, selected original agent evidence. No industrial performance, physical acceptance or external review claim.',
+      'scope':'Ten finite reference reports including exact X6-QE graph references, guarded declarative runner, selected original agent evidence. No industrial performance, physical acceptance or external review claim.',
       'files':{n:hashlib.sha256(data).hexdigest() for n,data in payload.items()}}
     payload['RELEASE_BUNDLE.json']=(json.dumps(manifest,indent=2,sort_keys=True)+'\n').encode()
     output.mkdir(parents=False,exist_ok=False);name='x6-'+TAG+'.zip'

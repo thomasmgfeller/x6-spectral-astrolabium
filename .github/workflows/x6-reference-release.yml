@@ -8,6 +8,10 @@ on:
       - 'docs/validation-v1/**'
       - 'docs/agent-archive/**'
       - 'tools/release/**'
+      - 'research/x6_qe/**'
+      - 'docs/reference-qe-v0.1/**'
+      - 'REFERENCE_SOURCE_MANIFEST.json'
+      - 'QE_SOURCE_MANIFEST.json'
       - 'CITATION.cff'
       - 'VALIDATION_SOURCE_MANIFEST.json'
       - '.github/workflows/x6-reference-release.yml'
@@ -19,6 +23,10 @@ on:
       - 'docs/validation-v1/**'
       - 'docs/agent-archive/**'
       - 'tools/release/**'
+      - 'research/x6_qe/**'
+      - 'docs/reference-qe-v0.1/**'
+      - 'REFERENCE_SOURCE_MANIFEST.json'
+      - 'QE_SOURCE_MANIFEST.json'
       - 'CITATION.cff'
       - 'VALIDATION_SOURCE_MANIFEST.json'
       - '.github/workflows/x6-reference-release.yml'
@@ -50,7 +58,7 @@ jobs:
         run: |
           python3 - <<'PY'
           import os,subprocess
-          changed=subprocess.check_output(['git','diff','--name-only',os.environ['BEFORE_SHA'],os.environ['CURRENT_SHA'],'--','docs/validation-v1/RELEASE_NOTES.md']).decode().strip()
+          changed=subprocess.check_output(['git','diff','--name-only',os.environ['BEFORE_SHA'],os.environ['CURRENT_SHA'],'--','docs/reference-qe-v0.1/RELEASE_NOTES.md']).decode().strip()
           with open(os.environ['GITHUB_OUTPUT'],'a') as f:f.write('requested='+str(bool(changed)).lower()+'\n')
           PY
       - name: Validate citation against pinned official CFF schema
@@ -63,7 +71,7 @@ jobs:
         run: python3 -S -B tools/release/build.py --output "$RUNNER_TEMP/reference-release"
       - name: Reproduce solely from extracted package without network
         run: |
-          python3 -m zipfile -e "$RUNNER_TEMP/reference-release/x6-reference-2026.10.15.zip" "$RUNNER_TEMP/unpacked"
+          python3 -m zipfile -e "$RUNNER_TEMP/reference-release/x6-reference-2026.10.15-qe1.zip" "$RUNNER_TEMP/unpacked"
           cd "$RUNNER_TEMP/unpacked/x6-reference"
           sudo env "PATH=$PATH" unshare --net python3 -S -B tools/release/reproduce.py --output "$RUNNER_TEMP/reproduction"
       - name: Preserve append-only finding history
@@ -127,4 +135,4 @@ jobs:
           cd release-assets
           sha256sum -c SHA256SUMS
           cd ..
-          gh release create reference-2026.10.15 release-assets/x6-reference-2026.10.15.zip release-assets/x6-reference-qualification.zip release-assets/SHA256SUMS release-assets/BUILD.json --target "$SOURCE_SHA" --title "X6 Reference Edition 2026-10-15" --notes-file docs/validation-v1/RELEASE_NOTES.md --prerelease --latest=false
+          gh release create reference-2026.10.15-qe1 release-assets/x6-reference-2026.10.15-qe1.zip release-assets/x6-reference-qualification.zip release-assets/SHA256SUMS release-assets/BUILD.json --target "$SOURCE_SHA" --title "X6 Reference Edition 2026-10-15 — QE v0.1" --notes-file docs/reference-qe-v0.1/RELEASE_NOTES.md --prerelease --latest=false

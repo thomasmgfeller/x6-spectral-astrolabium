@@ -30,8 +30,8 @@ Erwartete Abschlussmeldung und Exitcode **0**:
 ```json
 {
   "status": "PASS_OFFLINE_REFERENCE_REPLAY",
-  "cases": 9,
-  "negative_controls": 26
+  "cases": 10,
+  "negative_controls": 27
 }
 ```
 
@@ -53,10 +53,12 @@ Ein erwartetes fachliches `FAIL` innerhalb eines Referenzfalls ist kein Suitefeh
 | `wolfram-dependence.json` | Fall-4-Archiv: `verify.py` | 12 Wolfram-Prüfungen, 7 lokale Gegenrechnungen, exakte Wurzeleinschließung und 60-Dezimalstellen-Toleranz; ursprüngliches INCONCLUSIVE bleibt sichtbar. Konstruiertes Abhängigkeitsbeispiel, keine Prüfung echter Projektdaten. |
 | `wolfram-causal3.json` | Fall-5-Archiv: `verify_release.py` | 16/16 Wolfram/Python, 6 charakteristische Polynome, 6 Permutationen. Isospektrale, nicht ordnungserhaltend isomorphe Dreierordnungen; ursprünglicher Vorzeichenfehler bleibt dokumentiert. |
 | `lorentz-residuals.json` | [Restpaar-Prüfer](../research/lorentz_n6_residuals/README.md): 36 gespeicherte Wolfram-Polynome unabhängig gegenrechnen, alle n=6-Observablen und Höhe-zwei-n=7-Enumeration | Vier Paare getrennt; 17 zusätzliche interne Fehlerkontrollen. Zukunftsseparator scheitert bei n=7, volle Gradpaare plus Spektren bei einem verbundenen n=8-Dualpaar. Hypothese für beide Zählgrößen bei n=7/Höhe ≥3 offen. |
-| `failure-controls.json` | 13 fachliche Mutationen plus 13 beschädigte/manipulierte Ausgaben | Alle 26 müssen abgelehnt werden. Akzeptiert ein Prüfer eine davon, scheitert die gesamte Suite. |
+| `qe-graphs.json` | [X6-QE](../research/x6_qe/README.md): vier Graphen, drei bekannte Referenzen, exakte Adjazenz- und Ihara-Polynome mit unabhängigen Determinantenidentitäten | Stern ohne Zyklusfingerprint, primitiver Viererzyklus, Turmgraph/Shrikhande mit gleichem Spektrum und Zeta, aber K4=8/0. Zwölf Umbenennungen, 21 zusätzliche Fehlerkontrollen. Keine Quanten-, Gedächtnis- oder Arithmetikbehauptung. |
+| `failure-controls.json` | 13 fachliche Mutationen plus 14 beschädigte/manipulierte Ausgaben | Alle 27 müssen abgelehnt werden. Akzeptiert ein Prüfer eine davon, scheitert die gesamte Suite. |
 
-Die 26 übergreifenden Fehlerkontrollen bleiben bestehen; die 17 neuen fachlichen
-Kontrollen sind zusätzlich im Bericht `lorentz-residuals.json` enthalten.
+Die bisherigen 26 übergreifenden Fehlerkontrollen bleiben bestehen; ein neu gehashter
+falscher QE-Motivbefund ergänzt sie auf 27. Zusätzlich enthalten die Berichte
+`lorentz-residuals.json` 17 und `qe-graphs.json` 21 interne Fehlerkontrollen.
 Die vier Original-ZIPs bleiben unverändert. Ihre Pfade und SHA-256-Werte stehen
 in [REFERENCE_SOURCE_MANIFEST.json](../REFERENCE_SOURCE_MANIFEST.json).
 Für n=6 dokumentiert [PROVENANCE.json](../references/causal-order-n6/PROVENANCE.json)
@@ -71,7 +73,7 @@ ursprünglichen Branch; dessen relative Generatorpfade sind keine neuen Suite-Ei
 python3 -S -B x6.py reference verify /tmp/x6-reference-evidence
 ```
 
-Der Ordner enthält genau **neun Berichte und `complete.json`**. Letztere bindet
+Der Ordner enthält genau **zehn Berichte und `complete.json`**. Letztere bindet
 die vollständige Fallliste, alle Berichtslängen und SHA-256-Werte, den Geltungsbereich
 und die Quellen. Sie wird erst nach erfolgreichen Rechnungen und Fehlerkontrollen
 als letzte Datei geschrieben. Fehlende, zusätzliche, verlinkte, gekürzte oder
@@ -82,7 +84,7 @@ Checkout** alle Berichte neu und vergleicht deren vollständige kanonische Bytes
 Es führt keinen Code aus dem Ergebnisordner aus. Insbesondere reichen nachgezogene
 Prüfsummen für eine falsche Graphschranke, eine entfernte Wolfram-Zeile, eine falsche
 n=6-Anzahl oder eine erfundene PASS-Zusammenfassung nicht aus. Diese Angriffe sind
-Teil jeder Ausführung; die ersten beiden werden zusätzlich über die öffentliche CLI
+Teil jeder Ausführung; Graphschranke, Wolfram-Zeile und QE-Motivzahl werden zusätzlich über die öffentliche CLI
 geprüft.
 
 Die ursprünglichen fachlichen Toleranzen gelten beim Wolfram-Vergleich; Replay
@@ -107,11 +109,11 @@ python3 -S -B tests/reference/qualify_checkout.py --output /tmp/x6-reference-acc
 ```
 
 Dieser zusätzliche Einstieg verlangt einen sauberen Git-Checkout ohne `.venv`,
-ruft den dokumentierten CLI-Ablauf auf und prüft zehn weitere Zurückweisungen:
-Überschreiben, Python `-O`, zwei neu gehashte Fälschungen, fehlender Fall,
+ruft den dokumentierten CLI-Ablauf auf und prüft elf weitere Zurückweisungen:
+Überschreiben, Python `-O`, drei neu gehashte Fälschungen (Graphschranke, Wolfram-Zeile, QE-Motivzahl), fehlender Fall,
 doppelter JSON-Schlüssel, Symlink, veränderter aktueller Kern, beschädigtes
-Wolfram-Archiv und fehlendes Node. Das sind **zehn** Zurückweisungen plus der
-erfolgreiche Qualifikationslauf, insgesamt elf protokollierte CLI-Schritte.
+Wolfram-Archiv und fehlendes Node. Das sind **elf** Zurückweisungen plus der
+erfolgreiche Qualifikationslauf, insgesamt zwölf protokollierte CLI-Schritte.
 Er prüft außerdem, dass der Checkout unverändert bleibt. Das wiederprüfbare Bundle
 liegt unter `run/`; `acceptance.json` und die Logs dokumentieren den Testlauf.
 
@@ -153,4 +155,7 @@ historische Evidenz ihres dort genannten Commits. Die aktuelle Erweiterung und
 ihre unveränderten Wolfram-Rohantworten stehen unter
 [research/lorentz_n6_residuals/](../research/lorentz_n6_residuals/README.md).
 Alte Bundles werden auf der zugehörigen alten Quellenrevision wiederholt,
-nicht gegen das inzwischen erweiterte Neun-Berichte-Inventar.
+nicht gegen das inzwischen erweiterte Zehn-Berichte-Inventar.
+
+Die Zehn-Berichte-Erweiterung ist unter [X6-QE/Abnahme](../research/x6_qe/ACCEPTANCE.md)
+dokumentiert. Frühere Acht-/Neun-Berichte-Bundles bleiben an ihre alten Quellenrevisionen gebunden.
