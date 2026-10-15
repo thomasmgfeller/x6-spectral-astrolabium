@@ -1,0 +1,109 @@
+{
+  "schema": "x6.numerics.regression/1",
+  "status": "PASS",
+  "checks": [
+    {
+      "id": "historical_failure_is_reproduced",
+      "status": "PASS"
+    },
+    {
+      "id": "scaled_pair_exponent_-996",
+      "status": "PASS"
+    },
+    {
+      "id": "scaled_pair_exponent_-500",
+      "status": "PASS"
+    },
+    {
+      "id": "scaled_pair_exponent_-50",
+      "status": "PASS"
+    },
+    {
+      "id": "scaled_pair_exponent_-40",
+      "status": "PASS"
+    },
+    {
+      "id": "scaled_pair_exponent_0",
+      "status": "PASS"
+    },
+    {
+      "id": "scaled_pair_exponent_40",
+      "status": "PASS"
+    },
+    {
+      "id": "scaled_pair_exponent_500",
+      "status": "PASS"
+    },
+    {
+      "id": "scaled_pair_exponent_996",
+      "status": "PASS"
+    },
+    {
+      "id": "old_threshold_adjacent_-1",
+      "status": "PASS"
+    },
+    {
+      "id": "old_threshold_adjacent_0",
+      "status": "PASS"
+    },
+    {
+      "id": "old_threshold_adjacent_1",
+      "status": "PASS"
+    },
+    {
+      "id": "zero_matrix",
+      "status": "PASS"
+    },
+    {
+      "id": "unresolved_positive_gap_is_labelled",
+      "status": "PASS"
+    },
+    {
+      "id": "normalization_underflow_is_reported",
+      "status": "PASS"
+    },
+    {
+      "id": "reject_negative",
+      "status": "PASS"
+    },
+    {
+      "id": "reject_zero",
+      "status": "PASS"
+    },
+    {
+      "id": "reject_self_loop",
+      "status": "PASS"
+    },
+    {
+      "id": "reject_nan",
+      "status": "PASS"
+    },
+    {
+      "id": "reject_infinity",
+      "status": "PASS"
+    },
+    {
+      "id": "reject_degree_overflow",
+      "status": "PASS"
+    },
+    {
+      "id": "reject_eigenvalue_overflow",
+      "status": "PASS"
+    },
+    {
+      "id": "reject_too_many_vertices",
+      "status": "PASS"
+    }
+  ],
+  "source": {
+    "commit": "7715b7d07ec333c838ca6a4f1da503253b75ea8b",
+    "app_sha256": "56df754a1c5c3d26022e54b000f0d9e52ab4067d39e6a664556de12bfd7dc071",
+    "kernel_sha256": "02345490b0aee9a4c1bfc53ba4ce724e396d227ec842dc7d3e24309af89fd5cb",
+    "observed_kernel_sha256": "b9ee7c740e587479d80ad5097e09bb69a7b68e8ce40893321cbd58a2463d11a8",
+    "source_dirty": false,
+    "source_path": "app/index.html",
+    "node": "v24.19.0",
+    "execution": "Node.js VM; original public output plus observation-only vector return; no DOM"
+  },
+  "scope": "Targeted numerical regression and explicit input/range rejection; not universal robustness."
+}

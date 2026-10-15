@@ -60,3 +60,13 @@ The browser test requires Playwright; the workflow pins its dependency. Local
 development may use `--allow-working-tree`, but published qualification must bind
 the unchanged application bytes to an actual source commit. Future broader tests
 remain distinct from the frozen 27-case acceptance.
+
+## Active integration pin
+
+The active math-agent app checksum is updated to the exact reviewed repaired app.
+Its schedule, limits, seed and research algorithms are unchanged.
+`tests/numerics/preservation.py` proves byte equality outside `spectrumFrame` and
+of the extracted FFT/filter and signal-to-graph functions against the archived app.
+The Signal Lab original 17-file baseline remains immutable; a new exact two-file
+amendment binds the repaired app and matching configuration. Tamper-rejection
+tests remain enabled. This is a checksum rebind, not a fresh research-agent run.

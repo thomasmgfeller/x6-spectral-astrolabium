@@ -26,6 +26,7 @@ jobs:
           node "$RUNNER_TEMP/x6-numerics/node_modules/playwright/cli.js" install --with-deps chromium
       - name: Frozen contract, controls and targeted regressions
         run: |
+          python3 tests/numerics/preservation.py > numerics-preservation.json
           python3 tests/numerics/verify_frozen.py --output numerics-evidence
           node tests/numerics/test_regression.cjs > numerics-evidence/regression.json
       - name: Actual UI input, display, errors and JSON export

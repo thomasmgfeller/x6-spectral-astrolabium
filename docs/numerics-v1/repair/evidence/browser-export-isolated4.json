@@ -1,0 +1,75 @@
+{
+  "version": "X6-2.4",
+  "timestamp": "2026-10-15T18:36:53.501Z",
+  "scope": "finite positive-weight undirected graph combinatorial Laplacian",
+  "input": "v0\nv1\nv2\nv3",
+  "nodes": [
+    "v0",
+    "v1",
+    "v2",
+    "v3"
+  ],
+  "edgeCount": 0,
+  "componentCount": 4,
+  "componentSizes": [
+    1,
+    1,
+    1,
+    1
+  ],
+  "exactNullity": 4,
+  "positiveEigenvalueCount": 0,
+  "componentBounds": [],
+  "exactRationalBounds": [],
+  "globalGapLowerBound": null,
+  "trace": 0,
+  "numerical": {
+    "eig": [
+      {
+        "value": 0,
+        "residual": 0
+      },
+      {
+        "value": 0,
+        "residual": 0
+      },
+      {
+        "value": 0,
+        "residual": 0
+      },
+      {
+        "value": 0,
+        "residual": 0
+      }
+    ],
+    "converged": true,
+    "sweeps": 0,
+    "solverVersion": "jacobi-scale-1",
+    "matrixScale": 0,
+    "normalizedMatrixInfinityNorm": 0,
+    "scaledMaxResidual": 0,
+    "orthogonalityError": 0,
+    "relativeTolerance": 1e-12,
+    "normalizationUnderflowCount": 0,
+    "resolutionRelative": 1e-12,
+    "resolutionAbsolute": 0,
+    "stopReason": "RESIDUAL_AND_ORTHOGONALITY_ACCEPTED",
+    "guarantee": "NUMERICAL_POSTCHECK_ONLY_NOT_INTERVAL_CERTIFIED",
+    "positiveGap": {
+      "index": null,
+      "estimate": null,
+      "status": "NO_POSITIVE_MODE",
+      "scope": "smallest positive mode indexed by exact component count; numerical resolution is not a gap certificate"
+    }
+  },
+  "certification": {
+    "nullity": "COMBINATORIAL_THEOREM",
+    "gap": "GRAPH_THEORETIC_BOUND",
+    "eigenvalues": "NUMERICAL_ONLY",
+    "intervalArithmetic": "NOT_IMPLEMENTED",
+    "rationalGapCertificate": "EXACT_DECIMAL_INPUT",
+    "julia": "REFERENCE_EXPORT_ONLY",
+    "wolfram": "REFERENCE_EXPORT_ONLY",
+    "browserE2E": "PENDING"
+  }
+}

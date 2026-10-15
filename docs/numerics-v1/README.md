@@ -1,6 +1,9 @@
 # X6 numerical qualification and scaling finding
 
-**2026-10-15: extended robustness FAIL; repair pending.**
+**2026-10-15: historical 25/27 FAIL preserved; repaired solver passes the frozen 27/27 suite.**
+
+See the [repair report](repair/REPORT.md) for exact Sage and actual-browser evidence.
+The broader 120-vertex qualification remains a separate next gate.
 
 This audit concerns the finite positive-weight undirected graph Laplacian in
 `app/index.html`, `spectrumFrame`, at commit
@@ -23,11 +26,11 @@ v0 v1 0.00000000000000088817841970012523233890533447265625
 ```
 
 With `w = 2^(-50)`, the exact matrix is `[[w,-w],[-w,w]]`, whose eigenvalues
-are `0` and `2w`. X6 returns `w,w`, `converged=true` and zero rotations.
+are `0` and `2w`. The historical X6 revision returns `w,w`, `converged=true` and zero rotations.
 The eigenvalue error and eigenvector residual, each scaled by the matrix infinity
 norm, are both `1/2`. The topologically computed nullity remains correctly one.
 
-The stopping condition uses `max(1, max(abs(diagonal)))`. The fixed floor causes
+The historical stopping condition uses `max(1, max(abs(diagonal)))`. The fixed floor causes
 the solver to terminate before a rotation at this scale. The weight is exactly
 representable in binary64; this example does not involve underflow.
 A similarly scaled path with 16 vertices also fails.
