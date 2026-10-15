@@ -1,0 +1,135 @@
+{
+  "assumed_alternatives": {
+    "main": [
+      0.7,
+      0.2,
+      0.05,
+      0.05
+    ],
+    "smaller_gain": [
+      0.75,
+      0.15,
+      0.05,
+      0.05
+    ]
+  },
+  "confirmation_authorized": false,
+  "healthy_component_target_power": 0.95,
+  "healthy_designs_by_assumed_true_fpr": {
+    "0.001": {
+      "largest_accepted_false_alarm_count": 2,
+      "n": 720,
+      "power": 0.9634608671664251
+    },
+    "0.002": {
+      "largest_accepted_false_alarm_count": 5,
+      "n": 1164,
+      "power": 0.968642272512447
+    },
+    "0.005": {
+      "largest_accepted_false_alarm_count": 26,
+      "n": 3804,
+      "power": 0.9513820608203388
+    }
+  },
+  "illustrative_design_for_two_claims": {
+    "healthy_gate_power_per_claim": 0.968642272512447,
+    "healthy_n_per_claim": 1164,
+    "positive_joint_gate_power_per_claim": 0.9983797494470786,
+    "positive_n_per_claim": 800,
+    "scope": "Conditional on identical registered alternatives for both claims, iid comparable bearings within each class, and all deterministic resource/preservation gates passing. No cross-claim independence is assumed. Positive n is first passing grid value, not a global minimum.",
+    "simultaneous_quality_gate_power_union_lower_bound": 0.9340440439190512
+  },
+  "not_estimated_from_pilot": true,
+  "positive_category_order": [
+    "both_correct",
+    "candidate_only_correct",
+    "baseline_only_correct",
+    "both_wrong"
+  ],
+  "positive_power_grid": {
+    "main": [
+      {
+        "joint_sensitivity_and_gain_power": 0.11926363014920281,
+        "n": 100
+      },
+      {
+        "joint_sensitivity_and_gain_power": 0.43691797478397926,
+        "n": 200
+      },
+      {
+        "joint_sensitivity_and_gain_power": 0.8726514121126134,
+        "n": 400
+      },
+      {
+        "joint_sensitivity_and_gain_power": 0.9983797494470786,
+        "n": 800
+      },
+      {
+        "joint_sensitivity_and_gain_power": 0.9999919127726327,
+        "n": 1200
+      },
+      {
+        "joint_sensitivity_and_gain_power": 0.9999999767621675,
+        "n": 1600
+      },
+      {
+        "joint_sensitivity_and_gain_power": 0.999999999999926,
+        "n": 2400
+      }
+    ],
+    "smaller_gain": [
+      {
+        "joint_sensitivity_and_gain_power": 0.014378679388375346,
+        "n": 100
+      },
+      {
+        "joint_sensitivity_and_gain_power": 0.0589382457632728,
+        "n": 200
+      },
+      {
+        "joint_sensitivity_and_gain_power": 0.20554726177561175,
+        "n": 400
+      },
+      {
+        "joint_sensitivity_and_gain_power": 0.5713587769618237,
+        "n": 800
+      },
+      {
+        "joint_sensitivity_and_gain_power": 0.8242117857476052,
+        "n": 1200
+      },
+      {
+        "joint_sensitivity_and_gain_power": 0.9412428365103497,
+        "n": 1600
+      },
+      {
+        "joint_sensitivity_and_gain_power": 0.9955989532778083,
+        "n": 2400
+      }
+    ]
+  },
+  "required_before_confirmation": [
+    "Justify alternatives and population with domain review.",
+    "Obtain independent machine/site-aware development, validation, holdout and external data with rights and labels.",
+    "Freeze candidate, baseline, thresholds, sample sizes and unchanged gates before access.",
+    "If clustering invalidates iid: preregister a new cluster-aware design; do not multiply windows."
+  ],
+  "schema": "x6.industrial.v1-planning/1",
+  "status": "CONDITIONAL_PLANNING_ONLY",
+  "unchanged_gates": {
+    "alpha_per_claim": 0.025,
+    "false_positive_rate_max": 0.01,
+    "family_alpha": 0.05,
+    "registered_claim_count": 2,
+    "sensitivity_min": 0.8,
+    "strict_sensitivity_gain_min": 0.05
+  },
+  "zero_false_alarms": {
+    "minimum_independent_healthy_units": 368,
+    "probability_of_zero_at_368_if_true_fpr_0_002": 0.47867328917800417,
+    "upper_at_367": 0.010001095732145986,
+    "upper_at_368": 0.009974054826946353,
+    "upper_at_two_if_iid": 0.841886116991581
+  }
+}
