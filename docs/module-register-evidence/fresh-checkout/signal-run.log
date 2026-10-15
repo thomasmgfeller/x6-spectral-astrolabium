@@ -1,0 +1,29 @@
+{
+  "status": "COMPLETED",
+  "directory": "/workspace/scratch/efe82cff8a53/registry-evidence/runs/signal",
+  "summary": {
+    "schema": "x6.integration.summary/1",
+    "module": "signal",
+    "execution_status": "COMPLETED",
+    "verification_status": "BACKEND_CHECKS_PASS",
+    "evidence_class": "SYNTHETIC_SOFTWARE",
+    "scientific_result": {
+      "native_schema": "x6.signal-lab.evidence/1",
+      "result": {
+        "identity": "PASS",
+        "moving_average": "PASS",
+        "fft_lowpass": "PASS",
+        "x6_phase": "FAIL"
+      },
+      "scope": "Synthetic signal screening; same-engine replay is not independent validation."
+    },
+    "limits": {
+      "authenticity": "NOT_ASSESSED",
+      "physical_validation": "NOT_PERFORMED",
+      "external_review": "NOT_PERFORMED",
+      "hardware_control": "NOT_PERFORMED"
+    }
+  }
+}
+
+--- stderr ---

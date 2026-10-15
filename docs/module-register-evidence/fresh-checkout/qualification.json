@@ -1,0 +1,299 @@
+{
+  "schema": "x6.integration.qualification/1",
+  "status": "PASS_CORE_WORKFLOW",
+  "started_utc": "2026-10-15T09:44:34.571932+00:00",
+  "source_commit": "7c14eaf8cebf50ebfbba3a92e4b62dbfd23a2170",
+  "initial_checkout_clean": true,
+  "initial_environment_absent": true,
+  "steps": [
+    {
+      "name": "01-setup",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "x6.py",
+        "setup",
+        "--profile",
+        "research"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "seconds": 20.78263537299972,
+      "passed": true
+    },
+    {
+      "name": "02-doctor",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "x6.py",
+        "doctor",
+        "--profile",
+        "research"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "seconds": 0.22190739000143367,
+      "passed": true
+    },
+    {
+      "name": "03-pip-check",
+      "command": [
+        "/workspace/scratch/efe82cff8a53/registry-qualification/.venv/bin/python",
+        "-m",
+        "pip",
+        "check"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "seconds": 0.32125375000032363,
+      "passed": true
+    },
+    {
+      "name": "04-regressions",
+      "command": [
+        "/workspace/scratch/efe82cff8a53/registry-qualification/.venv/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests/integration",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "seconds": 3.1798779939999804,
+      "passed": true
+    },
+    {
+      "name": "signal-run",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "x6.py",
+        "run",
+        "signal",
+        "--output",
+        "/workspace/scratch/efe82cff8a53/registry-evidence/runs/signal"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "seconds": 0.47196474700103863,
+      "passed": true
+    },
+    {
+      "name": "signal-verify",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "x6.py",
+        "verify",
+        "/workspace/scratch/efe82cff8a53/registry-evidence/runs/signal"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "seconds": 0.37424723399999493,
+      "passed": true
+    },
+    {
+      "name": "signal-export",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "x6.py",
+        "export",
+        "/workspace/scratch/efe82cff8a53/registry-evidence/runs/signal",
+        "--output",
+        "/workspace/scratch/efe82cff8a53/registry-evidence/exports/signal.zip"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "seconds": 0.16701471200030937,
+      "passed": true
+    },
+    {
+      "name": "signal-zip-replay",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "x6.py",
+        "verify",
+        "/workspace/scratch/efe82cff8a53/registry-evidence/exports/signal.zip"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "seconds": 0.3750771110007918,
+      "passed": true
+    },
+    {
+      "name": "spectral-run",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "x6.py",
+        "run",
+        "spectral",
+        "--output",
+        "/workspace/scratch/efe82cff8a53/registry-evidence/runs/spectral"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "seconds": 0.19511476300067443,
+      "passed": true
+    },
+    {
+      "name": "spectral-verify",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "x6.py",
+        "verify",
+        "/workspace/scratch/efe82cff8a53/registry-evidence/runs/spectral"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "seconds": 0.16151146100128244,
+      "passed": true
+    },
+    {
+      "name": "spectral-export",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "x6.py",
+        "export",
+        "/workspace/scratch/efe82cff8a53/registry-evidence/runs/spectral",
+        "--output",
+        "/workspace/scratch/efe82cff8a53/registry-evidence/exports/spectral.zip"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "seconds": 0.13099301399961405,
+      "passed": true
+    },
+    {
+      "name": "spectral-zip-replay",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "x6.py",
+        "verify",
+        "/workspace/scratch/efe82cff8a53/registry-evidence/exports/spectral.zip"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "seconds": 0.17601320199901238,
+      "passed": true
+    },
+    {
+      "name": "rax-run",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "x6.py",
+        "run",
+        "rax",
+        "--output",
+        "/workspace/scratch/efe82cff8a53/registry-evidence/runs/rax"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "seconds": 63.07958480299931,
+      "passed": true
+    },
+    {
+      "name": "rax-verify",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "x6.py",
+        "verify",
+        "/workspace/scratch/efe82cff8a53/registry-evidence/runs/rax"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "seconds": 57.69277524000063,
+      "passed": true
+    },
+    {
+      "name": "rax-export",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "x6.py",
+        "export",
+        "/workspace/scratch/efe82cff8a53/registry-evidence/runs/rax",
+        "--output",
+        "/workspace/scratch/efe82cff8a53/registry-evidence/exports/rax.zip"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "seconds": 0.4366894409995439,
+      "passed": true
+    },
+    {
+      "name": "rax-zip-replay",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "x6.py",
+        "verify",
+        "/workspace/scratch/efe82cff8a53/registry-evidence/exports/rax.zip"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "seconds": 58.16149459600092,
+      "passed": true
+    },
+    {
+      "name": "no-overwrite",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "x6.py",
+        "run",
+        "signal",
+        "--output",
+        "/workspace/scratch/efe82cff8a53/registry-evidence/runs/signal"
+      ],
+      "exit_code": 1,
+      "expected_exit_code": 1,
+      "seconds": 0.28958521300046414,
+      "passed": true
+    },
+    {
+      "name": "invalid-job",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "x6.py",
+        "run",
+        "signal",
+        "--job",
+        "experimental/edge_reference/examples/invalid-job.json",
+        "--output",
+        "/workspace/scratch/efe82cff8a53/registry-evidence/invalid"
+      ],
+      "exit_code": 1,
+      "expected_exit_code": 1,
+      "seconds": 0.3593465929989179,
+      "passed": true
+    },
+    {
+      "name": "source-inventory",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "tests/python/verify_manifest.py"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "seconds": 0.1540359909995459,
+      "passed": true
+    }
+  ],
+  "browser": "NOT_EXECUTED",
+  "physical_validation": "NOT_PERFORMED",
+  "research_agents_executed": false,
+  "environment": {
+    "python": "3.12.14",
+    "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+    "machine": "x86_64",
+    "node": "v24.19.0",
+    "git": true,
+    "packages": {
+      "numpy": "2.3.5",
+      "scipy": "1.17.0"
+    },
+    "isolated_environment": true
+  },
+  "isolated_environment_config": "home = /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin\ninclude-system-site-packages = false\nversion = 3.12.14\nexecutable = /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12\ncommand = /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3 -m venv --copies /workspace/scratch/efe82cff8a53/registry-qualification/.venv\n",
+  "final_checkout_clean": true,
+  "all_tracked_files_unchanged": true,
+  "finished_utc": "2026-10-15T09:48:01.989776+00:00"
+}

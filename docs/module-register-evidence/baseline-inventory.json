@@ -1,0 +1,69 @@
+{
+  "status": "FAIL",
+  "verified": 395,
+  "excluded": [
+    {
+      "path": ".github/workflows/validation.yml",
+      "reason": "historical archived workflow omitted; separately installed CI differs"
+    },
+    {
+      "path": "README.md",
+      "reason": "updated public preview and license disclosure; historical digest retained as provenance"
+    },
+    {
+      "path": "docs/RELEASE_CHECKLIST.md",
+      "reason": "updated release checklist; historical digest retained only as provenance"
+    },
+    {
+      "path": "tests/python/python_results.local.json",
+      "reason": "generated local test output; not part of published source checkout"
+    }
+  ],
+  "superseded": [
+    {
+      "path": ".gitignore",
+      "historical_sha256": "6f9cb2fceaa2850733f2abbc1472195a10c0e844b25c0f5bbc2591e189f96f47",
+      "reason": "integration output directories; current bytes checked by INTEGRATION_SOURCE_MANIFEST.json"
+    },
+    {
+      "path": "CITATION.cff",
+      "historical_sha256": "5225a23f7cd2f1841db38dd9f4b6f1b3624cce110cf27d08575b6f4b29cd2bc0",
+      "reason": "authorised Apache-2.0 activation; current bytes checked by LICENSE_SOURCE_MANIFEST.json"
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "historical_sha256": "366d6a2ce4b388d1fb77d4a5188157ff99613be932065fa758f8e562a6b45ee0",
+      "reason": "authorised Apache-2.0 activation; current bytes checked by LICENSE_SOURCE_MANIFEST.json"
+    },
+    {
+      "path": "app/index.html",
+      "historical_sha256": "df48fa522498fb79aa3617fe2fefa587ef820b9555a692b5bd253ac88b2298f7",
+      "reason": "Sagnac integration; current content checked by separate versioned manifest"
+    },
+    {
+      "path": "docs/LICENSE_OPTIONS.md",
+      "historical_sha256": "395e50df5a4007b888c6bf9b222969c42d141f48f627eaa9478344a42a71e772",
+      "reason": "authorised Apache-2.0 activation; current bytes checked by LICENSE_SOURCE_MANIFEST.json"
+    }
+  ],
+  "failed": [
+    {
+      "path": "README.md",
+      "reason": "integration SHA-256 mismatch"
+    },
+    {
+      "path": "README.md",
+      "reason": "extension SHA-256 mismatch"
+    }
+  ],
+  "unlisted_tracked": [
+    "docs/research/causal-order/wolfram-countercheck-v0.1/PRUEFBERICHT_DE.txt",
+    "docs/research/causal-order/wolfram-countercheck-v0.1/PUBLICATION.json",
+    "docs/research/causal-order/wolfram-countercheck-v0.1/README.md",
+    "docs/research/causal-order/wolfram-countercheck-v0.1/X6_Wolfram_Fall5_v0_1.zip",
+    "docs/signal-lab/wolfram-zero-failures-v0.1/PRUEFBERICHT_DE.txt",
+    "docs/signal-lab/wolfram-zero-failures-v0.1/PUBLICATION.json",
+    "docs/signal-lab/wolfram-zero-failures-v0.1/README.md",
+    "docs/signal-lab/wolfram-zero-failures-v0.1/X6_Wolfram_Fall4_v0_1.zip"
+  ]
+}

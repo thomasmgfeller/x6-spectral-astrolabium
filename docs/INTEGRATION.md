@@ -7,19 +7,25 @@ Entscheidungen behalten ihre bisherigen Fassungen.
 
 ## 1. Einen Checkout dieser Fassung beziehen
 
-Die Integrationsfassung liegt im separaten Entwicklungsbranch
-`research/x6-integration-v0.1` und wird als Entwurf zur Übernahme bereitgestellt:
+Die Integrationsfassung ist seit PR #9 / Merge-Commit
+`a4641e00d9f699311e7105d0b5c94b7b356a5ab7` in **main** enthalten.
+Der frühere Branch `research/x6-integration-v0.1` ist ein historischer
+Entwicklungsstand. Der aktuelle Einstieg ist:
 
 ```sh
-git clone --branch research/x6-integration-v0.1 https://github.com/thomasmgfeller/x6-spectral-astrolabium.git x6-integration
+git clone --branch main https://github.com/thomasmgfeller/x6-spectral-astrolabium.git x6-integration
 cd x6-integration
 ```
 
 Nicht zwischen Forschungsbranches wechseln, um die hier beschriebenen Schritte
-auszuführen: alle drei Adapter sind in derselben Fassung enthalten. Der
-[Abnahmebericht](integration-v0.1/README.md) nennt die genau getestete
+auszuführen: alle drei Adapter sind in derselben Fassung enthalten. Das
+[zentrale Modulregister](MODULE_REGISTRY.md) nennt die gepinnten Quellstände,
+weiteren Module und nächsten Abnahmen. Für den dort dokumentierten Snapshot:
+`git checkout --detach 1dd5f65e1046edab6175998552362ad3856f8549`.
+Der historische [Abnahmebericht](integration-v0.1/README.md) nennt die genau getestete
 Implementierungsrevision und enthält die vollständigen Befehlsprotokolle sowie
-die tatsächlich erzeugten Beispiel-Exporte.
+die tatsächlich erzeugten Beispiel-Exporte. Seine Entwurfs-/CI-Angaben beschreiben
+den damaligen Veröffentlichungszeitpunkt; sie sind kein aktueller Integrationsstatus.
 
 Voraussetzungen für den qualifizierten Ablauf: **Linux/POSIX auf x86-64,
 Python 3.12, Git und Node.js ab 22**. Die tatsächlich geprüften Versionen stehen
@@ -197,10 +203,18 @@ Begutachtung. Ein Fehler beendet die Abnahme mit Status FAIL und erhält Logs.
 Sagnac-Dateiimport ist über die vorhandene Astrolabium-Oberfläche erreichbar.
 Eine UART-Anbindung hat einen eigenen
 [Geräteadapter und Prüfbereich](SAGNAC_INTEGRATION.md); sie wird durch diesen
-Einstieg nicht gestartet. Hardwarequalifikation, Julia-Gesamtprüfung,
-optisch-mechanische CAD-Prüfungen, externe Datenagenten und Konzepte wie ACVM
-sind nicht Teil der drei lokalen Adapter. Der neue Einstieg zeigt keine
-ausgeführten Hardware- oder Forschungsleistungen für diese Bereiche an.
+Einstieg nicht gestartet. Zusätzlich zu den drei lokalen Adaptern enthält main
+inzwischen getrennte ACVM-Unterbefehle:
+
+```sh
+python3 x6.py control qualify --output runs/c1-qualification
+python3 x6.py acvm qualify --output runs/acvm-qualification
+```
+
+Sie prüfen Software-/Modellpfade; Voraussetzungen und offene Geräteabnahmen
+stehen im [Modulregister](MODULE_REGISTRY.md). Hardwarequalifikation,
+Julia-Gesamtprüfung, optisch-mechanische CAD-Prüfungen und externe Datenagenten
+sind nicht durch die Abnahme der drei lokalen Adapter mitgeprüft.
 
 Zur Entfernung die erzeugte `.venv` und bewusst gewählten Lauf-/Exportordner
 löschen; es wurden keine globalen Python-Pakete installiert. Aufzubewahrende
