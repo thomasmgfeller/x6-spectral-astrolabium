@@ -1,0 +1,199 @@
+X6 - Eigenvektor- und Robustheitspruefung 3, Version 1.0
+Datum: 15.10.2026
+
+ERGEBNIS: FAIL DER ERWEITERTEN ROBUSTHEITSPRUEFUNG
+25/27 Graphen bestehen. Zwei kleine Gewichtsskalen scheitern.
+11/11 Negativkontrollen und 2/2 Positivkontrollen bestehen.
+Der minimale Gegenfall wurde anschliessend in SageMathCell 10.9 exakt bestaetigt.
+
+QUELLE UND METHODIK
+Commit: 7257e51a8df93ff1722d1116103143cc6c827ef4
+Repository: https://github.com/thomasmgfeller/x6-spectral-astrolabium
+Quelldatei: app/index.html, spectrumFrame.
+Quelle via git show aus genau diesem Commit gelesen. App- und Kernel-Hashes
+stimmen mit Pruefung 2 ueberein. Keine Aenderung am Repository vorgenommen.
+App-SHA256: ff60231155f0fc869564ec0eb24c87568943cdd96e154094ae9abd9877bd7ff8
+Original-Kernel-SHA256: a5adaeb576e6e0417023cc61ac4e431b782362843c2110f121c82d1f8227b46e
+
+Der unveraenderte Originalkern wurde unter Node.js v24.19.0 ausgefuehrt.
+Da die vorhandene Schnittstelle keine Eigenvektoren ausgibt, wurde ein zweiter
+Lauf mit genau einer beobachtenden Ergaenzung durchgefuehrt:
+  return {value:lambda,residual:res}
+  wird zu return {value:lambda,residual:res,vector:v}
+Die Rechenoperationen blieben unveraendert. Nach Entfernen des Zusatzfeldes
+und des Zeitstempels sind alle Original- und Beobachtungsausgaben identisch.
+Die Vektoren stammen damit aus den internen X6-Rechnungen; ihre Auswertung
+ist kein Test einer schon vorhandenen oeffentlichen Eigenvektor-API.
+
+Lokale Referenz: Python 3.12.14, NumPy 2.3.5, SciPy 1.17.0.
+Matrizen werden separat mit Fraction aus den Eingabetexten rekonstruiert und
+exakt verglichen. Alle hier gewaehlten Gewichte sind dyadisch; auch ihre
+Knotengrade sind exakt in binary64 darstellbar.
+Numerische Referenz: scipy.linalg.eigh, LAPACK-Treiber evd, fuer L/||L||inf.
+Dies ist eine andere Solverimplementierung, jedoch ebenfalls binary64 und
+kein Intervallbeweis. Sage bestaetigte zwei eingebettete Ausgaben mit QQ exakt:
+ein unskaliertes positives Kontrollbeispiel und den minimalen Gegenfall.
+Die 27er-Suite wurde nicht vollstaendig in Sage ausgefuehrt.
+
+UMFANG UND FESTE KRITERIEN
+27 Faelle, 1 bis 32 Knoten: die vier bisherigen Referenzen, Nullmatrizen,
+vollstaendiger Graph, Zyklus, getrennte Dreiecke, nahe Eigenwerte, schwache
+Bruecken, Skalierungen und acht gewichtete Zufallsgraphen mit festen Seeds
+104729 und 130363 bei n=8,16,24,32. Die vollstaendigen Eingaben sind enthalten.
+Der Vertrag wurde nach der Codeinspektion, aber vor dem ersten X6-Testlauf
+festgeschrieben. Dies ist eine gezielte Fehlerpruefung, kein unabhaengig
+praeregistriertes statistisches Experiment.
+
+Mit s=||L||inf, ohne kuenstliche Untergrenze 1:
+- Eigenwertfehler max_j |lambda_j-lambda_ref_j| / s <= 1e-12.
+- Residuum max_j ||L*v_j-lambda_j*v_j||2 / (s*||v_j||2) <= 1e-12.
+- Orthogonalitaet ||V^T V-I||F <= 1e-12.
+- Rekonstruktion ||L-V diag(lambda) V^T||F / ||L||F <= 1e-12.
+- Projektorabstand je Eigenwertcluster <= 1e-7 in Frobeniusnorm.
+- Cluster: benachbarte Referenzwerte mit Abstand <= 1e-7*s zusammenfassen.
+- Exakt verschwindende L werden separat ohne Division durch null behandelt.
+- Endliche Werte, vollstaendige Dimension, Sortierung, Konvergenzmeldung,
+  Matrizen, kombinatorische Nullitaet und Original-/Beobachtungsparitaet pruefen.
+- X6-Residuen werden unabhaengig neu berechnet und auf Konsistenz verglichen.
+
+Mehrfache oder nahe Eigenwerte haben keine eindeutig bestimmten einzelnen
+Eigenvektoren. Deshalb werden die Projektoren der Cluster verglichen.
+Die Positivkontrollen akzeptieren sowohl einen Vorzeichenwechsel als auch
+eine Basisrotation innerhalb eines mehrfachen Eigenraums.
+Der sehr kleine positive Gap von weak_bridge_50 liegt unter der relativen
+Testaufloesung. Sein Bestehen zertifiziert weder diesen einzelnen Gap noch
+eine eindeutige Trennung seiner Eigenvektoren vom Nullraum. Der Cluster wird
+als gemeinsamer Unterraum geprueft; das ist in local_results.json markiert.
+
+GEFUNDENER FEHLER: X6-NUM-SCALE-001
+Minimaler Graph: zwei Knoten, eine Kante mit w=2^(-50).
+Exakter Eingabewert:
+  v0 v1 0.00000000000000088817841970012523233890533447265625
+L = [[w,-w],[-w,w]].
+Soll: Eigenwerte [0,2w].
+X6:   Eigenwerte [w,w], V=I, converged=true, sweeps=0.
+Skalierter Eigenwertfehler = 1/2; skalierte Residuen = 1/2.
+Sage hat Matrix, Eigenwerte und Residuenquadrate [1/4,1/4] exakt bestaetigt.
+Der kombinatorische Nullitaetswert von X6 ist weiterhin korrekt 1; die
+numerisch ausgegebene Eigenwertliste stellt diesen Nullmodus hier nicht dar.
+
+Ursache im Quellcode:
+  scale=Math.max(1,...diagonal_abs)
+  if(m<=2e-14*scale){converged=true;break}
+Fuer den Gegenfall ist m=w<2e-14 und scale=1. Die Schleife beendet sich vor
+der ersten Rotation. Die ausgegebenen Werte sind dann Rayleigh-Quotienten
+der Standardbasis, keine hinreichend genauen Eigenwerte relativ zur Matrix.
+Dies ist kein Unterlauf: 2^(-50) ist als binary64 exakt darstellbar.
+Ein 16-Knoten-Pfad mit derselben Skalierung scheitert aus demselben Grund.
+
+BEDEUTUNG FUER PRUEFUNG 2
+Die bisherigen vier PASS bleiben gueltig fuer genau diese Eingaben.
+Das bisherige Kriterium 1e-12 + 1e-12*|Referenzwert| besitzt einen absoluten
+Sockel. Auf sehr kleinen Matrizen kann es grosse relative Fehler verdecken.
+Der neue Gegenfall widerlegt daher keine bestandene begrenzte Referenzpruefung,
+sondern eine Ausdehnung dieses Ergebnisses auf beliebige Gewichtsskalen.
+
+MAXIMA UNTER DEN 25 BESTANDENEN FAELLEN
+Skalierter Eigenwertfehler: 3.220e-15
+Skaliertes Eigenvektorresiduum: 2.705e-14
+Orthogonalitaetsfehler: 2.234e-14
+Projektorabstand: 9.603e-13
+
+EMPFOHLENER NAeCHSTER REPARATURSCHRITT
+Den Jacobi-Eingang geeignet skalieren, die Nullmatrix separat behandeln und
+Konvergenz durch dimensionslose Residuen absichern. Eigenwerte danach korrekt
+zurueckskalieren. Die zwei gefundenen Gegenfaelle als Regressionstests erhalten.
+Anschliessend denselben eingefrorenen Vertrag gegen einen neuen, explizit
+benannten Quellstand erneut ausfuehren. Eine solche Reparatur ist in diesem
+Paket noch nicht implementiert. Keine allgemeine Korrektheitsfreigabe.
+
+GRENZEN
+Kein X6-Browser-/DOM-Test, kein allgemeiner Beweis, keine Hardware-/Physikpruefung.
+SageMathCell wurde im Browser tatsaechlich ausgefuehrt; dies prueft eingebettete
+X6-Ausgaben und ist kein Lauf der X6-Browseroberflaeche. Hashes sichern Zuordnung,
+nicht die mathematische Wahrheit. Zufallstests erlauben keine Aussage ueber
+alle Graphen, insbesondere nicht ueber die volle Grenze von 120 Knoten.
+
+REPRODUKTION
+Python 3 mit NumPy und SciPy, Node.js; optional SageMath.
+Im entpackten Verzeichnis:
+  node export_x6.cjs > x6_actual_output.json
+  python3 verify.py
+  python3 build_sage.py
+  sage X6_SageMathCell_Pruefung_3.sage
+verify.py liefert fuer den hier geprueften Originalstand erwartungsgemaess
+Exitcode 1, weil zwei X6-Faelle scheitern. Das ist kein technischer Abbruch.
+make_contract.py dient der Nachvollziehbarkeit der Fallgenerierung und weigert
+sich absichtlich, einen vorhandenen eingefrorenen Vertrag zu ueberschreiben.
+
+SAGE IM BROWSER
+https://sagecell.sagemath.org/
+Den gesamten Inhalt von X6_SageMathCell_Pruefung_3.sage einfuegen und Evaluate.
+Die Datei ist selbststaendig und braucht keine Netzabfragen oder Zusatzdateien.
+Die Schlusszeile bestaetigt einen Fehlerfund, KEIN PASS des X6-Solvers:
+  GEGENBEISPIEL: EXAKT BESTAETIGT
+  X6-ROBUSTHEIT: FAIL fuer kleine Gewichtsskalen; kein allgemeines PASS.
+Ein Parserproblem fuer Dezimalzeichenketten wurde waehrend der Skriptpruefung
+korrigiert: Dezimalgewichte werden mit Fraction exakt in QQ ueberfuehrt.
+Die ausgelieferte Sage-Datei ist byteidentisch mit der erfolgreich ausgefuehrten.
+
+DATEIEN
+contract.json: vor dem ersten Lauf festgelegte Eingaben und Kriterien.
+source/: originaler Quellstand mit Lizenzhinweisen.
+original_kernel.js / observed_kernel.js: Original und beobachtender Export.
+export_x6.cjs / make_contract.py / verify.py / build_sage.py: reproduzierbarer Ablauf.
+x6_actual_output.json: echte X6-Ausgaben mit intern berechneten Vektoren.
+local_results.json / local_run.log: alle lokalen Ergebnisse und Kontrollen.
+sage_run.log: aus der SageMathCell-Ausgabe uebernommenes Laufprotokoll.
+X6_SageMathCell_Pruefung_3.sage: exakter Gegenbeispielnachweis und Kontrollfall.
+SHA256SUMS: Pruefsummen des Paketinhalts.
+
+METHODENREFERENZEN
+https://docs.scipy.org/doc/scipy/reference/generated/scipy.linalg.eigh.html
+https://doc.sagemath.org/html/en/reference/matrices/sage/matrix/matrix_rational_dense.html
+
+EINZELERGEBNISSE
+path4: PASS; n=4; Eigenwertfehler/s=3.330669e-16; Residuum/s=4.458206e-16; Orthogonalitaet=1.155895e-15
+triangle: PASS; n=3; Eigenwertfehler/s=1.110223e-16; Residuum/s=1.570092e-16; Orthogonalitaet=4.009457e-16
+weighted2: PASS; n=2; Eigenwertfehler/s=2.220446e-16; Residuum/s=1.570092e-16; Orthogonalitaet=3.156082e-16
+disconnected: PASS; n=4; Eigenwertfehler/s=2.220446e-16; Residuum/s=1.570092e-16; Orthogonalitaet=4.463374e-16
+singleton: PASS; n=1; Eigenwertfehler/s=0.000000e+00; Residuum/s=0.000000e+00; Orthogonalitaet=0.000000e+00
+isolated4: PASS; n=4; Eigenwertfehler/s=0.000000e+00; Residuum/s=0.000000e+00; Orthogonalitaet=0.000000e+00
+complete8: PASS; n=8; Eigenwertfehler/s=5.551115e-16; Residuum/s=1.784805e-16; Orthogonalitaet=5.062518e-16
+cycle8: PASS; n=8; Eigenwertfehler/s=4.440892e-16; Residuum/s=4.933939e-16; Orthogonalitaet=1.262301e-15
+three_triangles: PASS; n=9; Eigenwertfehler/s=1.110223e-16; Residuum/s=1.570092e-16; Orthogonalitaet=6.944582e-16
+near_triangle: PASS; n=3; Eigenwertfehler/s=2.220446e-16; Residuum/s=2.220446e-16; Orthogonalitaet=4.004678e-16
+weak_bridge_30: PASS; n=8; Eigenwertfehler/s=4.440892e-16; Residuum/s=4.440892e-16; Orthogonalitaet=8.164838e-16
+weak_bridge_50: PASS; n=8; Eigenwertfehler/s=2.546498e-16; Residuum/s=2.619556e-16; Orthogonalitaet=5.961144e-16
+scaled_pair_-50: FAIL; n=2; Eigenwertfehler/s=5.000000e-01; Residuum/s=5.000000e-01; Orthogonalitaet=0.000000e+00
+scaled_pair_-40: PASS; n=2; Eigenwertfehler/s=2.220446e-16; Residuum/s=1.570092e-16; Orthogonalitaet=3.156082e-16
+scaled_pair_0: PASS; n=2; Eigenwertfehler/s=2.220446e-16; Residuum/s=1.570092e-16; Orthogonalitaet=3.156082e-16
+scaled_pair_40: PASS; n=2; Eigenwertfehler/s=2.220446e-16; Residuum/s=1.570092e-16; Orthogonalitaet=3.156082e-16
+scaled_path16_-50: FAIL; n=16; Eigenwertfehler/s=4.903926e-01; Residuum/s=3.535534e-01; Orthogonalitaet=0.000000e+00
+scaled_path16_0: PASS; n=16; Eigenwertfehler/s=1.443290e-15; Residuum/s=2.704383e-14; Orthogonalitaet=5.038171e-15
+scaled_path16_40: PASS; n=16; Eigenwertfehler/s=1.443290e-15; Residuum/s=2.704383e-14; Orthogonalitaet=5.038171e-15
+random_n8_seed104729: PASS; n=8; Eigenwertfehler/s=5.551115e-16; Residuum/s=1.110838e-14; Orthogonalitaet=1.836507e-15
+random_n8_seed130363: PASS; n=8; Eigenwertfehler/s=4.440892e-16; Residuum/s=1.170624e-14; Orthogonalitaet=2.653332e-15
+random_n16_seed104729: PASS; n=16; Eigenwertfehler/s=1.776357e-15; Residuum/s=1.701721e-14; Orthogonalitaet=8.021867e-15
+random_n16_seed130363: PASS; n=16; Eigenwertfehler/s=1.221245e-15; Residuum/s=8.800579e-15; Orthogonalitaet=8.054082e-15
+random_n24_seed104729: PASS; n=24; Eigenwertfehler/s=1.665335e-15; Residuum/s=1.513485e-14; Orthogonalitaet=1.459908e-14
+random_n24_seed130363: PASS; n=24; Eigenwertfehler/s=3.108624e-15; Residuum/s=1.541192e-14; Orthogonalitaet=1.330731e-14
+random_n32_seed104729: PASS; n=32; Eigenwertfehler/s=2.664535e-15; Residuum/s=1.796240e-14; Orthogonalitaet=2.187120e-14
+random_n32_seed130363: PASS; n=32; Eigenwertfehler/s=3.219647e-15; Residuum/s=1.653943e-14; Orthogonalitaet=2.233682e-14
+
+NEGATIVKONTROLLEN
+wrong_matrix: PASS; erwarteter Fehler=matrix_L
+wrong_pairing: PASS; erwarteter Fehler=residual
+duplicated_vector: PASS; erwarteter Fehler=orthogonality
+zero_vector: PASS; erwarteter Fehler=nonzero_vectors
+unnormalized_vector: PASS; erwarteter Fehler=orthogonality
+missing_vector: PASS; erwarteter Fehler=vector_shape
+nonfinite_vector: PASS; erwarteter Fehler=finite
+wrong_eigenvalue: PASS; erwarteter Fehler=eigenvalues
+false_convergence: PASS; erwarteter Fehler=convergence
+missing_case: PASS; erwarteter Fehler=case_set
+wrong_commit: PASS; erwarteter Fehler=commit
+
+POSITIVKONTROLLEN
+eigenvector_sign_flip: PASS
+degenerate_eigenspace_basis_rotation: PASS

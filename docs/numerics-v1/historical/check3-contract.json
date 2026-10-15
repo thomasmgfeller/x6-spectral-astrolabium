@@ -1,0 +1,201 @@
+{
+  "schema": "x6-eigenvectors-check3-contract/1",
+  "commit": "7257e51a8df93ff1722d1116103143cc6c827ef4",
+  "frozen_utc": "2026-10-15T18:08:20.335486+00:00",
+  "app_sha256": "ff60231155f0fc869564ec0eb24c87568943cdd96e154094ae9abd9877bd7ff8",
+  "eigenvalue_scaled_limit": 1e-12,
+  "residual_scaled_limit": 1e-12,
+  "orthogonality_frobenius_limit": 1e-12,
+  "reconstruction_scaled_limit": 1e-12,
+  "subspace_projector_frobenius_limit": 1e-07,
+  "cluster_relative_gap": 1e-07,
+  "definitions": {
+    "scale": "s=||L||_infinity; no floor of 1; exactly zero matrices use absolute zero tests",
+    "eigenvalue_scaled_error": "max_j |lambda_X6_j-lambda_ref_j|/s",
+    "residual_scaled": "max_j ||L*v_j-lambda_j*v_j||_2/(s*||v_j||_2)",
+    "orthogonality": "||V^T*V-I||_F",
+    "reconstruction_scaled": "||L-V*diag(lambda)*V^T||_F/||L||_F",
+    "cluster": "join adjacent reference eigenvalues if gap <= 1e-7*s; compare projectors, not individual vectors",
+    "reference": "scipy.linalg.eigh driver=evd, binary64 numerical reference; exact algebraic spectra for selected Sage cases",
+    "scope": "Finite deterministic corpus; no browser, physical evidence, interval certificate or general correctness proof."
+  },
+  "cases": [
+    {
+      "id": "path4",
+      "n": 4,
+      "input": "v0\nv1\nv2\nv3\nv0 v1 1\nv1 v2 1\nv2 v3 1",
+      "family": "prior"
+    },
+    {
+      "id": "triangle",
+      "n": 3,
+      "input": "v0\nv1\nv2\nv0 v1 1\nv0 v2 1\nv1 v2 1",
+      "family": "prior"
+    },
+    {
+      "id": "weighted2",
+      "n": 2,
+      "input": "v0\nv1\nv0 v1 0.125",
+      "family": "prior"
+    },
+    {
+      "id": "disconnected",
+      "n": 4,
+      "input": "v0\nv1\nv2\nv3\nv0 v1 1\nv2 v3 1",
+      "family": "prior"
+    },
+    {
+      "id": "singleton",
+      "n": 1,
+      "input": "v0",
+      "family": "zero"
+    },
+    {
+      "id": "isolated4",
+      "n": 4,
+      "input": "v0\nv1\nv2\nv3",
+      "family": "zero"
+    },
+    {
+      "id": "complete8",
+      "n": 8,
+      "input": "v0\nv1\nv2\nv3\nv4\nv5\nv6\nv7\nv0 v1 1\nv0 v2 1\nv0 v3 1\nv0 v4 1\nv0 v5 1\nv0 v6 1\nv0 v7 1\nv1 v2 1\nv1 v3 1\nv1 v4 1\nv1 v5 1\nv1 v6 1\nv1 v7 1\nv2 v3 1\nv2 v4 1\nv2 v5 1\nv2 v6 1\nv2 v7 1\nv3 v4 1\nv3 v5 1\nv3 v6 1\nv3 v7 1\nv4 v5 1\nv4 v6 1\nv4 v7 1\nv5 v6 1\nv5 v7 1\nv6 v7 1",
+      "family": "repeated"
+    },
+    {
+      "id": "cycle8",
+      "n": 8,
+      "input": "v0\nv1\nv2\nv3\nv4\nv5\nv6\nv7\nv0 v1 1\nv1 v2 1\nv2 v3 1\nv3 v4 1\nv4 v5 1\nv5 v6 1\nv6 v7 1\nv0 v7 1",
+      "family": "repeated"
+    },
+    {
+      "id": "three_triangles",
+      "n": 9,
+      "input": "v0\nv1\nv2\nv3\nv4\nv5\nv6\nv7\nv8\nv0 v1 1\nv0 v2 1\nv1 v2 1\nv3 v4 1\nv3 v5 1\nv4 v5 1\nv6 v7 1\nv6 v8 1\nv7 v8 1",
+      "family": "repeated"
+    },
+    {
+      "id": "near_triangle",
+      "n": 3,
+      "input": "v0\nv1\nv2\nv0 v1 1\nv1 v2 1\nv0 v2 1.000000000931322574615478515625",
+      "family": "clustered"
+    },
+    {
+      "id": "weak_bridge_30",
+      "n": 8,
+      "input": "v0\nv1\nv2\nv3\nv4\nv5\nv6\nv7\nv0 v1 1\nv0 v2 1\nv0 v3 1\nv1 v2 1\nv1 v3 1\nv2 v3 1\nv4 v5 1\nv4 v6 1\nv4 v7 1\nv5 v6 1\nv5 v7 1\nv6 v7 1\nv3 v4 0.000000000931322574615478515625",
+      "family": "clustered"
+    },
+    {
+      "id": "weak_bridge_50",
+      "n": 8,
+      "input": "v0\nv1\nv2\nv3\nv4\nv5\nv6\nv7\nv0 v1 1\nv0 v2 1\nv0 v3 1\nv1 v2 1\nv1 v3 1\nv2 v3 1\nv4 v5 1\nv4 v6 1\nv4 v7 1\nv5 v6 1\nv5 v7 1\nv6 v7 1\nv3 v4 0.00000000000000088817841970012523233890533447265625",
+      "family": "clustered"
+    },
+    {
+      "id": "scaled_pair_-50",
+      "n": 2,
+      "input": "v0\nv1\nv0 v1 0.00000000000000088817841970012523233890533447265625",
+      "family": "scaling",
+      "exponent": -50
+    },
+    {
+      "id": "scaled_pair_-40",
+      "n": 2,
+      "input": "v0\nv1\nv0 v1 0.0000000000009094947017729282379150390625",
+      "family": "scaling",
+      "exponent": -40
+    },
+    {
+      "id": "scaled_pair_0",
+      "n": 2,
+      "input": "v0\nv1\nv0 v1 1",
+      "family": "scaling",
+      "exponent": 0
+    },
+    {
+      "id": "scaled_pair_40",
+      "n": 2,
+      "input": "v0\nv1\nv0 v1 1099511627776",
+      "family": "scaling",
+      "exponent": 40
+    },
+    {
+      "id": "scaled_path16_-50",
+      "n": 16,
+      "input": "v0\nv1\nv2\nv3\nv4\nv5\nv6\nv7\nv8\nv9\nv10\nv11\nv12\nv13\nv14\nv15\nv0 v1 0.00000000000000088817841970012523233890533447265625\nv1 v2 0.00000000000000088817841970012523233890533447265625\nv2 v3 0.00000000000000088817841970012523233890533447265625\nv3 v4 0.00000000000000088817841970012523233890533447265625\nv4 v5 0.00000000000000088817841970012523233890533447265625\nv5 v6 0.00000000000000088817841970012523233890533447265625\nv6 v7 0.00000000000000088817841970012523233890533447265625\nv7 v8 0.00000000000000088817841970012523233890533447265625\nv8 v9 0.00000000000000088817841970012523233890533447265625\nv9 v10 0.00000000000000088817841970012523233890533447265625\nv10 v11 0.00000000000000088817841970012523233890533447265625\nv11 v12 0.00000000000000088817841970012523233890533447265625\nv12 v13 0.00000000000000088817841970012523233890533447265625\nv13 v14 0.00000000000000088817841970012523233890533447265625\nv14 v15 0.00000000000000088817841970012523233890533447265625",
+      "family": "scaling",
+      "exponent": -50
+    },
+    {
+      "id": "scaled_path16_0",
+      "n": 16,
+      "input": "v0\nv1\nv2\nv3\nv4\nv5\nv6\nv7\nv8\nv9\nv10\nv11\nv12\nv13\nv14\nv15\nv0 v1 1\nv1 v2 1\nv2 v3 1\nv3 v4 1\nv4 v5 1\nv5 v6 1\nv6 v7 1\nv7 v8 1\nv8 v9 1\nv9 v10 1\nv10 v11 1\nv11 v12 1\nv12 v13 1\nv13 v14 1\nv14 v15 1",
+      "family": "scaling",
+      "exponent": 0
+    },
+    {
+      "id": "scaled_path16_40",
+      "n": 16,
+      "input": "v0\nv1\nv2\nv3\nv4\nv5\nv6\nv7\nv8\nv9\nv10\nv11\nv12\nv13\nv14\nv15\nv0 v1 1099511627776\nv1 v2 1099511627776\nv2 v3 1099511627776\nv3 v4 1099511627776\nv4 v5 1099511627776\nv5 v6 1099511627776\nv6 v7 1099511627776\nv7 v8 1099511627776\nv8 v9 1099511627776\nv9 v10 1099511627776\nv10 v11 1099511627776\nv11 v12 1099511627776\nv12 v13 1099511627776\nv13 v14 1099511627776\nv14 v15 1099511627776",
+      "family": "scaling",
+      "exponent": 40
+    },
+    {
+      "id": "random_n8_seed104729",
+      "n": 8,
+      "input": "v0\nv1\nv2\nv3\nv4\nv5\nv6\nv7\nv0 v1 0.125\nv0 v2 1.875\nv1 v2 1.75\nv2 v3 1.625\nv2 v6 1.5\nv3 v4 0.125\nv4 v5 3.875\nv4 v6 3.125\nv5 v6 3.125\nv5 v7 0.5\nv6 v7 3.5",
+      "family": "seeded_dyadic",
+      "seed": 104729
+    },
+    {
+      "id": "random_n8_seed130363",
+      "n": 8,
+      "input": "v0\nv1\nv2\nv3\nv4\nv5\nv6\nv7\nv0 v1 3.375\nv0 v2 2\nv0 v5 1.875\nv0 v7 0.75\nv1 v2 1\nv1 v3 2.25\nv1 v5 1.125\nv2 v3 2.625\nv2 v4 3.625\nv3 v4 3.5\nv4 v5 1.625\nv5 v6 1.625\nv6 v7 2.625",
+      "family": "seeded_dyadic",
+      "seed": 130363
+    },
+    {
+      "id": "random_n16_seed104729",
+      "n": 16,
+      "input": "v0\nv1\nv2\nv3\nv4\nv5\nv6\nv7\nv8\nv9\nv10\nv11\nv12\nv13\nv14\nv15\nv0 v1 1.75\nv0 v4 1\nv0 v6 3\nv0 v9 0.875\nv0 v11 0.375\nv0 v12 1\nv1 v2 1.125\nv1 v10 3\nv1 v12 1.375\nv1 v14 3.875\nv2 v3 0.5\nv2 v4 2.375\nv2 v10 1.75\nv3 v4 1.625\nv3 v7 2\nv3 v12 1.75\nv4 v5 2\nv4 v10 0.375\nv4 v12 2.5\nv4 v13 2.25\nv5 v6 3.375\nv6 v7 2.75\nv6 v9 2\nv7 v8 3.625\nv7 v9 2.125\nv7 v13 1.75\nv7 v14 3.5\nv8 v9 1.125\nv8 v12 2.75\nv8 v15 0.875\nv9 v10 0.625\nv9 v11 0.25\nv9 v15 1.75\nv10 v11 1.25\nv10 v12 1.375\nv10 v15 0.75\nv11 v12 0.875\nv11 v15 2.125\nv12 v13 1.75\nv13 v14 3.875\nv14 v15 1.375",
+      "family": "seeded_dyadic",
+      "seed": 104729
+    },
+    {
+      "id": "random_n16_seed130363",
+      "n": 16,
+      "input": "v0\nv1\nv2\nv3\nv4\nv5\nv6\nv7\nv8\nv9\nv10\nv11\nv12\nv13\nv14\nv15\nv0 v1 3.375\nv0 v3 2.5\nv0 v7 0.125\nv0 v9 1.5\nv0 v11 4\nv0 v13 0.5\nv0 v15 3\nv1 v2 3.75\nv1 v4 2.625\nv2 v3 2.75\nv2 v7 3.375\nv2 v14 0.5\nv3 v4 0.25\nv4 v5 3\nv4 v8 0.125\nv4 v11 3.25\nv5 v6 2.25\nv5 v7 1.625\nv5 v10 3\nv5 v12 0.25\nv6 v7 1\nv6 v12 4\nv7 v8 3.375\nv7 v15 2.875\nv8 v9 0.5\nv8 v13 3.375\nv9 v10 1.25\nv10 v11 2.75\nv11 v12 0.5\nv11 v13 1.25\nv12 v13 1.875\nv12 v14 4\nv13 v14 0.375\nv14 v15 3.625",
+      "family": "seeded_dyadic",
+      "seed": 130363
+    },
+    {
+      "id": "random_n24_seed104729",
+      "n": 24,
+      "input": "v0\nv1\nv2\nv3\nv4\nv5\nv6\nv7\nv8\nv9\nv10\nv11\nv12\nv13\nv14\nv15\nv16\nv17\nv18\nv19\nv20\nv21\nv22\nv23\nv0 v1 0.875\nv0 v8 3.25\nv0 v9 1.25\nv0 v11 2.375\nv0 v23 3.875\nv1 v2 3.875\nv1 v3 1.125\nv1 v5 2.25\nv1 v6 4\nv1 v18 1.25\nv2 v3 2.875\nv2 v6 2.25\nv2 v13 3.125\nv2 v16 4\nv2 v17 1.25\nv2 v20 2.875\nv3 v4 2.75\nv3 v10 1.75\nv3 v15 1.25\nv3 v16 4\nv3 v22 2.375\nv4 v5 3.375\nv4 v10 3.25\nv4 v13 2.5\nv4 v18 1.25\nv4 v20 2.125\nv5 v6 2.375\nv5 v9 3.5\nv5 v10 0.75\nv5 v11 2.375\nv5 v12 2.5\nv5 v18 2.625\nv6 v7 0.125\nv6 v10 0.875\nv6 v14 0.25\nv6 v16 2.5\nv6 v18 2.75\nv7 v8 3.125\nv7 v15 3\nv8 v9 3.75\nv8 v12 2.25\nv8 v13 4\nv8 v14 1.875\nv8 v17 3.75\nv9 v10 2\nv9 v13 0.875\nv9 v15 2.375\nv9 v20 3.125\nv9 v23 1.875\nv10 v11 2.5\nv10 v12 0.875\nv11 v12 1.125\nv12 v13 1.75\nv12 v15 1.875\nv12 v17 3.875\nv12 v21 3.75\nv13 v14 2.375\nv14 v15 1.5\nv14 v18 0.625\nv15 v16 1.875\nv16 v17 1.625\nv16 v21 1\nv17 v18 2.125\nv17 v19 0.625\nv17 v22 3.875\nv18 v19 3.5\nv18 v20 2\nv18 v21 0.5\nv18 v22 0.875\nv19 v20 2.875\nv20 v21 2.625\nv21 v22 2.75\nv22 v23 3.125",
+      "family": "seeded_dyadic",
+      "seed": 104729
+    },
+    {
+      "id": "random_n24_seed130363",
+      "n": 24,
+      "input": "v0\nv1\nv2\nv3\nv4\nv5\nv6\nv7\nv8\nv9\nv10\nv11\nv12\nv13\nv14\nv15\nv16\nv17\nv18\nv19\nv20\nv21\nv22\nv23\nv0 v1 0.5\nv0 v3 2\nv0 v17 0.875\nv1 v2 3.25\nv1 v6 3.375\nv1 v16 2.625\nv1 v17 2.25\nv1 v18 0.25\nv1 v20 2.5\nv1 v21 2.75\nv1 v23 3.125\nv2 v3 1.75\nv2 v8 4\nv2 v16 4\nv3 v4 3.375\nv3 v7 3.5\nv3 v8 1.625\nv3 v15 1.75\nv3 v16 1\nv3 v17 1.125\nv3 v21 0.625\nv3 v23 2.75\nv4 v5 3.875\nv4 v12 3.25\nv4 v20 2.625\nv4 v22 3.375\nv4 v23 1.5\nv5 v6 2.375\nv5 v12 2.75\nv5 v13 1.375\nv6 v7 2.875\nv6 v18 1.5\nv6 v22 2.5\nv6 v23 1.625\nv7 v8 3.875\nv7 v11 3.375\nv7 v12 3.75\nv7 v15 1.625\nv7 v20 2.75\nv8 v9 2.5\nv8 v11 0.625\nv8 v13 2.75\nv8 v14 2.875\nv8 v22 1.125\nv8 v23 2\nv9 v10 2.25\nv9 v13 0.125\nv9 v14 1.875\nv9 v15 3.875\nv9 v16 1.375\nv9 v19 2.625\nv10 v11 1.5\nv10 v14 0.375\nv10 v22 2.625\nv11 v12 3.5\nv11 v17 0.5\nv11 v23 1.375\nv12 v13 3\nv12 v15 1.875\nv12 v20 2.125\nv13 v14 0.625\nv13 v16 1.375\nv14 v15 0.875\nv15 v16 3.25\nv15 v17 1.25\nv16 v17 0.125\nv16 v19 1.125\nv16 v23 4\nv17 v18 1.375\nv17 v22 3.75\nv18 v19 0.125\nv18 v23 0.5\nv19 v20 2.25\nv19 v23 0.25\nv20 v21 0.875\nv20 v23 0.125\nv21 v22 1\nv21 v23 0.875\nv22 v23 3.625",
+      "family": "seeded_dyadic",
+      "seed": 130363
+    },
+    {
+      "id": "random_n32_seed104729",
+      "n": 32,
+      "input": "v0\nv1\nv2\nv3\nv4\nv5\nv6\nv7\nv8\nv9\nv10\nv11\nv12\nv13\nv14\nv15\nv16\nv17\nv18\nv19\nv20\nv21\nv22\nv23\nv24\nv25\nv26\nv27\nv28\nv29\nv30\nv31\nv0 v1 0.25\nv0 v2 2.875\nv0 v5 3.625\nv0 v6 0.25\nv0 v7 0.25\nv0 v11 1.875\nv0 v12 2\nv0 v14 1.625\nv0 v25 2.75\nv1 v2 3.875\nv1 v4 2.75\nv1 v6 2.5\nv1 v10 2.5\nv1 v23 3.625\nv2 v3 2.125\nv2 v7 2.375\nv2 v9 1.125\nv2 v10 1.5\nv2 v14 3.625\nv2 v18 0.75\nv2 v19 1.125\nv2 v22 0.875\nv2 v24 2.625\nv2 v27 3.25\nv2 v30 3.75\nv3 v4 1.75\nv3 v10 0.125\nv3 v14 3.875\nv3 v30 3.75\nv4 v5 2.125\nv4 v8 2.5\nv4 v9 1.625\nv4 v14 1.75\nv4 v18 0.875\nv4 v19 1.625\nv4 v23 3.25\nv4 v24 3.75\nv4 v26 0.375\nv4 v30 1.625\nv5 v6 1.125\nv5 v14 0.625\nv5 v21 3.25\nv5 v29 2.125\nv6 v7 3.375\nv6 v9 2.375\nv6 v21 2.625\nv6 v23 2.75\nv6 v27 1.375\nv6 v30 0.375\nv7 v8 0.875\nv7 v12 0.125\nv7 v13 0.25\nv7 v16 2.125\nv7 v23 1\nv7 v28 3.625\nv7 v31 0.5\nv8 v9 4\nv8 v15 3.25\nv8 v18 0.875\nv8 v20 1.625\nv8 v21 2.875\nv8 v26 3.125\nv8 v29 2.25\nv9 v10 2.75\nv9 v11 2.375\nv9 v12 2.75\nv9 v17 3.125\nv9 v20 1.625\nv9 v24 2.125\nv9 v27 1.25\nv9 v28 0.625\nv10 v11 4\nv10 v12 4\nv10 v16 3.125\nv10 v22 1.125\nv10 v26 2.75\nv10 v29 3.375\nv11 v12 3.75\nv11 v13 2.875\nv11 v15 2.875\nv11 v30 2.125\nv11 v31 1.875\nv12 v13 0.375\nv12 v14 0.75\nv12 v20 2\nv12 v21 1.25\nv12 v26 3.625\nv12 v29 0.375\nv13 v14 3.375\nv13 v21 1.375\nv13 v22 3\nv13 v24 4\nv13 v30 2.5\nv14 v15 0.875\nv14 v18 0.375\nv14 v22 3.625\nv15 v16 0.75\nv15 v18 2.25\nv15 v19 2.875\nv15 v28 3.125\nv15 v30 2.625\nv15 v31 2.125\nv16 v17 4\nv17 v18 0.5\nv17 v22 1.75\nv17 v25 0.375\nv17 v30 1.125\nv18 v19 2\nv18 v26 1.5\nv18 v28 2.25\nv18 v31 2.125\nv19 v20 2.25\nv19 v24 2.25\nv19 v25 3.375\nv19 v28 1.875\nv19 v29 0.5\nv19 v31 1.75\nv20 v21 3\nv20 v27 0.625\nv20 v31 0.25\nv21 v22 0.125\nv21 v28 2.25\nv21 v29 2.125\nv22 v23 1.5\nv22 v24 3.25\nv23 v24 3.75\nv23 v25 3.625\nv23 v30 2.25\nv24 v25 0.25\nv24 v31 1.5\nv25 v26 0.75\nv25 v30 1\nv25 v31 2.875\nv26 v27 2.125\nv26 v28 1\nv26 v29 2.625\nv27 v28 3\nv27 v30 3.375\nv28 v29 3\nv29 v30 2.125\nv30 v31 1.5",
+      "family": "seeded_dyadic",
+      "seed": 104729
+    },
+    {
+      "id": "random_n32_seed130363",
+      "n": 32,
+      "input": "v0\nv1\nv2\nv3\nv4\nv5\nv6\nv7\nv8\nv9\nv10\nv11\nv12\nv13\nv14\nv15\nv16\nv17\nv18\nv19\nv20\nv21\nv22\nv23\nv24\nv25\nv26\nv27\nv28\nv29\nv30\nv31\nv0 v1 0.25\nv0 v8 3.25\nv0 v9 2\nv0 v12 3.875\nv0 v13 3\nv0 v14 3.75\nv0 v19 0.5\nv0 v20 3.625\nv0 v23 0.5\nv0 v25 2.75\nv0 v28 2\nv0 v29 0.625\nv1 v2 2.5\nv1 v5 1.75\nv1 v6 3.125\nv1 v9 1.75\nv1 v11 0.375\nv1 v16 2.75\nv1 v18 2.375\nv1 v24 0.375\nv1 v28 0.25\nv1 v30 1.625\nv1 v31 2.5\nv2 v3 3.625\nv2 v4 3.25\nv2 v5 0.375\nv2 v8 2.75\nv2 v10 0.25\nv2 v31 0.375\nv3 v4 1\nv3 v6 2\nv3 v8 3.875\nv3 v9 1.875\nv3 v23 3.5\nv3 v26 1\nv3 v27 3.75\nv3 v28 3.875\nv4 v5 2.75\nv4 v10 1.5\nv4 v16 3.625\nv4 v20 3.25\nv4 v27 3.75\nv4 v29 2\nv4 v30 3.75\nv5 v6 2.125\nv5 v7 2.25\nv5 v16 1.25\nv5 v17 0.875\nv5 v18 3.25\nv5 v31 3.875\nv6 v7 3.375\nv6 v8 3.625\nv6 v17 1.5\nv6 v25 0.75\nv6 v26 1.875\nv7 v8 1.75\nv7 v15 2.25\nv7 v16 0.125\nv7 v19 3.75\nv7 v20 1.25\nv8 v9 1\nv8 v10 1.25\nv8 v15 1\nv8 v17 2.75\nv8 v18 1.75\nv8 v20 2\nv8 v22 2\nv8 v25 1.875\nv8 v29 0.5\nv8 v31 2.75\nv9 v10 3.125\nv9 v13 3.75\nv9 v14 3.875\nv9 v19 0.25\nv9 v26 0.625\nv9 v31 4\nv10 v11 0.375\nv10 v18 4\nv10 v20 0.125\nv10 v23 0.625\nv10 v24 3.625\nv10 v31 0.75\nv11 v12 1.5\nv12 v13 0.625\nv12 v18 1.375\nv12 v25 3.25\nv12 v28 2\nv13 v14 0.5\nv13 v15 0.375\nv13 v18 1.625\nv13 v29 1.875\nv13 v30 3.875\nv14 v15 2.625\nv14 v16 3.75\nv14 v19 2.25\nv15 v16 3.625\nv15 v19 0.75\nv15 v22 1.875\nv15 v24 1.375\nv15 v28 4\nv16 v17 3.25\nv16 v25 0.5\nv16 v29 3.875\nv17 v18 2.875\nv17 v23 0.25\nv17 v24 2.625\nv17 v26 3.25\nv18 v19 2.125\nv18 v22 1.875\nv18 v25 3.25\nv18 v27 1.5\nv18 v30 3.5\nv18 v31 0.75\nv19 v20 0.625\nv19 v23 0.25\nv19 v27 1.25\nv20 v21 1\nv20 v23 3.25\nv20 v24 3.375\nv20 v28 3.375\nv21 v22 0.875\nv21 v31 0.5\nv22 v23 3.75\nv22 v24 2.75\nv22 v27 1.5\nv22 v29 3.75\nv23 v24 0.625\nv23 v25 0.375\nv23 v28 2\nv24 v25 0.75\nv24 v26 1.125\nv24 v27 3.125\nv24 v28 3.875\nv24 v30 1.25\nv25 v26 2.625\nv25 v29 2.625\nv26 v27 3\nv26 v28 2\nv27 v28 1.625\nv28 v29 1\nv28 v30 0.875\nv29 v30 0.25\nv30 v31 3.5",
+      "family": "seeded_dyadic",
+      "seed": 130363
+    }
+  ]
+}

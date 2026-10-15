@@ -37,6 +37,11 @@ def main():
     # Isolated extensions have explicit inventories; do not weaken the unknown-file
     # check or change the app pin used by the bounded research agents.
     extension_specs = {
+        "NUMERICS_SOURCE_MANIFEST.json": (
+            "x6.numerics.source-manifest/1",
+            {"docs/numerics-v1/README.md", "docs/numerics-v1/historical/ARCHIVE.json",
+             "docs/numerics-v1/historical/check2-original.zip",
+             "docs/numerics-v1/historical/check3-original.zip"}),
         "QE_SOURCE_MANIFEST.json": (
             "x6.qe.source-manifest/1",
             {"research/x6_qe/core.py", "research/x6_qe/independent.py",

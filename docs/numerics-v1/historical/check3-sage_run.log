@@ -1,0 +1,19 @@
+Sage-Version: 10.9
+X6-Commit: 7257e51a8df93ff1722d1116103143cc6c827ef4
+Quelle: echte Node.js-Ausgaben; Eigenvektoren nur beobachtend exportiert.
+scaled_pair_0: X6 PASS
+  Soll-Eigenwerte: [0, 2]
+  X6-Eigenwerte: [0, 4503599627370495/2251799813685248]
+  Skalierter Eigenwertfehler: 1/4503599627370496
+  Skalierte Residuenquadrate: [0, 1/20282409603651670423947251286016]
+  X6 converged: True ; Rotationen: 1
+scaled_pair_-50: X6 FAIL
+  Soll-Eigenwerte: [0, 1/562949953421312]
+  X6-Eigenwerte: [1/1125899906842624, 1/1125899906842624]
+  Skalierter Eigenwertfehler: 1/2
+  Skalierte Residuenquadrate: [1/4, 1/4]
+  X6 converged: True ; Rotationen: 0
+GEGENBEISPIEL: EXAKT BESTAETIGT
+X6-ROBUSTHEIT: FAIL fuer kleine Gewichtsskalen; kein allgemeines PASS.
+Geltung: zwei eingebettete X6-Ausgaben; kein X6-Browserlauf.
+
