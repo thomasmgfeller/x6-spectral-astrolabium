@@ -2,6 +2,8 @@
 
 Registerstand: 2026-10-15. MAIN / SOFTWARE. Kein Live-Prüfsiegel.
 
+[Astrolabium öffnen →](https://thomasmgfeller.github.io/x6-spectral-astrolabium/app/)
+
 ## Quelle
 
 Branch: main

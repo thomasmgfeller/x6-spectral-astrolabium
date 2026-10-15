@@ -3,6 +3,38 @@ Die Evidenz prüfen.
 
 X6 Spectral Astrolabium ist ein offener Forschungshub für Signale, Graphen und kausale Ordnungen. Beginne mit einem Browserexperiment, erkunde einen Forschungszweig oder rechne eine endliche Referenz nach.
 
+- [Astrolabium öffnen →](https://thomasmgfeller.github.io/x6-spectral-astrolabium/app/)
+- [Signal Lab öffnen →](https://thomasmgfeller.github.io/x6-spectral-astrolabium/app/signal-lab.html)
+- [Alle Module erkunden →](https://thomasmgfeller.github.io/x6-spectral-astrolabium/modules/)
+
+## Weitere Werkzeuge & Referenzen
+
+Die beiden Browseranwendungen starten direkt oben. Diese Einstiege führen zu den passenden Anleitungen, Voraussetzungen und dokumentierten Prüfungen.
+
+### Gemeinsamer Workflow
+
+LOKAL INSTALLIEREN. Signal-, Spektral- und RAX-Läufe lokal ausführen, Ergebnisse exportieren und nachrechnen. Die Anleitung führt durch Einrichtung und Start.
+
+[Workflow einrichten →](https://thomasmgfeller.github.io/x6-spectral-astrolabium/modules/integration.html)
+
+### Sagnac-Datenimport
+
+ASTROLABIUM · TAB 07. Synthetische Beispieldaten und SGNCv007-Aufzeichnungen im Astrolabium prüfen. Die lokale Bridge benötigt Python; eine optische Gerätesteuerung ist damit nicht nachgewiesen.
+
+[Sagnac-Anleitung öffnen →](https://thomasmgfeller.github.io/x6-spectral-astrolabium/modules/sagnac-import.html)
+
+### Referenzedition & Prüfsuite
+
+LOKAL NACHRECHNEN. Versionierte Referenzpakete und zehn dokumentierte Offline-Berichte. Folge der Anleitung für Download, Voraussetzungen und reproduzierbare Berechnung.
+
+[Referenzedition öffnen →](https://thomasmgfeller.github.io/x6-spectral-astrolabium/modules/reference-edition.html)
+
+### Edge-Signalauftrag
+
+LOKALES NODE.JS-BEISPIEL. Einen begrenzten Signalauftrag lokal ausführen, exportieren und erneut prüfen. Ein ausführbares Referenzbeispiel für den Einstieg in Edge-Workflows.
+
+[Edge-Beispiel ansehen →](https://thomasmgfeller.github.io/x6-spectral-astrolabium/modules/edge-reference.html)
+
 ## Verstehen
 
 Was wird untersucht, und was sagen die Ergebnisse tatsächlich aus? Ein verständlicher Einstieg in die Forschung und ihre Grenzen.
@@ -11,7 +43,7 @@ Was wird untersucht, und was sagen die Ergebnisse tatsächlich aus? Ein verstän
 
 ## Ausprobieren
 
-Vergleiche Signale und Referenzfilter im Browser. Synthetische Beispiele zeigen bestandene Prüfungen und aufschlussreiche Gegenbeispiele.
+Erkunde Signale und Graphen im Astrolabium oder vergleiche Referenzfilter im Signal Lab. Synthetische Beispiele zeigen Ergebnisse und Gegenbeispiele.
 
 [Ein erstes Experiment starten →](https://thomasmgfeller.github.io/x6-spectral-astrolabium/de/guide.html#try)
 

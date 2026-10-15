@@ -5,6 +5,16 @@ The public portal provides English/German introductions, three routes
 Every module page contains the original claim, pinned source, evidence summaries,
 reproduction context, expected output and next acceptance gate.
 
+## Direct entry points
+
+Both language homepages launch the Astrolabium and Signal Validation Lab directly.
+The module catalogue and their detail pages also provide application buttons.
+Four additional cards lead to the local workflow, Sagnac import instructions,
+reference edition and Edge example. They explicitly state when setup or local
+execution is required. Research-topic buttons retain their module/evidence pages.
+The Markdown alternatives include the same destinations. No application kernels,
+scientific claims or historical evidence are changed by these navigation links.
+
 ## Authoritative inputs
 
 - `MODULE_REGISTRY.json`: dated scientific/source register; no automatic upgrades.

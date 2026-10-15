@@ -4,7 +4,7 @@
     "description": "Explore X6 research software, signal validation and finite spectral references. Find runnable examples, pinned sources, evidence and open research questions.",
     "headline": "Explore the question.\nInspect the evidence.",
     "lead": "X6 Spectral Astrolabium is an open research hub for signals, graphs and causal orders. Start with a browser experiment, explore a research module, or reproduce a finite reference calculation.",
-    "launch": "Try Signal Validation Lab →",
+    "launch": "Open Signal Lab →",
     "browse": "Browse all modules →",
     "paths_title": "Choose your starting point",
     "paths": [
@@ -17,7 +17,7 @@
       {
         "id": "try",
         "title": "Try",
-        "text": "Compare signals and reference filters in your browser. Use synthetic examples to see both successful checks and counterexamples.",
+        "text": "Explore signals and graphs in the Astrolabium or compare reference filters in Signal Lab. Synthetic examples show results and counterexamples.",
         "link": "Run a first experiment →"
       },
       {
@@ -203,6 +203,39 @@
           }
         ]
       }
+    ],
+    "launch_astrolabium": "Open Astrolabium →",
+    "tools_title": "More tools & references",
+    "tools_intro": "Launch either browser application above. These starting points lead to the relevant instructions, prerequisites and documented checks.",
+    "tools": [
+      {
+        "module": "integration",
+        "kind": "LOCAL INSTALLATION",
+        "title": "Shared workflow",
+        "text": "Run signal, spectral and RAX jobs locally, export results and replay calculations. Follow the setup and launch instructions.",
+        "button": "Set up the local workflow →"
+      },
+      {
+        "module": "sagnac-import",
+        "kind": "ASTROLABIUM · TAB 07",
+        "title": "Sagnac data import",
+        "text": "Inspect synthetic examples and SGNCv007 recordings in the Astrolabium. The local bridge requires Python; this does not demonstrate optical device control.",
+        "button": "Open Sagnac instructions →"
+      },
+      {
+        "module": "reference-edition",
+        "kind": "LOCAL REPRODUCTION",
+        "title": "Reference edition & test suite",
+        "text": "Versioned reference packages and ten documented offline reports. Follow the download, prerequisite and reproduction instructions.",
+        "button": "Open the reference edition →"
+      },
+      {
+        "module": "edge-reference",
+        "kind": "LOCAL NODE.JS EXAMPLE",
+        "title": "Edge signal task",
+        "text": "Run, export and replay a bounded signal task locally. An executable reference example for getting started with Edge workflows.",
+        "button": "Explore the Edge example →"
+      }
     ]
   },
   "de": {
@@ -210,7 +243,7 @@
     "description": "X6-Forschungsportal für Signalvalidierung, endliche Spektralreferenzen und kausale Ordnungen. Mit Beispielen, Quellenpins, Evidenz und offenen Prüfungen.",
     "headline": "Die Frage verstehen.\nDie Evidenz prüfen.",
     "lead": "X6 Spectral Astrolabium ist ein offener Forschungshub für Signale, Graphen und kausale Ordnungen. Beginne mit einem Browserexperiment, erkunde einen Forschungszweig oder rechne eine endliche Referenz nach.",
-    "launch": "Signal Validation Lab ausprobieren →",
+    "launch": "Signal Lab öffnen →",
     "browse": "Alle Module erkunden →",
     "paths_title": "Wähle deinen Einstieg",
     "paths": [
@@ -223,7 +256,7 @@
       {
         "id": "try",
         "title": "Ausprobieren",
-        "text": "Vergleiche Signale und Referenzfilter im Browser. Synthetische Beispiele zeigen bestandene Prüfungen und aufschlussreiche Gegenbeispiele.",
+        "text": "Erkunde Signale und Graphen im Astrolabium oder vergleiche Referenzfilter im Signal Lab. Synthetische Beispiele zeigen Ergebnisse und Gegenbeispiele.",
         "link": "Ein erstes Experiment starten →"
       },
       {
@@ -408,6 +441,39 @@
             "label": "Sitemap der Dokumentation"
           }
         ]
+      }
+    ],
+    "launch_astrolabium": "Astrolabium öffnen →",
+    "tools_title": "Weitere Werkzeuge & Referenzen",
+    "tools_intro": "Die beiden Browseranwendungen starten direkt oben. Diese Einstiege führen zu den passenden Anleitungen, Voraussetzungen und dokumentierten Prüfungen.",
+    "tools": [
+      {
+        "module": "integration",
+        "kind": "LOKAL INSTALLIEREN",
+        "title": "Gemeinsamer Workflow",
+        "text": "Signal-, Spektral- und RAX-Läufe lokal ausführen, Ergebnisse exportieren und nachrechnen. Die Anleitung führt durch Einrichtung und Start.",
+        "button": "Workflow einrichten →"
+      },
+      {
+        "module": "sagnac-import",
+        "kind": "ASTROLABIUM · TAB 07",
+        "title": "Sagnac-Datenimport",
+        "text": "Synthetische Beispieldaten und SGNCv007-Aufzeichnungen im Astrolabium prüfen. Die lokale Bridge benötigt Python; eine optische Gerätesteuerung ist damit nicht nachgewiesen.",
+        "button": "Sagnac-Anleitung öffnen →"
+      },
+      {
+        "module": "reference-edition",
+        "kind": "LOKAL NACHRECHNEN",
+        "title": "Referenzedition & Prüfsuite",
+        "text": "Versionierte Referenzpakete und zehn dokumentierte Offline-Berichte. Folge der Anleitung für Download, Voraussetzungen und reproduzierbare Berechnung.",
+        "button": "Referenzedition öffnen →"
+      },
+      {
+        "module": "edge-reference",
+        "kind": "LOKALES NODE.JS-BEISPIEL",
+        "title": "Edge-Signalauftrag",
+        "text": "Einen begrenzten Signalauftrag lokal ausführen, exportieren und erneut prüfen. Ein ausführbares Referenzbeispiel für den Einstieg in Edge-Workflows.",
+        "button": "Edge-Beispiel ansehen →"
       }
     ]
   }

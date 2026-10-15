@@ -10,6 +10,9 @@ X6 is an open research hub for **signal validation, finite spectral graph
 references and Lorentzian causal-order research**. It offers browser experiments,
 executable reference calculations and research plans with explicit evidence limits.
 
+**[Open Astrolabium](https://thomasmgfeller.github.io/x6-spectral-astrolabium/app/)** ·
+**[Open Signal Validation Lab](https://thomasmgfeller.github.io/x6-spectral-astrolabium/app/signal-lab.html)**
+
 **[Research portal](https://thomasmgfeller.github.io/x6-spectral-astrolabium/)** ·
 **[Deutsch](https://thomasmgfeller.github.io/x6-spectral-astrolabium/de/)** ·
 [All modules](https://thomasmgfeller.github.io/x6-spectral-astrolabium/modules/)
@@ -17,6 +20,7 @@ executable reference calculations and research plans with explicit evidence limi
 | Your goal | Start here |
 | --- | --- |
 | Understand the questions and scientific limits | [Plain-language guide](https://thomasmgfeller.github.io/x6-spectral-astrolabium/guide/#understand) |
+| Explore signals, Fourier analysis and graph models | [Astrolabium browser application](https://thomasmgfeller.github.io/x6-spectral-astrolabium/app/) |
 | Try a synthetic signal experiment | [Signal Validation Lab](https://thomasmgfeller.github.io/x6-spectral-astrolabium/app/signal-lab.html) |
 | Reproduce a documented reference | [Pinned reference edition](https://thomasmgfeller.github.io/x6-spectral-astrolabium/modules/reference-edition.html) |
 | Inspect sources, evidence and open acceptance gates | [Searchable module catalogue](https://thomasmgfeller.github.io/x6-spectral-astrolabium/modules/) |

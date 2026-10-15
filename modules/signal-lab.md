@@ -2,6 +2,8 @@
 
 Registerstand: 2026-10-15. MAIN / SOFTWARE. Kein Live-Prüfsiegel.
 
+[Signal Lab öffnen →](https://thomasmgfeller.github.io/x6-spectral-astrolabium/app/signal-lab.html)
+
 ## Quelle
 
 Branch: main

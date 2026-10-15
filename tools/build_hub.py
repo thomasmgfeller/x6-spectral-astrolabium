@@ -17,6 +17,10 @@ ROOT = Path(__file__).resolve().parents[1]
 BASE = 'https://thomasmgfeller.github.io/x6-spectral-astrolabium/'
 REPO = 'https://github.com/thomasmgfeller/x6-spectral-astrolabium'
 E = html.escape
+BROWSER_APPS = {
+    'astrolabium': ('app/index.html', 'Astrolabium öffnen →'),
+    'signal-lab': ('app/signal-lab.html', 'Signal Lab öffnen →'),
+}
 
 
 def rel(source, target):
@@ -95,20 +99,29 @@ def home(path, data, content, lang):
     t = content[lang]
     guide = 'de/guide.html' if lang == 'de' else 'guide/index.html'
     body = '<section class="hero"><p class="eyebrow">OPEN RESEARCH · PUBLIC PREVIEW</p><h1>' + E(t['headline']) + '</h1>' + p(t['lead'])
-    body += '<div class="actions">' + link(rel(path, 'app/signal-lab.html'), t['launch'], **{'class': 'button'}) + link(rel(path, 'modules/index.html'), t['browse'], **{'class': 'button secondary'}) + '</div></section>'
+    body += '<div class="actions">' + link(rel(path, 'app/index.html'), t['launch_astrolabium'], **{'class': 'button'}) + link(rel(path, 'app/signal-lab.html'), t['launch'], **{'class': 'button secondary'}) + link(rel(path, 'modules/index.html'), t['browse'], **{'class': 'button secondary'}) + '</div></section>'
+    body += '<section aria-labelledby="tools"><h2 id="tools">' + E(t['tools_title']) + '</h2>' + p(t['tools_intro']) + '<div class="tool-grid">'
+    for item in t['tools']:
+        body += '<article class="card tool-card"><p class="eyebrow">' + E(item['kind']) + '</p><h3>' + E(item['title']) + '</h3>' + p(item['text']) + link(rel(path, 'modules/' + item['module'] + '.html'), item['button'], **{'class': 'button secondary'}) + '</article>'
+    body += '</div></section>'
     body += '<section aria-labelledby="paths"><h2 id="paths">' + E(t['paths_title']) + '</h2><div class="path-grid">'
     for i, card in enumerate(t['paths']):
         body += '<article class="card"><p class="number">0' + str(i + 1) + '</p><h3>' + E(card['title']) + '</h3>' + p(card['text']) + link(rel(path, guide) + '#' + card['id'], card['link']) + '</article>'
     body += '</div></section><section class="split"><div><p class="eyebrow">' + E(t['priority_label']) + '</p><h2>' + E(t['priority_title']) + '</h2>' + p(t['priority_text'])
-    body += link(rel(path, 'modules/lorentz-n6-residuals.html'), t['priority_link']) + '</div><aside class="note"><h2>' + E(t['limits_title']) + '</h2>' + p(t['limits']) + '</aside></section>'
+    body += link(rel(path, 'modules/lorentz-n6-residuals.html'), t['priority_link'], **{'class': 'button secondary'}) + '</div><aside class="note"><h2>' + E(t['limits_title']) + '</h2>' + p(t['limits']) + '</aside></section>'
     body += '<section aria-labelledby="topics"><h2 id="topics">' + E(t['topics_title']) + '</h2><ul class="topic-list">'
     for item in t['topics']:
-        body += '<li>' + link(rel(path, 'modules/' + item['module'] + '.html'), item['title']) + '<span>' + E(item['text']) + '</span></li>'
+        body += '<li>' + link(rel(path, 'modules/' + item['module'] + '.html'), item['title'], **{'class': 'button secondary'}) + '<span>' + E(item['text']) + '</span></li>'
     body += '</ul></section><section class="note"><h2>' + E(t['status_title']) + '</h2>'
     body += p(t['snapshot'].format(count=len(data['modules']), date=data['snapshot_date']))
     body += '<p>' + link(rel(path, 'docs/MODULE_REGISTRY.md'), t['register']) + ' · ' + link(rel(path, 'MODULE_REGISTRY.json'), 'JSON') + '</p>'
     body += p(t['window']) + '<p><time datetime="' + data['agent_window']['stop_local'] + '">19 October 2026, 00:00 Europe/Zurich</time> · <code>' + data['agent_window']['stop_utc'] + '</code></p></section>'
     md = '# ' + t['headline'] + '\n\n' + t['lead'] + '\n\n'
+    for target, label in [('app/index.html', t['launch_astrolabium']), ('app/signal-lab.html', t['launch']), ('modules/index.html', t['browse'])]:
+        md += '- [' + label + '](' + canonical(target) + ')\n'
+    md += '\n## ' + t['tools_title'] + '\n\n' + t['tools_intro'] + '\n\n'
+    for item in t['tools']:
+        md += '### ' + item['title'] + '\n\n' + item['kind'] + '. ' + item['text'] + '\n\n[' + item['button'] + '](' + canonical('modules/' + item['module'] + '.html') + ')\n\n'
     for card in t['paths']:
         md += '## ' + card['title'] + '\n\n' + card['text'] + '\n\n[' + card['link'] + '](' + canonical(guide) + '#' + card['id'] + ')\n\n'
     md += '## ' + t['priority_title'] + '\n\n' + t['priority_text'] + '\n\n## ' + t['limits_title'] + '\n\n' + t['limits'] + '\n\n'
@@ -146,12 +159,18 @@ def module_page(m, data):
     path = 'modules/' + m['id'] + '.html'
     body = '<p class="eyebrow">MODULREGISTER · ' + E(data['snapshot_date']) + '</p><h1>' + E(m['name']) + '</h1>'
     body += '<p><span class="tag">' + E(s['availability']) + '</span> <span class="tag">' + E(m['kind']) + '</span></p>'
+    if m['id'] in BROWSER_APPS:
+        target, label = BROWSER_APPS[m['id']]
+        body += '<div class="actions">' + link(rel(path, target), label, **{'class': 'button'}) + '</div>'
     body += p('Datierter Registerstand, kein Live-Prüfsiegel. SOFTWARE bezeichnet den ausführbaren Prüfweg, nicht eine validierte physische Anwendung. Die Originalangaben bleiben in Deutsch.')
     body += '<section class="prose"><h2>1. Was wird untersucht?</h2>' + p(m['name'])
     body += '<p>' + link(source_url(s['commit'], s['path']), 'Gepinnte Originaldokumentation') + ' · ' + link(REPO + '/commit/' + s['commit'], 'Quellencommit ' + s['commit'][:12]) + '</p>'
     body += '<p>Branch: <code>' + E(s['branch']) + '</code>. <code>' + E(s['commit']) + '</code></p></section>'
     body += '<section class="prose"><h2>2. Was ist dokumentiert?</h2>' + p(m['claim']) + '<ul>'
     md = '# ' + m['name'] + '\n\nRegisterstand: ' + data['snapshot_date'] + '. ' + s['availability'] + ' / ' + m['kind'] + '. Kein Live-Prüfsiegel.\n\n'
+    if m['id'] in BROWSER_APPS:
+        target, label = BROWSER_APPS[m['id']]
+        md += '[' + label + '](' + canonical(target) + ')\n\n'
     md += '## Quelle\n\nBranch: ' + s['branch'] + '\n\nCommit: ' + s['commit'] + '\n\n[Originaldokumentation](' + source_url(s['commit'], s['path']) + ')\n\n## Dokumentierte Aussage\n\n' + m['claim'] + '\n\n'
     for ev in m['evidence']:
         url = source_url(s['commit'], ev['path'])
@@ -190,8 +209,15 @@ def catalogue(data):
     body += '<p id="count" role="status" aria-live="polite">' + str(len(data['modules'])) + ' Module</p><p id="empty" hidden>Keine Treffer / No matches. Filter ändern oder zurücksetzen.</p><div class="module-list">'
     md = '# Module und Evidenz\n\nRegisterstand: ' + data['snapshot_date'] + '. Kein Live-Prüfsiegel. Originalangaben in Deutsch.\n\n'
     for m in data['modules']:
-        body += '<article class="module" data-kind="' + E(m['kind']) + '" data-availability="' + E(m['source']['availability']) + '"><div><span class="tag">' + E(m['source']['availability']) + '</span> <span class="tag">' + E(m['kind']) + '</span></div><h2>' + link(m['id'] + '.html', m['name']) + '</h2>' + p(m['claim']) + '</article>'
+        body += '<article class="module" data-kind="' + E(m['kind']) + '" data-availability="' + E(m['source']['availability']) + '"><div><span class="tag">' + E(m['source']['availability']) + '</span> <span class="tag">' + E(m['kind']) + '</span></div><h2>' + link(m['id'] + '.html', m['name']) + '</h2>' + p(m['claim'])
+        if m['id'] in BROWSER_APPS:
+            target, label = BROWSER_APPS[m['id']]
+            body += link(rel(path, target), label, **{'class': 'button secondary'})
+        body += '</article>'
         md += '- [' + m['name'] + '](' + BASE + 'modules/' + m['id'] + '.md): ' + m['source']['availability'] + ' / ' + m['kind'] + '. ' + m['claim'] + '\n'
+        if m['id'] in BROWSER_APPS:
+            target, label = BROWSER_APPS[m['id']]
+            md += '  [' + label + '](' + canonical(target) + ')\n'
     body += '</div>'
     return page(path, 'Module und Evidenz', 'Durchsuchbarer Forschungsindex mit Quellenpins, Evidenz, Reproduktion und offenen Abnahmen.', body, 'de', script=True), md
 
