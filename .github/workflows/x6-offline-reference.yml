@@ -54,7 +54,9 @@ jobs:
           node-version: '24'
       - name: Fresh checkout, replay and tampering controls without network
         run: >-
-          sudo env "PATH=$PATH" unshare --net
+          sudo env "PATH=$PATH" GIT_CONFIG_COUNT=1
+          GIT_CONFIG_KEY_0=safe.directory "GIT_CONFIG_VALUE_0=$GITHUB_WORKSPACE"
+          unshare --net
           python3 -S -B tests/reference/qualify_checkout.py
           --require-network-isolation --output "$RUNNER_TEMP/x6-offline-reference"
       - name: Preserve complete results and rejection logs
