@@ -1,0 +1,3634 @@
+{
+  "schema": "x6.numerics.browser/1",
+  "status": "PASS",
+  "browser": "151.0.7922.34",
+  "source": {
+    "commit": "6c7a0396432ea56b9533828b3c473af34d3d9187",
+    "app_sha256": "56df754a1c5c3d26022e54b000f0d9e52ab4067d39e6a664556de12bfd7dc071",
+    "kernel_sha256": "02345490b0aee9a4c1bfc53ba4ce724e396d227ec842dc7d3e24309af89fd5cb",
+    "observed_kernel_sha256": "b9ee7c740e587479d80ad5097e09bb69a7b68e8ce40893321cbd58a2463d11a8",
+    "source_dirty": false,
+    "source_path": "app/index.html",
+    "node": "v24.21.0",
+    "execution": "Node.js VM; original public output plus observation-only vector return; no DOM",
+    "contract_sha256": "cd6f2c93af4e03d311d4b35a9ac369d146abde3c39d738bb9b70e8f20cf5296f",
+    "exporter_sha256": "c5a4e4b243c022605c31ee1e2cd1bc003c78a68f6327808d162041c390d644e0",
+    "loader_sha256": "fbbce06c4c2b8fc2608e1b8eb7531c31d0e862b4cb2dbd1f81be8644a9106a5e"
+  },
+  "checks": [
+    {
+      "id": "path4",
+      "status": "PASS",
+      "scaledEigenvalueError": 3.3306690738754696e-16
+    },
+    {
+      "id": "export_path4",
+      "status": "PASS"
+    },
+    {
+      "id": "triangle",
+      "status": "PASS",
+      "scaledEigenvalueError": 1.1102230246251565e-16
+    },
+    {
+      "id": "weighted2",
+      "status": "PASS",
+      "scaledEigenvalueError": 2.220446049250313e-16
+    },
+    {
+      "id": "disconnected",
+      "status": "PASS",
+      "scaledEigenvalueError": 2.220446049250313e-16
+    },
+    {
+      "id": "singleton",
+      "status": "PASS",
+      "scaledEigenvalueError": 0
+    },
+    {
+      "id": "isolated4",
+      "status": "PASS",
+      "scaledEigenvalueError": 0
+    },
+    {
+      "id": "export_isolated4",
+      "status": "PASS"
+    },
+    {
+      "id": "complete8",
+      "status": "PASS",
+      "scaledEigenvalueError": 5.075305255429287e-16
+    },
+    {
+      "id": "cycle8",
+      "status": "PASS",
+      "scaledEigenvalueError": 4.440892098500626e-16
+    },
+    {
+      "id": "three_triangles",
+      "status": "PASS",
+      "scaledEigenvalueError": 1.1102230246251565e-16
+    },
+    {
+      "id": "near_triangle",
+      "status": "PASS",
+      "scaledEigenvalueError": 2.2204460482163373e-16
+    },
+    {
+      "id": "weak_bridge_30",
+      "status": "PASS",
+      "scaledEigenvalueError": 4.4408920971219916e-16
+    },
+    {
+      "id": "weak_bridge_50",
+      "status": "PASS",
+      "scaledEigenvalueError": 2.2204460492503123e-16
+    },
+    {
+      "id": "scaled_pair_-50",
+      "status": "PASS",
+      "scaledEigenvalueError": 2.220446049250313e-16
+    },
+    {
+      "id": "export_scaled_pair_-50",
+      "status": "PASS"
+    },
+    {
+      "id": "scaled_pair_-40",
+      "status": "PASS",
+      "scaledEigenvalueError": 2.220446049250313e-16
+    },
+    {
+      "id": "scaled_pair_0",
+      "status": "PASS",
+      "scaledEigenvalueError": 2.220446049250313e-16
+    },
+    {
+      "id": "scaled_pair_40",
+      "status": "PASS",
+      "scaledEigenvalueError": 2.220446049250313e-16
+    },
+    {
+      "id": "scaled_path16_-50",
+      "status": "PASS",
+      "scaledEigenvalueError": 1.2212453270876722e-15
+    },
+    {
+      "id": "scaled_path16_0",
+      "status": "PASS",
+      "scaledEigenvalueError": 1.2212453270876722e-15
+    },
+    {
+      "id": "scaled_path16_40",
+      "status": "PASS",
+      "scaledEigenvalueError": 1.2212453270876722e-15
+    },
+    {
+      "id": "random_n8_seed104729",
+      "status": "PASS",
+      "scaledEigenvalueError": 7.894919286223335e-16
+    },
+    {
+      "id": "random_n8_seed130363",
+      "status": "PASS",
+      "scaledEigenvalueError": 5.761157316973786e-16
+    },
+    {
+      "id": "random_n16_seed104729",
+      "status": "PASS",
+      "scaledEigenvalueError": 1.1278456123176193e-15
+    },
+    {
+      "id": "random_n16_seed130363",
+      "status": "PASS",
+      "scaledEigenvalueError": 1.5987211554602255e-15
+    },
+    {
+      "id": "random_n24_seed104729",
+      "status": "PASS",
+      "scaledEigenvalueError": 1.453382868600205e-15
+    },
+    {
+      "id": "random_n24_seed130363",
+      "status": "PASS",
+      "scaledEigenvalueError": 3.430206310566001e-15
+    },
+    {
+      "id": "random_n32_seed104729",
+      "status": "PASS",
+      "scaledEigenvalueError": 2.616224299033005e-15
+    },
+    {
+      "id": "random_n32_seed130363",
+      "status": "PASS",
+      "scaledEigenvalueError": 3.538889890167036e-15
+    },
+    {
+      "id": "reject_negative",
+      "status": "PASS"
+    },
+    {
+      "id": "reject_zero",
+      "status": "PASS"
+    },
+    {
+      "id": "reject_self_loop",
+      "status": "PASS"
+    },
+    {
+      "id": "reject_nan",
+      "status": "PASS"
+    },
+    {
+      "id": "reject_overflow",
+      "status": "PASS"
+    },
+    {
+      "id": "reject_limit",
+      "status": "PASS"
+    },
+    {
+      "id": "no_stale_export_after_invalid_input",
+      "status": "PASS"
+    }
+  ],
+  "runs": [
+    {
+      "id": "path4",
+      "analysis": {
+        "version": "X6-2.4",
+        "timestamp": "2026-10-15T18:36:53.031Z",
+        "scope": "finite positive-weight undirected graph combinatorial Laplacian",
+        "input": "v0\nv1\nv2\nv3\nv0 v1 1\nv1 v2 1\nv2 v3 1",
+        "nodes": [
+          "v0",
+          "v1",
+          "v2",
+          "v3"
+        ],
+        "edgeCount": 3,
+        "componentCount": 1,
+        "componentSizes": [
+          4
+        ],
+        "exactNullity": 1,
+        "positiveEigenvalueCount": 3,
+        "componentBounds": [
+          {
+            "size": 4,
+            "diameter": 3,
+            "minWeight": 1,
+            "lowerBound": 0.3333333333333333
+          }
+        ],
+        "exactRationalBounds": [
+          {
+            "size": 4,
+            "diameter": 3,
+            "minWeightFraction": [
+              "1",
+              "1"
+            ],
+            "gapLowerFraction": [
+              "1",
+              "3"
+            ]
+          }
+        ],
+        "globalGapLowerBound": 0.3333333333333333,
+        "trace": 6,
+        "numerical": {
+          "eig": [
+            {
+              "value": 4.437342591868191e-31,
+              "residual": 9.518179688573627e-16
+            },
+            {
+              "value": 0.5857864376269049,
+              "residual": 3.002224531865041e-16
+            },
+            {
+              "value": 2,
+              "residual": 4.577566798522237e-16
+            },
+            {
+              "value": 3.414213562373093,
+              "residual": 1.7832822334594722e-15
+            }
+          ],
+          "converged": true,
+          "sweeps": 21,
+          "solverVersion": "jacobi-scale-1",
+          "matrixScale": 2,
+          "normalizedMatrixInfinityNorm": 2,
+          "scaledMaxResidual": 4.458205583648682e-16,
+          "orthogonalityError": 7.426885862005046e-16,
+          "relativeTolerance": 1e-12,
+          "normalizationUnderflowCount": 0,
+          "resolutionRelative": 1e-12,
+          "resolutionAbsolute": 4e-12,
+          "stopReason": "RESIDUAL_AND_ORTHOGONALITY_ACCEPTED",
+          "guarantee": "NUMERICAL_POSTCHECK_ONLY_NOT_INTERVAL_CERTIFIED",
+          "positiveGap": {
+            "index": 1,
+            "estimate": 0.5857864376269049,
+            "status": "RESOLVED_AT_TOLERANCE",
+            "scope": "smallest positive mode indexed by exact component count; numerical resolution is not a gap certificate"
+          }
+        },
+        "certification": {
+          "nullity": "COMBINATORIAL_THEOREM",
+          "gap": "GRAPH_THEORETIC_BOUND",
+          "eigenvalues": "NUMERICAL_ONLY",
+          "intervalArithmetic": "NOT_IMPLEMENTED",
+          "rationalGapCertificate": "EXACT_DECIMAL_INPUT",
+          "julia": "REFERENCE_EXPORT_ONLY",
+          "wolfram": "REFERENCE_EXPORT_ONLY",
+          "browserE2E": "PENDING"
+        }
+      }
+    },
+    {
+      "id": "triangle",
+      "analysis": {
+        "version": "X6-2.4",
+        "timestamp": "2026-10-15T18:36:53.236Z",
+        "scope": "finite positive-weight undirected graph combinatorial Laplacian",
+        "input": "v0\nv1\nv2\nv0 v1 1\nv0 v2 1\nv1 v2 1",
+        "nodes": [
+          "v0",
+          "v1",
+          "v2"
+        ],
+        "edgeCount": 3,
+        "componentCount": 1,
+        "componentSizes": [
+          3
+        ],
+        "exactNullity": 1,
+        "positiveEigenvalueCount": 2,
+        "componentBounds": [
+          {
+            "size": 3,
+            "diameter": 1,
+            "minWeight": 1,
+            "lowerBound": 1.3333333333333333
+          }
+        ],
+        "exactRationalBounds": [
+          {
+            "size": 3,
+            "diameter": 1,
+            "minWeightFraction": [
+              "1",
+              "1"
+            ],
+            "gapLowerFraction": [
+              "4",
+              "3"
+            ]
+          }
+        ],
+        "globalGapLowerBound": 1.3333333333333333,
+        "trace": 6,
+        "numerical": {
+          "eig": [
+            {
+              "value": 0,
+              "residual": 0
+            },
+            {
+              "value": 2.9999999999999996,
+              "residual": 6.280369834735101e-16
+            },
+            {
+              "value": 3.0000000000000004,
+              "residual": 4.440892098500626e-16
+            }
+          ],
+          "converged": true,
+          "sweeps": 2,
+          "solverVersion": "jacobi-scale-1",
+          "matrixScale": 2,
+          "normalizedMatrixInfinityNorm": 2,
+          "scaledMaxResidual": 1.5700924586837752e-16,
+          "orthogonalityError": 3.925231146709438e-16,
+          "relativeTolerance": 1e-12,
+          "normalizationUnderflowCount": 0,
+          "resolutionRelative": 1e-12,
+          "resolutionAbsolute": 4e-12,
+          "stopReason": "RESIDUAL_AND_ORTHOGONALITY_ACCEPTED",
+          "guarantee": "NUMERICAL_POSTCHECK_ONLY_NOT_INTERVAL_CERTIFIED",
+          "positiveGap": {
+            "index": 1,
+            "estimate": 2.9999999999999996,
+            "status": "RESOLVED_AT_TOLERANCE",
+            "scope": "smallest positive mode indexed by exact component count; numerical resolution is not a gap certificate"
+          }
+        },
+        "certification": {
+          "nullity": "COMBINATORIAL_THEOREM",
+          "gap": "GRAPH_THEORETIC_BOUND",
+          "eigenvalues": "NUMERICAL_ONLY",
+          "intervalArithmetic": "NOT_IMPLEMENTED",
+          "rationalGapCertificate": "EXACT_DECIMAL_INPUT",
+          "julia": "REFERENCE_EXPORT_ONLY",
+          "wolfram": "REFERENCE_EXPORT_ONLY",
+          "browserE2E": "PENDING"
+        }
+      }
+    },
+    {
+      "id": "weighted2",
+      "analysis": {
+        "version": "X6-2.4",
+        "timestamp": "2026-10-15T18:36:53.303Z",
+        "scope": "finite positive-weight undirected graph combinatorial Laplacian",
+        "input": "v0\nv1\nv0 v1 0.125",
+        "nodes": [
+          "v0",
+          "v1"
+        ],
+        "edgeCount": 1,
+        "componentCount": 1,
+        "componentSizes": [
+          2
+        ],
+        "exactNullity": 1,
+        "positiveEigenvalueCount": 1,
+        "componentBounds": [
+          {
+            "size": 2,
+            "diameter": 1,
+            "minWeight": 0.125,
+            "lowerBound": 0.25
+          }
+        ],
+        "exactRationalBounds": [
+          {
+            "size": 2,
+            "diameter": 1,
+            "minWeightFraction": [
+              "125",
+              "1000"
+            ],
+            "gapLowerFraction": [
+              "1",
+              "4"
+            ]
+          }
+        ],
+        "globalGapLowerBound": 0.25,
+        "trace": 0.25,
+        "numerical": {
+          "eig": [
+            {
+              "value": 0,
+              "residual": 0
+            },
+            {
+              "value": 0.24999999999999994,
+              "residual": 3.925231146709438e-17
+            }
+          ],
+          "converged": true,
+          "sweeps": 1,
+          "solverVersion": "jacobi-scale-1",
+          "matrixScale": 0.125,
+          "normalizedMatrixInfinityNorm": 2,
+          "scaledMaxResidual": 1.5700924586837752e-16,
+          "orthogonalityError": 3.1401849173675503e-16,
+          "relativeTolerance": 1e-12,
+          "normalizationUnderflowCount": 0,
+          "resolutionRelative": 1e-12,
+          "resolutionAbsolute": 2.5e-13,
+          "stopReason": "RESIDUAL_AND_ORTHOGONALITY_ACCEPTED",
+          "guarantee": "NUMERICAL_POSTCHECK_ONLY_NOT_INTERVAL_CERTIFIED",
+          "positiveGap": {
+            "index": 1,
+            "estimate": 0.24999999999999994,
+            "status": "RESOLVED_AT_TOLERANCE",
+            "scope": "smallest positive mode indexed by exact component count; numerical resolution is not a gap certificate"
+          }
+        },
+        "certification": {
+          "nullity": "COMBINATORIAL_THEOREM",
+          "gap": "GRAPH_THEORETIC_BOUND",
+          "eigenvalues": "NUMERICAL_ONLY",
+          "intervalArithmetic": "NOT_IMPLEMENTED",
+          "rationalGapCertificate": "EXACT_DECIMAL_INPUT",
+          "julia": "REFERENCE_EXPORT_ONLY",
+          "wolfram": "REFERENCE_EXPORT_ONLY",
+          "browserE2E": "PENDING"
+        }
+      }
+    },
+    {
+      "id": "disconnected",
+      "analysis": {
+        "version": "X6-2.4",
+        "timestamp": "2026-10-15T18:36:53.369Z",
+        "scope": "finite positive-weight undirected graph combinatorial Laplacian",
+        "input": "v0\nv1\nv2\nv3\nv0 v1 1\nv2 v3 1",
+        "nodes": [
+          "v0",
+          "v1",
+          "v2",
+          "v3"
+        ],
+        "edgeCount": 2,
+        "componentCount": 2,
+        "componentSizes": [
+          2,
+          2
+        ],
+        "exactNullity": 2,
+        "positiveEigenvalueCount": 2,
+        "componentBounds": [
+          {
+            "size": 2,
+            "diameter": 1,
+            "minWeight": 1,
+            "lowerBound": 2
+          },
+          {
+            "size": 2,
+            "diameter": 1,
+            "minWeight": 1,
+            "lowerBound": 2
+          }
+        ],
+        "exactRationalBounds": [
+          {
+            "size": 2,
+            "diameter": 1,
+            "minWeightFraction": [
+              "1",
+              "1"
+            ],
+            "gapLowerFraction": [
+              "2",
+              "1"
+            ]
+          },
+          {
+            "size": 2,
+            "diameter": 1,
+            "minWeightFraction": [
+              "1",
+              "1"
+            ],
+            "gapLowerFraction": [
+              "2",
+              "1"
+            ]
+          }
+        ],
+        "globalGapLowerBound": 2,
+        "trace": 4,
+        "numerical": {
+          "eig": [
+            {
+              "value": 0,
+              "residual": 0
+            },
+            {
+              "value": 0,
+              "residual": 0
+            },
+            {
+              "value": 1.9999999999999996,
+              "residual": 3.1401849173675503e-16
+            },
+            {
+              "value": 1.9999999999999996,
+              "residual": 3.1401849173675503e-16
+            }
+          ],
+          "converged": true,
+          "sweeps": 2,
+          "solverVersion": "jacobi-scale-1",
+          "matrixScale": 1,
+          "normalizedMatrixInfinityNorm": 2,
+          "scaledMaxResidual": 1.5700924586837752e-16,
+          "orthogonalityError": 4.440892098500626e-16,
+          "relativeTolerance": 1e-12,
+          "normalizationUnderflowCount": 0,
+          "resolutionRelative": 1e-12,
+          "resolutionAbsolute": 2e-12,
+          "stopReason": "RESIDUAL_AND_ORTHOGONALITY_ACCEPTED",
+          "guarantee": "NUMERICAL_POSTCHECK_ONLY_NOT_INTERVAL_CERTIFIED",
+          "positiveGap": {
+            "index": 2,
+            "estimate": 1.9999999999999996,
+            "status": "RESOLVED_AT_TOLERANCE",
+            "scope": "smallest positive mode indexed by exact component count; numerical resolution is not a gap certificate"
+          }
+        },
+        "certification": {
+          "nullity": "COMBINATORIAL_THEOREM",
+          "gap": "GRAPH_THEORETIC_BOUND",
+          "eigenvalues": "NUMERICAL_ONLY",
+          "intervalArithmetic": "NOT_IMPLEMENTED",
+          "rationalGapCertificate": "EXACT_DECIMAL_INPUT",
+          "julia": "REFERENCE_EXPORT_ONLY",
+          "wolfram": "REFERENCE_EXPORT_ONLY",
+          "browserE2E": "PENDING"
+        }
+      }
+    },
+    {
+      "id": "singleton",
+      "analysis": {
+        "version": "X6-2.4",
+        "timestamp": "2026-10-15T18:36:53.435Z",
+        "scope": "finite positive-weight undirected graph combinatorial Laplacian",
+        "input": "v0",
+        "nodes": [
+          "v0"
+        ],
+        "edgeCount": 0,
+        "componentCount": 1,
+        "componentSizes": [
+          1
+        ],
+        "exactNullity": 1,
+        "positiveEigenvalueCount": 0,
+        "componentBounds": [],
+        "exactRationalBounds": [],
+        "globalGapLowerBound": null,
+        "trace": 0,
+        "numerical": {
+          "eig": [
+            {
+              "value": 0,
+              "residual": 0
+            }
+          ],
+          "converged": true,
+          "sweeps": 0,
+          "solverVersion": "jacobi-scale-1",
+          "matrixScale": 0,
+          "normalizedMatrixInfinityNorm": 0,
+          "scaledMaxResidual": 0,
+          "orthogonalityError": 0,
+          "relativeTolerance": 1e-12,
+          "normalizationUnderflowCount": 0,
+          "resolutionRelative": 1e-12,
+          "resolutionAbsolute": 0,
+          "stopReason": "RESIDUAL_AND_ORTHOGONALITY_ACCEPTED",
+          "guarantee": "NUMERICAL_POSTCHECK_ONLY_NOT_INTERVAL_CERTIFIED",
+          "positiveGap": {
+            "index": null,
+            "estimate": null,
+            "status": "NO_POSITIVE_MODE",
+            "scope": "smallest positive mode indexed by exact component count; numerical resolution is not a gap certificate"
+          }
+        },
+        "certification": {
+          "nullity": "COMBINATORIAL_THEOREM",
+          "gap": "GRAPH_THEORETIC_BOUND",
+          "eigenvalues": "NUMERICAL_ONLY",
+          "intervalArithmetic": "NOT_IMPLEMENTED",
+          "rationalGapCertificate": "EXACT_DECIMAL_INPUT",
+          "julia": "REFERENCE_EXPORT_ONLY",
+          "wolfram": "REFERENCE_EXPORT_ONLY",
+          "browserE2E": "PENDING"
+        }
+      }
+    },
+    {
+      "id": "isolated4",
+      "analysis": {
+        "version": "X6-2.4",
+        "timestamp": "2026-10-15T18:36:53.501Z",
+        "scope": "finite positive-weight undirected graph combinatorial Laplacian",
+        "input": "v0\nv1\nv2\nv3",
+        "nodes": [
+          "v0",
+          "v1",
+          "v2",
+          "v3"
+        ],
+        "edgeCount": 0,
+        "componentCount": 4,
+        "componentSizes": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "exactNullity": 4,
+        "positiveEigenvalueCount": 0,
+        "componentBounds": [],
+        "exactRationalBounds": [],
+        "globalGapLowerBound": null,
+        "trace": 0,
+        "numerical": {
+          "eig": [
+            {
+              "value": 0,
+              "residual": 0
+            },
+            {
+              "value": 0,
+              "residual": 0
+            },
+            {
+              "value": 0,
+              "residual": 0
+            },
+            {
+              "value": 0,
+              "residual": 0
+            }
+          ],
+          "converged": true,
+          "sweeps": 0,
+          "solverVersion": "jacobi-scale-1",
+          "matrixScale": 0,
+          "normalizedMatrixInfinityNorm": 0,
+          "scaledMaxResidual": 0,
+          "orthogonalityError": 0,
+          "relativeTolerance": 1e-12,
+          "normalizationUnderflowCount": 0,
+          "resolutionRelative": 1e-12,
+          "resolutionAbsolute": 0,
+          "stopReason": "RESIDUAL_AND_ORTHOGONALITY_ACCEPTED",
+          "guarantee": "NUMERICAL_POSTCHECK_ONLY_NOT_INTERVAL_CERTIFIED",
+          "positiveGap": {
+            "index": null,
+            "estimate": null,
+            "status": "NO_POSITIVE_MODE",
+            "scope": "smallest positive mode indexed by exact component count; numerical resolution is not a gap certificate"
+          }
+        },
+        "certification": {
+          "nullity": "COMBINATORIAL_THEOREM",
+          "gap": "GRAPH_THEORETIC_BOUND",
+          "eigenvalues": "NUMERICAL_ONLY",
+          "intervalArithmetic": "NOT_IMPLEMENTED",
+          "rationalGapCertificate": "EXACT_DECIMAL_INPUT",
+          "julia": "REFERENCE_EXPORT_ONLY",
+          "wolfram": "REFERENCE_EXPORT_ONLY",
+          "browserE2E": "PENDING"
+        }
+      }
+    },
+    {
+      "id": "complete8",
+      "analysis": {
+        "version": "X6-2.4",
+        "timestamp": "2026-10-15T18:36:53.618Z",
+        "scope": "finite positive-weight undirected graph combinatorial Laplacian",
+        "input": "v0\nv1\nv2\nv3\nv4\nv5\nv6\nv7\nv0 v1 1\nv0 v2 1\nv0 v3 1\nv0 v4 1\nv0 v5 1\nv0 v6 1\nv0 v7 1\nv1 v2 1\nv1 v3 1\nv1 v4 1\nv1 v5 1\nv1 v6 1\nv1 v7 1\nv2 v3 1\nv2 v4 1\nv2 v5 1\nv2 v6 1\nv2 v7 1\nv3 v4 1\nv3 v5 1\nv3 v6 1\nv3 v7 1\nv4 v5 1\nv4 v6 1\nv4 v7 1\nv5 v6 1\nv5 v7 1\nv6 v7 1",
+        "nodes": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4",
+          "v5",
+          "v6",
+          "v7"
+        ],
+        "edgeCount": 28,
+        "componentCount": 1,
+        "componentSizes": [
+          8
+        ],
+        "exactNullity": 1,
+        "positiveEigenvalueCount": 7,
+        "componentBounds": [
+          {
+            "size": 8,
+            "diameter": 1,
+            "minWeight": 1,
+            "lowerBound": 0.5
+          }
+        ],
+        "exactRationalBounds": [
+          {
+            "size": 8,
+            "diameter": 1,
+            "minWeightFraction": [
+              "1",
+              "1"
+            ],
+            "gapLowerFraction": [
+              "1",
+              "2"
+            ]
+          }
+        ],
+        "globalGapLowerBound": 0.5,
+        "trace": 56,
+        "numerical": {
+          "eig": [
+            {
+              "value": 3.091119528033683e-16,
+              "residual": 1.1113391917912505e-15
+            },
+            {
+              "value": 7.999999999999998,
+              "residual": 2.198129442157285e-15
+            },
+            {
+              "value": 8,
+              "residual": 1.4144454836540928e-15
+            },
+            {
+              "value": 8,
+              "residual": 5.495323605393213e-16
+            },
+            {
+              "value": 8,
+              "residual": 1.5903242446021246e-15
+            },
+            {
+              "value": 8,
+              "residual": 1.5784115357090269e-15
+            },
+            {
+              "value": 8.000000000000002,
+              "residual": 1.5694176645739767e-15
+            },
+            {
+              "value": 8.000000000000002,
+              "residual": 2.7476618026966064e-16
+            }
+          ],
+          "converged": true,
+          "sweeps": 7,
+          "solverVersion": "jacobi-scale-1",
+          "matrixScale": 7,
+          "normalizedMatrixInfinityNorm": 1.9999999999999998,
+          "scaledMaxResidual": 1.5700924586837754e-16,
+          "orthogonalityError": 4.54378355600607e-16,
+          "relativeTolerance": 1e-12,
+          "normalizationUnderflowCount": 0,
+          "resolutionRelative": 1e-12,
+          "resolutionAbsolute": 1.3999999999999999e-11,
+          "stopReason": "RESIDUAL_AND_ORTHOGONALITY_ACCEPTED",
+          "guarantee": "NUMERICAL_POSTCHECK_ONLY_NOT_INTERVAL_CERTIFIED",
+          "positiveGap": {
+            "index": 1,
+            "estimate": 7.999999999999998,
+            "status": "RESOLVED_AT_TOLERANCE",
+            "scope": "smallest positive mode indexed by exact component count; numerical resolution is not a gap certificate"
+          }
+        },
+        "certification": {
+          "nullity": "COMBINATORIAL_THEOREM",
+          "gap": "GRAPH_THEORETIC_BOUND",
+          "eigenvalues": "NUMERICAL_ONLY",
+          "intervalArithmetic": "NOT_IMPLEMENTED",
+          "rationalGapCertificate": "EXACT_DECIMAL_INPUT",
+          "julia": "REFERENCE_EXPORT_ONLY",
+          "wolfram": "REFERENCE_EXPORT_ONLY",
+          "browserE2E": "PENDING"
+        }
+      }
+    },
+    {
+      "id": "cycle8",
+      "analysis": {
+        "version": "X6-2.4",
+        "timestamp": "2026-10-15T18:36:53.685Z",
+        "scope": "finite positive-weight undirected graph combinatorial Laplacian",
+        "input": "v0\nv1\nv2\nv3\nv4\nv5\nv6\nv7\nv0 v1 1\nv1 v2 1\nv2 v3 1\nv3 v4 1\nv4 v5 1\nv5 v6 1\nv6 v7 1\nv0 v7 1",
+        "nodes": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4",
+          "v5",
+          "v6",
+          "v7"
+        ],
+        "edgeCount": 8,
+        "componentCount": 1,
+        "componentSizes": [
+          8
+        ],
+        "exactNullity": 1,
+        "positiveEigenvalueCount": 7,
+        "componentBounds": [
+          {
+            "size": 8,
+            "diameter": 4,
+            "minWeight": 1,
+            "lowerBound": 0.125
+          }
+        ],
+        "exactRationalBounds": [
+          {
+            "size": 8,
+            "diameter": 4,
+            "minWeightFraction": [
+              "1",
+              "1"
+            ],
+            "gapLowerFraction": [
+              "1",
+              "8"
+            ]
+          }
+        ],
+        "globalGapLowerBound": 0.125,
+        "trace": 16,
+        "numerical": {
+          "eig": [
+            {
+              "value": 3.0814879110195774e-32,
+              "residual": 2.9373740229761033e-16
+            },
+            {
+              "value": 0.5857864376269051,
+              "residual": 5.17029086494124e-16
+            },
+            {
+              "value": 0.5857864376269051,
+              "residual": 2.0396099332657776e-16
+            },
+            {
+              "value": 2,
+              "residual": 2.220446049250313e-16
+            },
+            {
+              "value": 2.0000000000000004,
+              "residual": 3.1401849173675503e-16
+            },
+            {
+              "value": 3.414213562373095,
+              "residual": 2.9373740229761033e-16
+            },
+            {
+              "value": 3.414213562373096,
+              "residual": 8.15843973306311e-16
+            },
+            {
+              "value": 4.000000000000002,
+              "residual": 1.9735756178897087e-15
+            }
+          ],
+          "converged": true,
+          "sweeps": 48,
+          "solverVersion": "jacobi-scale-1",
+          "matrixScale": 2,
+          "normalizedMatrixInfinityNorm": 2,
+          "scaledMaxResidual": 4.933939044724271e-16,
+          "orthogonalityError": 1.0507327636559083e-15,
+          "relativeTolerance": 1e-12,
+          "normalizationUnderflowCount": 0,
+          "resolutionRelative": 1e-12,
+          "resolutionAbsolute": 4e-12,
+          "stopReason": "RESIDUAL_AND_ORTHOGONALITY_ACCEPTED",
+          "guarantee": "NUMERICAL_POSTCHECK_ONLY_NOT_INTERVAL_CERTIFIED",
+          "positiveGap": {
+            "index": 1,
+            "estimate": 0.5857864376269051,
+            "status": "RESOLVED_AT_TOLERANCE",
+            "scope": "smallest positive mode indexed by exact component count; numerical resolution is not a gap certificate"
+          }
+        },
+        "certification": {
+          "nullity": "COMBINATORIAL_THEOREM",
+          "gap": "GRAPH_THEORETIC_BOUND",
+          "eigenvalues": "NUMERICAL_ONLY",
+          "intervalArithmetic": "NOT_IMPLEMENTED",
+          "rationalGapCertificate": "EXACT_DECIMAL_INPUT",
+          "julia": "REFERENCE_EXPORT_ONLY",
+          "wolfram": "REFERENCE_EXPORT_ONLY",
+          "browserE2E": "PENDING"
+        }
+      }
+    },
+    {
+      "id": "three_triangles",
+      "analysis": {
+        "version": "X6-2.4",
+        "timestamp": "2026-10-15T18:36:53.751Z",
+        "scope": "finite positive-weight undirected graph combinatorial Laplacian",
+        "input": "v0\nv1\nv2\nv3\nv4\nv5\nv6\nv7\nv8\nv0 v1 1\nv0 v2 1\nv1 v2 1\nv3 v4 1\nv3 v5 1\nv4 v5 1\nv6 v7 1\nv6 v8 1\nv7 v8 1",
+        "nodes": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4",
+          "v5",
+          "v6",
+          "v7",
+          "v8"
+        ],
+        "edgeCount": 9,
+        "componentCount": 3,
+        "componentSizes": [
+          3,
+          3,
+          3
+        ],
+        "exactNullity": 3,
+        "positiveEigenvalueCount": 6,
+        "componentBounds": [
+          {
+            "size": 3,
+            "diameter": 1,
+            "minWeight": 1,
+            "lowerBound": 1.3333333333333333
+          },
+          {
+            "size": 3,
+            "diameter": 1,
+            "minWeight": 1,
+            "lowerBound": 1.3333333333333333
+          },
+          {
+            "size": 3,
+            "diameter": 1,
+            "minWeight": 1,
+            "lowerBound": 1.3333333333333333
+          }
+        ],
+        "exactRationalBounds": [
+          {
+            "size": 3,
+            "diameter": 1,
+            "minWeightFraction": [
+              "1",
+              "1"
+            ],
+            "gapLowerFraction": [
+              "4",
+              "3"
+            ]
+          },
+          {
+            "size": 3,
+            "diameter": 1,
+            "minWeightFraction": [
+              "1",
+              "1"
+            ],
+            "gapLowerFraction": [
+              "4",
+              "3"
+            ]
+          },
+          {
+            "size": 3,
+            "diameter": 1,
+            "minWeightFraction": [
+              "1",
+              "1"
+            ],
+            "gapLowerFraction": [
+              "4",
+              "3"
+            ]
+          }
+        ],
+        "globalGapLowerBound": 1.3333333333333333,
+        "trace": 18,
+        "numerical": {
+          "eig": [
+            {
+              "value": 0,
+              "residual": 0
+            },
+            {
+              "value": 0,
+              "residual": 0
+            },
+            {
+              "value": 0,
+              "residual": 0
+            },
+            {
+              "value": 2.9999999999999996,
+              "residual": 6.280369834735101e-16
+            },
+            {
+              "value": 2.9999999999999996,
+              "residual": 6.280369834735101e-16
+            },
+            {
+              "value": 2.9999999999999996,
+              "residual": 6.280369834735101e-16
+            },
+            {
+              "value": 3.0000000000000004,
+              "residual": 4.440892098500626e-16
+            },
+            {
+              "value": 3.0000000000000004,
+              "residual": 4.440892098500626e-16
+            },
+            {
+              "value": 3.0000000000000004,
+              "residual": 4.440892098500626e-16
+            }
+          ],
+          "converged": true,
+          "sweeps": 6,
+          "solverVersion": "jacobi-scale-1",
+          "matrixScale": 2,
+          "normalizedMatrixInfinityNorm": 2,
+          "scaledMaxResidual": 1.5700924586837752e-16,
+          "orthogonalityError": 6.798699777552592e-16,
+          "relativeTolerance": 1e-12,
+          "normalizationUnderflowCount": 0,
+          "resolutionRelative": 1e-12,
+          "resolutionAbsolute": 4e-12,
+          "stopReason": "RESIDUAL_AND_ORTHOGONALITY_ACCEPTED",
+          "guarantee": "NUMERICAL_POSTCHECK_ONLY_NOT_INTERVAL_CERTIFIED",
+          "positiveGap": {
+            "index": 3,
+            "estimate": 2.9999999999999996,
+            "status": "RESOLVED_AT_TOLERANCE",
+            "scope": "smallest positive mode indexed by exact component count; numerical resolution is not a gap certificate"
+          }
+        },
+        "certification": {
+          "nullity": "COMBINATORIAL_THEOREM",
+          "gap": "GRAPH_THEORETIC_BOUND",
+          "eigenvalues": "NUMERICAL_ONLY",
+          "intervalArithmetic": "NOT_IMPLEMENTED",
+          "rationalGapCertificate": "EXACT_DECIMAL_INPUT",
+          "julia": "REFERENCE_EXPORT_ONLY",
+          "wolfram": "REFERENCE_EXPORT_ONLY",
+          "browserE2E": "PENDING"
+        }
+      }
+    },
+    {
+      "id": "near_triangle",
+      "analysis": {
+        "version": "X6-2.4",
+        "timestamp": "2026-10-15T18:36:53.818Z",
+        "scope": "finite positive-weight undirected graph combinatorial Laplacian",
+        "input": "v0\nv1\nv2\nv0 v1 1\nv1 v2 1\nv0 v2 1.000000000931322574615478515625",
+        "nodes": [
+          "v0",
+          "v1",
+          "v2"
+        ],
+        "edgeCount": 3,
+        "componentCount": 1,
+        "componentSizes": [
+          3
+        ],
+        "exactNullity": 1,
+        "positiveEigenvalueCount": 2,
+        "componentBounds": [
+          {
+            "size": 3,
+            "diameter": 1,
+            "minWeight": 1,
+            "lowerBound": 1.3333333333333333
+          }
+        ],
+        "exactRationalBounds": [
+          {
+            "size": 3,
+            "diameter": 1,
+            "minWeightFraction": [
+              "1",
+              "1"
+            ],
+            "gapLowerFraction": [
+              "4",
+              "3"
+            ]
+          }
+        ],
+        "globalGapLowerBound": 1.3333333333333333,
+        "trace": 6.000000001862645,
+        "numerical": {
+          "eig": [
+            {
+              "value": 0,
+              "residual": 0
+            },
+            {
+              "value": 3.0000000000000004,
+              "residual": 8.881784201137155e-16
+            },
+            {
+              "value": 3.0000000018626447,
+              "residual": 6.280369837659626e-16
+            }
+          ],
+          "converged": true,
+          "sweeps": 2,
+          "solverVersion": "jacobi-scale-1",
+          "matrixScale": 2.0000000009313226,
+          "normalizedMatrixInfinityNorm": 2,
+          "scaledMaxResidual": 2.220446049250313e-16,
+          "orthogonalityError": 3.925231146709438e-16,
+          "relativeTolerance": 1e-12,
+          "normalizationUnderflowCount": 0,
+          "resolutionRelative": 1e-12,
+          "resolutionAbsolute": 4.000000001862645e-12,
+          "stopReason": "RESIDUAL_AND_ORTHOGONALITY_ACCEPTED",
+          "guarantee": "NUMERICAL_POSTCHECK_ONLY_NOT_INTERVAL_CERTIFIED",
+          "positiveGap": {
+            "index": 1,
+            "estimate": 3.0000000000000004,
+            "status": "RESOLVED_AT_TOLERANCE",
+            "scope": "smallest positive mode indexed by exact component count; numerical resolution is not a gap certificate"
+          }
+        },
+        "certification": {
+          "nullity": "COMBINATORIAL_THEOREM",
+          "gap": "GRAPH_THEORETIC_BOUND",
+          "eigenvalues": "NUMERICAL_ONLY",
+          "intervalArithmetic": "NOT_IMPLEMENTED",
+          "rationalGapCertificate": "EXACT_DECIMAL_INPUT",
+          "julia": "REFERENCE_EXPORT_ONLY",
+          "wolfram": "REFERENCE_EXPORT_ONLY",
+          "browserE2E": "PENDING"
+        }
+      }
+    },
+    {
+      "id": "weak_bridge_30",
+      "analysis": {
+        "version": "X6-2.4",
+        "timestamp": "2026-10-15T18:36:53.884Z",
+        "scope": "finite positive-weight undirected graph combinatorial Laplacian",
+        "input": "v0\nv1\nv2\nv3\nv4\nv5\nv6\nv7\nv0 v1 1\nv0 v2 1\nv0 v3 1\nv1 v2 1\nv1 v3 1\nv2 v3 1\nv4 v5 1\nv4 v6 1\nv4 v7 1\nv5 v6 1\nv5 v7 1\nv6 v7 1\nv3 v4 0.000000000931322574615478515625",
+        "nodes": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4",
+          "v5",
+          "v6",
+          "v7"
+        ],
+        "edgeCount": 13,
+        "componentCount": 1,
+        "componentSizes": [
+          8
+        ],
+        "exactNullity": 1,
+        "positiveEigenvalueCount": 7,
+        "componentBounds": [
+          {
+            "size": 8,
+            "diameter": 3,
+            "minWeight": 9.313225746154785e-10,
+            "lowerBound": 1.5522042910257974e-10
+          }
+        ],
+        "exactRationalBounds": [
+          {
+            "size": 8,
+            "diameter": 3,
+            "minWeightFraction": [
+              "931322574615478515625",
+              "1000000000000000000000000000000"
+            ],
+            "gapLowerFraction": [
+              "1",
+              "6442450944"
+            ]
+          }
+        ],
+        "globalGapLowerBound": 1.5522042910257974e-10,
+        "trace": 24.000000001862645,
+        "numerical": {
+          "eig": [
+            {
+              "value": 1.6114656067183134e-16,
+              "residual": 1.6555248705722196e-16
+            },
+            {
+              "value": 4.656613905292462e-10,
+              "residual": 2.5921287566662755e-16
+            },
+            {
+              "value": 3.999999999999999,
+              "residual": 9.420554755027176e-16
+            },
+            {
+              "value": 3.999999999999999,
+              "residual": 1.0069903862443685e-15
+            },
+            {
+              "value": 4,
+              "residual": 6.796086673660985e-16
+            },
+            {
+              "value": 4.000000000000001,
+              "residual": 8.326672687273613e-16
+            },
+            {
+              "value": 4.000000000000001,
+              "residual": 1.4895204924107718e-15
+            },
+            {
+              "value": 4.000000001396984,
+              "residual": 7.631521575310538e-16
+            }
+          ],
+          "converged": true,
+          "sweeps": 19,
+          "solverVersion": "jacobi-scale-1",
+          "matrixScale": 3.0000000009313226,
+          "normalizedMatrixInfinityNorm": 2,
+          "scaledMaxResidual": 2.482534153247273e-16,
+          "orthogonalityError": 8.90711256235479e-16,
+          "relativeTolerance": 1e-12,
+          "normalizationUnderflowCount": 0,
+          "resolutionRelative": 1e-12,
+          "resolutionAbsolute": 6.0000000018626454e-12,
+          "stopReason": "RESIDUAL_AND_ORTHOGONALITY_ACCEPTED",
+          "guarantee": "NUMERICAL_POSTCHECK_ONLY_NOT_INTERVAL_CERTIFIED",
+          "positiveGap": {
+            "index": 1,
+            "estimate": 4.656613905292462e-10,
+            "status": "RESOLVED_AT_TOLERANCE",
+            "scope": "smallest positive mode indexed by exact component count; numerical resolution is not a gap certificate"
+          }
+        },
+        "certification": {
+          "nullity": "COMBINATORIAL_THEOREM",
+          "gap": "GRAPH_THEORETIC_BOUND",
+          "eigenvalues": "NUMERICAL_ONLY",
+          "intervalArithmetic": "NOT_IMPLEMENTED",
+          "rationalGapCertificate": "EXACT_DECIMAL_INPUT",
+          "julia": "REFERENCE_EXPORT_ONLY",
+          "wolfram": "REFERENCE_EXPORT_ONLY",
+          "browserE2E": "PENDING"
+        }
+      }
+    },
+    {
+      "id": "weak_bridge_50",
+      "analysis": {
+        "version": "X6-2.4",
+        "timestamp": "2026-10-15T18:36:53.950Z",
+        "scope": "finite positive-weight undirected graph combinatorial Laplacian",
+        "input": "v0\nv1\nv2\nv3\nv4\nv5\nv6\nv7\nv0 v1 1\nv0 v2 1\nv0 v3 1\nv1 v2 1\nv1 v3 1\nv2 v3 1\nv4 v5 1\nv4 v6 1\nv4 v7 1\nv5 v6 1\nv5 v7 1\nv6 v7 1\nv3 v4 0.00000000000000088817841970012523233890533447265625",
+        "nodes": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4",
+          "v5",
+          "v6",
+          "v7"
+        ],
+        "edgeCount": 13,
+        "componentCount": 1,
+        "componentSizes": [
+          8
+        ],
+        "exactNullity": 1,
+        "positiveEigenvalueCount": 7,
+        "componentBounds": [
+          {
+            "size": 8,
+            "diameter": 3,
+            "minWeight": 8.881784197001252e-16,
+            "lowerBound": 1.4802973661668753e-16
+          }
+        ],
+        "exactRationalBounds": [
+          {
+            "size": 8,
+            "diameter": 3,
+            "minWeightFraction": [
+              "88817841970012523233890533447265625",
+              "100000000000000000000000000000000000000000000000000"
+            ],
+            "gapLowerFraction": [
+              "1",
+              "6755399441055744"
+            ]
+          }
+        ],
+        "globalGapLowerBound": 1.4802973661668753e-16,
+        "trace": 24,
+        "numerical": {
+          "eig": [
+            {
+              "value": -1.249000902703301e-16,
+              "residual": 5.472495832362188e-16
+            },
+            {
+              "value": 3.697785493223494e-32,
+              "residual": 6.030054506389723e-16
+            },
+            {
+              "value": 3.999999999999999,
+              "residual": 1.4068910410943614e-15
+            },
+            {
+              "value": 3.9999999999999996,
+              "residual": 4.710277376051327e-16
+            },
+            {
+              "value": 4,
+              "residual": 7.850462293418878e-16
+            },
+            {
+              "value": 4.000000000000001,
+              "residual": 8.326672684688676e-16
+            },
+            {
+              "value": 4.000000000000001,
+              "residual": 8.214900197283516e-16
+            },
+            {
+              "value": 4.000000000000002,
+              "residual": 1.0629576194313576e-15
+            }
+          ],
+          "converged": true,
+          "sweeps": 6,
+          "solverVersion": "jacobi-scale-1",
+          "matrixScale": 3.000000000000001,
+          "normalizedMatrixInfinityNorm": 2,
+          "scaledMaxResidual": 2.344818401823935e-16,
+          "orthogonalityError": 6.093597404471837e-16,
+          "relativeTolerance": 1e-12,
+          "normalizationUnderflowCount": 0,
+          "resolutionRelative": 1e-12,
+          "resolutionAbsolute": 6.000000000000002e-12,
+          "stopReason": "RESIDUAL_AND_ORTHOGONALITY_ACCEPTED",
+          "guarantee": "NUMERICAL_POSTCHECK_ONLY_NOT_INTERVAL_CERTIFIED",
+          "positiveGap": {
+            "index": 1,
+            "estimate": 3.697785493223494e-32,
+            "status": "UNRESOLVED_AT_TOLERANCE",
+            "scope": "smallest positive mode indexed by exact component count; numerical resolution is not a gap certificate"
+          }
+        },
+        "certification": {
+          "nullity": "COMBINATORIAL_THEOREM",
+          "gap": "GRAPH_THEORETIC_BOUND",
+          "eigenvalues": "NUMERICAL_ONLY",
+          "intervalArithmetic": "NOT_IMPLEMENTED",
+          "rationalGapCertificate": "EXACT_DECIMAL_INPUT",
+          "julia": "REFERENCE_EXPORT_ONLY",
+          "wolfram": "REFERENCE_EXPORT_ONLY",
+          "browserE2E": "PENDING"
+        }
+      }
+    },
+    {
+      "id": "scaled_pair_-50",
+      "analysis": {
+        "version": "X6-2.4",
+        "timestamp": "2026-10-15T18:36:54.017Z",
+        "scope": "finite positive-weight undirected graph combinatorial Laplacian",
+        "input": "v0\nv1\nv0 v1 0.00000000000000088817841970012523233890533447265625",
+        "nodes": [
+          "v0",
+          "v1"
+        ],
+        "edgeCount": 1,
+        "componentCount": 1,
+        "componentSizes": [
+          2
+        ],
+        "exactNullity": 1,
+        "positiveEigenvalueCount": 1,
+        "componentBounds": [
+          {
+            "size": 2,
+            "diameter": 1,
+            "minWeight": 8.881784197001252e-16,
+            "lowerBound": 1.7763568394002505e-15
+          }
+        ],
+        "exactRationalBounds": [
+          {
+            "size": 2,
+            "diameter": 1,
+            "minWeightFraction": [
+              "88817841970012523233890533447265625",
+              "100000000000000000000000000000000000000000000000000"
+            ],
+            "gapLowerFraction": [
+              "1",
+              "562949953421312"
+            ]
+          }
+        ],
+        "globalGapLowerBound": 1.7763568394002505e-15,
+        "trace": 1.7763568394002505e-15,
+        "numerical": {
+          "eig": [
+            {
+              "value": 0,
+              "residual": 0
+            },
+            {
+              "value": 1.77635683940025e-15,
+              "residual": 2.789044477473679e-31
+            }
+          ],
+          "converged": true,
+          "sweeps": 1,
+          "solverVersion": "jacobi-scale-1",
+          "matrixScale": 8.881784197001252e-16,
+          "normalizedMatrixInfinityNorm": 2,
+          "scaledMaxResidual": 1.5700924586837752e-16,
+          "orthogonalityError": 3.1401849173675503e-16,
+          "relativeTolerance": 1e-12,
+          "normalizationUnderflowCount": 0,
+          "resolutionRelative": 1e-12,
+          "resolutionAbsolute": 1.7763568394002504e-27,
+          "stopReason": "RESIDUAL_AND_ORTHOGONALITY_ACCEPTED",
+          "guarantee": "NUMERICAL_POSTCHECK_ONLY_NOT_INTERVAL_CERTIFIED",
+          "positiveGap": {
+            "index": 1,
+            "estimate": 1.77635683940025e-15,
+            "status": "RESOLVED_AT_TOLERANCE",
+            "scope": "smallest positive mode indexed by exact component count; numerical resolution is not a gap certificate"
+          }
+        },
+        "certification": {
+          "nullity": "COMBINATORIAL_THEOREM",
+          "gap": "GRAPH_THEORETIC_BOUND",
+          "eigenvalues": "NUMERICAL_ONLY",
+          "intervalArithmetic": "NOT_IMPLEMENTED",
+          "rationalGapCertificate": "EXACT_DECIMAL_INPUT",
+          "julia": "REFERENCE_EXPORT_ONLY",
+          "wolfram": "REFERENCE_EXPORT_ONLY",
+          "browserE2E": "PENDING"
+        }
+      }
+    },
+    {
+      "id": "scaled_pair_-40",
+      "analysis": {
+        "version": "X6-2.4",
+        "timestamp": "2026-10-15T18:36:54.134Z",
+        "scope": "finite positive-weight undirected graph combinatorial Laplacian",
+        "input": "v0\nv1\nv0 v1 0.0000000000009094947017729282379150390625",
+        "nodes": [
+          "v0",
+          "v1"
+        ],
+        "edgeCount": 1,
+        "componentCount": 1,
+        "componentSizes": [
+          2
+        ],
+        "exactNullity": 1,
+        "positiveEigenvalueCount": 1,
+        "componentBounds": [
+          {
+            "size": 2,
+            "diameter": 1,
+            "minWeight": 9.094947017729282e-13,
+            "lowerBound": 1.8189894035458565e-12
+          }
+        ],
+        "exactRationalBounds": [
+          {
+            "size": 2,
+            "diameter": 1,
+            "minWeightFraction": [
+              "9094947017729282379150390625",
+              "10000000000000000000000000000000000000000"
+            ],
+            "gapLowerFraction": [
+              "1",
+              "549755813888"
+            ]
+          }
+        ],
+        "globalGapLowerBound": 1.8189894035458565e-12,
+        "trace": 1.8189894035458565e-12,
+        "numerical": {
+          "eig": [
+            {
+              "value": 0,
+              "residual": 0
+            },
+            {
+              "value": 1.818989403545856e-12,
+              "residual": 2.8559815449330475e-28
+            }
+          ],
+          "converged": true,
+          "sweeps": 1,
+          "solverVersion": "jacobi-scale-1",
+          "matrixScale": 9.094947017729282e-13,
+          "normalizedMatrixInfinityNorm": 2,
+          "scaledMaxResidual": 1.5700924586837752e-16,
+          "orthogonalityError": 3.1401849173675503e-16,
+          "relativeTolerance": 1e-12,
+          "normalizationUnderflowCount": 0,
+          "resolutionRelative": 1e-12,
+          "resolutionAbsolute": 1.8189894035458564e-24,
+          "stopReason": "RESIDUAL_AND_ORTHOGONALITY_ACCEPTED",
+          "guarantee": "NUMERICAL_POSTCHECK_ONLY_NOT_INTERVAL_CERTIFIED",
+          "positiveGap": {
+            "index": 1,
+            "estimate": 1.818989403545856e-12,
+            "status": "RESOLVED_AT_TOLERANCE",
+            "scope": "smallest positive mode indexed by exact component count; numerical resolution is not a gap certificate"
+          }
+        },
+        "certification": {
+          "nullity": "COMBINATORIAL_THEOREM",
+          "gap": "GRAPH_THEORETIC_BOUND",
+          "eigenvalues": "NUMERICAL_ONLY",
+          "intervalArithmetic": "NOT_IMPLEMENTED",
+          "rationalGapCertificate": "EXACT_DECIMAL_INPUT",
+          "julia": "REFERENCE_EXPORT_ONLY",
+          "wolfram": "REFERENCE_EXPORT_ONLY",
+          "browserE2E": "PENDING"
+        }
+      }
+    },
+    {
+      "id": "scaled_pair_0",
+      "analysis": {
+        "version": "X6-2.4",
+        "timestamp": "2026-10-15T18:36:54.201Z",
+        "scope": "finite positive-weight undirected graph combinatorial Laplacian",
+        "input": "v0\nv1\nv0 v1 1",
+        "nodes": [
+          "v0",
+          "v1"
+        ],
+        "edgeCount": 1,
+        "componentCount": 1,
+        "componentSizes": [
+          2
+        ],
+        "exactNullity": 1,
+        "positiveEigenvalueCount": 1,
+        "componentBounds": [
+          {
+            "size": 2,
+            "diameter": 1,
+            "minWeight": 1,
+            "lowerBound": 2
+          }
+        ],
+        "exactRationalBounds": [
+          {
+            "size": 2,
+            "diameter": 1,
+            "minWeightFraction": [
+              "1",
+              "1"
+            ],
+            "gapLowerFraction": [
+              "2",
+              "1"
+            ]
+          }
+        ],
+        "globalGapLowerBound": 2,
+        "trace": 2,
+        "numerical": {
+          "eig": [
+            {
+              "value": 0,
+              "residual": 0
+            },
+            {
+              "value": 1.9999999999999996,
+              "residual": 3.1401849173675503e-16
+            }
+          ],
+          "converged": true,
+          "sweeps": 1,
+          "solverVersion": "jacobi-scale-1",
+          "matrixScale": 1,
+          "normalizedMatrixInfinityNorm": 2,
+          "scaledMaxResidual": 1.5700924586837752e-16,
+          "orthogonalityError": 3.1401849173675503e-16,
+          "relativeTolerance": 1e-12,
+          "normalizationUnderflowCount": 0,
+          "resolutionRelative": 1e-12,
+          "resolutionAbsolute": 2e-12,
+          "stopReason": "RESIDUAL_AND_ORTHOGONALITY_ACCEPTED",
+          "guarantee": "NUMERICAL_POSTCHECK_ONLY_NOT_INTERVAL_CERTIFIED",
+          "positiveGap": {
+            "index": 1,
+            "estimate": 1.9999999999999996,
+            "status": "RESOLVED_AT_TOLERANCE",
+            "scope": "smallest positive mode indexed by exact component count; numerical resolution is not a gap certificate"
+          }
+        },
+        "certification": {
+          "nullity": "COMBINATORIAL_THEOREM",
+          "gap": "GRAPH_THEORETIC_BOUND",
+          "eigenvalues": "NUMERICAL_ONLY",
+          "intervalArithmetic": "NOT_IMPLEMENTED",
+          "rationalGapCertificate": "EXACT_DECIMAL_INPUT",
+          "julia": "REFERENCE_EXPORT_ONLY",
+          "wolfram": "REFERENCE_EXPORT_ONLY",
+          "browserE2E": "PENDING"
+        }
+      }
+    },
+    {
+      "id": "scaled_pair_40",
+      "analysis": {
+        "version": "X6-2.4",
+        "timestamp": "2026-10-15T18:36:54.267Z",
+        "scope": "finite positive-weight undirected graph combinatorial Laplacian",
+        "input": "v0\nv1\nv0 v1 1099511627776",
+        "nodes": [
+          "v0",
+          "v1"
+        ],
+        "edgeCount": 1,
+        "componentCount": 1,
+        "componentSizes": [
+          2
+        ],
+        "exactNullity": 1,
+        "positiveEigenvalueCount": 1,
+        "componentBounds": [
+          {
+            "size": 2,
+            "diameter": 1,
+            "minWeight": 1099511627776,
+            "lowerBound": 2199023255552
+          }
+        ],
+        "exactRationalBounds": [
+          {
+            "size": 2,
+            "diameter": 1,
+            "minWeightFraction": [
+              "1099511627776",
+              "1"
+            ],
+            "gapLowerFraction": [
+              "2199023255552",
+              "1"
+            ]
+          }
+        ],
+        "globalGapLowerBound": 2199023255552,
+        "trace": 2199023255552,
+        "numerical": {
+          "eig": [
+            {
+              "value": 0,
+              "residual": 0
+            },
+            {
+              "value": 2199023255551.9995,
+              "residual": 0.00034526698300124393
+            }
+          ],
+          "converged": true,
+          "sweeps": 1,
+          "solverVersion": "jacobi-scale-1",
+          "matrixScale": 1099511627776,
+          "normalizedMatrixInfinityNorm": 2,
+          "scaledMaxResidual": 1.5700924586837752e-16,
+          "orthogonalityError": 3.1401849173675503e-16,
+          "relativeTolerance": 1e-12,
+          "normalizationUnderflowCount": 0,
+          "resolutionRelative": 1e-12,
+          "resolutionAbsolute": 2.199023255552,
+          "stopReason": "RESIDUAL_AND_ORTHOGONALITY_ACCEPTED",
+          "guarantee": "NUMERICAL_POSTCHECK_ONLY_NOT_INTERVAL_CERTIFIED",
+          "positiveGap": {
+            "index": 1,
+            "estimate": 2199023255551.9995,
+            "status": "RESOLVED_AT_TOLERANCE",
+            "scope": "smallest positive mode indexed by exact component count; numerical resolution is not a gap certificate"
+          }
+        },
+        "certification": {
+          "nullity": "COMBINATORIAL_THEOREM",
+          "gap": "GRAPH_THEORETIC_BOUND",
+          "eigenvalues": "NUMERICAL_ONLY",
+          "intervalArithmetic": "NOT_IMPLEMENTED",
+          "rationalGapCertificate": "EXACT_DECIMAL_INPUT",
+          "julia": "REFERENCE_EXPORT_ONLY",
+          "wolfram": "REFERENCE_EXPORT_ONLY",
+          "browserE2E": "PENDING"
+        }
+      }
+    },
+    {
+      "id": "scaled_path16_-50",
+      "analysis": {
+        "version": "X6-2.4",
+        "timestamp": "2026-10-15T18:36:54.337Z",
+        "scope": "finite positive-weight undirected graph combinatorial Laplacian",
+        "input": "v0\nv1\nv2\nv3\nv4\nv5\nv6\nv7\nv8\nv9\nv10\nv11\nv12\nv13\nv14\nv15\nv0 v1 0.00000000000000088817841970012523233890533447265625\nv1 v2 0.00000000000000088817841970012523233890533447265625\nv2 v3 0.00000000000000088817841970012523233890533447265625\nv3 v4 0.00000000000000088817841970012523233890533447265625\nv4 v5 0.00000000000000088817841970012523233890533447265625\nv5 v6 0.00000000000000088817841970012523233890533447265625\nv6 v7 0.00000000000000088817841970012523233890533447265625\nv7 v8 0.00000000000000088817841970012523233890533447265625\nv8 v9 0.00000000000000088817841970012523233890533447265625\nv9 v10 0.00000000000000088817841970012523233890533447265625\nv10 v11 0.00000000000000088817841970012523233890533447265625\nv11 v12 0.00000000000000088817841970012523233890533447265625\nv12 v13 0.00000000000000088817841970012523233890533447265625\nv13 v14 0.00000000000000088817841970012523233890533447265625\nv14 v15 0.00000000000000088817841970012523233890533447265625",
+        "nodes": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4",
+          "v5",
+          "v6",
+          "v7",
+          "v8",
+          "v9",
+          "v10",
+          "v11",
+          "v12",
+          "v13",
+          "v14",
+          "v15"
+        ],
+        "edgeCount": 15,
+        "componentCount": 1,
+        "componentSizes": [
+          16
+        ],
+        "exactNullity": 1,
+        "positiveEigenvalueCount": 15,
+        "componentBounds": [
+          {
+            "size": 16,
+            "diameter": 15,
+            "minWeight": 8.881784197001252e-16,
+            "lowerBound": 1.4802973661668754e-17
+          }
+        ],
+        "exactRationalBounds": [
+          {
+            "size": 16,
+            "diameter": 15,
+            "minWeightFraction": [
+              "88817841970012523233890533447265625",
+              "100000000000000000000000000000000000000000000000000"
+            ],
+            "gapLowerFraction": [
+              "1",
+              "67553994410557440"
+            ]
+          }
+        ],
+        "globalGapLowerBound": 1.4802973661668754e-17,
+        "trace": 2.6645352591003757e-14,
+        "numerical": {
+          "eig": [
+            {
+              "value": 3.0176962429234936e-42,
+              "residual": 5.751607611623115e-29
+            },
+            {
+              "value": 3.413219857287967e-17,
+              "residual": 2.2334118292761442e-29
+            },
+            {
+              "value": 1.3521711304192019e-16,
+              "residual": 1.3503300833776728e-29
+            },
+            {
+              "value": 2.9937010683315e-16,
+              "residual": 1.357719178521211e-29
+            },
+            {
+              "value": 5.202828724532297e-16,
+              "residual": 5.407984559986432e-29
+            },
+            {
+              "value": 7.894658562086899e-16,
+              "residual": 2.0957606836354618e-30
+            },
+            {
+              "value": 1.0965745069933613e-15,
+              "residual": 9.040925972726133e-29
+            },
+            {
+              "value": 1.4298068115861053e-15,
+              "residual": 6.685077570851504e-29
+            },
+            {
+              "value": 1.7763568394002505e-15,
+              "residual": 2.9284967013473628e-30
+            },
+            {
+              "value": 2.1229068672143966e-15,
+              "residual": 5.459163844011777e-29
+            },
+            {
+              "value": 2.4561391718071374e-15,
+              "residual": 4.6986941548354996e-30
+            },
+            {
+              "value": 2.7632478225918144e-15,
+              "residual": 4.3153253524909866e-29
+            },
+            {
+              "value": 3.03243080634727e-15,
+              "residual": 4.290431299436037e-29
+            },
+            {
+              "value": 3.2533435719673468e-15,
+              "residual": 2.231373123390169e-29
+            },
+            {
+              "value": 3.4174965657585835e-15,
+              "residual": 9.610546314874653e-29
+            },
+            {
+              "value": 3.518581480227622e-15,
+              "residual": 2.4839774468889105e-30
+            }
+          ],
+          "converged": true,
+          "sweeps": 448,
+          "solverVersion": "jacobi-scale-1",
+          "matrixScale": 1.7763568394002505e-15,
+          "normalizedMatrixInfinityNorm": 2,
+          "scaledMaxResidual": 2.7051283001560226e-14,
+          "orthogonalityError": 5.0499101709484396e-15,
+          "relativeTolerance": 1e-12,
+          "normalizationUnderflowCount": 0,
+          "resolutionRelative": 1e-12,
+          "resolutionAbsolute": 3.552713678800501e-27,
+          "stopReason": "RESIDUAL_AND_ORTHOGONALITY_ACCEPTED",
+          "guarantee": "NUMERICAL_POSTCHECK_ONLY_NOT_INTERVAL_CERTIFIED",
+          "positiveGap": {
+            "index": 1,
+            "estimate": 3.413219857287967e-17,
+            "status": "RESOLVED_AT_TOLERANCE",
+            "scope": "smallest positive mode indexed by exact component count; numerical resolution is not a gap certificate"
+          }
+        },
+        "certification": {
+          "nullity": "COMBINATORIAL_THEOREM",
+          "gap": "GRAPH_THEORETIC_BOUND",
+          "eigenvalues": "NUMERICAL_ONLY",
+          "intervalArithmetic": "NOT_IMPLEMENTED",
+          "rationalGapCertificate": "EXACT_DECIMAL_INPUT",
+          "julia": "REFERENCE_EXPORT_ONLY",
+          "wolfram": "REFERENCE_EXPORT_ONLY",
+          "browserE2E": "PENDING"
+        }
+      }
+    },
+    {
+      "id": "scaled_path16_0",
+      "analysis": {
+        "version": "X6-2.4",
+        "timestamp": "2026-10-15T18:36:54.417Z",
+        "scope": "finite positive-weight undirected graph combinatorial Laplacian",
+        "input": "v0\nv1\nv2\nv3\nv4\nv5\nv6\nv7\nv8\nv9\nv10\nv11\nv12\nv13\nv14\nv15\nv0 v1 1\nv1 v2 1\nv2 v3 1\nv3 v4 1\nv4 v5 1\nv5 v6 1\nv6 v7 1\nv7 v8 1\nv8 v9 1\nv9 v10 1\nv10 v11 1\nv11 v12 1\nv12 v13 1\nv13 v14 1\nv14 v15 1",
+        "nodes": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4",
+          "v5",
+          "v6",
+          "v7",
+          "v8",
+          "v9",
+          "v10",
+          "v11",
+          "v12",
+          "v13",
+          "v14",
+          "v15"
+        ],
+        "edgeCount": 15,
+        "componentCount": 1,
+        "componentSizes": [
+          16
+        ],
+        "exactNullity": 1,
+        "positiveEigenvalueCount": 15,
+        "componentBounds": [
+          {
+            "size": 16,
+            "diameter": 15,
+            "minWeight": 1,
+            "lowerBound": 0.016666666666666666
+          }
+        ],
+        "exactRationalBounds": [
+          {
+            "size": 16,
+            "diameter": 15,
+            "minWeightFraction": [
+              "1",
+              "1"
+            ],
+            "gapLowerFraction": [
+              "1",
+              "60"
+            ]
+          }
+        ],
+        "globalGapLowerBound": 0.016666666666666666,
+        "trace": 30,
+        "numerical": {
+          "eig": [
+            {
+              "value": 3.397623918786898e-27,
+              "residual": 6.475734474121793e-14
+            },
+            {
+              "value": 0.03842943919353917,
+              "residual": 2.5145981705232252e-14
+            },
+            {
+              "value": 0.1522409349774265,
+              "residual": 1.5203365150817146e-14
+            },
+            {
+              "value": 0.33706077539491,
+              "residual": 1.5286558966154754e-14
+            },
+            {
+              "value": 0.5857864376269042,
+              "residual": 6.088849312295073e-14
+            },
+            {
+              "value": 0.8888595339607963,
+              "residual": 2.3596167584696004e-15
+            },
+            {
+              "value": 1.2346331352698219,
+              "residual": 1.0179177710463413e-13
+            },
+            {
+              "value": 1.6098193559677452,
+              "residual": 7.526728214257424e-14
+            },
+            {
+              "value": 2,
+              "residual": 3.2971941632359274e-15
+            },
+            {
+              "value": 2.390180644032256,
+              "residual": 6.146472063411481e-14
+            },
+            {
+              "value": 2.7653668647301757,
+              "residual": 5.290259311211271e-15
+            },
+            {
+              "value": 3.1111404660392075,
+              "residual": 4.8586244123652154e-14
+            },
+            {
+              "value": 3.4142135623730945,
+              "residual": 4.830596200349712e-14
+            },
+            {
+              "value": 3.6629392246050854,
+              "residual": 2.5123027917561264e-14
+            },
+            {
+              "value": 3.8477590650225766,
+              "residual": 1.0820513200624096e-13
+            },
+            {
+              "value": 3.9615705608064617,
+              "residual": 2.7967099760514033e-15
+            }
+          ],
+          "converged": true,
+          "sweeps": 448,
+          "solverVersion": "jacobi-scale-1",
+          "matrixScale": 2,
+          "normalizedMatrixInfinityNorm": 2,
+          "scaledMaxResidual": 2.7051283001560226e-14,
+          "orthogonalityError": 5.0499101709484396e-15,
+          "relativeTolerance": 1e-12,
+          "normalizationUnderflowCount": 0,
+          "resolutionRelative": 1e-12,
+          "resolutionAbsolute": 4e-12,
+          "stopReason": "RESIDUAL_AND_ORTHOGONALITY_ACCEPTED",
+          "guarantee": "NUMERICAL_POSTCHECK_ONLY_NOT_INTERVAL_CERTIFIED",
+          "positiveGap": {
+            "index": 1,
+            "estimate": 0.03842943919353917,
+            "status": "RESOLVED_AT_TOLERANCE",
+            "scope": "smallest positive mode indexed by exact component count; numerical resolution is not a gap certificate"
+          }
+        },
+        "certification": {
+          "nullity": "COMBINATORIAL_THEOREM",
+          "gap": "GRAPH_THEORETIC_BOUND",
+          "eigenvalues": "NUMERICAL_ONLY",
+          "intervalArithmetic": "NOT_IMPLEMENTED",
+          "rationalGapCertificate": "EXACT_DECIMAL_INPUT",
+          "julia": "REFERENCE_EXPORT_ONLY",
+          "wolfram": "REFERENCE_EXPORT_ONLY",
+          "browserE2E": "PENDING"
+        }
+      }
+    },
+    {
+      "id": "scaled_path16_40",
+      "analysis": {
+        "version": "X6-2.4",
+        "timestamp": "2026-10-15T18:36:54.484Z",
+        "scope": "finite positive-weight undirected graph combinatorial Laplacian",
+        "input": "v0\nv1\nv2\nv3\nv4\nv5\nv6\nv7\nv8\nv9\nv10\nv11\nv12\nv13\nv14\nv15\nv0 v1 1099511627776\nv1 v2 1099511627776\nv2 v3 1099511627776\nv3 v4 1099511627776\nv4 v5 1099511627776\nv5 v6 1099511627776\nv6 v7 1099511627776\nv7 v8 1099511627776\nv8 v9 1099511627776\nv9 v10 1099511627776\nv10 v11 1099511627776\nv11 v12 1099511627776\nv12 v13 1099511627776\nv13 v14 1099511627776\nv14 v15 1099511627776",
+        "nodes": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4",
+          "v5",
+          "v6",
+          "v7",
+          "v8",
+          "v9",
+          "v10",
+          "v11",
+          "v12",
+          "v13",
+          "v14",
+          "v15"
+        ],
+        "edgeCount": 15,
+        "componentCount": 1,
+        "componentSizes": [
+          16
+        ],
+        "exactNullity": 1,
+        "positiveEigenvalueCount": 15,
+        "componentBounds": [
+          {
+            "size": 16,
+            "diameter": 15,
+            "minWeight": 1099511627776,
+            "lowerBound": 18325193796.266666
+          }
+        ],
+        "exactRationalBounds": [
+          {
+            "size": 16,
+            "diameter": 15,
+            "minWeightFraction": [
+              "1099511627776",
+              "1"
+            ],
+            "gapLowerFraction": [
+              "274877906944",
+              "15"
+            ]
+          }
+        ],
+        "globalGapLowerBound": 18325193796.266666,
+        "trace": 32985348833280,
+        "numerical": {
+          "eig": [
+            {
+              "value": 3.735727005516054e-15,
+              "residual": 0.07120145352686812
+            },
+            {
+              "value": 42253615242.20706,
+              "residual": 0.02764829927674543
+            },
+            {
+              "value": 167390678231.17038,
+              "residual": 0.01671627676464787
+            },
+            {
+              "value": 370602241813.8982,
+              "residual": 0.01680774933197062
+            },
+            {
+              "value": 644078999564.2617,
+              "residual": 0.06694760618644334
+            },
+            {
+              "value": 977311393049.4519,
+              "residual": 0.002594426063032439
+            },
+            {
+              "value": 1357493488266.7083,
+              "residual": 0.11192124253852805
+            },
+            {
+              "value": 1770015100505.4075,
+              "residual": 0.08275725190685726
+            },
+            {
+              "value": 2199023255552,
+              "residual": 0.003625303321513061
+            },
+            {
+              "value": 2628031410598.5938,
+              "residual": 0.06758117503521267
+            },
+            {
+              "value": 3040553022837.289,
+              "residual": 0.005816701626627045
+            },
+            {
+              "value": 3420735118054.5522,
+              "residual": 0.053421140363918894
+            },
+            {
+              "value": 3753967511539.737,
+              "residual": 0.053112966913750725
+            },
+            {
+              "value": 4027444269290.0967,
+              "residual": 0.027623061320299677
+            },
+            {
+              "value": 4230655832872.833,
+              "residual": 0.11897280082589895
+            },
+            {
+              "value": 4355792895861.794,
+              "residual": 0.0030750151381856564
+            }
+          ],
+          "converged": true,
+          "sweeps": 448,
+          "solverVersion": "jacobi-scale-1",
+          "matrixScale": 2199023255552,
+          "normalizedMatrixInfinityNorm": 2,
+          "scaledMaxResidual": 2.7051283001560226e-14,
+          "orthogonalityError": 5.0499101709484396e-15,
+          "relativeTolerance": 1e-12,
+          "normalizationUnderflowCount": 0,
+          "resolutionRelative": 1e-12,
+          "resolutionAbsolute": 4.398046511104,
+          "stopReason": "RESIDUAL_AND_ORTHOGONALITY_ACCEPTED",
+          "guarantee": "NUMERICAL_POSTCHECK_ONLY_NOT_INTERVAL_CERTIFIED",
+          "positiveGap": {
+            "index": 1,
+            "estimate": 42253615242.20706,
+            "status": "RESOLVED_AT_TOLERANCE",
+            "scope": "smallest positive mode indexed by exact component count; numerical resolution is not a gap certificate"
+          }
+        },
+        "certification": {
+          "nullity": "COMBINATORIAL_THEOREM",
+          "gap": "GRAPH_THEORETIC_BOUND",
+          "eigenvalues": "NUMERICAL_ONLY",
+          "intervalArithmetic": "NOT_IMPLEMENTED",
+          "rationalGapCertificate": "EXACT_DECIMAL_INPUT",
+          "julia": "REFERENCE_EXPORT_ONLY",
+          "wolfram": "REFERENCE_EXPORT_ONLY",
+          "browserE2E": "PENDING"
+        }
+      }
+    },
+    {
+      "id": "random_n8_seed104729",
+      "analysis": {
+        "version": "X6-2.4",
+        "timestamp": "2026-10-15T18:36:54.550Z",
+        "scope": "finite positive-weight undirected graph combinatorial Laplacian",
+        "input": "v0\nv1\nv2\nv3\nv4\nv5\nv6\nv7\nv0 v1 0.125\nv0 v2 1.875\nv1 v2 1.75\nv2 v3 1.625\nv2 v6 1.5\nv3 v4 0.125\nv4 v5 3.875\nv4 v6 3.125\nv5 v6 3.125\nv5 v7 0.5\nv6 v7 3.5",
+        "nodes": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4",
+          "v5",
+          "v6",
+          "v7"
+        ],
+        "edgeCount": 11,
+        "componentCount": 1,
+        "componentSizes": [
+          8
+        ],
+        "exactNullity": 1,
+        "positiveEigenvalueCount": 7,
+        "componentBounds": [
+          {
+            "size": 8,
+            "diameter": 3,
+            "minWeight": 0.125,
+            "lowerBound": 0.020833333333333332
+          }
+        ],
+        "exactRationalBounds": [
+          {
+            "size": 8,
+            "diameter": 3,
+            "minWeightFraction": [
+              "125",
+              "1000"
+            ],
+            "gapLowerFraction": [
+              "1",
+              "48"
+            ]
+          }
+        ],
+        "globalGapLowerBound": 0.020833333333333332,
+        "trace": 42.25,
+        "numerical": {
+          "eig": [
+            {
+              "value": -1.379964074959753e-16,
+              "residual": 2.48937213201509e-13
+            },
+            {
+              "value": 0.659121172476714,
+              "residual": 2.432388579216257e-14
+            },
+            {
+              "value": 1.7646109501062066,
+              "residual": 3.1239996521488627e-14
+            },
+            {
+              "value": 2.0645467820825716,
+              "residual": 3.185878921387858e-14
+            },
+            {
+              "value": 4.112593921443908,
+              "residual": 3.887798585940491e-14
+            },
+            {
+              "value": 8.004897646928761,
+              "residual": 3.206974755754228e-14
+            },
+            {
+              "value": 11.210161764306141,
+              "residual": 2.4956575334818194e-13
+            },
+            {
+              "value": 14.43406776265571,
+              "residual": 1.8404396227383507e-14
+            }
+          ],
+          "converged": true,
+          "sweeps": 81,
+          "solverVersion": "jacobi-scale-1",
+          "matrixScale": 11.25,
+          "normalizedMatrixInfinityNorm": 2,
+          "scaledMaxResidual": 1.1091811259919194e-14,
+          "orthogonalityError": 1.8925251052434063e-15,
+          "relativeTolerance": 1e-12,
+          "normalizationUnderflowCount": 0,
+          "resolutionRelative": 1e-12,
+          "resolutionAbsolute": 2.25e-11,
+          "stopReason": "RESIDUAL_AND_ORTHOGONALITY_ACCEPTED",
+          "guarantee": "NUMERICAL_POSTCHECK_ONLY_NOT_INTERVAL_CERTIFIED",
+          "positiveGap": {
+            "index": 1,
+            "estimate": 0.659121172476714,
+            "status": "RESOLVED_AT_TOLERANCE",
+            "scope": "smallest positive mode indexed by exact component count; numerical resolution is not a gap certificate"
+          }
+        },
+        "certification": {
+          "nullity": "COMBINATORIAL_THEOREM",
+          "gap": "GRAPH_THEORETIC_BOUND",
+          "eigenvalues": "NUMERICAL_ONLY",
+          "intervalArithmetic": "NOT_IMPLEMENTED",
+          "rationalGapCertificate": "EXACT_DECIMAL_INPUT",
+          "julia": "REFERENCE_EXPORT_ONLY",
+          "wolfram": "REFERENCE_EXPORT_ONLY",
+          "browserE2E": "PENDING"
+        }
+      }
+    },
+    {
+      "id": "random_n8_seed130363",
+      "analysis": {
+        "version": "X6-2.4",
+        "timestamp": "2026-10-15T18:36:54.617Z",
+        "scope": "finite positive-weight undirected graph combinatorial Laplacian",
+        "input": "v0\nv1\nv2\nv3\nv4\nv5\nv6\nv7\nv0 v1 3.375\nv0 v2 2\nv0 v5 1.875\nv0 v7 0.75\nv1 v2 1\nv1 v3 2.25\nv1 v5 1.125\nv2 v3 2.625\nv2 v4 3.625\nv3 v4 3.5\nv4 v5 1.625\nv5 v6 1.625\nv6 v7 2.625",
+        "nodes": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4",
+          "v5",
+          "v6",
+          "v7"
+        ],
+        "edgeCount": 13,
+        "componentCount": 1,
+        "componentSizes": [
+          8
+        ],
+        "exactNullity": 1,
+        "positiveEigenvalueCount": 7,
+        "componentBounds": [
+          {
+            "size": 8,
+            "diameter": 3,
+            "minWeight": 0.75,
+            "lowerBound": 0.125
+          }
+        ],
+        "exactRationalBounds": [
+          {
+            "size": 8,
+            "diameter": 3,
+            "minWeightFraction": [
+              "75",
+              "100"
+            ],
+            "gapLowerFraction": [
+              "1",
+              "8"
+            ]
+          }
+        ],
+        "globalGapLowerBound": 0.125,
+        "trace": 56,
+        "numerical": {
+          "eig": [
+            {
+              "value": -1.588491979631961e-16,
+              "residual": 2.1595545930199866e-13
+            },
+            {
+              "value": 1.2321565328232298,
+              "residual": 1.7197670691410267e-13
+            },
+            {
+              "value": 4.940908833792537,
+              "residual": 1.725794634880849e-13
+            },
+            {
+              "value": 5.6474764294839,
+              "residual": 1.5782347125611268e-13
+            },
+            {
+              "value": 7.829737724727678,
+              "residual": 9.398969083241093e-14
+            },
+            {
+              "value": 9.859569324276857,
+              "residual": 8.595009182223805e-15
+            },
+            {
+              "value": 12.981431925583443,
+              "residual": 1.7366730904557547e-13
+            },
+            {
+              "value": 13.508719229312371,
+              "residual": 6.041897429324735e-15
+            }
+          ],
+          "converged": true,
+          "sweeps": 94,
+          "solverVersion": "jacobi-scale-1",
+          "matrixScale": 9.25,
+          "normalizedMatrixInfinityNorm": 2,
+          "scaledMaxResidual": 1.16732680703783e-14,
+          "orthogonalityError": 2.988993628846243e-15,
+          "relativeTolerance": 1e-12,
+          "normalizationUnderflowCount": 0,
+          "resolutionRelative": 1e-12,
+          "resolutionAbsolute": 1.85e-11,
+          "stopReason": "RESIDUAL_AND_ORTHOGONALITY_ACCEPTED",
+          "guarantee": "NUMERICAL_POSTCHECK_ONLY_NOT_INTERVAL_CERTIFIED",
+          "positiveGap": {
+            "index": 1,
+            "estimate": 1.2321565328232298,
+            "status": "RESOLVED_AT_TOLERANCE",
+            "scope": "smallest positive mode indexed by exact component count; numerical resolution is not a gap certificate"
+          }
+        },
+        "certification": {
+          "nullity": "COMBINATORIAL_THEOREM",
+          "gap": "GRAPH_THEORETIC_BOUND",
+          "eigenvalues": "NUMERICAL_ONLY",
+          "intervalArithmetic": "NOT_IMPLEMENTED",
+          "rationalGapCertificate": "EXACT_DECIMAL_INPUT",
+          "julia": "REFERENCE_EXPORT_ONLY",
+          "wolfram": "REFERENCE_EXPORT_ONLY",
+          "browserE2E": "PENDING"
+        }
+      }
+    },
+    {
+      "id": "random_n16_seed104729",
+      "analysis": {
+        "version": "X6-2.4",
+        "timestamp": "2026-10-15T18:36:54.684Z",
+        "scope": "finite positive-weight undirected graph combinatorial Laplacian",
+        "input": "v0\nv1\nv2\nv3\nv4\nv5\nv6\nv7\nv8\nv9\nv10\nv11\nv12\nv13\nv14\nv15\nv0 v1 1.75\nv0 v4 1\nv0 v6 3\nv0 v9 0.875\nv0 v11 0.375\nv0 v12 1\nv1 v2 1.125\nv1 v10 3\nv1 v12 1.375\nv1 v14 3.875\nv2 v3 0.5\nv2 v4 2.375\nv2 v10 1.75\nv3 v4 1.625\nv3 v7 2\nv3 v12 1.75\nv4 v5 2\nv4 v10 0.375\nv4 v12 2.5\nv4 v13 2.25\nv5 v6 3.375\nv6 v7 2.75\nv6 v9 2\nv7 v8 3.625\nv7 v9 2.125\nv7 v13 1.75\nv7 v14 3.5\nv8 v9 1.125\nv8 v12 2.75\nv8 v15 0.875\nv9 v10 0.625\nv9 v11 0.25\nv9 v15 1.75\nv10 v11 1.25\nv10 v12 1.375\nv10 v15 0.75\nv11 v12 0.875\nv11 v15 2.125\nv12 v13 1.75\nv13 v14 3.875\nv14 v15 1.375",
+        "nodes": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4",
+          "v5",
+          "v6",
+          "v7",
+          "v8",
+          "v9",
+          "v10",
+          "v11",
+          "v12",
+          "v13",
+          "v14",
+          "v15"
+        ],
+        "edgeCount": 41,
+        "componentCount": 1,
+        "componentSizes": [
+          16
+        ],
+        "exactNullity": 1,
+        "positiveEigenvalueCount": 15,
+        "componentBounds": [
+          {
+            "size": 16,
+            "diameter": 3,
+            "minWeight": 0.25,
+            "lowerBound": 0.020833333333333332
+          }
+        ],
+        "exactRationalBounds": [
+          {
+            "size": 16,
+            "diameter": 3,
+            "minWeightFraction": [
+              "25",
+              "100"
+            ],
+            "gapLowerFraction": [
+              "1",
+              "48"
+            ]
+          }
+        ],
+        "globalGapLowerBound": 0.020833333333333332,
+        "trace": 148.75,
+        "numerical": {
+          "eig": [
+            {
+              "value": 8.333177898915848e-16,
+              "residual": 6.719059682238557e-13
+            },
+            {
+              "value": 3.031762656615599,
+              "residual": 6.734065727535262e-13
+            },
+            {
+              "value": 3.617696982564119,
+              "residual": 6.380369465434571e-13
+            },
+            {
+              "value": 4.40279923401126,
+              "residual": 1.0675576920551238e-13
+            },
+            {
+              "value": 5.463910038772902,
+              "residual": 6.304382023216686e-13
+            },
+            {
+              "value": 6.423284983311788,
+              "residual": 4.440313381452631e-13
+            },
+            {
+              "value": 6.788164007582837,
+              "residual": 5.484064556874476e-13
+            },
+            {
+              "value": 7.978979534137932,
+              "residual": 8.189718677122567e-13
+            },
+            {
+              "value": 8.575074433373269,
+              "residual": 3.014343671795241e-13
+            },
+            {
+              "value": 9.643620449312264,
+              "residual": 3.183216491556277e-14
+            },
+            {
+              "value": 10.688993439471748,
+              "residual": 2.020659435939398e-13
+            },
+            {
+              "value": 12.987197883902835,
+              "residual": 1.4148579552351755e-13
+            },
+            {
+              "value": 15.045423573106763,
+              "residual": 2.124275137826292e-13
+            },
+            {
+              "value": 15.970520329037022,
+              "residual": 7.456811324382504e-14
+            },
+            {
+              "value": 17.715070638578652,
+              "residual": 3.799648515456547e-13
+            },
+            {
+              "value": 20.41750181622121,
+              "residual": 7.633397925521164e-13
+            }
+          ],
+          "converged": true,
+          "sweeps": 445,
+          "solverVersion": "jacobi-scale-1",
+          "matrixScale": 15.75,
+          "normalizedMatrixInfinityNorm": 2,
+          "scaledMaxResidual": 2.5999106911500194e-14,
+          "orthogonalityError": 7.423028215915724e-15,
+          "relativeTolerance": 1e-12,
+          "normalizationUnderflowCount": 0,
+          "resolutionRelative": 1e-12,
+          "resolutionAbsolute": 3.15e-11,
+          "stopReason": "RESIDUAL_AND_ORTHOGONALITY_ACCEPTED",
+          "guarantee": "NUMERICAL_POSTCHECK_ONLY_NOT_INTERVAL_CERTIFIED",
+          "positiveGap": {
+            "index": 1,
+            "estimate": 3.031762656615599,
+            "status": "RESOLVED_AT_TOLERANCE",
+            "scope": "smallest positive mode indexed by exact component count; numerical resolution is not a gap certificate"
+          }
+        },
+        "certification": {
+          "nullity": "COMBINATORIAL_THEOREM",
+          "gap": "GRAPH_THEORETIC_BOUND",
+          "eigenvalues": "NUMERICAL_ONLY",
+          "intervalArithmetic": "NOT_IMPLEMENTED",
+          "rationalGapCertificate": "EXACT_DECIMAL_INPUT",
+          "julia": "REFERENCE_EXPORT_ONLY",
+          "wolfram": "REFERENCE_EXPORT_ONLY",
+          "browserE2E": "PENDING"
+        }
+      }
+    },
+    {
+      "id": "random_n16_seed130363",
+      "analysis": {
+        "version": "X6-2.4",
+        "timestamp": "2026-10-15T18:36:54.751Z",
+        "scope": "finite positive-weight undirected graph combinatorial Laplacian",
+        "input": "v0\nv1\nv2\nv3\nv4\nv5\nv6\nv7\nv8\nv9\nv10\nv11\nv12\nv13\nv14\nv15\nv0 v1 3.375\nv0 v3 2.5\nv0 v7 0.125\nv0 v9 1.5\nv0 v11 4\nv0 v13 0.5\nv0 v15 3\nv1 v2 3.75\nv1 v4 2.625\nv2 v3 2.75\nv2 v7 3.375\nv2 v14 0.5\nv3 v4 0.25\nv4 v5 3\nv4 v8 0.125\nv4 v11 3.25\nv5 v6 2.25\nv5 v7 1.625\nv5 v10 3\nv5 v12 0.25\nv6 v7 1\nv6 v12 4\nv7 v8 3.375\nv7 v15 2.875\nv8 v9 0.5\nv8 v13 3.375\nv9 v10 1.25\nv10 v11 2.75\nv11 v12 0.5\nv11 v13 1.25\nv12 v13 1.875\nv12 v14 4\nv13 v14 0.375\nv14 v15 3.625",
+        "nodes": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4",
+          "v5",
+          "v6",
+          "v7",
+          "v8",
+          "v9",
+          "v10",
+          "v11",
+          "v12",
+          "v13",
+          "v14",
+          "v15"
+        ],
+        "edgeCount": 34,
+        "componentCount": 1,
+        "componentSizes": [
+          16
+        ],
+        "exactNullity": 1,
+        "positiveEigenvalueCount": 15,
+        "componentBounds": [
+          {
+            "size": 16,
+            "diameter": 3,
+            "minWeight": 0.125,
+            "lowerBound": 0.010416666666666666
+          }
+        ],
+        "exactRationalBounds": [
+          {
+            "size": 16,
+            "diameter": 3,
+            "minWeightFraction": [
+              "125",
+              "1000"
+            ],
+            "gapLowerFraction": [
+              "1",
+              "96"
+            ]
+          }
+        ],
+        "globalGapLowerBound": 0.010416666666666666,
+        "trace": 145,
+        "numerical": {
+          "eig": [
+            {
+              "value": -4.553649124438231e-17,
+              "residual": 1.0290957119855283e-14
+            },
+            {
+              "value": 2.4481770719240092,
+              "residual": 6.322101788617641e-14
+            },
+            {
+              "value": 2.884175572176479,
+              "residual": 3.034162186204567e-14
+            },
+            {
+              "value": 3.6310747327535298,
+              "residual": 4.292649653984316e-14
+            },
+            {
+              "value": 4.239707721717129,
+              "residual": 6.431608295582773e-14
+            },
+            {
+              "value": 5.714746145524544,
+              "residual": 8.49229331167678e-14
+            },
+            {
+              "value": 6.644439481422742,
+              "residual": 2.055199316303957e-14
+            },
+            {
+              "value": 6.947979705303038,
+              "residual": 2.3466165048326354e-13
+            },
+            {
+              "value": 9.131412201982483,
+              "residual": 9.468535810518338e-14
+            },
+            {
+              "value": 10.017487162217499,
+              "residual": 7.578894698310033e-14
+            },
+            {
+              "value": 11.631209141449753,
+              "residual": 5.0739620827560584e-14
+            },
+            {
+              "value": 12.70359579478089,
+              "residual": 2.635831303949204e-13
+            },
+            {
+              "value": 14.95586765682933,
+              "residual": 6.287376670638731e-14
+            },
+            {
+              "value": 15.632925014813623,
+              "residual": 8.279131036872985e-14
+            },
+            {
+              "value": 17.781733424563395,
+              "residual": 2.347056071657477e-14
+            },
+            {
+              "value": 20.63546917254183,
+              "residual": 1.2132986517773836e-13
+            }
+          ],
+          "converged": true,
+          "sweeps": 442,
+          "solverVersion": "jacobi-scale-1",
+          "matrixScale": 15,
+          "normalizedMatrixInfinityNorm": 2.0000000000000004,
+          "scaledMaxResidual": 8.786104346497337e-15,
+          "orthogonalityError": 8.312981417382423e-15,
+          "relativeTolerance": 1e-12,
+          "normalizationUnderflowCount": 0,
+          "resolutionRelative": 1e-12,
+          "resolutionAbsolute": 3.0000000000000006e-11,
+          "stopReason": "RESIDUAL_AND_ORTHOGONALITY_ACCEPTED",
+          "guarantee": "NUMERICAL_POSTCHECK_ONLY_NOT_INTERVAL_CERTIFIED",
+          "positiveGap": {
+            "index": 1,
+            "estimate": 2.4481770719240092,
+            "status": "RESOLVED_AT_TOLERANCE",
+            "scope": "smallest positive mode indexed by exact component count; numerical resolution is not a gap certificate"
+          }
+        },
+        "certification": {
+          "nullity": "COMBINATORIAL_THEOREM",
+          "gap": "GRAPH_THEORETIC_BOUND",
+          "eigenvalues": "NUMERICAL_ONLY",
+          "intervalArithmetic": "NOT_IMPLEMENTED",
+          "rationalGapCertificate": "EXACT_DECIMAL_INPUT",
+          "julia": "REFERENCE_EXPORT_ONLY",
+          "wolfram": "REFERENCE_EXPORT_ONLY",
+          "browserE2E": "PENDING"
+        }
+      }
+    },
+    {
+      "id": "random_n24_seed104729",
+      "analysis": {
+        "version": "X6-2.4",
+        "timestamp": "2026-10-15T18:36:54.835Z",
+        "scope": "finite positive-weight undirected graph combinatorial Laplacian",
+        "input": "v0\nv1\nv2\nv3\nv4\nv5\nv6\nv7\nv8\nv9\nv10\nv11\nv12\nv13\nv14\nv15\nv16\nv17\nv18\nv19\nv20\nv21\nv22\nv23\nv0 v1 0.875\nv0 v8 3.25\nv0 v9 1.25\nv0 v11 2.375\nv0 v23 3.875\nv1 v2 3.875\nv1 v3 1.125\nv1 v5 2.25\nv1 v6 4\nv1 v18 1.25\nv2 v3 2.875\nv2 v6 2.25\nv2 v13 3.125\nv2 v16 4\nv2 v17 1.25\nv2 v20 2.875\nv3 v4 2.75\nv3 v10 1.75\nv3 v15 1.25\nv3 v16 4\nv3 v22 2.375\nv4 v5 3.375\nv4 v10 3.25\nv4 v13 2.5\nv4 v18 1.25\nv4 v20 2.125\nv5 v6 2.375\nv5 v9 3.5\nv5 v10 0.75\nv5 v11 2.375\nv5 v12 2.5\nv5 v18 2.625\nv6 v7 0.125\nv6 v10 0.875\nv6 v14 0.25\nv6 v16 2.5\nv6 v18 2.75\nv7 v8 3.125\nv7 v15 3\nv8 v9 3.75\nv8 v12 2.25\nv8 v13 4\nv8 v14 1.875\nv8 v17 3.75\nv9 v10 2\nv9 v13 0.875\nv9 v15 2.375\nv9 v20 3.125\nv9 v23 1.875\nv10 v11 2.5\nv10 v12 0.875\nv11 v12 1.125\nv12 v13 1.75\nv12 v15 1.875\nv12 v17 3.875\nv12 v21 3.75\nv13 v14 2.375\nv14 v15 1.5\nv14 v18 0.625\nv15 v16 1.875\nv16 v17 1.625\nv16 v21 1\nv17 v18 2.125\nv17 v19 0.625\nv17 v22 3.875\nv18 v19 3.5\nv18 v20 2\nv18 v21 0.5\nv18 v22 0.875\nv19 v20 2.875\nv20 v21 2.625\nv21 v22 2.75\nv22 v23 3.125",
+        "nodes": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4",
+          "v5",
+          "v6",
+          "v7",
+          "v8",
+          "v9",
+          "v10",
+          "v11",
+          "v12",
+          "v13",
+          "v14",
+          "v15",
+          "v16",
+          "v17",
+          "v18",
+          "v19",
+          "v20",
+          "v21",
+          "v22",
+          "v23"
+        ],
+        "edgeCount": 73,
+        "componentCount": 1,
+        "componentSizes": [
+          24
+        ],
+        "exactNullity": 1,
+        "positiveEigenvalueCount": 23,
+        "componentBounds": [
+          {
+            "size": 24,
+            "diameter": 3,
+            "minWeight": 0.125,
+            "lowerBound": 0.006944444444444444
+          }
+        ],
+        "exactRationalBounds": [
+          {
+            "size": 24,
+            "diameter": 3,
+            "minWeightFraction": [
+              "125",
+              "1000"
+            ],
+            "gapLowerFraction": [
+              "1",
+              "144"
+            ]
+          }
+        ],
+        "globalGapLowerBound": 0.006944444444444444,
+        "trace": 334.75,
+        "numerical": {
+          "eig": [
+            {
+              "value": -3.232923383788176e-16,
+              "residual": 1.6731390685530275e-13
+            },
+            {
+              "value": 3.9340630657344087,
+              "residual": 5.788808286595555e-13
+            },
+            {
+              "value": 4.538003326146724,
+              "residual": 3.6651650931784027e-13
+            },
+            {
+              "value": 5.543268352633772,
+              "residual": 3.113977641950712e-13
+            },
+            {
+              "value": 6.008355461785492,
+              "residual": 2.7762144224897885e-13
+            },
+            {
+              "value": 6.300180634841321,
+              "residual": 2.5360218742232552e-14
+            },
+            {
+              "value": 7.593283120688656,
+              "residual": 2.933633583289288e-13
+            },
+            {
+              "value": 9.758713670391701,
+              "residual": 4.834966775060931e-13
+            },
+            {
+              "value": 10.620941067764441,
+              "residual": 4.177562145293134e-13
+            },
+            {
+              "value": 11.590896952714933,
+              "residual": 5.772992174620117e-13
+            },
+            {
+              "value": 11.691659568310133,
+              "residual": 8.987123541442836e-13
+            },
+            {
+              "value": 12.82129732797473,
+              "residual": 5.656546992864569e-13
+            },
+            {
+              "value": 14.622566208922695,
+              "residual": 4.028455402430658e-13
+            },
+            {
+              "value": 15.342506505432087,
+              "residual": 7.001893390877092e-13
+            },
+            {
+              "value": 15.810469972804425,
+              "residual": 5.362772032552061e-13
+            },
+            {
+              "value": 16.200497589850727,
+              "residual": 5.433924195449454e-13
+            },
+            {
+              "value": 17.99112775974968,
+              "residual": 4.410785202202123e-13
+            },
+            {
+              "value": 19.00615047915027,
+              "residual": 4.663648347435701e-13
+            },
+            {
+              "value": 20.985179268254054,
+              "residual": 1.2270352589013613e-12
+            },
+            {
+              "value": 21.409927824950064,
+              "residual": 6.652087456907489e-13
+            },
+            {
+              "value": 22.870212143775575,
+              "residual": 8.226003217596663e-13
+            },
+            {
+              "value": 24.948788046354434,
+              "residual": 1.0579802288099675e-12
+            },
+            {
+              "value": 27.036393463702474,
+              "residual": 1.1183567653231523e-13
+            },
+            {
+              "value": 28.125518188067932,
+              "residual": 8.317226238345267e-13
+            }
+          ],
+          "converged": true,
+          "sweeps": 1041,
+          "solverVersion": "jacobi-scale-1",
+          "matrixScale": 22,
+          "normalizedMatrixInfinityNorm": 2,
+          "scaledMaxResidual": 2.7887164975030903e-14,
+          "orthogonalityError": 1.3184228568304916e-14,
+          "relativeTolerance": 1e-12,
+          "normalizationUnderflowCount": 0,
+          "resolutionRelative": 1e-12,
+          "resolutionAbsolute": 4.3999999999999997e-11,
+          "stopReason": "RESIDUAL_AND_ORTHOGONALITY_ACCEPTED",
+          "guarantee": "NUMERICAL_POSTCHECK_ONLY_NOT_INTERVAL_CERTIFIED",
+          "positiveGap": {
+            "index": 1,
+            "estimate": 3.9340630657344087,
+            "status": "RESOLVED_AT_TOLERANCE",
+            "scope": "smallest positive mode indexed by exact component count; numerical resolution is not a gap certificate"
+          }
+        },
+        "certification": {
+          "nullity": "COMBINATORIAL_THEOREM",
+          "gap": "GRAPH_THEORETIC_BOUND",
+          "eigenvalues": "NUMERICAL_ONLY",
+          "intervalArithmetic": "NOT_IMPLEMENTED",
+          "rationalGapCertificate": "EXACT_DECIMAL_INPUT",
+          "julia": "REFERENCE_EXPORT_ONLY",
+          "wolfram": "REFERENCE_EXPORT_ONLY",
+          "browserE2E": "PENDING"
+        }
+      }
+    },
+    {
+      "id": "random_n24_seed130363",
+      "analysis": {
+        "version": "X6-2.4",
+        "timestamp": "2026-10-15T18:36:54.919Z",
+        "scope": "finite positive-weight undirected graph combinatorial Laplacian",
+        "input": "v0\nv1\nv2\nv3\nv4\nv5\nv6\nv7\nv8\nv9\nv10\nv11\nv12\nv13\nv14\nv15\nv16\nv17\nv18\nv19\nv20\nv21\nv22\nv23\nv0 v1 0.5\nv0 v3 2\nv0 v17 0.875\nv1 v2 3.25\nv1 v6 3.375\nv1 v16 2.625\nv1 v17 2.25\nv1 v18 0.25\nv1 v20 2.5\nv1 v21 2.75\nv1 v23 3.125\nv2 v3 1.75\nv2 v8 4\nv2 v16 4\nv3 v4 3.375\nv3 v7 3.5\nv3 v8 1.625\nv3 v15 1.75\nv3 v16 1\nv3 v17 1.125\nv3 v21 0.625\nv3 v23 2.75\nv4 v5 3.875\nv4 v12 3.25\nv4 v20 2.625\nv4 v22 3.375\nv4 v23 1.5\nv5 v6 2.375\nv5 v12 2.75\nv5 v13 1.375\nv6 v7 2.875\nv6 v18 1.5\nv6 v22 2.5\nv6 v23 1.625\nv7 v8 3.875\nv7 v11 3.375\nv7 v12 3.75\nv7 v15 1.625\nv7 v20 2.75\nv8 v9 2.5\nv8 v11 0.625\nv8 v13 2.75\nv8 v14 2.875\nv8 v22 1.125\nv8 v23 2\nv9 v10 2.25\nv9 v13 0.125\nv9 v14 1.875\nv9 v15 3.875\nv9 v16 1.375\nv9 v19 2.625\nv10 v11 1.5\nv10 v14 0.375\nv10 v22 2.625\nv11 v12 3.5\nv11 v17 0.5\nv11 v23 1.375\nv12 v13 3\nv12 v15 1.875\nv12 v20 2.125\nv13 v14 0.625\nv13 v16 1.375\nv14 v15 0.875\nv15 v16 3.25\nv15 v17 1.25\nv16 v17 0.125\nv16 v19 1.125\nv16 v23 4\nv17 v18 1.375\nv17 v22 3.75\nv18 v19 0.125\nv18 v23 0.5\nv19 v20 2.25\nv19 v23 0.25\nv20 v21 0.875\nv20 v23 0.125\nv21 v22 1\nv21 v23 0.875\nv22 v23 3.625",
+        "nodes": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4",
+          "v5",
+          "v6",
+          "v7",
+          "v8",
+          "v9",
+          "v10",
+          "v11",
+          "v12",
+          "v13",
+          "v14",
+          "v15",
+          "v16",
+          "v17",
+          "v18",
+          "v19",
+          "v20",
+          "v21",
+          "v22",
+          "v23"
+        ],
+        "edgeCount": 79,
+        "componentCount": 1,
+        "componentSizes": [
+          24
+        ],
+        "exactNullity": 1,
+        "positiveEigenvalueCount": 23,
+        "componentBounds": [
+          {
+            "size": 24,
+            "diameter": 3,
+            "minWeight": 0.125,
+            "lowerBound": 0.006944444444444444
+          }
+        ],
+        "exactRationalBounds": [
+          {
+            "size": 24,
+            "diameter": 3,
+            "minWeightFraction": [
+              "125",
+              "1000"
+            ],
+            "gapLowerFraction": [
+              "1",
+              "144"
+            ]
+          }
+        ],
+        "globalGapLowerBound": 0.006944444444444444,
+        "trace": 324.5,
+        "numerical": {
+          "eig": [
+            {
+              "value": -4.640245385221079e-16,
+              "residual": 1.9049607668048406e-13
+            },
+            {
+              "value": 3.0408803466316434,
+              "residual": 8.064311668090846e-13
+            },
+            {
+              "value": 3.323092470877813,
+              "residual": 1.3960783650030653e-13
+            },
+            {
+              "value": 4.720660827487679,
+              "residual": 9.883818592718227e-14
+            },
+            {
+              "value": 5.224949659436495,
+              "residual": 6.2341673002853544e-15
+            },
+            {
+              "value": 5.658039701336505,
+              "residual": 1.0141293030183932e-12
+            },
+            {
+              "value": 5.917278920419049,
+              "residual": 3.2475925185457235e-13
+            },
+            {
+              "value": 7.872289042445372,
+              "residual": 2.1294726560890608e-13
+            },
+            {
+              "value": 9.064999758213089,
+              "residual": 6.707188849697929e-13
+            },
+            {
+              "value": 9.210208873105843,
+              "residual": 3.7559987007680766e-13
+            },
+            {
+              "value": 10.539950937544152,
+              "residual": 1.9588651458895388e-13
+            },
+            {
+              "value": 11.36356928001308,
+              "residual": 1.0341187013020214e-13
+            },
+            {
+              "value": 12.593036273765113,
+              "residual": 1.0145231782161515e-12
+            },
+            {
+              "value": 13.509528853054281,
+              "residual": 3.2951243753885625e-13
+            },
+            {
+              "value": 15.128120765445914,
+              "residual": 1.4517738920378729e-13
+            },
+            {
+              "value": 16.885279104451346,
+              "residual": 1.2506641051008465e-13
+            },
+            {
+              "value": 17.97764634155234,
+              "residual": 5.145788297249823e-13
+            },
+            {
+              "value": 19.99341678556667,
+              "residual": 2.4601231389063495e-13
+            },
+            {
+              "value": 21.62588053004038,
+              "residual": 4.752589784857714e-13
+            },
+            {
+              "value": 23.148825449157062,
+              "residual": 5.084955048422139e-13
+            },
+            {
+              "value": 24.417268103206798,
+              "residual": 2.7743074826075445e-13
+            },
+            {
+              "value": 26.09442031636711,
+              "residual": 7.820504019361609e-13
+            },
+            {
+              "value": 27.319340952593617,
+              "residual": 4.1811826057359515e-13
+            },
+            {
+              "value": 29.87131670728938,
+              "residual": 3.858417382910353e-13
+            }
+          ],
+          "converged": true,
+          "sweeps": 1023,
+          "solverVersion": "jacobi-scale-1",
+          "matrixScale": 21.75,
+          "normalizedMatrixInfinityNorm": 2,
+          "scaledMaxResidual": 2.3322371913014956e-14,
+          "orthogonalityError": 1.3215988097586629e-14,
+          "relativeTolerance": 1e-12,
+          "normalizationUnderflowCount": 0,
+          "resolutionRelative": 1e-12,
+          "resolutionAbsolute": 4.35e-11,
+          "stopReason": "RESIDUAL_AND_ORTHOGONALITY_ACCEPTED",
+          "guarantee": "NUMERICAL_POSTCHECK_ONLY_NOT_INTERVAL_CERTIFIED",
+          "positiveGap": {
+            "index": 1,
+            "estimate": 3.0408803466316434,
+            "status": "RESOLVED_AT_TOLERANCE",
+            "scope": "smallest positive mode indexed by exact component count; numerical resolution is not a gap certificate"
+          }
+        },
+        "certification": {
+          "nullity": "COMBINATORIAL_THEOREM",
+          "gap": "GRAPH_THEORETIC_BOUND",
+          "eigenvalues": "NUMERICAL_ONLY",
+          "intervalArithmetic": "NOT_IMPLEMENTED",
+          "rationalGapCertificate": "EXACT_DECIMAL_INPUT",
+          "julia": "REFERENCE_EXPORT_ONLY",
+          "wolfram": "REFERENCE_EXPORT_ONLY",
+          "browserE2E": "PENDING"
+        }
+      }
+    },
+    {
+      "id": "random_n32_seed104729",
+      "analysis": {
+        "version": "X6-2.4",
+        "timestamp": "2026-10-15T18:36:55.058Z",
+        "scope": "finite positive-weight undirected graph combinatorial Laplacian",
+        "input": "v0\nv1\nv2\nv3\nv4\nv5\nv6\nv7\nv8\nv9\nv10\nv11\nv12\nv13\nv14\nv15\nv16\nv17\nv18\nv19\nv20\nv21\nv22\nv23\nv24\nv25\nv26\nv27\nv28\nv29\nv30\nv31\nv0 v1 0.25\nv0 v2 2.875\nv0 v5 3.625\nv0 v6 0.25\nv0 v7 0.25\nv0 v11 1.875\nv0 v12 2\nv0 v14 1.625\nv0 v25 2.75\nv1 v2 3.875\nv1 v4 2.75\nv1 v6 2.5\nv1 v10 2.5\nv1 v23 3.625\nv2 v3 2.125\nv2 v7 2.375\nv2 v9 1.125\nv2 v10 1.5\nv2 v14 3.625\nv2 v18 0.75\nv2 v19 1.125\nv2 v22 0.875\nv2 v24 2.625\nv2 v27 3.25\nv2 v30 3.75\nv3 v4 1.75\nv3 v10 0.125\nv3 v14 3.875\nv3 v30 3.75\nv4 v5 2.125\nv4 v8 2.5\nv4 v9 1.625\nv4 v14 1.75\nv4 v18 0.875\nv4 v19 1.625\nv4 v23 3.25\nv4 v24 3.75\nv4 v26 0.375\nv4 v30 1.625\nv5 v6 1.125\nv5 v14 0.625\nv5 v21 3.25\nv5 v29 2.125\nv6 v7 3.375\nv6 v9 2.375\nv6 v21 2.625\nv6 v23 2.75\nv6 v27 1.375\nv6 v30 0.375\nv7 v8 0.875\nv7 v12 0.125\nv7 v13 0.25\nv7 v16 2.125\nv7 v23 1\nv7 v28 3.625\nv7 v31 0.5\nv8 v9 4\nv8 v15 3.25\nv8 v18 0.875\nv8 v20 1.625\nv8 v21 2.875\nv8 v26 3.125\nv8 v29 2.25\nv9 v10 2.75\nv9 v11 2.375\nv9 v12 2.75\nv9 v17 3.125\nv9 v20 1.625\nv9 v24 2.125\nv9 v27 1.25\nv9 v28 0.625\nv10 v11 4\nv10 v12 4\nv10 v16 3.125\nv10 v22 1.125\nv10 v26 2.75\nv10 v29 3.375\nv11 v12 3.75\nv11 v13 2.875\nv11 v15 2.875\nv11 v30 2.125\nv11 v31 1.875\nv12 v13 0.375\nv12 v14 0.75\nv12 v20 2\nv12 v21 1.25\nv12 v26 3.625\nv12 v29 0.375\nv13 v14 3.375\nv13 v21 1.375\nv13 v22 3\nv13 v24 4\nv13 v30 2.5\nv14 v15 0.875\nv14 v18 0.375\nv14 v22 3.625\nv15 v16 0.75\nv15 v18 2.25\nv15 v19 2.875\nv15 v28 3.125\nv15 v30 2.625\nv15 v31 2.125\nv16 v17 4\nv17 v18 0.5\nv17 v22 1.75\nv17 v25 0.375\nv17 v30 1.125\nv18 v19 2\nv18 v26 1.5\nv18 v28 2.25\nv18 v31 2.125\nv19 v20 2.25\nv19 v24 2.25\nv19 v25 3.375\nv19 v28 1.875\nv19 v29 0.5\nv19 v31 1.75\nv20 v21 3\nv20 v27 0.625\nv20 v31 0.25\nv21 v22 0.125\nv21 v28 2.25\nv21 v29 2.125\nv22 v23 1.5\nv22 v24 3.25\nv23 v24 3.75\nv23 v25 3.625\nv23 v30 2.25\nv24 v25 0.25\nv24 v31 1.5\nv25 v26 0.75\nv25 v30 1\nv25 v31 2.875\nv26 v27 2.125\nv26 v28 1\nv26 v29 2.625\nv27 v28 3\nv27 v30 3.375\nv28 v29 3\nv29 v30 2.125\nv30 v31 1.5",
+        "nodes": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4",
+          "v5",
+          "v6",
+          "v7",
+          "v8",
+          "v9",
+          "v10",
+          "v11",
+          "v12",
+          "v13",
+          "v14",
+          "v15",
+          "v16",
+          "v17",
+          "v18",
+          "v19",
+          "v20",
+          "v21",
+          "v22",
+          "v23",
+          "v24",
+          "v25",
+          "v26",
+          "v27",
+          "v28",
+          "v29",
+          "v30",
+          "v31"
+        ],
+        "edgeCount": 141,
+        "componentCount": 1,
+        "componentSizes": [
+          32
+        ],
+        "exactNullity": 1,
+        "positiveEigenvalueCount": 31,
+        "componentBounds": [
+          {
+            "size": 32,
+            "diameter": 3,
+            "minWeight": 0.125,
+            "lowerBound": 0.005208333333333333
+          }
+        ],
+        "exactRationalBounds": [
+          {
+            "size": 32,
+            "diameter": 3,
+            "minWeightFraction": [
+              "125",
+              "1000"
+            ],
+            "gapLowerFraction": [
+              "1",
+              "192"
+            ]
+          }
+        ],
+        "globalGapLowerBound": 0.005208333333333333,
+        "trace": 589.25,
+        "numerical": {
+          "eig": [
+            {
+              "value": 3.9623176818121936e-16,
+              "residual": 1.0169684189958222e-12
+            },
+            {
+              "value": 5.853634390274285,
+              "residual": 1.3539377936978262e-12
+            },
+            {
+              "value": 6.874528433728486,
+              "residual": 1.2605512001125398e-12
+            },
+            {
+              "value": 8.22626913363737,
+              "residual": 5.15396665900617e-13
+            },
+            {
+              "value": 9.310328775875076,
+              "residual": 2.994716494813387e-13
+            },
+            {
+              "value": 9.731460971099382,
+              "residual": 1.3788745815582166e-12
+            },
+            {
+              "value": 10.339895633284705,
+              "residual": 1.454077322789062e-12
+            },
+            {
+              "value": 11.16389157541163,
+              "residual": 9.964757154801057e-13
+            },
+            {
+              "value": 11.787429520470791,
+              "residual": 1.1600914648882185e-12
+            },
+            {
+              "value": 12.755449685661349,
+              "residual": 4.2629326450364764e-13
+            },
+            {
+              "value": 13.250892728202302,
+              "residual": 1.0716443466449182e-12
+            },
+            {
+              "value": 14.738860955176829,
+              "residual": 1.4323484981120604e-12
+            },
+            {
+              "value": 14.986359277375923,
+              "residual": 8.688991764476948e-14
+            },
+            {
+              "value": 15.479515003919289,
+              "residual": 1.4265345565612838e-12
+            },
+            {
+              "value": 17.481713641883445,
+              "residual": 1.6868038002697366e-12
+            },
+            {
+              "value": 18.0029048672849,
+              "residual": 4.631884838800965e-13
+            },
+            {
+              "value": 18.534368119525823,
+              "residual": 9.694817377671642e-13
+            },
+            {
+              "value": 19.33889840842742,
+              "residual": 9.026673850882197e-13
+            },
+            {
+              "value": 19.89214827063506,
+              "residual": 1.8002052010670092e-12
+            },
+            {
+              "value": 21.272442792761954,
+              "residual": 1.0598313610216523e-12
+            },
+            {
+              "value": 21.618820394237225,
+              "residual": 1.0734629516101713e-12
+            },
+            {
+              "value": 22.14032067249358,
+              "residual": 5.050466644065774e-13
+            },
+            {
+              "value": 22.957352851659863,
+              "residual": 5.680027492132207e-13
+            },
+            {
+              "value": 23.77032043184964,
+              "residual": 1.0093030703008103e-12
+            },
+            {
+              "value": 25.296459539347353,
+              "residual": 8.311662425718989e-13
+            },
+            {
+              "value": 27.234890522807653,
+              "residual": 8.431759599810385e-13
+            },
+            {
+              "value": 27.693714221969415,
+              "residual": 4.663254568942891e-13
+            },
+            {
+              "value": 29.038193945290605,
+              "residual": 5.290431094711451e-13
+            },
+            {
+              "value": 30.478323595285016,
+              "residual": 1.6868974664633797e-12
+            },
+            {
+              "value": 30.707093952318196,
+              "residual": 9.075801818411332e-13
+            },
+            {
+              "value": 32.54293992605165,
+              "residual": 9.639258323025624e-13
+            },
+            {
+              "value": 36.750577762055755,
+              "residual": 9.155111674370423e-13
+            }
+          ],
+          "converged": true,
+          "sweeps": 1869,
+          "solverVersion": "jacobi-scale-1",
+          "matrixScale": 29.875,
+          "normalizedMatrixInfinityNorm": 1.9999999999999998,
+          "scaledMaxResidual": 3.0128957340033613e-14,
+          "orthogonalityError": 2.0953873752890784e-14,
+          "relativeTolerance": 1e-12,
+          "normalizationUnderflowCount": 0,
+          "resolutionRelative": 1e-12,
+          "resolutionAbsolute": 5.974999999999999e-11,
+          "stopReason": "RESIDUAL_AND_ORTHOGONALITY_ACCEPTED",
+          "guarantee": "NUMERICAL_POSTCHECK_ONLY_NOT_INTERVAL_CERTIFIED",
+          "positiveGap": {
+            "index": 1,
+            "estimate": 5.853634390274285,
+            "status": "RESOLVED_AT_TOLERANCE",
+            "scope": "smallest positive mode indexed by exact component count; numerical resolution is not a gap certificate"
+          }
+        },
+        "certification": {
+          "nullity": "COMBINATORIAL_THEOREM",
+          "gap": "GRAPH_THEORETIC_BOUND",
+          "eigenvalues": "NUMERICAL_ONLY",
+          "intervalArithmetic": "NOT_IMPLEMENTED",
+          "rationalGapCertificate": "EXACT_DECIMAL_INPUT",
+          "julia": "REFERENCE_EXPORT_ONLY",
+          "wolfram": "REFERENCE_EXPORT_ONLY",
+          "browserE2E": "PENDING"
+        }
+      }
+    },
+    {
+      "id": "random_n32_seed130363",
+      "analysis": {
+        "version": "X6-2.4",
+        "timestamp": "2026-10-15T18:36:55.188Z",
+        "scope": "finite positive-weight undirected graph combinatorial Laplacian",
+        "input": "v0\nv1\nv2\nv3\nv4\nv5\nv6\nv7\nv8\nv9\nv10\nv11\nv12\nv13\nv14\nv15\nv16\nv17\nv18\nv19\nv20\nv21\nv22\nv23\nv24\nv25\nv26\nv27\nv28\nv29\nv30\nv31\nv0 v1 0.25\nv0 v8 3.25\nv0 v9 2\nv0 v12 3.875\nv0 v13 3\nv0 v14 3.75\nv0 v19 0.5\nv0 v20 3.625\nv0 v23 0.5\nv0 v25 2.75\nv0 v28 2\nv0 v29 0.625\nv1 v2 2.5\nv1 v5 1.75\nv1 v6 3.125\nv1 v9 1.75\nv1 v11 0.375\nv1 v16 2.75\nv1 v18 2.375\nv1 v24 0.375\nv1 v28 0.25\nv1 v30 1.625\nv1 v31 2.5\nv2 v3 3.625\nv2 v4 3.25\nv2 v5 0.375\nv2 v8 2.75\nv2 v10 0.25\nv2 v31 0.375\nv3 v4 1\nv3 v6 2\nv3 v8 3.875\nv3 v9 1.875\nv3 v23 3.5\nv3 v26 1\nv3 v27 3.75\nv3 v28 3.875\nv4 v5 2.75\nv4 v10 1.5\nv4 v16 3.625\nv4 v20 3.25\nv4 v27 3.75\nv4 v29 2\nv4 v30 3.75\nv5 v6 2.125\nv5 v7 2.25\nv5 v16 1.25\nv5 v17 0.875\nv5 v18 3.25\nv5 v31 3.875\nv6 v7 3.375\nv6 v8 3.625\nv6 v17 1.5\nv6 v25 0.75\nv6 v26 1.875\nv7 v8 1.75\nv7 v15 2.25\nv7 v16 0.125\nv7 v19 3.75\nv7 v20 1.25\nv8 v9 1\nv8 v10 1.25\nv8 v15 1\nv8 v17 2.75\nv8 v18 1.75\nv8 v20 2\nv8 v22 2\nv8 v25 1.875\nv8 v29 0.5\nv8 v31 2.75\nv9 v10 3.125\nv9 v13 3.75\nv9 v14 3.875\nv9 v19 0.25\nv9 v26 0.625\nv9 v31 4\nv10 v11 0.375\nv10 v18 4\nv10 v20 0.125\nv10 v23 0.625\nv10 v24 3.625\nv10 v31 0.75\nv11 v12 1.5\nv12 v13 0.625\nv12 v18 1.375\nv12 v25 3.25\nv12 v28 2\nv13 v14 0.5\nv13 v15 0.375\nv13 v18 1.625\nv13 v29 1.875\nv13 v30 3.875\nv14 v15 2.625\nv14 v16 3.75\nv14 v19 2.25\nv15 v16 3.625\nv15 v19 0.75\nv15 v22 1.875\nv15 v24 1.375\nv15 v28 4\nv16 v17 3.25\nv16 v25 0.5\nv16 v29 3.875\nv17 v18 2.875\nv17 v23 0.25\nv17 v24 2.625\nv17 v26 3.25\nv18 v19 2.125\nv18 v22 1.875\nv18 v25 3.25\nv18 v27 1.5\nv18 v30 3.5\nv18 v31 0.75\nv19 v20 0.625\nv19 v23 0.25\nv19 v27 1.25\nv20 v21 1\nv20 v23 3.25\nv20 v24 3.375\nv20 v28 3.375\nv21 v22 0.875\nv21 v31 0.5\nv22 v23 3.75\nv22 v24 2.75\nv22 v27 1.5\nv22 v29 3.75\nv23 v24 0.625\nv23 v25 0.375\nv23 v28 2\nv24 v25 0.75\nv24 v26 1.125\nv24 v27 3.125\nv24 v28 3.875\nv24 v30 1.25\nv25 v26 2.625\nv25 v29 2.625\nv26 v27 3\nv26 v28 2\nv27 v28 1.625\nv28 v29 1\nv28 v30 0.875\nv29 v30 0.25\nv30 v31 3.5",
+        "nodes": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4",
+          "v5",
+          "v6",
+          "v7",
+          "v8",
+          "v9",
+          "v10",
+          "v11",
+          "v12",
+          "v13",
+          "v14",
+          "v15",
+          "v16",
+          "v17",
+          "v18",
+          "v19",
+          "v20",
+          "v21",
+          "v22",
+          "v23",
+          "v24",
+          "v25",
+          "v26",
+          "v27",
+          "v28",
+          "v29",
+          "v30",
+          "v31"
+        ],
+        "edgeCount": 143,
+        "componentCount": 1,
+        "componentSizes": [
+          32
+        ],
+        "exactNullity": 1,
+        "positiveEigenvalueCount": 31,
+        "componentBounds": [
+          {
+            "size": 32,
+            "diameter": 3,
+            "minWeight": 0.125,
+            "lowerBound": 0.005208333333333333
+          }
+        ],
+        "exactRationalBounds": [
+          {
+            "size": 32,
+            "diameter": 3,
+            "minWeightFraction": [
+              "125",
+              "1000"
+            ],
+            "gapLowerFraction": [
+              "1",
+              "192"
+            ]
+          }
+        ],
+        "globalGapLowerBound": 0.005208333333333333,
+        "trace": 594.5,
+        "numerical": {
+          "eig": [
+            {
+              "value": -7.524014541656788e-16,
+              "residual": 7.616360780407357e-13
+            },
+            {
+              "value": 2.0493447093344925,
+              "residual": 7.422040768799863e-13
+            },
+            {
+              "value": 2.3692888521016853,
+              "residual": 8.716314293182725e-13
+            },
+            {
+              "value": 8.151067624936031,
+              "residual": 6.713297537242346e-13
+            },
+            {
+              "value": 8.574916091387058,
+              "residual": 7.662748149459747e-13
+            },
+            {
+              "value": 8.809687255164414,
+              "residual": 1.3339053810899321e-12
+            },
+            {
+              "value": 10.501812832082374,
+              "residual": 1.2139380819512412e-12
+            },
+            {
+              "value": 11.438702078448882,
+              "residual": 2.996627294610513e-13
+            },
+            {
+              "value": 11.971902992149506,
+              "residual": 8.674075625535699e-13
+            },
+            {
+              "value": 12.767771891744738,
+              "residual": 1.6131558799403957e-13
+            },
+            {
+              "value": 13.6370093428034,
+              "residual": 1.3960276887763853e-12
+            },
+            {
+              "value": 14.302546122270973,
+              "residual": 5.229115235241961e-13
+            },
+            {
+              "value": 15.558552171657375,
+              "residual": 2.551692645263683e-13
+            },
+            {
+              "value": 15.841965803224463,
+              "residual": 9.98152964566912e-13
+            },
+            {
+              "value": 17.098887608228654,
+              "residual": 1.0398258850719047e-12
+            },
+            {
+              "value": 17.95524478029438,
+              "residual": 1.9616604553765974e-12
+            },
+            {
+              "value": 19.149036643334842,
+              "residual": 3.206245431015824e-13
+            },
+            {
+              "value": 19.402205274945032,
+              "residual": 6.353915854236774e-13
+            },
+            {
+              "value": 20.40817776505257,
+              "residual": 1.6053025689219254e-12
+            },
+            {
+              "value": 20.934999806892876,
+              "residual": 4.0877400039817894e-13
+            },
+            {
+              "value": 21.275361634969787,
+              "residual": 3.395257173887992e-13
+            },
+            {
+              "value": 21.67284302768438,
+              "residual": 1.0580073106030799e-12
+            },
+            {
+              "value": 22.761594438971382,
+              "residual": 4.565839515344281e-13
+            },
+            {
+              "value": 25.346609770125824,
+              "residual": 9.030074013765281e-13
+            },
+            {
+              "value": 26.87273716752833,
+              "residual": 1.1892884991574447e-12
+            },
+            {
+              "value": 27.756414394740023,
+              "residual": 1.3315940099459016e-12
+            },
+            {
+              "value": 28.869095314666183,
+              "residual": 1.0685291398584765e-12
+            },
+            {
+              "value": 30.698392821568298,
+              "residual": 1.179575335825517e-12
+            },
+            {
+              "value": 32.20791247530961,
+              "residual": 1.0241744848267213e-13
+            },
+            {
+              "value": 32.85791595641449,
+              "residual": 8.893259974678217e-13
+            },
+            {
+              "value": 35.80290809094849,
+              "residual": 1.2410548320647545e-12
+            },
+            {
+              "value": 37.455095261021675,
+              "residual": 1.5118142365500964e-12
+            }
+          ],
+          "converged": true,
+          "sweeps": 1862,
+          "solverVersion": "jacobi-scale-1",
+          "matrixScale": 32.125,
+          "normalizedMatrixInfinityNorm": 2,
+          "scaledMaxResidual": 3.05316802393244e-14,
+          "orthogonalityError": 2.140287481078467e-14,
+          "relativeTolerance": 1e-12,
+          "normalizationUnderflowCount": 0,
+          "resolutionRelative": 1e-12,
+          "resolutionAbsolute": 6.425e-11,
+          "stopReason": "RESIDUAL_AND_ORTHOGONALITY_ACCEPTED",
+          "guarantee": "NUMERICAL_POSTCHECK_ONLY_NOT_INTERVAL_CERTIFIED",
+          "positiveGap": {
+            "index": 1,
+            "estimate": 2.0493447093344925,
+            "status": "RESOLVED_AT_TOLERANCE",
+            "scope": "smallest positive mode indexed by exact component count; numerical resolution is not a gap certificate"
+          }
+        },
+        "certification": {
+          "nullity": "COMBINATORIAL_THEOREM",
+          "gap": "GRAPH_THEORETIC_BOUND",
+          "eigenvalues": "NUMERICAL_ONLY",
+          "intervalArithmetic": "NOT_IMPLEMENTED",
+          "rationalGapCertificate": "EXACT_DECIMAL_INPUT",
+          "julia": "REFERENCE_EXPORT_ONLY",
+          "wolfram": "REFERENCE_EXPORT_ONLY",
+          "browserE2E": "PENDING"
+        }
+      }
+    }
+  ],
+  "pageErrors": [],
+  "scope": "Real Chromium UI and JSON downloads for the 27 frozen inputs; eigenvectors remain internal."
+}

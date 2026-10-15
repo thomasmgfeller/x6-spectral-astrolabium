@@ -1,0 +1,82 @@
+{
+  "version": "X6-2.4",
+  "timestamp": "2026-10-15T18:36:54.017Z",
+  "scope": "finite positive-weight undirected graph combinatorial Laplacian",
+  "input": "v0\nv1\nv0 v1 0.00000000000000088817841970012523233890533447265625",
+  "nodes": [
+    "v0",
+    "v1"
+  ],
+  "edgeCount": 1,
+  "componentCount": 1,
+  "componentSizes": [
+    2
+  ],
+  "exactNullity": 1,
+  "positiveEigenvalueCount": 1,
+  "componentBounds": [
+    {
+      "size": 2,
+      "diameter": 1,
+      "minWeight": 8.881784197001252e-16,
+      "lowerBound": 1.7763568394002505e-15
+    }
+  ],
+  "exactRationalBounds": [
+    {
+      "size": 2,
+      "diameter": 1,
+      "minWeightFraction": [
+        "88817841970012523233890533447265625",
+        "100000000000000000000000000000000000000000000000000"
+      ],
+      "gapLowerFraction": [
+        "1",
+        "562949953421312"
+      ]
+    }
+  ],
+  "globalGapLowerBound": 1.7763568394002505e-15,
+  "trace": 1.7763568394002505e-15,
+  "numerical": {
+    "eig": [
+      {
+        "value": 0,
+        "residual": 0
+      },
+      {
+        "value": 1.77635683940025e-15,
+        "residual": 2.789044477473679e-31
+      }
+    ],
+    "converged": true,
+    "sweeps": 1,
+    "solverVersion": "jacobi-scale-1",
+    "matrixScale": 8.881784197001252e-16,
+    "normalizedMatrixInfinityNorm": 2,
+    "scaledMaxResidual": 1.5700924586837752e-16,
+    "orthogonalityError": 3.1401849173675503e-16,
+    "relativeTolerance": 1e-12,
+    "normalizationUnderflowCount": 0,
+    "resolutionRelative": 1e-12,
+    "resolutionAbsolute": 1.7763568394002504e-27,
+    "stopReason": "RESIDUAL_AND_ORTHOGONALITY_ACCEPTED",
+    "guarantee": "NUMERICAL_POSTCHECK_ONLY_NOT_INTERVAL_CERTIFIED",
+    "positiveGap": {
+      "index": 1,
+      "estimate": 1.77635683940025e-15,
+      "status": "RESOLVED_AT_TOLERANCE",
+      "scope": "smallest positive mode indexed by exact component count; numerical resolution is not a gap certificate"
+    }
+  },
+  "certification": {
+    "nullity": "COMBINATORIAL_THEOREM",
+    "gap": "GRAPH_THEORETIC_BOUND",
+    "eigenvalues": "NUMERICAL_ONLY",
+    "intervalArithmetic": "NOT_IMPLEMENTED",
+    "rationalGapCertificate": "EXACT_DECIMAL_INPUT",
+    "julia": "REFERENCE_EXPORT_ONLY",
+    "wolfram": "REFERENCE_EXPORT_ONLY",
+    "browserE2E": "PENDING"
+  }
+}

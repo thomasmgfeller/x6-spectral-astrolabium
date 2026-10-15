@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "base_commit": "1735a85dfd5bdb7a4b59e5c00595d2d300ce1e05",
   "source_status": "DECLARED_BUILD_MANIFEST",
-  "protected_app_sha256": "ff60231155f0fc869564ec0eb24c87568943cdd96e154094ae9abd9877bd7ff8",
+  "protected_app_sha256": "56df754a1c5c3d26022e54b000f0d9e52ab4067d39e6a664556de12bfd7dc071",
   "bundle_algorithm": "SHA-256 of sorted compact UTF-8 JSON file-to-SHA-256 mapping",
   "bundle_sha256": "7da09a4e3fac71e056abfdadeee58415d95e21f02d4de426f8e42205f494a465",
   "files": {

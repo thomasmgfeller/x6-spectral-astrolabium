@@ -153,63 +153,108 @@ window.addEventListener('message',e=&gt;{if(e.source!==parent||!e.data||e.data.s
 &lt;html lang=&quot;en&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;/&gt;&lt;meta content=&quot;width=device-width,initial-scale=1&quot; name=&quot;viewport&quot;/&gt;&lt;title&gt;X6 v3.0 — Scientific Validation Release Candidate&lt;/title&gt;&lt;style&gt;:root{font-family:system-ui,Arial;background:#07111d;color:#e8f2ff}*{box-sizing:border-box}body{max-width:1100px;margin:auto;padding:24px}h1{color:#69d9ff}section{background:#102236;border:1px solid #29435c;border-radius:12px;padding:18px;margin:15px 0}textarea{width:100%;min-height:130px;background:#071522;color:#fff;border:1px solid #46617a;border-radius:7px;padding:10px;font:14px monospace}button,select{padding:9px 12px;border:1px solid #6acfff;border-radius:7px;background:#173b54;color:white;margin:4px;cursor:pointer}button:hover{background:#225d7c}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#071522;padding:14px;border-radius:8px}small{color:#a4b8cc}.pass{color:#80e9b4}.warn{color:#ffdb8b}a{color:#7cdcff}&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;header&gt;&lt;h1&gt;X6 v3.0 · Scientific Validation Release Candidate&lt;/h1&gt;&lt;label&gt;Language &lt;select id=&quot;lang&quot;&gt;&lt;option value=&quot;en&quot;&gt;English&lt;/option&gt;&lt;option value=&quot;de&quot;&gt;Deutsch&lt;/option&gt;&lt;option value=&quot;fr&quot;&gt;Français&lt;/option&gt;&lt;/select&gt;&lt;/label&gt;&lt;/header&gt;&lt;section&gt;&lt;h2 id=&quot;inputTitle&quot;&gt;Weighted undirected graph&lt;/h2&gt;&lt;p id=&quot;inputHelp&quot;&gt;One edge per line: nodeA nodeB positiveWeight. Node IDs are strings. No self-loops.&lt;/p&gt;&lt;textarea id=&quot;edges&quot;&gt;a b 1
 b c 1
 c d 1&lt;/textarea&gt;&lt;div&gt;&lt;button id=&quot;run&quot;&gt;Analyze&lt;/button&gt;&lt;button id=&quot;sample&quot;&gt;Load sample&lt;/button&gt;&lt;button id=&quot;tests&quot;&gt;Run regression tests&lt;/button&gt;&lt;button id=&quot;export&quot;&gt;Export evidence JSON&lt;/button&gt;&lt;button id=&quot;julia&quot;&gt;Julia reference&lt;/button&gt;&lt;button id=&quot;wolfram&quot;&gt;Wolfram reference&lt;/button&gt;&lt;/div&gt;&lt;/section&gt;&lt;section&gt;&lt;h2 id=&quot;resultTitle&quot;&gt;Results&lt;/h2&gt;&lt;pre aria-live=&quot;polite&quot; id=&quot;out&quot;&gt;Ready.&lt;/pre&gt;&lt;/section&gt;&lt;section&gt;&lt;h2 id=&quot;helpTitle&quot;&gt;Online help / mathematical contract&lt;/h2&gt;&lt;div id=&quot;help&quot;&gt;&lt;/div&gt;&lt;/section&gt;&lt;script&gt;
-'use strict';
-const T={en:{inputTitle:'Weighted undirected graph',inputHelp:'One edge per line: nodeA nodeB positiveWeight. Node IDs are strings. No self-loops. Isolated vertices may be declared as a single token per line.',resultTitle:'Results',helpTitle:'Help / mathematical contract',analyze:'Analyze',sample:'Load sample',tests:'Run regression tests',export:'Export evidence JSON',ready:'Ready.'},de:{inputTitle:'Gewichteter ungerichteter Graph',inputHelp:'Eine Kante pro Zeile: KnotenA KnotenB positivesGewicht. Einzelne Knotennamen deklarieren isolierte Knoten. Keine Schleifen.',resultTitle:'Ergebnisse',helpTitle:'Hilfe / mathematischer Vertrag',analyze:'Analysieren',sample:'Beispiel laden',tests:'Regressionstests',export:'Evidenz-JSON exportieren',ready:'Bereit.'},fr:{inputTitle:'Graphe non orienté pondéré',inputHelp:'Une arête par ligne : sommetA sommetB poidsPositif. Un sommet seul déclare un sommet isolé. Pas de boucles.',resultTitle:'Résultats',helpTitle:'Aide / contrat mathématique',analyze:'Analyser',sample:'Charger un exemple',tests:'Tests de régression',export:'Exporter JSON de preuve',ready:'Prêt.'}};
-const helpHTML='&lt;p&gt;&lt;b&gt;Scope:&lt;/b&gt; Real symmetric weighted combinatorial Laplacian L=D−A, finite undirected graph, strictly positive finite edge weights. Connected components and exact nullity are determined combinatorially (assuming the supplied edge list defines the graph).&lt;/p&gt;&lt;p&gt;&lt;b&gt;Rigorous spectral-gap bound:&lt;/b&gt; For each nontrivial connected component with n vertices, diameter d (unweighted shortest-path distance) and minimum edge weight w, λ₂ ≥ 4w/(n d). This follows from the Rayleigh quotient, pathwise Cauchy–Schwarz and the variance identity; it is generally conservative. The global smallest strictly positive eigenvalue is bounded below by the minimum of these component bounds. If no nontrivial component exists, there is no positive eigenvalue.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Numerical eigenvalues:&lt;/b&gt; Jacobi diagonalization, with eigenpair residual norms. For an exact real symmetric matrix, an eigenvalue lies within residual norm of the Rayleigh quotient. Floating-point calculations here do &lt;em&gt;not&lt;/em&gt; constitute outward-rounded interval arithmetic: displayed residual intervals are numerical diagnostics, &lt;em&gt;not&lt;/em&gt; formally certified enclosures.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Limitations:&lt;/b&gt; New v2.2: rational decimal weights are parsed exactly for an independent rational lower-bound certificate; floating-point Jacobi results remain diagnostics. Reference programs can be exported for Julia and Wolfram; execution in those environments is not claimed. No claims for general non-Hermitian operators, indefinite operators, spectral triples, or arbitrary quantum-gravity Hamiltonians. Julia, Wolfram, and cross-browser verification are pending. The graph-theoretic bound is mathematical; this JavaScript implementation is not a formally verified proof checker.&lt;/p&gt;';
+&#x27;use strict&#x27;;
+const T={en:{inputTitle:&#x27;Weighted undirected graph&#x27;,inputHelp:&#x27;One edge per line: nodeA nodeB positiveWeight. Node IDs are strings. No self-loops. Isolated vertices may be declared as a single token per line.&#x27;,resultTitle:&#x27;Results&#x27;,helpTitle:&#x27;Help / mathematical contract&#x27;,analyze:&#x27;Analyze&#x27;,sample:&#x27;Load sample&#x27;,tests:&#x27;Run regression tests&#x27;,export:&#x27;Export evidence JSON&#x27;,ready:&#x27;Ready.&#x27;},de:{inputTitle:&#x27;Gewichteter ungerichteter Graph&#x27;,inputHelp:&#x27;Eine Kante pro Zeile: KnotenA KnotenB positivesGewicht. Einzelne Knotennamen deklarieren isolierte Knoten. Keine Schleifen.&#x27;,resultTitle:&#x27;Ergebnisse&#x27;,helpTitle:&#x27;Hilfe / mathematischer Vertrag&#x27;,analyze:&#x27;Analysieren&#x27;,sample:&#x27;Beispiel laden&#x27;,tests:&#x27;Regressionstests&#x27;,export:&#x27;Evidenz-JSON exportieren&#x27;,ready:&#x27;Bereit.&#x27;},fr:{inputTitle:&#x27;Graphe non orienté pondéré&#x27;,inputHelp:&#x27;Une arête par ligne : sommetA sommetB poidsPositif. Un sommet seul déclare un sommet isolé. Pas de boucles.&#x27;,resultTitle:&#x27;Résultats&#x27;,helpTitle:&#x27;Aide / contrat mathématique&#x27;,analyze:&#x27;Analyser&#x27;,sample:&#x27;Charger un exemple&#x27;,tests:&#x27;Tests de régression&#x27;,export:&#x27;Exporter JSON de preuve&#x27;,ready:&#x27;Prêt.&#x27;}};
+const helpHTML=&#x27;&lt;p&gt;&lt;b&gt;Scope:&lt;/b&gt; Real symmetric weighted combinatorial Laplacian L=D−A, finite undirected graph, strictly positive finite edge weights. Connected components and exact nullity are determined combinatorially (assuming the supplied edge list defines the graph).&lt;/p&gt;&lt;p&gt;&lt;b&gt;Rigorous spectral-gap bound:&lt;/b&gt; For each nontrivial connected component with n vertices, diameter d (unweighted shortest-path distance) and minimum edge weight w, λ₂ ≥ 4w/(n d). This follows from the Rayleigh quotient, pathwise Cauchy–Schwarz and the variance identity; it is generally conservative. The global smallest strictly positive eigenvalue is bounded below by the minimum of these component bounds. If no nontrivial component exists, there is no positive eigenvalue.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Numerical eigenvalues:&lt;/b&gt; Jacobi diagonalization, with eigenpair residual norms. For an exact real symmetric matrix, an eigenvalue lies within residual norm of the Rayleigh quotient. Floating-point calculations here do &lt;em&gt;not&lt;/em&gt; constitute outward-rounded interval arithmetic: displayed residual intervals are numerical diagnostics, &lt;em&gt;not&lt;/em&gt; formally certified enclosures.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Limitations:&lt;/b&gt; New v2.2: rational decimal weights are parsed exactly for an independent rational lower-bound certificate; floating-point Jacobi results remain diagnostics. Reference programs can be exported for Julia and Wolfram; execution in those environments is not claimed. No claims for general non-Hermitian operators, indefinite operators, spectral triples, or arbitrary quantum-gravity Hamiltonians. Julia, Wolfram, and cross-browser verification are pending. The graph-theoretic bound is mathematical; this JavaScript implementation is not a formally verified proof checker.&lt;/p&gt;&#x27;;
 let last=null;
-function parse(s){const names=new Set(), edges=[];for(const [i,raw] of s.split(/\r?\n/).entries()){const line=raw.replace(/#.*/,'').trim();if(!line)continue;const p=line.split(/\s+/);if(p.length===1){names.add(p[0]);continue}if(p.length!==3)throw Error('Line '+(i+1)+': expected 1 or 3 fields');const [a,b,ws]=p,w=Number(ws);if(!a||!b||a===b||!Number.isFinite(w)||w&lt;=0)throw Error('Line '+(i+1)+': invalid edge/weight');names.add(a);names.add(b);edges.push([a,b,w]);}if(!names.size)throw Error('Empty graph');if(names.size&gt;120)throw Error('Maximum 120 vertices for this browser prototype');const nodes=[...names],idx=new Map(nodes.map((x,i)=&gt;[x,i])),n=nodes.length,A=Array.from({length:n},()=&gt;Array(n).fill(0)),adj=Array.from({length:n},()=&gt;[]);for(const [a,b,w] of edges){let i=idx.get(a),j=idx.get(b);A[i][j]+=w;A[j][i]+=w;adj[i].push(j);adj[j].push(i)}const L=A.map((r,i)=&gt;r.map((v,j)=&gt;i===j?r.reduce((s,x)=&gt;s+x,0):-v));return {nodes,edges,L,adj,A}}
+function parse(s){const names=new Set(), edges=[];for(const [i,raw] of s.split(/\r?\n/).entries()){const line=raw.replace(/#.*/,&#x27;&#x27;).trim();if(!line)continue;const p=line.split(/\s+/);if(p.length===1){names.add(p[0]);continue}if(p.length!==3)throw Error(&#x27;Line &#x27;+(i+1)+&#x27;: expected 1 or 3 fields&#x27;);const [a,b,ws]=p,w=Number(ws);if(!a||!b||a===b||!Number.isFinite(w)||w&lt;=0)throw Error(&#x27;Line &#x27;+(i+1)+&#x27;: invalid edge/weight&#x27;);names.add(a);names.add(b);edges.push([a,b,w]);}if(!names.size)throw Error(&#x27;Empty graph&#x27;);if(names.size&gt;120)throw Error(&#x27;Maximum 120 vertices for this browser prototype&#x27;);const nodes=[...names],idx=new Map(nodes.map((x,i)=&gt;[x,i])),n=nodes.length,A=Array.from({length:n},()=&gt;Array(n).fill(0)),adj=Array.from({length:n},()=&gt;[]);for(const [a,b,w] of edges){let i=idx.get(a),j=idx.get(b);A[i][j]+=w;A[j][i]+=w;adj[i].push(j);adj[j].push(i)}const L=A.map((r,i)=&gt;r.map((v,j)=&gt;i===j?r.reduce((s,x)=&gt;s+x,0):-v));return {nodes,edges,L,adj,A}}
 function components(g){let seen=new Set(),out=[];for(let i=0;i&lt;g.nodes.length;i++){if(seen.has(i))continue;let queue=[i],part=[];seen.add(i);for(let q=0;q&lt;queue.length;q++){let v=queue[q];part.push(v);for(const u of g.adj[v])if(!seen.has(u)){seen.add(u);queue.push(u)}}out.push(part)}return out}
 function diameter(g,comp){let d=0;for(let start of comp){let dist=new Map([[start,0]]),q=[start];for(let k=0;k&lt;q.length;k++)for(let u of g.adj[q[k]])if(!dist.has(u)){dist.set(u,dist.get(q[k])+1);q.push(u)}for(let v of comp)d=Math.max(d,dist.get(v))}return d}
-function jacobi(M){let n=M.length,A=M.map(r=&gt;r.slice()),V=Array.from({length:n},(_,i)=&gt;Array.from({length:n},(_,j)=&gt;+(i===j))),sweeps=0,converged=false;for(;sweeps&lt;80*n*n;sweeps++){let p=0,q=0,m=0;for(let i=0;i&lt;n;i++)for(let j=i+1;j&lt;n;j++)if(Math.abs(A[i][j])&gt;m){m=Math.abs(A[i][j]);p=i;q=j}let scale=Math.max(1,...A.map((r,i)=&gt;Math.abs(r[i])));if(m&lt;=2e-14*scale){converged=true;break}let tau=(A[q][q]-A[p][p])/(2*A[p][q]),t=(tau&gt;=0?1:-1)/(Math.abs(tau)+Math.sqrt(1+tau*tau)),c=1/Math.sqrt(1+t*t),s=t*c,app=A[p][p],aqq=A[q][q],apq=A[p][q];A[p][p]=app-t*apq;A[q][q]=aqq+t*apq;A[p][q]=A[q][p]=0;for(let k=0;k&lt;n;k++){if(k!==p&amp;&amp;k!==q){let x=A[k][p],y=A[k][q];A[k][p]=A[p][k]=c*x-s*y;A[k][q]=A[q][k]=s*x+c*y}let x=V[k][p],y=V[k][q];V[k][p]=c*x-s*y;V[k][q]=s*x+c*y}}let eig=Array.from({length:n},(_,j)=&gt;{let v=V.map(r=&gt;r[j]),lambda=v.reduce((sum,x,i)=&gt;sum+x*M[i].reduce((z,a,k)=&gt;z+a*v[k],0),0),res=Math.sqrt(v.reduce((sum,x,i)=&gt;{let r=M[i].reduce((z,a,k)=&gt;z+a*v[k],0)-lambda*x;return sum+r*r},0));return {value:lambda,residual:res}}).sort((a,b)=&gt;a.value-b.value);return {eig,converged,sweeps}}
+function jacobi(M){
+  const n=M.length,tolerance=1e-12;
+  if(!n||M.some(r=&gt;r.length!==n||r.some(x=&gt;!Number.isFinite(x))))throw Error(&#x27;Numerical matrix must be finite and square&#x27;);
+  let matrixScale=0;for(const r of M)for(const x of r)matrixScale=Math.max(matrixScale,Math.abs(x));
+  const B=M.map(r=&gt;r.map(x=&gt;matrixScale===0?0:x/matrixScale));
+  const normInf=Math.max(...B.map(r=&gt;r.reduce((s,x)=&gt;s+Math.abs(x),0)));
+  const normalizationUnderflowCount=M.reduce((s,r,i)=&gt;s+r.filter((x,j)=&gt;x!==0&amp;&amp;B[i][j]===0).length,0);
+  let A=B.map(r=&gt;r.slice()),V=Array.from({length:n},(_,i)=&gt;Array.from({length:n},(_,j)=&gt;+(i===j))),sweeps=0,stopped=false;
+  for(;sweeps&lt;80*n*n;sweeps++){
+    let p=0,q=0,m=0;
+    for(let i=0;i&lt;n;i++)for(let j=i+1;j&lt;n;j++)if(Math.abs(A[i][j])&gt;m){m=Math.abs(A[i][j]);p=i;q=j}
+    if(m&lt;=2e-14*normInf){stopped=true;break}
+    const tau=(A[q][q]-A[p][p])/(2*A[p][q]);
+    const t=(tau&gt;=0?1:-1)/(Math.abs(tau)+Math.hypot(1,tau)),c=1/Math.hypot(1,t),s=t*c;
+    const app=A[p][p],aqq=A[q][q],apq=A[p][q];
+    A[p][p]=app-t*apq;A[q][q]=aqq+t*apq;A[p][q]=A[q][p]=0;
+    for(let k=0;k&lt;n;k++){
+      if(k!==p&amp;&amp;k!==q){const x=A[k][p],y=A[k][q];A[k][p]=A[p][k]=c*x-s*y;A[k][q]=A[q][k]=s*x+c*y}
+      const x=V[k][p],y=V[k][q];V[k][p]=c*x-s*y;V[k][q]=s*x+c*y;
+    }
+  }
+  let scaledMaxResidual=0;
+  const eig=Array.from({length:n},(_,j)=&gt;{
+    const v=V.map(r=&gt;r[j]),bv=B.map(r=&gt;r.reduce((s,a,k)=&gt;s+a*v[k],0));
+    const normalizedValue=v.reduce((s,x,i)=&gt;s+x*bv[i],0);
+    const normalizedResidual=Math.hypot(...bv.map((x,i)=&gt;x-normalizedValue*v[i]));
+    const relativeResidual=normInf===0?normalizedResidual:normalizedResidual/(normInf*Math.hypot(...v));
+    scaledMaxResidual=Math.max(scaledMaxResidual,relativeResidual);
+    const lambda=normalizedValue*matrixScale,res=normalizedResidual*matrixScale;
+    if(!Number.isFinite(lambda)||!Number.isFinite(res))throw Error(&#x27;Numerical result exceeds finite binary64 range&#x27;);
+    return {value:lambda,residual:res};
+  }).sort((a,b)=&gt;a.value-b.value);
+  let orthogonalitySquared=0;
+  for(let i=0;i&lt;n;i++)for(let j=0;j&lt;n;j++){
+    let dot=0;for(let k=0;k&lt;n;k++)dot+=V[k][i]*V[k][j];
+    const err=dot-+(i===j);orthogonalitySquared+=err*err;
+  }
+  const orthogonalityError=Math.sqrt(orthogonalitySquared);
+  const converged=stopped&amp;&amp;scaledMaxResidual&lt;=tolerance&amp;&amp;orthogonalityError&lt;=tolerance;
+  return {eig,converged,sweeps,solverVersion:&#x27;jacobi-scale-1&#x27;,matrixScale,normalizedMatrixInfinityNorm:normInf,
+    scaledMaxResidual,orthogonalityError,relativeTolerance:tolerance,normalizationUnderflowCount,
+    resolutionRelative:tolerance,resolutionAbsolute:(matrixScale*tolerance)*normInf,
+    stopReason:converged?&#x27;RESIDUAL_AND_ORTHOGONALITY_ACCEPTED&#x27;:stopped?&#x27;POSTCHECK_FAILED&#x27;:&#x27;ITERATION_LIMIT&#x27;,
+    guarantee:&#x27;NUMERICAL_POSTCHECK_ONLY_NOT_INTERVAL_CERTIFIED&#x27;};
+}
+
 function rational(s){
   if(/^\d+\/\d+$/.test(s)){let [a,b]=s.split(&quot;/&quot;).map(BigInt);if(a&lt;=0n||b&lt;=0n)throw Error(&quot;Nonpositive rational&quot;);return [a,b]}
-  if(!/^(?:\d+(?:\.\d*)?|\.\d+)(?:[eE][+-]?\d+)?$/.test(s))throw Error('Weights must be positive decimal literals');
-  let [mant,exp='0']=s.toLowerCase().split('e');let e=Number(exp);if(!Number.isSafeInteger(e)||Math.abs(e)&gt;300)throw Error('Weight exponent out of range');
-  let parts=mant.split('.'),digits=parts.join(''),scale=(parts[1]||'').length-e;
+  if(!/^(?:\d+(?:\.\d*)?|\.\d+)(?:[eE][+-]?\d+)?$/.test(s))throw Error(&#x27;Weights must be positive decimal literals&#x27;);
+  let [mant,exp=&#x27;0&#x27;]=s.toLowerCase().split(&#x27;e&#x27;);let e=Number(exp);if(!Number.isSafeInteger(e)||Math.abs(e)&gt;300)throw Error(&#x27;Weight exponent out of range&#x27;);
+  let parts=mant.split(&#x27;.&#x27;),digits=parts.join(&#x27;&#x27;),scale=(parts[1]||&#x27;&#x27;).length-e;
   let a=BigInt(digits),b=1n;if(scale&gt;=0)b=10n**BigInt(scale);else a*=10n**BigInt(-scale);
-  if(a&lt;=0n)throw Error('Nonpositive weight');return [a,b];
+  if(a&lt;=0n)throw Error(&#x27;Nonpositive weight&#x27;);return [a,b];
 }
 function gcd(a,b){while(b){let t=a%b;a=b;b=t}return a}
 function rationalMin(a,b){return a[0]*b[1]&lt;=b[0]*a[1]?a:b}
 function rationalBound(s,cs,g){
-  let tokens=s.split(/\r?\n/).map(x=&gt;x.replace(/#.*/,'').trim()).filter(Boolean).map(x=&gt;x.split(/\s+/));
+  let tokens=s.split(/\r?\n/).map(x=&gt;x.replace(/#.*/,&#x27;&#x27;).trim()).filter(Boolean).map(x=&gt;x.split(/\s+/));
   let edges=tokens.filter(x=&gt;x.length===3).map(x=&gt;({a:x[0],b:x[1],w:rational(x[2])}));
   let cert=[];
   for(let comp of cs){if(comp.length&lt;2)continue;let names=new Set(comp.map(i=&gt;g.nodes[i]));let weights=edges.filter(x=&gt;names.has(x.a)&amp;&amp;names.has(x.b)).map(x=&gt;x.w);let w=weights.reduce(rationalMin);let d=diameter(g,comp),n=comp.length;let num=4n*w[0],den=BigInt(n*d)*w[1],factor=gcd(num,den);cert.push({size:n,diameter:d,minWeightFraction:[String(w[0]),String(w[1])],gapLowerFraction:[String(num/factor),String(den/factor)]});}
   return cert;
 }
-function analyze(s){let g=parse(s),cs=components(g),exactBounds=rationalBound(s,cs,g),bounds=cs.filter(c=&gt;c.length&gt;1).map(c=&gt;{let set=new Set(c),w=Math.min(...g.edges.filter(([a,b])=&gt;set.has(g.nodes.indexOf(a))&amp;&amp;set.has(g.nodes.indexOf(b))).map(e=&gt;e[2])),d=diameter(g,c);return {size:c.length,diameter:d,minWeight:w,lowerBound:4*w/(c.length*d)}}),numerics=jacobi(g.L),trace=g.L.reduce((s,r,i)=&gt;s+r[i],0);return {version:'X6-2.4',timestamp:new Date().toISOString(),scope:'finite positive-weight undirected graph combinatorial Laplacian',input:s,nodes:g.nodes,edgeCount:g.edges.length,componentCount:cs.length,componentSizes:cs.map(c=&gt;c.length),exactNullity:cs.length,positiveEigenvalueCount:g.nodes.length-cs.length,componentBounds:bounds,exactRationalBounds:exactBounds,globalGapLowerBound:bounds.length?Math.min(...bounds.map(x=&gt;x.lowerBound)):null,trace,numerical:numerics,certification:{nullity:'COMBINATORIAL_THEOREM',gap:'GRAPH_THEORETIC_BOUND',eigenvalues:'NUMERICAL_ONLY',intervalArithmetic:'NOT_IMPLEMENTED',rationalGapCertificate:'EXACT_DECIMAL_INPUT',julia:'REFERENCE_EXPORT_ONLY',wolfram:'REFERENCE_EXPORT_ONLY',browserE2E:'PENDING'}}}
-function show(o){last=o;document.getElementById('out').textContent=JSON.stringify(o,null,2)}
-function regression(){let cases=[['path4','a b 1\nb c 1\nc d 1',1,3,1/3],['triangle','a b 1\nb c 1\na c 1',1,2,4/3],['disconnected','a b 2\nc d 3\ne',3,2,4],['single','x',1,0,null]];let results=cases.map(([name,s,nullity,positive,bound])=&gt;{let o=analyze(s),ok=o.exactNullity===nullity&amp;&amp;o.positiveEigenvalueCount===positive&amp;&amp;(bound===null?o.globalGapLowerBound===null:Math.abs(o.globalGapLowerBound-bound)&lt;1e-10)&amp;&amp;o.numerical.converged&amp;&amp;o.numerical.eig.every(x=&gt;x.residual&lt;1e-8);return {name,pass:ok,nullity:o.exactNullity,lowerBound:o.globalGapLowerBound,maxResidual:Math.max(...o.numerical.eig.map(x=&gt;x.residual))}});show({version:'X6-2.2',type:'regression',allPassed:results.every(x=&gt;x.pass),results});}
-function downloadText(name,body,mime='text/plain'){let blob=new Blob([body],{type:mime}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=name;a.click();setTimeout(()=&gt;URL.revokeObjectURL(url),1000)}
-function refCode(lang){let raw=document.getElementById('edges').value;let g=parse(raw),L=g.L;
-  if(lang==='julia')return `# X6 v2.2 independent reference; requires Julia + LinearAlgebra\nusing LinearAlgebra\nL = [${L.map(row=&gt;row.join(' ')).join('; ')}] # rows are separated by semicolons\nvals = eigvals(Symmetric(L))\nprintln(vals)\nprintln(&quot;nullity (combinatorial): ${components(g).length}&quot;)\n`;
-  return `(* X6 v2.2 independent Wolfram reference *)\nL = ${JSON.stringify(L).replace(/\[/g,'{').replace(/\]/g,'}')};\nPrint[Eigenvalues[L] // Sort];\nPrint[&quot;Nullity (combinatorial): ${components(g).length}&quot;];\n`;
+function analyze(s){let g=parse(s),cs=components(g),exactBounds=rationalBound(s,cs,g),bounds=cs.filter(c=&gt;c.length&gt;1).map(c=&gt;{let set=new Set(c),w=Math.min(...g.edges.filter(([a,b])=&gt;set.has(g.nodes.indexOf(a))&amp;&amp;set.has(g.nodes.indexOf(b))).map(e=&gt;e[2])),d=diameter(g,c);return {size:c.length,diameter:d,minWeight:w,lowerBound:4*w/(c.length*d)}}),numerics=jacobi(g.L),trace=g.L.reduce((s,r,i)=&gt;s+r[i],0);const gap=cs.length&lt;g.nodes.length?numerics.eig[cs.length].value:null;const gapScaled=gap===null||numerics.matrixScale===0?null:gap/numerics.matrixScale;const resolutionStatus=gap===null?&#x27;NO_POSITIVE_MODE&#x27;:!numerics.converged?&#x27;NOT_CONVERGED&#x27;:gapScaled&gt;numerics.resolutionRelative*numerics.normalizedMatrixInfinityNorm?&#x27;RESOLVED_AT_TOLERANCE&#x27;:&#x27;UNRESOLVED_AT_TOLERANCE&#x27;;numerics.positiveGap={index:gap===null?null:cs.length,estimate:gap,status:resolutionStatus,scope:&#x27;smallest positive mode indexed by exact component count; numerical resolution is not a gap certificate&#x27;};return {version:&#x27;X6-2.4&#x27;,timestamp:new Date().toISOString(),scope:&#x27;finite positive-weight undirected graph combinatorial Laplacian&#x27;,input:s,nodes:g.nodes,edgeCount:g.edges.length,componentCount:cs.length,componentSizes:cs.map(c=&gt;c.length),exactNullity:cs.length,positiveEigenvalueCount:g.nodes.length-cs.length,componentBounds:bounds,exactRationalBounds:exactBounds,globalGapLowerBound:bounds.length?Math.min(...bounds.map(x=&gt;x.lowerBound)):null,trace,numerical:numerics,certification:{nullity:&#x27;COMBINATORIAL_THEOREM&#x27;,gap:&#x27;GRAPH_THEORETIC_BOUND&#x27;,eigenvalues:&#x27;NUMERICAL_ONLY&#x27;,intervalArithmetic:&#x27;NOT_IMPLEMENTED&#x27;,rationalGapCertificate:&#x27;EXACT_DECIMAL_INPUT&#x27;,julia:&#x27;REFERENCE_EXPORT_ONLY&#x27;,wolfram:&#x27;REFERENCE_EXPORT_ONLY&#x27;,browserE2E:&#x27;PENDING&#x27;}}}
+function show(o){last=o;document.getElementById(&#x27;out&#x27;).textContent=JSON.stringify(o,null,2)}
+function regression(){let cases=[[&#x27;path4&#x27;,&#x27;a b 1\nb c 1\nc d 1&#x27;,1,3,1/3],[&#x27;triangle&#x27;,&#x27;a b 1\nb c 1\na c 1&#x27;,1,2,4/3],[&#x27;disconnected&#x27;,&#x27;a b 2\nc d 3\ne&#x27;,3,2,4],[&#x27;single&#x27;,&#x27;x&#x27;,1,0,null]];let results=cases.map(([name,s,nullity,positive,bound])=&gt;{let o=analyze(s),ok=o.exactNullity===nullity&amp;&amp;o.positiveEigenvalueCount===positive&amp;&amp;(bound===null?o.globalGapLowerBound===null:Math.abs(o.globalGapLowerBound-bound)&lt;1e-10)&amp;&amp;o.numerical.converged&amp;&amp;o.numerical.eig.every(x=&gt;x.residual&lt;1e-8);return {name,pass:ok,nullity:o.exactNullity,lowerBound:o.globalGapLowerBound,maxResidual:Math.max(...o.numerical.eig.map(x=&gt;x.residual))}});show({version:&#x27;X6-2.2&#x27;,type:&#x27;regression&#x27;,allPassed:results.every(x=&gt;x.pass),results});}
+function downloadText(name,body,mime=&#x27;text/plain&#x27;){let blob=new Blob([body],{type:mime}),url=URL.createObjectURL(blob),a=document.createElement(&#x27;a&#x27;);a.href=url;a.download=name;a.click();setTimeout(()=&gt;URL.revokeObjectURL(url),1000)}
+function refCode(lang){let raw=document.getElementById(&#x27;edges&#x27;).value;let g=parse(raw),L=g.L;
+  if(lang===&#x27;julia&#x27;)return `# X6 v2.2 independent reference; requires Julia + LinearAlgebra\nusing LinearAlgebra\nL = [${L.map(row=&gt;row.join(&#x27; &#x27;)).join(&#x27;; &#x27;)}] # rows are separated by semicolons\nvals = eigvals(Symmetric(L))\nprintln(vals)\nprintln(&quot;nullity (combinatorial): ${components(g).length}&quot;)\n`;
+  return `(* X6 v2.2 independent Wolfram reference *)\nL = ${JSON.stringify(L).replace(/\[/g,&#x27;{&#x27;).replace(/\]/g,&#x27;}&#x27;)};\nPrint[Eigenvalues[L] // Sort];\nPrint[&quot;Nullity (combinatorial): ${components(g).length}&quot;];\n`;
 }
-function localize(){let t=T[document.getElementById('lang').value];for(let k of ['inputTitle','inputHelp','resultTitle','helpTitle'])document.getElementById(k).textContent=t[k];for(let k of ['run','sample','tests','export'])document.getElementById(k).textContent=t[k];document.getElementById('help').innerHTML=helpHTML}
-document.getElementById('julia').onclick=()=&gt;{try{downloadText('X6_v2_2_reference.jl',refCode('julia'))}catch(e){alert(e.message)}};document.getElementById('wolfram').onclick=()=&gt;{try{downloadText('X6_v2_2_reference.wl',refCode('wolfram'))}catch(e){alert(e.message)}};document.getElementById('lang').onchange=localize;document.getElementById('run').onclick=()=&gt;{try{show(analyze(document.getElementById('edges').value))}catch(e){document.getElementById('out').textContent='ERROR: '+e.message}};document.getElementById('sample').onclick=()=&gt;{document.getElementById('edges').value='a b 1\nb c 1\nc d 1\nx y 2\nz';document.getElementById('run').click()};document.getElementById('tests').onclick=regression;document.getElementById('export').onclick=()=&gt;{if(!last){alert('Analyze first');return}let blob=new Blob([JSON.stringify(last,null,2)],{type:'application/json'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='X6_v2_1_evidence.json';a.click();setTimeout(()=&gt;URL.revokeObjectURL(url),1000)};localize();
+function localize(){let t=T[document.getElementById(&#x27;lang&#x27;).value];for(let k of [&#x27;inputTitle&#x27;,&#x27;inputHelp&#x27;,&#x27;resultTitle&#x27;,&#x27;helpTitle&#x27;])document.getElementById(k).textContent=t[k];for(let k of [&#x27;run&#x27;,&#x27;sample&#x27;,&#x27;tests&#x27;,&#x27;export&#x27;])document.getElementById(k).textContent=t[k];document.getElementById(&#x27;help&#x27;).innerHTML=helpHTML}
+document.getElementById(&#x27;julia&#x27;).onclick=()=&gt;{try{downloadText(&#x27;X6_v2_2_reference.jl&#x27;,refCode(&#x27;julia&#x27;))}catch(e){alert(e.message)}};document.getElementById(&#x27;wolfram&#x27;).onclick=()=&gt;{try{downloadText(&#x27;X6_v2_2_reference.wl&#x27;,refCode(&#x27;wolfram&#x27;))}catch(e){alert(e.message)}};document.getElementById(&#x27;lang&#x27;).onchange=localize;document.getElementById(&#x27;run&#x27;).onclick=()=&gt;{try{show(analyze(document.getElementById(&#x27;edges&#x27;).value))}catch(e){last=null;document.getElementById(&#x27;out&#x27;).textContent=&#x27;ERROR: &#x27;+e.message}};document.getElementById(&#x27;sample&#x27;).onclick=()=&gt;{document.getElementById(&#x27;edges&#x27;).value=&#x27;a b 1\nb c 1\nc d 1\nx y 2\nz&#x27;;document.getElementById(&#x27;run&#x27;).click()};document.getElementById(&#x27;tests&#x27;).onclick=regression;document.getElementById(&#x27;export&#x27;).onclick=()=&gt;{if(!last){alert(&#x27;Analyze first&#x27;);return}let blob=new Blob([JSON.stringify(last,null,2)],{type:&#x27;application/json&#x27;}),url=URL.createObjectURL(blob),a=document.createElement(&#x27;a&#x27;);a.href=url;a.download=&#x27;X6_v2_1_evidence.json&#x27;;a.click();setTimeout(()=&gt;URL.revokeObjectURL(url),1000)};localize();
 
 // v2.3: exact rational arithmetic; an exact LDL^T positive-definiteness test
 // for L + J/n - b I. This proves lambda_2 &gt; b when it passes.
-const Q=(a,b=1n)=&gt;{if(b===0n)throw Error('zero denominator');if(b&lt;0n){a=-a;b=-b}let d=gcd(a&lt;0n?-a:a,b);return [a/d,b/d]};
+const Q=(a,b=1n)=&gt;{if(b===0n)throw Error(&#x27;zero denominator&#x27;);if(b&lt;0n){a=-a;b=-b}let d=gcd(a&lt;0n?-a:a,b);return [a/d,b/d]};
 const qa=(x,y)=&gt;Q(x[0]*y[1]+y[0]*x[1],x[1]*y[1]);
 const qn=x=&gt;[-x[0],x[1]];
 const qs=(x,y)=&gt;qa(x,qn(y));
 const qm=(x,y)=&gt;Q(x[0]*y[0],x[1]*y[1]);
 const qd=(x,y)=&gt;Q(x[0]*y[1],x[1]*y[0]);
-const qstr=x=&gt;x[0]+'/'+x[1];
+const qstr=x=&gt;x[0]+&#x27;/&#x27;+x[1];
 function exactLDL(M){let n=M.length,pivots=[];for(let k=0;k&lt;n;k++){
   let d=M[k][k];if(d[0]&lt;=0n)return {pass:false,failedPivot:k,pivot:qstr(d),pivots};
   pivots.push(qstr(d));for(let i=k+1;i&lt;n;i++)for(let j=i;j&lt;n;j++){
     let delta=qd(qm(M[i][k],M[j][k]),d);M[j][i]=qs(M[j][i],delta);M[i][j]=M[j][i];
   }
 }return {pass:true,pivots};}
-function exactCertificate(input, requested='auto'){
-  let g=parse(input),cs=components(g),tokens=input.split(/\r?\n/).map(x=&gt;x.replace(/#.*/,'').trim()).filter(Boolean).map(x=&gt;x.split(/\s+/));
-  if(g.nodes.length&gt;24)throw Error('Exact rational LDL gate: max 24 vertices');
+function exactCertificate(input, requested=&#x27;auto&#x27;){
+  let g=parse(input),cs=components(g),tokens=input.split(/\r?\n/).map(x=&gt;x.replace(/#.*/,&#x27;&#x27;).trim()).filter(Boolean).map(x=&gt;x.split(/\s+/));
+  if(g.nodes.length&gt;24)throw Error(&#x27;Exact rational LDL gate: max 24 vertices&#x27;);
   let edges=tokens.filter(x=&gt;x.length===3).map(x=&gt;({a:x[0],b:x[1],w:Q(...rational(x[2]))}));
   let results=[];
-  for(let c of cs){if(c.length===1){results.push({vertices:[g.nodes[c[0]]],status:'ISOLATED',nullity:1});continue}
+  for(let c of cs){if(c.length===1){results.push({vertices:[g.nodes[c[0]]],status:&#x27;ISOLATED&#x27;,nullity:1});continue}
     let names=c.map(i=&gt;g.nodes[i]),n=c.length,idx=new Map(names.map((x,i)=&gt;[x,i]));
     let L=Array.from({length:n},()=&gt;Array.from({length:n},()=&gt;Q(0n)));
     for(let e of edges){if(!idx.has(e.a)||!idx.has(e.b))continue;let i=idx.get(e.a),j=idx.get(e.b);
@@ -217,136 +262,136 @@ function exactCertificate(input, requested='auto'){
       L[i][j]=qs(L[i][j],e.w);L[j][i]=qs(L[j][i],e.w);
     }
     let bound;
-    if(requested==='auto'){
+    if(requested===&#x27;auto&#x27;){
       let w=edges.filter(e=&gt;idx.has(e.a)&amp;&amp;idx.has(e.b)).map(e=&gt;e.w).reduce(rationalMin);
       bound=qd(qm(Q(4n),w),Q(BigInt(n*diameter(g,c))));
-      // Strictly smaller than the theorem's non-strict lower bound.
+      // Strictly smaller than the theorem&#x27;s non-strict lower bound.
       bound=qm(bound,Q(1n,2n));
     }else{bound=Q(...rational(requested));}
     // For connected graph: eigenvalues of L+(b+1)J/n-bI are 1,lambda_2-b,... .
     let M=Array.from({length:n},(_,i)=&gt;Array.from({length:n},(_,j)=&gt;
       qs(qa(L[i][j],qd(qa(bound,Q(1n)),Q(BigInt(n)))),i===j?bound:Q(0n))));
     let result=exactLDL(M);
-    results.push({vertices:names,lowerStrict:qstr(bound),status:result.pass?'EXACT_POSITIVE_DEFINITE':'NOT_CERTIFIED',ldl:result});
+    results.push({vertices:names,lowerStrict:qstr(bound),status:result.pass?&#x27;EXACT_POSITIVE_DEFINITE&#x27;:&#x27;NOT_CERTIFIED&#x27;,ldl:result});
   }
-  return {version:'X6-2.4',method:'exact BigInt rational LDL^T of L+(b+1)J/n-bI',assumptions:'undirected graph, positive decimal weights, no self-loops',componentResults:results,allNontrivialCertified:results.every(x=&gt;x.status==='ISOLATED'||x.status==='EXACT_POSITIVE_DEFINITE'),note:'Exact rational certificate for the mathematical matrix defined by input decimals; no claim of interval-rounded floating-point eigenvalues.'};
+  return {version:&#x27;X6-2.4&#x27;,method:&#x27;exact BigInt rational LDL^T of L+(b+1)J/n-bI&#x27;,assumptions:&#x27;undirected graph, positive decimal weights, no self-loops&#x27;,componentResults:results,allNontrivialCertified:results.every(x=&gt;x.status===&#x27;ISOLATED&#x27;||x.status===&#x27;EXACT_POSITIVE_DEFINITE&#x27;),note:&#x27;Exact rational certificate for the mathematical matrix defined by input decimals; no claim of interval-rounded floating-point eigenvalues.&#x27;};
 }
-function runV23(){try{let result=exactCertificate(document.getElementById('edges').value);show(result)}catch(e){document.getElementById('out').textContent='ERROR: '+e.message}}
-function testV23(){let cases=[['path4','a b 1\nb c 1\nc d 1',true],['triangle','a b 1\nb c 1\na c 1',true],['disconnected','a b 2\nc d 3\ne',true],['single','x',true],['decimal','a b 0.125',true]];
+function runV23(){try{let result=exactCertificate(document.getElementById(&#x27;edges&#x27;).value);show(result)}catch(e){document.getElementById(&#x27;out&#x27;).textContent=&#x27;ERROR: &#x27;+e.message}}
+function testV23(){let cases=[[&#x27;path4&#x27;,&#x27;a b 1\nb c 1\nc d 1&#x27;,true],[&#x27;triangle&#x27;,&#x27;a b 1\nb c 1\na c 1&#x27;,true],[&#x27;disconnected&#x27;,&#x27;a b 2\nc d 3\ne&#x27;,true],[&#x27;single&#x27;,&#x27;x&#x27;,true],[&#x27;decimal&#x27;,&#x27;a b 0.125&#x27;,true]];
 let r=cases.map(([name,input,expected])=&gt;{try{let x=exactCertificate(input);return {name,pass:x.allNontrivialCertified===expected}}catch(e){return {name,pass:false,error:e.message}}});
-show({version:'X6-2.3',regression:r,allPassed:r.every(x=&gt;x.pass)});
+show({version:&#x27;X6-2.3&#x27;,regression:r,allPassed:r.every(x=&gt;x.pass)});
 }
-const b23=document.createElement('button');b23.textContent='Exact LDL certificate v2.3';b23.onclick=runV23;
-const t23=document.createElement('button');t23.textContent='Test v2.3';t23.onclick=testV23;
-document.getElementById('run').parentElement.append(b23,t23);
+const b23=document.createElement(&#x27;button&#x27;);b23.textContent=&#x27;Exact LDL certificate v2.3&#x27;;b23.onclick=runV23;
+const t23=document.createElement(&#x27;button&#x27;);t23.textContent=&#x27;Test v2.3&#x27;;t23.onclick=testV23;
+document.getElementById(&#x27;run&#x27;).parentElement.append(b23,t23);
 
 
 // v2.4 independent verification harness and explicit negative controls.
 function verifyV24(){
  const cases=[
-  {name:'path4 positive',input:'a b 1\nb c 1\nc d 1',bound:'0.3',expect:true},
-  {name:'path4 too-high',input:'a b 1\nb c 1\nc d 1',bound:'1',expect:false},
-  {name:'triangle positive',input:'a b 1\nb c 1\na c 1',bound:'2',expect:true},
-  {name:'triangle equality rejected',input:'a b 1\nb c 1\na c 1',bound:'3',expect:false},
-  {name:'decimal edge',input:'a b 0.125',bound:'0.2',expect:true},
-  {name:'decimal equality rejected',input:'a b 0.125',bound:'0.25',expect:false},
-  {name:'disconnected components',input:'a b 2\nc d 3\ne',bound:'3',expect:true},
-  {name:'isolated only has no gap',input:'x',bound:'1',expect:null},
+  {name:&#x27;path4 positive&#x27;,input:&#x27;a b 1\nb c 1\nc d 1&#x27;,bound:&#x27;0.3&#x27;,expect:true},
+  {name:&#x27;path4 too-high&#x27;,input:&#x27;a b 1\nb c 1\nc d 1&#x27;,bound:&#x27;1&#x27;,expect:false},
+  {name:&#x27;triangle positive&#x27;,input:&#x27;a b 1\nb c 1\na c 1&#x27;,bound:&#x27;2&#x27;,expect:true},
+  {name:&#x27;triangle equality rejected&#x27;,input:&#x27;a b 1\nb c 1\na c 1&#x27;,bound:&#x27;3&#x27;,expect:false},
+  {name:&#x27;decimal edge&#x27;,input:&#x27;a b 0.125&#x27;,bound:&#x27;0.2&#x27;,expect:true},
+  {name:&#x27;decimal equality rejected&#x27;,input:&#x27;a b 0.125&#x27;,bound:&#x27;0.25&#x27;,expect:false},
+  {name:&#x27;disconnected components&#x27;,input:&#x27;a b 2\nc d 3\ne&#x27;,bound:&#x27;3&#x27;,expect:true},
+  {name:&#x27;isolated only has no gap&#x27;,input:&#x27;x&#x27;,bound:&#x27;1&#x27;,expect:null},
  ];
  const results=cases.map(t=&gt;{try{
    const c=exactCertificate(t.input,t.bound);
-   const nontrivial=c.componentResults.filter(x=&gt;x.status!=='ISOLATED');
-   const got=nontrivial.length?nontrivial.every(x=&gt;x.status==='EXACT_POSITIVE_DEFINITE'):null;
+   const nontrivial=c.componentResults.filter(x=&gt;x.status!==&#x27;ISOLATED&#x27;);
+   const got=nontrivial.length?nontrivial.every(x=&gt;x.status===&#x27;EXACT_POSITIVE_DEFINITE&#x27;):null;
    return {name:t.name,pass:got===t.expect,expected:t.expect,actual:got};
  }catch(e){return {name:t.name,pass:false,error:String(e)}}});
- const previous=[['legacy graph regression',()=&gt;{const g=analyze('a b 1\nb c 1\nc d 1');return g.exactNullity===1&amp;&amp;g.numerical.converged&amp;&amp;g.numerical.eig.every(x=&gt;x.residual&lt;1e-8)}],['exact LDL auto',()=&gt;exactCertificate('a b 1\nb c 1\nc d 1').allNontrivialCertified]];
+ const previous=[[&#x27;legacy graph regression&#x27;,()=&gt;{const g=analyze(&#x27;a b 1\nb c 1\nc d 1&#x27;);return g.exactNullity===1&amp;&amp;g.numerical.converged&amp;&amp;g.numerical.eig.every(x=&gt;x.residual&lt;1e-8)}],[&#x27;exact LDL auto&#x27;,()=&gt;exactCertificate(&#x27;a b 1\nb c 1\nc d 1&#x27;).allNontrivialCertified]];
  for(const [name,fn] of previous){try{results.push({name,pass:!!fn()})}catch(e){results.push({name,pass:false,error:String(e)})}}
- const report={version:'X6-2.4',kind:'IN_BROWSER_VERIFICATION',date:new Date().toISOString(),allPassed:results.every(x=&gt;x.pass),results,external:{julia:'NOT_EXECUTED',wolfram:'NOT_EXECUTED'},scope:'Exact rational LDL certificates for finite undirected positive-weight graph Laplacians; not general operators'};
+ const report={version:&#x27;X6-2.4&#x27;,kind:&#x27;IN_BROWSER_VERIFICATION&#x27;,date:new Date().toISOString(),allPassed:results.every(x=&gt;x.pass),results,external:{julia:&#x27;NOT_EXECUTED&#x27;,wolfram:&#x27;NOT_EXECUTED&#x27;},scope:&#x27;Exact rational LDL certificates for finite undirected positive-weight graph Laplacians; not general operators&#x27;};
  show(report);return report;
 }
-const v24button=document.createElement('button');v24button.id='verify24';v24button.textContent='Verify v2.4 (positive + negative controls)';v24button.onclick=verifyV24;
-document.getElementById('run').parentElement.appendChild(v24button);
-document.querySelector('h1').textContent='X6 v2.4 · Independent Verification &amp; Integration';
-document.title='X6 v2.4 — Independent Verification &amp; Integration';
+const v24button=document.createElement(&#x27;button&#x27;);v24button.id=&#x27;verify24&#x27;;v24button.textContent=&#x27;Verify v2.4 (positive + negative controls)&#x27;;v24button.onclick=verifyV24;
+document.getElementById(&#x27;run&#x27;).parentElement.appendChild(v24button);
+document.querySelector(&#x27;h1&#x27;).textContent=&#x27;X6 v2.4 · Independent Verification &amp; Integration&#x27;;
+document.title=&#x27;X6 v2.4 — Independent Verification &amp; Integration&#x27;;
 
 // X6 v2.5: cross-language reproducibility package and browser acceptance harness.
 function referenceBundle(input){
  const g=parse(input),cs=components(g), c=exactCertificate(input);
  const rows=g.L.map(r=&gt;r.map(x=&gt;Number(x).toPrecision(17)));
- const jl=`# X6 v2.5 independent numerical cross-check; Julia 1.x + LinearAlgebra\nusing LinearAlgebra\nL = [${rows.map(r=&gt;r.join(' ')).join('; ')}]\nvals = sort(eigvals(Symmetric(L)))\nprintln(&quot;eigenvalues=&quot;, vals)\nprintln(&quot;component_count=&quot;, ${cs.length})\nprintln(&quot;max_symmetry_error=&quot;, maximum(abs.(L-transpose(L))))\n`;
- const wl=`(* X6 v2.5 independent numerical cross-check; Wolfram Language *)\nL = ${JSON.stringify(rows.map(r=&gt;r.map(Number))).replace(/\[/g,'{').replace(/\]/g,'}')};\nPrint[&quot;eigenvalues=&quot;, Sort[Eigenvalues[N[L, 16]]]];\nPrint[&quot;component_count=&quot;, ${cs.length}];\nPrint[&quot;max_symmetry_error=&quot;, Max[Abs[Flatten[L-Transpose[L]]]]];\n`;
- return {julia:jl,wolfram:wl,manifest:{version:'X6-2.5',input,expectedNullity:cs.length,expectedCertificate:c,scope:'Independent NUMERICAL cross-check; external programs are not executed by export',referenceEigenvalues:jacobi(g.L).eig.map(x=&gt;x.value)}};
+ const jl=`# X6 v2.5 independent numerical cross-check; Julia 1.x + LinearAlgebra\nusing LinearAlgebra\nL = [${rows.map(r=&gt;r.join(&#x27; &#x27;)).join(&#x27;; &#x27;)}]\nvals = sort(eigvals(Symmetric(L)))\nprintln(&quot;eigenvalues=&quot;, vals)\nprintln(&quot;component_count=&quot;, ${cs.length})\nprintln(&quot;max_symmetry_error=&quot;, maximum(abs.(L-transpose(L))))\n`;
+ const wl=`(* X6 v2.5 independent numerical cross-check; Wolfram Language *)\nL = ${JSON.stringify(rows.map(r=&gt;r.map(Number))).replace(/\[/g,&#x27;{&#x27;).replace(/\]/g,&#x27;}&#x27;)};\nPrint[&quot;eigenvalues=&quot;, Sort[Eigenvalues[N[L, 16]]]];\nPrint[&quot;component_count=&quot;, ${cs.length}];\nPrint[&quot;max_symmetry_error=&quot;, Max[Abs[Flatten[L-Transpose[L]]]]];\n`;
+ return {julia:jl,wolfram:wl,manifest:{version:&#x27;X6-2.5&#x27;,input,expectedNullity:cs.length,expectedCertificate:c,scope:&#x27;Independent NUMERICAL cross-check; external programs are not executed by export&#x27;,referenceEigenvalues:jacobi(g.L).eig.map(x=&gt;x.value)}};
 }
 function v25Tests(){
  const base=verifyV24();
  const checks=[
-  ['Julia reference syntax',()=&gt;referenceBundle('a b 1\nb c 1').julia.includes('using LinearAlgebra')],
-  ['Wolfram reference syntax',()=&gt;referenceBundle('a b 1\nb c 1').wolfram.includes('Eigenvalues')],
-  ['Independent analytic path4',()=&gt;{let e=analyze('a b 1\nb c 1\nc d 1').numerical.eig.map(x=&gt;x.value);return Math.abs(e[1]-(2-Math.sqrt(2)))&lt;1e-10}],
-  ['Independent analytic triangle',()=&gt;{let e=analyze('a b 1\nb c 1\na c 1').numerical.eig.map(x=&gt;x.value);return Math.abs(e[1]-3)&lt;1e-10}],
-  ['Reject negative weight',()=&gt;{try{exactCertificate('a b -1');return false}catch(e){return true}}],
-  ['Reject self-loop',()=&gt;{try{exactCertificate('a a 1');return false}catch(e){return true}}],
-  ['Reject nondecimal exact weight',()=&gt;{try{exactCertificate('a b Infinity');return false}catch(e){return true}}],
+  [&#x27;Julia reference syntax&#x27;,()=&gt;referenceBundle(&#x27;a b 1\nb c 1&#x27;).julia.includes(&#x27;using LinearAlgebra&#x27;)],
+  [&#x27;Wolfram reference syntax&#x27;,()=&gt;referenceBundle(&#x27;a b 1\nb c 1&#x27;).wolfram.includes(&#x27;Eigenvalues&#x27;)],
+  [&#x27;Independent analytic path4&#x27;,()=&gt;{let e=analyze(&#x27;a b 1\nb c 1\nc d 1&#x27;).numerical.eig.map(x=&gt;x.value);return Math.abs(e[1]-(2-Math.sqrt(2)))&lt;1e-10}],
+  [&#x27;Independent analytic triangle&#x27;,()=&gt;{let e=analyze(&#x27;a b 1\nb c 1\na c 1&#x27;).numerical.eig.map(x=&gt;x.value);return Math.abs(e[1]-3)&lt;1e-10}],
+  [&#x27;Reject negative weight&#x27;,()=&gt;{try{exactCertificate(&#x27;a b -1&#x27;);return false}catch(e){return true}}],
+  [&#x27;Reject self-loop&#x27;,()=&gt;{try{exactCertificate(&#x27;a a 1&#x27;);return false}catch(e){return true}}],
+  [&#x27;Reject nondecimal exact weight&#x27;,()=&gt;{try{exactCertificate(&#x27;a b Infinity&#x27;);return false}catch(e){return true}}],
  ];
  let results=base.results.concat(checks.map(([name,fn])=&gt;{try{return {name,pass:!!fn()}}catch(e){return {name,pass:false,error:String(e)}}}));
- const report={version:'X6-2.5',kind:'BROWSER_ACCEPTANCE',timestamp:new Date().toISOString(),passed:results.filter(x=&gt;x.pass).length,total:results.length,allPassed:results.every(x=&gt;x.pass),results,external:{julia:'NOT_EXECUTED',wolfram:'NOT_EXECUTED'},claim:'Browser verification is distinct from independent language execution'};
+ const report={version:&#x27;X6-2.5&#x27;,kind:&#x27;BROWSER_ACCEPTANCE&#x27;,timestamp:new Date().toISOString(),passed:results.filter(x=&gt;x.pass).length,total:results.length,allPassed:results.every(x=&gt;x.pass),results,external:{julia:&#x27;NOT_EXECUTED&#x27;,wolfram:&#x27;NOT_EXECUTED&#x27;},claim:&#x27;Browser verification is distinct from independent language execution&#x27;};
  show(report);return report;
 }
-const v25=document.createElement('button');v25.id='verify25';v25.textContent='Verify v2.5 (17 checks)';v25.onclick=v25Tests;
-const pack=document.createElement('button');pack.id='bundle25';pack.textContent='Export cross-language package';pack.onclick=()=&gt;{try{let p=referenceBundle(document.getElementById('edges').value);downloadText('X6_v2_5_reference.jl',p.julia);downloadText('X6_v2_5_reference.wl',p.wolfram);downloadText('X6_v2_5_manifest.json',JSON.stringify(p.manifest,null,2),'application/json')}catch(e){alert(e.message)}};
-document.getElementById('run').parentElement.append(v25,pack);
-document.querySelector('h1').textContent='X6 v2.6 · Scientific Evidence Suite';document.title='X6 v2.6 — Scientific Evidence Suite';
+const v25=document.createElement(&#x27;button&#x27;);v25.id=&#x27;verify25&#x27;;v25.textContent=&#x27;Verify v2.5 (17 checks)&#x27;;v25.onclick=v25Tests;
+const pack=document.createElement(&#x27;button&#x27;);pack.id=&#x27;bundle25&#x27;;pack.textContent=&#x27;Export cross-language package&#x27;;pack.onclick=()=&gt;{try{let p=referenceBundle(document.getElementById(&#x27;edges&#x27;).value);downloadText(&#x27;X6_v2_5_reference.jl&#x27;,p.julia);downloadText(&#x27;X6_v2_5_reference.wl&#x27;,p.wolfram);downloadText(&#x27;X6_v2_5_manifest.json&#x27;,JSON.stringify(p.manifest,null,2),&#x27;application/json&#x27;)}catch(e){alert(e.message)}};
+document.getElementById(&#x27;run&#x27;).parentElement.append(v25,pack);
+document.querySelector(&#x27;h1&#x27;).textContent=&#x27;X6 v2.6 · Scientific Evidence Suite&#x27;;document.title=&#x27;X6 v2.6 — Scientific Evidence Suite&#x27;;
 // Explicit opt-in test route for headless Chromium smoke test.
-if(new URLSearchParams(location.search).get('selftest')==='1'){
- const result=v25Tests();document.body.dataset.x6Acceptance=result.allPassed?'PASS':'FAIL';
- const status=document.createElement('div');status.id='x6-headless-status';status.textContent='X6_BROWSER_ACCEPTANCE='+document.body.dataset.x6Acceptance+' '+result.passed+'/'+result.total;document.body.appendChild(status);
+if(new URLSearchParams(location.search).get(&#x27;selftest&#x27;)===&#x27;1&#x27;){
+ const result=v25Tests();document.body.dataset.x6Acceptance=result.allPassed?&#x27;PASS&#x27;:&#x27;FAIL&#x27;;
+ const status=document.createElement(&#x27;div&#x27;);status.id=&#x27;x6-headless-status&#x27;;status.textContent=&#x27;X6_BROWSER_ACCEPTANCE=&#x27;+document.body.dataset.x6Acceptance+&#x27; &#x27;+result.passed+&#x27;/&#x27;+result.total;document.body.appendChild(status);
 }
 
 
 // X6 v2.6 evidence package: hashes bind the exported bytes, not claims about external execution.
 const X626_ENCODER = new TextEncoder();
-function x626Hex(bytes){return Array.from(new Uint8Array(bytes),x=&gt;x.toString(16).padStart(2,'0')).join('')}
-async function x626Sha256(str){if(!globalThis.crypto?.subtle)throw Error('WebCrypto SHA-256 unavailable; evidence package not issued');return x626Hex(await crypto.subtle.digest('SHA-256',X626_ENCODER.encode(str)))}
-function x626Canonical(x){if(Array.isArray(x))return '['+x.map(x626Canonical).join(',')+']';if(x&amp;&amp;typeof x==='object')return '{'+Object.keys(x).sort().map(k=&gt;JSON.stringify(k)+':'+x626Canonical(x[k])).join(',')+'}';return JSON.stringify(x)}
+function x626Hex(bytes){return Array.from(new Uint8Array(bytes),x=&gt;x.toString(16).padStart(2,&#x27;0&#x27;)).join(&#x27;&#x27;)}
+async function x626Sha256(str){if(!globalThis.crypto?.subtle)throw Error(&#x27;WebCrypto SHA-256 unavailable; evidence package not issued&#x27;);return x626Hex(await crypto.subtle.digest(&#x27;SHA-256&#x27;,X626_ENCODER.encode(str)))}
+function x626Canonical(x){if(Array.isArray(x))return &#x27;[&#x27;+x.map(x626Canonical).join(&#x27;,&#x27;)+&#x27;]&#x27;;if(x&amp;&amp;typeof x===&#x27;object&#x27;)return &#x27;{&#x27;+Object.keys(x).sort().map(k=&gt;JSON.stringify(k)+&#x27;:&#x27;+x626Canonical(x[k])).join(&#x27;,&#x27;)+&#x27;}&#x27;;return JSON.stringify(x)}
 async function x626Package(input){
  const ref=referenceBundle(input), tests=v25Tests(), cert=exactCertificate(input), analysis=analyze(input);
- const files={'input.txt':input,'reference.jl':ref.julia,'reference.wl':ref.wolfram,'certificate.json':JSON.stringify(cert,null,2),'numerical.json':JSON.stringify(analysis,null,2),'regression.json':JSON.stringify(tests,null,2)};
+ const files={&#x27;input.txt&#x27;:input,&#x27;reference.jl&#x27;:ref.julia,&#x27;reference.wl&#x27;:ref.wolfram,&#x27;certificate.json&#x27;:JSON.stringify(cert,null,2),&#x27;numerical.json&#x27;:JSON.stringify(analysis,null,2),&#x27;regression.json&#x27;:JSON.stringify(tests,null,2)};
  const hashes={};for(const name of Object.keys(files).sort())hashes[name]=await x626Sha256(files[name]);
- const manifest={schema:'x6-evidence-1',version:'2.6',hashAlgorithm:'SHA-256',encoding:'UTF-8',hashes,checks:{javascriptRegression:tests.allPassed?'PASS':'FAIL',rationalLDL:cert.allNontrivialCertified?'PASS':'FAIL',julia:'NOT_EXECUTED',wolfram:'NOT_EXECUTED',chromiumE2E:'NOT_EXECUTED_IN_THIS_PACKAGE',directedIntervalArithmetic:'NOT_IMPLEMENTED'},environment:{runtime:'Browser JavaScript',userAgent:typeof navigator!=='undefined'?navigator.userAgent:'UNAVAILABLE'},issuedAt:new Date().toISOString(),limitations:'SHA-256 authenticates file integrity only, not correctness or provenance. External language execution requires separately recorded output.'};
- files['manifest.json']=JSON.stringify(manifest,null,2);
+ const manifest={schema:&#x27;x6-evidence-1&#x27;,version:&#x27;2.6&#x27;,hashAlgorithm:&#x27;SHA-256&#x27;,encoding:&#x27;UTF-8&#x27;,hashes,checks:{javascriptRegression:tests.allPassed?&#x27;PASS&#x27;:&#x27;FAIL&#x27;,rationalLDL:cert.allNontrivialCertified?&#x27;PASS&#x27;:&#x27;FAIL&#x27;,julia:&#x27;NOT_EXECUTED&#x27;,wolfram:&#x27;NOT_EXECUTED&#x27;,chromiumE2E:&#x27;NOT_EXECUTED_IN_THIS_PACKAGE&#x27;,directedIntervalArithmetic:&#x27;NOT_IMPLEMENTED&#x27;},environment:{runtime:&#x27;Browser JavaScript&#x27;,userAgent:typeof navigator!==&#x27;undefined&#x27;?navigator.userAgent:&#x27;UNAVAILABLE&#x27;},issuedAt:new Date().toISOString(),limitations:&#x27;SHA-256 authenticates file integrity only, not correctness or provenance. External language execution requires separately recorded output.&#x27;};
+ files[&#x27;manifest.json&#x27;]=JSON.stringify(manifest,null,2);
  return {files,manifest};
 }
 async function x626Verify(files){
- if(!files['manifest.json'])return {pass:false,reason:'missing manifest'};
- let manifest;try{manifest=JSON.parse(files['manifest.json'])}catch(e){return {pass:false,reason:'invalid manifest'}};
- if(manifest.schema!=='x6-evidence-1'||manifest.hashAlgorithm!=='SHA-256')return {pass:false,reason:'unsupported schema'};
- const expected=Object.keys(manifest.hashes).sort(), actual=Object.keys(files).filter(k=&gt;k!=='manifest.json').sort();
- if(JSON.stringify(expected)!==JSON.stringify(actual))return {pass:false,reason:'missing or extra files'};
+ if(!files[&#x27;manifest.json&#x27;])return {pass:false,reason:&#x27;missing manifest&#x27;};
+ let manifest;try{manifest=JSON.parse(files[&#x27;manifest.json&#x27;])}catch(e){return {pass:false,reason:&#x27;invalid manifest&#x27;}};
+ if(manifest.schema!==&#x27;x6-evidence-1&#x27;||manifest.hashAlgorithm!==&#x27;SHA-256&#x27;)return {pass:false,reason:&#x27;unsupported schema&#x27;};
+ const expected=Object.keys(manifest.hashes).sort(), actual=Object.keys(files).filter(k=&gt;k!==&#x27;manifest.json&#x27;).sort();
+ if(JSON.stringify(expected)!==JSON.stringify(actual))return {pass:false,reason:&#x27;missing or extra files&#x27;};
  const results=[];for(const name of expected){let actualHash=await x626Sha256(files[name]);results.push({name,pass:actualHash===manifest.hashes[name]})}
  return {pass:results.every(x=&gt;x.pass),results};
 }
 async function x626Selftest(){
- const pkg=await x626Package('a b 1\nb c 1\nc d 1'.replace(/\\n/g,'\n'));
+ const pkg=await x626Package(&#x27;a b 1\nb c 1\nc d 1&#x27;.replace(/\\n/g,&#x27;\n&#x27;));
  const intact=await x626Verify(pkg.files);
- const tampered={...pkg.files,'input.txt':pkg.files['input.txt']+'\n# modified'};
+ const tampered={...pkg.files,&#x27;input.txt&#x27;:pkg.files[&#x27;input.txt&#x27;]+&#x27;\n# modified&#x27;};
  const rejected=await x626Verify(tampered);
- const stable=(await x626Sha256('abc'))==='ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad';
- return {version:'2.6',checks:[{name:'SHA-256 known-answer',pass:stable},{name:'package integrity',pass:intact.pass},{name:'tampering rejected',pass:!rejected.pass},{name:'external execution not falsely claimed',pass:pkg.manifest.checks.julia==='NOT_EXECUTED'&amp;&amp;pkg.manifest.checks.wolfram==='NOT_EXECUTED'}]};
+ const stable=(await x626Sha256(&#x27;abc&#x27;))===&#x27;ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad&#x27;;
+ return {version:&#x27;2.6&#x27;,checks:[{name:&#x27;SHA-256 known-answer&#x27;,pass:stable},{name:&#x27;package integrity&#x27;,pass:intact.pass},{name:&#x27;tampering rejected&#x27;,pass:!rejected.pass},{name:&#x27;external execution not falsely claimed&#x27;,pass:pkg.manifest.checks.julia===&#x27;NOT_EXECUTED&#x27;&amp;&amp;pkg.manifest.checks.wolfram===&#x27;NOT_EXECUTED&#x27;}]};
 }
-const x626button=document.createElement('button');x626button.id='evidence26';x626button.textContent='Export v2.6 evidence package';x626button.onclick=async()=&gt;{try{const p=await x626Package(document.getElementById('edges').value);for(const [name,data] of Object.entries(p.files))downloadText('X6_v2_6_'+name,data,name.endsWith('.json')?'application/json':'text/plain');show({version:'2.6',manifest:p.manifest,integrity:await x626Verify(p.files)})}catch(e){document.getElementById('out').textContent='ERROR: '+e.message}};
-const x626test=document.createElement('button');x626test.id='test26';x626test.textContent='Verify v2.6 integrity';x626test.onclick=async()=&gt;{try{const r=await x626Selftest();show({...r,allPassed:r.checks.every(x=&gt;x.pass)})}catch(e){document.getElementById('out').textContent='ERROR: '+e.message}};
-document.getElementById('run').parentElement.append(x626button,x626test);
-document.querySelector('h1').textContent='X6 v2.6 · Scientific Evidence &amp; Reproducibility';document.title='X6 v2.6 — Scientific Evidence Suite';
+const x626button=document.createElement(&#x27;button&#x27;);x626button.id=&#x27;evidence26&#x27;;x626button.textContent=&#x27;Export v2.6 evidence package&#x27;;x626button.onclick=async()=&gt;{try{const p=await x626Package(document.getElementById(&#x27;edges&#x27;).value);for(const [name,data] of Object.entries(p.files))downloadText(&#x27;X6_v2_6_&#x27;+name,data,name.endsWith(&#x27;.json&#x27;)?&#x27;application/json&#x27;:&#x27;text/plain&#x27;);show({version:&#x27;2.6&#x27;,manifest:p.manifest,integrity:await x626Verify(p.files)})}catch(e){document.getElementById(&#x27;out&#x27;).textContent=&#x27;ERROR: &#x27;+e.message}};
+const x626test=document.createElement(&#x27;button&#x27;);x626test.id=&#x27;test26&#x27;;x626test.textContent=&#x27;Verify v2.6 integrity&#x27;;x626test.onclick=async()=&gt;{try{const r=await x626Selftest();show({...r,allPassed:r.checks.every(x=&gt;x.pass)})}catch(e){document.getElementById(&#x27;out&#x27;).textContent=&#x27;ERROR: &#x27;+e.message}};
+document.getElementById(&#x27;run&#x27;).parentElement.append(x626button,x626test);
+document.querySelector(&#x27;h1&#x27;).textContent=&#x27;X6 v2.6 · Scientific Evidence &amp; Reproducibility&#x27;;document.title=&#x27;X6 v2.6 — Scientific Evidence Suite&#x27;;
 
 &lt;/script&gt;&lt;p&gt;&lt;b&gt;v2.5:&lt;/b&gt; Exact rational LDL certificates prove strict lower spectral-gap bounds for components with up to 24 vertices. These are exact arithmetic checks, not directed floating-point interval arithmetic. Julia/Wolfram execution remains pending; browser smoke verification is supplied separately.&lt;/p&gt;&lt;p&gt;&lt;b&gt;v2.6:&lt;/b&gt; SHA-256 evidence package and tamper detection. Integrity does not prove correctness. Julia, Wolfram and real browser end-to-end execution are not claimed.&lt;/p&gt;&lt;section&gt;&lt;h2&gt;X6 v2.9 — Independent Scientific Audit&lt;/h2&gt;&lt;p&gt;Independent Wolfram kernel tests: 5/5 PASS (P4 accepted/rejected, K3 accepted/equality rejected, disconnected rejected). Independent Python Fraction/Bareiss/Sylvester tests: 7/7 PASS. These are recorded fixtures, not live Wolfram execution in this offline browser.&lt;/p&gt;&lt;button id=&quot;audit27&quot;&gt;Run v2.7 in-browser audit&lt;/button&gt;&lt;pre aria-live=&quot;polite&quot; id=&quot;audit27out&quot;&gt;Audit not run in browser.&lt;/pre&gt;&lt;p&gt;Important: a connected component certificate is not a positive global algebraic-connectivity certificate when the graph is disconnected. Exported references require independent execution; hashes do not prove mathematical correctness.&lt;/p&gt;&lt;/section&gt;
 &lt;script&gt;
 (function(){
-const cases=[['P4 accepted','a b 1\nb c 1\nc d 1','0.5',true],['P4 rejected','a b 1\nb c 1\nc d 1','0.6',false],['K3 accepted','a b 1\nb c 1\na c 1','2',true],['K3 equality rejected','a b 1\nb c 1\na c 1','3',false],['Decimal accepted','a b 0.125','0.125',true],['Decimal equality rejected','a b 0.125','0.25',false]];
-document.getElementById('audit27').onclick=()=&gt;{
+const cases=[[&#x27;P4 accepted&#x27;,&#x27;a b 1\nb c 1\nc d 1&#x27;,&#x27;0.5&#x27;,true],[&#x27;P4 rejected&#x27;,&#x27;a b 1\nb c 1\nc d 1&#x27;,&#x27;0.6&#x27;,false],[&#x27;K3 accepted&#x27;,&#x27;a b 1\nb c 1\na c 1&#x27;,&#x27;2&#x27;,true],[&#x27;K3 equality rejected&#x27;,&#x27;a b 1\nb c 1\na c 1&#x27;,&#x27;3&#x27;,false],[&#x27;Decimal accepted&#x27;,&#x27;a b 0.125&#x27;,&#x27;0.125&#x27;,true],[&#x27;Decimal equality rejected&#x27;,&#x27;a b 0.125&#x27;,&#x27;0.25&#x27;,false]];
+document.getElementById(&#x27;audit27&#x27;).onclick=()=&gt;{
 const results=cases.map(([name,input,b,expected])=&gt;{try{const x=exactCertificate(input,b);return {name,pass:x.allNontrivialCertified===expected,actual:x.allNontrivialCertified,expected}}catch(e){return {name,pass:false,error:String(e)}}});
-const dis=exactCertificate('a b 1\nc d 1','0.1');results.push({name:'Disconnected: component-only scope',pass:dis.componentResults.length===2&amp;&amp;dis.allNontrivialCertified,warning:'Individual component certificates do not establish a positive global lambda2'});
-const result={version:'X6-2.7',kind:'IN_BROWSER_JAVASCRIPT_AUDIT',allPassed:results.every(x=&gt;x.pass),results,independentWolfram:'5/5 EXTERNALLY_EXECUTED_FIXED_TESTS',independentPython:'7/7 EXTERNALLY_EXECUTED_FIXED_TESTS',liveWolframInBrowser:'NOT_AVAILABLE'};
-document.getElementById('audit27out').textContent=JSON.stringify(result,null,2);
+const dis=exactCertificate(&#x27;a b 1\nc d 1&#x27;,&#x27;0.1&#x27;);results.push({name:&#x27;Disconnected: component-only scope&#x27;,pass:dis.componentResults.length===2&amp;&amp;dis.allNontrivialCertified,warning:&#x27;Individual component certificates do not establish a positive global lambda2&#x27;});
+const result={version:&#x27;X6-2.7&#x27;,kind:&#x27;IN_BROWSER_JAVASCRIPT_AUDIT&#x27;,allPassed:results.every(x=&gt;x.pass),results,independentWolfram:&#x27;5/5 EXTERNALLY_EXECUTED_FIXED_TESTS&#x27;,independentPython:&#x27;7/7 EXTERNALLY_EXECUTED_FIXED_TESTS&#x27;,liveWolframInBrowser:&#x27;NOT_AVAILABLE&#x27;};
+document.getElementById(&#x27;audit27out&#x27;).textContent=JSON.stringify(result,null,2);
 };
 })();
 &lt;/script&gt;
@@ -354,16 +399,16 @@ document.getElementById('audit27out').textContent=JSON.stringify(result,null,2);
 &lt;script&gt;
 (function(){
 let last=null;
-function rational(t){let x=String(t).trim();if(!/^[+]?(?:\d+(?:\.\d*)?|\.\d+)(?:\/\d+)?$/.test(x))throw Error('Invalid positive rational');let [a,b]=x.split('/');function decimal(y){let z=y.split('.');return [BigInt(z.join('')),10n**BigInt(z.length===2?z[1].length:0)]}let [an,ad]=decimal(a),[bn,bd]=b?decimal(b):[1n,1n];if(bn===0n)throw Error('Division by zero');let n=an*bd,d=ad*bn;if(n&lt;=0n)throw Error('Bound must be positive');let gcd=(a,b)=&gt;b===0n?a:gcd(b,a%b);let g=gcd(n,d);return [n/g,d/g]}
-function graph(src){let vertices=[],edges=[];for(let line of src.split(/\r?\n/)){let p=line.split('#')[0].trim().split(/\s+/);if(p.length===1&amp;&amp;!p[0])continue;if(p.length===1){if(!vertices.includes(p[0]))vertices.push(p[0]);continue}if(p.length!==3)throw Error('Expected vertex or edge line');let [a,b,w]=p;if(a===b)throw Error('Self-loop');let [num,den]=rational(w);for(let v of [a,b])if(!vertices.includes(v))vertices.push(v);edges.push([a,b,num,den])}if(vertices.length&lt;2)throw Error('At least two vertices required');let seen=new Set(),adj=new Map(vertices.map(v=&gt;[v,[]]));for(let [a,b] of edges){adj.get(a).push(b);adj.get(b).push(a)}let stack=[vertices[0]];while(stack.length){let v=stack.pop();if(seen.has(v))continue;seen.add(v);stack.push(...adj.get(v))}if(seen.size!==vertices.length)throw Error('Disconnected graph: global positive gap cannot be certified');return {vertices,edges}}
+function rational(t){let x=String(t).trim();if(!/^[+]?(?:\d+(?:\.\d*)?|\.\d+)(?:\/\d+)?$/.test(x))throw Error(&#x27;Invalid positive rational&#x27;);let [a,b]=x.split(&#x27;/&#x27;);function decimal(y){let z=y.split(&#x27;.&#x27;);return [BigInt(z.join(&#x27;&#x27;)),10n**BigInt(z.length===2?z[1].length:0)]}let [an,ad]=decimal(a),[bn,bd]=b?decimal(b):[1n,1n];if(bn===0n)throw Error(&#x27;Division by zero&#x27;);let n=an*bd,d=ad*bn;if(n&lt;=0n)throw Error(&#x27;Bound must be positive&#x27;);let gcd=(a,b)=&gt;b===0n?a:gcd(b,a%b);let g=gcd(n,d);return [n/g,d/g]}
+function graph(src){let vertices=[],edges=[];for(let line of src.split(/\r?\n/)){let p=line.split(&#x27;#&#x27;)[0].trim().split(/\s+/);if(p.length===1&amp;&amp;!p[0])continue;if(p.length===1){if(!vertices.includes(p[0]))vertices.push(p[0]);continue}if(p.length!==3)throw Error(&#x27;Expected vertex or edge line&#x27;);let [a,b,w]=p;if(a===b)throw Error(&#x27;Self-loop&#x27;);let [num,den]=rational(w);for(let v of [a,b])if(!vertices.includes(v))vertices.push(v);edges.push([a,b,num,den])}if(vertices.length&lt;2)throw Error(&#x27;At least two vertices required&#x27;);let seen=new Set(),adj=new Map(vertices.map(v=&gt;[v,[]]));for(let [a,b] of edges){adj.get(a).push(b);adj.get(b).push(a)}let stack=[vertices[0]];while(stack.length){let v=stack.pop();if(seen.has(v))continue;seen.add(v);stack.push(...adj.get(v))}if(seen.size!==vertices.length)throw Error(&#x27;Disconnected graph: global positive gap cannot be certified&#x27;);return {vertices,edges}}
 function gcd(a,b){return b===0n?a:gcd(b,a%b)}
 function frac(n,d){if(d&lt;0n){n=-n;d=-d}let g=gcd(n&lt;0n?-n:n,d);return [n/g,d/g]}
 function add(a,b){return frac(a[0]*b[1]+b[0]*a[1],a[1]*b[1])}
 function div(a,b){return frac(a[0]*b[1],a[1]*b[0])}
-function upper(g){let n=g.vertices.length,idx=new Map(g.vertices.map((v,i)=&gt;[v,i])),degree=Array.from({length:n},()=&gt;[0n,1n]);for(let [a,b,num,den] of g.edges){let w=[num,den];degree[idx.get(a)]=add(degree[idx.get(a)],w);degree[idx.get(b)]=add(degree[idx.get(b)],w)}let best=null,pair=null;for(let i=0;i&lt;n;i++)for(let j=i+1;j&lt;n;j++){let cross=[0n,1n];for(let [a,b,num,den] of g.edges)if((a===g.vertices[i]&amp;&amp;b===g.vertices[j])||(b===g.vertices[i]&amp;&amp;a===g.vertices[j]))cross=add(cross,[num,den]);let q=div(add(add(degree[i],degree[j]),[2n*cross[0],cross[1]]),[2n,1n]);if(!best||q[0]*best[1]&lt;best[0]*q[1]){best=q;pair=[g.vertices[i],g.vertices[j]]}}return {fraction:best[0]+'/'+best[1],pair}}
-function run(){let source=document.getElementById('edges').value,b=document.getElementById('bound28').value;let g=graph(source),u=upper(g),cert=exactCertificate(source,b);if(cert.componentResults.length!==1)throw Error('Not one component');let certified=cert.allNontrivialCertified===true;let out={schema:'x6.spectral.enclosure.v1',version:'2.8',scope:'global-connected-graph',source,requestedLower:b,strictLowerCertified:certified,upperBound:u.fraction,upperWitnessPair:u.pair,lowerMethod:'exact rational LDL via existing X6 core',upperMethod:'exact rational Rayleigh quotient of e_i-e_j',status:certified?'CERTIFIED_ENCLOSURE':'LOWER_NOT_CERTIFIED',externalPython:'PENDING',externalWolfram:'PENDING'};last=out;document.getElementById('out28').textContent=JSON.stringify(out,null,2);return out}
-document.getElementById('audit28').onclick=()=&gt;{try{run()}catch(e){last=null;document.getElementById('out28').textContent='FAIL: '+e.message}};
-document.getElementById('export28').onclick=()=&gt;{try{let o=run();let blob=new Blob([JSON.stringify(o,null,2)],{type:'application/json'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='x6_v28_certificate.json';a.click();setTimeout(()=&gt;URL.revokeObjectURL(url),1000)}catch(e){document.getElementById('out28').textContent='FAIL: '+e.message}};
+function upper(g){let n=g.vertices.length,idx=new Map(g.vertices.map((v,i)=&gt;[v,i])),degree=Array.from({length:n},()=&gt;[0n,1n]);for(let [a,b,num,den] of g.edges){let w=[num,den];degree[idx.get(a)]=add(degree[idx.get(a)],w);degree[idx.get(b)]=add(degree[idx.get(b)],w)}let best=null,pair=null;for(let i=0;i&lt;n;i++)for(let j=i+1;j&lt;n;j++){let cross=[0n,1n];for(let [a,b,num,den] of g.edges)if((a===g.vertices[i]&amp;&amp;b===g.vertices[j])||(b===g.vertices[i]&amp;&amp;a===g.vertices[j]))cross=add(cross,[num,den]);let q=div(add(add(degree[i],degree[j]),[2n*cross[0],cross[1]]),[2n,1n]);if(!best||q[0]*best[1]&lt;best[0]*q[1]){best=q;pair=[g.vertices[i],g.vertices[j]]}}return {fraction:best[0]+&#x27;/&#x27;+best[1],pair}}
+function run(){let source=document.getElementById(&#x27;edges&#x27;).value,b=document.getElementById(&#x27;bound28&#x27;).value;let g=graph(source),u=upper(g),cert=exactCertificate(source,b);if(cert.componentResults.length!==1)throw Error(&#x27;Not one component&#x27;);let certified=cert.allNontrivialCertified===true;let out={schema:&#x27;x6.spectral.enclosure.v1&#x27;,version:&#x27;2.8&#x27;,scope:&#x27;global-connected-graph&#x27;,source,requestedLower:b,strictLowerCertified:certified,upperBound:u.fraction,upperWitnessPair:u.pair,lowerMethod:&#x27;exact rational LDL via existing X6 core&#x27;,upperMethod:&#x27;exact rational Rayleigh quotient of e_i-e_j&#x27;,status:certified?&#x27;CERTIFIED_ENCLOSURE&#x27;:&#x27;LOWER_NOT_CERTIFIED&#x27;,externalPython:&#x27;PENDING&#x27;,externalWolfram:&#x27;PENDING&#x27;};last=out;document.getElementById(&#x27;out28&#x27;).textContent=JSON.stringify(out,null,2);return out}
+document.getElementById(&#x27;audit28&#x27;).onclick=()=&gt;{try{run()}catch(e){last=null;document.getElementById(&#x27;out28&#x27;).textContent=&#x27;FAIL: &#x27;+e.message}};
+document.getElementById(&#x27;export28&#x27;).onclick=()=&gt;{try{let o=run();let blob=new Blob([JSON.stringify(o,null,2)],{type:&#x27;application/json&#x27;}),url=URL.createObjectURL(blob),a=document.createElement(&#x27;a&#x27;);a.href=url;a.download=&#x27;x6_v28_certificate.json&#x27;;a.click();setTimeout(()=&gt;URL.revokeObjectURL(url),1000)}catch(e){document.getElementById(&#x27;out28&#x27;).textContent=&#x27;FAIL: &#x27;+e.message}};
 })();
 &lt;/script&gt;
 &lt;section style=&quot;border:1px solid #476579;padding:14px;margin:16px 0;border-radius:8px&quot;&gt;&lt;h2&gt;X6 v2.9 · Automated Certificate Verification&lt;/h2&gt;&lt;p&gt;Exact dyadic search for strict lower bounds. A rejected bound is not reported as a mathematical certificate. The upper bound is a rational Rayleigh witness.&lt;/p&gt;&lt;label&gt;Dyadic refinement steps (1–16): &lt;input id=&quot;steps29&quot; max=&quot;16&quot; min=&quot;1&quot; type=&quot;number&quot; value=&quot;10&quot;/&gt;&lt;/label&gt; &lt;button id=&quot;run29&quot;&gt;Refine and export audit certificate&lt;/button&gt;&lt;button id=&quot;test29&quot;&gt;Run negative controls&lt;/button&gt;&lt;pre id=&quot;out29&quot; style=&quot;white-space:pre-wrap;overflow:auto;max-height:400px&quot;&gt;&lt;/pre&gt;&lt;/section&gt;
@@ -371,11 +416,11 @@ document.getElementById('export28').onclick=()=&gt;{try{let o=run();let blob=new
 (function(){
 const $=id=&gt;document.getElementById(id);
 function certified(src,b){const c=exactCertificate(src,b);return c.componentResults.length===1&amp;&amp;c.allNontrivialCertified===true}
-function rational(s){let m=String(s).match(/^(\d+)\/(\d+)$/);if(!m)throw Error('Invalid rational upper bound');return [BigInt(m[1]),BigInt(m[2])]}
-function getUpper(){ $('audit28').click();let o=JSON.parse($('out28').textContent);if(!o.upperBound)throw Error('Upper witness unavailable');return o}
-function refine(){let src=$('edges').value;let initial=getUpper();let [num,den]=rational(initial.upperBound);let steps=Number($('steps29').value);if(!Number.isInteger(steps)||steps&lt;1||steps&gt;16)throw Error('Steps must be 1–16');if(initial.scope!=='global-connected-graph')throw Error('Graph not connected');let lo=0n,hi=num*(2n**BigInt(steps));let divisor=den*(2n**BigInt(steps));let trace=[];for(let i=0;i&lt;steps;i++){let mid=(lo+hi)/2n;if(mid===lo)break;let bound=mid+'/'+divisor;let pass=certified(src,bound);trace.push({bound,positiveDefinite:pass});if(pass)lo=mid;else hi=mid}let lower=lo+'/'+divisor;let finalPass=lo&gt;0n&amp;&amp;certified(src,lower);let report={schema:'x6.spectral.audit.v2',version:'2.9',scope:'connected-undirected-positive-rational-weights',source:src,strictLower:lower,strictLowerCertified:finalPass,upperBound:initial.upperBound,upperWitnessPair:initial.upperWitnessPair,upperCertifiedBy:'exact rational Rayleigh quotient',searchTrace:trace,claim:finalPass?'strictLower &lt; lambda2 &lt;= upperBound':'No strictly positive lower bound certified at this resolution',externalPython:'NOT_EXECUTED',externalWolfram:'NOT_EXECUTED',browserE2E:'NOT_EXECUTED'};$('out29').textContent=JSON.stringify(report,null,2);let blob=new Blob([JSON.stringify(report,null,2)],{type:'application/json'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='x6_v29_audit_certificate.json';a.click();setTimeout(()=&gt;URL.revokeObjectURL(url),1000);return report}
-$('run29').onclick=()=&gt;{try{refine()}catch(e){$('out29').textContent='FAIL: '+e.message}};
-$('test29').onclick=()=&gt;{let tests=[['P4 valid',()=&gt;certified('a b 1\nb c 1\nc d 1','1/2')],['P4 invalid',()=&gt;!certified('a b 1\nb c 1\nc d 1','3/5')],['K3 equality',()=&gt;!certified('a b 1\nb c 1\na c 1','3')],['Disconnected rejection',()=&gt;!certified('a b 1\nc d 1','1/10')],['Decimal weights',()=&gt;certified('a b 0.125','1/8')],['Decimal equality',()=&gt;!certified('a b 0.125','1/4')]];let results=tests.map(([name,fn])=&gt;{try{return {name,pass:!!fn()}}catch(e){return {name,pass:false,error:String(e)}}});$('out29').textContent=JSON.stringify({version:'2.9',results,allPassed:results.every(x=&gt;x.pass)},null,2)};
+function rational(s){let m=String(s).match(/^(\d+)\/(\d+)$/);if(!m)throw Error(&#x27;Invalid rational upper bound&#x27;);return [BigInt(m[1]),BigInt(m[2])]}
+function getUpper(){ $(&#x27;audit28&#x27;).click();let o=JSON.parse($(&#x27;out28&#x27;).textContent);if(!o.upperBound)throw Error(&#x27;Upper witness unavailable&#x27;);return o}
+function refine(){let src=$(&#x27;edges&#x27;).value;let initial=getUpper();let [num,den]=rational(initial.upperBound);let steps=Number($(&#x27;steps29&#x27;).value);if(!Number.isInteger(steps)||steps&lt;1||steps&gt;16)throw Error(&#x27;Steps must be 1–16&#x27;);if(initial.scope!==&#x27;global-connected-graph&#x27;)throw Error(&#x27;Graph not connected&#x27;);let lo=0n,hi=num*(2n**BigInt(steps));let divisor=den*(2n**BigInt(steps));let trace=[];for(let i=0;i&lt;steps;i++){let mid=(lo+hi)/2n;if(mid===lo)break;let bound=mid+&#x27;/&#x27;+divisor;let pass=certified(src,bound);trace.push({bound,positiveDefinite:pass});if(pass)lo=mid;else hi=mid}let lower=lo+&#x27;/&#x27;+divisor;let finalPass=lo&gt;0n&amp;&amp;certified(src,lower);let report={schema:&#x27;x6.spectral.audit.v2&#x27;,version:&#x27;2.9&#x27;,scope:&#x27;connected-undirected-positive-rational-weights&#x27;,source:src,strictLower:lower,strictLowerCertified:finalPass,upperBound:initial.upperBound,upperWitnessPair:initial.upperWitnessPair,upperCertifiedBy:&#x27;exact rational Rayleigh quotient&#x27;,searchTrace:trace,claim:finalPass?&#x27;strictLower &lt; lambda2 &lt;= upperBound&#x27;:&#x27;No strictly positive lower bound certified at this resolution&#x27;,externalPython:&#x27;NOT_EXECUTED&#x27;,externalWolfram:&#x27;NOT_EXECUTED&#x27;,browserE2E:&#x27;NOT_EXECUTED&#x27;};$(&#x27;out29&#x27;).textContent=JSON.stringify(report,null,2);let blob=new Blob([JSON.stringify(report,null,2)],{type:&#x27;application/json&#x27;}),url=URL.createObjectURL(blob),a=document.createElement(&#x27;a&#x27;);a.href=url;a.download=&#x27;x6_v29_audit_certificate.json&#x27;;a.click();setTimeout(()=&gt;URL.revokeObjectURL(url),1000);return report}
+$(&#x27;run29&#x27;).onclick=()=&gt;{try{refine()}catch(e){$(&#x27;out29&#x27;).textContent=&#x27;FAIL: &#x27;+e.message}};
+$(&#x27;test29&#x27;).onclick=()=&gt;{let tests=[[&#x27;P4 valid&#x27;,()=&gt;certified(&#x27;a b 1\nb c 1\nc d 1&#x27;,&#x27;1/2&#x27;)],[&#x27;P4 invalid&#x27;,()=&gt;!certified(&#x27;a b 1\nb c 1\nc d 1&#x27;,&#x27;3/5&#x27;)],[&#x27;K3 equality&#x27;,()=&gt;!certified(&#x27;a b 1\nb c 1\na c 1&#x27;,&#x27;3&#x27;)],[&#x27;Disconnected rejection&#x27;,()=&gt;!certified(&#x27;a b 1\nc d 1&#x27;,&#x27;1/10&#x27;)],[&#x27;Decimal weights&#x27;,()=&gt;certified(&#x27;a b 0.125&#x27;,&#x27;1/8&#x27;)],[&#x27;Decimal equality&#x27;,()=&gt;!certified(&#x27;a b 0.125&#x27;,&#x27;1/4&#x27;)]];let results=tests.map(([name,fn])=&gt;{try{return {name,pass:!!fn()}}catch(e){return {name,pass:false,error:String(e)}}});$(&#x27;out29&#x27;).textContent=JSON.stringify({version:&#x27;2.9&#x27;,results,allPassed:results.every(x=&gt;x.pass)},null,2)};
 })();
 &lt;/script&gt;
 &lt;section id=&quot;release30&quot;&gt;&lt;h2&gt;X6 v3.0 · Release verification gate&lt;/h2&gt;
@@ -385,58 +430,58 @@ $('test29').onclick=()=&gt;{let tests=[['P4 valid',()=&gt;certified('a b 1\nb c 
 &lt;script&gt;
 (function(){
 const by=id=&gt;document.getElementById(id);
-by('gate30').onclick=()=&gt;{
+by(&#x27;gate30&#x27;).onclick=()=&gt;{
  const tests=[];
  function run(name,fn){try{tests.push({name,pass:!!fn()})}catch(e){tests.push({name,pass:false,error:String(e)})}}
- run('P4 strict lower',()=&gt;{let c=exactCertificate('a b 1\nb c 1\nc d 1','1/2');return c.allNontrivialCertified===true});
- run('P4 reject too high',()=&gt;exactCertificate('a b 1\nb c 1\nc d 1','3/5').allNontrivialCertified===false);
- run('K3 equality rejected',()=&gt;exactCertificate('a b 1\nb c 1\na c 1','3').allNontrivialCertified===false);
- run('decimal exact',()=&gt;exactCertificate('a b 0.125','1/8').allNontrivialCertified===true);
- run('decimal equality rejected',()=&gt;exactCertificate('a b 0.125','1/4').allNontrivialCertified===false);
- run('disconnected global scope rejection',()=&gt;{let c=exactCertificate('a b 1\nc d 1','1/10');return c.componentResults.length===2});
- const out={version:'3.0-rc',environment:'browser',tests,allPassed:tests.every(t=&gt;t.pass),independentPython:'SEPARATE_PROCESS',wolfram:'PENDING',julia:'PENDING'};
- by('gate30out').textContent=JSON.stringify(out,null,2);
+ run(&#x27;P4 strict lower&#x27;,()=&gt;{let c=exactCertificate(&#x27;a b 1\nb c 1\nc d 1&#x27;,&#x27;1/2&#x27;);return c.allNontrivialCertified===true});
+ run(&#x27;P4 reject too high&#x27;,()=&gt;exactCertificate(&#x27;a b 1\nb c 1\nc d 1&#x27;,&#x27;3/5&#x27;).allNontrivialCertified===false);
+ run(&#x27;K3 equality rejected&#x27;,()=&gt;exactCertificate(&#x27;a b 1\nb c 1\na c 1&#x27;,&#x27;3&#x27;).allNontrivialCertified===false);
+ run(&#x27;decimal exact&#x27;,()=&gt;exactCertificate(&#x27;a b 0.125&#x27;,&#x27;1/8&#x27;).allNontrivialCertified===true);
+ run(&#x27;decimal equality rejected&#x27;,()=&gt;exactCertificate(&#x27;a b 0.125&#x27;,&#x27;1/4&#x27;).allNontrivialCertified===false);
+ run(&#x27;disconnected global scope rejection&#x27;,()=&gt;{let c=exactCertificate(&#x27;a b 1\nc d 1&#x27;,&#x27;1/10&#x27;);return c.componentResults.length===2});
+ const out={version:&#x27;3.0-rc&#x27;,environment:&#x27;browser&#x27;,tests,allPassed:tests.every(t=&gt;t.pass),independentPython:&#x27;SEPARATE_PROCESS&#x27;,wolfram:&#x27;PENDING&#x27;,julia:&#x27;PENDING&#x27;};
+ by(&#x27;gate30out&#x27;).textContent=JSON.stringify(out,null,2);
 };
 })();
 &lt;/script&gt;
-&lt;section id=&quot;release31&quot; style=&quot;border:1px solid #476579;padding:14px;margin:16px 0;border-radius:8px&quot;&gt;&lt;h2&gt;X6 v3.1 · Browser Validation &amp;amp; Release Hardening&lt;/h2&gt;&lt;p&gt;Browser automation confirmed six release-gate checks and generated a certificate for P4, independently accepted by Python Fraction/Bareiss/Sylvester. This records a fixture, not a fresh external audit of every user input.&lt;/p&gt;&lt;button id=&quot;gate31&quot;&gt;Run v3.1 browser verification&lt;/button&gt;&lt;pre aria-live=&quot;polite&quot; id=&quot;gate31out&quot;&gt;NOT_EXECUTED&lt;/pre&gt;&lt;p&gt;Release status: BROWSER-GATE PASSED ON P4 FIXTURE; Julia, Wolfram for v3.1 and original full X6 integration remain pending.&lt;/p&gt;&lt;/section&gt;&lt;script&gt;(function(){document.getElementById('gate31').onclick=function(){document.getElementById('gate30').click();let r=JSON.parse(document.getElementById('gate30out').textContent);document.getElementById('gate31out').textContent=JSON.stringify({version:'3.1',browserGate:r.allPassed,tests:r.tests,externalPythonFixture:'PASS_IN_SEPARATE_RUN',externalWolfram:'PENDING',externalJulia:'PENDING',fullIntegration:'PENDING'},null,2)}})();&lt;/script&gt;&lt;script&gt;
-(function(){'use strict';const VERSION='x6-bridge-1';
-window.addEventListener('message',e=&gt;{if(e.source!==parent||!e.data||e.data.schema!==VERSION)return;
-if(e.data.action==='SET_GRAPH'){
+&lt;section id=&quot;release31&quot; style=&quot;border:1px solid #476579;padding:14px;margin:16px 0;border-radius:8px&quot;&gt;&lt;h2&gt;X6 v3.1 · Browser Validation &amp;amp; Release Hardening&lt;/h2&gt;&lt;p&gt;Browser automation confirmed six release-gate checks and generated a certificate for P4, independently accepted by Python Fraction/Bareiss/Sylvester. This records a fixture, not a fresh external audit of every user input.&lt;/p&gt;&lt;button id=&quot;gate31&quot;&gt;Run v3.1 browser verification&lt;/button&gt;&lt;pre aria-live=&quot;polite&quot; id=&quot;gate31out&quot;&gt;NOT_EXECUTED&lt;/pre&gt;&lt;p&gt;Release status: BROWSER-GATE PASSED ON P4 FIXTURE; Julia, Wolfram for v3.1 and original full X6 integration remain pending.&lt;/p&gt;&lt;/section&gt;&lt;script&gt;(function(){document.getElementById(&#x27;gate31&#x27;).onclick=function(){document.getElementById(&#x27;gate30&#x27;).click();let r=JSON.parse(document.getElementById(&#x27;gate30out&#x27;).textContent);document.getElementById(&#x27;gate31out&#x27;).textContent=JSON.stringify({version:&#x27;3.1&#x27;,browserGate:r.allPassed,tests:r.tests,externalPythonFixture:&#x27;PASS_IN_SEPARATE_RUN&#x27;,externalWolfram:&#x27;PENDING&#x27;,externalJulia:&#x27;PENDING&#x27;,fullIntegration:&#x27;PENDING&#x27;},null,2)}})();&lt;/script&gt;&lt;script&gt;
+(function(){&#x27;use strict&#x27;;const VERSION=&#x27;x6-bridge-1&#x27;;
+window.addEventListener(&#x27;message&#x27;,e=&gt;{if(e.source!==parent||!e.data||e.data.schema!==VERSION)return;
+if(e.data.action===&#x27;SET_GRAPH&#x27;){
  const p=e.data.payload;
- if(!p||p.kind!=='graph-input'||typeof p.edgeText!=='string'||p.edgeText.length&gt;50000)return;
- const el=document.getElementById('edges');if(!el)return;el.value=p.edgeText;
- parent.postMessage({schema:VERSION,action:'GRAPH_RECEIVED',requestId:e.data.requestId,payload:{kind:'graph-input',length:el.value.length,source:'spectral-lab-v3.1',status:'INPUT_LOADED_NOT_CERTIFIED'}},'*');
+ if(!p||p.kind!==&#x27;graph-input&#x27;||typeof p.edgeText!==&#x27;string&#x27;||p.edgeText.length&gt;50000)return;
+ const el=document.getElementById(&#x27;edges&#x27;);if(!el)return;el.value=p.edgeText;
+ parent.postMessage({schema:VERSION,action:&#x27;GRAPH_RECEIVED&#x27;,requestId:e.data.requestId,payload:{kind:&#x27;graph-input&#x27;,length:el.value.length,source:&#x27;spectral-lab-v3.1&#x27;,status:&#x27;INPUT_LOADED_NOT_CERTIFIED&#x27;}},&#x27;*&#x27;);
 }
-if(e.data.action==='GET_GRAPH'){
- const el=document.getElementById('edges');parent.postMessage({schema:VERSION,action:'GRAPH_DATA',requestId:e.data.requestId,payload:{kind:'graph-input',edgeText:el?.value||'',source:'spectral-lab-v3.1',scientificStatus:'USER_INPUT_NOT_CERTIFIED'}},'*');
+if(e.data.action===&#x27;GET_GRAPH&#x27;){
+ const el=document.getElementById(&#x27;edges&#x27;);parent.postMessage({schema:VERSION,action:&#x27;GRAPH_DATA&#x27;,requestId:e.data.requestId,payload:{kind:&#x27;graph-input&#x27;,edgeText:el?.value||&#x27;&#x27;,source:&#x27;spectral-lab-v3.1&#x27;,scientificStatus:&#x27;USER_INPUT_NOT_CERTIFIED&#x27;}},&#x27;*&#x27;);
 }
 });})();
 &lt;/script&gt;&lt;script&gt;
 (function(){
-'use strict';
-const SCHEMA='x6-cert-bridge-1';
-window.addEventListener('message',event=&gt;{
-  if(event.source!==parent || !event.data || event.data.schema!==SCHEMA || event.data.action!=='CERTIFY')return;
+&#x27;use strict&#x27;;
+const SCHEMA=&#x27;x6-cert-bridge-1&#x27;;
+window.addEventListener(&#x27;message&#x27;,event=&gt;{
+  if(event.source!==parent || !event.data || event.data.schema!==SCHEMA || event.data.action!==&#x27;CERTIFY&#x27;)return;
   const id=event.data.requestId;
   try{
     const p=event.data.payload;
-    if(!p||typeof p.edgeText!=='string'||p.edgeText.length&gt;50000)throw Error('Invalid graph payload');
-    document.getElementById('edges').value=p.edgeText;
-    const exact=exactCertificate(p.edgeText,'auto');
-    document.getElementById('audit28').click();
-    const upper=JSON.parse(document.getElementById('out28').textContent);
+    if(!p||typeof p.edgeText!==&#x27;string&#x27;||p.edgeText.length&gt;50000)throw Error(&#x27;Invalid graph payload&#x27;);
+    document.getElementById(&#x27;edges&#x27;).value=p.edgeText;
+    const exact=exactCertificate(p.edgeText,&#x27;auto&#x27;);
+    document.getElementById(&#x27;audit28&#x27;).click();
+    const upper=JSON.parse(document.getElementById(&#x27;out28&#x27;).textContent);
     let refined=null;
     if(exact.componentResults.length===1 &amp;&amp; exact.allNontrivialCertified){
-      document.getElementById('steps29').value='10';
-      document.getElementById('run29').click();
-      const output=document.getElementById('out29').textContent;
-      try{refined=JSON.parse(output)}catch(e){refined={status:'NOT_AVAILABLE',message:output.slice(0,500)}}
+      document.getElementById(&#x27;steps29&#x27;).value=&#x27;10&#x27;;
+      document.getElementById(&#x27;run29&#x27;).click();
+      const output=document.getElementById(&#x27;out29&#x27;).textContent;
+      try{refined=JSON.parse(output)}catch(e){refined={status:&#x27;NOT_AVAILABLE&#x27;,message:output.slice(0,500)}}
     }
-    parent.postMessage({schema:SCHEMA,requestId:id,action:'CERTIFICATION_RESULT',
-      payload:{status:'COMPUTED_IN_BROWSER_NOT_EXTERNALLY_VERIFIED',exact,upper,refined,
-      source:'x6-spectral-v3.1',external:{python:'NOT_EXECUTED_FOR_THIS_RESULT',wolfram:'NOT_EXECUTED_FOR_THIS_RESULT',julia:'NOT_EXECUTED_FOR_THIS_RESULT'}}},'*');
-  }catch(e){parent.postMessage({schema:SCHEMA,requestId:id,action:'CERTIFICATION_ERROR',payload:{error:String(e)}},'*')}
+    parent.postMessage({schema:SCHEMA,requestId:id,action:&#x27;CERTIFICATION_RESULT&#x27;,
+      payload:{status:&#x27;COMPUTED_IN_BROWSER_NOT_EXTERNALLY_VERIFIED&#x27;,exact,upper,refined,
+      source:&#x27;x6-spectral-v3.1&#x27;,external:{python:&#x27;NOT_EXECUTED_FOR_THIS_RESULT&#x27;,wolfram:&#x27;NOT_EXECUTED_FOR_THIS_RESULT&#x27;,julia:&#x27;NOT_EXECUTED_FOR_THIS_RESULT&#x27;}}},&#x27;*&#x27;);
+  }catch(e){parent.postMessage({schema:SCHEMA,requestId:id,action:&#x27;CERTIFICATION_ERROR&#x27;,payload:{error:String(e)}},&#x27;*&#x27;)}
 });
 })();
 &lt;/script&gt;&lt;/body&gt;&lt;/html&gt;
