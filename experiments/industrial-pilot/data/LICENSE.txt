@@ -1,0 +1,29 @@
+Paderborn University KAt Bearing DataCenter — selected measurement channels
+
+Data creators: Christian Lessmeier, James Kuria Kimotho, Detmar Zimmer,
+Walter Sextro; Chair of Design and Drive Technology, Paderborn University.
+
+License: Creative Commons Attribution-NonCommercial 4.0 International
+https://creativecommons.org/licenses/by-nc/4.0/
+
+Authoritative license statement and source:
+https://mb.uni-paderborn.de/en/kat/research/bearing-datacenter
+https://groups.uni-paderborn.de/kat/BearingDataCenter/
+
+Cite: Lessmeier, C.; Kimotho, J. K.; Zimmer, D.; Sextro, W. (2016).
+Condition Monitoring of Bearing Damage in Electromechanical Drive Systems
+by Using Motor Current Signals of Electric Motors: A Benchmark Data Set
+for Data-Driven Classification. European Conference of the Prognostics
+and Health Management Society, Bilbao, Spain.
+
+Changes made for this pilot: selected one metadata-qualified repeat per
+physical bearing and the vibration_1 channel; retained the first 256000
+stored samples as unchanged float64 values; omitted an extra endpoint
+where present and omitted other channels; lossless NPZ compression.
+No filtering, interpolation, resampling or amplitude conversion of these
+redistributed input values. Exact archive/member/signal hashes and selection
+attempts are in manifest.json. No endorsement by the original authors is implied.
+
+These measurements are NOT relicensed under the repository's Apache-2.0
+license. The publisher permits noncommercial academic use with attribution;
+for commercial use the publisher directs users to contact the author.

@@ -1,0 +1,1059 @@
+{
+  "schema": "x6.industrial.pilot-inputs/1",
+  "contract_sha256": "6aaf98935d9ba94015bc365e0ab02dedfe700823941f8b047f39f1555243437f",
+  "importer_sha256": "870f6c7b2ec4da4f12cfb775da7d86642e2d54d84ac4567b3bc849e3a207c158",
+  "created_utc": "2026-10-15T13:11:10.281244+00:00",
+  "evidence_class": "PUBLIC_MEASURED_SECONDARY_ANALYSIS",
+  "license": "CC-BY-NC-4.0",
+  "transformation": "First metadata-qualified repeat per bearing, named vibration_1, first 256000 samples unchanged as float64; omitted extra endpoint if present and other channels; no filtering or resampling.",
+  "records": [
+    {
+      "bearing_id": "K001",
+      "record_id": "N15_M07_F10_K001_1",
+      "selected_repeat": 1,
+      "selection_audit": [
+        {
+          "repeat": 1,
+          "member_sha256": "e1a971e93991e5f8bbfdcacde5a0fec895a4248f8232d52b59ff85d034c9c00d",
+          "native_samples": 256001,
+          "max_grid_error_samples": 0.08795025403378531,
+          "gates": {
+            "shape": true,
+            "finite_lossless": true,
+            "timebase": true,
+            "native_unit_unchanged": true
+          },
+          "accepted": true
+        }
+      ],
+      "split": "development",
+      "label": "healthy",
+      "archive_url": "https://groups.uni-paderborn.de/kat/BearingDataCenter/K001.rar",
+      "archive_bytes": 173881721,
+      "archive_sha256": "0f119ebdb28fb2f4d9fac1beb1319429f63f7ae1256c23c872f280f3560918e5",
+      "member": "K001/N15_M07_F10_K001_1.mat",
+      "member_bytes": 8714904,
+      "member_sha256": "e1a971e93991e5f8bbfdcacde5a0fec895a4248f8232d52b59ff85d034c9c00d",
+      "path": "K001.npz",
+      "bytes": 510555,
+      "sha256": "fc1330752d8814045cc1c5138ee411dc7da16d9456dad85fe8eeb2fdd766226d",
+      "samples": 256000,
+      "dtype": "<f8",
+      "native_unit": "",
+      "signal_sha256": "c94fd2801f2b7a1c808a36fb4d651b21a8f13ab52934425135a6117d414300ae",
+      "timebase": {
+        "first": 0.0,
+        "last": 3.999998716828959,
+        "median_dt": 1.5825776168654215e-05,
+        "max_deviation_ppm": 69273.27180028442,
+        "max_grid_error_samples": 0.08795025403378531
+      }
+    },
+    {
+      "bearing_id": "K002",
+      "record_id": "N15_M07_F10_K002_1",
+      "selected_repeat": 1,
+      "selection_audit": [
+        {
+          "repeat": 1,
+          "member_sha256": "e2955b32c984c2e2557248ef2c7fbe213c180ade11dcfab8e4456712f785aabb",
+          "native_samples": 256001,
+          "max_grid_error_samples": 0.10415198154805694,
+          "gates": {
+            "shape": true,
+            "finite_lossless": true,
+            "timebase": true,
+            "native_unit_unchanged": true
+          },
+          "accepted": true
+        }
+      ],
+      "split": "development",
+      "label": "healthy",
+      "archive_url": "https://groups.uni-paderborn.de/kat/BearingDataCenter/K002.rar",
+      "archive_bytes": 161981588,
+      "archive_sha256": "1040da8b74d169c4e8c8545afa335d7a3a320bcaf36a471250c3e434bc4caffd",
+      "member": "K002/N15_M07_F10_K002_1.mat",
+      "member_bytes": 8714904,
+      "member_sha256": "e2955b32c984c2e2557248ef2c7fbe213c180ade11dcfab8e4456712f785aabb",
+      "path": "K002.npz",
+      "bytes": 464263,
+      "sha256": "96ae8b8a7b1c33586868693bc46cdefc64f5b4be214aeb80c00f575915377362",
+      "samples": 256000,
+      "dtype": "<f8",
+      "native_unit": "",
+      "signal_sha256": "b83e9ddc813989b79a4b6370450ba67d6b83f2754fc165adc888c1af500a92dd",
+      "timebase": {
+        "first": 0.0,
+        "last": 3.9999987168344475,
+        "median_dt": 1.5825708478356404e-05,
+        "max_deviation_ppm": 41903.05427675867,
+        "max_grid_error_samples": 0.10415198154805694
+      }
+    },
+    {
+      "bearing_id": "K003",
+      "record_id": "N15_M07_F10_K003_1",
+      "selected_repeat": 1,
+      "selection_audit": [
+        {
+          "repeat": 1,
+          "member_sha256": "c0f0fab2248bf96db5bb0301e7ad157efbcde9ec6af43a4f9cf50100e3bc038e",
+          "native_samples": 256000,
+          "max_grid_error_samples": 0.0439506244729273,
+          "gates": {
+            "shape": true,
+            "finite_lossless": true,
+            "timebase": true,
+            "native_unit_unchanged": true
+          },
+          "accepted": true
+        }
+      ],
+      "split": "validation",
+      "label": "healthy",
+      "archive_url": "https://groups.uni-paderborn.de/kat/BearingDataCenter/K003.rar",
+      "archive_bytes": 173194389,
+      "archive_sha256": "d7d1edf6047fac088efe118198abd0856c5280dd8653496fbac9a5d877180f1e",
+      "member": "K003/N15_M07_F10_K003_1.mat",
+      "member_bytes": 8714872,
+      "member_sha256": "c0f0fab2248bf96db5bb0301e7ad157efbcde9ec6af43a4f9cf50100e3bc038e",
+      "path": "K003.npz",
+      "bytes": 500527,
+      "sha256": "197a237fca3fda31d47e98aa8aa760a5fec319f0ff8e4c0028ec2706c8f7ba7f",
+      "samples": 256000,
+      "dtype": "<f8",
+      "native_unit": "",
+      "signal_sha256": "183f8795403f2ba8f92956ae3a4483e66107a06dcb827515f53259051ece479e",
+      "timebase": {
+        "first": 0.0,
+        "last": 3.999985029421464,
+        "median_dt": 1.5826040166366795e-05,
+        "max_deviation_ppm": 67616.11502292908,
+        "max_grid_error_samples": 0.0439506244729273
+      }
+    },
+    {
+      "bearing_id": "K004",
+      "record_id": "N15_M07_F10_K004_1",
+      "selected_repeat": 1,
+      "selection_audit": [
+        {
+          "repeat": 1,
+          "member_sha256": "4fbe5c88b56c0a2e1a4b20ca25894024717117b6420e4d9a0e2903f1efc01368",
+          "native_samples": 256001,
+          "max_grid_error_samples": 0.03406049209297635,
+          "gates": {
+            "shape": true,
+            "finite_lossless": true,
+            "timebase": true,
+            "native_unit_unchanged": true
+          },
+          "accepted": true
+        }
+      ],
+      "split": "validation",
+      "label": "healthy",
+      "archive_url": "https://groups.uni-paderborn.de/kat/BearingDataCenter/K004.rar",
+      "archive_bytes": 163337851,
+      "archive_sha256": "97242542046cf3ce286c13e12d8df11f618a53365efe592750e2047256345333",
+      "member": "K004/N15_M07_F10_K004_1.mat",
+      "member_bytes": 8714904,
+      "member_sha256": "4fbe5c88b56c0a2e1a4b20ca25894024717117b6420e4d9a0e2903f1efc01368",
+      "path": "K004.npz",
+      "bytes": 446410,
+      "sha256": "a8ac44e92ede2f8fdf140239ef72c705fe673d9e6a66f835a42fabe44e82dc32",
+      "samples": 256000,
+      "dtype": "<f8",
+      "native_unit": "",
+      "signal_sha256": "2a1eff1bcad993218ef4239cba7cc3f91e511cb5afe44d606a1315ba66244da9",
+      "timebase": {
+        "first": 0.0,
+        "last": 4.0,
+        "median_dt": 1.5825776168654215e-05,
+        "max_deviation_ppm": 14524.640756462759,
+        "max_grid_error_samples": 0.03406049209297635
+      }
+    },
+    {
+      "bearing_id": "K005",
+      "record_id": "N15_M07_F10_K005_1",
+      "selected_repeat": 1,
+      "selection_audit": [
+        {
+          "repeat": 1,
+          "member_sha256": "fa4e629194bdd37fad8216e64bb502f46e6a7adf2143f61fa14a8a2f9ad5bc7b",
+          "native_samples": 256001,
+          "max_grid_error_samples": 0.036086191452341154,
+          "gates": {
+            "shape": true,
+            "finite_lossless": true,
+            "timebase": true,
+            "native_unit_unchanged": true
+          },
+          "accepted": true
+        }
+      ],
+      "split": "evaluation",
+      "label": "healthy",
+      "archive_url": "https://groups.uni-paderborn.de/kat/BearingDataCenter/K005.rar",
+      "archive_bytes": 167366765,
+      "archive_sha256": "2faf0ee4ee66055bcc066e5b6d9ed9fc44638b2c1ea397a279261103aa83caaa",
+      "member": "K005/N15_M07_F10_K005_1.mat",
+      "member_bytes": 8714904,
+      "member_sha256": "fa4e629194bdd37fad8216e64bb502f46e6a7adf2143f61fa14a8a2f9ad5bc7b",
+      "path": "K005.npz",
+      "bytes": 453346,
+      "sha256": "16c372153bab1fbdfa4b96d6da25ec4dd7e65c08b1822b3eb1562f2a6bb24e48",
+      "samples": 256000,
+      "dtype": "<f8",
+      "native_unit": "",
+      "signal_sha256": "53caffe8738dc4ff6213949516c43f2f50b3714b17d87fce6777ff75fe3e322a",
+      "timebase": {
+        "first": 0.0,
+        "last": 3.99999957227632,
+        "median_dt": 1.5825776168654215e-05,
+        "max_deviation_ppm": 41898.956268686896,
+        "max_grid_error_samples": 0.036086191452341154
+      }
+    },
+    {
+      "bearing_id": "K006",
+      "record_id": "N15_M07_F10_K006_1",
+      "selected_repeat": 1,
+      "selection_audit": [
+        {
+          "repeat": 1,
+          "member_sha256": "40437feb0100c5bcc075e45a675dfdae9d16563496c57fd99ab7409bf6bc42c0",
+          "native_samples": 256001,
+          "max_grid_error_samples": 0.05544308660319075,
+          "gates": {
+            "shape": true,
+            "finite_lossless": true,
+            "timebase": true,
+            "native_unit_unchanged": true
+          },
+          "accepted": true
+        }
+      ],
+      "split": "evaluation",
+      "label": "healthy",
+      "archive_url": "https://groups.uni-paderborn.de/kat/BearingDataCenter/K006.rar",
+      "archive_bytes": 175997605,
+      "archive_sha256": "250b8e0ef18082163ae4003cd7f50e6daa3061b3a095e226378910da55b78b94",
+      "member": "K006/N15_M07_F10_K006_1.mat",
+      "member_bytes": 8714904,
+      "member_sha256": "40437feb0100c5bcc075e45a675dfdae9d16563496c57fd99ab7409bf6bc42c0",
+      "path": "K006.npz",
+      "bytes": 507419,
+      "sha256": "01b6221188120945be52db6830f515417d8c5ac6f3ea9150fe525e8d482273fe",
+      "samples": 256000,
+      "dtype": "<f8",
+      "native_unit": "",
+      "signal_sha256": "82502fd39dfff07bcbecddd0f068459db0390c9ed443f32d78ecbccb5917f088",
+      "timebase": {
+        "first": 0.0,
+        "last": 3.999999572271014,
+        "median_dt": 1.5825972473848537e-05,
+        "max_deviation_ppm": 14512.416778188708,
+        "max_grid_error_samples": 0.05544308660319075
+      }
+    },
+    {
+      "bearing_id": "KA04",
+      "record_id": "N15_M07_F10_KA04_5",
+      "selected_repeat": 5,
+      "selection_audit": [
+        {
+          "repeat": 1,
+          "member_sha256": "c1caff884401a8476d3e8f42fb6efcd57c721888706af26cfeaeb2c3e99b35a5",
+          "native_samples": 256004,
+          "max_grid_error_samples": 3.831574733128946,
+          "gates": {
+            "shape": false,
+            "finite_lossless": true,
+            "timebase": false,
+            "native_unit_unchanged": true
+          },
+          "accepted": false
+        },
+        {
+          "repeat": 2,
+          "member_sha256": "22210c904d75338060e03859cab6c6c55c1f509ff250e266f178eb198b210017",
+          "native_samples": 262062,
+          "max_grid_error_samples": 6076.719919553085,
+          "gates": {
+            "shape": false,
+            "finite_lossless": true,
+            "timebase": false,
+            "native_unit_unchanged": true
+          },
+          "accepted": false
+        },
+        {
+          "repeat": 3,
+          "member_sha256": "6ae0d36410a6dd32ac307ab8ffae4d81b867b433b01ab24dcc1a12172dff2f31",
+          "native_samples": 257144,
+          "max_grid_error_samples": 1148.5056205486762,
+          "gates": {
+            "shape": false,
+            "finite_lossless": true,
+            "timebase": false,
+            "native_unit_unchanged": true
+          },
+          "accepted": false
+        },
+        {
+          "repeat": 4,
+          "member_sha256": "700369d50867284ed9969d730354d4fe9e60b29d7e90e568359fcbee26615e07",
+          "native_samples": 256088,
+          "max_grid_error_samples": 87.6698468180548,
+          "gates": {
+            "shape": false,
+            "finite_lossless": true,
+            "timebase": false,
+            "native_unit_unchanged": true
+          },
+          "accepted": false
+        },
+        {
+          "repeat": 5,
+          "member_sha256": "c6dc56d18a2704193756e502b656ca21781b6ec983e4b36c5a2ef7c939d1cbfa",
+          "native_samples": 256001,
+          "max_grid_error_samples": 0.15509557776385918,
+          "gates": {
+            "shape": true,
+            "finite_lossless": true,
+            "timebase": true,
+            "native_unit_unchanged": true
+          },
+          "accepted": true
+        }
+      ],
+      "split": "development",
+      "label": "damaged",
+      "archive_url": "https://groups.uni-paderborn.de/kat/BearingDataCenter/KA04.rar",
+      "archive_bytes": 180920703,
+      "archive_sha256": "6fc317157e2cd4cb55bc54d6fac1b1753f8ab31abcccd1ac68cbfb78e5e8299d",
+      "member": "KA04/N15_M07_F10_KA04_5.mat",
+      "member_bytes": 8714904,
+      "member_sha256": "c6dc56d18a2704193756e502b656ca21781b6ec983e4b36c5a2ef7c939d1cbfa",
+      "path": "KA04.npz",
+      "bytes": 511360,
+      "sha256": "51febb63ca59ad18e6c8433219332286761296b51fc924329850ac856c0dc094",
+      "samples": 256000,
+      "dtype": "<f8",
+      "native_unit": "",
+      "signal_sha256": "776ea8e36a8a9a9b8ae1f0323ee380d6725ce3c5acc9899ef484b293819c32dc",
+      "timebase": {
+        "first": 0.0,
+        "last": 3.9999978613642186,
+        "median_dt": 1.582590478177437e-05,
+        "max_deviation_ppm": 96640.24596622767,
+        "max_grid_error_samples": 0.15509557776385918
+      }
+    },
+    {
+      "bearing_id": "KA15",
+      "record_id": "N15_M07_F10_KA15_4",
+      "selected_repeat": 4,
+      "selection_audit": [
+        {
+          "repeat": 1,
+          "member_sha256": "48263d4e1244455b21cbbe8a4bba8fc0dbbe1c379d984ffd5d463339d676af6a",
+          "native_samples": 256000,
+          "max_grid_error_samples": 0.8278231353324372,
+          "gates": {
+            "shape": true,
+            "finite_lossless": true,
+            "timebase": false,
+            "native_unit_unchanged": true
+          },
+          "accepted": false
+        },
+        {
+          "repeat": 2,
+          "member_sha256": "088552bc2d26987e20ea30f693fe7ac9ecfd71df23998ee0bdec3716fcbd649d",
+          "native_samples": 256001,
+          "max_grid_error_samples": 0.5549023767525796,
+          "gates": {
+            "shape": true,
+            "finite_lossless": true,
+            "timebase": false,
+            "native_unit_unchanged": true
+          },
+          "accepted": false
+        },
+        {
+          "repeat": 3,
+          "member_sha256": "33fa5141f10f736e4b62f57fcf9a3744a5442b8a212141d1d300d015c0a8f2fe",
+          "native_samples": 256001,
+          "max_grid_error_samples": 0.6769433970039245,
+          "gates": {
+            "shape": true,
+            "finite_lossless": true,
+            "timebase": false,
+            "native_unit_unchanged": true
+          },
+          "accepted": false
+        },
+        {
+          "repeat": 4,
+          "member_sha256": "53e7f1f9a288036f29ac2c77ce0bb0372421cd9f48103ad7d82d751c2dc30c4d",
+          "native_samples": 256001,
+          "max_grid_error_samples": 0.47841202275594696,
+          "gates": {
+            "shape": true,
+            "finite_lossless": true,
+            "timebase": true,
+            "native_unit_unchanged": true
+          },
+          "accepted": true
+        }
+      ],
+      "split": "development",
+      "label": "damaged",
+      "archive_url": "https://groups.uni-paderborn.de/kat/BearingDataCenter/KA15.rar",
+      "archive_bytes": 164268273,
+      "archive_sha256": "2914d003a7a7a23425a825f03f09b2dede8e0f53c266e0b3ad90aa6b98958b7b",
+      "member": "KA15/N15_M07_F10_KA15_4.mat",
+      "member_bytes": 8714904,
+      "member_sha256": "53e7f1f9a288036f29ac2c77ce0bb0372421cd9f48103ad7d82d751c2dc30c4d",
+      "path": "KA15.npz",
+      "bytes": 453061,
+      "sha256": "4b3d21ce3855e9fb36ddaf7d0848d6c615904948cb9a1cdba5ff6c90f3d50097",
+      "samples": 256000,
+      "dtype": "<f8",
+      "native_unit": "",
+      "signal_sha256": "bc34cdfe8652b6e3d9dd96ced1d46ded10ec13eab416aa95f820480274f09b87",
+      "timebase": {
+        "first": 0.0,
+        "last": 3.9999931564503877,
+        "median_dt": 1.5825708478356404e-05,
+        "max_deviation_ppm": 425141.8325745817,
+        "max_grid_error_samples": 0.47841202275594696
+      }
+    },
+    {
+      "bearing_id": "KA16",
+      "record_id": "N15_M07_F10_KA16_1",
+      "selected_repeat": 1,
+      "selection_audit": [
+        {
+          "repeat": 1,
+          "member_sha256": "152a6de0d94e766f0cb0030718c26d6c4d32314e9b15a94654e2dbe7330c9cc8",
+          "native_samples": 256001,
+          "max_grid_error_samples": 0.04266800347249955,
+          "gates": {
+            "shape": true,
+            "finite_lossless": true,
+            "timebase": true,
+            "native_unit_unchanged": true
+          },
+          "accepted": true
+        }
+      ],
+      "split": "validation",
+      "label": "damaged",
+      "archive_url": "https://groups.uni-paderborn.de/kat/BearingDataCenter/KA16.rar",
+      "archive_bytes": 167165704,
+      "archive_sha256": "3e300d2e3402b47a18ce9c75694d3146f6e4b5f86bcd1d159f4938221fb261b6",
+      "member": "KA16/N15_M07_F10_KA16_1.mat",
+      "member_bytes": 8714904,
+      "member_sha256": "152a6de0d94e766f0cb0030718c26d6c4d32314e9b15a94654e2dbe7330c9cc8",
+      "path": "KA16.npz",
+      "bytes": 546480,
+      "sha256": "0c05ed4aa3f4d1e480e653f13c071e06a6c98c591f62101d4d019e4c8294d2ae",
+      "samples": 256000,
+      "dtype": "<f8",
+      "native_unit": "",
+      "signal_sha256": "c5c33bcfd63b600df0ee7a3d9ecddbca73625e6dbdf07870d7e1b0b03d40eb1f",
+      "timebase": {
+        "first": 0.0,
+        "last": 3.99999957227632,
+        "median_dt": 1.5825776168654215e-05,
+        "max_deviation_ppm": 41898.956268714646,
+        "max_grid_error_samples": 0.04266800347249955
+      }
+    },
+    {
+      "bearing_id": "KA22",
+      "record_id": "N15_M07_F10_KA22_1",
+      "selected_repeat": 1,
+      "selection_audit": [
+        {
+          "repeat": 1,
+          "member_sha256": "9e39532276f79b1a75707e6c38e10075aa41ba985d0360629be8dbb389d51559",
+          "native_samples": 256000,
+          "max_grid_error_samples": 0.05930303281638771,
+          "gates": {
+            "shape": true,
+            "finite_lossless": true,
+            "timebase": true,
+            "native_unit_unchanged": true
+          },
+          "accepted": true
+        }
+      ],
+      "split": "validation",
+      "label": "damaged",
+      "archive_url": "https://groups.uni-paderborn.de/kat/BearingDataCenter/KA22.rar",
+      "archive_bytes": 159054470,
+      "archive_sha256": "95790035ebe5a69bb298f93a7f4fc64769f0baeffd04a2cbb3ff5b4af8608642",
+      "member": "KA22/N15_M07_F10_KA22_1.mat",
+      "member_bytes": 8714872,
+      "member_sha256": "9e39532276f79b1a75707e6c38e10075aa41ba985d0360629be8dbb389d51559",
+      "path": "KA22.npz",
+      "bytes": 444229,
+      "sha256": "dea85c97f617a8458a915296b760756cf9a9f56e4786c16ea1d2497a1ebca982",
+      "samples": 256000,
+      "dtype": "<f8",
+      "native_unit": "",
+      "signal_sha256": "3bf7ad6a7ff77cd11248440a23c8fb890005b24d08e250fc77c610d8865c2324",
+      "timebase": {
+        "first": 0.0,
+        "last": 3.999985029671192,
+        "median_dt": 1.5825776168654215e-05,
+        "max_deviation_ppm": 40223.99034420232,
+        "max_grid_error_samples": 0.05930303281638771
+      }
+    },
+    {
+      "bearing_id": "KA30",
+      "record_id": "N15_M07_F10_KA30_2",
+      "selected_repeat": 2,
+      "selection_audit": [
+        {
+          "repeat": 1,
+          "member_sha256": "dfdc8e765ee16b88b5b3edc2b4d3d7bac288b4e7e94617bcddfe583ba68e6af6",
+          "native_samples": 256004,
+          "max_grid_error_samples": 4.1258860902744345,
+          "gates": {
+            "shape": false,
+            "finite_lossless": true,
+            "timebase": false,
+            "native_unit_unchanged": true
+          },
+          "accepted": false
+        },
+        {
+          "repeat": 2,
+          "member_sha256": "512939707e4b4d9cf96b47d94d4fc89d597a00f4f75bf0c005f1ca88a8e857f9",
+          "native_samples": 256001,
+          "max_grid_error_samples": 0.4337589646311244,
+          "gates": {
+            "shape": true,
+            "finite_lossless": true,
+            "timebase": true,
+            "native_unit_unchanged": true
+          },
+          "accepted": true
+        }
+      ],
+      "split": "evaluation",
+      "label": "damaged",
+      "archive_url": "https://groups.uni-paderborn.de/kat/BearingDataCenter/KA30.rar",
+      "archive_bytes": 163625195,
+      "archive_sha256": "cbe1810281a7cbd28d5ad0372cc392c910744709d46d4db501a45eeea18dd518",
+      "member": "KA30/N15_M07_F10_KA30_2.mat",
+      "member_bytes": 8714904,
+      "member_sha256": "512939707e4b4d9cf96b47d94d4fc89d597a00f4f75bf0c005f1ca88a8e857f9",
+      "path": "KA30.npz",
+      "bytes": 487383,
+      "sha256": "14d7be7d92b91438a74e86e3b3b283cbef57edde36e0a68ef1d31c905fd5e5ca",
+      "samples": 256000,
+      "dtype": "<f8",
+      "native_unit": "",
+      "signal_sha256": "52113efd0facd1beabf87c0e53bde644ddddba1ab2aa13247234bc93bb137733",
+      "timebase": {
+        "first": 0.0,
+        "last": 3.999994439546968,
+        "median_dt": 1.582590478177437e-05,
+        "max_deviation_ppm": 397760.16397274815,
+        "max_grid_error_samples": 0.4337589646311244
+      }
+    },
+    {
+      "bearing_id": "KB23",
+      "record_id": "N15_M07_F10_KB23_1",
+      "selected_repeat": 1,
+      "selection_audit": [
+        {
+          "repeat": 1,
+          "member_sha256": "fe34bbe1da2608017d48b838d2338cc04d1b333d20890ed2876a6203de6da2fe",
+          "native_samples": 256001,
+          "max_grid_error_samples": 0.3082334745267872,
+          "gates": {
+            "shape": true,
+            "finite_lossless": true,
+            "timebase": true,
+            "native_unit_unchanged": true
+          },
+          "accepted": true
+        }
+      ],
+      "split": "development",
+      "label": "damaged",
+      "archive_url": "https://groups.uni-paderborn.de/kat/BearingDataCenter/KB23.rar",
+      "archive_bytes": 170933916,
+      "archive_sha256": "a07e976b285438c33492650c4f5b28250a49e7855990191b30b6bcb541831c6c",
+      "member": "KB23/N15_M07_F10_KB23_1.mat",
+      "member_bytes": 8714904,
+      "member_sha256": "fe34bbe1da2608017d48b838d2338cc04d1b333d20890ed2876a6203de6da2fe",
+      "path": "KB23.npz",
+      "bytes": 536245,
+      "sha256": "bede7ac8a3965dd8bcb3727f7aa79aedf71aae1f46a4c5bfaf7cf5f5ec3f938f",
+      "samples": 256000,
+      "dtype": "<f8",
+      "native_unit": "",
+      "signal_sha256": "94829c7ec6c7d69682625f831003bc1525c7dbcc3570b9d61baf327623309c5b",
+      "timebase": {
+        "first": 0.0,
+        "last": 3.9999957227814926,
+        "median_dt": 1.5825708478356404e-05,
+        "max_deviation_ppm": 288270.8403101333,
+        "max_grid_error_samples": 0.3082334745267872
+      }
+    },
+    {
+      "bearing_id": "KB24",
+      "record_id": "N15_M07_F10_KB24_1",
+      "selected_repeat": 1,
+      "selection_audit": [
+        {
+          "repeat": 1,
+          "member_sha256": "f2b5491d77d4cdd4872cb48cbcef8b914a8f8a55153cd922a287e66bc8dba445",
+          "native_samples": 256000,
+          "max_grid_error_samples": 0.07057068360154517,
+          "gates": {
+            "shape": true,
+            "finite_lossless": true,
+            "timebase": true,
+            "native_unit_unchanged": true
+          },
+          "accepted": true
+        }
+      ],
+      "split": "validation",
+      "label": "damaged",
+      "archive_url": "https://groups.uni-paderborn.de/kat/BearingDataCenter/KB24.rar",
+      "archive_bytes": 186677308,
+      "archive_sha256": "ae5928ee2ed02773e3787aeceaae73074b15ff3ae158cd932c7a6865fbc9c1ff",
+      "member": "KB24/N15_M07_F10_KB24_1.mat",
+      "member_bytes": 8714872,
+      "member_sha256": "f2b5491d77d4cdd4872cb48cbcef8b914a8f8a55153cd922a287e66bc8dba445",
+      "path": "KB24.npz",
+      "bytes": 580429,
+      "sha256": "654f3b314a24f5f1316fb2710a85076ab4f3d3c49e3934e28257242a1f28765e",
+      "samples": 256000,
+      "dtype": "<f8",
+      "native_unit": "",
+      "signal_sha256": "ae8de52a20fb872bfedec14a8220d1497545c8b898c9d51eadf682c8210de972",
+      "timebase": {
+        "first": 0.0,
+        "last": 3.999985029735223,
+        "median_dt": 1.5825708478356404e-05,
+        "max_deviation_ppm": 94967.93797347891,
+        "max_grid_error_samples": 0.07057068360154517
+      }
+    },
+    {
+      "bearing_id": "KB27",
+      "record_id": "N15_M07_F10_KB27_1",
+      "selected_repeat": 1,
+      "selection_audit": [
+        {
+          "repeat": 1,
+          "member_sha256": "f251e86e3596742af8a78ac00ce133421af2b3b36d442ae637b5d865ba7624e9",
+          "native_samples": 256001,
+          "max_grid_error_samples": 0.4234763841086533,
+          "gates": {
+            "shape": true,
+            "finite_lossless": true,
+            "timebase": true,
+            "native_unit_unchanged": true
+          },
+          "accepted": true
+        }
+      ],
+      "split": "evaluation",
+      "label": "damaged",
+      "archive_url": "https://groups.uni-paderborn.de/kat/BearingDataCenter/KB27.rar",
+      "archive_bytes": 162452979,
+      "archive_sha256": "738b9c332b31038ab051f60a7e1ceec5612f28449254cccda6154ae14655e4aa",
+      "member": "KB27/N15_M07_F10_KB27_1.mat",
+      "member_bytes": 8714904,
+      "member_sha256": "f251e86e3596742af8a78ac00ce133421af2b3b36d442ae637b5d865ba7624e9",
+      "path": "KB27.npz",
+      "bytes": 462114,
+      "sha256": "5cb322aedebba263d291344979fb698cbc69e9d8f67343f4f4d3fc0a5e4f2143",
+      "samples": 256000,
+      "dtype": "<f8",
+      "native_unit": "",
+      "signal_sha256": "c1a7d57b98964e20fd90fe9a9bdcfb3567290fc9105667286ecc4a30261c0168",
+      "timebase": {
+        "first": 0.0,
+        "last": 3.9999935841447964,
+        "median_dt": 1.5825776168654215e-05,
+        "max_deviation_ppm": 397765.05820532294,
+        "max_grid_error_samples": 0.4234763841086533
+      }
+    },
+    {
+      "bearing_id": "KI04",
+      "record_id": "N15_M07_F10_KI04_1",
+      "selected_repeat": 1,
+      "selection_audit": [
+        {
+          "repeat": 1,
+          "member_sha256": "d77409dca95d03986b5957b73c2219f42f7bbfd8080ebbf6f5b9f11571476f9c",
+          "native_samples": 256001,
+          "max_grid_error_samples": 0.029038272448815405,
+          "gates": {
+            "shape": true,
+            "finite_lossless": true,
+            "timebase": true,
+            "native_unit_unchanged": true
+          },
+          "accepted": true
+        }
+      ],
+      "split": "development",
+      "label": "damaged",
+      "archive_url": "https://groups.uni-paderborn.de/kat/BearingDataCenter/KI04.rar",
+      "archive_bytes": 172644279,
+      "archive_sha256": "8fde861a9ceac4b41fe8a030b4c5bbb4b9b9af0590d9338a8de0150b4661be77",
+      "member": "KI04/N15_M07_F10_KI04_1.mat",
+      "member_bytes": 8714904,
+      "member_sha256": "d77409dca95d03986b5957b73c2219f42f7bbfd8080ebbf6f5b9f11571476f9c",
+      "path": "KI04.npz",
+      "bytes": 489868,
+      "sha256": "69b87591020966efef4b0295567278578436c3002bad422fbad72c37dc4f8fab",
+      "samples": 256000,
+      "dtype": "<f8",
+      "native_unit": "",
+      "signal_sha256": "45311d060dab99c1d73753dd718eb3721681fca43187aa4c5654c18a35325fe6",
+      "timebase": {
+        "first": 0.0,
+        "last": 3.9999995722746733,
+        "median_dt": 1.5825837090366335e-05,
+        "max_deviation_ppm": 41895.2680319431,
+        "max_grid_error_samples": 0.029038272448815405
+      }
+    },
+    {
+      "bearing_id": "KI14",
+      "record_id": "N15_M07_F10_KI14_2",
+      "selected_repeat": 2,
+      "selection_audit": [
+        {
+          "repeat": 1,
+          "member_sha256": "0561c09a89dff7fe5f78eeaa09b8c1d8f85174862418d970b5091d0b54b63fc3",
+          "native_samples": 256001,
+          "max_grid_error_samples": 0.7090803171158768,
+          "gates": {
+            "shape": true,
+            "finite_lossless": true,
+            "timebase": false,
+            "native_unit_unchanged": true
+          },
+          "accepted": false
+        },
+        {
+          "repeat": 2,
+          "member_sha256": "33fb8ee231dac36ef2d03d69309f4eec88cffb2256eda96597028a521aac9878",
+          "native_samples": 256001,
+          "max_grid_error_samples": 0.42886484702466987,
+          "gates": {
+            "shape": true,
+            "finite_lossless": true,
+            "timebase": true,
+            "native_unit_unchanged": true
+          },
+          "accepted": true
+        }
+      ],
+      "split": "development",
+      "label": "damaged",
+      "archive_url": "https://groups.uni-paderborn.de/kat/BearingDataCenter/KI14.rar",
+      "archive_bytes": 163581312,
+      "archive_sha256": "16911b5f8c723b568b6aa69397b00796fea41e43bf627a1a0158a7294f2b7a60",
+      "member": "KI14/N15_M07_F10_KI14_2.mat",
+      "member_bytes": 8714904,
+      "member_sha256": "33fb8ee231dac36ef2d03d69309f4eec88cffb2256eda96597028a521aac9878",
+      "path": "KI14.npz",
+      "bytes": 460192,
+      "sha256": "a21cea4883fa438b7f5dc86184e236dfeb9f4e546daa8058254003db9a939be5",
+      "samples": 256000,
+      "dtype": "<f8",
+      "native_unit": "",
+      "signal_sha256": "606a672b5f9a070e0efc4c98b978aad6f46def7d7e2a927bc7860ed50a5498f4",
+      "timebase": {
+        "first": 0.0,
+        "last": 3.9999935841447964,
+        "median_dt": 1.5825776168654215e-05,
+        "max_deviation_ppm": 260893.48056734708,
+        "max_grid_error_samples": 0.42886484702466987
+      }
+    },
+    {
+      "bearing_id": "KI16",
+      "record_id": "N15_M07_F10_KI16_1",
+      "selected_repeat": 1,
+      "selection_audit": [
+        {
+          "repeat": 1,
+          "member_sha256": "a73d2cd371a689c46a3cc95af9d8851f39f662b00a2eb826002c1bbdc901d220",
+          "native_samples": 256001,
+          "max_grid_error_samples": 0.04804171828436665,
+          "gates": {
+            "shape": true,
+            "finite_lossless": true,
+            "timebase": true,
+            "native_unit_unchanged": true
+          },
+          "accepted": true
+        }
+      ],
+      "split": "validation",
+      "label": "damaged",
+      "archive_url": "https://groups.uni-paderborn.de/kat/BearingDataCenter/KI16.rar",
+      "archive_bytes": 166348305,
+      "archive_sha256": "f7f4ce4feffc3ae799f92289cdea7708d2cf6e154ad5382f9f4c2c8bed890c44",
+      "member": "KI16/N15_M07_F10_KI16_1.mat",
+      "member_bytes": 8714904,
+      "member_sha256": "a73d2cd371a689c46a3cc95af9d8851f39f662b00a2eb826002c1bbdc901d220",
+      "path": "KI16.npz",
+      "bytes": 491304,
+      "sha256": "717f246c4258198bdad2949ec56d2e9a2273ef3c6462c88156e86dd2263a2e47",
+      "samples": 256000,
+      "dtype": "<f8",
+      "native_unit": "",
+      "signal_sha256": "99261cff817190eb127d558bec78e0c54ac5e7ded760fbb1a86c9f83202bf769",
+      "timebase": {
+        "first": 0.0,
+        "last": 3.999999572278149,
+        "median_dt": 1.5825708478356404e-05,
+        "max_deviation_ppm": 41903.054276203555,
+        "max_grid_error_samples": 0.04804171828436665
+      }
+    },
+    {
+      "bearing_id": "KI17",
+      "record_id": "N15_M07_F10_KI17_6",
+      "selected_repeat": 6,
+      "selection_audit": [
+        {
+          "repeat": 1,
+          "member_sha256": "cf0a8a71b99f959a2319ab5e95ecc48ffeca251e396f5081762e5791cf56922e",
+          "native_samples": 261714,
+          "max_grid_error_samples": 5823.231585718895,
+          "gates": {
+            "shape": false,
+            "finite_lossless": true,
+            "timebase": false,
+            "native_unit_unchanged": true
+          },
+          "accepted": false
+        },
+        {
+          "repeat": 2,
+          "member_sha256": "d70f380c88faacd886296da0505b5599ce159169d139fe03344bafba5e9c8c17",
+          "native_samples": 256002,
+          "max_grid_error_samples": 1.4053981919714715,
+          "gates": {
+            "shape": false,
+            "finite_lossless": true,
+            "timebase": false,
+            "native_unit_unchanged": true
+          },
+          "accepted": false
+        },
+        {
+          "repeat": 3,
+          "member_sha256": "704e60731094aa263501bdb7e310bf39a7258349ec3f393b43559157ef750dcc",
+          "native_samples": 256004,
+          "max_grid_error_samples": 3.1206586232001428,
+          "gates": {
+            "shape": false,
+            "finite_lossless": true,
+            "timebase": false,
+            "native_unit_unchanged": true
+          },
+          "accepted": false
+        },
+        {
+          "repeat": 4,
+          "member_sha256": "478e5e3af8a5c43ad3b00253e4baec99dac87090299363d529e315444b9ebf53",
+          "native_samples": 256002,
+          "max_grid_error_samples": 1.6677935711632017,
+          "gates": {
+            "shape": false,
+            "finite_lossless": true,
+            "timebase": false,
+            "native_unit_unchanged": true
+          },
+          "accepted": false
+        },
+        {
+          "repeat": 5,
+          "member_sha256": "4986d340cfd389ffabf958fbc5568cdb37c4fbe8a382c2adb51a26f2a1de2bd4",
+          "native_samples": 256003,
+          "max_grid_error_samples": 2.026128672383493,
+          "gates": {
+            "shape": false,
+            "finite_lossless": true,
+            "timebase": false,
+            "native_unit_unchanged": true
+          },
+          "accepted": false
+        },
+        {
+          "repeat": 6,
+          "member_sha256": "1f6e5f7b198799e65b1089f36995dc46561f58a6e227e603a52a45f268cbf152",
+          "native_samples": 256001,
+          "max_grid_error_samples": 0.044845780612376984,
+          "gates": {
+            "shape": true,
+            "finite_lossless": true,
+            "timebase": true,
+            "native_unit_unchanged": true
+          },
+          "accepted": true
+        }
+      ],
+      "split": "validation",
+      "label": "damaged",
+      "archive_url": "https://groups.uni-paderborn.de/kat/BearingDataCenter/KI17.rar",
+      "archive_bytes": 167363476,
+      "archive_sha256": "d80dbdb612cfaeb7ba1ffe6387c52c4d938084b2466e55d96a5528aff4d8b084",
+      "member": "KI17/N15_M07_F10_KI17_6.mat",
+      "member_bytes": 8714904,
+      "member_sha256": "1f6e5f7b198799e65b1089f36995dc46561f58a6e227e603a52a45f268cbf152",
+      "path": "KI17.npz",
+      "bytes": 468991,
+      "sha256": "162dad2e8c95cad702e88af1b022d42ff608c8a75688ee59800c4127640f6b33",
+      "samples": 256000,
+      "dtype": "<f8",
+      "native_unit": "",
+      "signal_sha256": "9e4bdb79f837cc841aa1e1a624420a3f4602f1e45cc634c1d0c24f5544936193",
+      "timebase": {
+        "first": 0.0,
+        "last": 3.999999572278149,
+        "median_dt": 1.5825708478356404e-05,
+        "max_deviation_ppm": 41903.0542761758,
+        "max_grid_error_samples": 0.044845780612376984
+      }
+    },
+    {
+      "bearing_id": "KI18",
+      "record_id": "N15_M07_F10_KI18_1",
+      "selected_repeat": 1,
+      "selection_audit": [
+        {
+          "repeat": 1,
+          "member_sha256": "f7bfc841ba0c66c0c012166e714d6e331a76362e6628f849d7ede201c25eab6d",
+          "native_samples": 256001,
+          "max_grid_error_samples": 0.03271901072002947,
+          "gates": {
+            "shape": true,
+            "finite_lossless": true,
+            "timebase": true,
+            "native_unit_unchanged": true
+          },
+          "accepted": true
+        }
+      ],
+      "split": "evaluation",
+      "label": "damaged",
+      "archive_url": "https://groups.uni-paderborn.de/kat/BearingDataCenter/KI18.rar",
+      "archive_bytes": 161226797,
+      "archive_sha256": "37b9b17c392d033f0b14c35bf0fd19ea878909299cdc8c517e2226f794048615",
+      "member": "KI18/N15_M07_F10_KI18_1.mat",
+      "member_bytes": 8714904,
+      "member_sha256": "f7bfc841ba0c66c0c012166e714d6e331a76362e6628f849d7ede201c25eab6d",
+      "path": "KI18.npz",
+      "bytes": 495714,
+      "sha256": "b9be5917f52447e83c58d92a7d5e861c47bf65b734ad3927f71981e428d7edea",
+      "samples": 256000,
+      "dtype": "<f8",
+      "native_unit": "",
+      "signal_sha256": "c1eac46ba55cd2815991c85a83e869e92758c7b8442a40e419ad4740eb4e4fd9",
+      "timebase": {
+        "first": 0.0,
+        "last": 3.999999572278149,
+        "median_dt": 1.5825708478356404e-05,
+        "max_deviation_ppm": 14528.855838079835,
+        "max_grid_error_samples": 0.03271901072002947
+      }
+    },
+    {
+      "bearing_id": "KI21",
+      "record_id": "N15_M07_F10_KI21_3",
+      "selected_repeat": 3,
+      "selection_audit": [
+        {
+          "repeat": 1,
+          "member_sha256": "0b63bc4656f67793fb181406cef43215ea63ae22e9def23fde2fc64cf95f1632",
+          "native_samples": 256093,
+          "max_grid_error_samples": 92.0,
+          "gates": {
+            "shape": false,
+            "finite_lossless": true,
+            "timebase": false,
+            "native_unit_unchanged": true
+          },
+          "accepted": false
+        },
+        {
+          "repeat": 2,
+          "member_sha256": "40d3793c1ebc8d49a364fc4dced0599ad31e5229146b47be3528635ce2f7427c",
+          "native_samples": 256001,
+          "max_grid_error_samples": 0.8385675082099624,
+          "gates": {
+            "shape": true,
+            "finite_lossless": true,
+            "timebase": false,
+            "native_unit_unchanged": true
+          },
+          "accepted": false
+        },
+        {
+          "repeat": 3,
+          "member_sha256": "f74a70ff318b9051e4db2430a878027ac17265dc143c9a4da7e5c12bdc67ed80",
+          "native_samples": 256000,
+          "max_grid_error_samples": 0.05782799422740936,
+          "gates": {
+            "shape": true,
+            "finite_lossless": true,
+            "timebase": true,
+            "native_unit_unchanged": true
+          },
+          "accepted": true
+        }
+      ],
+      "split": "evaluation",
+      "label": "damaged",
+      "archive_url": "https://groups.uni-paderborn.de/kat/BearingDataCenter/KI21.rar",
+      "archive_bytes": 164882839,
+      "archive_sha256": "1e3c563fa1d1564e3586736189b2e0807688389b549944af4a06908485c1d5bf",
+      "member": "KI21/N15_M07_F10_KI21_3.mat",
+      "member_bytes": 8714872,
+      "member_sha256": "f74a70ff318b9051e4db2430a878027ac17265dc143c9a4da7e5c12bdc67ed80",
+      "path": "KI21.npz",
+      "bytes": 471475,
+      "sha256": "197e928b83cffa2e56efe0018c048f53e87e4999765938ae196d02620cb6ad76",
+      "samples": 256000,
+      "dtype": "<f8",
+      "native_unit": "",
+      "signal_sha256": "4f4343e4b8115fc206666d6c9fb93478f36e036bf18a14880f29bf74fbf41aab",
+      "timebase": {
+        "first": 0.0,
+        "last": 3.9999850297352233,
+        "median_dt": 1.5825708478356404e-05,
+        "max_deviation_ppm": 67593.73952058922,
+        "max_grid_error_samples": 0.05782799422740936
+      }
+    }
+  ]
+}

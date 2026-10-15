@@ -1,0 +1,281 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "status",
+    "claim_supported",
+    "evaluator_sha256"
+  ],
+  "properties": {
+    "schema": {
+      "const": "x6.industrial.v1.assessment/1"
+    },
+    "status": {
+      "enum": [
+        "PASS",
+        "FAIL",
+        "INCONCLUSIVE",
+        "NOT_READY",
+        "INVALID",
+        "READY_FOR_RESULT_REVIEW"
+      ]
+    },
+    "claim_supported": {
+      "type": "boolean"
+    },
+    "evaluator_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "profile_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "inputs_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "result_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "blocking_items": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 1000
+      },
+      "minItems": 0,
+      "maxItems": 100000
+    },
+    "reason": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 1000
+    },
+    "evidence_class": {
+      "enum": [
+        "REAL_MEASURED",
+        "SYNTHETIC_CONTROL"
+      ]
+    },
+    "claim_scope": {
+      "enum": [
+        "REGISTERED_V1_DATASET_ONLY",
+        "SOFTWARE_CONTROL_ONLY"
+      ]
+    },
+    "alpha_per_claim": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "gates": {
+      "type": "object",
+      "additionalProperties": {
+        "enum": [
+          "PASS",
+          "FAIL",
+          "INCONCLUSIVE"
+        ]
+      }
+    },
+    "counts": {
+      "type": "object",
+      "properties": {
+        "positive_bearings": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "negative_bearings": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "true_positive": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "false_positive": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "paired_wins": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "paired_losses": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "positive_bearings",
+        "negative_bearings",
+        "true_positive",
+        "false_positive",
+        "paired_wins",
+        "paired_losses"
+      ],
+      "additionalProperties": false
+    },
+    "one_sided_bounds": {
+      "type": "object",
+      "properties": {
+        "sensitivity": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          },
+          "minItems": 2,
+          "maxItems": 2
+        },
+        "false_positive_rate": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          },
+          "minItems": 2,
+          "maxItems": 2
+        },
+        "paired_sensitivity_gain": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          },
+          "minItems": 2,
+          "maxItems": 2
+        }
+      },
+      "required": [
+        "sensitivity",
+        "false_positive_rate",
+        "paired_sensitivity_gain"
+      ],
+      "additionalProperties": false
+    },
+    "resources": {
+      "type": "object",
+      "properties": {
+        "mean_service_ms": {
+          "type": "number",
+          "minimum": 0
+        },
+        "p99_service_ms": {
+          "type": "number",
+          "minimum": 0
+        },
+        "max_observed_latency_ms": {
+          "type": "number",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "mean_service_ms",
+        "p99_service_ms",
+        "max_observed_latency_ms"
+      ],
+      "additionalProperties": false
+    },
+    "unavailable_metrics": {
+      "type": "object",
+      "properties": {
+        "reconstruction_MSE": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 1000
+        },
+        "energy_savings": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 1000
+        }
+      },
+      "required": [
+        "reconstruction_MSE",
+        "energy_savings"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "enum": [
+              "PASS",
+              "FAIL",
+              "INCONCLUSIVE"
+            ]
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "gates",
+          "counts",
+          "one_sided_bounds",
+          "evidence_class",
+          "claim_scope"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "const": "INVALID"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "reason"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "const": "NOT_READY"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "blocking_items"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "claim_supported": {
+            "const": true
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "evidence_class",
+          "claim_scope"
+        ],
+        "properties": {
+          "status": {
+            "const": "PASS"
+          },
+          "evidence_class": {
+            "const": "REAL_MEASURED"
+          },
+          "claim_scope": {
+            "const": "REGISTERED_V1_DATASET_ONLY"
+          }
+        }
+      }
+    }
+  ],
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

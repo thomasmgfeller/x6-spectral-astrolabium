@@ -33,7 +33,7 @@ intact. Third-party notices are not overridden.
 
 ## Scientific scope
 
-There is no additional research-only or non-commercial restriction. Scientific
+Project-owned material has no additional research-only or non-commercial restriction. Scientific
 citation is encouraged, not imposed as an extra license term. This licensing
 decision does not establish physical validation, independent replication,
 scientific certification or patent clearance. Apache-2.0 section 3 governs
@@ -43,3 +43,12 @@ warranty and liability provisions.
 Historical rights and validation audits remain historical evidence. Their
 earlier "license pending" descriptions are superseded by this licensing
 decision, not converted into a retrospective rights-audit PASS.
+
+## Paderborn pilot measurements
+
+The selected external measurements under `experiments/industrial-pilot/data/`
+retain **CC BY-NC 4.0** from the Paderborn University KAt Bearing DataCenter.
+They are excluded from this repository’s Apache-2.0 grant. Attribution, source,
+license link and extraction changes are in that folder’s `LICENSE.txt`.
+This pilot is limited to noncommercial research; commercial permission is not
+asserted. Original project code and documentation remain Apache-2.0.

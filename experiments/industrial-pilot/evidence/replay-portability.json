@@ -1,0 +1,28 @@
+{
+  "schema": "x6.industrial.replay-portability/1",
+  "completed_utc": "2026-10-15T13:37:05.223771+00:00",
+  "status": "LOCAL_REPLAY_PASS",
+  "pilot_tests": 13,
+  "negative_controls": 25,
+  "original_results_commit": "1c7e7d1fed1a50b59478516a805ab529c467a17b",
+  "first_ci_failure": "OUTPUT_VALUE: report.records.3.decisions.envelope_harmonic_ratio; K004 is a healthy validation bearing. A score immediately below nextafter(max_validation_score,+inf) rounded across that threshold on GitHub Ubuntu.",
+  "repair": "Separate replay.py preserves the frozen calculation and original results. Checks scores with the original 1e-10 relative/1e-12 absolute tolerance; requires canonical decisions exactly; reconciles only non-evaluation boundary roundoff. Any evaluation score within threshold tolerance or any changed evaluation decision fails.",
+  "scientific_criteria_changed": false,
+  "original_files_unchanged_sha256": {
+    "pilot.py": "3f59366af2fb0b9729c9d9b27ab50f44623f7dce87729a9dddc06ae10f0d39cd",
+    "prepare.py": "870f6c7b2ec4da4f12cfb775da7d86642e2d54d84ac4567b3bc849e3a207c158",
+    "power.py": "399eedacfb7a4d1cad83356b855a664c3372d672e35de3a999ed47686c6afa44",
+    "download_sources.py": "1855ebbb67fbd902ffbaec8a58c5191bc7d129870a8057b5422b3d5839a865b3",
+    "contract.json": "6aaf98935d9ba94015bc365e0ab02dedfe700823941f8b047f39f1555243437f",
+    "requirements.txt": "1668a3152e33680d94637b13421c15e68bd97cd8701f7f555c691f5bc5c0b9f3",
+    "requirements-import.txt": "86aef0ba2aeabaee0398375bd35a5b8a34a086fb94cd389798d25cdc1abde3ce",
+    "freeze.json": "d1aa2f5bcccab7e83963c1261876c8ee7f234c7abf5095d4fa54a48e702f4264",
+    "data/manifest.json": "3896fbbf3620720b4f2c1a398a67f2006f31fcc84552f5941a21d0781c3fc29b",
+    "evidence/fit.json": "061b39ca2eab401d86dca7bbd8d881c0077c3209feb70c282148116ced891645",
+    "evidence/pilot-report.json": "2032a85cbf901bb630e1bb3c55420328a9b780ed910d4c334d4cf55e471650b1"
+  },
+  "industrial_claim_supported": false,
+  "confirmatory_v1_status": "NOT_READY",
+  "test_coverage": "The production replay rejects seven manipulated report variants, including a forged decision. Regression checks reproduce validation roundoff and reject an ambiguous evaluation decision. Original data, leakage, power and V1 gate controls retained.",
+  "first_ci_failure_job_id": 116446986106
+}

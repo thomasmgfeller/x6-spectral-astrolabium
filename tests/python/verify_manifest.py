@@ -37,6 +37,12 @@ def main():
     # Isolated extensions have explicit inventories; do not weaken the unknown-file
     # check or change the app pin used by the bounded research agents.
     extension_specs = {
+        "INDUSTRIAL_SOURCE_MANIFEST.json": (
+            "x6.industrial.source-manifest/1",
+            {"experiments/industrial-v1/evaluate.py", "experiments/industrial-v1/V1_PROFILE_DRAFT.json",
+             "experiments/industrial-pilot/contract.json", "experiments/industrial-pilot/pilot.py",
+             "experiments/industrial-pilot/prepare.py", "experiments/industrial-pilot/power.py",
+             "experiments/industrial-pilot/data/manifest.json", "experiments/industrial-pilot/data/LICENSE.txt"}),
         "ACVM_OPTICAL_SOURCE_MANIFEST.json": (
             "x6.acvm-optical.source-manifest/1",
             {"experimental/acvm/engine.py", "experimental/acvm/archive.py",

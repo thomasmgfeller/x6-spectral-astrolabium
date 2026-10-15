@@ -14,18 +14,31 @@ n=7 mit Höhe ≥3 bleibt offen. Die gemeinsame Referenzsuite umfasst jetzt neun
 
 ## Start here: actual module and evidence status
 
-The [central module register](docs/MODULE_REGISTRY.md) lists **33 modules** with
+The [central module register](docs/MODULE_REGISTRY.md) lists **34 modules** with
 their authoritative branch and commit, prerequisites, executable entry point,
 expected result, available evidence and next acceptance gate. Its
 [machine-readable source](MODULE_REGISTRY.json) is a dated snapshot, not a live
 qualification badge. Concepts without an executable package are marked explicitly.
 
 The integrated CLI, Signal Lab, Edge reference, Sagnac import, ACVM C1/0.2 and
-published RAX/Wolfram packages are in **main**. The n=6 atlas generator, Industrial V1
-assessor, fingerprints, Experiment Fabric, Neutral Discovery, NQK dossier and
+published RAX/Wolfram packages, the original Industrial V1 assessor and a bounded
+industrial data pilot are in **main**. The n=6 atlas generator, fingerprints,
+Experiment Fabric, Neutral Discovery, NQK dossier and
 Photonic Link still have separate research sources; use their pinned checkout
 instructions in the register. A historical branch tip is not proof that its
 features are absent from main.
+
+## Industrial data contract and executed feasibility pilot
+
+The [Paderborn feasibility pilot](experiments/industrial-pilot/README.md) fixes
+machine/sensor provenance, **CC BY-NC 4.0** data rights, labels, bearing-level splits,
+three classical references and reproducible checks. Twenty real laboratory bearings
+are included; the primary envelope reference detects 4/4 damaged evaluation bearings
+and raises 1/2 healthy false alarms. These are small descriptive counts, not an
+industrial performance qualification. No new filter was developed. The original
+[V1 confirmation contract](experiments/industrial-v1/README.md) remains **NOT_READY**;
+its gates are unchanged. The exact 368-unit zero-failure calculation and conditional
+power planning are supplied separately from the pilot's limited claim.
 
 ## Run
 
@@ -293,7 +306,9 @@ Copyright 2026 Thomas Gfeller. See [NOTICE](NOTICE).
 
 Separately licensed components, including MIT Sagnac/photonic reference
 packages, retain their own licenses. External datasets and third-party works
-are not relicensed. This licensing decision is not scientific certification
+are not relicensed. In particular, included Paderborn measurement channels retain
+[CC BY-NC 4.0](experiments/industrial-pilot/data/LICENSE.txt); commercial permission
+is not asserted. This licensing decision is not scientific certification
 or a completed independent rights audit. See the
 [dated activation record](docs/LICENSE_ACTIVATION_2026-10-13.md).
 

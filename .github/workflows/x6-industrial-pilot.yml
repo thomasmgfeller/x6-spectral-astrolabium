@@ -1,0 +1,54 @@
+name: Industrial data contract and bounded pilot
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - 'experiments/industrial-v1/**'
+      - 'experiments/industrial-pilot/**'
+      - 'INDUSTRIAL_SOURCE_MANIFEST.json'
+      - '.github/workflows/x6-industrial-pilot.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'experiments/industrial-v1/**'
+      - 'experiments/industrial-pilot/**'
+      - 'INDUSTRIAL_SOURCE_MANIFEST.json'
+      - '.github/workflows/x6-industrial-pilot.yml'
+permissions:
+  contents: read
+jobs:
+  industrial-pilot:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Install frozen numerical and original contract dependencies
+        run: python3 -m pip install -r experiments/industrial-v1/requirements.txt
+      - name: Replay all 20 real laboratory records without network
+        run: python3 experiments/industrial-pilot/replay.py --output "$RUNNER_TEMP/pilot-replay.json"
+      - name: Reject corrupted data, leakage and incomplete or manipulated results
+        run: python3 experiments/industrial-pilot/test_pilot.py
+      - name: Preserve original V1 acceptance gates
+        run: |
+          python3 -m unittest discover -s experiments/industrial-v1/tests -v
+          python3 - <<'PY'
+          import os, subprocess
+          p=subprocess.run(['python3','experiments/industrial-v1/evaluate.py',
+              'experiments/industrial-v1/V1_PROFILE_DRAFT.json','--root','experiments/industrial-v1',
+              '--output',os.environ['RUNNER_TEMP']+'/v1-readiness.json'])
+          assert p.returncode == 3, 'Confirmatory V1 must remain NOT_READY'
+          PY
+      - name: Check complete source and data inventory
+        run: python3 tests/python/verify_manifest.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: industrial-pilot-replay-no-performance-claim
+          path: |
+            ${{ runner.temp }}/pilot-replay.json
+            ${{ runner.temp }}/v1-readiness.json
+          retention-days: 30

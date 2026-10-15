@@ -1,0 +1,201 @@
+{
+  "schema": "x6.industrial.pilot-contract/1",
+  "id": "PU-BEARING-FEASIBILITY-0.1",
+  "status": "FROZEN_DESIGN",
+  "frozen_utc": "2026-10-15T13:00:03.256297+00:00",
+  "evidence_class": "PUBLIC_MEASURED_SECONDARY_ANALYSIS",
+  "purpose": "Bounded noncommercial feasibility of a reproducible bearing-level data and classical-baseline pipeline; no novel filter, superiority, deployment or 1-percent-FPR claim.",
+  "source": {
+    "dataset": "Paderborn University KAt Bearing DataCenter",
+    "landing_url": "https://mb.uni-paderborn.de/en/kat/research/bearing-datacenter",
+    "download_base": "https://groups.uni-paderborn.de/kat/BearingDataCenter/",
+    "authors": "Christian Lessmeier, James Kuria Kimotho, Detmar Zimmer, Walter Sextro",
+    "paper_url": "https://mb.uni-paderborn.de/fileadmin-mb/kat/PDF/Veroeffentlichungen/20160703_PHME16_CM_bearing.pdf",
+    "publication_year": 2016,
+    "license": "CC-BY-NC-4.0",
+    "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
+    "use_scope": "NONCOMMERCIAL_RESEARCH_ONLY",
+    "commercial_use_authorized": false
+  },
+  "machine_and_sensor": {
+    "rig": "KAt modular electromechanical drive/bearing test rig, Paderborn University",
+    "bearing_type": "6203",
+    "accelerometer": "PCB Piezotronics 336C04",
+    "amplifier": "Kistler 5015A; published low-pass 30 kHz",
+    "digitizer": "dSPACE DS1006/DS2004",
+    "sampling_hz": 64000,
+    "setting": "N15_M07_F10",
+    "speed_rpm_nominal": 1500,
+    "load_torque_Nm_nominal": 0.7,
+    "radial_force_N_nominal": 1000,
+    "traceable_calibration_certificates": "NOT_AVAILABLE; no absolute metrological accuracy claim",
+    "sensor_unit_policy": "Preserve native stored numbers and record the MAT channel Unit; do not invent a calibration conversion."
+  },
+  "selection": {
+    "bearing_ids": [
+      "K001",
+      "K002",
+      "K003",
+      "K004",
+      "K005",
+      "K006",
+      "KA04",
+      "KA15",
+      "KA16",
+      "KA22",
+      "KA30",
+      "KB23",
+      "KB24",
+      "KB27",
+      "KI04",
+      "KI14",
+      "KI16",
+      "KI17",
+      "KI18",
+      "KI21"
+    ],
+    "record_rule": "Exactly N15_M07_F10_{bearing_id}_1.mat; first 256000 of 256001 samples, omitting final endpoint; nominal half-open 4 seconds; first repeat fixed before score analysis.",
+    "channel_rule": "Exactly one channel with Name vibration_1; no other channels used.",
+    "samples": 256000,
+    "source_dtype": "native numeric converted losslessly to float64; reject non-exact conversion",
+    "stored_dtype": "<f8",
+    "all_records_required": true,
+    "allow_substitution": false,
+    "excluded": "12 artificially machined damage bearings, other settings and repeats; no post-result exclusion.",
+    "native_samples": 256001,
+    "timebase_relative_tolerance": 1e-05,
+    "unit": "unspecified_native_amplitude; no SI conversion or absolute calibration claim"
+  },
+  "ground_truth": {
+    "healthy": [
+      "K001",
+      "K002",
+      "K003",
+      "K004",
+      "K005",
+      "K006"
+    ],
+    "damaged": [
+      "KA04",
+      "KA15",
+      "KA16",
+      "KA22",
+      "KA30",
+      "KB23",
+      "KB24",
+      "KB27",
+      "KI04",
+      "KI14",
+      "KI16",
+      "KI17",
+      "KI18",
+      "KI21"
+    ],
+    "basis": "Source paper Tables 5 and 6, physical bearing damage characterization from accelerated lifetime tests. Labels are not derived from this pilot score.",
+    "limitations": [
+      "Source-curated laboratory bearings; not a probability sample of an industrial fleet.",
+      "One common rig/site; no assertion of statistical independence across machines/sites.",
+      "Public data are not a secret or externally protected holdout."
+    ]
+  },
+  "splits": {
+    "development": [
+      "K001",
+      "K002",
+      "KA04",
+      "KA15",
+      "KB23",
+      "KI04",
+      "KI14"
+    ],
+    "validation": [
+      "K003",
+      "K004",
+      "KA16",
+      "KA22",
+      "KB24",
+      "KI16",
+      "KI17"
+    ],
+    "evaluation": [
+      "K005",
+      "K006",
+      "KA30",
+      "KB27",
+      "KI18",
+      "KI21"
+    ]
+  },
+  "grouping": {
+    "unit": "physical_bearing_id",
+    "one_record_per_bearing": true,
+    "split_disjoint": true,
+    "evaluation_healthy_n": 2,
+    "evaluation_damaged_n": 4,
+    "windows_are_not_new_units": true,
+    "external_validation": "NONE"
+  },
+  "methods": {
+    "ids": [
+      "raw_rms",
+      "raw_kurtosis",
+      "envelope_harmonic_ratio"
+    ],
+    "primary_baseline": "envelope_harmonic_ratio",
+    "candidate_filter": "NONE; no further filter development in this pilot",
+    "rms": "sqrt(mean((x-mean(x))^2)) on fixed crop",
+    "kurtosis": "mean((x-mean(x))^4) / mean((x-mean(x))^2)^2; Pearson, no bias correction",
+    "envelope": {
+      "bandpass_hz": [
+        2000,
+        10000
+      ],
+      "butterworth_order": 4,
+      "phase": "offline zero-phase sosfiltfilt; no streaming or latency claim",
+      "envelope": "absolute Hilbert analytic signal",
+      "trim_each_end_samples": 6400,
+      "spectrum": "mean-removed envelope, periodic Hann, rFFT squared magnitude",
+      "normalization_band_hz": [
+        20,
+        500
+      ],
+      "fault_fundamentals_hz": [
+        76.25,
+        123.3
+      ],
+      "harmonics": [
+        1,
+        2,
+        3
+      ],
+      "half_width_hz": 2,
+      "score": "maximum of two harmonic-band power sums divided by total 20..500-Hz power"
+    },
+    "crop_for_all_methods": [
+      6400,
+      249600
+    ],
+    "threshold": "For each fixed method: nextafter(max(validation healthy scores), +infinity); no evaluation access for fitting.",
+    "decision": "score >= threshold",
+    "method_selection": "None after data inspection. Report all three; no winner or new filter chosen."
+  },
+  "acceptance": {
+    "success_status": "PILOT_PIPELINE_PASS",
+    "required": [
+      "All 20 fixed records, labels, groups and hashes match; no duplicated bearing or identical signal bytes.",
+      "All three fixed scores are finite and reproducible.",
+      "Thresholds use only two validation healthy bearings; evaluation contains exactly six preselected bearings.",
+      "Independent replay matches all counts, decisions and scores; all corruption controls reject."
+    ],
+    "diagnostic_performance_gate": false,
+    "industrial_claim_supported": false,
+    "v1_ap1_status": "NOT_READY",
+    "not_claimed": [
+      "FPR <= 1 percent",
+      "Sensitivity or sensitivity gain",
+      "Clean-reference reconstruction error",
+      "Causal streaming, energy savings or resource targets",
+      "Independent industrial generalization or commercial data rights"
+    ]
+  }
+}

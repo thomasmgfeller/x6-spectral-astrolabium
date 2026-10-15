@@ -1,0 +1,388 @@
+{
+  "commercial_use_authorized": false,
+  "confirmatory_v1_status": "NOT_READY",
+  "contract_sha256": "6aaf98935d9ba94015bc365e0ab02dedfe700823941f8b047f39f1555243437f",
+  "evaluation": {
+    "envelope_harmonic_ratio": {
+      "false_negative": 0,
+      "false_positive": 1,
+      "false_positive_rate_descriptive": 0.5,
+      "negative_bearings": 2,
+      "positive_bearings": 4,
+      "sensitivity_descriptive": 1.0,
+      "true_negative": 1,
+      "true_positive": 4
+    },
+    "raw_kurtosis": {
+      "false_negative": 4,
+      "false_positive": 0,
+      "false_positive_rate_descriptive": 0.0,
+      "negative_bearings": 2,
+      "positive_bearings": 4,
+      "sensitivity_descriptive": 0.0,
+      "true_negative": 2,
+      "true_positive": 0
+    },
+    "raw_rms": {
+      "false_negative": 3,
+      "false_positive": 1,
+      "false_positive_rate_descriptive": 0.5,
+      "negative_bearings": 2,
+      "positive_bearings": 4,
+      "sensitivity_descriptive": 0.25,
+      "true_negative": 1,
+      "true_positive": 1
+    }
+  },
+  "evidence_class": "PUBLIC_MEASURED_SECONDARY_ANALYSIS",
+  "fit_sha256": "061b39ca2eab401d86dca7bbd8d881c0077c3209feb70c282148116ced891645",
+  "freeze_sha256": "d1aa2f5bcccab7e83963c1261876c8ee7f234c7abf5095d4fa54a48e702f4264",
+  "industrial_claim_supported": false,
+  "manifest_sha256": "3896fbbf3620720b4f2c1a398a67f2006f31fcc84552f5941a21d0781c3fc29b",
+  "primary_baseline": "envelope_harmonic_ratio",
+  "records": [
+    {
+      "bearing_id": "K001",
+      "decisions": {
+        "envelope_harmonic_ratio": false,
+        "raw_kurtosis": false,
+        "raw_rms": true
+      },
+      "label": "healthy",
+      "record_id": "N15_M07_F10_K001_1",
+      "scores": {
+        "envelope_harmonic_ratio": 0.01815319942246592,
+        "raw_kurtosis": 13.071890885461473,
+        "raw_rms": 0.40656279648774263
+      },
+      "split": "development"
+    },
+    {
+      "bearing_id": "K002",
+      "decisions": {
+        "envelope_harmonic_ratio": false,
+        "raw_kurtosis": false,
+        "raw_rms": false
+      },
+      "label": "healthy",
+      "record_id": "N15_M07_F10_K002_1",
+      "scores": {
+        "envelope_harmonic_ratio": 0.023524471407384083,
+        "raw_kurtosis": 14.343321612421136,
+        "raw_rms": 0.2275022625508243
+      },
+      "split": "development"
+    },
+    {
+      "bearing_id": "K003",
+      "decisions": {
+        "envelope_harmonic_ratio": false,
+        "raw_kurtosis": false,
+        "raw_rms": false
+      },
+      "label": "healthy",
+      "record_id": "N15_M07_F10_K003_1",
+      "scores": {
+        "envelope_harmonic_ratio": 0.019427395364475134,
+        "raw_kurtosis": 16.45446584465253,
+        "raw_rms": 0.3641340927803714
+      },
+      "split": "validation"
+    },
+    {
+      "bearing_id": "K004",
+      "decisions": {
+        "envelope_harmonic_ratio": false,
+        "raw_kurtosis": false,
+        "raw_rms": false
+      },
+      "label": "healthy",
+      "record_id": "N15_M07_F10_K004_1",
+      "scores": {
+        "envelope_harmonic_ratio": 0.028075183851902708,
+        "raw_kurtosis": 5.225141775606188,
+        "raw_rms": 0.17028907569889984
+      },
+      "split": "validation"
+    },
+    {
+      "bearing_id": "K005",
+      "decisions": {
+        "envelope_harmonic_ratio": true,
+        "raw_kurtosis": false,
+        "raw_rms": false
+      },
+      "label": "healthy",
+      "record_id": "N15_M07_F10_K005_1",
+      "scores": {
+        "envelope_harmonic_ratio": 0.03939394674596251,
+        "raw_kurtosis": 4.5618730885673004,
+        "raw_rms": 0.19840905572781253
+      },
+      "split": "evaluation"
+    },
+    {
+      "bearing_id": "K006",
+      "decisions": {
+        "envelope_harmonic_ratio": false,
+        "raw_kurtosis": false,
+        "raw_rms": true
+      },
+      "label": "healthy",
+      "record_id": "N15_M07_F10_K006_1",
+      "scores": {
+        "envelope_harmonic_ratio": 0.025376613086499165,
+        "raw_kurtosis": 14.776028652725689,
+        "raw_rms": 0.3903079012103902
+      },
+      "split": "evaluation"
+    },
+    {
+      "bearing_id": "KA04",
+      "decisions": {
+        "envelope_harmonic_ratio": true,
+        "raw_kurtosis": false,
+        "raw_rms": true
+      },
+      "label": "damaged",
+      "record_id": "N15_M07_F10_KA04_5",
+      "scores": {
+        "envelope_harmonic_ratio": 0.39223287304336923,
+        "raw_kurtosis": 5.628018713709373,
+        "raw_rms": 0.47741746207627295
+      },
+      "split": "development"
+    },
+    {
+      "bearing_id": "KA15",
+      "decisions": {
+        "envelope_harmonic_ratio": true,
+        "raw_kurtosis": false,
+        "raw_rms": false
+      },
+      "label": "damaged",
+      "record_id": "N15_M07_F10_KA15_4",
+      "scores": {
+        "envelope_harmonic_ratio": 0.033136057854325426,
+        "raw_kurtosis": 4.1414614959490335,
+        "raw_rms": 0.20051346363043412
+      },
+      "split": "development"
+    },
+    {
+      "bearing_id": "KA16",
+      "decisions": {
+        "envelope_harmonic_ratio": true,
+        "raw_kurtosis": false,
+        "raw_rms": true
+      },
+      "label": "damaged",
+      "record_id": "N15_M07_F10_KA16_1",
+      "scores": {
+        "envelope_harmonic_ratio": 0.2689967844439824,
+        "raw_kurtosis": 12.930480334372932,
+        "raw_rms": 0.7243149131207145
+      },
+      "split": "validation"
+    },
+    {
+      "bearing_id": "KA22",
+      "decisions": {
+        "envelope_harmonic_ratio": true,
+        "raw_kurtosis": false,
+        "raw_rms": false
+      },
+      "label": "damaged",
+      "record_id": "N15_M07_F10_KA22_1",
+      "scores": {
+        "envelope_harmonic_ratio": 0.03567042874727737,
+        "raw_kurtosis": 4.177904818601739,
+        "raw_rms": 0.1827611878247638
+      },
+      "split": "validation"
+    },
+    {
+      "bearing_id": "KA30",
+      "decisions": {
+        "envelope_harmonic_ratio": true,
+        "raw_kurtosis": false,
+        "raw_rms": false
+      },
+      "label": "damaged",
+      "record_id": "N15_M07_F10_KA30_2",
+      "scores": {
+        "envelope_harmonic_ratio": 0.0738836125536795,
+        "raw_kurtosis": 5.1572736394195875,
+        "raw_rms": 0.35928620711387904
+      },
+      "split": "evaluation"
+    },
+    {
+      "bearing_id": "KB23",
+      "decisions": {
+        "envelope_harmonic_ratio": true,
+        "raw_kurtosis": false,
+        "raw_rms": true
+      },
+      "label": "damaged",
+      "record_id": "N15_M07_F10_KB23_1",
+      "scores": {
+        "envelope_harmonic_ratio": 0.07262638877521894,
+        "raw_kurtosis": 5.673504617976614,
+        "raw_rms": 0.6616334908981221
+      },
+      "split": "development"
+    },
+    {
+      "bearing_id": "KB24",
+      "decisions": {
+        "envelope_harmonic_ratio": true,
+        "raw_kurtosis": false,
+        "raw_rms": true
+      },
+      "label": "damaged",
+      "record_id": "N15_M07_F10_KB24_1",
+      "scores": {
+        "envelope_harmonic_ratio": 0.07511097412406227,
+        "raw_kurtosis": 8.244978760566699,
+        "raw_rms": 0.9728062170340153
+      },
+      "split": "validation"
+    },
+    {
+      "bearing_id": "KB27",
+      "decisions": {
+        "envelope_harmonic_ratio": true,
+        "raw_kurtosis": false,
+        "raw_rms": false
+      },
+      "label": "damaged",
+      "record_id": "N15_M07_F10_KB27_1",
+      "scores": {
+        "envelope_harmonic_ratio": 0.09031527840670846,
+        "raw_kurtosis": 3.4804036146524915,
+        "raw_rms": 0.24266110209281494
+      },
+      "split": "evaluation"
+    },
+    {
+      "bearing_id": "KI04",
+      "decisions": {
+        "envelope_harmonic_ratio": true,
+        "raw_kurtosis": false,
+        "raw_rms": false
+      },
+      "label": "damaged",
+      "record_id": "N15_M07_F10_KI04_1",
+      "scores": {
+        "envelope_harmonic_ratio": 0.13331338513969013,
+        "raw_kurtosis": 5.248994121521398,
+        "raw_rms": 0.35193289943411105
+      },
+      "split": "development"
+    },
+    {
+      "bearing_id": "KI14",
+      "decisions": {
+        "envelope_harmonic_ratio": true,
+        "raw_kurtosis": false,
+        "raw_rms": false
+      },
+      "label": "damaged",
+      "record_id": "N15_M07_F10_KI14_2",
+      "scores": {
+        "envelope_harmonic_ratio": 0.06232623033235943,
+        "raw_kurtosis": 4.0619105047022135,
+        "raw_rms": 0.2229800735303683
+      },
+      "split": "development"
+    },
+    {
+      "bearing_id": "KI16",
+      "decisions": {
+        "envelope_harmonic_ratio": true,
+        "raw_kurtosis": false,
+        "raw_rms": true
+      },
+      "label": "damaged",
+      "record_id": "N15_M07_F10_KI16_1",
+      "scores": {
+        "envelope_harmonic_ratio": 0.08727461359277411,
+        "raw_kurtosis": 4.998245484694026,
+        "raw_rms": 0.38841234784543566
+      },
+      "split": "validation"
+    },
+    {
+      "bearing_id": "KI17",
+      "decisions": {
+        "envelope_harmonic_ratio": true,
+        "raw_kurtosis": false,
+        "raw_rms": false
+      },
+      "label": "damaged",
+      "record_id": "N15_M07_F10_KI17_6",
+      "scores": {
+        "envelope_harmonic_ratio": 0.036108869526210126,
+        "raw_kurtosis": 3.7897975281329583,
+        "raw_rms": 0.27320287008823657
+      },
+      "split": "validation"
+    },
+    {
+      "bearing_id": "KI18",
+      "decisions": {
+        "envelope_harmonic_ratio": true,
+        "raw_kurtosis": false,
+        "raw_rms": true
+      },
+      "label": "damaged",
+      "record_id": "N15_M07_F10_KI18_1",
+      "scores": {
+        "envelope_harmonic_ratio": 0.1727587603388063,
+        "raw_kurtosis": 11.230184423049577,
+        "raw_rms": 0.3648374000145087
+      },
+      "split": "evaluation"
+    },
+    {
+      "bearing_id": "KI21",
+      "decisions": {
+        "envelope_harmonic_ratio": true,
+        "raw_kurtosis": false,
+        "raw_rms": false
+      },
+      "label": "damaged",
+      "record_id": "N15_M07_F10_KI21_3",
+      "scores": {
+        "envelope_harmonic_ratio": 0.047600713681050656,
+        "raw_kurtosis": 3.39371272178403,
+        "raw_rms": 0.28266898985707894
+      },
+      "split": "evaluation"
+    }
+  ],
+  "runner_sha256": "3f59366af2fb0b9729c9d9b27ab50f44623f7dce87729a9dddc06ae10f0d39cd",
+  "schema": "x6.industrial.pilot-report/1",
+  "scope": "Only complete and reproducible secondary-data/classical-baseline processing on the 20 registered laboratory bearings. Descriptive counts are not a population performance claim.",
+  "started_utc": "2026-10-15T13:19:33.525676+00:00",
+  "status": "PILOT_PIPELINE_PASS",
+  "thresholds": {
+    "envelope_harmonic_ratio": 0.02807518385190271,
+    "raw_kurtosis": 16.454465844652532,
+    "raw_rms": 0.36413409278037145
+  },
+  "unavailable": [
+    "independent_external_data",
+    "calibration_certificates",
+    "new_filter_comparison",
+    "industrial_FPR_guarantee",
+    "causal_streaming_and_resources"
+  ],
+  "units_by_split": {
+    "development": 7,
+    "evaluation": 6,
+    "validation": 7
+  },
+  "units_total": 20
+}
