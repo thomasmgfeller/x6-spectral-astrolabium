@@ -1,0 +1,55 @@
+{
+  "board": "pico",
+  "build_lock_sha256": "5762b00b1062a0be0193a376a06fab7e5c68edb644421b30de7c80ee005094b5",
+  "builder_sha256": "3a30e1fb0095ec570369a906216a8751d00d4a20ecf0c965a6ce4dffc2344e07",
+  "device_opened": false,
+  "electrical_validation": "NOT_PERFORMED",
+  "environment": {
+    "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+    "python": "3.12.14"
+  },
+  "firmware_source_commit": "cdf185588f87d73f757dc94c60a8b84b2d6de75d",
+  "firmware_sources": {
+    "experimental/control_channel/firmware/CMakeLists.txt": "590f1b53e36dcb4285a275b09dc94401d8b59fbdce07d284cdc09429979f01ed",
+    "experimental/control_channel/firmware/core.hpp": "3885a31927984c48d4b512e7ed8bdc350e4eb80f07ebcdcf974d4ee6d34961c5",
+    "experimental/control_channel/firmware/pico.cpp": "f1854798848209b36420be8c6cded057f357dabed8c69c8508b6961ead2e047d"
+  },
+  "flashed": false,
+  "outputs": {
+    "acvm_channel.bin": "a3b5a99430e13fc375d6a6bfbae45bbcb995dead813ab00a7a364460bf4e4fbb",
+    "acvm_channel.elf": "427896126792d9c84bf7304cc3350c85052a7b0c2bfd2e5ca4fb1074f60b625b",
+    "acvm_channel.uf2": "70b3b696b78a24b0e7526da4be00778ecbfc58b8361ff0cbfced867ee1b9d29d",
+    "build.log": "8c910d9842c6523f23090cdbc12699daf659994a842c14767814f016e7832560",
+    "configure.log": "00cb166693b59f810ed2e83e8bb7e2e9c96b1e53dd3fd7235614d27d9455a007",
+    "elf-header.txt": "7dcd9c4f6054bb5368a5a8d95e5804f01884c9a8f8a983d191cf6fc653213a56",
+    "picotool-info.txt": "07ed42e7d4c49a2cd4ab6dd51323511aadc31baf5207f25c760c3ef443d2a861"
+  },
+  "pico_sdk_commit": "079c6f39023649b154152db30f1d781e884879bc",
+  "picotool_sha256": "eefcbd48c2c0fa825a8e2ea3e44239644194d79abff8eb082bc3914971e745e5",
+  "platform": "rp2040",
+  "schema": "acvm.c1.target-build/1",
+  "scope": "CROSS_COMPILED_CANDIDATE_ONLY; NO_PHYSICAL_OUTPUT_MEASURED",
+  "source_date_epoch": 1792065877,
+  "status": "TARGET_BUILD_PASS",
+  "tinyusb_commit": "86ad6e56c1700e85f1c5678607a762cfe3aa2f47",
+  "tool_executables_sha256": {
+    "arm-none-eabi-g++": "85f3026ea1fef94f371c8121d42579ef9d3046857e727e5e986d61c33b4ba36b",
+    "arm-none-eabi-gcc": "94f60cfbad1091ad86c2435d8b804e82c0fc7e4c16302183c9a60cddd5318b1a",
+    "arm-none-eabi-readelf": "9f1a1ae49716e2b58ccc27b7fad1a40cf0df93b2c75c43c062f952ed7fe78654",
+    "arm-none-eabi-size": "9e8ce253718c3fd92d6b5749499d281e9cd648fe22b9e1ba3e67e7c7490e783b",
+    "cmake": "8542b512ac147329e03de375583665a64f02afb65d6c4665099390be103ac2d0",
+    "ninja": "607e668f90dd6cd82e1a42ae572647ad1b1fd43063964295b9547836d8c15d99"
+  },
+  "tool_versions": {
+    "cmake": "4.3.4",
+    "gcc": "15.2.1",
+    "ninja": "1.13.2",
+    "picotool": "2.3.1"
+  },
+  "uf2": {
+    "binary_bytes": 28396,
+    "blocks": 111,
+    "family": "RP2040",
+    "start_address": "0x10000000"
+  }
+}

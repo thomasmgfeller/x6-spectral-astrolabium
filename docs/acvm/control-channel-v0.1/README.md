@@ -5,7 +5,9 @@
 C1 implementiert einen begrenzten Befehlsweg vom lokalen Python-Host zu einem
 C++-Gerätekern. Der Zieladapter ist ein Raspberry Pi Pico (RP2040) mit MCP4921-DAC.
 Der identische Protokoll- und Sequenzkern läuft im nativen Prüfprozess und im
-Pico-Quelltext. Nur der native Prozess wurde hier gebaut und ausgeführt.
+Pico-Quelltext. Der native Prozess wurde gebaut und ausgeführt. Der
+[RP2040-Zielbuild](../c1-e01-target-build/README.md) ist inzwischen ebenfalls
+erfolgreich; die Firmware wurde hier nicht auf ein Board übertragen.
 Die native Ausgabe ist ein protokolliertes Modell, keine Spannung.
 
 | Nachweis | Stand dieser Lieferung |
@@ -13,7 +15,7 @@ Die native Ausgabe ist ein protokolliertes Modell, keine Spannung.
 | Planprüfung, binärer Compiler, unabhängiger Leser | Implementiert und geprüft |
 | Host ↔ C++-Kern über POSIX-Pseudoterminal | Durchgängiger Lauf und Fehlerfälle geprüft |
 | Vollständige Sequenz, Stop, Timeout, Wiederholungen | Softwareprüfungen; Rohprotokolle vorhanden |
-| Pico-SDK-Adapter, SPI-Ausgang und Bauanleitung | Quelltext geliefert; Zielbuild noch nicht ausgeführt |
+| Pico-SDK-Adapter und Zielbuild | RP2040-Kandidat erfolgreich gebaut und als UF2 archiviert; SPI-Ausgang physisch nicht gemessen |
 | Reale USB-/SPI-Verbindung und Ausgangsspannung | NOT_PERFORMED |
 | Kalibrierter optischer Aktuator, Regelung, Quantenoperation | NOT_PERFORMED |
 

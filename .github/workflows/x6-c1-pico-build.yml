@@ -1,0 +1,67 @@
+name: C1 RP2040 target build (no physical test)
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - 'experimental/control_channel/firmware/**'
+      - 'tools/build_c1_pico.py'
+      - 'tests/control-channel/test_pico_build.py'
+      - 'docs/acvm/c1-e01-target-build/**'
+      - '.github/workflows/x6-c1-pico-build.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'experimental/control_channel/firmware/**'
+      - 'tools/build_c1_pico.py'
+      - 'tests/control-channel/test_pico_build.py'
+      - 'docs/acvm/c1-e01-target-build/**'
+      - '.github/workflows/x6-c1-pico-build.yml'
+permissions:
+  contents: read
+jobs:
+  target-build:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Obtain pinned SDK and user-local tools
+        shell: bash
+        run: |
+          git clone --depth 1 --branch 2.3.1 https://github.com/raspberrypi/pico-sdk.git "$RUNNER_TEMP/c1-sdk"
+          git -C "$RUNNER_TEMP/c1-sdk" submodule update --init --depth 1 lib/tinyusb
+          git init "$RUNNER_TEMP/c1-installer"
+          git -C "$RUNNER_TEMP/c1-installer" remote add origin https://github.com/raspberrypi/pico-sdk-tools.git
+          git -C "$RUNNER_TEMP/c1-installer" fetch --depth 1 origin 4ddc34c32f58be6ddf4fefb966f8e7f367063db9
+          git -C "$RUNNER_TEMP/c1-installer" checkout --detach FETCH_HEAD
+          python3 "$RUNNER_TEMP/c1-installer/installer/install_pico_tools.py" 2.3.1 \
+            --only arm-toolchain,cmake,ninja,picotool --install-dir "$RUNNER_TEMP/c1-tools" --no-rc-include \
+            --bundles docs/acvm/c1-e01-target-build/versionBundles.json \
+            --toolchains-ini docs/acvm/c1-e01-target-build/supportedToolchains.ini \
+            --picotool-tag v2.3.1-0
+      - name: Cross-compile, inspect UF2 and require the frozen binary hash
+        shell: bash
+        run: |
+          source "$RUNNER_TEMP/c1-tools/picorc"
+          python3 -B tools/build_c1_pico.py --sdk "$RUNNER_TEMP/c1-sdk" \
+            --picotool-dir "$RUNNER_TEMP/c1-tools/picotool/2.3.1/picotool" \
+            --output "$RUNNER_TEMP/c1-target-build"
+          python3 -B tests/control-channel/test_pico_build.py
+      - name: Preserve candidate and complete build evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: c1-rp2040-candidate-not-electrically-validated
+          path: |
+            ${{ runner.temp }}/c1-target-build/*.json
+            ${{ runner.temp }}/c1-target-build/*.log
+            ${{ runner.temp }}/c1-target-build/*.uf2
+            ${{ runner.temp }}/c1-target-build/*.bin
+            ${{ runner.temp }}/c1-target-build/*.elf
+            ${{ runner.temp }}/c1-target-build/*.txt
+          if-no-files-found: warn
+          retention-days: 30

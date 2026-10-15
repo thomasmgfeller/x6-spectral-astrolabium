@@ -61,7 +61,9 @@ aufgezeichneten Bytes; eine externe Begutachtung wurde nicht durchgeführt.
 
 ## Offene Gates
 
-1. Pico-Zielbuild, UF2-Identifikation und Flashen des konkreten Boards.
+1. Flashen und Identifizieren des konkreten Boards. Der
+   [RP2040-Zielbuild samt UF2-Identifikation](../c1-e01-target-build/README.md)
+   ist inzwischen ausgeführt; die unten stehenden physischen Gates bleiben offen.
 2. Reale USB-/SPI-Verbindung und unabhängige Spannungs-/Timingmessung nach
    [E01](HARDWARE.md), einschließlich Fehler- und Abschaltversuchen.
 3. Auswahl eines konkreten optischen Treibers, bestätigte elektrische

@@ -1,0 +1,78 @@
+{
+  "schema": "acvm.c1.e01-measurement-profile/1",
+  "status": "DRAFT_NOT_FROZEN",
+  "electrical_validation": "NOT_PERFORMED",
+  "purpose": "Independent physical measurement of this specific low-voltage C1 bench. Template values are not measurements.",
+  "device": {
+    "pico_model": "Raspberry Pi Pico RP2040 (candidate)",
+    "pico_serial": null,
+    "dac_model": "MCP4921 PDIP-8 (candidate)",
+    "dac_serial_or_lot": null,
+    "reference_model": null,
+    "reference_serial": null,
+    "load_ohm": null,
+    "ambient_temperature_C": null,
+    "wiring_photo_files": []
+  },
+  "instruments": {
+    "scope_or_daq": {
+      "model": null,
+      "serial": null,
+      "calibration_certificate_file": null,
+      "calibration_valid_until": null,
+      "voltage_range_V": null,
+      "input_impedance_ohm": null,
+      "sample_rate_Hz": null,
+      "timebase_uncertainty_U95_s": null
+    },
+    "reference_voltage_meter": {
+      "model": null,
+      "serial": null,
+      "calibration_certificate_file": null,
+      "calibration_valid_until": null
+    }
+  },
+  "measured_vref_V": null,
+  "voltage_difference_uncertainty_budget_file": null,
+  "timing_uncertainty_budget_file": null,
+  "criteria_from_existing_E01": {
+    "nominal_runs_minimum": 10,
+    "sample_rate_per_channel_Hz_minimum": 10000,
+    "plateau_window_relative_to_scheduled_edge_ms": [
+      50,
+      150
+    ],
+    "voltage_acceptance": "abs(mean_measured_V - measured_Vref_V * dac_code / 4096) + U95_of_difference_V <= 0.025",
+    "zero_acceptance": "abs(mean_measured_V) + U95_zero_V <= 0.025",
+    "transition_acceptance": "abs(measured_edge_time_s - scheduled_time_s) + U95_time_error_s <= 0.020",
+    "host_loss_acceptance": "independently observed enable low and VOUT in zero band within 0.550 s, including uncertainty, relative to last accepted POLL or a justified earlier time bound"
+  },
+  "acquisition_contract_to_complete_before_freeze": {
+    "pretrigger_s": null,
+    "posttrigger_s": null,
+    "voltage_step_edge_definition": null,
+    "GP2_edge_threshold_V": null,
+    "maximum_sample_gap_s": null,
+    "fault_time_reference_method": null,
+    "fault_time_reference_uncertainty_s": null,
+    "voltage_uncertainty_includes": [
+      "instrument calibration",
+      "probe/range",
+      "Vref uncertainty and covariance if any",
+      "observed variation and autocorrelation",
+      "drift",
+      "relevant resolution/quantization"
+    ],
+    "correction_model_from_separate_calibration": null,
+    "correction_frozen_sha256": null,
+    "raw_file_format_and_export_settings": null,
+    "fault_limits_and_expected_behaviors_file": null
+  },
+  "before_measurement": {
+    "operator": null,
+    "frozen_at_utc": null,
+    "profile_sha256_recorded_before_first_test": null,
+    "firmware_uf2_sha256": "70b3b696b78a24b0e7526da4be00778ecbfc58b8361ff0cbfced867ee1b9d29d"
+  },
+  "gate": "No PASS can be inferred from this template, a command ACK or a target build. Missing or unresolvable metrology yields NOT_READY / INCONCLUSIVE."
+}
