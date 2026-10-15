@@ -13,6 +13,7 @@ from scipy.stats import beta, multinomial
 
 import pilot
 import power
+import replay
 
 ROOT = Path(__file__).resolve().parent
 
@@ -25,10 +26,24 @@ class PilotTests(unittest.TestCase):
         cls.report = pilot.read(ROOT/'evidence/pilot-report.json')
 
     def test_all_real_data_and_saved_report_replay(self):
-        expected = pilot.run(ROOT/'data', ROOT/'evidence/fit.json', self.report['started_utc'])
-        pilot.same(self.report, expected)
-        self.assertEqual(expected['units_total'],20)
+        expected = replay.verify(ROOT/'data', ROOT/'evidence/fit.json',ROOT/'evidence/pilot-report.json')
+        self.assertEqual(expected['units'],20)
         self.assertIs(expected['industrial_claim_supported'],False)
+
+    def test_non_evaluation_roundoff_is_reconciled_without_changing_scores(self):
+        row=dict(bearing_id='K004',record_id='test',split='validation',label='healthy',
+                 scores={'x':1.0},decisions={'x':False})
+        actual=copy.deepcopy(row);actual['scores']['x']=math.nextafter(1.0,math.inf);actual['decisions']['x']=True
+        original_score=actual['scores']['x']
+        result=replay.reconcile_decisions([row],[actual],{'x':math.nextafter(1.0,math.inf)})
+        self.assertEqual(result,['K004:x']);self.assertEqual(actual['scores']['x'],original_score)
+
+    def test_evaluation_roundoff_must_fail(self):
+        row=dict(bearing_id='K005',record_id='test',split='evaluation',label='healthy',
+                 scores={'x':1.0},decisions={'x':False})
+        actual=copy.deepcopy(row)
+        with self.assertRaisesRegex(ValueError,'UNSTABLE_EVALUATION_DECISION'):
+            replay.reconcile_decisions([row],[actual],{'x':math.nextafter(1.0,math.inf)})
 
     def test_manifest_negative_controls(self):
         def missing(d):d['records'].pop()
@@ -53,10 +68,14 @@ class PilotTests(unittest.TestCase):
         def fake_score(d):d['records'][0]['scores']['raw_rms']+=1
         def added(d):d['unregistered_success']=True
         def nan(d):d['records'][0]['scores']['raw_rms']=float('nan')
-        for mutation in [incomplete,false_claim,fake_count,fake_score,added,nan]:
+        def false_decision(d):d['records'][0]['decisions']['raw_rms']=not d['records'][0]['decisions']['raw_rms']
+        for mutation in [incomplete,false_claim,fake_count,fake_score,added,nan,false_decision]:
             with self.subTest(mutation=mutation.__name__):
                 d=copy.deepcopy(self.report);mutation(d)
-                with self.assertRaises(ValueError):pilot.same(d,self.report)
+                with tempfile.TemporaryDirectory() as tmp:
+                    path=Path(tmp)/'report.json';path.write_text(json.dumps(d))
+                    with self.assertRaises(ValueError):
+                        replay.verify(ROOT/'data',ROOT/'evidence/fit.json',path)
 
     def test_raw_corruption_and_symlink(self):
         record=copy.deepcopy(self.manifest['records'][0])

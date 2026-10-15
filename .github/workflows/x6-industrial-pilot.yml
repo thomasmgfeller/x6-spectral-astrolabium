@@ -30,7 +30,7 @@ jobs:
       - name: Install frozen numerical and original contract dependencies
         run: python3 -m pip install -r experiments/industrial-v1/requirements.txt
       - name: Replay all 20 real laboratory records without network
-        run: python3 experiments/industrial-pilot/pilot.py verify --output "$RUNNER_TEMP/pilot-replay.json"
+        run: python3 experiments/industrial-pilot/replay.py --output "$RUNNER_TEMP/pilot-replay.json"
       - name: Reject corrupted data, leakage and incomplete or manipulated results
         run: python3 experiments/industrial-pilot/test_pilot.py
       - name: Preserve original V1 acceptance gates

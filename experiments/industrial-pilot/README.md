@@ -26,7 +26,7 @@ Kenntnis dieser Ergebnisse **nicht geändert**.
 
 - [Vollständiger Bericht mit allen Scores und Entscheidungen](evidence/pilot-report.json)
 - [Eingefrorene Validierungsschwellen](evidence/fit.json)
-- [Ausführungsbeleg](evidence/execution.json), [elf Tests / 23 Negativkontrollen](evidence/pilot-tests.log)
+- [Ausführungsbeleg](evidence/execution.json), [13 Tests / 25 Negativkontrollen](evidence/portable-replay-tests.log)
 - [Unveränderte V1-Vorprüfung: NOT_READY](evidence/v1-readiness.json)
 - [Bedingte Fallzahl-/Powerrechnung](evidence/power-plan.json)
 
@@ -120,7 +120,7 @@ Aus einem frischen Checkout, Python 3.12:
 python3 -m venv .venv-industrial
 . .venv-industrial/bin/activate
 python3 -m pip install -r experiments/industrial-v1/requirements.txt
-python3 experiments/industrial-pilot/pilot.py verify
+python3 experiments/industrial-pilot/replay.py
 python3 experiments/industrial-pilot/test_pilot.py
 ```
 
@@ -135,7 +135,7 @@ Ein neuer Lauf schreibt ausschließlich in neue Ausgabedateien:
 ```sh
 python3 experiments/industrial-pilot/pilot.py fit --output /tmp/pu-fit-new.json
 python3 experiments/industrial-pilot/pilot.py run --fit /tmp/pu-fit-new.json --output /tmp/pu-run-new.json
-python3 experiments/industrial-pilot/pilot.py verify --fit /tmp/pu-fit-new.json --report /tmp/pu-run-new.json
+python3 experiments/industrial-pilot/replay.py --fit /tmp/pu-fit-new.json --report /tmp/pu-run-new.json
 python3 experiments/industrial-pilot/power.py --output /tmp/v1-power-new.json
 ```
 
@@ -162,6 +162,26 @@ veränderten Originaldateien scheitert der Download. Der Reimport muss dieselben
 NPZ- und Signalhashes und dieselbe Auswahl ergeben; nur Erstellzeit des neuen
 Manifests darf abweichen. Keinen neu erzeugten Import ungeprüft als eingefrorene
 Originaleingabe ausgeben.
+
+## Numerische Replay-Korrektur nach dem ersten CI-Lauf
+
+Der erste GitHub-Replay wurde am Validierungslager K004 durch eine Rundungsdifferenz
+abgewiesen: Die per `nextafter` gesetzte Schwelle liegt genau einen Float über dem
+Validierungsmaximum. Bibliotheks-/CPU-Rundung kann beim erneuten Rechnen diese
+nicht zur Evaluation gehörende Entscheidung kippen. Der Fehler wurde nicht als
+bestandener Lauf ausgegeben; CI-Job 116446986106 dokumentiert die Ablehnung.
+
+Der [nachvollziehbar dokumentierte Reparaturlauf](evidence/replay-portability.json)
+und der ergänzte [portable Prüfer](replay.py) lässt den eingefrorenen Rechenkern,
+Vertrag, Fit und Ergebnis unverändert. Er prüft die gespeicherte Schwellenregel
+und jede Entscheidung exakt aus den gespeicherten Scores und vergleicht alle
+Scores mit der erneuten Berechnung innerhalb der bereits festgelegten Toleranz.
+Ausschließlich bei Nicht-Evaluationslagern darf eine unmittelbar an der Schwelle
+liegende Rundungsabweichung erklärt werden. Evaluationsentscheidungen müssen
+außerhalb dieses Toleranzbands liegen und exakt übereinstimmen; andernfalls
+scheitert der Replay. Zwei zusätzliche Regressionstests prüfen diese Grenze.
+Der ursprüngliche `pilot.py verify` bleibt als eingefrorener historischer Prüfer
+erhalten; für rechnerübergreifende Reproduktion gilt der oben genannte `replay.py`.
 
 ## Bestätigung bleibt ein eigenes Gate
 
