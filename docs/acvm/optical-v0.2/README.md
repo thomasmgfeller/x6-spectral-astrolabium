@@ -9,7 +9,7 @@ das veröffentlichte C1-Paket bleiben historische, unveränderte Dokumente.
 
 | Arbeitsbereich | Jetzt vorhanden | Noch für einen physischen Abschluss nötig |
 |---|---|---|
-| Optischer Aufbau | Komponentenentscheidung, Anschlusstopologie, Kalibrier- und Abnahmeablauf | Komponenten/Revisionen bestätigen, Kristall und Schleifenspiegel spezifizieren, aufbauen und messen |
+| Optischer Aufbau | Komponentenentscheidung, Anschlusstopologie, Kalibrier- und Abnahmeablauf; [Kristall-/Schleifen-/Ofenspezifikation 0.1](../sagnac-components-v0.1/README.md) | Herstellerprofile/Revisionen bestätigen, mechanisch freigeben, aufbauen und messen |
 | Optische Ansteuerung | ELL14-Serielladapter; Wellenplattenwinkel; kalibrierungsgebundener QHQ-Phasensteller; Intensitätssteller HWP/PBS | Motor-/Optik-Seriennummern, Encodermaßstab, Achsnullen, Retardanz und Übertragung messen |
 | Regelung | Begrenzter PI-Regler, PM100D-Rückmeldung, Fehlerabbruch, vollständiger Modellvergleich | Kontrollierte und ungeregelte Laborläufe; unabhängige Leistungsmessung und Driftprüfung |
 | ACVM | D01-Compiler, unabhängiger Binärleser, Zustandsautomat, Archiv/ZIP, V01–V08, V09/V10-Auswerter | Pico-Zielbuild und elektrische/optische Abnahme; FPGA und schneller Feed-forward-Pfad |
@@ -87,6 +87,7 @@ PM100D2/PM100D3, LCC25, TFLN-Treiber und beliebige SCPI-Geräte sind nicht freig
 
 - [Ausführbares Quellpaket mit Rohberichten](ACVM_Optik_Referenz_v0_2.zip),
   [Paket-Prüfnachweis](PACKAGE.json); nach Entpacken zuerst `START_HERE.txt` lesen.
+- [Kristall, Sagnac-Schleife und Ofen – Spezifikation 0.1 vom 15.10.2026](../sagnac-components-v0.1/README.md): Anfrageprofil und KSO01–KSO12 (NOT_RUN).
 - [Aufbau und konkrete Komponenten](HARDWARE.md)
 - [Kalibrierung und Laborabnahme](CALIBRATION.md)
 - [Architektur, Formate und Nachweisgrenzen](ARCHITECTURE.md)

@@ -83,6 +83,12 @@ V01–V08 are exercised in software; V09/V10 and physical closed-loop/feed-forwa
 remain unperformed. Component choices and concrete laboratory acceptance steps
 are documented; hardware adapters are not yet device-qualified.
 
+[Crystal, Sagnac loop and oven specification 0.1](docs/acvm/sagnac-components-v0.1/README.md)
+publishes the approved ten-page engineering document. It defines the type-II
+ppKTP procurement profile, a shared triangular loop with 22.5° mirror incidence,
+temperature requirements and twelve unperformed acceptance checks.
+Supplier confirmation, fabrication approval and physical validation remain open.
+
 [ACVM C1 — executable single-channel reference](docs/acvm/control-channel-v0.1/README.md)
 adds a bounded host-to-device command protocol, sequence compiler, portable C++
 sequencer, Pico/MCP4921 target source and independent software tests.
@@ -226,4 +232,3 @@ or a completed independent rights audit. See the
 [dated activation record](docs/LICENSE_ACTIVATION_2026-10-13.md).
 
 See [provenance](docs/PROVENANCE.md), [release checklist](docs/RELEASE_CHECKLIST.md), and draft [citation metadata](CITATION.cff).
-
