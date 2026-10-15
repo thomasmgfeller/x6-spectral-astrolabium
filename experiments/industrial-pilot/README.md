@@ -171,9 +171,9 @@ Validierungsmaximum. Bibliotheks-/CPU-Rundung kann beim erneuten Rechnen diese
 nicht zur Evaluation gehörende Entscheidung kippen. Der Fehler wurde nicht als
 bestandener Lauf ausgegeben; CI-Job 116446986106 dokumentiert die Ablehnung.
 
-Der [nachvollziehbar dokumentierte Reparaturlauf](evidence/replay-portability.json)
-und der ergänzte [portable Prüfer](replay.py) lässt den eingefrorenen Rechenkern,
-Vertrag, Fit und Ergebnis unverändert. Er prüft die gespeicherte Schwellenregel
+Der ergänzte [portable Prüfer](replay.py) lässt den eingefrorenen Rechenkern,
+Vertrag, Fit und Ergebnis unverändert; der [Reparaturlauf](evidence/replay-portability.json)
+ist dokumentiert. Er prüft die gespeicherte Schwellenregel
 und jede Entscheidung exakt aus den gespeicherten Scores und vergleicht alle
 Scores mit der erneuten Berechnung innerhalb der bereits festgelegten Toleranz.
 Ausschließlich bei Nicht-Evaluationslagern darf eine unmittelbar an der Schwelle
