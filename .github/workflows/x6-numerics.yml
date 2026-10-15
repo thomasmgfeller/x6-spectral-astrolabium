@@ -29,6 +29,8 @@ jobs:
           python3 tests/numerics/preservation.py > numerics-preservation.json
           python3 tests/numerics/verify_frozen.py --output numerics-evidence
           node tests/numerics/test_regression.cjs > numerics-evidence/regression.json
+      - name: Extended 120-node corpus and metamorphic checks
+        run: python3 tests/numerics/verify_extended.py --output numerics-evidence/extended
       - name: Actual UI input, display, errors and JSON export
         env:
           NODE_PATH: ${{ runner.temp }}/x6-numerics/node_modules
