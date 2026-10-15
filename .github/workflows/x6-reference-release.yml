@@ -14,7 +14,13 @@ on:
   push:
     branches: [main]
     paths:
-      - 'docs/validation-v1/RELEASE_NOTES.md'
+      - 'experimental/rax_guarded/**'
+      - 'tests/rax-guarded/**'
+      - 'docs/validation-v1/**'
+      - 'docs/agent-archive/**'
+      - 'tools/release/**'
+      - 'CITATION.cff'
+      - 'VALIDATION_SOURCE_MANIFEST.json'
       - '.github/workflows/x6-reference-release.yml'
 permissions:
   contents: read
@@ -22,6 +28,8 @@ jobs:
   qualify:
     runs-on: ubuntu-24.04
     timeout-minutes: 12
+    outputs:
+      release_requested: ${{ steps.release_change.outputs.requested }}
     steps:
       - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09
         with:
@@ -33,6 +41,18 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '24'
+      - name: Detect explicit reference release notes change
+        id: release_change
+        if: github.event_name == 'push'
+        env:
+          BEFORE_SHA: ${{ github.event.before }}
+          CURRENT_SHA: ${{ github.sha }}
+        run: |
+          python3 - <<'PY'
+          import os,subprocess
+          changed=subprocess.check_output(['git','diff','--name-only',os.environ['BEFORE_SHA'],os.environ['CURRENT_SHA'],'--','docs/validation-v1/RELEASE_NOTES.md']).decode().strip()
+          with open(os.environ['GITHUB_OUTPUT'],'a') as f:f.write('requested='+str(bool(changed)).lower()+'\n')
+          PY
       - name: Validate citation against pinned official CFF schema
         run: |
           python3 -m pip install PyYAML==6.0.2 jsonschema==4.25.1
@@ -79,7 +99,7 @@ jobs:
           if-no-files-found: error
           retention-days: 30
   publish:
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main' && needs.qualify.outputs.release_requested == 'true'
     needs: qualify
     runs-on: ubuntu-24.04
     timeout-minutes: 5
