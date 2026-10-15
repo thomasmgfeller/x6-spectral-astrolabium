@@ -1,0 +1,172 @@
+FALL 4 — NULL FEHLER UND SCHEINREPLIKATION
+Ausführungsstand: 15. Oktober 2026
+Paket v0.1; dokumentierte Änderung des Wolfram-Prüfcodes v0.1.1
+
+ERGEBNIS
+PASS_WITH_SCOPE_LIMITS: Der zweite Wolfram-Lauf besteht 12 von 12
+Prüfaussagen ohne Meldungen. Die unabhängige Python-Gegenrechnung besteht
+alle sieben Zahlenvergleiche bei der unveränderten absoluten Toleranz 1e-60.
+Ein exakter rationaler Nachweis schließt die entscheidende Wurzel in ein
+Intervall der Breite 1e-60 ein.
+
+Bei null beobachteten Fehlern beträgt die einseitige obere
+95-%-Konfidenzgrenze für die Fehlerwahrscheinlichkeit:
+  20 unabhängige Versuche: 0,1391083406682652... = 13,91083406682652... %
+  20 Einträge aus EINEM Versuch: 0,95 = 95 %
+
+Bei der zweiten Zeile ist der Kopiermechanismus ausdrücklich bekannt und
+Bestandteil des Referenzmodells. Gleiche beobachtete Werte allein beweisen
+keine Abhängigkeit. Es wurden keine realen Projektdaten auf Kopien geprüft.
+
+FRAGE UND MODELL
+X_i = 1 bedeutet Fehler, X_i = 0 bedeutet kein Fehler. p ist die feste,
+unbekannte Fehlerwahrscheinlichkeit. Im unabhängigen Modell gelten:
+  K = Summe X_i ~ Binomial(n,p), n = 20, beobachtet K = 0.
+Die Versuche sind unabhängig, haben dieselbe Fehlerwahrscheinlichkeit und
+eine vorab festgelegte Stichprobengröße. Fehlerdefinition und vollständige
+Erfassung der Versuche sind vorausgesetzt.
+
+Im vollständig abhängigen Gegenmodell gilt:
+  B ~ Bernoulli(p); X_1 = ... = X_20 = B.
+Hier entstehen 20 Datensätze aus genau einer Zufallsziehung. Die Anzahl
+gespeicherter Zeilen ist nicht die Anzahl unabhängiger Versuche.
+
+HERLEITUNG
+Für alpha = 1/20 = 0,05 wird die obere exakte einseitige Binomialgrenze
+durch Inversion der Verteilungsfunktion bestimmt. Für K = 0 gilt:
+  P_p(K = 0) = (1-p)^n,
+  (1-u_n)^n = alpha,
+  u_n = 1 - alpha^(1/n).
+Das ergibt u_20 = 1 - (1/20)^(1/20) und u_1 = 19/20.
+Das Konfidenzintervall lautet jeweils [0,u_n]. Für K = n ist die obere
+Grenze 1. Es handelt sich um die einseitige exakte Clopper-Pearson-Grenze;
+eine zentrale zweiseitige 95-%-Grenze wäre eine andere Größe.
+
+Die Zahl 95 % beschreibt die Deckungseigenschaft des Verfahrens bei
+wiederholten Versuchen unter dem jeweiligen Modell. Sie ist keine
+95-%-Posteriorwahrscheinlichkeit für den festen Parameter p.
+
+NEGATIVKONTROLLE: FALSCHE UNABHÄNGIGKEIT
+Die Gegenprüfung setzt den wahren Parameter auf p0 = 1/5 = 20 % und
+enumeriert beide möglichen Ausgänge des Kopiermodells vollständig:
+
+B=0, Wahrscheinlichkeit 4/5:
+  0 Fehler in 20 Einträgen.
+  Fälschlich n=20: obere Grenze 13,910834... %, enthält p0 nicht.
+  Korrekt n=1: obere Grenze 95 %, enthält p0.
+
+B=1, Wahrscheinlichkeit 1/5:
+  20 Fehler in 20 Einträgen.
+  Beide Verfahren: obere Grenze 100 %, enthält p0.
+
+Daher ist die tatsächliche, unbedingte Deckungswahrscheinlichkeit des
+falsch angewendeten Verfahrens bei diesem p0 nur 1/5 = 20 %.
+In 80 % der Wiederholungen wird p0 fälschlich ausgeschlossen.
+Das korrekt angewendete n=1-Verfahren deckt bei diesem konkreten p0 in
+100 % der Wiederholungen. Das bedeutet keine universelle 100-%-Deckung;
+das exakte Verfahren garantiert unter seinen Modellannahmen mindestens
+das nominelle Konfidenzniveau.
+
+Zur Plausibilitätskontrolle:
+  P(alle fehlerfrei | p0, unabhängig) = (4/5)^20
+    = 1099511627776/95367431640625
+    = 0,01152921504606846976.
+  P(alle fehlerfrei | p0, Kopien) = 4/5 = 0,8.
+
+WAS TATSÄCHLICH GEPRÜFT WURDE
+Wolfram Language, gemeldeter Kernel:
+  15.0.1 for Linux x86 (64-bit) (July 2, 2026).
+Exakte Brüche und algebraische Ausdrücke wurden bevorzugt; die dezimale
+Ausgabe wurde mit angeforderter Präzision 80 erzeugt.
+Python 3.12.14 rechnet unabhängig mit Decimal-Präzision 100 und Fraction.
+Der größte Vergleichsrest der gespeicherten Dezimalausgaben ist
+1,98e-98. Das ist ein Vergleichsrest, keine Zertifizierung von 98
+verlässlichen Stellen. Die vorab festgelegte Annahmetoleranz bleibt 1e-60.
+Die Wurzeleinschließung wird zusätzlich ausschließlich mit exakter
+Ganzzahl-/Bruchrechnung bewiesen: (1-low)^20 > alpha > (1-high)^20.
+Wegen strenger Monotonie und Stetigkeit liegt die eindeutige Wurzel
+zwischen low und high.
+
+PRÜFVERLAUF UND ÄNDERUNG
+Der erste Wolfram-Lauf gab trotz zwölf wahrer Boolescher Ergebnisse die
+Präzisionswarnung N::meprec beim Vergleich von Beta-Quantil und Radikal aus.
+Entsprechend der festgelegten Fehlerregel bleibt dieser Lauf INCONCLUSIVE.
+Seine vollständige Antwort ist erhalten.
+
+Für den zweiten Lauf wurde nur der Vergleich gleichwertiger algebraischer
+Darstellungen geändert:
+  FullSimplify[a == b]
+wurde durch
+  SameQ[RootReduce[a], RootReduce[b]]
+ersetzt. Modell, erwartete Ergebnisse, zwölf Prüf-IDs, Präzision,
+Wurzelintervall und Vergleichstoleranz blieben unverändert.
+Die Änderung wurde vor dem zweiten Aufruf festgehalten. Der zweite Lauf
+enthält keine Warnmeldung und besteht alle zwölf Prüfungen.
+
+Die mathematischen Erwartungen und eine lokale Vorrechnung waren vor der
+Fixierung bekannt. Die Freeze-Dateien dokumentieren den Ausführungsumfang;
+sie sind keine wissenschaftliche Vorregistrierung und keine unabhängige
+Zeitstempelbeglaubigung. Hashes prüfen Dateikonsistenz, nicht Urheberschaft
+oder externe Begutachtung.
+
+REPRODUKTION
+1. ZIP vollständig entpacken.
+2. Im Paketverzeichnis ausführen:
+     python3 verify.py
+   Nur Python-Standardbibliothek erforderlich, kein Netzwerkzugriff.
+   Das Skript berechnet die Python-Ergebnisse neu, prüft die gespeicherte
+   Wolfram-Antwort, beide Freeze-Dateien und das Dateimanifest.
+   Der erwartete Status ist PASS_WITH_SCOPE_LIMITS.
+3. Eine erneute Wolfram-Ausführung ist davon getrennt:
+   wolfram_check_v0_1_1.wl in einer verfügbaren Wolfram-Language-Umgebung
+   ausführen. Die kostenlose Offline-Prüfung startet diesen Dienst nicht.
+
+verification_result.json wurde vor Erstellung des Gesamtmanifests
+gespeichert; dort ist package_manifest_verified deshalb false.
+Der anschließende Test des entpackten endgültigen ZIP hat zusätzlich das
+vollständige Manifest geprüft. Ein erneuter Aufruf von verify.py im
+unveränderten ausgelieferten Paket gibt dafür true aus.
+
+DATEIEN
+contract.json: Modelle, Annahmen, Sollwerte, Toleranz und Geltungsgrenzen.
+freeze.json: Hashes des ursprünglichen Vertrags und Wolfram-Codes.
+wolfram_check.wl: unveränderter ursprünglicher Prüfcode.
+wolfram_response_attempt1.json: ursprüngliche Rohantwort mit Warnung.
+amendment.json / amendment_freeze.json: Änderung und zugehörige Hashes.
+wolfram_check_v0_1_1.wl: erfolgreich ausgeführter revidierter Prüfcode.
+wolfram_response_final.json: vollständige zweite Rohantwort.
+wolfram_result.json: daraus ohne inhaltliche Änderung extrahiertes Ergebnis.
+wolfram_context_response.json: vorausgehender Kontextabruf; kein Prüflauf.
+verify.py: unabhängige lokale Gegenrechnung und Integritätsprüfung.
+verification_result.json: gespeichertes lokales Prüfergebnis.
+SHA256.json: SHA-256-Inventar aller anderen Paketdateien.
+BERICHT.txt: dieser Bericht.
+
+BEDEUTUNG FÜR DATENVALIDIERUNG
+Null Fehler belegen keine Fehlerfreiheit. Ein Konfidenzverfahren ist nur
+unter passenden Modellannahmen aussagekräftig. Datenherkunft und
+Unabhängigkeit müssen getrennt von der arithmetischen Korrektheit geprüft
+werden. Replizieren gespeicherter Ergebnisse erzeugt keine zusätzlichen
+unabhängigen Versuche.
+
+Dies ist ein konstruierter statistischer Referenzfall. Er bewertet keine
+realen Datensätze, keine physikalische Kristall-, Schleifen- oder
+Ofenauslegung und keinen X6-Produktionslauf. Er ist weder externe
+menschliche Begutachtung noch Zertifizierung oder Neuheitsnachweis.
+
+REFERENZEN
+NIST/SEMATECH Dataplot: EXACT BINOMIAL. Methodische Dokumentation der
+exakten einseitigen und zweiseitigen Binomial-Konfidenzgrenzen.
+Abgerufen am 15. Oktober 2026:
+https://www.itl.nist.gov/div898/software/dataplot/refman2/auxillar/exacbino.htm
+In diesem Paket bezeichnet alpha stets die Ausschlusswahrscheinlichkeit
+0,05; Softwareparameter anderer Programme können anders benannt sein.
+
+Wolfram Language: BinomialDistribution, BernoulliDistribution,
+InverseCDF, BetaDistribution und RootReduce (Funktionsdokumentation).
+https://reference.wolfram.com/language/ref/BinomialDistribution.html
+https://reference.wolfram.com/language/ref/BernoulliDistribution.html
+https://reference.wolfram.com/language/ref/InverseCDF.html
+https://reference.wolfram.com/language/ref/BetaDistribution.html
+https://reference.wolfram.com/language/ref/RootReduce.html
+

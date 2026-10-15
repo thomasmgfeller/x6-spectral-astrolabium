@@ -40,6 +40,11 @@ open. Read the [executed checks](docs/perspectives/edge-platform/VALIDATION.md).
 
 ## Signal Validation Lab
 
+[Executed Wolfram zero-failure/dependence countercheck](docs/signal-lab/wolfram-zero-failures-v0.1/README.md)
+compares twenty independent trials with twenty copies of one trial. Twelve Wolfram
+checks and seven Python comparisons verify exact confidence bounds and an explicit
+coverage counterexample. This constructed model test does not audit project datasets.
+
 [Executed Wolfram polarity-inversion countercheck](docs/signal-lab/wolfram-polarity-v0.1/README.md)
 provides the unchanged reproduction package, four symbolic identities and twelve
 numerical checks. X6 correctly rejects the inverted signal despite unchanged PSD
@@ -237,3 +242,4 @@ or a completed independent rights audit. See the
 [dated activation record](docs/LICENSE_ACTIVATION_2026-10-13.md).
 
 See [provenance](docs/PROVENANCE.md), [release checklist](docs/RELEASE_CHECKLIST.md), and draft [citation metadata](CITATION.cff).
+
