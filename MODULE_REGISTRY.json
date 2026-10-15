@@ -2,7 +2,7 @@
   "schema": "x6.module-register/1",
   "snapshot_date": "2026-10-15",
   "repository": "thomasmgfeller/x6-spectral-astrolabium",
-  "main_snapshot": "1dd5f65e1046edab6175998552362ad3856f8549",
+  "main_snapshot": "dedddc11ed43b14bf872d56b02c92c5b65e695bb",
   "agent_window": {
     "stop_utc": "2026-10-18T22:00:00Z",
     "stop_local": "2026-10-19T00:00:00+02:00",
@@ -17,7 +17,7 @@
       "name": "Gemeinsamer lokaler Einstieg",
       "source": {
         "branch": "main",
-        "commit": "1dd5f65e1046edab6175998552362ad3856f8549",
+        "commit": "dedddc11ed43b14bf872d56b02c92c5b65e695bb",
         "path": "docs/INTEGRATION.md",
         "availability": "MAIN"
       },
@@ -46,11 +46,57 @@
       "next_acceptance": "Frischer Checkout der nächsten Implementierungsrevision: Installation, alle drei Adapter, ZIP-Replay, Negativkontrollen und Browser/CLI-Austausch bestehen."
     },
     {
+      "id": "offline-reference",
+      "name": "Gemeinsame Offline-Referenzsuite",
+      "source": {
+        "branch": "main",
+        "commit": "dedddc11ed43b14bf872d56b02c92c5b65e695bb",
+        "path": "docs/OFFLINE_REFERENCE.md",
+        "availability": "MAIN"
+      },
+      "kind": "SOFTWARE",
+      "prerequisites": "Linux/POSIX x86-64, Python 3.12 und Node.js 24. Nur Standardbibliothek; kein setup, NumPy/SciPy, Netzwerk oder Wolfram-Zugang. Neuer Ausgabeordner.",
+      "entry": {
+        "cwd": ".",
+        "commands": [
+          "python3 -S -B x6.py reference qualify --output /tmp/x6-reference-evidence",
+          "python3 -S -B x6.py reference verify /tmp/x6-reference-evidence"
+        ],
+        "paths": [
+          "x6.py",
+          "tools/reference_suite.py",
+          "REFERENCE_SOURCE_MANIFEST.json"
+        ],
+        "archive": null,
+        "expected": "Exit 0; PASS_OFFLINE_REFERENCE_REPLAY, 8 Berichte, 26 zurückgewiesene Fehlerkontrollen. Manipulierte/unvollständige Ausgaben: Exit 1 und FAIL, auch nach neu berechneten Prüfsummen."
+      },
+      "claim": "Vier unveränderte Wolfram-Archive, fünf rationale Graphfälle, 318 n=6-Ordnungen mit 4.208 exakten Polynomen und aktueller Signal-Lab-Kern gegen die gespeicherte Polaritätsreferenz. Vollständiges quellengebundenes Replay. Frische CI-Checkouts laufen bei relevanten Änderungen mit abgeschaltetem Netzwerk. Endliche Software-/Referenzrechnung, keine physische Abnahme oder externe Begutachtung.",
+      "evidence": [
+        {
+          "path": "docs/reference-suite/README.md",
+          "summary": "Ausgeführte Abnahme der Implementierung 7c35b591f77ab1c123ee9795ea6978d1681d59bb. Lokale und Netzwerk-isolierte CI-Abnahme PASS, identische Bundle-Prüfsumme."
+        },
+        {
+          "path": "docs/reference-suite/local/acceptance.json",
+          "summary": "Frischer sauberer Checkout ohne .venv/Site-Pakete; elf CLI-Schritte einschließlich zehn erwarteter Zurückweisungen. Historische Prüfrevision explizit gespeichert."
+        },
+        {
+          "path": "docs/reference-suite/local/run/complete.json",
+          "summary": "Vollständiges Bundle mit acht Berichten, Quellenhashes und Inventar; durch reference verify erneut berechenbar."
+        },
+        {
+          "path": "docs/reference-suite/ci/acceptance.json",
+          "summary": "GitHub-Lauf 38720405798: network_namespace_isolated=true, alle elf CLI-Schritte wie erwartet."
+        }
+      ],
+      "next_acceptance": "Bei jeder relevanten Änderung frischen Checkout mit unverändertem Prüfvertrag qualifizieren und neue Evidenzrevision festhalten. Neue Fälle oder größere Korpora benötigen eigene Erwartungen und Fehlerkontrollen; andere Plattformen sind separat zu qualifizieren."
+    },
+    {
       "id": "astrolabium",
       "name": "Astrolabium und rationale Spektralreferenz",
       "source": {
         "branch": "main",
-        "commit": "1dd5f65e1046edab6175998552362ad3856f8549",
+        "commit": "dedddc11ed43b14bf872d56b02c92c5b65e695bb",
         "path": "docs/SCIENTIFIC_SCOPE.md",
         "availability": "MAIN"
       },
@@ -88,7 +134,7 @@
       "name": "Signal Validation Lab",
       "source": {
         "branch": "main",
-        "commit": "1dd5f65e1046edab6175998552362ad3856f8549",
+        "commit": "dedddc11ed43b14bf872d56b02c92c5b65e695bb",
         "path": "docs/SIGNAL_VALIDATION_LAB.md",
         "availability": "MAIN"
       },
@@ -125,7 +171,7 @@
       "name": "Edge-Referenzadapter",
       "source": {
         "branch": "main",
-        "commit": "1dd5f65e1046edab6175998552362ad3856f8549",
+        "commit": "dedddc11ed43b14bf872d56b02c92c5b65e695bb",
         "path": "experimental/edge_reference/README.md",
         "availability": "MAIN"
       },
@@ -158,7 +204,7 @@
       "name": "Evidence & Calibration",
       "source": {
         "branch": "main",
-        "commit": "1dd5f65e1046edab6175998552362ad3856f8549",
+        "commit": "dedddc11ed43b14bf872d56b02c92c5b65e695bb",
         "path": "experimental/evidence_calibration/README.md",
         "availability": "MAIN"
       },
@@ -189,7 +235,7 @@
       "name": "X6-Phasenfilter: Experimentvertrag",
       "source": {
         "branch": "main",
-        "commit": "1dd5f65e1046edab6175998552362ad3856f8549",
+        "commit": "dedddc11ed43b14bf872d56b02c92c5b65e695bb",
         "path": "experiments/x6-phase-filter/README.md",
         "availability": "MAIN"
       },
@@ -222,7 +268,7 @@
       "name": "Industrielle Entrauschung: Forschungsprogramm v0.2",
       "source": {
         "branch": "main",
-        "commit": "1dd5f65e1046edab6175998552362ad3856f8549",
+        "commit": "dedddc11ed43b14bf872d56b02c92c5b65e695bb",
         "path": "docs/industrial-denoising/Astrolabium_Industrial_Denoising_Forschungsprogramm_v0_2.docx",
         "availability": "MAIN"
       },
@@ -249,7 +295,7 @@
       "name": "Sagnac-Aufnahme und Import",
       "source": {
         "branch": "main",
-        "commit": "1dd5f65e1046edab6175998552362ad3856f8549",
+        "commit": "dedddc11ed43b14bf872d56b02c92c5b65e695bb",
         "path": "docs/SAGNAC_INTEGRATION.md",
         "availability": "MAIN"
       },
@@ -280,7 +326,7 @@
       "name": "Photonischer Zwei-Qubit-Aufbau und Jig",
       "source": {
         "branch": "main",
-        "commit": "1dd5f65e1046edab6175998552362ad3856f8549",
+        "commit": "dedddc11ed43b14bf872d56b02c92c5b65e695bb",
         "path": "experiments/photonic-two-qubit/REPRODUCE.md",
         "availability": "MAIN"
       },
@@ -316,7 +362,7 @@
       "name": "ACVM: Grundkonzept 0.1",
       "source": {
         "branch": "main",
-        "commit": "1dd5f65e1046edab6175998552362ad3856f8549",
+        "commit": "dedddc11ed43b14bf872d56b02c92c5b65e695bb",
         "path": "docs/acvm/README.md",
         "availability": "MAIN"
       },
@@ -343,7 +389,7 @@
       "name": "ACVM C1: Steuerkanal",
       "source": {
         "branch": "main",
-        "commit": "1dd5f65e1046edab6175998552362ad3856f8549",
+        "commit": "dedddc11ed43b14bf872d56b02c92c5b65e695bb",
         "path": "docs/acvm/control-channel-v0.1/README.md",
         "availability": "MAIN"
       },
@@ -375,7 +421,7 @@
       "name": "ACVM 0.2: optischer Referenzablauf",
       "source": {
         "branch": "main",
-        "commit": "1dd5f65e1046edab6175998552362ad3856f8549",
+        "commit": "dedddc11ed43b14bf872d56b02c92c5b65e695bb",
         "path": "docs/acvm/optical-v0.2/README.md",
         "availability": "MAIN"
       },
@@ -411,7 +457,7 @@
       "name": "Sagnac-Komponenten und Ofen",
       "source": {
         "branch": "main",
-        "commit": "1dd5f65e1046edab6175998552362ad3856f8549",
+        "commit": "dedddc11ed43b14bf872d56b02c92c5b65e695bb",
         "path": "docs/acvm/sagnac-components-v0.1/README.md",
         "availability": "MAIN"
       },
@@ -438,7 +484,7 @@
       "name": "ACVM Experiment Records",
       "source": {
         "branch": "main",
-        "commit": "1dd5f65e1046edab6175998552362ad3856f8549",
+        "commit": "dedddc11ed43b14bf872d56b02c92c5b65e695bb",
         "path": "docs/acvm/experiment-records/README.md",
         "availability": "MAIN"
       },
@@ -465,7 +511,7 @@
       "name": "ACVM Electrical & Thermal Test Fixture",
       "source": {
         "branch": "main",
-        "commit": "1dd5f65e1046edab6175998552362ad3856f8549",
+        "commit": "dedddc11ed43b14bf872d56b02c92c5b65e695bb",
         "path": "docs/acvm/electrical-thermal-fixture/README.md",
         "availability": "MAIN"
       },
@@ -492,7 +538,7 @@
       "name": "RAX: relationales Forschungsprogramm",
       "source": {
         "branch": "main",
-        "commit": "1dd5f65e1046edab6175998552362ad3856f8549",
+        "commit": "dedddc11ed43b14bf872d56b02c92c5b65e695bb",
         "path": "docs/research/rax/README.md",
         "availability": "MAIN"
       },
@@ -519,7 +565,7 @@
       "name": "RAX-U1: Reduktionskontrolle",
       "source": {
         "branch": "main",
-        "commit": "1dd5f65e1046edab6175998552362ad3856f8549",
+        "commit": "dedddc11ed43b14bf872d56b02c92c5b65e695bb",
         "path": "docs/research/rax/countercheck-v0.1/README.md",
         "availability": "MAIN"
       },
@@ -556,7 +602,7 @@
       "name": "RAX-B1/M1: Benchmark und Methodenreview",
       "source": {
         "branch": "main",
-        "commit": "1dd5f65e1046edab6175998552362ad3856f8549",
+        "commit": "dedddc11ed43b14bf872d56b02c92c5b65e695bb",
         "path": "docs/research/rax/method-review-v0.1/README.md",
         "availability": "MAIN"
       },
@@ -592,7 +638,7 @@
       "name": "RAX-W1: exakte Wolfram-Gegenprüfung",
       "source": {
         "branch": "main",
-        "commit": "1dd5f65e1046edab6175998552362ad3856f8549",
+        "commit": "dedddc11ed43b14bf872d56b02c92c5b65e695bb",
         "path": "docs/research/rax/wolfram-check-v0.1/README.md",
         "availability": "MAIN"
       },
@@ -628,7 +674,7 @@
       "name": "Wolfram Fall 2: Polaritätsumkehr",
       "source": {
         "branch": "main",
-        "commit": "1dd5f65e1046edab6175998552362ad3856f8549",
+        "commit": "dedddc11ed43b14bf872d56b02c92c5b65e695bb",
         "path": "docs/signal-lab/wolfram-polarity-v0.1/README.md",
         "availability": "MAIN"
       },
@@ -662,7 +708,7 @@
       "name": "Wolfram Fall 4: Nullfehler und Abhängigkeit",
       "source": {
         "branch": "main",
-        "commit": "1dd5f65e1046edab6175998552362ad3856f8549",
+        "commit": "dedddc11ed43b14bf872d56b02c92c5b65e695bb",
         "path": "docs/signal-lab/wolfram-zero-failures-v0.1/README.md",
         "availability": "MAIN"
       },
@@ -696,7 +742,7 @@
       "name": "Wolfram Fall 5: Kausalordnung",
       "source": {
         "branch": "main",
-        "commit": "1dd5f65e1046edab6175998552362ad3856f8549",
+        "commit": "dedddc11ed43b14bf872d56b02c92c5b65e695bb",
         "path": "docs/research/causal-order/wolfram-countercheck-v0.1/README.md",
         "availability": "MAIN"
       },
@@ -730,7 +776,7 @@
       "name": "Öffentliche Datenagenten: NOAA, Atlas, QuTech, NASA",
       "source": {
         "branch": "main",
-        "commit": "1dd5f65e1046edab6175998552362ad3856f8549",
+        "commit": "dedddc11ed43b14bf872d56b02c92c5b65e695bb",
         "path": "docs/SOURCE_AGENTS.md",
         "availability": "MAIN"
       },
@@ -770,7 +816,7 @@
       "name": "Begrenzter Mathematikagent: Lorentz n=3–5 und Propagator",
       "source": {
         "branch": "main",
-        "commit": "1dd5f65e1046edab6175998552362ad3856f8549",
+        "commit": "dedddc11ed43b14bf872d56b02c92c5b65e695bb",
         "path": "docs/MATH_AGENT.md",
         "availability": "MAIN"
       },
@@ -804,7 +850,7 @@
     },
     {
       "id": "lorentz-n6",
-      "name": "Lorentz-Kollisionsatlas n=6",
+      "name": "Lorentz-Kollisionsatlas n=6: vollständiger Forschungsstand",
       "source": {
         "branch": "research/lorentz-v1-workpackages",
         "commit": "f5116b9970a6b7dc788c18623a8386b4cde33ad4",
@@ -825,7 +871,7 @@
         "archive": null,
         "expected": "Exit 0; nur die unten genannte Softwareaussage."
       },
-      "claim": "318 Ordnungen; 286 Spektralklassen, mit Endpunktzahlen 314, mit angegebener Quill-Vergleichsbasis 318. Nur endlicher Korpus.",
+      "claim": "318 Ordnungen; 286 Spektralklassen, mit Endpunktzahlen 314, Quill-Basis 285, mit maximalen Quills 318. Nur endlicher Korpus. Vollständiger Forschungsstand einschließlich Generator auf diesem Branch; bytegleicher Prüfer und fester Atlas auch in main über die gemeinsame Offline-Referenzsuite.",
       "evidence": [
         {
           "path": "research/lorentz_n6/results/atlas_n6.json",
@@ -1056,7 +1102,7 @@
     {
       "name": "docs/wolfram-causal-order-v0-1",
       "commit": "3f8fb920ddefd9ede13d0855a14f4bfb1c7b1239",
-      "behind_main": 1,
+      "behind_main": 6,
       "ahead_of_main": 0,
       "registered_modules": [],
       "role": "HISTORICAL_BRANCH",
@@ -1065,7 +1111,7 @@
     {
       "name": "docs/wolfram-zero-failures-v0-1",
       "commit": "a40a513a9633cbe6aad4ce66132331d9264c0bab",
-      "behind_main": 3,
+      "behind_main": 8,
       "ahead_of_main": 0,
       "registered_modules": [],
       "role": "HISTORICAL_BRANCH",
@@ -1074,7 +1120,7 @@
     {
       "name": "feat/signal-validation-lab",
       "commit": "33032c23dd0ef3e035d38c5b9cf7c3db6faf65f0",
-      "behind_main": 38,
+      "behind_main": 43,
       "ahead_of_main": 1,
       "registered_modules": [],
       "role": "HISTORICAL_BRANCH",
@@ -1083,7 +1129,7 @@
     {
       "name": "feature/sagnac-integration-preview-0.1",
       "commit": "7aaa8e38acc60be556614dd4e4c0ac1697b45815",
-      "behind_main": 61,
+      "behind_main": 66,
       "ahead_of_main": 1,
       "registered_modules": [],
       "role": "HISTORICAL_BRANCH",
@@ -1092,7 +1138,7 @@
     {
       "name": "fix/evidence-audit-20261012",
       "commit": "680fe6a43e664164a26dcf1b8cfb6bf52a1b3b56",
-      "behind_main": 39,
+      "behind_main": 44,
       "ahead_of_main": 1,
       "registered_modules": [],
       "role": "HISTORICAL_BRANCH",
@@ -1101,7 +1147,7 @@
     {
       "name": "fix/safe-x6-publish",
       "commit": "f802252689284de402a3a322a64a69a07098622f",
-      "behind_main": 122,
+      "behind_main": 127,
       "ahead_of_main": 0,
       "registered_modules": [],
       "role": "HISTORICAL_BRANCH",
@@ -1110,7 +1156,7 @@
     {
       "name": "fix/signal-lab-evidence-archive",
       "commit": "d43238b4e110ea7338f225334f23c6cde179626e",
-      "behind_main": 37,
+      "behind_main": 42,
       "ahead_of_main": 1,
       "registered_modules": [],
       "role": "HISTORICAL_BRANCH",
@@ -1118,11 +1164,12 @@
     },
     {
       "name": "main",
-      "commit": "1dd5f65e1046edab6175998552362ad3856f8549",
+      "commit": "dedddc11ed43b14bf872d56b02c92c5b65e695bb",
       "behind_main": 0,
       "ahead_of_main": 0,
       "registered_modules": [
         "integration",
+        "offline-reference",
         "astrolabium",
         "signal-lab",
         "edge-reference",
@@ -1153,7 +1200,7 @@
     {
       "name": "publication/acvm-c1-v0.1",
       "commit": "b3def446889b34cc25afeb1aad14930199636c22",
-      "behind_main": 17,
+      "behind_main": 22,
       "ahead_of_main": 0,
       "registered_modules": [],
       "role": "HISTORICAL_BRANCH",
@@ -1162,7 +1209,7 @@
     {
       "name": "publication/acvm-optical-v0.2",
       "commit": "94f08ef30a60cab4a6534aef9b0d05e1d5b2ff0b",
-      "behind_main": 10,
+      "behind_main": 15,
       "ahead_of_main": 0,
       "registered_modules": [],
       "role": "HISTORICAL_BRANCH",
@@ -1171,7 +1218,7 @@
     {
       "name": "publication/sagnac-components-v0.1-20261015",
       "commit": "7f0f8b893e5fb91708cb75c1460f880adaf2e519",
-      "behind_main": 7,
+      "behind_main": 12,
       "ahead_of_main": 0,
       "registered_modules": [],
       "role": "HISTORICAL_BRANCH",
@@ -1180,7 +1227,7 @@
     {
       "name": "publication/wolfram-polarity-v0.1-20261015",
       "commit": "8b6785d556895bcb19856061a681720c3f3ff228",
-      "behind_main": 5,
+      "behind_main": 10,
       "ahead_of_main": 0,
       "registered_modules": [],
       "role": "HISTORICAL_BRANCH",
@@ -1189,7 +1236,7 @@
     {
       "name": "publish/photonic-two-qubit-design",
       "commit": "8f0cdaad0cd8823ceb2a3db6f2d9a5815d6134ba",
-      "behind_main": 60,
+      "behind_main": 65,
       "ahead_of_main": 1,
       "registered_modules": [],
       "role": "HISTORICAL_BRANCH",
@@ -1198,7 +1245,7 @@
     {
       "name": "research/lorentz-v1-workpackages",
       "commit": "f5116b9970a6b7dc788c18623a8386b4cde33ad4",
-      "behind_main": 28,
+      "behind_main": 33,
       "ahead_of_main": 1,
       "registered_modules": [
         "lorentz-n6",
@@ -1210,7 +1257,7 @@
     {
       "name": "research/nqk",
       "commit": "a8fbc70fae3ecb46bfcd8ceb828ce182e533dd04",
-      "behind_main": 36,
+      "behind_main": 41,
       "ahead_of_main": 2,
       "registered_modules": [
         "nqk"
@@ -1221,7 +1268,7 @@
     {
       "name": "research/photonic-link",
       "commit": "7ff72fcd6a16e9b353d1af277307463f757d3470",
-      "behind_main": 35,
+      "behind_main": 40,
       "ahead_of_main": 1,
       "registered_modules": [
         "photonic-link"
@@ -1232,7 +1279,7 @@
     {
       "name": "research/rax-w1-publication",
       "commit": "1cd7e4bb71672233058e061d18fae6b249d948ad",
-      "behind_main": 21,
+      "behind_main": 26,
       "ahead_of_main": 0,
       "registered_modules": [],
       "role": "HISTORICAL_BRANCH",
@@ -1241,7 +1288,7 @@
     {
       "name": "research/x6-edge-reference",
       "commit": "7ac131bcfbabd658b38fb1c97686325ac47fa081",
-      "behind_main": 28,
+      "behind_main": 33,
       "ahead_of_main": 0,
       "registered_modules": [],
       "role": "HISTORICAL_BRANCH",
@@ -1250,7 +1297,7 @@
     {
       "name": "research/x6-experiment-fabric-v1",
       "commit": "a34c59f2b0e2d30c73936363040669941aa8ce09",
-      "behind_main": 28,
+      "behind_main": 33,
       "ahead_of_main": 3,
       "registered_modules": [
         "experiment-fabric"
@@ -1261,7 +1308,7 @@
     {
       "name": "research/x6-fingerprint-v1",
       "commit": "f22030f2dae0aa670cdbc450c5e881ce250b36b8",
-      "behind_main": 28,
+      "behind_main": 33,
       "ahead_of_main": 2,
       "registered_modules": [
         "fingerprint"
@@ -1272,7 +1319,7 @@
     {
       "name": "research/x6-integration-v0.1",
       "commit": "87ca9ad6b12fd87869b393658f2ed6848f876c12",
-      "behind_main": 23,
+      "behind_main": 28,
       "ahead_of_main": 0,
       "registered_modules": [],
       "role": "HISTORICAL_BRANCH",
@@ -1281,7 +1328,7 @@
     {
       "name": "research/x6-neutral-discovery-v1",
       "commit": "1a02c482d59a42d554337fb83e0f6d6e6d84b516",
-      "behind_main": 28,
+      "behind_main": 33,
       "ahead_of_main": 4,
       "registered_modules": [
         "neutral-discovery"
@@ -1292,7 +1339,7 @@
     {
       "name": "x6-bounded-math-agent",
       "commit": "122ba4eb5ac1e7496bf3426b0f3e908d08aa74ff",
-      "behind_main": 62,
+      "behind_main": 67,
       "ahead_of_main": 0,
       "registered_modules": [],
       "role": "HISTORICAL_BRANCH",
@@ -1301,7 +1348,7 @@
     {
       "name": "x6-source-preview",
       "commit": "24023fd88abd676336098950ea3a08e93eeebfd8",
-      "behind_main": 70,
+      "behind_main": 75,
       "ahead_of_main": 0,
       "registered_modules": [],
       "role": "HISTORICAL_BRANCH",

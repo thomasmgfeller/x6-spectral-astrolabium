@@ -20,8 +20,8 @@ cd x6-integration
 Nicht zwischen Forschungsbranches wechseln, um die hier beschriebenen Schritte
 auszuführen: alle drei Adapter sind in derselben Fassung enthalten. Das
 [zentrale Modulregister](MODULE_REGISTRY.md) nennt die gepinnten Quellstände,
-weiteren Module und nächsten Abnahmen. Für den dort dokumentierten Snapshot:
-`git checkout --detach 1dd5f65e1046edab6175998552362ad3856f8549`.
+weiteren Module und nächsten Abnahmen. Für eine exakt gepinnte Wiederholung
+den Quellencommit des gewünschten Moduls aus dem Register auschecken.
 Der historische [Abnahmebericht](integration-v0.1/README.md) nennt die genau getestete
 Implementierungsrevision und enthält die vollständigen Befehlsprotokolle sowie
 die tatsächlich erzeugten Beispiel-Exporte. Seine Entwurfs-/CI-Angaben beschreiben
@@ -32,6 +32,17 @@ Python 3.12, Git und Node.js ab 22**. Die tatsächlich geprüften Versionen steh
 im beigefügten Qualifikationsbericht. Andere Betriebssysteme und Architekturen
 sind mit diesem Lauf nicht qualifiziert. Für die Oberfläche wird zusätzlich
 ein Browser benötigt; die Prüfung verwendet Chromium.
+
+Die [gemeinsame Offline-Referenzsuite](OFFLINE_REFERENCE.md) hat einen eigenen,
+installationsfreien Prüfweg mit Python 3.12 und Node.js 24:
+
+```sh
+python3 -S -B x6.py reference qualify --output /tmp/x6-reference-evidence
+```
+
+Dieser Befehl verlangt weder `setup` noch NumPy/SciPy. Er prüft die gespeicherten
+Wolfram-Ergebnisse, rationalen Graphfälle, Kausalordnungen und gezielte Fehlerfälle
+in einem Ablauf und wiederholt die Rechnung beim Replay.
 
 ## 2. Installieren und Umgebung prüfen
 

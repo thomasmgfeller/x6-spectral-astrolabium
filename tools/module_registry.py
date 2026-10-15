@@ -33,7 +33,7 @@ def render(doc):
         '# X6 — zentrales Modul- und Evidenzregister', '',
         '**Geprüfter Quellenstand: ' + doc['snapshot_date'] + '.** Dieses Register ist der gemeinsame Einstieg in die veröffentlichten Module.', '',
         'Es beschreibt einen datierten Snapshot, keinen Live-Monitor. Massgeblicher main-Ausgangscommit: [' + main + '](' + repo + '/commit/' + main + '). Dokumentationsänderungen nach diesem Snapshot sind über die Git-Historie nachvollziehbar. Die Quellpins bezeichnen die verfügbare Implementierung; ältere Evidenzberichte behalten ihre eigenen Prüfrevisionen.', '',
-        '[Maschinenlesbare Quelle](../MODULE_REGISTRY.json) · [Installation und Bedienung](INTEGRATION.md) · [Register-Abnahme](MODULE_REGISTRY_ACCEPTANCE.md)', '',
+        '[Maschinenlesbare Quelle](../MODULE_REGISTRY.json) · [Installation und Bedienung](INTEGRATION.md) · [Register-Abnahme](MODULE_REGISTRY_ACCEPTANCE.md) · [Offline-Referenzsuite](OFFLINE_REFERENCE.md)', '',
         '## Schnellstart aus main', '', FENCE + 'sh',
         'git clone --branch main https://github.com/' + doc['repository'] + '.git x6',
         'cd x6',
