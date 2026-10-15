@@ -988,6 +988,7 @@ Ein historischer Branch kann ungemergte Commits haben, obwohl sein Modul bereits
 | `hardware/c1-e01-readiness` | [d99b5f8d6d5c](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/d99b5f8d6d5cc1294397a7072d136d6209381d57) | 0 / 13 | Historischer Entwicklungs-/Publikationszweig |
 | `research/industrial-data-pilot` | [e14eaea1f554](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/e14eaea1f55497d397f297d9310e9c6bec1ee6d9) | 0 / 7 | Historischer Entwicklungs-/Publikationszweig |
 | `research/validation-reference-release` | [2268fb97f90c](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/2268fb97f90cfc09490d0988e4c24e1556c569b5) | 0 / 4 | Historischer Entwicklungs-/Publikationszweig |
+| `research/x6-qe-v0.1` | [d81774785916](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/d81774785916be76e8642ac9909e61ac5f3743e6) | 1 / 0 | Historischer Entwicklungs-/Publikationszweig |
 
 Bei einer Modulfreigabe zuerst MODULE_REGISTRY.json aktualisieren: Quellencommit, Einstieg, erwartete Ausgabe, Evidenzrevision und nächste Abnahme. Danach rendern und prüfen:
 
