@@ -1,0 +1,40 @@
+{
+  "status": "COMPLETED",
+  "directory": "/workspace/scratch/efe82cff8a53/registry-evidence/runs/rax",
+  "summary": {
+    "schema": "x6.integration.summary/1",
+    "module": "rax",
+    "execution_status": "COMPLETED",
+    "verification_status": "BACKEND_CHECKS_PASS",
+    "evidence_class": "SYNTHETIC_SOFTWARE",
+    "scientific_result": {
+      "native_schema": "RAX-M1-20261014-001",
+      "result": {
+        "primary_conclusions": {
+          "INCONCLUSIVE": 8
+        },
+        "method_findings": {
+          "00_original_replay": "PASS",
+          "01_sampling_units": "PASS_WITH_SCOPE",
+          "02_negative_index_alias": "DEFECT_REPRODUCED",
+          "03_ineffective_holdout_unit_test": "DEFECT_REPRODUCED",
+          "04_callback_future_data": "EXPOSURE_REPRODUCED",
+          "05_freeze_attestation": "LIMIT_REPRODUCED",
+          "06_dependence_counterexamples": "EXACT_COUNTEREXAMPLES",
+          "07_holdout_selection_bias": "EXACT_COUNTEREXAMPLE",
+          "08_claims": "CLAIMS_BOUNDED"
+        },
+        "original_files_unchanged": 36
+      },
+      "scope": "Internal post-hoc RAX-B1/M1 replay; not new acquisition, external review, U2 or physical evidence."
+    },
+    "limits": {
+      "authenticity": "NOT_ASSESSED",
+      "physical_validation": "NOT_PERFORMED",
+      "external_review": "NOT_PERFORMED",
+      "hardware_control": "NOT_PERFORMED"
+    }
+  }
+}
+
+--- stderr ---

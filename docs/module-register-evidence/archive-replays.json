@@ -1,0 +1,35 @@
+{
+  "scope": "Offline Python verification of stored Wolfram evidence; Fall 2 additionally reruns Node. No fresh Wolfram execution.",
+  "results": [
+    {
+      "module": "rax-w1",
+      "command": "python3 -B verify_package.py",
+      "exit_code": 0,
+      "seconds": 0.04211888200006797
+    },
+    {
+      "module": "rax-w1",
+      "command": "python3 -B verify.py",
+      "exit_code": 0,
+      "seconds": 0.3565195210012462
+    },
+    {
+      "module": "wolfram-polarity",
+      "command": "python3 verify.py --rerun",
+      "exit_code": 0,
+      "seconds": 0.18461232600020594
+    },
+    {
+      "module": "wolfram-dependence",
+      "command": "python3 verify.py",
+      "exit_code": 0,
+      "seconds": 0.048164907999307616
+    },
+    {
+      "module": "wolfram-causal",
+      "command": "python3 verify_release.py",
+      "exit_code": 0,
+      "seconds": 0.051863787999536726
+    }
+  ]
+}

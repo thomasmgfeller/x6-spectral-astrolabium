@@ -1,9 +1,19 @@
 # Lorentzian priority: reference, comparison and research gates
 
-Research snapshot: 11 October 2026. The user's priority is Lorentzian spectral
+Research baseline: 11 October 2026; navigation/window reconciled 15 October 2026.
+The user's priority is Lorentzian spectral
 geometry. Both Lorentzian tracks run first; the three existing signal/graph
-controls follow with 24 cases each. The original pilot deadline remains
-13 October 2026 at 22:26:52 UTC. See `MATH_AGENT.md` for control.
+controls follow with 24 cases each. The authorised exclusive cutoff is
+19 October 2026 at 00:00:00 Europe/Zurich (`2026-10-18T22:00:00Z`), including
+Sunday 18 October. See `MATH_AGENT.md` for control and the
+[central module register](MODULE_REGISTRY.md) for source pins and evidence.
+
+This page describes the scheduled main-branch n=3..5/propagator baseline.
+The separately executable n=6 atlas is already available on
+`research/lorentz-v1-workpackages`; fingerprints, Fabric and Neutral Discovery
+have later branch sources. Their exact entry points, finite results and next
+acceptance gates are in the register. They are not automatically part of this
+scheduled agent or evidence of a general reconstruction theorem.
 
 ## Research reference and exact replication
 
@@ -92,7 +102,9 @@ eigenvalues near the discreteness scale require a justified cutoff later.
 | 5 | Other geometries or dimensions | Correct dimension-dependent Green function, volume measure and independent controls |
 | Supporting | Held-out denoising benchmark and source agents | Untouched test sequences, clean targets or defensible proxies, fair comparator tuning |
 
-Items 2–5 and the full denoising comparison remain subsequent work. Good finite
+For the main scheduled baseline, items 2–5 and the full denoising comparison
+remain outside its executed scope. Item 2 now has a finite n=6 branch result
+as recorded above; larger/general reconstruction questions remain open. Good finite
 tests do not automatically extend the runtime window or establish a physical
 interpretation. A useful near-term output is an independently checkable
 benchmark and negative-result corpus. New mathematics requires a proved

@@ -1,6 +1,16 @@
 # Astrolabium Control and Validation Module
 
-**ACVM concept 0.1 · 13 October 2026 · CONCEPT ONLY**
+**Historical ACVM concept 0.1 · 13 October 2026 · CONCEPT ONLY**
+
+**Current implementation status (15 October):** main also contains
+[C1](control-channel-v0.1/README.md) and the
+[0.2 optical/reference workflow](optical-v0.2/README.md).
+Run `python3 x6.py control qualify --output runs/c1-qualification` or
+`python3 x6.py acvm qualify --output runs/acvm-qualification` from the repository
+root. V01–V08 have software/model evidence; V09/V10 physical measurements and
+device qualification remain open. The [central register](../MODULE_REGISTRY.md)
+provides source commits, evidence and next gates. The table and first steps below
+describe the original 0.1 proposal, not the current status of all ACVM modules.
 
 ACVM is a proposed control and validation module for the Astrolabium project.
 It defines how an experiment plan could be compiled, executed on a supported
@@ -10,7 +20,7 @@ device, independently measured and assessed against declared acceptance criteria
 - [Download the original Word document](Astrolabium_ACVM_Konzept_v0_1.docx)
 - [Publication provenance and SHA-256 inventory](manifest.json)
 
-## Classification and evidence
+## Historical concept classification and evidence
 
 | Attribute | Status |
 | --- | --- |
@@ -34,7 +44,7 @@ not rerun for this publication and are not independently reproducible from
 this folder alone. Source I4 is the supplied concept excerpt. External papers
 and manufacturer materials are linked, not redistributed.
 
-## First implementation steps
+## Original implementation plan
 
 1. Specify one experiment-package profile, a compiler and an independent reader.
 2. Implement the proposed software/model checks V01–V08 and preserve their results.

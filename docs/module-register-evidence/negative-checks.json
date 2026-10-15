@@ -1,0 +1,17 @@
+{
+  "scope": "In-memory mutations of register data; checked by the actual validator. No repository mutation.",
+  "checks": [
+    {
+      "mutation": "changed UTC cutoff",
+      "result": "REJECTED"
+    },
+    {
+      "mutation": "unknown commit pin",
+      "result": "REJECTED"
+    },
+    {
+      "mutation": "nonexistent entry path",
+      "result": "REJECTED"
+    }
+  ]
+}

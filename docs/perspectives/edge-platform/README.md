@@ -39,8 +39,9 @@ daraus nicht abgeleitet. Der X6-Phasenfilter bleibt eines der zu prüfenden Verf
 
 - `experimental/edge_reference/`: ausführbarer begrenzter Referenzadapter.
 - `docs/perspectives/edge-platform/`: Konzept, Roadmap, Vertragsbeschreibung und Prüfnachweise.
-- Branch [`research/x6-edge-reference`](https://github.com/thomasmgfeller/x6-spectral-astrolabium/tree/research/x6-edge-reference): Ausgangspunkt für weitere Entwicklungsarbeit.
-- `main`: dokumentierter veröffentlichter Ausgangsstand, ausdrücklich experimentell.
+- `main`: enthält den ausführbaren Referenzadapter und diese Dokumentation, ausdrücklich experimentell.
+- Branch [`research/x6-edge-reference`](https://github.com/thomasmgfeller/x6-spectral-astrolabium/tree/research/x6-edge-reference): historischer Entwicklungsstand; kein nötiger Umweg zum Ausführen.
+- [Zentrales Register](../../MODULE_REGISTRY.md): verbindlicher datierter Quellpin, Einstieg, Evidenz und nächste Abnahme.
 
 Der Plattformkern soll anwendungsunabhängig werden. Dafür reicht X6 allein nicht:
 Die nächste Generalisierung muss an einer zweiten unabhängigen Anwendung geprüft

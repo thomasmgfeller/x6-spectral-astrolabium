@@ -1,0 +1,30 @@
+
+--- stderr ---
+test_existing_output_and_archive_are_not_overwritten (test_workflow.WorkflowTests.test_existing_output_and_archive_are_not_overwritten) ... ok
+test_invalid_signal_job_preserves_failure_without_completion (test_workflow.WorkflowTests.test_invalid_signal_job_preserves_failure_without_completion) ... ok
+test_local_server_serves_both_apps_and_denies_internal_files (test_workflow.WorkflowTests.test_local_server_serves_both_apps_and_denies_internal_files) ... 127.0.0.1 - - [15/Oct/2026 11:44:56] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [15/Oct/2026 11:44:56] "GET /app/index.html HTTP/1.1" 200 -
+127.0.0.1 - - [15/Oct/2026 11:44:56] "GET /app/signal-lab.html HTTP/1.1" 200 -
+127.0.0.1 - - [15/Oct/2026 11:44:56] code 404, message Not Found
+127.0.0.1 - - [15/Oct/2026 11:44:56] "GET /.git/config HTTP/1.1" 404 -
+127.0.0.1 - - [15/Oct/2026 11:44:56] code 404, message Not Found
+127.0.0.1 - - [15/Oct/2026 11:44:56] "GET /.venv/pyvenv.cfg HTTP/1.1" 404 -
+127.0.0.1 - - [15/Oct/2026 11:44:56] code 404, message Not Found
+127.0.0.1 - - [15/Oct/2026 11:44:56] "GET /tools/workflow/cli.py HTTP/1.1" 404 -
+127.0.0.1 - - [15/Oct/2026 11:44:56] code 404, message Not Found
+127.0.0.1 - - [15/Oct/2026 11:44:56] "GET /app/../README.md HTTP/1.1" 404 -
+ok
+test_missing_completion_extra_file_and_digest_tamper_rejected (test_workflow.WorkflowTests.test_missing_completion_extra_file_and_digest_tamper_rejected) ... ok
+test_native_signal_import_preserves_bytes_and_replays (test_workflow.WorkflowTests.test_native_signal_import_preserves_bytes_and_replays) ... ok
+test_rehashed_forged_summary_is_rejected_by_replay (test_workflow.WorkflowTests.test_rehashed_forged_summary_is_rejected_by_replay) ... ok
+test_rehashed_native_rational_result_is_rejected (test_workflow.WorkflowTests.test_rehashed_native_rational_result_is_rejected) ... ok
+test_signal_csv_is_checked_against_native_replay (test_workflow.WorkflowTests.test_signal_csv_is_checked_against_native_replay) ... ok
+test_source_revision_mismatch_is_not_silently_replayed (test_workflow.WorkflowTests.test_source_revision_mismatch_is_not_silently_replayed) ... ok
+test_spectral_export_replays_without_changing_run (test_workflow.WorkflowTests.test_spectral_export_replays_without_changing_run) ... ok
+test_symlink_and_incomplete_exports_are_not_accepted (test_workflow.WorkflowTests.test_symlink_and_incomplete_exports_are_not_accepted) ... ok
+test_zip_traversal_duplicate_and_symlink_are_rejected (test_workflow.WorkflowTests.test_zip_traversal_duplicate_and_symlink_are_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 3.027s
+
+OK

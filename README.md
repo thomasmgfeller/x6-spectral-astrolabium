@@ -4,12 +4,27 @@
 
 This repository publishes the actual **X6 v4.2 RC** browser application, alongside the **v4.3 community audit kit**. The application combines experimental signal/Fourier analysis, a model-dependent signal-to-graph mapping, and exact rational lower bounds for finite weighted undirected graph Laplacians.
 
+## Start here: actual module and evidence status
+
+The [central module register](docs/MODULE_REGISTRY.md) lists **31 modules** with
+their authoritative branch and commit, prerequisites, executable entry point,
+expected result, available evidence and next acceptance gate. Its
+[machine-readable source](MODULE_REGISTRY.json) is a dated snapshot, not a live
+qualification badge. Concepts without an executable package are marked explicitly.
+
+The integrated CLI, Signal Lab, Edge reference, Sagnac import, ACVM C1/0.2 and
+published RAX/Wolfram packages are in **main**. The n=6 atlas, Industrial V1
+assessor, fingerprints, Experiment Fabric, Neutral Discovery, NQK dossier and
+Photonic Link still have separate research sources; use their pinned checkout
+instructions in the register. A historical branch tip is not proof that its
+features are absent from main.
+
 ## Run
 
 **Experimental software.** Do not enter confidential data; this is not a production-hardened service. The browser's local qualification is not independent scientific certification.
 
-Use the [unified local workflow](docs/INTEGRATION.md) from a checkout of this
-integration revision (Python 3.12, Git and Node.js 22 or newer):
+Use the [unified local workflow](docs/INTEGRATION.md) from a checkout of **main**
+(Python 3.12, Git and Node.js 22 or newer):
 
 ```sh
 python3 x6.py setup --profile research
@@ -32,8 +47,9 @@ Platform. The [local Node.js adapter](experimental/edge_reference/README.md)
 executes a bounded synthetic signal job, exports its evidence and verifies it by
 computational replay. The existing Signal Lab kernel is reused unchanged.
 
-Further development starts on
-[`research/x6-edge-reference`](https://github.com/thomasmgfeller/x6-spectral-astrolabium/tree/research/x6-edge-reference).
+The executable baseline is already in **main**. The historical
+[`research/x6-edge-reference`](https://github.com/thomasmgfeller/x6-spectral-astrolabium/tree/research/x6-edge-reference)
+branch is retained for provenance; use the register's main pin to reproduce it.
 This is an experimental software baseline: hardware adapters, a generic scheduler,
 cross-architecture qualification, measured savings and security profiles remain
 open. Read the [executed checks](docs/perspectives/edge-platform/VALIDATION.md).
@@ -123,8 +139,10 @@ provisional research concept, not a fabricated device or demonstrated qubit.
 This experimental extension adds tab **07 · Sagnac**: validated SGNCv007 binary
 capture import, an explicitly synthetic example, and a loopback-only Linux
 UART receiver. Start `python3 device/sagnac_bridge.py` and open its URL.
-All quantum/physical claims remain NOT_ASSESSED. Optical control is unavailable;
-no command path or qualified actuators are implemented. Physical hardware
+All quantum/physical claims remain NOT_ASSESSED. This acquisition/import module
+does not issue optical commands. Separate ACVM C1/0.2 command paths and adapter
+tests are available above; their physical actuator qualification remains open.
+Physical hardware
 qualification remains open. No scheduled research agent is activated or modified.
 
 The **X6 Validation** workflow checks the decoder, local bridge, Chromium UI,
@@ -165,10 +183,15 @@ This certifies the **rounded rational graph**, not unrounded signal values or a 
 
 ## Automated public-data checks
 
-**Current run window: 11–13 October 2026.** All four agents stop by
-14 October 2026, 00:26:52 Europe/Zurich. Their workflows enforce the cutoff
-before any data work; automatic runs on code changes are disabled. Existing
-results keep the retention periods below.
+**Current run window: 11–18 October 2026, including Sunday.** The exclusive
+cutoff is **19 October 2026, 00:00:00 Europe/Zurich**
+(`2026-10-18T22:00:00Z`). Four data jobs in two workflows and the bounded math
+agent share this cutoff. Data/source workflows have no code-change triggers;
+the math workflow also has guarded source-change qualification triggers.
+Admission reserves the documented job budgets. A schedule is not evidence of
+execution; the [register](docs/MODULE_REGISTRY.md#agentenfenster) links observed
+runs and the authoritative configuration. Existing results keep the retention
+periods below.
 
 The [X6 Data Agent](docs/DATA_AGENT.md) downloads public NOAA GOES X-ray observations, drives the actual browser app, and separately checks its exported rational graph certificate in Python. The bounded daily workflow uploads inputs and evidence as Actions artifacts for 30 days. PASS means the named software checks passed; it does not establish denoising performance or physical validity.
 
@@ -224,8 +247,10 @@ classification and compares independent 1+1-dimensional diamond samples with
 the known causal-propagator spectrum. Signal/graph controls continue alongside.
 See [definitions, literature and next research gates](docs/LORENTZ_RESEARCH.md).
 Runs are attempted every six hours during the same pilot window, with a
-90-second research budget and mandatory cutoff at 14 October 2026,
-00:26:52 Europe/Zurich. These are replication/calibration results; no new
+90-second research budget and mandatory exclusive cutoff at **19 October 2026,
+00:00:00 Europe/Zurich**. The separate n=6 atlas and later research modules are
+located in the [module register](docs/MODULE_REGISTRY.md).
+These are replication/calibration results; no new
 theorem, general continuum limit or physical validation is claimed.
 
 See the [X6 Working Paper v0.3](docs/X6_OPEN_RESEARCH_AGENDA_DRAFT.md) for falsifiable research questions and proposed industrial pilots in signal denoising, quantum readout analysis, and cryptographic graph verification. These are proposals, not validated product performance or physical claims.

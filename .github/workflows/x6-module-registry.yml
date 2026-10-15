@@ -1,0 +1,24 @@
+name: X6 Module Register
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  consistency:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Check source pins, archive entries, generated register and operating cutoff
+        run: python3 tools/module_registry.py --check --git-objects
+      - name: Check repository source inventories
+        run: python3 tests/python/verify_manifest.py
