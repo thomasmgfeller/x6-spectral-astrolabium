@@ -1,0 +1,41 @@
+name: X6 Numerical Qualification
+on:
+  pull_request:
+    paths: ['app/index.html', 'tests/numerics/**', 'docs/numerics-v1/**', 'NUMERICS_SOURCE_MANIFEST.json', '.github/workflows/x6-numerics.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  numerics:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Install numerical and browser references
+        run: |
+          python -m pip install numpy==2.3.5 scipy==1.17.0
+          npm install --prefix "$RUNNER_TEMP/x6-numerics" --no-save --no-package-lock --ignore-scripts playwright@1.62.1
+          node "$RUNNER_TEMP/x6-numerics/node_modules/playwright/cli.js" install --with-deps chromium
+      - name: Frozen contract, controls and targeted regressions
+        run: |
+          python3 tests/numerics/verify_frozen.py --output numerics-evidence
+          node tests/numerics/test_regression.cjs > numerics-evidence/regression.json
+      - name: Actual UI input, display, errors and JSON export
+        env:
+          NODE_PATH: ${{ runner.temp }}/x6-numerics/node_modules
+        run: node tests/numerics/browser.cjs numerics-evidence
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: x6-numerics-evidence
+          path: numerics-evidence/
+          retention-days: 30
+          if-no-files-found: error
