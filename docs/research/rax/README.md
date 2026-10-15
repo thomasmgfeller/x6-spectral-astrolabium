@@ -113,6 +113,15 @@ Prüfregeln sind mitgeliefert. Die eingefrorenen Benchmarkquellen bleiben
 unverändert. Externe Begutachtung oder physikalische Nachweise sind damit
 nicht erbracht.
 
+## Neuer geschützter Runner für begrenzte Planer
+
+[RAX-G1](../../validation-v1/README.md) ergänzt einen neuen deklarativen
+Ausführungsweg mit frischen öffentlichen Präfix-Prozessen, phasengebundener
+Prüfdatenerzeugung, 33 Angriffskontrollen und dauerhaftem Fehlerbudget. Er führt
+keinen beliebigen fremden Python-Code aus und ersetzt weder die historischen
+B1-Quellen noch deren acht unentschiedene Entscheidungen. Externe Wiederholung
+bleibt offen.
+
 ## Exakte Gegenprüfung mit Wolfram RAX-W1
 
 Die [RAX-W1-Gegenprüfung](wolfram-check-v0.1/README.md) rekonstruiert 44 von

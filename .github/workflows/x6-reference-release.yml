@@ -1,0 +1,130 @@
+name: Frozen reference edition
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - 'experimental/rax_guarded/**'
+      - 'tests/rax-guarded/**'
+      - 'docs/validation-v1/**'
+      - 'docs/agent-archive/**'
+      - 'tools/release/**'
+      - 'CITATION.cff'
+      - 'VALIDATION_SOURCE_MANIFEST.json'
+      - '.github/workflows/x6-reference-release.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'experimental/rax_guarded/**'
+      - 'tests/rax-guarded/**'
+      - 'docs/validation-v1/**'
+      - 'docs/agent-archive/**'
+      - 'tools/release/**'
+      - 'CITATION.cff'
+      - 'VALIDATION_SOURCE_MANIFEST.json'
+      - '.github/workflows/x6-reference-release.yml'
+permissions:
+  contents: read
+jobs:
+  qualify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    outputs:
+      release_requested: ${{ steps.release_change.outputs.requested }}
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Detect explicit reference release notes change
+        id: release_change
+        if: github.event_name == 'push'
+        env:
+          BEFORE_SHA: ${{ github.event.before }}
+          CURRENT_SHA: ${{ github.sha }}
+        run: |
+          python3 - <<'PY'
+          import os,subprocess
+          changed=subprocess.check_output(['git','diff','--name-only',os.environ['BEFORE_SHA'],os.environ['CURRENT_SHA'],'--','docs/validation-v1/RELEASE_NOTES.md']).decode().strip()
+          with open(os.environ['GITHUB_OUTPUT'],'a') as f:f.write('requested='+str(bool(changed)).lower()+'\n')
+          PY
+      - name: Validate citation against pinned official CFF schema
+        run: |
+          python3 -m pip install PyYAML==6.0.2 jsonschema==4.25.1
+          python3 tools/release/check_citation.py
+      - name: Validate full repository inventory
+        run: python3 tests/python/verify_manifest.py
+      - name: Build deterministic portable handoff
+        run: python3 -S -B tools/release/build.py --output "$RUNNER_TEMP/reference-release"
+      - name: Reproduce solely from extracted package without network
+        run: |
+          python3 -m zipfile -e "$RUNNER_TEMP/reference-release/x6-reference-2026.10.15.zip" "$RUNNER_TEMP/unpacked"
+          cd "$RUNNER_TEMP/unpacked/x6-reference"
+          sudo env "PATH=$PATH" unshare --net python3 -S -B tools/release/reproduce.py --output "$RUNNER_TEMP/reproduction"
+      - name: Preserve append-only finding history
+        if: github.event_name == 'pull_request'
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+        run: python3 -S -B tests/rax-guarded/check_budget.py --qualification "$RUNNER_TEMP/reproduction/guarded/qualification.json" --base "$BASE_SHA"
+      - name: Package complete CI evidence for permanent release attachment
+        run: |
+          python3 - <<'PY'
+          import hashlib,os,zipfile
+          from pathlib import Path
+          temp=Path(os.environ['RUNNER_TEMP']);base=temp/'reproduction';assets=temp/'reference-release'
+          archive=assets/'x6-reference-qualification.zip'
+          with zipfile.ZipFile(archive,'x',compression=zipfile.ZIP_DEFLATED) as z:
+              for p in sorted(base.rglob('*')):
+                  if p.is_file():z.write(p,str(p.relative_to(base)))
+          with (assets/'SHA256SUMS').open('a') as f:
+              f.write(hashlib.sha256(archive.read_bytes()).hexdigest()+'  '+archive.name+'\n')
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: reference-edition-assets
+          path: ${{ runner.temp }}/reference-release/
+          if-no-files-found: error
+          retention-days: 30
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: reference-edition-qualification
+          path: ${{ runner.temp }}/reproduction/
+          if-no-files-found: error
+          retention-days: 30
+  publish:
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main' && needs.qualify.outputs.release_requested == 'true'
+    needs: qualify
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09
+        with:
+          persist-credentials: false
+      - uses: actions/download-artifact@v4
+        with:
+          name: reference-edition-assets
+          path: release-assets
+      - name: Publish the qualified research reference once
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          SOURCE_SHA: ${{ github.sha }}
+        run: |
+          python3 - <<'PY'
+          import json,os
+          from pathlib import Path
+          assert json.loads(Path('release-assets/BUILD.json').read_text())['source_commit']==os.environ['SOURCE_SHA']
+          PY
+          cd release-assets
+          sha256sum -c SHA256SUMS
+          cd ..
+          gh release create reference-2026.10.15 release-assets/x6-reference-2026.10.15.zip release-assets/x6-reference-qualification.zip release-assets/SHA256SUMS release-assets/BUILD.json --target "$SOURCE_SHA" --title "X6 Reference Edition 2026-10-15" --notes-file docs/validation-v1/RELEASE_NOTES.md --prerelease --latest=false

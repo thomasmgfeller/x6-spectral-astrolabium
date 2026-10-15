@@ -1,0 +1,196 @@
+{
+  "schema": "x6-bounded-math-agent-1",
+  "started_at": "2026-10-15T13:10:50.966082Z",
+  "status": "PASS",
+  "novelty": "NOT_ASSESSED",
+  "physical_evidence": "NONE",
+  "denoising_benchmark": "NOT_PERFORMED",
+  "config": {
+    "schema": "x6-bounded-math-agent-1",
+    "enabled": true,
+    "start_utc": "2026-10-11T08:13:02Z",
+    "stop_utc": "2026-10-18T22:00:00Z",
+    "slot_hours": 6,
+    "max_seconds": 90,
+    "cases_per_track": 24,
+    "seed": 104729,
+    "app_sha256": "ff60231155f0fc869564ec0eb24c87568943cdd96e154094ae9abd9877bd7ff8"
+  },
+  "tracks": {
+    "lorentz_orders": {
+      "finding": "LITERATURE_REPLICATION_EXACT_SMALL_ORDERS",
+      "source": "https://arxiv.org/abs/2008.02291v1",
+      "source_locations": "Tables 1 and 2, causal matrix C columns, n=3..5 only",
+      "rows": [
+        {
+          "n": 3,
+          "nonisomorphic_orders": 5,
+          "spectral_classes": 4,
+          "unresolved_groups": 1,
+          "classes_with_minimal_maximal_counts": 5,
+          "literature_expected": [
+            5,
+            4,
+            5
+          ],
+          "replication": "EXACT_MATCH"
+        },
+        {
+          "n": 4,
+          "nonisomorphic_orders": 16,
+          "spectral_classes": 14,
+          "unresolved_groups": 2,
+          "classes_with_minimal_maximal_counts": 16,
+          "literature_expected": [
+            16,
+            14,
+            16
+          ],
+          "replication": "EXACT_MATCH"
+        },
+        {
+          "n": 5,
+          "nonisomorphic_orders": 63,
+          "spectral_classes": 53,
+          "unresolved_groups": 9,
+          "classes_with_minimal_maximal_counts": 63,
+          "literature_expected": [
+            63,
+            53,
+            63
+          ],
+          "replication": "EXACT_MATCH"
+        }
+      ],
+      "arithmetic": "Python arbitrary-precision integers; characteristic polynomials",
+      "novelty": "NOT_CLAIMED_REPLICATION",
+      "limits": "No n=6..9 replication, no quill perturbation implementation, no continuum claim",
+      "elapsed_seconds": 0.38815424000000576
+    },
+    "lorentz_propagator": {
+      "finding": "FINITE_SIZE_NUMERICAL_COMPARISON",
+      "source": "https://arxiv.org/html/2606.00311v3",
+      "source_locations": "Equations 11,12,14; volume normalization in Figure 3 caption",
+      "analytic_top_eigenvalues_L1": [
+        0.8579558179283586,
+        0.3183098861837907,
+        0.2171922062731401,
+        0.15915494309189535,
+        0.1283716204177077,
+        0.1061032953945969,
+        0.0913246708930076,
+        0.07957747154594767
+      ],
+      "compared_positive_ranks": 8,
+      "reference_seed": 20260805,
+      "comparison_slot": 16,
+      "comparisons": [
+        {
+          "n": 64,
+          "replicates_per_sequence": 3,
+          "mean_top_eigenvalues": {
+            "reference": [
+              0.8284522837876646,
+              0.3215291704920893,
+              0.2215895920289084,
+              0.1746478121475371,
+              0.1255045255925803,
+              0.10448048772329675,
+              0.08962019808462589,
+              0.0783612216939248
+            ],
+            "comparison": [
+              0.8880485755986599,
+              0.3191613588551379,
+              0.21166496057282805,
+              0.15926677804608577,
+              0.12995661356698643,
+              0.10372723895741637,
+              0.08333862286135281,
+              0.07360535603999047
+            ]
+          },
+          "mean_relative_l2_error": {
+            "reference": 0.0606273427260263,
+            "comparison": 0.04167361681793866
+          },
+          "relative_distance_of_mean_spectra": 0.06460545808101804
+        },
+        {
+          "n": 128,
+          "replicates_per_sequence": 3,
+          "mean_top_eigenvalues": {
+            "reference": [
+              0.8622385460347961,
+              0.32397982781321066,
+              0.21194256306549134,
+              0.16164148224653885,
+              0.13084541142252856,
+              0.10720852819001635,
+              0.09017611391245799,
+              0.078909224161518
+            ],
+            "comparison": [
+              0.8556989050969142,
+              0.30605355943150064,
+              0.22593045151156577,
+              0.15913215648694934,
+              0.13373779991539222,
+              0.10735515526769168,
+              0.09426098532363592,
+              0.08002694353551273
+            ]
+          },
+          "mean_relative_l2_error": {
+            "reference": 0.039437673010963126,
+            "comparison": 0.03550735411341383
+          },
+          "relative_distance_of_mean_spectra": 0.02494107079269149
+        }
+      ],
+      "sampling": "uniform fixed-N samples in null square [-1,1]^2, massless 1+1 Minkowski",
+      "novelty": "NOT_CLAIMED_KNOWN_ANALYTIC_CALIBRATION",
+      "limits": "n=64,128 and three replicates; no asymptotic-law test, no fitted exponent or physical validation",
+      "elapsed_seconds": 0.05908553700000141
+    },
+    "mapping": {
+      "hypothesis": "The labeled Gaussian path identifies its signal modulo global sign and translation",
+      "finding": "FALSIFIED_EXACT_WITNESS",
+      "checked_pairs": 24,
+      "novelty": "NOT_CLAIMED_ELEMENTARY_CONSEQUENCE",
+      "scope": "fixed positive sigma; original ordered samples; graph and spectrum cannot recover lost signs",
+      "elapsed_seconds": 0.031257652999997276
+    },
+    "perturbation": {
+      "hypothesis": "Gap change is at most max incident absolute edge-weight change (factor one)",
+      "finding": "FALSIFIED_EXACT_WITNESS",
+      "factor_two_status": "EXACT_TRANSFERS_CHECKED_ON_FINITE_CASES",
+      "cases": 24,
+      "novelty": "NOT_CLAIMED_STANDARD_PERTURBATION_THEORY",
+      "policy": "alternate fresh paths and mutations of the largest observed gap-change/uncertainty ratio",
+      "elapsed_seconds": 0.10818239900000037
+    },
+    "phase": {
+      "hypothesis": "The fixed-angle X6 phase filter commutes with all circular time shifts",
+      "finding": "NUMERICAL_COUNTEREXAMPLE",
+      "max_relative_defect": 1.000000000000001,
+      "cases": 24,
+      "novelty": "NOT_CLAIMED_DFT_SHIFT_THEOREM_CONSEQUENCE",
+      "execution": "unmodified numerical functions extracted from pinned HTML; Node VM, not browser E2E",
+      "policy": "alternate new tones/offsets and angle mutations of the strongest prior-batch counterexample",
+      "elapsed_seconds": 0.0850000840000007
+    }
+  },
+  "slot": 16,
+  "effective_seed": 16104777,
+  "seed_slot": 16,
+  "mode": "SEARCH",
+  "app_sha256": "ff60231155f0fc869564ec0eb24c87568943cdd96e154094ae9abd9877bd7ff8",
+  "python": "3.12.15",
+  "node": "v24.21.0",
+  "git_commit": "d94f99ca6b49f07e3c7c8d3a79b696fa9bca4d6c",
+  "git_dirty": false,
+  "numpy": "2.3.5",
+  "priority": "LORENTZIAN_SPECTRAL_GEOMETRY",
+  "finished_at": "2026-10-15T13:10:51.918220Z"
+}

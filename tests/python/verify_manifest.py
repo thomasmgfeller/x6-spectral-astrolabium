@@ -37,6 +37,14 @@ def main():
     # Isolated extensions have explicit inventories; do not weaken the unknown-file
     # check or change the app pin used by the bounded research agents.
     extension_specs = {
+        "VALIDATION_SOURCE_MANIFEST.json": (
+            "x6.validation.source-manifest/1",
+            {"experimental/rax_guarded/runner.py", "experimental/rax_guarded/worker.py",
+             "experimental/rax_guarded/contract.json", "tests/rax-guarded/qualify.py",
+             "tests/rax-guarded/check_budget.py", "docs/validation-v1/ERROR_BUDGET.json",
+             "tools/release/reproduce.py", "tools/release/build.py",
+             "docs/agent-archive/2026-10-15/ARCHIVE.json",
+             ".github/workflows/x6-reference-release.yml"}),
         "INDUSTRIAL_SOURCE_MANIFEST.json": (
             "x6.industrial.source-manifest/1",
             {"experiments/industrial-v1/evaluate.py", "experiments/industrial-v1/V1_PROFILE_DRAFT.json",
