@@ -6,7 +6,7 @@ This repository publishes the actual **X6 v4.2 RC** browser application, alongsi
 
 ## Start here: actual module and evidence status
 
-The [central module register](docs/MODULE_REGISTRY.md) lists **31 modules** with
+The [central module register](docs/MODULE_REGISTRY.md) lists **32 modules** with
 their authoritative branch and commit, prerequisites, executable entry point,
 expected result, available evidence and next acceptance gate. Its
 [machine-readable source](MODULE_REGISTRY.json) is a dated snapshot, not a live

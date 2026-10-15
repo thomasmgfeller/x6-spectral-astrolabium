@@ -20,8 +20,8 @@ cd x6-integration
 Nicht zwischen Forschungsbranches wechseln, um die hier beschriebenen Schritte
 auszuführen: alle drei Adapter sind in derselben Fassung enthalten. Das
 [zentrale Modulregister](MODULE_REGISTRY.md) nennt die gepinnten Quellstände,
-weiteren Module und nächsten Abnahmen. Für den dort dokumentierten Snapshot:
-`git checkout --detach 1dd5f65e1046edab6175998552362ad3856f8549`.
+weiteren Module und nächsten Abnahmen. Für eine exakt gepinnte Wiederholung
+den Quellencommit des gewünschten Moduls aus dem Register auschecken.
 Der historische [Abnahmebericht](integration-v0.1/README.md) nennt die genau getestete
 Implementierungsrevision und enthält die vollständigen Befehlsprotokolle sowie
 die tatsächlich erzeugten Beispiel-Exporte. Seine Entwurfs-/CI-Angaben beschreiben
