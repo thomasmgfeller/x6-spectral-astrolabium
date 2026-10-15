@@ -1,0 +1,40 @@
+{
+  "board": "pico",
+  "expected_bin_sha256": "a3b5a99430e13fc375d6a6bfbae45bbcb995dead813ab00a7a364460bf4e4fbb",
+  "expected_uf2_sha256": "70b3b696b78a24b0e7526da4be00778ecbfc58b8361ff0cbfced867ee1b9d29d",
+  "firmware_source_commit": "cdf185588f87d73f757dc94c60a8b84b2d6de75d",
+  "firmware_sources": {
+    "experimental/control_channel/firmware/CMakeLists.txt": "590f1b53e36dcb4285a275b09dc94401d8b59fbdce07d284cdc09429979f01ed",
+    "experimental/control_channel/firmware/core.hpp": "3885a31927984c48d4b512e7ed8bdc350e4eb80f07ebcdcf974d4ee6d34961c5",
+    "experimental/control_channel/firmware/pico.cpp": "f1854798848209b36420be8c6cded057f357dabed8c69c8508b6961ead2e047d"
+  },
+  "installer": {
+    "commit": "4ddc34c32f58be6ddf4fefb966f8e7f367063db9",
+    "extension_data_version": "0.22.0",
+    "metadata": {
+      "supportedToolchains.ini": {
+        "sha256": "79243f0e8d53eae490ddabf27bdda0547956c69c28b3c02895fddf3a44ba11c5",
+        "source_url": "https://raw.githubusercontent.com/raspberrypi/pico-vscode/main/data/0.22.0/supportedToolchains.ini"
+      },
+      "versionBundles.json": {
+        "sha256": "647858ad1bab47c4838e161d7ed6ca2dfc7c1aebc22e6d6142414759bbab3f9c",
+        "source_url": "https://raw.githubusercontent.com/raspberrypi/pico-vscode/main/data/0.22.0/versionBundles.json"
+      }
+    },
+    "repository": "https://github.com/raspberrypi/pico-sdk-tools.git",
+    "sdk_bundle": "2.3.1"
+  },
+  "physical_status": "NOT_PERFORMED",
+  "pico_sdk_commit": "079c6f39023649b154152db30f1d781e884879bc",
+  "pico_sdk_version": "2.3.1",
+  "platform": "rp2040",
+  "schema": "acvm.c1.target-build-lock/1",
+  "source_date_epoch": 1792065877,
+  "tinyusb_commit": "86ad6e56c1700e85f1c5678607a762cfe3aa2f47",
+  "tools": {
+    "cmake": "4.3.4",
+    "gcc": "15.2.1",
+    "ninja": "1.13.2",
+    "picotool": "2.3.1"
+  }
+}

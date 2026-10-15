@@ -142,8 +142,10 @@ Supplier confirmation, fabrication approval and physical validation remain open.
 adds a bounded host-to-device command protocol, sequence compiler, portable C++
 sequencer, Pico/MCP4921 target source and independent software tests.
 Run `python3 x6.py control qualify --output runs/c1-qualification`.
-The native core and virtual serial path are tested; the Pico target build,
-electrical measurements and optical actuation remain unperformed. This limited
+The native core and virtual serial path are tested. The
+[RP2040 target build and E01 measurement preparation](docs/acvm/c1-e01-target-build/README.md)
+now include a reproducible UF2 candidate. Flashing, electrical measurements and
+optical actuation remain unperformed. This limited
 implementation does not complete the full ACVM concept validation programme.
 
 [ACVM Experiment Records — concept 0.1](docs/acvm/experiment-records/README.md)

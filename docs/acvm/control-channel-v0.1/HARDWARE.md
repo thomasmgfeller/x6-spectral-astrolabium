@@ -1,6 +1,8 @@
 # C1: Aufbau und unabhängiger elektrischer Nachweis
 
-**Referenzentwurf, noch nicht aufgebaut oder vermessen. Pico-Zielbuild nicht ausgeführt.**
+**Referenzentwurf, noch nicht aufgebaut oder vermessen. RP2040-Zielbuild inzwischen PASS.**
+Firmwarekandidat, reproduzierbarer Build und offene E01-Messvorlagen stehen im
+[Build- und Messpaket](../c1-e01-target-build/README.md).
 Dieser Ablauf ist der nächste notwendige Nachweis. Der Softwarebericht darf
 nicht als abgeschlossener Hardwaretest bezeichnet werden.
 
@@ -44,10 +46,10 @@ auch sein Verhalten wird auf dem tatsächlichen Aufbau geprüft.
 ## Firmware bauen und identifizieren
 
 Benötigt werden Pico SDK, CMake, GNU Arm Embedded Toolchain und ein Buildwerkzeug.
-Sie sind nicht im Repository gebündelt und wurden in dieser Umgebung nicht
-installiert. SDK-Version/Commit, Compiler-Version und UF2-SHA-256 im Messprotokoll
-festhalten. Der aktuelle Referenztext verwendet die offiziellen SDK-APIs; erst
-ein erfolgreicher Zielbuild schliesst den Build-Schritt ab.
+Der [festgelegte Build](../c1-e01-target-build/README.md) wurde mit Pico SDK 2.3.1
+und GNU Arm GCC 15.2.1 ausgeführt; UF2, Werkzeugversionen, Quellenhashes und Logs
+sind archiviert. SDK und Compiler werden über das dortige Rezept bezogen.
+Die folgenden allgemeinen Befehle ersetzen nicht die festgelegten Versionen.
 
 ```bash
 export PICO_SDK_PATH=/absoluter/pfad/pico-sdk

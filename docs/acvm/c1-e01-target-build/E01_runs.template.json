@@ -1,0 +1,157 @@
+{
+  "schema": "acvm.c1.e01-run-index/1",
+  "status": "NOT_PERFORMED",
+  "all_attempts_must_be_retained": true,
+  "runs": [
+    {
+      "id": "E01-N01",
+      "kind": "NOMINAL",
+      "status": "NOT_PERFORMED",
+      "host_run_directory": null,
+      "raw_instrument_files": [],
+      "calibration_files": [],
+      "notes": null
+    },
+    {
+      "id": "E01-N02",
+      "kind": "NOMINAL",
+      "status": "NOT_PERFORMED",
+      "host_run_directory": null,
+      "raw_instrument_files": [],
+      "calibration_files": [],
+      "notes": null
+    },
+    {
+      "id": "E01-N03",
+      "kind": "NOMINAL",
+      "status": "NOT_PERFORMED",
+      "host_run_directory": null,
+      "raw_instrument_files": [],
+      "calibration_files": [],
+      "notes": null
+    },
+    {
+      "id": "E01-N04",
+      "kind": "NOMINAL",
+      "status": "NOT_PERFORMED",
+      "host_run_directory": null,
+      "raw_instrument_files": [],
+      "calibration_files": [],
+      "notes": null
+    },
+    {
+      "id": "E01-N05",
+      "kind": "NOMINAL",
+      "status": "NOT_PERFORMED",
+      "host_run_directory": null,
+      "raw_instrument_files": [],
+      "calibration_files": [],
+      "notes": null
+    },
+    {
+      "id": "E01-N06",
+      "kind": "NOMINAL",
+      "status": "NOT_PERFORMED",
+      "host_run_directory": null,
+      "raw_instrument_files": [],
+      "calibration_files": [],
+      "notes": null
+    },
+    {
+      "id": "E01-N07",
+      "kind": "NOMINAL",
+      "status": "NOT_PERFORMED",
+      "host_run_directory": null,
+      "raw_instrument_files": [],
+      "calibration_files": [],
+      "notes": null
+    },
+    {
+      "id": "E01-N08",
+      "kind": "NOMINAL",
+      "status": "NOT_PERFORMED",
+      "host_run_directory": null,
+      "raw_instrument_files": [],
+      "calibration_files": [],
+      "notes": null
+    },
+    {
+      "id": "E01-N09",
+      "kind": "NOMINAL",
+      "status": "NOT_PERFORMED",
+      "host_run_directory": null,
+      "raw_instrument_files": [],
+      "calibration_files": [],
+      "notes": null
+    },
+    {
+      "id": "E01-N10",
+      "kind": "NOMINAL",
+      "status": "NOT_PERFORMED",
+      "host_run_directory": null,
+      "raw_instrument_files": [],
+      "calibration_files": [],
+      "notes": null
+    },
+    {
+      "id": "E01-F01",
+      "kind": "HOST_LOSS",
+      "status": "NOT_PERFORMED",
+      "host_run_directory": null,
+      "raw_instrument_files": [],
+      "independent_event_reference": null,
+      "expected_behavior": "500 ms device lease; measure both GP2 and VOUT, <=550 ms including uncertainty.",
+      "notes": null
+    },
+    {
+      "id": "E01-F02",
+      "kind": "STOP",
+      "status": "NOT_PERFORMED",
+      "host_run_directory": null,
+      "raw_instrument_files": [],
+      "independent_event_reference": null,
+      "expected_behavior": "Measure both outputs relative to independently established receipt of complete STOP.",
+      "notes": null
+    },
+    {
+      "id": "E01-F03",
+      "kind": "CORRUPT_FRAME",
+      "status": "NOT_PERFORMED",
+      "host_run_directory": null,
+      "raw_instrument_files": [],
+      "independent_event_reference": null,
+      "expected_behavior": "Complete ACV1 frame with wrong CRC while running; device should fault. Partial noise is a different case.",
+      "notes": null
+    },
+    {
+      "id": "E01-F04",
+      "kind": "USB_DISCONNECT",
+      "status": "NOT_PERFORMED",
+      "host_run_directory": null,
+      "raw_instrument_files": [],
+      "independent_event_reference": null,
+      "expected_behavior": "Record whether VBUS also removes board/DAC power. A power drop alone does not qualify the powered lease path.",
+      "notes": null
+    },
+    {
+      "id": "E01-F05",
+      "kind": "PICO_RESET",
+      "status": "NOT_PERFORMED",
+      "host_run_directory": null,
+      "raw_instrument_files": [],
+      "independent_event_reference": null,
+      "expected_behavior": "Measure GP2 and VOUT separately; external DAC can retain its code until a new SPI word.",
+      "notes": null
+    },
+    {
+      "id": "E01-F06",
+      "kind": "SPI_OPEN",
+      "status": "NOT_PERFORMED",
+      "host_run_directory": null,
+      "raw_instrument_files": [],
+      "independent_event_reference": null,
+      "expected_behavior": "Intentionally expose missing voltage feedback: commanded code/ACK can disagree with VOUT. Preserve observed mismatch; this is not a fail-safe qualification.",
+      "notes": null
+    }
+  ]
+}
