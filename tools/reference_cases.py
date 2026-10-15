@@ -145,4 +145,9 @@ def run_cases(work):
                     'freeze_hashes_verified': True, 'preserved_sign_convention_failure_verified': True,
                     'wolfram_reexecuted_by_this_script': False})
     reports['wolfram-causal3'] = causal
+    residuals = python(ROOT / 'research/lorentz_n6_residuals/verify.py', work)
+    fields(residuals, {'status': 'PASS_WITH_SCOPE_LIMITS', 'primary_pairs_resolved': 4,
+                       'primary_pairs_unresolved': 0, 'wolfram_polynomials_compared': 36,
+                       'negative_controls_passed': 17, 'wolfram_reexecuted_by_this_script': False})
+    reports['lorentz-residuals'] = residuals
     return reports, controls

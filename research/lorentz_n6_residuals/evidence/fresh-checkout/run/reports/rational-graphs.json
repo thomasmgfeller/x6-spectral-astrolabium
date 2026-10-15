@@ -1,0 +1,58 @@
+{
+  "engine": "Python stdlib fractions",
+  "passed": 5,
+  "results": [
+    {
+      "expected_valid": true,
+      "invalid_bound": "3/5",
+      "invalid_rejected": true,
+      "name": "path4",
+      "pass_": true,
+      "upper": "1",
+      "valid_accepted": true,
+      "valid_bound": "1/2"
+    },
+    {
+      "expected_valid": true,
+      "invalid_bound": "3",
+      "invalid_rejected": true,
+      "name": "triangle",
+      "pass_": true,
+      "upper": "3",
+      "valid_accepted": true,
+      "valid_bound": "2"
+    },
+    {
+      "expected_valid": true,
+      "invalid_bound": "1/4",
+      "invalid_rejected": true,
+      "name": "weighted2",
+      "pass_": true,
+      "upper": "1/4",
+      "valid_accepted": true,
+      "valid_bound": "1/8"
+    },
+    {
+      "expected_valid": true,
+      "invalid_bound": "1/2",
+      "invalid_rejected": true,
+      "name": "rounded_signal_path",
+      "pass_": true,
+      "upper": "367879/1000000",
+      "valid_accepted": true,
+      "valid_bound": "367879/6000000"
+    },
+    {
+      "expected_valid": false,
+      "invalid_bound": "1/2",
+      "invalid_rejected": true,
+      "name": "disconnected",
+      "pass_": true,
+      "upper": "1",
+      "valid_accepted": false,
+      "valid_bound": "1/10"
+    }
+  ],
+  "schema": "x6-community-audit-1",
+  "total": 5
+}

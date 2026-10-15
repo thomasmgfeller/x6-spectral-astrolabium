@@ -4,9 +4,17 @@
 
 This repository publishes the actual **X6 v4.2 RC** browser application, alongside the **v4.3 community audit kit**. The application combines experimental signal/Fourier analysis, a model-dependent signal-to-graph mapping, and exact rational lower bounds for finite weighted undirected graph Laplacians.
 
+## Lorentz: die vier n=6-Restpaare
+
+Die [gezielte Restpaaranalyse](research/lorentz_n6_residuals/README.md) trennt alle vier
+Paare mit gerichteten Gradpaaren und einer einfachen Zukunftszählung. Exakte
+Wolfram-Gegenrechnung, Offline-Replay und Gegenbeispiele bei n=7/n=8 sind enthalten.
+Die nächste Hypothese betrifft beide gerichteten Zählgrößen bei n≤7;
+n=7 mit Höhe ≥3 bleibt offen. Die gemeinsame Referenzsuite umfasst jetzt neun Berichte.
+
 ## Start here: actual module and evidence status
 
-The [central module register](docs/MODULE_REGISTRY.md) lists **32 modules** with
+The [central module register](docs/MODULE_REGISTRY.md) lists **33 modules** with
 their authoritative branch and commit, prerequisites, executable entry point,
 expected result, available evidence and next acceptance gate. Its
 [machine-readable source](MODULE_REGISTRY.json) is a dated snapshot, not a live
@@ -51,7 +59,7 @@ The [common offline reference suite](docs/OFFLINE_REFERENCE.md) recomputes the
 stored Wolfram packages, five rational graph cases and the n=6 causal-order atlas,
 and checks the current Signal Lab core against the stored polarity reference.
 No setup, package download or new Wolfram call is needed. Expected:
-`PASS_OFFLINE_REFERENCE_REPLAY`, eight reports, 26 rejected negative controls.
+`PASS_OFFLINE_REFERENCE_REPLAY`, nine reports, 26 rejected bundle/domain controls plus 17 Lorentz-specific controls.
 Relevant changes run the fresh-checkout acceptance in CI with networking disabled.
 
 ## X6 Edge Reference — experimental development perspective

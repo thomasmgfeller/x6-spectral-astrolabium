@@ -1,0 +1,79 @@
+{
+  "bundle_manifest_sha256": "7ceef64b76c508229139b36ec2b883fb54b7e6cc9602e5dc3f2d92e402d69d4c",
+  "fresh_checkout": true,
+  "network_namespace_isolated": false,
+  "python_site_packages_disabled": true,
+  "schema": "x6.reference.checkout-acceptance/1",
+  "scope": "CLI acceptance; namespace field records enforcement, not a mathematical claim.",
+  "source_commit": "5eaffee5a594e2c2c5b86db28a1406dc29168087",
+  "status": "PASS",
+  "steps": [
+    {
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "log_sha256": "34b484799c86562d59a60149ba7faaa1163966c431affd9cb52ca2afcd96b47a",
+      "step": "01-qualify"
+    },
+    {
+      "exit_code": 1,
+      "expected_exit_code": 1,
+      "log_sha256": "ced7fdea349ca07575420bfa8d3ec111cc9feb143b23089d318bb2941d33ec69",
+      "step": "02-no-overwrite"
+    },
+    {
+      "exit_code": 1,
+      "expected_exit_code": 1,
+      "log_sha256": "387915fc1102d10079330715d362a65b1f09f07300b34cffad126c9eed6e0cfe",
+      "step": "03-no-optimization"
+    },
+    {
+      "exit_code": 1,
+      "expected_exit_code": 1,
+      "log_sha256": "b569f1df9295dd4e3ac3e848db8c65a1dce7ce16e871942a69a75fb9c6d74750",
+      "step": "04-reject-graph"
+    },
+    {
+      "exit_code": 1,
+      "expected_exit_code": 1,
+      "log_sha256": "880efe11c5cf49a0a5f42751a4b11dc62ecc93482022f694428c070806ee7d92",
+      "step": "04-reject-wolfram"
+    },
+    {
+      "exit_code": 1,
+      "expected_exit_code": 1,
+      "log_sha256": "45b9452980a1eebc02b76945d0b824c1a5b974774d1eee0776ffddb8fe0cc8d5",
+      "step": "04-reject-missing"
+    },
+    {
+      "exit_code": 1,
+      "expected_exit_code": 1,
+      "log_sha256": "4b80e16f45575bee55c96884943c7af08c880ce82a9a25b925ce22d64baa4290",
+      "step": "04-reject-duplicate"
+    },
+    {
+      "exit_code": 1,
+      "expected_exit_code": 1,
+      "log_sha256": "66fbe1820ba1f1169f47e0840052d37dc8572727192fc927729c79c006074ad2",
+      "step": "04-reject-symlink"
+    },
+    {
+      "exit_code": 1,
+      "expected_exit_code": 1,
+      "log_sha256": "424a43d1521c15d3c8b340d206db106fd3a22b1f98f0bbc0a62dc4bf3d2feece",
+      "step": "05-changed-current-core"
+    },
+    {
+      "exit_code": 1,
+      "expected_exit_code": 1,
+      "log_sha256": "8e07a90fb0b6612c0290833bf412db183a66a67710d49819bebeda88831f179a",
+      "step": "06-corrupted-wolfram-archive"
+    },
+    {
+      "exit_code": 1,
+      "expected_exit_code": 1,
+      "log_sha256": "5d87d8788669330902d7195bbb5c6d375ebd53c591a069193d89a0ca11fd6d5d",
+      "step": "07-missing-runtime"
+    }
+  ],
+  "suite_negative_controls": 26
+}

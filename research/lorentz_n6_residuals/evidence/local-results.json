@@ -1,0 +1,1446 @@
+{
+  "atlas_verification": {
+    "exact_polynomials_checked": 4208,
+    "natural_orders_checked": 4824,
+    "representatives_checked": 318,
+    "scope": "INDEPENDENT_ALGORITHM_CHECK_NOT_EXTERNAL_REVIEW",
+    "status": "PASS",
+    "verifier_sha256": "b8cce5281216669e3922160271f5da3c81fb54b0599b0aa74f78fa5df25e81f7"
+  },
+  "first_attempt_status": "REJECTED_TRUNCATED_OUTPUT",
+  "hypothesis": {
+    "id": "H7-bidirectional-moments",
+    "next_acceptance": "Enumerate all 2045 nonisomorphic seven-element posets, independently verify completeness, and test all F0 collision classes with both moments. Record every remaining pair; do not substitute full D for the scalar hypothesis.",
+    "statement": "For any strict finite posets P,Q of equal cardinality n<=7 with time orientation retained, equality of (F0,W_future,W_past) implies order-preserving isomorphism.",
+    "status": "OPEN_FOR_N7_HEIGHT_GE_3",
+    "universal_extension": "Refuted at n=8 by the explicit connected degree-control pair."
+  },
+  "n6_groups": {
+    "D_only": {
+      "classes": 311,
+      "collision_groups": [
+        [
+          "n6-0071",
+          "n6-0081"
+        ],
+        [
+          "n6-0076",
+          "n6-0083"
+        ],
+        [
+          "n6-0090",
+          "n6-0181"
+        ],
+        [
+          "n6-0114",
+          "n6-0128"
+        ],
+        [
+          "n6-0154",
+          "n6-0187"
+        ],
+        [
+          "n6-0155",
+          "n6-0233"
+        ],
+        [
+          "n6-0173",
+          "n6-0189"
+        ]
+      ],
+      "collision_pairs": 7
+    },
+    "F0": {
+      "classes": 314,
+      "collision_groups": [
+        [
+          "n6-0073",
+          "n6-0181"
+        ],
+        [
+          "n6-0082",
+          "n6-0087"
+        ],
+        [
+          "n6-0099",
+          "n6-0131"
+        ],
+        [
+          "n6-0100",
+          "n6-0135"
+        ]
+      ],
+      "collision_pairs": 4
+    },
+    "F0_D": {
+      "classes": 318,
+      "collision_groups": [],
+      "collision_pairs": 0
+    },
+    "F0_W_both": {
+      "classes": 318,
+      "collision_groups": [],
+      "collision_pairs": 0
+    },
+    "F0_W_future": {
+      "classes": 318,
+      "collision_groups": [],
+      "collision_pairs": 0
+    }
+  },
+  "n7_height_at_most_two": {
+    "future_collision_matrices": {
+      "n7-h2-4-3-0-006": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "n7-h2-4-3-0-016": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    "groups": {
+      "F0": {
+        "classes": 158,
+        "collision_groups": [
+          [
+            "n7-h2-3-3-1-001",
+            "n7-h2-3-3-1-008"
+          ],
+          [
+            "n7-h2-3-3-1-004",
+            "n7-h2-3-3-1-005"
+          ],
+          [
+            "n7-h2-3-3-1-009",
+            "n7-h2-3-3-1-011"
+          ],
+          [
+            "n7-h2-3-3-1-010",
+            "n7-h2-3-3-1-012"
+          ],
+          [
+            "n7-h2-3-4-0-006",
+            "n7-h2-3-4-0-016"
+          ],
+          [
+            "n7-h2-4-3-0-006",
+            "n7-h2-4-3-0-016"
+          ]
+        ],
+        "collision_pairs": 6
+      },
+      "F0_D": {
+        "classes": 164,
+        "collision_groups": [],
+        "collision_pairs": 0
+      },
+      "F0_W_both": {
+        "classes": 164,
+        "collision_groups": [],
+        "collision_pairs": 0
+      },
+      "F0_W_future": {
+        "classes": 163,
+        "collision_groups": [
+          [
+            "n7-h2-4-3-0-006",
+            "n7-h2-4-3-0-016"
+          ]
+        ],
+        "collision_pairs": 1
+      }
+    },
+    "orders": 164,
+    "strata_p_q_isolates_valid_classes": [
+      [
+        1,
+        1,
+        5,
+        1,
+        1
+      ],
+      [
+        1,
+        2,
+        4,
+        1,
+        1
+      ],
+      [
+        1,
+        3,
+        3,
+        1,
+        1
+      ],
+      [
+        1,
+        4,
+        2,
+        1,
+        1
+      ],
+      [
+        1,
+        5,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        6,
+        0,
+        1,
+        1
+      ],
+      [
+        2,
+        1,
+        4,
+        1,
+        1
+      ],
+      [
+        2,
+        2,
+        3,
+        7,
+        3
+      ],
+      [
+        2,
+        3,
+        2,
+        25,
+        5
+      ],
+      [
+        2,
+        4,
+        1,
+        79,
+        8
+      ],
+      [
+        2,
+        5,
+        0,
+        241,
+        11
+      ],
+      [
+        3,
+        1,
+        3,
+        1,
+        1
+      ],
+      [
+        3,
+        2,
+        2,
+        25,
+        5
+      ],
+      [
+        3,
+        3,
+        1,
+        265,
+        17
+      ],
+      [
+        3,
+        4,
+        0,
+        2161,
+        42
+      ],
+      [
+        4,
+        1,
+        2,
+        1,
+        1
+      ],
+      [
+        4,
+        2,
+        1,
+        79,
+        8
+      ],
+      [
+        4,
+        3,
+        0,
+        2161,
+        42
+      ],
+      [
+        5,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        5,
+        2,
+        0,
+        241,
+        11
+      ],
+      [
+        6,
+        1,
+        0,
+        1,
+        1
+      ]
+    ]
+  },
+  "negative_controls": [
+    {
+      "case": "truncated-original-receipt",
+      "rejected": true
+    },
+    {
+      "case": "nonmonic-odd-dimension-attempt",
+      "rejected": true
+    },
+    {
+      "case": "missing-record",
+      "rejected": true
+    },
+    {
+      "case": "missing-primary-pair",
+      "rejected": true
+    },
+    {
+      "case": "changed-W-future",
+      "rejected": true
+    },
+    {
+      "case": "changed-K-normalization",
+      "rejected": true
+    },
+    {
+      "case": "lost-degree-multiplicity",
+      "rejected": true
+    },
+    {
+      "case": "false-duality",
+      "rejected": true
+    },
+    {
+      "case": "hidden-n8-counterexample",
+      "rejected": true
+    },
+    {
+      "case": "missing-boolean-check",
+      "rejected": true
+    },
+    {
+      "case": "integer-instead-of-boolean",
+      "rejected": true
+    },
+    {
+      "case": "wrong-input-hash",
+      "rejected": true
+    },
+    {
+      "case": "duplicate-json-key",
+      "rejected": true
+    },
+    {
+      "case": "hasse-chain-without-transitive-edge",
+      "rejected": true
+    },
+    {
+      "case": "duplicate-case-id",
+      "rejected": true
+    },
+    {
+      "case": "consistent-replacement-receipt-with-false-math",
+      "rejected": true
+    },
+    {
+      "case": "K-sign-on-height-three-control",
+      "rejected": true
+    }
+  ],
+  "negative_controls_passed": 17,
+  "primary_degree_relabelings": 5760,
+  "primary_pairs_resolved": 4,
+  "primary_pairs_unresolved": 0,
+  "schema": "x6.lorentz-residual-report/1",
+  "scope": "FINITE_EXACT_CHECKS; N7_HEIGHT_GE_3_OPEN; NO_PHYSICAL_VALIDATION; NO_EXTERNAL_REVIEW",
+  "second_attempt_status": "REJECTED_NONMONIC_ODD_DIMENSION_POLYNOMIALS",
+  "selected": {
+    "pairs": [
+      {
+        "dual_isomorphic": false,
+        "ids": [
+          "n6-0073",
+          "n6-0181"
+        ],
+        "isomorphic": false,
+        "same_D": false,
+        "same_F0": true,
+        "same_W_future": false,
+        "same_W_past": false
+      },
+      {
+        "dual_isomorphic": true,
+        "ids": [
+          "n6-0082",
+          "n6-0087"
+        ],
+        "isomorphic": false,
+        "same_D": false,
+        "same_F0": true,
+        "same_W_future": false,
+        "same_W_past": false
+      },
+      {
+        "dual_isomorphic": true,
+        "ids": [
+          "n6-0099",
+          "n6-0131"
+        ],
+        "isomorphic": false,
+        "same_D": false,
+        "same_F0": true,
+        "same_W_future": false,
+        "same_W_past": false
+      },
+      {
+        "dual_isomorphic": true,
+        "ids": [
+          "n6-0100",
+          "n6-0135"
+        ],
+        "isomorphic": false,
+        "same_D": false,
+        "same_F0": true,
+        "same_W_future": false,
+        "same_W_past": false
+      },
+      {
+        "dual_isomorphic": false,
+        "ids": [
+          "n7-wfuture-a",
+          "n7-wfuture-b"
+        ],
+        "isomorphic": false,
+        "same_D": false,
+        "same_F0": true,
+        "same_W_future": true,
+        "same_W_past": false
+      },
+      {
+        "dual_isomorphic": true,
+        "ids": [
+          "n8-degree-a",
+          "n8-degree-b"
+        ],
+        "isomorphic": false,
+        "same_D": true,
+        "same_F0": true,
+        "same_W_future": true,
+        "same_W_past": true
+      }
+    ],
+    "records": {
+      "n6-0073": {
+        "W_future": 3,
+        "W_past": 3,
+        "connected": true,
+        "degree_pairs": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            3,
+            0
+          ]
+        ],
+        "edges": 5,
+        "height_at_most_two": true,
+        "minimal_maximal_isolated": [
+          3,
+          3,
+          0
+        ],
+        "n": 6,
+        "polynomials_S_A_K": [
+          [
+            1,
+            0,
+            -5,
+            0,
+            4,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            5,
+            0,
+            4,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            -68,
+            0,
+            256,
+            0,
+            0
+          ]
+        ]
+      },
+      "n6-0082": {
+        "W_future": 3,
+        "W_past": 2,
+        "connected": true,
+        "degree_pairs": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            0
+          ]
+        ],
+        "edges": 5,
+        "height_at_most_two": true,
+        "minimal_maximal_isolated": [
+          3,
+          3,
+          0
+        ],
+        "n": 6,
+        "polynomials_S_A_K": [
+          [
+            1,
+            0,
+            -5,
+            0,
+            5,
+            0,
+            -1
+          ],
+          [
+            1,
+            0,
+            5,
+            0,
+            5,
+            0,
+            1
+          ],
+          [
+            1,
+            0,
+            -60,
+            0,
+            240,
+            0,
+            -64
+          ]
+        ]
+      },
+      "n6-0087": {
+        "W_future": 2,
+        "W_past": 3,
+        "connected": true,
+        "degree_pairs": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            3,
+            0
+          ]
+        ],
+        "edges": 5,
+        "height_at_most_two": true,
+        "minimal_maximal_isolated": [
+          3,
+          3,
+          0
+        ],
+        "n": 6,
+        "polynomials_S_A_K": [
+          [
+            1,
+            0,
+            -5,
+            0,
+            5,
+            0,
+            -1
+          ],
+          [
+            1,
+            0,
+            5,
+            0,
+            5,
+            0,
+            1
+          ],
+          [
+            1,
+            0,
+            -60,
+            0,
+            240,
+            0,
+            -64
+          ]
+        ]
+      },
+      "n6-0099": {
+        "W_future": 4,
+        "W_past": 3,
+        "connected": true,
+        "degree_pairs": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            0
+          ]
+        ],
+        "edges": 6,
+        "height_at_most_two": true,
+        "minimal_maximal_isolated": [
+          3,
+          3,
+          0
+        ],
+        "n": 6,
+        "polynomials_S_A_K": [
+          [
+            1,
+            0,
+            -6,
+            0,
+            6,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            6,
+            0,
+            6,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            -96,
+            0,
+            576,
+            0,
+            0
+          ]
+        ]
+      },
+      "n6-0100": {
+        "W_future": 6,
+        "W_past": 5,
+        "connected": true,
+        "degree_pairs": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            3,
+            0
+          ]
+        ],
+        "edges": 7,
+        "height_at_most_two": true,
+        "minimal_maximal_isolated": [
+          3,
+          3,
+          0
+        ],
+        "n": 6,
+        "polynomials_S_A_K": [
+          [
+            1,
+            0,
+            -7,
+            0,
+            4,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            7,
+            0,
+            4,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            -164,
+            0,
+            256,
+            0,
+            0
+          ]
+        ]
+      },
+      "n6-0131": {
+        "W_future": 3,
+        "W_past": 4,
+        "connected": true,
+        "degree_pairs": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            3,
+            0
+          ]
+        ],
+        "edges": 6,
+        "height_at_most_two": true,
+        "minimal_maximal_isolated": [
+          3,
+          3,
+          0
+        ],
+        "n": 6,
+        "polynomials_S_A_K": [
+          [
+            1,
+            0,
+            -6,
+            0,
+            6,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            6,
+            0,
+            6,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            -96,
+            0,
+            576,
+            0,
+            0
+          ]
+        ]
+      },
+      "n6-0135": {
+        "W_future": 5,
+        "W_past": 6,
+        "connected": true,
+        "degree_pairs": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            3,
+            0
+          ]
+        ],
+        "edges": 7,
+        "height_at_most_two": true,
+        "minimal_maximal_isolated": [
+          3,
+          3,
+          0
+        ],
+        "n": 6,
+        "polynomials_S_A_K": [
+          [
+            1,
+            0,
+            -7,
+            0,
+            4,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            7,
+            0,
+            4,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            -164,
+            0,
+            256,
+            0,
+            0
+          ]
+        ]
+      },
+      "n6-0181": {
+        "W_future": 2,
+        "W_past": 2,
+        "connected": false,
+        "degree_pairs": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            0
+          ]
+        ],
+        "edges": 5,
+        "height_at_most_two": true,
+        "minimal_maximal_isolated": [
+          3,
+          3,
+          0
+        ],
+        "n": 6,
+        "polynomials_S_A_K": [
+          [
+            1,
+            0,
+            -5,
+            0,
+            4,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            5,
+            0,
+            4,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            -68,
+            0,
+            256,
+            0,
+            0
+          ]
+        ]
+      },
+      "n7-wfuture-a": {
+        "W_future": 2,
+        "W_past": 6,
+        "connected": true,
+        "degree_pairs": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            4,
+            0
+          ]
+        ],
+        "edges": 6,
+        "height_at_most_two": true,
+        "minimal_maximal_isolated": [
+          4,
+          3,
+          0
+        ],
+        "n": 7,
+        "polynomials_S_A_K": [
+          [
+            1,
+            0,
+            -6,
+            0,
+            7,
+            0,
+            -2,
+            0
+          ],
+          [
+            1,
+            0,
+            6,
+            0,
+            7,
+            0,
+            2,
+            0
+          ],
+          [
+            1,
+            0,
+            -88,
+            0,
+            400,
+            0,
+            -256,
+            0
+          ]
+        ]
+      },
+      "n7-wfuture-b": {
+        "W_future": 2,
+        "W_past": 4,
+        "connected": false,
+        "degree_pairs": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            3,
+            0
+          ]
+        ],
+        "edges": 6,
+        "height_at_most_two": true,
+        "minimal_maximal_isolated": [
+          4,
+          3,
+          0
+        ],
+        "n": 7,
+        "polynomials_S_A_K": [
+          [
+            1,
+            0,
+            -6,
+            0,
+            7,
+            0,
+            -2,
+            0
+          ],
+          [
+            1,
+            0,
+            6,
+            0,
+            7,
+            0,
+            2,
+            0
+          ],
+          [
+            1,
+            0,
+            -88,
+            0,
+            400,
+            0,
+            -256,
+            0
+          ]
+        ]
+      },
+      "n8-degree-a": {
+        "W_future": 4,
+        "W_past": 4,
+        "connected": true,
+        "degree_pairs": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            3,
+            0
+          ]
+        ],
+        "edges": 7,
+        "height_at_most_two": true,
+        "minimal_maximal_isolated": [
+          4,
+          4,
+          0
+        ],
+        "n": 8,
+        "polynomials_S_A_K": [
+          [
+            1,
+            0,
+            -7,
+            0,
+            13,
+            0,
+            -6,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            7,
+            0,
+            13,
+            0,
+            6,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            -92,
+            0,
+            1360,
+            0,
+            -2304,
+            0,
+            0
+          ]
+        ]
+      },
+      "n8-degree-b": {
+        "W_future": 4,
+        "W_past": 4,
+        "connected": true,
+        "degree_pairs": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            3,
+            0
+          ]
+        ],
+        "edges": 7,
+        "height_at_most_two": true,
+        "minimal_maximal_isolated": [
+          4,
+          4,
+          0
+        ],
+        "n": 8,
+        "polynomials_S_A_K": [
+          [
+            1,
+            0,
+            -7,
+            0,
+            13,
+            0,
+            -6,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            7,
+            0,
+            13,
+            0,
+            6,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            -92,
+            0,
+            1360,
+            0,
+            -2304,
+            0,
+            0
+          ]
+        ]
+      }
+    }
+  },
+  "status": "PASS_WITH_SCOPE_LIMITS",
+  "third_attempt_status": "COMPLETE_EXACT_AGREEMENT",
+  "wolfram_boolean_checks": 6,
+  "wolfram_polynomials_compared": 36,
+  "wolfram_reexecuted_by_this_script": false,
+  "wolfram_version": "15.0.1 for Linux x86 (64-bit) (July 2, 2026)"
+}

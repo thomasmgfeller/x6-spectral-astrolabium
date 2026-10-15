@@ -46,3 +46,9 @@ Quellenbindung scheitern. Dann den oben genannten Commit verwenden und das Bundl
 aus der neueren Evidenzrevision als Eingabe bereitstellen. Die Suite bewertet
 endliche Rechnungen und Ablehnungsregeln; sie bestätigt keine physische Messung,
 keine Urheberschaft und keine externe Begutachtung.
+
+## Fortsetzung mit neun Berichten
+
+Die [Abnahme der Lorentz-Erweiterung](../../research/lorentz_n6_residuals/ACCEPTANCE.md)
+prüft die neue Neun-Berichte-Suite auf einer späteren Quellenrevision. Die oben
+beschriebene Acht-Berichte-Abnahme und ihr Bundle bleiben historisch unverändert.
