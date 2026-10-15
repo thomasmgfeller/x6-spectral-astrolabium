@@ -150,6 +150,15 @@ bei speziell konstruierten DC- oder vorgefilterten Kandidaten nicht das
 Konstruktionsrezept. Eine allgemeine automatische Suche über beliebige
 Fehlermodelle ist in dieser ersten Version nicht enthalten.
 
+## Ergänzende Wolfram-Gegenprüfung vom 15. Oktober 2026
+
+Die [veröffentlichte Gegenprüfung der Polaritätsumkehr](signal-lab/wolfram-polarity-v0.1/README.md)
+bestätigt vier symbolische Identitäten und zwölf numerische Sollwerte mit einem
+separaten Wolfram-Rechenweg. X6 weist das invertierte Signal korrekt zurück.
+Prüfpaket, Rohantworten und die dokumentierte Präzisionskorrektur der Nullkontrolle
+sind verfügbar. Dies ist eine begrenzte synthetische Rechenprüfung, keine externe
+personelle Begutachtung oder physikalische Validierung.
+
 ## Export, Quellen und Wiederholung
 
 Der JSON-Export verwendet `x6.signal-lab.evidence/1`. Er bewahrt:
