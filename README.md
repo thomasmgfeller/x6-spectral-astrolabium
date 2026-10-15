@@ -2,6 +2,11 @@
 
 **Public Research Preview — independent validation requested. NOT a scientifically certified stable release.**
 
+**Numerical audit (2026-10-15):** [a reproducible small-weight scaling defect](docs/numerics-v1/README.md)
+was found in the browser graph eigensolver. The original four reference cases pass;
+the extended suite passes 25/27 cases and is **overall FAIL**. The exact Sage
+counterexample and original evidence are published; repair is pending.
+
 This repository publishes the actual **X6 v4.2 RC** browser application, alongside the **v4.3 community audit kit**. The application combines experimental signal/Fourier analysis, a model-dependent signal-to-graph mapping, and exact rational lower bounds for finite weighted undirected graph Laplacians.
 
 ## Start here — understand, try, verify

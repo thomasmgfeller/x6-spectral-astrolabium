@@ -1,0 +1,23 @@
+{
+  "commit": "7257e51a8df93ff1722d1116103143cc6c827ef4",
+  "source": {
+    "commit": "7257e51a8df93ff1722d1116103143cc6c827ef4",
+    "app_sha256": "ff60231155f0fc869564ec0eb24c87568943cdd96e154094ae9abd9877bd7ff8",
+    "kernel_sha256": "a5adaeb576e6e0417023cc61ac4e431b782362843c2110f121c82d1f8227b46e",
+    "observed_kernel_sha256": "178902a7f0dea1d52beefcb467be2694e38ec07aff040676a0ccca756ed684d2",
+    "contract_sha256": "cd6f2c93af4e03d311d4b35a9ac369d146abde3c39d738bb9b70e8f20cf5296f",
+    "exporter_sha256": "0da16f6091007acf99b0f03cd5433dd49b8646bbcf3a4d5f945bc455d3d9835b",
+    "node": "v24.19.0",
+    "execution": "Node.js VM; unchanged original kernel plus observation-only return-field augmentation; no DOM/browser",
+    "observation_patch": {
+      "before": "return {value:lambda,residual:res}",
+      "after": "return {value:lambda,residual:res,vector:v}",
+      "changes": 1
+    }
+  },
+  "sage_version": "10.9",
+  "sage_execution": "Observed live SageMathCell run through browser",
+  "sage_script_sha256": "7b38994aacd1d05768279f9111d5157ddd1869cb31bc40f5359a5e2616a9bfac",
+  "sage_log_sha256": "7b2bbf469b2cfd7603255da6681fe8e2ef6cd644a486866967e3ca0f97258a96",
+  "prior_source_hash_match": true
+}
