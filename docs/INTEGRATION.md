@@ -33,6 +33,17 @@ im beigefügten Qualifikationsbericht. Andere Betriebssysteme und Architekturen
 sind mit diesem Lauf nicht qualifiziert. Für die Oberfläche wird zusätzlich
 ein Browser benötigt; die Prüfung verwendet Chromium.
 
+Die [gemeinsame Offline-Referenzsuite](OFFLINE_REFERENCE.md) hat einen eigenen,
+installationsfreien Prüfweg mit Python 3.12 und Node.js 24:
+
+```sh
+python3 -S -B x6.py reference qualify --output /tmp/x6-reference-evidence
+```
+
+Dieser Befehl verlangt weder `setup` noch NumPy/SciPy. Er prüft die gespeicherten
+Wolfram-Ergebnisse, rationalen Graphfälle, Kausalordnungen und gezielte Fehlerfälle
+in einem Ablauf und wiederholt die Rechnung beim Replay.
+
 ## 2. Installieren und Umgebung prüfen
 
 Aus dem neuen Checkout:

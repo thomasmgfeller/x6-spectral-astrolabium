@@ -13,7 +13,7 @@ expected result, available evidence and next acceptance gate. Its
 qualification badge. Concepts without an executable package are marked explicitly.
 
 The integrated CLI, Signal Lab, Edge reference, Sagnac import, ACVM C1/0.2 and
-published RAX/Wolfram packages are in **main**. The n=6 atlas, Industrial V1
+published RAX/Wolfram packages are in **main**. The n=6 atlas generator, Industrial V1
 assessor, fingerprints, Experiment Fabric, Neutral Discovery, NQK dossier and
 Photonic Link still have separate research sources; use their pinned checkout
 instructions in the register. A historical branch tip is not proof that its
@@ -38,6 +38,21 @@ or exported ZIPs, and imports native Signal Lab JSON without losing its format.
 The [documented fresh-checkout procedure](docs/INTEGRATION.md#6-abnahme-aus-einem-frischen-checkout-wiederholen)
 checks installation, execution, export and replay. Directly opening
 `app/index.html` remains available for the existing browser-only application.
+
+## Offline reference suite
+
+From a fresh checkout with **Python 3.12 and Node.js 24** already available:
+
+```sh
+python3 -S -B x6.py reference qualify --output /tmp/x6-reference-evidence
+```
+
+The [common offline reference suite](docs/OFFLINE_REFERENCE.md) recomputes the
+stored Wolfram packages, five rational graph cases and the n=6 causal-order atlas,
+and checks the current Signal Lab core against the stored polarity reference.
+No setup, package download or new Wolfram call is needed. Expected:
+`PASS_OFFLINE_REFERENCE_REPLAY`, eight reports, 26 rejected negative controls.
+Relevant changes run the fresh-checkout acceptance in CI with networking disabled.
 
 ## X6 Edge Reference — experimental development perspective
 

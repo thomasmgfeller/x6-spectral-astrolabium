@@ -1,0 +1,67 @@
+name: X6 Offline Reference Suite
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - 'x6.py'
+      - 'tools/workflow/**'
+      - 'tools/reference*'
+      - 'tests/reference/**'
+      - 'tests/python/independent_audit.py'
+      - 'references/**'
+      - 'app/signal-lab-core.js'
+      - 'REFERENCE_SOURCE_MANIFEST.json'
+      - 'docs/OFFLINE_REFERENCE.md'
+      - 'docs/reference-suite/**'
+      - 'docs/research/rax/wolfram-check-v0.1/**'
+      - 'docs/research/causal-order/wolfram-countercheck-v0.1/**'
+      - 'docs/signal-lab/wolfram-polarity-v0.1/**'
+      - 'docs/signal-lab/wolfram-zero-failures-v0.1/**'
+      - '.github/workflows/x6-offline-reference.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'x6.py'
+      - 'tools/workflow/**'
+      - 'tools/reference*'
+      - 'tests/reference/**'
+      - 'tests/python/independent_audit.py'
+      - 'references/**'
+      - 'app/signal-lab-core.js'
+      - 'REFERENCE_SOURCE_MANIFEST.json'
+      - 'docs/OFFLINE_REFERENCE.md'
+      - 'docs/reference-suite/**'
+      - 'docs/research/rax/wolfram-check-v0.1/**'
+      - 'docs/research/causal-order/wolfram-countercheck-v0.1/**'
+      - 'docs/signal-lab/wolfram-polarity-v0.1/**'
+      - 'docs/signal-lab/wolfram-zero-failures-v0.1/**'
+      - '.github/workflows/x6-offline-reference.yml'
+permissions:
+  contents: read
+jobs:
+  offline-fresh-checkout:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Fresh checkout, replay and tampering controls without network
+        run: >-
+          sudo env "PATH=$PATH" unshare --net
+          python3 -S -B tests/reference/qualify_checkout.py
+          --require-network-isolation --output "$RUNNER_TEMP/x6-offline-reference"
+      - name: Preserve complete results and rejection logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: x6-offline-reference-evidence
+          path: ${{ runner.temp }}/x6-offline-reference/
+          retention-days: 30
+          if-no-files-found: error
