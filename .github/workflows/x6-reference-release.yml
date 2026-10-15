@@ -51,6 +51,19 @@ jobs:
         env:
           BASE_SHA: ${{ github.event.pull_request.base.sha }}
         run: python3 -S -B tests/rax-guarded/check_budget.py --qualification "$RUNNER_TEMP/reproduction/guarded/qualification.json" --base "$BASE_SHA"
+      - name: Package complete CI evidence for permanent release attachment
+        run: |
+          python3 - <<'PY'
+          import hashlib,os,zipfile
+          from pathlib import Path
+          temp=Path(os.environ['RUNNER_TEMP']);base=temp/'reproduction';assets=temp/'reference-release'
+          archive=assets/'x6-reference-qualification.zip'
+          with zipfile.ZipFile(archive,'x',compression=zipfile.ZIP_DEFLATED) as z:
+              for p in sorted(base.rglob('*')):
+                  if p.is_file():z.write(p,str(p.relative_to(base)))
+          with (assets/'SHA256SUMS').open('a') as f:
+              f.write(hashlib.sha256(archive.read_bytes()).hexdigest()+'  '+archive.name+'\n')
+          PY
       - uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -94,4 +107,4 @@ jobs:
           cd release-assets
           sha256sum -c SHA256SUMS
           cd ..
-          gh release create reference-2026.10.15 release-assets/x6-reference-2026.10.15.zip release-assets/SHA256SUMS release-assets/BUILD.json --target "$SOURCE_SHA" --title "X6 Reference Edition 2026-10-15" --notes-file docs/validation-v1/RELEASE_NOTES.md --prerelease --latest=false
+          gh release create reference-2026.10.15 release-assets/x6-reference-2026.10.15.zip release-assets/x6-reference-qualification.zip release-assets/SHA256SUMS release-assets/BUILD.json --target "$SOURCE_SHA" --title "X6 Reference Edition 2026-10-15" --notes-file docs/validation-v1/RELEASE_NOTES.md --prerelease --latest=false
