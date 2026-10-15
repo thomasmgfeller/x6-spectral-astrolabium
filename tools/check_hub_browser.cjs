@@ -69,7 +69,9 @@ async function main() {
     for (const url of ['', 'de/', 'modules/', 'modules/lorentz-n6-residuals.html']) {
       await page.setViewportSize({width:360,height:800});
       await page.goto(base+url);
-      assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true, 'mobile overflow: '+url);
+      const overflow = await page.evaluate(()=>({width:innerWidth,scroll:document.documentElement.scrollWidth,elements:Array.from(document.querySelectorAll('main *')).filter(e=>e.getBoundingClientRect().right>innerWidth+1).slice(0,8).map(e=>({tag:e.tagName,cls:e.className,text:e.textContent.slice(0,90)}))}));
+      if (overflow.scroll>overflow.width) await page.screenshot({path:path.join(output,'mobile-overflow.png'),fullPage:true});
+      assert.equal(overflow.scroll<=overflow.width,true, 'mobile overflow: '+url+' '+JSON.stringify(overflow));
     }
     await page.goto(base+'de/');
     await page.screenshot({path:path.join(output,'overview-mobile-de.png'),fullPage:true});

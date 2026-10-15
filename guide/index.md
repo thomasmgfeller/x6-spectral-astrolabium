@@ -72,4 +72,3 @@ Useful contributions include independent reproductions, counterexamples, accessi
 - [Contribution guide](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/CONTRIBUTING.md)
 - [Optional navigation for AI tools](https://thomasmgfeller.github.io/x6-spectral-astrolabium/llms.txt)
 - [Documentation sitemap](https://thomasmgfeller.github.io/x6-spectral-astrolabium/sitemap.xml)
-

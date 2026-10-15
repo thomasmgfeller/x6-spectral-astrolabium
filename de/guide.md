@@ -72,4 +72,3 @@ Sinnvolle Beiträge sind unabhängige Reproduktionen, Gegenbeispiele, Verbesseru
 - [Hinweise für Beiträge](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/CONTRIBUTING.md)
 - [Optionaler Wegweiser für KI-Werkzeuge](https://thomasmgfeller.github.io/x6-spectral-astrolabium/llms.txt)
 - [Sitemap der Dokumentation](https://thomasmgfeller.github.io/x6-spectral-astrolabium/sitemap.xml)
-

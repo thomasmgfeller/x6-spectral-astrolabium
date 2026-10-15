@@ -201,7 +201,7 @@ def outputs():
     content = json.loads((ROOT / 'docs/hub/content.json').read_text())
     out = {}
     def add(path, pair):
-        out[path], out[str(Path(path).with_suffix('.md'))] = pair
+        out[path], out[str(Path(path).with_suffix('.md'))] = pair[0], pair[1].rstrip() + "\n"
     add('index.html', home('index.html', data, content, 'en'))
     add('de/index.html', home('de/index.html', data, content, 'de'))
     add('guide/index.html', guide('guide/index.html', content, 'en'))
