@@ -5,15 +5,15 @@ type: software
 authors:
   - family-names: Gfeller
     given-names: Thomas
-version: "2026.10.15-reference"
+version: "2026.10.15-reference-qe1"
 date-released: "2026-10-15"
 repository-code: "https://github.com/thomasmgfeller/x6-spectral-astrolabium"
-url: "https://github.com/thomasmgfeller/x6-spectral-astrolabium/releases/tag/reference-2026.10.15"
+url: "https://github.com/thomasmgfeller/x6-spectral-astrolabium/releases/tag/reference-2026.10.15-qe1"
 license: Apache-2.0
 abstract: >-
   Reproducible finite mathematical and software references, including Lorentzian
   causal-order checks, stored Wolfram counterchecks, and guarded declarative RAX
-  execution. No physical validation, industrial superiority or independent
+  execution and exact graph references for spectral indistinguishability. No physical validation, industrial superiority or independent
   person-level replication is implied. Apache-2.0 covers original project
   contributions; separately identified data and dependencies retain their own
   licenses as documented in LICENSE_SCOPE.md. AI-assisted implementation and
@@ -39,3 +39,15 @@ references:
     start: "015011"
     doi: "10.1088/1361-6382/abc3f8"
     url: "https://arxiv.org/abs/2008.02291"
+  - type: article
+    title: "Properties Determined by the Ihara Zeta Function of a Graph"
+    authors:
+      - family-names: Cooper
+        given-names: Yaim
+    year: 2009
+    journal: "The Electronic Journal of Combinatorics"
+    volume: "16"
+    issue: "1"
+    start: "R84"
+    doi: "10.37236/173"
+    url: "https://www.combinatorics.org/ojs/index.php/eljc/article/view/v16i1r84"

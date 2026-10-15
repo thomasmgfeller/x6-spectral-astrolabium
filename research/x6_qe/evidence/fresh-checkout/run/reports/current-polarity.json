@@ -1,0 +1,2522 @@
+{
+  "comparison": {
+    "metric_comparisons": 12,
+    "spectrum_max_abs_differences": {
+      "coherence": 4.440892098500626e-16,
+      "crossSpectrumImag": 0,
+      "crossSpectrumReal": 9.540979117872439e-18,
+      "outputPSD": 9.540979117872439e-18,
+      "phaseDeg": 0,
+      "referencePSD": 9.540979117872439e-18
+    },
+    "x6_case_statuses": {
+      "identity": "PASS",
+      "inverted": "FAIL",
+      "zero": "FAIL"
+    }
+  },
+  "full_result": {
+    "cases": [
+      {
+        "candidate": [
+          -1,
+          -0.9987954562051724,
+          -0.9951847266721969,
+          -0.989176509964781,
+          -0.9807852804032304,
+          -0.970031253194544,
+          -0.9569403357322088,
+          -0.9415440651830208,
+          -0.9238795325112867,
+          -0.9039892931234433,
+          -0.881921264348355,
+          -0.8577286100002721,
+          -0.8314696123025452,
+          -0.8032075314806449,
+          -0.773010453362737,
+          -0.7409511253549592,
+          -0.7071067811865476,
+          -0.6715589548470184,
+          -0.6343932841636455,
+          -0.5956993044924335,
+          -0.5555702330196023,
+          -0.5141027441932217,
+          -0.4713967368259978,
+          -0.4275550934302822,
+          -0.38268343236508984,
+          -0.33688985339222005,
+          -0.29028467725446233,
+          -0.24298017990326398,
+          -0.19509032201612833,
+          -0.14673047445536175,
+          -0.09801714032956077,
+          -0.049067674327418126,
+          -6.123233995736766e-17,
+          0.04906767432741801,
+          0.09801714032956065,
+          0.14673047445536164,
+          0.1950903220161282,
+          0.24298017990326387,
+          0.29028467725446216,
+          0.33688985339221994,
+          0.3826834323650897,
+          0.42755509343028186,
+          0.4713967368259977,
+          0.5141027441932216,
+          0.555570233019602,
+          0.5956993044924334,
+          0.6343932841636454,
+          0.6715589548470184,
+          0.7071067811865475,
+          0.7409511253549589,
+          0.773010453362737,
+          0.8032075314806448,
+          0.8314696123025453,
+          0.857728610000272,
+          0.8819212643483549,
+          0.9039892931234433,
+          0.9238795325112867,
+          0.9415440651830207,
+          0.9569403357322088,
+          0.970031253194544,
+          0.9807852804032304,
+          0.989176509964781,
+          0.9951847266721968,
+          0.9987954562051724,
+          1,
+          0.9987954562051724,
+          0.9951847266721969,
+          0.989176509964781,
+          0.9807852804032304,
+          0.970031253194544,
+          0.9569403357322089,
+          0.9415440651830208,
+          0.9238795325112868,
+          0.9039892931234434,
+          0.881921264348355,
+          0.8577286100002721,
+          0.8314696123025455,
+          0.8032075314806449,
+          0.7730104533627371,
+          0.7409511253549591,
+          0.7071067811865477,
+          0.6715589548470187,
+          0.6343932841636459,
+          0.5956993044924331,
+          0.5555702330196022,
+          0.5141027441932218,
+          0.4713967368259979,
+          0.4275550934302825,
+          0.38268343236509034,
+          0.33688985339221994,
+          0.29028467725446244,
+          0.24298017990326412,
+          0.19509032201612866,
+          0.1467304744553623,
+          0.09801714032956045,
+          0.04906767432741803,
+          1.8369701987210297e-16,
+          -0.04906767432741766,
+          -0.09801714032956009,
+          -0.14673047445536194,
+          -0.1950903220161283,
+          -0.24298017990326376,
+          -0.29028467725446205,
+          -0.3368898533922196,
+          -0.38268343236509,
+          -0.42755509343028214,
+          -0.4713967368259976,
+          -0.5141027441932216,
+          -0.5555702330196018,
+          -0.5956993044924328,
+          -0.6343932841636456,
+          -0.6715589548470183,
+          -0.7071067811865474,
+          -0.7409511253549589,
+          -0.7730104533627365,
+          -0.803207531480645,
+          -0.8314696123025452,
+          -0.857728610000272,
+          -0.8819212643483548,
+          -0.9039892931234431,
+          -0.9238795325112865,
+          -0.9415440651830208,
+          -0.9569403357322088,
+          -0.970031253194544,
+          -0.9807852804032303,
+          -0.9891765099647809,
+          -0.9951847266721969,
+          -0.9987954562051724
+        ],
+        "label": "inverted",
+        "result": {
+          "acceptance": {
+            "coherenceMin": 0.9,
+            "delaySamplesMax": 1,
+            "gainErrorPctMax": 10,
+            "nrmseMax": 0.25,
+            "phaseCoherenceMin": 0.8,
+            "phaseErrorDegMax": 10,
+            "spectralErrorMax": 0.2
+          },
+          "delay": {
+            "bestLagSamples": 0,
+            "competingLags": [],
+            "correlationByLag": [
+              {
+                "correlation": 0.33195180105375455,
+                "lag": -32
+              },
+              {
+                "correlation": 0.27557022528131025,
+                "lag": -31
+              },
+              {
+                "correlation": 0.21722938700659075,
+                "lag": -30
+              },
+              {
+                "correlation": 0.15718061933646302,
+                "lag": -29
+              },
+              {
+                "correlation": 0.09571046832351175,
+                "lag": -28
+              },
+              {
+                "correlation": 0.03313733100606625,
+                "lag": -27
+              },
+              {
+                "correlation": -0.03019310045855603,
+                "lag": -26
+              },
+              {
+                "correlation": -0.0939134857460136,
+                "lag": -25
+              },
+              {
+                "correlation": -0.15764140120139833,
+                "lag": -24
+              },
+              {
+                "correlation": -0.22098658594436713,
+                "lag": -23
+              },
+              {
+                "correlation": -0.28355858252141614,
+                "lag": -22
+              },
+              {
+                "correlation": -0.3449744539361397,
+                "lag": -21
+              },
+              {
+                "correlation": -0.4048662496708619,
+                "lag": -20
+              },
+              {
+                "correlation": -0.46288790756887405,
+                "lag": -19
+              },
+              {
+                "correlation": -0.51872131487633,
+                "lag": -18
+              },
+              {
+                "correlation": -0.5720813066771733,
+                "lag": -17
+              },
+              {
+                "correlation": -0.6227194478800095,
+                "lag": -16
+              },
+              {
+                "correlation": -0.6704265192554273,
+                "lag": -15
+              },
+              {
+                "correlation": -0.7150337020211376,
+                "lag": -14
+              },
+              {
+                "correlation": -0.7564125230343196,
+                "lag": -13
+              },
+              {
+                "correlation": -0.794473678992436,
+                "lag": -12
+              },
+              {
+                "correlation": -0.8291649000845612,
+                "lag": -11
+              },
+              {
+                "correlation": -0.8604680399990003,
+                "lag": -10
+              },
+              {
+                "correlation": -0.8883955904563219,
+                "lag": -9
+              },
+              {
+                "correlation": -0.9129868161924093,
+                "lag": -8
+              },
+              {
+                "correlation": -0.9343036931372846,
+                "lag": -7
+              },
+              {
+                "correlation": -0.952426811428048,
+                "lag": -6
+              },
+              {
+                "correlation": -0.9674513788985633,
+                "lag": -5
+              },
+              {
+                "correlation": -0.979483432573863,
+                "lag": -4
+              },
+              {
+                "correlation": -0.9886363377646039,
+                "lag": -3
+              },
+              {
+                "correlation": -0.9950276283444883,
+                "lag": -2
+              },
+              {
+                "correlation": -0.9987762188684878,
+                "lag": -1
+              },
+              {
+                "correlation": -0.9999999999999999,
+                "lag": 0
+              },
+              {
+                "correlation": -0.9987762188684878,
+                "lag": 1
+              },
+              {
+                "correlation": -0.9950276283444883,
+                "lag": 2
+              },
+              {
+                "correlation": -0.9886363377646039,
+                "lag": 3
+              },
+              {
+                "correlation": -0.979483432573863,
+                "lag": 4
+              },
+              {
+                "correlation": -0.9674513788985633,
+                "lag": 5
+              },
+              {
+                "correlation": -0.952426811428048,
+                "lag": 6
+              },
+              {
+                "correlation": -0.9343036931372846,
+                "lag": 7
+              },
+              {
+                "correlation": -0.9129868161924093,
+                "lag": 8
+              },
+              {
+                "correlation": -0.8883955904563219,
+                "lag": 9
+              },
+              {
+                "correlation": -0.8604680399990003,
+                "lag": 10
+              },
+              {
+                "correlation": -0.8291649000845612,
+                "lag": 11
+              },
+              {
+                "correlation": -0.794473678992436,
+                "lag": 12
+              },
+              {
+                "correlation": -0.7564125230343196,
+                "lag": 13
+              },
+              {
+                "correlation": -0.7150337020211376,
+                "lag": 14
+              },
+              {
+                "correlation": -0.6704265192554273,
+                "lag": 15
+              },
+              {
+                "correlation": -0.6227194478800095,
+                "lag": 16
+              },
+              {
+                "correlation": -0.5720813066771733,
+                "lag": 17
+              },
+              {
+                "correlation": -0.51872131487633,
+                "lag": 18
+              },
+              {
+                "correlation": -0.46288790756887405,
+                "lag": 19
+              },
+              {
+                "correlation": -0.4048662496708619,
+                "lag": 20
+              },
+              {
+                "correlation": -0.3449744539361397,
+                "lag": 21
+              },
+              {
+                "correlation": -0.28355858252141614,
+                "lag": 22
+              },
+              {
+                "correlation": -0.22098658594436713,
+                "lag": 23
+              },
+              {
+                "correlation": -0.15764140120139833,
+                "lag": 24
+              },
+              {
+                "correlation": -0.0939134857460136,
+                "lag": 25
+              },
+              {
+                "correlation": -0.03019310045855603,
+                "lag": 26
+              },
+              {
+                "correlation": 0.03313733100606625,
+                "lag": 27
+              },
+              {
+                "correlation": 0.09571046832351175,
+                "lag": 28
+              },
+              {
+                "correlation": 0.15718061933646302,
+                "lag": 29
+              },
+              {
+                "correlation": 0.21722938700659075,
+                "lag": 30
+              },
+              {
+                "correlation": 0.27557022528131025,
+                "lag": 31
+              },
+              {
+                "correlation": 0.33195180105375455,
+                "lag": 32
+              }
+            ],
+            "maxAbsCorrelation": 0.9999999999999999,
+            "numericalGuard": {
+              "centeredNormRatio": 1,
+              "minimumCenteredNormRatio": 1e-12
+            },
+            "reason": "Unique dominant absolute overlap-correlation peak inside the bounded search; positive means candidate delayed.",
+            "searchMaxLagSamples": 32,
+            "status": "DEFINED",
+            "value": 0
+          },
+          "evidenceClass": "SYNTHETIC_RESULT",
+          "gates": [
+            {
+              "id": "nrmse",
+              "limit": 0.25,
+              "reason": "Declared exploratory screening: value <= 0.25; no physical qualification.",
+              "status": "FAIL",
+              "value": 2
+            },
+            {
+              "id": "gain_error_pct",
+              "limit": 10,
+              "reason": "Declared exploratory screening: absolute value <= 10; no physical qualification.",
+              "status": "PASS",
+              "value": 0
+            },
+            {
+              "id": "phase_error_deg",
+              "limit": 10,
+              "reason": "Declared exploratory screening: value <= 10; no physical qualification.",
+              "status": "FAIL",
+              "value": 180
+            },
+            {
+              "id": "delay_samples",
+              "limit": 1,
+              "reason": "Declared exploratory screening: absolute value <= 1; no physical qualification.",
+              "status": "PASS",
+              "value": 0
+            },
+            {
+              "id": "spectral_error",
+              "limit": 0.2,
+              "reason": "Declared exploratory screening: value <= 0.2; no physical qualification.",
+              "status": "PASS",
+              "value": 0
+            },
+            {
+              "id": "coherence_mean",
+              "limit": 0.9,
+              "reason": "Declared exploratory screening: value >= 0.9; no physical qualification.",
+              "status": "PASS",
+              "value": 1
+            }
+          ],
+          "metrics": {
+            "coherence_mean": {
+              "reason": "Reference-PSD-weighted coherence on non-DC bins at least 0.001 of peak reference PSD; defined reference-weight coverage is recorded in spectrum.coherenceCoverage. Coherence alone cannot identify gain or phase correctness.",
+              "status": "DEFINED",
+              "unit": "ratio",
+              "value": 1
+            },
+            "delay_samples": {
+              "reason": "Unique dominant absolute overlap-correlation peak inside the bounded search; positive means candidate delayed.",
+              "status": "DEFINED",
+              "unit": "samples",
+              "value": 0
+            },
+            "gain_error_pct": {
+              "reason": "Signed raw RMS amplitude-ratio error; this does not detect polarity inversion.",
+              "status": "DEFINED",
+              "unit": "%",
+              "value": 0
+            },
+            "nrmse": {
+              "reason": "RMS error divided by raw reference RMS; no alignment or rescaling.",
+              "status": "DEFINED",
+              "unit": "ratio",
+              "value": 2
+            },
+            "phase_error_deg": {
+              "reason": "Reference-PSD-weighted RMS wrapped cross-phase relative to zero; only coherence >= 0.8; eligible reference-weight coverage is recorded in spectrum.phaseCoverage. No delay compensation.",
+              "status": "DEFINED",
+              "unit": "deg",
+              "value": 180
+            },
+            "rmse": {
+              "reason": "Root mean squared sample error against the known reference; no alignment or rescaling.",
+              "status": "DEFINED",
+              "unit": "amplitude",
+              "value": 1.414213562373095
+            },
+            "snr_db": {
+              "reason": "10 log10(sum reference² / sum reconstruction-error²), evaluated with scaled norms and logarithms; known synthetic reference, not a measurement of physical noise power.",
+              "status": "DEFINED",
+              "unit": "dB",
+              "value": -6.020599913279625
+            },
+            "spectral_error": {
+              "reason": "L1 difference of detrended Welch PSDs divided by reference PSD integral; phase and DC errors can be invisible.",
+              "status": "DEFINED",
+              "unit": "ratio",
+              "value": 0
+            }
+          },
+          "spectrum": {
+            "activeReferenceBins": [
+              1,
+              2,
+              3
+            ],
+            "coherence": [
+              1,
+              1,
+              0.9999999999999998,
+              0.9999999999999996,
+              1,
+              1,
+              1,
+              0.9999999999999998,
+              0.9999999999999998,
+              1,
+              0.9999999999999998,
+              0.9999999999999998,
+              1,
+              0.9999999999999996,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              0.9999999999999996,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              0.9999999999999998
+            ],
+            "coherenceCoverage": 1,
+            "crossSpectrumImag": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "crossSpectrumReal": [
+              -0.005063801843785751,
+              -0.05937427597743435,
+              -0.005358847613845576,
+              -0.0001306989437511429,
+              -1.6440481175913697e-05,
+              -3.7091880044270957e-06,
+              -1.1473188356724407e-06,
+              -4.3379758963475704e-07,
+              -1.8865622792373995e-07,
+              -9.098476532283528e-08,
+              -4.751369555902262e-08,
+              -2.642603417088693e-08,
+              -1.5465963964994897e-08,
+              -9.438321013851028e-09,
+              -5.963251686801372e-09,
+              -3.878206931895897e-09,
+              -2.583676054957236e-09,
+              -1.7558462480031388e-09,
+              -1.2126688389877577e-09,
+              -8.481510222780415e-10,
+              -5.98650667033582e-10,
+              -4.24897226431686e-10,
+              -3.0206317371666445e-10,
+              -2.1410921474819303e-10,
+              -1.5047332862901604e-10,
+              -1.0408348323866115e-10,
+              -7.013812915342082e-11,
+              -4.534314337880045e-11,
+              -2.7426529415863494e-11,
+              -1.482607279446896e-11,
+              -6.4873879541597074e-12,
+              -1.734572856182713e-12,
+              -9.533491770266682e-14
+            ],
+            "estimator": {
+              "densityDenominator": 3072,
+              "detrend": "constant per segment",
+              "method": "Welch",
+              "nperseg": 64,
+              "overlap": 32,
+              "scaling": "one-sided density",
+              "segments": 3,
+              "window": "periodic Hann"
+            },
+            "frequencies": [
+              0,
+              2,
+              4,
+              6,
+              8,
+              10,
+              12,
+              14,
+              16,
+              18,
+              20,
+              22,
+              24,
+              26,
+              28,
+              30,
+              32,
+              34,
+              36,
+              38,
+              40,
+              42,
+              44,
+              46,
+              48,
+              50,
+              52,
+              54,
+              56,
+              58,
+              60,
+              62,
+              64
+            ],
+            "numericalGuard": {
+              "minimumPSD": 5.937427597743435e-26,
+              "pairwisePeakFloorRatio": 1e-24,
+              "pairwisePeakPower": 0.05937427597743435,
+              "peakPowerRatio": 1
+            },
+            "outputPSD": [
+              0.005063801843785751,
+              0.05937427597743435,
+              0.005358847613845576,
+              0.0001306989437511429,
+              1.6440481175913697e-05,
+              3.7091880044270957e-06,
+              1.1473188356724407e-06,
+              4.3379758963475704e-07,
+              1.8865622792373995e-07,
+              9.098476532283528e-08,
+              4.751369555902262e-08,
+              2.642603417088693e-08,
+              1.5465963964994897e-08,
+              9.438321013851028e-09,
+              5.963251686801372e-09,
+              3.878206931895897e-09,
+              2.583676054957236e-09,
+              1.7558462480031388e-09,
+              1.2126688389877577e-09,
+              8.481510222780415e-10,
+              5.98650667033582e-10,
+              4.24897226431686e-10,
+              3.0206317371666445e-10,
+              2.1410921474819303e-10,
+              1.5047332862901604e-10,
+              1.0408348323866115e-10,
+              7.013812915342082e-11,
+              4.534314337880045e-11,
+              2.7426529415863494e-11,
+              1.482607279446896e-11,
+              6.4873879541597074e-12,
+              1.734572856182713e-12,
+              9.533491770266682e-14
+            ],
+            "phaseCoverage": 1,
+            "phaseDeg": [
+              180,
+              180,
+              180,
+              180,
+              180,
+              180,
+              180,
+              180,
+              180,
+              180,
+              180,
+              180,
+              180,
+              180,
+              180,
+              180,
+              180,
+              180,
+              180,
+              180,
+              180,
+              180,
+              180,
+              180,
+              180,
+              180,
+              180,
+              180,
+              180,
+              180,
+              180,
+              180,
+              180
+            ],
+            "phaseEligibleBins": [
+              1,
+              2,
+              3
+            ],
+            "referencePSD": [
+              0.005063801843785751,
+              0.05937427597743435,
+              0.005358847613845576,
+              0.0001306989437511429,
+              1.6440481175913697e-05,
+              3.7091880044270957e-06,
+              1.1473188356724407e-06,
+              4.3379758963475704e-07,
+              1.8865622792373995e-07,
+              9.098476532283528e-08,
+              4.751369555902262e-08,
+              2.642603417088693e-08,
+              1.5465963964994897e-08,
+              9.438321013851028e-09,
+              5.963251686801372e-09,
+              3.878206931895897e-09,
+              2.583676054957236e-09,
+              1.7558462480031388e-09,
+              1.2126688389877577e-09,
+              8.481510222780415e-10,
+              5.98650667033582e-10,
+              4.24897226431686e-10,
+              3.0206317371666445e-10,
+              2.1410921474819303e-10,
+              1.5047332862901604e-10,
+              1.0408348323866115e-10,
+              7.013812915342082e-11,
+              4.534314337880045e-11,
+              2.7426529415863494e-11,
+              1.482607279446896e-11,
+              6.4873879541597074e-12,
+              1.734572856182713e-12,
+              9.533491770266682e-14
+            ]
+          },
+          "status": "FAIL"
+        }
+      },
+      {
+        "candidate": [
+          1,
+          0.9987954562051724,
+          0.9951847266721969,
+          0.989176509964781,
+          0.9807852804032304,
+          0.970031253194544,
+          0.9569403357322088,
+          0.9415440651830208,
+          0.9238795325112867,
+          0.9039892931234433,
+          0.881921264348355,
+          0.8577286100002721,
+          0.8314696123025452,
+          0.8032075314806449,
+          0.773010453362737,
+          0.7409511253549592,
+          0.7071067811865476,
+          0.6715589548470184,
+          0.6343932841636455,
+          0.5956993044924335,
+          0.5555702330196023,
+          0.5141027441932217,
+          0.4713967368259978,
+          0.4275550934302822,
+          0.38268343236508984,
+          0.33688985339222005,
+          0.29028467725446233,
+          0.24298017990326398,
+          0.19509032201612833,
+          0.14673047445536175,
+          0.09801714032956077,
+          0.049067674327418126,
+          6.123233995736766e-17,
+          -0.04906767432741801,
+          -0.09801714032956065,
+          -0.14673047445536164,
+          -0.1950903220161282,
+          -0.24298017990326387,
+          -0.29028467725446216,
+          -0.33688985339221994,
+          -0.3826834323650897,
+          -0.42755509343028186,
+          -0.4713967368259977,
+          -0.5141027441932216,
+          -0.555570233019602,
+          -0.5956993044924334,
+          -0.6343932841636454,
+          -0.6715589548470184,
+          -0.7071067811865475,
+          -0.7409511253549589,
+          -0.773010453362737,
+          -0.8032075314806448,
+          -0.8314696123025453,
+          -0.857728610000272,
+          -0.8819212643483549,
+          -0.9039892931234433,
+          -0.9238795325112867,
+          -0.9415440651830207,
+          -0.9569403357322088,
+          -0.970031253194544,
+          -0.9807852804032304,
+          -0.989176509964781,
+          -0.9951847266721968,
+          -0.9987954562051724,
+          -1,
+          -0.9987954562051724,
+          -0.9951847266721969,
+          -0.989176509964781,
+          -0.9807852804032304,
+          -0.970031253194544,
+          -0.9569403357322089,
+          -0.9415440651830208,
+          -0.9238795325112868,
+          -0.9039892931234434,
+          -0.881921264348355,
+          -0.8577286100002721,
+          -0.8314696123025455,
+          -0.8032075314806449,
+          -0.7730104533627371,
+          -0.7409511253549591,
+          -0.7071067811865477,
+          -0.6715589548470187,
+          -0.6343932841636459,
+          -0.5956993044924331,
+          -0.5555702330196022,
+          -0.5141027441932218,
+          -0.4713967368259979,
+          -0.4275550934302825,
+          -0.38268343236509034,
+          -0.33688985339221994,
+          -0.29028467725446244,
+          -0.24298017990326412,
+          -0.19509032201612866,
+          -0.1467304744553623,
+          -0.09801714032956045,
+          -0.04906767432741803,
+          -1.8369701987210297e-16,
+          0.04906767432741766,
+          0.09801714032956009,
+          0.14673047445536194,
+          0.1950903220161283,
+          0.24298017990326376,
+          0.29028467725446205,
+          0.3368898533922196,
+          0.38268343236509,
+          0.42755509343028214,
+          0.4713967368259976,
+          0.5141027441932216,
+          0.5555702330196018,
+          0.5956993044924328,
+          0.6343932841636456,
+          0.6715589548470183,
+          0.7071067811865474,
+          0.7409511253549589,
+          0.7730104533627365,
+          0.803207531480645,
+          0.8314696123025452,
+          0.857728610000272,
+          0.8819212643483548,
+          0.9039892931234431,
+          0.9238795325112865,
+          0.9415440651830208,
+          0.9569403357322088,
+          0.970031253194544,
+          0.9807852804032303,
+          0.9891765099647809,
+          0.9951847266721969,
+          0.9987954562051724
+        ],
+        "label": "identity",
+        "result": {
+          "acceptance": {
+            "coherenceMin": 0.9,
+            "delaySamplesMax": 1,
+            "gainErrorPctMax": 10,
+            "nrmseMax": 0.25,
+            "phaseCoherenceMin": 0.8,
+            "phaseErrorDegMax": 10,
+            "spectralErrorMax": 0.2
+          },
+          "delay": {
+            "bestLagSamples": 0,
+            "competingLags": [],
+            "correlationByLag": [
+              {
+                "correlation": -0.33195180105375455,
+                "lag": -32
+              },
+              {
+                "correlation": -0.27557022528131025,
+                "lag": -31
+              },
+              {
+                "correlation": -0.21722938700659075,
+                "lag": -30
+              },
+              {
+                "correlation": -0.15718061933646302,
+                "lag": -29
+              },
+              {
+                "correlation": -0.09571046832351175,
+                "lag": -28
+              },
+              {
+                "correlation": -0.03313733100606625,
+                "lag": -27
+              },
+              {
+                "correlation": 0.03019310045855603,
+                "lag": -26
+              },
+              {
+                "correlation": 0.0939134857460136,
+                "lag": -25
+              },
+              {
+                "correlation": 0.15764140120139833,
+                "lag": -24
+              },
+              {
+                "correlation": 0.22098658594436713,
+                "lag": -23
+              },
+              {
+                "correlation": 0.28355858252141614,
+                "lag": -22
+              },
+              {
+                "correlation": 0.3449744539361397,
+                "lag": -21
+              },
+              {
+                "correlation": 0.4048662496708619,
+                "lag": -20
+              },
+              {
+                "correlation": 0.46288790756887405,
+                "lag": -19
+              },
+              {
+                "correlation": 0.51872131487633,
+                "lag": -18
+              },
+              {
+                "correlation": 0.5720813066771733,
+                "lag": -17
+              },
+              {
+                "correlation": 0.6227194478800095,
+                "lag": -16
+              },
+              {
+                "correlation": 0.6704265192554273,
+                "lag": -15
+              },
+              {
+                "correlation": 0.7150337020211376,
+                "lag": -14
+              },
+              {
+                "correlation": 0.7564125230343196,
+                "lag": -13
+              },
+              {
+                "correlation": 0.794473678992436,
+                "lag": -12
+              },
+              {
+                "correlation": 0.8291649000845612,
+                "lag": -11
+              },
+              {
+                "correlation": 0.8604680399990003,
+                "lag": -10
+              },
+              {
+                "correlation": 0.8883955904563219,
+                "lag": -9
+              },
+              {
+                "correlation": 0.9129868161924093,
+                "lag": -8
+              },
+              {
+                "correlation": 0.9343036931372846,
+                "lag": -7
+              },
+              {
+                "correlation": 0.952426811428048,
+                "lag": -6
+              },
+              {
+                "correlation": 0.9674513788985633,
+                "lag": -5
+              },
+              {
+                "correlation": 0.979483432573863,
+                "lag": -4
+              },
+              {
+                "correlation": 0.9886363377646039,
+                "lag": -3
+              },
+              {
+                "correlation": 0.9950276283444883,
+                "lag": -2
+              },
+              {
+                "correlation": 0.9987762188684878,
+                "lag": -1
+              },
+              {
+                "correlation": 0.9999999999999999,
+                "lag": 0
+              },
+              {
+                "correlation": 0.9987762188684878,
+                "lag": 1
+              },
+              {
+                "correlation": 0.9950276283444883,
+                "lag": 2
+              },
+              {
+                "correlation": 0.9886363377646039,
+                "lag": 3
+              },
+              {
+                "correlation": 0.979483432573863,
+                "lag": 4
+              },
+              {
+                "correlation": 0.9674513788985633,
+                "lag": 5
+              },
+              {
+                "correlation": 0.952426811428048,
+                "lag": 6
+              },
+              {
+                "correlation": 0.9343036931372846,
+                "lag": 7
+              },
+              {
+                "correlation": 0.9129868161924093,
+                "lag": 8
+              },
+              {
+                "correlation": 0.8883955904563219,
+                "lag": 9
+              },
+              {
+                "correlation": 0.8604680399990003,
+                "lag": 10
+              },
+              {
+                "correlation": 0.8291649000845612,
+                "lag": 11
+              },
+              {
+                "correlation": 0.794473678992436,
+                "lag": 12
+              },
+              {
+                "correlation": 0.7564125230343196,
+                "lag": 13
+              },
+              {
+                "correlation": 0.7150337020211376,
+                "lag": 14
+              },
+              {
+                "correlation": 0.6704265192554273,
+                "lag": 15
+              },
+              {
+                "correlation": 0.6227194478800095,
+                "lag": 16
+              },
+              {
+                "correlation": 0.5720813066771733,
+                "lag": 17
+              },
+              {
+                "correlation": 0.51872131487633,
+                "lag": 18
+              },
+              {
+                "correlation": 0.46288790756887405,
+                "lag": 19
+              },
+              {
+                "correlation": 0.4048662496708619,
+                "lag": 20
+              },
+              {
+                "correlation": 0.3449744539361397,
+                "lag": 21
+              },
+              {
+                "correlation": 0.28355858252141614,
+                "lag": 22
+              },
+              {
+                "correlation": 0.22098658594436713,
+                "lag": 23
+              },
+              {
+                "correlation": 0.15764140120139833,
+                "lag": 24
+              },
+              {
+                "correlation": 0.0939134857460136,
+                "lag": 25
+              },
+              {
+                "correlation": 0.03019310045855603,
+                "lag": 26
+              },
+              {
+                "correlation": -0.03313733100606625,
+                "lag": 27
+              },
+              {
+                "correlation": -0.09571046832351175,
+                "lag": 28
+              },
+              {
+                "correlation": -0.15718061933646302,
+                "lag": 29
+              },
+              {
+                "correlation": -0.21722938700659075,
+                "lag": 30
+              },
+              {
+                "correlation": -0.27557022528131025,
+                "lag": 31
+              },
+              {
+                "correlation": -0.33195180105375455,
+                "lag": 32
+              }
+            ],
+            "maxAbsCorrelation": 0.9999999999999999,
+            "numericalGuard": {
+              "centeredNormRatio": 1,
+              "minimumCenteredNormRatio": 1e-12
+            },
+            "reason": "Unique dominant absolute overlap-correlation peak inside the bounded search; positive means candidate delayed.",
+            "searchMaxLagSamples": 32,
+            "status": "DEFINED",
+            "value": 0
+          },
+          "evidenceClass": "SYNTHETIC_RESULT",
+          "gates": [
+            {
+              "id": "nrmse",
+              "limit": 0.25,
+              "reason": "Declared exploratory screening: value <= 0.25; no physical qualification.",
+              "status": "PASS",
+              "value": 0
+            },
+            {
+              "id": "gain_error_pct",
+              "limit": 10,
+              "reason": "Declared exploratory screening: absolute value <= 10; no physical qualification.",
+              "status": "PASS",
+              "value": 0
+            },
+            {
+              "id": "phase_error_deg",
+              "limit": 10,
+              "reason": "Declared exploratory screening: value <= 10; no physical qualification.",
+              "status": "PASS",
+              "value": 0
+            },
+            {
+              "id": "delay_samples",
+              "limit": 1,
+              "reason": "Declared exploratory screening: absolute value <= 1; no physical qualification.",
+              "status": "PASS",
+              "value": 0
+            },
+            {
+              "id": "spectral_error",
+              "limit": 0.2,
+              "reason": "Declared exploratory screening: value <= 0.2; no physical qualification.",
+              "status": "PASS",
+              "value": 0
+            },
+            {
+              "id": "coherence_mean",
+              "limit": 0.9,
+              "reason": "Declared exploratory screening: value >= 0.9; no physical qualification.",
+              "status": "PASS",
+              "value": 1
+            }
+          ],
+          "metrics": {
+            "coherence_mean": {
+              "reason": "Reference-PSD-weighted coherence on non-DC bins at least 0.001 of peak reference PSD; defined reference-weight coverage is recorded in spectrum.coherenceCoverage. Coherence alone cannot identify gain or phase correctness.",
+              "status": "DEFINED",
+              "unit": "ratio",
+              "value": 1
+            },
+            "delay_samples": {
+              "reason": "Unique dominant absolute overlap-correlation peak inside the bounded search; positive means candidate delayed.",
+              "status": "DEFINED",
+              "unit": "samples",
+              "value": 0
+            },
+            "gain_error_pct": {
+              "reason": "Signed raw RMS amplitude-ratio error; this does not detect polarity inversion.",
+              "status": "DEFINED",
+              "unit": "%",
+              "value": 0
+            },
+            "nrmse": {
+              "reason": "RMS error divided by raw reference RMS; no alignment or rescaling.",
+              "status": "DEFINED",
+              "unit": "ratio",
+              "value": 0
+            },
+            "phase_error_deg": {
+              "reason": "Reference-PSD-weighted RMS wrapped cross-phase relative to zero; only coherence >= 0.8; eligible reference-weight coverage is recorded in spectrum.phaseCoverage. No delay compensation.",
+              "status": "DEFINED",
+              "unit": "deg",
+              "value": 0
+            },
+            "rmse": {
+              "reason": "Root mean squared sample error against the known reference; no alignment or rescaling.",
+              "status": "DEFINED",
+              "unit": "amplitude",
+              "value": 0
+            },
+            "snr_db": {
+              "reason": "Exactly zero sample error with nonzero reference: mathematical SNR is +infinity; represented as null with this explicit status.",
+              "status": "EXACT_MATCH",
+              "unit": "dB",
+              "value": null
+            },
+            "spectral_error": {
+              "reason": "L1 difference of detrended Welch PSDs divided by reference PSD integral; phase and DC errors can be invisible.",
+              "status": "DEFINED",
+              "unit": "ratio",
+              "value": 0
+            }
+          },
+          "spectrum": {
+            "activeReferenceBins": [
+              1,
+              2,
+              3
+            ],
+            "coherence": [
+              1,
+              1,
+              0.9999999999999998,
+              0.9999999999999996,
+              1,
+              1,
+              1,
+              0.9999999999999998,
+              0.9999999999999998,
+              1,
+              0.9999999999999998,
+              0.9999999999999998,
+              1,
+              0.9999999999999996,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              0.9999999999999996,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              0.9999999999999998
+            ],
+            "coherenceCoverage": 1,
+            "crossSpectrumImag": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "crossSpectrumReal": [
+              0.005063801843785751,
+              0.05937427597743435,
+              0.005358847613845576,
+              0.0001306989437511429,
+              1.6440481175913697e-05,
+              3.7091880044270957e-06,
+              1.1473188356724407e-06,
+              4.3379758963475704e-07,
+              1.8865622792373995e-07,
+              9.098476532283528e-08,
+              4.751369555902262e-08,
+              2.642603417088693e-08,
+              1.5465963964994897e-08,
+              9.438321013851028e-09,
+              5.963251686801372e-09,
+              3.878206931895897e-09,
+              2.583676054957236e-09,
+              1.7558462480031388e-09,
+              1.2126688389877577e-09,
+              8.481510222780415e-10,
+              5.98650667033582e-10,
+              4.24897226431686e-10,
+              3.0206317371666445e-10,
+              2.1410921474819303e-10,
+              1.5047332862901604e-10,
+              1.0408348323866115e-10,
+              7.013812915342082e-11,
+              4.534314337880045e-11,
+              2.7426529415863494e-11,
+              1.482607279446896e-11,
+              6.4873879541597074e-12,
+              1.734572856182713e-12,
+              9.533491770266682e-14
+            ],
+            "estimator": {
+              "densityDenominator": 3072,
+              "detrend": "constant per segment",
+              "method": "Welch",
+              "nperseg": 64,
+              "overlap": 32,
+              "scaling": "one-sided density",
+              "segments": 3,
+              "window": "periodic Hann"
+            },
+            "frequencies": [
+              0,
+              2,
+              4,
+              6,
+              8,
+              10,
+              12,
+              14,
+              16,
+              18,
+              20,
+              22,
+              24,
+              26,
+              28,
+              30,
+              32,
+              34,
+              36,
+              38,
+              40,
+              42,
+              44,
+              46,
+              48,
+              50,
+              52,
+              54,
+              56,
+              58,
+              60,
+              62,
+              64
+            ],
+            "numericalGuard": {
+              "minimumPSD": 5.937427597743435e-26,
+              "pairwisePeakFloorRatio": 1e-24,
+              "pairwisePeakPower": 0.05937427597743435,
+              "peakPowerRatio": 1
+            },
+            "outputPSD": [
+              0.005063801843785751,
+              0.05937427597743435,
+              0.005358847613845576,
+              0.0001306989437511429,
+              1.6440481175913697e-05,
+              3.7091880044270957e-06,
+              1.1473188356724407e-06,
+              4.3379758963475704e-07,
+              1.8865622792373995e-07,
+              9.098476532283528e-08,
+              4.751369555902262e-08,
+              2.642603417088693e-08,
+              1.5465963964994897e-08,
+              9.438321013851028e-09,
+              5.963251686801372e-09,
+              3.878206931895897e-09,
+              2.583676054957236e-09,
+              1.7558462480031388e-09,
+              1.2126688389877577e-09,
+              8.481510222780415e-10,
+              5.98650667033582e-10,
+              4.24897226431686e-10,
+              3.0206317371666445e-10,
+              2.1410921474819303e-10,
+              1.5047332862901604e-10,
+              1.0408348323866115e-10,
+              7.013812915342082e-11,
+              4.534314337880045e-11,
+              2.7426529415863494e-11,
+              1.482607279446896e-11,
+              6.4873879541597074e-12,
+              1.734572856182713e-12,
+              9.533491770266682e-14
+            ],
+            "phaseCoverage": 1,
+            "phaseDeg": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "phaseEligibleBins": [
+              1,
+              2,
+              3
+            ],
+            "referencePSD": [
+              0.005063801843785751,
+              0.05937427597743435,
+              0.005358847613845576,
+              0.0001306989437511429,
+              1.6440481175913697e-05,
+              3.7091880044270957e-06,
+              1.1473188356724407e-06,
+              4.3379758963475704e-07,
+              1.8865622792373995e-07,
+              9.098476532283528e-08,
+              4.751369555902262e-08,
+              2.642603417088693e-08,
+              1.5465963964994897e-08,
+              9.438321013851028e-09,
+              5.963251686801372e-09,
+              3.878206931895897e-09,
+              2.583676054957236e-09,
+              1.7558462480031388e-09,
+              1.2126688389877577e-09,
+              8.481510222780415e-10,
+              5.98650667033582e-10,
+              4.24897226431686e-10,
+              3.0206317371666445e-10,
+              2.1410921474819303e-10,
+              1.5047332862901604e-10,
+              1.0408348323866115e-10,
+              7.013812915342082e-11,
+              4.534314337880045e-11,
+              2.7426529415863494e-11,
+              1.482607279446896e-11,
+              6.4873879541597074e-12,
+              1.734572856182713e-12,
+              9.533491770266682e-14
+            ]
+          },
+          "status": "PASS"
+        }
+      },
+      {
+        "candidate": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "label": "zero",
+        "result": {
+          "acceptance": {
+            "coherenceMin": 0.9,
+            "delaySamplesMax": 1,
+            "gainErrorPctMax": 10,
+            "nrmseMax": 0.25,
+            "phaseCoherenceMin": 0.8,
+            "phaseErrorDegMax": 10,
+            "spectralErrorMax": 0.2
+          },
+          "delay": {
+            "bestLagSamples": null,
+            "competingLags": [],
+            "correlationByLag": [
+              {
+                "correlation": null,
+                "lag": -32
+              },
+              {
+                "correlation": null,
+                "lag": -31
+              },
+              {
+                "correlation": null,
+                "lag": -30
+              },
+              {
+                "correlation": null,
+                "lag": -29
+              },
+              {
+                "correlation": null,
+                "lag": -28
+              },
+              {
+                "correlation": null,
+                "lag": -27
+              },
+              {
+                "correlation": null,
+                "lag": -26
+              },
+              {
+                "correlation": null,
+                "lag": -25
+              },
+              {
+                "correlation": null,
+                "lag": -24
+              },
+              {
+                "correlation": null,
+                "lag": -23
+              },
+              {
+                "correlation": null,
+                "lag": -22
+              },
+              {
+                "correlation": null,
+                "lag": -21
+              },
+              {
+                "correlation": null,
+                "lag": -20
+              },
+              {
+                "correlation": null,
+                "lag": -19
+              },
+              {
+                "correlation": null,
+                "lag": -18
+              },
+              {
+                "correlation": null,
+                "lag": -17
+              },
+              {
+                "correlation": null,
+                "lag": -16
+              },
+              {
+                "correlation": null,
+                "lag": -15
+              },
+              {
+                "correlation": null,
+                "lag": -14
+              },
+              {
+                "correlation": null,
+                "lag": -13
+              },
+              {
+                "correlation": null,
+                "lag": -12
+              },
+              {
+                "correlation": null,
+                "lag": -11
+              },
+              {
+                "correlation": null,
+                "lag": -10
+              },
+              {
+                "correlation": null,
+                "lag": -9
+              },
+              {
+                "correlation": null,
+                "lag": -8
+              },
+              {
+                "correlation": null,
+                "lag": -7
+              },
+              {
+                "correlation": null,
+                "lag": -6
+              },
+              {
+                "correlation": null,
+                "lag": -5
+              },
+              {
+                "correlation": null,
+                "lag": -4
+              },
+              {
+                "correlation": null,
+                "lag": -3
+              },
+              {
+                "correlation": null,
+                "lag": -2
+              },
+              {
+                "correlation": null,
+                "lag": -1
+              },
+              {
+                "correlation": null,
+                "lag": 0
+              },
+              {
+                "correlation": null,
+                "lag": 1
+              },
+              {
+                "correlation": null,
+                "lag": 2
+              },
+              {
+                "correlation": null,
+                "lag": 3
+              },
+              {
+                "correlation": null,
+                "lag": 4
+              },
+              {
+                "correlation": null,
+                "lag": 5
+              },
+              {
+                "correlation": null,
+                "lag": 6
+              },
+              {
+                "correlation": null,
+                "lag": 7
+              },
+              {
+                "correlation": null,
+                "lag": 8
+              },
+              {
+                "correlation": null,
+                "lag": 9
+              },
+              {
+                "correlation": null,
+                "lag": 10
+              },
+              {
+                "correlation": null,
+                "lag": 11
+              },
+              {
+                "correlation": null,
+                "lag": 12
+              },
+              {
+                "correlation": null,
+                "lag": 13
+              },
+              {
+                "correlation": null,
+                "lag": 14
+              },
+              {
+                "correlation": null,
+                "lag": 15
+              },
+              {
+                "correlation": null,
+                "lag": 16
+              },
+              {
+                "correlation": null,
+                "lag": 17
+              },
+              {
+                "correlation": null,
+                "lag": 18
+              },
+              {
+                "correlation": null,
+                "lag": 19
+              },
+              {
+                "correlation": null,
+                "lag": 20
+              },
+              {
+                "correlation": null,
+                "lag": 21
+              },
+              {
+                "correlation": null,
+                "lag": 22
+              },
+              {
+                "correlation": null,
+                "lag": 23
+              },
+              {
+                "correlation": null,
+                "lag": 24
+              },
+              {
+                "correlation": null,
+                "lag": 25
+              },
+              {
+                "correlation": null,
+                "lag": 26
+              },
+              {
+                "correlation": null,
+                "lag": 27
+              },
+              {
+                "correlation": null,
+                "lag": 28
+              },
+              {
+                "correlation": null,
+                "lag": 29
+              },
+              {
+                "correlation": null,
+                "lag": 30
+              },
+              {
+                "correlation": null,
+                "lag": 31
+              },
+              {
+                "correlation": null,
+                "lag": 32
+              }
+            ],
+            "maxAbsCorrelation": null,
+            "numericalGuard": {
+              "centeredNormRatio": 0,
+              "minimumCenteredNormRatio": 1e-12
+            },
+            "reason": "Centered energy is zero or the signal-pair centered-norm ratio does not exceed the declared 1e-12 diagnostic range limit. Delay is not evaluated on a negligible residual; this is not a physical decoherence claim.",
+            "searchMaxLagSamples": 32,
+            "status": "UNDEFINED",
+            "value": null
+          },
+          "evidenceClass": "SYNTHETIC_RESULT",
+          "gates": [
+            {
+              "id": "nrmse",
+              "limit": 0.25,
+              "reason": "Declared exploratory screening: value <= 0.25; no physical qualification.",
+              "status": "FAIL",
+              "value": 1
+            },
+            {
+              "id": "gain_error_pct",
+              "limit": 10,
+              "reason": "Declared exploratory screening: absolute value <= 10; no physical qualification.",
+              "status": "FAIL",
+              "value": -100
+            },
+            {
+              "id": "phase_error_deg",
+              "limit": 10,
+              "reason": "Screening cannot pass an unavailable, partial, or ambiguous metric. No reference-active bins inside the declared diagnostic dynamic range with sufficient coherence and a defined cross-phase.",
+              "status": "UNDEFINED",
+              "value": null
+            },
+            {
+              "id": "delay_samples",
+              "limit": 1,
+              "reason": "Screening cannot pass an unavailable, partial, or ambiguous metric. Centered energy is zero or the signal-pair centered-norm ratio does not exceed the declared 1e-12 diagnostic range limit. Delay is not evaluated on a negligible residual; this is not a physical decoherence claim.",
+              "status": "UNDEFINED",
+              "value": null
+            },
+            {
+              "id": "spectral_error",
+              "limit": 0.2,
+              "reason": "Declared exploratory screening: value <= 0.2; no physical qualification.",
+              "status": "FAIL",
+              "value": 1
+            },
+            {
+              "id": "coherence_mean",
+              "limit": 0.9,
+              "reason": "Screening cannot pass an unavailable, partial, or ambiguous metric. No reference-active bins with nonzero-energy coherence inside the declared diagnostic dynamic range. This is an evaluation limit, not evidence of physical decoherence.",
+              "status": "UNDEFINED",
+              "value": null
+            }
+          ],
+          "metrics": {
+            "coherence_mean": {
+              "reason": "No reference-active bins with nonzero-energy coherence inside the declared diagnostic dynamic range. This is an evaluation limit, not evidence of physical decoherence.",
+              "status": "UNDEFINED",
+              "unit": "ratio",
+              "value": null
+            },
+            "delay_samples": {
+              "reason": "Centered energy is zero or the signal-pair centered-norm ratio does not exceed the declared 1e-12 diagnostic range limit. Delay is not evaluated on a negligible residual; this is not a physical decoherence claim.",
+              "status": "UNDEFINED",
+              "unit": "samples",
+              "value": null
+            },
+            "gain_error_pct": {
+              "reason": "Signed raw RMS amplitude-ratio error; this does not detect polarity inversion.",
+              "status": "DEFINED",
+              "unit": "%",
+              "value": -100
+            },
+            "nrmse": {
+              "reason": "RMS error divided by raw reference RMS; no alignment or rescaling.",
+              "status": "DEFINED",
+              "unit": "ratio",
+              "value": 1
+            },
+            "phase_error_deg": {
+              "reason": "No reference-active bins inside the declared diagnostic dynamic range with sufficient coherence and a defined cross-phase.",
+              "status": "UNDEFINED",
+              "unit": "deg",
+              "value": null
+            },
+            "rmse": {
+              "reason": "Root mean squared sample error against the known reference; no alignment or rescaling.",
+              "status": "DEFINED",
+              "unit": "amplitude",
+              "value": 0.7071067811865475
+            },
+            "snr_db": {
+              "reason": "10 log10(sum reference² / sum reconstruction-error²), evaluated with scaled norms and logarithms; known synthetic reference, not a measurement of physical noise power.",
+              "status": "DEFINED",
+              "unit": "dB",
+              "value": 0
+            },
+            "spectral_error": {
+              "reason": "L1 difference of detrended Welch PSDs divided by reference PSD integral; phase and DC errors can be invisible.",
+              "status": "DEFINED",
+              "unit": "ratio",
+              "value": 1
+            }
+          },
+          "spectrum": {
+            "activeReferenceBins": [
+              1,
+              2,
+              3
+            ],
+            "coherence": [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "coherenceCoverage": 0,
+            "crossSpectrumImag": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "crossSpectrumReal": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "estimator": {
+              "densityDenominator": 3072,
+              "detrend": "constant per segment",
+              "method": "Welch",
+              "nperseg": 64,
+              "overlap": 32,
+              "scaling": "one-sided density",
+              "segments": 3,
+              "window": "periodic Hann"
+            },
+            "frequencies": [
+              0,
+              2,
+              4,
+              6,
+              8,
+              10,
+              12,
+              14,
+              16,
+              18,
+              20,
+              22,
+              24,
+              26,
+              28,
+              30,
+              32,
+              34,
+              36,
+              38,
+              40,
+              42,
+              44,
+              46,
+              48,
+              50,
+              52,
+              54,
+              56,
+              58,
+              60,
+              62,
+              64
+            ],
+            "numericalGuard": {
+              "minimumPSD": 5.937427597743435e-26,
+              "pairwisePeakFloorRatio": 1e-24,
+              "pairwisePeakPower": 0.05937427597743435,
+              "peakPowerRatio": 0
+            },
+            "outputPSD": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "phaseCoverage": 0,
+            "phaseDeg": [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "phaseEligibleBins": [],
+            "referencePSD": [
+              0.005063801843785751,
+              0.05937427597743435,
+              0.005358847613845576,
+              0.0001306989437511429,
+              1.6440481175913697e-05,
+              3.7091880044270957e-06,
+              1.1473188356724407e-06,
+              4.3379758963475704e-07,
+              1.8865622792373995e-07,
+              9.098476532283528e-08,
+              4.751369555902262e-08,
+              2.642603417088693e-08,
+              1.5465963964994897e-08,
+              9.438321013851028e-09,
+              5.963251686801372e-09,
+              3.878206931895897e-09,
+              2.583676054957236e-09,
+              1.7558462480031388e-09,
+              1.2126688389877577e-09,
+              8.481510222780415e-10,
+              5.98650667033582e-10,
+              4.24897226431686e-10,
+              3.0206317371666445e-10,
+              2.1410921474819303e-10,
+              1.5047332862901604e-10,
+              1.0408348323866115e-10,
+              7.013812915342082e-11,
+              4.534314337880045e-11,
+              2.7426529415863494e-11,
+              1.482607279446896e-11,
+              6.4873879541597074e-12,
+              1.734572856182713e-12,
+              9.533491770266682e-14
+            ]
+          },
+          "status": "FAIL"
+        }
+      }
+    ],
+    "reference": [
+      1,
+      0.9987954562051724,
+      0.9951847266721969,
+      0.989176509964781,
+      0.9807852804032304,
+      0.970031253194544,
+      0.9569403357322088,
+      0.9415440651830208,
+      0.9238795325112867,
+      0.9039892931234433,
+      0.881921264348355,
+      0.8577286100002721,
+      0.8314696123025452,
+      0.8032075314806449,
+      0.773010453362737,
+      0.7409511253549592,
+      0.7071067811865476,
+      0.6715589548470184,
+      0.6343932841636455,
+      0.5956993044924335,
+      0.5555702330196023,
+      0.5141027441932217,
+      0.4713967368259978,
+      0.4275550934302822,
+      0.38268343236508984,
+      0.33688985339222005,
+      0.29028467725446233,
+      0.24298017990326398,
+      0.19509032201612833,
+      0.14673047445536175,
+      0.09801714032956077,
+      0.049067674327418126,
+      6.123233995736766e-17,
+      -0.04906767432741801,
+      -0.09801714032956065,
+      -0.14673047445536164,
+      -0.1950903220161282,
+      -0.24298017990326387,
+      -0.29028467725446216,
+      -0.33688985339221994,
+      -0.3826834323650897,
+      -0.42755509343028186,
+      -0.4713967368259977,
+      -0.5141027441932216,
+      -0.555570233019602,
+      -0.5956993044924334,
+      -0.6343932841636454,
+      -0.6715589548470184,
+      -0.7071067811865475,
+      -0.7409511253549589,
+      -0.773010453362737,
+      -0.8032075314806448,
+      -0.8314696123025453,
+      -0.857728610000272,
+      -0.8819212643483549,
+      -0.9039892931234433,
+      -0.9238795325112867,
+      -0.9415440651830207,
+      -0.9569403357322088,
+      -0.970031253194544,
+      -0.9807852804032304,
+      -0.989176509964781,
+      -0.9951847266721968,
+      -0.9987954562051724,
+      -1,
+      -0.9987954562051724,
+      -0.9951847266721969,
+      -0.989176509964781,
+      -0.9807852804032304,
+      -0.970031253194544,
+      -0.9569403357322089,
+      -0.9415440651830208,
+      -0.9238795325112868,
+      -0.9039892931234434,
+      -0.881921264348355,
+      -0.8577286100002721,
+      -0.8314696123025455,
+      -0.8032075314806449,
+      -0.7730104533627371,
+      -0.7409511253549591,
+      -0.7071067811865477,
+      -0.6715589548470187,
+      -0.6343932841636459,
+      -0.5956993044924331,
+      -0.5555702330196022,
+      -0.5141027441932218,
+      -0.4713967368259979,
+      -0.4275550934302825,
+      -0.38268343236509034,
+      -0.33688985339221994,
+      -0.29028467725446244,
+      -0.24298017990326412,
+      -0.19509032201612866,
+      -0.1467304744553623,
+      -0.09801714032956045,
+      -0.04906767432741803,
+      -1.8369701987210297e-16,
+      0.04906767432741766,
+      0.09801714032956009,
+      0.14673047445536194,
+      0.1950903220161283,
+      0.24298017990326376,
+      0.29028467725446205,
+      0.3368898533922196,
+      0.38268343236509,
+      0.42755509343028214,
+      0.4713967368259976,
+      0.5141027441932216,
+      0.5555702330196018,
+      0.5956993044924328,
+      0.6343932841636456,
+      0.6715589548470183,
+      0.7071067811865474,
+      0.7409511253549589,
+      0.7730104533627365,
+      0.803207531480645,
+      0.8314696123025452,
+      0.857728610000272,
+      0.8819212643483548,
+      0.9039892931234431,
+      0.9238795325112865,
+      0.9415440651830208,
+      0.9569403357322088,
+      0.970031253194544,
+      0.9807852804032303,
+      0.9891765099647809,
+      0.9951847266721969,
+      0.9987954562051724
+    ],
+    "sampleRate": 128,
+    "samples": 128,
+    "schema": "x6.reference.current-polarity/1"
+  },
+  "status": "PASS_WITH_SCOPE_LIMITS"
+}

@@ -1,0 +1,62 @@
+{
+  "bundle_manifest_sha256": "eff4e457d662c7b4103c3a233d70b8b9b851e62a70af9e6133c4b49cd3b889fa",
+  "deviations": [],
+  "finished_utc": "2026-10-15T15:24:22.954305+00:00",
+  "output_sha256": {
+    "agent-preservation.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "agent-preservation.stdout.log": "1b5a255b4e5ab353e4b29155c8e762261baab1260045efbda4bb84cc16beadec",
+    "error-budget.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "error-budget.stdout.log": "7226c64ccb977efb2c89eb3d37770bab9288faf3eda68e37654ad41a0b9533ef",
+    "finite-reference.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "finite-reference.stdout.log": "2e3aeefaca3389f020614d528e62b713942f0b1c1eab53519c81001919fa8b92",
+    "guarded-runner.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "guarded-runner.stdout.log": "e8f648e6bf4c8e0956dc91ce21ea25fa2d77b0115db69ec859b5b2e9586d57e2",
+    "guarded/qualification.json": "2d2e589af985f21b214bee69a4c60d302ec18a8a5af39bb47992367369c22276",
+    "guarded/run/assessment.json": "ad3f52810db0dde7d04f95c01ac4de607ab8fe04457783c4c96bcb73a6252958",
+    "guarded/run/challenge.json": "49500ea94c09a57f2d77b4283074999ef841291dea7cf29afd4c1391a12eed4b",
+    "guarded/run/complete.json": "f4d29cfbdbf46e8a667b0e75d30d7205029d9533899fda3e5c3a87df57a1b0ba",
+    "guarded/run/contract.json": "9cc992f457b62c00a2f39680a3f6fcc01476d4ef158850f20efb4c2db38e61b9",
+    "guarded/run/freeze.json": "1c99511ffe5aab8adf0bddca06c5553906923823776d2df113dee42fbf36828d",
+    "guarded/run/predictions.json": "f54c37fd296e2ad0c5afa1bd4afcad8ad0160fc6e22c0e3c0546e5c7327c32be",
+    "reference/complete.json": "a9320d908fb6baf376aea7d43432ba17df469b566a9b115755c3a1116ca46e41",
+    "reference/reports/causal-n6.json": "3febdb0c5a3c404fc3d963c575e278b10b351fa97853306ac56597548f0f6f4d",
+    "reference/reports/current-polarity.json": "973353d0024a945d61ec80a5177dfe11da3a892ea69e0a354273a96161ba82ed",
+    "reference/reports/failure-controls.json": "92329f9cd186514170f1fd1e16b81a303747ea91300a1ec1d1ab7fd4a9ac145a",
+    "reference/reports/lorentz-residuals.json": "4960edf0fcc75e74f5b5b347da3cad6d39a24451f0936d6e44ab8c85d7a7983a",
+    "reference/reports/qe-graphs.json": "1a07d262d03f0fc5a509ef48b615829638b6c76c911d6d4bde07ccdc930d397d",
+    "reference/reports/rational-graphs.json": "051a840ac02be4de1eef73e1af05b370944e85f1cc3da6bd77ac4a7af2ea8acf",
+    "reference/reports/rax-w1.json": "3fac74a0c7eda09deee45f96db13f3133fe9c40579da68dfe7036f9654c9c8bc",
+    "reference/reports/wolfram-causal3.json": "73d6c203edf8f89731480768048a5ed9a7e60ec366dd20a07a185ac1d909ddde",
+    "reference/reports/wolfram-dependence.json": "6326826f8c043a9d44f3062189388a613ac2ce971aaeee7112f87eaba7ce3664",
+    "reference/reports/wolfram-polarity.json": "bbd413dc3a21fa0d5ddb270640889dc355854fd6ee4cb4731482b7ba8c627a78"
+  },
+  "person_level_independence": "NOT_ASSESSED",
+  "release": "reference-2026.10.15-qe1",
+  "runtime": {
+    "node": "v24.19.0",
+    "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+    "python": "3.12.14"
+  },
+  "schema": "x6.external-reproduction/1",
+  "source_commit": "f2c1fb583dfb8f15db8c11f37866f24a9436eb56",
+  "started_utc": "2026-10-15T15:23:34.551964+00:00",
+  "status": "PASS_REFERENCE_REPRODUCTION",
+  "steps": [
+    {
+      "exit_code": 0,
+      "name": "finite-reference"
+    },
+    {
+      "exit_code": 0,
+      "name": "guarded-runner"
+    },
+    {
+      "exit_code": 0,
+      "name": "error-budget"
+    },
+    {
+      "exit_code": 0,
+      "name": "agent-preservation"
+    }
+  ]
+}

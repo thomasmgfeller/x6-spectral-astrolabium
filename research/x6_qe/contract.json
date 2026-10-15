@@ -1,0 +1,126 @@
+{
+  "schema": "x6.qe.contract/1",
+  "version": "0.1.0",
+  "date": "2026-10-15",
+  "evidence_class": "EXACT_FINITE_REFERENCE_REPLICATION",
+  "discovery_preregistration": false,
+  "graph_ids": [
+    "star-k1-6",
+    "cycle-4",
+    "rook-4x4",
+    "shrikhande"
+  ],
+  "inputs_sha256": "9e6dec917e19036736ebc709bc01004e05a1ffcb250f358e162cec0ba9f1fb16",
+  "operator": "unweighted symmetric adjacency A; finite simple undirected graphs",
+  "characteristic_convention": "det(tI-A), monic descending integer coefficients",
+  "ihara_convention": "Z(u)^(-1)=det(I-uT), ascending integer coefficients; T indexed by oriented arcs, no immediate reversal; primitive cycles modulo cyclic rotation, reversal distinct",
+  "expected": {
+    "star-k1-6": {
+      "n": 7,
+      "m": 6,
+      "degrees": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        6
+      ],
+      "k4_count": 0,
+      "ihara_reciprocal_ascending": [
+        1
+      ]
+    },
+    "cycle-4": {
+      "n": 4,
+      "m": 4,
+      "degrees": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "k4_count": 0,
+      "ihara_reciprocal_ascending": [
+        1,
+        0,
+        0,
+        0,
+        -2,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    "rook-4x4": {
+      "n": 16,
+      "m": 48,
+      "degrees": [
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6
+      ],
+      "k4_count": 8
+    },
+    "shrikhande": {
+      "n": 16,
+      "m": 48,
+      "degrees": [
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6
+      ],
+      "k4_count": 0
+    }
+  },
+  "scope": {
+    "spectral_universality": "NOT_TESTED",
+    "billiard_ergodicity": "NOT_TESTED",
+    "quantum_memory": "NOT_TESTED",
+    "topological_protection": "NOT_TESTED",
+    "arithmetic_residue": "NOT_TESTED",
+    "transport": "NOT_TESTED",
+    "lorentz_continuum": "NOT_TESTED"
+  },
+  "acceptance": {
+    "graphs": 4,
+    "reference_cases": 3,
+    "relabelings": 12,
+    "negative_controls": 21,
+    "numerical_tolerance": 0
+  },
+  "limits": [
+    "Known references; no mathematical novelty claim.",
+    "Three fixed label permutations per graph, not an exhaustive permutation campaign.",
+    "Distinct algorithms share input convention and trusted Python runtime; not independent external review.",
+    "No interpretation of the original spider images without provenance."
+  ]
+}

@@ -47,17 +47,22 @@ def main():
     command('03-no-optimization', ['verify', out / 'run'], 1, 'optimization', optimized=True)
     with tempfile.TemporaryDirectory(prefix='x6-reference-attacks-') as temporary:
         temp = Path(temporary)
-        for name in ('graph', 'wolfram', 'missing', 'duplicate', 'symlink'):
+        for name in ('graph', 'wolfram', 'qe', 'missing', 'duplicate', 'symlink'):
             bad = temp / name
             shutil.copytree(out / 'run', bad)
             report_path = bad / 'reports/rational-graphs.json'
-            rehash = name in ('graph', 'wolfram', 'missing')
+            rehash = name in ('graph', 'wolfram', 'qe', 'missing')
             if name == 'graph':
                 report = decode(read(report_path)); report['results'][0]['valid_bound'] = '3/5'
                 report_path.write_bytes(encode(report))
             elif name == 'wolfram':
                 report_path = bad / 'reports/rax-w1.json'
                 report = decode(read(report_path)); report['verification']['case_results'].pop()
+                report_path.write_bytes(encode(report))
+            elif name == 'qe':
+                report_path = bad / 'reports/qe-graphs.json'
+                report = decode(read(report_path)); report['result']['graphs'][2]['k4_count'] = 0
+                report['result_sha256'] = sha(encode(report['result']))
                 report_path.write_bytes(encode(report))
             elif name == 'missing':
                 report_path.unlink()
@@ -70,7 +75,7 @@ def main():
                 manifest['files'] = {p.relative_to(bad).as_posix(): {'sha256': sha(read(p)), 'bytes': p.stat().st_size}
                                      for p in sorted((bad / 'reports').glob('*.json'))}
                 (bad / 'complete.json').write_bytes(encode(manifest))
-            reason = 'Replay differs' if name in ('graph', 'wolfram') else {
+            reason = 'Replay differs' if name in ('graph', 'wolfram', 'qe') else {
                 'missing': 'Incomplete or extra bundle files', 'duplicate': 'Duplicate JSON key',
                 'symlink': 'Linked bundle entry'}[name]
             command('04-reject-' + name, ['verify', bad], 1, reason)
@@ -98,7 +103,8 @@ def main():
               'source_commit': subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=ROOT, text=True).strip(),
               'fresh_checkout': True, 'python_site_packages_disabled': True,
               'network_namespace_isolated': isolated, 'steps': steps,
-              'suite_negative_controls': 26, 'bundle_manifest_sha256': sha(read(out / 'run/complete.json')),
+              'suite_negative_controls': decode(read(out / 'run/reports/failure-controls.json'))['total_rejected'],
+              'bundle_manifest_sha256': sha(read(out / 'run/complete.json')),
               'scope': 'CLI acceptance; namespace field records enforcement, not a mathematical claim.'}
     (out / 'acceptance.json').write_bytes(encode(report))
     print(encode(report).decode(), end='')

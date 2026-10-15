@@ -150,4 +150,10 @@ def run_cases(work):
                        'primary_pairs_unresolved': 0, 'wolfram_polynomials_compared': 36,
                        'negative_controls_passed': 17, 'wolfram_reexecuted_by_this_script': False})
     reports['lorentz-residuals'] = residuals
+    qe_path = work / 'qe.json'
+    qe = python(ROOT / 'research/x6_qe/verify.py', work, '--output', qe_path)
+    fields(qe, {'status': 'PASS_WITH_SCOPE_LIMITS', 'reference_cases': 3, 'graphs': 4,
+                'relabelings': 12, 'negative_controls_rejected': 21,
+                'external_review': False, 'physical_validation': False})
+    reports['qe-graphs'] = decode(read(qe_path))
     return reports, controls

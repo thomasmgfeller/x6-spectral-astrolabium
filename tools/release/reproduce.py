@@ -44,7 +44,10 @@ def reproduce(output):
         node=subprocess.run(['node','--version'],capture_output=True,text=True,env=env,timeout=5)
         result['runtime']['node']=node.stdout.strip();require(node.returncode==0 and node.stdout.startswith('v24.'),'Node 24 required')
         execute('finite-reference',[sys.executable,'-S','-B','x6.py','reference','qualify','--output',str(output/'reference')])
-        expected=decode(read(ROOT/'docs/validation-v1/expected-reference.json'))
+        expected=decode(read(ROOT/'docs/reference-qe-v0.1/expected-reference.json'))
+        actual_files={str(p.relative_to(output/'reference')) for p in (output/'reference/reports').glob('*.json')}
+        require(actual_files==set(expected['reports_sha256']),'frozen report coverage')
+        require(sha(read(ROOT/'REFERENCE_SOURCE_MANIFEST.json'))==expected['reference_source_manifest_sha256'],'frozen source manifest')
         for n,h in expected['reports_sha256'].items():
             actual=sha(read(output/'reference'/n))
             if actual!=h:result['deviations'].append({'file':n,'expected_sha256':h,'actual_sha256':actual})

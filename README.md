@@ -10,21 +10,30 @@ Die [gezielte Restpaaranalyse](research/lorentz_n6_residuals/README.md) trennt a
 Paare mit gerichteten Gradpaaren und einer einfachen Zukunftszählung. Exakte
 Wolfram-Gegenrechnung, Offline-Replay und Gegenbeispiele bei n=7/n=8 sind enthalten.
 Die nächste Hypothese betrifft beide gerichteten Zählgrößen bei n≤7;
-n=7 mit Höhe ≥3 bleibt offen. Die gemeinsame Referenzsuite umfasst jetzt neun Berichte.
+n=7 mit Höhe ≥3 bleibt offen. Die gemeinsame Referenzsuite umfasst jetzt zehn Berichte.
 
 ## Frozen reference edition and validation hardening
 
-The [2026-10-15 reference edition](https://github.com/thomasmgfeller/x6-spectral-astrolabium/releases/tag/reference-2026.10.15)
-provides a small [documented external reproduction](docs/validation-v1/EXTERNAL_REPRODUCTION.md),
-the nine-case offline suite, a [guarded declarative RAX runner](docs/validation-v1/README.md)
-with 33 adversarial controls, and [three preserved original agent artifacts](docs/agent-archive/2026-10-15/README.md).
-The [error budget](docs/validation-v1/ERROR_BUDGET.json) keeps historical findings and
-remaining limits visible. Person-level external replication is **NOT_PERFORMED**.
-This research reference edition does not qualify industrial performance or hardware.
+The [QE reference edition](https://github.com/thomasmgfeller/x6-spectral-astrolabium/releases/tag/reference-2026.10.15-qe1)
+extends the unchanged [first reference release](https://github.com/thomasmgfeller/x6-spectral-astrolabium/releases/tag/reference-2026.10.15).
+It provides a [documented offline reproduction](docs/reference-qe-v0.1/EXTERNAL_REPRODUCTION.md),
+ten finite reports, the [guarded declarative RAX runner](docs/validation-v1/README.md)
+with 33 adversarial controls and [three preserved original agent artifacts](docs/agent-archive/2026-10-15/README.md).
+Person-level external replication remains **NOT_PERFORMED**. The edition does not
+qualify industrial performance, physical hardware or quantum memory.
+
+## X6-QE: exact finite graph references
+
+[X6-QE v0.1](research/x6_qe/README.md) checks a star, a primitive four-cycle and the
+cospectral rook/Shrikhande pair. Equal full adjacency spectra and global Ihara zeta
+functions coexist with different local K4 counts. These known references have
+separate exact algebraic checks, twelve relabelings and 21 deliberate rejections.
+The original spider geometry, billiards, transport and arithmetic-residue tests
+remain [explicit future gates](research/x6_qe/ROADMAP.md). Lorentz remains the priority.
 
 ## Start here: actual module and evidence status
 
-The [central module register](docs/MODULE_REGISTRY.md) lists **36 modules** with
+The [central module register](docs/MODULE_REGISTRY.md) lists **37 modules** with
 their authoritative branch and commit, prerequisites, executable entry point,
 expected result, available evidence and next acceptance gate. Its
 [machine-readable source](MODULE_REGISTRY.json) is a dated snapshot, not a live
@@ -82,7 +91,7 @@ The [common offline reference suite](docs/OFFLINE_REFERENCE.md) recomputes the
 stored Wolfram packages, five rational graph cases and the n=6 causal-order atlas,
 and checks the current Signal Lab core against the stored polarity reference.
 No setup, package download or new Wolfram call is needed. Expected:
-`PASS_OFFLINE_REFERENCE_REPLAY`, nine reports, 26 rejected bundle/domain controls plus 17 Lorentz-specific controls.
+`PASS_OFFLINE_REFERENCE_REPLAY`, ten reports, 27 rejected bundle/domain controls plus 17 Lorentz-specific and 21 QE-specific controls.
 Relevant changes run the fresh-checkout acceptance in CI with networking disabled.
 
 ## X6 Edge Reference — experimental development perspective
