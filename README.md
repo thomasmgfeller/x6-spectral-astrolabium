@@ -40,6 +40,11 @@ open. Read the [executed checks](docs/perspectives/edge-platform/VALIDATION.md).
 
 ## Signal Validation Lab
 
+[Executed Wolfram polarity-inversion countercheck](docs/signal-lab/wolfram-polarity-v0.1/README.md)
+provides the unchanged reproduction package, four symbolic identities and twelve
+numerical checks. X6 correctly rejects the inverted signal despite unchanged PSD
+and unit magnitude-squared coherence. The documented scope is synthetic computation.
+
 Open the [Signal Validation Lab](https://thomasmgfeller.github.io/x6-spectral-astrolabium/app/signal-lab.html)
 or `app/signal-lab.html` locally. This isolated DE/EN/FR extension compares known
 synthetic signals with identity, centered moving average, periodic FFT low-pass

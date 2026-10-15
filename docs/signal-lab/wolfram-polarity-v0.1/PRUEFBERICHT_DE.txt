@@ -1,0 +1,133 @@
+X6 / WOLFRAM – REFERENZFALL 2: VORZEICHENUMKEHR
+Ausgeführt am 15. Oktober 2026
+Status: PASS_WITH_SCOPE_LIMITS
+
+ERGEBNIS
+Der festgelegte synthetische Referenzfall ist bestätigt. Wolfram und der
+unveränderte veröffentlichte X6-Kern erkennen dieselben Kennzahlen.
+X6 weist das invertierte Signal als FAIL zurück. Das ist das gewünschte
+Verhalten; die Gegenprüfung selbst ist bestanden.
+
+Eingabe:
+  x[n] = cos(2*pi*n/128), n=0,...,127; Abtastrate 128 Hz.
+  Hauptfall y=-x. Kontrollen y=x und y=0.
+  Amplitude in beliebigen Einheiten; kein Rauschen, kein Zufallsgenerator.
+
+Hauptfall y=-x:
+  Normierter Rekonstruktionsfehler ||y-x||_2/||x||_2 = 2.
+  Relativer L1-Fehler der Welch-Leistungsdichten = 0.
+  Referenzleistungsgewichtete betragsquadratische Kohärenz = 1.
+  Gewichteter RMS-Kreuzphasenfehler = 180 Grad.
+  X6-Gesamtentscheidung = FAIL, insbesondere wegen Rekonstruktions- und Phasenfehler.
+
+Kontrolle y=x:
+  NRMSE 0; Spektralfehler 0; Kohärenz 1; Phasenfehler 0 Grad.
+  X6-Gesamtentscheidung = PASS für diese konkrete Konfiguration.
+Kontrolle y=0:
+  NRMSE 1; Spektralfehler 1; Kohärenz und Phase ausdrücklich UNDEFINED.
+  X6-Gesamtentscheidung = FAIL.
+
+WISSENSCHAFTLICHE AUSSAGE
+Identische Leistungsspektren und Kohärenz 1 reichen nicht aus, um eine
+vorzeichen- und phasentreue Rekonstruktion zu belegen. Diese Aussage betrifft
+die festgelegte Rekonstruktionsaufgabe. Für eine ausdrücklich vorzeicheninvariante
+Aufgabe wäre ein anderer Vergleichsvertrag erforderlich.
+
+Für einen nichtverschwindenden Fourierkoeffizienten z gilt bei y=-x:
+  Pyy=Pxx; Pxy=-Pxx; |Pxy|^2/(Pxx*Pyy)=1; Arg(Pxy)=pi.
+Für ein reelles Signal mit Energie E>0 gilt:
+  ||-x-x||/||x||=sqrt(4E)/sqrt(E)=2.
+Wolfram hat die vier entsprechenden symbolischen Identitäten bestätigt.
+
+METHODIK
+Wolfram Language 15.0.1, Linux-x86-64, nominelle Arbeitspräzision 80 Stellen.
+Die Eingaben werden aus exakten trigonometrischen Ausdrücken numerisch erzeugt.
+Unabhängig geschriebene Welch-Berechnung mit FourierParameters->{1,-1};
+64 Abtastwerte pro Segment, Schrittweite 32, drei überlappende Segmente,
+periodisches Hann-Fenster, Mittelwertabzug pro Segment vor der Fensterung.
+Einseitige PSD-Dichte mit Nenner fs*sum(window^2); innere Frequenzbins verdoppelt.
+Kreuzspektrum conj(X)*Y, Mittelung vor der Kohärenzbildung.
+Referenzaktive Nicht-DC-Bins: 1, 2, 3 (Frequenzen 2, 4, 6 Hz).
+Die aktive Maske bezeichnet hier Welch-Bins nach Fensterung und Detrending;
+sie ist keine Behauptung zusätzlicher Linien im ursprünglichen 1-Hz-Signal.
+Alle 33 Bins sind im Hauptfall innerhalb der festgelegten numerischen
+Auswertbarkeitsgrenzen. Die Nullkontrolle besitzt keine auswertbaren Bins.
+
+X6:
+  Repository thomasmgfeller/x6-spectral-astrolabium
+  Commit 90b74509f2b65de08a77de8a7057204834951fc2
+  app/signal-lab-core.js Git-Blob 14990fa1dc8c4b28ff8f153e9fbec349c8af2f69
+  Ausgeführt mit Node.js v24.19.0.
+Die Quelldatei ist bytegleich übernommen; keine Änderung am Repository.
+
+ABGLEICH
+Vier symbolische Identitäten bestätigt; zwölf numerische Sollwertprüfungen
+bestanden (vier Kennzahlen in drei Fällen).
+Zusätzlich zwölf Kennzahlvergleiche zwischen X6 und Wolfram sowie Vergleich
+der vollständigen Hauptfall-Spektren einschließlich der Auswertbarkeitsmasken.
+Maximale absolute Differenz:
+  PSD und reelles Kreuzspektrum: 9.540979117872439e-18.
+  Imaginäres Kreuzspektrum: 0.
+  Betragsquadratische Kohärenz: 4.440892098500626e-16.
+  Zirkuläre Phasendifferenz: 0 Grad.
+Vorab festgelegte Vergleichstoleranzen:
+  Kennzahlen 1e-10; PSD/CSD 1e-12; zirkuläre Phase 1e-8 Grad.
+Interne Wolfram-Sollwerttoleranz unverändert 1e-50.
+
+ABWEICHUNG UND KORREKTUR
+Der erste Wolfram-Lauf bestätigte den Hauptfall, die Identitätskontrolle und
+alle symbolischen Identitäten. In der Nullkontrolle betrug der Spektralfehler
+0.9999999999999997; das bestand die interne 1e-50-Toleranz nicht.
+Eine diagnostische Abfrage bestätigt, dass Fourier auf einem exakten
+ganzzahligen Nullvektor Maschinenpräzision zurückliefert.
+Die zweite Fassung bildet ausschließlich den exakt erkannten Nullvektor
+direkt auf den exakten Null-Fouriervektor ab. Erwartungen, Toleranzen,
+Signal und X6-Quelle blieben unverändert. Danach bestanden alle Prüfungen.
+Das ist eine dokumentierte Korrektur des Prüfadapters nach Einsicht in den
+ersten Lauf, keine blinde Wiederholung. Beide Programme und Rohantworten
+sowie die vor den jeweiligen Aufrufen erfassten Hashes bleiben erhalten.
+
+TRANSPORT
+Wolfram lieferte in der JSON-Ausgabe für hochpräzise Nullen die Schreibweise
+0.e-76 usw. Der Offline-Parser ergänzt ausschließlich die fehlende Dezimalziffer
+zu 0.0e-76. Im zweiten Lauf betraf dies 35 Zahlen. Kein Zahlenwert wird dadurch
+verändert. Die vollständige ursprüngliche Antwort bleibt separat erhalten.
+
+GELTUNGSBEREICH
+Synthetische Rechenprüfung, keine physikalischen Messdaten oder Hardwareabnahme.
+Die überlappenden Welch-Segmente sind keine unabhängigen Wiederholungsversuche;
+aus ihnen wird kein Kohärenz-Konfidenzintervall abgeleitet.
+Eine hohe klassische Signalkohärenz ist kein Nachweis von Quantenkohärenz.
+Der zusätzliche Rechenkern ist Wolfram; Testentwurf und Auswertung wurden von
+derselben Assistenz erstellt. Keine externe, blinde personelle Begutachtung
+und keine Zertifizierung durch Wolfram Research.
+Die zugrunde liegende Identität und vorhandene X6-Tests waren vor dem Auftrag
+bekannt. Der festgehaltene Vertrag dokumentiert den Ausführungsumfang und ist
+keine Vorregistrierung einer neuen wissenschaftlichen Entdeckung.
+Zwei begrenzte Rechenaufrufe über die bestehende Wolfram-Anbindung;
+keine kostenpflichtigen Dienste, Abos oder Cloud-Credits neu aktiviert.
+
+REPRODUKTION
+Benötigt Python 3 (Standardbibliothek), für den frischen X6-Lauf zusätzlich Node.js.
+
+  python verify.py
+    Prüft Paket, gespeicherte Antworten, Erwartungen und Quervergleich.
+  python verify.py --rerun
+    Führt zusätzlich den unveränderten X6-Kern frisch aus.
+    Wolfram wird dadurch NICHT erneut aufgerufen.
+
+Für einen frischen Wolfram-Lauf wolfram_check_v0_1_1.wl in einer geeigneten
+Wolfram-Umgebung auswerten. Der ursprüngliche Aufruf hatte ein Zeitlimit von
+30 Sekunden; Dienste können eigene Laufzeit- und Nutzungsgrenzen setzen.
+wolfram_check.wl ist bewusst die erhaltene ursprüngliche Fassung.
+freeze.json und amendment_freeze.json sind lokale Inhalts- und Zeitprotokolle,
+keine extern beglaubigten Zeitstempel. SHA-256 belegt Dateiintegrität,
+nicht Authentizität oder wissenschaftliche Richtigkeit.
+
+QUELLEN UND RECHTE
+X6-Quellstand:
+https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/90b74509f2b65de08a77de8a7057204834951fc2/app/signal-lab-core.js
+Fourier-Konvention:
+https://reference.wolfram.com/language/ref/FourierParameters.html
+Die übernommene X6-Quelle steht unter Apache-2.0; LICENSE und NOTICE liegen
+unter source/. Das Paket enthält keine Wolfram-Software oder Lizenzschlüssel.
