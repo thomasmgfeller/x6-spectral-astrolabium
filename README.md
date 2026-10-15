@@ -14,7 +14,7 @@ n=7 mit Höhe ≥3 bleibt offen. Die gemeinsame Referenzsuite umfasst jetzt neun
 
 ## Start here: actual module and evidence status
 
-The [central module register](docs/MODULE_REGISTRY.md) lists **32 modules** with
+The [central module register](docs/MODULE_REGISTRY.md) lists **33 modules** with
 their authoritative branch and commit, prerequisites, executable entry point,
 expected result, available evidence and next acceptance gate. Its
 [machine-readable source](MODULE_REGISTRY.json) is a dated snapshot, not a live
