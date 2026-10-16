@@ -4,7 +4,7 @@ For every result, ask: which claim was tested, using what data and under which c
 
 [Deutsch](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/de/evidence.md) · [Wiki overview](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/en/)
 
-Source snapshot: 2026-10-16 · `08c64744caa584c940b45a8825d0b099ae0c92fb`
+Source snapshot: 2026-10-16 · `967c7662f005d887918cac9350e5bbaf76f653a9`
 
 ## Four different kinds of evidence
 
@@ -22,6 +22,7 @@ An archived laboratory dataset comes from real measurements. Analysing it in thi
 | Status | Meaning |
 | --- | --- |
 | PASS | The explicitly tested criteria were met. |
+| QUALIFIED_IN_DECLARED_MODEL | All specified primary criteria are met in the explicitly declared model; this is not general physical validation. |
 | FAIL | At least one specified criterion was violated. |
 | INCONCLUSIVE | This test leaves the question undecided. |
 | NOT_RUN / NOT_PERFORMED / NOT_EXECUTED | The relevant test was not executed. |
