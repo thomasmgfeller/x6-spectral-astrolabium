@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "candidates_replayed": 24576,
+  "unique_selected_verified": 1879,
+  "exact_matching_cells": 9,
+  "evaluable_cells": 5,
+  "scalar_predictions_verified": 5120,
+  "toys": {
+    "status": "PASS_TOY_ONLY",
+    "exhaustive_label_swap_cases": 16,
+    "upper_DAG_closures": 64,
+    "rejected_controls": [
+      "missing candidate",
+      "inexact matched relation count",
+      "reused paired observation",
+      "corrupt intersection histogram"
+    ],
+    "target_generation": false
+  },
+  "independence": "Distinct matching, height, integer feature and classifier formulas in one authoring process; generator/paired bootstrap replay shares source. External replication not performed."
+}
