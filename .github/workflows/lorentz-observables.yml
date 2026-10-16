@@ -1,0 +1,40 @@
+name: Lorentz Observable Comparison
+on:
+  pull_request:
+    paths: ['research/lorentz_observable_comparison/**', '.github/workflows/lorentz-observables.yml']
+  push:
+    branches: [main]
+    paths: ['research/lorentz_observable_comparison/**', '.github/workflows/lorentz-observables.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  frozen-exact-comparison:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Reproduce frozen comparison and countercheck without network
+        run: >-
+          sudo env "PATH=$PATH" GIT_CONFIG_COUNT=1
+          GIT_CONFIG_KEY_0=safe.directory "GIT_CONFIG_VALUE_0=$GITHUB_WORKSPACE"
+          unshare --net python3 -B -O research/lorentz_observable_comparison/run.py
+          --run "$RUNNER_TEMP/observable-comparison"
+      - name: Compare every deterministic result
+        run: |
+          for name in records.jsonl draws.json summary.json verification.json; do
+            cmp "research/lorentz_observable_comparison/results/$name" "$RUNNER_TEMP/observable-comparison/$name"
+          done
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: observable-comparison-reproduction
+          path: ${{ runner.temp }}/observable-comparison*
+          retention-days: 30
+          if-no-files-found: error

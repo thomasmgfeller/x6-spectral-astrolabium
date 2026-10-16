@@ -89,6 +89,8 @@ Quellenlücken, insbesondere fehlende NQK-Archive, bleiben ausdrücklich offen.
 
 **Strukturelle Erklärung der H7-Gegenbeispiele:** [Exakte Zertifikate und Beweise](research/lorentz_h7_structure/README.md) erklären beide n=7-Paare durch reguläre orthogonale Ähnlichkeit. Eine explizite Konstruktion liefert zusammenhängende H7-Kollisionen für jedes n≥8. Sie zeigt außerdem eine präzise Grenze weiterer Matrixpolynom-Spektren. Nachträgliche Analyse, keine Neuheits- oder Physikbehauptung.
 
+**Vorab festgelegter Merkmalsvergleich:** [Nachbarschaftsprofile und Einpunkt-Erweiterungen](research/lorentz_observable_comparison/README.md) wurden exakt verglichen. N1 und Q1 trennen alle sechs bekannten Kontrollpaare; N1 benötigt keine zusätzlichen Spektralpolynome. Die neue kleine Stichprobe enthält bereits unter H7 keine Kollision und belegt daher keinen Zusatznutzen. Empfehlung nur als Vorfilter mit vollständiger Isomorphieprüfung.
+
 ## Frozen reference edition and validation hardening
 
 The [QE reference edition](https://github.com/thomasmgfeller/x6-spectral-astrolabium/releases/tag/reference-2026.10.15-qe1)
