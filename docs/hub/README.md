@@ -15,6 +15,16 @@ execution is required. Research-topic buttons retain their module/evidence pages
 The Markdown alternatives include the same destinations. No application kernels,
 scientific claims or historical evidence are changed by these navigation links.
 
+## Featured research and setup visual
+
+Both language homepages show the existing Sagnac concept illustration in the
+hero area, with a full-resolution link and an explicit AI/planned-setup caption.
+Immediately below, the RAX-CQG feature links the approved PDF, DOCX and full
+Markdown architecture. The same access points appear in the Markdown homepages.
+The dated 37-module register is unchanged; the feature is a new publication,
+not a new executed test or qualification status. Its files and hashes live in
+`docs/research/rax/cqg-v0.1/PUBLICATION.json`.
+
 ## Authoritative inputs
 
 - `MODULE_REGISTRY.json`: dated scientific/source register; no automatic upgrades.

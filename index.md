@@ -7,6 +7,24 @@ X6 Spectral Astrolabium is an open research hub for signals, graphs and causal o
 - [Open Signal Lab →](https://thomasmgfeller.github.io/x6-spectral-astrolabium/app/signal-lab.html)
 - [Browse all modules →](https://thomasmgfeller.github.io/x6-spectral-astrolabium/modules/)
 
+## From light signals to measurement data
+
+![AI concept illustration of the proposed Sagnac laboratory with a photon source, four detector channels, time tagging and digital analysis.](https://thomasmgfeller.github.io/x6-spectral-astrolabium/experiments/photonic-two-qubit/figures/AI_CONCEPT_NOT_PHOTO.png)
+
+AI concept illustration, not a photograph of an assembled experiment. Optics, devices and displays are illustrative; the setup provides no experimental evidence for RAX-CQG yet.
+
+[Explore the design and schematic →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/experiments/photonic-two-qubit/README.md)
+
+## RAX-CQG · NEW · RESEARCH ARCHITECTURE V0.1 · 16 OCT 2026
+
+Relational axioms, causal histories and stable reconstruction: a mathematical research programme for emergent quantum dynamics.
+
+Research draft, not an established physical theory. CQG-01–08 are specified but have not been executed as a test campaign.
+
+- [Read the architecture · PDF, 19 pages →](https://thomasmgfeller.github.io/x6-spectral-astrolabium/docs/research/rax/cqg-v0.1/RAX_CQG_Forschungsarchitektur_v0_1.pdf)
+- [Markdown and sources on GitHub →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/docs/research/rax/cqg-v0.1/ARCHITECTURE.md)
+- [Download the Word document ↓](https://thomasmgfeller.github.io/x6-spectral-astrolabium/docs/research/rax/cqg-v0.1/RAX_CQG_Forschungsarchitektur_v0_1.docx)
+
 ## More tools & references
 
 Launch either browser application above. These starting points lead to the relevant instructions, prerequisites and documented checks.

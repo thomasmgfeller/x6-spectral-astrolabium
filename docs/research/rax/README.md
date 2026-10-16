@@ -2,6 +2,13 @@
 
 **Forschungsfassung vom 14. Oktober 2026. Aktueller Stand: RAX-U1 als synthetische Kontrolle ausgeführt und intern gegengeprüft; technische Gesamtabnahme offen. RAX-B1-Messplanbenchmark ausgeführt, acht primäre Überlegenheitsentscheidungen unentschieden. RAX-U2 und die weiteren Forschungsversuche bleiben geplant.**
 
+**Neu: [RAX-CQG Forschungsarchitektur v0.1](cqg-v0.1/README.md)** —
+kausale Historien, diskrete Wirkung, Destillation und stabile Rekonstruktion.
+[PDF, 19 Seiten](cqg-v0.1/RAX_CQG_Forschungsarchitektur_v0_1.pdf) ·
+[Markdown](cqg-v0.1/ARCHITECTURE.md) ·
+[Word](cqg-v0.1/RAX_CQG_Forschungsarchitektur_v0_1.docx).
+Forschungsentwurf; CQG-01–08 sind noch nicht als Kampagne ausgeführt.
+
 [Forschungsprogramm herunterladen (DOCX, 14 Seiten)](RAX_Relationales_Forschungsprogramm_v0_1.docx)
 
 [RAX-U1-Gegenprüfung v0.1: Bericht und vollständiges Reproduktionspaket](countercheck-v0.1/README.md)
