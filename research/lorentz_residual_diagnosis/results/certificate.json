@@ -1,0 +1,99 @@
+{
+  "status": "PASS_POST_HOC_WITNESS_UNPACKING",
+  "scope": "Interpretation of the frozen R2 result; selected after results, not a fourth tested candidate or held-out endpoint.",
+  "definition": "For ordered distinct lower vertices u,v, G=B B^T, use (G[u,v], multiset_w (G[u,w],G[w,v])) over every lower w, including u and v.",
+  "common_successors_of_root_pair": 2,
+  "joint_common_successor_histogram": [
+    {
+      "counts": [
+        0,
+        0
+      ],
+      "multiplicity": 2
+    },
+    {
+      "counts": [
+        0,
+        1
+      ],
+      "multiplicity": 1
+    },
+    {
+      "counts": [
+        1,
+        0
+      ],
+      "multiplicity": 1
+    },
+    {
+      "counts": [
+        1,
+        2
+      ],
+      "multiplicity": 1
+    },
+    {
+      "counts": [
+        2,
+        1
+      ],
+      "multiplicity": 1
+    },
+    {
+      "counts": [
+        2,
+        3
+      ],
+      "multiplicity": 1
+    },
+    {
+      "counts": [
+        3,
+        2
+      ],
+      "multiplicity": 1
+    }
+  ],
+  "records": [
+    {
+      "id": "m8-r012",
+      "ordered_pair_count": 0,
+      "pairs_zero_based": [],
+      "B_rows": [
+        "01100010",
+        "11010000",
+        "00001110",
+        "10100001",
+        "00011100",
+        "11000010",
+        "00101001",
+        "00010101"
+      ]
+    },
+    {
+      "id": "m8-r070",
+      "ordered_pair_count": 2,
+      "pairs_zero_based": [
+        [
+          3,
+          5
+        ],
+        [
+          5,
+          3
+        ]
+      ],
+      "B_rows": [
+        "11100000",
+        "01011000",
+        "01001001",
+        "00000111",
+        "10000011",
+        "00010110",
+        "00110100",
+        "10101000"
+      ]
+    }
+  ],
+  "verification": "Scalar dot products equal explicit neighbor-set intersections; descriptor membership equals the original round-two R2 witness color on every ordered lower pair in both target orders."
+}

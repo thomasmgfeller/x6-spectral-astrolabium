@@ -1,0 +1,48 @@
+{
+  "schema": "x6.residual-diagnosis-contract/1",
+  "evidence_class": "POST_HOC_KNOWN_CORPUS_DIAGNOSIS",
+  "base_commit": "a5639e7aa715f4bdccfdd6e871ed0a6ef8d1b8ae",
+  "question": "Which of three fixed relational invariants distinguishes the known H7+N1+Q1 residual pair, and what are their complete partitions on the existing stress corpus?",
+  "known_before_evaluation": [
+    "The matrices and original H7/N1/Q1 outcomes are already public and have been inspected.",
+    "The corpus contains 207 representatives of 352 fixed draws; 6849 same-size pairs; 25 H7+N1 collisions, 24 resolved by Q1.",
+    "m8-r012 and m8-r070 are nonisomorphic, including after time reversal, but have equal H7, N1 and Q1.",
+    "All orders are cubic regular height-two orders. Directed vertex color refinement initialized by degrees remains constant on each layer at every round.",
+    "The three new invariant outputs have not been computed before this contract. Their selection is motivated by known outcomes, not blind validation."
+  ],
+  "input": {
+    "records": "research/lorentz_n1_stress/results/records.jsonl",
+    "sha256": "97d583ecbf226671a5ffa411799eacb432a0e6106f8ea16c5fd236b7a3267540",
+    "representatives": 207,
+    "cells": {"6":6,"7":11,"8":32,"9":68,"10":90},
+    "target_ids": ["m8-r012", "m8-r070"],
+    "selection": "Every original representative, in original order. No new draws, filtering, adaptive additions or removal of failures."
+  },
+  "invariants": {
+    "I2": "Ordered pair of multisets: common-successor counts for every unordered pair of lower vertices; common-predecessor counts for every unordered pair of upper vertices. Keep all zero counts and multiplicities.",
+    "I3": "Ordered pair of multisets over all unordered triples in the lower/upper layer. Each entry is [the three sorted pairwise common-neighbor counts, the triple common-neighbor count], flattened to four integers. Future and past components remain ordered; include zeros and multiplicities.",
+    "R2": "Directed ordered-pair Weisfeiler-Leman refinement. c0(u,v) is (pred(u),succ(u),pred(v),succ(v),[u=v],Cuv,Cvu). c(t+1)(u,v) is the exact tuple (c(t)(u,v), sorted multiset over w of the ORDERED pair (c(t)(u,w),c(t)(w,v))). Colors are compressed by sorted exact tuples jointly over all graphs of the SAME n, never independently per graph. Preserve multiplicities; no hash is used for feature equality. Stop when the global number of colors stops increasing; output the per-graph stable color histogram. Store every round's color matrices. Color IDs are contextual to this jointly refined corpus, not portable standalone fingerprints.",
+    "R1_control": "Three diagnostic rounds of directed vertex refinement initialized by predecessor/successor degrees; its all-round failure on the family is proved by induction, not inferred from three rounds."
+  },
+  "endpoints": [
+    "For the known target pair: full I2 and I3 values, exact differing entries if any, R2 first distinguishing round and stable partition; preserve unresolved outcomes.",
+    "For each size and each of I2, I3, R2, H7+N1+I2, H7+N1+I3, H7+N1+R2 and H7+N1+Q1 plus each new invariant: all class counts, unresolved pairs and residual groups.",
+    "Report complete same-size pair counts and target outcome separately. No population probability, p-value, held-out performance or general reconstruction claim.",
+    "Record integer payloads, zero characteristic-polynomial calls for the three new features, logical intersection counts, R2 refinement rounds and n^3 contributions per graph per round. R2 color dictionary context and round traces are additional shared storage; histogram payload alone is not standalone storage cost.",
+    "One-run feature timings are descriptive only; do not compare them as a controlled speed benchmark against historical Q1 timings.",
+    "Fixed panel only: if all three fail, archive the failure without extending the panel. A new independent challenge requires a separate later contract."
+  ],
+  "verification": [
+    "Producer I2/I3 uses bitset intersections; checker counts explicit Boolean incidences over all candidate neighbors.",
+    "Producer R2 enumerates intermediate vertices; checker counts intersections of outgoing and incoming color-class sets. Compare every exact color matrix at every round, all features and complete summaries.",
+    "Reverse the labels of every input and check transport of every R2 color matrix and equality of every I2/I3 value. The reference uses full directed relations.",
+    "Recheck H7/N1/Q1 equality of the target with both existing exact arithmetic paths, and its nonisomorphism and nonduality with both existing exact isomorphism solvers.",
+    "Reject a self-loop, altered feature, lost multiplicity, omitted representative, corrupted R2 trace and omitted residual summary. Toy tests (n<=4) must distinguish joint ordered color-pair information from separated marginal multisets.",
+    "No external human review is implied by two implementations from the same authoring process."
+  ],
+  "resources": {"phase_seconds":1200,"memory_bytes":2147483648,"max_refinement_rounds":200,"network_during_computation":false},
+  "freeze_policy": "Commit this known-data diagnostic contract before evaluating new features. Freeze and hash all execution sources and input before target evaluation; bind to actual Git commit IDs. Record the actual publication chronology without claiming blinded or independent preregistration. Corrections after first target evaluation require an explicit deviation record and fresh run.",
+  "decisions": {"PASS_EXACT_DIAGNOSIS":"Complete fixed corpus, source binding, exact countercheck and negative controls passed. This status does not imply target separation.","INCONCLUSIVE":"Incomplete computation, timeout, nonstabilization, source mismatch or failed check."},
+  "references": ["https://arxiv.org/abs/1002.1921", "https://arxiv.org/abs/2005.08887"],
+  "limits": ["No novelty claim for Weisfeiler-Leman or intersection invariants", "No global minimality of a separating feature", "No general equivalence or domination between I3, R2 and Q1", "No physical spacetime, quantum dynamics or continuum-limit evidence"]
+}
