@@ -1,0 +1,541 @@
+{
+  "cells": {
+    "layered/n16": {
+      "status": "INSUFFICIENT_COMMON_SUPPORT",
+      "train_eligible": 2,
+      "test_eligible": 1
+    },
+    "lattice/n16": {
+      "status": "EVALUABLE",
+      "incremental": {
+        "gain": 0.03515625,
+        "paired_bootstrap_95": [
+          -0.0078125,
+          0.078125
+        ],
+        "meets_numerical_threshold": false
+      },
+      "methods": {
+        "D": {
+          "confusion": [
+            [
+              128,
+              0
+            ],
+            [
+              128,
+              0
+            ]
+          ],
+          "balanced_accuracy": 0.5,
+          "conditional_pair_bootstrap_95": [
+            0.5,
+            0.5
+          ],
+          "label_swap": {
+            "discordant_predicted_pairs": 0,
+            "correctly_oriented_pairs": 0,
+            "one_sided_label_swap_p": 1.0
+          }
+        },
+        "B": {
+          "confusion": [
+            [
+              84,
+              44
+            ],
+            [
+              28,
+              100
+            ]
+          ],
+          "balanced_accuracy": 0.71875,
+          "conditional_pair_bootstrap_95": [
+            0.66796875,
+            0.76953125
+          ],
+          "label_swap": {
+            "discordant_predicted_pairs": 72,
+            "correctly_oriented_pairs": 64,
+            "one_sided_label_swap_p": 2.882759652259666e-12
+          }
+        },
+        "P123": {
+          "confusion": [
+            [
+              68,
+              60
+            ],
+            [
+              40,
+              88
+            ]
+          ],
+          "balanced_accuracy": 0.609375,
+          "conditional_pair_bootstrap_95": [
+            0.546875,
+            0.671875
+          ],
+          "label_swap": {
+            "discordant_predicted_pairs": 72,
+            "correctly_oriented_pairs": 50,
+            "one_sided_label_swap_p": 0.0006467924813381441
+          }
+        },
+        "B+P123": {
+          "confusion": [
+            [
+              86,
+              42
+            ],
+            [
+              21,
+              107
+            ]
+          ],
+          "balanced_accuracy": 0.75390625,
+          "conditional_pair_bootstrap_95": [
+            0.703125,
+            0.8046875
+          ],
+          "label_swap": {
+            "discordant_predicted_pairs": 77,
+            "correctly_oriented_pairs": 71,
+            "one_sided_label_swap_p": 1.709160445145146e-15
+          }
+        }
+      }
+    },
+    "jittered_lattice/n16": {
+      "status": "EVALUABLE",
+      "incremental": {
+        "gain": 0.03515625,
+        "paired_bootstrap_95": [
+          -0.01171875,
+          0.08203125
+        ],
+        "meets_numerical_threshold": false
+      },
+      "methods": {
+        "D": {
+          "confusion": [
+            [
+              128,
+              0
+            ],
+            [
+              128,
+              0
+            ]
+          ],
+          "balanced_accuracy": 0.5,
+          "conditional_pair_bootstrap_95": [
+            0.5,
+            0.5
+          ],
+          "label_swap": {
+            "discordant_predicted_pairs": 0,
+            "correctly_oriented_pairs": 0,
+            "one_sided_label_swap_p": 1.0
+          }
+        },
+        "B": {
+          "confusion": [
+            [
+              62,
+              66
+            ],
+            [
+              67,
+              61
+            ]
+          ],
+          "balanced_accuracy": 0.48046875,
+          "conditional_pair_bootstrap_95": [
+            0.42578125,
+            0.54296875
+          ],
+          "label_swap": {
+            "discordant_predicted_pairs": 59,
+            "correctly_oriented_pairs": 27,
+            "one_sided_label_swap_p": 0.7825035974389233
+          }
+        },
+        "P123": {
+          "confusion": [
+            [
+              70,
+              58
+            ],
+            [
+              57,
+              71
+            ]
+          ],
+          "balanced_accuracy": 0.55078125,
+          "conditional_pair_bootstrap_95": [
+            0.4921875,
+            0.609375
+          ],
+          "label_swap": {
+            "discordant_predicted_pairs": 61,
+            "correctly_oriented_pairs": 37,
+            "one_sided_label_swap_p": 0.06186572126904608
+          }
+        },
+        "B+P123": {
+          "confusion": [
+            [
+              65,
+              63
+            ],
+            [
+              61,
+              67
+            ]
+          ],
+          "balanced_accuracy": 0.515625,
+          "conditional_pair_bootstrap_95": [
+            0.45703125,
+            0.58203125
+          ],
+          "label_swap": {
+            "discordant_predicted_pairs": 68,
+            "correctly_oriented_pairs": 36,
+            "one_sided_label_swap_p": 0.35815038007716843
+          }
+        }
+      }
+    },
+    "layered/n36": {
+      "status": "INSUFFICIENT_COMMON_SUPPORT",
+      "train_eligible": 0,
+      "test_eligible": 0
+    },
+    "lattice/n36": {
+      "status": "EVALUABLE",
+      "incremental": {
+        "gain": 0.00390625,
+        "paired_bootstrap_95": [
+          -0.0078125,
+          0.01953125
+        ],
+        "meets_numerical_threshold": false
+      },
+      "methods": {
+        "D": {
+          "confusion": [
+            [
+              128,
+              0
+            ],
+            [
+              128,
+              0
+            ]
+          ],
+          "balanced_accuracy": 0.5,
+          "conditional_pair_bootstrap_95": [
+            0.5,
+            0.5
+          ],
+          "label_swap": {
+            "discordant_predicted_pairs": 0,
+            "correctly_oriented_pairs": 0,
+            "one_sided_label_swap_p": 1.0
+          }
+        },
+        "B": {
+          "confusion": [
+            [
+              119,
+              9
+            ],
+            [
+              0,
+              128
+            ]
+          ],
+          "balanced_accuracy": 0.96484375,
+          "conditional_pair_bootstrap_95": [
+            0.94140625,
+            0.984375
+          ],
+          "label_swap": {
+            "discordant_predicted_pairs": 119,
+            "correctly_oriented_pairs": 119,
+            "one_sided_label_swap_p": 1.504632769052528e-36
+          }
+        },
+        "P123": {
+          "confusion": [
+            [
+              66,
+              62
+            ],
+            [
+              21,
+              107
+            ]
+          ],
+          "balanced_accuracy": 0.67578125,
+          "conditional_pair_bootstrap_95": [
+            0.625,
+            0.7265625
+          ],
+          "label_swap": {
+            "discordant_predicted_pairs": 61,
+            "correctly_oriented_pairs": 53,
+            "one_sided_label_swap_p": 1.49322082520012e-09
+          }
+        },
+        "B+P123": {
+          "confusion": [
+            [
+              120,
+              8
+            ],
+            [
+              0,
+              128
+            ]
+          ],
+          "balanced_accuracy": 0.96875,
+          "conditional_pair_bootstrap_95": [
+            0.9453125,
+            0.98828125
+          ],
+          "label_swap": {
+            "discordant_predicted_pairs": 120,
+            "correctly_oriented_pairs": 120,
+            "one_sided_label_swap_p": 7.52316384526264e-37
+          }
+        }
+      }
+    },
+    "jittered_lattice/n36": {
+      "status": "EVALUABLE",
+      "incremental": {
+        "gain": 0.046875,
+        "paired_bootstrap_95": [
+          -0.00390625,
+          0.1015625
+        ],
+        "meets_numerical_threshold": false
+      },
+      "methods": {
+        "D": {
+          "confusion": [
+            [
+              128,
+              0
+            ],
+            [
+              128,
+              0
+            ]
+          ],
+          "balanced_accuracy": 0.5,
+          "conditional_pair_bootstrap_95": [
+            0.5,
+            0.5
+          ],
+          "label_swap": {
+            "discordant_predicted_pairs": 0,
+            "correctly_oriented_pairs": 0,
+            "one_sided_label_swap_p": 1.0
+          }
+        },
+        "B": {
+          "confusion": [
+            [
+              60,
+              68
+            ],
+            [
+              45,
+              83
+            ]
+          ],
+          "balanced_accuracy": 0.55859375,
+          "conditional_pair_bootstrap_95": [
+            0.49609375,
+            0.6171875
+          ],
+          "label_swap": {
+            "discordant_predicted_pairs": 65,
+            "correctly_oriented_pairs": 40,
+            "one_sided_label_swap_p": 0.04084076697077003
+          }
+        },
+        "P123": {
+          "confusion": [
+            [
+              69,
+              59
+            ],
+            [
+              56,
+              72
+            ]
+          ],
+          "balanced_accuracy": 0.55078125,
+          "conditional_pair_bootstrap_95": [
+            0.49990234375,
+            0.6015625
+          ],
+          "label_swap": {
+            "discordant_predicted_pairs": 51,
+            "correctly_oriented_pairs": 32,
+            "one_sided_label_swap_p": 0.045957274907927115
+          }
+        },
+        "B+P123": {
+          "confusion": [
+            [
+              71,
+              57
+            ],
+            [
+              44,
+              84
+            ]
+          ],
+          "balanced_accuracy": 0.60546875,
+          "conditional_pair_bootstrap_95": [
+            0.546875,
+            0.6641601562499995
+          ],
+          "label_swap": {
+            "discordant_predicted_pairs": 67,
+            "correctly_oriented_pairs": 47,
+            "one_sided_label_swap_p": 0.0006535843428818002
+          }
+        }
+      }
+    },
+    "layered/n64": {
+      "status": "INSUFFICIENT_COMMON_SUPPORT",
+      "train_eligible": 0,
+      "test_eligible": 0
+    },
+    "lattice/n64": {
+      "status": "INSUFFICIENT_COMMON_SUPPORT",
+      "train_eligible": 89,
+      "test_eligible": 84
+    },
+    "jittered_lattice/n64": {
+      "status": "EVALUABLE",
+      "incremental": {
+        "gain": -0.0390625,
+        "paired_bootstrap_95": [
+          -0.09765625,
+          0.015625
+        ],
+        "meets_numerical_threshold": false
+      },
+      "methods": {
+        "D": {
+          "confusion": [
+            [
+              128,
+              0
+            ],
+            [
+              128,
+              0
+            ]
+          ],
+          "balanced_accuracy": 0.5,
+          "conditional_pair_bootstrap_95": [
+            0.5,
+            0.5
+          ],
+          "label_swap": {
+            "discordant_predicted_pairs": 0,
+            "correctly_oriented_pairs": 0,
+            "one_sided_label_swap_p": 1.0
+          }
+        },
+        "B": {
+          "confusion": [
+            [
+              75,
+              53
+            ],
+            [
+              64,
+              64
+            ]
+          ],
+          "balanced_accuracy": 0.54296875,
+          "conditional_pair_bootstrap_95": [
+            0.48046875,
+            0.609375
+          ],
+          "label_swap": {
+            "discordant_predicted_pairs": 71,
+            "correctly_oriented_pairs": 41,
+            "one_sided_label_swap_p": 0.11754878120417092
+          }
+        },
+        "P123": {
+          "confusion": [
+            [
+              58,
+              70
+            ],
+            [
+              69,
+              59
+            ]
+          ],
+          "balanced_accuracy": 0.45703125,
+          "conditional_pair_bootstrap_95": [
+            0.390625,
+            0.5234375
+          ],
+          "label_swap": {
+            "discordant_predicted_pairs": 73,
+            "correctly_oriented_pairs": 31,
+            "one_sided_label_swap_p": 0.9201441584409902
+          }
+        },
+        "B+P123": {
+          "confusion": [
+            [
+              68,
+              60
+            ],
+            [
+              67,
+              61
+            ]
+          ],
+          "balanced_accuracy": 0.50390625,
+          "conditional_pair_bootstrap_95": [
+            0.44140625,
+            0.5703125
+          ],
+          "label_swap": {
+            "discordant_predicted_pairs": 69,
+            "correctly_oriented_pairs": 35,
+            "one_sided_label_swap_p": 0.5
+          }
+        }
+      }
+    }
+  },
+  "primary": {
+    "cell": "jittered_lattice/n64",
+    "gain": -0.0390625,
+    "paired_bootstrap_95": [
+      -0.09765625,
+      0.015625
+    ],
+    "meets_numerical_threshold": false,
+    "status": "NO_DEMONSTRATED_INCREMENT"
+  },
+  "bootstrap_replicates": 2000,
+  "scope": "Conditional on selected common support and fixed training; secondary results descriptive."
+}

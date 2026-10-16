@@ -101,6 +101,8 @@ Quellenlücken, insbesondere fehlende NQK-Archive, bleiben ausdrücklich offen.
 
 **Knoten-Zuordnung und erster Geometriepilot:** Die [Folgestudie nach PR #39](research/lorentz_matching_geometry/README.md) ergänzt explizite Knotenbijektionen: 7.088 Paarentscheidungen und 651 umbenannte Kopien bestehen. Ein Sechsknoten-Gegenbeispiel zeigt die Grenze getrennter Dreischicht-Rekonstruktion; ein begrenzter Satz mit gemeinsam indizierten Nachbarschaften ist bewiesen. Auf 720 neuen synthetischen Ordnungen liefern die getesteten P123-Schnittprofile keinen nachgewiesenen Zusatznutzen gegenüber Linkgraden, Intervallhäufigkeiten und Hasse-Laplace-Spektren. Der vorab definierte Hauptvergleich fällt negativ aus; keine geometrische oder physikalische Validierung.
 
+**Exakter Dichte-/Höhenabgleich:** Die [neue Kontrollstudie](research/lorentz_matched_controls/README.md) prüft 24.576 frische Kandidaten. Fünf Vergleiche liefern genügend Paare mit identischen Knotenzahlen, Relationszahlen und Höhen; vier bleiben wegen unzureichender Überlappung ohne Leistungsbewertung. Die reine Dichte-/Höhenkontrolle erreicht exakt 50 %. Im primären Vergleich gegen gestörte Gitter bei 64 Knoten beträgt der Zusatznutzen von P123 −3,91 Prozentpunkte, mit 95%-Paar-Bootstrap-Intervall [−9,77;+1,56]: kein nachgewiesener Zusatznutzen. Vollständiger Auswahlledger, verwendete Rohdaten und getrennte Gegenprüfungen sind archiviert.
+
 ## Frozen reference edition and validation hardening
 
 The [QE reference edition](https://github.com/thomasmgfeller/x6-spectral-astrolabium/releases/tag/reference-2026.10.15-qe1)

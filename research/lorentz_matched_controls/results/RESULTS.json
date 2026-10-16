@@ -1,0 +1,40 @@
+{
+  "schema": "x6.matched-controls-run/1",
+  "status": "PASS_BOUNDED_STUDY",
+  "source_commit": "ef182efc4af8551295a754df32c2875f44b84574",
+  "started_utc": "2026-10-16T18:14:03.723239+00:00",
+  "completed_utc": "2026-10-16T18:17:29.658853+00:00",
+  "sources": {
+    "research/lorentz_matched_controls/contract.json": "7ac0954956b0fbae3a796b2519a244ea157e5ba71a8d0302a3d0821363dcef9f",
+    "research/lorentz_matched_controls/common.py": "246b38e7df3f78dec4c025dc25dbfba659055af07248ea8a0229ee5bc933fc43",
+    "research/lorentz_matched_controls/analysis.py": "68bfb833ea0ba9ac6d6c6704f8eefc51b24c4e302cde37a2b5e00a8b14fdb6cc",
+    "research/lorentz_matched_controls/produce.py": "bde6017b546d11e4b39a99c4861d5d4b9e998b812f3bd84456baaf4c52a2937d",
+    "research/lorentz_matched_controls/check.py": "28ccbc4d4d6a6ddd9e2ee857f7bcbfdf7d8b67fb455b9a96187673d4cffd1ea4",
+    "research/lorentz_matched_controls/matched_tests.py": "133a566770c654920661ea22859a80afcdaee56e4f81d627f2736490c2eef173",
+    "research/lorentz_matched_controls/run.py": "1f913f95b51284f47478af67134da22bb7118349ca6669bc430b7ac4f4611364",
+    "research/lorentz_matched_controls/compare.py": "969eec574f557915e487410fca312607c59ee23261a684605d63efebbe1ef730",
+    "research/lorentz_matched_controls/requirements.txt": "7bd6b8946940b79948c548c8048e545684b91c8edc9444d8dfc0c8f76a97c0a7",
+    "research/lorentz_matching_geometry/core.py": "ee9a96bdba32e93b092e89ce81a76a524a0dbaa05cf905e293b319eefb50f0f7",
+    "research/lorentz_matching_geometry/geometry.py": "d9924b4edd0df5ae464215be849947a4cab72ac767ef25c254749eee233262b9"
+  },
+  "phase_seconds": {
+    "produce": 80.31901179000124,
+    "check": 125.42640875399957
+  },
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+  "network_scope": "No computational network calls; OS network isolation separately enforced in CI only.",
+  "files": {
+    "candidate_ledger.json.gz": "314eaead99b0cd2016bc1253f34ffb083cbf7493a059c37fb13d51dec387a0d8",
+    "check.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "costs.json": "4e658233d2b336b27cdd2197e00fb3375223ef97e8e7bbb59e652ff629661142",
+    "evaluation.json.gz": "510af2c7cacaca262b1bcc59f1239a5bfab9020cbd9d091709d66d6a2912d717",
+    "produce.log": "a7f70a4a62048d72e47f5f96fefd91e44d0a24ca0666c05fb64010a614aaa12b",
+    "selected_records.json.gz": "c7e6bf7adc32ab56bba2768cbe835fdda005f96b81b77ee531cb18905227b8c0",
+    "selection.json.gz": "1ed4cea973b3a1f6b77de9cd08310cee20c061a3644ffb642f89e4c049b82aff",
+    "summary.json": "886467eeed37f986a7608dccade7faf229dc4db0de7521486b8045973fab80ba",
+    "support.json": "5bddd8c643f94a42648f174ed5af84e9bf6fdac0ca9c121431cc4223c5c656a5",
+    "verification.json": "5559a6c774acb8024f9f411a36ad139effa3534c44292992cc3221e69505ec66"
+  }
+}
