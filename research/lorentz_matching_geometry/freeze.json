@@ -1,0 +1,30 @@
+{
+  "schema": "x6.matching-geometry-freeze/1",
+  "created_utc": "2026-10-16T17:53:46.058758+00:00",
+  "status": "BEFORE_TARGET_GENERATION",
+  "sources": {
+    "research/lorentz_matching_geometry/contract.json": "26741496d1ad2ff44dfc0ab9195eb94034d84ff432f631d4c9eae934c516b1b5",
+    "research/lorentz_matching_geometry/core.py": "ee9a96bdba32e93b092e89ce81a76a524a0dbaa05cf905e293b319eefb50f0f7",
+    "research/lorentz_matching_geometry/geometry.py": "d9924b4edd0df5ae464215be849947a4cab72ac767ef25c254749eee233262b9",
+    "research/lorentz_matching_geometry/produce.py": "ed820aa341f6d089e951a10342a0b8009efb6a036f471bf45edcc234b8fcaaf3",
+    "research/lorentz_matching_geometry/check.py": "04bc6beb30a3f6573448ec9b96d7ae7fe74fe3ccfbf9f5b76ad31f3df2e97356",
+    "research/lorentz_matching_geometry/selftest.py": "e45475c1a99d113c1404109d0a1e8ca1cbe959a96f06b59c933cd989ba9cded7",
+    "research/lorentz_matching_geometry/run.py": "efcd77d5aa6c72cfca02ac58881f6fb368b971432678c8d5eed0ef01f5d84f36",
+    "research/lorentz_matching_geometry/compare.py": "a904a2aa80f9a9785a370c6280319a0bc4c514aa2432044a4fea937a1559358d",
+    "research/lorentz_matching_geometry/requirements.txt": "7bd6b8946940b79948c548c8048e545684b91c8edc9444d8dfc0c8f76a97c0a7"
+  },
+  "toy_checks": {
+    "status": "PASS_TOY_ONLY",
+    "pair_oracles": 256,
+    "binary_3x3": 512,
+    "three_layer_2x2_pairs": 256,
+    "rejected_corruptions": [
+      "missing subset",
+      "changed empty count",
+      "false bijection",
+      "duplicate bijection"
+    ],
+    "budget_control": "INCONCLUSIVE",
+    "target_generation": false
+  }
+}

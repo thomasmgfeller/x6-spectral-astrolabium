@@ -43,7 +43,7 @@
       "P123",
       "B+P123"
     ],
-    "classifier": "Nearest class centroid in training-only z-scores; population standard deviation; constant columns scale=1; squared Euclidean distance; ties resolved by declared family order; no tuning or held-out fitting.",
+    "classifier": "Nearest class centroid in training-only z-scores; population standard deviation; columns with population standard deviation <=1e-12 scale=1 (numerical zero floor); squared Euclidean distance; ties resolved by declared family order; no tuning or held-out fitting.",
     "primary": "Paired test balanced-accuracy gain (B+P123 minus B) at N=64; 2000 stratified paired percentile bootstrap replicates, fixed SHA seed; positive incremental evidence only if gain >=0.05 and lower 95% bootstrap bound >0. All other sizes/models descriptive.",
     "diagnostics": "Relation fraction, height, full feature vectors, predictions, confusion matrices, raw coordinates/relations, eigensolver residuals; per-draw relabeling checks; explicit relation/link reconstruction checks.",
     "limits": "Generator discrimination only; no manifoldlikeness certificate, curvature estimator, dimension reconstruction, continuum limit, Lorentz-invariance proof or speed superiority. Null ties, density and height are potential confounders; grid controls are finite stochastic sampling designs."
@@ -66,5 +66,6 @@
       "submitted": "2026-05-26",
       "use": "Motivates graph observable families; pilot is not a replication; interval-size convention uses strict interiors (paper counts endpoints)."
     }
-  ]
+  ],
+  "pre_target_clarification": "Before target generation, the standardization floor was made explicit to prevent roundoff-only variation in mathematically constant spectral coordinates from being amplified."
 }
