@@ -15,5 +15,14 @@
     "COUNTEREXAMPLE.md algebraic interpretation",
     "explain.py and results/explanation.json: exact algebra, feature equality, coherent-class trace interpretation; additional lost-multiplicity and omitted-residual negative controls"
   ],
-  "publication_authorization": "User requested execution of the next research steps and continuation of the GitHub publication."
+  "publication_authorization": "User requested execution of the next research steps and continuation of the GitHub publication.",
+  "ci_setup_correction": {
+    "failed_job": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/actions/runs/38912769331/job/117012476496",
+    "completed_before_failure": [
+      "full source-bound computation and independent checker",
+      "byte comparison of every deterministic frozen-run result"
+    ],
+    "failure": "Supplemental explanation.json write failed because the network-isolated run directory was root-owned.",
+    "fix": "Copy already checked outputs to a runner-owned temporary directory before writing the post-hoc receipt. No frozen source, input, result or mathematical check changed."
+  }
 }

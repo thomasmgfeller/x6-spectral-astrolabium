@@ -33,8 +33,11 @@ jobs:
           done
       - name: Recheck separately labelled algebraic interpretation
         run: |
-          python3 -B -O research/lorentz_relational_transfer/explain.py "$RUNNER_TEMP/relational-transfer"
-          cmp research/lorentz_relational_transfer/results/explanation.json "$RUNNER_TEMP/relational-transfer/explanation.json"
+          # The isolated run is root-owned. Copy its checked outputs into a
+          # runner-owned directory before the supplemental receipt is written.
+          cp -R "$RUNNER_TEMP/relational-transfer" "$RUNNER_TEMP/relational-transfer-explanation"
+          python3 -B -O research/lorentz_relational_transfer/explain.py "$RUNNER_TEMP/relational-transfer-explanation"
+          cmp research/lorentz_relational_transfer/results/explanation.json "$RUNNER_TEMP/relational-transfer-explanation/explanation.json"
       - uses: actions/upload-artifact@v4
         if: always()
         with:
