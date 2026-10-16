@@ -49,6 +49,8 @@ def p(text):
 
 def page(path, title, description, body, lang='en', translations=None, script=False, software=False):
     de = lang == 'de'
+    style_version = ('?v=' + hashlib.sha256((ROOT / 'assets/hub.css').read_bytes()).hexdigest()[:12]
+                     if path in {'index.html', 'de/index.html'} else '')
     home = 'de/index.html' if de else 'index.html'
     guide = 'de/guide.html' if de else 'guide/index.html'
     md = str(Path(path).with_suffix('.md'))
@@ -82,7 +84,7 @@ def page(path, title, description, body, lang='en', translations=None, script=Fa
 <meta property="og:url" content="{canonical(path)}">
 <meta property="og:site_name" content="X6 Spectral Astrolabium">
 <meta name="twitter:card" content="summary">
-<link rel="stylesheet" href="{rel(path, 'assets/hub.css')}">
+<link rel="stylesheet" href="{rel(path, 'assets/hub.css')}{style_version}">
 <script type="application/ld+json">{structured_json}</script>
 {('<script src="' + rel(path, 'assets/hub.js') + '" defer></script>') if script else ''}
 </head>
