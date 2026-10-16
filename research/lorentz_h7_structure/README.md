@@ -270,3 +270,8 @@ Der Beitrag dieses Repositorys ist die nachvollziehbare Zuordnung, Herleitung
 und exakte Überprüfung der konkreten archivierten Beispiele. Eine Aussage über
 Neuheit oder Priorität dieser Beispiele oder Folgerungen erfordert zusätzliche
 Literaturarbeit und externe fachliche Prüfung.
+
+
+## Nachfolgender Merkmalsvergleich vom 16.10.2026
+
+Der [vorab festgelegte Vergleich](../lorentz_observable_comparison/README.md) prüft D, M11, N1 und Q1 im vollständigen n≤7-Korpus, an sechs bekannten Kontrollpaaren und einer festgelegten kleinen n=8/9-Stichprobe. N1 und Q1 bestehen das begrenzte Trennkriterium; N1 liegt nach der festgelegten Kostenregel vorne. Die Stichprobe besitzt keine H7-Kollision und belegt keine zusätzliche Trennwirkung. Alle Identitätsentscheidungen benötigen weiterhin vollständige Relationen.

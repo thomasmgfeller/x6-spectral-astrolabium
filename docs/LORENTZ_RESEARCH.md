@@ -155,3 +155,8 @@ Die [H7-Abhängigkeitsprüfung](../research/lorentz_h7_dependency_audit/README.m
 ## Strukturelle Erklärung vom 16.10.2026
 
 Die [nachträgliche Strukturanalyse](../research/lorentz_h7_structure/README.md) liefert exakte Switching-Zertifikate für beide n=7-Paare, einen Beweis zusammenhängender H7-Kollisionen für jedes n≥8 und eine begrenzte Ununterscheidbarkeitsaussage für Matrixpolynom-Spektren. Historische Verträge und Resultate bleiben unverändert; zusätzliche Grad- oder Motivmerkmale werden nicht als universelle Identifikatoren behauptet.
+
+
+## Nachfolgender Merkmalsvergleich vom 16.10.2026
+
+Der [vorab festgelegte Vergleich](../research/lorentz_observable_comparison/README.md) prüft D, M11, N1 und Q1 im vollständigen n≤7-Korpus, an sechs bekannten Kontrollpaaren und einer festgelegten kleinen n=8/9-Stichprobe. N1 und Q1 bestehen das begrenzte Trennkriterium; N1 liegt nach der festgelegten Kostenregel vorne. Die Stichprobe besitzt keine H7-Kollision und belegt keine zusätzliche Trennwirkung. Alle Identitätsentscheidungen benötigen weiterhin vollständige Relationen.
