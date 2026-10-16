@@ -1,0 +1,70 @@
+{
+  "schema": "x6.matching-geometry-contract/1",
+  "date": "2026-10-16",
+  "base_commit": "0b87723af5df0f3be95320853dd4490dfab2b4fb",
+  "status": "FIXED_BEFORE_NEW_TARGET_EXECUTION",
+  "matching": {
+    "orders": 217,
+    "same_size_pairs": 7088,
+    "relabelings_per_order": 3,
+    "seed": 104729,
+    "node_budget_per_comparison": 2000000,
+    "input_sha256": {
+      "research/lorentz_relational_boundary/results/inputs.json": "8c1c51664c5de9a623e9f1d098c924c8ae5796599322cc7a198e6a64603f2ee3",
+      "research/lorentz_relational_boundary/results/indexed.json.gz": "4f26e9cd37f4a8cdf9ab44698ddc9faa36e879c38bb10e5af4414b203f0ac499",
+      "research/lorentz_relational_boundary/results/reference.json.gz": "670cf1a53d07673db9d4d27e44ff01ad1f310037717f070f62b2932001b00ee9"
+    },
+    "acceptance": "Every old pair agrees; every relabeling has an explicit full-relation bijection; no budget exhaustion counted as nonisomorphic. Search returns a witness, not a canonical form; automorphisms can make witnesses nonunique."
+  },
+  "three_layer": {
+    "claim": "Joint indexed intersections of the paired past/future neighborhood of each middle vertex reconstruct a specified three-part layered order generated only by adjacent incidences, up to a single middle permutation with exterior labels fixed. Independent marginal reconstructions need not glue. Direct lower-to-upper bypass links must be excluded or separately supplied.",
+    "toy_scope": "All 256 pairs of binary 2x2 adjacent matrices; full relation and reconstruction witnesses. A six-node positive-layer counterexample is a designed diagnostic, no minimality claim."
+  },
+  "geometry": {
+    "evidence": "Prospective synthetic pilot after public contract and source freeze; deterministic seeds known, not blinded; not a reproduction of all nine literature classes.",
+    "sizes": [
+      16,
+      36,
+      64
+    ],
+    "families": [
+      "minkowski",
+      "layered",
+      "lattice",
+      "jittered_lattice"
+    ],
+    "train_per_cell": 20,
+    "test_per_cell": 40,
+    "generator": "SHA-256 counter stream keyed by version, family, n, split, draw. Minkowski iid null coordinates in (0,1)^2 at 52-bit precision, conditioned on fixed N, ties rejected; layered sizes N/4,N/2,N/4 rounded with adjacent Bernoulli(1/2) links and transitive closure; lattice N sites without replacement from a 2sqrt(N) square lattice, coordinatewise <= order; jittered same sampling law with independent coordinate offsets in (-0.2,0.2) lattice units.",
+    "baseline": "B: separate in/out link-degree histograms length N (each divided by N), strict interior interval-size histogram length N (counts divided by choose(N,2)), sorted symmetrized Hasse combinatorial Laplacian eigenvalues divided by N.",
+    "candidate": "P123: for all node subsets of sizes 1,2,3, histograms of common strict successors and predecessors from the full relation, including zeros, each normalized by choose(N,k). This is an explicitly defined extension of pure pooled profiles; neither Pall nor H7/N1/Q1/R2 is claimed to be evaluated.",
+    "models": [
+      "B",
+      "P123",
+      "B+P123"
+    ],
+    "classifier": "Nearest class centroid in training-only z-scores; population standard deviation; constant columns scale=1; squared Euclidean distance; ties resolved by declared family order; no tuning or held-out fitting.",
+    "primary": "Paired test balanced-accuracy gain (B+P123 minus B) at N=64; 2000 stratified paired percentile bootstrap replicates, fixed SHA seed; positive incremental evidence only if gain >=0.05 and lower 95% bootstrap bound >0. All other sizes/models descriptive.",
+    "diagnostics": "Relation fraction, height, full feature vectors, predictions, confusion matrices, raw coordinates/relations, eigensolver residuals; per-draw relabeling checks; explicit relation/link reconstruction checks.",
+    "limits": "Generator discrimination only; no manifoldlikeness certificate, curvature estimator, dimension reconstruction, continuum limit, Lorentz-invariance proof or speed superiority. Null ties, density and height are potential confounders; grid controls are finite stochastic sampling designs."
+  },
+  "resources": {
+    "phase_seconds": 1800,
+    "memory_bytes": 2147483648
+  },
+  "publication": "Contract then frozen sources publicly committed before new target execution. Corrections after target inspection require an explicit amendment and exploratory label; do not silently overwrite failures.",
+  "literature": [
+    {
+      "url": "https://arxiv.org/abs/2605.27514v1",
+      "title": "Charting causal set configuration space with graph observables",
+      "authors": [
+        "Astrid Eichhorn",
+        "Harald Mack",
+        "Kim Tuyen Le",
+        "Fabian Wagner"
+      ],
+      "submitted": "2026-05-26",
+      "use": "Motivates graph observable families; pilot is not a replication; interval-size convention uses strict interiors (paper counts endpoints)."
+    }
+  ]
+}
