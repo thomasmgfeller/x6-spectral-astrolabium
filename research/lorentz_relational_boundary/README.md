@@ -177,3 +177,8 @@ Die nächste offene Arbeit ist die explizite Behandlung der Knoten-Zuordnung und
 eine begründete Erweiterung auf höhere Schichten. Der vorliegende Satz darf
 nicht als Rekonstruktion beliebiger Kausalmengen ausgegeben werden. Keine
 Neuheits-, Minimalitäts-, Physik- oder Kontinuumsbehauptung.
+
+
+## Folgestudie nach diesem Stand
+
+Die [Knoten-Zuordnungs- und Geometriestudie](../lorentz_matching_geometry/README.md) ergänzt explizite Isomorphiezeugen, ein Dreischicht-Gegenbeispiel und einen eingeschränkten gemeinsamen Rekonstruktionssatz. Der erste prospektive Geometriepilot weist für die dort getesteten P123-Merkmale keinen Zusatznutzen nach. Die oben archivierten Quellen und ursprünglichen Befunde bleiben unverändert.
