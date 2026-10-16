@@ -1,20 +1,20 @@
 # X6-QE: exakte Graphreferenzen und Grenzen spektraler Unterscheidbarkeit
 
-Registerstand: 2026-10-15. MAIN / SOFTWARE. Kein Live-Prüfsiegel.
+Registerstand: 2026-10-16. MAIN / SOFTWARE. Kein Live-Prüfsiegel.
 
 ## Quelle
 
 Branch: main
 
-Commit: a81e62fb077ef5e8fd7774682a400cbef6ed5aa1
+Commit: 7ea315830f9c5ccee8bad5bebfaa7666c342e3d5
 
-[Originaldokumentation](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/a81e62fb077ef5e8fd7774682a400cbef6ed5aa1/research/x6_qe/README.md)
+[Originaldokumentation](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/7ea315830f9c5ccee8bad5bebfaa7666c342e3d5/research/x6_qe/README.md)
 
 ## Dokumentierte Aussage
 
 Vier Graphen in drei bekannten Referenzen: Stern mit trivialer Ihara-Zeta; primitiver Viererzyklus mit zusammengesetzter Länge; Turmgraph/Shrikhande mit gleichem Spektrum und gleicher globaler Ihara-Zeta, aber K4=8/0. Keine neue Mathematik, Quantengedächtnis- oder Arithmetikbehauptung.
 
-- [research/x6_qe/evidence/local-results.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/a81e62fb077ef5e8fd7774682a400cbef6ed5aa1/research/x6_qe/evidence/local-results.json): Vollständige exakte Polynome, getrennte Determinantenprüfungen und K4-Zählwege, Quellenhashes und Fehlerkontrollen. Interne Rechnung; keine personell unabhängige Wiederholung.
+- [research/x6_qe/evidence/local-results.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/7ea315830f9c5ccee8bad5bebfaa7666c342e3d5/research/x6_qe/evidence/local-results.json): Vollständige exakte Polynome, getrennte Determinantenprüfungen und K4-Zählwege, Quellenhashes und Fehlerkontrollen. Interne Rechnung; keine personell unabhängige Wiederholung.
 
 ## Reproduzieren
 
@@ -25,7 +25,7 @@ Neue Arbeits- und Ausgabeordner verwenden; Voraussetzungen aus der Originaldokum
 ```sh
 git clone --branch main https://github.com/thomasmgfeller/x6-spectral-astrolabium.git x6-x6-qe
 cd x6-x6-qe
-git checkout --detach a81e62fb077ef5e8fd7774682a400cbef6ed5aa1
+git checkout --detach 7ea315830f9c5ccee8bad5bebfaa7666c342e3d5
 python3 -S -B research/x6_qe/verify.py --output /tmp/x6-qe.json
 python3 -S -B research/x6_qe/verify.py --verify-report /tmp/x6-qe.json
 ```

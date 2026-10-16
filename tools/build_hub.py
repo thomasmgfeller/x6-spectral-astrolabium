@@ -20,10 +20,12 @@ E = html.escape
 BROWSER_APPS = {
     'astrolabium': ('app/index.html', 'Astrolabium öffnen →'),
     'signal-lab': ('app/signal-lab.html', 'Signal Lab öffnen →'),
+    'rax-cqg-benchmark': ('app/rax-cqg-lab.html', 'Causal-Set-Labor öffnen →'),
 }
 SETUP_IMAGE = 'experiments/photonic-two-qubit/figures/AI_CONCEPT_NOT_PHOTO.png'
 CQG_PATH = 'docs/research/rax/cqg-v0.1/'
 CQG_DOCUMENT = 'RAX_CQG_Forschungsarchitektur_v0_1'
+CQG_BENCHMARK_PATH = 'docs/research/rax/cqg-benchmark-v0.2.0/'
 
 
 def rel(source, target):
@@ -107,7 +109,10 @@ def home(path, data, content, lang):
     body = '<section class="hero hero-visual"><div class="hero-copy"><p class="eyebrow">OPEN RESEARCH · PUBLIC PREVIEW</p><h1>' + E(t['headline']) + '</h1>' + p(t['lead'])
     body += '<div class="actions">' + link(rel(path, 'app/index.html'), t['launch_astrolabium'], **{'class': 'button'}) + link(rel(path, 'app/signal-lab.html'), t['launch'], **{'class': 'button secondary'}) + link(rel(path, 'modules/index.html'), t['browse'], **{'class': 'button secondary'}) + '</div></div>'
     body += '<figure class="setup-visual"><a href="' + rel(path, SETUP_IMAGE) + '" aria-label="' + E(visual['expand'], quote=True) + '"><img src="' + rel(path, SETUP_IMAGE) + '" width="1536" height="1024" fetchpriority="high" alt="' + E(visual['alt'], quote=True) + '"></a><figcaption><span class="eyebrow">' + E(visual['label']) + '</span><strong>' + E(visual['title']) + '</strong>' + p(visual['caption']) + link(REPO + '/blob/main/experiments/photonic-two-qubit/README.md', visual['details']) + '</figcaption></figure></section>'
-    downloads = [(rel(path, CQG_PATH + CQG_DOCUMENT + '.pdf'), feature['pdf']),
+    downloads = [(rel(path, 'app/rax-cqg-lab.html'), feature['benchmark']),
+                 (rel(path, CQG_BENCHMARK_PATH + 'RAX_CQG_Benchmark_v0_2_0.zip'), feature['package']),
+                 (rel(path, 'modules/rax-cqg-benchmark.html'), feature['scope']),
+                 (rel(path, CQG_PATH + CQG_DOCUMENT + '.pdf'), feature['pdf']),
                  (REPO + '/blob/main/' + CQG_PATH + 'ARCHITECTURE.md', feature['read']),
                  (rel(path, CQG_PATH + CQG_DOCUMENT + '.docx'), feature['word'])]
     body += '<section class="research-feature" id="rax-cqg" aria-labelledby="cqg-title"><div><p class="eyebrow">' + E(feature['label']) + '</p><h2 id="cqg-title">RAX-CQG</h2><p class="feature-intro">' + E(feature['text']) + '</p><p class="feature-status">' + E(feature['status']) + '</p></div><div class="feature-links">'
@@ -133,7 +138,7 @@ def home(path, data, content, lang):
         md += '- [' + label + '](' + canonical(target) + ')\n'
     md += '\n## ' + visual['title'] + '\n\n![' + visual['alt'] + '](' + BASE + SETUP_IMAGE + ')\n\n' + visual['caption'] + '\n\n[' + visual['details'] + '](' + REPO + '/blob/main/experiments/photonic-two-qubit/README.md)\n'
     md += '\n## RAX-CQG · ' + feature['label'] + '\n\n' + feature['text'] + '\n\n' + feature['status'] + '\n\n'
-    for target, label in [(BASE + CQG_PATH + CQG_DOCUMENT + '.pdf', feature['pdf']), (REPO + '/blob/main/' + CQG_PATH + 'ARCHITECTURE.md', feature['read']), (BASE + CQG_PATH + CQG_DOCUMENT + '.docx', feature['word'])]:
+    for target, label in [(BASE + 'app/rax-cqg-lab.html', feature['benchmark']), (BASE + CQG_BENCHMARK_PATH + 'RAX_CQG_Benchmark_v0_2_0.zip', feature['package']), (BASE + 'modules/rax-cqg-benchmark.html', feature['scope']), (BASE + CQG_PATH + CQG_DOCUMENT + '.pdf', feature['pdf']), (REPO + '/blob/main/' + CQG_PATH + 'ARCHITECTURE.md', feature['read']), (BASE + CQG_PATH + CQG_DOCUMENT + '.docx', feature['word'])]:
         md += '- [' + label + '](' + target + ')\n'
     md += '\n## ' + t['tools_title'] + '\n\n' + t['tools_intro'] + '\n\n'
     for item in t['tools']:

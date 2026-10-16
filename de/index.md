@@ -15,12 +15,15 @@ KI-Konzeptvisualisierung, kein Foto eines aufgebauten Experiments. Optik, Gerät
 
 [Versuchsplanung und Prinzipschema ansehen →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/experiments/photonic-two-qubit/README.md)
 
-## RAX-CQG · NEU · FORSCHUNGSARCHITEKTUR V0.1 · 16.10.2026
+## RAX-CQG · NEU · CAUSAL-SET BENCHMARK 0.2.0 · 16.10.2026
 
-Relationale Axiome, kausale Historien und stabile Rekonstruktion: ein mathematisches Forschungsprogramm für emergente Quantendynamik.
+Repariertes Forschungslabor für endliche kausale Ordnungen: echte Spektren, Intervallzählung, Rohdaten und reproduzierbare Gegenprüfungen.
 
-Forschungsentwurf, keine etablierte physikalische Theorie. CQG-01–08 sind spezifiziert, aber noch nicht als Testkampagne ausgeführt.
+Explorativer Software-Prototyp, keine validierte Quantengravitation. Die Architektur v0.1 bleibt ein Forschungsentwurf; CQG-01–08 sind nicht als vollständige Testkampagne ausgeführt.
 
+- [Causal-Set-Labor öffnen →](https://thomasmgfeller.github.io/x6-spectral-astrolabium/app/rax-cqg-lab.html)
+- [Benchmark-Paket 0.2.0 herunterladen ↓](https://thomasmgfeller.github.io/x6-spectral-astrolabium/docs/research/rax/cqg-benchmark-v0.2.0/RAX_CQG_Benchmark_v0_2_0.zip)
+- [Prüfbericht, Quellen und Grenzen →](https://thomasmgfeller.github.io/x6-spectral-astrolabium/modules/rax-cqg-benchmark.html)
 - [Architektur lesen · PDF, 19 Seiten →](https://thomasmgfeller.github.io/x6-spectral-astrolabium/docs/research/rax/cqg-v0.1/RAX_CQG_Forschungsarchitektur_v0_1.pdf)
 - [Markdown und Quellen auf GitHub →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/docs/research/rax/cqg-v0.1/ARCHITECTURE.md)
 - [Word-Dokument herunterladen ↓](https://thomasmgfeller.github.io/x6-spectral-astrolabium/docs/research/rax/cqg-v0.1/RAX_CQG_Forschungsarchitektur_v0_1.docx)
@@ -86,7 +89,7 @@ Dies ist experimentelle Forschungssoftware. Ein bestandener Softwaretest ist kei
 - [Industrieller Datenpilot](https://thomasmgfeller.github.io/x6-spectral-astrolabium/modules/industrial-pilot.html): Begrenzte Machbarkeitsstudie mit Labordaten und expliziten Grenzen.
 - [NQK-Forschungsdossier](https://thomasmgfeller.github.io/x6-spectral-astrolabium/modules/nqk.html): Eigenständiger Forschungszweig mit unvollständigen Reproduktionsarchiven.
 
-Das Register vom 2026-10-15 beschreibt 37 Module. Es dokumentiert Quellenorte und Evidenz; es ist kein Live-Prüfsiegel.
+Das Register vom 2026-10-16 beschreibt 38 Module. Es dokumentiert Quellenorte und Evidenz; es ist kein Live-Prüfsiegel.
 
 Das konfigurierte Agentenfenster schliesst Sonntag, den 18. Oktober 2026, ein. Das exklusive Ende unten begrenzt den Zeitplan und belegt keine Ausführung. Danach ist das Fenster geschlossen.
 2026-10-19T00:00:00+02:00
