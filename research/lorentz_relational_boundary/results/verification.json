@@ -1,0 +1,20 @@
+{
+  "status": "PASS_EXACT_BOUNDARY_STUDY",
+  "orders": 217,
+  "exact_reference_pairs": 7088,
+  "new_polynomials_per_arithmetic_path": 744,
+  "reused_prior_feature_records": 209,
+  "indexed_directions_reconstructed": 434,
+  "all_subset_transports_and_round_matrices_agree": true,
+  "negative_controls_rejected": [
+    "missing_subset",
+    "wrong_degree_cap",
+    "altered_count",
+    "lost_column_multiplicity",
+    "false_column_witness",
+    "corrupted_R2_trace",
+    "omitted_input",
+    "omitted_residual_pair"
+  ],
+  "scope": "Separate implementations from one authoring process. The 209 historical H7/N1/Q1 records are hash-bound reuse, not newly recomputed polynomials."
+}

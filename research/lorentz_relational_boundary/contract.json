@@ -1,0 +1,60 @@
+{
+  "schema":"x6.relational-boundary-contract/1",
+  "base_commit":"8457be8a9935ddf98ddd63afa3f9ec7e0c3a917b",
+  "evidence_class":"KNOWN_CORPUS_DIAGNOSIS_AND_THEORY_MOTIVATED_CONTROLS",
+  "question":"Which information is lost by pooling common-neighbor counts, and under what explicit height-two and degree assumptions do subset-indexed counts reconstruct the incidence relation?",
+  "known_before_evaluation":[
+    "The 207 cubic stress orders and the two closed-neighborhood orders are already public. Their prior H7/N1/Q1/R2 outcomes have been inspected.",
+    "The 32-element pair is separated by the fourth-order pooled count certificate. This separation is known, not a prospective discovery.",
+    "For maximum neighbor degree d, intersections of more than d roots are empty. In particular fourth-order pure intersections cannot add information within the cubic stress family.",
+    "The selected cycle controls are theory-motivated expected failures of every pooled intersection order; their feature values have not yet been generated in this task.",
+    "Subset-lattice Mobius inversion is established mathematics. The planned reconstruction statement is a restricted application, not a novelty or efficient graph-isomorphism claim."
+  ],
+  "sources":{
+    "research/lorentz_n1_stress/results/records.jsonl":"97d583ecbf226671a5ffa411799eacb432a0e6106f8ea16c5fd236b7a3267540",
+    "research/lorentz_relational_transfer/results/records.jsonl.gz":"449157101795b69a562d081974db7ed1269a10c3b4c6452f896e8debdcad5df8"
+  },
+  "population":{
+    "stress":"All 207 original representatives, in original order, retaining original IDs.",
+    "structured":"Exactly closed-rook and closed-shrikhande from the frozen transfer file, in that order; other transfer draws are outside this study.",
+    "cycles":{"m":[6,7,8,9],"types":["one","split"],"recipe":"For one use a single block of length m; for split use lengths 3 and m-3. In each consecutive block put B[i,i]=B[i,next(i)]=1 cyclically, with no cross-block entries. C=[[0,B],[0,0]]. Name cycle-mM-one or cycle-mM-split. Append in m/type order. No filtering or replacement."},
+    "orders":217,
+    "same_size_pairs":7088,
+    "selection":"Complete fixed panel. All new outputs on known data remain diagnostic. No held-out performance claim or adaptive addition."
+  },
+  "pooled_features":{
+    "Pall":"Ordered future/past profiles. On each intrinsic positive height-two layer, for every k=1,...,layer size, retain the complete histogram [common-neighbor count, multiplicity] over unordered k-subsets, including zero counts. Include both layer sizes. Counts above the actual opposite-neighbor degree cap are analytically zero with binomial multiplicity; this is verified from the input degrees.",
+    "P1_P12_P123_P1234":"Prefixes of Pall through orders 1,2,3,4 respectively; neither root labels nor correlations between subsets are retained.",
+    "R2":"Unchanged directed pair-refinement kernels from lorentz_residual_diagnosis. Recompute joint palettes over the entire new panel of each n; do not compare old contextual color IDs. Archive every round.",
+    "methods":["P1","P12","P123","P1234","Pall","R2","R2+Pall","H7+N1+Q1","H7+N1+Q1+R2+Pall"],
+    "old_features":"Reuse hash-bound H7/N1/Q1 values for the 209 existing inputs, explicitly as previously verified results. Compute these features for all eight new cycle controls through both original exact arithmetic paths."
+  },
+  "indexed_reconstruction":{
+    "input":"A binary m by u incidence matrix with specified row and column sides, including possibly empty rows/columns in theorem/toy tests. In the target panel positive height-two degrees identify the sides intrinsically. Set d to maximum column sum. Record g(empty)=u and g(S)=number of columns containing S for every labelled row subset S with |S|<=d, including zero entries and subset identities.",
+    "claim":"These indexed counts reconstruct the complete multiset of column neighborhoods. For each T with |T|<=d, a(T)=sum over S containing T, |S|<=d, of (-1)^(|S|-|T|) g(S). Columns are recovered up to permutation, with row labels retained. Apply separately to B and its transpose.",
+    "critical_limit":"The indexed data are an equivariant representation, NOT a permutation-invariant compact fingerprint. Testing equality up to a row permutation still requires correspondence/isomorphism work. This theorem is restricted to the stated incidence/height-two setting, not arbitrary causal sets.",
+    "producer":"Bitmask intersections for g, descending subtraction for inversion, explicit original-to-reconstructed column permutation witness.",
+    "checker":"Explicit Boolean incidence sums for g; alternating inclusion-exclusion for inversion; independently verify the entire reconstructed matrix under each stored column permutation.",
+    "cost":"Report sum_{k=0}^d binom(m,k) entries for each direction, subset-mask and count integer payloads, versus original m*u binary entries. No generic compression or speed claim."
+  },
+  "reference":"Every same-size pair receives an exact reference. Producer uses necessary degree/Gram-profile rejection then full-relation backtracking; checker uses the separate row-bijection/complete-column-pattern algorithm. For the known n=32 pair independently recomputed fourth-order counts certify nonisomorphism. Isomorphic outputs, if any, must remain and may not count as feature failures.",
+  "endpoints":[
+    "All feature partitions, complete unresolved nonisomorphic pairs, class counts and incremental outcomes by n and input family.",
+    "Known 16-element residual pair and known 32-element pair: full profile values, first distinguishing intersection order if any, and R2 outcomes.",
+    "All four cycle pairs: component counts, complete Pall equality or failure, original H7/N1/Q1 and R2 outcomes. Prove or reject the proposed all-m>=6 pooled-profile collision by explicit counting; finite tests alone do not establish the theorem.",
+    "Exact reconstruction of every target matrix in both directions, including multiplicities, zero g entries and column permutation witnesses.",
+    "Reversal of the row and column labels transports indexed counts correctly and leaves Pall unchanged; independently transport all R2 round matrices under full vertex-label reversal.",
+    "Logical payload and operation counts, plus descriptive timings only. No candidate changes following a failure."
+  ],
+  "verification":[
+    "Before source publication, test all 512 binary 3x3 matrices for both encoders and decoders, including zero columns; R2 toy tests use all 64 four-vertex upper-DAG closures and the paired-versus-marginal control. Toy cycle generator uses only one block of size 3, not target sizes.",
+    "Compare all 217 target encodings and reconstructions, every R2 round, all 7088 references and complete summaries.",
+    "Reject missing indexed subset, wrong degree cap, altered count, lost column multiplicity, false column witness, corrupted R2 trace, omitted input and omitted residual pair. Invalid or incomplete inputs cannot silently become successful reconstruction.",
+    "Separate code paths are not independent human review."
+  ],
+  "resources":{"phase_seconds":1800,"memory_bytes":2147483648,"max_refinement_rounds":200,"network_during_computation":false},
+  "freeze_policy":"Publish this diagnostic contract first, then source hashes after toy checks, before generating cycle targets or evaluating new target profiles. Any correction after evaluation must be explicitly recorded. Preserve failures; do not portray known-data diagnosis as blind validation.",
+  "decisions":{"PASS_EXACT_BOUNDARY_STUDY":"Complete fixed coverage and all checks passed, regardless of feature separation outcomes.","INCONCLUSIVE":"Incomplete computation, source mismatch, failed check, timeout or nonstabilization."},
+  "references":["https://www.math.colostate.edu/~hulpke/lectures/m501/notes.html","https://page.math.tu-berlin.de/~felsner/Lehre/DSI23/Skript-DSI_2021.pdf"],
+  "limits":["No general uniqueness of pooled fingerprints or of their combination with R2","No minimal separating order or counterexample claim","No new-physics or continuum-limit evidence"]
+}

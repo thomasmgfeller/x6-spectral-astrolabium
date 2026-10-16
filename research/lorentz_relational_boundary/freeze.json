@@ -1,0 +1,25 @@
+{
+  "schema": "x6.relational-boundary-freeze/1",
+  "created_utc": "2026-10-16T14:43:40.126262+00:00",
+  "status": "BEFORE_NEW_TARGET_PROFILES_AND_CYCLE_GENERATION",
+  "sources": {
+    "research/lorentz_relational_boundary/contract.json": "82d87d357f3b0ce05f757ccca672a18f7775b4a15ae3d8cb0b9fd06b1d2d7df1",
+    "research/lorentz_relational_boundary/produce.py": "6841229469ff438b45b39e6a0a9f53995e5cc648a399063f252a753220d5cc67",
+    "research/lorentz_relational_boundary/check.py": "9ed35d03a0c678131b998be9250a2165e50a3979636654edaa2179469ae47b32",
+    "research/lorentz_relational_boundary/run.py": "92f112941bf7aaffdcd9502d69a050905c4510f5a6076805d0e34dda85c35e01",
+    "research/lorentz_observable_comparison/produce.py": "968ee3510c6d799b9edc4cc6f8452b6dd8904017738dbe2c1cd174a663ecf8d8",
+    "research/lorentz_observable_comparison/check.py": "dd4166385b1609af152dab5d654ac068d89b9e8e2336d61501adc40d0c21a036",
+    "research/lorentz_residual_diagnosis/produce.py": "48fe32bef4bdde9b2fd746ff671c021182e4afe0a952f3131d75c530cb95ba60",
+    "research/lorentz_residual_diagnosis/check.py": "13672e253a515ea796c9b6fe858019b1bf7a3c9a96c96d795e9203e8b2367b19",
+    "research/lorentz_n1_stress/produce.py": "7f4c76368db4540764f7b5af27ac4e63485dfdd0d90392f00343a9877916cd79",
+    "research/lorentz_n1_stress/check.py": "3257ef93756745b6082de8916233a7d43fbb573b0e62773bb0a1062145191ad3"
+  },
+  "toy_checks": {
+    "status": "PASS_TOY_ONLY",
+    "binary_3_by_3_matrices": 512,
+    "maximum_order_size": 6,
+    "upper_DAG_closures": 64,
+    "joint_marginal_fault_detected": true,
+    "target_generation": false
+  }
+}
