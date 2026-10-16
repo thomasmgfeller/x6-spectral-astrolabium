@@ -11,6 +11,24 @@ extends qualification through 120 vertices and records the unresolved-gap limits
 
 This repository publishes the actual **X6 v4.2 RC** browser application, alongside the **v4.3 community audit kit**. The application combines experimental signal/Fourier analysis, a model-dependent signal-to-graph mapping, and exact rational lower bounds for finite weighted undirected graph Laplacians.
 
+## New: RAX-CQG research architecture v0.1
+
+**[Read the 19-page architecture (PDF)](docs/research/rax/cqg-v0.1/RAX_CQG_Forschungsarchitektur_v0_1.pdf)** ·
+[Markdown and sources](docs/research/rax/cqg-v0.1/ARCHITECTURE.md) ·
+[Word document](docs/research/rax/cqg-v0.1/RAX_CQG_Forschungsarchitektur_v0_1.docx)
+
+Relational axioms, causal histories, discrete curvature, predictive distillation
+and stable reconstruction form a mathematical research architecture for emergent
+quantum dynamics. **Research draft, not an established physical theory.**
+CQG-01–08 are specified but have not been executed as a test campaign.
+[Publication scope and checksums](docs/research/rax/cqg-v0.1/README.md).
+
+[![AI concept illustration of the proposed Sagnac experiment, not a laboratory photograph](experiments/photonic-two-qubit/figures/AI_CONCEPT_NOT_PHOTO.png)](experiments/photonic-two-qubit/README.md)
+
+*Proposed photonic two-qubit setup: AI concept illustration, not a photograph
+of an assembled experiment or experimental evidence for RAX-CQG.
+[Design and schematic](experiments/photonic-two-qubit/README.md).*
+
 ## Start here — understand, try, verify
 
 X6 is an open research hub for **signal validation, finite spectral graph

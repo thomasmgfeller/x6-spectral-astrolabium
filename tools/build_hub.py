@@ -21,6 +21,9 @@ BROWSER_APPS = {
     'astrolabium': ('app/index.html', 'Astrolabium öffnen →'),
     'signal-lab': ('app/signal-lab.html', 'Signal Lab öffnen →'),
 }
+SETUP_IMAGE = 'experiments/photonic-two-qubit/figures/AI_CONCEPT_NOT_PHOTO.png'
+CQG_PATH = 'docs/research/rax/cqg-v0.1/'
+CQG_DOCUMENT = 'RAX_CQG_Forschungsarchitektur_v0_1'
 
 
 def rel(source, target):
@@ -98,8 +101,15 @@ def page(path, title, description, body, lang='en', translations=None, script=Fa
 def home(path, data, content, lang):
     t = content[lang]
     guide = 'de/guide.html' if lang == 'de' else 'guide/index.html'
-    body = '<section class="hero"><p class="eyebrow">OPEN RESEARCH · PUBLIC PREVIEW</p><h1>' + E(t['headline']) + '</h1>' + p(t['lead'])
-    body += '<div class="actions">' + link(rel(path, 'app/index.html'), t['launch_astrolabium'], **{'class': 'button'}) + link(rel(path, 'app/signal-lab.html'), t['launch'], **{'class': 'button secondary'}) + link(rel(path, 'modules/index.html'), t['browse'], **{'class': 'button secondary'}) + '</div></section>'
+    visual, feature = t['setup_visual'], t['cqg_feature']
+    body = '<section class="hero hero-visual"><div class="hero-copy"><p class="eyebrow">OPEN RESEARCH · PUBLIC PREVIEW</p><h1>' + E(t['headline']) + '</h1>' + p(t['lead'])
+    body += '<div class="actions">' + link(rel(path, 'app/index.html'), t['launch_astrolabium'], **{'class': 'button'}) + link(rel(path, 'app/signal-lab.html'), t['launch'], **{'class': 'button secondary'}) + link(rel(path, 'modules/index.html'), t['browse'], **{'class': 'button secondary'}) + '</div></div>'
+    body += '<figure class="setup-visual"><a href="' + rel(path, SETUP_IMAGE) + '" aria-label="' + E(visual['expand'], quote=True) + '"><img src="' + rel(path, SETUP_IMAGE) + '" width="1536" height="1024" fetchpriority="high" alt="' + E(visual['alt'], quote=True) + '"></a><figcaption><span class="eyebrow">' + E(visual['label']) + '</span><strong>' + E(visual['title']) + '</strong>' + p(visual['caption']) + link(REPO + '/blob/main/experiments/photonic-two-qubit/README.md', visual['details']) + '</figcaption></figure></section>'
+    downloads = [(rel(path, CQG_PATH + CQG_DOCUMENT + '.pdf'), feature['pdf']),
+                 (REPO + '/blob/main/' + CQG_PATH + 'ARCHITECTURE.md', feature['read']),
+                 (rel(path, CQG_PATH + CQG_DOCUMENT + '.docx'), feature['word'])]
+    body += '<section class="research-feature" id="rax-cqg" aria-labelledby="cqg-title"><div><p class="eyebrow">' + E(feature['label']) + '</p><h2 id="cqg-title">RAX-CQG</h2><p class="feature-intro">' + E(feature['text']) + '</p><p class="feature-status">' + E(feature['status']) + '</p></div><div class="feature-links">'
+    body += ''.join(link(url, label, **{'class': 'button' if i == 0 else 'feature-link'}) for i, (url, label) in enumerate(downloads)) + '</div></section>'
     body += '<section aria-labelledby="tools"><h2 id="tools">' + E(t['tools_title']) + '</h2>' + p(t['tools_intro']) + '<div class="tool-grid">'
     for item in t['tools']:
         body += '<article class="card tool-card"><p class="eyebrow">' + E(item['kind']) + '</p><h3>' + E(item['title']) + '</h3>' + p(item['text']) + link(rel(path, 'modules/' + item['module'] + '.html'), item['button'], **{'class': 'button secondary'}) + '</article>'
@@ -119,6 +129,10 @@ def home(path, data, content, lang):
     md = '# ' + t['headline'] + '\n\n' + t['lead'] + '\n\n'
     for target, label in [('app/index.html', t['launch_astrolabium']), ('app/signal-lab.html', t['launch']), ('modules/index.html', t['browse'])]:
         md += '- [' + label + '](' + canonical(target) + ')\n'
+    md += '\n## ' + visual['title'] + '\n\n![' + visual['alt'] + '](' + BASE + SETUP_IMAGE + ')\n\n' + visual['caption'] + '\n\n[' + visual['details'] + '](' + REPO + '/blob/main/experiments/photonic-two-qubit/README.md)\n'
+    md += '\n## RAX-CQG · ' + feature['label'] + '\n\n' + feature['text'] + '\n\n' + feature['status'] + '\n\n'
+    for target, label in [(BASE + CQG_PATH + CQG_DOCUMENT + '.pdf', feature['pdf']), (REPO + '/blob/main/' + CQG_PATH + 'ARCHITECTURE.md', feature['read']), (BASE + CQG_PATH + CQG_DOCUMENT + '.docx', feature['word'])]:
+        md += '- [' + label + '](' + target + ')\n'
     md += '\n## ' + t['tools_title'] + '\n\n' + t['tools_intro'] + '\n\n'
     for item in t['tools']:
         md += '### ' + item['title'] + '\n\n' + item['kind'] + '. ' + item['text'] + '\n\n[' + item['button'] + '](' + canonical('modules/' + item['module'] + '.html') + ')\n\n'
