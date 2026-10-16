@@ -95,6 +95,8 @@ Quellenlücken, insbesondere fehlende NQK-Archive, bleiben ausdrücklich offen.
 
 **Diagnose des Restpaars:** [Gerichtete Paarverfeinerung und exaktes Trennzeugnis](research/lorentz_residual_diagnosis/README.md) unterscheiden das H7+N1+Q1-Restpaar in Runde 2. R2 trennt alle 6.849 größeninternen Paare des vorhandenen Korpus; Zweier- und Dreier-Schnittprofile scheitern am Restpaar. Zwei getrennte Implementierungen, vollständige Rundenspuren und ein direktes Relationszertifikat sichern den Befund. Nachträgliche Diagnose bekannter Daten, keine allgemeine Eindeutigkeits- oder Physikbehauptung.
 
+**Transfer und Grenze von R2:** [Vorab veröffentlichter Familientest](research/lorentz_relational_transfer/README.md) mit 72 neuen Ziehungen und zwei getrennten Strukturkontrollen. Q1 und R2 trennen jeweils die 539 nichtisomorphen Stichprobenpaare. Zwei Ordnungen mit je 32 Elementen bleiben jedoch auch unter H7+N1+Q1+R2 gleich; ein vollständiges Vierer-Schnittzertifikat beweist ihre Nichtisomorphie. Sämtliche 541 Paarentscheidungen und 6.294 Polynome je Rechenweg wurden getrennt gegengeprüft. Keine allgemeine Rekonstruktionsgarantie.
+
 ## Frozen reference edition and validation hardening
 
 The [QE reference edition](https://github.com/thomasmgfeller/x6-spectral-astrolabium/releases/tag/reference-2026.10.15-qe1)

@@ -1,0 +1,18 @@
+{
+  "status": "PASS_EXACT_FIXED_TRANSFER",
+  "inputs": 74,
+  "same_size_reference_pairs": 541,
+  "polynomials_per_arithmetic_path": 6294,
+  "all_round_matrices_agree": true,
+  "all_relabelled_rounds_agree": true,
+  "all_reference_pairs_agree": true,
+  "negative_controls_rejected": [
+    "self_loop",
+    "missing_input",
+    "Q1_coefficient",
+    "R2_multiplicity",
+    "R2_round",
+    "missing_reference_pair"
+  ],
+  "independence_scope": "Separate code paths from one authoring process; not independent human review."
+}
