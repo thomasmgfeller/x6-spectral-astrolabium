@@ -1,0 +1,165 @@
+{
+  "schema": "x6.lorentz-proper-time-design/1",
+  "version": "1.0.0",
+  "date": "2026-10-16",
+  "base_commit": "0989cc1c97ee91dbb716dbe2e778ca096c486730",
+  "status": "DESIGN_FIXED_IMPLEMENTATION_PENDING_NO_TARGET_DATA",
+  "objective": "Qualify estimation of normalized timelike separation from a marked finite order under explicit known 1+1-dimensional flat sampling assumptions; then describe transfer to density/height-matched jittered grids.",
+  "target": {
+    "name": "theta",
+    "definition": "tau(p,q)/T = sqrt((u_q-u_p)*(v_q-v_p)) for dimensionless null coordinates in (0,1)^2; physical t=T*(u+v)/2, x=T*(u-v)/2, c=1.",
+    "scale": "T is a declared external unit, never inferred from the order.",
+    "domain": "0<theta<1; marked p strictly precedes q.",
+    "auxiliary": "a=theta^2; interval spacetime-volume fraction equals a."
+  },
+  "allowed_predictor_inputs": [
+    "strict full relation C",
+    "marked endpoint indices p,q",
+    "N=m+2",
+    "declared model d=2 and domain scale convention"
+  ],
+  "forbidden_predictor_inputs": [
+    "coordinates",
+    "true theta or a",
+    "RNG key or draw ID as numeric features",
+    "generator family label",
+    "test outcomes for fitting"
+  ],
+  "sampling": {
+    "namespace": "lorentz-proper-time-v1",
+    "m_values": [
+      64,
+      144,
+      256
+    ],
+    "N": "m+2 including both marked endpoints",
+    "families": [
+      "uniform",
+      "jittered_grid"
+    ],
+    "calibration": {
+      "uniform_per_m": 256,
+      "jittered_grid_per_m": 0
+    },
+    "test_per_family_m": 1024,
+    "total_orders": 6912,
+    "endpoints": "Before background generation, draw independent uniform p,q in (0,1)^2 and reject only endpoint draws until u_p<u_q and v_p<v_q. Do not sort coordinates independently, or choose endpoints after inspecting an order. Each accepted endpoint pair gets exactly one independently generated background.",
+    "uniform": "m independent uniform points in the same unit square.",
+    "jittered_grid": "s=2*sqrt(m); choose m distinct sites uniformly without replacement from s*s sites, and independently jitter each coordinate: (integer_index+0.5+0.4*(U-0.5))/s. Both endpoints follow the same continuous law as uniform. This is a distribution-shift stress control, not a Poisson sprinkling.",
+    "precision": "Use the pinned Stream.unit() midpoint 52-bit rule. Draw endpoint coordinates in order u_p,v_p,u_q,v_q; reject endpoint attempts only until both strict inequalities hold, with a hard cap of 10000 attempts per draw. Then generate background. C_ij=1 iff i!=j and u_i<=u_j and v_i<=v_j. Coordinate ties are retained and logged; duplicate full coordinate pairs cause INCONCLUSIVE, never silent redraw. Record endpoint attempts and all tie counts. These finite-precision laws approximate the continuum model used in the proof.",
+    "rng_source": {
+      "path": "research/lorentz_matching_geometry/core.py",
+      "sha256": "ee9a96bdba32e93b092e89ce81a76a524a0dbaa05cf905e293b319eefb50f0f7"
+    },
+    "splits": "Separate Stream('lorentz-proper-time-v1',family,m,split,draw) keys with split calibration/test. One marked pair per independently drawn order; no subinterval pseudoreplication.",
+    "exclusions": "No rejection by K, local chain length, theta, prediction error, R or H in the unselected primary cohort. No pool extension.",
+    "rng_order": "For uniform backgrounds draw u then v for each of m nodes. For jittered_grid use Stream.shuffle(range(s*s))[:m]; site coordinates (site//s,site%s), draw u-jitter then v-jitter for each selected site. Endpoint and background draws use the same per-order stream sequentially."
+  },
+  "methods": {
+    "K": "Count strict interval interior {z:p<z<q}; endpoints excluded.",
+    "ell": "Height of the strict interior in vertices; ell=0 if K=0. Closed-interval height=ell+2; longest endpoint-to-endpoint chain in edges=ell+1.",
+    "V": "theta_hat=sqrt(K/m); a_hat=K/m. No fitted correction.",
+    "L": "theta_hat=min(1,ell/(2*sqrt(m))); raw value also archived. Asymptotic m_2=2 motivates this descriptive comparator; no finite-sample unbiasedness claim.",
+    "C0": "theta_hat=64/225, the analytic unconditional mean theta for the specified endpoint law.",
+    "D": "At each m separately fit theta by OLS on calibration uniform orders, columns [1,r,h,r*r,r*h,h*h], r=R/binomial(N,2), h=H/N. Moore-Penrose SVD inverse with relative cutoff 1e-12; no feature tuning or regularization search; clip predictions to [0,1]. Archive raw predictions, coefficients, singular values and effective rank. Same fitted model is applied to both test families.",
+    "P123": "Not evaluated. Conditional on K, the inner order alone is ancillary for theta in the unselected uniform model. No universal claim for full orders or matched subsets."
+  },
+  "matched_transfer": {
+    "role": "Secondary descriptive stress check only; does not replace primary uniform cohort.",
+    "key": [
+      "N",
+      "R",
+      "H"
+    ],
+    "R": "all strict relations of full marked order",
+    "H": "global height in vertices including marked endpoints",
+    "selection": "For each m, group uniform/test and jittered_grid/test by exact (R,H). Sort IDs by draw, pair kth members without replacement, sort pairs by SHA256 of compact JSON [namespace,'match',m,uniform_id,jittered_id], take first 128 pairs. No K, ell, coordinates, target or predictions enter matching.",
+    "minimum_pairs": 128,
+    "insufficient": "INSUFFICIENT_COMMON_SUPPORT; record full ledger, no matched performance summary. No tolerance relaxation.",
+    "estimand": "Finite selected common-support subset. Conditional binomial formulas from the unselected uniform model do not assert unbiasedness or coverage after matching."
+  },
+  "evaluation": {
+    "primary": {
+      "family": "uniform",
+      "m": 256,
+      "count": 1024,
+      "method": "V",
+      "loss": "squared error of theta",
+      "gates": [
+        "RMSE(V)<=0.05",
+        "MSE(V)<=0.90*MSE(D) and MSE(V)<=0.90*MSE(C0)",
+        "Both 95% whole-order paired bootstrap upper bounds for MSE(V)-MSE(D) and MSE(V)-MSE(C0) are strictly below zero."
+      ],
+      "decision": "All gates and integrity checks pass: QUALIFIED_IN_DECLARED_MODEL. Otherwise NO_QUALIFICATION_DEMONSTRATED; execution/coverage failures: INCONCLUSIVE. This is an intersection of required gates, not selection of the better p-value. Thresholds are engineering qualification choices, not physical constants or a power guarantee."
+    },
+    "bootstrap": {
+      "replicates": 5000,
+      "unit": "independent marked order, one endpoint pair each",
+      "method": "percentile interval using linear quantiles; same resample indices for all methods; calibration fixed; Stream('lorentz-proper-time-v1','bootstrap',family,m)",
+      "matched_key": "Stream('lorentz-proper-time-v1','matched-bootstrap',m)"
+    },
+    "secondary": "Per size/family/method: RMSE, MAE, signed bias and complete individual errors; squared-time a_hat bias and MSE; zero-K frequency. Paired order bootstrap for unselected cohorts; whole matched-pair bootstrap for matched cohorts. Match-induced dependence between cohorts is not extra independent evidence. L comparisons and all transfer cells descriptive.",
+    "analytic_checks": "Before matching: K conditional on endpoints is Binomial(m,a); E[K/m]=a, Var[K/m]=a*(1-a)/m. For this endpoint law E[a]=1/9, E[a^2]=1/36, hence unconditional MSE(a_hat)=1/(12*m). sqrt(K/m) is downward biased, so never call theta_hat unbiased.",
+    "reporting": "Primary results remain primary even if negative; all sizes, rejected endpoint attempts, cohorts and failed matching cells reported. No target-bin filtering, relative error threshold near theta=0, or post-test estimator changes."
+  },
+  "pre_run_gate": [
+    "Publish this design",
+    "Implement generator, estimator interface, separate coordinate oracle, independent interval/longest-chain checks and declared bootstrap",
+    "Validate only small deterministic toys before target data",
+    "Publish computational source hashes and immutable source commit",
+    "Only then generate new target samples"
+  ],
+  "implementation_tests": [
+    "exact equal-order/different-theta counterexample",
+    "K and ell on empty, chain and antichain intervals",
+    "binomial first/second moments by finite exact sums",
+    "relabel invariance with transported marks",
+    "rational boost u->2u,v->v/2 and common coordinate dilation with scaled T",
+    "forbidden-field rejection and test-label/coordinate leakage tests",
+    "independent source replay and full output coverage"
+  ],
+  "publication": {
+    "new_target_samples_generated": false,
+    "large_run_executed": false,
+    "source_freeze_exists": false,
+    "scope": "Design and deterministic analytical examples only. Subsequent source freeze must precede any target sample. Implementation-driven amendments require a new public design version before generation."
+  },
+  "limits": [
+    "Known flat d=2 model and sampling law; no dimension inference",
+    "Absolute time scale not identifiable from unweighted finite order alone",
+    "Exact finite theta not identifiable even with declared T",
+    "Ancillarity statement is restricted to unselected uniform interval interiors conditioned on K",
+    "Full-order outside information, curvature, nonuniform sampling and selected subsets lie outside that argument",
+    "No continuum-limit proof, manifold certificate, new algorithm or physical validation",
+    "External replication remains open"
+  ],
+  "references": [
+    {
+      "doi": "10.1103/PhysRevLett.66.260",
+      "url": "https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.66.260"
+    },
+    {
+      "arxiv": "gr-qc/0512073",
+      "url": "https://arxiv.org/abs/gr-qc/0512073"
+    },
+    {
+      "arxiv": "1805.07312",
+      "url": "https://arxiv.org/abs/1805.07312"
+    }
+  ],
+  "resources": {
+    "phase_seconds": 1800,
+    "memory_bytes": 2147483648,
+    "failure": "INCONCLUSIVE with preserved logs; no silent partial cohort."
+  },
+  "archive": [
+    "source hashes and source commit",
+    "every RNG key and endpoint rejection count",
+    "coordinates, marks and full relation or lossless relation rows for every order",
+    "all K,ell,R,H values and targets",
+    "calibration coefficients and numerical checks",
+    "all predictions including unclipped predictions",
+    "matching ledger including unused draws",
+    "primary and secondary metrics, bootstrap settings and integrity results"
+  ]
+}
