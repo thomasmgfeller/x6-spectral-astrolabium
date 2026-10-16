@@ -1,0 +1,121 @@
+{
+  "schema": "x6.observable-comparison-contract/1",
+  "status": "PLANNED_BEFORE_COMPARISON",
+  "base_commit": "80c8836f42e065d0c32d4fff2d82dbdf403caea6",
+  "source_sha256": {
+    "research/lorentz_n7_complete/results/atlas.json": "7d6457b6377b3777ad520d2a22b85e17a22b61221da9edf77b7fdf5591f1d709",
+    "research/lorentz_h7_structure/results.json": "9e1b26237160aea33622a964e73898dbeae6fbb0964636f1c880cab403c3d21c"
+  },
+  "knowledge_before_run": [
+    "H7 has two collision pairs at n=7; D resolves the complete n<=7 corpus.",
+    "M11 separates the known n8 degree pair, but not the two n7 seeds.",
+    "Neighbor profiles contain D and therefore inherit its known finite n<=7 resolution.",
+    "Literature reports effective quill perturbations through n=9, with operators and protocol different from this exact paired S/A/K deck.",
+    "All six control pairs are known, not held out. New sample matrices and this comparison have not been computed before contract publication."
+  ],
+  "population": {
+    "census": {
+      "sizes": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "counts": [
+        1,
+        2,
+        5,
+        16,
+        63,
+        318,
+        2045
+      ],
+      "source": "research/lorentz_n7_complete/results/atlas.json"
+    },
+    "controls": {
+      "source": "research/lorentz_h7_structure/results.json",
+      "records": 12,
+      "pairs": 6,
+      "separate_from_census": true
+    },
+    "challenge": {
+      "sizes": [
+        8,
+        9
+      ],
+      "thresholds_out_of_8": [
+        1,
+        2,
+        4,
+        6
+      ],
+      "draws_per_cell": 16,
+      "draws_total": 128,
+      "seed": "x6-observable-comparison-v1-20261016",
+      "edge_rule": "For each i<j, SHA256 UTF-8 seed|n|threshold|draw|i|j; first digest byte modulo 8 < threshold. Then take strict transitive closure.",
+      "deduplication": "Exact directed isomorphism only; retain first draw representative and full draw-to-representative mapping.",
+      "distribution": "Biased upper-DAG closure sample, not uniform over labelled or unlabelled posets, not an exhaustive n=8 or n=9 corpus."
+    }
+  },
+  "conventions": {
+    "C": "Full strict transitive causal relation; direction-preserving isomorphism, no quotient by duality",
+    "base": "H7=(n,chi(C+Ct),chi(C-Ct),chi(2(CtC-CCt)),nmin,nmax,Wfuture,Wpast)",
+    "D": "Sorted multiset of (strict predecessor count,strict successor count).",
+    "M11": "Sum of common successor counts over unordered pairs of minimal elements each with exactly one strict successor.",
+    "N1": "Sorted multiset over roots v of [degree(v),sorted degrees of all strict predecessors,sorted degrees of all strict successors]. One fixed round; full relations, not Hasse edges.",
+    "Q1": "For each root v, add one new point z either with edge v<z or z<v, then take full transitive closure. Store ordered pair [chi_S/A/K of future extension,chi_S/A/K of past extension]. Sort these root-pairs as a multiset, preserving multiplicity and within-root direction pairing.",
+    "methods": [
+      "H7",
+      "H7+D",
+      "H7+M11",
+      "H7+N1",
+      "H7+Q1"
+    ],
+    "secondary": [
+      "D alone",
+      "M11 alone",
+      "N1 alone",
+      "Q1 alone"
+    ],
+    "extra_information": "No new adaptive motif, extra iteration, invariant or operator after outcomes."
+  },
+  "endpoints": [
+    "Per-size and per-panel class count, unresolved nonisomorphic pair count, maximum class size and every residual group for every method.",
+    "Each of six known control pairs: separated or unresolved for every method.",
+    "Record exact incremental characteristic-polynomial calls and integer payload counts; wall times are single-environment observations, not industrial efficiency claims.",
+    "Finite admissibility requires no unresolved census pair, all six controls separated and no unresolved pair in the fixed deduplicated challenge. Report failures; this gate does not certify future inputs.",
+    "Among finitely admissible extensions, order by additional polynomial calls, then total integer payload count. Recommend at most a bounded prefilter with exact-isomorphism fallback; never replace full relation or infer identity from equality."
+  ],
+  "verification": [
+    "Producer: Faddeev-LeVerrier integer recurrence with Cayley-Hamilton residual; direct closed-form quill rows/columns.",
+    "Checker: no producer import; Bareiss determinant interpolation; graph edge insertion followed by closure; explicit motif counts and separately assembled neighborhood multisets.",
+    "Replay challenge hashes; exact isomorphism checks for every deduplication, no spectral deduplication.",
+    "Compare all full values, partitions and all control results; relabel every input by reversal and verify invariance by transporting all quill matrices under the relabelling.",
+    "Reject missing transitive closure, lost multiplicity, reversed direction pairing, altered polynomial, forged deduplication and omitted collision groups."
+  ],
+  "resources": {
+    "phase_seconds": 900,
+    "memory_bytes": 2147483648,
+    "network_during_computation": false,
+    "no_automatic_scope_expansion": true
+  },
+  "decisions": {
+    "PASS_FINITE_COMPARISON": "All fixed records completed and exact countercheck/negative controls passed; individual methods may still fail resolution.",
+    "INCONCLUSIVE": "Timeout, missing input, code disagreement, incomplete countercheck or failed negative control. Retain partial artifacts without declaring completion."
+  },
+  "excluded": [
+    "General uniqueness or reconstruction",
+    "Representative population estimates or p-values",
+    "Physical spacetime or quantum-dynamical validation",
+    "Novelty",
+    "External independent human review"
+  ],
+  "references": [
+    "https://arxiv.org/abs/2008.02291",
+    "../lorentz_h7_structure/README.md"
+  ],
+  "freeze_policy": "Contract published before new comparison. Source and runner hashes must also be published before the first target run; history retained. Fixes require a recorded deviation and a fresh run."
+}
