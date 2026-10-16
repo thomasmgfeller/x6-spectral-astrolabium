@@ -1,6 +1,6 @@
 # NQK: Forschungsdossier
 
-Registerstand: 2026-10-15. BRANCH_ONLY / DOSSIER. Kein Live-Prüfsiegel.
+Registerstand: 2026-10-16. BRANCH_ONLY / DOSSIER. Kein Live-Prüfsiegel.
 
 ## Quelle
 

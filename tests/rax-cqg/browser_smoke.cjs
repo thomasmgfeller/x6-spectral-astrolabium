@@ -1,0 +1,52 @@
+// Bounded real-browser publication check. Not physical validation or a full UX audit.
+'use strict';
+const {chromium}=require('playwright');
+const fs=require('node:fs'),path=require('node:path'),http=require('node:http');
+const assert=require('node:assert/strict');
+const root=path.resolve(__dirname,'../..');
+const output=path.resolve(process.argv[2]||'/tmp/rax-cqg-browser');
+fs.mkdirSync(output,{recursive:true});
+const bytes=fs.readFileSync(path.join(root,'app/rax-cqg-lab.html'));
+const server=http.createServer((req,res)=>{res.writeHead(200,{'Content-Type':'text/html; charset=utf-8'});res.end(bytes);});
+(async()=>{
+ await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));
+ const browser=await chromium.launch({headless:true});
+ const checks=[],errors=[];
+ try {
+  const page=await browser.newPage({viewport:{width:1440,height:1000},acceptDownloads:true});
+  page.on('pageerror',e=>errors.push(e.message));
+  await page.goto('http://127.0.0.1:'+server.address().port);
+  await page.locator('#export-button:not([disabled])').waitFor();
+  assert.match(await page.locator('#selftest-status').textContent(),/7\/7/);
+  assert.equal(await page.locator('#error').isVisible(),false);
+  assert.equal(await page.locator('#spectrum-chart rect').count(),30);
+  checks.push('Default model computes, seven reference cases pass, thirty eigenvalues render');
+  await page.screenshot({path:path.join(output,'desktop.png'),fullPage:true});
+  await page.locator('#model').selectOption('chain');
+  await page.locator('#size').fill('8');await page.locator('#run-button').click();
+  await page.waitForFunction(()=>document.getElementById('m-height').textContent==='8');
+  assert.equal(await page.locator('#m-relations').textContent(),'28 / 7');
+  checks.push('Eight-element chain produces 28 relations, seven links and height eight');
+  const download=page.waitForEvent('download');await page.locator('#export-button').click();
+  const file=await download;const saved=path.join(output,'browser-export.json');await file.saveAs(saved);
+  const record=JSON.parse(fs.readFileSync(saved,'utf8'));
+  assert.equal(record.metrics.size,8);assert.equal(record.metrics.height,8);
+  assert.match(record.relation_sha256,/^[0-9a-f]{64}$/);
+  await page.locator('#import-file').setInputFiles(saved);
+  await page.waitForFunction(()=>document.getElementById('run-status').textContent.includes('Matrix geprüft'));
+  assert.equal(await page.locator('#m-relations').textContent(),'28 / 7');
+  checks.push('Real download and hash-verified import roundtrip');
+  await page.locator('#retention').fill('0');await page.locator('#thin-button').click();
+  const counts=await page.locator('#thinning-table tr td:nth-child(2)').allTextContents();
+  assert.deepEqual(counts,['8','0','0','0','0']);
+  checks.push('Zero-retention thinning renders the empty induced orders');
+  await page.setViewportSize({width:390,height:844});
+  assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),'mobile horizontal overflow');
+  await page.screenshot({path:path.join(output,'mobile.png'),fullPage:true});
+  checks.push('390-pixel viewport has no horizontal page overflow');
+  assert.deepEqual(errors,[]);checks.push('No uncaught page JavaScript exceptions');
+  const report={status:'PASS_BOUNDED_CHROMIUM_SMOKE',checks,scope:'Actual headless Chromium interactions and screenshots; not human visual review, full accessibility audit or physical validation'};
+  fs.writeFileSync(path.join(output,'result.json'),JSON.stringify(report,null,2)+'\n');
+  console.log(JSON.stringify(report));
+ } finally {await browser.close();server.close();}
+})().catch(e=>{console.error(e);server.close();process.exitCode=1;});

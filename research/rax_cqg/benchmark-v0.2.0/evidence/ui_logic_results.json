@@ -1,0 +1,526 @@
+{
+  "method": "Node VM with minimal test DOM; actual generated HTML scripts",
+  "visual_browser_qa": "NOT_RUN",
+  "checks": [
+    {
+      "name": "default calculation completes",
+      "passed": true
+    },
+    {
+      "name": "runtime selftests displayed",
+      "passed": true
+    },
+    {
+      "name": "actual spectrum plotted",
+      "passed": true
+    },
+    {
+      "name": "matrix hash available",
+      "passed": true
+    },
+    {
+      "name": "controls recompute actual values",
+      "passed": true
+    },
+    {
+      "name": "invalid size clears stale results",
+      "passed": true
+    },
+    {
+      "name": "import recomputes and ignores stored metrics",
+      "passed": true
+    },
+    {
+      "name": "export contains recomputed matrix and diagnostics",
+      "passed": true
+    },
+    {
+      "name": "bad hash rejected",
+      "passed": true
+    },
+    {
+      "name": "legacy unverified schema rejected",
+      "passed": true
+    },
+    {
+      "name": "sweep import populates selector",
+      "passed": true
+    },
+    {
+      "name": "sweep selection recomputes chosen graph",
+      "passed": true
+    },
+    {
+      "name": "zero retention produces empty suborders",
+      "passed": true
+    },
+    {
+      "name": "invalid thinning clears stale diagram",
+      "passed": true
+    },
+    {
+      "name": "thinning recovers after correction",
+      "passed": true
+    },
+    {
+      "name": "independent clock chart rendered in DOM",
+      "passed": true
+    }
+  ],
+  "count": 16,
+  "export_fixture": {
+    "schema": "RAX-CQG-EXPERIMENT-0.2",
+    "software_version": "0.2.0",
+    "evidence_class": "FINITE_ORDER_BENCHMARK",
+    "generator": {
+      "model": "percolation",
+      "size": 16,
+      "seed": 123,
+      "rng": "PCG-XSH-RR-64-32",
+      "stream": 54,
+      "version": "0.2.0",
+      "uniform": "(uint32+0.5)/2**32",
+      "p": 0.3
+    },
+    "relation_rows": [
+      "0100100111011111",
+      "0000000101011111",
+      "0001001001011111",
+      "0000001001011111",
+      "0000000111011111",
+      "0000000000001010",
+      "0000000001011111",
+      "0000000001010111",
+      "0000000001010111",
+      "0000000000010111",
+      "0000000000000101",
+      "0000000000000010",
+      "0000000000000000",
+      "0000000000000001",
+      "0000000000000000",
+      "0000000000000000"
+    ],
+    "relation_sha256": "937fc14ad9c3417015a07e2f024f5c24640e35c473a315b8984e06e494556641",
+    "metrics": {
+      "size": 16,
+      "relations": 66,
+      "links": 20,
+      "ordering_fraction": 0.55,
+      "height": 6,
+      "interval_counts": [
+        20,
+        14,
+        15,
+        8,
+        5,
+        2,
+        2
+      ],
+      "bdg4_bracket": -54,
+      "adjacency_spectrum": [
+        -4.75411621079855,
+        -2.1627367930468977,
+        -1.5359151913537967,
+        -1.4269024775135812,
+        -1.3577189974573376,
+        -1,
+        -1,
+        -0.9999999999999997,
+        -0.5908982141372747,
+        -0.4463745767184692,
+        0.11085297377482936,
+        0.5914705286920388,
+        1.0746139121437759,
+        1.8419024161489304,
+        2.5041014009246574,
+        9.151721229341673
+      ],
+      "laplacian_spectrum": [
+        -7.627562279103233e-16,
+        1.7231369206764975,
+        2.115546900639505,
+        5.549636581617304,
+        6.805684430443714,
+        7.36344736009371,
+        8.638503826604312,
+        9,
+        9,
+        9.790004536200563,
+        10.178577444868674,
+        10.959042104539195,
+        11.613058515545463,
+        12,
+        13.11276261658246,
+        14.150598762188597
+      ],
+      "spectral_radius": 9.151721229341673,
+      "adjacency_spectral_width": 13.905837440140223,
+      "algebraic_connectivity": 1.7231369206764975,
+      "h2_spectral_entropy": 1.33845884934535,
+      "adjacency_spectral_std": 2.8722813232690143,
+      "triangles": 110,
+      "triangles_per_vertex": 6.875
+    },
+    "origin": {
+      "kind": "matrix_import",
+      "stored_metrics_used": false,
+      "generator_replay_checked": false
+    },
+    "thinning": {
+      "method": "independent Bernoulli retention, induced suborders",
+      "retention": 0.75,
+      "seed": 104729,
+      "steps": 4,
+      "interpretation": "Thinning only; no fitted RG flow or continuum claim",
+      "path": [
+        {
+          "step": 0,
+          "original_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "relation_rows": [
+            "0100100111011111",
+            "0000000101011111",
+            "0001001001011111",
+            "0000001001011111",
+            "0000000111011111",
+            "0000000000001010",
+            "0000000001011111",
+            "0000000001010111",
+            "0000000001010111",
+            "0000000000010111",
+            "0000000000000101",
+            "0000000000000010",
+            "0000000000000000",
+            "0000000000000001",
+            "0000000000000000",
+            "0000000000000000"
+          ],
+          "metrics": {
+            "size": 16,
+            "relations": 66,
+            "links": 20,
+            "ordering_fraction": 0.55,
+            "height": 6,
+            "interval_counts": [
+              20,
+              14,
+              15,
+              8,
+              5,
+              2,
+              2
+            ],
+            "bdg4_bracket": -54,
+            "adjacency_spectrum": [
+              -4.75411621079855,
+              -2.1627367930468977,
+              -1.5359151913537967,
+              -1.4269024775135812,
+              -1.3577189974573376,
+              -1,
+              -1,
+              -0.9999999999999997,
+              -0.5908982141372747,
+              -0.4463745767184692,
+              0.11085297377482936,
+              0.5914705286920388,
+              1.0746139121437759,
+              1.8419024161489304,
+              2.5041014009246574,
+              9.151721229341673
+            ],
+            "laplacian_spectrum": [
+              -7.627562279103233e-16,
+              1.7231369206764975,
+              2.115546900639505,
+              5.549636581617304,
+              6.805684430443714,
+              7.36344736009371,
+              8.638503826604312,
+              9,
+              9,
+              9.790004536200563,
+              10.178577444868674,
+              10.959042104539195,
+              11.613058515545463,
+              12,
+              13.11276261658246,
+              14.150598762188597
+            ],
+            "spectral_radius": 9.151721229341673,
+            "adjacency_spectral_width": 13.905837440140223,
+            "algebraic_connectivity": 1.7231369206764975,
+            "h2_spectral_entropy": 1.33845884934535,
+            "adjacency_spectral_std": 2.8722813232690143,
+            "triangles": 110,
+            "triangles_per_vertex": 6.875
+          }
+        },
+        {
+          "step": 1,
+          "original_indices": [
+            0,
+            2,
+            3,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            15
+          ],
+          "relation_rows": [
+            "0000011101111",
+            "0010100101111",
+            "0000100101111",
+            "0000000000100",
+            "0000000101111",
+            "0000000101011",
+            "0000000101011",
+            "0000000001011",
+            "0000000000011",
+            "0000000000000",
+            "0000000000000",
+            "0000000000001",
+            "0000000000000"
+          ],
+          "metrics": {
+            "size": 13,
+            "relations": 40,
+            "links": 14,
+            "ordering_fraction": 0.5128205128205128,
+            "height": 6,
+            "interval_counts": [
+              14,
+              11,
+              8,
+              5,
+              2
+            ],
+            "bdg4_bracket": 10,
+            "adjacency_spectrum": [
+              -3.7197439052560513,
+              -1.952028280963105,
+              -1.4556230564220265,
+              -1,
+              -1,
+              -0.9999999999999994,
+              -0.6005686226102201,
+              -0.5000962291799582,
+              9.677327414039932e-17,
+              0.8484417278538551,
+              1.1890501335109138,
+              2.1197530957776567,
+              7.070815137288937
+            ],
+            "laplacian_spectrum": [
+              -5.656976321276306e-16,
+              0.8271266072620003,
+              1.958219780862225,
+              4.011105419471675,
+              4.999999999999997,
+              5.7603507172907085,
+              7.388635640372327,
+              7.890266563314306,
+              8,
+              8,
+              10.000000000000002,
+              10.13566720014643,
+              11.028628071280318
+            ],
+            "spectral_radius": 7.070815137288937,
+            "adjacency_spectral_width": 10.790559042544988,
+            "algebraic_connectivity": 0.8271266072620003,
+            "h2_spectral_entropy": 1.3205897198544188,
+            "adjacency_spectral_std": 2.4806946917841692,
+            "triangles": 50,
+            "triangles_per_vertex": 3.8461538461538463
+          }
+        },
+        {
+          "step": 2,
+          "original_indices": [
+            2,
+            3,
+            5,
+            7,
+            8,
+            11,
+            13,
+            15
+          ],
+          "relation_rows": [
+            "01000111",
+            "00000111",
+            "00000000",
+            "00000111",
+            "00000111",
+            "00000000",
+            "00000001",
+            "00000000"
+          ],
+          "metrics": {
+            "size": 8,
+            "relations": 14,
+            "links": 8,
+            "ordering_fraction": 0.5,
+            "height": 4,
+            "interval_counts": [
+              8,
+              5,
+              1
+            ],
+            "bdg4_bracket": 29,
+            "adjacency_spectrum": [
+              -2.9518628852826923,
+              -1,
+              -0.9999999999999998,
+              0,
+              3.24803615701812e-17,
+              0.3127698316495552,
+              0.5267709749463892,
+              4.112322078686746
+            ],
+            "laplacian_spectrum": [
+              0,
+              2.5586440346761657e-16,
+              3,
+              3.0000000000000004,
+              3.9999999999999996,
+              5,
+              5.999999999999999,
+              7.000000000000001
+            ],
+            "spectral_radius": 4.112322078686746,
+            "adjacency_spectral_width": 7.0641849639694385,
+            "algebraic_connectivity": 2.5586440346761657e-16,
+            "h2_spectral_entropy": 0.971314653726323,
+            "adjacency_spectral_std": 1.8708286933869707,
+            "triangles": 7,
+            "triangles_per_vertex": 0.875
+          }
+        },
+        {
+          "step": 3,
+          "original_indices": [
+            2,
+            3,
+            5,
+            8,
+            11
+          ],
+          "relation_rows": [
+            "01001",
+            "00001",
+            "00000",
+            "00001",
+            "00000"
+          ],
+          "metrics": {
+            "size": 5,
+            "relations": 4,
+            "links": 3,
+            "ordering_fraction": 0.4,
+            "height": 3,
+            "interval_counts": [
+              3,
+              1
+            ],
+            "bdg4_bracket": 11,
+            "adjacency_spectrum": [
+              -1.4811943040920157,
+              -1,
+              0,
+              0.3111078174659819,
+              2.1700864866260337
+            ],
+            "laplacian_spectrum": [
+              -6.178152800045978e-17,
+              0,
+              0.9999999999999999,
+              3,
+              4
+            ],
+            "spectral_radius": 2.1700864866260337,
+            "adjacency_spectral_width": 3.651280790718049,
+            "algebraic_connectivity": 0,
+            "h2_spectral_entropy": 0.9800752541371331,
+            "adjacency_spectral_std": 1.2649110640673518,
+            "triangles": 1,
+            "triangles_per_vertex": 0.2
+          }
+        },
+        {
+          "step": 4,
+          "original_indices": [
+            2,
+            3,
+            5,
+            8,
+            11
+          ],
+          "relation_rows": [
+            "01001",
+            "00001",
+            "00000",
+            "00001",
+            "00000"
+          ],
+          "metrics": {
+            "size": 5,
+            "relations": 4,
+            "links": 3,
+            "ordering_fraction": 0.4,
+            "height": 3,
+            "interval_counts": [
+              3,
+              1
+            ],
+            "bdg4_bracket": 11,
+            "adjacency_spectrum": [
+              -1.4811943040920157,
+              -1,
+              0,
+              0.3111078174659819,
+              2.1700864866260337
+            ],
+            "laplacian_spectrum": [
+              -6.178152800045978e-17,
+              0,
+              0.9999999999999999,
+              3,
+              4
+            ],
+            "spectral_radius": 2.1700864866260337,
+            "adjacency_spectral_width": 3.651280790718049,
+            "algebraic_connectivity": 0,
+            "h2_spectral_entropy": 0.9800752541371331,
+            "adjacency_spectral_std": 1.2649110640673518,
+            "triangles": 1,
+            "triangles_per_vertex": 0.2
+          }
+        }
+      ]
+    }
+  }
+}

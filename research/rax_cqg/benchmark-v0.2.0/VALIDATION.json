@@ -1,0 +1,53 @@
+{
+  "schema": "RAX-CQG-RELEASE-CHECKS-0.2",
+  "software_version": "0.2.0",
+  "date": "2026-10-16",
+  "result": "PASS_WITH_EXPLICIT_SCOPE_LIMITS",
+  "unittest_cases": 28,
+  "exhaustive_small_order_check": {
+    "upper_DAGs_on_5_labels": 1024,
+    "distinct_transitive_orders": 357,
+    "reference": "independent graph reachability, explicit interval sets and brute-force chain subsets"
+  },
+  "javascript_python_parity_cases": 28,
+  "numeric_comparison": {
+    "atol": 1e-09,
+    "rtol": 1e-09
+  },
+  "ui_logic_checks": 16,
+  "ui_export_python_roundtrip": "PASS",
+  "sweep_runs_replayed": 240,
+  "sweep_groups_verified": 30,
+  "visual_browser_QA": "NOT_RUN: managed environment has no supported browser-control capability; Node VM DOM tests are not visual QA",
+  "scientific_scope": [
+    "finite mathematical/implementation consistency only",
+    "4D BDG interval bracket, not continuum curvature validation",
+    "conditioned fixed-N sprinklings, not Poisson count sampling",
+    "classical stable graph-field reference",
+    "assumed two-qubit clock, not emergence of quantum mechanics",
+    "no QSG, KR suppression, Hauptvermutung or continuum-limit claim"
+  ],
+  "environment": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "node": "v24.19.0",
+    "platform": "Linux-6.18.44-x86_64-with-glibc2.39"
+  },
+  "duration_seconds": 3.089082890001009,
+  "source_sha256": {
+    "rax_cqg_twin.py": "ae96f5abd1be8a44e67dba4180fc646d14e23c02f1686e30c71643b8a0124eba",
+    "rax_cqg_matter_astrolab.py": "7be2177703da98a2da9eb0241398473053a6964835c44600cf6fa17a861b044a",
+    "rax_cqg_reference_models.py": "25af38e5383059694f078bcb722557e5c48658b838158a54d3d44ba75ccfda26",
+    "run_sweep.py": "9b9b3be3f4d4b9a737ffad2b8a22b2bb670782cc637379edfca913ae669f8900",
+    "build_web.py": "c77221b9616b8680a3c3cacd1f2ceb9215f7f2ca534530764235d7c6c768e4ce",
+    "validate.py": "5fd6ff96877df899821532f618ba929202a0edf2d7904578ce2f5f4910006bf4",
+    "web/rax_core.js": "05c28eac63f9c7af7f4f1753f09b17098ce7a1114386fce9a67e6f25e8982651",
+    "web/lab_ui.js": "64ae178d14e4845218a4ae4b2166cbe2574724e76c48d2ede031d29d70231fc3",
+    "web/lab_template.html": "8e0088748ea0c6c327fbdc667b4d4e9e2db6bf52693d423cbc04f1600a3e44fa",
+    "tests/test_science.py": "37857e14cd80fff1936f894b3126d074874968a3f6e17a0539f2332680061b2d",
+    "tests/js_bridge.js": "32ffea94f3b7ef072e01363561562005967a8425242688627e195310b685aea3",
+    "tests/ui_logic_test.js": "c81b71d00baa07bbf88da1e0714a222bd300ae3ae19579a265c2c84d6180bb95",
+    "rax_cqg_lab.html": "2e6bf929405aee66f12113c405c9c1879d71d2c897f4fc7435b5d4bf18c4c8a4"
+  }
+}

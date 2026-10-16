@@ -77,8 +77,8 @@
     "docs/research/causal-order/wolfram-countercheck-v0.1/PUBLICATION.json": "36eb3d2488122423e1f79ab9449d19efb833da4eb34a422b7605a5aa4abdd364",
     "docs/research/causal-order/wolfram-countercheck-v0.1/README.md": "8cba550748e851cb574aba76eb519daf3cb6791993a10bb51ede6a5f563dc52c",
     "docs/research/causal-order/wolfram-countercheck-v0.1/X6_Wolfram_Fall5_v0_1.zip": "7992c9a6ad1622cd338785a11ddccd46d3a0d4839db0333719f239c2d3fef868",
-    "MODULE_REGISTRY.json": "501b72ed667b2a2494e052dd7be977eb909fc12176085f7133b6c15e08bc1d5a",
-    "docs/MODULE_REGISTRY.md": "921a8ed79068f4b8886d02f086adfd2a414a3b81c3cb588d3f6e39f36eb45cf0",
+    "MODULE_REGISTRY.json": "8e1550b9f551a55669a4df694d2475be3779af175fbfd936ecec06a65863d65d",
+    "docs/MODULE_REGISTRY.md": "4a2e646f18295d106203905a527faecca43f15e360e8016fa3aeacd3fa53d26e",
     "docs/MODULE_REGISTRY_ACCEPTANCE.md": "5c2f5a4aac8ed5f645826e796da5021801b7f3c0dad89aa3ad6b23554d74be8c",
     "tools/module_registry.py": "d09317d33e58acabbec4944966242793cf938a942ef6a4ffae5fc26bc4ee4bfe",
     ".github/workflows/x6-module-registry.yml": "71be650d610a06d0848379c7efe64be9f66025f430297f70c6f4a9c3c3f85aaf",
@@ -281,6 +281,24 @@
         "experiments/x6-phase-filter/README.md"
       ],
       "scope": "Approved development-tool publication. All twelve versioned package files are byte-identical to the approved package. The report records 42 local validator tests, not denoising efficacy, portability qualification or physical evidence. Existing historical digests retained."
+    }
+  ],
+  "non_historical_documentation_updates": [
+    {
+      "date": "2026-10-16",
+      "scope": "Current module-register navigation updated for the approved RAX-CQG benchmark. Prior hashes retained below; historical scientific evidence and artifacts unchanged.",
+      "files": [
+        {
+          "path": "MODULE_REGISTRY.json",
+          "previous_sha256": "501b72ed667b2a2494e052dd7be977eb909fc12176085f7133b6c15e08bc1d5a",
+          "sha256": "8e1550b9f551a55669a4df694d2475be3779af175fbfd936ecec06a65863d65d"
+        },
+        {
+          "path": "docs/MODULE_REGISTRY.md",
+          "previous_sha256": "921a8ed79068f4b8886d02f086adfd2a414a3b81c3cb588d3f6e39f36eb45cf0",
+          "sha256": "4a2e646f18295d106203905a527faecca43f15e360e8016fa3aeacd3fa53d26e"
+        }
+      ]
     }
   ]
 }

@@ -1,0 +1,62 @@
+name: RAX-CQG Benchmark
+on:
+  pull_request:
+    paths: ['research/rax_cqg/**', 'docs/research/rax/cqg-benchmark-v0.2.0/**', 'app/rax-cqg-lab.html', 'tests/rax-cqg/**', '.github/workflows/rax-cqg-benchmark.yml']
+  push:
+    branches: [main]
+    paths: ['research/rax_cqg/**', 'docs/research/rax/cqg-benchmark-v0.2.0/**', 'app/rax-cqg-lab.html', 'tests/rax-cqg/**', '.github/workflows/rax-cqg-benchmark.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  references:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: python3 tests/rax-cqg/verify_publication.py
+      - run: python3 -m pip install -r research/rax_cqg/benchmark-v0.2.0/requirements.txt
+      - name: Reproduce references in a temporary copy
+        run: |
+          cp -R research/rax_cqg/benchmark-v0.2.0 "$RUNNER_TEMP/rax-cqg-replay"
+          cd "$RUNNER_TEMP/rax-cqg-replay"
+          python3 validate.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: rax-cqg-reference-replay
+          path: |
+            ${{ runner.temp }}/rax-cqg-replay/VALIDATION.json
+            ${{ runner.temp }}/rax-cqg-replay/evidence/
+          retention-days: 30
+          if-no-files-found: error
+  browser:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Install the hub's pinned browser runner
+        run: |
+          npm install --no-save --package-lock=false --ignore-scripts playwright@1.62.1
+          npx playwright install --with-deps chromium
+      - run: node tests/rax-cqg/browser_smoke.cjs "$RUNNER_TEMP/rax-cqg-browser"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: rax-cqg-browser
+          path: ${{ runner.temp }}/rax-cqg-browser
+          retention-days: 30
+          if-no-files-found: error

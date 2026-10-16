@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Reproduzierbares Labor für endliche kausale Ordnungen, Intervallkombinationen und Graphspektren. Explorative Referenzsoftware, keine validierte Quantengravitation.">
+<title>RAX-CQG · Causal-Set Benchmark</title>
+<style>
+:root{color-scheme:dark;--bg:#0b1220;--panel:#131e30;--edge:#2b3b51;--ink:#e7eef8;--muted:#a7b8cd;--teal:#6ee7ce;--violet:#c3afff;--warning:#ffcf87;--red:#ffb0b8}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 system-ui,-apple-system,sans-serif}main{max-width:1240px;margin:auto;padding:32px 24px 60px}h1{font-size:clamp(25px,4vw,38px);letter-spacing:-.04em;margin:4px 0 12px;line-height:1.15}h2{font-size:19px;letter-spacing:-.02em;margin:0 0 8px}h3{font-size:15px;margin:8px 0}p{margin:8px 0 16px}a{color:var(--teal)}.eyebrow{letter-spacing:.16em;font-size:11px;text-transform:uppercase;color:var(--teal);font-weight:700}.muted,.hint{color:var(--muted)}.hint{font-size:12px}.mast{display:flex;justify-content:space-between;gap:24px;align-items:start}.mast>div:first-child{max-width:760px}.pill{border:1px solid var(--edge);border-radius:20px;padding:6px 12px;font-size:12px;white-space:nowrap}.notice{background:#182b31;border-left:3px solid var(--teal);padding:12px 16px;margin:18px 0 24px;font-size:13px}.panel{background:var(--panel);border:1px solid var(--edge);border-radius:14px;padding:20px;margin:0 0 20px}.controls{display:grid;grid-template-columns:2fr 1fr 1fr 1fr auto;gap:12px;align-items:end}.field label{display:block;font-size:12px;color:var(--muted);margin:0 0 5px}input,select,button{font:inherit}input,select{width:100%;background:#0b1423;color:var(--ink);border:1px solid #456078;border-radius:7px;min-height:43px;padding:8px 10px}input:disabled{opacity:.5}button,.file-label{display:inline-block;border:1px solid #42607b;background:#20354d;color:var(--ink);border-radius:7px;padding:10px 14px;cursor:pointer;font-weight:600;font-size:13px}button.primary{background:var(--teal);color:#09211d;border-color:var(--teal)}button:disabled{opacity:.45;cursor:not-allowed}button:hover:not(:disabled),.file-label:hover{filter:brightness(1.12)}:focus-visible{outline:3px solid var(--violet);outline-offset:3px}.toolbar{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:14px}.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:20px}.metric{padding:18px;background:var(--panel);border:1px solid var(--edge);border-radius:12px}.metric .label{font-size:12px;color:var(--muted)}.metric .value{font:600 28px/1.4 ui-monospace,monospace;color:var(--teal);overflow-wrap:anywhere}.metric small{font-size:11px;color:var(--muted)}.grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}.grid .panel{margin:0}.chart{width:100%;min-height:235px;overflow:hidden}.chart svg{display:block;width:100%;height:auto}.chart text{font:11px system-ui,sans-serif;fill:var(--muted)}.chart .axis{stroke:#526377;stroke-width:1}.chart .gridline{stroke:#2a3b50;stroke-width:1}.chart .empty{padding:40px 10px;text-align:center;color:var(--muted)}.section-gap{margin-top:20px}.table-wrap{overflow:auto}table{width:100%;border-collapse:collapse;font-size:13px}th,td{padding:9px 11px;text-align:left;border-bottom:1px solid var(--edge);white-space:nowrap}th{font-size:12px;color:var(--muted);font-weight:600}td.num{text-align:right;font-family:ui-monospace,monospace}.split{display:flex;align-items:center;justify-content:space-between;gap:15px;flex-wrap:wrap}.small-select{width:auto;min-height:36px;font-size:12px}.two-controls{display:grid;grid-template-columns:1fr 1fr auto;gap:12px;max-width:560px;align-items:end;margin:16px 0}.error{background:#3b1e2a;border:1px solid #a95c6b;color:#ffe0e4;padding:12px 16px;border-radius:8px;margin:12px 0}.success{color:var(--teal)}.warning{color:var(--warning)}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}details{margin-top:12px}summary{cursor:pointer;font-weight:600;color:var(--violet)}details p{margin-top:12px}code{font-family:ui-monospace,monospace;font-size:.9em;color:#cad8eb}footer{border-top:1px solid var(--edge);margin-top:28px;padding-top:18px;font-size:12px;color:var(--muted)}[hidden]{display:none!important}.source{word-break:break-all;font-size:11px}.result-title{margin:0 0 18px}.chips{display:flex;gap:8px;flex-wrap:wrap}.chips span{padding:4px 9px;background:#18283c;border-radius:5px;font-size:11px}.status{font-size:12px;padding-top:10px}#run-status{min-height:22px}.legend{font-size:12px;color:var(--muted)}.teal{color:var(--teal)}.violet{color:var(--violet)}@media(max-width:850px){.controls{grid-template-columns:2fr 1fr 1fr}.controls button{grid-column:2/4}.grid{grid-template-columns:1fr}.metrics{grid-template-columns:1fr 1fr}.mast{display:block}.mast .pill{display:inline-block;margin-top:4px}}@media(max-width:500px){main{padding:22px 14px 40px}.panel{padding:16px}.controls{grid-template-columns:1fr 1fr}.controls .field:first-child{grid-column:1/-1}.controls button{grid-column:auto}.metrics{gap:9px}.metric{padding:13px}.metric .value{font-size:23px}.two-controls{grid-template-columns:1fr 1fr}.two-controls button{grid-column:1/-1}.toolbar button,.toolbar .file-label{flex:1;text-align:center}h1{font-size:29px}}
+</style>
+</head>
+<body><main>
+<header class="mast"><div><div class="eyebrow">RAX-CQG · Forschungswerkzeuge</div><h1>Causal-Set Benchmark</h1><p class="muted">Endliche Ordnungen untersuchen. Intervalle exakt zählen. Spektren nachvollziehen.</p></div><span class="pill">Explorativer Prototyp · 0.2.0</span></header>
+<div class="notice">Die berechneten Werte beschreiben endliche mathematische Modelle. Sie belegen keine emergente Raumzeit, KR-Unterdrückung oder Quantengravitation. Die Referenzuhr unten ist ein separat vorausgesetztes Quantenmodell.</div>
+<section class="panel" aria-labelledby="setup-title"><h2 id="setup-title">Experiment anlegen</h2>
+<form id="experiment-form" class="controls">
+<div class="field"><label for="model">Ensemble</label><select id="model"><option value="minkowski_4d">4D-Minkowski-Diamant · festes N</option><option value="minkowski_2d">2D-Minkowski-Diamant · festes N</option><option value="percolation">Transitive Perkolation</option><option value="three_layer">Dreischicht-Poset</option><option value="chain">Vollständige Kette</option><option value="antichain">Antikette</option></select></div>
+<div class="field"><label for="size">Ereignisse N · 4–96</label><input id="size" type="number" min="4" max="96" step="1" value="30" required></div>
+<div class="field"><label for="seed">Seed · uint32</label><input id="seed" type="number" min="0" max="4294967295" step="1" value="42" required></div>
+<div class="field"><label for="probability">Kantenwahrscheinlichkeit p</label><input id="probability" type="number" min="0" max="1" step="0.01" value="0.25" disabled></div>
+<button class="primary" id="run-button" type="submit">Berechnen</button></form>
+<p id="ensemble-note" class="hint"></p>
+<div class="toolbar"><button id="export-button" type="button" disabled>Experiment als JSON</button><label class="file-label" for="import-file">JSON importieren</label><input class="sr-only" type="file" id="import-file" accept=".json,application/json"><span class="hint">Offline · keine externen Bibliotheken · keine Datenübertragung</span></div>
+<div id="dataset-picker" hidden class="section-gap"><label for="dataset-run" class="hint">Importierter Sweep · Datensatz auswählen</label><select id="dataset-run"></select><p id="dataset-note" class="hint"></p></div>
+<div id="selftest-status" class="status" aria-live="polite">Referenzfälle werden geprüft …</div><div id="run-status" class="status" aria-live="polite"></div><div id="error" role="alert" class="error" hidden></div>
+</section>
+<div id="results" hidden>
+<div class="split result-title"><div><h2 id="result-heading">Ergebnis</h2><div id="result-meta" class="chips"></div></div><span class="hint">Alle Grafiken werden aus der Relationsmatrix berechnet.</span></div>
+<section class="metrics" aria-label="Kennzahlen">
+<div class="metric"><div class="label">Relationen / Links</div><div class="value" id="m-relations"></div><small>Alle Paare / unmittelbare Nachbarn</small></div>
+<div class="metric"><div class="label">4D-BDG-Kombination B₄</div><div class="value" id="m-bdg"></div><small>Dimensionslose Intervallkombination</small></div>
+<div class="metric"><div class="label">Fiedler-Wert λ₂(L)</div><div class="value" id="m-fiedler"></div><small>Kombinatorischer Graph-Laplaceoperator</small></div>
+<div class="metric"><div class="label">Längste Kette</div><div class="value" id="m-height"></div><small>Anzahl Ereignisse · keine kalibrierte Uhrzeit</small></div>
+</section>
+<div class="grid">
+<section class="panel"><div class="split"><h2>Berechnetes Spektrum</h2><select id="spectrum-kind" class="small-select" aria-label="Spektraloperator"><option value="adjacency_spectrum">H = R + Rᵀ</option><option value="laplacian_spectrum">L = D − H</option></select></div><p class="hint">Ein Balken pro Eigenwert. Die Symmetrisierung verliert die kausale Orientierung.</p><div id="spectrum-chart" class="chart"></div><p class="hint" id="spectrum-note"></p></section>
+<section class="panel"><h2>Offene Ordnungsintervalle</h2><p class="hint">Nₖ zählt Paare mit genau k inneren Ereignissen. N₀ zählt die Links.</p><div id="interval-chart" class="chart"></div><p class="hint">B₄ = N − N₀ + 9N₁ − 16N₂ + 8N₃. Eine 4D-Formel ist keine Dimensionsmessung.</p></section>
+</div>
+<div class="grid section-gap">
+<section class="panel"><h2>Gerichtete Relationsmatrix</h2><p class="hint">Zeile i, Spalte j: Rᵢⱼ = 1 bedeutet i ≺ j. Die Reihenfolge der Indizes ist keine physikalische Zeit.</p><div id="matrix-chart" class="chart"></div></section>
+<section class="panel"><h2>Weitere Diagnostik</h2><div class="table-wrap"><table><tbody id="diagnostics-table"></tbody></table></div><details><summary>Was diese Kennzahlen bedeuten</summary><p class="hint">Die H²-Entropie gehört zur konstruierten Matrix ρ = H² / Tr(H²). Für H = 0 ist sie undefiniert. Sie ist keine nachgewiesene Verschränkungsentropie. Die Spektralstandardabweichung ist exakt √(2M/N), also eine Funktion der Relationsdichte.</p></details><p id="matrix-hash" class="source muted"></p></section>
+</div>
+<section class="panel section-gap"><h2>Stochastische Ausdünnung</h2><p class="muted">Jeder Schritt behält Ereignisse unabhängig mit Wahrscheinlichkeit q. Gezeigt werden echte induzierte Teilordnungen derselben Realisierung.</p><div class="two-controls"><div class="field"><label for="retention">Behaltewahrscheinlichkeit q</label><input id="retention" type="number" min="0" max="1" step="0.05" value="0.75"></div><div class="field"><label for="steps">Schritte · 0–8</label><input id="steps" type="number" min="0" max="8" step="1" value="4"></div><button id="thin-button" type="button">Ausdünnen</button></div><div id="thinning-chart" class="chart"></div><div class="table-wrap"><table><thead><tr><th>Schritt</th><th>N</th><th>Relationen</th><th>Ordnungsanteil</th><th>B₄</th></tr></thead><tbody id="thinning-table"></tbody></table></div><p class="hint">Seed der Ausdünnung: 104729. Die Kompositionsregel q₁q₂ gilt für die Verteilung, nicht als Gleichheit beliebiger einzelner Zufallsziehungen. Keine Renormierung der Wirkung oder Kontinuumsgrenze nachgewiesen.</p></section>
+</div>
+<section class="panel section-gap"><h2>Relationale Uhr · separater Referenzfall</h2><p class="muted">Ein stationärer Zustand zweier Qubits wird auf eine interne Uhrablesung konditioniert. Quantenmechanik und Hamiltonoperatoren werden hier vorausgesetzt.</p><details id="clock-details"><summary>Periodische Uhr und Messwahrscheinlichkeit anzeigen</summary><p class="hint">ℏ = 1; H<sub>T</sub> = H<sub>S</sub> = diag(−½, ½); |Ψ⟩ = (|01⟩ + |10⟩)/√2. Die Nebenbedingung (H<sub>T</sub> ⊗ I + I ⊗ H<sub>S</sub>)|Ψ⟩ = 0 ist erfüllt.</p><div id="clock-chart" class="chart"></div><p class="hint">Gezeigt: P(+x | τ), aus dem bedingten Zustand berechnet. Periodendauer 2π, Uhr-POVM E(τ) = |τ⟩⟨τ|/π. Der Parameter τ ist nicht der Wachstumsindex N. Kein Anschluss an den Poset-Generator implementiert.</p></details></section>
+<section class="panel"><h2>Rechenstand und Grenzen</h2><div class="table-wrap"><table><thead><tr><th>Baustein</th><th>Umfang</th></tr></thead><tbody><tr><td>Ordnung, Intervalle, Graphspektren</td><td>Endliche Berechnung mit Referenztests</td></tr><tr><td>4D-BDG-Kombination</td><td>Exakte Zählformel; physikalische Vorfaktoren nicht gesetzt</td></tr><tr><td>Materiereferenz im Python-Paket</td><td>Stabiles klassisches Gaußmodell auf einem Graphen</td></tr><tr><td>Relationale Uhr</td><td>Vorausgesetztes periodisches Zweiqubitmodell</td></tr><tr><td>KR-Pfadsumme / nichtkommutatives QSG</td><td>Nicht implementiert</td></tr><tr><td>Emergente Raumzeit / Hauptvermutung</td><td>Kein Nachweis</td></tr></tbody></table></div><details><summary>Quellen und Reproduzierbarkeit</summary><p class="hint">Benincasa & Dowker: <a href="https://arxiv.org/abs/1001.2725" target="_blank" rel="noopener">Intervallwirkung</a> · Rideout & Sorkin: <a href="https://arxiv.org/abs/gr-qc/9904062" target="_blank" rel="noopener">Wachstumsmodelle</a> · Höhn, Smith & Lock: <a href="https://arxiv.org/abs/1912.00033" target="_blank" rel="noopener">relationale Dynamik</a> · Srivastava & Surya: <a href="https://arxiv.org/abs/2603.25503" target="_blank" rel="noopener">QSG-Bedingungen</a>.</p><p class="hint">JSON-Exporte enthalten die vollständige Relationsmatrix, Generatorparameter und neu berechnete Kennzahlen. Python und JavaScript verwenden denselben dokumentierten PCG32-Zufallsstrom. Eigenwerte im Browser: zyklisches Jacobi-Verfahren mit Konvergenzkontrolle; N ≤ 96. Der Python-Kern erlaubt N ≤ 512. Nahe dem Lichtkegel können plattformabhängige Rundungsgrenzen relevant sein; gespeicherte Matrizen bleiben die maßgebliche numerische Eingabe.</p></details></section>
+<footer>RAX-CQG 0.2.0 · Ein Werkzeug zur Prüfung endlicher Modelle. Reproduzierbare Softwaretests ersetzen keine physikalischen Nachweise.<br>Keine Telemetrie, keine CDN-Abhängigkeiten. Zur lokalen Nutzung diese HTML-Datei in einem aktuellen Browser öffnen.</footer>
+</main><script>
+/* RAX-CQG 0.2.0: finite order diagnostics, no physics-validation claim.
+ * PCG-XSH-RR algorithm: M. E. O'Neill; see THIRD_PARTY_NOTICES.txt. */
+(function(root){
+'use strict';
+const VERSION='0.2.0', MAX_SIZE=96;
+const MODELS=['chain','antichain','percolation','three_layer','minkowski_2d','minkowski_4d'];
+function integer(x,name,lo=0,hi=MAX_SIZE){
+  if(!Number.isSafeInteger(x)||x<lo||x>hi)throw new Error(`${name}: ganze Zahl in [${lo}, ${hi}] erforderlich`);
+  return x;
+}
+function real(x,name,lo=-Infinity,hi=Infinity){
+  if(typeof x!=='number'||!Number.isFinite(x)||x<lo||x>hi)throw new Error(`${name}: ungültiger Wert`);
+  return x;
+}
+class PCG32{
+  constructor(seed=42,stream=54){
+    integer(seed,'Seed',0,4294967295);integer(stream,'Stream',0,4294967295);
+    this.state=0n;this.inc=(BigInt(stream)<<1n)|1n;this.next();
+    this.state=BigInt.asUintN(64,this.state+BigInt(seed));this.next();
+  }
+  next(){
+    const old=this.state;this.state=BigInt.asUintN(64,old*6364136223846793005n+this.inc);
+    const word=Number(BigInt.asUintN(32,((old>>18n)^old)>>27n)),rot=Number(old>>59n);
+    return ((word>>>rot)|(word<<((-rot)&31)))>>>0;
+  }
+  uniform(){return (this.next()+.5)/4294967296;}
+}
+function zeros(n){return Array.from({length:n},()=>Array(n).fill(0));}
+function copy(r){return r.map(row=>row.slice());}
+function closure(matrix){
+  const r=copy(matrix),n=r.length;
+  for(let k=0;k<n;k++)for(let i=0;i<n;i++)if(r[i][k])for(let j=0;j<n;j++)if(r[k][j])r[i][j]=1;
+  return r;
+}
+function validate(r){
+  if(!Array.isArray(r))throw new Error('Matrix fehlt');
+  const n=integer(r.length,'N');
+  if(r.some(row=>!Array.isArray(row)||row.length!==n||row.some(v=>v!==0&&v!==1)))throw new Error('Binäre quadratische Matrix erforderlich');
+  const c=closure(r);
+  for(let i=0;i<n;i++)for(let j=0;j<n;j++){
+    if(i===j&&c[i][j])throw new Error('Zyklus oder reflexive Relation');
+    if(c[i][j]!==r[i][j])throw new Error('Matrix ist nicht transitiv');
+  }
+  return r;
+}
+function addRelation(matrix,i,j){
+  validate(matrix);const n=matrix.length;
+  integer(i,'i',0,n-1);integer(j,'j',0,n-1);
+  if(i===j||matrix[j][i])throw new Error('Einfügung würde einen Zyklus erzeugen');
+  const r=copy(matrix);
+  for(let a=0;a<n;a++)if(a===i||matrix[a][i])for(let b=0;b<n;b++)if(b===j||matrix[j][b])r[a][b]=1;
+  return r;
+}
+function generate(model='percolation',n=30,seed=42,p=.25){
+  integer(n,'N');integer(seed,'Seed',0,4294967295);real(p,'p',0,1);
+  if(!MODELS.includes(model))throw new Error('Unbekanntes Ensemble');
+  let r=zeros(n);const rng=new PCG32(seed);
+  const generator={model,size:n,seed,rng:'PCG-XSH-RR-64-32',stream:54,version:VERSION,
+    uniform:'(uint32+0.5)/2**32',p:['percolation','three_layer'].includes(model)?p:null};
+  if(model==='chain'){
+    for(let i=0;i<n;i++)for(let j=i+1;j<n;j++)r[i][j]=1;
+  }else if(model==='percolation'){
+    for(let i=0;i<n;i++)for(let j=i+1;j<n;j++)r[i][j]=rng.uniform()<p?1:0;
+    r=closure(r);
+  }else if(model==='three_layer'){
+    if(n<4)throw new Error('Dreischicht-Ensemble benötigt N≥4');
+    const a=Math.floor(n/4),b=Math.floor(n/2),bounds=[0,a,a+b,n];
+    for(let layer=0;layer<2;layer++)for(let i=bounds[layer];i<bounds[layer+1];i++)
+      for(let j=bounds[layer+1];j<bounds[layer+2];j++)r[i][j]=rng.uniform()<p?1:0;
+    r=closure(r);generator.layer_sizes=[a,b,n-a-b];
+    generator.ensemble_note='Independent adjacent-layer edges; fixed labels; not a uniform sample of all KR orders';
+  }else if(model.startsWith('minkowski_')){
+    const dim=model==='minkowski_2d'?2:4,pts=[];
+    for(let i=0;i<n;i++){
+      if(dim===2){const u=rng.uniform(),v=rng.uniform();pts.push([(u+v)/2-.5,(v-u)/2]);}
+      else{
+        const u=rng.uniform(),t=u<.5?-.5+.5*(2*u)**.25:.5-.5*(2*(1-u))**.25;
+        const radius=(.5-Math.abs(t))*rng.uniform()**(1/3),z=2*rng.uniform()-1,angle=2*Math.PI*rng.uniform();
+        const transverse=Math.sqrt(Math.max(0,1-z*z));
+        pts.push([t,radius*transverse*Math.cos(angle),radius*transverse*Math.sin(angle),radius*z]);
+      }
+    }
+    for(let i=0;i<n;i++)for(let j=0;j<n;j++){
+      const dt=pts[j][0]-pts[i][0];let ds2=0;
+      for(let k=1;k<dim;k++)ds2+=(pts[j][k]-pts[i][k])**2;
+      r[i][j]=dt>0&&dt*dt>=ds2?1:0;
+    }
+    Object.assign(generator,{dimension:dim,coordinates:pts,diamond_endpoints:[[-.5,...Array(dim-1).fill(0)],[.5,...Array(dim-1).fill(0)]],
+      volume:dim===2?.5:Math.PI/24,sampling:'Uniform spacetime volume conditioned on fixed N; N is not Poisson sampled',
+      causal_comparison:'float64 dt>0 and dt^2>=sum(dx^2); no tolerance or closure repair'});
+  }
+  validate(r);return {R:r,generator};
+}
+function eigenvalues(matrix){
+  const n=matrix.length;if(!n)return [];
+  const a=copy(matrix);let norm=0;
+  for(let i=0;i<n;i++)for(let j=0;j<n;j++)norm+=a[i][j]**2;
+  const threshold=1e-12*Math.max(1,Math.sqrt(norm));
+  for(let sweep=0;sweep<60;sweep++){
+    for(let p=0;p<n;p++)for(let q=p+1;q<n;q++){
+      const apq=a[p][q];if(Math.abs(apq)<threshold/(Math.max(1,n)*10))continue;
+      const tau=(a[q][q]-a[p][p])/(2*apq);
+      const t=(tau>=0?1:-1)/(Math.abs(tau)+Math.hypot(1,tau));
+      const c=1/Math.sqrt(1+t*t),s=t*c;
+      a[p][p]-=t*apq;a[q][q]+=t*apq;a[p][q]=a[q][p]=0;
+      for(let k=0;k<n;k++)if(k!==p&&k!==q){
+        const kp=a[k][p],kq=a[k][q];
+        a[k][p]=a[p][k]=c*kp-s*kq;a[k][q]=a[q][k]=s*kp+c*kq;
+      }
+    }
+    let off=0;for(let p=0;p<n;p++)for(let q=p+1;q<n;q++)off+=2*a[p][q]**2;
+    if(Math.sqrt(off)<=threshold)return a.map((row,i)=>row[i]).sort((x,y)=>x-y);
+  }
+  throw new Error('Jacobi-Eigensolver hat die Toleranz nicht erreicht');
+}
+function diagnose(r){
+  validate(r);const n=r.length,h=zeros(n),hist=[],pred=Array(n).fill(0);let m=0,triangles=0;
+  for(let i=0;i<n;i++)for(let j=0;j<n;j++){
+    h[i][j]=r[i][j]+r[j][i];m+=r[i][j];pred[j]+=r[i][j];
+    if(r[i][j]){let kcount=0;for(let k=0;k<n;k++)kcount+=r[i][k]*r[k][j];hist[kcount]=(hist[kcount]||0)+1;}
+  }
+  for(let k=0;k<hist.length;k++)hist[k]=hist[k]||0;
+  const order=Array.from({length:n},(_,i)=>i).sort((a,b)=>pred[a]-pred[b]||a-b),depth=Array(n).fill(1);
+  for(const j of order)for(let i=0;i<n;i++)if(r[i][j])depth[j]=Math.max(depth[j],depth[i]+1);
+  for(let i=0;i<n;i++)for(let j=i+1;j<n;j++)for(let k=j+1;k<n;k++)triangles+=h[i][j]*h[j][k]*h[k][i];
+  const lap=h.map((row,i)=>row.map((v,j)=>i===j?row.reduce((a,b)=>a+b,0):-v));
+  const eig=eigenvalues(h),leig=eigenvalues(lap);
+  const entropy=m?eig.reduce((a,e)=>{const p=e*e/(2*m);return a-(p>0?p*Math.log(p):0);},0):null;
+  return {size:n,relations:m,links:hist[0]||0,ordering_fraction:n>1?2*m/(n*(n-1)):0,
+    height:n?Math.max(...depth):0,interval_counts:hist,
+    bdg4_bracket:n+[-1,9,-16,8].reduce((s,c,k)=>s+c*(hist[k]||0),0),
+    adjacency_spectrum:eig,laplacian_spectrum:leig,spectral_radius:n?Math.max(...eig.map(Math.abs)):0,
+    adjacency_spectral_width:n?eig[n-1]-eig[0]:0,algebraic_connectivity:n>1?Math.max(0,leig[1]):null,
+    h2_spectral_entropy:entropy,adjacency_spectral_std:n?Math.sqrt(2*m/n):0,
+    triangles,triangles_per_vertex:n?triangles/n:0};
+}
+function rows(r){return r.map(row=>row.join(''));}
+function experiment(model='percolation',n=30,seed=42,p=.25){
+  const x=generate(model,n,seed,p);
+  return {schema:'RAX-CQG-EXPERIMENT-0.2',software_version:VERSION,evidence_class:'FINITE_ORDER_BENCHMARK',
+    generator:x.generator,relation_rows:rows(x.R),relation_sha256:null,metrics:diagnose(x.R)};
+}
+function loadExperiment(record){
+  if(!record||record.schema!=='RAX-CQG-EXPERIMENT-0.2')throw new Error('Nicht unterstütztes Experimentformat');
+  const rs=record.relation_rows;
+  if(!Array.isArray(rs))throw new Error('Relationsmatrix fehlt');
+  const n=integer(rs.length,'Importgröße');
+  if(rs.some(row=>typeof row!=='string'||row.length!==n||/[^01]/.test(row)))throw new Error('Ungültige Matrixzeilen');
+  const r=rs.map(row=>Array.from(row,Number));validate(r);return r;
+}
+function thinning(r,retention=.75,steps=4,seed=104729){
+  validate(r);real(retention,'Retention',0,1);integer(steps,'Schritte',0,20);const rng=new PCG32(seed);
+  let ids=r.map((_,i)=>i);const path=[];
+  for(let step=0;step<=steps;step++){
+    const sub=ids.map(i=>ids.map(j=>r[i][j]));
+    path.push({step,original_indices:ids.slice(),relation_rows:rows(sub),metrics:diagnose(sub)});
+    if(step<steps)ids=ids.filter(()=>rng.uniform()<retention);
+  }
+  return {method:'independent Bernoulli retention, induced suborders',retention,seed,steps,
+    interpretation:'Thinning only; no fitted RG flow or continuum claim',path};
+}
+function clockReference(samples=33){
+  integer(samples,'Uhrpunkte',3,1000);
+  // Direct conditioning of (|01>+|10>)/sqrt(2) on e^(-i H_T tau)|+>.
+  const data=[];
+  for(let i=0;i<samples;i++){
+    const tau=2*Math.PI*i/(samples-1),cos=Math.cos(tau/2),sin=Math.sin(tau/2);
+    const raw=[[cos/2,sin/2],[cos/2,-sin/2]],weight=raw.reduce((s,z)=>s+z[0]**2+z[1]**2,0);
+    const state=raw.map(z=>z.map(x=>x/Math.sqrt(weight)));
+    const realSum=(state[0][0]+state[1][0])/Math.sqrt(2),imagSum=(state[0][1]+state[1][1])/Math.sqrt(2);
+    data.push({tau,overlap_weight:weight,clock_probability_density:1/(2*Math.PI),p_plus_x:realSum**2+imagSum**2});
+  }
+  return {model:'assumed_two_qubit_periodic_clock',hbar:1,omega:1,period:2*Math.PI,samples:data};
+}
+function selfTest(){
+  const checks=[];
+  const add=(name,ok)=>checks.push({name,passed:Boolean(ok)}),near=(x,y)=>Math.abs(x-y)<1e-8;
+  const rng=new PCG32(42),reference=[0xa15c02b7,0x7b47f409,0xba1d3330,0x83d2f293,0xbfa4784b,0xcbed606e];
+  add('PCG32-Referenzvektor',reference.every(v=>rng.next()===v));
+  add('Antikette B₄=4',diagnose(zeros(4)).bdg4_bracket===4);
+  let star=zeros(4);for(let i=1;i<4;i++)star=addRelation(star,0,i);
+  add('Stern B₄=1',diagnose(star).bdg4_bracket===1);
+  let c=addRelation(addRelation(zeros(4),0,1),1,2),d=diagnose(c);
+  add('Kette + isolierter Punkt',d.bdg4_bracket===11&&near(d.algebraic_connectivity,0));
+  const chain=diagnose(generate('chain',8).R).adjacency_spectrum;
+  add('Exaktes Kettenspektrum',chain.every((v,i)=>near(v,i===7?7:-1)));
+  const start=addRelation(zeros(4),0,1),ab=addRelation(addRelation(start,1,2),2,3),ba=addRelation(addRelation(start,2,3),1,2);
+  add('Einfügereihenfolge',JSON.stringify(ab)===JSON.stringify(ba));
+  const clock=clockReference(5);add('Periodische Referenzuhr',near(clock.samples[0].p_plus_x,1)&&near(clock.samples[2].p_plus_x,0));
+  return {checks,passed:checks.filter(x=>x.passed).length,total:checks.length,scope:'Finite mathematical reference cases only'};
+}
+const api={VERSION,MAX_SIZE,MODELS,PCG32,closure,validate,addRelation,generate,diagnose,experiment,loadExperiment,thinning,clockReference,selfTest};
+if(typeof module!=='undefined'&&module.exports)module.exports=api;else root.RAXCore=api;
+})(typeof globalThis!=='undefined'?globalThis:this);
+
+</script><script>
+'use strict';
+(() => {
+const $=id=>document.getElementById(id), core=RAXCore;
+let current=null,currentR=null,importedRuns=[],selftestOK=false,requestSerial=0;
+const names={chain:'Vollständige Kette',antichain:'Antikette',percolation:'Transitive Perkolation',three_layer:'Dreischicht-Poset',minkowski_2d:'2D-Minkowski-Diamant',minkowski_4d:'4D-Minkowski-Diamant'};
+const notes={percolation:'p gilt für Kanten vor dem transitiven Abschluss; der resultierende Ordnungsanteil ist eine andere Größe.',three_layer:'Feste Schichten ungefähr N/4, N/2, N/4; unabhängige Kanten zwischen Nachbarschichten. Kein gleichverteiltes KR-Gesamtensemble.',minkowski_2d:'Gleichverteilung im Raumzeitvolumen bei festem N. Die Gesamtzahl wird nicht poissonverteilt gezogen.',minkowski_4d:'Gleichverteilung im 4D-Raumzeitvolumen bei festem N. Die Zeitkoordinate wird mit dem korrekten Querschnittsgewicht gezogen.',chain:'Exakter Referenzfall: Jedes Ereignispaar ist vergleichbar.',antichain:'Exakter Referenzfall: Keine zwei Ereignisse sind vergleichbar.'};
+const fmt=(x,d=4)=>x===null||x===undefined?'undefiniert':Number.isInteger(x)?String(x):Math.abs(x)<1e-10?'0':Number(x).toLocaleString('de-CH',{maximumFractionDigits:d});
+function error(message){$('error').textContent=message;$('error').hidden=false;$('run-status').textContent='Berechnung nicht abgeschlossen.';}
+function clearError(){$('error').hidden=true;$('error').textContent='';}
+function clearResult(){current=null;currentR=null;$('results').hidden=true;$('export-button').disabled=true;}
+function note(){$('probability').disabled=!['percolation','three_layer'].includes($('model').value);$('ensemble-note').textContent=notes[$('model').value];}
+function svgStart(label){return `<svg viewBox="0 0 540 250" role="img" aria-label="${label}">`;}
+function bars(container,values,color='#6ee7ce',xCaption='Index'){
+  if(!values.length){$(container).innerHTML='<p class="empty">Keine Werte für dieses leere Objekt.</p>';return;}
+  const lo=Math.min(0,...values),hi=Math.max(1,...values),span=hi-lo,w=470/values.length;
+  const y=v=>206-(v-lo)/span*176,zero=y(0);let svg=svgStart('Balkendiagramm der berechneten Werte');
+  for(let k=0;k<=4;k++){const v=lo+span*k/4;svg+=`<line class="gridline" x1="50" x2="520" y1="${y(v)}" y2="${y(v)}"/><text x="43" y="${y(v)+4}" text-anchor="end">${fmt(v,1)}</text>`;}
+  values.forEach((v,i)=>{const top=Math.min(zero,y(v)),height=Math.abs(y(v)-zero);svg+=`<rect x="${51+i*w}" y="${top}" width="${Math.max(.4,w-1.5)}" height="${Math.max(.2,height)}" fill="${v<0?'#c3afff':color}"><title>${i}: ${v}</title></rect>`;});
+  svg+=`<line class="axis" x1="50" x2="520" y1="${zero}" y2="${zero}"/><text x="50" y="230">0</text><text x="520" y="230" text-anchor="end">${values.length-1}</text><text x="285" y="246" text-anchor="middle">${xCaption}</text></svg>`;
+  $(container).innerHTML=svg;
+}
+function line(container,points,label,color='#6ee7ce',maxY=null){
+  if(!points.length)return;
+  const minX=points[0][0],maxX=points[points.length-1][0],top=maxY??Math.max(1,...points.map(p=>p[1]));
+  const x=v=>50+(v-minX)/Math.max(1e-12,maxX-minX)*470,y=v=>206-v/top*176;
+  let svg=svgStart(label);
+  for(let k=0;k<=4;k++){let v=top*k/4;svg+=`<line class="gridline" x1="50" x2="520" y1="${y(v)}" y2="${y(v)}"/><text x="43" y="${y(v)+4}" text-anchor="end">${fmt(v,2)}</text>`;}
+  svg+=`<polyline points="${points.map(p=>x(p[0])+','+y(p[1])).join(' ')}" fill="none" stroke="${color}" stroke-width="2"/>`;
+  if(points.length<=12)for(const p of points)svg+=`<circle cx="${x(p[0])}" cy="${y(p[1])}" r="3" fill="${color}"/>`;
+  svg+=`<text x="50" y="230">${fmt(minX,2)}</text><text x="520" y="230" text-anchor="end">${fmt(maxX,2)}</text><text x="285" y="246" text-anchor="middle">${label}</text></svg>`;
+  $(container).innerHTML=svg;
+}
+function matrix(r){
+  const n=r.length;if(!n){$('matrix-chart').innerHTML='<p class="empty">Leere Ordnung.</p>';return;}
+  const unit=190/n;let svg=svgStart('Relationsmatrix: Zeilen sind Quellen, Spalten sind Ziele');
+  svg+='<rect x="165" y="20" width="190" height="190" fill="#0b1423"/>';
+  r.forEach((row,i)=>row.forEach((v,j)=>{if(v)svg+=`<rect x="${165+j*unit}" y="${20+i*unit}" width="${unit}" height="${unit}" fill="#6ee7ce"><title>${i} ≺ ${j}</title></rect>`;}));
+  svg+=`<text x="260" y="236" text-anchor="middle">Ziel j · 0 … ${n-1}</text><text x="135" y="115" text-anchor="middle" transform="rotate(-90 135 115)">Quelle i · 0 … ${n-1}</text></svg>`;
+  $('matrix-chart').innerHTML=svg;
+}
+function tableRow(body,values){const tr=document.createElement('tr');for(let i=0;i<values.length;i++){const td=document.createElement('td');td.textContent=String(values[i]);if(i>0)td.className='num';tr.appendChild(td);}body.appendChild(tr);}
+async function digest(r){
+  if(!globalThis.crypto?.subtle)return null;
+  const bytes=new TextEncoder().encode(r.length+'\n'+r.map(row=>row.join('')+'\n').join(''));
+  const hash=await crypto.subtle.digest('SHA-256',bytes);
+  return Array.from(new Uint8Array(hash),x=>x.toString(16).padStart(2,'0')).join('');
+}
+function renderSpectrum(){if(!current)return;const key=$('spectrum-kind').value;bars('spectrum-chart',current.metrics[key]);$('spectrum-note').textContent=`${current.metrics.size} Eigenwerte · zyklisches Jacobi-Verfahren · relative Offdiagonal-Toleranz 10⁻¹²`;;}
+function render(){
+  const m=current.metrics;$('results').hidden=false;$('export-button').disabled=false;
+  $('result-heading').textContent=names[current.generator?.model]||'Importierte endliche Ordnung';
+  $('result-meta').replaceChildren();for(const value of [`N = ${m.size}`,`Seed ${current.generator?.seed??'unbekannt'}`,`Ordnungsanteil ${fmt(m.ordering_fraction)}`]){const span=document.createElement('span');span.textContent=value;$('result-meta').appendChild(span);}
+  $('m-relations').textContent=`${m.relations} / ${m.links}`;$('m-bdg').textContent=m.bdg4_bracket;$('m-fiedler').textContent=fmt(m.algebraic_connectivity);$('m-height').textContent=m.height;
+  renderSpectrum();bars('interval-chart',m.interval_counts,'#c3afff','Innere Ereignisse k');matrix(currentR);
+  const tbody=$('diagnostics-table');tbody.replaceChildren();
+  for(const [label,v] of [['Spektralradius H',m.spectral_radius],['Spektralbreite H',m.adjacency_spectral_width],['H²-Spektralentropie · nats',m.h2_spectral_entropy],['Spektralstandardabweichung',m.adjacency_spectral_std],['Dreiecke im Vergleichbarkeitsgraphen',m.triangles],['Ordnungsanteil 2M / N(N−1)',m.ordering_fraction]])tableRow(tbody,[label,fmt(v)]);
+  $('matrix-hash').textContent=current.relation_sha256?`Matrix SHA-256: ${current.relation_sha256}`:'SHA-256 hier nicht verfügbar; die vollständige Matrix ist im Export enthalten.';
+  runThinning();
+}
+function runThinning(){
+  if(!currentR)return;
+  try{const q=Number($('retention').value),steps=Number($('steps').value);if(!Number.isInteger(steps)||steps<0||steps>8)throw new Error('Schritte müssen zwischen 0 und 8 liegen');
+    const data=core.thinning(currentR,q,steps,104729);current.thinning=data;
+    line('thinning-chart',data.path.map(x=>[x.step,x.metrics.size]),'Schritt · Anzahl erhaltener Ereignisse');
+    const body=$('thinning-table');body.replaceChildren();for(const row of data.path)tableRow(body,[row.step,row.metrics.size,row.metrics.relations,fmt(row.metrics.ordering_fraction),row.metrics.bdg4_bracket]);
+  }catch(e){delete current.thinning;$('thinning-chart').innerHTML='';$('thinning-table').replaceChildren();error(e.message);}
+}
+async function run(event){
+  const serial=++requestSerial;
+  event?.preventDefault();clearError();clearResult();if(!selftestOK){error('Referenzprüfungen müssen zuerst bestehen.');return;}
+  $('run-button').disabled=true;$('run-status').textContent='Relationsmatrix und Spektren werden berechnet …';
+  await new Promise(resolve=>setTimeout(resolve,0));
+  try{const n=Number($('size').value),seed=Number($('seed').value),p=$('probability').disabled ? 0.25 : Number($('probability').value);
+    if(!Number.isInteger(n)||n<4||n>96)throw new Error('N muss eine ganze Zahl von 4 bis 96 sein');
+    const next=core.experiment($('model').value,n,seed,p),r=core.loadExperiment(next);
+    next.relation_sha256=await digest(r);if(serial!==requestSerial)return;
+    next.origin={kind:'browser_generation',solver:'cyclic_jacobi',core_version:core.VERSION};current=next;currentR=r;
+    render();if($('error').hidden)$('run-status').textContent='Endliche Berechnung abgeschlossen. Kein physikalischer Validierungsstatus.';
+  }catch(e){if(serial===requestSerial){clearResult();error(e.message);}}finally{if(serial===requestSerial)$('run-button').disabled=false;}
+}
+async function useImported(index){
+  const serial=++requestSerial;
+  clearError();clearResult();
+  try{const record=importedRuns[index],r=core.loadExperiment(record),hash=await digest(r);if(serial!==requestSerial)return;
+    if(record.relation_sha256&&hash&&record.relation_sha256!==hash)throw new Error('SHA-256 stimmt nicht mit der importierten Matrix überein');
+    if(record.relation_sha256&&!hash)throw new Error('Dieser Browser kann die importierte Prüfsumme nicht verifizieren');
+    current={schema:'RAX-CQG-EXPERIMENT-0.2',software_version:core.VERSION,evidence_class:'FINITE_ORDER_BENCHMARK',generator:record.generator||{model:'imported'},relation_rows:core.loadExperiment(record).map(row=>row.join('')),relation_sha256:hash,metrics:core.diagnose(r),origin:{kind:'matrix_import',stored_metrics_used:false,generator_replay_checked:false}};
+    currentR=r;render();if($('error').hidden)$('run-status').textContent='Matrix geprüft; Kennzahlen neu berechnet. Generatorangaben stammen aus der importierten Datei.';
+  }catch(e){if(serial===requestSerial){clearResult();error(e.message);}}finally{if(serial===requestSerial)$('run-button').disabled=false;}
+}
+async function importFile(event){
+  const file=event.target.files[0];if(!file)return;
+  try{if(file.size>20*1024*1024)throw new Error('Import auf 20 MB begrenzt');const data=JSON.parse(await file.text());
+    importedRuns=data.schema==='RAX-CQG-SWEEP-0.2'?data.runs:[data];
+    if(!Array.isArray(importedRuns)||!importedRuns.length||importedRuns.length>1000)throw new Error('Ungültige Anzahl Experimente');
+    const select=$('dataset-run');select.replaceChildren();importedRuns.forEach((record,i)=>{const option=document.createElement('option');option.value=i;option.textContent=`${i+1} · ${names[record.generator?.model]||'Import'} · N=${record.relation_rows?.length??'?'} · Seed ${record.generator?.seed??'?'}`;select.appendChild(option);});
+    $('dataset-picker').hidden=importedRuns.length===1;$('dataset-note').textContent=`${importedRuns.length} Experimente. Gespeicherte Kennzahlen werden beim Auswählen durch Neuberechnung ersetzt.`;await useImported(0);
+  }catch(e){clearResult();error(e.message);}finally{event.target.value='';}
+}
+function exportFile(){if(!current)return;const blob=new Blob([JSON.stringify(current,null,2)+'\n'],{type:'application/json'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='rax_cqg_experiment.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
+$('model').addEventListener('change',note);$('experiment-form').addEventListener('submit',run);$('thin-button').addEventListener('click',()=>{clearError();runThinning();});$('spectrum-kind').addEventListener('change',renderSpectrum);$('export-button').addEventListener('click',exportFile);$('import-file').addEventListener('change',importFile);$('dataset-run').addEventListener('change',event=>useImported(Number(event.target.value)));
+note();
+try{const tests=core.selfTest();selftestOK=tests.passed===tests.total;$('selftest-status').textContent=`Selbstprüfung: ${tests.passed}/${tests.total} endliche Referenzfälle bestanden.`;$('selftest-status').className='status '+(selftestOK?'success':'warning');if(!selftestOK)throw new Error('Mindestens eine Referenzprüfung ist fehlgeschlagen');const clock=core.clockReference(65);line('clock-chart',clock.samples.map(x=>[x.tau,x.p_plus_x]),'Uhrparameter τ · P(+x | τ)','#c3afff',1);run();}catch(e){error(e.message);$('run-button').disabled=true;}
+})();
+
+</script></body></html>

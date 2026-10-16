@@ -8,6 +8,8 @@ getrennten Rekonstruktions- und Analyseebene. Der Arbeitsname lautet
 „Maximales relational kausales Modell emergenter Quantendynamik“.
 „Maximal“ bezeichnet den Programmumfang, keine nachgewiesene Überlegenheit.
 
+**Neu:** Der [reparierte Causal-Set Benchmark 0.2.0](../cqg-benchmark-v0.2.0/README.md) ergänzt diesen Entwurf um endliche Rechenreferenzen. Er bestätigt weder die gesamte Architektur noch ihre offenen physikalischen Hypothesen.
+
 ## Lesen und herunterladen
 
 - [Forschungsarchitektur als PDF — 19 Seiten](RAX_CQG_Forschungsarchitektur_v0_1.pdf)

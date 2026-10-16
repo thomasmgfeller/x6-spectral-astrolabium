@@ -11,6 +11,19 @@ extends qualification through 120 vertices and records the unresolved-gap limits
 
 This repository publishes the actual **X6 v4.2 RC** browser application, alongside the **v4.3 community audit kit**. The application combines experimental signal/Fourier analysis, a model-dependent signal-to-graph mapping, and exact rational lower bounds for finite weighted undirected graph Laplacians.
 
+## New: RAX-CQG Causal-Set Benchmark 0.2.0
+
+**[Open the Causal-Set Lab](https://thomasmgfeller.github.io/x6-spectral-astrolabium/app/rax-cqg-lab.html)** ·
+[Download the approved package](docs/research/rax/cqg-benchmark-v0.2.0/RAX_CQG_Benchmark_v0_2_0.zip) ·
+[Sources, checks and limitations](docs/research/rax/cqg-benchmark-v0.2.0/README.md)
+
+Corrected finite-order operations, interval counts, actual graph spectra and 240
+reproducible pilot runs. The approved package is preserved byte-for-byte, with
+28 Python test methods, 28 Python/JavaScript parity cases and 16 UI logic checks.
+**Research software prototype; no quantum-gravity, KR-suppression or continuum
+claim.** The classical graph field and assumed quantum clock have separate scopes.
+The architecture below remains a research programme with open physical questions.
+
 ## New: RAX-CQG research architecture v0.1
 
 **[Read the 19-page architecture (PDF)](docs/research/rax/cqg-v0.1/RAX_CQG_Forschungsarchitektur_v0_1.pdf)** ·
@@ -86,7 +99,7 @@ remain [explicit future gates](research/x6_qe/ROADMAP.md). Lorentz remains the p
 
 ## Start here: actual module and evidence status
 
-The [central module register](docs/MODULE_REGISTRY.md) lists **37 modules** with
+The [central module register](docs/MODULE_REGISTRY.md) lists **38 modules** with
 their authoritative branch and commit, prerequisites, executable entry point,
 expected result, available evidence and next acceptance gate. Its
 [machine-readable source](MODULE_REGISTRY.json) is a dated snapshot, not a live

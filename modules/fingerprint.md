@@ -1,6 +1,6 @@
 # Mehrschichtiger Fingerprint
 
-Registerstand: 2026-10-15. BRANCH_ONLY / SOFTWARE. Kein Live-Prüfsiegel.
+Registerstand: 2026-10-16. BRANCH_ONLY / SOFTWARE. Kein Live-Prüfsiegel.
 
 ## Quelle
 

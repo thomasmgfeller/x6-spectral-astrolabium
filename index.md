@@ -15,12 +15,15 @@ AI concept illustration, not a photograph of an assembled experiment. Optics, de
 
 [Explore the design and schematic →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/experiments/photonic-two-qubit/README.md)
 
-## RAX-CQG · NEW · RESEARCH ARCHITECTURE V0.1 · 16 OCT 2026
+## RAX-CQG · NEW · CAUSAL-SET BENCHMARK 0.2.0 · 16 OCT 2026
 
-Relational axioms, causal histories and stable reconstruction: a mathematical research programme for emergent quantum dynamics.
+Repaired research lab for finite causal orders: computed spectra, interval counts, raw data and reproducible reference checks.
 
-Research draft, not an established physical theory. CQG-01–08 are specified but have not been executed as a test campaign.
+Exploratory software prototype, not validated quantum gravity. Architecture v0.1 remains a research draft; CQG-01–08 have not been executed as a complete test campaign.
 
+- [Open the Causal-Set Lab →](https://thomasmgfeller.github.io/x6-spectral-astrolabium/app/rax-cqg-lab.html)
+- [Download benchmark package 0.2.0 ↓](https://thomasmgfeller.github.io/x6-spectral-astrolabium/docs/research/rax/cqg-benchmark-v0.2.0/RAX_CQG_Benchmark_v0_2_0.zip)
+- [Checks, sources and limitations →](https://thomasmgfeller.github.io/x6-spectral-astrolabium/modules/rax-cqg-benchmark.html)
 - [Read the architecture · PDF, 19 pages →](https://thomasmgfeller.github.io/x6-spectral-astrolabium/docs/research/rax/cqg-v0.1/RAX_CQG_Forschungsarchitektur_v0_1.pdf)
 - [Markdown and sources on GitHub →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/docs/research/rax/cqg-v0.1/ARCHITECTURE.md)
 - [Download the Word document ↓](https://thomasmgfeller.github.io/x6-spectral-astrolabium/docs/research/rax/cqg-v0.1/RAX_CQG_Forschungsarchitektur_v0_1.docx)
@@ -86,7 +89,7 @@ This is experimental research software. A passing software test is not physical 
 - [Industrial data pilot](https://thomasmgfeller.github.io/x6-spectral-astrolabium/modules/industrial-pilot.html): A bounded laboratory-data feasibility study with explicit limits.
 - [NQK research dossier](https://thomasmgfeller.github.io/x6-spectral-astrolabium/modules/nqk.html): A separate research direction with incomplete reproduction archives.
 
-37 modules are described in the register dated 2026-10-15. The register records source locations and evidence; it is not a live qualification badge.
+38 modules are described in the register dated 2026-10-16. The register records source locations and evidence; it is not a live qualification badge.
 
 The configured research-agent window includes Sunday, 18 October 2026. The exclusive cutoff below is a schedule limit, not evidence of execution. After this cutoff the window is closed.
 2026-10-19T00:00:00+02:00
