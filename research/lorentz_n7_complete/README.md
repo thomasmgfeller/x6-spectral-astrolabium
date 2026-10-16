@@ -166,3 +166,8 @@ bereits widerlegt ist.
 ## Abhängigkeitsprüfung vom 16.10.2026
 
 Die nachfolgende [Abhängigkeitsprüfung](../lorentz_h7_dependency_audit/README.md) fand im geprüften Quellenumfang keinen laufenden Rechenweg, der die widerlegte H7-Eindeutigkeit voraussetzt. Sie dokumentiert alle 39 Module, sechs gezielte Gegenproben und ausdrücklich verbleibende Quellenlücken. Der hier eingefrorene Vertrag, Rechenkern und Datensatz bleiben unverändert.
+
+
+## Strukturelle Erklärung vom 16.10.2026
+
+Die [nachträgliche Strukturanalyse](../lorentz_h7_structure/README.md) liefert exakte Switching-Zertifikate für beide n=7-Paare, einen Beweis zusammenhängender H7-Kollisionen für jedes n≥8 und eine begrenzte Ununterscheidbarkeitsaussage für Matrixpolynom-Spektren. Historische Verträge und Resultate bleiben unverändert; zusätzliche Grad- oder Motivmerkmale werden nicht als universelle Identifikatoren behauptet.

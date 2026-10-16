@@ -87,6 +87,8 @@ fand keinen konkreten laufenden Rechenweg, der H7-Eindeutigkeit voraussetzt.
 Gleiche Signaturen dürfen keine Isomorphie oder eindeutige Rekonstruktion begründen.
 Quellenlücken, insbesondere fehlende NQK-Archive, bleiben ausdrücklich offen.
 
+**Strukturelle Erklärung der H7-Gegenbeispiele:** [Exakte Zertifikate und Beweise](research/lorentz_h7_structure/README.md) erklären beide n=7-Paare durch reguläre orthogonale Ähnlichkeit. Eine explizite Konstruktion liefert zusammenhängende H7-Kollisionen für jedes n≥8. Sie zeigt außerdem eine präzise Grenze weiterer Matrixpolynom-Spektren. Nachträgliche Analyse, keine Neuheits- oder Physikbehauptung.
+
 ## Frozen reference edition and validation hardening
 
 The [QE reference edition](https://github.com/thomasmgfeller/x6-spectral-astrolabium/releases/tag/reference-2026.10.15-qe1)
