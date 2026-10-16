@@ -76,7 +76,7 @@ Follow pinned sources, reproduce documented calculations and inspect the next ac
 
 ## Lorentzian spectral geometry
 
-Can spectral information distinguish finite causal orders? The programme tests explicit examples and counterexamples. Finite classifications do not establish a spacetime continuum or a physical theory.
+The complete exact test of 2,045 seven-element causal orders refutes the two-moment H7 hypothesis: two nonisomorphic pairs remain. Inspect all counterexamples and reproduce the separate enumeration and algebra checks. This finite result does not establish a physical theory.
 
 ## Read the scope with the result
 
@@ -89,7 +89,7 @@ This is experimental research software. A passing software test is not physical 
 - [Industrial data pilot](https://thomasmgfeller.github.io/x6-spectral-astrolabium/modules/industrial-pilot.html): A bounded laboratory-data feasibility study with explicit limits.
 - [NQK research dossier](https://thomasmgfeller.github.io/x6-spectral-astrolabium/modules/nqk.html): A separate research direction with incomplete reproduction archives.
 
-38 modules are described in the register dated 2026-10-16. The register records source locations and evidence; it is not a live qualification badge.
+39 modules are described in the register dated 2026-10-16. The register records source locations and evidence; it is not a live qualification badge.
 
 The configured research-agent window includes Sunday, 18 October 2026. The exclusive cutoff below is a schedule limit, not evidence of execution. After this cutoff the window is closed.
 2026-10-19T00:00:00+02:00

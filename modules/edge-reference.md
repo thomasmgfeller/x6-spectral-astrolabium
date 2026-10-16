@@ -6,15 +6,15 @@ Registerstand: 2026-10-16. MAIN / SOFTWARE. Kein Live-Prüfsiegel.
 
 Branch: main
 
-Commit: 7ea315830f9c5ccee8bad5bebfaa7666c342e3d5
+Commit: a1f22f6c59f3c5259d12cfb6c0ca2e8b0886f33f
 
-[Originaldokumentation](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/7ea315830f9c5ccee8bad5bebfaa7666c342e3d5/experimental/edge_reference/README.md)
+[Originaldokumentation](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/a1f22f6c59f3c5259d12cfb6c0ca2e8b0886f33f/experimental/edge_reference/README.md)
 
 ## Dokumentierte Aussage
 
 Begrenzter lokaler Signalauftrag mit Export und rechnerischem Replay; main enthält den Adapter bereits.
 
-- [docs/perspectives/edge-platform/evidence/local-validation.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/7ea315830f9c5ccee8bad5bebfaa7666c342e3d5/docs/perspectives/edge-platform/evidence/local-validation.json): Lokale Softwareprüfung; keine Messung von Geräteeffizienz.
+- [docs/perspectives/edge-platform/evidence/local-validation.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/a1f22f6c59f3c5259d12cfb6c0ca2e8b0886f33f/docs/perspectives/edge-platform/evidence/local-validation.json): Lokale Softwareprüfung; keine Messung von Geräteeffizienz.
 
 ## Reproduzieren
 
@@ -25,7 +25,7 @@ Neue Arbeits- und Ausgabeordner verwenden; Voraussetzungen aus der Originaldokum
 ```sh
 git clone --branch main https://github.com/thomasmgfeller/x6-spectral-astrolabium.git x6-edge-reference
 cd x6-edge-reference
-git checkout --detach 7ea315830f9c5ccee8bad5bebfaa7666c342e3d5
+git checkout --detach a1f22f6c59f3c5259d12cfb6c0ca2e8b0886f33f
 node experimental/edge_reference/runner.cjs run experimental/edge_reference/examples/synthetic-signal.json runs/register-edge
 node experimental/edge_reference/runner.cjs verify runs/register-edge
 ```

@@ -10,7 +10,7 @@ A spectrum is a collection of values derived from a matrix. Different structures
 
 The current priority is Lorentzian spectral geometry. Signal processing, RAX, photonics and industrial data studies have their own scopes and acceptance gates. There is no claim of a completed quantum computer or a proven quantum-gravity theory.
 
-- [Lorentz: exact finite causal-order references](https://thomasmgfeller.github.io/x6-spectral-astrolabium/modules/lorentz-n6-residuals.html)
+- [Lorentz: exact finite causal-order references](https://thomasmgfeller.github.io/x6-spectral-astrolabium/modules/lorentz-n7-complete.html)
 - [X6-QE: structures with the same spectrum](https://thomasmgfeller.github.io/x6-spectral-astrolabium/modules/x6-qe.html)
 - [Browse every registered research module](https://thomasmgfeller.github.io/x6-spectral-astrolabium/modules/index.html)
 

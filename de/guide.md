@@ -10,7 +10,7 @@ Ein Spektrum ist eine aus einer Matrix berechnete Sammlung von Werten. Unterschi
 
 Der aktuelle Schwerpunkt ist die lorentzsche Spektralgeometrie. Signalverarbeitung, RAX, Photonik und industrielle Datenstudien haben jeweils eigene Geltungsbereiche und Abnahmekriterien. Ein fertiger Quantencomputer oder eine bewiesene Quantengravitationstheorie werden nicht behauptet.
 
-- [Lorentz: exakte endliche Referenzen kausaler Ordnungen](https://thomasmgfeller.github.io/x6-spectral-astrolabium/modules/lorentz-n6-residuals.html)
+- [Lorentz: exakte endliche Referenzen kausaler Ordnungen](https://thomasmgfeller.github.io/x6-spectral-astrolabium/modules/lorentz-n7-complete.html)
 - [X6-QE: unterschiedliche Strukturen mit gleichem Spektrum](https://thomasmgfeller.github.io/x6-spectral-astrolabium/modules/x6-qe.html)
 - [Alle registrierten Forschungsmodule](https://thomasmgfeller.github.io/x6-spectral-astrolabium/modules/index.html)
 

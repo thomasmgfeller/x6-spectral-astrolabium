@@ -125,7 +125,7 @@ def home(path, data, content, lang):
     for i, card in enumerate(t['paths']):
         body += '<article class="card"><p class="number">0' + str(i + 1) + '</p><h3>' + E(card['title']) + '</h3>' + p(card['text']) + link(rel(path, guide) + '#' + card['id'], card['link']) + '</article>'
     body += '</div></section><section class="split"><div><p class="eyebrow">' + E(t['priority_label']) + '</p><h2>' + E(t['priority_title']) + '</h2>' + p(t['priority_text'])
-    body += link(rel(path, 'modules/lorentz-n6-residuals.html'), t['priority_link'], **{'class': 'button secondary'}) + '</div><aside class="note"><h2>' + E(t['limits_title']) + '</h2>' + p(t['limits']) + '</aside></section>'
+    body += link(rel(path, 'modules/lorentz-n7-complete.html'), t['priority_link'], **{'class': 'button secondary'}) + '</div><aside class="note"><h2>' + E(t['limits_title']) + '</h2>' + p(t['limits']) + '</aside></section>'
     body += '<section aria-labelledby="topics"><h2 id="topics">' + E(t['topics_title']) + '</h2><ul class="topic-list">'
     for item in t['topics']:
         body += '<li>' + link(rel(path, 'modules/' + item['module'] + '.html'), item['title'], **{'class': 'button secondary'}) + '<span>' + E(item['text']) + '</span></li>'

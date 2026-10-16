@@ -34,6 +34,6 @@ Erwartete Ausgabe: Exit 0; nur die unten genannte Softwareaussage.
 
 ## Offene Prüfung
 
-Die vier Endpunkt-Kollisionen sind im main-Modul lorentz-n6-residuals exakt mit Wolfram gegengeprüft und getrennt. Nächste Forschungsabnahme: H7-bidirectional-moments auf allen 2.045 n=7-Ordnungen testen; Enumeration, Budget und Abbruchregel vorher fixieren. Externe Begutachtung bleibt offen.
+Die vollständige n=7-Abnahme ist im Modul lorentz-n7-complete abgeschlossen: H7-bidirectional-moments ist durch zwei Restpaare widerlegt. Nächster Schritt: strukturelle Erklärung der minimalen Kollisionen und unabhängige externe Replikation; neue Aussagen müssen eigene Voraussetzungen nennen.
 
 Evidenzberichte behalten ihre eigenen Prüfrevisionen. Keine neue Ausführung, externe Begutachtung oder physische Qualifikation durch diese Darstellung.

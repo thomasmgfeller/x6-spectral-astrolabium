@@ -1,0 +1,43 @@
+name: Lorentz Complete n7
+on:
+  pull_request:
+    paths: ['research/lorentz_n7_complete/**', '.github/workflows/lorentz-n7.yml']
+  push:
+    branches: [main]
+    paths: ['research/lorentz_n7_complete/**', '.github/workflows/lorentz-n7.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  exact-countercheck:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Recheck all upper relations and exact polynomials without network
+        run: >-
+          sudo env "PATH=$PATH" unshare --net
+          python3 -B -O research/lorentz_n7_complete/run.py
+          --verify research/lorentz_n7_complete/results
+      - name: Reproduce both enumeration paths without network
+        run: >-
+          sudo env "PATH=$PATH" unshare --net
+          python3 -B research/lorentz_n7_complete/run.py
+          --run "$RUNNER_TEMP/lorentz-n7-fresh"
+      - name: Compare deterministic artifacts
+        run: |
+          for name in atlas.json independent-results.json counterexamples.json controls.json; do
+            cmp "research/lorentz_n7_complete/results/$name" "$RUNNER_TEMP/lorentz-n7-fresh/$name"
+          done
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: lorentz-n7-exact-reproduction
+          path: ${{ runner.temp }}/lorentz-n7-fresh/
+          retention-days: 30
+          if-no-files-found: error
