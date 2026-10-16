@@ -1,10 +1,10 @@
 name: X6 Research Hub
 on:
   pull_request:
-    paths: ['index.html', 'index.md', 'de/**', 'guide/**', 'modules/**', 'assets/hub.*', 'docs/hub/**', 'MODULE_REGISTRY.json', 'hub-index.json', 'sitemap.xml', 'llms.txt', 'tools/*hub*', '.github/workflows/x6-hub.yml']
+    paths: ['index.html', 'index.md', 'de/**', 'guide/**', 'modules/**', 'wiki/**', 'assets/hub.*', 'assets/wiki.css', 'docs/hub/**', 'docs/wiki/**', 'MODULE_REGISTRY.json', 'hub-index.json', 'sitemap.xml', 'llms.txt', 'tools/*hub*', 'tools/*wiki*', '.github/workflows/x6-hub.yml']
   push:
     branches: [main]
-    paths: ['index.html', 'index.md', 'de/**', 'guide/**', 'modules/**', 'assets/hub.*', 'docs/hub/**', 'MODULE_REGISTRY.json', 'hub-index.json', 'sitemap.xml', 'llms.txt', 'tools/*hub*', '.github/workflows/x6-hub.yml']
+    paths: ['index.html', 'index.md', 'de/**', 'guide/**', 'modules/**', 'wiki/**', 'assets/hub.*', 'assets/wiki.css', 'docs/hub/**', 'docs/wiki/**', 'MODULE_REGISTRY.json', 'hub-index.json', 'sitemap.xml', 'llms.txt', 'tools/*hub*', 'tools/*wiki*', '.github/workflows/x6-hub.yml']
   workflow_dispatch:
 permissions:
   contents: read
@@ -23,6 +23,7 @@ jobs:
         run: |
           python3 tools/build_hub.py --check
           python3 tools/check_hub.py
+          python3 tools/check_wiki.py
           python3 tests/python/verify_manifest.py
   browser:
     runs-on: ubuntu-24.04

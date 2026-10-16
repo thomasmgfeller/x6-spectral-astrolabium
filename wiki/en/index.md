@@ -1,0 +1,39 @@
+# X6, explained simply
+
+A guide for curious readers, learners and people who want to check the work themselves. No specialist knowledge is needed to get started.
+
+[Deutsch](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/de/) · [Wiki overview](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/en/)
+
+Source snapshot: 2026-10-16 · `08c64744caa584c940b45a8825d0b099ae0c92fb`
+
+## What is X6?
+
+X6 Spectral Astrolabium is an open research workshop maintained by Thomas Gfeller. It brings together small browser labs, reproducible mathematical examples and research plans. The shared question is: what can we reliably learn from measured signals and relationships between events?
+
+Think of a toolbox accompanied by a lab notebook. A tool calculates something; the notebook explains its inputs, results and limits. A successful example does not make every tool suitable for every purpose.
+
+## Where would you like to begin?
+
+| Your goal | Suggested starting point |
+| --- | --- |
+| Try something without installing software | Quick start → Signal Validation Lab |
+| Understand the plots | Signals and filters |
+| Understand networks and possible spacetime structures | Causal orders |
+| Read a result critically | Understanding evidence |
+| Find a particular project | Research areas |
+| Look up an unfamiliar word | Glossary |
+
+The chapter menu covers both language editions. Switching languages opens the corresponding article. Use your browser’s Find function to search within a page.
+
+## What can you use today?
+
+- Browser applications for signals and finite causal orders.
+- Computational references with source code, test cases and documented counterexamples.
+- A local workflow for running, verifying and exporting experiments.
+- Research plans for further mathematics, industrial applications and laboratory work.
+
+X6 is a public research preview. It does not establish a general spacetime theory, a qualified quantum chip or superior industrial denoising. This describes the available evidence, rather than deciding which questions might eventually be solved.
+
+- [Project portal](https://thomasmgfeller.github.io/x6-spectral-astrolabium/)
+- [All registered modules](https://thomasmgfeller.github.io/x6-spectral-astrolabium/modules/)
+- [Scientific scope](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/docs/SCIENTIFIC_SCOPE.md)

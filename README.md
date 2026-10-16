@@ -1,5 +1,11 @@
 # X6 Spectral Astrolabium
 
+**Neu: das verständliche X6-Wiki · New: the plain-language X6 wiki**
+
+**[Deutsch](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/de/)** · **[English](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/en/)**
+
+Acht Kapitel je Sprache: Einstieg, Schnellstart, Signale, kausale Ordnungen, Evidenz, Forschungsbereiche, Glossar und FAQ. Eight chapters per language, with practical examples and links to the original evidence.
+
 **Public Research Preview — independent validation requested. NOT a scientifically certified stable release.**
 
 **Numerical audit (2026-10-15):** [a reproducible small-weight scaling defect](docs/numerics-v1/README.md)
