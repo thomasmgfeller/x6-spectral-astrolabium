@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Schnellstart: dein erster Versuch | X6 Research Hub</title>
+<meta name="description" content="Beginne im Browser. Die lokale Installation ist ein eigener, optionaler Weg für reproduzierbare Rechenläufe.">
+<link rel="canonical" href="https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/de/quick-start.html">
+<link rel="alternate" hreflang="de" href="https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/de/quick-start.html">
+<link rel="alternate" hreflang="en" href="https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/en/quick-start.html">
+<link rel="alternate" type="text/markdown" href="quick-start.md">
+<link rel="describedby" href="../../llms.txt" type="text/plain">
+<link rel="sitemap" href="../../sitemap.xml" type="application/xml">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Schnellstart: dein erster Versuch">
+<meta property="og:description" content="Beginne im Browser. Die lokale Installation ist ein eigener, optionaler Weg für reproduzierbare Rechenläufe.">
+<meta property="og:url" content="https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/de/quick-start.html">
+<meta property="og:site_name" content="X6 Spectral Astrolabium">
+<meta name="twitter:card" content="summary">
+<link rel="stylesheet" href="../../assets/hub.css">
+<link rel="stylesheet" href="../../assets/wiki.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Schnellstart: dein erster Versuch", "description": "Beginne im Browser. Die lokale Installation ist ein eigener, optionaler Weg für reproduzierbare Rechenläufe.", "url": "https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/de/quick-start.html", "inLanguage": "de", "isPartOf": {"@type": "WebSite", "name": "X6 Spectral Astrolabium", "url": "https://thomasmgfeller.github.io/x6-spectral-astrolabium/"}}</script>
+
+</head>
+<body>
+<a class="skip" href="#main">Zum Inhalt</a>
+<header><a class="brand" href="../../de/index.html">X6 <span>Spectral Astrolabium</span></a>
+<nav aria-label="Hauptnavigation"><a href="../../de/index.html">Übersicht</a><a href="../../de/guide.html">Einstieg</a><a href="../../modules/index.html">Module</a><a href="index.html">Wiki</a><a href="../en/quick-start.html" hreflang="en">English</a><a href="https://github.com/thomasmgfeller/x6-spectral-astrolabium">GitHub</a></nav></header>
+<main id="main"><section class="hero compact wiki-heading"><p class="eyebrow">X6 WIKI · DEUTSCH</p><h1>Schnellstart: dein erster Versuch</h1><p>Beginne im Browser. Die lokale Installation ist ein eigener, optionaler Weg für reproduzierbare Rechenläufe.</p></section><div class="wiki-layout"><aside class="wiki-sidebar"><nav class="wiki-chapters" aria-label="Wiki-Kapitel"><a href="index.html">X6 einfach verstehen</a><a href="quick-start.html" aria-current="page">Schnellstart: dein erster Versuch</a><a href="signals.html">Signale und Filter verstehen</a><a href="causal-orders.html">Kausale Ordnungen und Raumzeitfragen</a><a href="evidence.html">Prüfergebnisse richtig verstehen</a><a href="research-map.html">Die Forschungsbereiche im Überblick</a><a href="glossary.html">Glossar: Begriffe ohne Umwege</a><a href="faq.html">Häufige Fragen und Hilfe</a></nav><p class="wiki-stamp">Quellenstand: 2026-10-16 · <a href="https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/08c64744caa584c940b45a8825d0b099ae0c92fb">08c6474</a></p></aside><article class="wiki-article"><details class="wiki-toc" open><summary>Auf dieser Seite</summary><ul><li><a href="#browser">In fünf Minuten im Signal Lab</a></li><li><a href="#local">Lokal starten</a></li><li><a href="#save">Einen Lauf ausführen und prüfen</a></li></ul></details><section class="prose" id="browser"><h2>In fünf Minuten im Signal Lab</h2><ol><li>Öffne das Signal Validation Lab und wähle bei Bedarf Deutsch.</li><li>Übernimm die Standardwerte und klicke auf „Test ausführen“.</li><li>Vergleiche Identität, gleitenden Mittelwert, FFT-Tiefpass und X6-Phasenfilter. Sie verwenden denselben Eingang.</li><li>Betrachte Referenz und Ausgabe gemeinsam. Lies anschließend den Fehlerwert und die einzelnen Kriterien.</li><li>Ändere nur die Rauschstärke und führe erneut aus. So bleibt erkennbar, welche Änderung welchen Effekt hatte.</li><li>Wähle „Gegenbeispiele prüfen“. Ein bestandener Gegenbeispielfall bedeutet, dass der erwartete Fehler erkannt wurde.</li><li>Exportiere den JSON-Prüfbericht. Importiere ihn anschließend über „JSON-Prüfbericht wiederholen“ und lasse ihn neu berechnen.</li></ol><p>Das Ergebnis muss nicht überall PASS zeigen. Auch ein korrekt ausgeführter Versuch kann zeigen, dass ein Filter das Signal verschlechtert. JSON bewahrt den vollständigen Prüfbericht; CSV enthält Zeitreihen zur weiteren Auswertung.</p><ul class="wiki-sources"><li><a href="../../app/signal-lab.html">Signal Validation Lab öffnen</a></li><li><a href="https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/docs/SIGNAL_VALIDATION_LAB.md">Ausführliche Bedienung</a></li></ul></section><section class="prose" id="local"><h2>Lokal starten</h2><p>Der dokumentierte lokale Prüfweg verwendet Linux/POSIX auf x86-64, Python 3.12, Git und Node.js ab Version 22. Andere Plattformen sind durch diesen Prüfbericht nicht automatisch mitabgedeckt. Führe die Befehle in einem neuen Projektordner aus.</p><pre><code>git clone --branch main https://github.com/thomasmgfeller/x6-spectral-astrolabium.git x6-wiki-start
+cd x6-wiki-start
+python3 x6.py setup --profile research
+python3 x6.py doctor --profile research
+python3 x6.py serve</code></pre><p>Öffne die ausgegebene lokale Adresse. Strg+C beendet den Server. Bei belegtem Port: python3 x6.py serve --port 8001. Für eine exakt gleiche Wiederholung verwende den Quellencommit aus dem betreffenden Modulbericht; main entwickelt sich weiter.</p><ul class="wiki-sources"><li><a href="https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/docs/INTEGRATION.md">Installations- und Integrationsanleitung</a></li></ul></section><section class="prose" id="save"><h2>Einen Lauf ausführen und prüfen</h2><pre><code>python3 x6.py run signal --output runs/wiki-signal-001
+python3 x6.py verify runs/wiki-signal-001
+python3 x6.py export runs/wiki-signal-001 --output exports/wiki-signal-001.zip
+python3 x6.py verify exports/wiki-signal-001.zip</code></pre><p>Benutze für den nächsten Lauf einen neuen Ausgabenamen. verify prüft nicht nur Prüfsummen, sondern berechnet die vorgesehenen Ergebnisse erneut. Das erfolgreiche Exportieren ändert das fachliche Urteil über den Filter nicht.</p><p>Für den Einstieg ist keine neue Wolfram-Abfrage und kein Messgerät erforderlich. Die separat dokumentierte Offline-Referenzsuite verwendet Python 3.12 und Node.js 24.</p><ul class="wiki-sources"><li><a href="https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/docs/OFFLINE_REFERENCE.md">Offline-Referenzsuite</a></li></ul></section><p class="wiki-next"><a href="index.html">Zur Wiki-Übersicht</a></p></article></div></main>
+<footer><p>Thomas Gfeller · Offene Forschung · <a href="../../CITATION.cff">CITATION.cff</a> · <a href="quick-start.md">Markdown</a> · <a href="../../llms.txt">llms.txt</a></p>
+<p>Eigene Beiträge: Apache-2.0. Drittinhalte und Daten behalten ihre eigenen Bedingungen. <a href="https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/LICENSE_SCOPE.md">Lizenzumfang</a>.</p>
+<p>Forschungssoftware und endliche Referenzrechnungen. Keine abgeschlossene physische Gerätequalifikation oder unabhängige externe Begutachtung.</p></footer>
+</body></html>

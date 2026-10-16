@@ -46,6 +46,14 @@ async function main() {
     assert.equal(new URL(page.url()).hash,'#try');
     assert.equal(await page.locator('#try h2').innerText(),'2. Ein Browserexperiment ausprobieren');
     checks.push('Language navigation and the German guided route reach the correct content');
+    await page.getByRole('link',{name:'Wiki',exact:true}).click();
+    assert.equal(new URL(page.url()).pathname.endsWith('/wiki/de/index.html'),true);
+    await page.locator('.wiki-chapters').getByRole('link',{name:'Signale und Filter verstehen',exact:true}).click();
+    await page.getByRole('link',{name:'English',exact:true}).click();
+    assert.equal(new URL(page.url()).pathname.endsWith('/wiki/en/signals.html'),true);
+    assert.equal(await page.locator('h1').innerText(),'Understanding signals and filters');
+    await page.screenshot({path:path.join(output,'wiki-desktop-en.png'),fullPage:true});
+    checks.push('Wiki entry, chapter navigation and corresponding DE/EN article switch work');
     await page.goto(base+'modules/');
     const all=JSON.parse(fs.readFileSync(path.join(root,'MODULE_REGISTRY.json'))).modules;
     assert.equal(await page.locator('.module:visible').count(),all.length);
@@ -66,7 +74,9 @@ async function main() {
     assert.equal(await page.locator('main').innerText().then(t=>t.includes('historische Tests 001–013 unbestätigt')),true);
     assert.equal(await page.locator('main pre').count(),0);
     checks.push('The NQK dossier retains missing-evidence limits and offers no invented execution command');
-    for (const url of ['', 'de/', 'modules/', 'modules/lorentz-n6-residuals.html']) {
+    const wiki=JSON.parse(fs.readFileSync(path.join(root,'docs/wiki/content.json')));
+    const wikiUrls=wiki.articles.flatMap(a=>['de','en'].map(lang=>`wiki/${lang}/${a.id}.html`));
+    for (const url of ['', 'de/', 'modules/', 'modules/lorentz-n6-residuals.html', 'wiki/', ...wikiUrls]) {
       await page.setViewportSize({width:360,height:800});
       await page.goto(base+url);
       const overflow = await page.evaluate(()=>({width:innerWidth,scroll:document.documentElement.scrollWidth,elements:Array.from(document.querySelectorAll('main *')).filter(e=>e.getBoundingClientRect().right>innerWidth+1).slice(0,8).map(e=>({tag:e.tagName,cls:e.className,text:e.textContent.slice(0,90)}))}));
@@ -75,7 +85,9 @@ async function main() {
     }
     await page.goto(base+'de/');
     await page.screenshot({path:path.join(output,'overview-mobile-de.png'),fullPage:true});
-    checks.push('Four representative pages fit a 360px mobile viewport without horizontal page overflow');
+    await page.goto(base+'wiki/de/quick-start.html');
+    await page.screenshot({path:path.join(output,'wiki-mobile-de.png'),fullPage:true});
+    checks.push('All wiki articles and representative hub pages fit a 360px mobile viewport');
     const nojs=await browser.newContext({javaScriptEnabled:false,viewport:{width:1280,height:900}});
     const crawler=await nojs.newPage();
     await crawler.goto(base+'modules/');
@@ -85,7 +97,14 @@ async function main() {
     await crawler.getByRole('link',{name:all[0].name,exact:true}).click();
     assert.equal(await crawler.locator('main h2').count(),4);
     assert.equal((await crawler.locator('main').innerText()).includes(all[0].claim),true);
-    checks.push('All 37 module links and four-part detail pages remain usable with JavaScript disabled');
+    checks.push('All module links and four-part detail pages remain usable with JavaScript disabled');
+    await crawler.goto(base+'wiki/de/evidence.html');
+    assert.equal(await crawler.locator('.wiki-chapters a').count(),wiki.articles.length);
+    assert.equal((await crawler.locator('main').innerText()).includes('INSUFFICIENT_COMMON_SUPPORT'),true);
+    await crawler.getByRole('link',{name:'English',exact:true}).click();
+    assert.equal(new URL(crawler.url()).pathname.endsWith('/wiki/en/evidence.html'),true);
+    assert.equal(await crawler.locator('h1').innerText(),'Understanding evidence');
+    checks.push('Wiki evidence, chapter links and corresponding translations work without JavaScript');
     assert.deepEqual(errors,[]);
     assert.deepEqual(badResponses,[]);
     const result={status:'PASS',checks,playwright:require('playwright/package.json').version,chromium:browser.version(),page_errors:errors,bad_responses:badResponses,scope:'Hub navigation and selected browser accessibility checks; not a complete WCAG audit, search-index confirmation or scientific validation.'};
