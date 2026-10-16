@@ -97,6 +97,8 @@ Quellenlücken, insbesondere fehlende NQK-Archive, bleiben ausdrücklich offen.
 
 **Transfer und Grenze von R2:** [Vorab veröffentlichter Familientest](research/lorentz_relational_transfer/README.md) mit 72 neuen Ziehungen und zwei getrennten Strukturkontrollen. Q1 und R2 trennen jeweils die 539 nichtisomorphen Stichprobenpaare. Zwei Ordnungen mit je 32 Elementen bleiben jedoch auch unter H7+N1+Q1+R2 gleich; ein vollständiges Vierer-Schnittzertifikat beweist ihre Nichtisomorphie. Sämtliche 541 Paarentscheidungen und 6.294 Polynome je Rechenweg wurden getrennt gegengeprüft. Keine allgemeine Rekonstruktionsgarantie.
 
+**Welche relationale Information erhalten bleiben muss:** [Schnittprofile und begrenzte Rekonstruktion](research/lorentz_relational_boundary/README.md) prüfen 217 Ordnungen und 7.088 Paare. Dreifache Schnitte trennen das 32er-Restpaar; dennoch scheitern selbst Histogramme aller Schnittordnungen allgemein. Eine explizite Gegenbeispielfamilie und ein eingeschränkter Rekonstruktionssatz erklären den Unterschied zwischen bloßen Häufigkeiten und zugeordneten Teilmengenwerten. 434 vollständige Rekonstruktionen sind exakt gegengeprüft; die beschriftete Darstellung ist kein universeller kompakter Fingerabdruck.
+
 ## Frozen reference edition and validation hardening
 
 The [QE reference edition](https://github.com/thomasmgfeller/x6-spectral-astrolabium/releases/tag/reference-2026.10.15-qe1)
