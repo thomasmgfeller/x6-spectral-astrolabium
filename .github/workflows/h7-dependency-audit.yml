@@ -1,0 +1,34 @@
+name: H7 Dependency Audit
+on:
+  pull_request:
+    paths: ['research/lorentz_h7_dependency_audit/**', '.github/workflows/h7-dependency-audit.yml']
+  push:
+    branches: [main]
+    paths: ['research/lorentz_h7_dependency_audit/**', '.github/workflows/h7-dependency-audit.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  pinned-dependency-probes:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: python3 -m pip install -r research/lorentz_h7_dependency_audit/requirements.txt
+      - name: Reproduce pinned comparison and identity behavior without network
+        run: >-
+          sudo env "PATH=$PATH" GIT_CONFIG_COUNT=1
+          GIT_CONFIG_KEY_0=safe.directory "GIT_CONFIG_VALUE_0=$GITHUB_WORKSPACE"
+          unshare --net python3 -B -O research/lorentz_h7_dependency_audit/probes.py
+          --output "$RUNNER_TEMP/h7-probes.json"
+      - run: cmp research/lorentz_h7_dependency_audit/probes.json "$RUNNER_TEMP/h7-probes.json"
+      - run: python3 -B -O research/lorentz_h7_dependency_audit/verify_review.py

@@ -161,3 +161,8 @@ erklären und daraus eine begrenzte neue Aussage mit klaren Voraussetzungen
 ableiten. Eine unabhängige externe Replikation bleibt offen. Größere Durchläufe
 sollten einer neuen präzisen Frage folgen, da die unveränderte H7-Signatur
 bereits widerlegt ist.
+
+
+## Abhängigkeitsprüfung vom 16.10.2026
+
+Die nachfolgende [Abhängigkeitsprüfung](../lorentz_h7_dependency_audit/README.md) fand im geprüften Quellenumfang keinen laufenden Rechenweg, der die widerlegte H7-Eindeutigkeit voraussetzt. Sie dokumentiert alle 39 Module, sechs gezielte Gegenproben und ausdrücklich verbleibende Quellenlücken. Der hier eingefrorene Vertrag, Rechenkern und Datensatz bleiben unverändert.
