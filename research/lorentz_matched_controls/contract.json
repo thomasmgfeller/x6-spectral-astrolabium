@@ -1,0 +1,89 @@
+{
+  "schema": "x6.matched-controls-contract/1",
+  "date": "2026-10-16",
+  "base_commit": "37227587150e8e41bf86520124855909f1ee2eb9",
+  "status": "BEFORE_NEW_TARGET_GENERATION",
+  "question": "Do graph features, and especially the added P123 profiles, discriminate generator families after exact matching on node count, relation count and height?",
+  "history": "PR40 negative pilot motivated this design. All data in this study use a new namespace. This is a prospectively fixed conditional synthetic comparison, not blinded validation or an external replication.",
+  "generators": {
+    "reused_from": "research/lorentz_matching_geometry/geometry.py",
+    "families": [
+      "minkowski",
+      "layered",
+      "lattice",
+      "jittered_lattice"
+    ],
+    "sizes": [
+      16,
+      36,
+      64
+    ],
+    "namespace": "density-height-controls-v1",
+    "pool_per_family_size_split": 1024,
+    "splits": [
+      "train",
+      "test"
+    ],
+    "total_candidate_draws": 24576,
+    "no_adaptive_pool_growth": true,
+    "source_sha256": {
+      "research/lorentz_matching_geometry/core.py": "ee9a96bdba32e93b092e89ce81a76a524a0dbaa05cf905e293b319eefb50f0f7",
+      "research/lorentz_matching_geometry/geometry.py": "d9924b4edd0df5ae464215be849947a4cab72ac767ef25c254749eee233262b9"
+    }
+  },
+  "matching": {
+    "reference_family": "minkowski",
+    "controls": [
+      "layered",
+      "lattice",
+      "jittered_lattice"
+    ],
+    "key": [
+      "N",
+      "strict_relation_count",
+      "height_in_vertices"
+    ],
+    "strata": "Within each size/split/control, group each family by exact (R,H). Pair the kth draw (ascending draw number) in each stratum, without replacement within that comparison. Sort all eligible pairs by SHA256 of [namespace,pair-priority,control,n,split,reference_id,control_id], then take a fixed cap. Features, coordinate values and relation hashes do not participate in selection.",
+    "train_pairs": 64,
+    "test_pairs": 128,
+    "acceptance": "A comparison is EVALUABLE only when both independent split pools provide the full fixed caps. Otherwise record INSUFFICIENT_COMMON_SUPPORT and all available pairs but compute no performance claims for that cell. No relaxed calipers, relabelling of controls or replacement sampling.",
+    "estimand": "Performance on the selected common-support finite conditional distribution. Not the original generator population, not a causal effect, not manifoldlikeness. Reference observations may be reused across different descriptive control comparisons; they never cross train/test within a comparison.",
+    "ledger": "Every candidate id, draw, RNG split key, R, H and full-relation SHA256 is retained. Full coordinates, relations and features are retained for all observations selected in EVALUABLE comparisons. Every rejected/unselected draw can be regenerated from frozen source and ledger."
+  },
+  "features": {
+    "D": "Only [R/choose(N,2),H/N]. This confound-only negative control must have identical within-class training/test distributions and balanced accuracy exactly 0.5 under the fixed centroid rule.",
+    "B": "Unchanged PR40 link-degree distributions, strict interior interval histogram and sorted Hasse Laplacian eigenvalues with the same normalizations.",
+    "P123": "Unchanged PR40 all-node pooled strict past/future intersection histograms through order three.",
+    "models": [
+      "D",
+      "B",
+      "P123",
+      "B+P123"
+    ],
+    "classifier": "Unchanged training-only z-score nearest class centroid; std<=1e-12 uses scale 1; tie order minkowski then control. No hyperparameter tuning. R2+Pall/H7/N1/Q1 not evaluated."
+  },
+  "analysis": {
+    "primary_cell": {
+      "n": 64,
+      "control": "jittered_lattice"
+    },
+    "primary_endpoint": "Balanced accuracy gain B+P123 minus B on 128 test pairs. Bootstrap 2000 whole pairs with replacement, keeping the two members together; percentile 95% interval, linear quantiles; training set held fixed.",
+    "incremental_success": "Primary cell EVALUABLE, gain >=0.05 and lower 95% paired bootstrap bound >0. Otherwise NO_DEMONSTRATED_INCREMENT, or INSUFFICIENT_COMMON_SUPPORT if not evaluable.",
+    "secondary": "All other cells and models descriptive. For each model report confusion, per-observation predictions, whole-pair bootstrap 95% accuracy interval and the exact one-sided within-pair label-swap tail for accuracy above chance. The latter is binomial on pairs with opposite predicted labels; identical predicted labels contribute a fixed one correct. No multiple-testing-adjusted secondary discovery claims.",
+    "uncertainty": "Conditional on fixed selected pools and training. Does not capture pool selection, matching, retraining, other generators or other N. Within-pair permutation assumes exchangeability under the conditional null; no causal interpretation.",
+    "diagnostics": "Eligible/matched/unused counts and every stratum; all selected pair keys equal exactly; no duplicate id inside a cell or across its splits; coordinate-derived vs direct relation/height/interval checks; per-observation relabel invariance; separate scalar classifier; complete coverage. No post-result tuning."
+  },
+  "selftests": "Toy generator N=4 only and artificial ledgers; exact matching support gates; synthetic train/test and negative controls; no target pool creation before public freeze.",
+  "resources": {
+    "phase_seconds": 1800,
+    "memory_bytes": 2147483648
+  },
+  "publication": "Public contract then source freeze before candidate generation. Failures preserved; frozen sources never silently repaired after results. Entire old studies remain unchanged.",
+  "limitations": [
+    "Fixed N is a conditioned sprinkling approximation with finite precision.",
+    "Exact matching can select a narrow atypical subpopulation; discarded observations are explicit.",
+    "No common support is not evidence that a geometric observable works.",
+    "Finite conditional discrimination does not establish geometry reconstruction, Lorentz invariance or continuum physics.",
+    "External replication remains open."
+  ]
+}
