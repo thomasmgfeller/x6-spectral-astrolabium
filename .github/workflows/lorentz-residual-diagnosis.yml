@@ -1,0 +1,45 @@
+name: Lorentz Residual Pair Diagnosis
+on:
+  pull_request:
+    paths: ['research/lorentz_residual_diagnosis/**', '.github/workflows/lorentz-residual-diagnosis.yml']
+  push:
+    branches: [main]
+    paths: ['research/lorentz_residual_diagnosis/**', '.github/workflows/lorentz-residual-diagnosis.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  exact-residual-diagnosis:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Check toy cases and source-bound diagnosis without network
+        run: |
+          python3 -B -O research/lorentz_residual_diagnosis/run.py --selftest
+          sudo env "PATH=$PATH" GIT_CONFIG_COUNT=1 GIT_CONFIG_KEY_0=safe.directory "GIT_CONFIG_VALUE_0=$GITHUB_WORKSPACE" \
+            unshare --net python3 -B -O research/lorentz_residual_diagnosis/run.py \
+            --run "$RUNNER_TEMP/residual-diagnosis" --source-ref 00dc46ac9077e94897453ff4320885524f4edfa2
+      - name: Compare all deterministic results
+        run: |
+          for name in features.jsonl rounds.json summary.json costs.json target.json verification.json; do
+            cmp "research/lorentz_residual_diagnosis/results/$name" "$RUNNER_TEMP/residual-diagnosis/$name"
+          done
+      - name: Recheck separately labelled post-hoc witness interpretation
+        run: |
+          cp research/lorentz_residual_diagnosis/results/certificate.json "$RUNNER_TEMP/certificate.json"
+          python3 -B -O research/lorentz_residual_diagnosis/explain.py
+          cmp research/lorentz_residual_diagnosis/results/certificate.json "$RUNNER_TEMP/certificate.json"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: residual-diagnosis-reproduction
+          path: ${{ runner.temp }}/residual-diagnosis*
+          if-no-files-found: error
+          retention-days: 30

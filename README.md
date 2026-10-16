@@ -93,6 +93,8 @@ Quellenlücken, insbesondere fehlende NQK-Archive, bleiben ausdrücklich offen.
 
 **Belastungstest gleicher N1-Profile:** [207 verschiedene reguläre Zweischichtenordnungen](research/lorentz_n1_stress/README.md) wurden exakt geprüft. Q1 trennt 24 von 25 nichtisomorphen H7+N1-Kollisionspaaren; ein Paar mit 16 Elementen bleibt auch unter Q1 gleich. 23.193 Polynome wurden getrennt gegengeprüft. Lokale Vorabfestlegung mit dokumentierter blockierter öffentlicher Vorabveröffentlichung; keine allgemeine Rekonstruktionsgarantie.
 
+**Diagnose des Restpaars:** [Gerichtete Paarverfeinerung und exaktes Trennzeugnis](research/lorentz_residual_diagnosis/README.md) unterscheiden das H7+N1+Q1-Restpaar in Runde 2. R2 trennt alle 6.849 größeninternen Paare des vorhandenen Korpus; Zweier- und Dreier-Schnittprofile scheitern am Restpaar. Zwei getrennte Implementierungen, vollständige Rundenspuren und ein direktes Relationszertifikat sichern den Befund. Nachträgliche Diagnose bekannter Daten, keine allgemeine Eindeutigkeits- oder Physikbehauptung.
+
 ## Frozen reference edition and validation hardening
 
 The [QE reference edition](https://github.com/thomasmgfeller/x6-spectral-astrolabium/releases/tag/reference-2026.10.15-qe1)
