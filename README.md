@@ -103,6 +103,8 @@ Quellenlücken, insbesondere fehlende NQK-Archive, bleiben ausdrücklich offen.
 
 **Exakter Dichte-/Höhenabgleich:** Die [neue Kontrollstudie](research/lorentz_matched_controls/README.md) prüft 24.576 frische Kandidaten. Fünf Vergleiche liefern genügend Paare mit identischen Knotenzahlen, Relationszahlen und Höhen; vier bleiben wegen unzureichender Überlappung ohne Leistungsbewertung. Die reine Dichte-/Höhenkontrolle erreicht exakt 50 %. Im primären Vergleich gegen gestörte Gitter bei 64 Knoten beträgt der Zusatznutzen von P123 −3,91 Prozentpunkte, mit 95%-Paar-Bootstrap-Intervall [−9,77;+1,56]: kein nachgewiesener Zusatznutzen. Vollständiger Auswahlledger, verwendete Rohdaten und getrennte Gegenprüfungen sind archiviert.
 
+**Nächste geometrische Zielgröße:** [Normierte Eigenzeit zwischen markierten Ereignissen](research/lorentz_proper_time/README.md). Zieldefinition, exakte Identifizierbarkeitsgrenzen und ein prospektiver Prüfvertrag sind festgelegt. Die Intervallpunktzahl bildet die Referenz; globale Dichte/Höhe und lokale längste Ketten sind Vergleichsgrößen. Deterministische Kleintests sind ausführbar. Der neue Monte-Carlo-Lauf und seine vollständige Quellenfixierung stehen noch aus.
+
 ## Frozen reference edition and validation hardening
 
 The [QE reference edition](https://github.com/thomasmgfeller/x6-spectral-astrolabium/releases/tag/reference-2026.10.15-qe1)
