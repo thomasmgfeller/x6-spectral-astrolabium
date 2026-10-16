@@ -1,0 +1,50 @@
+name: Lorentz N1 Equal Profile Stress
+on:
+  pull_request:
+    paths: ['research/lorentz_n1_stress/**', '.github/workflows/lorentz-n1-stress.yml']
+  push:
+    branches: [main]
+    paths: ['research/lorentz_n1_stress/**', '.github/workflows/lorentz-n1-stress.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  exact-stress-countercheck:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 70
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Restore exact local pre-run commits from archived bundle
+        run: |
+          git bundle verify research/lorentz_n1_stress/local-history.bundle
+          git fetch research/lorentz_n1_stress/local-history.bundle refs/heads/research/n1-stress:refs/archive/n1-stress-local
+          test "$(git rev-parse refs/archive/n1-stress-local)" = ef64e9174d882ac5c5b7cd43e5d004da2e66b162
+      - name: Reproduce fixed stress study without network
+        run: >-
+          sudo env "PATH=$PATH" GIT_CONFIG_COUNT=1
+          GIT_CONFIG_KEY_0=safe.directory "GIT_CONFIG_VALUE_0=$GITHUB_WORKSPACE"
+          unshare --net python3 -B -O research/lorentz_n1_stress/run.py
+          --run "$RUNNER_TEMP/n1-stress"
+      - name: Compare deterministic results
+        run: |
+          for name in records.jsonl draws.json summary.json verification.json; do
+            cmp "research/lorentz_n1_stress/results/$name" "$RUNNER_TEMP/n1-stress/$name"
+          done
+      - name: Reproduce separately labelled post-hoc interpretation
+        run: |
+          cp research/lorentz_n1_stress/interpretation.json "$RUNNER_TEMP/interpretation.json"
+          python3 -B -O research/lorentz_n1_stress/interpret.py
+          cmp research/lorentz_n1_stress/interpretation.json "$RUNNER_TEMP/interpretation.json"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: n1-stress-reproduction
+          path: ${{ runner.temp }}/n1-stress*
+          retention-days: 30
+          if-no-files-found: error

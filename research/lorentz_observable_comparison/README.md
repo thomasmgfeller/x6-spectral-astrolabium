@@ -211,6 +211,8 @@ Stichprobe würde die hier sichtbare Schwierigkeit voraussichtlich schlecht
 adressieren. Auch dabei müssen Fragestellung und Familie vor dem Lauf feststehen;
 eine gefundene Kollision bleibt erhalten.
 
+**Nachfolgender Test ausgeführt:** Der [Belastungstest gleicher N1-Profile](../lorentz_n1_stress/README.md) findet unter 207 verschiedenen regulären Zweischichtenordnungen 25 H7+N1-Kollisionspaare. Q1 trennt 24, ein Paar mit 16 Elementen bleibt gleich. Alle 23.193 Polynome wurden getrennt exakt gegengeprüft. Die öffentliche Vorabveröffentlichung wurde blockiert; die lokale Vorabfestlegung und diese Abweichung sind offengelegt. Dieser Folgetest ändert die historischen Vergleichsergebnisse nicht.
+
 ## Literatur
 
 [1] Y. K. Yazdi, M. Letizia und A. Kempf, *Lorentzian Spectral Geometry with

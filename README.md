@@ -91,6 +91,8 @@ Quellenlücken, insbesondere fehlende NQK-Archive, bleiben ausdrücklich offen.
 
 **Vorab festgelegter Merkmalsvergleich:** [Nachbarschaftsprofile und Einpunkt-Erweiterungen](research/lorentz_observable_comparison/README.md) wurden exakt verglichen. N1 und Q1 trennen alle sechs bekannten Kontrollpaare; N1 benötigt keine zusätzlichen Spektralpolynome. Die neue kleine Stichprobe enthält bereits unter H7 keine Kollision und belegt daher keinen Zusatznutzen. Empfehlung nur als Vorfilter mit vollständiger Isomorphieprüfung.
 
+**Belastungstest gleicher N1-Profile:** [207 verschiedene reguläre Zweischichtenordnungen](research/lorentz_n1_stress/README.md) wurden exakt geprüft. Q1 trennt 24 von 25 nichtisomorphen H7+N1-Kollisionspaaren; ein Paar mit 16 Elementen bleibt auch unter Q1 gleich. 23.193 Polynome wurden getrennt gegengeprüft. Lokale Vorabfestlegung mit dokumentierter blockierter öffentlicher Vorabveröffentlichung; keine allgemeine Rekonstruktionsgarantie.
+
 ## Frozen reference edition and validation hardening
 
 The [QE reference edition](https://github.com/thomasmgfeller/x6-spectral-astrolabium/releases/tag/reference-2026.10.15-qe1)
