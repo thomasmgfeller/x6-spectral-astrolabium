@@ -1,0 +1,33 @@
+{
+  "schema": "x6.h7-structure-contract/1",
+  "status": "POST_HOC_EXACT_EXPLANATION",
+  "discovery": "Switching sets and relabellings were discovered by exploratory exact search on known counterexamples before this contract. This is not a prospective hypothesis test or external preregistration.",
+  "primary": "Explain both minimal H7 collision pairs with explicit regular orthogonal similarity, then prove connected ordinal-prefix lifts for every k>=1.",
+  "conventions": {
+    "C": "Full strict transitive 0/1 relation; not Hasse links",
+    "Q": "Q_X=J_4/2-I_4, identity off X; Q^T Q=I and Q 1=1",
+    "mapping": "(Q^T C_left Q)[i,j]=C_right[p[i],p[j]]; zero-based labels",
+    "signature": "(n,chi_S,chi_A,chi_K,nmin,nmax,Wfuture,Wpast), K=SA-AS",
+    "connected": "Connected undirected comparability graph, not strong connectivity of the directed acyclic graph"
+  },
+  "checks": [
+    "Bind six original matrices to published source hashes",
+    "Verify both rational similarity certificates with integer identities",
+    "Independently compare all characteristic polynomials using determinants, not producer recurrence",
+    "Check isomorphism invariants and brute-force small-pair bijections",
+    "Check k=1,2,5 lifts as finite implementation checks of a general proved construction",
+    "Keep known connected n=8 D collision as a control against universal recovery claims",
+    "Reject altered switching matrix, relabelling, relation, polynomial and transitivity data"
+  ],
+  "excluded": [
+    "Universal recovery by D, isolated counts, or any proposed scalar",
+    "Novelty or priority",
+    "Physical spacetime or dynamics validation",
+    "External human review",
+    "An exhaustive new n>=8 census"
+  ],
+  "references": [
+    "https://users.cecs.anu.edu.au/~bdm/papers/GodsilMcKayCospectral.pdf",
+    "https://arxiv.org/abs/2008.02291"
+  ]
+}

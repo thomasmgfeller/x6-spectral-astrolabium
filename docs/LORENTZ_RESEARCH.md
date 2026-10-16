@@ -150,3 +150,8 @@ Kollisionen sowie eine externe Replikation. Keine physische Validierung.
 ## Abhängigkeitsprüfung vom 16.10.2026
 
 Die [H7-Abhängigkeitsprüfung](../research/lorentz_h7_dependency_audit/README.md) umfasst alle 39 registrierten Module. Keine konkrete laufende H7-Eindeutigkeitsabhängigkeit wurde gefunden. Historische Teilbefunde bleiben begrenzt gültig; Rekonstruktion und Historienreduktion benötigen eigene Identitäts- und Informationsverlustprüfungen. Unzugängliche Quellen werden nicht entlastet.
+
+
+## Strukturelle Erklärung vom 16.10.2026
+
+Die [nachträgliche Strukturanalyse](../research/lorentz_h7_structure/README.md) liefert exakte Switching-Zertifikate für beide n=7-Paare, einen Beweis zusammenhängender H7-Kollisionen für jedes n≥8 und eine begrenzte Ununterscheidbarkeitsaussage für Matrixpolynom-Spektren. Historische Verträge und Resultate bleiben unverändert; zusätzliche Grad- oder Motivmerkmale werden nicht als universelle Identifikatoren behauptet.
