@@ -1,0 +1,48 @@
+{
+  "status": "PASS",
+  "orders_verified": 6912,
+  "full_relation_checks": 6912,
+  "coordinate_oracle_max_a_error": 1.1102230246251565e-16,
+  "relabelings": 6912,
+  "predictions_verified": 27648,
+  "independent_generator_replay": true,
+  "independent_matching": true,
+  "independent_bootstrap_reductions": true,
+  "toys": {
+    "status": "PASS_TOY_ONLY",
+    "target_samples_generated": 0,
+    "design": {
+      "status": "PASS_DESIGN_ONLY",
+      "target_samples_generated": 0,
+      "relabelings": 48,
+      "exact_binomial_cases": 24,
+      "target_values": {
+        "A": "3/10",
+        "B": "7/10"
+      },
+      "full_source_freeze": false,
+      "monte_carlo_run": false,
+      "note": "Finite checks support arithmetic and examples, not an independent proof of the general argument."
+    },
+    "small_generator_draws": 6,
+    "new_relabelings": 24,
+    "rejected_controls": [
+      "forbidden coordinates",
+      "forbidden theta",
+      "forbidden a",
+      "forbidden rng_key",
+      "forbidden family",
+      "forbidden id",
+      "full record at inference",
+      "test split in calibration",
+      "extra calibration metadata",
+      "negative mark alias",
+      "nontransitive order",
+      "missing cohort member",
+      "reordered cohort"
+    ],
+    "poison_checks": true,
+    "bootstrap_oracle": true
+  },
+  "scope": "Separate formulas and RNG replay in one authoring process; not external replication."
+}

@@ -1,10 +1,16 @@
 # Normierte Eigenzeit aus einer markierten kausalen Ordnung
 
-**Status: Zieldefinition und Prüfvertrag festgelegt; kein neuer Ziel-Datenlauf ausgeführt.**
+**Status: Erster Ziel-Datenlauf und interne Gegenprüfung abgeschlossen.**
 Anschluss an [PR #41](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/41).
-Diese Veröffentlichung enthält eine begründete Zielgröße, einen maschinenlesbaren
-[Vertrag](contract.json), ein exaktes Gegenbeispiel und ausführbare Kleintests.
-Generator, Auswertung und Quellenfixierung des großen Versuchs sind noch zu implementieren.
+Der unveränderte [Vertrag](contract.json) aus
+[PR #42](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/42)
+wurde mit 6.912 Ordnungen ausgeführt. Die Intervallreferenz erfüllt die
+vorab festgelegten Hauptkriterien im bekannten flachen 1+1-Modell:
+RMSE 0,031614 bei m=256, gegenüber 0,177785 für die Dichte-/Höhenregression.
+Die größte exakt abgeglichene Zusatzkontrolle bleibt mit 63 statt 128 Paaren
+ohne Leistungsbewertung. [Ergebnisse, Grenzen und Reproduktion](RESULTS.md)
+trennen diese beiden Befunde. Die folgenden Abschnitte erläutern weiterhin
+die Zieldefinition und den ursprünglichen Versuchsplan.
 
 ## 1. Die konkrete geometrische Frage
 
@@ -190,7 +196,7 @@ Unmöglichkeit. Ausführungsfehler oder unvollständige Hauptdaten heißen INCON
 Alle anderen Größen, L-Vergleiche und Gitterübertragungen bleiben beschreibend.
 Nahe theta=0 werden keine relativen Fehler als Hauptkriterium verwendet.
 
-## 6. Was jetzt abgeschlossen ist und was noch aussteht
+## 6. Designprüfungen und Ausführungsstand
 
 Abgeschlossen sind Zieldefinition, Annahmen, Begründung, Gegenbeispiel,
 Fallzahlen und Auswertungsvertrag. Die deterministischen Kleintests rechnen
@@ -210,17 +216,22 @@ Ausführen ohne Zusatzbibliotheken:
 python3 -B -O research/lorentz_proper_time/check_design.py
 ~~~
 
-Die [CI](../../.github/workflows/lorentz-proper-time-design.yml) prüft diese
-Beispiele und den maschinenlesbaren Vertrag. Sie führt **keine**
-Monte-Carlo-Zielstudie aus. Kleine Beispiele prüfen die Rechnungen; der
+Die [Design-CI](../../.github/workflows/lorentz-proper-time-design.yml) prüft diese
+Beispiele und den maschinenlesbaren Vertrag. Der getrennte
+[Reproduktionsworkflow](../../.github/workflows/lorentz-proper-time-run.yml)
+wiederholt zusätzlich die vollständige archivierte Monte-Carlo-Studie.
+Kleine Beispiele prüfen die Rechnungen; der
 allgemeine Skalierungs-/Unabhängigkeitsbefund beruht auf dem Argument oben.
 
-Noch ausstehend sind die vollständige Generator-/Schätzerschnittstelle,
-Leckage- und Replay-Prüfungen, der öffentliche Quellenstand vor Zielerzeugung
-und danach der neue Datenlauf. Dieser Vertrag ist keine Behauptung, diese
-Arbeiten seien schon ausgeführt. Änderungen vor dem Quellenstand erhalten
-eine neue öffentlich dokumentierte Vertragsversion; spätere Änderungen
-dürfen den alten Lauf nicht rückwirkend umdefinieren.
+Generator-/Schätzerschnittstelle, Leckage- und Replay-Prüfungen sowie der erste
+Datenlauf sind inzwischen implementiert und intern geprüft. Der Rechenstand
+ist an Commit `9aca530f2bd0b8ec68e7262013a5c8b3c8bce575` gebunden.
+[RESULTS.md](RESULTS.md) enthält Ergebnisse und Chronologie; die historischen
+Statusfelder in Vertrag und Quellenfixierung bleiben unverändert.
+Offen bleiben externe Replikation, ausreichende Vergleichspaare bei m=256
+und Untersuchungen außerhalb des festgelegten Modells. Ein neuer Versuch
+benötigt einen eigenen vorab festgelegten Vertrag; spätere Änderungen dürfen
+den alten Lauf nicht rückwirkend umdefinieren.
 
 ## 7. Literatur und Reichweite
 

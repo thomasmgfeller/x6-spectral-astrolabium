@@ -1,0 +1,41 @@
+name: Lorentz Proper Time Qualification
+on:
+  pull_request:
+    paths: ['research/lorentz_proper_time/**', 'research/lorentz_matching_geometry/core.py', '.github/workflows/lorentz-proper-time-run.yml']
+  push:
+    branches: [main]
+    paths: ['research/lorentz_proper_time/**', 'research/lorentz_matching_geometry/core.py', '.github/workflows/lorentz-proper-time-run.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  qualification:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 65
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Install pinned dependency
+        run: python3 -m pip install -r research/lorentz_proper_time/requirements.txt
+      - name: Deterministic and small toy controls
+        run: OPENBLAS_NUM_THREADS=1 python3 -B -O research/lorentz_proper_time/run.py --selftest
+      - name: Reproduce complete archived target study without network
+        if: ${{ hashFiles('research/lorentz_proper_time/results/RESULTS.json') != '' }}
+        run: |
+          SOURCE_REF=$(python3 -c "import json; print(json.load(open('research/lorentz_proper_time/results/RESULTS.json'))['source_commit'])")
+          sudo env "PATH=$PATH" GIT_CONFIG_COUNT=1 GIT_CONFIG_KEY_0=safe.directory "GIT_CONFIG_VALUE_0=$GITHUB_WORKSPACE" \
+            OPENBLAS_NUM_THREADS=1 unshare --net python3 -B -O research/lorentz_proper_time/run.py \
+            --run "$RUNNER_TEMP/proper-time" --source-ref "$SOURCE_REF"
+          python3 research/lorentz_proper_time/compare.py research/lorentz_proper_time/results "$RUNNER_TEMP/proper-time"
+      - uses: actions/upload-artifact@v4
+        if: ${{ always() && hashFiles('research/lorentz_proper_time/results/RESULTS.json') != '' }}
+        with:
+          name: proper-time-qualification-reproduction
+          path: ${{ runner.temp }}/proper-time
+          if-no-files-found: error
+          retention-days: 30

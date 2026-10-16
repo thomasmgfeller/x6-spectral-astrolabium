@@ -1,0 +1,19 @@
+name: Assemble verified proper-time archive
+on:
+  push:
+    branches: ['publication/proper-time-transfer-20261016']
+permissions:
+  contents: read
+jobs:
+  assemble:
+    if: github.repository == 'thomasmgfeller/x6-spectral-astrolabium' && github.ref == 'refs/heads/publication/proper-time-transfer-20261016'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09
+        with:
+          fetch-depth: 0
+      - name: Assemble original bytes, verify complete tree and fast-forward publication branch
+        run: python3 .publication-transfer/assemble.py
