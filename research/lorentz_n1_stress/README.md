@@ -20,7 +20,8 @@ Merkmale, Endpunkte und Ressourcenlimits wurden danach nicht geändert.
 Die lokale Git-Zeitfolge ist nachvollziehbar, aber kein unabhängiger Zeitstempel.
 Auch eine spätere Veröffentlichung macht daraus keine rückwirkende öffentliche
 Vorregistrierung. Die Erstfassung war noch nicht veröffentlicht; die anschließend
-erteilte Freigabe und der Publikationsweg sind in [PUBLICATION.md](PUBLICATION.md)+dokumentiert. Die ursprünglichen lokalen Commits bleiben im beigefügten
+erteilte Freigabe und der Publikationsweg sind in [PUBLICATION.md](PUBLICATION.md)
+dokumentiert. Die ursprünglichen lokalen Commits bleiben im beigefügten
 [Git-Bundle](local-history.bundle) bytegenau erhalten.
 
 - Grundlage: `faeb2e003ff91cd3cc90b18db9617d725bebcb2f` (integrierter Vergleich, PR 35).
