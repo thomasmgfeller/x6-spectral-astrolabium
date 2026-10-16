@@ -1,0 +1,50 @@
+{
+  "schema": "x6.relational-transfer-contract/1",
+  "base_commit": "91fb3587a5e12eb7c47a291f5794b993d6e1eb60",
+  "evidence_class": "PROSPECTIVE_FIXED_GENERATORS_WITH_SEPARATE_THEORY_MOTIVATED_CONTROLS",
+  "question": "How do unchanged H7, N1, Q1 and directed R2 transfer to fixed new draws, and does a separately selected closed-neighborhood incidence pair expose a joint failure?",
+  "known_before_evaluation": [
+    "R2 separated all 207 previously inspected cubic height-two representatives; H7+N1+Q1 left one nonisomorphic pair.",
+    "None of this contract's target matrices or feature values has been generated in this task before the protocol publication.",
+    "Rook and Shrikhande graphs are familiar strongly regular graphs, not blind discoveries. Their ordinary bipartite doubles are isomorphic; using an undirected counterexample alone cannot certify a directed-order counterexample.",
+    "The two structured controls instead use B=I+A. Their order isomorphism and feature outcomes are to be computed. They are excluded from prospective random-panel claims."
+  ],
+  "inputs": {
+    "seed": "x6-relational-transfer-v1|2026-10-16",
+    "regular": {"m": [8,11], "draws_each": 12, "degree": 3, "switch_steps": "20*m*m", "recipe": "Start B[i,j]=1 iff (j-i) mod m is 0,1,2. At step s use SHA256 of seed|regular|m|draw|s; the first four big-endian 32-bit words modulo m give i,k,j,l. Switch (i,j),(k,l) to (i,l),(k,j) exactly when rows and columns differ, old edges exist and new edges do not. Keep no-op steps. C has B in its lower-to-upper block."},
+    "bernoulli_height_two": {"n": [8,12], "thresholds_out_of_8": [2,4,6], "draws_each": 4, "recipe": "Equal consecutive layers. For each lower i, upper j, include i<j iff the first SHA256 byte of seed|height2|n|threshold|draw|i|j modulo 8 is below threshold. Isolates and accidentally regular orders are retained."},
+    "three_layer": {"n": [9,12], "thresholds_out_of_8": [2,4,6], "draws_each": 4, "recipe": "Three equal consecutive layers. Independently hash seed|height3|n|threshold|draw|i|j for all pairs in adjacent layers as above, then take strict transitive closure. Degenerate lower-height outcomes are retained."},
+    "structured_controls": {"n": 32, "names": ["closed-rook", "closed-shrikhande"], "recipe": "Index graph vertices by (a,b) in Z4 squared, index=4*a+b. Rook adjacency means distinct vertices agree in either coordinate. Shrikhande adjacency means difference modulo 4 lies in {(1,0),(3,0),(0,1),(0,3),(1,1),(3,3)}. Set B=I+A and C=[[0,B],[0,0]]."},
+    "total_draws": 72,
+    "total_controls": 2,
+    "selection": "Retain all 74 labelled inputs, including isomorphic duplicates, in declared family/size/threshold/draw order. No rejection, seed retry, connectivity filter, added targets or adaptive sample size. Report draw-pair counts separately from exact isomorphism-class counts. Compare every unordered same-size pair (541 pairs), including cross-family pairs, with controls reported separately."
+  },
+  "methods": ["H7", "N1", "Q1", "R2", "H7+N1", "H7+N1+Q1", "H7+N1+R2", "H7+N1+Q1+R2"],
+  "method_policy": "Import unchanged H7/N1/Q1 from lorentz_observable_comparison and unchanged R2 from lorentz_residual_diagnosis, both producer and checker. R2 uses exact paired intermediate colors, joint palettes over all inputs of each n and stabilization by unchanged color count. Save all rounds. Contextual color IDs must not be compared against prior corpora or treated as portable fingerprints. No new separating method enters the panel.",
+  "reference": [
+    "Validate every full strict relation. Direction is preserved; duality is not quotiented out.",
+    "For sample pairs, unequal degree multisets certify nonisomorphism; otherwise use full-relation adaptive backtracking in the producer. Checker uses independently implemented degree-class permutation search for n<=12 and the existing exact row/column-pattern solver for regular height-two n>=16.",
+    "For the structured pair, compute the complete distribution of common-successor counts over every unordered four-element lower subset (and common-predecessor distribution in the upper layer). Producer uses bitset intersections; checker explicit incidences. A difference is a complete finite nonisomorphism certificate. If these agree, use both full-relation and row/column-pattern isomorphism solvers within the same resource cap. This certificate is reference adjudication, not an additional candidate fingerprint or held-out performance result.",
+    "Every same-size pair receives an exact Boolean reference or the entire run is INCONCLUSIVE. Preserve every unresolved feature pair; equality never proves isomorphism."
+  ],
+  "endpoints": [
+    "Full labelled draws, generation metadata, all features, all R2 round matrices and exact reference pair outcomes.",
+    "For every size and each family/size: input count, exact isomorphism classes, total and nonisomorphic draw pairs, and complete unresolved nonisomorphic pairs for every method.",
+    "Incremental R2 outcome on H7+N1+Q1-equal nonisomorphic pairs: ADDITIONAL_SEPARATION, NO_ADDITIONAL_SEPARATION or NO_OPPORTUNITY. Report separately by family and for the structured controls.",
+    "Finite structural summaries: actual height, isolated vertices, degree multiplicities; no assumption that generated height-three draws all attain height three.",
+    "Feature integer payload, 3 characteristic-polynomial calls per input for H7, 6*n for Q1, zero for N1/R2, R2 rounds and n^3 intermediate contributions. Report shared trace storage and color-context requirement. Timings are descriptive single runs, not a controlled speed benchmark.",
+    "No distribution-free generalization, uniform random-poset sampling, general uniqueness, physical spacetime or new-physics claim."
+  ],
+  "verification": [
+    "Independent generation replay (edge sets and reachability traversal versus matrices and closure), including all accepted-switch counts and target coverage.",
+    "Compare every H7/N1/Q1 coefficient via existing Faddeev-LeVerrier versus Bareiss/interpolation arithmetic paths.",
+    "Compare every R2 color matrix at every round via the existing two independent kernels; verify all matrices transport under reversal of every input's vertex labels.",
+    "Recompute every reference pair and every summary independently. Verify isomorphic pairs have identical candidate outputs.",
+    "Toy-only pre-freeze tests n<=4, including all 64 upper-DAG closures, generators at small parameters, relabelled isomorphism positives, and the joint-versus-marginal colored-array control.",
+    "Negative controls reject a self-loop, missing input, altered Q1 coefficient, lost R2 histogram multiplicity, corrupted R2 round and omitted residual/reference pair. No independent human review is implied."
+  ],
+  "resources": {"phase_seconds": 1800, "memory_bytes": 2147483648, "max_refinement_rounds": 200, "network_during_computation": false},
+  "freeze_policy": "Publish this contract first. Implement and test only n<=4 toy inputs, then publish hashes and source commit before any target generation. Record actual chronology. Any post-target correction requires an explicit deviation record and a fresh run; no undisclosed output-driven tuning.",
+  "decisions": {"PASS_EXACT_FIXED_TRANSFER": "Complete coverage, source binding, reference adjudication, independent arithmetic/refinement checks and negative controls passed, regardless of separation outcomes.", "INCONCLUSIVE": "Incomplete computation, timeout, nonstabilization, source mismatch or failed check; preserve partial data and do not add inputs."},
+  "references": ["https://aeb.win.tue.nl/graphs/Shrikhande.html", "https://arxiv.org/abs/2005.08887"]
+}
