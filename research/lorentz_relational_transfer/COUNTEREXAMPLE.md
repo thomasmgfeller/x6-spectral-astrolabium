@@ -96,15 +96,15 @@ und im getrennten Prüfer durch explizite Inzidenzzählung berechnet.
 H7 hat n=32, jeweils 16 minimale/maximale Elemente und beide Gabelzählungen
 gleich 336. Seine drei charakteristischen Polynome sind:
 
-\[
+$$
 \chi_S(x)=(x^2-49)(x^2-9)^6(x^2-1)^9,
-\]
-\[
+$$
+$$
 \chi_A(x)=(x^2+49)(x^2+9)^6(x^2+1)^9,
-\]
-\[
+$$
+$$
 \chi_K(x)=(x^2-9604)(x^2-324)^6(x^2-4)^9.
-\]
+$$
 
 Hier bezeichnet A im H7-Ausdruck die antisymmetrische Relationsmatrix C−Cᵀ,
 nicht die unten als G bezeichnete Graphadjazenz. K=2(CᵀC−CCᵀ).
@@ -129,9 +129,9 @@ Adjazenz eines der beiden stark regulären Graphen und N=J−I−G die Relation
 verschiedener nicht benachbarter Knoten. Beide Graphen haben dieselben Parameter
 (16,6,2,2). Die drei disjunkten Relationsmatrizen erfüllen:
 
-\[
+$$
 G^2=6I+2G+2N,\qquad GN=NG=3G+4N,\qquad N^2=9I+6G+4N.
-\]
+$$
 
 Diese Gleichungen werden für beide archivierten Matrizen durch exakte
 ganzzahlige Multiplikation geprüft. I ist das Einselement. Somit sind alle
