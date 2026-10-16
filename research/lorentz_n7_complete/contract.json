@@ -1,0 +1,100 @@
+{
+  "schema": "x6.lorentz-n7-contract/1",
+  "hypothesis_id": "H7-bidirectional-moments",
+  "statement": "For strict finite posets P,Q of equal cardinality 1<=n<=7, equality of (F0,W_future,W_past) implies order-preserving isomorphism.",
+  "primary_endpoint": "All residual unordered pairs under F0_W_both, without replacing the two scalar moments by the full paired degree multiset D.",
+  "conventions": {
+    "C": "Full strict transitive causal relation, not Hasse links; C[i][j]=1 iff i precedes j",
+    "S": "C+transpose(C)",
+    "A": "C-transpose(C)",
+    "K": "S*A-A*S = 2*(transpose(C)*C-C*transpose(C))",
+    "polynomials": "det(t I-M), monic integer coefficients in descending order",
+    "F0": "(n, chi_S, chi_A, chi_K, number_minimal, number_maximal)",
+    "W_future": "sum_v binomial(number_of_strict_successors(v),2)",
+    "W_past": "sum_v binomial(number_of_strict_predecessors(v),2)",
+    "D": "Sorted multiset of paired (strict_predecessor_count,strict_successor_count), diagnostic control only",
+    "isomorphism": "Direction-preserving bijection. Time reversal is not imposed as an equivalence.",
+    "encoding": "A row is an n-character bit string with column index increasing left to right; canonical integer code is sum(row_bitmask[i] << (n*i)). Canonicalization orders degree classes and minimizes over every within-class permutation."
+  },
+  "population": {
+    "n": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "expected_unlabelled_counts": [
+      1,
+      2,
+      5,
+      16,
+      63,
+      318,
+      2045
+    ],
+    "n7_upper_binary_matrices": 2097152,
+    "expected_known_n6": {
+      "F0": 314,
+      "F0_W_future": 318,
+      "F0_W_both": 318,
+      "F0_D": 318
+    },
+    "expected_known_n7_height_le_2": {
+      "orders": 164,
+      "F0": 158,
+      "F0_W_future": 163,
+      "F0_W_both": 164,
+      "F0_D": 164
+    },
+    "note": "Count agreement alone is not the completeness argument. Exhaustive independent classification and exact-once coverage are required."
+  },
+  "methods": {
+    "producer_enumeration": "Adjoin a maximal point to every smaller isomorphism representative, for every order ideal as its strict past; exact degree-partition canonicalization.",
+    "counter_enumeration": "Every upper-triangular binary relation for each n; reject precisely the nontransitive relations; classify by directed backtracking bijections, without importing producer algorithms.",
+    "multiplicity_crosscheck": "Producer computes linear extensions by subset recursion and automorphisms by degree-class permutations; counter enumerator independently counts natural labellings per representative and checks L(P)/Aut(P). Counterchecker also counts every automorphism by directed backtracking and checks linear extensions as natural multiplicity times automorphisms.",
+    "producer_polynomials": "Faddeev-LeVerrier integer recurrence and Cayley-Hamilton residual",
+    "counter_polynomials": "Pivoted Bareiss determinants at n+1 integers, exact rational Newton interpolation",
+    "counter_moments": "Explicit directed fork triple counts, independently of the degree-moment formula",
+    "collision_checks": "Reconstruct every signature class independently; check every residual pair is nonisomorphic; retain complete matrices, exact invariants and duality status."
+  },
+  "decisions": {
+    "SUPPORTED_FINITE_N_LE_7": "Complete counter-verified corpus and zero residual F0_W_both pairs for every n<=7",
+    "REFUTED_BY_COUNTEREXAMPLE": "Complete counter-verified corpus and at least one nonisomorphic residual F0_W_both pair",
+    "INCONCLUSIVE": "Timeout, incomplete enumeration, disagreement, invalid record or failed rejection control. Never report a completed hypothesis test."
+  },
+  "resources": {
+    "producer_seconds": 600,
+    "independent_seconds": 600,
+    "memory_bytes_per_phase": 1073741824,
+    "maximum_n": 7,
+    "network_during_computation": false
+  },
+  "reporting": {
+    "all_collision_groups": [
+      "F0",
+      "F0_W_future",
+      "F0_W_both",
+      "F0_D"
+    ],
+    "all_primary_pairs_saved": true,
+    "negative_results_preserved": true,
+    "numerical_tolerances": "None; all primary comparisons use exact integers or rational arithmetic",
+    "discovery_status": "The complete n=7 result was not computed before this protocol. Existing n<=6 and n=7 height<=2 results and n=8 counterexamples were already known. This is a workflow-local prospective freeze, not an external preregistration service."
+  },
+  "excluded_claims": [
+    "General completeness beyond n=7",
+    "Continuum spacetime reconstruction",
+    "Physical Lorentz geometry validation",
+    "Quantum-gravity dynamics",
+    "Independent external human review",
+    "Established novelty"
+  ],
+  "references": [
+    "https://arxiv.org/abs/2008.02291",
+    "../lorentz_n6_residuals/contract.json",
+    "../lorentz_n6_residuals/README.md"
+  ]
+}
