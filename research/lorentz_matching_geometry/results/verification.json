@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "matching_pairs": 7088,
+  "full_relation_witnesses": 651,
+  "geometry_orders": 720,
+  "independent_integer_features": 720,
+  "relabeling_checks": 720,
+  "counterexample_full_permutations": 720,
+  "toys": {
+    "status": "PASS_TOY_ONLY",
+    "pair_oracles": 256,
+    "binary_3x3": 512,
+    "three_layer_2x2_pairs": 256,
+    "rejected_corruptions": [
+      "missing subset",
+      "changed empty count",
+      "false bijection",
+      "duplicate bijection"
+    ],
+    "budget_control": "INCONCLUSIVE",
+    "target_generation": false
+  },
+  "independence": "Distinct exact feature formulas and scalar classifier in one authoring process; bootstrap replay shares source; external replication not performed."
+}

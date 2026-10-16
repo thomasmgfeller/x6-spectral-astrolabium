@@ -1,0 +1,41 @@
+name: Lorentz Matching and Geometry Pilot
+on:
+  pull_request:
+    paths: ['research/lorentz_matching_geometry/**', 'research/lorentz_relational_boundary/results/**', '.github/workflows/lorentz-matching-geometry.yml']
+  push:
+    branches: [main]
+    paths: ['research/lorentz_matching_geometry/**', 'research/lorentz_relational_boundary/results/**', '.github/workflows/lorentz-matching-geometry.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  reproduce:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 65
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Install declared numerical dependency
+        run: python3 -m pip install -r research/lorentz_matching_geometry/requirements.txt
+      - name: Reproduce the frozen study without network
+        run: |
+          OPENBLAS_NUM_THREADS=1 python3 -B -O research/lorentz_matching_geometry/run.py --selftest
+          sudo env "PATH=$PATH" GIT_CONFIG_COUNT=1 GIT_CONFIG_KEY_0=safe.directory "GIT_CONFIG_VALUE_0=$GITHUB_WORKSPACE" \
+            OPENBLAS_NUM_THREADS=1 unshare --net python3 -B -O research/lorentz_matching_geometry/run.py \
+            --run "$RUNNER_TEMP/matching-geometry" --source-ref fc14a049885a9efc1604ce4e4b542945b82c4fcb
+      - name: Compare exact results and numerical arrays
+        run: |
+          python3 research/lorentz_matching_geometry/compare.py \
+            research/lorentz_matching_geometry/results "$RUNNER_TEMP/matching-geometry"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: matching-geometry-reproduction
+          path: ${{ runner.temp }}/matching-geometry
+          if-no-files-found: error
+          retention-days: 30

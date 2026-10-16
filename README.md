@@ -99,6 +99,8 @@ Quellenlücken, insbesondere fehlende NQK-Archive, bleiben ausdrücklich offen.
 
 **Welche relationale Information erhalten bleiben muss:** [Schnittprofile und begrenzte Rekonstruktion](research/lorentz_relational_boundary/README.md) prüfen 217 Ordnungen und 7.088 Paare. Dreifache Schnitte trennen das 32er-Restpaar; dennoch scheitern selbst Histogramme aller Schnittordnungen allgemein. Eine explizite Gegenbeispielfamilie und ein eingeschränkter Rekonstruktionssatz erklären den Unterschied zwischen bloßen Häufigkeiten und zugeordneten Teilmengenwerten. 434 vollständige Rekonstruktionen sind exakt gegengeprüft; die beschriftete Darstellung ist kein universeller kompakter Fingerabdruck.
 
+**Knoten-Zuordnung und erster Geometriepilot:** Die [Folgestudie nach PR #39](research/lorentz_matching_geometry/README.md) ergänzt explizite Knotenbijektionen: 7.088 Paarentscheidungen und 651 umbenannte Kopien bestehen. Ein Sechsknoten-Gegenbeispiel zeigt die Grenze getrennter Dreischicht-Rekonstruktion; ein begrenzter Satz mit gemeinsam indizierten Nachbarschaften ist bewiesen. Auf 720 neuen synthetischen Ordnungen liefern die getesteten P123-Schnittprofile keinen nachgewiesenen Zusatznutzen gegenüber Linkgraden, Intervallhäufigkeiten und Hasse-Laplace-Spektren. Der vorab definierte Hauptvergleich fällt negativ aus; keine geometrische oder physikalische Validierung.
+
 ## Frozen reference edition and validation hardening
 
 The [QE reference edition](https://github.com/thomasmgfeller/x6-spectral-astrolabium/releases/tag/reference-2026.10.15-qe1)
