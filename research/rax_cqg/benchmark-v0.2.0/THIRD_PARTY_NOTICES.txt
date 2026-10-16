@@ -1,0 +1,25 @@
+RAX-CQG Causal-Set Benchmark 0.2.0
+
+PCG random-number algorithm
+---------------------------
+The Python and JavaScript PCG32 routines implement the PCG-XSH-RR 64/32
+algorithm and seeding convention from the minimal PCG C implementation:
+https://www.pcg-random.org/download.html
+
+Original reference implementation:
+Copyright 2014 Melissa O'Neill <oneill@pcg-random.org>
+Licensed under the Apache License, Version 2.0.
+http://www.apache.org/licenses/LICENSE-2.0
+
+The routines in this package are language adaptations with explicit uint32
+seed bounds, a fixed default stream and an open-interval float conversion.
+See LICENSE for the Apache-2.0 license text.
+
+Runtime dependencies
+--------------------
+NumPy and SciPy are dependencies installed separately; their source or
+binaries are not bundled in this archive. They retain their own licenses.
+Node.js and Python are external runtimes and are not bundled.
+
+Scientific references are cited in MODEL_CONTRACT.md. Their papers are not
+redistributed in this package. A citation is not an endorsement of this code.
