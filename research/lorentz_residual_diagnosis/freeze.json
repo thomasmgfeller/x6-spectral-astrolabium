@@ -1,0 +1,23 @@
+{
+  "schema": "x6.residual-source-freeze/1",
+  "created_utc": "2026-10-16T13:21:19.278254+00:00",
+  "status": "BEFORE_NEW_FEATURE_EVALUATION_ON_KNOWN_CORPUS",
+  "sources": {
+    "research/lorentz_residual_diagnosis/contract.json": "36494a6d9cb8606fb09d4f0f8cdd4069e84201e659e3a6bdc91beaf6046686e3",
+    "research/lorentz_residual_diagnosis/produce.py": "48fe32bef4bdde9b2fd746ff671c021182e4afe0a952f3131d75c530cb95ba60",
+    "research/lorentz_residual_diagnosis/check.py": "13672e253a515ea796c9b6fe858019b1bf7a3c9a96c96d795e9203e8b2367b19",
+    "research/lorentz_residual_diagnosis/run.py": "641386229b7351a47a75804b60398e680f35250bfc9b98f6caaaf3486cd483f8",
+    "research/lorentz_n1_stress/produce.py": "7f4c76368db4540764f7b5af27ac4e63485dfdd0d90392f00343a9877916cd79",
+    "research/lorentz_n1_stress/check.py": "3257ef93756745b6082de8916233a7d43fbb573b0e62773bb0a1062145191ad3",
+    "research/lorentz_observable_comparison/produce.py": "968ee3510c6d799b9edc4cc6f8452b6dd8904017738dbe2c1cd174a663ecf8d8",
+    "research/lorentz_observable_comparison/check.py": "dd4166385b1609af152dab5d654ac068d89b9e8e2336d61501adc40d0c21a036"
+  },
+  "toy_checks": {
+    "status": "PASS_TOY_ONLY",
+    "n_max": 4,
+    "upper_dag_draws": 64,
+    "joint_colors_after_one_round": 166,
+    "synthetic_color_control_vertices": 3,
+    "separated_marginal_fault_detected": true
+  }
+}
