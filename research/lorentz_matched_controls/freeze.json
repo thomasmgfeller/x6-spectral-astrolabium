@@ -1,0 +1,30 @@
+{
+  "schema": "x6.matched-controls-freeze/1",
+  "created_utc": "2026-10-16T18:13:29.509606+00:00",
+  "status": "BEFORE_TARGET_GENERATION",
+  "sources": {
+    "research/lorentz_matched_controls/contract.json": "7ac0954956b0fbae3a796b2519a244ea157e5ba71a8d0302a3d0821363dcef9f",
+    "research/lorentz_matched_controls/common.py": "246b38e7df3f78dec4c025dc25dbfba659055af07248ea8a0229ee5bc933fc43",
+    "research/lorentz_matched_controls/analysis.py": "68bfb833ea0ba9ac6d6c6704f8eefc51b24c4e302cde37a2b5e00a8b14fdb6cc",
+    "research/lorentz_matched_controls/produce.py": "bde6017b546d11e4b39a99c4861d5d4b9e998b812f3bd84456baaf4c52a2937d",
+    "research/lorentz_matched_controls/check.py": "28ccbc4d4d6a6ddd9e2ee857f7bcbfdf7d8b67fb455b9a96187673d4cffd1ea4",
+    "research/lorentz_matched_controls/matched_tests.py": "133a566770c654920661ea22859a80afcdaee56e4f81d627f2736490c2eef173",
+    "research/lorentz_matched_controls/run.py": "1f913f95b51284f47478af67134da22bb7118349ca6669bc430b7ac4f4611364",
+    "research/lorentz_matched_controls/compare.py": "969eec574f557915e487410fca312607c59ee23261a684605d63efebbe1ef730",
+    "research/lorentz_matched_controls/requirements.txt": "7bd6b8946940b79948c548c8048e545684b91c8edc9444d8dfc0c8f76a97c0a7",
+    "research/lorentz_matching_geometry/core.py": "ee9a96bdba32e93b092e89ce81a76a524a0dbaa05cf905e293b319eefb50f0f7",
+    "research/lorentz_matching_geometry/geometry.py": "d9924b4edd0df5ae464215be849947a4cab72ac767ef25c254749eee233262b9"
+  },
+  "toy_checks": {
+    "status": "PASS_TOY_ONLY",
+    "exhaustive_label_swap_cases": 16,
+    "upper_DAG_closures": 64,
+    "rejected_controls": [
+      "missing candidate",
+      "inexact matched relation count",
+      "reused paired observation",
+      "corrupt intersection histogram"
+    ],
+    "target_generation": false
+  }
+}
