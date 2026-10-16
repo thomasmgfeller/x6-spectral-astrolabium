@@ -1,0 +1,24 @@
+{
+  "schema": "x6.relational-transfer-freeze/1",
+  "created_utc": "2026-10-16T13:52:58.153630+00:00",
+  "status": "BEFORE_TARGET_INPUT_GENERATION",
+  "sources": {
+    "research/lorentz_relational_transfer/contract.json": "4f1ac37899b34460e5e82141fa2f98a8b411064d7d94fb66a9d9a751e821e1a9",
+    "research/lorentz_relational_transfer/produce.py": "e446a1c960acda6f56b5ce0675e0dd04588f86b9304915b3e9ea66581be36f9a",
+    "research/lorentz_relational_transfer/check.py": "701a9259be93ea03730e1bbea00659e1a06ecaed05b5a9649caf8d7462605fce",
+    "research/lorentz_relational_transfer/run.py": "50b7ad013e7c116ceb2dd5bcb662facf40c80b2944b312c1d105674dfb0d2002",
+    "research/lorentz_observable_comparison/produce.py": "968ee3510c6d799b9edc4cc6f8452b6dd8904017738dbe2c1cd174a663ecf8d8",
+    "research/lorentz_observable_comparison/check.py": "dd4166385b1609af152dab5d654ac068d89b9e8e2336d61501adc40d0c21a036",
+    "research/lorentz_residual_diagnosis/produce.py": "48fe32bef4bdde9b2fd746ff671c021182e4afe0a952f3131d75c530cb95ba60",
+    "research/lorentz_residual_diagnosis/check.py": "13672e253a515ea796c9b6fe858019b1bf7a3c9a96c96d795e9203e8b2367b19",
+    "research/lorentz_n1_stress/produce.py": "7f4c76368db4540764f7b5af27ac4e63485dfdd0d90392f00343a9877916cd79",
+    "research/lorentz_n1_stress/check.py": "3257ef93756745b6082de8916233a7d43fbb573b0e62773bb0a1062145191ad3"
+  },
+  "toy_checks": {
+    "status": "PASS_TOY_ONLY",
+    "maximum_order_size": 4,
+    "upper_DAG_closures": 64,
+    "joint_marginal_fault_detected": true,
+    "target_generation": false
+  }
+}
