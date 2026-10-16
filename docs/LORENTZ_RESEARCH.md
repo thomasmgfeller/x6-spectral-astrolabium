@@ -130,6 +130,18 @@ a theorem, self-modify code or extend the pilot.
 Die [exakte Restpaaranalyse](../research/lorentz_n6_residuals/README.md) ist in main
 ausführbar und Teil der gemeinsamen Offline-Suite. Alle vier Paare sind getrennt;
 drei sind Zeitumkehrpaare. Der Bericht enthält die neue Wolfram-Gegenprüfung,
-n=7/n=8-Gegenbeispiele und die ausdrücklich offene Hypothese
+n=7/n=8-Gegenbeispiele und die damals offene Hypothese
 H7-bidirectional-moments für n=7 mit Höhe ≥3. Die ursprünglichen Agentenläufe
 n=3–5 bleiben historische Replikationsevidenz.
+
+
+## Fortschreibung 16.10.2026: H7 vollständig geprüft und widerlegt
+
+Die [vollständige n=7-Studie](../research/lorentz_n7_complete/README.md) erfasst
+alle 2.045 Ordnungen. F0 und beide gerichteten Gabelzählungen ergeben nur 2.043
+Klassen: Zwei nichtisomorphe Paare der Höhe drei bleiben. Beide sind vollständig
+als [Gegenbeispiele](../research/lorentz_n7_complete/COUNTEREXAMPLES.md) dokumentiert.
+Die Gegenprüfung verwendet einen getrennten Enumerator und exakte Algebra.
+H7 ist damit widerlegt; ein stärkeres Gradmultiset ersetzt diesen Test nicht.
+Der nächste sinnvolle Schritt ist die strukturelle Analyse dieser minimalen
+Kollisionen sowie eine externe Replikation. Keine physische Validierung.

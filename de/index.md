@@ -76,7 +76,7 @@ Folge gepinnten Quellen, rechne dokumentierte Ergebnisse nach und prüfe die nä
 
 ## Lorentzsche Spektralgeometrie
 
-Kann spektrale Information endliche kausale Ordnungen unterscheiden? Das Programm untersucht konkrete Beispiele und Gegenbeispiele. Endliche Klassifikationen belegen weder ein Raumzeitkontinuum noch eine physikalische Theorie.
+Die vollständige exakte Prüfung von 2.045 kausalen Ordnungen mit sieben Elementen widerlegt die H7-Hypothese mit zwei Zählgrößen: Zwei nichtisomorphe Paare bleiben. Alle Gegenbeispiele sowie getrennte Enumerations- und Algebra-Prüfungen sind verfügbar. Der endliche Befund belegt keine physikalische Theorie.
 
 ## Ergebnis und Geltungsbereich zusammen lesen
 
@@ -89,7 +89,7 @@ Dies ist experimentelle Forschungssoftware. Ein bestandener Softwaretest ist kei
 - [Industrieller Datenpilot](https://thomasmgfeller.github.io/x6-spectral-astrolabium/modules/industrial-pilot.html): Begrenzte Machbarkeitsstudie mit Labordaten und expliziten Grenzen.
 - [NQK-Forschungsdossier](https://thomasmgfeller.github.io/x6-spectral-astrolabium/modules/nqk.html): Eigenständiger Forschungszweig mit unvollständigen Reproduktionsarchiven.
 
-Das Register vom 2026-10-16 beschreibt 38 Module. Es dokumentiert Quellenorte und Evidenz; es ist kein Live-Prüfsiegel.
+Das Register vom 2026-10-16 beschreibt 39 Module. Es dokumentiert Quellenorte und Evidenz; es ist kein Live-Prüfsiegel.
 
 Das konfigurierte Agentenfenster schliesst Sonntag, den 18. Oktober 2026, ein. Das exklusive Ende unten begrenzt den Zeitplan und belegt keine Ausführung. Danach ist das Fenster geschlossen.
 2026-10-19T00:00:00+02:00
