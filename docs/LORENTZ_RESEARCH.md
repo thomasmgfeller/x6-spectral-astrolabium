@@ -160,3 +160,7 @@ Die [nachträgliche Strukturanalyse](../research/lorentz_h7_structure/README.md)
 ## Nachfolgender Merkmalsvergleich vom 16.10.2026
 
 Der [vorab festgelegte Vergleich](../research/lorentz_observable_comparison/README.md) prüft D, M11, N1 und Q1 im vollständigen n≤7-Korpus, an sechs bekannten Kontrollpaaren und einer festgelegten kleinen n=8/9-Stichprobe. N1 und Q1 bestehen das begrenzte Trennkriterium; N1 liegt nach der festgelegten Kostenregel vorne. Die Stichprobe besitzt keine H7-Kollision und belegt keine zusätzliche Trennwirkung. Alle Identitätsentscheidungen benötigen weiterhin vollständige Relationen.
+
+## Belastungstest gleicher N1-Profile vom 16.10.2026
+
+Der [anschließende Belastungstest](../research/lorentz_n1_stress/README.md) umfasst 352 feste Erzeugungen und 207 verschiedene Ordnungen mit 12 bis 20 Elementen. Innerhalb jeder Größe sind die N1-Profile konstruktiv identisch. Unter 25 nichtisomorphen Paaren mit zugleich gleichem H7 trennt Q1 24; ein Paar mit 16 Elementen bleibt unter H7+N1+Q1 ununterscheidbar. Die getrennte exakte Gegenprüfung bestätigt 23.193 Polynome. Sieben der zusätzlichen Trennungen und das Restpaar betreffen auch nach Zeitumkehr nichtisomorphe Ordnungen (nachträgliche Diagnose). Vertrag und Code wurden vorab lokal eingefroren; die blockierte öffentliche Vorabveröffentlichung ist als Abweichung dokumentiert. Die vollständige gerichtete Relation bleibt verbindliche Referenz.

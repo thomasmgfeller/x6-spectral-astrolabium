@@ -1,0 +1,52 @@
+{
+  "schema": "x6.n1-stress-contract/1",
+  "status": "PLANNED_BEFORE_TARGET_GENERATION",
+  "base_commit": "faeb2e003ff91cd3cc90b18db9617d725bebcb2f",
+  "question": "Does the unchanged paired quill deck Q1 separate nonisomorphic orders with equal N1, especially when H7 also agrees?",
+  "knowledge_before_run": [
+    "The preceding study separated six known controls with both N1 and Q1; its 120 new orders had no H7 collision.",
+    "In an m-by-m d-regular height-two order, N1 depends only on m and d. This is a deliberate structural stress family, not a representative population.",
+    "No matrices or target outcomes for the present fixed draws have been generated before this contract. No guarantee of H7 collisions or Q1 improvement is assumed.",
+    "Q1-style one-point perturbations have prior literature; no novelty or physics claim."
+  ],
+  "definitions": {
+    "source": "research/lorentz_observable_comparison/contract.json at base_commit",
+    "unchanged": ["H7", "N1", "Q1"],
+    "reference": "Full strict relation matrix and exact direction-preserving isomorphism. No quotient by time reversal.",
+    "family": "C=[[0,B],[0,0]], B is m-by-m binary with all row and column sums 3. Both connected and disconnected orders are retained.",
+    "N1_proof": "Every lower vertex has degree (0,3) and three successors of degree (3,0); every upper vertex has degree (3,0) and three predecessors of degree (0,3). Thus the complete N1 multiset is fixed at each m."
+  },
+  "population": {
+    "cells": [{"m":6,"draws":32},{"m":7,"draws":32},{"m":8,"draws":96},{"m":9,"draws":96},{"m":10,"draws":96}],
+    "total_draws": 352,
+    "seed": "x6-n1-stress-v1-20261016",
+    "initial_matrix": "B[i,j]=1 exactly when (j-i) mod m is in {0,1,2}",
+    "switch_proposals_per_draw": "20*m*m",
+    "indices": "SHA256(UTF8 seed|m|draw|step), first four consecutive 4-byte words, unsigned big endian, modulo m give i,k,j,l.",
+    "switch_rule": "If i!=k, j!=l, B[i,j]=B[k,l]=1 and B[i,l]=B[k,j]=0, flip all four entries. Otherwise retain matrix. Each draw independently restarts at initial_matrix.",
+    "selection": "Keep every draw. Deduplicate by exact isomorphism within m, retaining first representative and every draw relation matrix and mapping. H7 may only reject a proposed isomorphism, never certify one.",
+    "distribution": "Finite deterministic degree-preserving switch sample; neither uniformity nor mixing is claimed. No post-outcome seed, family, size or budget expansion."
+  },
+  "endpoints": [
+    "All full H7/N1/Q1 values for every nonisomorphic representative, complete partitions and all residual groups.",
+    "Per m: nonisomorphic pairs equal under N1; those split by Q1; pairs equal under H7+N1; those additionally split by Q1; residual H7+N1+Q1 pairs.",
+    "Primary incremental-evidence gate is at least one exact nonisomorphic H7+N1-equal pair split by Q1. A zero denominator is NO_OPPORTUNITY, not superiority or failure.",
+    "Record all paired outcomes, not just a successful witness; include residual collisions even if the primary gate passes.",
+    "Count logical H7 polynomial evaluations (3 per representative) and Q1 (6n per representative); N1 has zero. Record exact integer payload and single-run wall times without general speed claims."
+  ],
+  "verification": [
+    "Reuse the frozen producer arithmetic (integer Faddeev-LeVerrier with Cayley-Hamilton residual) and separate checker arithmetic (Bareiss determinant interpolation) from base_commit, bound by source hashes.",
+    "Producer uses direct quill formula; checker uses inserted edge and full transitive closure. Compare every coefficient of every representative.",
+    "Independently replay all switch proposals; verify binary strict transitive relations, row/column regularity and equal N1 in every cell.",
+    "Producer isomorphism: adaptive partial full-relation bijections. Checker isomorphism: enumerate admissible row bijections preserving intersection counts, then exactly match multisets of complete column patterns. Verify every draw mapping and all H7-equal representative pairs.",
+    "Transport every representative and every rooted quill under reversal relabelling. Retain direction and multiplicity.",
+    "Recompute summaries using independent pairwise counts. Reject altered relation, altered polynomial, omitted representative, forged deduplication and omitted residual results; retain the predecessor's six negative controls."
+  ],
+  "resources": {"phase_seconds":1800,"memory_bytes":2147483648,"network_during_computation":false},
+  "decisions": {
+    "PASS_EXACT_STRESS_TEST": "Every fixed draw and representative completed, source binding and separate countercheck passed. Does not mean Q1 always resolves.",
+    "INCONCLUSIVE": "Timeout, incomplete corpus, changed frozen source, failed verification or unrecorded protocol deviation."
+  },
+  "freeze_policy": "Publish contract, then source hashes before first target generation. Only n<=6 toy checks before source freeze. Any correction after target generation is recorded as a deviation and requires a new run.",
+  "limits": ["No population success rate", "No general reconstruction guarantee", "No claim of physical spacetime or quantum dynamics", "No external human review", "No claim of novelty"]
+}

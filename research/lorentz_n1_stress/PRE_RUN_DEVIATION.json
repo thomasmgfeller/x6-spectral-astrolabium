@@ -1,0 +1,9 @@
+{
+  "schema": "x6.n1-stress-pre-run-deviation/1",
+  "stage": "BEFORE_TARGET_GENERATION_AND_SOURCE_FREEZE",
+  "contract_commit": "9da649b",
+  "deviation": "Contract requests public contract and source publication before target generation. Git push was rejected by automatic approval review as publication not authorized for this new payload. No alternate publication route is attempted.",
+  "actual_provenance": "Contract committed locally before source implementation. Source and contract hashed and committed locally before any target generation. Public publication remains pending. Local timestamps and commits are not independent timestamping or external preregistration.",
+  "effect_on_analysis": "None: fixed family, seeds, draw counts, observables, exact reference, endpoints and resource limits remain as written. Only public pre-run publication is unmet.",
+  "reporting": "Report complete computational result only with this explicit pre-run protocol deviation. Do not label the run a fully compliant publicly preregistered experiment."
+}
