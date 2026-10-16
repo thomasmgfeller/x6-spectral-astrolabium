@@ -1,5 +1,11 @@
 # X6 Spectral Astrolabium
 
+**Neu: das verständliche X6-Wiki · New: the plain-language X6 wiki**
+
+**[Deutsch](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/de/)** · **[English](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/en/)**
+
+Acht Kapitel je Sprache: Einstieg, Schnellstart, Signale, kausale Ordnungen, Evidenz, Forschungsbereiche, Glossar und FAQ. Eight chapters per language, with practical examples and links to the original evidence.
+
 **Public Research Preview — independent validation requested. NOT a scientifically certified stable release.**
 
 **Numerical audit (2026-10-15):** [a reproducible small-weight scaling defect](docs/numerics-v1/README.md)
@@ -103,7 +109,7 @@ Quellenlücken, insbesondere fehlende NQK-Archive, bleiben ausdrücklich offen.
 
 **Exakter Dichte-/Höhenabgleich:** Die [neue Kontrollstudie](research/lorentz_matched_controls/README.md) prüft 24.576 frische Kandidaten. Fünf Vergleiche liefern genügend Paare mit identischen Knotenzahlen, Relationszahlen und Höhen; vier bleiben wegen unzureichender Überlappung ohne Leistungsbewertung. Die reine Dichte-/Höhenkontrolle erreicht exakt 50 %. Im primären Vergleich gegen gestörte Gitter bei 64 Knoten beträgt der Zusatznutzen von P123 −3,91 Prozentpunkte, mit 95%-Paar-Bootstrap-Intervall [−9,77;+1,56]: kein nachgewiesener Zusatznutzen. Vollständiger Auswahlledger, verwendete Rohdaten und getrennte Gegenprüfungen sind archiviert.
 
-**Nächste geometrische Zielgröße:** [Normierte Eigenzeit zwischen markierten Ereignissen](research/lorentz_proper_time/README.md). Zieldefinition, exakte Identifizierbarkeitsgrenzen und ein prospektiver Prüfvertrag sind festgelegt. Die Intervallpunktzahl bildet die Referenz; globale Dichte/Höhe und lokale längste Ketten sind Vergleichsgrößen. Deterministische Kleintests sind ausführbar. Der neue Monte-Carlo-Lauf und seine vollständige Quellenfixierung stehen noch aus.
+**Erste geometrische Schätzaufgabe abgeschlossen:** [Normierte Eigenzeit zwischen markierten Ereignissen](research/lorentz_proper_time/RESULTS.md). 6.912 Ordnungen und 27.648 Vorhersagen sind intern gegengeprüft. Die Intervallpunktzahl erfüllt im bekannten flachen 1+1-Modell die vorab festgelegten Hauptkriterien: RMSE 0,031614 gegenüber 0,177785 für die Dichte-/Höhenregression. Bei der größten exakt abgeglichenen Zusatzkontrolle reichen 63 statt 128 Paare nicht für eine Leistungsbewertung. Das ist eine begrenzte Schätzerqualifikation; externe Replikation und allgemeinere geometrische Aussagen bleiben offen.
 
 ## Frozen reference edition and validation hardening
 

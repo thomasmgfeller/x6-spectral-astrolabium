@@ -1,0 +1,2153 @@
+{
+  "schema": "x6.bilingual-wiki/1",
+  "snapshot_date": "2026-10-16",
+  "source_commit": "08c64744caa584c940b45a8825d0b099ae0c92fb",
+  "articles": [
+    {
+      "id": "index",
+      "de": {
+        "title": "X6 einfach verstehen",
+        "lead": "Ein Wegweiser für Neugierige, Lernende und Menschen, die selbst prüfen möchten. Du brauchst zum Einstieg keine Spezialkenntnisse.",
+        "sections": [
+          {
+            "id": "idea",
+            "title": "Was ist X6?",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "X6 Spectral Astrolabium ist eine offene Forschungswerkstatt von Thomas Gfeller. Sie verbindet kleine Browserlabore, nachrechenbare mathematische Beispiele und Forschungspläne. Die gemeinsame Frage lautet: Was können wir aus Messsignalen und Beziehungen zwischen Ereignissen zuverlässig lernen?"
+              },
+              {
+                "type": "paragraph",
+                "text": "Stell dir einen Werkzeugkasten mit Versuchsbuch vor. Ein Werkzeug berechnet etwas; das Versuchsbuch erklärt die Eingaben, Ergebnisse und Grenzen. Ein gelungenes Beispiel macht noch nicht jedes Werkzeug für jeden Zweck geeignet."
+              }
+            ]
+          },
+          {
+            "id": "routes",
+            "title": "Womit möchtest du anfangen?",
+            "blocks": [
+              {
+                "type": "table",
+                "headers": [
+                  "Dein Ziel",
+                  "Passender Einstieg"
+                ],
+                "rows": [
+                  [
+                    "Etwas ohne Installation ausprobieren",
+                    "Schnellstart → Signal Validation Lab"
+                  ],
+                  [
+                    "Verstehen, was die Kurven bedeuten",
+                    "Signale und Filter"
+                  ],
+                  [
+                    "Netze und mögliche Raumzeitstrukturen verstehen",
+                    "Kausale Ordnungen"
+                  ],
+                  [
+                    "Ein Ergebnis kritisch lesen",
+                    "Prüfergebnisse verstehen"
+                  ],
+                  [
+                    "Ein bestimmtes Projekt finden",
+                    "Forschungsbereiche"
+                  ],
+                  [
+                    "Ein unbekanntes Wort nachschlagen",
+                    "Glossar"
+                  ]
+                ]
+              },
+              {
+                "type": "paragraph",
+                "text": "Die Kapitelübersicht führt durch beide Sprachfassungen. Der Sprachwechsel öffnet jeweils denselben Artikel. Zum Suchen innerhalb einer Seite kannst du die Suchfunktion deines Browsers verwenden."
+              }
+            ]
+          },
+          {
+            "id": "scope",
+            "title": "Was ist heute schon nutzbar?",
+            "blocks": [
+              {
+                "type": "list",
+                "items": [
+                  "Browseranwendungen für Signale und endliche kausale Ordnungen.",
+                  "Rechenreferenzen mit Quellcode, Testfällen und dokumentierten Gegenbeispielen.",
+                  "Ein lokaler Ablauf für Ausführen, Prüfen und Exportieren.",
+                  "Forschungspläne für weiterführende Mathematik, Industrie und Labor."
+                ]
+              },
+              {
+                "type": "paragraph",
+                "text": "X6 ist eine öffentliche Forschungsvorschau. Eine allgemeine Raumzeittheorie, ein qualifizierter Quantenchip und eine überlegene industrielle Entrauschung sind damit nicht nachgewiesen. Das ist eine Aussage zum Stand der Belege, kein Urteil darüber, welche Fragen künftig lösbar sind."
+              },
+              {
+                "type": "links",
+                "items": [
+                  {
+                    "label": "Projektportal",
+                    "url": "index.html"
+                  },
+                  {
+                    "label": "Alle registrierten Module",
+                    "url": "modules/index.html"
+                  },
+                  {
+                    "label": "Wissenschaftlicher Geltungsbereich",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/docs/SCIENTIFIC_SCOPE.md"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "en": {
+        "title": "X6, explained simply",
+        "lead": "A guide for curious readers, learners and people who want to check the work themselves. No specialist knowledge is needed to get started.",
+        "sections": [
+          {
+            "id": "idea",
+            "title": "What is X6?",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "X6 Spectral Astrolabium is an open research workshop maintained by Thomas Gfeller. It brings together small browser labs, reproducible mathematical examples and research plans. The shared question is: what can we reliably learn from measured signals and relationships between events?"
+              },
+              {
+                "type": "paragraph",
+                "text": "Think of a toolbox accompanied by a lab notebook. A tool calculates something; the notebook explains its inputs, results and limits. A successful example does not make every tool suitable for every purpose."
+              }
+            ]
+          },
+          {
+            "id": "routes",
+            "title": "Where would you like to begin?",
+            "blocks": [
+              {
+                "type": "table",
+                "headers": [
+                  "Your goal",
+                  "Suggested starting point"
+                ],
+                "rows": [
+                  [
+                    "Try something without installing software",
+                    "Quick start → Signal Validation Lab"
+                  ],
+                  [
+                    "Understand the plots",
+                    "Signals and filters"
+                  ],
+                  [
+                    "Understand networks and possible spacetime structures",
+                    "Causal orders"
+                  ],
+                  [
+                    "Read a result critically",
+                    "Understanding evidence"
+                  ],
+                  [
+                    "Find a particular project",
+                    "Research areas"
+                  ],
+                  [
+                    "Look up an unfamiliar word",
+                    "Glossary"
+                  ]
+                ]
+              },
+              {
+                "type": "paragraph",
+                "text": "The chapter menu covers both language editions. Switching languages opens the corresponding article. Use your browser’s Find function to search within a page."
+              }
+            ]
+          },
+          {
+            "id": "scope",
+            "title": "What can you use today?",
+            "blocks": [
+              {
+                "type": "list",
+                "items": [
+                  "Browser applications for signals and finite causal orders.",
+                  "Computational references with source code, test cases and documented counterexamples.",
+                  "A local workflow for running, verifying and exporting experiments.",
+                  "Research plans for further mathematics, industrial applications and laboratory work."
+                ]
+              },
+              {
+                "type": "paragraph",
+                "text": "X6 is a public research preview. It does not establish a general spacetime theory, a qualified quantum chip or superior industrial denoising. This describes the available evidence, rather than deciding which questions might eventually be solved."
+              },
+              {
+                "type": "links",
+                "items": [
+                  {
+                    "label": "Project portal",
+                    "url": "index.html"
+                  },
+                  {
+                    "label": "All registered modules",
+                    "url": "modules/index.html"
+                  },
+                  {
+                    "label": "Scientific scope",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/docs/SCIENTIFIC_SCOPE.md"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "quick-start",
+      "de": {
+        "title": "Schnellstart: dein erster Versuch",
+        "lead": "Beginne im Browser. Die lokale Installation ist ein eigener, optionaler Weg für reproduzierbare Rechenläufe.",
+        "sections": [
+          {
+            "id": "browser",
+            "title": "In fünf Minuten im Signal Lab",
+            "blocks": [
+              {
+                "type": "steps",
+                "items": [
+                  "Öffne das Signal Validation Lab und wähle bei Bedarf Deutsch.",
+                  "Übernimm die Standardwerte und klicke auf „Test ausführen“.",
+                  "Vergleiche Identität, gleitenden Mittelwert, FFT-Tiefpass und X6-Phasenfilter. Sie verwenden denselben Eingang.",
+                  "Betrachte Referenz und Ausgabe gemeinsam. Lies anschließend den Fehlerwert und die einzelnen Kriterien.",
+                  "Ändere nur die Rauschstärke und führe erneut aus. So bleibt erkennbar, welche Änderung welchen Effekt hatte.",
+                  "Wähle „Gegenbeispiele prüfen“. Ein bestandener Gegenbeispielfall bedeutet, dass der erwartete Fehler erkannt wurde.",
+                  "Exportiere den JSON-Prüfbericht. Importiere ihn anschließend über „JSON-Prüfbericht wiederholen“ und lasse ihn neu berechnen."
+                ]
+              },
+              {
+                "type": "paragraph",
+                "text": "Das Ergebnis muss nicht überall PASS zeigen. Auch ein korrekt ausgeführter Versuch kann zeigen, dass ein Filter das Signal verschlechtert. JSON bewahrt den vollständigen Prüfbericht; CSV enthält Zeitreihen zur weiteren Auswertung."
+              },
+              {
+                "type": "links",
+                "items": [
+                  {
+                    "label": "Signal Validation Lab öffnen",
+                    "url": "app/signal-lab.html"
+                  },
+                  {
+                    "label": "Ausführliche Bedienung",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/docs/SIGNAL_VALIDATION_LAB.md"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "local",
+            "title": "Lokal starten",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "Der dokumentierte lokale Prüfweg verwendet Linux/POSIX auf x86-64, Python 3.12, Git und Node.js ab Version 22. Andere Plattformen sind durch diesen Prüfbericht nicht automatisch mitabgedeckt. Führe die Befehle in einem neuen Projektordner aus."
+              },
+              {
+                "type": "code",
+                "text": "git clone --branch main https://github.com/thomasmgfeller/x6-spectral-astrolabium.git x6-wiki-start\ncd x6-wiki-start\npython3 x6.py setup --profile research\npython3 x6.py doctor --profile research\npython3 x6.py serve"
+              },
+              {
+                "type": "paragraph",
+                "text": "Öffne die ausgegebene lokale Adresse. Strg+C beendet den Server. Bei belegtem Port: python3 x6.py serve --port 8001. Für eine exakt gleiche Wiederholung verwende den Quellencommit aus dem betreffenden Modulbericht; main entwickelt sich weiter."
+              },
+              {
+                "type": "links",
+                "items": [
+                  {
+                    "label": "Installations- und Integrationsanleitung",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/docs/INTEGRATION.md"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "save",
+            "title": "Einen Lauf ausführen und prüfen",
+            "blocks": [
+              {
+                "type": "code",
+                "text": "python3 x6.py run signal --output runs/wiki-signal-001\npython3 x6.py verify runs/wiki-signal-001\npython3 x6.py export runs/wiki-signal-001 --output exports/wiki-signal-001.zip\npython3 x6.py verify exports/wiki-signal-001.zip"
+              },
+              {
+                "type": "paragraph",
+                "text": "Benutze für den nächsten Lauf einen neuen Ausgabenamen. verify prüft nicht nur Prüfsummen, sondern berechnet die vorgesehenen Ergebnisse erneut. Das erfolgreiche Exportieren ändert das fachliche Urteil über den Filter nicht."
+              },
+              {
+                "type": "paragraph",
+                "text": "Für den Einstieg ist keine neue Wolfram-Abfrage und kein Messgerät erforderlich. Die separat dokumentierte Offline-Referenzsuite verwendet Python 3.12 und Node.js 24."
+              },
+              {
+                "type": "links",
+                "items": [
+                  {
+                    "label": "Offline-Referenzsuite",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/docs/OFFLINE_REFERENCE.md"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "en": {
+        "title": "Quick start: your first experiment",
+        "lead": "Start in the browser. Local installation is a separate, optional route for reproducible computational runs.",
+        "sections": [
+          {
+            "id": "browser",
+            "title": "Five minutes in the Signal Lab",
+            "blocks": [
+              {
+                "type": "steps",
+                "items": [
+                  "Open the Signal Validation Lab and select English if needed.",
+                  "Keep the defaults and run the test.",
+                  "Compare identity, moving average, FFT low-pass and X6 phase filter. They all receive the same input.",
+                  "Look at the reference and output together, then read the error value and individual criteria.",
+                  "Change only the noise level and run again. This makes the effect of that change easier to identify.",
+                  "Run the counterexample checks. A passing counterexample means the expected fault was detected.",
+                  "Export the JSON evidence report. Import it again using the report replay option and recompute it."
+                ]
+              },
+              {
+                "type": "paragraph",
+                "text": "Not every result needs to show PASS. A correctly executed experiment may demonstrate that a filter makes the signal worse. JSON preserves the full evidence report; CSV contains time series for further analysis."
+              },
+              {
+                "type": "links",
+                "items": [
+                  {
+                    "label": "Open Signal Validation Lab",
+                    "url": "app/signal-lab.html"
+                  },
+                  {
+                    "label": "Detailed operation guide (German)",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/docs/SIGNAL_VALIDATION_LAB.md"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "local",
+            "title": "Run locally",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "The documented local qualification uses Linux/POSIX on x86-64, Python 3.12, Git and Node.js 22 or later. That report does not automatically cover other platforms. Run these commands in a new project directory."
+              },
+              {
+                "type": "code",
+                "text": "git clone --branch main https://github.com/thomasmgfeller/x6-spectral-astrolabium.git x6-wiki-start\ncd x6-wiki-start\npython3 x6.py setup --profile research\npython3 x6.py doctor --profile research\npython3 x6.py serve"
+              },
+              {
+                "type": "paragraph",
+                "text": "Open the local address printed by the command. Press Ctrl+C to stop the server. If the port is busy, use python3 x6.py serve --port 8001. For an exact reproduction, check out the source commit stated in the relevant module report; main continues to change."
+              },
+              {
+                "type": "links",
+                "items": [
+                  {
+                    "label": "Installation and integration guide (German)",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/docs/INTEGRATION.md"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "save",
+            "title": "Run and verify an experiment",
+            "blocks": [
+              {
+                "type": "code",
+                "text": "python3 x6.py run signal --output runs/wiki-signal-001\npython3 x6.py verify runs/wiki-signal-001\npython3 x6.py export runs/wiki-signal-001 --output exports/wiki-signal-001.zip\npython3 x6.py verify exports/wiki-signal-001.zip"
+              },
+              {
+                "type": "paragraph",
+                "text": "Use a new output name for the next run. verify checks more than file hashes: it recomputes the prescribed results. A successful export does not change the scientific verdict on the filter."
+              },
+              {
+                "type": "paragraph",
+                "text": "Getting started requires neither a new Wolfram query nor laboratory equipment. The separately documented offline reference suite uses Python 3.12 and Node.js 24."
+              },
+              {
+                "type": "links",
+                "items": [
+                  {
+                    "label": "Offline reference suite",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/docs/OFFLINE_REFERENCE.md"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "signals",
+      "de": {
+        "title": "Signale und Filter verstehen",
+        "lead": "Eine ruhigere Kurve ist nicht automatisch eine bessere Messung. Entscheidend ist, ob die wichtige Information erhalten bleibt.",
+        "sections": [
+          {
+            "id": "signal",
+            "title": "Vom Signal zum Spektrum",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "Ein Signal ist eine Folge von Werten über die Zeit, zum Beispiel eine gemessene Schwingung. Ein Spektrum zeigt, welche Frequenzanteile darin vorkommen. Die Fourierzerlegung beschreibt das Signal mithilfe von Schwingungsbausteinen."
+              },
+              {
+                "type": "paragraph",
+                "text": "Die Amplitude sagt, wie stark ein Anteil ist. Die Phase beschreibt seine Lage im Schwingungszyklus. Ein Leistungsspektrum allein enthält deshalb nicht alles, was zur Rekonstruktion der ursprünglichen Zeitkurve nötig ist."
+              }
+            ]
+          },
+          {
+            "id": "methods",
+            "title": "Vier Verfahren, ein fairer Eingang",
+            "blocks": [
+              {
+                "type": "table",
+                "headers": [
+                  "Verfahren",
+                  "Was es tut",
+                  "Worauf du achten solltest"
+                ],
+                "rows": [
+                  [
+                    "Identität",
+                    "Lässt den Eingang unverändert.",
+                    "Referenz für den Zustand ohne Filter."
+                  ],
+                  [
+                    "Gleitender Mittelwert",
+                    "Mittelt benachbarte Werte.",
+                    "Kann kurze Impulse und Amplitude abschwächen."
+                  ],
+                  [
+                    "FFT-Tiefpass",
+                    "Entfernt Anteile oberhalb einer Grenzfrequenz.",
+                    "Kann auch nützliche hohe Frequenzen entfernen; Randartefakte sind möglich."
+                  ],
+                  [
+                    "X6-Phasenfilter",
+                    "Wählt Fourieranteile anhand ihres Winkels aus.",
+                    "Ist kein gewöhnlicher Tiefpass und kann ein sauberes Sollsignal entfernen."
+                  ]
+                ]
+              },
+              {
+                "type": "paragraph",
+                "text": "Diese Vergleiche arbeiten mit vollständigen gespeicherten Signalen. Der zentrierte Mittelwert nutzt auch spätere Werte und ist so kein unmittelbar kausaler Echtzeitfilter. Aus einer guten Offlinekurve folgt keine Eignung für eine schnelle Maschinenregelung."
+              }
+            ]
+          },
+          {
+            "id": "metrics",
+            "title": "Welche Zahlen helfen?",
+            "blocks": [
+              {
+                "type": "table",
+                "headers": [
+                  "Kennzahl",
+                  "Einfach erklärt"
+                ],
+                "rows": [
+                  [
+                    "RMSE",
+                    "Typischer Fehler auf der Skala des Signals; kleiner ist meist besser bei gleichem Ziel."
+                  ],
+                  [
+                    "NRMSE",
+                    "Fehler relativ zur festgelegten Referenznorm; die genaue Definition zählt."
+                  ],
+                  [
+                    "PSD",
+                    "Verteilung der Signalleistung über Frequenzen."
+                  ],
+                  [
+                    "Kohärenz",
+                    "Frequenzbezogene lineare Übereinstimmung; allein keine Rekonstruktionsgarantie."
+                  ],
+                  [
+                    "Phase und Zeitversatz",
+                    "Ob Schwingungen passend liegen und eine Ausgabe früher oder später ankommt."
+                  ]
+                ]
+              },
+              {
+                "type": "paragraph",
+                "text": "Ein anschauliches Gegenbeispiel ist y = −x: Die Kurve ist umgekehrt. Ihr Leistungsspektrum bleibt gleich, und die Betragsquadrat-Kohärenz kann eins sein. Trotzdem ist das ursprüngliche Signal nicht korrekt rekonstruiert. Deshalb prüft X6 mehrere Kriterien gemeinsam."
+              }
+            ]
+          },
+          {
+            "id": "practice",
+            "title": "So wird der Versuch aussagekräftig",
+            "blocks": [
+              {
+                "type": "list",
+                "items": [
+                  "Verändere zunächst jeweils einen Parameter.",
+                  "Vergleiche alle Verfahren mit derselben bekannten Referenz.",
+                  "Prüfe kurze Ereignisse und Phasenlage zusätzlich zum Rauschen.",
+                  "Bewahre Seed, Einstellungen, Rohdaten und Prüfbericht zusammen auf.",
+                  "Übertrage ein synthetisches Ergebnis erst nach neuen Prüfungen auf reale Sensoren."
+                ]
+              },
+              {
+                "type": "links",
+                "items": [
+                  {
+                    "label": "Signal Lab",
+                    "url": "app/signal-lab.html"
+                  },
+                  {
+                    "label": "Kennzahlen und Grenzen",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/docs/SIGNAL_LAB_METHODS.md"
+                  },
+                  {
+                    "label": "Gegenprüfung der Polaritätsumkehr",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/docs/signal-lab/wolfram-polarity-v0.1/README.md"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "en": {
+        "title": "Understanding signals and filters",
+        "lead": "A smoother curve is not automatically a better measurement. What matters is whether the important information survives.",
+        "sections": [
+          {
+            "id": "signal",
+            "title": "From a signal to a spectrum",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "A signal is a sequence of values over time, such as a measured vibration. A spectrum shows which frequency components it contains. Fourier decomposition describes the signal using oscillating building blocks."
+              },
+              {
+                "type": "paragraph",
+                "text": "Amplitude describes the strength of a component. Phase describes its position within an oscillation cycle. A power spectrum alone therefore does not contain everything needed to reconstruct the original time series."
+              }
+            ]
+          },
+          {
+            "id": "methods",
+            "title": "Four methods, the same input",
+            "blocks": [
+              {
+                "type": "table",
+                "headers": [
+                  "Method",
+                  "What it does",
+                  "What to watch for"
+                ],
+                "rows": [
+                  [
+                    "Identity",
+                    "Leaves the input unchanged.",
+                    "A reference for the unfiltered condition."
+                  ],
+                  [
+                    "Moving average",
+                    "Averages neighbouring samples.",
+                    "Can weaken short impulses and amplitude."
+                  ],
+                  [
+                    "FFT low-pass",
+                    "Removes components above a cutoff frequency.",
+                    "May remove useful high frequencies; boundary artefacts are possible."
+                  ],
+                  [
+                    "X6 phase filter",
+                    "Selects Fourier components by their angle.",
+                    "Is not an ordinary low-pass filter and can remove a clean target signal."
+                  ]
+                ]
+              },
+              {
+                "type": "paragraph",
+                "text": "These comparisons operate on complete stored signals. The centred moving average also uses later samples, so this implementation is not a directly causal real-time filter. A good offline plot does not establish suitability for fast machine control."
+              }
+            ]
+          },
+          {
+            "id": "metrics",
+            "title": "Which numbers help?",
+            "blocks": [
+              {
+                "type": "table",
+                "headers": [
+                  "Metric",
+                  "Plain-language meaning"
+                ],
+                "rows": [
+                  [
+                    "RMSE",
+                    "A typical error on the signal’s scale; usually smaller is better for the same target."
+                  ],
+                  [
+                    "NRMSE",
+                    "Error relative to the specified reference norm; the precise definition matters."
+                  ],
+                  [
+                    "PSD",
+                    "How signal power is distributed across frequencies."
+                  ],
+                  [
+                    "Coherence",
+                    "Frequency-dependent linear agreement; not a reconstruction guarantee by itself."
+                  ],
+                  [
+                    "Phase and delay",
+                    "Whether oscillations line up and whether an output arrives earlier or later."
+                  ]
+                ]
+              },
+              {
+                "type": "paragraph",
+                "text": "A useful counterexample is y = −x: the curve is inverted. Its power spectrum is unchanged, and magnitude-squared coherence can be one. The original signal is still not reconstructed correctly. This is why X6 checks several criteria together."
+              }
+            ]
+          },
+          {
+            "id": "practice",
+            "title": "Make the experiment informative",
+            "blocks": [
+              {
+                "type": "list",
+                "items": [
+                  "Initially change one parameter at a time.",
+                  "Compare every method against the same known reference.",
+                  "Check short events and phase alignment as well as noise.",
+                  "Keep the seed, settings, raw data and evidence report together.",
+                  "Use new tests before transferring a synthetic result to real sensors."
+                ]
+              },
+              {
+                "type": "links",
+                "items": [
+                  {
+                    "label": "Signal Lab",
+                    "url": "app/signal-lab.html"
+                  },
+                  {
+                    "label": "Metric definitions and limits (German)",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/docs/SIGNAL_LAB_METHODS.md"
+                  },
+                  {
+                    "label": "Polarity-inversion countercheck",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/docs/signal-lab/wolfram-polarity-v0.1/README.md"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "causal-orders",
+      "de": {
+        "title": "Kausale Ordnungen und Raumzeitfragen",
+        "lead": "Hier geht es um die Frage, welche Struktur in Beziehungen steckt, bevor man eine räumliche Zeichnung voraussetzt.",
+        "sections": [
+          {
+            "id": "order",
+            "title": "Ereignisse und ihre Reihenfolge",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "Eine kausale Ordnung beschreibt, welche Ereignisse vor welchen anderen liegen können. Denke an drei Arbeitsschritte: A muss vor B passieren und B vor C. Dann muss auch A vor C liegen. Diese Folgerung heißt Transitivität."
+              },
+              {
+                "type": "paragraph",
+                "text": "Manche Paare haben keine vorgegebene Reihenfolge. In einer kausalen Raumzeitinterpretation können sie räumlich getrennt sein. Bei einem beliebigen erzeugten Netzwerk ist diese physikalische Interpretation aber noch nicht begründet."
+              },
+              {
+                "type": "paragraph",
+                "text": "Ein Hasse-Diagramm zeichnet nur die unmittelbaren Beziehungen. Die vollständige Relationsmatrix enthält zusätzlich alle Beziehungen, die durch Transitivität folgen. Eine hübsche Anordnung der Punkte auf dem Bildschirm ist noch keine gemessene Geometrie."
+              }
+            ]
+          },
+          {
+            "id": "fingerprints",
+            "title": "Warum ein Spektrum nicht alles verrät",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "Eine gezeichnete Ordnung kann durch Umnummerieren ihrer Knoten anders aussehen und dennoch dieselbe Struktur haben. Isomorphie bedeutet hier: Es gibt eine bijektive Zuordnung der Knoten (jeder Knoten wird genau einmal zugeordnet), die alle gerichteten Beziehungen erhält. Die Zuordnung muss nicht die einzig mögliche sein."
+              },
+              {
+                "type": "paragraph",
+                "text": "Ein Fingerabdruck fasst die Struktur in wenigen Zahlen oder Häufigkeiten zusammen. Verschiedene Strukturen können dabei denselben Fingerabdruck erhalten – ähnlich wie verschiedene Menschen gleich groß sein können."
+              },
+              {
+                "type": "table",
+                "headers": [
+                  "Kürzel im Projekt",
+                  "Was dahintersteckt"
+                ],
+                "rows": [
+                  [
+                    "H7",
+                    "Eine konkret festgelegte Kombination von Spektren und Zählgrößen; keine eindeutige Kennung."
+                  ],
+                  [
+                    "N1",
+                    "Lokale Nachbarschaftsprofile."
+                  ],
+                  [
+                    "Q1",
+                    "Spektren gezielter Einpunkt-Erweiterungen."
+                  ],
+                  [
+                    "R2",
+                    "Wiederholte Verfeinerung von Merkmalen geordneter Knotenpaare."
+                  ],
+                  [
+                    "P123",
+                    "Histogramme gemeinsamer Vorgänger und Nachfolger für Ein-, Zwei- und Dreiermengen."
+                  ]
+                ]
+              },
+              {
+                "type": "paragraph",
+                "text": "Die veröffentlichten Gegenbeispiele zeigen Grenzen solcher Zusammenfassungen. Die vollständige gerichtete Relation und eine exakte Isomorphieprüfung bleiben die Vergleichsreferenz."
+              }
+            ]
+          },
+          {
+            "id": "controls",
+            "title": "Was leisten die faireren Kontrollen?",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "Zwei Erzeuger sind leicht zu unterscheiden, wenn einer viel dichtere oder höhere Ordnungen liefert. Deshalb wurden Vergleichspaare mit gleicher Knotenzahl N, Relationszahl R und Höhe H ausgewählt. Höhe meint hier die Länge einer längsten Kette, gezählt in Knoten."
+              },
+              {
+                "type": "paragraph",
+                "text": "Im veröffentlichten Hauptvergleich bei N=64 brachte P123 keinen nachgewiesenen Zusatznutzen: Die Basis erreichte 54,30 %, die Kombination 50,39 %. Vier von neun Vergleichszellen hatten zu wenige passende Paare und blieben ohne Leistungsbewertung. Das Ergebnis grenzt eine getestete Methode ein; es beweist keine allgemeine Unmöglichkeit geometrischer Erkenntnis."
+              },
+              {
+                "type": "links",
+                "items": [
+                  {
+                    "label": "Kontrollstudie mit Originaldaten",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/lorentz_matched_controls/README.md"
+                  },
+                  {
+                    "label": "Gegenbeispiele und Rekonstruktionsgrenzen",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/lorentz_relational_boundary/README.md"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "time",
+            "title": "Die nächste konkrete Frage: Eigenzeit",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "Eigenzeit bezeichnet die Zeit entlang einer zeitartigen Verbindung. Im festgelegten flachen 1+1-Modell ist das Ziel ihr Verhältnis zum bekannten äußeren Zeitmaßstab. Das ist eine statistische Schätzaufgabe zwischen zwei markierten Ereignissen."
+              },
+              {
+                "type": "paragraph",
+                "text": "Die Referenz zählt Punkte im offenen Intervall zwischen den Markierungen. In diesem Modell motiviert das die Schätzung sqrt(K/(N−2)). Der Maßstab und die Dimension sind dabei vorgegeben. Dieselbe endliche Ordnung kann mehrere verschiedene geometrische Einbettungen besitzen."
+              },
+              {
+                "type": "paragraph",
+                "text": "Der hier beschriebene veröffentlichte Referenzstand enthält Zieldefinition und Prüfvertrag aus PR #42. Der anschließende numerische Lauf wird gesondert dokumentiert; dieser Wiki-Stand erklärt ihn nicht pauschal für veröffentlicht oder physikalisch bestätigt."
+              },
+              {
+                "type": "links",
+                "items": [
+                  {
+                    "label": "Eigenzeit: Definition, Beispiel und Vertrag",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/lorentz_proper_time/README.md"
+                  },
+                  {
+                    "label": "Causal-Set-Labor öffnen",
+                    "url": "app/rax-cqg-lab.html"
+                  },
+                  {
+                    "label": "Grenzen des Browsermodells",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/docs/research/rax/cqg-benchmark-v0.2.0/README.md"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "en": {
+        "title": "Causal orders and spacetime questions",
+        "lead": "This research asks what structure is carried by relationships before a spatial drawing is assumed.",
+        "sections": [
+          {
+            "id": "order",
+            "title": "Events and their ordering",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "A causal order describes which events can precede which others. Imagine three tasks: A must happen before B, and B before C. Then A must also precede C. This implication is called transitivity."
+              },
+              {
+                "type": "paragraph",
+                "text": "Some pairs have no specified ordering. In a causal spacetime interpretation they may be spatially separated. An arbitrary generated network does not automatically justify that physical interpretation."
+              },
+              {
+                "type": "paragraph",
+                "text": "A Hasse diagram draws only the immediate relationships. The full relation matrix also contains the relationships implied by transitivity. An attractive arrangement of dots on a screen is not a measured geometry."
+              }
+            ]
+          },
+          {
+            "id": "fingerprints",
+            "title": "Why a spectrum is not the whole story",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "Renumbering the nodes can make a drawing look different while leaving its structure unchanged. Isomorphism here means there is a one-to-one node correspondence preserving every directed relationship. That correspondence need not be the only possible one."
+              },
+              {
+                "type": "paragraph",
+                "text": "A fingerprint summarises a structure using a few numbers or frequency counts. Different structures can share the same fingerprint, just as different people can have the same height."
+              },
+              {
+                "type": "table",
+                "headers": [
+                  "Project abbreviation",
+                  "What it represents"
+                ],
+                "rows": [
+                  [
+                    "H7",
+                    "A specifically defined combination of spectra and counts; not a unique identifier."
+                  ],
+                  [
+                    "N1",
+                    "Local neighbourhood profiles."
+                  ],
+                  [
+                    "Q1",
+                    "Spectra of targeted one-point extensions."
+                  ],
+                  [
+                    "R2",
+                    "Iterative refinement of features of ordered node pairs."
+                  ],
+                  [
+                    "P123",
+                    "Histograms of common predecessors and successors for sets of one, two and three nodes."
+                  ]
+                ]
+              },
+              {
+                "type": "paragraph",
+                "text": "Published counterexamples expose limits of these summaries. The full directed relation and exact isomorphism checking remain the comparison reference."
+              }
+            ]
+          },
+          {
+            "id": "controls",
+            "title": "What do fairer controls achieve?",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "Two generators are easy to distinguish if one produces much denser or taller orders. Comparison pairs were therefore selected with the same node count N, relation count R and height H. Here height is the length of a longest chain, counted in nodes."
+              },
+              {
+                "type": "paragraph",
+                "text": "In the published primary comparison at N=64, P123 showed no demonstrated incremental benefit: the baseline reached 54.30%, while the combination reached 50.39%. Four of nine comparison cells lacked enough matching pairs and received no performance assessment. This limits a tested method; it does not prove that learning geometry is generally impossible."
+              },
+              {
+                "type": "links",
+                "items": [
+                  {
+                    "label": "Matched-control study and original data",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/lorentz_matched_controls/README.md"
+                  },
+                  {
+                    "label": "Counterexamples and reconstruction limits",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/lorentz_relational_boundary/README.md"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "time",
+            "title": "A concrete next question: proper time",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "Proper time describes time along a timelike connection. In the specified flat 1+1-dimensional model, the target is its ratio to a known outer time scale. This is a statistical estimation task between two marked events."
+              },
+              {
+                "type": "paragraph",
+                "text": "The reference counts points in the open interval between the marks. In this model that motivates the estimate sqrt(K/(N−2)). The scale and dimension are given. The same finite order can admit several different geometric embeddings."
+              },
+              {
+                "type": "paragraph",
+                "text": "The published reference state covered here contains the target definition and contract from PR #42. The subsequent numerical run is documented separately; this wiki edition does not present it as already published in full or physically validated."
+              },
+              {
+                "type": "links",
+                "items": [
+                  {
+                    "label": "Proper time: definition, example and contract",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/lorentz_proper_time/README.md"
+                  },
+                  {
+                    "label": "Open Causal-Set Lab",
+                    "url": "app/rax-cqg-lab.html"
+                  },
+                  {
+                    "label": "Limits of the browser model",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/docs/research/rax/cqg-benchmark-v0.2.0/README.md"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "evidence",
+      "de": {
+        "title": "Prüfergebnisse richtig verstehen",
+        "lead": "Frage bei einem Ergebnis immer: Welche Aussage wurde geprüft, mit welchen Daten und unter welchen Bedingungen?",
+        "sections": [
+          {
+            "id": "levels",
+            "title": "Vier unterschiedliche Arten von Belegen",
+            "blocks": [
+              {
+                "type": "table",
+                "headers": [
+                  "Art",
+                  "Was sie leisten kann",
+                  "Was daraus nicht automatisch folgt"
+                ],
+                "rows": [
+                  [
+                    "Softwareprüfung",
+                    "Ein Programm erfüllt die geprüften Regeln und Kontrollfälle.",
+                    "Dass das Modell die Natur beschreibt."
+                  ],
+                  [
+                    "Exakte endliche Rechnung",
+                    "Eine mathematische Aussage gilt für die angegebenen endlichen Objekte.",
+                    "Dass sie für alle Größen oder einen Kontinuumsgrenzfall gilt."
+                  ],
+                  [
+                    "Synthetische Simulation",
+                    "Ein Verhalten tritt unter den programmierten Modellannahmen auf.",
+                    "Dass ein echtes Messgerät denselben Effekt zeigt."
+                  ],
+                  [
+                    "Physische Messung",
+                    "Daten eines realen Aufbaus stützen eine begrenzte Messbehauptung.",
+                    "Allgemeine Gültigkeit ohne Kalibrierung, Unsicherheiten und Wiederholung."
+                  ]
+                ]
+              },
+              {
+                "type": "paragraph",
+                "text": "Ein archivierter Labordatensatz stammt aus realen Messungen. Seine Auswertung im Projekt ist dennoch keine neue eigene Geräteabnahme. Eine KI-Konzeptillustration ist kein Foto eines aufgebauten Experiments."
+              }
+            ]
+          },
+          {
+            "id": "labels",
+            "title": "Statuswörter übersetzen",
+            "blocks": [
+              {
+                "type": "table",
+                "headers": [
+                  "Status",
+                  "Bedeutung"
+                ],
+                "rows": [
+                  [
+                    "PASS",
+                    "Die ausdrücklich geprüften Kriterien wurden erfüllt."
+                  ],
+                  [
+                    "FAIL",
+                    "Mindestens ein bestimmtes Kriterium wurde verletzt."
+                  ],
+                  [
+                    "INCONCLUSIVE",
+                    "Die Frage bleibt mit dieser Prüfung unentschieden."
+                  ],
+                  [
+                    "NOT_RUN / NOT_PERFORMED / NOT_EXECUTED",
+                    "Die betreffende Prüfung wurde nicht ausgeführt."
+                  ],
+                  [
+                    "INSUFFICIENT_COMMON_SUPPORT",
+                    "Es gibt zu wenige passende Vergleichsfälle für die festgelegte Auswertung."
+                  ],
+                  [
+                    "MAIN / BRANCH_ONLY",
+                    "Beschreibt den Ablageort des Quellcodes, nicht seine wissenschaftliche Reife."
+                  ]
+                ]
+              },
+              {
+                "type": "paragraph",
+                "text": "Die genaue Bedeutung steht im jeweiligen Prüfvertrag. Beispiel: Ein Gegenbeispieltest kann PASS melden, gerade weil ein ungeeigneter Filter korrekt zurückgewiesen wurde."
+              }
+            ]
+          },
+          {
+            "id": "reproduce",
+            "title": "Nachrechnen ist mehr als eine Prüfsumme",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "Eine Prüfsumme wie SHA-256 hilft zu erkennen, ob Bytes verändert wurden. Sie beweist allein weder die Herkunft noch die Richtigkeit eines Ergebnisses. Ein Replay führt die Berechnung erneut aus. Ein getrennt programmierter Prüfer reduziert bestimmte gemeinsame Fehlerquellen; gleiche Autorenschaft oder Bibliotheken können trotzdem Abhängigkeiten erzeugen."
+              },
+              {
+                "type": "paragraph",
+                "text": "Externe Replikation bedeutet hier, dass andere Personen mit eigener Prüfung den Befund wiederholen. Automatische GitHub-Prüfungen und interne Gegenrechnungen sind wertvoll, ersetzen diesen Schritt aber nicht."
+              },
+              {
+                "type": "steps",
+                "items": [
+                  "Lies die genaue Behauptung und die Grenzen.",
+                  "Notiere Quellencommit, Datenstand, Zufallsseed und Softwareversionen.",
+                  "Suche den ausgeführten Bericht, nicht nur einen geplanten Test.",
+                  "Prüfe, ob Gegenbeispiele und unentschiedene Fälle erhalten sind.",
+                  "Vergleiche das berichtete Ergebnis mit dem vorab festgelegten Kriterium."
+                ]
+              },
+              {
+                "type": "links",
+                "items": [
+                  {
+                    "label": "Referenzedition und externe Reproduktion",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/docs/reference-qe-v0.1/EXTERNAL_REPRODUCTION.md"
+                  },
+                  {
+                    "label": "Numerische Reparatur und ursprüngliche Fehler",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/docs/numerics-v1/README.md"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "uncertainty",
+            "title": "Was ein Unsicherheitsintervall sagt",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "Ein Intervall beschreibt Unsicherheit unter einem bestimmten Auswertungsmodell. Wenn das Intervall für den Zusatznutzen sowohl negative als auch positive Werte enthält, ist ein Vorteil dadurch nicht nachgewiesen. Das ist kein Beweis exakter Gleichheit."
+              },
+              {
+                "type": "paragraph",
+                "text": "Bei gepaarten Vergleichen werden passende Fälle gemeinsam ausgewertet. Manche Bootstrap-Intervalle halten Training und Fallauswahl fest. Sie decken dann nicht zusätzlich die Unsicherheit durch andere Trainingsdaten, neue Erzeuger oder eine andere Auswahl ab."
+              }
+            ]
+          }
+        ]
+      },
+      "en": {
+        "title": "Understanding evidence",
+        "lead": "For every result, ask: which claim was tested, using what data and under which conditions?",
+        "sections": [
+          {
+            "id": "levels",
+            "title": "Four different kinds of evidence",
+            "blocks": [
+              {
+                "type": "table",
+                "headers": [
+                  "Kind",
+                  "What it can establish",
+                  "What does not follow automatically"
+                ],
+                "rows": [
+                  [
+                    "Software check",
+                    "A program satisfies the tested rules and control cases.",
+                    "That its model describes nature."
+                  ],
+                  [
+                    "Exact finite calculation",
+                    "A mathematical statement holds for the specified finite objects.",
+                    "That it holds at every size or in a continuum limit."
+                  ],
+                  [
+                    "Synthetic simulation",
+                    "Behaviour occurs under the programmed model assumptions.",
+                    "That real equipment exhibits the same effect."
+                  ],
+                  [
+                    "Physical measurement",
+                    "Data from a real setup support a limited measurement claim.",
+                    "General validity without calibration, uncertainty analysis and repetition."
+                  ]
+                ]
+              },
+              {
+                "type": "paragraph",
+                "text": "An archived laboratory dataset comes from real measurements. Analysing it in this project is still not a new qualification of the project’s own equipment. An AI concept illustration is not a photograph of an assembled experiment."
+              }
+            ]
+          },
+          {
+            "id": "labels",
+            "title": "Reading status labels",
+            "blocks": [
+              {
+                "type": "table",
+                "headers": [
+                  "Status",
+                  "Meaning"
+                ],
+                "rows": [
+                  [
+                    "PASS",
+                    "The explicitly tested criteria were met."
+                  ],
+                  [
+                    "FAIL",
+                    "At least one specified criterion was violated."
+                  ],
+                  [
+                    "INCONCLUSIVE",
+                    "This test leaves the question undecided."
+                  ],
+                  [
+                    "NOT_RUN / NOT_PERFORMED / NOT_EXECUTED",
+                    "The relevant test was not executed."
+                  ],
+                  [
+                    "INSUFFICIENT_COMMON_SUPPORT",
+                    "Too few matching cases are available for the specified analysis."
+                  ],
+                  [
+                    "MAIN / BRANCH_ONLY",
+                    "Describes where source code is stored, not its scientific maturity."
+                  ]
+                ]
+              },
+              {
+                "type": "paragraph",
+                "text": "The precise meaning belongs to the relevant test contract. For example, a counterexample test may show PASS because an unsuitable filter was correctly rejected."
+              }
+            ]
+          },
+          {
+            "id": "reproduce",
+            "title": "Reproduction is more than a checksum",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "A checksum such as SHA-256 helps detect changes to bytes. On its own, it proves neither the origin nor the correctness of a result. A replay runs the calculation again. A separately programmed checker reduces certain shared error risks; common authorship or libraries can still create dependencies."
+              },
+              {
+                "type": "paragraph",
+                "text": "External replication here means that other people repeat the result with their own scrutiny. Automated GitHub checks and internal counterchecks are useful, but do not replace that step."
+              },
+              {
+                "type": "steps",
+                "items": [
+                  "Read the precise claim and its limits.",
+                  "Record the source commit, dataset revision, random seed and software versions.",
+                  "Find the executed report, not just a planned test.",
+                  "Check that counterexamples and undecided cases were preserved.",
+                  "Compare the reported result with the criterion specified in advance."
+                ]
+              },
+              {
+                "type": "links",
+                "items": [
+                  {
+                    "label": "Reference edition and external reproduction",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/docs/reference-qe-v0.1/EXTERNAL_REPRODUCTION.md"
+                  },
+                  {
+                    "label": "Numerical repair and preserved original failures",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/docs/numerics-v1/README.md"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "uncertainty",
+            "title": "What an uncertainty interval tells you",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "An interval describes uncertainty under a particular analysis model. If an interval for incremental benefit includes both negative and positive values, it does not establish an advantage. That is not proof of exact equality."
+              },
+              {
+                "type": "paragraph",
+                "text": "Paired comparisons analyse matching cases together. Some bootstrap intervals hold training and case selection fixed. They therefore do not additionally cover uncertainty from different training data, new generators or another selection process."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "research-map",
+      "de": {
+        "title": "Die Forschungsbereiche im Überblick",
+        "lead": "Nicht jeder Ordner ist eine fertige Anwendung. Diese Karte zeigt, wofür die einzelnen Bereiche gedacht sind und wo du weiterliest.",
+        "sections": [
+          {
+            "id": "tools",
+            "title": "Drei direkte Einstiege",
+            "blocks": [
+              {
+                "type": "table",
+                "headers": [
+                  "Bereich",
+                  "Wofür?",
+                  "Stand"
+                ],
+                "rows": [
+                  [
+                    "Astrolabium",
+                    "Signale, Fourierdarstellung und spektrale Graphmodelle erkunden.",
+                    "Browseranwendung mit dokumentierten numerischen Prüfungen und Grenzen."
+                  ],
+                  [
+                    "Signal Validation Lab",
+                    "Vier Verarbeitungsverfahren an bekannten Signalen vergleichen.",
+                    "Synthetische Versuche mit Export und Replay."
+                  ],
+                  [
+                    "Causal-Set Lab",
+                    "Endliche kausale Ordnungen erzeugen und untersuchen.",
+                    "Forschungsprototyp; kein Quantengravitationsnachweis."
+                  ]
+                ]
+              },
+              {
+                "type": "links",
+                "items": [
+                  {
+                    "label": "Astrolabium",
+                    "url": "app/index.html"
+                  },
+                  {
+                    "label": "Signal Validation Lab",
+                    "url": "app/signal-lab.html"
+                  },
+                  {
+                    "label": "Causal-Set Lab",
+                    "url": "app/rax-cqg-lab.html"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "branches",
+            "title": "Was steckt hinter den Projektnamen?",
+            "blocks": [
+              {
+                "type": "table",
+                "headers": [
+                  "Name",
+                  "Einfache Einordnung",
+                  "Wichtige Grenze"
+                ],
+                "rows": [
+                  [
+                    "Lorentz / kausale Ordnungen",
+                    "Untersucht Beziehungen, Strukturmerkmale und geometrische Schätzaufgaben.",
+                    "Gleiche Signaturen bedeuten nicht automatisch gleiche Ordnung."
+                  ],
+                  [
+                    "RAX / RAX-CQG",
+                    "Relationales Forschungsprogramm und Architektur für weiterführende Quantendynamikfragen.",
+                    "Programm und endliche Benchmarks sind keine etablierte physikalische Theorie."
+                  ],
+                  [
+                    "X6-QE",
+                    "Exakte Graphbeispiele zu Spektren und verlorener Strukturinformation.",
+                    "Keine allgemeine Quantum- oder Raumzeitqualifikation."
+                  ],
+                  [
+                    "Industrielle Entrauschung",
+                    "Prüft Wege zu brauchbarer Signalrekonstruktion für Maschinen.",
+                    "Begrenzter Datenpilot; neue Filterüberlegenheit nicht nachgewiesen."
+                  ],
+                  [
+                    "ACVM / Sagnac / Photonik",
+                    "Steuerkanäle, Referenzabläufe und Entwürfe für optische Versuche.",
+                    "Softwareprüfung und Firmwarebuild ersetzen keine elektrische oder optische Messabnahme."
+                  ],
+                  [
+                    "Edge Reference",
+                    "Lokaler Ausführungs- und Exportweg als Ausgangspunkt für gerätenahe Anwendungen.",
+                    "Kein allgemein qualifiziertes verteiltes Hardwareprodukt."
+                  ],
+                  [
+                    "NQK, Experiment Fabric, Neutral Discovery",
+                    "Separate Forschungsquellen bzw. Dossiers im Modulregister.",
+                    "Teilweise nur auf Forschungsbranches; historische NQK-Testarchive fehlen."
+                  ]
+                ]
+              },
+              {
+                "type": "paragraph",
+                "text": "Der Paderborn-Pilot verwendet vorhandene reale Labordaten. Die kleinen Fallzahlen tragen keine allgemeine industrielle Leistungszusage. Seine Datenrechte sind separat dokumentiert; die Softwarelizenz ist keine pauschale Lizenz für alle Datensätze."
+              }
+            ]
+          },
+          {
+            "id": "find",
+            "title": "So findest du den maßgeblichen Stand",
+            "blocks": [
+              {
+                "type": "steps",
+                "items": [
+                  "Öffne den Modulkatalog und suche nach dem Thema.",
+                  "Lies Quellort und Commit. MAIN und BRANCH_ONLY sind Ortsangaben.",
+                  "Öffne die Originaldokumentation sowie den jeweiligen Prüfbericht.",
+                  "Prüfe die nächste offene Abnahme. Bei neueren Studien helfen die datierten Forschungsnotizen zusätzlich zum Register."
+                ]
+              },
+              {
+                "type": "paragraph",
+                "text": "Diese Wiki-Fassung erklärt den veröffentlichten Stand bis einschließlich PR #42 vom 16. Oktober 2026. Das Register ist ebenfalls eine datierte Bestandsaufnahme. Ein älterer Quellenpin ist nicht automatisch der neueste Stand aller späteren Studien."
+              },
+              {
+                "type": "links",
+                "items": [
+                  {
+                    "label": "Durchsuchbarer Modulkatalog",
+                    "url": "modules/index.html"
+                  },
+                  {
+                    "label": "Modulregister",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/docs/MODULE_REGISTRY.md"
+                  },
+                  {
+                    "label": "Neuere Lorentz-Studien",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/docs/LORENTZ_RESEARCH.md"
+                  },
+                  {
+                    "label": "Industriepilot",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/experiments/industrial-pilot/README.md"
+                  },
+                  {
+                    "label": "ACVM-Stand",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/docs/acvm/README.md"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "en": {
+        "title": "Research areas at a glance",
+        "lead": "Not every directory is a finished application. This map explains the purpose of each area and where to read more.",
+        "sections": [
+          {
+            "id": "tools",
+            "title": "Three direct starting points",
+            "blocks": [
+              {
+                "type": "table",
+                "headers": [
+                  "Area",
+                  "Purpose",
+                  "Status"
+                ],
+                "rows": [
+                  [
+                    "Astrolabium",
+                    "Explore signals, Fourier representations and spectral graph models.",
+                    "Browser application with documented numerical checks and limits."
+                  ],
+                  [
+                    "Signal Validation Lab",
+                    "Compare four processing methods against known signals.",
+                    "Synthetic experiments with export and replay."
+                  ],
+                  [
+                    "Causal-Set Lab",
+                    "Generate and examine finite causal orders.",
+                    "Research prototype; not evidence for quantum gravity."
+                  ]
+                ]
+              },
+              {
+                "type": "links",
+                "items": [
+                  {
+                    "label": "Astrolabium",
+                    "url": "app/index.html"
+                  },
+                  {
+                    "label": "Signal Validation Lab",
+                    "url": "app/signal-lab.html"
+                  },
+                  {
+                    "label": "Causal-Set Lab",
+                    "url": "app/rax-cqg-lab.html"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "branches",
+            "title": "What do the project names mean?",
+            "blocks": [
+              {
+                "type": "table",
+                "headers": [
+                  "Name",
+                  "Plain-language purpose",
+                  "Important limit"
+                ],
+                "rows": [
+                  [
+                    "Lorentz / causal orders",
+                    "Studies relationships, structural features and geometric estimation tasks.",
+                    "Matching signatures do not automatically mean identical orders."
+                  ],
+                  [
+                    "RAX / RAX-CQG",
+                    "A relational research programme and architecture for further questions about quantum dynamics.",
+                    "The programme and finite benchmarks are not an established physical theory."
+                  ],
+                  [
+                    "X6-QE",
+                    "Exact graph examples about spectra and lost structural information.",
+                    "Not a general qualification of quantum or spacetime claims."
+                  ],
+                  [
+                    "Industrial denoising",
+                    "Investigates useful signal reconstruction for machinery.",
+                    "Limited data pilot; no demonstrated superiority of a new filter."
+                  ],
+                  [
+                    "ACVM / Sagnac / photonics",
+                    "Control channels, reference workflows and optical experiment designs.",
+                    "Software checks and firmware builds do not replace electrical or optical measurement qualification."
+                  ],
+                  [
+                    "Edge Reference",
+                    "Local execution and export as a starting point for applications near devices.",
+                    "Not a generally qualified distributed hardware product."
+                  ],
+                  [
+                    "NQK, Experiment Fabric, Neutral Discovery",
+                    "Separate research sources or dossiers listed in the module register.",
+                    "Some are only on research branches; historical NQK test archives are missing."
+                  ]
+                ]
+              },
+              {
+                "type": "paragraph",
+                "text": "The Paderborn pilot uses existing real laboratory data. Its small sample counts do not establish general industrial performance. Data rights are documented separately; the software licence does not cover every dataset automatically."
+              }
+            ]
+          },
+          {
+            "id": "find",
+            "title": "Find the authoritative version",
+            "blocks": [
+              {
+                "type": "steps",
+                "items": [
+                  "Open the module catalogue and search for your topic.",
+                  "Read the source location and commit. MAIN and BRANCH_ONLY describe locations.",
+                  "Open the original documentation and its evidence report.",
+                  "Check the next outstanding acceptance test. Dated research notes supplement the register for later studies."
+                ]
+              },
+              {
+                "type": "paragraph",
+                "text": "This wiki edition explains the published state through PR #42 on 16 October 2026. The register is also a dated snapshot. An older source pin is not automatically the latest state of every subsequent study."
+              },
+              {
+                "type": "links",
+                "items": [
+                  {
+                    "label": "Searchable module catalogue",
+                    "url": "modules/index.html"
+                  },
+                  {
+                    "label": "Module register",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/docs/MODULE_REGISTRY.md"
+                  },
+                  {
+                    "label": "Later Lorentz studies",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/docs/LORENTZ_RESEARCH.md"
+                  },
+                  {
+                    "label": "Industrial pilot",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/experiments/industrial-pilot/README.md"
+                  },
+                  {
+                    "label": "ACVM status",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/docs/acvm/README.md"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "glossary",
+      "de": {
+        "title": "Glossar: Begriffe ohne Umwege",
+        "lead": "Die Erklärungen sind Einstiegshilfen. Für eine Rechnung gilt immer die präzise Definition im jeweiligen Modul.",
+        "sections": [
+          {
+            "id": "terms",
+            "title": "Die wichtigsten Begriffe",
+            "blocks": [
+              {
+                "type": "table",
+                "headers": [
+                  "Begriff",
+                  "Bedeutung"
+                ],
+                "rows": [
+                  [
+                    "Signal",
+                    "Wertefolge, meist über die Zeit."
+                  ],
+                  [
+                    "Spektrum",
+                    "Darstellung von Frequenzanteilen oder – bei einer Matrix – ihrer Eigenwerte. Der Kontext entscheidet."
+                  ],
+                  [
+                    "Fouriertransformation / FFT",
+                    "Zerlegung in Schwingungsanteile; FFT ist ein schneller Rechenweg dafür."
+                  ],
+                  [
+                    "Phase",
+                    "Lage eines Schwingungsanteils innerhalb seines Zyklus."
+                  ],
+                  [
+                    "Rauschen",
+                    "Zusätzliche Schwankungen; welche Anteile stören, hängt von der Aufgabe ab."
+                  ],
+                  [
+                    "Graph",
+                    "Knoten und ihre Verbindungen."
+                  ],
+                  [
+                    "Laplacematrix",
+                    "Matrix aus Knotengraden und Verbindungen; hier ein genau definierter Graphoperator."
+                  ],
+                  [
+                    "Eigenwert / Spektrallücke",
+                    "Kennzahl eines Operators / Abstand zwischen bestimmten Eigenwerten. Welche Lücke gemeint ist, muss definiert sein."
+                  ],
+                  [
+                    "Kausale Ordnung / Poset",
+                    "Menge mit gerichteter, transitiver Ordnung; nicht alle Paare müssen vergleichbar sein."
+                  ],
+                  [
+                    "Hasse-Diagramm",
+                    "Darstellung der unmittelbaren Beziehungen einer endlichen Ordnung."
+                  ],
+                  [
+                    "Isomorphie",
+                    "Gleiche Struktur nach einer bijektiven Umbenennung der Knoten."
+                  ],
+                  [
+                    "Invariante / Fingerabdruck",
+                    "Merkmal, das beim erlaubten Umbenennen gleich bleibt; muss nicht eindeutig sein."
+                  ],
+                  [
+                    "Intervall K",
+                    "Im Eigenzeitversuch: Zahl der Ereignisse strikt zwischen zwei markierten Ereignissen."
+                  ],
+                  [
+                    "Höhe H",
+                    "Länge einer längsten Kette; hier in Knoten gezählt."
+                  ],
+                  [
+                    "Relationsdichte",
+                    "Anteil vergleichbarer Paare nach der genau angegebenen Zählkonvention."
+                  ],
+                  [
+                    "Minkowski-Modell",
+                    "Flaches relativistisches Raumzeitmodell; keine Krümmung."
+                  ],
+                  [
+                    "1+1 Dimensionen",
+                    "Eine Zeit- und eine Raumdimension."
+                  ],
+                  [
+                    "Eigenzeit",
+                    "Zeitmaß entlang einer zeitartigen Verbindung; im Versuch relativ zu einer äußeren Skala."
+                  ],
+                  [
+                    "Seed",
+                    "Startangabe für eine reproduzierbare Zufallsfolge."
+                  ],
+                  [
+                    "Baseline",
+                    "Festgelegtes Vergleichsverfahren."
+                  ],
+                  [
+                    "Kontrolle / Gegenbeispiel",
+                    "Prüffall für eine konkrete Fehlerquelle / Fall, der eine allgemeine Behauptung widerlegt."
+                  ],
+                  [
+                    "Holdout",
+                    "Daten, die nicht zur Anpassung oder Auswahl des Verfahrens verwendet werden."
+                  ],
+                  [
+                    "Bootstrap",
+                    "Wiederholtes Ziehen aus vorhandenen Daten zur Abschätzung einer bestimmten Unsicherheit."
+                  ],
+                  [
+                    "RMSE",
+                    "Wurzel des mittleren quadratischen Fehlers."
+                  ],
+                  [
+                    "Commit",
+                    "Genau bezeichnete Version eines Git-Projekts."
+                  ],
+                  [
+                    "Pull Request / PR",
+                    "Vorschlag, eine Änderung in einen anderen Entwicklungszweig zu übernehmen."
+                  ],
+                  [
+                    "CI",
+                    "Automatisch ausgeführte Integrations- und Prüfabläufe."
+                  ],
+                  [
+                    "Replay / Replikation",
+                    "Erneute Berechnung / Wiederholung eines Befunds; Umfang und Unabhängigkeit müssen benannt werden."
+                  ],
+                  [
+                    "Provenienz / Hash",
+                    "Dokumentierte Herkunft / Prüfsumme von Bytes."
+                  ],
+                  [
+                    "Kontinuumslimes",
+                    "Mathematisch kontrollierter Übergang von diskreten Objekten zu einem kontinuierlichen Grenzmodell."
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "context",
+            "title": "Ein Wort kann mehrere Bedeutungen haben",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "Ein Graphspektrum ist nicht dasselbe wie das Frequenzspektrum einer gemessenen Schwingung. Ebenso ist eine Spektrallücke nicht automatisch eine physikalische Energielücke. Prüfe immer, welcher Operator, welche Einheit und welches Modell gemeint sind."
+              },
+              {
+                "type": "links",
+                "items": [
+                  {
+                    "label": "Mathematischer Vertrag",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/docs/SCIENTIFIC_SCOPE.md"
+                  },
+                  {
+                    "label": "Methoden des Signal Labs",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/docs/SIGNAL_LAB_METHODS.md"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "en": {
+        "title": "Glossary: terms without detours",
+        "lead": "These definitions are starting points. Calculations always use the precise definition in the relevant module.",
+        "sections": [
+          {
+            "id": "terms",
+            "title": "Key terms",
+            "blocks": [
+              {
+                "type": "table",
+                "headers": [
+                  "Term",
+                  "Meaning"
+                ],
+                "rows": [
+                  [
+                    "Signal",
+                    "A sequence of values, usually over time."
+                  ],
+                  [
+                    "Spectrum",
+                    "A representation of frequency components or, for a matrix, its eigenvalues. Context matters."
+                  ],
+                  [
+                    "Fourier transform / FFT",
+                    "Decomposition into oscillating components; FFT is a fast method of calculating it."
+                  ],
+                  [
+                    "Phase",
+                    "The position of an oscillating component within its cycle."
+                  ],
+                  [
+                    "Noise",
+                    "Additional fluctuations; which components are unwanted depends on the task."
+                  ],
+                  [
+                    "Graph",
+                    "Nodes and their connections."
+                  ],
+                  [
+                    "Laplacian matrix",
+                    "A matrix built from node degrees and connections; a precisely defined graph operator here."
+                  ],
+                  [
+                    "Eigenvalue / spectral gap",
+                    "A characteristic value of an operator / a separation between specified eigenvalues. The intended gap must be defined."
+                  ],
+                  [
+                    "Causal order / poset",
+                    "A set with a directed, transitive ordering; not every pair must be comparable."
+                  ],
+                  [
+                    "Hasse diagram",
+                    "A drawing of the immediate relations of a finite order."
+                  ],
+                  [
+                    "Isomorphism",
+                    "Identical structure after a one-to-one renaming of nodes."
+                  ],
+                  [
+                    "Invariant / fingerprint",
+                    "A feature unchanged by the allowed relabelling; it need not uniquely identify a structure."
+                  ],
+                  [
+                    "Interval count K",
+                    "In the proper-time experiment: the number of events strictly between two marked events."
+                  ],
+                  [
+                    "Height H",
+                    "The length of a longest chain; counted in nodes here."
+                  ],
+                  [
+                    "Relation density",
+                    "The fraction of comparable pairs under the specified counting convention."
+                  ],
+                  [
+                    "Minkowski model",
+                    "A flat relativistic spacetime model, without curvature."
+                  ],
+                  [
+                    "1+1 dimensions",
+                    "One time dimension and one spatial dimension."
+                  ],
+                  [
+                    "Proper time",
+                    "A measure of time along a timelike connection; relative to an outer scale in this experiment."
+                  ],
+                  [
+                    "Seed",
+                    "A starting specification for a reproducible random sequence."
+                  ],
+                  [
+                    "Baseline",
+                    "A specified comparison method."
+                  ],
+                  [
+                    "Control / counterexample",
+                    "A test case for a particular error risk / a case refuting a general claim."
+                  ],
+                  [
+                    "Holdout",
+                    "Data not used to fit or select a method."
+                  ],
+                  [
+                    "Bootstrap",
+                    "Repeated sampling from existing data to estimate a particular uncertainty."
+                  ],
+                  [
+                    "RMSE",
+                    "Root mean square error."
+                  ],
+                  [
+                    "Commit",
+                    "A precisely identified version of a Git project."
+                  ],
+                  [
+                    "Pull request / PR",
+                    "A proposal to incorporate changes into another development branch."
+                  ],
+                  [
+                    "CI",
+                    "Automatically executed integration and checking workflows."
+                  ],
+                  [
+                    "Replay / replication",
+                    "Recomputing a result / repeating a finding; scope and independence must be stated."
+                  ],
+                  [
+                    "Provenance / hash",
+                    "Documented origin / a checksum of bytes."
+                  ],
+                  [
+                    "Continuum limit",
+                    "A mathematically controlled passage from discrete objects to a continuous limiting model."
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "context",
+            "title": "One word can have several meanings",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "A graph spectrum is not the same as the frequency spectrum of a measured vibration. Likewise, a spectral gap is not automatically a physical energy gap. Always check which operator, unit and model are involved."
+              },
+              {
+                "type": "links",
+                "items": [
+                  {
+                    "label": "Mathematical contract",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/docs/SCIENTIFIC_SCOPE.md"
+                  },
+                  {
+                    "label": "Signal Lab methods",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/docs/SIGNAL_LAB_METHODS.md"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "faq",
+      "de": {
+        "title": "Häufige Fragen und Hilfe",
+        "lead": "Kurze Antworten für den Alltag – mit dem passenden Weg zu den Details.",
+        "sections": [
+          {
+            "id": "begin",
+            "title": "Brauche ich Mathematikkenntnisse oder ein Konto?",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "Zum Lesen und für die öffentlichen Browserlabore brauchst du kein GitHub-Konto. Für den ersten Signalversuch reicht Neugier. Mathematik und Programmierung werden wichtig, wenn du Beweise, Quellcode oder neue Forschungsfragen selbst prüfen möchtest."
+              }
+            ]
+          },
+          {
+            "id": "quantum",
+            "title": "Ist X6 ein Quantencomputer oder eine bewiesene Gravitationstheorie?",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "Nein. Das Projekt enthält Forschungsfragen mit Quanten- und Raumzeitbezug, außerdem klassische Rechenwerkzeuge und endliche Referenzen. Der Browserbenchmark setzt bei seiner Zweiqubit-Uhr Quantenmechanik voraus; er leitet sie nicht aus der kausalen Ordnung her."
+              }
+            ]
+          },
+          {
+            "id": "pass",
+            "title": "Alles ist grün. Ist meine Hypothese damit bewiesen?",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "Nur die angegebenen Prüfbedingungen sind bestanden. Ein mathematischer Beweis braucht eine passende allgemeine Argumentation. Eine Aussage über die Natur braucht geeignete physische Daten. Auch viele kopierte oder abhängige Versuche sind nicht automatisch viele unabhängige Bestätigungen."
+              }
+            ]
+          },
+          {
+            "id": "failure",
+            "title": "Ein Filter zeigt FAIL. Ist die App kaputt?",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "Nicht unbedingt. Der Versuch kann korrekt zeigen, dass dieser Filter bei diesen Einstellungen Information verliert. Kontrolliere zuerst Referenz, Störungen und Kriterien. Melde einen Fehler, wenn die Berechnung oder Bedienung selbst nicht mit der Dokumentation übereinstimmt."
+              }
+            ]
+          },
+          {
+            "id": "problems",
+            "title": "Der lokale Start oder Export funktioniert nicht",
+            "blocks": [
+              {
+                "type": "list",
+                "items": [
+                  "Starte die Befehle im Projektordner, in dem x6.py liegt.",
+                  "Prüfe die Voraussetzungen mit doctor --profile research.",
+                  "Verwende bei belegtem Port serve --port 8001.",
+                  "Wähle einen neuen Ausgabeordner, statt einen alten Lauf zu überschreiben.",
+                  "Für JSON-Exporte verwende einen Browser mit WebCrypto über HTTPS oder localhost.",
+                  "Lies bei einem Abbruch die Logs und den Fehlerbericht; ein unvollständiger Lauf ist kein abgeschlossener Nachweis."
+                ]
+              },
+              {
+                "type": "links",
+                "items": [
+                  {
+                    "label": "Vollständige lokale Anleitung",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/docs/INTEGRATION.md"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "contribute",
+            "title": "Wie melde ich einen Fehler oder helfe mit?",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "Eine hilfreiche Meldung nennt den Commit, Browser bzw. Laufzeitversion, die genauen Schritte, Eingabedaten oder Seed, das erwartete und das tatsächliche Ergebnis sowie die Fehlermeldung. Entferne vertrauliche Daten, bevor du sie in ein öffentliches Issue einfügst."
+              },
+              {
+                "type": "paragraph",
+                "text": "Besonders nützlich sind verständliche Gegenbeispiele, externe Wiederholungen und konkrete Dokumentationskorrekturen. Auch ein negatives Ergebnis hilft, wenn klar ist, was geprüft wurde."
+              },
+              {
+                "type": "links",
+                "items": [
+                  {
+                    "label": "GitHub-Issues",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/issues"
+                  },
+                  {
+                    "label": "Beitragsrichtlinien",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/CONTRIBUTING.md"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "cite",
+            "title": "Darf ich X6 weiterverwenden und zitieren?",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "Eigene Projektbeiträge stehen unter Apache-2.0. Drittinhalte und Datensätze behalten ihre eigenen Bedingungen; für den verwendeten Paderborn-Datensatz gilt eine separat dokumentierte nichtkommerzielle Lizenz. Prüfe den Lizenzumfang der konkreten Datei."
+              },
+              {
+                "type": "paragraph",
+                "text": "Nenne beim Zitieren das Projekt, den genauen Commit oder die Veröffentlichung und den verwendeten Prüfbericht. Übernimm dessen Grenzen. Die Zitiermetadaten sind ein Einstieg; eine allgemeine Wiki-Zitation ersetzt die konkrete Ergebnisquelle nicht."
+              },
+              {
+                "type": "links",
+                "items": [
+                  {
+                    "label": "Zitiermetadaten",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/CITATION.cff"
+                  },
+                  {
+                    "label": "Lizenzumfang",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/LICENSE_SCOPE.md"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "wiki",
+            "title": "Wie wird dieses Wiki gepflegt?",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "Deutsch und Englisch werden gemeinsam versioniert. Die Seiten sind auch ohne JavaScript lesbar und als Markdown verfügbar. Aktualisierungen beginnen bei den Originalquellen und ihren ausgeführten Berichten; geplante Tests werden nicht allein durch eine Textänderung zu bestandenen Tests."
+              },
+              {
+                "type": "links",
+                "items": [
+                  {
+                    "label": "Wiki-Quellen und Pflegeanleitung",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/docs/wiki/README.md"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "en": {
+        "title": "Frequently asked questions and help",
+        "lead": "Short answers for everyday use, with links to the details.",
+        "sections": [
+          {
+            "id": "begin",
+            "title": "Do I need mathematics or an account?",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "You do not need a GitHub account to read the wiki or use the public browser labs. Curiosity is enough for the first signal experiment. Mathematics and programming become important when you want to check proofs, source code or new research questions yourself."
+              }
+            ]
+          },
+          {
+            "id": "quantum",
+            "title": "Is X6 a quantum computer or a proven theory of gravity?",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "No. The project includes research questions about quantum physics and spacetime alongside classical computational tools and finite references. The browser benchmark assumes quantum mechanics for its two-qubit clock; it does not derive quantum mechanics from the causal order."
+              }
+            ]
+          },
+          {
+            "id": "pass",
+            "title": "Everything is green. Is my hypothesis proved?",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "Only the stated test conditions have passed. A mathematical proof needs an appropriate general argument. A claim about nature needs suitable physical data. Many copied or dependent trials are not automatically many independent confirmations."
+              }
+            ]
+          },
+          {
+            "id": "failure",
+            "title": "A filter shows FAIL. Is the app broken?",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "Not necessarily. The experiment may correctly show that this filter loses information under these settings. First check the reference, disturbances and criteria. Report a bug if the computation or interface itself contradicts the documentation."
+              }
+            ]
+          },
+          {
+            "id": "problems",
+            "title": "Local startup or export does not work",
+            "blocks": [
+              {
+                "type": "list",
+                "items": [
+                  "Run the commands from the project directory containing x6.py.",
+                  "Check prerequisites using doctor --profile research.",
+                  "Use serve --port 8001 if the port is busy.",
+                  "Choose a new output directory instead of overwriting an earlier run.",
+                  "For JSON exports, use a browser supporting WebCrypto over HTTPS or localhost.",
+                  "After a failure, read the logs and error report; an incomplete run is not completed evidence."
+                ]
+              },
+              {
+                "type": "links",
+                "items": [
+                  {
+                    "label": "Complete local workflow guide",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/docs/INTEGRATION.md"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "contribute",
+            "title": "How can I report a bug or contribute?",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "A useful report includes the commit, browser or runtime version, exact steps, input data or seed, expected and actual results, and the error message. Remove confidential data before posting it in a public issue."
+              },
+              {
+                "type": "paragraph",
+                "text": "Clear counterexamples, external repetitions and specific documentation corrections are particularly useful. A negative result also helps when the tested question is explicit."
+              },
+              {
+                "type": "links",
+                "items": [
+                  {
+                    "label": "GitHub issues",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/issues"
+                  },
+                  {
+                    "label": "Contribution guidelines",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/CONTRIBUTING.md"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "cite",
+            "title": "May I reuse and cite X6?",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "Original project contributions use Apache-2.0. Third-party works and datasets retain their own terms; the included Paderborn data have a separately documented non-commercial licence. Check the licence scope of the particular file."
+              },
+              {
+                "type": "paragraph",
+                "text": "When citing, identify the project, exact commit or release, and the evidence report you used. Carry over its limitations. Citation metadata provide a starting point; a general wiki citation does not replace the specific result source."
+              },
+              {
+                "type": "links",
+                "items": [
+                  {
+                    "label": "Citation metadata",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/CITATION.cff"
+                  },
+                  {
+                    "label": "Licence scope",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/LICENSE_SCOPE.md"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "wiki",
+            "title": "How is this wiki maintained?",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "German and English are versioned together. Pages can be read without JavaScript and are also available as Markdown. Updates start from original sources and their executed reports; editing a description alone does not turn a planned test into a passed test."
+              },
+              {
+                "type": "links",
+                "items": [
+                  {
+                    "label": "Wiki source and maintenance guide",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/docs/wiki/README.md"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

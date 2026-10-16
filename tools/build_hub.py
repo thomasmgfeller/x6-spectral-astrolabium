@@ -12,6 +12,7 @@ import posixpath
 import shlex
 from pathlib import Path
 from urllib.parse import quote
+from build_wiki import outputs as wiki_outputs
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE = 'https://thomasmgfeller.github.io/x6-spectral-astrolabium/'
@@ -57,8 +58,10 @@ def page(path, title, description, body, lang='en', translations=None, script=Fa
     guide = 'de/guide.html' if de else 'guide/index.html'
     md = str(Path(path).with_suffix('.md'))
     nav = [(home, 'Übersicht' if de else 'Overview'), (guide, 'Einstieg' if de else 'Start here'),
-           ('modules/index.html', 'Module' if de else 'Modules')]
-    language = link(rel(path, 'index.html' if de else 'de/index.html'), 'English' if de else 'Deutsch', hreflang='en' if de else 'de')
+           ('modules/index.html', 'Module' if de else 'Modules'), ('wiki/de/index.html' if de else 'wiki/en/index.html', 'Wiki')]
+    other = 'en' if de else 'de'
+    language_target = (translations or {}).get(other, 'index.html' if de else 'de/index.html')
+    language = link(rel(path, language_target), 'English' if de else 'Deutsch', hreflang=other)
     alternates = ''.join('<link rel="alternate" hreflang="' + code + '" href="' + canonical(dest) + '">\n'
                          for code, dest in (translations or {}).items())
     structured = {'@context': 'https://schema.org', '@type': 'WebPage', 'name': title,
@@ -87,6 +90,7 @@ def page(path, title, description, body, lang='en', translations=None, script=Fa
 <meta property="og:site_name" content="X6 Spectral Astrolabium">
 <meta name="twitter:card" content="summary">
 <link rel="stylesheet" href="{rel(path, 'assets/hub.css')}{style_version}">
+{('<link rel="stylesheet" href="' + rel(path, 'assets/wiki.css') + '">') if path.startswith('wiki/') else ''}
 <script type="application/ld+json">{structured_json}</script>
 {('<script src="' + rel(path, 'assets/hub.js') + '" defer></script>') if script else ''}
 </head>
@@ -107,7 +111,7 @@ def home(path, data, content, lang):
     guide = 'de/guide.html' if lang == 'de' else 'guide/index.html'
     visual, feature = t['setup_visual'], t['cqg_feature']
     body = '<section class="hero hero-visual"><div class="hero-copy"><p class="eyebrow">OPEN RESEARCH · PUBLIC PREVIEW</p><h1>' + E(t['headline']) + '</h1>' + p(t['lead'])
-    body += '<div class="actions">' + link(rel(path, 'app/index.html'), t['launch_astrolabium'], **{'class': 'button'}) + link(rel(path, 'app/signal-lab.html'), t['launch'], **{'class': 'button secondary'}) + link(rel(path, 'modules/index.html'), t['browse'], **{'class': 'button secondary'}) + '</div></div>'
+    body += '<div class="actions">' + link(rel(path, 'app/index.html'), t['launch_astrolabium'], **{'class': 'button'}) + link(rel(path, 'app/signal-lab.html'), t['launch'], **{'class': 'button secondary'}) + link(rel(path, 'modules/index.html'), t['browse'], **{'class': 'button secondary'}) + link(rel(path, 'wiki/' + lang + '/index.html'), 'X6 verständlich erklärt →' if lang == 'de' else 'X6 explained simply →', **{'class': 'button secondary'}) + '</div></div>'
     body += '<figure class="setup-visual"><a href="' + rel(path, SETUP_IMAGE) + '" aria-label="' + E(visual['expand'], quote=True) + '"><img src="' + rel(path, SETUP_IMAGE) + '" width="1536" height="1024" fetchpriority="high" alt="' + E(visual['alt'], quote=True) + '"></a><figcaption><span class="eyebrow">' + E(visual['label']) + '</span><strong>' + E(visual['title']) + '</strong>' + p(visual['caption']) + link(REPO + '/blob/main/experiments/photonic-two-qubit/README.md', visual['details']) + '</figcaption></figure></section>'
     downloads = [(rel(path, 'app/rax-cqg-lab.html'), feature['benchmark']),
                  (rel(path, CQG_BENCHMARK_PATH + 'RAX_CQG_Benchmark_v0_2_0.zip'), feature['package']),
@@ -134,6 +138,7 @@ def home(path, data, content, lang):
     body += '<p>' + link(rel(path, 'docs/MODULE_REGISTRY.md'), t['register']) + ' · ' + link(rel(path, 'MODULE_REGISTRY.json'), 'JSON') + '</p>'
     body += p(t['window']) + '<p><time datetime="' + data['agent_window']['stop_local'] + '">19 October 2026, 00:00 Europe/Zurich</time> · <code>' + data['agent_window']['stop_utc'] + '</code></p></section>'
     md = '# ' + t['headline'] + '\n\n' + t['lead'] + '\n\n'
+    md += '[' + ('Wiki: X6 verständlich erklärt' if lang == 'de' else 'Wiki: X6 explained simply') + '](' + canonical('wiki/' + lang + '/index.html') + ')\n\n'
     for target, label in [('app/index.html', t['launch_astrolabium']), ('app/signal-lab.html', t['launch']), ('modules/index.html', t['browse'])]:
         md += '- [' + label + '](' + canonical(target) + ')\n'
     md += '\n## ' + visual['title'] + '\n\n![' + visual['alt'] + '](' + BASE + SETUP_IMAGE + ')\n\n' + visual['caption'] + '\n\n[' + visual['details'] + '](' + REPO + '/blob/main/experiments/photonic-two-qubit/README.md)\n'
@@ -256,6 +261,8 @@ def outputs():
     add('modules/index.html', catalogue(data))
     for m in data['modules']:
         add('modules/' + m['id'] + '.html', module_page(m, data))
+    for path, pair in wiki_outputs(page, link, rel, canonical).items():
+        add(path, pair)
     out['sitemap.xml'] = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + ''.join('  <url><loc>' + canonical(path) + '</loc></url>\n' for path in sorted(out) if path.endswith('.html')) + '</urlset>\n'
     digest = hashlib.sha256((ROOT / 'MODULE_REGISTRY.json').read_bytes()).hexdigest()
     index = {'schema': 'x6.research-hub-index/1', 'registry_snapshot_date': data['snapshot_date'],
@@ -287,6 +294,8 @@ ranking, inclusion in AI responses or permission to reuse third-party material.
 - [Deutscher Einstieg]({BASE}de/index.md)
 - [English reproduction and evidence guide]({BASE}guide/index.md)
 - [Deutsche Anleitung]({BASE}de/guide.md)
+- [Wiki auf Deutsch]({BASE}wiki/de/index.md)
+- [English wiki]({BASE}wiki/en/index.md)
 - [Module summaries and links]({BASE}modules/index.md)
 - [Authoritative module register]({BASE}MODULE_REGISTRY.json)
 - [Derived navigation index]({BASE}hub-index.json)

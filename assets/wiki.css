@@ -1,0 +1,13 @@
+.wiki-heading{max-width:900px}.wiki-heading h1{font-size:clamp(2.1rem,4.5vw,3.6rem)}
+.wiki-layout{display:grid;grid-template-columns:230px minmax(0,1fr);gap:42px;align-items:start}
+.wiki-sidebar{position:sticky;top:22px;min-width:0;padding:20px;background:var(--white);border:1px solid var(--line);border-radius:6px}
+.wiki-chapters{display:grid;gap:4px;font-size:.88rem}.wiki-chapters a{padding:9px 10px;border-radius:4px;text-decoration:none;line-height:1.4}
+.wiki-chapters a:hover{background:var(--paper)}.wiki-chapters [aria-current=page]{background:var(--accent);color:var(--teal);font-weight:750}
+.wiki-stamp{font-size:.72rem;color:var(--muted);line-height:1.6;margin:18px 10px 0}.wiki-article{min-width:0}
+.wiki-toc{background:var(--accent);padding:18px 22px;border-radius:5px;font-size:.93rem}.wiki-toc summary{font-weight:700;cursor:pointer}.wiki-toc ul{margin-bottom:0;padding-left:20px}.wiki-toc li{margin:6px 0}
+.wiki-article .prose{margin-top:30px}.wiki-article li{padding-left:3px}.wiki-table{overflow-x:auto;border:1px solid var(--line);border-radius:5px;background:var(--white);margin:22px 0}
+.wiki-table table{width:100%;border-collapse:collapse;font-size:.9rem;line-height:1.55;table-layout:fixed}.wiki-table th,.wiki-table td{text-align:left;vertical-align:top;padding:13px 15px;overflow-wrap:anywhere;hyphens:auto}.wiki-table th{background:var(--accent);font-size:.84rem}.wiki-table tr+tr td{border-top:1px solid var(--line)}.wiki-table tr:nth-child(even){background:#fafbf8}
+.wiki-sources{font-size:.9rem;padding-left:20px}.wiki-next{padding:22px 0;border-top:1px solid var(--line)}
+@media(max-width:860px){.wiki-layout{grid-template-columns:1fr;gap:20px}.wiki-sidebar{position:static}.wiki-chapters{grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}.wiki-stamp{margin-top:10px}}
+@media(max-width:480px){.wiki-chapters{font-size:.8rem}.wiki-sidebar{padding:12px}.wiki-table th,.wiki-table td{padding:9px 8px;font-size:.78rem}.wiki-article h2{font-size:1.4rem}}
+@media print{.wiki-sidebar,.wiki-toc,.wiki-next{display:none}.wiki-layout{display:block}.wiki-table{overflow:visible}.wiki-table tr{break-inside:avoid}.wiki-heading h1{font-size:26pt}}

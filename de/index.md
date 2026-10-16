@@ -3,6 +3,8 @@ Die Evidenz prüfen.
 
 X6 Spectral Astrolabium ist ein offener Forschungshub für Signale, Graphen und kausale Ordnungen. Beginne mit einem Browserexperiment, erkunde einen Forschungszweig oder rechne eine endliche Referenz nach.
 
+[Wiki: X6 verständlich erklärt](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/de/)
+
 - [Astrolabium öffnen →](https://thomasmgfeller.github.io/x6-spectral-astrolabium/app/)
 - [Signal Lab öffnen →](https://thomasmgfeller.github.io/x6-spectral-astrolabium/app/signal-lab.html)
 - [Alle Module erkunden →](https://thomasmgfeller.github.io/x6-spectral-astrolabium/modules/)
