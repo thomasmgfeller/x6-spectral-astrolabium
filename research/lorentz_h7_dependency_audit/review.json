@@ -1,0 +1,497 @@
+{
+  "schema": "x6.h7-dependency-review/1",
+  "date": "2026-10-16",
+  "base_commit": "dc50ffb228e442a230a32e4437e8e452a90b39ad",
+  "status": "COMPLETED_WITH_SCOPE_LIMITS",
+  "registered_modules": 39,
+  "hypothesis_status": "REFUTED_BY_COUNTEREXAMPLE",
+  "existing_runtime_pipelines_requiring_h7_pause": [],
+  "conclusion": "No concrete running dependency on H7 uniqueness was identified in the reviewed source scope. This is not a proof of absence or a scientific requalification of the whole repository.",
+  "blocked_claims_or_uses": [
+    "H7 uniqueness theorem",
+    "Using equality of H7 spectra/moments as proof of poset isomorphism",
+    "Unique geometry reconstruction from the H7 vector alone",
+    "Dropping distinct histories or their weights because their H7 signatures coincide"
+  ],
+  "permitted_with_scope": [
+    "Observables and collision classes with retained source relations",
+    "Finite n≤6 and n=7 height≤2 results as explicitly bounded",
+    "Explicit coarse-graining with correctly aggregated weights/amplitudes and a separately justified interpretation"
+  ],
+  "coverage_gaps": [
+    "Four complete NQK archives absent at the registered revision",
+    "501 inventoried binary/image entries not semantically reviewed; no OCR or firmware audit",
+    "Unregistered branches, unpublished files, other repositories and future commits excluded",
+    "No external person-level review; static inspection and six targeted probes are not formal program verification"
+  ],
+  "modules": [
+    {
+      "id": "integration",
+      "name": "Gemeinsamer lokaler Einstieg",
+      "availability": "MAIN",
+      "decision": "NO_H7_DEPENDENCY_IDENTIFIED",
+      "reason": "Registrierter Einstieg, Aussagen und zugänglicher Quellen-/Archivtext gesichtet. Keine konkrete Voraussetzung H7 oder Identifikation kausaler Ordnungen allein über die betroffene Signatur gefunden. Bestehende modulspezifische Grenzen bleiben bestehen.",
+      "evidence": {
+        "commit": "dc50ffb228e442a230a32e4437e8e452a90b39ad",
+        "path": "docs/INTEGRATION.md"
+      },
+      "method": "Source/claim review and bounded text scan; not fresh full-module execution"
+    },
+    {
+      "id": "offline-reference",
+      "name": "Gemeinsame Offline-Referenzsuite",
+      "availability": "MAIN",
+      "decision": "FINITE_REFERENCES_UNAFFECTED",
+      "reason": "Die Suite liest vollständige Referenzmatrizen und erwartet festgelegte endliche Resultate einschließlich Kollisionen; der historische H7-OPEN-Text bleibt datierte Evidenz.",
+      "evidence": {
+        "commit": "dc50ffb228e442a230a32e4437e8e452a90b39ad",
+        "path": "tools/reference_cases.py"
+      },
+      "method": "Source/claim review and bounded text scan; not fresh full-module execution"
+    },
+    {
+      "id": "astrolabium",
+      "name": "Astrolabium und rationale Spektralreferenz",
+      "availability": "MAIN",
+      "decision": "NO_H7_DEPENDENCY_IDENTIFIED",
+      "reason": "Zertifiziert rationale Schranken für eine eingegebene Graph-Laplacematrix, keine Rekonstruktion aus Spektren.",
+      "evidence": {
+        "commit": "dc50ffb228e442a230a32e4437e8e452a90b39ad",
+        "path": "docs/SCIENTIFIC_SCOPE.md"
+      },
+      "method": "Source/claim review and bounded text scan; not fresh full-module execution"
+    },
+    {
+      "id": "signal-lab",
+      "name": "Signal Validation Lab",
+      "availability": "MAIN",
+      "decision": "NO_H7_DEPENDENCY_IDENTIFIED",
+      "reason": "Registrierter Einstieg, Aussagen und zugänglicher Quellen-/Archivtext gesichtet. Keine konkrete Voraussetzung H7 oder Identifikation kausaler Ordnungen allein über die betroffene Signatur gefunden. Bestehende modulspezifische Grenzen bleiben bestehen.",
+      "evidence": {
+        "commit": "dc50ffb228e442a230a32e4437e8e452a90b39ad",
+        "path": "docs/SIGNAL_VALIDATION_LAB.md"
+      },
+      "method": "Source/claim review and bounded text scan; not fresh full-module execution"
+    },
+    {
+      "id": "edge-reference",
+      "name": "Edge-Referenzadapter",
+      "availability": "MAIN",
+      "decision": "NO_H7_DEPENDENCY_IDENTIFIED",
+      "reason": "Registrierter Einstieg, Aussagen und zugänglicher Quellen-/Archivtext gesichtet. Keine konkrete Voraussetzung H7 oder Identifikation kausaler Ordnungen allein über die betroffene Signatur gefunden. Bestehende modulspezifische Grenzen bleiben bestehen.",
+      "evidence": {
+        "commit": "dc50ffb228e442a230a32e4437e8e452a90b39ad",
+        "path": "experimental/edge_reference/README.md"
+      },
+      "method": "Source/claim review and bounded text scan; not fresh full-module execution"
+    },
+    {
+      "id": "evidence-calibration",
+      "name": "Evidence & Calibration",
+      "availability": "MAIN",
+      "decision": "NO_H7_DEPENDENCY_IDENTIFIED",
+      "reason": "Registrierter Einstieg, Aussagen und zugänglicher Quellen-/Archivtext gesichtet. Keine konkrete Voraussetzung H7 oder Identifikation kausaler Ordnungen allein über die betroffene Signatur gefunden. Bestehende modulspezifische Grenzen bleiben bestehen.",
+      "evidence": {
+        "commit": "dc50ffb228e442a230a32e4437e8e452a90b39ad",
+        "path": "experimental/evidence_calibration/README.md"
+      },
+      "method": "Source/claim review and bounded text scan; not fresh full-module execution"
+    },
+    {
+      "id": "phase-contract",
+      "name": "X6-Phasenfilter: Experimentvertrag",
+      "availability": "MAIN",
+      "decision": "NO_H7_DEPENDENCY_IDENTIFIED",
+      "reason": "Registrierter Einstieg, Aussagen und zugänglicher Quellen-/Archivtext gesichtet. Keine konkrete Voraussetzung H7 oder Identifikation kausaler Ordnungen allein über die betroffene Signatur gefunden. Bestehende modulspezifische Grenzen bleiben bestehen.",
+      "evidence": {
+        "commit": "dc50ffb228e442a230a32e4437e8e452a90b39ad",
+        "path": "experiments/x6-phase-filter/README.md"
+      },
+      "method": "Source/claim review and bounded text scan; not fresh full-module execution"
+    },
+    {
+      "id": "industrial-programme",
+      "name": "Industrielle Entrauschung: Forschungsprogramm v0.2",
+      "availability": "MAIN",
+      "decision": "NO_H7_DEPENDENCY_IDENTIFIED",
+      "reason": "Registrierter Einstieg, Aussagen und zugänglicher Quellen-/Archivtext gesichtet. Keine konkrete Voraussetzung H7 oder Identifikation kausaler Ordnungen allein über die betroffene Signatur gefunden. Bestehende modulspezifische Grenzen bleiben bestehen.",
+      "evidence": {
+        "commit": "dc50ffb228e442a230a32e4437e8e452a90b39ad",
+        "path": "docs/industrial-denoising/Astrolabium_Industrial_Denoising_Forschungsprogramm_v0_2.docx"
+      },
+      "method": "Source/claim review and bounded text scan; not fresh full-module execution"
+    },
+    {
+      "id": "sagnac-import",
+      "name": "Sagnac-Aufnahme und Import",
+      "availability": "MAIN",
+      "decision": "NO_H7_DEPENDENCY_IDENTIFIED",
+      "reason": "Registrierter Einstieg, Aussagen und zugänglicher Quellen-/Archivtext gesichtet. Keine konkrete Voraussetzung H7 oder Identifikation kausaler Ordnungen allein über die betroffene Signatur gefunden. Bestehende modulspezifische Grenzen bleiben bestehen.",
+      "evidence": {
+        "commit": "dc50ffb228e442a230a32e4437e8e452a90b39ad",
+        "path": "docs/SAGNAC_INTEGRATION.md"
+      },
+      "method": "Source/claim review and bounded text scan; not fresh full-module execution"
+    },
+    {
+      "id": "photonic-design",
+      "name": "Photonischer Zwei-Qubit-Aufbau und Jig",
+      "availability": "MAIN",
+      "decision": "NO_H7_DEPENDENCY_IDENTIFIED",
+      "reason": "Registrierter Einstieg, Aussagen und zugänglicher Quellen-/Archivtext gesichtet. Keine konkrete Voraussetzung H7 oder Identifikation kausaler Ordnungen allein über die betroffene Signatur gefunden. Bestehende modulspezifische Grenzen bleiben bestehen.",
+      "evidence": {
+        "commit": "dc50ffb228e442a230a32e4437e8e452a90b39ad",
+        "path": "experiments/photonic-two-qubit/REPRODUCE.md"
+      },
+      "method": "Source/claim review and bounded text scan; not fresh full-module execution"
+    },
+    {
+      "id": "acvm-concept",
+      "name": "ACVM: Grundkonzept 0.1",
+      "availability": "MAIN",
+      "decision": "NO_H7_DEPENDENCY_IDENTIFIED",
+      "reason": "Registrierter Einstieg, Aussagen und zugänglicher Quellen-/Archivtext gesichtet. Keine konkrete Voraussetzung H7 oder Identifikation kausaler Ordnungen allein über die betroffene Signatur gefunden. Bestehende modulspezifische Grenzen bleiben bestehen.",
+      "evidence": {
+        "commit": "dc50ffb228e442a230a32e4437e8e452a90b39ad",
+        "path": "docs/acvm/README.md"
+      },
+      "method": "Source/claim review and bounded text scan; not fresh full-module execution"
+    },
+    {
+      "id": "acvm-c1",
+      "name": "ACVM C1: Steuerkanal",
+      "availability": "MAIN",
+      "decision": "NO_H7_DEPENDENCY_IDENTIFIED",
+      "reason": "Registrierter Einstieg, Aussagen und zugänglicher Quellen-/Archivtext gesichtet. Keine konkrete Voraussetzung H7 oder Identifikation kausaler Ordnungen allein über die betroffene Signatur gefunden. Bestehende modulspezifische Grenzen bleiben bestehen.",
+      "evidence": {
+        "commit": "dc50ffb228e442a230a32e4437e8e452a90b39ad",
+        "path": "docs/acvm/control-channel-v0.1/README.md"
+      },
+      "method": "Source/claim review and bounded text scan; not fresh full-module execution"
+    },
+    {
+      "id": "acvm-optical",
+      "name": "ACVM 0.2: optischer Referenzablauf",
+      "availability": "MAIN",
+      "decision": "NO_H7_DEPENDENCY_IDENTIFIED",
+      "reason": "Registrierter Einstieg, Aussagen und zugänglicher Quellen-/Archivtext gesichtet. Keine konkrete Voraussetzung H7 oder Identifikation kausaler Ordnungen allein über die betroffene Signatur gefunden. Bestehende modulspezifische Grenzen bleiben bestehen.",
+      "evidence": {
+        "commit": "dc50ffb228e442a230a32e4437e8e452a90b39ad",
+        "path": "docs/acvm/optical-v0.2/README.md"
+      },
+      "method": "Source/claim review and bounded text scan; not fresh full-module execution"
+    },
+    {
+      "id": "sagnac-components",
+      "name": "Sagnac-Komponenten und Ofen",
+      "availability": "MAIN",
+      "decision": "NO_H7_DEPENDENCY_IDENTIFIED",
+      "reason": "Registrierter Einstieg, Aussagen und zugänglicher Quellen-/Archivtext gesichtet. Keine konkrete Voraussetzung H7 oder Identifikation kausaler Ordnungen allein über die betroffene Signatur gefunden. Bestehende modulspezifische Grenzen bleiben bestehen.",
+      "evidence": {
+        "commit": "dc50ffb228e442a230a32e4437e8e452a90b39ad",
+        "path": "docs/acvm/sagnac-components-v0.1/README.md"
+      },
+      "method": "Source/claim review and bounded text scan; not fresh full-module execution"
+    },
+    {
+      "id": "acvm-records",
+      "name": "ACVM Experiment Records",
+      "availability": "MAIN",
+      "decision": "NO_H7_DEPENDENCY_IDENTIFIED",
+      "reason": "Registrierter Einstieg, Aussagen und zugänglicher Quellen-/Archivtext gesichtet. Keine konkrete Voraussetzung H7 oder Identifikation kausaler Ordnungen allein über die betroffene Signatur gefunden. Bestehende modulspezifische Grenzen bleiben bestehen.",
+      "evidence": {
+        "commit": "dc50ffb228e442a230a32e4437e8e452a90b39ad",
+        "path": "docs/acvm/experiment-records/README.md"
+      },
+      "method": "Source/claim review and bounded text scan; not fresh full-module execution"
+    },
+    {
+      "id": "acvm-fixture",
+      "name": "ACVM Electrical & Thermal Test Fixture",
+      "availability": "MAIN",
+      "decision": "NO_H7_DEPENDENCY_IDENTIFIED",
+      "reason": "Registrierter Einstieg, Aussagen und zugänglicher Quellen-/Archivtext gesichtet. Keine konkrete Voraussetzung H7 oder Identifikation kausaler Ordnungen allein über die betroffene Signatur gefunden. Bestehende modulspezifische Grenzen bleiben bestehen.",
+      "evidence": {
+        "commit": "dc50ffb228e442a230a32e4437e8e452a90b39ad",
+        "path": "docs/acvm/electrical-thermal-fixture/README.md"
+      },
+      "method": "Source/claim review and bounded text scan; not fresh full-module execution"
+    },
+    {
+      "id": "rax-programme",
+      "name": "RAX: relationales Forschungsprogramm",
+      "availability": "MAIN",
+      "decision": "FRAMEWORK_REQUIRES_SEPARATE_RECONSTRUCTION",
+      "reason": "Architektur definiert Zustände als volle Ordnungen beziehungsweise echte Isomorphieklassen. Spektrale Nicht-Eindeutigkeit und eigenständige Rekonstruktionsgates sind bereits erklärt.",
+      "evidence": {
+        "commit": "dc50ffb228e442a230a32e4437e8e452a90b39ad",
+        "path": "docs/research/rax/cqg-v0.1/ARCHITECTURE.md"
+      },
+      "method": "Source/claim review and bounded text scan; not fresh full-module execution"
+    },
+    {
+      "id": "rax-u1",
+      "name": "RAX-U1: Reduktionskontrolle",
+      "availability": "MAIN",
+      "decision": "NO_H7_DEPENDENCY_IDENTIFIED",
+      "reason": "Registrierter Einstieg, Aussagen und zugänglicher Quellen-/Archivtext gesichtet. Keine konkrete Voraussetzung H7 oder Identifikation kausaler Ordnungen allein über die betroffene Signatur gefunden. Bestehende modulspezifische Grenzen bleiben bestehen.",
+      "evidence": {
+        "commit": "dc50ffb228e442a230a32e4437e8e452a90b39ad",
+        "path": "docs/research/rax/countercheck-v0.1/README.md"
+      },
+      "method": "Source/claim review and bounded text scan; not fresh full-module execution"
+    },
+    {
+      "id": "rax-b1-m1",
+      "name": "RAX-B1/M1: Benchmark und Methodenreview",
+      "availability": "MAIN",
+      "decision": "NO_H7_DEPENDENCY_IDENTIFIED",
+      "reason": "Registrierter Einstieg, Aussagen und zugänglicher Quellen-/Archivtext gesichtet. Keine konkrete Voraussetzung H7 oder Identifikation kausaler Ordnungen allein über die betroffene Signatur gefunden. Bestehende modulspezifische Grenzen bleiben bestehen.",
+      "evidence": {
+        "commit": "dc50ffb228e442a230a32e4437e8e452a90b39ad",
+        "path": "docs/research/rax/method-review-v0.1/README.md"
+      },
+      "method": "Source/claim review and bounded text scan; not fresh full-module execution"
+    },
+    {
+      "id": "rax-w1",
+      "name": "RAX-W1: exakte Wolfram-Gegenprüfung",
+      "availability": "MAIN",
+      "decision": "NO_H7_DEPENDENCY_IDENTIFIED",
+      "reason": "Registrierter Einstieg, Aussagen und zugänglicher Quellen-/Archivtext gesichtet. Keine konkrete Voraussetzung H7 oder Identifikation kausaler Ordnungen allein über die betroffene Signatur gefunden. Bestehende modulspezifische Grenzen bleiben bestehen.",
+      "evidence": {
+        "commit": "dc50ffb228e442a230a32e4437e8e452a90b39ad",
+        "path": "docs/research/rax/wolfram-check-v0.1/README.md"
+      },
+      "method": "Source/claim review and bounded text scan; not fresh full-module execution"
+    },
+    {
+      "id": "wolfram-polarity",
+      "name": "Wolfram Fall 2: Polaritätsumkehr",
+      "availability": "MAIN",
+      "decision": "NO_H7_DEPENDENCY_IDENTIFIED",
+      "reason": "Registrierter Einstieg, Aussagen und zugänglicher Quellen-/Archivtext gesichtet. Keine konkrete Voraussetzung H7 oder Identifikation kausaler Ordnungen allein über die betroffene Signatur gefunden. Bestehende modulspezifische Grenzen bleiben bestehen.",
+      "evidence": {
+        "commit": "dc50ffb228e442a230a32e4437e8e452a90b39ad",
+        "path": "docs/signal-lab/wolfram-polarity-v0.1/README.md"
+      },
+      "method": "Source/claim review and bounded text scan; not fresh full-module execution"
+    },
+    {
+      "id": "wolfram-dependence",
+      "name": "Wolfram Fall 4: Nullfehler und Abhängigkeit",
+      "availability": "MAIN",
+      "decision": "NO_H7_DEPENDENCY_IDENTIFIED",
+      "reason": "Registrierter Einstieg, Aussagen und zugänglicher Quellen-/Archivtext gesichtet. Keine konkrete Voraussetzung H7 oder Identifikation kausaler Ordnungen allein über die betroffene Signatur gefunden. Bestehende modulspezifische Grenzen bleiben bestehen.",
+      "evidence": {
+        "commit": "dc50ffb228e442a230a32e4437e8e452a90b39ad",
+        "path": "docs/signal-lab/wolfram-zero-failures-v0.1/README.md"
+      },
+      "method": "Source/claim review and bounded text scan; not fresh full-module execution"
+    },
+    {
+      "id": "wolfram-causal",
+      "name": "Wolfram Fall 5: Kausalordnung",
+      "availability": "MAIN",
+      "decision": "NO_H7_DEPENDENCY_IDENTIFIED",
+      "reason": "Registrierter Einstieg, Aussagen und zugänglicher Quellen-/Archivtext gesichtet. Keine konkrete Voraussetzung H7 oder Identifikation kausaler Ordnungen allein über die betroffene Signatur gefunden. Bestehende modulspezifische Grenzen bleiben bestehen.",
+      "evidence": {
+        "commit": "dc50ffb228e442a230a32e4437e8e452a90b39ad",
+        "path": "docs/research/causal-order/wolfram-countercheck-v0.1/README.md"
+      },
+      "method": "Source/claim review and bounded text scan; not fresh full-module execution"
+    },
+    {
+      "id": "data-agents",
+      "name": "Öffentliche Datenagenten: NOAA, Atlas, QuTech, NASA",
+      "availability": "MAIN",
+      "decision": "NO_H7_DEPENDENCY_IDENTIFIED",
+      "reason": "Registrierter Einstieg, Aussagen und zugänglicher Quellen-/Archivtext gesichtet. Keine konkrete Voraussetzung H7 oder Identifikation kausaler Ordnungen allein über die betroffene Signatur gefunden. Bestehende modulspezifische Grenzen bleiben bestehen.",
+      "evidence": {
+        "commit": "dc50ffb228e442a230a32e4437e8e452a90b39ad",
+        "path": "docs/SOURCE_AGENTS.md"
+      },
+      "method": "Source/claim review and bounded text scan; not fresh full-module execution"
+    },
+    {
+      "id": "lorentz-agent",
+      "name": "Begrenzter Mathematikagent: Lorentz n=3–5 und Propagator",
+      "availability": "MAIN",
+      "decision": "FINITE_DOMAIN_UNAFFECTED",
+      "reason": "Permutationstest bestimmt Isomorphie für n≤5. Spektren sind Vergleichsmerkmale; n=7-Kanonisierung wird ausdrücklich abgelehnt.",
+      "evidence": {
+        "commit": "dc50ffb228e442a230a32e4437e8e452a90b39ad",
+        "path": "agent/lorentz_spectral.py"
+      },
+      "method": "Targeted code/data-flow review plus probes"
+    },
+    {
+      "id": "lorentz-n6",
+      "name": "Lorentz-Kollisionsatlas n=6: vollständiger Forschungsstand",
+      "availability": "BRANCH_ONLY",
+      "decision": "FINITE_DOMAIN_UNAFFECTED",
+      "reason": "Kanonisierung anhand vollständiger Ordnungen; spektrale Klassen und Restkollisionen werden separat erfasst. Der n=6-Befund wird nicht zu n=7 fortgeschrieben.",
+      "evidence": {
+        "commit": "f5116b9970a6b7dc788c18623a8386b4cde33ad4",
+        "path": "research/lorentz_n6/atlas.py"
+      },
+      "method": "Source/claim review and bounded text scan; not fresh full-module execution"
+    },
+    {
+      "id": "lorentz-n6-residuals",
+      "name": "Lorentz: vier n=6-Restpaare und Grenzen der Gradseparatoren",
+      "availability": "MAIN",
+      "decision": "HISTORICAL_SCOPE_RETAINED",
+      "reason": "n=6 und Höhe≤2 bei n=7 bleiben gültige endliche Teilbefunde. Historische OPEN-Angaben sind durch die vollständige n=7-Studie überholt.",
+      "evidence": {
+        "commit": "dc50ffb228e442a230a32e4437e8e452a90b39ad",
+        "path": "research/lorentz_n6_residuals/contract.json"
+      },
+      "method": "Source/claim review and bounded text scan; not fresh full-module execution"
+    },
+    {
+      "id": "lorentz-n7-complete",
+      "name": "Lorentz: vollständige n=7-Prüfung und Widerlegung von H7",
+      "availability": "MAIN",
+      "decision": "REFUTATION_CONFIRMED",
+      "reason": "H7 wird als Hypothese geprüft und widerlegt. Klassen werden als Listen aller IDs erhalten; keine Zusammenlegung der Repräsentanten.",
+      "evidence": {
+        "commit": "dc50ffb228e442a230a32e4437e8e452a90b39ad",
+        "path": "research/lorentz_n7_complete/producer.py"
+      },
+      "method": "Targeted code/data-flow review plus probes"
+    },
+    {
+      "id": "industrial-v1",
+      "name": "Industrielle Entrauschung: V1-Bewertungsadapter",
+      "availability": "MAIN",
+      "decision": "NO_H7_DEPENDENCY_IDENTIFIED",
+      "reason": "Registrierter Einstieg, Aussagen und zugänglicher Quellen-/Archivtext gesichtet. Keine konkrete Voraussetzung H7 oder Identifikation kausaler Ordnungen allein über die betroffene Signatur gefunden. Bestehende modulspezifische Grenzen bleiben bestehen.",
+      "evidence": {
+        "commit": "dc50ffb228e442a230a32e4437e8e452a90b39ad",
+        "path": "experiments/industrial-v1/README.md"
+      },
+      "method": "Source/claim review and bounded text scan; not fresh full-module execution"
+    },
+    {
+      "id": "industrial-pilot",
+      "name": "Industrieller Datenvertrag: Paderborn-Machbarkeitspilot",
+      "availability": "MAIN",
+      "decision": "NO_H7_DEPENDENCY_IDENTIFIED",
+      "reason": "Registrierter Einstieg, Aussagen und zugänglicher Quellen-/Archivtext gesichtet. Keine konkrete Voraussetzung H7 oder Identifikation kausaler Ordnungen allein über die betroffene Signatur gefunden. Bestehende modulspezifische Grenzen bleiben bestehen.",
+      "evidence": {
+        "commit": "dc50ffb228e442a230a32e4437e8e452a90b39ad",
+        "path": "experiments/industrial-pilot/README.md"
+      },
+      "method": "Source/claim review and bounded text scan; not fresh full-module execution"
+    },
+    {
+      "id": "fingerprint",
+      "name": "Mehrschichtiger Fingerprint",
+      "availability": "BRANCH_ONLY",
+      "decision": "COLLISION_AWARE",
+      "reason": "EXACT_COLLISION ist ein zulässiges Ergebnis. physical_equivalence ist NOT_ASSESSED. Die neuen Gegenbeispiele werden als Kollision akzeptiert; erfundene Gleichheit oder Trennung wird abgelehnt.",
+      "evidence": {
+        "commit": "f22030f2dae0aa670cdbc450c5e881ce250b36b8",
+        "path": "research/fingerprint_v1/validate.py"
+      },
+      "method": "Targeted code/data-flow review plus probes"
+    },
+    {
+      "id": "experiment-fabric",
+      "name": "Experiment Fabric",
+      "availability": "BRANCH_ONLY",
+      "decision": "PREDICTIVE_DOMAIN_ONLY",
+      "reason": "Planung und Updates verwenden explizite Modell-/Zustands-IDs und Likelihoods. Hashes binden Aufträge/Daten. Eine spektrale Poset-Identitätsannahme wurde nicht gefunden.",
+      "evidence": {
+        "commit": "a34c59f2b0e2d30c73936363040669941aa8ce09",
+        "path": "experimental/experiment_fabric/core.mjs"
+      },
+      "method": "Source/claim review and bounded text scan; not fresh full-module execution"
+    },
+    {
+      "id": "neutral-discovery",
+      "name": "Neutral Discovery",
+      "availability": "BRANCH_ONLY",
+      "decision": "PREDICTIVE_DOMAIN_ONLY",
+      "reason": "Klassen sind ausdrücklich gleiche Vorhersagen auf einem festen Interventionskatalog. Das ist keine globale Mechanismen- oder Geometriegleichheit; geometry=NOT_IDENTIFIED.",
+      "evidence": {
+        "commit": "1a02c482d59a42d554337fb83e0f6d6e6d84b516",
+        "path": "experimental/neutral_discovery/discovery.py"
+      },
+      "method": "Targeted code/data-flow review plus probes"
+    },
+    {
+      "id": "nqk",
+      "name": "NQK: Forschungsdossier",
+      "availability": "BRANCH_ONLY",
+      "decision": "SOURCE_COVERAGE_INCOMPLETE",
+      "reason": "Das zugängliche Dossier setzt H7 nicht voraus. Vier vollständige historische Code-/Datenarchive fehlen; keine Entwarnung für deren unbekannten Inhalt.",
+      "evidence": {
+        "commit": "a8fbc70fae3ecb46bfcd8ceb828ce182e533dd04",
+        "path": "research/nqk/STATUS.md"
+      },
+      "method": "Source/claim review and bounded text scan; not fresh full-module execution"
+    },
+    {
+      "id": "photonic-link",
+      "name": "Photonic Link Validation Lab",
+      "availability": "BRANCH_ONLY",
+      "decision": "NO_H7_DEPENDENCY_IDENTIFIED",
+      "reason": "Registrierter Einstieg, Aussagen und zugänglicher Quellen-/Archivtext gesichtet. Keine konkrete Voraussetzung H7 oder Identifikation kausaler Ordnungen allein über die betroffene Signatur gefunden. Bestehende modulspezifische Grenzen bleiben bestehen.",
+      "evidence": {
+        "commit": "7ff72fcd6a16e9b353d1af277307463f757d3470",
+        "path": "research/photonic-link/README.md"
+      },
+      "method": "Source/claim review and bounded text scan; not fresh full-module execution"
+    },
+    {
+      "id": "rax-guarded",
+      "name": "RAX-G1: deklarativer Runner und Fehlerbudget",
+      "availability": "MAIN",
+      "decision": "NO_H7_DEPENDENCY_IDENTIFIED",
+      "reason": "Registrierter Einstieg, Aussagen und zugänglicher Quellen-/Archivtext gesichtet. Keine konkrete Voraussetzung H7 oder Identifikation kausaler Ordnungen allein über die betroffene Signatur gefunden. Bestehende modulspezifische Grenzen bleiben bestehen.",
+      "evidence": {
+        "commit": "dc50ffb228e442a230a32e4437e8e452a90b39ad",
+        "path": "docs/validation-v1/README.md"
+      },
+      "method": "Source/claim review and bounded text scan; not fresh full-module execution"
+    },
+    {
+      "id": "reference-edition",
+      "name": "Gemeinsame Referenzedition und Agentenarchiv",
+      "availability": "MAIN",
+      "decision": "NO_H7_DEPENDENCY_IDENTIFIED",
+      "reason": "Registrierter Einstieg, Aussagen und zugänglicher Quellen-/Archivtext gesichtet. Keine konkrete Voraussetzung H7 oder Identifikation kausaler Ordnungen allein über die betroffene Signatur gefunden. Bestehende modulspezifische Grenzen bleiben bestehen.",
+      "evidence": {
+        "commit": "dc50ffb228e442a230a32e4437e8e452a90b39ad",
+        "path": "docs/reference-qe-v0.1/EXTERNAL_REPRODUCTION.md"
+      },
+      "method": "Source/claim review and bounded text scan; not fresh full-module execution"
+    },
+    {
+      "id": "x6-qe",
+      "name": "X6-QE: exakte Graphreferenzen und Grenzen spektraler Unterscheidbarkeit",
+      "availability": "MAIN",
+      "decision": "COLLISION_AWARE",
+      "reason": "Veröffentlichte Referenzen enthalten absichtlich nichtisomorphe isospektrale Graphen; H7 ist keine Voraussetzung.",
+      "evidence": {
+        "commit": "dc50ffb228e442a230a32e4437e8e452a90b39ad",
+        "path": "research/x6_qe/README.md"
+      },
+      "method": "Source/claim review and bounded text scan; not fresh full-module execution"
+    },
+    {
+      "id": "rax-cqg-benchmark",
+      "name": "RAX-CQG: endlicher Causal-Set Benchmark 0.2.0",
+      "availability": "MAIN",
+      "decision": "FULL_RELATION_PRESERVED",
+      "reason": "Python und JS importieren und behalten die komplette Relation. Spektren sind Diagnostik. Sechs bekannte Gegenbeispielmatrizen werden getrennt erhalten.",
+      "evidence": {
+        "commit": "dc50ffb228e442a230a32e4437e8e452a90b39ad",
+        "path": "research/rax_cqg/benchmark-v0.2.0/rax_cqg_twin.py"
+      },
+      "method": "Targeted code/data-flow review plus probes"
+    }
+  ]
+}

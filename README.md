@@ -82,6 +82,11 @@ ersetzt aber nicht die widerlegte skalare Hypothese. Keine physische Validierung
 Die [n=6-Vorgängerstudie](research/lorentz_n6_residuals/README.md) und die gemeinsame
 Zehn-Berichte-Referenzsuite bleiben erhalten; n=7 besitzt einen eigenen Prüfweg.
 
+Die [Abhängigkeitsprüfung aller 39 registrierten Module](research/lorentz_h7_dependency_audit/README.md)
+fand keinen konkreten laufenden Rechenweg, der H7-Eindeutigkeit voraussetzt.
+Gleiche Signaturen dürfen keine Isomorphie oder eindeutige Rekonstruktion begründen.
+Quellenlücken, insbesondere fehlende NQK-Archive, bleiben ausdrücklich offen.
+
 ## Frozen reference edition and validation hardening
 
 The [QE reference edition](https://github.com/thomasmgfeller/x6-spectral-astrolabium/releases/tag/reference-2026.10.15-qe1)

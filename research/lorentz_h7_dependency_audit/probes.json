@@ -1,0 +1,108 @@
+{
+  "schema": "x6.h7-dependency-probes/1",
+  "status": "PASS_WITH_SCOPE_LIMITS",
+  "base_commit": "dc50ffb228e442a230a32e4437e8e452a90b39ad",
+  "sources": {
+    "dc50ffb228e442a230a32e4437e8e452a90b39ad:research/lorentz_n7_complete/independent.py": "160fb386a4f0d2afaf3c97545f28717366e0952046d3c4fb48db066e4a9572de",
+    "dc50ffb228e442a230a32e4437e8e452a90b39ad:research/rax_cqg/benchmark-v0.2.0/rax_cqg_twin.py": "ae96f5abd1be8a44e67dba4180fc646d14e23c02f1686e30c71643b8a0124eba",
+    "dc50ffb228e442a230a32e4437e8e452a90b39ad:research/rax_cqg/benchmark-v0.2.0/web/rax_core.js": "05c28eac63f9c7af7f4f1753f09b17098ce7a1114386fce9a67e6f25e8982651",
+    "dc50ffb228e442a230a32e4437e8e452a90b39ad:agent/lorentz_spectral.py": "984d569a9c55035540402a20a188a0baea5a338988b134d5e64a8d86f7bdf704",
+    "dc50ffb228e442a230a32e4437e8e452a90b39ad:research/lorentz_n7_complete/results/counterexamples.json": "3892a192c9d65adf02bc5de0d86e37245aa3cea468c6a126ded4dc2ddc4417c9",
+    "dc50ffb228e442a230a32e4437e8e452a90b39ad:research/lorentz_n6_residuals/inputs.json": "0407123b3eb2cd2b7947ad50d6432c4f8cfab8ce2f51cc966839455fe076d85f",
+    "f22030f2dae0aa670cdbc450c5e881ce250b36b8:research/fingerprint_v1/validate.py": "6c92a8c74fda5553eeedfbeb70d5818c5795e26e0097ba921e5432117af9b0b3",
+    "f22030f2dae0aa670cdbc450c5e881ce250b36b8:research/fingerprint_v1/x6-fingerprint.schema.json": "7735c98f6c1b618c49534c90efd69fe7238a5848d05077de5bbe6203280ce3ff",
+    "f22030f2dae0aa670cdbc450c5e881ce250b36b8:research/fingerprint_v1/comparison-event.schema.json": "e044c4dc2de85adb9493d1e5dd0ffb396abbd3ded7c716941841a26275891657",
+    "f22030f2dae0aa670cdbc450c5e881ce250b36b8:research/fingerprint_v1/examples/n6-0073.json": "977a9ea7f28e07a632460c7e99dcdc4f9bf7afb46667d594bd4b851036479f26",
+    "f22030f2dae0aa670cdbc450c5e881ce250b36b8:research/fingerprint_v1/examples/separation-event.json": "26b91e0cc4a1baaa0c404b412e0dc32256fc18714e237553c660dc4406e40bee",
+    "1a02c482d59a42d554337fb83e0f6d6e6d84b516:experimental/neutral_discovery/discovery.py": "15edbb966eb50bae092eee241d8f55b01603aba9f11840324c88205ec394e108"
+  },
+  "checks": [
+    {
+      "name": "python_raw_relation_roundtrip",
+      "status": "PASS",
+      "detail": "All six witnesses retain their complete relation and distinct within-pair byte digests; digests are not isomorphism keys."
+    },
+    {
+      "name": "thinning_retention_one",
+      "status": "PASS",
+      "detail": "All six full relations survive q=1 induced-suborder processing."
+    },
+    {
+      "name": "agent_size_gate",
+      "status": "PASS",
+      "detail": "Four n=7 spectra agree exactly; the unchanged n<=5 canonicalizer rejects every n=7 input."
+    },
+    {
+      "name": "javascript_raw_relation_roundtrip",
+      "status": "PASS",
+      "detail": "Unchanged JS core retains all six matrices and agrees on exact integer BDG brackets; browser UI not exercised."
+    },
+    {
+      "name": "fingerprint_collision_semantics",
+      "status": "PASS",
+      "detail": "Three complete schema-valid collision events accepted, including the known n=8 D collision; all three false equivalence and all three false separation claims rejected. Validator checks stored values, not their raw-matrix derivation."
+    },
+    {
+      "name": "discovery_predicted_observations_only",
+      "status": "PASS",
+      "detail": "The three intervention-prediction classes are unchanged by duplicating a generator representation; geometry remains NOT_IDENTIFIED. This does not certify unseen mechanisms or future observation catalogues."
+    }
+  ],
+  "pairs": [
+    {
+      "ids": [
+        "n7-0475",
+        "n7-0734"
+      ],
+      "n": 7,
+      "H7_equal": true,
+      "isomorphic": false,
+      "same_D": false,
+      "matrix_hashes": [
+        "2ec506a59070c838955fad6ca446253f43574465b6fa05c69d1404a89dd51619",
+        "d3d28d66bd65a0dad3ea90ec6d63222c1b3d16cc1ecd32ce484ca9a1f926dea4"
+      ],
+      "bdg4_brackets": [
+        19,
+        19
+      ]
+    },
+    {
+      "ids": [
+        "n7-0588",
+        "n7-1112"
+      ],
+      "n": 7,
+      "H7_equal": true,
+      "isomorphic": false,
+      "same_D": false,
+      "matrix_hashes": [
+        "e3e92ab570dafa6b209fa253b93937418645f60c86c35bceeab442f678719a21",
+        "18b9e6d60e4e6eb467c2db8562e5f3822f458f511e16086288af5e0a947ad2c5"
+      ],
+      "bdg4_brackets": [
+        19,
+        19
+      ]
+    },
+    {
+      "ids": [
+        "n8-degree-a",
+        "n8-degree-b"
+      ],
+      "n": 8,
+      "H7_equal": true,
+      "isomorphic": false,
+      "same_D": true,
+      "matrix_hashes": [
+        "c8c023ab2bfc6b39737b1dae540c3674a0312c329c2e0aef92173659a022d29b",
+        "234dde612a0ab6e3f92ab59f885bb5a048c50327cd65925d278879d6dcd72ec2"
+      ],
+      "bdg4_brackets": [
+        1,
+        1
+      ]
+    }
+  ],
+  "scope": "Targeted imported kernels and comparison semantics; not full module, hardware or physical validation."
+}

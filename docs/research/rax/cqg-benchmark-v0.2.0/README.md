@@ -44,3 +44,8 @@ Der Wachstumsindex ist keine kalibrierte physikalische Zeit. Die Zweiqubit-Uhr s
 Der praktische wissenschaftliche Nutzen liegt in offen nachrechenbaren Definitionen, endlichen Referenzen, Rohdaten und überprüfbaren Gegenbeispielen. Neuheit, physikalische Gültigkeit und personell unabhängige Replikation sind nicht nachgewiesen.
 
 Originale Projektbeiträge: [Apache-2.0](../../../../LICENSE). Der PCG-Hinweis im Paket bleibt erhalten. Die frühere Architektur und vorhandene historische Evidenz werden nicht überschrieben.
+
+
+## Abhängigkeitsprüfung vom 16.10.2026
+
+Die [H7-Abhängigkeitsprüfung](../../../../research/lorentz_h7_dependency_audit/README.md) bestätigt an sechs bekannten Gegenbeispielmatrizen, dass die unveränderten Python- und JavaScript-Kerne volle Relationen behalten. Die Widerlegung von H7 erfordert hier keinen Rechenstopp. Spektren bleiben Diagnostik; eindeutige Rekonstruktion folgt daraus nicht. Das freigegebene ZIP und seine 28 Quelldateien bleiben unverändert.

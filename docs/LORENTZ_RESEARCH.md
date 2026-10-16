@@ -145,3 +145,8 @@ Die Gegenprüfung verwendet einen getrennten Enumerator und exakte Algebra.
 H7 ist damit widerlegt; ein stärkeres Gradmultiset ersetzt diesen Test nicht.
 Der nächste sinnvolle Schritt ist die strukturelle Analyse dieser minimalen
 Kollisionen sowie eine externe Replikation. Keine physische Validierung.
+
+
+## Abhängigkeitsprüfung vom 16.10.2026
+
+Die [H7-Abhängigkeitsprüfung](../research/lorentz_h7_dependency_audit/README.md) umfasst alle 39 registrierten Module. Keine konkrete laufende H7-Eindeutigkeitsabhängigkeit wurde gefunden. Historische Teilbefunde bleiben begrenzt gültig; Rekonstruktion und Historienreduktion benötigen eigene Identitäts- und Informationsverlustprüfungen. Unzugängliche Quellen werden nicht entlastet.
