@@ -70,13 +70,17 @@ Independent external replication and physical device qualification remain open.
 The catalogue renders the dated register without changing its claims or source pins.
 Detailed research updates and reproduction instructions follow below.
 
-## Lorentz: die vier n=6-Restpaare
+## Lorentz: vollständige n=7-Prüfung
 
-Die [gezielte Restpaaranalyse](research/lorentz_n6_residuals/README.md) trennt alle vier
-Paare mit gerichteten Gradpaaren und einer einfachen Zukunftszählung. Exakte
-Wolfram-Gegenrechnung, Offline-Replay und Gegenbeispiele bei n=7/n=8 sind enthalten.
-Die nächste Hypothese betrifft beide gerichteten Zählgrößen bei n≤7;
-n=7 mit Höhe ≥3 bleibt offen. Die gemeinsame Referenzsuite umfasst jetzt zehn Berichte.
+Die [vollständige exakte Studie](research/lorentz_n7_complete/README.md) widerlegt
+H7-bidirectional-moments: Spektren, Endpunktzahlen und beide Gabelzählungen ergeben
+**2.043 Klassen für 2.045 Ordnungen**. Zwei nichtisomorphe Paare bleiben; alle
+[Gegenbeispiele](research/lorentz_n7_complete/COUNTEREXAMPLES.md) sind erhalten.
+Ein getrennter Prüfer durchläuft alle 2.097.152 oberen Binärmatrizen und rechnet
+7.350 Polynome für n≤7 exakt nach. Das vollständige Gradpaar-Multiset trennt n≤7,
+ersetzt aber nicht die widerlegte skalare Hypothese. Keine physische Validierung.
+Die [n=6-Vorgängerstudie](research/lorentz_n6_residuals/README.md) und die gemeinsame
+Zehn-Berichte-Referenzsuite bleiben erhalten; n=7 besitzt einen eigenen Prüfweg.
 
 ## Frozen reference edition and validation hardening
 
@@ -99,7 +103,7 @@ remain [explicit future gates](research/x6_qe/ROADMAP.md). Lorentz remains the p
 
 ## Start here: actual module and evidence status
 
-The [central module register](docs/MODULE_REGISTRY.md) lists **38 modules** with
+The [central module register](docs/MODULE_REGISTRY.md) lists **39 modules** with
 their authoritative branch and commit, prerequisites, executable entry point,
 expected result, available evidence and next acceptance gate. Its
 [machine-readable source](MODULE_REGISTRY.json) is a dated snapshot, not a live

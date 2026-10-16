@@ -1,5 +1,8 @@
 # Vier n=6-Restkollisionen: Separatoren und Grenzen
 
+> **Fortschreibung vom 16.10.2026:** Die hier historisch offene H7-Hypothese wurde inzwischen vollständig geprüft und durch zwei n=7-Paare widerlegt. Siehe [vollständige n=7-Studie](../lorentz_n7_complete/README.md). Die folgenden Ergebnisse, Verträge und Evidenzdateien der Vorgängerstudie bleiben als damaliger Stand erhalten.
+
+
 Alle vier Kollisionspaare nach Ergänzung der Minimal-/Maximalanzahlen sind
 getrennt. Die gerichteten Gradpaare `D` genügen; sogar die einzelne ganze Zahl
 `W_future` trennt jedes dieser vier Paare. Das ist eine endliche Aussage über
