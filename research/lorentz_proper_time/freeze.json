@@ -1,0 +1,59 @@
+{
+  "schema": "x6.proper-time-source-freeze/1",
+  "created_utc": "2026-10-16T18:54:41.022645+00:00",
+  "design_commit": "9684959af9700f0def30a16811498b49950ca406",
+  "status": "BEFORE_TARGET_GENERATION",
+  "sources": {
+    "research/lorentz_proper_time/contract.json": "3f3754c5f03bb95af68b5fc18c3e33a0dc4a763fdc23c53b8d385cd6eff1e762",
+    "research/lorentz_proper_time/design_examples.json": "5f58dd374c0ca093799781bbd85c7e7849d0ae791f2588e71b330822ceead2ec",
+    "research/lorentz_proper_time/check_design.py": "7dcb3b72001ba677ba4c1d446b71333bbf65893bd072fb1c6f615ec087f74210",
+    "research/lorentz_proper_time/proper_core.py": "3165631ae9de0ae6b30e4277e4f67449c9e16705c51d8cf918c6dad424a66eb6",
+    "research/lorentz_proper_time/proper_common.py": "8762bfbf545fd79c23ffc46ea3669bfec20ef201dffada51c91cd6fd46b00793",
+    "research/lorentz_proper_time/proper_analysis.py": "9973ffed6dac8c9ff55eb5daea5e37cfa707a4b8b7212fa8a2ed654249e0720e",
+    "research/lorentz_proper_time/produce.py": "97e882194b991cceebfa618f6a939fadd20c159fc5d2835d9c33233f6855b171",
+    "research/lorentz_proper_time/check.py": "0106ae32293b0735cd54ed0ffc5c2fe65bcb33deca9aa2662413ae2f2f453a98",
+    "research/lorentz_proper_time/selftest.py": "ec470ba9c3b4bd8c120d8d1b596294d00bf2498265aefc72669c37f3d8d8d19a",
+    "research/lorentz_proper_time/compare.py": "cf55e6bc3db204bcfe1769f096f3e547f6793716e6ae09d141123ae62154db87",
+    "research/lorentz_proper_time/run.py": "52596a3ac2fff009e72982bf4f36529166126f7a8300a691bbcc2d7a4da9baf2",
+    "research/lorentz_proper_time/requirements.txt": "7bd6b8946940b79948c548c8048e545684b91c8edc9444d8dfc0c8f76a97c0a7",
+    "research/lorentz_proper_time/IMPLEMENTATION.md": "94f46bafb0f080b9fff0d7f49342f15d11902b834a9776a3f1f3f1c4482c5f74",
+    "research/lorentz_matching_geometry/core.py": "ee9a96bdba32e93b092e89ce81a76a524a0dbaa05cf905e293b319eefb50f0f7",
+    ".github/workflows/lorentz-proper-time-run.yml": "7a384b79da8913b3b8f0b90f35b13a989618f2f707b5d3bbf9c15c229d56f942"
+  },
+  "toys": {
+    "status": "PASS_TOY_ONLY",
+    "target_samples_generated": 0,
+    "design": {
+      "status": "PASS_DESIGN_ONLY",
+      "target_samples_generated": 0,
+      "relabelings": 48,
+      "exact_binomial_cases": 24,
+      "target_values": {
+        "A": "3/10",
+        "B": "7/10"
+      },
+      "full_source_freeze": false,
+      "monte_carlo_run": false,
+      "note": "Finite checks support arithmetic and examples, not an independent proof of the general argument."
+    },
+    "small_generator_draws": 6,
+    "new_relabelings": 24,
+    "rejected_controls": [
+      "forbidden coordinates",
+      "forbidden theta",
+      "forbidden a",
+      "forbidden rng_key",
+      "forbidden family",
+      "forbidden id",
+      "full record at inference",
+      "test split in calibration",
+      "extra calibration metadata",
+      "negative mark alias",
+      "nontransitive order",
+      "missing cohort member",
+      "reordered cohort"
+    ],
+    "poison_checks": true,
+    "bootstrap_oracle": true
+  }
+}
