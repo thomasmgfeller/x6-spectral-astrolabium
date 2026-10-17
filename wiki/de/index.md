@@ -4,7 +4,7 @@ Ein Wegweiser für Neugierige, Lernende und Menschen, die selbst prüfen möchte
 
 [English](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/en/) · [Wiki-Übersicht](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/de/)
 
-Quellenstand: 2026-10-16 · `967c7662f005d887918cac9350e5bbaf76f653a9`
+Quellenstand: 2026-10-17 · `389cb3f688dfbc9d90086bb55c1b5d199b7e9c58`
 
 ## Was ist X6?
 
@@ -32,7 +32,7 @@ Die Kapitelübersicht führt durch beide Sprachfassungen. Der Sprachwechsel öff
 - Ein lokaler Ablauf für Ausführen, Prüfen und Exportieren.
 - Forschungspläne für weiterführende Mathematik, Industrie und Labor.
 
-Neu dokumentiert: Der erste Eigenzeit-Versuch ist vollständig veröffentlicht. Die Intervallreferenz erreicht im festgelegten flachen 1+1-Modell RMSE 0,0316. Die größte abgeglichene Zusatzkontrolle bleibt wegen zu weniger Paare offen. Das Kapitel „Kausale Ordnungen“ erklärt beide Befunde.
+Neu dokumentiert: Zur ersten Eigenzeit-Referenz kommen explizite Gültigkeitsbedingungen, endliche Fehlergrenzen und sequenzielles Nachbeproben. Das Kapitel „Kausale Ordnungen“ erklärt die Ergebnisse, Budgetgrenzen und die begrenzte Kettendiagnostik.
 
 X6 ist eine öffentliche Forschungsvorschau. Eine allgemeine Raumzeittheorie, ein qualifizierter Quantenchip und eine überlegene industrielle Entrauschung sind damit nicht nachgewiesen. Das ist eine Aussage zum Stand der Belege, kein Urteil darüber, welche Fragen künftig lösbar sind.
 
