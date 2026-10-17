@@ -1,0 +1,56 @@
+{
+  "scope": "Fixed known flat 4D diamond, iid sampling, tau/T=0.1; strict relative error <0.1",
+  "calculation": "Exact binomial expressions evaluated numerically with SciPy, not interval arithmetic",
+  "minimum_budget_claim": false,
+  "rows": [
+    {
+      "scale_over_T": 1.0,
+      "m": 300000,
+      "p": 0.0001,
+      "expected_K": 30.0,
+      "accepted_K": [
+        20,
+        43
+      ],
+      "binomial_success_probability": 0.9683995573915871,
+      "chernoff_failure_upper_bound": 0.19189554837888229
+    },
+    {
+      "scale_over_T": 0.2,
+      "m": 480,
+      "p": 0.0625,
+      "expected_K": 30.0,
+      "accepted_K": [
+        20,
+        43
+      ],
+      "binomial_success_probability": 0.9733867419750611,
+      "chernoff_failure_upper_bound": 0.19189554837888229
+    },
+    {
+      "scale_over_T": 1.0,
+      "m": 550000,
+      "p": 0.0001,
+      "expected_K": 55.0,
+      "accepted_K": [
+        37,
+        80
+      ],
+      "binomial_success_probability": 0.995181766502505,
+      "chernoff_failure_upper_bound": 0.03022336884718821
+    },
+    {
+      "scale_over_T": 0.2,
+      "m": 880,
+      "p": 0.0625,
+      "expected_K": 55.0,
+      "accepted_K": [
+        37,
+        80
+      ],
+      "binomial_success_probability": 0.9962690478184896,
+      "chernoff_failure_upper_bound": 0.03022336884718821
+    }
+  ],
+  "poisson_mean_30_success": 0.9683913355087509
+}

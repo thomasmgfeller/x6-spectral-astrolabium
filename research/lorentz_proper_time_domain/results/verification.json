@@ -1,0 +1,67 @@
+{
+  "verification": "PASS",
+  "sources_unchanged_since_local_freeze": true,
+  "structural_checks": {
+    "status": "PASS",
+    "cases": [
+      {
+        "valid": true,
+        "reason": "FINITE_STRICT_POSET_ONLY"
+      },
+      {
+        "valid": true,
+        "reason": "FINITE_STRICT_POSET_ONLY"
+      },
+      {
+        "valid": false,
+        "reason": "SELF_RELATION",
+        "witness": [
+          1
+        ]
+      },
+      {
+        "valid": false,
+        "reason": "TWO_CYCLE",
+        "witness": [
+          0,
+          1
+        ]
+      },
+      {
+        "valid": false,
+        "reason": "DIRECTED_CYCLE",
+        "witness_remaining_nodes": [
+          0,
+          1,
+          2
+        ]
+      },
+      {
+        "valid": false,
+        "reason": "MISSING_TRANSITIVE_RELATION",
+        "witness": [
+          0,
+          1,
+          2
+        ]
+      },
+      {
+        "valid": true,
+        "reason": "FINITE_STRICT_POSET_ONLY"
+      },
+      {
+        "valid": true,
+        "reason": "FINITE_STRICT_POSET_ONLY"
+      }
+    ],
+    "mark_exclusion": "PASS",
+    "relabel_invariance": "PASS",
+    "valid_poset_can_disagree_with_embedding": "DEMONSTRATED",
+    "finite_profile_twins_are_not_continuum_violation": "DEMONSTRATED"
+  },
+  "max_binomial_tail_error": 6.963526977266099e-14,
+  "recomputed_raw_replicates": 49152,
+  "full_order_crosschecks": 12,
+  "scientific_status": "CONDITIONAL_FLAT_MODEL_CHECK_PASSED",
+  "independent_external_replication": false
+}

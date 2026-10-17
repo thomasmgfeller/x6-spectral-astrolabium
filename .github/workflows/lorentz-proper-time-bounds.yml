@@ -1,0 +1,30 @@
+name: Lorentz Proper Time Bounds and Sequential Reference
+on:
+  pull_request:
+    paths: ['research/lorentz_proper_time_domain/**', 'research/lorentz_proper_time_sequential/**', 'research/lorentz_proper_time_publication/**', 'research/lorentz_proper_time/proper_core.py', '.github/workflows/lorentz-proper-time-bounds.yml']
+  push:
+    branches: [main]
+    paths: ['research/lorentz_proper_time_domain/**', 'research/lorentz_proper_time_sequential/**', 'research/lorentz_proper_time_publication/**', 'research/lorentz_proper_time/proper_core.py', '.github/workflows/lorentz-proper-time-bounds.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  reproduce:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Install pinned numerical dependencies
+        run: python3 -m pip install -r research/lorentz_proper_time_sequential/requirements.txt
+      - name: Verify archives, repair history, planning and both complete replays
+        env:
+          OPENBLAS_NUM_THREADS: '1'
+          OMP_NUM_THREADS: '1'
+        run: python3 -B research/lorentz_proper_time_publication/replay.py
+      - name: Verify source inventory
+        run: python3 tests/python/verify_manifest.py

@@ -4,7 +4,7 @@ Hier geht es um die Frage, welche Struktur in Beziehungen steckt, bevor man eine
 
 [English](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/en/causal-orders.md) · [Wiki-Übersicht](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/de/)
 
-Quellenstand: 2026-10-16 · `967c7662f005d887918cac9350e5bbaf76f653a9`
+Quellenstand: 2026-10-17 · `389cb3f688dfbc9d90086bb55c1b5d199b7e9c58`
 
 ## Ereignisse und ihre Reihenfolge
 
@@ -80,3 +80,36 @@ Die Anleitung im Ergebnisbericht nennt Softwareversionen, Quellencommit und Befe
 - [Rohdatenarchiv und Prüfsummen](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/lorentz_proper_time/results/RESULTS.json)
 - [Veröffentlichung und GitHub-Prüfungen: PR #44](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/44)
 - [Causal-Set-Labor (eigenständiger Browserprototyp)](https://thomasmgfeller.github.io/x6-spectral-astrolabium/app/rax-cqg-lab.html)
+
+## Wann sind Eigenzeit und Unsicherheit verlässlich?
+
+Die neue Erweiterung gilt für bekannte flache Diamanten in d Raumzeitdimensionen. Dimension und Zeitmaßstab müssen bekannt sein, das innere Intervall muss vollständig enthalten sein, und die Hintergrundpunkte müssen unabhängig und uniform bezüglich des Volumens gezogen werden. Endpunkte und Gebiet stehen vor der Bestätigungsstichprobe fest. Dann folgt aus K inneren Punkten unter m Hintergrundpunkten die rohe Schätzung tau/S = (K/m)^(1/d).
+
+49.152 neue Punktwolken in d=2,3,4 stimmen mit dem deklarierten Binomialmodell überein. Die daraus abgeleiteten 95%-Intervalle sind konservativ. Gute Überdeckung bedeutet jedoch keine enge Schätzung: Bei d=4, tau/T=0,1 und m=256 bleibt die innere Punktzahl mit etwa 97,47% Wahrscheinlichkeit null.
+
+Unbekannte Dichte, abgeschnittene Intervalle, Relationsfehler oder abhängige Beobachtungen können diese Unsicherheitsaussage ungültig machen. Ein endlicher gültiger Poset beweist keine Kausalitätsbedingung für ein glattes Kontinuum.
+
+- [Gemeinsamer Einstieg: Voraussetzungen, Ergebnisse und Grenzen](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/lorentz_proper_time_publication/README.md)
+- [Einschlussbeweis und endliche Fehlergrenzen](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/lorentz_proper_time_domain/README.md)
+
+## Nachbeproben bis zur gewünschten Präzision
+
+Die sequenzielle Variante erlaubt, nach jedem Block frischer unabhängiger Punkte auf das Ergebnis zu schauen und bei hinreichender Genauigkeit zu stoppen. Dafür verwendet sie eine zeituniforme Konfidenzfolge nach Howard et al.; das Zeitfehlerbudget beträgt 2,5%. Wenn relative Präzision unter 10% gemeldet wird, beträgt die Wahrscheinlichkeit einer solchen Meldung bei tatsächlich größerem Fehler höchstens 2,5%, unter den Modellannahmen. Das ist keine automatische bedingte Garantie nur unter erfolgreichen Stopps.
+
+Es gibt kein garantiert ausreichendes endliches Budget. Der Status BUDGET_EXHAUSTED verweigert die Präzisionsmeldung. In den gespeicherten 4D-Zählläufen erreichten alle je 1.024 Wiederholungen das Ziel; der Median betrug 2.592 lokale bzw. 1.673.216 globale Punkte. Das sind beobachtete Bedarfe. Der lokale Fall setzt einen bekannten, vollständig einschließenden Diamanten mit Zeitmaßstab 0,2T voraus.
+
+Ein fest geplanter Versuch mit 480 lokalen Punkten hat bei wahrem tau/T=0,1 eine andere Aussage: 97,34% Wahrscheinlichkeit für unter 10% relativen Fehler der rohen Schätzung. Er bietet nicht dieselbe Garantie beim wiederholten Nachschauen. Die publizierte Planung trennt diese Kriterien.
+
+- [Zeituniforme Schranke, Stoppregel und vollständige Ergebnisse](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/lorentz_proper_time_sequential/README.md)
+- [Reproduzierbare Rechnung der festen Budgets](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/lorentz_proper_time_publication/planning.py)
+
+## Was warnt die längste Kette – und was nicht?
+
+Ein einmaliger Vergleich der längsten inneren Kette mit frischen Referenzordnungen bei gleicher Punktzahl K prüft zusätzliche Forminformation. Die beobachteten Nullmodell-Warnungen betrugen 5/512. Bei absichtlich räumlich komprimierter Beprobung in weiterhin flacher Geometrie waren es 506/512. Das zeigt eine Dichtestörung, keinen Krümmungsnachweis.
+
+Eine Warnung setzt die wissenschaftliche Zeitfreigabe auf WITHHELD_MODEL_WARNING. Kein Alarm beweist das Modell nicht. Die Diagnose hat ein eigenes Fehlalarmbudget von 2,5%; zusammen mit der Zeitkonfidenzfolge beträgt die Wahrscheinlichkeit mindestens eines der beiden Fehlereignisse unter dem gemeinsamen Nullmodell höchstens 5%.
+
+Die Hauptsimulation arbeitet mit Zählblöcken; ein zusätzlicher Lauf prüft tatsächliche Geometriepunkte. Beide neuen Pakete wurden lokal vor den Ziehungen fixiert und erst danach veröffentlicht. Eine behobene JSON-Serialisierungspanne samt Originalcode und identischen Rohzählungen bleibt dokumentiert. Interne Reproduktion und GitHub CI sind keine unabhängige externe Replikation.
+
+- [Ausführungsverlauf und erhaltene Reparaturbelege](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/lorentz_proper_time_sequential/EXECUTION_HISTORY.md)
+- [Beide neuen Versuche vollständig reproduzieren](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/lorentz_proper_time_publication/replay.py)

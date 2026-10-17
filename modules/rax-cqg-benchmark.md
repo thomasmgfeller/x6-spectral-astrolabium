@@ -8,16 +8,16 @@ Registerstand: 2026-10-17. MAIN / SOFTWARE. Kein Live-Prüfsiegel.
 
 Branch: main
 
-Commit: 96fdd71b6741adecf5481174a5d19b32b66bfe2d
+Commit: 389cb3f688dfbc9d90086bb55c1b5d199b7e9c58
 
-[Originaldokumentation](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/96fdd71b6741adecf5481174a5d19b32b66bfe2d/docs/research/rax/cqg-benchmark-v0.2.0/README.md)
+[Originaldokumentation](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/389cb3f688dfbc9d90086bb55c1b5d199b7e9c58/docs/research/rax/cqg-benchmark-v0.2.0/README.md)
 
 ## Dokumentierte Aussage
 
 Explizite endliche Ordnungen, Intervalle, dimensionslose 4D-BDG-Kombination, Graphspektren und induzierte Ausdünnung. Separates klassisches Gaußfeld und vorausgesetzte Zweiqubit-Uhr. Kein Nachweis für Quantengravitation, KR-Unterdrückung oder einen Kontinuumslimes.
 
-- [research/rax_cqg/benchmark-v0.2.0/VALIDATION.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/96fdd71b6741adecf5481174a5d19b32b66bfe2d/research/rax_cqg/benchmark-v0.2.0/VALIDATION.json): Eingefrorener interner Prüflauf mit Quellenhashes und expliziten Grenzen. UI-Logik in Node; keine damalige visuelle Browserprüfung oder personell unabhängige Replikation.
-- [docs/research/rax/cqg-benchmark-v0.2.0/PUBLICATION.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/96fdd71b6741adecf5481174a5d19b32b66bfe2d/docs/research/rax/cqg-benchmark-v0.2.0/PUBLICATION.json): Freigegebenes ZIP, 28 bytegleiche Paketdateien und identische Browserkopie; zusätzliche CI getrennt vom ursprünglichen Bericht.
+- [research/rax_cqg/benchmark-v0.2.0/VALIDATION.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/389cb3f688dfbc9d90086bb55c1b5d199b7e9c58/research/rax_cqg/benchmark-v0.2.0/VALIDATION.json): Eingefrorener interner Prüflauf mit Quellenhashes und expliziten Grenzen. UI-Logik in Node; keine damalige visuelle Browserprüfung oder personell unabhängige Replikation.
+- [docs/research/rax/cqg-benchmark-v0.2.0/PUBLICATION.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/389cb3f688dfbc9d90086bb55c1b5d199b7e9c58/docs/research/rax/cqg-benchmark-v0.2.0/PUBLICATION.json): Freigegebenes ZIP, 28 bytegleiche Paketdateien und identische Browserkopie; zusätzliche CI getrennt vom ursprünglichen Bericht.
 
 ## Reproduzieren
 
@@ -28,7 +28,7 @@ Neue Arbeits- und Ausgabeordner verwenden; Voraussetzungen aus der Originaldokum
 ```sh
 git clone --branch main https://github.com/thomasmgfeller/x6-spectral-astrolabium.git x6-rax-cqg-benchmark
 cd x6-rax-cqg-benchmark
-git checkout --detach 96fdd71b6741adecf5481174a5d19b32b66bfe2d
+git checkout --detach 389cb3f688dfbc9d90086bb55c1b5d199b7e9c58
 cd research/rax_cqg/benchmark-v0.2.0
 python3 -m pip install -r requirements.txt
 python3 validate.py

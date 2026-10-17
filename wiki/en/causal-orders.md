@@ -4,7 +4,7 @@ This research asks what structure is carried by relationships before a spatial d
 
 [Deutsch](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/de/causal-orders.md) · [Wiki overview](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/en/)
 
-Source snapshot: 2026-10-16 · `967c7662f005d887918cac9350e5bbaf76f653a9`
+Source snapshot: 2026-10-17 · `389cb3f688dfbc9d90086bb55c1b5d199b7e9c58`
 
 ## Events and their ordering
 
@@ -80,3 +80,36 @@ The result report gives software versions, the source commit and reproduction co
 - [Raw-data inventory and checksums](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/lorentz_proper_time/results/RESULTS.json)
 - [Publication and GitHub checks: PR #44](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/44)
 - [Causal-Set Lab (separate browser prototype)](https://thomasmgfeller.github.io/x6-spectral-astrolabium/app/rax-cqg-lab.html)
+
+## When are proper time and its uncertainty reliable?
+
+The new extension applies to known flat diamonds in d spacetime dimensions. Dimension and time scale must be known, the inner interval must be fully contained, and background points must be independent and uniform in volume. Endpoints and region are fixed before the confirmatory sample. Then K inner points among m background points give the raw estimate tau/S = (K/m)^(1/d).
+
+49,152 new point clouds in d=2,3,4 agree with the declared binomial model. The resulting 95% intervals are conservative. Good coverage does not imply a narrow estimate: at d=4, tau/T=0.1 and m=256, the inner count is zero with probability about 97.47%.
+
+Unknown sampling density, clipped intervals, relation errors or dependent observations can invalidate this uncertainty statement. A valid finite poset does not prove a causality condition for a smooth continuum.
+
+- [Shared overview: assumptions, results and limits](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/lorentz_proper_time_publication/README.md)
+- [Containment proof and finite-sample bounds](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/lorentz_proper_time_domain/README.md)
+
+## Sampling until the requested precision is reached
+
+The sequential version allows inspecting results after each batch of fresh independent points and stopping once precision is sufficient. It uses a time-uniform confidence sequence following Howard et al., with a 2.5% time-error budget. Under the assumptions, the probability of reporting relative precision below 10% while the actual error exceeds 10% is at most 2.5%. This is not automatically a conditional guarantee restricted to successful stops.
+
+No finite budget is guaranteed to suffice. BUDGET_EXHAUSTED withholds the precision claim. In the archived 4D count simulations, all 1,024 repetitions per positive case reached the target; median sample sizes were 2,592 locally and 1,673,216 globally. These are observed requirements. The local case assumes a known, fully containing diamond with time scale 0.2T.
+
+A fixed experiment with 480 local points makes a different statement: at true tau/T=0.1, the raw estimate has a 97.34% probability of relative error below 10%. It does not provide the same guarantee under repeated inspection. The published planning note separates these criteria.
+
+- [Time-uniform bound, stopping rule and complete results](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/lorentz_proper_time_sequential/README.md)
+- [Reproducible fixed-budget calculation](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/lorentz_proper_time_publication/planning.py)
+
+## What can the longest chain warn about?
+
+A one-time comparison of the longest inner chain with fresh reference orders at the same count K examines additional shape information. Observed null-model warnings were 5/512. Deliberately spatially compressed sampling in still-flat geometry produced 506/512 warnings. This demonstrates a density perturbation, not curvature detection.
+
+A warning sets scientific time qualification to WITHHELD_MODEL_WARNING. No warning does not prove the model. The diagnostic has its own 2.5% false-alarm budget; together with the time confidence sequence, the probability of at least one of the two error events is at most 5% under the common null model.
+
+The main simulation uses count batches; an additional run checks actual geometric points. Both new packages were locally frozen before sampling and published afterwards. A repaired JSON serialization failure remains documented with original code and identical raw counts. Internal reproduction and GitHub CI are not independent external replication.
+
+- [Execution history and preserved repair evidence](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/lorentz_proper_time_sequential/EXECUTION_HISTORY.md)
+- [Fully reproduce both new experiments](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/lorentz_proper_time_publication/replay.py)

@@ -1,0 +1,6 @@
+{
+  "event": "First run completed calculations but JSON serialization failed on numpy.int64 while saving summary.json.",
+  "repair_scope": "Convert rejection-count scalar to Python int; no mathematical, sampling, threshold, seed or stopping-rule changes.",
+  "preserved": "Original source run_original.py, initial source freeze and all batch_counts.npz.",
+  "repeat_policy": "Replay exactly the original seeds; compare every archived block count before accepting the repaired output."
+}

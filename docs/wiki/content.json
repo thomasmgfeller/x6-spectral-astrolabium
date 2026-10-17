@@ -1,7 +1,7 @@
 {
   "schema": "x6.bilingual-wiki/1",
-  "snapshot_date": "2026-10-16",
-  "source_commit": "967c7662f005d887918cac9350e5bbaf76f653a9",
+  "snapshot_date": "2026-10-17",
+  "source_commit": "389cb3f688dfbc9d90086bb55c1b5d199b7e9c58",
   "articles": [
     {
       "id": "index",
@@ -81,7 +81,7 @@
               },
               {
                 "type": "paragraph",
-                "text": "Neu dokumentiert: Der erste Eigenzeit-Versuch ist vollständig veröffentlicht. Die Intervallreferenz erreicht im festgelegten flachen 1+1-Modell RMSE 0,0316. Die größte abgeglichene Zusatzkontrolle bleibt wegen zu weniger Paare offen. Das Kapitel „Kausale Ordnungen“ erklärt beide Befunde."
+                "text": "Neu dokumentiert: Zur ersten Eigenzeit-Referenz kommen explizite Gültigkeitsbedingungen, endliche Fehlergrenzen und sequenzielles Nachbeproben. Das Kapitel „Kausale Ordnungen“ erklärt die Ergebnisse, Budgetgrenzen und die begrenzte Kettendiagnostik."
               },
               {
                 "type": "paragraph",
@@ -193,7 +193,7 @@
               },
               {
                 "type": "paragraph",
-                "text": "Newly documented: the first proper-time experiment is fully published. The interval reference achieves RMSE 0.0316 in the specified flat 1+1 model. The largest matched supplementary control remains unresolved because too few pairs are available. The “Causal orders” chapter explains both findings."
+                "text": "Newly documented: the first proper-time reference is extended with explicit assumptions, finite-sample uncertainty and sequential sampling. The “Causal orders” chapter explains results, budget limits and the bounded chain diagnostic."
               },
               {
                 "type": "paragraph",
@@ -905,6 +905,99 @@
                 ]
               }
             ]
+          },
+          {
+            "id": "time-domain",
+            "title": "Wann sind Eigenzeit und Unsicherheit verlässlich?",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "Die neue Erweiterung gilt für bekannte flache Diamanten in d Raumzeitdimensionen. Dimension und Zeitmaßstab müssen bekannt sein, das innere Intervall muss vollständig enthalten sein, und die Hintergrundpunkte müssen unabhängig und uniform bezüglich des Volumens gezogen werden. Endpunkte und Gebiet stehen vor der Bestätigungsstichprobe fest. Dann folgt aus K inneren Punkten unter m Hintergrundpunkten die rohe Schätzung tau/S = (K/m)^(1/d)."
+              },
+              {
+                "type": "paragraph",
+                "text": "49.152 neue Punktwolken in d=2,3,4 stimmen mit dem deklarierten Binomialmodell überein. Die daraus abgeleiteten 95%-Intervalle sind konservativ. Gute Überdeckung bedeutet jedoch keine enge Schätzung: Bei d=4, tau/T=0,1 und m=256 bleibt die innere Punktzahl mit etwa 97,47% Wahrscheinlichkeit null."
+              },
+              {
+                "type": "paragraph",
+                "text": "Unbekannte Dichte, abgeschnittene Intervalle, Relationsfehler oder abhängige Beobachtungen können diese Unsicherheitsaussage ungültig machen. Ein endlicher gültiger Poset beweist keine Kausalitätsbedingung für ein glattes Kontinuum."
+              },
+              {
+                "type": "links",
+                "items": [
+                  {
+                    "label": "Gemeinsamer Einstieg: Voraussetzungen, Ergebnisse und Grenzen",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/lorentz_proper_time_publication/README.md"
+                  },
+                  {
+                    "label": "Einschlussbeweis und endliche Fehlergrenzen",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/lorentz_proper_time_domain/README.md"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "time-adaptive",
+            "title": "Nachbeproben bis zur gewünschten Präzision",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "Die sequenzielle Variante erlaubt, nach jedem Block frischer unabhängiger Punkte auf das Ergebnis zu schauen und bei hinreichender Genauigkeit zu stoppen. Dafür verwendet sie eine zeituniforme Konfidenzfolge nach Howard et al.; das Zeitfehlerbudget beträgt 2,5%. Wenn relative Präzision unter 10% gemeldet wird, beträgt die Wahrscheinlichkeit einer solchen Meldung bei tatsächlich größerem Fehler höchstens 2,5%, unter den Modellannahmen. Das ist keine automatische bedingte Garantie nur unter erfolgreichen Stopps."
+              },
+              {
+                "type": "paragraph",
+                "text": "Es gibt kein garantiert ausreichendes endliches Budget. Der Status BUDGET_EXHAUSTED verweigert die Präzisionsmeldung. In den gespeicherten 4D-Zählläufen erreichten alle je 1.024 Wiederholungen das Ziel; der Median betrug 2.592 lokale bzw. 1.673.216 globale Punkte. Das sind beobachtete Bedarfe. Der lokale Fall setzt einen bekannten, vollständig einschließenden Diamanten mit Zeitmaßstab 0,2T voraus."
+              },
+              {
+                "type": "paragraph",
+                "text": "Ein fest geplanter Versuch mit 480 lokalen Punkten hat bei wahrem tau/T=0,1 eine andere Aussage: 97,34% Wahrscheinlichkeit für unter 10% relativen Fehler der rohen Schätzung. Er bietet nicht dieselbe Garantie beim wiederholten Nachschauen. Die publizierte Planung trennt diese Kriterien."
+              },
+              {
+                "type": "links",
+                "items": [
+                  {
+                    "label": "Zeituniforme Schranke, Stoppregel und vollständige Ergebnisse",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/lorentz_proper_time_sequential/README.md"
+                  },
+                  {
+                    "label": "Reproduzierbare Rechnung der festen Budgets",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/lorentz_proper_time_publication/planning.py"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "time-chain",
+            "title": "Was warnt die längste Kette – und was nicht?",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "Ein einmaliger Vergleich der längsten inneren Kette mit frischen Referenzordnungen bei gleicher Punktzahl K prüft zusätzliche Forminformation. Die beobachteten Nullmodell-Warnungen betrugen 5/512. Bei absichtlich räumlich komprimierter Beprobung in weiterhin flacher Geometrie waren es 506/512. Das zeigt eine Dichtestörung, keinen Krümmungsnachweis."
+              },
+              {
+                "type": "paragraph",
+                "text": "Eine Warnung setzt die wissenschaftliche Zeitfreigabe auf WITHHELD_MODEL_WARNING. Kein Alarm beweist das Modell nicht. Die Diagnose hat ein eigenes Fehlalarmbudget von 2,5%; zusammen mit der Zeitkonfidenzfolge beträgt die Wahrscheinlichkeit mindestens eines der beiden Fehlereignisse unter dem gemeinsamen Nullmodell höchstens 5%."
+              },
+              {
+                "type": "paragraph",
+                "text": "Die Hauptsimulation arbeitet mit Zählblöcken; ein zusätzlicher Lauf prüft tatsächliche Geometriepunkte. Beide neuen Pakete wurden lokal vor den Ziehungen fixiert und erst danach veröffentlicht. Eine behobene JSON-Serialisierungspanne samt Originalcode und identischen Rohzählungen bleibt dokumentiert. Interne Reproduktion und GitHub CI sind keine unabhängige externe Replikation."
+              },
+              {
+                "type": "links",
+                "items": [
+                  {
+                    "label": "Ausführungsverlauf und erhaltene Reparaturbelege",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/lorentz_proper_time_sequential/EXECUTION_HISTORY.md"
+                  },
+                  {
+                    "label": "Beide neuen Versuche vollständig reproduzieren",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/lorentz_proper_time_publication/replay.py"
+                  }
+                ]
+              }
+            ]
           }
         ]
       },
@@ -1117,6 +1210,99 @@
                   {
                     "label": "Causal-Set Lab (separate browser prototype)",
                     "url": "app/rax-cqg-lab.html"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "time-domain",
+            "title": "When are proper time and its uncertainty reliable?",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "The new extension applies to known flat diamonds in d spacetime dimensions. Dimension and time scale must be known, the inner interval must be fully contained, and background points must be independent and uniform in volume. Endpoints and region are fixed before the confirmatory sample. Then K inner points among m background points give the raw estimate tau/S = (K/m)^(1/d)."
+              },
+              {
+                "type": "paragraph",
+                "text": "49,152 new point clouds in d=2,3,4 agree with the declared binomial model. The resulting 95% intervals are conservative. Good coverage does not imply a narrow estimate: at d=4, tau/T=0.1 and m=256, the inner count is zero with probability about 97.47%."
+              },
+              {
+                "type": "paragraph",
+                "text": "Unknown sampling density, clipped intervals, relation errors or dependent observations can invalidate this uncertainty statement. A valid finite poset does not prove a causality condition for a smooth continuum."
+              },
+              {
+                "type": "links",
+                "items": [
+                  {
+                    "label": "Shared overview: assumptions, results and limits",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/lorentz_proper_time_publication/README.md"
+                  },
+                  {
+                    "label": "Containment proof and finite-sample bounds",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/lorentz_proper_time_domain/README.md"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "time-adaptive",
+            "title": "Sampling until the requested precision is reached",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "The sequential version allows inspecting results after each batch of fresh independent points and stopping once precision is sufficient. It uses a time-uniform confidence sequence following Howard et al., with a 2.5% time-error budget. Under the assumptions, the probability of reporting relative precision below 10% while the actual error exceeds 10% is at most 2.5%. This is not automatically a conditional guarantee restricted to successful stops."
+              },
+              {
+                "type": "paragraph",
+                "text": "No finite budget is guaranteed to suffice. BUDGET_EXHAUSTED withholds the precision claim. In the archived 4D count simulations, all 1,024 repetitions per positive case reached the target; median sample sizes were 2,592 locally and 1,673,216 globally. These are observed requirements. The local case assumes a known, fully containing diamond with time scale 0.2T."
+              },
+              {
+                "type": "paragraph",
+                "text": "A fixed experiment with 480 local points makes a different statement: at true tau/T=0.1, the raw estimate has a 97.34% probability of relative error below 10%. It does not provide the same guarantee under repeated inspection. The published planning note separates these criteria."
+              },
+              {
+                "type": "links",
+                "items": [
+                  {
+                    "label": "Time-uniform bound, stopping rule and complete results",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/lorentz_proper_time_sequential/README.md"
+                  },
+                  {
+                    "label": "Reproducible fixed-budget calculation",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/lorentz_proper_time_publication/planning.py"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "time-chain",
+            "title": "What can the longest chain warn about?",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "A one-time comparison of the longest inner chain with fresh reference orders at the same count K examines additional shape information. Observed null-model warnings were 5/512. Deliberately spatially compressed sampling in still-flat geometry produced 506/512 warnings. This demonstrates a density perturbation, not curvature detection."
+              },
+              {
+                "type": "paragraph",
+                "text": "A warning sets scientific time qualification to WITHHELD_MODEL_WARNING. No warning does not prove the model. The diagnostic has its own 2.5% false-alarm budget; together with the time confidence sequence, the probability of at least one of the two error events is at most 5% under the common null model."
+              },
+              {
+                "type": "paragraph",
+                "text": "The main simulation uses count batches; an additional run checks actual geometric points. Both new packages were locally frozen before sampling and published afterwards. A repaired JSON serialization failure remains documented with original code and identical raw counts. Internal reproduction and GitHub CI are not independent external replication."
+              },
+              {
+                "type": "links",
+                "items": [
+                  {
+                    "label": "Execution history and preserved repair evidence",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/lorentz_proper_time_sequential/EXECUTION_HISTORY.md"
+                  },
+                  {
+                    "label": "Fully reproduce both new experiments",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/lorentz_proper_time_publication/replay.py"
                   }
                 ]
               }
@@ -1540,7 +1726,7 @@
               },
               {
                 "type": "paragraph",
-                "text": "Dieser Wiki-Stand berücksichtigt die Eigenzeit-Ergebnisveröffentlichung aus PR #44 vom 16. Oktober 2026. Das Modulregister bleibt eine eigene datierte Übersicht. Für spätere Einzelergebnisse sind die verlinkten Originalberichte maßgeblich; ein älterer Quellenpin beschreibt nicht automatisch jede Folgestudie."
+                "text": "Dieser Wiki-Stand vom 17. Oktober 2026 berücksichtigt die erste Eigenzeit-Veröffentlichung aus PR #44 sowie die neuen Pakete zu Gültigkeitsbereich und sequenzieller Absicherung. Der Quellenpin benennt deren gemeinsamen Implementierungsstand. Die Originalberichte behalten ihre eigenen Fixierungen und Grenzen; das Modulregister ist eine datierte Übersicht."
               },
               {
                 "type": "links",
@@ -1697,7 +1883,7 @@
               },
               {
                 "type": "paragraph",
-                "text": "This wiki snapshot includes the proper-time result publication in PR #44 of 16 October 2026. The module register remains a separately dated overview. Linked original reports govern later individual results; an older source pin does not automatically describe every follow-up study."
+                "text": "This wiki snapshot of 17 October 2026 includes the first proper-time publication in PR #44 and the new scope and sequential-inference packages. The source pin identifies their shared implementation snapshot. Original reports retain their own freezes and limits; the module register remains a dated overview."
               },
               {
                 "type": "links",
