@@ -30,7 +30,7 @@ Quellenstand: 2026-10-16 · `967c7662f005d887918cac9350e5bbaf76f653a9`
 | Edge Reference | Lokaler Ausführungs- und Exportweg als Ausgangspunkt für gerätenahe Anwendungen. | Kein allgemein qualifiziertes verteiltes Hardwareprodukt. |
 | NQK, Experiment Fabric, Neutral Discovery | Separate Forschungsquellen bzw. Dossiers im Modulregister. | Teilweise nur auf Forschungsbranches; historische NQK-Testarchive fehlen. |
 
-Der Paderborn-Pilot verwendet vorhandene reale Labordaten. Die kleinen Fallzahlen tragen keine allgemeine industrielle Leistungszusage. Seine Datenrechte sind separat dokumentiert; die Softwarelizenz ist keine pauschale Lizenz für alle Datensätze.
+Status: reproduzierbare Labor-Maschinenreferenz abgeschlossen. Diese am 17. Oktober 2026 präzisierte Bezeichnung gilt für die wiederholbare Sekundärauswertung von 20 festgelegten Paderborner Laborlagern mit drei klassischen Referenzverfahren. Die Hüllkurvenreferenz erkannte vier von vier beschädigten Evaluationslagern und erzeugte bei einem von zwei gesunden Lagern einen Fehlalarm. Die kleinen Fallzahlen belegen keinen Zusatznutzen eines neuen Filters und keine industrielle Leistungsfähigkeit. Die industrielle Bestätigung bleibt NOT_READY. Die Messdaten behalten ihre nichtkommerzielle Lizenz CC BY-NC 4.0; externe personelle Replikation und physische Gerätequalifikation bleiben offen.
 
 ## So findest du den maßgeblichen Stand
 

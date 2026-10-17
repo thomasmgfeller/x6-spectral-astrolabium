@@ -739,7 +739,7 @@ python3 experiments/industrial-v1/evaluate.py experiments/industrial-v1/V1_PROFI
 
 **Anleitung:** [aktuelle main-Dokumentation](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/experiments/industrial-pilot/README.md). **Voraussetzungen:** Python 3.12, gepinnte NumPy/SciPy-Abhängigkeiten; nach Installation offline. Enthaltene fremde Messkanäle: CC BY-NC 4.0, ausschließlich nichtkommerzieller Pilot; eigener Code Apache-2.0. Keine absoluten Kalibrierbelege.
 
-**Geprüfte Aussage:** Tatsächlich ausgeführte, reproduzierbare Sekundärauswertung realer Labormessungen: pro physischem Lager eine vor den Scores nach Metadaten gewählte Aufnahme; 16 Verwerfungen bleiben protokolliert. Drei feste klassische Referenzen. Hüllkurve: 4/4 beschädigte Evaluationslager erkannt, 1/2 gesunde mit Fehlalarm. Keine neue Filterleistung, 1-%-Fehlalarmgarantie oder industrielle Generalisierung.
+**Geprüfte Aussage:** Status: reproduzierbare Labor-Maschinenreferenz abgeschlossen (Bezeichnung präzisiert am 17.10.2026; Evidenz des Piloten vom 15.10.2026). Tatsächlich ausgeführte, reproduzierbare Sekundärauswertung realer Labormessungen: pro physischem Lager eine vor den Scores nach Metadaten gewählte Aufnahme; 16 Verwerfungen bleiben protokolliert. Drei feste klassische Referenzen. Hüllkurve: 4/4 beschädigte Evaluationslager erkannt, 1/2 gesunde mit Fehlalarm. Keine neue Filterleistung, 1-%-Fehlalarmgarantie oder industrielle Generalisierung.
 
 ```sh
 python3 -m pip install -r experiments/industrial-v1/requirements.txt
@@ -751,7 +751,7 @@ python3 experiments/industrial-pilot/test_pilot.py
 
 **Vorhandene Evidenz:**
 
-- [experiments/industrial-pilot/evidence/pilot-report.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/a1f22f6c59f3c5259d12cfb6c0ca2e8b0886f33f/experiments/industrial-pilot/evidence/pilot-report.json): Vollständige Scores, Schwellen und Entscheidungen; Pilotweg bestanden, industrielle Bestätigung ausdrücklich offen.
+- [experiments/industrial-pilot/evidence/pilot-report.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/a1f22f6c59f3c5259d12cfb6c0ca2e8b0886f33f/experiments/industrial-pilot/evidence/pilot-report.json): Reproduzierbare Labor-Maschinenreferenz abgeschlossen: vollständige Scores, Schwellen und Entscheidungen für 20 festgelegte Laborlager; industrielle Bestätigung ausdrücklich offen.
 - [experiments/industrial-pilot/evidence/replay-portability.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/a1f22f6c59f3c5259d12cfb6c0ca2e8b0886f33f/experiments/industrial-pilot/evidence/replay-portability.json): Nach anfänglichem CI-Rundungsfehler: unveränderte eingefrorene Quellen und Ergebnisse, separater portabler Replay mit 13 Tests / 25 Negativkontrollen. Unstabile Evaluationsentscheidungen werden abgelehnt.
 - [experiments/industrial-pilot/evidence/execution.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/a1f22f6c59f3c5259d12cfb6c0ca2e8b0886f33f/experiments/industrial-pilot/evidence/execution.json): Historischer Erstlauf: Vertrag/Daten/Code öffentlich vor Scores fixiert; damals elf Pilottests, 23 Negativkontrollen und 25 unveränderte V1-Tests bestanden.
 - [experiments/industrial-pilot/data/manifest.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/a1f22f6c59f3c5259d12cfb6c0ca2e8b0886f33f/experiments/industrial-pilot/data/manifest.json): Originalarchiv-, MAT-, Signal- und NPZ-Hashes; Lager-IDs, Labels, Splits und sämtliche geprüften Wiederholungen.

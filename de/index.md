@@ -88,7 +88,7 @@ Dies ist experimentelle Forschungssoftware. Ein bestandener Softwaretest ist kei
 - [Spektrale Graphreferenzen](https://thomasmgfeller.github.io/x6-spectral-astrolabium/modules/x6-qe.html): Exakte endliche Beispiele und Grenzen spektraler Unterscheidbarkeit.
 - [RAX · relationale Forschung](https://thomasmgfeller.github.io/x6-spectral-astrolabium/modules/rax-programme.html): Prädiktive Reduktionen, konkurrierende Modelle und Falsifikation.
 - [Photonik & Steuerung](https://thomasmgfeller.github.io/x6-spectral-astrolabium/modules/acvm-optical.html): Softwarereferenzen und geplante physische Abnahmen.
-- [Industrieller Datenpilot](https://thomasmgfeller.github.io/x6-spectral-astrolabium/modules/industrial-pilot.html): Begrenzte Machbarkeitsstudie mit Labordaten und expliziten Grenzen.
+- [Industrieller Datenpilot](https://thomasmgfeller.github.io/x6-spectral-astrolabium/modules/industrial-pilot.html): Status: reproduzierbare Labor-Maschinenreferenz abgeschlossen. 20 festgelegte Laborlager; industrielle Bestätigung bleibt offen.
 - [NQK-Forschungsdossier](https://thomasmgfeller.github.io/x6-spectral-astrolabium/modules/nqk.html): Eigenständiger Forschungszweig mit unvollständigen Reproduktionsarchiven.
 
 Das Register vom 2026-10-16 beschreibt 39 Module. Es dokumentiert Quellenorte und Evidenz; es ist kein Live-Prüfsiegel.

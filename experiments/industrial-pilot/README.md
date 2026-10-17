@@ -6,6 +6,22 @@ Bestätigung nach [V1](../industrial-v1/README.md) bleibt ein eigener Vertrag.
 Die vier Kanäle, 25.600 Hz, 10 s, Ressourcen- und Leistungsgates dieses
 ursprünglichen Vertrags werden weder geändert noch durch Labordaten ersetzt.
 
+## Status: reproduzierbare Labor-Maschinenreferenz abgeschlossen
+
+Statusbezeichnung präzisiert am 17. Oktober 2026, auf Grundlage des bereits
+veröffentlichten Piloten vom 15. Oktober. Abgeschlossen ist die dokumentierte,
+wiederholbare Sekundärauswertung der 20 festgelegten Paderborner Laborlager
+unter einer Betriebsbedingung, einschließlich Datenherkunft, Lageraufteilung,
+drei klassischer Referenzverfahren und rechnerischer Wiederholungsprüfung.
+Die ausführbaren Ergebniskennungen bleiben `PILOT_PIPELINE_PASS` und `REPLAY_PASS`.
+
+Der Abschluss gilt für diesen Labor-Datenweg. Zusatznutzen eines neuen Filters,
+Übertragbarkeit auf industrielle Maschinen, externe personelle Replikation und
+physische Gerätequalifikation sind damit nicht nachgewiesen. Der industrielle
+Bestätigungsvertrag bleibt `NOT_READY`; `industrial_claim_supported=false`.
+Die Präzisierung dokumentiert vorhandene Evidenz und ist kein neuer Mess- oder
+Leistungsversuch.
+
 ## Ausgeführtes Ergebnis am 15. Oktober 2026
 
 **PILOT_PIPELINE_PASS; industrielle Bestätigung NOT_READY.** Alle 20 festgelegten

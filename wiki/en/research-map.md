@@ -30,7 +30,7 @@ Source snapshot: 2026-10-16 · `967c7662f005d887918cac9350e5bbaf76f653a9`
 | Edge Reference | Local execution and export as a starting point for applications near devices. | Not a generally qualified distributed hardware product. |
 | NQK, Experiment Fabric, Neutral Discovery | Separate research sources or dossiers listed in the module register. | Some are only on research branches; historical NQK test archives are missing. |
 
-The Paderborn pilot uses existing real laboratory data. Its small sample counts do not establish general industrial performance. Data rights are documented separately; the software licence does not cover every dataset automatically.
+Status: reproducible laboratory machine reference completed. Clarified on 17 October 2026, this label covers the reproducible secondary analysis of 20 specified Paderborn laboratory bearings using three classical reference methods. The envelope reference detected four of four damaged evaluation bearings and raised a false alarm for one of two healthy bearings. These small counts establish neither added value from a new filter nor industrial performance. Industrial confirmation remains NOT_READY. The measurement data retain their non-commercial CC BY-NC 4.0 licence; external person-level replication and physical device qualification remain open.
 
 ## Find the authoritative version
 

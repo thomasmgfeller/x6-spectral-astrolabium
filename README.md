@@ -148,6 +148,12 @@ features are absent from main.
 
 ## Industrial data contract and executed feasibility pilot
 
+**Status: reproducible laboratory machine reference completed**
+(Deutsch: **reproduzierbare Labor-Maschinenreferenz abgeschlossen**).
+This label records the completed, bounded data-import, classical-analysis and
+replay workflow for the 20 specified Paderborn laboratory bearings. It does not
+establish new filter performance or industrial qualification.
+
 The [Paderborn feasibility pilot](experiments/industrial-pilot/README.md) fixes
 machine/sensor provenance, **CC BY-NC 4.0** data rights, labels, bearing-level splits,
 three classical references and reproducible checks. Twenty real laboratory bearings

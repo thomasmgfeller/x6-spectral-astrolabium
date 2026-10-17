@@ -88,7 +88,7 @@ This is experimental research software. A passing software test is not physical 
 - [Spectral graph references](https://thomasmgfeller.github.io/x6-spectral-astrolabium/modules/x6-qe.html): Exact finite examples and limits of spectral distinguishability.
 - [RAX · relational research](https://thomasmgfeller.github.io/x6-spectral-astrolabium/modules/rax-programme.html): Predictive reductions, competing models and falsification.
 - [Photonics & control](https://thomasmgfeller.github.io/x6-spectral-astrolabium/modules/acvm-optical.html): Software references and planned physical acceptance tests.
-- [Industrial data pilot](https://thomasmgfeller.github.io/x6-spectral-astrolabium/modules/industrial-pilot.html): A bounded laboratory-data feasibility study with explicit limits.
+- [Industrial data pilot](https://thomasmgfeller.github.io/x6-spectral-astrolabium/modules/industrial-pilot.html): Status: reproducible laboratory machine reference completed. 20 specified laboratory bearings; industrial confirmation remains open.
 - [NQK research dossier](https://thomasmgfeller.github.io/x6-spectral-astrolabium/modules/nqk.html): A separate research direction with incomplete reproduction archives.
 
 39 modules are described in the register dated 2026-10-16. The register records source locations and evidence; it is not a live qualification badge.
