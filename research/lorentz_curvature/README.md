@@ -62,3 +62,10 @@ und **Warnungen vor Modellabweichungen** zeigen. Der Dichtezwilling gehört
 sichtbar dazu. Ein weiterer Leistungsversuch muss zuerst unabhängiges Wissen
 über die Beprobung und eine identifizierbare geometrische Zielgröße festlegen;
 Schwellen und Stichproben werden für diesen Versuch neu vorab fixiert.
+
+## Anschluss: Roy–Sinha–Surya bei fester Punktzahl
+
+[Herleitung, neue Vorwärtsprüfung und Ergebnisse](../lorentz_rss_fixed_n/README.md):
+24.576 unabhängige Wolken; gemeinsames ±5%-Präzisionsziel nicht erreicht.
+Die bedingten Koeffizienten berücksichtigen das gekrümmte Volumen. Der hier
+archivierte Negativbefund bleibt unverändert.

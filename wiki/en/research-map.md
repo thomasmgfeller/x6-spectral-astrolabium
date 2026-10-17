@@ -4,7 +4,7 @@ Not every directory is a finished application. This map explains the purpose of 
 
 [Deutsch](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/de/research-map.md) · [Wiki overview](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/en/)
 
-Source snapshot: 2026-10-17 · `6ac1363b6d3e0bcef6f863320290e3826977952a`
+Source snapshot: 2026-10-18 · `8ee417ba8c44c1f32f4e310a6566168d84982d3a`
 
 ## Three direct starting points
 
@@ -39,7 +39,7 @@ Status: reproducible laboratory machine reference completed. Clarified on 17 Oct
 3. Open the original documentation and its evidence report.
 4. Check the next outstanding acceptance test. Dated research notes supplement the register for later studies.
 
-This wiki snapshot of 17 October 2026 includes the first proper-time publication in PR #44 and the new scope and sequential-inference packages. The source pin identifies their shared implementation snapshot. Original reports retain their own freezes and limits; the module register remains a dated overview.
+This wiki snapshot of 18 October 2026 includes the first proper-time publication in PR #44 and the new scope and sequential-inference packages. The source pin identifies their shared implementation snapshot. Original reports retain their own freezes and limits; the module register remains a dated overview. Conditional RSS moments and the complete fixed-count experiment are included; the joint precision target remains unmet.
 
 - [Proper time: published results and limits](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/lorentz_proper_time/RESULTS.md)
 - [Searchable module catalogue](https://thomasmgfeller.github.io/x6-spectral-astrolabium/modules/)

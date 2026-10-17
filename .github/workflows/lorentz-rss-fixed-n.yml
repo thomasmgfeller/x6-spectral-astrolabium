@@ -1,0 +1,27 @@
+name: Lorentz RSS Fixed-Count Forward Model
+on:
+  pull_request:
+    paths: ['research/lorentz_rss_fixed_n/**', '.github/workflows/lorentz-rss-fixed-n.yml']
+  push:
+    branches: [main]
+    paths: ['research/lorentz_rss_fixed_n/**', '.github/workflows/lorentz-rss-fixed-n.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  reproduce:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - run: python3 -m pip install -r research/lorentz_rss_fixed_n/requirements.txt
+      - name: Exact controls and complete frozen-source replay
+        run: python3 -B research/lorentz_rss_fixed_n/reproduce.py
+      - name: Source inventory
+        run: python3 tests/python/verify_manifest.py

@@ -117,6 +117,8 @@ Quellenlücken, insbesondere fehlende NQK-Archive, bleiben ausdrücklich offen.
 
 **Krümmungsbenchmark abgeschlossen:** [Ergebnisse und vollständiger Replay](research/lorentz_curvature/RESULTS.md). 8.702 Ordnungen nach öffentlich fixiertem Vertrag; beide Empfindlichkeitskriterien verfehlt. Im stärksten primären de-Sitter-Fall melden C2/C3/C4 118/512 Fälle, die längste Kette 5/512. 3.072 konforme Dichtezwillinge zeigen dieselbe Ordnung trotz verschiedener Krümmung. Ein universeller Krümmungssensor aus der Ordnung allein ist bei unbeschränkt unbekannter Beprobungsdichte nicht identifizierbar. [Einfach erklärt (DE/EN)](wiki/de/causal-orders.html#curvature-test).
 
+**RSS bei fester Punktzahl abgeschlossen:** [Herleitung, Ergebnisse und Replay](research/lorentz_rss_fixed_n/README.md). 24.576 unabhängige Wolken nach öffentlicher Quellenfixierung. Das gemeinsame ±5%-Präzisionsziel bleibt unerreicht; die unabhängige C2-Integration stützt die korrigierte Vorhersage. Die untersuchte Krümmungsinversion streut bei N=64/128 sehr stark. [Einfach erklärt (DE/EN)](wiki/de/causal-orders.html#rss-fixed-n).
+
 **Freies Feld und Entropiereferenz:** Der [neue RAX-CQG-Baustein](research/free_field_entropy/RESULTS.md) definiert Zustand, Korrelationen, Rand und Nullmoden. 13 Gegenprüfungen einschließlich einer bekannten Oszillatorentropie bestehen; 64 neue Causal-Set-Ordnungen sind vollständig berechnet. Die Hauptsteigung 0,358 mit 95%-Intervall [0,260; 0,458] ist mit 1/3 vereinbar, erfüllt aber die vorab verlangte Präzision und Cutoff-Stabilität nicht: **REFERENCE_NOT_ESTABLISHED**. Geometrieantworten und zusätzlicher Nutzen gegenüber bisherigen Merkmalen bleiben offen.
 
 ## Frozen reference edition and validation hardening

@@ -1,0 +1,40 @@
+{
+  "schema": "x6.rss-fixed-n/1",
+  "milestone": "Conditional chain means, covariance identity and a bounded de Sitter forward check",
+  "dimension": 4,
+  "sampling": "Independent points uniform in physical volume, conditional on a fixed N; fixed coordinate diamond |eta|+norm(x)<1/2",
+  "source": "Roy, Sinha, Surya, arXiv:1212.0631v1, equations 8, 9, 13, 14, 31, 32",
+  "seed_namespace": "x6/rss-fixed-n/v1/2026-10-17",
+  "importance": {
+    "N": 128,
+    "replicates": 8192,
+    "h": [0.02, 0.05, 0.1, 0.2, 0.4, 0.8],
+    "sampling": "Flat iid point clouds; exact known density-ratio products over chains; time-reflection antithetic average; paired subtraction of flat counts; not actual curved causal-set draws",
+    "primary": "Analytic h^2 derivative from polynomial products, divided by 12 times exact flat chain probability",
+    "intervals": "Bonferroni Student-t intervals, alpha=0.01 over all 21 slope entries (3 derivative plus 18 finite-h). CLT approximation, not finite-sample coverage guarantee",
+    "slope_relative_equivalence_margin": 0.05,
+    "success": "All 3 derivative intervals lie entirely within +/-5% of their conditional RSS slope; otherwise FORWARD_SLOPE_NOT_RESOLVED"
+  },
+  "quadrature": {
+    "h": [0.0, 0.02, 0.05, 0.1, 0.2, 0.4, 0.8, 1.25],
+    "orders": [12, 20, 32],
+    "convergence_absolute_tolerance": 1e-10,
+    "signal_relative_remainder_limit": 0.05,
+    "scope": "Only C2; consecutive quadrature agreement is numerical evidence, not a certified error bound; report discrete tested h values, no interpolation claim"
+  },
+  "direct": {
+    "sizes": [64, 128],
+    "h": [0.0, 0.1, 0.25, 0.5],
+    "replicates_per_cell": 2048,
+    "mean_check": "C2 mean vs independent quadrature: 99% familywise Bonferroni Student-t interval across 8 cells; stochastic diagnostic, not equivalence proof",
+    "covariance": "Sample covariance of Ck/choose(N,k) across independent orders; preserve all off-diagonal terms",
+    "inverse": "Exploratory linear inverse of F2/p2-1,F3/p3-1 to RT^2,R00T^2; report raw bias and single-order RMSE without clipping, fitting, or claimed coverage"
+  },
+  "gates": {
+    "deterministic": "Exact rational coefficients; exhaustive finite atomic covariance identity; brute-force weighted chain counts; flat and converged geometric quadrature",
+    "no_retuning": "No additional seeds, changed budgets or changed thresholds after the first target run; retain failed gates and label post-run fixes",
+    "publication": "Public source commit before first target execution; not an independent preregistration service"
+  },
+  "resources": {"seconds": 600, "address_space_bytes": 2147483648},
+  "nonclaims": ["No correction of an error in the RSS paper", "No novelty claim for conditioning or U-statistics", "No certified curved-space confidence intervals", "No resolution of unrestricted density twins", "No generic separation of R and R00 validated by the one-parameter de Sitter family", "No absolute curvature without an independent scale", "No universal validity window for all observables or geometries", "No changed interpretation of the previous negative benchmark"]
+}
