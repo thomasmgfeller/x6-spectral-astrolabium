@@ -4,7 +4,7 @@ Not every directory is a finished application. This map explains the purpose of 
 
 [Deutsch](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/de/research-map.md) · [Wiki overview](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/en/)
 
-Source snapshot: 2026-10-16 · `08c64744caa584c940b45a8825d0b099ae0c92fb`
+Source snapshot: 2026-10-16 · `967c7662f005d887918cac9350e5bbaf76f653a9`
 
 ## Three direct starting points
 
@@ -39,8 +39,9 @@ The Paderborn pilot uses existing real laboratory data. Its small sample counts 
 3. Open the original documentation and its evidence report.
 4. Check the next outstanding acceptance test. Dated research notes supplement the register for later studies.
 
-This wiki edition explains the published state through PR #42 on 16 October 2026. The register is also a dated snapshot. An older source pin is not automatically the latest state of every subsequent study.
+This wiki snapshot includes the proper-time result publication in PR #44 of 16 October 2026. The module register remains a separately dated overview. Linked original reports govern later individual results; an older source pin does not automatically describe every follow-up study.
 
+- [Proper time: published results and limits](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/lorentz_proper_time/RESULTS.md)
 - [Searchable module catalogue](https://thomasmgfeller.github.io/x6-spectral-astrolabium/modules/)
 - [Module register](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/docs/MODULE_REGISTRY.md)
 - [Later Lorentz studies](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/docs/LORENTZ_RESEARCH.md)

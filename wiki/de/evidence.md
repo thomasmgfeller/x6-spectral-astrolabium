@@ -4,7 +4,7 @@ Frage bei einem Ergebnis immer: Welche Aussage wurde geprüft, mit welchen Daten
 
 [English](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/en/evidence.md) · [Wiki-Übersicht](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/de/)
 
-Quellenstand: 2026-10-16 · `08c64744caa584c940b45a8825d0b099ae0c92fb`
+Quellenstand: 2026-10-16 · `967c7662f005d887918cac9350e5bbaf76f653a9`
 
 ## Vier unterschiedliche Arten von Belegen
 
@@ -22,6 +22,7 @@ Ein archivierter Labordatensatz stammt aus realen Messungen. Seine Auswertung im
 | Status | Bedeutung |
 | --- | --- |
 | PASS | Die ausdrücklich geprüften Kriterien wurden erfüllt. |
+| QUALIFIED_IN_DECLARED_MODEL | Alle festgelegten Hauptkriterien im ausdrücklich genannten Modell sind erfüllt; keine allgemeine physikalische Bestätigung. |
 | FAIL | Mindestens ein bestimmtes Kriterium wurde verletzt. |
 | INCONCLUSIVE | Die Frage bleibt mit dieser Prüfung unentschieden. |
 | NOT_RUN / NOT_PERFORMED / NOT_EXECUTED | Die betreffende Prüfung wurde nicht ausgeführt. |

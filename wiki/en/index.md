@@ -4,7 +4,7 @@ A guide for curious readers, learners and people who want to check the work them
 
 [Deutsch](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/de/) · [Wiki overview](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/en/)
 
-Source snapshot: 2026-10-16 · `08c64744caa584c940b45a8825d0b099ae0c92fb`
+Source snapshot: 2026-10-16 · `967c7662f005d887918cac9350e5bbaf76f653a9`
 
 ## What is X6?
 
@@ -32,8 +32,12 @@ The chapter menu covers both language editions. Switching languages opens the co
 - A local workflow for running, verifying and exporting experiments.
 - Research plans for further mathematics, industrial applications and laboratory work.
 
+Newly documented: the first proper-time experiment is fully published. The interval reference achieves RMSE 0.0316 in the specified flat 1+1 model. The largest matched supplementary control remains unresolved because too few pairs are available. The “Causal orders” chapter explains both findings.
+
 X6 is a public research preview. It does not establish a general spacetime theory, a qualified quantum chip or superior industrial denoising. This describes the available evidence, rather than deciding which questions might eventually be solved.
 
 - [Project portal](https://thomasmgfeller.github.io/x6-spectral-astrolabium/)
 - [All registered modules](https://thomasmgfeller.github.io/x6-spectral-astrolabium/modules/)
 - [Scientific scope](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/docs/SCIENTIFIC_SCOPE.md)
+
+- [Proper-time results explained](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/en/causal-orders.html)

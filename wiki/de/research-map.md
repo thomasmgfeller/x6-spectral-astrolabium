@@ -4,7 +4,7 @@ Nicht jeder Ordner ist eine fertige Anwendung. Diese Karte zeigt, wofür die ein
 
 [English](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/en/research-map.md) · [Wiki-Übersicht](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/de/)
 
-Quellenstand: 2026-10-16 · `08c64744caa584c940b45a8825d0b099ae0c92fb`
+Quellenstand: 2026-10-16 · `967c7662f005d887918cac9350e5bbaf76f653a9`
 
 ## Drei direkte Einstiege
 
@@ -39,8 +39,9 @@ Der Paderborn-Pilot verwendet vorhandene reale Labordaten. Die kleinen Fallzahle
 3. Öffne die Originaldokumentation sowie den jeweiligen Prüfbericht.
 4. Prüfe die nächste offene Abnahme. Bei neueren Studien helfen die datierten Forschungsnotizen zusätzlich zum Register.
 
-Diese Wiki-Fassung erklärt den veröffentlichten Stand bis einschließlich PR #42 vom 16. Oktober 2026. Das Register ist ebenfalls eine datierte Bestandsaufnahme. Ein älterer Quellenpin ist nicht automatisch der neueste Stand aller späteren Studien.
+Dieser Wiki-Stand berücksichtigt die Eigenzeit-Ergebnisveröffentlichung aus PR #44 vom 16. Oktober 2026. Das Modulregister bleibt eine eigene datierte Übersicht. Für spätere Einzelergebnisse sind die verlinkten Originalberichte maßgeblich; ein älterer Quellenpin beschreibt nicht automatisch jede Folgestudie.
 
+- [Eigenzeit: veröffentlichte Ergebnisse und Grenzen](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/lorentz_proper_time/RESULTS.md)
 - [Durchsuchbarer Modulkatalog](https://thomasmgfeller.github.io/x6-spectral-astrolabium/modules/)
 - [Modulregister](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/docs/MODULE_REGISTRY.md)
 - [Neuere Lorentz-Studien](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/docs/LORENTZ_RESEARCH.md)

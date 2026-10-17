@@ -8,11 +8,14 @@ GitHub-Pages-Portals, nicht ein getrennt gepflegtes GitHub-Wiki-Repository.
 - [Deutsch](../../wiki/de/index.html)
 - [English](../../wiki/en/index.html)
 
-Quellenstand dieser Erstausgabe: 16. Oktober 2026, main nach PR #42,
-Commit `08c64744caa584c940b45a8825d0b099ae0c92fb`.
-Die Einführung ersetzt keine Originaldefinition, keinen Prüfvertrag und
-keinen ausgeführten Evidenzbericht. Neuere Folgeläufe sind nicht allein
-durch ihre Erwähnung als vollständig veröffentlicht zu verstehen.
+Aktualisierter Quellenstand: 16. Oktober 2026, Eigenzeit-Ergebnisse aus PR #44,
+Commit `967c7662f005d887918cac9350e5bbaf76f653a9`.
+Die Erstausgabe aus PR #43 erklärte den Stand nach dem Design in PR #42.
+Diese Aktualisierung ergänzt den ausgeführten Lauf: 6.912 Ordnungen,
+RMSE 0,031614 im Hauptvergleich und die unzureichende größte Zusatzkontrolle
+(63 statt 128 Paare). Originaldaten, Quellenfixierung und Ergebnisgrenzen
+werden nicht verändert. Die Einführung ersetzt keine Originaldefinition,
+keinen Prüfvertrag und keinen ausgeführten Evidenzbericht.
 
 ## Pflege / maintenance
 
