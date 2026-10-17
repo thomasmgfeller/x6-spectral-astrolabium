@@ -7,6 +7,7 @@ X6 Spectral Astrolabium ist ein offener Forschungshub für Signale, Graphen und 
 
 - [Astrolabium öffnen →](https://thomasmgfeller.github.io/x6-spectral-astrolabium/app/)
 - [Signal Lab öffnen →](https://thomasmgfeller.github.io/x6-spectral-astrolabium/app/signal-lab.html)
+- [Eigenzeit-Lab öffnen →](https://thomasmgfeller.github.io/x6-spectral-astrolabium/app/proper-time.html)
 - [Alle Module erkunden →](https://thomasmgfeller.github.io/x6-spectral-astrolabium/modules/)
 
 ## Vom Lichtsignal zur auswertbaren Messung
@@ -32,7 +33,7 @@ Explorativer Software-Prototyp, keine validierte Quantengravitation. Die Archite
 
 ## Weitere Werkzeuge & Referenzen
 
-Die beiden Browseranwendungen starten direkt oben. Diese Einstiege führen zu den passenden Anleitungen, Voraussetzungen und dokumentierten Prüfungen.
+Die Browseranwendungen starten direkt oben. Diese Einstiege führen zu den passenden Anleitungen, Voraussetzungen und dokumentierten Prüfungen.
 
 ### Gemeinsamer Workflow
 

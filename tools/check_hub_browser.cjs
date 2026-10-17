@@ -38,6 +38,7 @@ async function main() {
     await page.keyboard.press('Tab');
     assert.equal(await page.evaluate(()=>document.activeElement.className),'skip');
     await page.keyboard.press('Enter');
+    await page.waitForURL(url=>url.hash==='#main');
     assert.equal(new URL(page.url()).hash,'#main');
     checks.push('English entry has three routes and a keyboard-accessible skip link');
     await page.getByRole('link',{name:'Deutsch',exact:true}).click();
