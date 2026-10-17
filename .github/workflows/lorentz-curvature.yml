@@ -1,0 +1,33 @@
+name: Lorentz Curvature Sensitivity and Identifiability
+on:
+  pull_request:
+    paths: ['research/lorentz_curvature/**', '.github/workflows/lorentz-curvature.yml']
+  push:
+    branches: [main]
+    paths: ['research/lorentz_curvature/**', '.github/workflows/lorentz-curvature.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  reproduce:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Install pinned dependencies
+        run: python3 -m pip install -r research/lorentz_curvature/requirements.txt
+      - name: Independent geometry and finite-order controls
+        run: python3 -B research/lorentz_curvature/selftest.py
+      - name: Full isolated evidence replay with audited coordinate variant
+        env:
+          OPENBLAS_NUM_THREADS: '1'
+          OMP_NUM_THREADS: '1'
+        run: python3 -B research/lorentz_curvature/reproduce_portable.py
+      - name: Source inventory
+        run: python3 tests/python/verify_manifest.py

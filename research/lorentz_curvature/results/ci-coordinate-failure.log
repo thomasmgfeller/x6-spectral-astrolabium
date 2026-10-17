@@ -1,0 +1,427 @@
+﻿2026-10-17T21:18:21.6840751Z Current runner version: '2.337.0'
+2026-10-17T21:18:21.6865287Z ##[group]Runner Image Provisioner
+2026-10-17T21:18:21.6866191Z Hosted Compute Agent
+2026-10-17T21:18:21.6866836Z Version: 20261012.601
+2026-10-17T21:18:21.6867453Z Commit: f3dc54e1fb89da6852db922499a0233137369e1d
+2026-10-17T21:18:21.6868230Z Build Date: 2026-10-12T17:48:21Z
+2026-10-17T21:18:21.6868956Z Worker ID: {25ac7b44-65ba-4714-9fea-b41d7c5e23a6}
+2026-10-17T21:18:21.6870134Z Region: westus
+2026-10-17T21:18:21.6870873Z Cloud: Azure
+2026-10-17T21:18:21.6871445Z ##[endgroup]
+2026-10-17T21:18:21.6873116Z ##[group]Operating System
+2026-10-17T21:18:21.6873747Z Ubuntu
+2026-10-17T21:18:21.6874240Z 24.04.5
+2026-10-17T21:18:21.6874851Z LTS
+2026-10-17T21:18:21.6875440Z ##[endgroup]
+2026-10-17T21:18:21.6876029Z ##[group]Runner Image
+2026-10-17T21:18:21.6876636Z Image: ubuntu-24.04
+2026-10-17T21:18:21.6877218Z Version: 20261012.334.1
+2026-10-17T21:18:21.6878530Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261012.334/images/ubuntu/Ubuntu2404-Readme.md
+2026-10-17T21:18:21.6880312Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261012.334
+2026-10-17T21:18:21.6881307Z ##[endgroup]
+2026-10-17T21:18:21.6882475Z ##[group]GITHUB_TOKEN Permissions
+2026-10-17T21:18:21.6884334Z Contents: read
+2026-10-17T21:18:21.6884940Z Metadata: read
+2026-10-17T21:18:21.6885639Z ##[endgroup]
+2026-10-17T21:18:21.6888154Z Secret source: Actions
+2026-10-17T21:18:21.6889400Z Cache mode: write
+2026-10-17T21:18:21.6890172Z Prepare workflow directory
+2026-10-17T21:18:21.7234439Z Prepare all required actions
+2026-10-17T21:18:21.7284777Z Getting action download info
+2026-10-17T21:18:22.1084676Z Download action repository 'actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09' (SHA:fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09)
+2026-10-17T21:18:22.2226494Z Download action repository 'actions/setup-python@v6' (SHA:ece7cb06caefa5fff74198d8649806c4678c61a1)
+2026-10-17T21:18:22.4420313Z Complete job name: reproduce
+2026-10-17T21:18:22.5228805Z ##[group]Run actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09
+2026-10-17T21:18:22.5230173Z with:
+2026-10-17T21:18:22.5230612Z   fetch-depth: 0
+2026-10-17T21:18:22.5231087Z   persist-credentials: false
+2026-10-17T21:18:22.5231696Z   repository: thomasmgfeller/x6-spectral-astrolabium
+2026-10-17T21:18:22.5235743Z   token: ***
+2026-10-17T21:18:22.5236185Z   ssh-strict: true
+2026-10-17T21:18:22.5236617Z   ssh-user: git
+2026-10-17T21:18:22.5237040Z   clean: true
+2026-10-17T21:18:22.5237486Z   sparse-checkout-cone-mode: true
+2026-10-17T21:18:22.5238033Z   fetch-tags: false
+2026-10-17T21:18:22.5238530Z   show-progress: true
+2026-10-17T21:18:22.5239026Z   lfs: false
+2026-10-17T21:18:22.5239748Z   submodules: false
+2026-10-17T21:18:22.5240250Z   set-safe-directory: true
+2026-10-17T21:18:22.5240824Z   allow-unsafe-pr-checkout: false
+2026-10-17T21:18:22.5241676Z ##[endgroup]
+2026-10-17T21:18:22.6302678Z Syncing repository: thomasmgfeller/x6-spectral-astrolabium
+2026-10-17T21:18:22.6305390Z ##[group]Getting Git version info
+2026-10-17T21:18:22.6306340Z Working directory is '/home/runner/work/x6-spectral-astrolabium/x6-spectral-astrolabium'
+2026-10-17T21:18:22.6307540Z [command]/usr/bin/git version
+2026-10-17T21:18:22.6382389Z git version 2.55.0
+2026-10-17T21:18:22.6408265Z ##[endgroup]
+2026-10-17T21:18:22.6426369Z Temporarily overriding HOME='/home/runner/work/_temp/d8c9b4f8-0361-4b2e-98e7-6b5a026b8e3c' before making global git config changes
+2026-10-17T21:18:22.6427837Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-17T21:18:22.6433416Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/x6-spectral-astrolabium/x6-spectral-astrolabium
+2026-10-17T21:18:22.6492495Z Deleting the contents of '/home/runner/work/x6-spectral-astrolabium/x6-spectral-astrolabium'
+2026-10-17T21:18:22.6520167Z ##[group]Initializing the repository
+2026-10-17T21:18:22.6540640Z [command]/usr/bin/git init /home/runner/work/x6-spectral-astrolabium/x6-spectral-astrolabium
+2026-10-17T21:18:22.6641512Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-10-17T21:18:22.6646949Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-10-17T21:18:22.6648689Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-10-17T21:18:22.6650254Z hint: call:
+2026-10-17T21:18:22.6650988Z hint:
+2026-10-17T21:18:22.6651864Z hint: 	git config --global init.defaultBranch <name>
+2026-10-17T21:18:22.6652911Z hint:
+2026-10-17T21:18:22.6653906Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-10-17T21:18:22.6655468Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-10-17T21:18:22.6656833Z hint:
+2026-10-17T21:18:22.6657648Z hint: 	git branch -m <name>
+2026-10-17T21:18:22.6658514Z hint:
+2026-10-17T21:18:22.6659913Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-10-17T21:18:22.6662018Z Initialized empty Git repository in /home/runner/work/x6-spectral-astrolabium/x6-spectral-astrolabium/.git/
+2026-10-17T21:18:22.6665350Z [command]/usr/bin/git remote add origin https://github.com/thomasmgfeller/x6-spectral-astrolabium
+2026-10-17T21:18:22.6728876Z ##[endgroup]
+2026-10-17T21:18:22.6730673Z ##[group]Disabling automatic garbage collection
+2026-10-17T21:18:22.6733203Z [command]/usr/bin/git config --local gc.auto 0
+2026-10-17T21:18:22.6768547Z ##[endgroup]
+2026-10-17T21:18:22.6770481Z ##[group]Setting up auth
+2026-10-17T21:18:22.6777933Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-17T21:18:22.6815935Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-17T21:18:22.7195499Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-17T21:18:22.7235851Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-17T21:18:22.7492893Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-17T21:18:22.7538576Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-17T21:18:22.7803738Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-17T21:18:22.7851363Z ##[endgroup]
+2026-10-17T21:18:22.7853162Z ##[group]Fetching the repository
+2026-10-17T21:18:22.7865203Z [command]/usr/bin/git -c protocol.version=2 fetch --prune --no-recurse-submodules origin +refs/heads/*:refs/remotes/origin/* +refs/tags/*:refs/tags/* +c415c0eab9d0f139e262c722ebf6aa045eb40374:refs/remotes/pull/48/merge
+2026-10-17T21:18:28.5417847Z From https://github.com/thomasmgfeller/x6-spectral-astrolabium
+2026-10-17T21:18:28.5420658Z  * [new branch]      audit/h7-dependencies                    -> origin/audit/h7-dependencies
+2026-10-17T21:18:28.5423056Z  * [new branch]      codex/hub-direct-entry-points            -> origin/codex/hub-direct-entry-points
+2026-10-17T21:18:28.5425638Z  * [new branch]      codex/rax-cqg-landing-20261016           -> origin/codex/rax-cqg-landing-20261016
+2026-10-17T21:18:28.5428237Z  * [new branch]      docs/bilingual-x6-wiki                   -> origin/docs/bilingual-x6-wiki
+2026-10-17T21:18:28.5431037Z  * [new branch]      docs/module-register-20261015            -> origin/docs/module-register-20261015
+2026-10-17T21:18:28.5433663Z  * [new branch]      docs/numerics-baseline-20261015          -> origin/docs/numerics-baseline-20261015
+2026-10-17T21:18:28.5436390Z  * [new branch]      docs/research-hub-accessibility          -> origin/docs/research-hub-accessibility
+2026-10-17T21:18:28.5469805Z  * [new branch]      docs/wiki-proper-time-results            -> origin/docs/wiki-proper-time-results
+2026-10-17T21:18:28.5472527Z  * [new branch]      docs/wolfram-causal-order-v0-1           -> origin/docs/wolfram-causal-order-v0-1
+2026-10-17T21:18:28.5474684Z  * [new branch]      docs/wolfram-zero-failures-v0-1          -> origin/docs/wolfram-zero-failures-v0-1
+2026-10-17T21:18:28.5476849Z  * [new branch]      feat/offline-reference-suite             -> origin/feat/offline-reference-suite
+2026-10-17T21:18:28.5478989Z  * [new branch]      feat/signal-validation-lab               -> origin/feat/signal-validation-lab
+2026-10-17T21:18:28.5481505Z  * [new branch]      feature/sagnac-integration-preview-0.1   -> origin/feature/sagnac-integration-preview-0.1
+2026-10-17T21:18:28.5483936Z  * [new branch]      fix/evidence-audit-20261012              -> origin/fix/evidence-audit-20261012
+2026-10-17T21:18:28.5486198Z  * [new branch]      fix/numerics-scale-20261015              -> origin/fix/numerics-scale-20261015
+2026-10-17T21:18:28.5488289Z  * [new branch]      fix/safe-x6-publish                      -> origin/fix/safe-x6-publish
+2026-10-17T21:18:28.5490737Z  * [new branch]      fix/signal-lab-evidence-archive          -> origin/fix/signal-lab-evidence-archive
+2026-10-17T21:18:28.5492962Z  * [new branch]      hardware/c1-e01-readiness                -> origin/hardware/c1-e01-readiness
+2026-10-17T21:18:28.5494739Z  * [new branch]      main                                     -> origin/main
+2026-10-17T21:18:28.5496584Z  * [new branch]      publication/acvm-c1-v0.1                 -> origin/publication/acvm-c1-v0.1
+2026-10-17T21:18:28.5498717Z  * [new branch]      publication/acvm-optical-v0.2            -> origin/publication/acvm-optical-v0.2
+2026-10-17T21:18:28.5501400Z  * [new branch]      publication/curvature-results-20261017   -> origin/publication/curvature-results-20261017
+2026-10-17T21:18:28.5504648Z  * [new branch]      publication/proper-time-complete-20261017 -> origin/publication/proper-time-complete-20261017
+2026-10-17T21:18:28.5508551Z  * [new branch]      publication/proper-time-transfer-20261016 -> origin/publication/proper-time-transfer-20261016
+2026-10-17T21:18:28.5511900Z  * [new branch]      publication/proper-time-transport-20261017 -> origin/publication/proper-time-transport-20261017
+2026-10-17T21:18:28.5514669Z  * [new branch]      publication/sagnac-components-v0.1-20261015 -> origin/publication/sagnac-components-v0.1-20261015
+2026-10-17T21:18:28.5517351Z  * [new branch]      publication/wolfram-polarity-v0.1-20261015 -> origin/publication/wolfram-polarity-v0.1-20261015
+2026-10-17T21:18:28.5520443Z  * [new branch]      publish/photonic-two-qubit-design        -> origin/publish/photonic-two-qubit-design
+2026-10-17T21:18:28.5523123Z  * [new branch]      publish/rax-cqg-benchmark-v0-2-0         -> origin/publish/rax-cqg-benchmark-v0-2-0
+2026-10-17T21:18:28.5525735Z  * [new branch]      research/curvature-identifiability-v1    -> origin/research/curvature-identifiability-v1
+2026-10-17T21:18:28.5528342Z  * [new branch]      research/density-height-controls-v1      -> origin/research/density-height-controls-v1
+2026-10-17T21:18:28.5531241Z  * [new branch]      research/free-field-entropy-v1           -> origin/research/free-field-entropy-v1
+2026-10-17T21:18:28.5533423Z  * [new branch]      research/h7-observables                  -> origin/research/h7-observables
+2026-10-17T21:18:28.5535472Z  * [new branch]      research/h7-structure                    -> origin/research/h7-structure
+2026-10-17T21:18:28.5537598Z  * [new branch]      research/industrial-data-pilot           -> origin/research/industrial-data-pilot
+2026-10-17T21:18:28.5540054Z  * [new branch]      research/lorentz-n6-residuals            -> origin/research/lorentz-n6-residuals
+2026-10-17T21:18:28.5542299Z  * [new branch]      research/lorentz-n7-complete             -> origin/research/lorentz-n7-complete
+2026-10-17T21:18:28.5544572Z  * [new branch]      research/lorentz-v1-workpackages         -> origin/research/lorentz-v1-workpackages
+2026-10-17T21:18:28.5546885Z  * [new branch]      research/n1-residual-diagnosis           -> origin/research/n1-residual-diagnosis
+2026-10-17T21:18:28.5549780Z  * [new branch]      research/n1-stress-publication           -> origin/research/n1-stress-publication
+2026-10-17T21:18:28.5551800Z  * [new branch]      research/nqk                             -> origin/research/nqk
+2026-10-17T21:18:28.5553715Z  * [new branch]      research/photonic-link                   -> origin/research/photonic-link
+2026-10-17T21:18:28.5555788Z  * [new branch]      research/proper-time-run-v1              -> origin/research/proper-time-run-v1
+2026-10-17T21:18:28.5557980Z  * [new branch]      research/proper-time-target-v1           -> origin/research/proper-time-target-v1
+2026-10-17T21:18:28.5560647Z  * [new branch]      research/rax-w1-publication              -> origin/research/rax-w1-publication
+2026-10-17T21:18:28.5563101Z  * [new branch]      research/relational-boundary-v1          -> origin/research/relational-boundary-v1
+2026-10-17T21:18:28.5565655Z  * [new branch]      research/relational-matching-geometry-v1 -> origin/research/relational-matching-geometry-v1
+2026-10-17T21:18:28.5568230Z  * [new branch]      research/relational-transfer-v1          -> origin/research/relational-transfer-v1
+2026-10-17T21:18:28.5571084Z  * [new branch]      research/validation-reference-release    -> origin/research/validation-reference-release
+2026-10-17T21:18:28.5573450Z  * [new branch]      research/x6-edge-reference               -> origin/research/x6-edge-reference
+2026-10-17T21:18:28.5575713Z  * [new branch]      research/x6-experiment-fabric-v1         -> origin/research/x6-experiment-fabric-v1
+2026-10-17T21:18:28.5578423Z  * [new branch]      research/x6-fingerprint-v1               -> origin/research/x6-fingerprint-v1
+2026-10-17T21:18:28.5581437Z  * [new branch]      research/x6-integration-v0.1             -> origin/research/x6-integration-v0.1
+2026-10-17T21:18:28.5584258Z  * [new branch]      research/x6-neutral-discovery-v1         -> origin/research/x6-neutral-discovery-v1
+2026-10-17T21:18:28.5587117Z  * [new branch]      research/x6-qe-v0.1                      -> origin/research/x6-qe-v0.1
+2026-10-17T21:18:28.5589788Z  * [new branch]      test/numerics-120-20261015               -> origin/test/numerics-120-20261015
+2026-10-17T21:18:28.5592134Z  * [new branch]      x6-bounded-math-agent                    -> origin/x6-bounded-math-agent
+2026-10-17T21:18:28.5594403Z  * [new branch]      x6-source-preview                        -> origin/x6-source-preview
+2026-10-17T21:18:28.5596559Z  * [new tag]         reference-2026.10.15                     -> reference-2026.10.15
+2026-10-17T21:18:28.5598611Z  * [new tag]         reference-2026.10.15-qe1                 -> reference-2026.10.15-qe1
+2026-10-17T21:18:28.5600966Z  * [new ref]         c415c0eab9d0f139e262c722ebf6aa045eb40374 -> pull/48/merge
+2026-10-17T21:18:28.5604518Z ##[endgroup]
+2026-10-17T21:18:28.5606016Z ##[group]Determining the checkout info
+2026-10-17T21:18:28.5607737Z ##[endgroup]
+2026-10-17T21:18:28.5608708Z [command]/usr/bin/git sparse-checkout disable
+2026-10-17T21:18:28.5611920Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-10-17T21:18:28.5615390Z ##[group]Checking out the ref
+2026-10-17T21:18:28.5616920Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/48/merge
+2026-10-17T21:18:28.9536345Z Note: switching to 'refs/remotes/pull/48/merge'.
+2026-10-17T21:18:28.9539909Z 
+2026-10-17T21:18:28.9541049Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-10-17T21:18:28.9542725Z changes and commit them, and you can discard any commits you make in this
+2026-10-17T21:18:28.9544138Z state without impacting any branches by switching back to a branch.
+2026-10-17T21:18:28.9544953Z 
+2026-10-17T21:18:28.9545512Z If you want to create a new branch to retain commits you create, you may
+2026-10-17T21:18:28.9546837Z do so (now or later) by using -c with the switch command. Example:
+2026-10-17T21:18:28.9547639Z 
+2026-10-17T21:18:28.9547993Z   git switch -c <new-branch-name>
+2026-10-17T21:18:28.9548638Z 
+2026-10-17T21:18:28.9549605Z Or undo this operation with:
+2026-10-17T21:18:28.9550151Z 
+2026-10-17T21:18:28.9550470Z   git switch -
+2026-10-17T21:18:28.9550885Z 
+2026-10-17T21:18:28.9551637Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-10-17T21:18:28.9552658Z 
+2026-10-17T21:18:28.9553831Z HEAD is now at c415c0e Merge 19454bef40f46be23107c20f29daa8e329873eb1 into 86f7b6049c5e9777f73ac30c90ce422a42d01fdf
+2026-10-17T21:18:28.9570628Z ##[endgroup]
+2026-10-17T21:18:28.9618958Z [command]/usr/bin/git log -1 --format=%H
+2026-10-17T21:18:28.9656171Z c415c0eab9d0f139e262c722ebf6aa045eb40374
+2026-10-17T21:18:28.9668388Z ##[group]Removing auth
+2026-10-17T21:18:28.9672719Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-17T21:18:28.9709888Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-17T21:18:28.9947859Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-17T21:18:28.9988155Z http.https://github.com/.extraheader
+2026-10-17T21:18:28.9998372Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-10-17T21:18:29.0039884Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-17T21:18:29.0274292Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-17T21:18:29.0307947Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-17T21:18:29.0536946Z ##[endgroup]
+2026-10-17T21:18:29.1008769Z ##[group]Run actions/setup-python@v6
+2026-10-17T21:18:29.1010257Z with:
+2026-10-17T21:18:29.1011042Z   python-version: 3.12
+2026-10-17T21:18:29.1011969Z   check-latest: false
+2026-10-17T21:18:29.1022769Z   token: ***
+2026-10-17T21:18:29.1023631Z   update-environment: true
+2026-10-17T21:18:29.1024694Z   allow-prereleases: false
+2026-10-17T21:18:29.1025676Z   freethreaded: false
+2026-10-17T21:18:29.1026558Z ##[endgroup]
+2026-10-17T21:18:29.2470556Z ##[group]Installed versions
+2026-10-17T21:18:29.2591313Z Successfully set up CPython (3.12.15)
+2026-10-17T21:18:29.2594017Z ##[endgroup]
+2026-10-17T21:18:29.2812643Z ##[group]Run python3 -m pip install -r research/lorentz_curvature/requirements.txt
+2026-10-17T21:18:29.2815921Z [36;1mpython3 -m pip install -r research/lorentz_curvature/requirements.txt[0m
+2026-10-17T21:18:29.3157146Z shell: /usr/bin/bash -e {0}
+2026-10-17T21:18:29.3158146Z env:
+2026-10-17T21:18:29.3159501Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-17T21:18:29.3161219Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+2026-10-17T21:18:29.3162956Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-17T21:18:29.3164443Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-17T21:18:29.3165875Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-17T21:18:29.3167317Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+2026-10-17T21:18:29.3168551Z ##[endgroup]
+2026-10-17T21:18:30.4834481Z Collecting numpy==2.3.5 (from -r research/lorentz_curvature/requirements.txt (line 1))
+2026-10-17T21:18:30.5303724Z   Downloading numpy-2.3.5-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+2026-10-17T21:18:30.6854328Z Collecting scipy==1.17.0 (from -r research/lorentz_curvature/requirements.txt (line 2))
+2026-10-17T21:18:30.6922977Z   Downloading scipy-1.17.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+2026-10-17T21:18:30.7150366Z Downloading numpy-2.3.5-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.6 MB)
+2026-10-17T21:18:30.8288910Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.6/16.6 MB 154.8 MB/s  0:00:00
+2026-10-17T21:18:30.8327084Z Downloading scipy-1.17.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (35.0 MB)
+2026-10-17T21:18:31.0366534Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 35.0/35.0 MB 174.0 MB/s  0:00:00
+2026-10-17T21:18:31.1797446Z Installing collected packages: numpy, scipy
+2026-10-17T21:18:37.7970861Z 
+2026-10-17T21:18:37.7982245Z Successfully installed numpy-2.3.5 scipy-1.17.0
+2026-10-17T21:18:37.8719625Z ##[group]Run python3 -B research/lorentz_curvature/selftest.py
+2026-10-17T21:18:37.8720143Z [36;1mpython3 -B research/lorentz_curvature/selftest.py[0m
+2026-10-17T21:18:37.8790176Z shell: /usr/bin/bash -e {0}
+2026-10-17T21:18:37.8790465Z env:
+2026-10-17T21:18:37.8790764Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-17T21:18:37.8791265Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+2026-10-17T21:18:37.8791764Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-17T21:18:37.8792214Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-17T21:18:37.8792675Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-17T21:18:37.8793110Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+2026-10-17T21:18:37.8793478Z ##[endgroup]
+2026-10-17T21:18:39.0078065Z {
+2026-10-17T21:18:39.0078747Z   "status": "PASS",
+2026-10-17T21:18:39.0079399Z   "exact_Ricci_cases": 12,
+2026-10-17T21:18:39.0079892Z   "exhaustive_orders": 24,
+2026-10-17T21:18:39.0080271Z   "relabel_cases": 24,
+2026-10-17T21:18:39.0080624Z   "sampler_checks": [
+2026-10-17T21:18:39.0080948Z     {
+2026-10-17T21:18:39.0081227Z       "h": 0.0,
+2026-10-17T21:18:39.0081570Z       "cut": -0.2,
+2026-10-17T21:18:39.0081894Z       "p_value": 0.4457493589392979
+2026-10-17T21:18:39.0082271Z     },
+2026-10-17T21:18:39.0082540Z     {
+2026-10-17T21:18:39.0082813Z       "h": 0.0,
+2026-10-17T21:18:39.0083104Z       "cut": 0.0,
+2026-10-17T21:18:39.0083423Z       "p_value": 0.24357259067621517
+2026-10-17T21:18:39.0083791Z     },
+2026-10-17T21:18:39.0084067Z     {
+2026-10-17T21:18:39.0084335Z       "h": 0.0,
+2026-10-17T21:18:39.0084622Z       "cut": 0.2,
+2026-10-17T21:18:39.0084932Z       "p_value": 0.4697526857805462
+2026-10-17T21:18:39.0085285Z     },
+2026-10-17T21:18:39.0085534Z     {
+2026-10-17T21:18:39.0085790Z       "h": 0.25,
+2026-10-17T21:18:39.0086083Z       "cut": -0.2,
+2026-10-17T21:18:39.0086401Z       "p_value": 0.2205333734476963
+2026-10-17T21:18:39.0086795Z     },
+2026-10-17T21:18:39.0087051Z     {
+2026-10-17T21:18:39.0087304Z       "h": 0.25,
+2026-10-17T21:18:39.0087579Z       "cut": 0.0,
+2026-10-17T21:18:39.0087883Z       "p_value": 0.9051420510555389
+2026-10-17T21:18:39.0088239Z     },
+2026-10-17T21:18:39.0088485Z     {
+2026-10-17T21:18:39.0088746Z       "h": 0.25,
+2026-10-17T21:18:39.0089046Z       "cut": 0.2,
+2026-10-17T21:18:39.0089595Z       "p_value": 0.4125731004594482
+2026-10-17T21:18:39.0089947Z     },
+2026-10-17T21:18:39.0090197Z     {
+2026-10-17T21:18:39.0090447Z       "h": 0.75,
+2026-10-17T21:18:39.0090732Z       "cut": -0.2,
+2026-10-17T21:18:39.0091047Z       "p_value": 0.15748930915579762
+2026-10-17T21:18:39.0091401Z     },
+2026-10-17T21:18:39.0091649Z     {
+2026-10-17T21:18:39.0091898Z       "h": 0.75,
+2026-10-17T21:18:39.0092189Z       "cut": 0.0,
+2026-10-17T21:18:39.0092490Z       "p_value": 0.2810170390284069
+2026-10-17T21:18:39.0092852Z     },
+2026-10-17T21:18:39.0093108Z     {
+2026-10-17T21:18:39.0093360Z       "h": 0.75,
+2026-10-17T21:18:39.0093655Z       "cut": 0.2,
+2026-10-17T21:18:39.0093948Z       "p_value": 0.39694609070248943
+2026-10-17T21:18:39.0094323Z     },
+2026-10-17T21:18:39.0094585Z     {
+2026-10-17T21:18:39.0094841Z       "h": 1.25,
+2026-10-17T21:18:39.0095122Z       "cut": -0.2,
+2026-10-17T21:18:39.0095425Z       "p_value": 0.09326692663807892
+2026-10-17T21:18:39.0095772Z     },
+2026-10-17T21:18:39.0096023Z     {
+2026-10-17T21:18:39.0096274Z       "h": 1.25,
+2026-10-17T21:18:39.0096548Z       "cut": 0.0,
+2026-10-17T21:18:39.0096858Z       "p_value": 0.14097287632434705
+2026-10-17T21:18:39.0097742Z     },
+2026-10-17T21:18:39.0097991Z     {
+2026-10-17T21:18:39.0098250Z       "h": 1.25,
+2026-10-17T21:18:39.0098551Z       "cut": 0.2,
+2026-10-17T21:18:39.0098873Z       "p_value": 0.36316242570170926
+2026-10-17T21:18:39.0099427Z     }
+2026-10-17T21:18:39.0099674Z   ],
+2026-10-17T21:18:39.0100064Z   "meaning": "Development checks only; no target namespace used"
+2026-10-17T21:18:39.0100575Z }
+2026-10-17T21:18:39.0867605Z ##[group]Run python3 -B research/lorentz_curvature/reproduce.py
+2026-10-17T21:18:39.0868102Z [36;1mpython3 -B research/lorentz_curvature/reproduce.py[0m
+2026-10-17T21:18:39.0933466Z shell: /usr/bin/bash -e {0}
+2026-10-17T21:18:39.0933717Z env:
+2026-10-17T21:18:39.0933981Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-17T21:18:39.0934424Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+2026-10-17T21:18:39.0934857Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-17T21:18:39.0935257Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-17T21:18:39.0935651Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-17T21:18:39.0936033Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+2026-10-17T21:18:39.0936378Z   OPENBLAS_NUM_THREADS: 1
+2026-10-17T21:18:39.0936600Z   OMP_NUM_THREADS: 1
+2026-10-17T21:18:39.0936806Z ##[endgroup]
+2026-10-17T21:18:52.5190226Z {
+2026-10-17T21:18:52.5191021Z   "status": "PASS_ARCHIVED_EVIDENCE",
+2026-10-17T21:18:52.5191628Z   "orders": 8702,
+2026-10-17T21:18:52.5192048Z   "independent_chain_counts": 26106,
+2026-10-17T21:18:52.5192520Z   "rank_checks": 12288,
+2026-10-17T21:18:52.5192896Z   "conformal_twins": 3072,
+2026-10-17T21:18:52.5193302Z   "relation_error_controls": 1024,
+2026-10-17T21:18:52.5193861Z   "source_commit": "31cfd8ca832cffe67942cd198eb2d9d260765f62",
+2026-10-17T21:18:52.5194470Z   "external_replication": false
+2026-10-17T21:18:52.5194903Z }
+2026-10-17T21:18:55.2672317Z N=64 flat_uniform: 512 orders completed
+2026-10-17T21:18:56.6864163Z N=64 de_sitter_025: 512 orders completed
+2026-10-17T21:18:58.1657708Z N=64 de_sitter_075: 512 orders completed
+2026-10-17T21:19:00.1056453Z N=64 de_sitter_125: 512 orders completed
+2026-10-17T21:19:00.7366213Z N=64 flat_spatial_compression: 512 orders completed
+2026-10-17T21:19:01.2439859Z N=64 flat_time_mask: 512 orders completed
+2026-10-17T21:19:06.4398201Z N=128 flat_uniform: 512 orders completed
+2026-10-17T21:19:09.8905698Z N=128 de_sitter_025: 512 orders completed
+2026-10-17T21:19:13.4664051Z N=128 de_sitter_075: 512 orders completed
+2026-10-17T21:19:17.9212938Z N=128 de_sitter_125: 512 orders completed
+2026-10-17T21:19:19.7631692Z N=128 flat_spatial_compression: 512 orders completed
+2026-10-17T21:19:21.1351026Z N=128 flat_time_mask: 512 orders completed
+2026-10-17T21:19:25.9472485Z {
+2026-10-17T21:19:25.9472861Z   "joint": {
+2026-10-17T21:19:25.9473194Z     "flat_uniform": {
+2026-10-17T21:19:25.9473538Z       "warnings": 10,
+2026-10-17T21:19:25.9473863Z       "trials": 512,
+2026-10-17T21:19:25.9474175Z       "bounds": [
+2026-10-17T21:19:25.9474521Z         0.008394603655458476,
+2026-10-17T21:19:25.9474872Z         0.03816751312201263
+2026-10-17T21:19:25.9475207Z       ]
+2026-10-17T21:19:25.9475488Z     },
+2026-10-17T21:19:25.9475755Z     "de_sitter_125": {
+2026-10-17T21:19:25.9476083Z       "warnings": 118,
+2026-10-17T21:19:25.9476408Z       "trials": 512,
+2026-10-17T21:19:25.9476720Z       "bounds": [
+2026-10-17T21:19:25.9477028Z         0.18987178121101633,
+2026-10-17T21:19:25.9477359Z         0.2750501524327573
+2026-10-17T21:19:25.9477682Z       ]
+2026-10-17T21:19:25.9477941Z     },
+2026-10-17T21:19:25.9478224Z     "null_upper": 0.03816751312201263,
+2026-10-17T21:19:25.9478623Z     "power_lower": 0.18987178121101633,
+2026-10-17T21:19:25.9479077Z     "status": "PRIMARY_SENSITIVITY_NOT_ESTABLISHED"
+2026-10-17T21:19:25.9479794Z   },
+2026-10-17T21:19:25.9480060Z   "height": {
+2026-10-17T21:19:25.9480354Z     "flat_uniform": {
+2026-10-17T21:19:25.9480663Z       "warnings": 1,
+2026-10-17T21:19:25.9480964Z       "trials": 512,
+2026-10-17T21:19:25.9481653Z       "bounds": [
+2026-10-17T21:19:25.9481960Z         2.4567632208554663e-05,
+2026-10-17T21:19:25.9482304Z         0.012397457103173068
+2026-10-17T21:19:25.9482631Z       ]
+2026-10-17T21:19:25.9482880Z     },
+2026-10-17T21:19:25.9483141Z     "de_sitter_125": {
+2026-10-17T21:19:25.9483450Z       "warnings": 5,
+2026-10-17T21:19:25.9483740Z       "trials": 512,
+2026-10-17T21:19:25.9484282Z       "bounds": [
+2026-10-17T21:19:25.9484589Z         0.002650623608810759,
+2026-10-17T21:19:25.9484920Z         0.02474351615229619
+2026-10-17T21:19:25.9485235Z       ]
+2026-10-17T21:19:25.9485493Z     },
+2026-10-17T21:19:25.9485779Z     "null_upper": 0.012397457103173068,
+2026-10-17T21:19:25.9486175Z     "power_lower": 0.002650623608810759,
+2026-10-17T21:19:25.9486615Z     "status": "PRIMARY_SENSITIVITY_NOT_ESTABLISHED"
+2026-10-17T21:19:25.9487322Z   }
+2026-10-17T21:19:25.9490115Z }
+2026-10-17T21:19:38.6404005Z {
+2026-10-17T21:19:38.6404534Z   "status": "PASS_ARCHIVED_EVIDENCE",
+2026-10-17T21:19:38.6405041Z   "orders": 8702,
+2026-10-17T21:19:38.6405450Z   "independent_chain_counts": 26106,
+2026-10-17T21:19:38.6405995Z   "rank_checks": 12288,
+2026-10-17T21:19:38.6406438Z   "conformal_twins": 3072,
+2026-10-17T21:19:38.6406986Z   "relation_error_controls": 1024,
+2026-10-17T21:19:38.6407661Z   "source_commit": "31cfd8ca832cffe67942cd198eb2d9d260765f62",
+2026-10-17T21:19:38.6408427Z   "external_replication": false
+2026-10-17T21:19:38.6408948Z }
+2026-10-17T21:19:38.8984056Z Traceback (most recent call last):
+2026-10-17T21:19:38.8992831Z   File "/home/runner/work/x6-spectral-astrolabium/x6-spectral-astrolabium/research/lorentz_curvature/reproduce.py", line 32, in <module>
+2026-10-17T21:19:38.8994255Z     if __name__=='__main__':main()
+2026-10-17T21:19:38.8994770Z                             ^^^^^^
+2026-10-17T21:19:38.8995633Z   File "/home/runner/work/x6-spectral-astrolabium/x6-spectral-astrolabium/research/lorentz_curvature/reproduce.py", line 27, in main
+2026-10-17T21:19:38.8996471Z     compare(before,after,'all records')
+2026-10-17T21:19:38.8997338Z   File "/home/runner/work/x6-spectral-astrolabium/x6-spectral-astrolabium/research/lorentz_curvature/verify.py", line 22, in compare
+2026-10-17T21:19:38.8998192Z     for i,(x,y) in enumerate(zip(a,b)):compare(x,y,path+'/'+str(i))
+2026-10-17T21:19:38.8998553Z                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-17T21:19:38.8999368Z   File "/home/runner/work/x6-spectral-astrolabium/x6-spectral-astrolabium/research/lorentz_curvature/verify.py", line 19, in compare
+2026-10-17T21:19:38.9000014Z     for key in a: compare(a[key],b[key],path+'/'+key)
+2026-10-17T21:19:38.9000322Z                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-17T21:19:38.9000963Z   File "/home/runner/work/x6-spectral-astrolabium/x6-spectral-astrolabium/research/lorentz_curvature/verify.py", line 25, in compare
+2026-10-17T21:19:38.9001581Z     else:require(a==b,path+' value')
+2026-10-17T21:19:38.9001838Z          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-17T21:19:38.9002434Z   File "/home/runner/work/x6-spectral-astrolabium/x6-spectral-astrolabium/research/lorentz_curvature/geometry.py", line 9, in require
+2026-10-17T21:19:38.9003066Z     raise ValueError(message)
+2026-10-17T21:19:38.9003347Z ValueError: all records/0/points_sha256 value
+2026-10-17T21:19:39.0193146Z ##[error]Process completed with exit code 1.
+2026-10-17T21:19:39.0387279Z Post job cleanup.
+2026-10-17T21:19:39.1282851Z [command]/usr/bin/git version
+2026-10-17T21:19:39.1331861Z git version 2.55.0
+2026-10-17T21:19:39.1377659Z Temporarily overriding HOME='/home/runner/work/_temp/df03b0be-e616-4e1b-840a-413eb6e9e4a6' before making global git config changes
+2026-10-17T21:19:39.1379881Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-17T21:19:39.1383961Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/x6-spectral-astrolabium/x6-spectral-astrolabium
+2026-10-17T21:19:39.1427050Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-17T21:19:39.1465025Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-17T21:19:39.1726398Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-17T21:19:39.1772339Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-17T21:19:39.2086198Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-17T21:19:39.2180609Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-17T21:19:39.2611914Z Cleaning up orphan processes

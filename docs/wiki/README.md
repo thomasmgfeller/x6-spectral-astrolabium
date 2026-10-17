@@ -8,14 +8,16 @@ GitHub-Pages-Portals, nicht ein getrennt gepflegtes GitHub-Wiki-Repository.
 - [Deutsch](../../wiki/de/index.html)
 - [English](../../wiki/en/index.html)
 
-Aktualisierter Quellenstand: 17. Oktober 2026, Commit `389cb3f688dfbc9d90086bb55c1b5d199b7e9c58`.
-Die ursprüngliche Eigenzeit-Referenz aus PR #44 bleibt unverändert dokumentiert.
-Ergänzt sind die d-dimensionalen Gültigkeitsbedingungen, endliche Fehlergrenzen,
-sequenzielles Nachbeproben, bedingte Kettendiagnostik und die erhaltene
-Ausführungshistorie. Die neuen Pakete wurden lokal vor ihren Zielziehungen
-fixiert und erst nach Ausführung veröffentlicht; keine öffentliche
-Präregistrierung oder externe Replikation wird behauptet. Die Einführung
-ersetzt keine Originaldefinition, keinen Prüfvertrag und keinen Evidenzbericht.
+Aktualisierter Quellenstand: 17. Oktober 2026, Commit `6ac1363b6d3e0bcef6f863320290e3826977952a`.
+Die Eigenzeit-Referenzen bleiben mit ihren jeweiligen Grenzen dokumentiert.
+Neu erklärt sind der vollständige Krümmungsbenchmark, beide verfehlten
+Empfindlichkeitskriterien und die exakte konforme Dichteverwechslung.
+Der Krümmungsvertrag war vor dem ersten Ziellauf öffentlich fixiert; die
+älteren Eigenzeit-Erweiterungen hatten nur eine lokale Quellenfixierung.
+Die nachträglich dokumentierte Koordinaten-Portabilitätskorrektur ist sichtbar;
+Originalquellen und wissenschaftliche Ergebnisse bleiben erhalten.
+Interne Wiederholung und GitHub CI sind keine externe Replikation.
+Die Einführung ersetzt keinen Originalbericht und keinen Prüfvertrag.
 
 ## Pflege / maintenance
 

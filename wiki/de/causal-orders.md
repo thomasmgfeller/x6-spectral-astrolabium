@@ -4,7 +4,7 @@ Hier geht es um die Frage, welche Struktur in Beziehungen steckt, bevor man eine
 
 [English](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/en/causal-orders.md) · [Wiki-Übersicht](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/de/)
 
-Quellenstand: 2026-10-17 · `389cb3f688dfbc9d90086bb55c1b5d199b7e9c58`
+Quellenstand: 2026-10-17 · `6ac1363b6d3e0bcef6f863320290e3826977952a`
 
 ## Ereignisse und ihre Reihenfolge
 
@@ -113,3 +113,33 @@ Die Hauptsimulation arbeitet mit Zählblöcken; ein zusätzlicher Lauf prüft ta
 
 - [Ausführungsverlauf und erhaltene Reparaturbelege](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/lorentz_proper_time_sequential/EXECUTION_HISTORY.md)
 - [Beide neuen Versuche vollständig reproduzieren](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/lorentz_proper_time_publication/replay.py)
+
+## Hat der Krümmungs-Rauchmelder bestanden?
+
+Der neue Versuch untersucht 4D-de-Sitter-Raumzeit mit bekannter positiver Krümmung. Er verwendet 64 oder 128 Ereignisse pro Ordnung, drei Krümmungsstärken und getrennte flache Kontrollen. Vertrag, Schwellen und Stichproben waren vor dem ersten Ziellauf öffentlich fixiert. Alle 8.702 Ordnungen sind archiviert und intern vollständig reproduziert.
+
+| Diagnose bei N=128 | Flache Referenz | Stärkster Krümmungsfall |
+| --- | --- | --- |
+| Gemeinsame 2er-/3er-/4er-Kettenstatistik | 10/512 Warnungen (1,95 %) | 118/512 Warnungen (23,05 %) |
+| Längste Kette | 1/512 Warnungen (0,20 %) | 5/512 Warnungen (0,98 %) |
+
+Beide Methoden bestehen die vorgegebene Fehlalarmgrenze, verfehlen aber das Empfindlichkeitsziel. Gefordert waren eine obere Fehlalarmgrenze von höchstens 5 % und eine untere Erkennungsgrenze von mindestens 80 %. Die vier ausgewählten einseitigen Grenzen berücksichtigen gemeinsam ein Fehlerbudget von 5 %. Die Intervalle gelten bedingt auf das festgehaltene Training und die gemeinsame Kalibrierungsbank.
+
+Das Ergebnis heißt PRIMARY_SENSITIVITY_NOT_ESTABLISHED. Ein bestandener Software-Replay ändert daran nichts. Die frühere Zahl 506/512 betraf eine andere Dichtestörung in flacher Geometrie; sie ist keine Krümmungs-Erkennungsrate. Eine stille Diagnose ist kein Beweis für flache Raumzeit.
+
+Technischer Nachtrag: Der erste GitHub-Replay scheiterte an Koordinatenbytes, die sich zwischen NumPy-Rechenpfaden geringfügig unterscheiden. Der vollständige Vergleich aller Punktwolken ergab höchstens 2,22e-16 Abweichung und exakt gleiche Kausalrelationen. Ein ergänzter Prüfweg akzeptiert nur die konkret geprüften Varianten. Der ursprüngliche strenge Check, Fehlerlog und das wissenschaftliche Negativergebnis bleiben erhalten.
+
+- [Vollständiger Ergebnisbericht und alle Zielzellen](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/lorentz_curvature/RESULTS.md)
+- [Vorab festgelegter Prüfvertrag](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/lorentz_curvature/contract.json)
+- [Dokumentierte Portabilitätskorrektur](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/lorentz_curvature/PORTABILITY.md)
+
+## Warum kann eine Dichtestörung wie Krümmung aussehen?
+
+Stell dir dieselbe Punktwolke in zwei Modellen vor. Im ersten liegt sie gleichmäßig im physikalischen Volumen einer gekrümmten Raumzeit. Im zweiten liegt sie in flacher Raumzeit, wird dort aber zeitabhängig dichter beprobt. Für die hier konstruierten konformen Zwillinge stimmen sämtliche Kausalbeziehungen exakt überein. Krümmung und wirkliche Eigenzeit sind trotzdem verschieden.
+
+Alle 3.072 gekoppelten Zwillinge bestätigen die analytische Konstruktion. Das sind Identitätskontrollen, keine zusätzlichen unabhängigen Versuche. Bei unbeschränkt unbekannter Beprobungsdichte kann deshalb kein Verfahren allein aus diesen Ordnungen die beiden Modelle eindeutig unterscheiden. Mehr Merkmale derselben Ordnung beseitigen diese Mehrdeutigkeit nicht.
+
+Ein sinnvoller Demonstrator darf eine Modellabweichung anzeigen und die Zwillinge gegenüberstellen. Eine Anzeige in Planck-Einheiten wäre eine Umrechnung der simulierten Skala. Ein physisches Planck-Zeitmessgerät ist damit nicht gebaut. Für neue geometrische Aussagen brauchen wir zuerst unabhängiges Wissen über Beprobung oder Volumen; fortlaufendes interaktives Testen benötigt einen eigenen vorab festgelegten Fehlerkontrollplan.
+
+- [Geometrie und Beweis der Dichteverwechslung](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/lorentz_curvature/DESIGN.md)
+- [Reproduktion und nächste Abnahme](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/lorentz_curvature/README.md)

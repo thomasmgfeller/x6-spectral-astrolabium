@@ -4,7 +4,7 @@ This research asks what structure is carried by relationships before a spatial d
 
 [Deutsch](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/de/causal-orders.md) · [Wiki overview](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/en/)
 
-Source snapshot: 2026-10-17 · `389cb3f688dfbc9d90086bb55c1b5d199b7e9c58`
+Source snapshot: 2026-10-17 · `6ac1363b6d3e0bcef6f863320290e3826977952a`
 
 ## Events and their ordering
 
@@ -113,3 +113,33 @@ The main simulation uses count batches; an additional run checks actual geometri
 
 - [Execution history and preserved repair evidence](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/lorentz_proper_time_sequential/EXECUTION_HISTORY.md)
 - [Fully reproduce both new experiments](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/lorentz_proper_time_publication/replay.py)
+
+## Did the curvature smoke detector pass?
+
+The new experiment studies 4D de Sitter spacetime with known positive curvature. It uses 64 or 128 events per order, three curvature strengths and separate flat controls. The contract, thresholds and sample sizes were publicly frozen before the first target run. All 8,702 orders are archived and fully reproduced internally.
+
+| Diagnostic at N=128 | Flat reference | Strongest curvature case |
+| --- | --- | --- |
+| Joint 2-/3-/4-chain statistic | 10/512 warnings (1.95%) | 118/512 warnings (23.05%) |
+| Longest chain | 1/512 warnings (0.20%) | 5/512 warnings (0.98%) |
+
+Both methods satisfy the prespecified false-alarm requirement but miss the sensitivity target. The required upper false-alarm bound was at most 5%, and the lower detection bound at least 80%. The four selected one-sided bounds share a family error budget of 5%. These intervals condition on the fitted training and shared calibration bank.
+
+The result is PRIMARY_SENSITIVITY_NOT_ESTABLISHED. Passing software replay does not change that result. The earlier 506/512 figure concerned a different density disturbance in flat geometry; it is not a curvature detection rate. A quiet diagnostic does not prove that spacetime is flat.
+
+Software addendum: the first GitHub replay failed on coordinate bytes that differ slightly between NumPy CPU paths. Comparing every cloud found at most 2.22e-16 absolute difference and identical full causal relations. A supplementary checker accepts only explicitly verified variants. The original strict check, failure log and negative scientific result are preserved.
+
+- [Complete results and every target cell](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/lorentz_curvature/RESULTS.md)
+- [Prespecified experiment contract](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/lorentz_curvature/contract.json)
+- [Documented portability repair](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/lorentz_curvature/PORTABILITY.md)
+
+## Why can a density disturbance resemble curvature?
+
+Imagine the same point cloud under two models. In the first it is uniform in the physical volume of a curved spacetime. In the second it lies in flat spacetime but is sampled with a time-dependent density. For the conformal twins constructed here, every causal relation agrees exactly. Curvature and true proper time nevertheless differ.
+
+All 3,072 coupled twins confirm the analytic construction. These are identity checks, not extra independent trials. With unrestricted unknown sampling density, no method using these orders alone can uniquely distinguish the two models. More features of the same order cannot remove this ambiguity.
+
+A useful demonstrator can show model-deviation warnings and compare the twins. A Planck-unit display would convert a simulated scale; it does not build a physical Planck-time measuring device. New geometrical claims first need independent knowledge of sampling or volume. Repeated interactive testing needs a separately prespecified error-control plan.
+
+- [Geometry and proof of density confounding](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/lorentz_curvature/DESIGN.md)
+- [Reproduction and next acceptance gate](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/lorentz_curvature/README.md)

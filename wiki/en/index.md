@@ -4,7 +4,7 @@ A guide for curious readers, learners and people who want to check the work them
 
 [Deutsch](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/de/) · [Wiki overview](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/en/)
 
-Source snapshot: 2026-10-17 · `389cb3f688dfbc9d90086bb55c1b5d199b7e9c58`
+Source snapshot: 2026-10-17 · `6ac1363b6d3e0bcef6f863320290e3826977952a`
 
 ## What is X6?
 
@@ -41,3 +41,5 @@ X6 is a public research preview. It does not establish a general spacetime theor
 - [Scientific scope](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/docs/SCIENTIFIC_SCOPE.md)
 
 - [Proper-time results explained](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/en/causal-orders.html)
+
+New: the curvature benchmark is complete. Both diagnostics miss the sensitivity target; density twins explain a fundamental ambiguity. The “Causal orders” chapter presents the results and consequences for the proposed clock.

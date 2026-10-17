@@ -1,0 +1,368 @@
+{
+  "primary": {
+    "joint": {
+      "flat_uniform": {
+        "warnings": 10,
+        "trials": 512,
+        "bounds": [
+          0.008394603655458476,
+          0.03816751312201263
+        ]
+      },
+      "de_sitter_125": {
+        "warnings": 118,
+        "trials": 512,
+        "bounds": [
+          0.18987178121101633,
+          0.2750501524327573
+        ]
+      },
+      "null_upper": 0.03816751312201263,
+      "power_lower": 0.18987178121101633,
+      "status": "PRIMARY_SENSITIVITY_NOT_ESTABLISHED"
+    },
+    "height": {
+      "flat_uniform": {
+        "warnings": 1,
+        "trials": 512,
+        "bounds": [
+          2.4567632208554663e-05,
+          0.012397457103173068
+        ]
+      },
+      "de_sitter_125": {
+        "warnings": 5,
+        "trials": 512,
+        "bounds": [
+          0.002650623608810759,
+          0.02474351615229619
+        ]
+      },
+      "null_upper": 0.012397457103173068,
+      "power_lower": 0.002650623608810759,
+      "status": "PRIMARY_SENSITIVITY_NOT_ESTABLISHED"
+    }
+  },
+  "cells": [
+    {
+      "N": 64,
+      "family": "flat_uniform",
+      "trials": 512,
+      "joint": {
+        "warnings": 10,
+        "rate": 0.01953125,
+        "conditional_rate_CI95": [
+          0.009404755122447006,
+          0.035624636181676994
+        ]
+      },
+      "height": {
+        "warnings": 0,
+        "rate": 0.0,
+        "conditional_rate_CI95": [
+          0.0,
+          0.007178950026259453
+        ]
+      },
+      "joint_only": 10,
+      "height_only": 0
+    },
+    {
+      "N": 64,
+      "family": "de_sitter_025",
+      "trials": 512,
+      "joint": {
+        "warnings": 11,
+        "rate": 0.021484375,
+        "conditional_rate_CI95": [
+          0.01077255408609197,
+          0.03811577167548383
+        ]
+      },
+      "height": {
+        "warnings": 0,
+        "rate": 0.0,
+        "conditional_rate_CI95": [
+          0.0,
+          0.007178950026259453
+        ]
+      },
+      "joint_only": 11,
+      "height_only": 0
+    },
+    {
+      "N": 64,
+      "family": "de_sitter_075",
+      "trials": 512,
+      "joint": {
+        "warnings": 29,
+        "rate": 0.056640625,
+        "conditional_rate_CI95": [
+          0.038257541986791446,
+          0.08033514760440219
+        ]
+      },
+      "height": {
+        "warnings": 2,
+        "rate": 0.00390625,
+        "conditional_rate_CI95": [
+          0.0004734155742531005,
+          0.014038905114244559
+        ]
+      },
+      "joint_only": 27,
+      "height_only": 0
+    },
+    {
+      "N": 64,
+      "family": "de_sitter_125",
+      "trials": 512,
+      "joint": {
+        "warnings": 69,
+        "rate": 0.134765625,
+        "conditional_rate_CI95": [
+          0.1063908681588636,
+          0.16743474564982297
+        ]
+      },
+      "height": {
+        "warnings": 1,
+        "rate": 0.001953125,
+        "conditional_rate_CI95": [
+          4.944762114539528e-05,
+          0.010833656944754487
+        ]
+      },
+      "joint_only": 68,
+      "height_only": 0
+    },
+    {
+      "N": 64,
+      "family": "flat_spatial_compression",
+      "trials": 512,
+      "joint": {
+        "warnings": 510,
+        "rate": 0.99609375,
+        "conditional_rate_CI95": [
+          0.9859610948857555,
+          0.9995265844257469
+        ]
+      },
+      "height": {
+        "warnings": 220,
+        "rate": 0.4296875,
+        "conditional_rate_CI95": [
+          0.3863456093827697,
+          0.4738457367669743
+        ]
+      },
+      "joint_only": 290,
+      "height_only": 0
+    },
+    {
+      "N": 64,
+      "family": "flat_time_mask",
+      "trials": 512,
+      "joint": {
+        "warnings": 0,
+        "rate": 0.0,
+        "conditional_rate_CI95": [
+          0.0,
+          0.007178950026259453
+        ]
+      },
+      "height": {
+        "warnings": 0,
+        "rate": 0.0,
+        "conditional_rate_CI95": [
+          0.0,
+          0.007178950026259453
+        ]
+      },
+      "joint_only": 0,
+      "height_only": 0
+    },
+    {
+      "N": 128,
+      "family": "flat_uniform",
+      "trials": 512,
+      "joint": {
+        "warnings": 10,
+        "rate": 0.01953125,
+        "conditional_rate_CI95": [
+          0.009404755122447006,
+          0.035624636181676994
+        ]
+      },
+      "height": {
+        "warnings": 1,
+        "rate": 0.001953125,
+        "conditional_rate_CI95": [
+          4.944762114539528e-05,
+          0.010833656944754487
+        ]
+      },
+      "joint_only": 9,
+      "height_only": 0
+    },
+    {
+      "N": 128,
+      "family": "de_sitter_025",
+      "trials": 512,
+      "joint": {
+        "warnings": 14,
+        "rate": 0.02734375,
+        "conditional_rate_CI95": [
+          0.015027969215664627,
+          0.045452910987455956
+        ]
+      },
+      "height": {
+        "warnings": 0,
+        "rate": 0.0,
+        "conditional_rate_CI95": [
+          0.0,
+          0.007178950026259453
+        ]
+      },
+      "joint_only": 14,
+      "height_only": 0
+    },
+    {
+      "N": 128,
+      "family": "de_sitter_075",
+      "trials": 512,
+      "joint": {
+        "warnings": 28,
+        "rate": 0.0546875,
+        "conditional_rate_CI95": [
+          0.03664337742047026,
+          0.07807148163751826
+        ]
+      },
+      "height": {
+        "warnings": 1,
+        "rate": 0.001953125,
+        "conditional_rate_CI95": [
+          4.944762114539528e-05,
+          0.010833656944754487
+        ]
+      },
+      "joint_only": 27,
+      "height_only": 0
+    },
+    {
+      "N": 128,
+      "family": "de_sitter_125",
+      "trials": 512,
+      "joint": {
+        "warnings": 118,
+        "rate": 0.23046875,
+        "conditional_rate_CI95": [
+          0.19465930677978105,
+          0.269423116205772
+        ]
+      },
+      "height": {
+        "warnings": 5,
+        "rate": 0.009765625,
+        "conditional_rate_CI95": [
+          0.0031782607998062633,
+          0.02264162068722705
+        ]
+      },
+      "joint_only": 113,
+      "height_only": 0
+    },
+    {
+      "N": 128,
+      "family": "flat_spatial_compression",
+      "trials": 512,
+      "joint": {
+        "warnings": 512,
+        "rate": 1.0,
+        "conditional_rate_CI95": [
+          0.9928210499737405,
+          1.0
+        ]
+      },
+      "height": {
+        "warnings": 389,
+        "rate": 0.759765625,
+        "conditional_rate_CI95": [
+          0.7203440277131419,
+          0.7961576778433711
+        ]
+      },
+      "joint_only": 123,
+      "height_only": 0
+    },
+    {
+      "N": 128,
+      "family": "flat_time_mask",
+      "trials": 512,
+      "joint": {
+        "warnings": 13,
+        "rate": 0.025390625,
+        "conditional_rate_CI95": [
+          0.013587156828088611,
+          0.04302739655157609
+        ]
+      },
+      "height": {
+        "warnings": 5,
+        "rate": 0.009765625,
+        "conditional_rate_CI95": [
+          0.0031782607998062633,
+          0.02264162068722705
+        ]
+      },
+      "joint_only": 11,
+      "height_only": 3
+    }
+  ],
+  "curvature_identification": "NOT_IDENTIFIABLE_WITH_UNRESTRICTED_SAMPLING_DENSITY",
+  "rate_interval_scope": "Conditional on fixed training and shared calibration bank; secondary CIs are pointwise only",
+  "geometry": [
+    {
+      "h": 0.25,
+      "proper_time": 1.0052577131236242,
+      "scalar_curvature": 0.75,
+      "ricci_time_orthonormal": -0.1875,
+      "volume": 0.13227941371737506,
+      "H_tau": 0.25131442828090605,
+      "R_tau_squared": 0.7579073023459041
+    },
+    {
+      "h": 0.75,
+      "proper_time": 1.0512764804856936,
+      "scalar_curvature": 6.75,
+      "ricci_time_orthonormal": -1.6875,
+      "volume": 0.14463085436368112,
+      "H_tau": 0.7884573603642702,
+      "R_tau_squared": 7.459980109351111
+    },
+    {
+      "h": 1.25,
+      "proper_time": 1.1730696550347417,
+      "scalar_curvature": 18.75,
+      "ricci_time_orthonormal": -4.6875,
+      "volume": 0.17963065784121904,
+      "H_tau": 1.4663370687934272,
+      "R_tau_squared": 25.801732791812398
+    },
+    {
+      "h": 0.0,
+      "proper_time": 1.0,
+      "scalar_curvature": 0.0,
+      "ricci_time_orthonormal": -0.0,
+      "volume": 0.1308996938995747,
+      "H_tau": 0.0,
+      "R_tau_squared": 0.0
+    }
+  ],
+  "unique_orders": 8702,
+  "conformal_twin_checks": 3072,
+  "relation_error_checks": 1024,
+  "external_replication": false
+}

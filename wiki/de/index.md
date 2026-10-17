@@ -4,7 +4,7 @@ Ein Wegweiser für Neugierige, Lernende und Menschen, die selbst prüfen möchte
 
 [English](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/en/) · [Wiki-Übersicht](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/de/)
 
-Quellenstand: 2026-10-17 · `389cb3f688dfbc9d90086bb55c1b5d199b7e9c58`
+Quellenstand: 2026-10-17 · `6ac1363b6d3e0bcef6f863320290e3826977952a`
 
 ## Was ist X6?
 
@@ -41,3 +41,5 @@ X6 ist eine öffentliche Forschungsvorschau. Eine allgemeine Raumzeittheorie, ei
 - [Wissenschaftlicher Geltungsbereich](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/docs/SCIENTIFIC_SCOPE.md)
 
 - [Eigenzeit-Ergebnisse einfach erklärt](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/de/causal-orders.html)
+
+Neu: Der Krümmungsbenchmark ist abgeschlossen. Beide Diagnosen verfehlen das Empfindlichkeitsziel; die Dichtezwillinge erklären eine grundsätzliche Mehrdeutigkeit. Das Kapitel „Kausale Ordnungen“ zeigt Ergebnisse und Folgen für die geplante Uhr.

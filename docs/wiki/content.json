@@ -1,7 +1,7 @@
 {
   "schema": "x6.bilingual-wiki/1",
   "snapshot_date": "2026-10-17",
-  "source_commit": "389cb3f688dfbc9d90086bb55c1b5d199b7e9c58",
+  "source_commit": "6ac1363b6d3e0bcef6f863320290e3826977952a",
   "articles": [
     {
       "id": "index",
@@ -112,6 +112,10 @@
                     "url": "wiki/de/causal-orders.html"
                   }
                 ]
+              },
+              {
+                "type": "paragraph",
+                "text": "Neu: Der Krümmungsbenchmark ist abgeschlossen. Beide Diagnosen verfehlen das Empfindlichkeitsziel; die Dichtezwillinge erklären eine grundsätzliche Mehrdeutigkeit. Das Kapitel „Kausale Ordnungen“ zeigt Ergebnisse und Folgen für die geplante Uhr."
               }
             ]
           }
@@ -224,6 +228,10 @@
                     "url": "wiki/en/causal-orders.html"
                   }
                 ]
+              },
+              {
+                "type": "paragraph",
+                "text": "New: the curvature benchmark is complete. Both diagnostics miss the sensitivity target; density twins explain a fundamental ambiguity. The “Causal orders” chapter presents the results and consequences for the proposed clock."
               }
             ]
           }
@@ -998,6 +1006,96 @@
                 ]
               }
             ]
+          },
+          {
+            "id": "curvature-test",
+            "title": "Hat der Krümmungs-Rauchmelder bestanden?",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "Der neue Versuch untersucht 4D-de-Sitter-Raumzeit mit bekannter positiver Krümmung. Er verwendet 64 oder 128 Ereignisse pro Ordnung, drei Krümmungsstärken und getrennte flache Kontrollen. Vertrag, Schwellen und Stichproben waren vor dem ersten Ziellauf öffentlich fixiert. Alle 8.702 Ordnungen sind archiviert und intern vollständig reproduziert."
+              },
+              {
+                "type": "table",
+                "headers": [
+                  "Diagnose bei N=128",
+                  "Flache Referenz",
+                  "Stärkster Krümmungsfall"
+                ],
+                "rows": [
+                  [
+                    "Gemeinsame 2er-/3er-/4er-Kettenstatistik",
+                    "10/512 Warnungen (1,95 %)",
+                    "118/512 Warnungen (23,05 %)"
+                  ],
+                  [
+                    "Längste Kette",
+                    "1/512 Warnungen (0,20 %)",
+                    "5/512 Warnungen (0,98 %)"
+                  ]
+                ]
+              },
+              {
+                "type": "paragraph",
+                "text": "Beide Methoden bestehen die vorgegebene Fehlalarmgrenze, verfehlen aber das Empfindlichkeitsziel. Gefordert waren eine obere Fehlalarmgrenze von höchstens 5 % und eine untere Erkennungsgrenze von mindestens 80 %. Die vier ausgewählten einseitigen Grenzen berücksichtigen gemeinsam ein Fehlerbudget von 5 %. Die Intervalle gelten bedingt auf das festgehaltene Training und die gemeinsame Kalibrierungsbank."
+              },
+              {
+                "type": "paragraph",
+                "text": "Das Ergebnis heißt PRIMARY_SENSITIVITY_NOT_ESTABLISHED. Ein bestandener Software-Replay ändert daran nichts. Die frühere Zahl 506/512 betraf eine andere Dichtestörung in flacher Geometrie; sie ist keine Krümmungs-Erkennungsrate. Eine stille Diagnose ist kein Beweis für flache Raumzeit."
+              },
+              {
+                "type": "paragraph",
+                "text": "Technischer Nachtrag: Der erste GitHub-Replay scheiterte an Koordinatenbytes, die sich zwischen NumPy-Rechenpfaden geringfügig unterscheiden. Der vollständige Vergleich aller Punktwolken ergab höchstens 2,22e-16 Abweichung und exakt gleiche Kausalrelationen. Ein ergänzter Prüfweg akzeptiert nur die konkret geprüften Varianten. Der ursprüngliche strenge Check, Fehlerlog und das wissenschaftliche Negativergebnis bleiben erhalten."
+              },
+              {
+                "type": "links",
+                "items": [
+                  {
+                    "label": "Vollständiger Ergebnisbericht und alle Zielzellen",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/lorentz_curvature/RESULTS.md"
+                  },
+                  {
+                    "label": "Vorab festgelegter Prüfvertrag",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/lorentz_curvature/contract.json"
+                  },
+                  {
+                    "label": "Dokumentierte Portabilitätskorrektur",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/lorentz_curvature/PORTABILITY.md"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "curvature-twins",
+            "title": "Warum kann eine Dichtestörung wie Krümmung aussehen?",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "Stell dir dieselbe Punktwolke in zwei Modellen vor. Im ersten liegt sie gleichmäßig im physikalischen Volumen einer gekrümmten Raumzeit. Im zweiten liegt sie in flacher Raumzeit, wird dort aber zeitabhängig dichter beprobt. Für die hier konstruierten konformen Zwillinge stimmen sämtliche Kausalbeziehungen exakt überein. Krümmung und wirkliche Eigenzeit sind trotzdem verschieden."
+              },
+              {
+                "type": "paragraph",
+                "text": "Alle 3.072 gekoppelten Zwillinge bestätigen die analytische Konstruktion. Das sind Identitätskontrollen, keine zusätzlichen unabhängigen Versuche. Bei unbeschränkt unbekannter Beprobungsdichte kann deshalb kein Verfahren allein aus diesen Ordnungen die beiden Modelle eindeutig unterscheiden. Mehr Merkmale derselben Ordnung beseitigen diese Mehrdeutigkeit nicht."
+              },
+              {
+                "type": "paragraph",
+                "text": "Ein sinnvoller Demonstrator darf eine Modellabweichung anzeigen und die Zwillinge gegenüberstellen. Eine Anzeige in Planck-Einheiten wäre eine Umrechnung der simulierten Skala. Ein physisches Planck-Zeitmessgerät ist damit nicht gebaut. Für neue geometrische Aussagen brauchen wir zuerst unabhängiges Wissen über Beprobung oder Volumen; fortlaufendes interaktives Testen benötigt einen eigenen vorab festgelegten Fehlerkontrollplan."
+              },
+              {
+                "type": "links",
+                "items": [
+                  {
+                    "label": "Geometrie und Beweis der Dichteverwechslung",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/lorentz_curvature/DESIGN.md"
+                  },
+                  {
+                    "label": "Reproduktion und nächste Abnahme",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/lorentz_curvature/README.md"
+                  }
+                ]
+              }
+            ]
           }
         ]
       },
@@ -1303,6 +1401,96 @@
                   {
                     "label": "Fully reproduce both new experiments",
                     "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/lorentz_proper_time_publication/replay.py"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "curvature-test",
+            "title": "Did the curvature smoke detector pass?",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "The new experiment studies 4D de Sitter spacetime with known positive curvature. It uses 64 or 128 events per order, three curvature strengths and separate flat controls. The contract, thresholds and sample sizes were publicly frozen before the first target run. All 8,702 orders are archived and fully reproduced internally."
+              },
+              {
+                "type": "table",
+                "headers": [
+                  "Diagnostic at N=128",
+                  "Flat reference",
+                  "Strongest curvature case"
+                ],
+                "rows": [
+                  [
+                    "Joint 2-/3-/4-chain statistic",
+                    "10/512 warnings (1.95%)",
+                    "118/512 warnings (23.05%)"
+                  ],
+                  [
+                    "Longest chain",
+                    "1/512 warnings (0.20%)",
+                    "5/512 warnings (0.98%)"
+                  ]
+                ]
+              },
+              {
+                "type": "paragraph",
+                "text": "Both methods satisfy the prespecified false-alarm requirement but miss the sensitivity target. The required upper false-alarm bound was at most 5%, and the lower detection bound at least 80%. The four selected one-sided bounds share a family error budget of 5%. These intervals condition on the fitted training and shared calibration bank."
+              },
+              {
+                "type": "paragraph",
+                "text": "The result is PRIMARY_SENSITIVITY_NOT_ESTABLISHED. Passing software replay does not change that result. The earlier 506/512 figure concerned a different density disturbance in flat geometry; it is not a curvature detection rate. A quiet diagnostic does not prove that spacetime is flat."
+              },
+              {
+                "type": "paragraph",
+                "text": "Software addendum: the first GitHub replay failed on coordinate bytes that differ slightly between NumPy CPU paths. Comparing every cloud found at most 2.22e-16 absolute difference and identical full causal relations. A supplementary checker accepts only explicitly verified variants. The original strict check, failure log and negative scientific result are preserved."
+              },
+              {
+                "type": "links",
+                "items": [
+                  {
+                    "label": "Complete results and every target cell",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/lorentz_curvature/RESULTS.md"
+                  },
+                  {
+                    "label": "Prespecified experiment contract",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/lorentz_curvature/contract.json"
+                  },
+                  {
+                    "label": "Documented portability repair",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/lorentz_curvature/PORTABILITY.md"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "curvature-twins",
+            "title": "Why can a density disturbance resemble curvature?",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "Imagine the same point cloud under two models. In the first it is uniform in the physical volume of a curved spacetime. In the second it lies in flat spacetime but is sampled with a time-dependent density. For the conformal twins constructed here, every causal relation agrees exactly. Curvature and true proper time nevertheless differ."
+              },
+              {
+                "type": "paragraph",
+                "text": "All 3,072 coupled twins confirm the analytic construction. These are identity checks, not extra independent trials. With unrestricted unknown sampling density, no method using these orders alone can uniquely distinguish the two models. More features of the same order cannot remove this ambiguity."
+              },
+              {
+                "type": "paragraph",
+                "text": "A useful demonstrator can show model-deviation warnings and compare the twins. A Planck-unit display would convert a simulated scale; it does not build a physical Planck-time measuring device. New geometrical claims first need independent knowledge of sampling or volume. Repeated interactive testing needs a separately prespecified error-control plan."
+              },
+              {
+                "type": "links",
+                "items": [
+                  {
+                    "label": "Geometry and proof of density confounding",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/lorentz_curvature/DESIGN.md"
+                  },
+                  {
+                    "label": "Reproduction and next acceptance gate",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/lorentz_curvature/README.md"
                   }
                 ]
               }
@@ -1722,7 +1910,8 @@
                   "Lies Quellort und Commit. MAIN und BRANCH_ONLY sind Ortsangaben.",
                   "Öffne die Originaldokumentation sowie den jeweiligen Prüfbericht.",
                   "Prüfe die nächste offene Abnahme. Bei neueren Studien helfen die datierten Forschungsnotizen zusätzlich zum Register."
-                ]
+                ],
+                "text": "Dieser Wiki-Stand vom 17. Oktober 2026 umfasst die Eigenzeit-Pakete und den vollständig ausgeführten Krümmungsbenchmark. Der Quellenpin enthält das Ergebnisarchiv. Der neue Krümmungsversuch wurde vor dem ersten Ziellauf öffentlich fixiert; die älteren Eigenzeit-Erweiterungen hatten nur eine lokale Quellenfixierung. Die Originalberichte behalten ihre eigenen Grenzen. Externe Replikation bleibt offen."
               },
               {
                 "type": "paragraph",
@@ -1879,7 +2068,8 @@
                   "Read the source location and commit. MAIN and BRANCH_ONLY describe locations.",
                   "Open the original documentation and its evidence report.",
                   "Check the next outstanding acceptance test. Dated research notes supplement the register for later studies."
-                ]
+                ],
+                "text": "This wiki snapshot of 17 October 2026 includes the proper-time packages and the completed curvature benchmark. The source pin contains the result archive. The new curvature study was publicly frozen before its first target run; the earlier proper-time extensions had only a local source freeze. Original reports retain their own limits. External replication remains open."
               },
               {
                 "type": "paragraph",
