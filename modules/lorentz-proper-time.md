@@ -2,6 +2,8 @@
 
 Registerstand: 2026-10-17. MAIN / SOFTWARE. Kein Live-Prüfsiegel.
 
+[Eigenzeit-Labor öffnen →](https://thomasmgfeller.github.io/x6-spectral-astrolabium/app/proper-time.html)
+
 ## Quelle
 
 Branch: main

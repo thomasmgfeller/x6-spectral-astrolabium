@@ -20,6 +20,7 @@ REPO = 'https://github.com/thomasmgfeller/x6-spectral-astrolabium'
 E = html.escape
 BROWSER_APPS = {
     'astrolabium': ('app/index.html', 'Astrolabium öffnen →'),
+    'lorentz-proper-time': ('app/proper-time.html', 'Eigenzeit-Labor öffnen →'),
     'signal-lab': ('app/signal-lab.html', 'Signal Lab öffnen →'),
     'rax-cqg-benchmark': ('app/rax-cqg-lab.html', 'Causal-Set-Labor öffnen →'),
 }

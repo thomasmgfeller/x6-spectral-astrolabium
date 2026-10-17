@@ -91,6 +91,8 @@ Unknown sampling density, clipped intervals, relation errors or dependent observ
 
 - [Shared overview: assumptions, results and limits](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/lorentz_proper_time_publication/README.md)
 - [Containment proof and finite-sample bounds](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/lorentz_proper_time_domain/README.md)
+- [Try the proper-time demonstrator (fixed budget; German UI)](https://thomasmgfeller.github.io/x6-spectral-astrolabium/app/proper-time.html)
+- [Standalone Jupyter notebook with example outputs (German)](https://thomasmgfeller.github.io/x6-spectral-astrolabium/research/lorentz_proper_time_lab/eigenzeit.ipynb)
 
 ## Sampling until the requested precision is reached
 

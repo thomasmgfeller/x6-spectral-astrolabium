@@ -22,6 +22,7 @@ Erkunde die dokumentierten Gegenbeispiele, etwa die Vorzeichenumkehr: Ein Signal
 
 Exportiere die Experimentdaten und prüfe die Rechnung über den dokumentierten Import- und Replay-Weg. Erfolgreiches Nachrechnen zeigt rechnerische Konsistenz in diesem Verfahren; es beweist weder Datenauthentizität noch physische Geräteleistung.
 
+- [Eigenzeit-Labor: Punkte zählen, Zeit schätzen](https://thomasmgfeller.github.io/x6-spectral-astrolabium/app/proper-time.html)
 - [Signal Validation Lab öffnen (DE / EN / FR)](https://thomasmgfeller.github.io/x6-spectral-astrolabium/app/signal-lab.html)
 - [Geltungsbereich und erwartete Ergebnisse lesen](https://thomasmgfeller.github.io/x6-spectral-astrolabium/modules/signal-lab.html)
 - [Die ursprüngliche Astrolabium-Anwendung öffnen](https://thomasmgfeller.github.io/x6-spectral-astrolabium/app/index.html)

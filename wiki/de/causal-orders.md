@@ -91,6 +91,8 @@ Unbekannte Dichte, abgeschnittene Intervalle, Relationsfehler oder abhängige Be
 
 - [Gemeinsamer Einstieg: Voraussetzungen, Ergebnisse und Grenzen](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/lorentz_proper_time_publication/README.md)
 - [Einschlussbeweis und endliche Fehlergrenzen](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/lorentz_proper_time_domain/README.md)
+- [Eigenzeit-Labor ausprobieren (feste Stichprobe)](https://thomasmgfeller.github.io/x6-spectral-astrolabium/app/proper-time.html)
+- [Eigenständiges Jupyter-Notebook mit Beispielausgaben](https://thomasmgfeller.github.io/x6-spectral-astrolabium/research/lorentz_proper_time_lab/eigenzeit.ipynb)
 
 ## Nachbeproben bis zur gewünschten Präzision
 
