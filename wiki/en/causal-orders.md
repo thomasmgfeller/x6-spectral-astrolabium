@@ -4,7 +4,7 @@ This research asks what structure is carried by relationships before a spatial d
 
 [Deutsch](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/de/causal-orders.md) · [Wiki overview](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/en/)
 
-Source snapshot: 2026-10-17 · `6ac1363b6d3e0bcef6f863320290e3826977952a`
+Source snapshot: 2026-10-18 · `8ee417ba8c44c1f32f4e310a6566168d84982d3a`
 
 ## Events and their ordering
 
@@ -145,3 +145,16 @@ A useful demonstrator can show model-deviation warnings and compare the twins. A
 
 - [Geometry and proof of density confounding](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/lorentz_curvature/DESIGN.md)
 - [Reproduction and next acceptance gate](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/lorentz_curvature/README.md)
+
+## How does a fixed point count change the curvature formulas?
+
+Update of 18 October 2026: Roy–Sinha–Surya study sampling with a fluctuating point count. Our experiments hold the count fixed. The expected chain counts and their curvature coefficients therefore change through normalization by the physical volume.
+
+The adaptation is derived and checked with 24,576 independent point clouds. An independent integral for two-element chains agrees closely with the corrected prediction. The joint goal of resolving all three leading coefficients within ±5% remains unmet: the three- and four-chain intervals are too wide.
+
+An algebraically invertible formula need not provide a useful measurement. With 128 points and true RT² about 0.12, the tested reconstruction has single-order root mean squared error about 96.53. Chain counts are strongly correlated. No general curvature sensor is qualified, and the density-twin limitation remains.
+
+The contract, seeds and budget were public before the first target run. Full replay reproduces every order and decision. A documented import wrapper repairs a verifier naming conflict without changing frozen sources, data or thresholds. External replication remains open.
+
+- [RSS: Ergebnisse / Results](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/8ee417ba8c44c1f32f4e310a6566168d84982d3a/research/lorentz_rss_fixed_n/RESULTS.md)
+- [RSS: Herleitung / Derivation](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/8ee417ba8c44c1f32f4e310a6566168d84982d3a/research/lorentz_rss_fixed_n/DERIVATION.md)

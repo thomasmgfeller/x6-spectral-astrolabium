@@ -4,7 +4,7 @@ Hier geht es um die Frage, welche Struktur in Beziehungen steckt, bevor man eine
 
 [English](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/en/causal-orders.md) · [Wiki-Übersicht](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/de/)
 
-Quellenstand: 2026-10-17 · `6ac1363b6d3e0bcef6f863320290e3826977952a`
+Quellenstand: 2026-10-18 · `8ee417ba8c44c1f32f4e310a6566168d84982d3a`
 
 ## Ereignisse und ihre Reihenfolge
 
@@ -145,3 +145,16 @@ Ein sinnvoller Demonstrator darf eine Modellabweichung anzeigen und die Zwilling
 
 - [Geometrie und Beweis der Dichteverwechslung](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/lorentz_curvature/DESIGN.md)
 - [Reproduktion und nächste Abnahme](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/lorentz_curvature/README.md)
+
+## Was ändert eine feste Punktzahl an den Krümmungsformeln?
+
+Nachtrag vom 18. Oktober 2026: Roy–Sinha–Surya untersuchen eine Beprobung mit schwankender Punktzahl. Unsere Versuche halten die Zahl der Ereignisse fest. Deshalb ändern sich die erwarteten Kettenzahlen und ihre Krümmungskoeffizienten durch die Normierung mit dem physikalischen Volumen.
+
+Die Anpassung ist hergeleitet und mit 24.576 unabhängigen Punktwolken geprüft. Eine unabhängige Integration für Zweierketten stimmt sehr gut mit der korrigierten Vorhersage überein. Das gemeinsame Ziel, alle drei führenden Kettenkoeffizienten auf ±5% einzugrenzen, bleibt jedoch unerreicht: Für Dreier- und Viererketten sind die Unsicherheitsintervalle zu breit.
+
+Eine Formel algebraisch umkehren zu können reicht nicht für eine brauchbare Messung. Bei 128 Punkten und wahrem RT² von etwa 0,12 beträgt der mittlere quadratische Fehler der untersuchten Rekonstruktion, als Wurzel angegeben, etwa 96,53. Die Kettenzahlen hängen stark zusammen. Ein universeller Krümmungssensor ist damit nicht qualifiziert; die Grenze durch Dichtezwillinge bleibt bestehen.
+
+Vertrag, Seeds und Budget waren vor dem ersten Zielversuch öffentlich fixiert. Der vollständige Replay reproduziert alle Ordnungen und Entscheidungen. Eine dokumentierte Importhülle behebt einen Namenskonflikt des Prüfers, ohne eingefrorene Quellen, Daten oder Schwellen zu ändern. Externe Replikation bleibt offen.
+
+- [RSS: Ergebnisse / Results](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/8ee417ba8c44c1f32f4e310a6566168d84982d3a/research/lorentz_rss_fixed_n/RESULTS.md)
+- [RSS: Herleitung / Derivation](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/8ee417ba8c44c1f32f4e310a6566168d84982d3a/research/lorentz_rss_fixed_n/DERIVATION.md)

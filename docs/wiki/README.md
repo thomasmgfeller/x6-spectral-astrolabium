@@ -45,3 +45,7 @@ historical evidence inventories and research-source freezes stay unchanged.
 Browser checks cover article navigation, corresponding language switches,
 mobile overflow and reading with JavaScript disabled. These are documentation
 and interface checks, not a full accessibility audit or scientific validation.
+
+Nachtrag 18. Oktober 2026: bedingte RSS-Kettenmomente, 24.576 neue Wolken,
+dokumentierter Status FORWARD_SLOPE_NOT_RESOLVED und große
+Einzelordnungsfehler der explorativen Krümmungsinversion.

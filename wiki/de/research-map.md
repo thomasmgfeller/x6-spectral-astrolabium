@@ -4,7 +4,7 @@ Nicht jeder Ordner ist eine fertige Anwendung. Diese Karte zeigt, wofür die ein
 
 [English](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/en/research-map.md) · [Wiki-Übersicht](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/de/)
 
-Quellenstand: 2026-10-17 · `6ac1363b6d3e0bcef6f863320290e3826977952a`
+Quellenstand: 2026-10-18 · `8ee417ba8c44c1f32f4e310a6566168d84982d3a`
 
 ## Drei direkte Einstiege
 
@@ -39,7 +39,7 @@ Status: reproduzierbare Labor-Maschinenreferenz abgeschlossen. Diese am 17. Okto
 3. Öffne die Originaldokumentation sowie den jeweiligen Prüfbericht.
 4. Prüfe die nächste offene Abnahme. Bei neueren Studien helfen die datierten Forschungsnotizen zusätzlich zum Register.
 
-Dieser Wiki-Stand vom 17. Oktober 2026 berücksichtigt die erste Eigenzeit-Veröffentlichung aus PR #44 sowie die neuen Pakete zu Gültigkeitsbereich und sequenzieller Absicherung. Der Quellenpin benennt deren gemeinsamen Implementierungsstand. Die Originalberichte behalten ihre eigenen Fixierungen und Grenzen; das Modulregister ist eine datierte Übersicht.
+Dieser Wiki-Stand vom 18. Oktober 2026 berücksichtigt die erste Eigenzeit-Veröffentlichung aus PR #44 sowie die neuen Pakete zu Gültigkeitsbereich und sequenzieller Absicherung. Der Quellenpin benennt deren gemeinsamen Implementierungsstand. Die Originalberichte behalten ihre eigenen Fixierungen und Grenzen; das Modulregister ist eine datierte Übersicht. Ergänzt sind die bedingten RSS-Momente und der vollständige Versuch mit fester Punktzahl; dessen gemeinsames Präzisionsziel bleibt unerreicht.
 
 - [Eigenzeit: veröffentlichte Ergebnisse und Grenzen](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/lorentz_proper_time/RESULTS.md)
 - [Durchsuchbarer Modulkatalog](https://thomasmgfeller.github.io/x6-spectral-astrolabium/modules/)
