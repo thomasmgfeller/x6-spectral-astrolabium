@@ -1,0 +1,46 @@
+{
+  "schema": "x6.free-field-entropy-contract/1",
+  "status_at_freeze": "BEFORE_CONFIRMATORY_TARGET_GENERATION",
+  "scope": "Massless real Gaussian SJ scalar on fixed flat 1+1 causal diamonds; no gravity dynamics or feature-utility claim",
+  "prior_exploration": "Earlier unfrozen pilot used N=64,128,256,512,1024 with eight seeds each (2026101700+101*N+r). Observed kernel obstructions and cutoff-sensitive finite-size entropies. It is not confirmatory evidence and is excluded here.",
+  "sampling": {
+    "generator": "numpy.PCG64 via default_rng; independent fixed-N uniform samples in [-1,1]^2 null coordinates",
+    "sizes": [256, 512, 1024, 2048],
+    "replicates_per_size": 16,
+    "seed_rule": "202610180000 + 100*N + replicate; replicate=0..15",
+    "seed_base": 202610180000,
+    "inner_halfwidth": 0.5,
+    "outer_halfwidth": 1.0,
+    "volume": 4.0,
+    "statistical_unit": "one independently generated whole causal set"
+  },
+  "regularization": {
+    "matrix_convention": "unweighted H=i*(C.T-C)/2; W=Pos(H)",
+    "primary_coefficient": 1.0,
+    "sensitivity_coefficients": [0.75, 1.0, 1.25],
+    "global_cutoff": "coefficient*sqrt(N)/(4*pi)",
+    "regional_cutoff": "coefficient*sqrt(N_A)/(4*pi)",
+    "numerical_zero": "50*n*float64_eps*max(1,max(abs(eigenvalues)))",
+    "kernel_relative_tolerance": 1e-9,
+    "eigenvalue_diagnostics_tolerance": 1e-8,
+    "kernel_policy": "No finite entropy on an unregularized kernel mismatch; explicit physical projection reported separately"
+  },
+  "analysis": {
+    "primary_sizes": [512, 1024, 2048],
+    "predictor": "log(sqrt(N_A))",
+    "response": "double-cutoff entropy in nats at coefficient=1",
+    "estimator": "OLS with intercept over all primary runs; bootstrap whole orders within each N stratum",
+    "bootstrap_replicates": 4000,
+    "bootstrap_seed": 202610180099,
+    "confidence_level": 0.95,
+    "reference_slope": 0.3333333333333333,
+    "engineering_equivalence_margin": 0.05,
+    "pass_rule": "All 64 primary-coefficient entropies valid, full primary 95% percentile interval inside 1/3 +/- 0.05, and primary-size point slopes for coefficients 0.75 and 1.25 inside that band",
+    "interpretation": "Finite-range numerical reference agreement only; margin is a declared engineering tolerance, not a theorem or a physical significance threshold",
+    "secondary": ["all-four-size slope", "adjacent-size slopes of mean entropy against mean predictor", "raw and global-only statuses", "cutoff coefficients 0.75 and 1.25"],
+    "missing_policy": "No replacement seeds; missing or invalid primary case makes reference INCOMPLETE; other outcomes REFERENCE_NOT_ESTABLISHED",
+    "no_retuning": "Do not change cutoff, seeds, fit range or acceptance after target observation"
+  },
+  "budget": {"wall_seconds": 1800, "memory_bytes": 2147483648, "blas_threads": 1},
+  "next_gate": "Geometry perturbations and equal-budget incremental utility require a separately frozen follow-up; no automatic scientific PASS from software tests"
+}

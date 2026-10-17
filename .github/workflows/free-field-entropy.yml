@@ -1,0 +1,37 @@
+name: Free Scalar Field and Entropy Reference
+on:
+  pull_request:
+    paths: ['research/free_field_entropy/**', '.github/workflows/free-field-entropy.yml']
+  push:
+    branches: [main]
+    paths: ['research/free_field_entropy/**', '.github/workflows/free-field-entropy.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Install numerical dependencies
+        run: python3 -m pip install -r research/free_field_entropy/requirements.txt
+      - name: Analytic and structural oracles
+        env:
+          OPENBLAS_NUM_THREADS: '1'
+        run: python3 -B research/free_field_entropy/test_core.py -v
+      - name: Verify published input ledger and frozen analysis if present
+        env:
+          OPENBLAS_NUM_THREADS: '1'
+        run: |
+          if test -f research/free_field_entropy/results/summary.json; then
+            python3 -B research/free_field_entropy/check.py research/free_field_entropy/results
+          fi
+      - name: Source inventory
+        run: python3 tests/python/verify_manifest.py
