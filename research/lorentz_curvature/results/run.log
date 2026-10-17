@@ -1,0 +1,56 @@
+N=64 flat_uniform: 512 orders completed
+N=64 de_sitter_025: 512 orders completed
+N=64 de_sitter_075: 512 orders completed
+N=64 de_sitter_125: 512 orders completed
+N=64 flat_spatial_compression: 512 orders completed
+N=64 flat_time_mask: 512 orders completed
+N=128 flat_uniform: 512 orders completed
+N=128 de_sitter_025: 512 orders completed
+N=128 de_sitter_075: 512 orders completed
+N=128 de_sitter_125: 512 orders completed
+N=128 flat_spatial_compression: 512 orders completed
+N=128 flat_time_mask: 512 orders completed
+{
+  "joint": {
+    "flat_uniform": {
+      "warnings": 10,
+      "trials": 512,
+      "bounds": [
+        0.008394603655458476,
+        0.03816751312201263
+      ]
+    },
+    "de_sitter_125": {
+      "warnings": 118,
+      "trials": 512,
+      "bounds": [
+        0.18987178121101633,
+        0.2750501524327573
+      ]
+    },
+    "null_upper": 0.03816751312201263,
+    "power_lower": 0.18987178121101633,
+    "status": "PRIMARY_SENSITIVITY_NOT_ESTABLISHED"
+  },
+  "height": {
+    "flat_uniform": {
+      "warnings": 1,
+      "trials": 512,
+      "bounds": [
+        2.4567632208554663e-05,
+        0.012397457103173068
+      ]
+    },
+    "de_sitter_125": {
+      "warnings": 5,
+      "trials": 512,
+      "bounds": [
+        0.002650623608810759,
+        0.02474351615229619
+      ]
+    },
+    "null_upper": 0.012397457103173068,
+    "power_lower": 0.002650623608810759,
+    "status": "PRIMARY_SENSITIVITY_NOT_ESTABLISHED"
+  }
+}
