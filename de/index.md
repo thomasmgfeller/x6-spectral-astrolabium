@@ -58,6 +58,12 @@ LOKALES NODE.JS-BEISPIEL. Einen begrenzten Signalauftrag lokal ausführen, expor
 
 [Edge-Beispiel ansehen →](https://thomasmgfeller.github.io/x6-spectral-astrolabium/modules/edge-reference.html)
 
+### Freies Feld & Entropie
+
+FORSCHUNGSREFERENZ. Definierter Gaußzustand, geprüfte Oszillatorreferenz und ein vorab festgelegter Causal-Set-Entropieversuch. Befunde und offene Grenzen getrennt lesen.
+
+[Entropiereferenz und Befund →](https://thomasmgfeller.github.io/x6-spectral-astrolabium/modules/free-field-entropy.html)
+
 ## Verstehen
 
 Was wird untersucht, und was sagen die Ergebnisse tatsächlich aus? Ein verständlicher Einstieg in die Forschung und ihre Grenzen.
@@ -91,7 +97,7 @@ Dies ist experimentelle Forschungssoftware. Ein bestandener Softwaretest ist kei
 - [Industrieller Datenpilot](https://thomasmgfeller.github.io/x6-spectral-astrolabium/modules/industrial-pilot.html): Status: reproduzierbare Labor-Maschinenreferenz abgeschlossen. 20 festgelegte Laborlager; industrielle Bestätigung bleibt offen.
 - [NQK-Forschungsdossier](https://thomasmgfeller.github.io/x6-spectral-astrolabium/modules/nqk.html): Eigenständiger Forschungszweig mit unvollständigen Reproduktionsarchiven.
 
-Das Register vom 2026-10-16 beschreibt 39 Module. Es dokumentiert Quellenorte und Evidenz; es ist kein Live-Prüfsiegel.
+Das Register vom 2026-10-17 beschreibt 40 Module. Es dokumentiert Quellenorte und Evidenz; es ist kein Live-Prüfsiegel.
 
 Das konfigurierte Agentenfenster schliesst Sonntag, den 18. Oktober 2026, ein. Das exklusive Ende unten begrenzt den Zeitplan und belegt keine Ausführung. Danach ist das Fenster geschlossen.
 2026-10-19T00:00:00+02:00

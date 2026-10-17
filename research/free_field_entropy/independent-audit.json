@@ -1,0 +1,32 @@
+{
+  "status": "PASS_FOUR_SIZE_COVARIANCE_AUDIT",
+  "source_ref": "bfdaae666978ffeb0ef92980d15df1aa07271d7e",
+  "cases": [
+    {
+      "n": 256,
+      "replicate": 0,
+      "independent_entropy_nats": 1.4418925971403687,
+      "absolute_error_nats": 1.84297022087776e-14
+    },
+    {
+      "n": 512,
+      "replicate": 0,
+      "independent_entropy_nats": 1.9083070437304848,
+      "absolute_error_nats": 2.1582735598713043e-13
+    },
+    {
+      "n": 1024,
+      "replicate": 0,
+      "independent_entropy_nats": 2.089876036260198,
+      "absolute_error_nats": 1.021405182655144e-14
+    },
+    {
+      "n": 2048,
+      "replicate": 0,
+      "independent_entropy_nats": 2.0838310576779353,
+      "absolute_error_nats": 4.8405723873656825e-14
+    }
+  ],
+  "elapsed_seconds": 36.23111535499993,
+  "scope": "First registered order of each size; different Hermitian covariance formula, same NumPy/SciPy environment and operator; no person-level independent replication"
+}
