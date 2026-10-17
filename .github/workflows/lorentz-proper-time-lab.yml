@@ -1,0 +1,57 @@
+name: Eigenzeit Notebook and Demonstrator
+on:
+  pull_request:
+    paths: ['research/lorentz_proper_time_lab/**', 'app/proper-time.html', '.github/workflows/lorentz-proper-time-lab.yml']
+  push:
+    branches: [main]
+    paths: ['research/lorentz_proper_time_lab/**', 'app/proper-time.html', '.github/workflows/lorentz-proper-time-lab.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  numerics-and-notebook:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: python -m pip install -r research/lorentz_proper_time_lab/requirements.txt
+      - name: Cross-check browser numerics and execute every notebook cell
+        env:
+          OPENBLAS_NUM_THREADS: '1'
+        run: |
+          python research/lorentz_proper_time_lab/build.py --check
+          python research/lorentz_proper_time_lab/verify.py --execute --report "$RUNNER_TEMP/eigenzeit-numerics.json"
+          python tests/python/verify_manifest.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: eigenzeit-numerics
+          path: ${{ runner.temp }}/eigenzeit-numerics.json
+  browser:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: |
+          npm install --no-save --package-lock=false --ignore-scripts playwright@1.62.1
+          npx playwright install --with-deps chromium
+      - name: Test controls, mobile layout, exports and standalone HTML
+        run: node research/lorentz_proper_time_lab/browser_test.cjs "$RUNNER_TEMP/eigenzeit-browser"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: eigenzeit-browser
+          path: ${{ runner.temp }}/eigenzeit-browser
+          retention-days: 30

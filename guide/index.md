@@ -22,6 +22,7 @@ Explore the documented counterexamples, including polarity inversion: a signal a
 
 Export the experiment evidence and use the documented import/replay workflow to check the calculation. A successful replay shows computational consistency within that workflow; it does not prove data authenticity or physical device performance.
 
+- [Proper-time lab: counts, uncertainty and a notebook (German)](https://thomasmgfeller.github.io/x6-spectral-astrolabium/app/proper-time.html)
 - [Open Signal Validation Lab (DE / EN / FR)](https://thomasmgfeller.github.io/x6-spectral-astrolabium/app/signal-lab.html)
 - [Read the Signal Lab scope and expected results](https://thomasmgfeller.github.io/x6-spectral-astrolabium/modules/signal-lab.html)
 - [Open the original Astrolabium application](https://thomasmgfeller.github.io/x6-spectral-astrolabium/app/index.html)

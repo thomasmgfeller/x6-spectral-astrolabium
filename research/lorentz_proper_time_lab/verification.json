@@ -1,0 +1,39 @@
+{
+  "status": "PASS_PROPER_TIME_LAB_IMPLEMENTATION",
+  "scope": "Numerical/software verification; not independent scientific replication",
+  "interval_cases": 1134,
+  "maximum_browser_reference_abs_error": 4.0158154579472694e-13,
+  "moment_cases": 27,
+  "maximum_moment_abs_error": 3.5110803153770576e-14,
+  "sampler_checks": [
+    {
+      "d": 2,
+      "m": 163840,
+      "k": 40944,
+      "t2": 0.04163756363499096,
+      "binomial_pvalue": 0.929531502851754,
+      "expected_t2": 0.041666666666666664
+    },
+    {
+      "d": 3,
+      "m": 163840,
+      "k": 20808,
+      "t2": 0.024978588545279866,
+      "binomial_pvalue": 0.014425358212202529,
+      "expected_t2": 0.025
+    },
+    {
+      "d": 4,
+      "m": 163840,
+      "k": 10323,
+      "t2": 0.016738843757607126,
+      "binomial_pvalue": 0.39692815382300406,
+      "expected_t2": 0.016666666666666666
+    }
+  ],
+  "rejected_invalid_inputs": 7,
+  "full_relation_count_check": true,
+  "notebook_code_cells_executed": 9,
+  "notebook_python": "3.12.14",
+  "notebook_execution_mode": "in_process_python"
+}
