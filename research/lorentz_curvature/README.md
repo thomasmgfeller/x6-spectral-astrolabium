@@ -11,6 +11,13 @@ Beprobungsdichte aus der Ordnung allein nicht identifizierbar.
 [Maschinenlesbarer Vertrag](contract.json) · [Rohdaten und Summen](results/) ·
 [Eigenzeit-Vorgeschichte](../lorentz_proper_time_publication/README.md)
 
+**Portabilitätsnachtrag:** Der strenge Replay bestand auf der ursprünglichen
+Laufzeitumgebung, scheiterte aber in GitHub CI an unterschiedlichen
+Koordinatenbytes. [Fehler und vollständig geprüfte NumPy-Variante](PORTABILITY.md)
+sind erhalten. Der ergänzte Replay akzeptiert ausschließlich die originalen
+oder konkret gegengeprüften Koordinatenhashes; die Kausalrelationen bleiben
+exakt gleich. Die ursprünglichen neun fixierten Quelldateien sind unverändert.
+
 Der öffentliche [Quellenstand `31cfd8c`](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/31cfd8ca832cffe67942cd198eb2d9d260765f62)
 liegt vor dem ersten Zielversuch. 8.702 unabhängige Ordnungen, korrekte
 4D-de-Sitter-Volumenbeprobung, bekannte Referenzeigenzeiten, flache Dichte-
@@ -30,9 +37,12 @@ python3 -m pip install -r research/lorentz_curvature/requirements.txt
 python3 -B research/lorentz_curvature/selftest.py
 python3 -B research/lorentz_curvature/verify.py
 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python3 -B research/lorentz_curvature/reproduce.py
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python3 -B research/lorentz_curvature/reproduce_portable.py
 ```
 
-Erwartet: `PASS_ARCHIVED_EVIDENCE` und `PASS_FULL_CURVATURE_REPLAY`.
+Erwartet: `PASS_ARCHIVED_EVIDENCE` und für den ergänzten Prüfweg
+`PASS_PORTABLE_CURVATURE_REPLAY`. Der ursprüngliche strenge Replay liefert
+`PASS_FULL_CURVATURE_REPLAY` nur bei identischen Original-Koordinatenbytes.
 Die Wiederholung erzeugt sämtliche Punktwolken in einem neuen temporären
 Verzeichnis und vergleicht alle wissenschaftlichen Ausgaben. Pro Ziellauf
 gelten 600 Sekunden und 2 GiB; Prüfer und Wiederholung benötigen zusätzliche

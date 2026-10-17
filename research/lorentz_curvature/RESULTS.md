@@ -8,6 +8,13 @@ order alone when sampling density is unrestricted. A quiet diagnostic is not
 a geometry certificate. This is not a physical Planck-scale clock or a
 validated curvature sensor.
 
+**Software addendum:** the original strict coordinate-byte replay passed
+locally but failed in the first GitHub CI job. [PORTABILITY.md](PORTABILITY.md)
+preserves that failure and the complete bounded CPU-dispatch comparison.
+The supplementary replay accepts only explicitly checked per-case coordinate
+hash variants and requires all original scientific fields and full relations
+to agree. This post-run software repair changes no scientific decision.
+
 **Deutsch:** Der vorab festgelegte Versuch mit 8.702 unabhängigen Ordnungen
 ist vollständig ausgeführt. Beide Diagnosen verfehlen das verlangte
 Empfindlichkeitskriterium. Alle 3.072 gekoppelten Dichtezwillinge liefern bei
@@ -143,7 +150,8 @@ ambiguity.
 The original target run took 25.05 seconds and peaked at 148,776 KiB RSS
 on the recorded Linux environment, within the 600-second and 2-GiB limits.
 This observation is not an industrial performance benchmark. Software and
-replay status is `PASS_FULL_CURVATURE_REPLAY`; scientific sensitivity remains
+local strict replay status is `PASS_FULL_CURVATURE_REPLAY`; the separately
+labelled portable check is described in the addendum. Scientific sensitivity remains
 failed. Internal verification and CI replay are not external replication.
 
 ## Consequences for the proposed clock and “smoke detector”
