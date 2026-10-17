@@ -112,7 +112,7 @@ def home(path, data, content, lang):
     guide = 'de/guide.html' if lang == 'de' else 'guide/index.html'
     visual, feature = t['setup_visual'], t['cqg_feature']
     body = '<section class="hero hero-visual"><div class="hero-copy"><p class="eyebrow">OPEN RESEARCH · PUBLIC PREVIEW</p><h1>' + E(t['headline']) + '</h1>' + p(t['lead'])
-    body += '<div class="actions">' + link(rel(path, 'app/index.html'), t['launch_astrolabium'], **{'class': 'button'}) + link(rel(path, 'app/signal-lab.html'), t['launch'], **{'class': 'button secondary'}) + link(rel(path, 'modules/index.html'), t['browse'], **{'class': 'button secondary'}) + link(rel(path, 'wiki/' + lang + '/index.html'), 'X6 verständlich erklärt →' if lang == 'de' else 'X6 explained simply →', **{'class': 'button secondary'}) + '</div></div>'
+    body += '<div class="actions">' + link(rel(path, 'app/index.html'), t['launch_astrolabium'], **{'class': 'button'}) + link(rel(path, 'app/signal-lab.html'), t['launch'], **{'class': 'button secondary'}) + link(rel(path, 'app/proper-time.html'), t['launch_proper_time'], **{'class': 'button'}) + link(rel(path, 'modules/index.html'), t['browse'], **{'class': 'button secondary'}) + link(rel(path, 'wiki/' + lang + '/index.html'), 'X6 verständlich erklärt →' if lang == 'de' else 'X6 explained simply →', **{'class': 'button secondary'}) + '</div></div>'
     body += '<figure class="setup-visual"><a href="' + rel(path, SETUP_IMAGE) + '" aria-label="' + E(visual['expand'], quote=True) + '"><img src="' + rel(path, SETUP_IMAGE) + '" width="1536" height="1024" fetchpriority="high" alt="' + E(visual['alt'], quote=True) + '"></a><figcaption><span class="eyebrow">' + E(visual['label']) + '</span><strong>' + E(visual['title']) + '</strong>' + p(visual['caption']) + link(REPO + '/blob/main/experiments/photonic-two-qubit/README.md', visual['details']) + '</figcaption></figure></section>'
     downloads = [(rel(path, 'app/rax-cqg-lab.html'), feature['benchmark']),
                  (rel(path, CQG_BENCHMARK_PATH + 'RAX_CQG_Benchmark_v0_2_0.zip'), feature['package']),
@@ -140,7 +140,7 @@ def home(path, data, content, lang):
     body += p(t['window']) + '<p><time datetime="' + data['agent_window']['stop_local'] + '">19 October 2026, 00:00 Europe/Zurich</time> · <code>' + data['agent_window']['stop_utc'] + '</code></p></section>'
     md = '# ' + t['headline'] + '\n\n' + t['lead'] + '\n\n'
     md += '[' + ('Wiki: X6 verständlich erklärt' if lang == 'de' else 'Wiki: X6 explained simply') + '](' + canonical('wiki/' + lang + '/index.html') + ')\n\n'
-    for target, label in [('app/index.html', t['launch_astrolabium']), ('app/signal-lab.html', t['launch']), ('modules/index.html', t['browse'])]:
+    for target, label in [('app/index.html', t['launch_astrolabium']), ('app/signal-lab.html', t['launch']), ('app/proper-time.html', t['launch_proper_time']), ('modules/index.html', t['browse'])]:
         md += '- [' + label + '](' + canonical(target) + ')\n'
     md += '\n## ' + visual['title'] + '\n\n![' + visual['alt'] + '](' + BASE + SETUP_IMAGE + ')\n\n' + visual['caption'] + '\n\n[' + visual['details'] + '](' + REPO + '/blob/main/experiments/photonic-two-qubit/README.md)\n'
     md += '\n## RAX-CQG · ' + feature['label'] + '\n\n' + feature['text'] + '\n\n' + feature['status'] + '\n\n'

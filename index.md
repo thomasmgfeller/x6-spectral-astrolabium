@@ -7,6 +7,7 @@ X6 Spectral Astrolabium is an open research hub for signals, graphs and causal o
 
 - [Open Astrolabium →](https://thomasmgfeller.github.io/x6-spectral-astrolabium/app/)
 - [Open Signal Lab →](https://thomasmgfeller.github.io/x6-spectral-astrolabium/app/signal-lab.html)
+- [Open Eigenzeit Lab →](https://thomasmgfeller.github.io/x6-spectral-astrolabium/app/proper-time.html)
 - [Browse all modules →](https://thomasmgfeller.github.io/x6-spectral-astrolabium/modules/)
 
 ## From light signals to measurement data
@@ -32,7 +33,7 @@ Exploratory software prototype, not validated quantum gravity. Architecture v0.1
 
 ## More tools & references
 
-Launch either browser application above. These starting points lead to the relevant instructions, prerequisites and documented checks.
+The browser applications launch directly above. These routes lead to the relevant instructions, prerequisites and documented checks.
 
 ### Shared workflow
 
