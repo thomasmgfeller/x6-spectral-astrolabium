@@ -5,18 +5,16 @@ kausale Ordnung. [Zustand, Randbedingungen und Nullmoden](MODEL.md) sind
 verbindlich beschrieben; der [Versuchsvertrag](contract.json) trennt
 Softwareprüfung, numerische Referenz und späteren Zusatznutzen.
 
-Stand dieses ersten Quellstands: analytische Gegenprüfungen implementiert,
-Zielkohorte noch nicht ausgeführt. Ergebnisse werden nach der öffentlichen
-Quellfixierung ergänzt. Ein früherer Pilot zählt nicht als bestätigende Evidenz.
+**Stand: Feldkern und kleine Oszillatorreferenz geprüft; der größere Skalierungsversuch bleibt REFERENCE_NOT_ESTABLISHED.** 64 neue Ordnungen sind vollständig berechnet. Die Hauptsteigung 0,358 mit 95%-Intervall [0,260; 0,458] erfüllt die vorab verlangte Präzision und Cutoff-Stabilität nicht. [Ergebnisse und Grenzen](RESULTS.md).
 
 ```sh
 python3 -m pip install -r research/free_field_entropy/requirements.txt
 OPENBLAS_NUM_THREADS=1 python3 -B research/free_field_entropy/test_core.py -v
-python3 -B research/free_field_entropy/run.py --source-ref FREEZE_COMMIT --output /tmp/x6-field-reference
+python3 -B research/free_field_entropy/run.py --source-ref bfdaae666978ffeb0ef92980d15df1aa07271d7e --output /tmp/x6-field-reference
 python3 -B research/free_field_entropy/check.py /tmp/x6-field-reference --audit
 ```
 
-FREEZE_COMMIT ist der öffentliche Commit mit `freeze.json`; die Ausführung
+Der angegebene öffentliche Commit enthält `freeze.json`; die Ausführung
 prüft die Dateihashes gegen diesen Git-Stand. Das Ausgabeverzeichnis muss neu
 sein. Der Arbeiter hat 30 Minuten, 2 GiB virtuellen Adressraum und einen
 BLAS-Thread. Abbrüche erhalten Teildaten und werden nicht durch Ersatzseeds

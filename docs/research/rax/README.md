@@ -9,6 +9,8 @@ kausale Historien, diskrete Wirkung, Destillation und stabile Rekonstruktion.
 [Word](cqg-v0.1/RAX_CQG_Forschungsarchitektur_v0_1.docx).
 Forschungsentwurf; CQG-01–08 sind noch nicht als Kampagne ausgeführt.
 
+**Freies Feld und Entropie:** Der [separate Referenzbaustein](../../../research/free_field_entropy/README.md) definiert einen masselosen SJ-Zustand auf festen 1+1-kausalen Mengen, behandelt Nullmoden explizit und prüft bekannte Entropiereferenzen. Softwareprüfung, numerischer Referenzbefund und ein späterer Zusatznutzen bleiben getrennte Aussagen.
+
 [Forschungsprogramm herunterladen (DOCX, 14 Seiten)](RAX_Relationales_Forschungsprogramm_v0_1.docx)
 
 [RAX-U1-Gegenprüfung v0.1: Bericht und vollständiges Reproduktionspaket](countercheck-v0.1/README.md)

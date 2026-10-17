@@ -111,6 +111,8 @@ Quellenlücken, insbesondere fehlende NQK-Archive, bleiben ausdrücklich offen.
 
 **Erste geometrische Schätzaufgabe abgeschlossen:** [Normierte Eigenzeit zwischen markierten Ereignissen](research/lorentz_proper_time/RESULTS.md). 6.912 Ordnungen und 27.648 Vorhersagen sind intern gegengeprüft. Die Intervallpunktzahl erfüllt im bekannten flachen 1+1-Modell die vorab festgelegten Hauptkriterien: RMSE 0,031614 gegenüber 0,177785 für die Dichte-/Höhenregression. Bei der größten exakt abgeglichenen Zusatzkontrolle reichen 63 statt 128 Paare nicht für eine Leistungsbewertung. Das ist eine begrenzte Schätzerqualifikation; externe Replikation und allgemeinere geometrische Aussagen bleiben offen.
 
+**Freies Feld und Entropiereferenz:** Der [neue RAX-CQG-Baustein](research/free_field_entropy/RESULTS.md) definiert Zustand, Korrelationen, Rand und Nullmoden. 13 Gegenprüfungen einschließlich einer bekannten Oszillatorentropie bestehen; 64 neue Causal-Set-Ordnungen sind vollständig berechnet. Die Hauptsteigung 0,358 mit 95%-Intervall [0,260; 0,458] ist mit 1/3 vereinbar, erfüllt aber die vorab verlangte Präzision und Cutoff-Stabilität nicht: **REFERENCE_NOT_ESTABLISHED**. Geometrieantworten und zusätzlicher Nutzen gegenüber bisherigen Merkmalen bleiben offen.
+
 ## Frozen reference edition and validation hardening
 
 The [QE reference edition](https://github.com/thomasmgfeller/x6-spectral-astrolabium/releases/tag/reference-2026.10.15-qe1)

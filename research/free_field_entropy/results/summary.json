@@ -1,0 +1,279 @@
+{
+  "cells": [
+    {
+      "cutoffs": {
+        "0.75": {
+          "double_statuses": {
+            "OK": 16
+          },
+          "global_only_statuses": {
+            "KERNEL_MISMATCH": 8,
+            "NUMERICAL_FAILURE": 4,
+            "OK": 4
+          },
+          "mean_entropy_nats": 2.2722044558835757,
+          "sample_sd": 0.17006444302780535
+        },
+        "1.0": {
+          "double_statuses": {
+            "OK": 16
+          },
+          "global_only_statuses": {
+            "KERNEL_MISMATCH": 3,
+            "OK": 13
+          },
+          "mean_entropy_nats": 1.6268365655173478,
+          "sample_sd": 0.15574873452253013
+        },
+        "1.25": {
+          "double_statuses": {
+            "OK": 16
+          },
+          "global_only_statuses": {
+            "OK": 16
+          },
+          "mean_entropy_nats": 1.271352868922751,
+          "sample_sd": 0.10324904100022476
+        }
+      },
+      "mean_region_count": 63.1875,
+      "n": 256,
+      "observed": 16,
+      "raw_statuses": {
+        "KERNEL_MISMATCH": 16
+      }
+    },
+    {
+      "cutoffs": {
+        "0.75": {
+          "double_statuses": {
+            "OK": 16
+          },
+          "global_only_statuses": {
+            "KERNEL_MISMATCH": 1,
+            "OK": 15
+          },
+          "mean_entropy_nats": 2.534432939198715,
+          "sample_sd": 0.13474122303851238
+        },
+        "1.0": {
+          "double_statuses": {
+            "OK": 16
+          },
+          "global_only_statuses": {
+            "OK": 16
+          },
+          "mean_entropy_nats": 1.811436030080661,
+          "sample_sd": 0.11988834409062982
+        },
+        "1.25": {
+          "double_statuses": {
+            "OK": 16
+          },
+          "global_only_statuses": {
+            "OK": 16
+          },
+          "mean_entropy_nats": 1.4459937282107709,
+          "sample_sd": 0.09829431682169358
+        }
+      },
+      "mean_region_count": 127.6875,
+      "n": 512,
+      "observed": 16,
+      "raw_statuses": {
+        "KERNEL_MISMATCH": 16
+      }
+    },
+    {
+      "cutoffs": {
+        "0.75": {
+          "double_statuses": {
+            "OK": 16
+          },
+          "global_only_statuses": {
+            "OK": 16
+          },
+          "mean_entropy_nats": 2.71837593751419,
+          "sample_sd": 0.1246566541203811
+        },
+        "1.0": {
+          "double_statuses": {
+            "OK": 16
+          },
+          "global_only_statuses": {
+            "OK": 16
+          },
+          "mean_entropy_nats": 1.948721113758084,
+          "sample_sd": 0.09001071473822726
+        },
+        "1.25": {
+          "double_statuses": {
+            "OK": 16
+          },
+          "global_only_statuses": {
+            "OK": 16
+          },
+          "mean_entropy_nats": 1.562853186656963,
+          "sample_sd": 0.07162690992700901
+        }
+      },
+      "mean_region_count": 254.625,
+      "n": 1024,
+      "observed": 16,
+      "raw_statuses": {
+        "KERNEL_MISMATCH": 16
+      }
+    },
+    {
+      "cutoffs": {
+        "0.75": {
+          "double_statuses": {
+            "OK": 16
+          },
+          "global_only_statuses": {
+            "OK": 16
+          },
+          "mean_entropy_nats": 2.8277181854698705,
+          "sample_sd": 0.08258833817265755
+        },
+        "1.0": {
+          "double_statuses": {
+            "OK": 16
+          },
+          "global_only_statuses": {
+            "OK": 16
+          },
+          "mean_entropy_nats": 2.067875614808624,
+          "sample_sd": 0.0709869712170667
+        },
+        "1.25": {
+          "double_statuses": {
+            "OK": 16
+          },
+          "global_only_statuses": {
+            "OK": 16
+          },
+          "mean_entropy_nats": 1.670031641827634,
+          "sample_sd": 0.06332622851106222
+        }
+      },
+      "mean_region_count": 510.6875,
+      "n": 2048,
+      "observed": 16,
+      "raw_statuses": {
+        "KERNEL_MISMATCH": 16
+      }
+    }
+  ],
+  "cohort_expected": 64,
+  "cohort_observed": 64,
+  "complete": true,
+  "cutoff_sensitivity_acceptable": false,
+  "fits": {
+    "0.75": {
+      "adjacent_mean_slopes": [
+        {
+          "sizes": [
+            256,
+            512
+          ],
+          "slope": 0.7423239616760119
+        },
+        {
+          "sizes": [
+            512,
+            1024
+          ],
+          "slope": 0.532161044593457
+        },
+        {
+          "sizes": [
+            1024,
+            2048
+          ],
+          "slope": 0.3141892924735296
+        }
+      ],
+      "all_sizes_slope": 0.5105861158368573,
+      "ci95": [
+        0.2882441862327711,
+        0.5152213546729111
+      ],
+      "primary_intercept": 1.5910683770810627,
+      "primary_slope": 0.3979673577593775,
+      "status": "OK"
+    },
+    "1.0": {
+      "adjacent_mean_slopes": [
+        {
+          "sizes": [
+            256,
+            512
+          ],
+          "slope": 0.5225694940744745
+        },
+        {
+          "sizes": [
+            512,
+            1024
+          ],
+          "slope": 0.3971761589510385
+        },
+        {
+          "sizes": [
+            1024,
+            2048
+          ],
+          "slope": 0.3423842940862146
+        }
+      ],
+      "all_sizes_slope": 0.4045399069800269,
+      "ci95": [
+        0.2597374770046835,
+        0.45841301610515733
+      ],
+      "primary_intercept": 0.9509441119874682,
+      "primary_slope": 0.3580034468202324,
+      "status": "OK"
+    },
+    "1.25": {
+      "adjacent_mean_slopes": [
+        {
+          "sizes": [
+            256,
+            512
+          ],
+          "slope": 0.4943783867345479
+        },
+        {
+          "sizes": [
+            512,
+            1024
+          ],
+          "slope": 0.3380832760521526
+        },
+        {
+          "sizes": [
+            1024,
+            2048
+          ],
+          "slope": 0.30797174585369874
+        }
+      ],
+      "all_sizes_slope": 0.36860557237462993,
+      "ci95": [
+        0.227329304273057,
+        0.3952441051811729
+      ],
+      "primary_intercept": 0.6808613002631522,
+      "primary_slope": 0.317223191571189,
+      "status": "OK"
+    }
+  },
+  "primary_equivalence": false,
+  "reference_band": [
+    0.2833333333333333,
+    0.3833333333333333
+  ],
+  "status": "REFERENCE_NOT_ESTABLISHED"
+}
