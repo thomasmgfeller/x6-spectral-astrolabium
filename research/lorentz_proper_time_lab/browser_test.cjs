@@ -22,6 +22,12 @@ async function main(){
     await page.goto(base+'/app/proper-time.html');
     await page.waitForFunction(()=>document.querySelector('#count').textContent!=='—');
     assert.equal(await page.locator('#error').isVisible(),false);
+    const plotBounds=await page.locator('#cloud').evaluate(el=>{
+      const b=el.getBBox(),v=el.viewBox.baseVal;
+      return b.x>=v.x && b.y>=v.y && b.x+b.width<=v.x+v.width && b.y+b.height<=v.y+v.height;
+    });
+    assert.equal(plotBounds,true,'Cloud drawing must stay inside its SVG viewBox');
+    checks.push('Cloud geometry fits its viewport and does not overlap neighbouring content');
     await page.screenshot({path:path.join(out,'desktop.png'),fullPage:true});
     const initial=await page.locator('#count').innerText();
     await page.locator('#run').click();assert.equal(await page.locator('#count').innerText(),initial);

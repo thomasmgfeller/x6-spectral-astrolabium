@@ -15,7 +15,7 @@
     return p;
   }
   function cloudPlot(c,p,chain) {
-    const X=x=>320+x*760,Y=t=>220-t*760;
+    const X=x=>320+x*380,Y=t=>220-t*380;
     let s='<title id="cloud-svg-title">Raumzeitdiamant mit markierten Endpunkten</title><desc id="cloud-svg-desc">Alle Vergleiche verwenden die vollständigen Raumzeitkoordinaten. Die Grafik zeigt t und x₁.</desc>';
     for(let a=-.5;a<=.501;a+=.1) {s+=line(X(-.6),Y(a),X(.6),Y(a),'#1d2a40');s+=line(X(a),Y(-.5),X(a),Y(.5),'#1d2a40');}
     s+=line(X(-.62),Y(0),X(.62),Y(0),'#40516a');s+=line(X(0),Y(-.53),X(0),Y(.53),'#40516a');
