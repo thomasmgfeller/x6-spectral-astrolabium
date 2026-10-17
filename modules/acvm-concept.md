@@ -1,20 +1,20 @@
 # ACVM: Grundkonzept 0.1
 
-Registerstand: 2026-10-16. MAIN / CONCEPT. Kein Live-Prüfsiegel.
+Registerstand: 2026-10-17. MAIN / CONCEPT. Kein Live-Prüfsiegel.
 
 ## Quelle
 
 Branch: main
 
-Commit: a1f22f6c59f3c5259d12cfb6c0ca2e8b0886f33f
+Commit: 96fdd71b6741adecf5481174a5d19b32b66bfe2d
 
-[Originaldokumentation](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/a1f22f6c59f3c5259d12cfb6c0ca2e8b0886f33f/docs/acvm/README.md)
+[Originaldokumentation](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/96fdd71b6741adecf5481174a5d19b32b66bfe2d/docs/acvm/README.md)
 
 ## Dokumentierte Aussage
 
 Historische Gesamtspezifikation. Teilimplementierungen in main ersetzen keine vollständige Geräteabnahme.
 
-- [docs/acvm/ACVM_CONCEPT_v0_1_DE.md](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/a1f22f6c59f3c5259d12cfb6c0ca2e8b0886f33f/docs/acvm/ACVM_CONCEPT_v0_1_DE.md): Ursprünglicher Anforderungstext; spätere Softwarebelege in C1 und optical-v0.2.
+- [docs/acvm/ACVM_CONCEPT_v0_1_DE.md](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/96fdd71b6741adecf5481174a5d19b32b66bfe2d/docs/acvm/ACVM_CONCEPT_v0_1_DE.md): Ursprünglicher Anforderungstext; spätere Softwarebelege in C1 und optical-v0.2.
 
 ## Reproduzieren
 

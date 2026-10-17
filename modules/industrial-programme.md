@@ -1,20 +1,20 @@
 # Industrielle Entrauschung: Forschungsprogramm v0.2
 
-Registerstand: 2026-10-16. MAIN / CONCEPT. Kein Live-Prüfsiegel.
+Registerstand: 2026-10-17. MAIN / CONCEPT. Kein Live-Prüfsiegel.
 
 ## Quelle
 
 Branch: main
 
-Commit: a1f22f6c59f3c5259d12cfb6c0ca2e8b0886f33f
+Commit: 96fdd71b6741adecf5481174a5d19b32b66bfe2d
 
-[Originaldokumentation](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/a1f22f6c59f3c5259d12cfb6c0ca2e8b0886f33f/docs/industrial-denoising/Astrolabium_Industrial_Denoising_Forschungsprogramm_v0_2.docx)
+[Originaldokumentation](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/96fdd71b6741adecf5481174a5d19b32b66bfe2d/docs/industrial-denoising/Astrolabium_Industrial_Denoising_Forschungsprogramm_v0_2.docx)
 
 ## Dokumentierte Aussage
 
 Forschungsplan für Diagnosequalität, Ereigniserhalt und Ressourcenbudgets; keine nachgewiesene neue Filterleistung.
 
-- [docs/industrial-denoising/Astrolabium_Industrial_Denoising_Forschungsprogramm_v0_2.docx](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/a1f22f6c59f3c5259d12cfb6c0ca2e8b0886f33f/docs/industrial-denoising/Astrolabium_Industrial_Denoising_Forschungsprogramm_v0_2.docx): Veröffentlichter Forschungsplan; kein abgeschlossener Industrieversuch.
+- [docs/industrial-denoising/Astrolabium_Industrial_Denoising_Forschungsprogramm_v0_2.docx](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/96fdd71b6741adecf5481174a5d19b32b66bfe2d/docs/industrial-denoising/Astrolabium_Industrial_Denoising_Forschungsprogramm_v0_2.docx): Veröffentlichter Forschungsplan; kein abgeschlossener Industrieversuch.
 
 ## Reproduzieren
 

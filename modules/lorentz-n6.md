@@ -1,6 +1,6 @@
 # Lorentz-Kollisionsatlas n=6: vollständiger Forschungsstand
 
-Registerstand: 2026-10-16. BRANCH_ONLY / SOFTWARE. Kein Live-Prüfsiegel.
+Registerstand: 2026-10-17. BRANCH_ONLY / SOFTWARE. Kein Live-Prüfsiegel.
 
 ## Quelle
 

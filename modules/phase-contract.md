@@ -1,20 +1,20 @@
 # X6-Phasenfilter: Experimentvertrag
 
-Registerstand: 2026-10-16. MAIN / SOFTWARE. Kein Live-Prüfsiegel.
+Registerstand: 2026-10-17. MAIN / SOFTWARE. Kein Live-Prüfsiegel.
 
 ## Quelle
 
 Branch: main
 
-Commit: a1f22f6c59f3c5259d12cfb6c0ca2e8b0886f33f
+Commit: 96fdd71b6741adecf5481174a5d19b32b66bfe2d
 
-[Originaldokumentation](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/a1f22f6c59f3c5259d12cfb6c0ca2e8b0886f33f/experiments/x6-phase-filter/README.md)
+[Originaldokumentation](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/96fdd71b6741adecf5481174a5d19b32b66bfe2d/experiments/x6-phase-filter/README.md)
 
 ## Dokumentierte Aussage
 
 Die Vorprüfung trennt einen strukturell gültigen Entwurf von einem ausführungsreifen Versuch; Filterclaim UNVALIDATED.
 
-- [experiments/x6-phase-filter/contract-v0.2.0/validation_report.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/a1f22f6c59f3c5259d12cfb6c0ca2e8b0886f33f/experiments/x6-phase-filter/contract-v0.2.0/validation_report.json): 42 Softwaretests; keine neuen Filterversuche.
+- [experiments/x6-phase-filter/contract-v0.2.0/validation_report.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/96fdd71b6741adecf5481174a5d19b32b66bfe2d/experiments/x6-phase-filter/contract-v0.2.0/validation_report.json): 42 Softwaretests; keine neuen Filterversuche.
 
 ## Reproduzieren
 
@@ -25,7 +25,7 @@ Neue Arbeits- und Ausgabeordner verwenden; Voraussetzungen aus der Originaldokum
 ```sh
 git clone --branch main https://github.com/thomasmgfeller/x6-spectral-astrolabium.git x6-phase-contract
 cd x6-phase-contract
-git checkout --detach a1f22f6c59f3c5259d12cfb6c0ca2e8b0886f33f
+git checkout --detach 96fdd71b6741adecf5481174a5d19b32b66bfe2d
 cd experiments/x6-phase-filter/contract-v0.2.0
 python3 -m pip install -r requirements.txt
 python3 preflight.py X6_PF_Experiment_Contract_v0_2_DRAFT.json --mode draft

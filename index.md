@@ -58,6 +58,12 @@ LOCAL NODE.JS EXAMPLE. Run, export and replay a bounded signal task locally. An 
 
 [Explore the Edge example →](https://thomasmgfeller.github.io/x6-spectral-astrolabium/modules/edge-reference.html)
 
+### Free field & entropy
+
+RESEARCH REFERENCE. A specified Gaussian state, a checked oscillator reference and a prospectively fixed causal-set entropy study. Results and open limits remain separate.
+
+[Read the entropy reference →](https://thomasmgfeller.github.io/x6-spectral-astrolabium/modules/free-field-entropy.html)
+
 ## Understand
 
 What is being studied, and what do the results actually say? A plain-language introduction to the research and its limits.
@@ -91,7 +97,7 @@ This is experimental research software. A passing software test is not physical 
 - [Industrial data pilot](https://thomasmgfeller.github.io/x6-spectral-astrolabium/modules/industrial-pilot.html): Status: reproducible laboratory machine reference completed. 20 specified laboratory bearings; industrial confirmation remains open.
 - [NQK research dossier](https://thomasmgfeller.github.io/x6-spectral-astrolabium/modules/nqk.html): A separate research direction with incomplete reproduction archives.
 
-39 modules are described in the register dated 2026-10-16. The register records source locations and evidence; it is not a live qualification badge.
+40 modules are described in the register dated 2026-10-17. The register records source locations and evidence; it is not a live qualification badge.
 
 The configured research-agent window includes Sunday, 18 October 2026. The exclusive cutoff below is a schedule limit, not evidence of execution. After this cutoff the window is closed.
 2026-10-19T00:00:00+02:00

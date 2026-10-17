@@ -1,20 +1,20 @@
 # ACVM Electrical & Thermal Test Fixture
 
-Registerstand: 2026-10-16. MAIN / CONCEPT. Kein Live-Prüfsiegel.
+Registerstand: 2026-10-17. MAIN / CONCEPT. Kein Live-Prüfsiegel.
 
 ## Quelle
 
 Branch: main
 
-Commit: a1f22f6c59f3c5259d12cfb6c0ca2e8b0886f33f
+Commit: 96fdd71b6741adecf5481174a5d19b32b66bfe2d
 
-[Originaldokumentation](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/a1f22f6c59f3c5259d12cfb6c0ca2e8b0886f33f/docs/acvm/electrical-thermal-fixture/README.md)
+[Originaldokumentation](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/96fdd71b6741adecf5481174a5d19b32b66bfe2d/docs/acvm/electrical-thermal-fixture/README.md)
 
 ## Dokumentierte Aussage
 
 Elektrischer/thermischer Prüfstand und QD-01 sind Konzeptdarstellungen; Illustrationen sind keine gefertigten Chips.
 
-- [docs/acvm/electrical-thermal-fixture/README.md](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/a1f22f6c59f3c5259d12cfb6c0ca2e8b0886f33f/docs/acvm/electrical-thermal-fixture/README.md): ETF-T01–ETF-T14 NOT_RUN.
+- [docs/acvm/electrical-thermal-fixture/README.md](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/96fdd71b6741adecf5481174a5d19b32b66bfe2d/docs/acvm/electrical-thermal-fixture/README.md): ETF-T01–ETF-T14 NOT_RUN.
 
 ## Reproduzieren
 

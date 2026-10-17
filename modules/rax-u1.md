@@ -1,20 +1,20 @@
 # RAX-U1: Reduktionskontrolle
 
-Registerstand: 2026-10-16. MAIN / SOFTWARE. Kein Live-Prüfsiegel.
+Registerstand: 2026-10-17. MAIN / SOFTWARE. Kein Live-Prüfsiegel.
 
 ## Quelle
 
 Branch: main
 
-Commit: a1f22f6c59f3c5259d12cfb6c0ca2e8b0886f33f
+Commit: 96fdd71b6741adecf5481174a5d19b32b66bfe2d
 
-[Originaldokumentation](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/a1f22f6c59f3c5259d12cfb6c0ca2e8b0886f33f/docs/research/rax/countercheck-v0.1/README.md)
+[Originaldokumentation](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/96fdd71b6741adecf5481174a5d19b32b66bfe2d/docs/research/rax/countercheck-v0.1/README.md)
 
 ## Dokumentierte Aussage
 
 160 Matrizen/3,2 Mio. Übergänge; Entscheidungen 8 gestützt, 16 verworfen, 16 unentschieden. Archivvorfall bleibt offen.
 
-- [docs/research/rax/countercheck-v0.1/RAX_U1_Gegenpruefung_v0_1_Paket.zip](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/a1f22f6c59f3c5259d12cfb6c0ca2e8b0886f33f/docs/research/rax/countercheck-v0.1/RAX_U1_Gegenpruefung_v0_1_Paket.zip): Originalquellen, Rohdaten, audit-final und Gegenproben im Paket.
+- [docs/research/rax/countercheck-v0.1/RAX_U1_Gegenpruefung_v0_1_Paket.zip](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/96fdd71b6741adecf5481174a5d19b32b66bfe2d/docs/research/rax/countercheck-v0.1/RAX_U1_Gegenpruefung_v0_1_Paket.zip): Originalquellen, Rohdaten, audit-final und Gegenproben im Paket.
 
 ## Reproduzieren
 
@@ -25,7 +25,7 @@ Neue Arbeits- und Ausgabeordner verwenden; Voraussetzungen aus der Originaldokum
 ```sh
 git clone --branch main https://github.com/thomasmgfeller/x6-spectral-astrolabium.git x6-rax-u1
 cd x6-rax-u1
-git checkout --detach a1f22f6c59f3c5259d12cfb6c0ca2e8b0886f33f
+git checkout --detach 96fdd71b6741adecf5481174a5d19b32b66bfe2d
 python3 -m zipfile -e docs/research/rax/countercheck-v0.1/RAX_U1_Gegenpruefung_v0_1_Paket.zip /tmp/x6-hub-rax-u1
 cd /tmp/x6-hub-rax-u1/RAX_U1_Gegenpruefung_v0_1
 python3 -m pip install -r research/rax_u1_countercheck/requirements.txt
