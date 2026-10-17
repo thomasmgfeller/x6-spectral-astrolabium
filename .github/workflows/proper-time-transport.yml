@@ -1,0 +1,19 @@
+name: Import verified proper-time publication
+on:
+  push:
+    branches: ['publication/proper-time-transport-20261017']
+permissions:
+  contents: read
+jobs:
+  import:
+    if: github.repository == 'thomasmgfeller/x6-spectral-astrolabium' && github.ref == 'refs/heads/publication/proper-time-transport-20261017'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09
+        with:
+          fetch-depth: 0
+      - name: Verify hashes and import original commits into the publication branch
+        run: python3 .publication-transfer/assemble.py
