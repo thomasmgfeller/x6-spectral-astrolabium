@@ -1,0 +1,46 @@
+{
+  "schema": "x6.proper-time-validity/0.2",
+  "title": "Eigenzeit v0.2: validity map and information requirements",
+  "base_commit": "44826ff2bab5cdca7665c3c07f12540f173c6e59",
+  "experiment": "Deterministic numerical evaluation of exact finite-binomial expressions; no new point-cloud draws or empirical efficacy trial",
+  "dimensions": [2, 3, 4],
+  "theta_grid": [0.1, 0.2, 0.4, 0.7],
+  "observed_counts": [256, 1024, 4096, 16384, 65536, 262144, 1048576],
+  "confidence_alpha": 0.05,
+  "relative_precision": 0.1,
+  "required_precision_probability": 0.9,
+  "models": {
+    "uniform_flat": "All listed dimensions; fixed central endpoints, complete inclusion and iid uniform observed background points",
+    "de_sitter_h": [0.1, 0.25, 0.5, 1.0],
+    "de_sitter": "d=4, metric (1-h*t)^-2 eta on |t|+norm(x)<1/2. Theta is true inner/outer geodesic proper time; inner coordinate span a=2*tanh(theta*atanh(h/2))/h. Known physical outer scale. Exact volume ratio, no RSS truncation",
+    "density_beta": [-0.9, 1.0, 4.0, 12.0],
+    "density": "Flat d=4 with sampling intensity proportional to 1+beta*(2t)^2; theta=a",
+    "thinning": [{"inside": 0.5, "outside": 0.5}, {"inside": 0.8, "outside": 1.0}, {"inside": 0.5, "outside": 1.0}],
+    "thinning_scope": "Flat d=4; independent retention by membership in the fixed inner interval; m counts retained points, not acquisition attempts",
+    "density_twins": "For each de Sitter cell, flat metric with intensity proportional to (1-h*t)^-4, identical coordinates/order law, but true theta=a"
+  },
+  "intervals": {
+    "nominal": [1.0, 1.0],
+    "bounded_mild": [0.8, 1.25],
+    "bounded_broad": [0.5, 2.0],
+    "scope": "Nominal for every model; bounded intervals additionally for all flat d=4 models. Bounds constrain the mean observed sampling intensity inside versus outside the inner interval, r. They are supplied externally, not diagnosed from counts. They do not correct curved geometry"
+  },
+  "metrics": ["coverage", "raw_relative_bias", "raw_relative_rmse", "raw_within_10percent_probability", "precision_probability", "false_precision_probability", "asymptotic_raw_relative_bias", "asymptotic_interval_relative_radius", "zero_count_probability", "expected_K"],
+  "precision_definition": "For transformed interval [L,U], use harmonic center H=2LU/(L+U), relative radius (U-L)/(U+L). Precision if radius <=0.1. False precision if precision AND abs(H/theta-1)>0.1. Raw estimator remains (K/m)^(1/d) and is reported separately",
+  "gate": "MEETS_DECLARED_GRID_CRITERIA only if model assumptions hold, coverage>=0.95 within numerical tolerance, and precision probability>=0.90. Otherwise OUTSIDE_ASSUMED_CLASS or INSUFFICIENT_GRID_PRECISION. This is cell-specific and not empirical certification of assumptions",
+  "planning": "Report every evaluated m and the smallest passing count on the declared grid. Do not call it a global minimum or presume monotonicity. Always report cells with no passing grid count",
+  "numerics": {
+    "gauss_legendre_orders": [32, 64],
+    "independent_quadrature": "scipy.integrate.quad, split at t=0, epsabs=epsrel=1e-12",
+    "geometry_absolute_tolerance": 1e-11,
+    "binomial_tail_per_side": 1e-13,
+    "mass_tolerance": 5e-10,
+    "probability_tolerance": 5e-10,
+    "replay_relative_tolerance": 1e-9,
+    "replay_absolute_tolerance": 5e-10,
+    "scope": "Float64 numerical evaluations, with explicit omitted-binomial-tail bounds. Neither quadrature convergence nor library agreement is a formal rounding-error certificate. Retain support and exact integer acceptance bounds"
+  },
+  "resources": {"wall_seconds": 600, "address_space_bytes": 2147483648, "blas_threads": 1},
+  "freeze": "Publish contract, derivation, runner and independent checks before first target-grid evaluation. Selftests use separate off-grid controls. This is a project source freeze, not independent preregistration",
+  "nonclaims": ["No new physical measurements", "No universal curvature detector", "No independent external replication", "No absolute time without calibration", "No simultaneous or anytime coverage claim for displayed intervals", "No resolution of unrestricted density twins", "No applicability to dependent data or postselected endpoints", "No general two-Ricci-parameter reconstruction", "No changes to earlier frozen studies"]
+}
