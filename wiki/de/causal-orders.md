@@ -4,7 +4,7 @@ Hier geht es um die Frage, welche Struktur in Beziehungen steckt, bevor man eine
 
 [English](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/en/causal-orders.md) · [Wiki-Übersicht](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/de/)
 
-Quellenstand: 2026-10-18 · `e6a5bce4cafe44ddb929da3ae32d9afa4d64eca1`
+Quellenstand: 2026-10-18 · `d9bd4d0266faff0fddd70b4067ad4422367f25a1`
 
 ## Ereignisse und ihre Reihenfolge
 
@@ -197,3 +197,16 @@ Die konservative Planung nennt je nach wahrer Krümmung sehr grosse ausreichende
 
 - [Ergebnisse und Grenzen](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e6a5bce4cafe44ddb929da3ae32d9afa4d64eca1/research/lorentz_de_sitter_c2/RESULTS.md)
 - [Vollständige Herleitung](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e6a5bce4cafe44ddb929da3ae32d9afa4d64eca1/research/lorentz_de_sitter_c2/DERIVATION.md)
+
+## Schärfere Intervalle: der Effizienzschritt ist bestanden
+
+Die neue Stufe nutzt genauer aus, dass ein Paar kausal vergleichbar ist oder nicht. Sie berücksichtigt weiterhin, dass Paare innerhalb derselben Wolke voneinander abhängen. Die neue KL-Schranke erzeugt Intervalle, die niemals breiter als die bisherige Referenz sind. Die mathematisch begründete Überdeckung von mindestens 95% gilt unter denselben bekannten Modellannahmen und bei vorher festem Datenbudget.
+
+Der Prüfvertrag wurde vor den neuen Rechnungen veröffentlicht. Die hinreichenden Planungsbudgets sinken an allen drei vorgegebenen Krümmungen um den Faktor 2,71 bis 2,77. Bei h=0,5 sind es beispielsweise 31.707 statt 85.871 unabhängige Wolken zu je 128 Punkten. Das sind ausreichende Grenzen der geprüften Verfahren, keine bewiesenen optimalen Mindestzahlen.
+
+77.824 neue Wolken wurden gerechnet und vollständig reproduziert. Bei h=0,5 mit je 16.384 Wolken erreichen alle vier KL-Intervalle die relative 20%-Vorgabe; die alte Schranke erreicht sie einmal. Im gesamten Datensatz von 65.536 Wolken beträgt der relative Radius 4,89% statt 9,16%. Vier Gruppen erlauben keine präzise Schätzung einer Erfolgsquote; verschiedene Gruppengrössen verwenden dieselben Daten erneut.
+
+Bei kleineren Krümmungen reichen die ausgeführten Budgets weiterhin nicht. Die vorab feste obere Modellgrenze hilft bei h=0,5. Unbekannte Dichte und freie Stoppregeln bleiben ausgeschlossen; ein flaches Modell mit anderer Dichte kann dieselben Relationen haben. Als Nächstes sind eine externe Prüfung und Replikation sinnvoll. Weitere Effizienzarbeit braucht wieder eine endliche Absicherung vor zusätzlichen Grossläufen.
+
+- [Ergebnisse und Präzisionsgrenzen](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/d9bd4d0266faff0fddd70b4067ad4422367f25a1/research/lorentz_de_sitter_kl/RESULTS.md)
+- [Herleitung und Prüfvertrag](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/d9bd4d0266faff0fddd70b4067ad4422367f25a1/research/lorentz_de_sitter_kl/DERIVATION.md)

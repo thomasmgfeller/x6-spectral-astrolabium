@@ -4,7 +4,7 @@ This research asks what structure is carried by relationships before a spatial d
 
 [Deutsch](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/de/causal-orders.md) · [Wiki overview](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/en/)
 
-Source snapshot: 2026-10-18 · `e6a5bce4cafe44ddb929da3ae32d9afa4d64eca1`
+Source snapshot: 2026-10-18 · `d9bd4d0266faff0fddd70b4067ad4422367f25a1`
 
 ## Events and their ordering
 
@@ -197,3 +197,16 @@ The conservative design calculation gives very large sufficient budgets for the 
 
 - [Results and limitations](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e6a5bce4cafe44ddb929da3ae32d9afa4d64eca1/research/lorentz_de_sitter_c2/RESULTS.md)
 - [Full derivation](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e6a5bce4cafe44ddb929da3ae32d9afa4d64eca1/research/lorentz_de_sitter_c2/DERIVATION.md)
+
+## Sharper intervals: the efficiency gate passes
+
+The new stage retains more information from the binary event that a pair is causally comparable. It still accounts for dependence between pairs in the same cloud. Its KL intervals are never wider than the previous reference. Mathematically justified coverage of at least 95% holds under the same known model assumptions and a prespecified fixed data budget.
+
+The protocol was public before the new calculations. Sufficient planning budgets improve by factors of 2.71 to 2.77 at all three prespecified curvatures. At h=0.5, for example, the count is 31,707 instead of 85,871 independent clouds of 128 points. These are sufficient boundaries for the tested procedures, not proven statistically optimal minimum counts.
+
+77,824 fresh clouds were calculated and fully replayed. At h=0.5 with 16,384 clouds per estimate, all four KL intervals meet the relative 20% precision requirement; the old bound does so once. In the full 65,536-cloud dataset, the relative radius is 4.89% instead of 9.16%. Four groups cannot precisely estimate a success rate, and different group sizes reuse the same observations.
+
+At smaller curvatures, the executed budgets still do not suffice. The prespecified upper model boundary helps at h=0.5. Unknown density and freely chosen stopping remain outside the guarantee; a flat model with different density can have the same relations. External proof review and replication are useful next steps. Further efficiency work needs finite-sample protection before additional large runs.
+
+- [Results and precision limits](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/d9bd4d0266faff0fddd70b4067ad4422367f25a1/research/lorentz_de_sitter_kl/RESULTS.md)
+- [Derivation and protocol](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/d9bd4d0266faff0fddd70b4067ad4422367f25a1/research/lorentz_de_sitter_kl/DERIVATION.md)
