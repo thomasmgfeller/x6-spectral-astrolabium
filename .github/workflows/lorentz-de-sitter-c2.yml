@@ -1,0 +1,31 @@
+name: Lorentz de Sitter C2 Confidence
+on:
+  pull_request:
+    paths: ['research/lorentz_de_sitter_c2/**', '.github/workflows/lorentz-de-sitter-c2.yml']
+  push:
+    branches: [main]
+    paths: ['research/lorentz_de_sitter_c2/**', '.github/workflows/lorentz-de-sitter-c2.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  reproduce:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+      MKL_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - run: python3 -m pip install -r research/lorentz_de_sitter_c2/requirements.txt
+      - name: Exact geometry, dependent-pair controls and complete replay
+        run: python3 -B research/lorentz_de_sitter_c2/verify.py
+      - name: Source inventory
+        run: python3 tests/python/verify_manifest.py
