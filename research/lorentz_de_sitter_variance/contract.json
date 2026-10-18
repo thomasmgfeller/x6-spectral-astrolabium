@@ -1,0 +1,79 @@
+{
+  "schema": "x6.de-sitter-variance/1",
+  "scope": "Known uniform physical-volume 4D de Sitter; independent identical N=128 clouds; fixed M; h in [0,1/2]",
+  "frozen_paths": [
+    "research/lorentz_de_sitter_variance/common.py",
+    "research/lorentz_de_sitter_variance/moments.py",
+    "research/lorentz_de_sitter_variance/bounds.py",
+    "research/lorentz_de_sitter_variance/support.py",
+    "research/lorentz_de_sitter_variance/analysis.py",
+    "research/lorentz_de_sitter_variance/run.py",
+    "research/lorentz_de_sitter_variance/verify.py",
+    "research/lorentz_de_sitter_variance/DERIVATION.md",
+    "research/lorentz_de_sitter_variance/requirements.txt",
+    "research/lorentz_de_sitter_variance/contract.json",
+    "research/lorentz_de_sitter_kl/core.py",
+    "research/lorentz_de_sitter_c2/exact.py",
+    "research/lorentz_curvature/geometry.py"
+  ],
+  "seed_namespace": "x6/de-sitter-variance/v01/2026-10-18/fresh",
+  "planning_h": [
+    "1/10",
+    "1/4",
+    "1/2"
+  ],
+  "maximum_planning_clouds": 1073741824,
+  "primary_gate": "At least twofold reduction against refined KL sufficient design budgets at every declared h; same at-least-95pct fixed-budget analytical coverage.",
+  "quadrature_h": [
+    "0",
+    "1/6",
+    "1/3",
+    "1/2"
+  ],
+  "fresh_n": 128,
+  "fresh_cells": [
+    {
+      "h": "0",
+      "clouds": 4096,
+      "group_sizes": [
+        256,
+        4096
+      ]
+    },
+    {
+      "h": "1/10",
+      "clouds": 4096,
+      "group_sizes": [
+        256,
+        4096
+      ]
+    },
+    {
+      "h": "1/4",
+      "clouds": 4096,
+      "group_sizes": [
+        256,
+        4096
+      ]
+    },
+    {
+      "h": "1/2",
+      "clouds": 32768,
+      "group_sizes": [
+        256,
+        4096,
+        8192,
+        16384,
+        32768
+      ]
+    }
+  ],
+  "storage_block": 8192,
+  "limits": {
+    "wall_seconds": 600,
+    "address_space_gib": 2
+  },
+  "fresh_policy": "Execute only after primary gate passes. No enlargement, reseeding, refitting, optional stopping or domain extension. No unadjusted intersection or selection of 95pct methods.",
+  "development": "Published historical KL counts used only to inspect cloud variances and choose the research direction. Analytical geometry, whole-domain variance certificate and off-grid controls developed before freeze. Target budget calculations and fresh data first run after public freeze.",
+  "evidence": "The analytical variance bound supplies coverage. Independent lens quadrature and full fresh replay are internal verification, not external review."
+}
