@@ -91,6 +91,7 @@ Die vollständige exakte Prüfung von 2.045 kausalen Ordnungen mit sieben Elemen
 
 Dies ist experimentelle Forschungssoftware. Ein bestandener Softwaretest ist kein physikalischer Nachweis. Gerätequalifikation, unabhängige externe Replikation und industrielle Leistungsqualifikation bleiben eigene offene Aufgaben.
 
+- [Krümmung: Wie viel Information liefern Ketten?](https://thomasmgfeller.github.io/x6-spectral-astrolabium/modules/lorentz-de-sitter-information.html): 16.384 neue Punktwolken: nur 1,37% weniger Schätzfehler durch zusätzliche Ketten. Das 10%-Ziel wird verfehlt; Datenbedarf und Grenzen sind dokumentiert.
 - [Eigenzeit v0.2: Wo die Schätzung trägt](https://thomasmgfeller.github.io/x6-spectral-astrolabium/modules/lorentz-proper-time-validity.html): 1.176 deterministische Kombinationen: Dichtefehler, Beobachtungslücken, konservative Intervalle und konkrete Punktbudgets.
 - [Krümmung: Ergebnis und Grenzen](https://thomasmgfeller.github.io/x6-spectral-astrolabium/modules/lorentz-curvature.html): 8.702 Ordnungen: Empfindlichkeitsziel verfehlt. Dichtezwillinge zeigen, warum ein Alarm Krümmung nicht eindeutig identifiziert.
 - [RSS: feste Punktzahl](https://thomasmgfeller.github.io/x6-spectral-astrolabium/modules/lorentz-rss-fixed-n.html): Korrigierte Kettenmomente, 24.576 Wolken und offengelegte Präzisionsgrenzen.
@@ -102,7 +103,7 @@ Dies ist experimentelle Forschungssoftware. Ein bestandener Softwaretest ist kei
 - [NQK-Forschungsdossier](https://thomasmgfeller.github.io/x6-spectral-astrolabium/modules/nqk.html): Eigenständiger Forschungszweig mit unvollständigen Reproduktionsarchiven.
 - [Eigenzeit und Unsicherheit](https://thomasmgfeller.github.io/x6-spectral-astrolabium/modules/lorentz-proper-time.html): Bekanntes flaches Modell: Voraussetzungen, Fehlergrenzen, Nachbeproben und Kettenwarnungen nachvollziehen.
 
-Das Register vom 2026-10-18 beschreibt 44 Module. Es dokumentiert Quellenorte und Evidenz; es ist kein Live-Prüfsiegel.
+Das Register vom 2026-10-18 beschreibt 45 Module. Es dokumentiert Quellenorte und Evidenz; es ist kein Live-Prüfsiegel.
 
 Das konfigurierte Agentenfenster schliesst Sonntag, den 18. Oktober 2026, ein. Das exklusive Ende unten begrenzt den Zeitplan und belegt keine Ausführung. Danach ist das Fenster geschlossen.
 2026-10-19T00:00:00+02:00

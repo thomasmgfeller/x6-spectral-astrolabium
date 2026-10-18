@@ -4,7 +4,7 @@ Hier geht es um die Frage, welche Struktur in Beziehungen steckt, bevor man eine
 
 [English](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/en/causal-orders.md) · [Wiki-Übersicht](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/de/)
 
-Quellenstand: 2026-10-18 · `e5840afa7c7865a48766d1a5366210508a7b1f05`
+Quellenstand: 2026-10-18 · `01430ce5f0a648ad63d611a451f0d0fd7ccb16aa`
 
 ## Ereignisse und ihre Reihenfolge
 
@@ -171,3 +171,16 @@ Im uniformen flachen 4D-Beispiel mit wahrer Eigenzeit 0,2 des äusseren Massstab
 
 - [Ergebnisse und Budgettabelle](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e5840afa7c7865a48766d1a5366210508a7b1f05/research/lorentz_proper_time_validity/RESULTS.md)
 - [Herleitung und Annahmen](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e5840afa7c7865a48766d1a5366210508a7b1f05/research/lorentz_proper_time_validity/DERIVATION.md)
+
+## Krümmung: Mehr Ketten helfen hier nur wenig
+
+Der neue Versuch vereinfacht das Problem auf eine bekannte de-Sitter-Familie mit nur einer unbekannten Krümmungsgrösse. Er verbindet Zweier-, Dreier- und Viererketten und berücksichtigt, dass diese Merkmale aus denselben Ereignissen stammen und stark zusammenhängen.
+
+Die Gewichtung wurde aus alten, veröffentlichten Daten bestimmt. Erst nach Veröffentlichung des Prüfvertrags wurden 16.384 neue unabhängige Punktwolken mit je 128 Ereignissen erzeugt. Im Hauptvergleich sank der mittlere quadratische Schätzfehler, als Wurzel ausgedrückt (RMSE), nur um 1,37%. Das vorab gesetzte Ziel von mindestens 10% wurde verfehlt.
+
+Bei schwacher Krümmung ergibt die Rechnung etwa 1,7 Millionen unabhängige Wolken für eine nominelle relative 20%-Halbbreite. Bei der stärkeren geprüften Krümmung sind es etwa 2.700. Das sind überschlägige Planwerte für Zufallsstreuung, keine ausgeführten Grossversuche oder garantierten Präzisionsgrenzen. Systematische Modellfehler bleiben bestehen.
+
+Der nächste sinnvolle Ansatz konzentriert sich auf Zweierketten und eine vollständigere geometrische Vorhersage mit kontrollierten Fehlern. Eine abgesicherte gekrümmte Uhr ist damit noch nicht erreicht. Dichteannahmen, eine unabhängige Zeitskala und externe Replikation bleiben offen.
+
+- [Ergebnisse und Datenbedarf](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/01430ce5f0a648ad63d611a451f0d0fd7ccb16aa/research/lorentz_de_sitter_information/RESULTS.md)
+- [Prüfvertrag und Quellen](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/01430ce5f0a648ad63d611a451f0d0fd7ccb16aa/research/lorentz_de_sitter_information/README.md)
