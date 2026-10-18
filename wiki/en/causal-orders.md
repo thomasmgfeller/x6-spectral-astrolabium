@@ -4,7 +4,7 @@ This research asks what structure is carried by relationships before a spatial d
 
 [Deutsch](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/de/causal-orders.md) · [Wiki overview](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/en/)
 
-Source snapshot: 2026-10-18 · `01430ce5f0a648ad63d611a451f0d0fd7ccb16aa`
+Source snapshot: 2026-10-18 · `e6a5bce4cafe44ddb929da3ae32d9afa4d64eca1`
 
 ## Events and their ordering
 
@@ -184,3 +184,16 @@ The next useful approach focuses on two-element chains and a fuller geometric pr
 
 - [Results and data budgets](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/01430ce5f0a648ad63d611a451f0d0fd7ccb16aa/research/lorentz_de_sitter_information/RESULTS.md)
 - [Protocol and sources](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/01430ce5f0a648ad63d611a451f0d0fd7ccb16aa/research/lorentz_de_sitter_information/README.md)
+
+## Curvature intervals: reliable within explicit assumptions
+
+The next step uses only two-element chains. For a specified de Sitter family, the full geometric prediction is computed with exact fractions and a bounded remainder. A mathematical inequality establishes that the prediction can be inverted uniquely throughout the declared range.
+
+Pairs in the same point cloud are dependent. The new error bound accounts for that. With known uniform physical-volume sampling, independent identical clouds and a prespecified fixed data budget, the intervals contain the true model value with at least 95% probability. This follows from the derivation; simulation alone does not prove it.
+
+16,384 fresh point clouds were calculated and fully reproduced. Every tested interval contains its model value, but none meets the required relative 20% precision. At the strongest tested curvature, 4,096 clouds give an interval of about 0.843 to 3.131; the true value is 3.131. The procedure correctly withholds precision qualification.
+
+The conservative design calculation gives very large sufficient budgets for the specified curvatures. These are not necessary minimum counts and were not simulated. The next step is therefore a sharper statistical bound with the same finite-sample protection. Unknown density, freely chosen stopping and a physical clock remain outside the present guarantee.
+
+- [Results and limitations](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e6a5bce4cafe44ddb929da3ae32d9afa4d64eca1/research/lorentz_de_sitter_c2/RESULTS.md)
+- [Full derivation](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e6a5bce4cafe44ddb929da3ae32d9afa4d64eca1/research/lorentz_de_sitter_c2/DERIVATION.md)

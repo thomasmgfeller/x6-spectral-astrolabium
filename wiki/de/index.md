@@ -4,7 +4,7 @@ Ein Wegweiser für Neugierige, Lernende und Menschen, die selbst prüfen möchte
 
 [English](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/en/) · [Wiki-Übersicht](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/de/)
 
-Quellenstand: 2026-10-18 · `01430ce5f0a648ad63d611a451f0d0fd7ccb16aa`
+Quellenstand: 2026-10-18 · `e6a5bce4cafe44ddb929da3ae32d9afa4d64eca1`
 
 ## Was ist X6?
 
@@ -47,3 +47,5 @@ Neu: Der Krümmungsbenchmark ist abgeschlossen. Beide Diagnosen verfehlen das Em
 Neu: Eigenzeit v0.2 erklärt, wann zusätzliche Daten helfen, wann Dichtefehler die Intervalle ungültig machen und wann eine vorsichtigere Rechnung die Präzisionsfreigabe verweigert.
 
 Neu: 16.384 neue Punktwolken prüfen die de-Sitter-Krümmungsschätzung. Zusätzliche Ketten bringen nur wenig Präzision; das Kapitel „Kausale Ordnungen“ erklärt, was daraus für die nächsten Schritte folgt.
+
+Neu: Zweierketten liefern jetzt konservative Krümmungsintervalle mit mathematisch begründeter Überdeckung im bekannten uniformen Modell. Die neuen Tests zeigen zugleich, dass die Intervalle für 20%-Präzision noch zu breit sind.

@@ -1,7 +1,7 @@
 {
   "schema": "x6.bilingual-wiki/1",
   "snapshot_date": "2026-10-18",
-  "source_commit": "01430ce5f0a648ad63d611a451f0d0fd7ccb16aa",
+  "source_commit": "e6a5bce4cafe44ddb929da3ae32d9afa4d64eca1",
   "articles": [
     {
       "id": "index",
@@ -124,6 +124,10 @@
               {
                 "type": "paragraph",
                 "text": "Neu: 16.384 neue Punktwolken prüfen die de-Sitter-Krümmungsschätzung. Zusätzliche Ketten bringen nur wenig Präzision; das Kapitel „Kausale Ordnungen“ erklärt, was daraus für die nächsten Schritte folgt."
+              },
+              {
+                "type": "paragraph",
+                "text": "Neu: Zweierketten liefern jetzt konservative Krümmungsintervalle mit mathematisch begründeter Überdeckung im bekannten uniformen Modell. Die neuen Tests zeigen zugleich, dass die Intervalle für 20%-Präzision noch zu breit sind."
               }
             ]
           }
@@ -248,6 +252,10 @@
               {
                 "type": "paragraph",
                 "text": "New: 16,384 fresh clouds test a restricted de Sitter curvature estimator. Extra chains add little precision; “Causal orders” explains the result and the next research step."
+              },
+              {
+                "type": "paragraph",
+                "text": "New: two-element chains now yield conservative curvature intervals with mathematically justified coverage in the known uniform model. Fresh tests also show that the intervals remain too wide for 20% precision."
               }
             ]
           }
@@ -1225,6 +1233,41 @@
                 ]
               }
             ]
+          },
+          {
+            "id": "de-sitter-c2",
+            "title": "Krümmungsintervalle: verlässlich innerhalb klarer Annahmen",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "Der nächste Schritt verwendet nur Zweierketten. Für eine festgelegte de-Sitter-Modellfamilie wurde die vollständige geometrische Vorhersage mit exakten Brüchen und einer begrenzten Restunsicherheit berechnet. Eine mathematische Ungleichung bestätigt, dass sich die Vorhersage im gesamten untersuchten Bereich eindeutig umkehren lässt."
+              },
+              {
+                "type": "paragraph",
+                "text": "Viele Paare aus derselben Punktwolke sind nicht unabhängig. Die neue Fehlerschranke berücksichtigt das. Unter bekannter uniformer physischer Volumendichte, unabhängigen gleichartigen Wolken und einem vorab festen Datenbudget enthalten die Intervalle den wahren Modellwert mit mindestens 95% Wahrscheinlichkeit. Diese Aussage stammt aus der Herleitung; die Simulation allein beweist sie nicht."
+              },
+              {
+                "type": "paragraph",
+                "text": "16.384 neue Punktwolken wurden gerechnet und vollständig reproduziert. Alle geprüften Intervalle enthalten ihren Modellwert, aber keines erreicht die geforderte relative 20%-Präzision. Bei der stärksten geprüften Krümmung reicht das Intervall nach 4.096 Wolken ungefähr von 0,843 bis 3,131. Der wahre Wert ist 3,131. Das Verfahren verweigert zu Recht die Präzisionsfreigabe."
+              },
+              {
+                "type": "paragraph",
+                "text": "Die konservative Planung nennt je nach wahrer Krümmung sehr grosse ausreichende Budgets. Diese sind keine notwendigen Mindestzahlen und wurden nicht simuliert. Deshalb ist der nächste Schritt eine schärfere statistische Schranke mit derselben endlichen Absicherung. Unbekannte Dichte, frei gewähltes Stoppen und eine reale Uhr bleiben ausserhalb der jetzigen Garantie."
+              },
+              {
+                "type": "links",
+                "items": [
+                  {
+                    "label": "Ergebnisse und Grenzen",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e6a5bce4cafe44ddb929da3ae32d9afa4d64eca1/research/lorentz_de_sitter_c2/RESULTS.md"
+                  },
+                  {
+                    "label": "Vollständige Herleitung",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e6a5bce4cafe44ddb929da3ae32d9afa4d64eca1/research/lorentz_de_sitter_c2/DERIVATION.md"
+                  }
+                ]
+              }
+            ]
           }
         ]
       },
@@ -1733,6 +1776,41 @@
                   {
                     "label": "Protocol and sources",
                     "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/01430ce5f0a648ad63d611a451f0d0fd7ccb16aa/research/lorentz_de_sitter_information/README.md"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "de-sitter-c2",
+            "title": "Curvature intervals: reliable within explicit assumptions",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "The next step uses only two-element chains. For a specified de Sitter family, the full geometric prediction is computed with exact fractions and a bounded remainder. A mathematical inequality establishes that the prediction can be inverted uniquely throughout the declared range."
+              },
+              {
+                "type": "paragraph",
+                "text": "Pairs in the same point cloud are dependent. The new error bound accounts for that. With known uniform physical-volume sampling, independent identical clouds and a prespecified fixed data budget, the intervals contain the true model value with at least 95% probability. This follows from the derivation; simulation alone does not prove it."
+              },
+              {
+                "type": "paragraph",
+                "text": "16,384 fresh point clouds were calculated and fully reproduced. Every tested interval contains its model value, but none meets the required relative 20% precision. At the strongest tested curvature, 4,096 clouds give an interval of about 0.843 to 3.131; the true value is 3.131. The procedure correctly withholds precision qualification."
+              },
+              {
+                "type": "paragraph",
+                "text": "The conservative design calculation gives very large sufficient budgets for the specified curvatures. These are not necessary minimum counts and were not simulated. The next step is therefore a sharper statistical bound with the same finite-sample protection. Unknown density, freely chosen stopping and a physical clock remain outside the present guarantee."
+              },
+              {
+                "type": "links",
+                "items": [
+                  {
+                    "label": "Results and limitations",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e6a5bce4cafe44ddb929da3ae32d9afa4d64eca1/research/lorentz_de_sitter_c2/RESULTS.md"
+                  },
+                  {
+                    "label": "Full derivation",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e6a5bce4cafe44ddb929da3ae32d9afa4d64eca1/research/lorentz_de_sitter_c2/DERIVATION.md"
                   }
                 ]
               }

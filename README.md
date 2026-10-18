@@ -76,6 +76,8 @@ Independent external replication and physical device qualification remain open.
 The catalogue renders the dated register without changing its claims or source pins.
 Detailed research updates and reproduction instructions follow below.
 
+**C2-Krümmungsintervalle abgeschlossen:** [Kontrollierte Geometrie und konservative Überdeckung](research/lorentz_de_sitter_c2/RESULTS.md) für die bekannte uniforme de-Sitter-Familie. Exakte rationale Restfehler und Monotonie; mindestens 95% Überdeckung bei unabhängigem, festem Wolkenbudget. **16.384 neue Wolken, keine 20%-Präzisionsfreigabe.** Vollständiger Replay bestanden; die nächste Stufe muss die statistische Schranke schärfen. Keine allgemeine Uhr oder Dichteidentifikation. [Einfach erklärt (DE/EN)](wiki/de/causal-orders.html#de-sitter-c2).
+
 **De-Sitter-Informationsplanung abgeschlossen:** [16.384 neue Punktwolken](research/lorentz_de_sitter_information/RESULTS.md) prüfen eine kovarianzbewusste Einparameter-Schätzung. Zusätzliche Ketten senken den RMSE im Hauptvergleich nur um **1,37%**; das vorab gesetzte **10%-Ziel wird verfehlt**. Vollständiger Replay bestanden. Datenbudgets bleiben approximativ; Krümmungsintervalle sind nicht qualifiziert. Der nächste Ansatz konzentriert sich auf Zweierketten und eine kontrollierte geometrische Vorwärtsrechnung. [Einfach erklärt (DE/EN)](wiki/de/causal-orders.html#de-sitter-information).
 
 ## Lorentz: vollständige n=7-Prüfung
@@ -146,7 +148,7 @@ remain [explicit future gates](research/x6_qe/ROADMAP.md). Lorentz remains the p
 
 ## Start here: actual module and evidence status
 
-The [central module register](docs/MODULE_REGISTRY.md) lists **45 modules** with
+The [central module register](docs/MODULE_REGISTRY.md) lists **46 modules** with
 their authoritative branch and commit, prerequisites, executable entry point,
 expected result, available evidence and next acceptance gate. Its
 [machine-readable source](MODULE_REGISTRY.json) is a dated snapshot, not a live

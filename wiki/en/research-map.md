@@ -4,7 +4,7 @@ Not every directory is a finished application. This map explains the purpose of 
 
 [Deutsch](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/de/research-map.md) · [Wiki overview](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/en/)
 
-Source snapshot: 2026-10-18 · `01430ce5f0a648ad63d611a451f0d0fd7ccb16aa`
+Source snapshot: 2026-10-18 · `e6a5bce4cafe44ddb929da3ae32d9afa4d64eca1`
 
 ## Three direct starting points
 
