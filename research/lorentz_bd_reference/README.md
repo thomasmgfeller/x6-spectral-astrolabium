@@ -33,3 +33,19 @@ English: Implemented 4D smoothed BD curvature reference with genuine Poisson
 sprinkling, held-out comparison and full internal replay. The declared pilot
 gate fails. Restricted-model C2, nominal intervals, modest scale separation;
 no universal superiority or continuum-limit claim. Apache-2.0.
+
+## Nachbau auf anderen Rechnern
+
+Der unveränderte Originalprüfer verlangt bitgleiche Gleitkommawerte. Der erste
+GitHub-Nachbau scheiterte an 2,84e-14 Rundungsabweichung. Für unterschiedliche
+Rechner gibt es deshalb eine [separate numerische Plattformprüfung](PORTABILITY.md):
+
+```sh
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python3 -B research/lorentz_bd_reference/replay_portable.py
+```
+
+Sie verlangt weiterhin exakte Archiv-/Quellenprüfsummen, alle ganzzahligen
+Intervallzählungen, Auswahl- und Entscheidungswerte. Nur Gleitkommafelder
+nutzen die offengelegte numerische Toleranz. Koordinaten-Bytehashes werden
+gesondert berichtet. Status: `PASS_PORTABLE_NUMERICAL_REPLAY`; kein behaupteter
+bitgleicher Replay. Der ursprüngliche Prüfvertrag und die Daten bleiben gleich.

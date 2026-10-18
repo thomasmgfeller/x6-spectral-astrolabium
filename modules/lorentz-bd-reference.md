@@ -23,7 +23,7 @@ Geglätteter 4D-Benincasa–Dowker-Operator mit Poisson-Punktzahlen, bekannter p
 
 ## Reproduzieren
 
-Python 3.12, NumPy 2.3.5, SciPy 1.17.0, C++17-Compiler g++ und vollständige Git-Historie. Der Quellencommit 2d2539123162ddc032b85ba51af56255ca36a906 muss erhalten bleiben.
+Python 3.12, NumPy 2.3.5, SciPy 1.17.0, C++17-Compiler g++ und vollständige Git-Historie. Der Quellencommit 2d2539123162ddc032b85ba51af56255ca36a906 muss erhalten bleiben. Der gepinnte Originalprüfer fordert bitgleiche Floats und setzt die Original-Rechenumgebung voraus. Die aktuelle README beschreibt zusätzlich den getrennten numerischen Plattformprüfer.
 
 Neue Arbeits- und Ausgabeordner verwenden; Voraussetzungen aus der Originaldokumentation beachten.
 
@@ -35,7 +35,7 @@ python3 -m pip install -r research/lorentz_bd_reference/requirements-replay.txt
 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python3 -B research/lorentz_bd_reference/verify.py --archive research/lorentz_bd_reference/results --replay
 ```
 
-Erwartete Ausgabe: PASS_FULL_REPLAY für 6.528 Wolken und 102 zusätzliche unabhängige Relationsprüfungen. Fachlicher Entscheid bleibt NO_GO_VARIABLE_CURVATURE_IN_THIS_BUDGET.
+Erwartete Ausgabe: Originalumgebung: PASS_FULL_REPLAY für 6.528 Wolken und 102 zusätzliche unabhängige Relationsprüfungen. Für andere Rechner siehe aktuellen README-Einstieg: getrenntes PASS_PORTABLE_NUMERICAL_REPLAY mit offengelegter Gleitkommatoleranz. Fachlicher Entscheid bleibt NO_GO_VARIABLE_CURVATURE_IN_THIS_BUDGET.
 
 ## Offene Prüfung
 

@@ -1912,7 +1912,7 @@
         "path": "research/lorentz_bd_reference/README.md",
         "availability": "MAIN"
       },
-      "prerequisites": "Python 3.12, NumPy 2.3.5, SciPy 1.17.0, C++17-Compiler g++ und vollständige Git-Historie. Der Quellencommit 2d2539123162ddc032b85ba51af56255ca36a906 muss erhalten bleiben.",
+      "prerequisites": "Python 3.12, NumPy 2.3.5, SciPy 1.17.0, C++17-Compiler g++ und vollständige Git-Historie. Der Quellencommit 2d2539123162ddc032b85ba51af56255ca36a906 muss erhalten bleiben. Der gepinnte Originalprüfer fordert bitgleiche Floats und setzt die Original-Rechenumgebung voraus. Die aktuelle README beschreibt zusätzlich den getrennten numerischen Plattformprüfer.",
       "entry": {
         "cwd": ".",
         "archive": null,
@@ -1924,7 +1924,7 @@
           "python3 -m pip install -r research/lorentz_bd_reference/requirements-replay.txt",
           "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python3 -B research/lorentz_bd_reference/verify.py --archive research/lorentz_bd_reference/results --replay"
         ],
-        "expected": "PASS_FULL_REPLAY für 6.528 Wolken und 102 zusätzliche unabhängige Relationsprüfungen. Fachlicher Entscheid bleibt NO_GO_VARIABLE_CURVATURE_IN_THIS_BUDGET."
+        "expected": "Originalumgebung: PASS_FULL_REPLAY für 6.528 Wolken und 102 zusätzliche unabhängige Relationsprüfungen. Für andere Rechner siehe aktuellen README-Einstieg: getrenntes PASS_PORTABLE_NUMERICAL_REPLAY mit offengelegter Gleitkommatoleranz. Fachlicher Entscheid bleibt NO_GO_VARIABLE_CURVATURE_IN_THIS_BUDGET."
       },
       "claim": "Geglätteter 4D-Benincasa–Dowker-Operator mit Poisson-Punktzahlen, bekannter physischer Dichte und externer Eigenzeit T=1. 384 Entwicklungs- und 6.144 getrennte Testwolken. Im Hauptfall ist das RMSE-Verhältnis BD/C2 33,34; die vorab lokal fixierten Nutzenkriterien scheitern. C2 nutzt die bekannte de-Sitter-Familie und Modellgrenzen. Nominale Student-Intervalle sind keine garantierten 95%-Intervalle; keine universelle Rangordnung oder allgemeine Krümmungsuhr.",
       "evidence": [

@@ -1258,7 +1258,7 @@ python3 -B research/lorentz_de_sitter_variance/verify.py
 
 **Stand:** MAIN / SOFTWARE; Branch `main`; Commit `49710201cdb2e2941404266b25e88051a659b08e`.
 
-**Anleitung:** [aktuelle main-Dokumentation](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/lorentz_bd_reference/README.md). **Voraussetzungen:** Python 3.12, NumPy 2.3.5, SciPy 1.17.0, C++17-Compiler g++ und vollständige Git-Historie. Der Quellencommit 2d2539123162ddc032b85ba51af56255ca36a906 muss erhalten bleiben.
+**Anleitung:** [aktuelle main-Dokumentation](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/lorentz_bd_reference/README.md). **Voraussetzungen:** Python 3.12, NumPy 2.3.5, SciPy 1.17.0, C++17-Compiler g++ und vollständige Git-Historie. Der Quellencommit 2d2539123162ddc032b85ba51af56255ca36a906 muss erhalten bleiben. Der gepinnte Originalprüfer fordert bitgleiche Floats und setzt die Original-Rechenumgebung voraus. Die aktuelle README beschreibt zusätzlich den getrennten numerischen Plattformprüfer.
 
 **Geprüfte Aussage:** Geglätteter 4D-Benincasa–Dowker-Operator mit Poisson-Punktzahlen, bekannter physischer Dichte und externer Eigenzeit T=1. 384 Entwicklungs- und 6.144 getrennte Testwolken. Im Hauptfall ist das RMSE-Verhältnis BD/C2 33,34; die vorab lokal fixierten Nutzenkriterien scheitern. C2 nutzt die bekannte de-Sitter-Familie und Modellgrenzen. Nominale Student-Intervalle sind keine garantierten 95%-Intervalle; keine universelle Rangordnung oder allgemeine Krümmungsuhr.
 
@@ -1267,7 +1267,7 @@ python3 -m pip install -r research/lorentz_bd_reference/requirements-replay.txt
 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python3 -B research/lorentz_bd_reference/verify.py --archive research/lorentz_bd_reference/results --replay
 ```
 
-**Erwartung:** PASS_FULL_REPLAY für 6.528 Wolken und 102 zusätzliche unabhängige Relationsprüfungen. Fachlicher Entscheid bleibt NO_GO_VARIABLE_CURVATURE_IN_THIS_BUDGET.
+**Erwartung:** Originalumgebung: PASS_FULL_REPLAY für 6.528 Wolken und 102 zusätzliche unabhängige Relationsprüfungen. Für andere Rechner siehe aktuellen README-Einstieg: getrenntes PASS_PORTABLE_NUMERICAL_REPLAY mit offengelegter Gleitkommatoleranz. Fachlicher Entscheid bleibt NO_GO_VARIABLE_CURVATURE_IN_THIS_BUDGET.
 
 **Vorhandene Evidenz:**
 
