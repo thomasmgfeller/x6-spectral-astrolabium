@@ -40,10 +40,10 @@ AUTHORISED_NUMERICS_UPDATES = {'app/index.html': '56df754a1c5c3d26022e54b000f0d9
 # User-authorised end-of-trial cleanup after the exclusive cutoff.
 # Historical baseline and prior amendment digests remain unchanged.
 AUTHORISED_SHUTDOWN_UPDATES = {
-    ".github/workflows/x6-data-agent.yml": "6157003f4c0db607cd14faf435f5fcbc49ad73ed1cae6c61a12cdd80dd89d0ee",
-    ".github/workflows/x6-math-agent.yml": "4c18621f9aada3111bb4e7fe8495e9c6d202f047428b689ac709d9b90366cd27",
-    ".github/workflows/x6-source-agents.yml": "5ee8bda493af01ac14b646997d97486108a7670012841d8997028ea8d35f8216",
-    "agent/math-agent-config.json": "7f7626b4b4e417af35eb5c9c9ecc5e64f02c1762fb36c8687fb53987bc122cf5"
+    ".github/workflows/x6-data-agent.yml": "607b080fa82cad471ffa1d5fa28c6a9005bdaec0635046b7dd3c04b2ac1cc047",
+    ".github/workflows/x6-math-agent.yml": "061d1213187ba2a247e9d3693484add4af47e398e6a7977fb771c3c643124eca",
+    ".github/workflows/x6-source-agents.yml": "e0fbfdc905e8c72eea772a2ff4968e72633395251843c20908a88e158e6445ff",
+    "agent/math-agent-config.json": "70101c096f063408205f92de691942fe8936bba271318be4783c3923fe14725b"
 }
 
 
