@@ -1,0 +1,40 @@
+{
+  "schema": "x6.bd-c2-poisson-pilot/1",
+  "seed_namespace": "x6/bd-c2-poisson/2026-10-18/v1/fresh",
+  "scope": "4D, known uniform physical density, externally known proper diamond duration T=1, apex BD curvature R=-2 B(1), restricted de Sitter C2 inversion; no general proper-time inference",
+  "flat_expected_counts": [128, 512, 2048],
+  "test_h": [0, 0.1, 0.25, 0.5],
+  "epsilon_candidates": [0.025, 0.05, 0.1, 0.2],
+  "development_flat_clouds_per_density": 128,
+  "test_clouds_per_cell": 512,
+  "group_size": 32,
+  "selection": "Per density, minimize raw BD mean-square error of four development-flat group means; first candidate wins ties. No bias subtraction, curved tuning or test reselection.",
+  "intervals": "Nominal 95% Student intervals across independent clouds within each group; C2 interval transforms probability limits. Coverage is empirical, not a finite-sample theorem. Supplementary conditional-N Hoeffding C2 interval is separately reported; old fixed-N Bennett bound is not reused.",
+  "gate": {
+    "primary_cell": {"flat_expected_count": 2048, "h": 0.5},
+    "bd_rmse_at_most_c2_factor": 0.8,
+    "bd_absolute_relative_bias_max": 0.1,
+    "bd_median_relative_halfwidth_max": 0.2,
+    "bd_covered_groups_min": 14,
+    "flat_absolute_bias_max": 0.2,
+    "total_method_cost_ratio_max": 2.0,
+    "all_required": true,
+    "pass": "GO_TO_SEPARATELY_PREREGISTERED_VARIABLE_CURVATURE",
+    "fail": "NO_GO_VARIABLE_CURVATURE_IN_THIS_BUDGET",
+    "invalid_controls_or_incomplete_run": "INCONCLUSIVE_STOP"
+  },
+  "limits": {"wall_seconds": 600, "cpu_seconds": 600, "address_space_gib": 2, "max_points_per_cloud": 8192, "additional_paid_compute_chf": 0},
+  "failure_policy": "No added samples, post-test tuning or dropping failed groups. Empty C2 intervals and boundary clipping remain visible. Any N<2 makes the comparison incomplete. Hard budget failure retains completed cells.",
+  "frozen_paths": [
+    "research/lorentz_bd_reference/contract.json",
+    "research/lorentz_bd_reference/core.py",
+    "research/lorentz_bd_reference/counts.cpp",
+    "research/lorentz_bd_reference/continuum.py",
+    "research/lorentz_bd_reference/run.py",
+    "research/lorentz_bd_reference/analyze.py",
+    "research/lorentz_bd_reference/verify.py",
+    "research/lorentz_bd_reference/METHODS.md",
+    "research/lorentz_curvature/geometry.py",
+    "research/lorentz_de_sitter_c2/exact.py"
+  ]
+}

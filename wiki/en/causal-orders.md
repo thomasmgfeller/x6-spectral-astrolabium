@@ -4,7 +4,7 @@ This research asks what structure is carried by relationships before a spatial d
 
 [Deutsch](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/de/causal-orders.md) · [Wiki overview](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/en/)
 
-Source snapshot: 2026-10-18 · `78a150f27fdf52187d140f9fcf440ce29c89cb48`
+Source snapshot: 2026-10-18 · `49710201cdb2e2941404266b25e88051a659b08e`
 
 ## Events and their ordering
 
@@ -226,3 +226,20 @@ A separate sphere-lens volume calculation checks the new geometry. A review pack
 - [Results and counterexample](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/78a150f27fdf52187d140f9fcf440ce29c89cb48/research/lorentz_de_sitter_variance/RESULTS.md)
 - [External review packet](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/78a150f27fdf52187d140f9fcf440ce29c89cb48/research/lorentz_de_sitter_variance/REVIEW.md)
 - [Full derivation](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/78a150f27fdf52187d140f9fcf440ce29c89cb48/research/lorentz_de_sitter_variance/DERIVATION.md)
+
+## BD versus C2: why is the extension stopped?
+
+The Benincasa–Dowker reference estimates curvature from event counts in small causal intervals. The completed pilot assumes known physical density and externally specified proper duration T=1 in four-dimensional Minkowski and de Sitter models. Point counts follow an actual Poisson distribution.
+
+384 flat development clouds select smoothing; 6,144 separate clouds form twelve test cells. All 6,528 clouds were fully replayed, with 102 also checked by a second causal predicate. The protocol and sources were frozen locally in Git before the data. Publication follows the run; this is not public preregistration.
+
+In the primary comparison, root mean square error (RMSE) is 14.924 for BD and 0.448 for C2, a ratio of 33.34. RMSE, bias, interval width and flat-bias criteria fail. Coverage and cost criteria pass. The decision is therefore NO_GO for variable-curvature expansion within this budget.
+
+The conclusion has limits: C2 knows the de Sitter family and benefits from clipping at its upper model boundary. At the lowest density, BD has a smaller RMSE in three cells. Nominal Student intervals have no proven 95% coverage; even C2 misses the primary 20% width requirement. This comparison neither refutes the BD continuum limit nor establishes universal C2 superiority.
+
+The local Boguñá–Krioukov operator is documented separately as a source audit and coefficient preflight. Intrinsic reproduction is still missing. Its constant-field result is identically zero, so the BD rule −2B(1) cannot be transferred as a curvature measurement.
+
+- [Results and limits](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/49710201cdb2e2941404266b25e88051a659b08e/research/lorentz_bd_reference/RESULTS.md)
+- [Methods and protocol](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/49710201cdb2e2941404266b25e88051a659b08e/research/lorentz_bd_reference/METHODS.md)
+- [Verification record](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/49710201cdb2e2941404266b25e88051a659b08e/research/lorentz_bd_reference/VERIFICATION.json)
+- [Local operator: open reproduction track](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/49710201cdb2e2941404266b25e88051a659b08e/research/lorentz_local_dalembert/README.md)

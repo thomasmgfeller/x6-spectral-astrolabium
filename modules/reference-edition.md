@@ -6,19 +6,19 @@ Registerstand: 2026-10-18. MAIN / SOFTWARE. Kein Live-Prüfsiegel.
 
 Branch: main
 
-Commit: 78a150f27fdf52187d140f9fcf440ce29c89cb48
+Commit: 49710201cdb2e2941404266b25e88051a659b08e
 
-[Originaldokumentation](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/78a150f27fdf52187d140f9fcf440ce29c89cb48/docs/reference-qe-v0.1/EXTERNAL_REPRODUCTION.md)
+[Originaldokumentation](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/49710201cdb2e2941404266b25e88051a659b08e/docs/reference-qe-v0.1/EXTERNAL_REPRODUCTION.md)
 
 ## Dokumentierte Aussage
 
 Erweiterte Referenzedition mit zehn Offline-Berichten, exaktem X6-QE-Modul, begrenztem RAX-G1-Runner und ausgewählten archivierten Original-Agentenbelegen. Alte Referenzfreigabe bleibt unverändert; externe personelle Wiederholung NOT_PERFORMED.
 
-- [docs/reference-qe-v0.1/expected-reference.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/78a150f27fdf52187d140f9fcf440ce29c89cb48/docs/reference-qe-v0.1/expected-reference.json): Festgelegte zehn Berichtshashes; acht bestehende fachliche Berichte unverändert. Neu: QE und ergänzter Fehlerkontrollbericht. Ausführungsabnahme steht in X6-QE/ACCEPTANCE.md.
-- [docs/validation-v1/expected-reference.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/78a150f27fdf52187d140f9fcf440ce29c89cb48/docs/validation-v1/expected-reference.json): Feste SHA-256-Erwartungen für alle neun Referenzberichte; ursprünglicher Quellenumfang unverändert.
-- [docs/agent-archive/2026-10-15/ARCHIVE.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/78a150f27fdf52187d140f9fcf440ce29c89cb48/docs/agent-archive/2026-10-15/ARCHIVE.json): Drei Original-ZIPs samt ursprünglichen Ablaufdaten, GitHub-Digests und vollständigen Dateiinventaren.
-- [docs/validation-v1/evidence/citation-validation.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/78a150f27fdf52187d140f9fcf440ce29c89cb48/docs/validation-v1/evidence/citation-validation.json): CFF 1.2.0 gegen offizielles Schema geprüft; keine erfundene DOI oder ORCID.
-- [docs/validation-v1/external-report.template.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/78a150f27fdf52187d140f9fcf440ce29c89cb48/docs/validation-v1/external-report.template.json): Noch nicht eingereichte Erklärung der ausführenden Person; keine externe Bestätigung vorweggenommen.
+- [docs/reference-qe-v0.1/expected-reference.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/49710201cdb2e2941404266b25e88051a659b08e/docs/reference-qe-v0.1/expected-reference.json): Festgelegte zehn Berichtshashes; acht bestehende fachliche Berichte unverändert. Neu: QE und ergänzter Fehlerkontrollbericht. Ausführungsabnahme steht in X6-QE/ACCEPTANCE.md.
+- [docs/validation-v1/expected-reference.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/49710201cdb2e2941404266b25e88051a659b08e/docs/validation-v1/expected-reference.json): Feste SHA-256-Erwartungen für alle neun Referenzberichte; ursprünglicher Quellenumfang unverändert.
+- [docs/agent-archive/2026-10-15/ARCHIVE.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/49710201cdb2e2941404266b25e88051a659b08e/docs/agent-archive/2026-10-15/ARCHIVE.json): Drei Original-ZIPs samt ursprünglichen Ablaufdaten, GitHub-Digests und vollständigen Dateiinventaren.
+- [docs/validation-v1/evidence/citation-validation.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/49710201cdb2e2941404266b25e88051a659b08e/docs/validation-v1/evidence/citation-validation.json): CFF 1.2.0 gegen offizielles Schema geprüft; keine erfundene DOI oder ORCID.
+- [docs/validation-v1/external-report.template.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/49710201cdb2e2941404266b25e88051a659b08e/docs/validation-v1/external-report.template.json): Noch nicht eingereichte Erklärung der ausführenden Person; keine externe Bestätigung vorweggenommen.
 
 ## Reproduzieren
 
@@ -29,7 +29,7 @@ Neue Arbeits- und Ausgabeordner verwenden; Voraussetzungen aus der Originaldokum
 ```sh
 git clone --branch main https://github.com/thomasmgfeller/x6-spectral-astrolabium.git x6-reference-edition
 cd x6-reference-edition
-git checkout --detach 78a150f27fdf52187d140f9fcf440ce29c89cb48
+git checkout --detach 49710201cdb2e2941404266b25e88051a659b08e
 python3 -S -B tools/release/build.py --output /tmp/register-reference-assets
 python3 -m zipfile -e /tmp/register-reference-assets/x6-reference-2026.10.15.zip /tmp/register-reference-unpacked
 python3 -S -B /tmp/register-reference-unpacked/x6-reference/tools/release/reproduce.py --output /tmp/register-reference-reproduction

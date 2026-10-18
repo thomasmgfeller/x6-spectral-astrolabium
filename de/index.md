@@ -91,6 +91,7 @@ Die vollständige exakte Prüfung von 2.045 kausalen Ordnungen mit sieben Elemen
 
 Dies ist experimentelle Forschungssoftware. Ein bestandener Softwaretest ist kein physikalischer Nachweis. Gerätequalifikation, unabhängige externe Replikation und industrielle Leistungsqualifikation bleiben eigene offene Aufgaben.
 
+- [BD gegen C2: Vergleich abgeschlossen](https://thomasmgfeller.github.io/x6-spectral-astrolabium/modules/lorentz-bd-reference.html): 6.528 Poisson-Wolken vollständig reproduziert. Der BD-Pilot verfehlt den vorab festgelegten Nutzen; variable Krümmung bleibt in diesem Budget gestoppt. Daten, Grenzen und separater Operator-Vortest sind offen zugänglich.
 - [Wolkenvarianz: weiterer belegter Budgetgewinn](https://thomasmgfeller.github.io/x6-spectral-astrolabium/modules/lorentz-de-sitter-variance.html): Analytische Varianz senkt hinreichende Budgets gegenüber KL um Faktor 2,89–4,10. 45.056 neue Wolken und getrennte Geometrieprüfung; ein Gegenbeispiel bleibt sichtbar.
 - [Schärfere Intervalle: weniger Datenbedarf](https://thomasmgfeller.github.io/x6-spectral-astrolabium/modules/lorentz-de-sitter-kl.html): Gleiche endliche 95%-Absicherung im bekannten Modell; hinreichende Budgets sinken um Faktor 2,71–2,77. 77.824 neue Wolken zeigen erste 20%-Präzisionsfreigaben.
 - [Krümmungsintervalle: abgesichert, noch unpräzise](https://thomasmgfeller.github.io/x6-spectral-astrolabium/modules/lorentz-de-sitter-c2.html): Kontrollierte Geometrie und mindestens 95% Überdeckung im bekannten uniformen Modell. 16.384 neue Wolken: keine 20%-Präzisionsfreigabe.
@@ -106,7 +107,7 @@ Dies ist experimentelle Forschungssoftware. Ein bestandener Softwaretest ist kei
 - [NQK-Forschungsdossier](https://thomasmgfeller.github.io/x6-spectral-astrolabium/modules/nqk.html): Eigenständiger Forschungszweig mit unvollständigen Reproduktionsarchiven.
 - [Eigenzeit und Unsicherheit](https://thomasmgfeller.github.io/x6-spectral-astrolabium/modules/lorentz-proper-time.html): Bekanntes flaches Modell: Voraussetzungen, Fehlergrenzen, Nachbeproben und Kettenwarnungen nachvollziehen.
 
-Das Register vom 2026-10-18 beschreibt 48 Module. Es dokumentiert Quellenorte und Evidenz; es ist kein Live-Prüfsiegel.
+Das Register vom 2026-10-18 beschreibt 50 Module. Es dokumentiert Quellenorte und Evidenz; es ist kein Live-Prüfsiegel.
 
 Das konfigurierte Agentenfenster schliesst Sonntag, den 18. Oktober 2026, ein. Das exklusive Ende unten begrenzt den Zeitplan und belegt keine Ausführung. Danach ist das Fenster geschlossen.
 2026-10-19T00:00:00+02:00
