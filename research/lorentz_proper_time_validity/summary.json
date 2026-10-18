@@ -1,0 +1,410 @@
+{
+  "schema": "x6.proper-time-validity.summary/0.2",
+  "rows": 1176,
+  "geometric_cells": 72,
+  "within_assumed_class": 714,
+  "min_in_class_coverage": 0.9500607580822792,
+  "max_in_class_false_precision": 0.01818283973882177,
+  "status_counts": {
+    "INSUFFICIENT_GRID_PRECISION": 522,
+    "MEETS_DECLARED_GRID_CRITERIA": 192,
+    "OUTSIDE_ASSUMED_CLASS": 462
+  },
+  "flat_d4_planning": [
+    {
+      "model": "uniform_flat",
+      "d": 4,
+      "planning_theta": 0.1,
+      "parameter": 0.0,
+      "interval": "nominal",
+      "first_passing_grid_m": 1048576,
+      "passing_grid_counts": [
+        1048576
+      ],
+      "in_assumed_class": true,
+      "asymptotic_interval_relative_radius": 0.0
+    },
+    {
+      "model": "uniform_flat",
+      "d": 4,
+      "planning_theta": 0.1,
+      "parameter": 0.0,
+      "interval": "bounded_mild",
+      "first_passing_grid_m": null,
+      "passing_grid_counts": [],
+      "in_assumed_class": true,
+      "asymptotic_interval_relative_radius": 0.05572248248221387
+    },
+    {
+      "model": "uniform_flat",
+      "d": 4,
+      "planning_theta": 0.1,
+      "parameter": 0.0,
+      "interval": "bounded_broad",
+      "first_passing_grid_m": null,
+      "passing_grid_counts": [],
+      "in_assumed_class": true,
+      "asymptotic_interval_relative_radius": 0.17155467759864368
+    },
+    {
+      "model": "uniform_flat",
+      "d": 4,
+      "planning_theta": 0.2,
+      "parameter": 0.0,
+      "interval": "nominal",
+      "first_passing_grid_m": 65536,
+      "passing_grid_counts": [
+        65536,
+        262144,
+        1048576
+      ],
+      "in_assumed_class": true,
+      "asymptotic_interval_relative_radius": 0.0
+    },
+    {
+      "model": "uniform_flat",
+      "d": 4,
+      "planning_theta": 0.2,
+      "parameter": 0.0,
+      "interval": "bounded_mild",
+      "first_passing_grid_m": 262144,
+      "passing_grid_counts": [
+        262144,
+        1048576
+      ],
+      "in_assumed_class": true,
+      "asymptotic_interval_relative_radius": 0.0556383726417236
+    },
+    {
+      "model": "uniform_flat",
+      "d": 4,
+      "planning_theta": 0.2,
+      "parameter": 0.0,
+      "interval": "bounded_broad",
+      "first_passing_grid_m": null,
+      "passing_grid_counts": [],
+      "in_assumed_class": true,
+      "asymptotic_interval_relative_radius": 0.17128180774355592
+    },
+    {
+      "model": "uniform_flat",
+      "d": 4,
+      "planning_theta": 0.4,
+      "parameter": 0.0,
+      "interval": "nominal",
+      "first_passing_grid_m": 4096,
+      "passing_grid_counts": [
+        4096,
+        16384,
+        65536,
+        262144,
+        1048576
+      ],
+      "in_assumed_class": true,
+      "asymptotic_interval_relative_radius": 0.0
+    },
+    {
+      "model": "uniform_flat",
+      "d": 4,
+      "planning_theta": 0.4,
+      "parameter": 0.0,
+      "interval": "bounded_mild",
+      "first_passing_grid_m": 16384,
+      "passing_grid_counts": [
+        16384,
+        65536,
+        262144,
+        1048576
+      ],
+      "in_assumed_class": true,
+      "asymptotic_interval_relative_radius": 0.05429335032542466
+    },
+    {
+      "model": "uniform_flat",
+      "d": 4,
+      "planning_theta": 0.4,
+      "parameter": 0.0,
+      "interval": "bounded_broad",
+      "first_passing_grid_m": null,
+      "passing_grid_counts": [],
+      "in_assumed_class": true,
+      "asymptotic_interval_relative_radius": 0.16693948152723245
+    },
+    {
+      "model": "uniform_flat",
+      "d": 4,
+      "planning_theta": 0.7,
+      "parameter": 0.0,
+      "interval": "nominal",
+      "first_passing_grid_m": 256,
+      "passing_grid_counts": [
+        256,
+        1024,
+        4096,
+        16384,
+        65536,
+        262144,
+        1048576
+      ],
+      "in_assumed_class": true,
+      "asymptotic_interval_relative_radius": 0.0
+    },
+    {
+      "model": "uniform_flat",
+      "d": 4,
+      "planning_theta": 0.7,
+      "parameter": 0.0,
+      "interval": "bounded_mild",
+      "first_passing_grid_m": 1024,
+      "passing_grid_counts": [
+        1024,
+        4096,
+        16384,
+        65536,
+        262144,
+        1048576
+      ],
+      "in_assumed_class": true,
+      "asymptotic_interval_relative_radius": 0.042322622950601366
+    },
+    {
+      "model": "uniform_flat",
+      "d": 4,
+      "planning_theta": 0.7,
+      "parameter": 0.0,
+      "interval": "bounded_broad",
+      "first_passing_grid_m": null,
+      "passing_grid_counts": [],
+      "in_assumed_class": true,
+      "asymptotic_interval_relative_radius": 0.12966737169194512
+    }
+  ],
+  "illustrative_cells": [
+    {
+      "model": "uniform_flat",
+      "d": 4,
+      "theta": 0.2,
+      "planning_theta": 0.2,
+      "a": 0.2,
+      "parameter": 0.0,
+      "p": 0.0016000000000000003,
+      "geometry": "flat",
+      "relative_intensity": 1.0,
+      "m": 65536,
+      "interval": "nominal",
+      "intensity_bounds": [
+        1.0,
+        1.0
+      ],
+      "in_assumed_class": true,
+      "status": "MEETS_DECLARED_GRID_CRITERIA",
+      "meets_numeric_criteria": true,
+      "expected_K": 104.85760000000002,
+      "zero_count_probability": 2.6573745171280532e-46,
+      "coverage": 0.9551672929032585,
+      "raw_relative_bias": -0.0008979951001170784,
+      "raw_relative_rmse": 0.024510668299666815,
+      "raw_within_10percent_probability": 0.9999168378510385,
+      "precision_probability": 0.999999999999857,
+      "false_precision_probability": 0.0001259490420421606,
+      "asymptotic_raw_relative_bias": 0.0,
+      "asymptotic_interval_relative_radius": 0.0,
+      "support": [
+        39,
+        188
+      ],
+      "omitted_probability": 1.434639665141982e-13,
+      "raw_bias_tail_bound": 5.738558660567928e-13,
+      "raw_mse_tail_bound": 2.295423464227171e-12
+    },
+    {
+      "d": 4,
+      "planning_theta": 0.2,
+      "a": 0.20415270644814565,
+      "parameter": 0.5,
+      "p": 0.0016672103635361495,
+      "quadrature_gap": 8.673617379884035e-19,
+      "model": "de_sitter",
+      "theta": 0.2,
+      "geometry": "curved",
+      "relative_intensity": null,
+      "m": 1048576,
+      "interval": "nominal",
+      "intensity_bounds": [
+        1.0,
+        1.0
+      ],
+      "in_assumed_class": false,
+      "status": "OUTSIDE_ASSUMED_CLASS",
+      "meets_numeric_criteria": false,
+      "expected_K": 1748.1967741552814,
+      "zero_count_probability": 0.0,
+      "coverage": 0.598717142752892,
+      "raw_relative_bias": 0.010286023303684185,
+      "raw_relative_rmse": 0.011926999649711759,
+      "raw_within_10percent_probability": 0.9999999999998215,
+      "precision_probability": 0.9999999999998215,
+      "false_precision_probability": 0.0,
+      "asymptotic_raw_relative_bias": 0.010340133357775949,
+      "asymptotic_interval_relative_radius": 0.0,
+      "support": [
+        1450,
+        2064
+      ],
+      "omitted_probability": 1.7853646622817809e-13,
+      "raw_bias_tail_bound": 7.141458649127123e-13,
+      "raw_mse_tail_bound": 2.8565834596508494e-12
+    },
+    {
+      "model": "density",
+      "d": 4,
+      "theta": 0.2,
+      "planning_theta": 0.2,
+      "a": 0.2,
+      "parameter": 4.0,
+      "p": 0.0012766315789473686,
+      "geometry": "flat",
+      "relative_intensity": 0.7976363930710701,
+      "m": 65536,
+      "interval": "nominal",
+      "intensity_bounds": [
+        1.0,
+        1.0
+      ],
+      "in_assumed_class": false,
+      "status": "OUTSIDE_ASSUMED_CLASS",
+      "meets_numeric_criteria": false,
+      "expected_K": 83.66532715789475,
+      "zero_count_probability": 4.379221144608598e-37,
+      "coverage": 0.45645645783877475,
+      "raw_relative_bias": -0.05594687694763874,
+      "raw_relative_rmse": 0.06167132443860997,
+      "raw_within_10percent_probability": 0.9549135372420879,
+      "precision_probability": 0.9999999999997665,
+      "false_precision_probability": 0.05728924328138174,
+      "asymptotic_raw_relative_bias": -0.05488120437967592,
+      "asymptotic_interval_relative_radius": 0.0,
+      "support": [
+        26,
+        159
+      ],
+      "omitted_probability": 1.2600173828717227e-13,
+      "raw_bias_tail_bound": 5.040069531486891e-13,
+      "raw_mse_tail_bound": 2.0160278125947564e-12
+    },
+    {
+      "model": "density",
+      "d": 4,
+      "theta": 0.2,
+      "planning_theta": 0.2,
+      "a": 0.2,
+      "parameter": 12.0,
+      "p": 0.0009173333333333336,
+      "geometry": "flat",
+      "relative_intensity": 0.5729415784079261,
+      "m": 65536,
+      "interval": "nominal",
+      "intensity_bounds": [
+        1.0,
+        1.0
+      ],
+      "in_assumed_class": false,
+      "status": "OUTSIDE_ASSUMED_CLASS",
+      "meets_numeric_criteria": false,
+      "expected_K": 60.11835733333335,
+      "zero_count_probability": 7.567395979449381e-27,
+      "coverage": 0.0014258989397763766,
+      "raw_relative_bias": -0.13120469107109473,
+      "raw_relative_rmse": 0.1342107429654887,
+      "raw_within_10percent_probability": 0.1403441622615261,
+      "precision_probability": 0.9999994073351365,
+      "false_precision_probability": 0.8853047832744292,
+      "asymptotic_raw_relative_bias": -0.12983462523492906,
+      "asymptotic_interval_relative_radius": 0.0,
+      "support": [
+        13,
+        125
+      ],
+      "omitted_probability": 1.2975118844183753e-13,
+      "raw_bias_tail_bound": 5.190047537673501e-13,
+      "raw_mse_tail_bound": 2.0760190150694004e-12
+    },
+    {
+      "model": "thinning",
+      "d": 4,
+      "theta": 0.2,
+      "planning_theta": 0.2,
+      "a": 0.2,
+      "parameter": 0.5,
+      "p": 0.0008006405124099281,
+      "geometry": "flat",
+      "relative_intensity": 0.5,
+      "retention_probability": 0.9992,
+      "m": 65536,
+      "interval": "nominal",
+      "intensity_bounds": [
+        1.0,
+        1.0
+      ],
+      "in_assumed_class": false,
+      "status": "OUTSIDE_ASSUMED_CLASS",
+      "meets_numeric_criteria": false,
+      "expected_K": 52.47077662129705,
+      "zero_count_probability": 1.596261263223063e-23,
+      "coverage": 2.239266029274139e-05,
+      "raw_relative_bias": -0.16045514465174918,
+      "raw_relative_rmse": 0.16310063250175236,
+      "raw_within_10percent_probability": 0.016363871214656617,
+      "precision_probability": 0.9999597068787117,
+      "false_precision_probability": 0.9880890164437564,
+      "asymptotic_raw_relative_bias": -0.15893532132310662,
+      "asymptotic_interval_relative_radius": 0.0,
+      "support": [
+        9,
+        114
+      ],
+      "omitted_probability": 8.752908242874831e-14,
+      "raw_bias_tail_bound": 3.5011632971499323e-13,
+      "raw_mse_tail_bound": 1.400465318859973e-12
+    },
+    {
+      "model": "thinning",
+      "d": 4,
+      "theta": 0.2,
+      "planning_theta": 0.2,
+      "a": 0.2,
+      "parameter": 0.5,
+      "p": 0.0008006405124099281,
+      "geometry": "flat",
+      "relative_intensity": 0.5,
+      "retention_probability": 0.9992,
+      "m": 65536,
+      "interval": "bounded_broad",
+      "intensity_bounds": [
+        0.5,
+        2.0
+      ],
+      "in_assumed_class": true,
+      "status": "INSUFFICIENT_GRID_PRECISION",
+      "meets_numeric_criteria": false,
+      "expected_K": 52.47077662129705,
+      "zero_count_probability": 1.596261263223063e-23,
+      "coverage": 0.977356425971268,
+      "raw_relative_bias": -0.16045514465174918,
+      "raw_relative_rmse": 0.16310063250175236,
+      "raw_within_10percent_probability": 0.016363871214656617,
+      "precision_probability": 0.0,
+      "false_precision_probability": 0.0,
+      "asymptotic_raw_relative_bias": -0.15893532132310662,
+      "asymptotic_interval_relative_radius": 0.17142719967069334,
+      "support": [
+        9,
+        114
+      ],
+      "omitted_probability": 8.752908242874831e-14,
+      "raw_bias_tail_bound": 3.5011632971499323e-13,
+      "raw_mse_tail_bound": 1.400465318859973e-12
+    }
+  ],
+  "figure_selection": "Fixed 4D examples at theta=0.2. Full grid remains archived; selected examples are descriptive, not additional acceptance gates."
+}
