@@ -4,7 +4,7 @@ Ein Wegweiser für Neugierige, Lernende und Menschen, die selbst prüfen möchte
 
 [English](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/en/) · [Wiki-Übersicht](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/de/)
 
-Quellenstand: 2026-10-18 · `d9bd4d0266faff0fddd70b4067ad4422367f25a1`
+Quellenstand: 2026-10-18 · `78a150f27fdf52187d140f9fcf440ce29c89cb48`
 
 ## Was ist X6?
 
@@ -51,3 +51,5 @@ Neu: 16.384 neue Punktwolken prüfen die de-Sitter-Krümmungsschätzung. Zusätz
 Neu: Zweierketten liefern jetzt konservative Krümmungsintervalle mit mathematisch begründeter Überdeckung im bekannten uniformen Modell. Die neuen Tests zeigen zugleich, dass die Intervalle für 20%-Präzision noch zu breit sind.
 
 Neu: Die schärfere KL-Schranke senkt hinreichende Datenbudgets um Faktor 2,71–2,77. 77.824 neue Wolken zeigen erste 20%-Präzisionsfreigaben innerhalb der bekannten de-Sitter-Familie; bei kleineren Krümmungen bleiben die Intervalle zu breit.
+
+Neu: Eine analytische Varianzgrenze senkt hinreichende Krümmungsbudgets gegenüber KL um Faktor 2,89–4,10. 45.056 neue Wolken, eine getrennte Geometrieprüfung und ein Prüfpaket dokumentieren Fortschritt und Grenzen.

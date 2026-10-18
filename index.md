@@ -91,6 +91,7 @@ The complete exact test of 2,045 seven-element causal orders refutes the two-mom
 
 This is experimental research software. A passing software test is not physical validation. Hardware qualification, independent external replication and industrial performance qualification remain separate open tasks.
 
+- [Cloud variance: another verified budget gain](https://thomasmgfeller.github.io/x6-spectral-astrolabium/modules/lorentz-de-sitter-variance.html): Analytical variance improves sufficient budgets 2.89–4.10 fold against KL. 45,056 fresh clouds and a separate geometry audit; a counterexample remains visible.
 - [Sharper intervals: lower data budgets](https://thomasmgfeller.github.io/x6-spectral-astrolabium/modules/lorentz-de-sitter-kl.html): Same finite-sample 95% coverage in the known model; sufficient budgets improve 2.71–2.77 fold. 77,824 fresh clouds show initial 20% precision qualifications.
 - [Curvature intervals: controlled, still imprecise](https://thomasmgfeller.github.io/x6-spectral-astrolabium/modules/lorentz-de-sitter-c2.html): Enclosed geometry and at least 95% coverage in the known uniform model. 16,384 fresh clouds: no 20% precision qualification.
 - [Curvature: how much information do chains add?](https://thomasmgfeller.github.io/x6-spectral-astrolabium/modules/lorentz-de-sitter-information.html): 16,384 fresh clouds: extra chains reduce estimation error by only 1.37%. The 10% target fails; data budgets and limitations are documented.
@@ -105,7 +106,7 @@ This is experimental research software. A passing software test is not physical 
 - [NQK research dossier](https://thomasmgfeller.github.io/x6-spectral-astrolabium/modules/nqk.html): A separate research direction with incomplete reproduction archives.
 - [Proper time and uncertainty](https://thomasmgfeller.github.io/x6-spectral-astrolabium/modules/lorentz-proper-time.html): Known flat model: inspect assumptions, uncertainty bounds, sequential sampling and chain warnings.
 
-47 modules are described in the register dated 2026-10-18. The register records source locations and evidence; it is not a live qualification badge.
+48 modules are described in the register dated 2026-10-18. The register records source locations and evidence; it is not a live qualification badge.
 
 The configured research-agent window includes Sunday, 18 October 2026. The exclusive cutoff below is a schedule limit, not evidence of execution. After this cutoff the window is closed.
 2026-10-19T00:00:00+02:00

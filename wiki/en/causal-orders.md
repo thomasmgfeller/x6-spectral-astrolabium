@@ -4,7 +4,7 @@ This research asks what structure is carried by relationships before a spatial d
 
 [Deutsch](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/de/causal-orders.md) · [Wiki overview](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/en/)
 
-Source snapshot: 2026-10-18 · `d9bd4d0266faff0fddd70b4067ad4422367f25a1`
+Source snapshot: 2026-10-18 · `78a150f27fdf52187d140f9fcf440ce29c89cb48`
 
 ## Events and their ordering
 
@@ -210,3 +210,19 @@ At smaller curvatures, the executed budgets still do not suffice. The prespecifi
 
 - [Results and precision limits](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/d9bd4d0266faff0fddd70b4067ad4422367f25a1/research/lorentz_de_sitter_kl/RESULTS.md)
 - [Derivation and protocol](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/d9bd4d0266faff0fddd70b4067ad4422367f25a1/research/lorentz_de_sitter_kl/DERIVATION.md)
+
+## Lower budgets through certified whole-cloud variance
+
+The new stage uses the variability of whole point clouds. This is bounded analytically from the known geometry. The calculation explicitly counts dependence between pairs sharing a point; it does not treat an empirical variance estimate as a guaranteed population bound.
+
+The Bennett bound retains at least 95% coverage in the known uniform model with a prespecified fixed budget. Sufficient budgets improve 2.89–4.10 fold against KL. At h=0.5 the count is 10,981 instead of 31,707 clouds; at h=0.1 it still reaches about 14.2 million. These are sufficient planning boundaries, not optimal minimum counts.
+
+The protocol was public before the target calculations. 45,056 fresh clouds were fully replayed. At h=0.5 with 4,096 clouds per estimate, five of eight Bennett intervals meet the relative 20% target, compared with none of eight KL intervals. In the full 32,768-cloud dataset, the relative radius drops from 8.88% to 4.64%. Different group sizes reuse data, and small numbers of groups cannot precisely estimate a success rate.
+
+A counterexample is retained: in one group of only 256 clouds, Bennett is wider than KL. The two intervals are not intersected or selected by observed width without additional protection. The certified budget gain does not imply that every reported interval is superior.
+
+A separate sphere-lens volume calculation checks the new geometry. A review packet identifies proof obligations and possible errors for external scrutiny. Known density, independent clouds and fixed budgets remain required. The upper model boundary helps at h=0.5; small curvature remains difficult. The next question is how bounded density and time-scale errors affect precision qualification.
+
+- [Results and counterexample](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/78a150f27fdf52187d140f9fcf440ce29c89cb48/research/lorentz_de_sitter_variance/RESULTS.md)
+- [External review packet](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/78a150f27fdf52187d140f9fcf440ce29c89cb48/research/lorentz_de_sitter_variance/REVIEW.md)
+- [Full derivation](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/78a150f27fdf52187d140f9fcf440ce29c89cb48/research/lorentz_de_sitter_variance/DERIVATION.md)
