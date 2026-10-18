@@ -1,7 +1,7 @@
 {
   "schema": "x6.bilingual-wiki/1",
   "snapshot_date": "2026-10-18",
-  "source_commit": "d9bd4d0266faff0fddd70b4067ad4422367f25a1",
+  "source_commit": "78a150f27fdf52187d140f9fcf440ce29c89cb48",
   "articles": [
     {
       "id": "index",
@@ -132,6 +132,10 @@
               {
                 "type": "paragraph",
                 "text": "Neu: Die schärfere KL-Schranke senkt hinreichende Datenbudgets um Faktor 2,71–2,77. 77.824 neue Wolken zeigen erste 20%-Präzisionsfreigaben innerhalb der bekannten de-Sitter-Familie; bei kleineren Krümmungen bleiben die Intervalle zu breit."
+              },
+              {
+                "type": "paragraph",
+                "text": "Neu: Eine analytische Varianzgrenze senkt hinreichende Krümmungsbudgets gegenüber KL um Faktor 2,89–4,10. 45.056 neue Wolken, eine getrennte Geometrieprüfung und ein Prüfpaket dokumentieren Fortschritt und Grenzen."
               }
             ]
           }
@@ -264,6 +268,10 @@
               {
                 "type": "paragraph",
                 "text": "New: the sharper KL bound improves sufficient data budgets 2.71–2.77 fold. 77,824 fresh clouds show initial 20% precision qualifications within the known de Sitter family; intervals remain too wide at smaller curvatures."
+              },
+              {
+                "type": "paragraph",
+                "text": "New: an analytical variance certificate improves sufficient curvature budgets 2.89–4.10 fold against KL. 45,056 fresh clouds, a separate geometry audit and a review packet document both the advance and its limits."
               }
             ]
           }
@@ -1311,6 +1319,49 @@
                 ]
               }
             ]
+          },
+          {
+            "id": "de-sitter-variance",
+            "title": "Weniger Daten durch eine abgesicherte Wolkenvarianz",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "Die nächste Stufe nutzt die Streuung ganzer Punktwolken. Diese wird aus der bekannten Geometrie mathematisch nach oben begrenzt. Die Rechnung zählt ausdrücklich die Abhängigkeit von Paaren mit einem gemeinsamen Punkt und benötigt keine als sicher behandelte empirische Varianz."
+              },
+              {
+                "type": "paragraph",
+                "text": "Die neue Bennett-Schranke behält mindestens 95% Überdeckung im bekannten uniformen Modell und bei vorher festem Budget. Gegenüber der KL-Referenz sinken die hinreichenden Budgets um Faktor 2,89 bis 4,10. Bei h=0,5 werden 10.981 statt 31.707 Wolken benötigt; bei h=0,1 bleiben es trotz Verbesserung rund 14,2 Millionen. Diese Planungszahlen sind ausreichende Grenzen, keine optimalen Mindestzahlen."
+              },
+              {
+                "type": "paragraph",
+                "text": "Der Vertrag wurde vor den Zielrechnungen veröffentlicht. 45.056 neue Wolken wurden vollständig reproduziert. Bei h=0,5 mit je 4.096 Wolken erreichen fünf von acht Bennett-Intervallen die relative 20%-Vorgabe, gegenüber null von acht mit KL. Im gesamten Datensatz von 32.768 Wolken sinkt der relative Radius von 8,88% auf 4,64%. Verschiedene Gruppengrössen verwenden dieselben Daten erneut; kleine Gruppenzahlen liefern keine präzise Erfolgsrate."
+              },
+              {
+                "type": "paragraph",
+                "text": "Ein Gegenbeispiel bleibt erhalten: In einer Gruppe mit nur 256 Wolken ist Bennett breiter als KL. Die beiden Intervalle werden deshalb nicht ungesichert geschnitten oder nachträglich nach ihrer Breite ausgewählt. Der belegte Budgetgewinn bedeutet keine allgemeine Überlegenheit jeder einzelnen Ausgabe."
+              },
+              {
+                "type": "paragraph",
+                "text": "Eine zweite geometrische Rechnung über Kugelschnittvolumina prüft die neue Formel gegen. Ein Prüfpaket benennt Beweisstellen und mögliche Fehler für eine externe Begutachtung. Bekannte Dichte, unabhängige Wolken und festes Budget bleiben erforderlich. Bei h=0,5 hilft die obere Modellgrenze; kleine Krümmungen bleiben schwierig. Als Nächstes ist zu klären, wie begrenzte Fehler in Dichte und Zeitskala die Freigabe beeinflussen."
+              },
+              {
+                "type": "links",
+                "items": [
+                  {
+                    "label": "Ergebnisse und Gegenbeispiel",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/78a150f27fdf52187d140f9fcf440ce29c89cb48/research/lorentz_de_sitter_variance/RESULTS.md"
+                  },
+                  {
+                    "label": "Prüfpaket für externe Begutachtung",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/78a150f27fdf52187d140f9fcf440ce29c89cb48/research/lorentz_de_sitter_variance/REVIEW.md"
+                  },
+                  {
+                    "label": "Vollständige Herleitung",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/78a150f27fdf52187d140f9fcf440ce29c89cb48/research/lorentz_de_sitter_variance/DERIVATION.md"
+                  }
+                ]
+              }
+            ]
           }
         ]
       },
@@ -1889,6 +1940,49 @@
                   {
                     "label": "Derivation and protocol",
                     "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/d9bd4d0266faff0fddd70b4067ad4422367f25a1/research/lorentz_de_sitter_kl/DERIVATION.md"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "de-sitter-variance",
+            "title": "Lower budgets through certified whole-cloud variance",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "The new stage uses the variability of whole point clouds. This is bounded analytically from the known geometry. The calculation explicitly counts dependence between pairs sharing a point; it does not treat an empirical variance estimate as a guaranteed population bound."
+              },
+              {
+                "type": "paragraph",
+                "text": "The Bennett bound retains at least 95% coverage in the known uniform model with a prespecified fixed budget. Sufficient budgets improve 2.89–4.10 fold against KL. At h=0.5 the count is 10,981 instead of 31,707 clouds; at h=0.1 it still reaches about 14.2 million. These are sufficient planning boundaries, not optimal minimum counts."
+              },
+              {
+                "type": "paragraph",
+                "text": "The protocol was public before the target calculations. 45,056 fresh clouds were fully replayed. At h=0.5 with 4,096 clouds per estimate, five of eight Bennett intervals meet the relative 20% target, compared with none of eight KL intervals. In the full 32,768-cloud dataset, the relative radius drops from 8.88% to 4.64%. Different group sizes reuse data, and small numbers of groups cannot precisely estimate a success rate."
+              },
+              {
+                "type": "paragraph",
+                "text": "A counterexample is retained: in one group of only 256 clouds, Bennett is wider than KL. The two intervals are not intersected or selected by observed width without additional protection. The certified budget gain does not imply that every reported interval is superior."
+              },
+              {
+                "type": "paragraph",
+                "text": "A separate sphere-lens volume calculation checks the new geometry. A review packet identifies proof obligations and possible errors for external scrutiny. Known density, independent clouds and fixed budgets remain required. The upper model boundary helps at h=0.5; small curvature remains difficult. The next question is how bounded density and time-scale errors affect precision qualification."
+              },
+              {
+                "type": "links",
+                "items": [
+                  {
+                    "label": "Results and counterexample",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/78a150f27fdf52187d140f9fcf440ce29c89cb48/research/lorentz_de_sitter_variance/RESULTS.md"
+                  },
+                  {
+                    "label": "External review packet",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/78a150f27fdf52187d140f9fcf440ce29c89cb48/research/lorentz_de_sitter_variance/REVIEW.md"
+                  },
+                  {
+                    "label": "Full derivation",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/78a150f27fdf52187d140f9fcf440ce29c89cb48/research/lorentz_de_sitter_variance/DERIVATION.md"
                   }
                 ]
               }

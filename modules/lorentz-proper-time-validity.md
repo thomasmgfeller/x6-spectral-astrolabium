@@ -6,19 +6,19 @@ Registerstand: 2026-10-18. MAIN / SOFTWARE. Kein Live-Prüfsiegel.
 
 Branch: main
 
-Commit: d9bd4d0266faff0fddd70b4067ad4422367f25a1
+Commit: 78a150f27fdf52187d140f9fcf440ce29c89cb48
 
-[Originaldokumentation](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/d9bd4d0266faff0fddd70b4067ad4422367f25a1/research/lorentz_proper_time_validity/README.md)
+[Originaldokumentation](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/78a150f27fdf52187d140f9fcf440ce29c89cb48/research/lorentz_proper_time_validity/README.md)
 
 ## Dokumentierte Aussage
 
 1.176 festgelegte Modell-/Budget-/Intervallkombinationen direkt berechnet. Alle 714 Kombinationen innerhalb ihrer Modellklasse erreichen mindestens 95% Überdeckung; 192 erfüllen zusätzlich das Präzisionsziel, 522 bleiben zu unpräzise. 462 Kombinationen liegen ausserhalb der jeweils vorausgesetzten Klasse. Extern begrenzte Dichtefehler erlauben konservative flache Eigenzeitintervalle, können aber eine irreduzible Präzisionsgrenze erzeugen. Keine allgemeine Krümmungsqualifikation.
 
-- [research/lorentz_proper_time_validity/RESULTS.md](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/d9bd4d0266faff0fddd70b4067ad4422367f25a1/research/lorentz_proper_time_validity/RESULTS.md): Gültigkeitskarte, Budgettabelle, Fehlpräzision bei selektiv fehlenden Ereignissen und verbleibende Grenzen.
-- [research/lorentz_proper_time_validity/DERIVATION.md](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/d9bd4d0266faff0fddd70b4067ad4422367f25a1/research/lorentz_proper_time_validity/DERIVATION.md): Exakte Binomialmodelle, bekannte de-Sitter-Familie und konservative Transformation für extern begrenzte Intensitätsverhältnisse.
-- [research/lorentz_proper_time_validity/contract.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/d9bd4d0266faff0fddd70b4067ad4422367f25a1/research/lorentz_proper_time_validity/contract.json): Öffentlicher Quellenstand 67dc770 vor der ersten Zielgitter-Auswertung.
-- [research/lorentz_proper_time_validity/ARCHIVE.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/d9bd4d0266faff0fddd70b4067ad4422367f25a1/research/lorentz_proper_time_validity/ARCHIVE.json): Prüfsumme und Inventar aller unveränderten Originalausgaben im ZIP.
-- [research/lorentz_proper_time_validity/VERIFICATION.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/d9bd4d0266faff0fddd70b4067ad4422367f25a1/research/lorentz_proper_time_validity/VERIFICATION.json): Getrennte Integral-/CDF-Gegenprüfung aller 1.176 Zellen und vollständiger Replay.
+- [research/lorentz_proper_time_validity/RESULTS.md](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/78a150f27fdf52187d140f9fcf440ce29c89cb48/research/lorentz_proper_time_validity/RESULTS.md): Gültigkeitskarte, Budgettabelle, Fehlpräzision bei selektiv fehlenden Ereignissen und verbleibende Grenzen.
+- [research/lorentz_proper_time_validity/DERIVATION.md](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/78a150f27fdf52187d140f9fcf440ce29c89cb48/research/lorentz_proper_time_validity/DERIVATION.md): Exakte Binomialmodelle, bekannte de-Sitter-Familie und konservative Transformation für extern begrenzte Intensitätsverhältnisse.
+- [research/lorentz_proper_time_validity/contract.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/78a150f27fdf52187d140f9fcf440ce29c89cb48/research/lorentz_proper_time_validity/contract.json): Öffentlicher Quellenstand 67dc770 vor der ersten Zielgitter-Auswertung.
+- [research/lorentz_proper_time_validity/ARCHIVE.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/78a150f27fdf52187d140f9fcf440ce29c89cb48/research/lorentz_proper_time_validity/ARCHIVE.json): Prüfsumme und Inventar aller unveränderten Originalausgaben im ZIP.
+- [research/lorentz_proper_time_validity/VERIFICATION.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/78a150f27fdf52187d140f9fcf440ce29c89cb48/research/lorentz_proper_time_validity/VERIFICATION.json): Getrennte Integral-/CDF-Gegenprüfung aller 1.176 Zellen und vollständiger Replay.
 
 ## Reproduzieren
 
@@ -29,7 +29,7 @@ Neue Arbeits- und Ausgabeordner verwenden; Voraussetzungen aus der Originaldokum
 ```sh
 git clone --branch main https://github.com/thomasmgfeller/x6-spectral-astrolabium.git x6-lorentz-proper-time-validity
 cd x6-lorentz-proper-time-validity
-git checkout --detach d9bd4d0266faff0fddd70b4067ad4422367f25a1
+git checkout --detach 78a150f27fdf52187d140f9fcf440ce29c89cb48
 python3 -m pip install -r research/lorentz_proper_time_validity/requirements.txt
 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 python3 -B research/lorentz_proper_time_validity/reproduce.py
 ```

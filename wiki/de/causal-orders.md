@@ -4,7 +4,7 @@ Hier geht es um die Frage, welche Struktur in Beziehungen steckt, bevor man eine
 
 [English](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/en/causal-orders.md) · [Wiki-Übersicht](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/de/)
 
-Quellenstand: 2026-10-18 · `d9bd4d0266faff0fddd70b4067ad4422367f25a1`
+Quellenstand: 2026-10-18 · `78a150f27fdf52187d140f9fcf440ce29c89cb48`
 
 ## Ereignisse und ihre Reihenfolge
 
@@ -210,3 +210,19 @@ Bei kleineren Krümmungen reichen die ausgeführten Budgets weiterhin nicht. Die
 
 - [Ergebnisse und Präzisionsgrenzen](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/d9bd4d0266faff0fddd70b4067ad4422367f25a1/research/lorentz_de_sitter_kl/RESULTS.md)
 - [Herleitung und Prüfvertrag](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/d9bd4d0266faff0fddd70b4067ad4422367f25a1/research/lorentz_de_sitter_kl/DERIVATION.md)
+
+## Weniger Daten durch eine abgesicherte Wolkenvarianz
+
+Die nächste Stufe nutzt die Streuung ganzer Punktwolken. Diese wird aus der bekannten Geometrie mathematisch nach oben begrenzt. Die Rechnung zählt ausdrücklich die Abhängigkeit von Paaren mit einem gemeinsamen Punkt und benötigt keine als sicher behandelte empirische Varianz.
+
+Die neue Bennett-Schranke behält mindestens 95% Überdeckung im bekannten uniformen Modell und bei vorher festem Budget. Gegenüber der KL-Referenz sinken die hinreichenden Budgets um Faktor 2,89 bis 4,10. Bei h=0,5 werden 10.981 statt 31.707 Wolken benötigt; bei h=0,1 bleiben es trotz Verbesserung rund 14,2 Millionen. Diese Planungszahlen sind ausreichende Grenzen, keine optimalen Mindestzahlen.
+
+Der Vertrag wurde vor den Zielrechnungen veröffentlicht. 45.056 neue Wolken wurden vollständig reproduziert. Bei h=0,5 mit je 4.096 Wolken erreichen fünf von acht Bennett-Intervallen die relative 20%-Vorgabe, gegenüber null von acht mit KL. Im gesamten Datensatz von 32.768 Wolken sinkt der relative Radius von 8,88% auf 4,64%. Verschiedene Gruppengrössen verwenden dieselben Daten erneut; kleine Gruppenzahlen liefern keine präzise Erfolgsrate.
+
+Ein Gegenbeispiel bleibt erhalten: In einer Gruppe mit nur 256 Wolken ist Bennett breiter als KL. Die beiden Intervalle werden deshalb nicht ungesichert geschnitten oder nachträglich nach ihrer Breite ausgewählt. Der belegte Budgetgewinn bedeutet keine allgemeine Überlegenheit jeder einzelnen Ausgabe.
+
+Eine zweite geometrische Rechnung über Kugelschnittvolumina prüft die neue Formel gegen. Ein Prüfpaket benennt Beweisstellen und mögliche Fehler für eine externe Begutachtung. Bekannte Dichte, unabhängige Wolken und festes Budget bleiben erforderlich. Bei h=0,5 hilft die obere Modellgrenze; kleine Krümmungen bleiben schwierig. Als Nächstes ist zu klären, wie begrenzte Fehler in Dichte und Zeitskala die Freigabe beeinflussen.
+
+- [Ergebnisse und Gegenbeispiel](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/78a150f27fdf52187d140f9fcf440ce29c89cb48/research/lorentz_de_sitter_variance/RESULTS.md)
+- [Prüfpaket für externe Begutachtung](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/78a150f27fdf52187d140f9fcf440ce29c89cb48/research/lorentz_de_sitter_variance/REVIEW.md)
+- [Vollständige Herleitung](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/78a150f27fdf52187d140f9fcf440ce29c89cb48/research/lorentz_de_sitter_variance/DERIVATION.md)

@@ -4,7 +4,7 @@ Short answers for everyday use, with links to the details.
 
 [Deutsch](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/de/faq.md) · [Wiki overview](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/en/)
 
-Source snapshot: 2026-10-18 · `d9bd4d0266faff0fddd70b4067ad4422367f25a1`
+Source snapshot: 2026-10-18 · `78a150f27fdf52187d140f9fcf440ce29c89cb48`
 
 ## Do I need mathematics or an account?
 

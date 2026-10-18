@@ -4,7 +4,7 @@ A guide for curious readers, learners and people who want to check the work them
 
 [Deutsch](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/de/) · [Wiki overview](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/en/)
 
-Source snapshot: 2026-10-18 · `d9bd4d0266faff0fddd70b4067ad4422367f25a1`
+Source snapshot: 2026-10-18 · `78a150f27fdf52187d140f9fcf440ce29c89cb48`
 
 ## What is X6?
 
@@ -51,3 +51,5 @@ New: 16,384 fresh clouds test a restricted de Sitter curvature estimator. Extra 
 New: two-element chains now yield conservative curvature intervals with mathematically justified coverage in the known uniform model. Fresh tests also show that the intervals remain too wide for 20% precision.
 
 New: the sharper KL bound improves sufficient data budgets 2.71–2.77 fold. 77,824 fresh clouds show initial 20% precision qualifications within the known de Sitter family; intervals remain too wide at smaller curvatures.
+
+New: an analytical variance certificate improves sufficient curvature budgets 2.89–4.10 fold against KL. 45,056 fresh clouds, a separate geometry audit and a review packet document both the advance and its limits.
