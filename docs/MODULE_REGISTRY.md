@@ -2,7 +2,7 @@
 
 **Geprüfter Quellenstand: 2026-10-18.** Dieses Register ist der gemeinsame Einstieg in die veröffentlichten Module.
 
-Es beschreibt einen datierten Snapshot, keinen Live-Monitor. Massgeblicher main-Ausgangscommit: [8ee417ba8c44c1f32f4e310a6566168d84982d3a](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/8ee417ba8c44c1f32f4e310a6566168d84982d3a). Dokumentationsänderungen nach diesem Snapshot sind über die Git-Historie nachvollziehbar. Die Quellpins bezeichnen die verfügbare Implementierung; ältere Evidenzberichte behalten ihre eigenen Prüfrevisionen.
+Es beschreibt einen datierten Snapshot, keinen Live-Monitor. Massgeblicher main-Ausgangscommit: [e5840afa7c7865a48766d1a5366210508a7b1f05](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/e5840afa7c7865a48766d1a5366210508a7b1f05). Dokumentationsänderungen nach diesem Snapshot sind über die Git-Historie nachvollziehbar. Die Quellpins bezeichnen die verfügbare Implementierung; ältere Evidenzberichte behalten ihre eigenen Prüfrevisionen.
 
 [Maschinenlesbare Quelle](../MODULE_REGISTRY.json) · [Installation und Bedienung](INTEGRATION.md) · [Register-Abnahme](MODULE_REGISTRY_ACCEPTANCE.md) · [Offline-Referenzsuite](OFFLINE_REFERENCE.md)
 
@@ -43,60 +43,61 @@ NOAA-/Quellenjobs haben keine Push-/PR-Starts. Der Mathematikworkflow besitzt zu
 
 | Modul | Verfügbarkeit / Art | Branch / Quellcommit |
 | --- | --- | --- |
-| [Gemeinsamer lokaler Einstieg](#integration) | MAIN / SOFTWARE | `main` / [8ee417ba8c44](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/8ee417ba8c44c1f32f4e310a6566168d84982d3a) |
-| [Gemeinsame Offline-Referenzsuite](#offline-reference) | MAIN / SOFTWARE | `main` / [8ee417ba8c44](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/8ee417ba8c44c1f32f4e310a6566168d84982d3a) |
-| [Astrolabium und rationale Spektralreferenz](#astrolabium) | MAIN / SOFTWARE | `main` / [8ee417ba8c44](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/8ee417ba8c44c1f32f4e310a6566168d84982d3a) |
-| [Signal Validation Lab](#signal-lab) | MAIN / SOFTWARE | `main` / [8ee417ba8c44](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/8ee417ba8c44c1f32f4e310a6566168d84982d3a) |
-| [Edge-Referenzadapter](#edge-reference) | MAIN / SOFTWARE | `main` / [8ee417ba8c44](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/8ee417ba8c44c1f32f4e310a6566168d84982d3a) |
-| [Evidence & Calibration](#evidence-calibration) | MAIN / SOFTWARE | `main` / [8ee417ba8c44](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/8ee417ba8c44c1f32f4e310a6566168d84982d3a) |
-| [X6-Phasenfilter: Experimentvertrag](#phase-contract) | MAIN / SOFTWARE | `main` / [8ee417ba8c44](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/8ee417ba8c44c1f32f4e310a6566168d84982d3a) |
-| [Industrielle Entrauschung: Forschungsprogramm v0.2](#industrial-programme) | MAIN / CONCEPT | `main` / [8ee417ba8c44](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/8ee417ba8c44c1f32f4e310a6566168d84982d3a) |
-| [Sagnac-Aufnahme und Import](#sagnac-import) | MAIN / SOFTWARE | `main` / [8ee417ba8c44](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/8ee417ba8c44c1f32f4e310a6566168d84982d3a) |
-| [Photonischer Zwei-Qubit-Aufbau und Jig](#photonic-design) | MAIN / SOFTWARE | `main` / [8ee417ba8c44](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/8ee417ba8c44c1f32f4e310a6566168d84982d3a) |
-| [ACVM: Grundkonzept 0.1](#acvm-concept) | MAIN / CONCEPT | `main` / [8ee417ba8c44](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/8ee417ba8c44c1f32f4e310a6566168d84982d3a) |
-| [ACVM C1: Steuerkanal](#acvm-c1) | MAIN / SOFTWARE | `main` / [8ee417ba8c44](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/8ee417ba8c44c1f32f4e310a6566168d84982d3a) |
-| [ACVM 0.2: optischer Referenzablauf](#acvm-optical) | MAIN / SOFTWARE | `main` / [8ee417ba8c44](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/8ee417ba8c44c1f32f4e310a6566168d84982d3a) |
-| [Sagnac-Komponenten und Ofen](#sagnac-components) | MAIN / CONCEPT | `main` / [8ee417ba8c44](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/8ee417ba8c44c1f32f4e310a6566168d84982d3a) |
-| [ACVM Experiment Records](#acvm-records) | MAIN / CONCEPT | `main` / [8ee417ba8c44](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/8ee417ba8c44c1f32f4e310a6566168d84982d3a) |
-| [ACVM Electrical & Thermal Test Fixture](#acvm-fixture) | MAIN / CONCEPT | `main` / [8ee417ba8c44](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/8ee417ba8c44c1f32f4e310a6566168d84982d3a) |
-| [RAX: relationales Forschungsprogramm](#rax-programme) | MAIN / CONCEPT | `main` / [8ee417ba8c44](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/8ee417ba8c44c1f32f4e310a6566168d84982d3a) |
-| [RAX-U1: Reduktionskontrolle](#rax-u1) | MAIN / SOFTWARE | `main` / [8ee417ba8c44](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/8ee417ba8c44c1f32f4e310a6566168d84982d3a) |
-| [RAX-B1/M1: Benchmark und Methodenreview](#rax-b1-m1) | MAIN / SOFTWARE | `main` / [8ee417ba8c44](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/8ee417ba8c44c1f32f4e310a6566168d84982d3a) |
-| [RAX-W1: exakte Wolfram-Gegenprüfung](#rax-w1) | MAIN / SOFTWARE | `main` / [8ee417ba8c44](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/8ee417ba8c44c1f32f4e310a6566168d84982d3a) |
-| [Wolfram Fall 2: Polaritätsumkehr](#wolfram-polarity) | MAIN / SOFTWARE | `main` / [8ee417ba8c44](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/8ee417ba8c44c1f32f4e310a6566168d84982d3a) |
-| [Wolfram Fall 4: Nullfehler und Abhängigkeit](#wolfram-dependence) | MAIN / SOFTWARE | `main` / [8ee417ba8c44](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/8ee417ba8c44c1f32f4e310a6566168d84982d3a) |
-| [Wolfram Fall 5: Kausalordnung](#wolfram-causal) | MAIN / SOFTWARE | `main` / [8ee417ba8c44](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/8ee417ba8c44c1f32f4e310a6566168d84982d3a) |
-| [Öffentliche Datenagenten: NOAA, Atlas, QuTech, NASA](#data-agents) | MAIN / SOFTWARE | `main` / [8ee417ba8c44](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/8ee417ba8c44c1f32f4e310a6566168d84982d3a) |
-| [Begrenzter Mathematikagent: Lorentz n=3–5 und Propagator](#lorentz-agent) | MAIN / SOFTWARE | `main` / [8ee417ba8c44](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/8ee417ba8c44c1f32f4e310a6566168d84982d3a) |
+| [Gemeinsamer lokaler Einstieg](#integration) | MAIN / SOFTWARE | `main` / [e5840afa7c78](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/e5840afa7c7865a48766d1a5366210508a7b1f05) |
+| [Gemeinsame Offline-Referenzsuite](#offline-reference) | MAIN / SOFTWARE | `main` / [e5840afa7c78](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/e5840afa7c7865a48766d1a5366210508a7b1f05) |
+| [Astrolabium und rationale Spektralreferenz](#astrolabium) | MAIN / SOFTWARE | `main` / [e5840afa7c78](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/e5840afa7c7865a48766d1a5366210508a7b1f05) |
+| [Signal Validation Lab](#signal-lab) | MAIN / SOFTWARE | `main` / [e5840afa7c78](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/e5840afa7c7865a48766d1a5366210508a7b1f05) |
+| [Edge-Referenzadapter](#edge-reference) | MAIN / SOFTWARE | `main` / [e5840afa7c78](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/e5840afa7c7865a48766d1a5366210508a7b1f05) |
+| [Evidence & Calibration](#evidence-calibration) | MAIN / SOFTWARE | `main` / [e5840afa7c78](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/e5840afa7c7865a48766d1a5366210508a7b1f05) |
+| [X6-Phasenfilter: Experimentvertrag](#phase-contract) | MAIN / SOFTWARE | `main` / [e5840afa7c78](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/e5840afa7c7865a48766d1a5366210508a7b1f05) |
+| [Industrielle Entrauschung: Forschungsprogramm v0.2](#industrial-programme) | MAIN / CONCEPT | `main` / [e5840afa7c78](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/e5840afa7c7865a48766d1a5366210508a7b1f05) |
+| [Sagnac-Aufnahme und Import](#sagnac-import) | MAIN / SOFTWARE | `main` / [e5840afa7c78](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/e5840afa7c7865a48766d1a5366210508a7b1f05) |
+| [Photonischer Zwei-Qubit-Aufbau und Jig](#photonic-design) | MAIN / SOFTWARE | `main` / [e5840afa7c78](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/e5840afa7c7865a48766d1a5366210508a7b1f05) |
+| [ACVM: Grundkonzept 0.1](#acvm-concept) | MAIN / CONCEPT | `main` / [e5840afa7c78](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/e5840afa7c7865a48766d1a5366210508a7b1f05) |
+| [ACVM C1: Steuerkanal](#acvm-c1) | MAIN / SOFTWARE | `main` / [e5840afa7c78](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/e5840afa7c7865a48766d1a5366210508a7b1f05) |
+| [ACVM 0.2: optischer Referenzablauf](#acvm-optical) | MAIN / SOFTWARE | `main` / [e5840afa7c78](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/e5840afa7c7865a48766d1a5366210508a7b1f05) |
+| [Sagnac-Komponenten und Ofen](#sagnac-components) | MAIN / CONCEPT | `main` / [e5840afa7c78](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/e5840afa7c7865a48766d1a5366210508a7b1f05) |
+| [ACVM Experiment Records](#acvm-records) | MAIN / CONCEPT | `main` / [e5840afa7c78](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/e5840afa7c7865a48766d1a5366210508a7b1f05) |
+| [ACVM Electrical & Thermal Test Fixture](#acvm-fixture) | MAIN / CONCEPT | `main` / [e5840afa7c78](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/e5840afa7c7865a48766d1a5366210508a7b1f05) |
+| [RAX: relationales Forschungsprogramm](#rax-programme) | MAIN / CONCEPT | `main` / [e5840afa7c78](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/e5840afa7c7865a48766d1a5366210508a7b1f05) |
+| [RAX-U1: Reduktionskontrolle](#rax-u1) | MAIN / SOFTWARE | `main` / [e5840afa7c78](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/e5840afa7c7865a48766d1a5366210508a7b1f05) |
+| [RAX-B1/M1: Benchmark und Methodenreview](#rax-b1-m1) | MAIN / SOFTWARE | `main` / [e5840afa7c78](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/e5840afa7c7865a48766d1a5366210508a7b1f05) |
+| [RAX-W1: exakte Wolfram-Gegenprüfung](#rax-w1) | MAIN / SOFTWARE | `main` / [e5840afa7c78](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/e5840afa7c7865a48766d1a5366210508a7b1f05) |
+| [Wolfram Fall 2: Polaritätsumkehr](#wolfram-polarity) | MAIN / SOFTWARE | `main` / [e5840afa7c78](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/e5840afa7c7865a48766d1a5366210508a7b1f05) |
+| [Wolfram Fall 4: Nullfehler und Abhängigkeit](#wolfram-dependence) | MAIN / SOFTWARE | `main` / [e5840afa7c78](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/e5840afa7c7865a48766d1a5366210508a7b1f05) |
+| [Wolfram Fall 5: Kausalordnung](#wolfram-causal) | MAIN / SOFTWARE | `main` / [e5840afa7c78](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/e5840afa7c7865a48766d1a5366210508a7b1f05) |
+| [Öffentliche Datenagenten: NOAA, Atlas, QuTech, NASA](#data-agents) | MAIN / SOFTWARE | `main` / [e5840afa7c78](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/e5840afa7c7865a48766d1a5366210508a7b1f05) |
+| [Begrenzter Mathematikagent: Lorentz n=3–5 und Propagator](#lorentz-agent) | MAIN / SOFTWARE | `main` / [e5840afa7c78](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/e5840afa7c7865a48766d1a5366210508a7b1f05) |
 | [Lorentz-Kollisionsatlas n=6: vollständiger Forschungsstand](#lorentz-n6) | BRANCH_ONLY / SOFTWARE | `research/lorentz-v1-workpackages` / [f5116b9970a6](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/f5116b9970a6b7dc788c18623a8386b4cde33ad4) |
-| [Lorentz: vier n=6-Restpaare und Grenzen der Gradseparatoren](#lorentz-n6-residuals) | MAIN / SOFTWARE | `main` / [8ee417ba8c44](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/8ee417ba8c44c1f32f4e310a6566168d84982d3a) |
-| [Lorentz: vollständige n=7-Prüfung und Widerlegung von H7](#lorentz-n7-complete) | MAIN / SOFTWARE | `main` / [8ee417ba8c44](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/8ee417ba8c44c1f32f4e310a6566168d84982d3a) |
-| [Industrielle Entrauschung: V1-Bewertungsadapter](#industrial-v1) | MAIN / SOFTWARE | `main` / [8ee417ba8c44](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/8ee417ba8c44c1f32f4e310a6566168d84982d3a) |
-| [Industrieller Datenvertrag: Paderborn-Machbarkeitspilot](#industrial-pilot) | MAIN / SOFTWARE | `main` / [8ee417ba8c44](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/8ee417ba8c44c1f32f4e310a6566168d84982d3a) |
+| [Lorentz: vier n=6-Restpaare und Grenzen der Gradseparatoren](#lorentz-n6-residuals) | MAIN / SOFTWARE | `main` / [e5840afa7c78](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/e5840afa7c7865a48766d1a5366210508a7b1f05) |
+| [Lorentz: vollständige n=7-Prüfung und Widerlegung von H7](#lorentz-n7-complete) | MAIN / SOFTWARE | `main` / [e5840afa7c78](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/e5840afa7c7865a48766d1a5366210508a7b1f05) |
+| [Industrielle Entrauschung: V1-Bewertungsadapter](#industrial-v1) | MAIN / SOFTWARE | `main` / [e5840afa7c78](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/e5840afa7c7865a48766d1a5366210508a7b1f05) |
+| [Industrieller Datenvertrag: Paderborn-Machbarkeitspilot](#industrial-pilot) | MAIN / SOFTWARE | `main` / [e5840afa7c78](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/e5840afa7c7865a48766d1a5366210508a7b1f05) |
 | [Mehrschichtiger Fingerprint](#fingerprint) | BRANCH_ONLY / SOFTWARE | `research/x6-fingerprint-v1` / [f22030f2dae0](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/f22030f2dae0aa670cdbc450c5e881ce250b36b8) |
 | [Experiment Fabric](#experiment-fabric) | BRANCH_ONLY / SOFTWARE | `research/x6-experiment-fabric-v1` / [a34c59f2b0e2](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/a34c59f2b0e2d30c73936363040669941aa8ce09) |
 | [Neutral Discovery](#neutral-discovery) | BRANCH_ONLY / SOFTWARE | `research/x6-neutral-discovery-v1` / [1a02c482d59a](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/1a02c482d59a42d554337fb83e0f6d6e6d84b516) |
 | [NQK: Forschungsdossier](#nqk) | BRANCH_ONLY / DOSSIER | `research/nqk` / [a8fbc70fae3e](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/a8fbc70fae3ecb46bfcd8ceb828ce182e533dd04) |
 | [Photonic Link Validation Lab](#photonic-link) | BRANCH_ONLY / SOFTWARE | `research/photonic-link` / [7ff72fcd6a16](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/7ff72fcd6a16e9b353d1af277307463f757d3470) |
-| [RAX-G1: deklarativer Runner und Fehlerbudget](#rax-guarded) | MAIN / SOFTWARE | `main` / [8ee417ba8c44](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/8ee417ba8c44c1f32f4e310a6566168d84982d3a) |
-| [Gemeinsame Referenzedition und Agentenarchiv](#reference-edition) | MAIN / SOFTWARE | `main` / [8ee417ba8c44](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/8ee417ba8c44c1f32f4e310a6566168d84982d3a) |
-| [X6-QE: exakte Graphreferenzen und Grenzen spektraler Unterscheidbarkeit](#x6-qe) | MAIN / SOFTWARE | `main` / [8ee417ba8c44](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/8ee417ba8c44c1f32f4e310a6566168d84982d3a) |
-| [RAX-CQG: endlicher Causal-Set Benchmark 0.2.0](#rax-cqg-benchmark) | MAIN / SOFTWARE | `main` / [8ee417ba8c44](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/8ee417ba8c44c1f32f4e310a6566168d84982d3a) |
-| [RAX-CQG: freies Feld und Entropiereferenz](#free-field-entropy) | MAIN / SOFTWARE | `main` / [8ee417ba8c44](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/8ee417ba8c44c1f32f4e310a6566168d84982d3a) |
-| [Eigenzeit: Referenz, Fehlergrenzen und sequenzielle Diagnose](#lorentz-proper-time) | MAIN / SOFTWARE | `main` / [8ee417ba8c44](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/8ee417ba8c44c1f32f4e310a6566168d84982d3a) |
-| [Krümmungsbenchmark: Empfindlichkeit und Dichteverwechslung](#lorentz-curvature) | MAIN / SOFTWARE | `main` / [8ee417ba8c44](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/8ee417ba8c44c1f32f4e310a6566168d84982d3a) |
-| [RSS bei fester Punktzahl: Formeln, Prüfung und Grenzen](#lorentz-rss-fixed-n) | MAIN / SOFTWARE | `main` / [8ee417ba8c44](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/8ee417ba8c44c1f32f4e310a6566168d84982d3a) |
+| [RAX-G1: deklarativer Runner und Fehlerbudget](#rax-guarded) | MAIN / SOFTWARE | `main` / [e5840afa7c78](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/e5840afa7c7865a48766d1a5366210508a7b1f05) |
+| [Gemeinsame Referenzedition und Agentenarchiv](#reference-edition) | MAIN / SOFTWARE | `main` / [e5840afa7c78](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/e5840afa7c7865a48766d1a5366210508a7b1f05) |
+| [X6-QE: exakte Graphreferenzen und Grenzen spektraler Unterscheidbarkeit](#x6-qe) | MAIN / SOFTWARE | `main` / [e5840afa7c78](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/e5840afa7c7865a48766d1a5366210508a7b1f05) |
+| [RAX-CQG: endlicher Causal-Set Benchmark 0.2.0](#rax-cqg-benchmark) | MAIN / SOFTWARE | `main` / [e5840afa7c78](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/e5840afa7c7865a48766d1a5366210508a7b1f05) |
+| [RAX-CQG: freies Feld und Entropiereferenz](#free-field-entropy) | MAIN / SOFTWARE | `main` / [e5840afa7c78](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/e5840afa7c7865a48766d1a5366210508a7b1f05) |
+| [Eigenzeit: Referenz, Fehlergrenzen und sequenzielle Diagnose](#lorentz-proper-time) | MAIN / SOFTWARE | `main` / [e5840afa7c78](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/e5840afa7c7865a48766d1a5366210508a7b1f05) |
+| [Krümmungsbenchmark: Empfindlichkeit und Dichteverwechslung](#lorentz-curvature) | MAIN / SOFTWARE | `main` / [e5840afa7c78](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/e5840afa7c7865a48766d1a5366210508a7b1f05) |
+| [RSS bei fester Punktzahl: Formeln, Prüfung und Grenzen](#lorentz-rss-fixed-n) | MAIN / SOFTWARE | `main` / [e5840afa7c78](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/e5840afa7c7865a48766d1a5366210508a7b1f05) |
+| [Eigenzeit v0.2: Gültigkeitsbereich und Informationsbedarf](#lorentz-proper-time-validity) | MAIN / SOFTWARE | `main` / [e5840afa7c78](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/e5840afa7c7865a48766d1a5366210508a7b1f05) |
 
 ## Einzelne Module ausführen
 
-Alle Befehle beziehen sich auf den Quellencommit des jeweiligen Moduls. Für einen exakt gepinnten main-Lauf nach dem Klonen `git checkout --detach 8ee417ba8c44c1f32f4e310a6566168d84982d3a` verwenden. Für Branch-Module folgt jeweils ein eigenes Klonrezept; danach ist der Checkout absichtlich detached. Nicht wahllos zwischen divergierenden Branches wechseln oder deren Versionsinventare mischen.
+Alle Befehle beziehen sich auf den Quellencommit des jeweiligen Moduls. Für einen exakt gepinnten main-Lauf nach dem Klonen `git checkout --detach e5840afa7c7865a48766d1a5366210508a7b1f05` verwenden. Für Branch-Module folgt jeweils ein eigenes Klonrezept; danach ist der Checkout absichtlich detached. Nicht wahllos zwischen divergierenden Branches wechseln oder deren Versionsinventare mischen.
 
 Archivmodule werden in neue Ordner unter /tmp entpackt. Eine erneute Ausführung benötigt einen neuen Zielnamen. Paketinterne Befehle starten aus dem angegebenen Wurzelordner. Installation externer Abhängigkeiten benötigt Netzwerk oder vorbereitete Wheels; der eigentliche Offline-Replay startet keinen Wolfram-Dienst.
 
 <a id="integration"></a>
 ### Gemeinsamer lokaler Einstieg
 
-**Stand:** MAIN / SOFTWARE; Branch `main`; Commit `8ee417ba8c44c1f32f4e310a6566168d84982d3a`.
+**Stand:** MAIN / SOFTWARE; Branch `main`; Commit `e5840afa7c7865a48766d1a5366210508a7b1f05`.
 
 **Anleitung:** [aktuelle main-Dokumentation](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/docs/INTEGRATION.md). **Voraussetzungen:** Linux/POSIX x86-64, Python 3.12, Git, Node >=22; setup installiert gepinntes NumPy/SciPy. Browser für die Oberfläche.
 
@@ -112,14 +113,14 @@ python3 x6.py serve
 
 **Vorhandene Evidenz:**
 
-- [docs/integration-v0.1/evidence/qualification.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/8ee417ba8c44c1f32f4e310a6566168d84982d3a/docs/integration-v0.1/evidence/qualification.json): Historische Abnahme PASS_WITH_BROWSER, 23 Schritte; genaue damalige Revision im Bericht. Kein Nachweis für beliebige spätere Commits.
+- [docs/integration-v0.1/evidence/qualification.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e5840afa7c7865a48766d1a5366210508a7b1f05/docs/integration-v0.1/evidence/qualification.json): Historische Abnahme PASS_WITH_BROWSER, 23 Schritte; genaue damalige Revision im Bericht. Kein Nachweis für beliebige spätere Commits.
 
 **Nächste Abnahme:** Frischer Checkout der nächsten Implementierungsrevision: Installation, alle drei Adapter, ZIP-Replay, Negativkontrollen und Browser/CLI-Austausch bestehen.
 
 <a id="offline-reference"></a>
 ### Gemeinsame Offline-Referenzsuite
 
-**Stand:** MAIN / SOFTWARE; Branch `main`; Commit `8ee417ba8c44c1f32f4e310a6566168d84982d3a`.
+**Stand:** MAIN / SOFTWARE; Branch `main`; Commit `e5840afa7c7865a48766d1a5366210508a7b1f05`.
 
 **Anleitung:** [aktuelle main-Dokumentation](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/docs/OFFLINE_REFERENCE.md). **Voraussetzungen:** Linux/POSIX x86-64, Python 3.12 und Node.js 24. Nur Standardbibliothek; kein setup, NumPy/SciPy, Netzwerk oder Wolfram-Zugang. Neuer Ausgabeordner.
 
@@ -134,19 +135,19 @@ python3 -S -B x6.py reference verify /tmp/x6-reference-evidence
 
 **Vorhandene Evidenz:**
 
-- [research/x6_qe/evidence/local-results.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/8ee417ba8c44c1f32f4e310a6566168d84982d3a/research/x6_qe/evidence/local-results.json): X6-QE: lokal ausgeführte exakte Referenzen, vier Graphen, zwölf Umbenennungen, 21 erwartete Zurückweisungen. Quellenhashes im Bericht; keine externe Prüfung.
-- [research/lorentz_n6_residuals/ACCEPTANCE.md](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/8ee417ba8c44c1f32f4e310a6566168d84982d3a/research/lorentz_n6_residuals/ACCEPTANCE.md): Aktuelle Neun-Berichte-Abnahme der Implementierung 5eaffee5a594e2c2c5b86db28a1406dc29168087. Lokal und Netzwerk-isolierte CI PASS, identisches Bundle. Ältere Acht-Berichte-Belege unten gehören zu ihrer historischen Quellenrevision.
-- [docs/reference-suite/README.md](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/8ee417ba8c44c1f32f4e310a6566168d84982d3a/docs/reference-suite/README.md): Ausgeführte Abnahme der Implementierung 7c35b591f77ab1c123ee9795ea6978d1681d59bb. Lokale und Netzwerk-isolierte CI-Abnahme PASS, identische Bundle-Prüfsumme.
-- [docs/reference-suite/local/acceptance.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/8ee417ba8c44c1f32f4e310a6566168d84982d3a/docs/reference-suite/local/acceptance.json): Frischer sauberer Checkout ohne .venv/Site-Pakete; elf CLI-Schritte einschließlich zehn erwarteter Zurückweisungen. Historische Prüfrevision explizit gespeichert.
-- [docs/reference-suite/local/run/complete.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/8ee417ba8c44c1f32f4e310a6566168d84982d3a/docs/reference-suite/local/run/complete.json): Vollständiges Bundle mit acht Berichten, Quellenhashes und Inventar; durch reference verify erneut berechenbar.
-- [docs/reference-suite/ci/acceptance.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/8ee417ba8c44c1f32f4e310a6566168d84982d3a/docs/reference-suite/ci/acceptance.json): GitHub-Lauf 38720405798: network_namespace_isolated=true, alle elf CLI-Schritte wie erwartet.
+- [research/x6_qe/evidence/local-results.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e5840afa7c7865a48766d1a5366210508a7b1f05/research/x6_qe/evidence/local-results.json): X6-QE: lokal ausgeführte exakte Referenzen, vier Graphen, zwölf Umbenennungen, 21 erwartete Zurückweisungen. Quellenhashes im Bericht; keine externe Prüfung.
+- [research/lorentz_n6_residuals/ACCEPTANCE.md](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e5840afa7c7865a48766d1a5366210508a7b1f05/research/lorentz_n6_residuals/ACCEPTANCE.md): Aktuelle Neun-Berichte-Abnahme der Implementierung 5eaffee5a594e2c2c5b86db28a1406dc29168087. Lokal und Netzwerk-isolierte CI PASS, identisches Bundle. Ältere Acht-Berichte-Belege unten gehören zu ihrer historischen Quellenrevision.
+- [docs/reference-suite/README.md](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e5840afa7c7865a48766d1a5366210508a7b1f05/docs/reference-suite/README.md): Ausgeführte Abnahme der Implementierung 7c35b591f77ab1c123ee9795ea6978d1681d59bb. Lokale und Netzwerk-isolierte CI-Abnahme PASS, identische Bundle-Prüfsumme.
+- [docs/reference-suite/local/acceptance.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e5840afa7c7865a48766d1a5366210508a7b1f05/docs/reference-suite/local/acceptance.json): Frischer sauberer Checkout ohne .venv/Site-Pakete; elf CLI-Schritte einschließlich zehn erwarteter Zurückweisungen. Historische Prüfrevision explizit gespeichert.
+- [docs/reference-suite/local/run/complete.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e5840afa7c7865a48766d1a5366210508a7b1f05/docs/reference-suite/local/run/complete.json): Vollständiges Bundle mit acht Berichten, Quellenhashes und Inventar; durch reference verify erneut berechenbar.
+- [docs/reference-suite/ci/acceptance.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e5840afa7c7865a48766d1a5366210508a7b1f05/docs/reference-suite/ci/acceptance.json): GitHub-Lauf 38720405798: network_namespace_isolated=true, alle elf CLI-Schritte wie erwartet.
 
 **Nächste Abnahme:** Bei jeder relevanten Änderung frischen Checkout mit unverändertem Prüfvertrag qualifizieren und neue Evidenzrevision festhalten. Neue Fälle oder größere Korpora benötigen eigene Erwartungen und Fehlerkontrollen; andere Plattformen sind separat zu qualifizieren.
 
 <a id="astrolabium"></a>
 ### Astrolabium und rationale Spektralreferenz
 
-**Stand:** MAIN / SOFTWARE; Branch `main`; Commit `8ee417ba8c44c1f32f4e310a6566168d84982d3a`.
+**Stand:** MAIN / SOFTWARE; Branch `main`; Commit `e5840afa7c7865a48766d1a5366210508a7b1f05`.
 
 **Anleitung:** [aktuelle main-Dokumentation](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/docs/SCIENTIFIC_SCOPE.md). **Voraussetzungen:** Python 3.12; gemeinsames setup --profile core. Browser-App: app/index.html.
 
@@ -161,15 +162,15 @@ python3 x6.py verify runs/register-spectral
 
 **Vorhandene Evidenz:**
 
-- [docs/integration-v0.1/evidence/spectral-run.log](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/8ee417ba8c44c1f32f4e310a6566168d84982d3a/docs/integration-v0.1/evidence/spectral-run.log): Erhaltene Referenzausführung; keine physische oder allgemeine Raumzeitaussage.
-- [evidence/historical_python_results.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/8ee417ba8c44c1f32f4e310a6566168d84982d3a/evidence/historical_python_results.json): Historischer Python-Befund; datierter Prüfstand.
+- [docs/integration-v0.1/evidence/spectral-run.log](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e5840afa7c7865a48766d1a5366210508a7b1f05/docs/integration-v0.1/evidence/spectral-run.log): Erhaltene Referenzausführung; keine physische oder allgemeine Raumzeitaussage.
+- [evidence/historical_python_results.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e5840afa7c7865a48766d1a5366210508a7b1f05/evidence/historical_python_results.json): Historischer Python-Befund; datierter Prüfstand.
 
 **Nächste Abnahme:** Externe Reproduktion der exakten Zertifikate und separat vollständige Browser-/Julia-Qualifikation.
 
 <a id="signal-lab"></a>
 ### Signal Validation Lab
 
-**Stand:** MAIN / SOFTWARE; Branch `main`; Commit `8ee417ba8c44c1f32f4e310a6566168d84982d3a`.
+**Stand:** MAIN / SOFTWARE; Branch `main`; Commit `e5840afa7c7865a48766d1a5366210508a7b1f05`.
 
 **Anleitung:** [aktuelle main-Dokumentation](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/docs/SIGNAL_VALIDATION_LAB.md). **Voraussetzungen:** Python 3.12, Node >=22; setup --profile core. UI: app/signal-lab.html.
 
@@ -184,15 +185,15 @@ python3 x6.py verify runs/register-signal
 
 **Vorhandene Evidenz:**
 
-- [docs/integration-v0.1/evidence/signal-run.log](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/8ee417ba8c44c1f32f4e310a6566168d84982d3a/docs/integration-v0.1/evidence/signal-run.log): Erhaltenes Pulsbeispiel: X6-Phasenfilter FAIL ist ein fachliches Ergebnis, kein Laufabbruch.
-- [docs/perspectives/edge-platform/evidence/independent-reference.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/8ee417ba8c44c1f32f4e310a6566168d84982d3a/docs/perspectives/edge-platform/evidence/independent-reference.json): Gespeicherte NumPy/SciPy-Gegenprüfung.
+- [docs/integration-v0.1/evidence/signal-run.log](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e5840afa7c7865a48766d1a5366210508a7b1f05/docs/integration-v0.1/evidence/signal-run.log): Erhaltenes Pulsbeispiel: X6-Phasenfilter FAIL ist ein fachliches Ergebnis, kein Laufabbruch.
+- [docs/perspectives/edge-platform/evidence/independent-reference.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e5840afa7c7865a48766d1a5366210508a7b1f05/docs/perspectives/edge-platform/evidence/independent-reference.json): Gespeicherte NumPy/SciPy-Gegenprüfung.
 
 **Nächste Abnahme:** Vor Leistungsclaims: starke Baselines, getrennte reale Testdaten, ereigniserhaltende Qualitätsgates und Ressourcenmessung.
 
 <a id="edge-reference"></a>
 ### Edge-Referenzadapter
 
-**Stand:** MAIN / SOFTWARE; Branch `main`; Commit `8ee417ba8c44c1f32f4e310a6566168d84982d3a`.
+**Stand:** MAIN / SOFTWARE; Branch `main`; Commit `e5840afa7c7865a48766d1a5366210508a7b1f05`.
 
 **Anleitung:** [aktuelle main-Dokumentation](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/experimental/edge_reference/README.md). **Voraussetzungen:** Node >=22; keine npm-Laufzeitabhängigkeiten.
 
@@ -207,14 +208,14 @@ node experimental/edge_reference/runner.cjs verify runs/register-edge
 
 **Vorhandene Evidenz:**
 
-- [docs/perspectives/edge-platform/evidence/local-validation.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/8ee417ba8c44c1f32f4e310a6566168d84982d3a/docs/perspectives/edge-platform/evidence/local-validation.json): Lokale Softwareprüfung; keine Messung von Geräteeffizienz.
+- [docs/perspectives/edge-platform/evidence/local-validation.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e5840afa7c7865a48766d1a5366210508a7b1f05/docs/perspectives/edge-platform/evidence/local-validation.json): Lokale Softwareprüfung; keine Messung von Geräteeffizienz.
 
 **Nächste Abnahme:** Zweite unabhängige Anwendung, qualifizierter Geräteadapter und ARM64/x86-64-Vergleich nach Roadmap.
 
 <a id="evidence-calibration"></a>
 ### Evidence & Calibration
 
-**Stand:** MAIN / SOFTWARE; Branch `main`; Commit `8ee417ba8c44c1f32f4e310a6566168d84982d3a`.
+**Stand:** MAIN / SOFTWARE; Branch `main`; Commit `e5840afa7c7865a48766d1a5366210508a7b1f05`.
 
 **Anleitung:** [aktuelle main-Dokumentation](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/experimental/evidence_calibration/README.md). **Voraussetzungen:** Python 3.12/3.13, Standardbibliothek.
 
@@ -228,14 +229,14 @@ python3 -m experimental.evidence_calibration.run_qualification --output runs/reg
 
 **Vorhandene Evidenz:**
 
-- [experimental/evidence_calibration/REMEDIATION.md](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/8ee417ba8c44c1f32f4e310a6566168d84982d3a/experimental/evidence_calibration/REMEDIATION.md): Audit-/Fehlerbehandlung und Testzuordnung. Ein erneuter Lauf erzeugt eigene Logs; kein gespeicherter physischer Qualifikationsbefund.
+- [experimental/evidence_calibration/REMEDIATION.md](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e5840afa7c7865a48766d1a5366210508a7b1f05/experimental/evidence_calibration/REMEDIATION.md): Audit-/Fehlerbehandlung und Testzuordnung. Ein erneuter Lauf erzeugt eigene Logs; kein gespeicherter physischer Qualifikationsbefund.
 
 **Nächste Abnahme:** Kontrollierte aufgezeichnete Messdaten, Dunkel-/Sättigungsprüfung, kalibrierter Massstab und vollständiges Unsicherheitsbudget.
 
 <a id="phase-contract"></a>
 ### X6-Phasenfilter: Experimentvertrag
 
-**Stand:** MAIN / SOFTWARE; Branch `main`; Commit `8ee417ba8c44c1f32f4e310a6566168d84982d3a`.
+**Stand:** MAIN / SOFTWARE; Branch `main`; Commit `e5840afa7c7865a48766d1a5366210508a7b1f05`.
 
 **Anleitung:** [aktuelle main-Dokumentation](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/experiments/x6-phase-filter/README.md). **Voraussetzungen:** Python 3.12, isolierte venv empfohlen; Abhängigkeiten aus Paket requirements.txt.
 
@@ -252,14 +253,14 @@ python3 preflight.py X6_PF_Experiment_Contract_v0_2_DRAFT.json --mode preflight
 
 **Vorhandene Evidenz:**
 
-- [experiments/x6-phase-filter/contract-v0.2.0/validation_report.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/8ee417ba8c44c1f32f4e310a6566168d84982d3a/experiments/x6-phase-filter/contract-v0.2.0/validation_report.json): 42 Softwaretests; keine neuen Filterversuche.
+- [experiments/x6-phase-filter/contract-v0.2.0/validation_report.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e5840afa7c7865a48766d1a5366210508a7b1f05/experiments/x6-phase-filter/contract-v0.2.0/validation_report.json): 42 Softwaretests; keine neuen Filterversuche.
 
 **Nächste Abnahme:** Offene fachliche Festlegungen und vertrauenswürdigen Freeze schliessen; danach Runner-Review.
 
 <a id="industrial-programme"></a>
 ### Industrielle Entrauschung: Forschungsprogramm v0.2
 
-**Stand:** MAIN / CONCEPT; Branch `main`; Commit `8ee417ba8c44c1f32f4e310a6566168d84982d3a`.
+**Stand:** MAIN / CONCEPT; Branch `main`; Commit `e5840afa7c7865a48766d1a5366210508a7b1f05`.
 
 **Anleitung:** [aktuelle main-Dokumentation](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/docs/industrial-denoising/Astrolabium_Industrial_Denoising_Forschungsprogramm_v0_2.docx). **Voraussetzungen:** DOCX-Leser. In main ausführbar: industrial-v1 (Bestätigungsvertrag) und industrial-pilot (begrenzter nichtkommerzieller Labor-Datenpilot).
 
@@ -269,14 +270,14 @@ python3 preflight.py X6_PF_Experiment_Contract_v0_2_DRAFT.json --mode preflight
 
 **Vorhandene Evidenz:**
 
-- [docs/industrial-denoising/Astrolabium_Industrial_Denoising_Forschungsprogramm_v0_2.docx](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/8ee417ba8c44c1f32f4e310a6566168d84982d3a/docs/industrial-denoising/Astrolabium_Industrial_Denoising_Forschungsprogramm_v0_2.docx): Veröffentlichter Forschungsplan; kein abgeschlossener Industrieversuch.
+- [docs/industrial-denoising/Astrolabium_Industrial_Denoising_Forschungsprogramm_v0_2.docx](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e5840afa7c7865a48766d1a5366210508a7b1f05/docs/industrial-denoising/Astrolabium_Industrial_Denoising_Forschungsprogramm_v0_2.docx): Veröffentlichter Forschungsplan; kein abgeschlossener Industrieversuch.
 
 **Nächste Abnahme:** Nach dem abgeschlossenen begrenzten Paderborn-Piloten: konkrete industrielle Zielpopulation und passende Datenrechte, Kalibrierung, unabhängige Referenzlabels, externe Splits und fachlich geprüfte Powerplanung für die Bestätigung. Keine Filterfreigabe allein aus Pilotzählungen.
 
 <a id="sagnac-import"></a>
 ### Sagnac-Aufnahme und Import
 
-**Stand:** MAIN / SOFTWARE; Branch `main`; Commit `8ee417ba8c44c1f32f4e310a6566168d84982d3a`.
+**Stand:** MAIN / SOFTWARE; Branch `main`; Commit `e5840afa7c7865a48766d1a5366210508a7b1f05`.
 
 **Anleitung:** [aktuelle main-Dokumentation](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/docs/SAGNAC_INTEGRATION.md). **Voraussetzungen:** Python 3.12, Browser; Standardstart ohne angeschlossenes Gerät.
 
@@ -290,14 +291,14 @@ python3 device/sagnac_bridge.py
 
 **Vorhandene Evidenz:**
 
-- [evidence/sagnac_integration_validation.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/8ee417ba8c44c1f32f4e310a6566168d84982d3a/evidence/sagnac_integration_validation.json): Gespeicherte Softwarevalidierung des Integrationsstands; keine Hardwaremessung.
+- [evidence/sagnac_integration_validation.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e5840afa7c7865a48766d1a5366210508a7b1f05/evidence/sagnac_integration_validation.json): Gespeicherte Softwarevalidierung des Integrationsstands; keine Hardwaremessung.
 
 **Nächste Abnahme:** Reale serielle Aufnahme und Zähler-/Zeitkalibrierung mit unabhängiger Referenz; optische Claims separat prüfen.
 
 <a id="photonic-design"></a>
 ### Photonischer Zwei-Qubit-Aufbau und Jig
 
-**Stand:** MAIN / SOFTWARE; Branch `main`; Commit `8ee417ba8c44c1f32f4e310a6566168d84982d3a`.
+**Stand:** MAIN / SOFTWARE; Branch `main`; Commit `e5840afa7c7865a48766d1a5366210508a7b1f05`.
 
 **Anleitung:** [aktuelle main-Dokumentation](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/experiments/photonic-two-qubit/REPRODUCE.md). **Voraussetzungen:** Python 3.12, GHDL 5.0.1 mcode und CAD-Abhängigkeiten aus requirements; keine Hardware nötig.
 
@@ -312,15 +313,15 @@ python3 tests/photonics/validate_release.py --ghdl --cad --output runs/register-
 
 **Vorhandene Evidenz:**
 
-- [experiments/photonic-two-qubit/SCIENTIFIC_STATUS.md](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/8ee417ba8c44c1f32f4e310a6566168d84982d3a/experiments/photonic-two-qubit/SCIENTIFIC_STATUS.md): Designstatus und Grenzen; physische Fertigungs-/Verschränkungsnachweise offen.
-- [experiments/photonic-two-qubit/reference/sagnac_v0_7/VALIDATION.md](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/8ee417ba8c44c1f32f4e310a6566168d84982d3a/experiments/photonic-two-qubit/reference/sagnac_v0_7/VALIDATION.md): Erhaltener digitaler Referenzbericht.
+- [experiments/photonic-two-qubit/SCIENTIFIC_STATUS.md](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e5840afa7c7865a48766d1a5366210508a7b1f05/experiments/photonic-two-qubit/SCIENTIFIC_STATUS.md): Designstatus und Grenzen; physische Fertigungs-/Verschränkungsnachweise offen.
+- [experiments/photonic-two-qubit/reference/sagnac_v0_7/VALIDATION.md](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e5840afa7c7865a48766d1a5366210508a7b1f05/experiments/photonic-two-qubit/reference/sagnac_v0_7/VALIDATION.md): Erhaltener digitaler Referenzbericht.
 
 **Nächste Abnahme:** Jig fertigen und vermessen; Quelle/Detektoren kalibrieren; vorregistrierte Koinzidenz-/Verschränkungsprüfung nach LAB_PROTOCOL.
 
 <a id="acvm-concept"></a>
 ### ACVM: Grundkonzept 0.1
 
-**Stand:** MAIN / CONCEPT; Branch `main`; Commit `8ee417ba8c44c1f32f4e310a6566168d84982d3a`.
+**Stand:** MAIN / CONCEPT; Branch `main`; Commit `e5840afa7c7865a48766d1a5366210508a7b1f05`.
 
 **Anleitung:** [aktuelle main-Dokumentation](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/docs/acvm/README.md). **Voraussetzungen:** Markdown-/DOCX-Leser; ausführbare C1-/0.2-Module siehe eigene Einträge.
 
@@ -330,14 +331,14 @@ python3 tests/photonics/validate_release.py --ghdl --cad --output runs/register-
 
 **Vorhandene Evidenz:**
 
-- [docs/acvm/ACVM_CONCEPT_v0_1_DE.md](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/8ee417ba8c44c1f32f4e310a6566168d84982d3a/docs/acvm/ACVM_CONCEPT_v0_1_DE.md): Ursprünglicher Anforderungstext; spätere Softwarebelege in C1 und optical-v0.2.
+- [docs/acvm/ACVM_CONCEPT_v0_1_DE.md](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e5840afa7c7865a48766d1a5366210508a7b1f05/docs/acvm/ACVM_CONCEPT_v0_1_DE.md): Ursprünglicher Anforderungstext; spätere Softwarebelege in C1 und optical-v0.2.
 
 **Nächste Abnahme:** Anforderungen mit den Teilimplementierungen verknüpfen und verbleibende elektrische/optische Abnahmen durchführen.
 
 <a id="acvm-c1"></a>
 ### ACVM C1: Steuerkanal
 
-**Stand:** MAIN / SOFTWARE; Branch `main`; Commit `8ee417ba8c44c1f32f4e310a6566168d84982d3a`.
+**Stand:** MAIN / SOFTWARE; Branch `main`; Commit `e5840afa7c7865a48766d1a5366210508a7b1f05`.
 
 **Anleitung:** [aktuelle main-Dokumentation](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/docs/acvm/control-channel-v0.1/README.md). **Voraussetzungen:** Softwarequalifikation: Python 3.12, POSIX-PTY, g++/C++17; kein Pico erforderlich. Optionaler Zielbuild: Linux x86-64 und gepinnte Werkzeuge gemäß docs/acvm/c1-e01-target-build/README.md. Physische E01-Abnahme benötigt einen identifizierten Pico/MCP4921-Aufbau und unabhängige kalibrierte Messgeräte.
 
@@ -352,16 +353,16 @@ python3 -B tests/control-channel/test_pico_build.py
 
 **Vorhandene Evidenz:**
 
-- [docs/acvm/control-channel-v0.1/evidence/qualification.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/8ee417ba8c44c1f32f4e310a6566168d84982d3a/docs/acvm/control-channel-v0.1/evidence/qualification.json): Gespeicherte Softwarequalifikation; kein Pico-Build oder elektrischer Messbeleg.
-- [docs/acvm/c1-e01-target-build/evidence/build-report.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/8ee417ba8c44c1f32f4e310a6566168d84982d3a/docs/acvm/c1-e01-target-build/evidence/build-report.json): Tatsächlicher RP2040-Zielbuild PASS; Pico SDK 2.3.1/GNU Arm GCC 15.2.1, Firmware-, Werkzeug- und Ausgabehashes. UF2/BIN/ELF und Buildlogs archiviert; kein Flash- oder Messbeleg.
-- [docs/acvm/c1-e01-target-build/evidence/readiness.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/8ee417ba8c44c1f32f4e310a6566168d84982d3a/docs/acvm/c1-e01-target-build/evidence/readiness.json): BLOCKED_PHYSICAL_MEASUREMENT: 0/10 Normalläufe und 0/6 Fehlerfälle; reale Geräte, Kalibrierung, vorher fixiertes Messprofil und unabhängige Rohaufnahmen fehlen.
+- [docs/acvm/control-channel-v0.1/evidence/qualification.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e5840afa7c7865a48766d1a5366210508a7b1f05/docs/acvm/control-channel-v0.1/evidence/qualification.json): Gespeicherte Softwarequalifikation; kein Pico-Build oder elektrischer Messbeleg.
+- [docs/acvm/c1-e01-target-build/evidence/build-report.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e5840afa7c7865a48766d1a5366210508a7b1f05/docs/acvm/c1-e01-target-build/evidence/build-report.json): Tatsächlicher RP2040-Zielbuild PASS; Pico SDK 2.3.1/GNU Arm GCC 15.2.1, Firmware-, Werkzeug- und Ausgabehashes. UF2/BIN/ELF und Buildlogs archiviert; kein Flash- oder Messbeleg.
+- [docs/acvm/c1-e01-target-build/evidence/readiness.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e5840afa7c7865a48766d1a5366210508a7b1f05/docs/acvm/c1-e01-target-build/evidence/readiness.json): BLOCKED_PHYSICAL_MEASUREMENT: 0/10 Normalläufe und 0/6 Fehlerfälle; reale Geräte, Kalibrierung, vorher fixiertes Messprofil und unabhängige Rohaufnahmen fehlen.
 
 **Nächste Abnahme:** Identifizierten Aufbau flashen; E01-Messprofil vor Datenerhebung fixieren; mindestens zehn Stellfolgen sowie sechs Fehlerfälle unabhängig erfassen. Spannungsfehler plus U95 ≤25 mV, Zeitfehler plus U95 ≤20 ms, Hostverlustreaktion plus U95 ≤550 ms gemäß E01. Vollständige Rohdaten, Kalibrierung und Fehlergrenzen archivieren; anschließend erst elektrische und später optische Abnahme entscheiden.
 
 <a id="acvm-optical"></a>
 ### ACVM 0.2: optischer Referenzablauf
 
-**Stand:** MAIN / SOFTWARE; Branch `main`; Commit `8ee417ba8c44c1f32f4e310a6566168d84982d3a`.
+**Stand:** MAIN / SOFTWARE; Branch `main`; Commit `e5840afa7c7865a48766d1a5366210508a7b1f05`.
 
 **Anleitung:** [aktuelle main-Dokumentation](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/docs/acvm/optical-v0.2/README.md). **Voraussetzungen:** Python 3.12, POSIX-PTY, g++; Softwarelauf ohne Geräte.
 
@@ -375,15 +376,15 @@ python3 x6.py acvm qualify --output runs/register-acvm
 
 **Vorhandene Evidenz:**
 
-- [docs/acvm/optical-v0.2/evidence/fresh-checkout/fresh-checkout.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/8ee417ba8c44c1f32f4e310a6566168d84982d3a/docs/acvm/optical-v0.2/evidence/fresh-checkout/fresh-checkout.json): 12 Checkout-Schritte; genaue geprüfte lokale Revision und Logs.
-- [docs/acvm/optical-v0.2/VALIDATION.md](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/8ee417ba8c44c1f32f4e310a6566168d84982d3a/docs/acvm/optical-v0.2/VALIDATION.md): V09/V10 physisch NOT_PERFORMED; Regelvorteil nur im angegebenen Modell.
+- [docs/acvm/optical-v0.2/evidence/fresh-checkout/fresh-checkout.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e5840afa7c7865a48766d1a5366210508a7b1f05/docs/acvm/optical-v0.2/evidence/fresh-checkout/fresh-checkout.json): 12 Checkout-Schritte; genaue geprüfte lokale Revision und Logs.
+- [docs/acvm/optical-v0.2/VALIDATION.md](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e5840afa7c7865a48766d1a5366210508a7b1f05/docs/acvm/optical-v0.2/VALIDATION.md): V09/V10 physisch NOT_PERFORMED; Regelvorteil nur im angegebenen Modell.
 
 **Nächste Abnahme:** V09/V10 mit unabhängigen Messungen; Geräteidentität/Kalibrierung, reale Hysterese/Laufzeiten und geschlossenen optischen Regelkreis nachweisen.
 
 <a id="sagnac-components"></a>
 ### Sagnac-Komponenten und Ofen
 
-**Stand:** MAIN / CONCEPT; Branch `main`; Commit `8ee417ba8c44c1f32f4e310a6566168d84982d3a`.
+**Stand:** MAIN / CONCEPT; Branch `main`; Commit `e5840afa7c7865a48766d1a5366210508a7b1f05`.
 
 **Anleitung:** [aktuelle main-Dokumentation](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/docs/acvm/sagnac-components-v0.1/README.md). **Voraussetzungen:** Dokument-/PDF-Leser.
 
@@ -393,14 +394,14 @@ python3 x6.py acvm qualify --output runs/register-acvm
 
 **Vorhandene Evidenz:**
 
-- [docs/acvm/sagnac-components-v0.1/README.md](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/8ee417ba8c44c1f32f4e310a6566168d84982d3a/docs/acvm/sagnac-components-v0.1/README.md): Zwölf Abnahmeschritte ungetestet; keine Lieferantenbestätigung.
+- [docs/acvm/sagnac-components-v0.1/README.md](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e5840afa7c7865a48766d1a5366210508a7b1f05/docs/acvm/sagnac-components-v0.1/README.md): Zwölf Abnahmeschritte ungetestet; keine Lieferantenbestätigung.
 
 **Nächste Abnahme:** Lieferantenspezifikation und Fertigungsfreigabe einholen; zwölf Komponenten-/Aufbauprüfungen tatsächlich ausführen.
 
 <a id="acvm-records"></a>
 ### ACVM Experiment Records
 
-**Stand:** MAIN / CONCEPT; Branch `main`; Commit `8ee417ba8c44c1f32f4e310a6566168d84982d3a`.
+**Stand:** MAIN / CONCEPT; Branch `main`; Commit `e5840afa7c7865a48766d1a5366210508a7b1f05`.
 
 **Anleitung:** [aktuelle main-Dokumentation](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/docs/acvm/experiment-records/README.md). **Voraussetzungen:** Markdown-/DOCX-Leser.
 
@@ -410,14 +411,14 @@ python3 x6.py acvm qualify --output runs/register-acvm
 
 **Vorhandene Evidenz:**
 
-- [docs/acvm/experiment-records/README.md](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/8ee417ba8c44c1f32f4e310a6566168d84982d3a/docs/acvm/experiment-records/README.md): Vierzehn Records-Prüfungen NOT_RUN.
+- [docs/acvm/experiment-records/README.md](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e5840afa7c7865a48766d1a5366210508a7b1f05/docs/acvm/experiment-records/README.md): Vierzehn Records-Prüfungen NOT_RUN.
 
 **Nächste Abnahme:** Versionierten Writer/Reader und Adapter implementieren; alle vierzehn Records-Gates mit Manipulations-/Abbruchfällen prüfen.
 
 <a id="acvm-fixture"></a>
 ### ACVM Electrical & Thermal Test Fixture
 
-**Stand:** MAIN / CONCEPT; Branch `main`; Commit `8ee417ba8c44c1f32f4e310a6566168d84982d3a`.
+**Stand:** MAIN / CONCEPT; Branch `main`; Commit `e5840afa7c7865a48766d1a5366210508a7b1f05`.
 
 **Anleitung:** [aktuelle main-Dokumentation](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/docs/acvm/electrical-thermal-fixture/README.md). **Voraussetzungen:** Dokument-/Bildbetrachter.
 
@@ -427,14 +428,14 @@ python3 x6.py acvm qualify --output runs/register-acvm
 
 **Vorhandene Evidenz:**
 
-- [docs/acvm/electrical-thermal-fixture/README.md](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/8ee417ba8c44c1f32f4e310a6566168d84982d3a/docs/acvm/electrical-thermal-fixture/README.md): ETF-T01–ETF-T14 NOT_RUN.
+- [docs/acvm/electrical-thermal-fixture/README.md](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e5840afa7c7865a48766d1a5366210508a7b1f05/docs/acvm/electrical-thermal-fixture/README.md): ETF-T01–ETF-T14 NOT_RUN.
 
 **Nächste Abnahme:** Anforderungen, Bauteile und Messunsicherheit freigeben; Prüfstand aufbauen und ETF-T01–T14 messen.
 
 <a id="rax-programme"></a>
 ### RAX: relationales Forschungsprogramm
 
-**Stand:** MAIN / CONCEPT; Branch `main`; Commit `8ee417ba8c44c1f32f4e310a6566168d84982d3a`.
+**Stand:** MAIN / CONCEPT; Branch `main`; Commit `e5840afa7c7865a48766d1a5366210508a7b1f05`.
 
 **Anleitung:** [aktuelle main-Dokumentation](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/docs/research/rax/README.md). **Voraussetzungen:** DOCX-/Markdown-Leser; ausführbare U1/B1/M1/W1-Pakete separat.
 
@@ -444,14 +445,14 @@ python3 x6.py acvm qualify --output runs/register-acvm
 
 **Vorhandene Evidenz:**
 
-- [docs/research/rax/README.md](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/8ee417ba8c44c1f32f4e310a6566168d84982d3a/docs/research/rax/README.md): Programmbeschreibung und Links zu begrenzten ausgeführten Kontrollen.
+- [docs/research/rax/README.md](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e5840afa7c7865a48766d1a5366210508a7b1f05/docs/research/rax/README.md): Programmbeschreibung und Links zu begrenzten ausgeführten Kontrollen.
 
 **Nächste Abnahme:** U2 mit heterogenen Generatoren, festem Beobachtungsziel, Holdout und eigenem Fehlerbudget vorregistrieren.
 
 <a id="rax-u1"></a>
 ### RAX-U1: Reduktionskontrolle
 
-**Stand:** MAIN / SOFTWARE; Branch `main`; Commit `8ee417ba8c44c1f32f4e310a6566168d84982d3a`.
+**Stand:** MAIN / SOFTWARE; Branch `main`; Commit `e5840afa7c7865a48766d1a5366210508a7b1f05`.
 
 **Anleitung:** [aktuelle main-Dokumentation](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/docs/research/rax/countercheck-v0.1/README.md). **Voraussetzungen:** Linux, Python 3.12, NumPy/SciPy aus enthaltenen requirements.
 
@@ -469,14 +470,14 @@ python3 research/rax_u1/reference.py research/rax_u1/evidence/qualification
 
 **Vorhandene Evidenz:**
 
-- [docs/research/rax/countercheck-v0.1/RAX_U1_Gegenpruefung_v0_1_Paket.zip](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/8ee417ba8c44c1f32f4e310a6566168d84982d3a/docs/research/rax/countercheck-v0.1/RAX_U1_Gegenpruefung_v0_1_Paket.zip): Originalquellen, Rohdaten, audit-final und Gegenproben im Paket.
+- [docs/research/rax/countercheck-v0.1/RAX_U1_Gegenpruefung_v0_1_Paket.zip](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e5840afa7c7865a48766d1a5366210508a7b1f05/docs/research/rax/countercheck-v0.1/RAX_U1_Gegenpruefung_v0_1_Paket.zip): Originalquellen, Rohdaten, audit-final und Gegenproben im Paket.
 
 **Nächste Abnahme:** Dauerhafte Speicherung mit Flush/fsync, Reopen/Hashprüfung sowie Abbruch-/Kürzungs-/Neustarttests qualifizieren.
 
 <a id="rax-b1-m1"></a>
 ### RAX-B1/M1: Benchmark und Methodenreview
 
-**Stand:** MAIN / SOFTWARE; Branch `main`; Commit `8ee417ba8c44c1f32f4e310a6566168d84982d3a`.
+**Stand:** MAIN / SOFTWARE; Branch `main`; Commit `e5840afa7c7865a48766d1a5366210508a7b1f05`.
 
 **Anleitung:** [aktuelle main-Dokumentation](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/docs/research/rax/method-review-v0.1/README.md). **Voraussetzungen:** setup --profile research; Python 3.12, NumPy/SciPy. Der Replay kann mehrere Minuten dauern.
 
@@ -491,15 +492,15 @@ python3 x6.py verify runs/register-rax
 
 **Vorhandene Evidenz:**
 
-- [docs/research/rax/benchmark-v0.1/RAX_B1_Benchmarking_v0_1_Paket.zip](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/8ee417ba8c44c1f32f4e310a6566168d84982d3a/docs/research/rax/benchmark-v0.1/RAX_B1_Benchmarking_v0_1_Paket.zip): Eingefrorene B1-Daten und Referenzprüfer.
-- [docs/research/rax/method-review-v0.1/RAX_M1_Methodenpruefung_v0_1_Paket.zip](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/8ee417ba8c44c1f32f4e310a6566168d84982d3a/docs/research/rax/method-review-v0.1/RAX_M1_Methodenpruefung_v0_1_Paket.zip): Zwei nachgewiesene Validierungsfehler und Zusatzguards; ursprüngliche Daten bestehen Nachprüfung.
+- [docs/research/rax/benchmark-v0.1/RAX_B1_Benchmarking_v0_1_Paket.zip](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e5840afa7c7865a48766d1a5366210508a7b1f05/docs/research/rax/benchmark-v0.1/RAX_B1_Benchmarking_v0_1_Paket.zip): Eingefrorene B1-Daten und Referenzprüfer.
+- [docs/research/rax/method-review-v0.1/RAX_M1_Methodenpruefung_v0_1_Paket.zip](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e5840afa7c7865a48766d1a5366210508a7b1f05/docs/research/rax/method-review-v0.1/RAX_M1_Methodenpruefung_v0_1_Paket.zip): Zwei nachgewiesene Validierungsfehler und Zusatzguards; ursprüngliche Daten bestehen Nachprüfung.
 
 **Nächste Abnahme:** Historische Quellen bleiben unverändert. Neuer deklarativer RAX-G1-Runner mit 33 Angriffskontrollen im Modul rax-guarded; unabhängige personelle Wiederholung und allgemeine Isolation fremden Python-Codes bleiben offen.
 
 <a id="rax-w1"></a>
 ### RAX-W1: exakte Wolfram-Gegenprüfung
 
-**Stand:** MAIN / SOFTWARE; Branch `main`; Commit `8ee417ba8c44c1f32f4e310a6566168d84982d3a`.
+**Stand:** MAIN / SOFTWARE; Branch `main`; Commit `e5840afa7c7865a48766d1a5366210508a7b1f05`.
 
 **Anleitung:** [aktuelle main-Dokumentation](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/docs/research/rax/wolfram-check-v0.1/README.md). **Voraussetzungen:** Python 3.12/Standardbibliothek. Offline-Prüfung startet keinen Wolfram-Kernel.
 
@@ -516,14 +517,14 @@ python3 -B verify.py
 
 **Vorhandene Evidenz:**
 
-- [docs/research/rax/wolfram-check-v0.1/RAX_W1_Exakte_Gegenpruefung_v0_1_Paket.zip](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/8ee417ba8c44c1f32f4e310a6566168d84982d3a/docs/research/rax/wolfram-check-v0.1/RAX_W1_Exakte_Gegenpruefung_v0_1_Paket.zip): Gespeicherte Wolfram-Antworten und unabhängiger Python-Prüfer; interne Post-hoc-Prüfung.
+- [docs/research/rax/wolfram-check-v0.1/RAX_W1_Exakte_Gegenpruefung_v0_1_Paket.zip](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e5840afa7c7865a48766d1a5366210508a7b1f05/docs/research/rax/wolfram-check-v0.1/RAX_W1_Exakte_Gegenpruefung_v0_1_Paket.zip): Gespeicherte Wolfram-Antworten und unabhängiger Python-Prüfer; interne Post-hoc-Prüfung.
 
 **Nächste Abnahme:** Externe Reproduktion bzw. neuer Wolfram-Lauf mit eigener Umgebung; Aussagebereich nicht auf U2 ausdehnen.
 
 <a id="wolfram-polarity"></a>
 ### Wolfram Fall 2: Polaritätsumkehr
 
-**Stand:** MAIN / SOFTWARE; Branch `main`; Commit `8ee417ba8c44c1f32f4e310a6566168d84982d3a`.
+**Stand:** MAIN / SOFTWARE; Branch `main`; Commit `e5840afa7c7865a48766d1a5366210508a7b1f05`.
 
 **Anleitung:** [aktuelle main-Dokumentation](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/docs/signal-lab/wolfram-polarity-v0.1/README.md). **Voraussetzungen:** Python 3.12/Standardbibliothek; Fall 2 mit --rerun zusätzlich Node. Kein frischer Wolfram-Lauf.
 
@@ -539,14 +540,14 @@ python3 verify.py --rerun
 
 **Vorhandene Evidenz:**
 
-- [docs/signal-lab/wolfram-polarity-v0.1/X6_Wolfram_Fall2_v0_1.zip](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/8ee417ba8c44c1f32f4e310a6566168d84982d3a/docs/signal-lab/wolfram-polarity-v0.1/X6_Wolfram_Fall2_v0_1.zip): Gespeicherte Erstfehler und korrigierte Wolfram-Antworten, Freeze-Dateien und vollständiges Inventar.
+- [docs/signal-lab/wolfram-polarity-v0.1/X6_Wolfram_Fall2_v0_1.zip](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e5840afa7c7865a48766d1a5366210508a7b1f05/docs/signal-lab/wolfram-polarity-v0.1/X6_Wolfram_Fall2_v0_1.zip): Gespeicherte Erstfehler und korrigierte Wolfram-Antworten, Freeze-Dateien und vollständiges Inventar.
 
 **Nächste Abnahme:** Externe Wiederholung; reale Signale benötigen einen eigenen Messvertrag.
 
 <a id="wolfram-dependence"></a>
 ### Wolfram Fall 4: Nullfehler und Abhängigkeit
 
-**Stand:** MAIN / SOFTWARE; Branch `main`; Commit `8ee417ba8c44c1f32f4e310a6566168d84982d3a`.
+**Stand:** MAIN / SOFTWARE; Branch `main`; Commit `e5840afa7c7865a48766d1a5366210508a7b1f05`.
 
 **Anleitung:** [aktuelle main-Dokumentation](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/docs/signal-lab/wolfram-zero-failures-v0.1/README.md). **Voraussetzungen:** Python 3.12/Standardbibliothek; Fall 2 mit --rerun zusätzlich Node. Kein frischer Wolfram-Lauf.
 
@@ -562,14 +563,14 @@ python3 verify.py
 
 **Vorhandene Evidenz:**
 
-- [docs/signal-lab/wolfram-zero-failures-v0.1/X6_Wolfram_Fall4_v0_1.zip](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/8ee417ba8c44c1f32f4e310a6566168d84982d3a/docs/signal-lab/wolfram-zero-failures-v0.1/X6_Wolfram_Fall4_v0_1.zip): Gespeicherte Erstfehler und korrigierte Wolfram-Antworten, Freeze-Dateien und vollständiges Inventar.
+- [docs/signal-lab/wolfram-zero-failures-v0.1/X6_Wolfram_Fall4_v0_1.zip](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e5840afa7c7865a48766d1a5366210508a7b1f05/docs/signal-lab/wolfram-zero-failures-v0.1/X6_Wolfram_Fall4_v0_1.zip): Gespeicherte Erstfehler und korrigierte Wolfram-Antworten, Freeze-Dateien und vollständiges Inventar.
 
 **Nächste Abnahme:** Unabhängigkeit konkreter Datensätze belegen; das konstruktive Gegenbeispiel ist kein Audit aller Projektdaten.
 
 <a id="wolfram-causal"></a>
 ### Wolfram Fall 5: Kausalordnung
 
-**Stand:** MAIN / SOFTWARE; Branch `main`; Commit `8ee417ba8c44c1f32f4e310a6566168d84982d3a`.
+**Stand:** MAIN / SOFTWARE; Branch `main`; Commit `e5840afa7c7865a48766d1a5366210508a7b1f05`.
 
 **Anleitung:** [aktuelle main-Dokumentation](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/docs/research/causal-order/wolfram-countercheck-v0.1/README.md). **Voraussetzungen:** Python 3.12/Standardbibliothek; Fall 2 mit --rerun zusätzlich Node. Kein frischer Wolfram-Lauf.
 
@@ -585,14 +586,14 @@ python3 verify_release.py
 
 **Vorhandene Evidenz:**
 
-- [docs/research/causal-order/wolfram-countercheck-v0.1/X6_Wolfram_Fall5_v0_1.zip](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/8ee417ba8c44c1f32f4e310a6566168d84982d3a/docs/research/causal-order/wolfram-countercheck-v0.1/X6_Wolfram_Fall5_v0_1.zip): Gespeicherte Erstfehler und korrigierte Wolfram-Antworten, Freeze-Dateien und vollständiges Inventar.
+- [docs/research/causal-order/wolfram-countercheck-v0.1/X6_Wolfram_Fall5_v0_1.zip](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e5840afa7c7865a48766d1a5366210508a7b1f05/docs/research/causal-order/wolfram-countercheck-v0.1/X6_Wolfram_Fall5_v0_1.zip): Gespeicherte Erstfehler und korrigierte Wolfram-Antworten, Freeze-Dateien und vollständiges Inventar.
 
 **Nächste Abnahme:** Zusätzliche Invarianten an registrierten Korpora prüfen; kein allgemeiner Rekonstruktionssatz.
 
 <a id="data-agents"></a>
 ### Öffentliche Datenagenten: NOAA, Atlas, QuTech, NASA
 
-**Stand:** MAIN / SOFTWARE; Branch `main`; Commit `8ee417ba8c44c1f32f4e310a6566168d84982d3a`.
+**Stand:** MAIN / SOFTWARE; Branch `main`; Commit `e5840afa7c7865a48766d1a5366210508a7b1f05`.
 
 **Anleitung:** [aktuelle main-Dokumentation](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/docs/SOURCE_AGENTS.md). **Voraussetzungen:** Lokale Tests: Abhängigkeiten aus agent/requirements.txt und agent/source-requirements.txt; siehe Dokumentation. Produktionsläufe nutzen geschützte GitHub-Workflows und deren Zeitfenster.
 
@@ -606,17 +607,17 @@ python3 -m unittest tests/python/test_data_agent.py tests/python/test_source_age
 
 **Vorhandene Evidenz:**
 
-- [docs/DATA_AGENT.md](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/8ee417ba8c44c1f32f4e310a6566168d84982d3a/docs/DATA_AGENT.md): NOAA-Lauf, Inputs und Actions-Artefakte 30 Tage.
-- [docs/SOURCE_AGENTS.md](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/8ee417ba8c44c1f32f4e310a6566168d84982d3a/docs/SOURCE_AGENTS.md): Atlas/QuTech/NASA-Artefakte 14 Tage; Archivdaten explizit gekennzeichnet.
-- [docs/AGENT_WINDOW_REPAIR_2026_10_13.md](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/8ee417ba8c44c1f32f4e310a6566168d84982d3a/docs/AGENT_WINDOW_REPAIR_2026_10_13.md): Dokumentierte Fenster- und Schutzprüfungen.
-- [docs/agent-archive/2026-10-15/ARCHIVE.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/8ee417ba8c44c1f32f4e310a6566168d84982d3a/docs/agent-archive/2026-10-15/ARCHIVE.json): Drei ausgewählte Originalartefakte dauerhaft in Git: Mathematik/Lorentz, Graphatlas, NOAA; GitHub-Digests, innere Inventare und historische Quellhashes geprüft. Nicht alle Läufe archiviert.
+- [docs/DATA_AGENT.md](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e5840afa7c7865a48766d1a5366210508a7b1f05/docs/DATA_AGENT.md): NOAA-Lauf, Inputs und Actions-Artefakte 30 Tage.
+- [docs/SOURCE_AGENTS.md](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e5840afa7c7865a48766d1a5366210508a7b1f05/docs/SOURCE_AGENTS.md): Atlas/QuTech/NASA-Artefakte 14 Tage; Archivdaten explizit gekennzeichnet.
+- [docs/AGENT_WINDOW_REPAIR_2026_10_13.md](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e5840afa7c7865a48766d1a5366210508a7b1f05/docs/AGENT_WINDOW_REPAIR_2026_10_13.md): Dokumentierte Fenster- und Schutzprüfungen.
+- [docs/agent-archive/2026-10-15/ARCHIVE.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e5840afa7c7865a48766d1a5366210508a7b1f05/docs/agent-archive/2026-10-15/ARCHIVE.json): Drei ausgewählte Originalartefakte dauerhaft in Git: Mathematik/Lorentz, Graphatlas, NOAA; GitHub-Digests, innere Inventare und historische Quellhashes geprüft. Nicht alle Läufe archiviert.
 
 **Nächste Abnahme:** Nach diesem Archiv-Snapshot entstehende oder bislang nicht ausgewählte Belege separat vor Ablauf sichern; unabhängiger Datensatz-/Drift- und Qualitätsvergleich. Nach Frist STOPPED erwarten.
 
 <a id="lorentz-agent"></a>
 ### Begrenzter Mathematikagent: Lorentz n=3–5 und Propagator
 
-**Stand:** MAIN / SOFTWARE; Branch `main`; Commit `8ee417ba8c44c1f32f4e310a6566168d84982d3a`.
+**Stand:** MAIN / SOFTWARE; Branch `main`; Commit `e5840afa7c7865a48766d1a5366210508a7b1f05`.
 
 **Anleitung:** [aktuelle main-Dokumentation](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/docs/MATH_AGENT.md). **Voraussetzungen:** Python 3.12, Node >=22 und gepinnte mathematische Abhängigkeiten.
 
@@ -631,9 +632,9 @@ python3 -m unittest tests/python/test_math_agent.py tests/python/test_lorentz_sp
 
 **Vorhandene Evidenz:**
 
-- [docs/LORENTZ_RESEARCH.md](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/8ee417ba8c44c1f32f4e310a6566168d84982d3a/docs/LORENTZ_RESEARCH.md): Definierte Referenzen, n=3/4/5-Zielzählungen und Grenzen.
-- [agent/math-agent-config.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/8ee417ba8c44c1f32f4e310a6566168d84982d3a/agent/math-agent-config.json): Konfiguriertes exklusives Ende 2026-10-18T22:00:00Z; 90 Sekunden Rechenbudget.
-- [docs/agent-archive/2026-10-15/ARCHIVE.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/8ee417ba8c44c1f32f4e310a6566168d84982d3a/docs/agent-archive/2026-10-15/ARCHIVE.json): Drei ausgewählte Originalartefakte dauerhaft in Git: Mathematik/Lorentz, Graphatlas, NOAA; GitHub-Digests, innere Inventare und historische Quellhashes geprüft. Nicht alle Läufe archiviert.
+- [docs/LORENTZ_RESEARCH.md](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e5840afa7c7865a48766d1a5366210508a7b1f05/docs/LORENTZ_RESEARCH.md): Definierte Referenzen, n=3/4/5-Zielzählungen und Grenzen.
+- [agent/math-agent-config.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e5840afa7c7865a48766d1a5366210508a7b1f05/agent/math-agent-config.json): Konfiguriertes exklusives Ende 2026-10-18T22:00:00Z; 90 Sekunden Rechenbudget.
+- [docs/agent-archive/2026-10-15/ARCHIVE.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e5840afa7c7865a48766d1a5366210508a7b1f05/docs/agent-archive/2026-10-15/ARCHIVE.json): Drei ausgewählte Originalartefakte dauerhaft in Git: Mathematik/Lorentz, Graphatlas, NOAA; GitHub-Digests, innere Inventare und historische Quellhashes geprüft. Nicht alle Läufe archiviert.
 
 **Nächste Abnahme:** Unabhängige Replikation; separat registrierte Grössen/Seeds/Ränge und Unsicherheit für Finite-Size-Studie. n=6-Restpaaranalyse in main: Modul lorentz-n6-residuals; vollständiger historischer Atlasgenerator weiter im Branch-Modul.
 
@@ -668,7 +669,7 @@ python3 research/lorentz_n6/verify.py research/lorentz_n6/results/atlas_n6.json 
 <a id="lorentz-n6-residuals"></a>
 ### Lorentz: vier n=6-Restpaare und Grenzen der Gradseparatoren
 
-**Stand:** MAIN / SOFTWARE; Branch `main`; Commit `8ee417ba8c44c1f32f4e310a6566168d84982d3a`.
+**Stand:** MAIN / SOFTWARE; Branch `main`; Commit `e5840afa7c7865a48766d1a5366210508a7b1f05`.
 
 **Anleitung:** [aktuelle main-Dokumentation](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/lorentz_n6_residuals/README.md). **Voraussetzungen:** Python 3.12, nur Standardbibliothek. Für die gemeinsame Offline-Suite zusätzlich Node.js 24. Kein Wolfram-Zugang oder Netzwerk beim Replay.
 
@@ -683,17 +684,17 @@ python3 -S -B research/lorentz_n6_residuals/verify.py --verify-report /tmp/loren
 
 **Vorhandene Evidenz:**
 
-- [research/lorentz_n6_residuals/evidence/local-results.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/8ee417ba8c44c1f32f4e310a6566168d84982d3a/research/lorentz_n6_residuals/evidence/local-results.json): Vollständige Paarwerte, unabhängig nachgerechnete 318 Atlasfälle, Höhe-zwei-n=7-Enumeration, zwei explizite Grenzpaare und 17 Fehlerkontrollen.
-- [research/lorentz_n6_residuals/evidence/wolfram-result.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/8ee417ba8c44c1f32f4e310a6566168d84982d3a/research/lorentz_n6_residuals/evidence/wolfram-result.json): Wolfram 15.0.1: zwölf Matrizen, 36 exakt übereinstimmende monische Polynome, Grade, Zählgrößen, Isomorphie-/Dualitätsprüfungen. Zwei frühere fehlgeschlagene Versuche bleiben erhalten.
-- [research/lorentz_n6_residuals/contract.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/8ee417ba8c44c1f32f4e310a6566168d84982d3a/research/lorentz_n6_residuals/contract.json): Fixierte Konventionen und Auswahl, Herkunft des bestehenden Separators, Literaturabgrenzung und Hypothese H7-bidirectional-moments.
-- [research/lorentz_n6_residuals/ACCEPTANCE.md](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/8ee417ba8c44c1f32f4e310a6566168d84982d3a/research/lorentz_n6_residuals/ACCEPTANCE.md): Frischer Checkout und Netzwerk-isolierte CI erfolgreich, identisches Neun-Berichte-Bundle; zusätzliche CLI-Manipulationen auch unter Python -O abgelehnt.
+- [research/lorentz_n6_residuals/evidence/local-results.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e5840afa7c7865a48766d1a5366210508a7b1f05/research/lorentz_n6_residuals/evidence/local-results.json): Vollständige Paarwerte, unabhängig nachgerechnete 318 Atlasfälle, Höhe-zwei-n=7-Enumeration, zwei explizite Grenzpaare und 17 Fehlerkontrollen.
+- [research/lorentz_n6_residuals/evidence/wolfram-result.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e5840afa7c7865a48766d1a5366210508a7b1f05/research/lorentz_n6_residuals/evidence/wolfram-result.json): Wolfram 15.0.1: zwölf Matrizen, 36 exakt übereinstimmende monische Polynome, Grade, Zählgrößen, Isomorphie-/Dualitätsprüfungen. Zwei frühere fehlgeschlagene Versuche bleiben erhalten.
+- [research/lorentz_n6_residuals/contract.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e5840afa7c7865a48766d1a5366210508a7b1f05/research/lorentz_n6_residuals/contract.json): Fixierte Konventionen und Auswahl, Herkunft des bestehenden Separators, Literaturabgrenzung und Hypothese H7-bidirectional-moments.
+- [research/lorentz_n6_residuals/ACCEPTANCE.md](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e5840afa7c7865a48766d1a5366210508a7b1f05/research/lorentz_n6_residuals/ACCEPTANCE.md): Frischer Checkout und Netzwerk-isolierte CI erfolgreich, identisches Neun-Berichte-Bundle; zusätzliche CLI-Manipulationen auch unter Python -O abgelehnt.
 
 **Nächste Abnahme:** Die vollständige n=7-Abnahme ist im Modul lorentz-n7-complete abgeschlossen: H7-bidirectional-moments ist durch zwei Restpaare widerlegt. Nächster Schritt: strukturelle Erklärung der minimalen Kollisionen und unabhängige externe Replikation; neue Aussagen müssen eigene Voraussetzungen nennen.
 
 <a id="lorentz-n7-complete"></a>
 ### Lorentz: vollständige n=7-Prüfung und Widerlegung von H7
 
-**Stand:** MAIN / SOFTWARE; Branch `main`; Commit `8ee417ba8c44c1f32f4e310a6566168d84982d3a`.
+**Stand:** MAIN / SOFTWARE; Branch `main`; Commit `e5840afa7c7865a48766d1a5366210508a7b1f05`.
 
 **Anleitung:** [aktuelle main-Dokumentation](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/lorentz_n7_complete/README.md). **Voraussetzungen:** Python 3.12 unter Linux/POSIX, nur Standardbibliothek. Kein Netzwerk oder Wolfram-Zugang für die Rechnung.
 
@@ -707,17 +708,17 @@ python3 -O research/lorentz_n7_complete/run.py --verify research/lorentz_n7_comp
 
 **Vorhandene Evidenz:**
 
-- [research/lorentz_n7_complete/results/RESULTS.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/8ee417ba8c44c1f32f4e310a6566168d84982d3a/research/lorentz_n7_complete/results/RESULTS.json): Vollständiges negatives Ergebnis, Quellbindung und alle Größenklassen.
-- [research/lorentz_n7_complete/results/independent-results.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/8ee417ba8c44c1f32f4e310a6566168d84982d3a/research/lorentz_n7_complete/results/independent-results.json): Algorithmisch getrennte Enumeration, Isomorphiesuche, natürliche Multiplizitäten und exakte Determinanteninterpolation.
-- [research/lorentz_n7_complete/COUNTEREXAMPLES.md](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/8ee417ba8c44c1f32f4e310a6566168d84982d3a/research/lorentz_n7_complete/COUNTEREXAMPLES.md): Beide minimalen n=7-Paare mit Matrizen und Polynomen; elementarer Nichtisomorphiebeweis und isolierte Erweiterungen für alle n≥7.
-- [research/lorentz_n7_complete/freeze.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/8ee417ba8c44c1f32f4e310a6566168d84982d3a/research/lorentz_n7_complete/freeze.json): Vor dem vollständigen Lauf veröffentlichte Quellhashes; prospektiver Arbeitsablauf, keine externe Präregistrierung.
+- [research/lorentz_n7_complete/results/RESULTS.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e5840afa7c7865a48766d1a5366210508a7b1f05/research/lorentz_n7_complete/results/RESULTS.json): Vollständiges negatives Ergebnis, Quellbindung und alle Größenklassen.
+- [research/lorentz_n7_complete/results/independent-results.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e5840afa7c7865a48766d1a5366210508a7b1f05/research/lorentz_n7_complete/results/independent-results.json): Algorithmisch getrennte Enumeration, Isomorphiesuche, natürliche Multiplizitäten und exakte Determinanteninterpolation.
+- [research/lorentz_n7_complete/COUNTEREXAMPLES.md](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e5840afa7c7865a48766d1a5366210508a7b1f05/research/lorentz_n7_complete/COUNTEREXAMPLES.md): Beide minimalen n=7-Paare mit Matrizen und Polynomen; elementarer Nichtisomorphiebeweis und isolierte Erweiterungen für alle n≥7.
+- [research/lorentz_n7_complete/freeze.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e5840afa7c7865a48766d1a5366210508a7b1f05/research/lorentz_n7_complete/freeze.json): Vor dem vollständigen Lauf veröffentlichte Quellhashes; prospektiver Arbeitsablauf, keine externe Präregistrierung.
 
 **Nächste Abnahme:** Externe Replikation und strukturelle Analyse der beiden minimalen Kollisionsklassen. Eine neue begrenzte Aussage vor der nächsten Suche festlegen; der unveränderte skalare Ansatz ist bereits widerlegt.
 
 <a id="industrial-v1"></a>
 ### Industrielle Entrauschung: V1-Bewertungsadapter
 
-**Stand:** MAIN / SOFTWARE; Branch `main`; Commit `8ee417ba8c44c1f32f4e310a6566168d84982d3a`.
+**Stand:** MAIN / SOFTWARE; Branch `main`; Commit `e5840afa7c7865a48766d1a5366210508a7b1f05`.
 
 **Anleitung:** [aktuelle main-Dokumentation](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/experiments/industrial-v1/README.md). **Voraussetzungen:** Python 3.12, gepinnte Anforderungen aus requirements; isolierte venv empfohlen.
 
@@ -732,14 +733,14 @@ python3 experiments/industrial-v1/evaluate.py experiments/industrial-v1/V1_PROFI
 
 **Vorhandene Evidenz:**
 
-- [experiments/industrial-v1/examples/draft_readiness.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/8ee417ba8c44c1f32f4e310a6566168d84982d3a/experiments/industrial-v1/examples/draft_readiness.json): Offene Eingabe-/Mess-/Protokollfelder einzeln ausgewiesen.
+- [experiments/industrial-v1/examples/draft_readiness.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e5840afa7c7865a48766d1a5366210508a7b1f05/experiments/industrial-v1/examples/draft_readiness.json): Offene Eingabe-/Mess-/Protokollfelder einzeln ausgewiesen.
 
 **Nächste Abnahme:** Für eine benannte industrielle Zielpopulation Rechte, 4-Kanal-Aufnahme/Kalibrierung, unabhängige Labels, Maschinen-/Standortstruktur und genügend unabhängige Lager beschaffen. Fachlich begründete Poweralternativen, Kandidat, starke Baseline und Schwellen vor Zugriff auf Bestätigungsdaten fixieren; ursprüngliche Gates unverändert anwenden.
 
 <a id="industrial-pilot"></a>
 ### Industrieller Datenvertrag: Paderborn-Machbarkeitspilot
 
-**Stand:** MAIN / SOFTWARE; Branch `main`; Commit `8ee417ba8c44c1f32f4e310a6566168d84982d3a`.
+**Stand:** MAIN / SOFTWARE; Branch `main`; Commit `e5840afa7c7865a48766d1a5366210508a7b1f05`.
 
 **Anleitung:** [aktuelle main-Dokumentation](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/experiments/industrial-pilot/README.md). **Voraussetzungen:** Python 3.12, gepinnte NumPy/SciPy-Abhängigkeiten; nach Installation offline. Enthaltene fremde Messkanäle: CC BY-NC 4.0, ausschließlich nichtkommerzieller Pilot; eigener Code Apache-2.0. Keine absoluten Kalibrierbelege.
 
@@ -755,12 +756,12 @@ python3 experiments/industrial-pilot/test_pilot.py
 
 **Vorhandene Evidenz:**
 
-- [experiments/industrial-pilot/evidence/pilot-report.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/8ee417ba8c44c1f32f4e310a6566168d84982d3a/experiments/industrial-pilot/evidence/pilot-report.json): Reproduzierbare Labor-Maschinenreferenz abgeschlossen: vollständige Scores, Schwellen und Entscheidungen für 20 festgelegte Laborlager; industrielle Bestätigung ausdrücklich offen.
-- [experiments/industrial-pilot/evidence/replay-portability.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/8ee417ba8c44c1f32f4e310a6566168d84982d3a/experiments/industrial-pilot/evidence/replay-portability.json): Nach anfänglichem CI-Rundungsfehler: unveränderte eingefrorene Quellen und Ergebnisse, separater portabler Replay mit 13 Tests / 25 Negativkontrollen. Unstabile Evaluationsentscheidungen werden abgelehnt.
-- [experiments/industrial-pilot/evidence/execution.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/8ee417ba8c44c1f32f4e310a6566168d84982d3a/experiments/industrial-pilot/evidence/execution.json): Historischer Erstlauf: Vertrag/Daten/Code öffentlich vor Scores fixiert; damals elf Pilottests, 23 Negativkontrollen und 25 unveränderte V1-Tests bestanden.
-- [experiments/industrial-pilot/data/manifest.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/8ee417ba8c44c1f32f4e310a6566168d84982d3a/experiments/industrial-pilot/data/manifest.json): Originalarchiv-, MAT-, Signal- und NPZ-Hashes; Lager-IDs, Labels, Splits und sämtliche geprüften Wiederholungen.
-- [experiments/industrial-pilot/data/LICENSE.txt](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/8ee417ba8c44c1f32f4e310a6566168d84982d3a/experiments/industrial-pilot/data/LICENSE.txt): Quellenzuordnung und CC-BY-NC-4.0-Bedingungen der Messdaten; kommerzielle Nutzung nicht freigegeben.
-- [experiments/industrial-pilot/evidence/power-plan.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/8ee417ba8c44c1f32f4e310a6566168d84982d3a/experiments/industrial-pilot/evidence/power-plan.json): 368-Sonderfall bestätigt; zusätzliche exakte bedingte Powerrechnung mit gepaarten Diskordanzen. Planungsannahmen sind keine Piloteffekt-Schätzungen oder freigegebene Industrie-Fallzahlen.
+- [experiments/industrial-pilot/evidence/pilot-report.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e5840afa7c7865a48766d1a5366210508a7b1f05/experiments/industrial-pilot/evidence/pilot-report.json): Reproduzierbare Labor-Maschinenreferenz abgeschlossen: vollständige Scores, Schwellen und Entscheidungen für 20 festgelegte Laborlager; industrielle Bestätigung ausdrücklich offen.
+- [experiments/industrial-pilot/evidence/replay-portability.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e5840afa7c7865a48766d1a5366210508a7b1f05/experiments/industrial-pilot/evidence/replay-portability.json): Nach anfänglichem CI-Rundungsfehler: unveränderte eingefrorene Quellen und Ergebnisse, separater portabler Replay mit 13 Tests / 25 Negativkontrollen. Unstabile Evaluationsentscheidungen werden abgelehnt.
+- [experiments/industrial-pilot/evidence/execution.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e5840afa7c7865a48766d1a5366210508a7b1f05/experiments/industrial-pilot/evidence/execution.json): Historischer Erstlauf: Vertrag/Daten/Code öffentlich vor Scores fixiert; damals elf Pilottests, 23 Negativkontrollen und 25 unveränderte V1-Tests bestanden.
+- [experiments/industrial-pilot/data/manifest.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e5840afa7c7865a48766d1a5366210508a7b1f05/experiments/industrial-pilot/data/manifest.json): Originalarchiv-, MAT-, Signal- und NPZ-Hashes; Lager-IDs, Labels, Splits und sämtliche geprüften Wiederholungen.
+- [experiments/industrial-pilot/data/LICENSE.txt](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e5840afa7c7865a48766d1a5366210508a7b1f05/experiments/industrial-pilot/data/LICENSE.txt): Quellenzuordnung und CC-BY-NC-4.0-Bedingungen der Messdaten; kommerzielle Nutzung nicht freigegeben.
+- [experiments/industrial-pilot/evidence/power-plan.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e5840afa7c7865a48766d1a5366210508a7b1f05/experiments/industrial-pilot/evidence/power-plan.json): 368-Sonderfall bestätigt; zusätzliche exakte bedingte Powerrechnung mit gepaarten Diskordanzen. Planungsannahmen sind keine Piloteffekt-Schätzungen oder freigegebene Industrie-Fallzahlen.
 
 **Nächste Abnahme:** Benannte industrielle Datenpartnerschaft/Zielpopulation, verwendbare Rechte, unabhängige Labels und ausreichende lager-/maschinenweise getrennte Daten. Vor bestätigendem Leistungsvergleich fachlich geprüften Vertrag samt Kandidat, Baseline, Schwellen, Power und unveränderten V1-Gates einfrieren; bei Clusterung vorab eigenes Design.
 
@@ -912,7 +913,7 @@ python3 experiments.py --output /tmp/register-plvl-experiments.json
 <a id="rax-guarded"></a>
 ### RAX-G1: deklarativer Runner und Fehlerbudget
 
-**Stand:** MAIN / SOFTWARE; Branch `main`; Commit `8ee417ba8c44c1f32f4e310a6566168d84982d3a`.
+**Stand:** MAIN / SOFTWARE; Branch `main`; Commit `e5840afa7c7865a48766d1a5366210508a7b1f05`.
 
 **Anleitung:** [aktuelle main-Dokumentation](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/docs/validation-v1/README.md). **Voraussetzungen:** Python 3.12, Standardbibliothek; neue Ausgabeverzeichnisse. Nur geprüftes deklaratives JSON, kein beliebiger fremder Python-Code.
 
@@ -928,15 +929,15 @@ python3 -S -B tests/rax-guarded/check_budget.py --qualification /tmp/register-ra
 
 **Vorhandene Evidenz:**
 
-- [docs/validation-v1/evidence/guarded/qualification.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/8ee417ba8c44c1f32f4e310a6566168d84982d3a/docs/validation-v1/evidence/guarded/qualification.json): Ausgeführte 33 Negativkontrollen, wirksame Datenmutationen und unabhängige exakte Vorhersage 13/24.
-- [docs/validation-v1/ERROR_BUDGET.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/8ee417ba8c44c1f32f4e310a6566168d84982d3a/docs/validation-v1/ERROR_BUDGET.json): Nulltoleranz im zugelassenen Profil; menschliche Blindheit, allgemeine Sandbox und externe Wiederholung offen.
+- [docs/validation-v1/evidence/guarded/qualification.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e5840afa7c7865a48766d1a5366210508a7b1f05/docs/validation-v1/evidence/guarded/qualification.json): Ausgeführte 33 Negativkontrollen, wirksame Datenmutationen und unabhängige exakte Vorhersage 13/24.
+- [docs/validation-v1/ERROR_BUDGET.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e5840afa7c7865a48766d1a5366210508a7b1f05/docs/validation-v1/ERROR_BUDGET.json): Nulltoleranz im zugelassenen Profil; menschliche Blindheit, allgemeine Sandbox und externe Wiederholung offen.
 
 **Nächste Abnahme:** Eine außenstehende Person führt den eingefrorenen Umfang aus und dokumentiert Rolle, Runtime, vollständige Ergebnisse und Abweichungen. Fremder ausführbarer Code benötigt eigene Betriebssystem-Isolationsabnahme.
 
 <a id="reference-edition"></a>
 ### Gemeinsame Referenzedition und Agentenarchiv
 
-**Stand:** MAIN / SOFTWARE; Branch `main`; Commit `8ee417ba8c44c1f32f4e310a6566168d84982d3a`.
+**Stand:** MAIN / SOFTWARE; Branch `main`; Commit `e5840afa7c7865a48766d1a5366210508a7b1f05`.
 
 **Anleitung:** [aktuelle main-Dokumentation](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/docs/reference-qe-v0.1/EXTERNAL_REPRODUCTION.md). **Voraussetzungen:** Sauberer Git-Checkout; Python 3.12 und Node 24. Standardbibliothek. Die veröffentlichten Release-Assets sind der kürzere externe Einstieg.
 
@@ -952,18 +953,18 @@ python3 -S -B /tmp/register-reference-unpacked/x6-reference/tools/release/reprod
 
 **Vorhandene Evidenz:**
 
-- [docs/reference-qe-v0.1/expected-reference.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/8ee417ba8c44c1f32f4e310a6566168d84982d3a/docs/reference-qe-v0.1/expected-reference.json): Festgelegte zehn Berichtshashes; acht bestehende fachliche Berichte unverändert. Neu: QE und ergänzter Fehlerkontrollbericht. Ausführungsabnahme steht in X6-QE/ACCEPTANCE.md.
-- [docs/validation-v1/expected-reference.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/8ee417ba8c44c1f32f4e310a6566168d84982d3a/docs/validation-v1/expected-reference.json): Feste SHA-256-Erwartungen für alle neun Referenzberichte; ursprünglicher Quellenumfang unverändert.
-- [docs/agent-archive/2026-10-15/ARCHIVE.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/8ee417ba8c44c1f32f4e310a6566168d84982d3a/docs/agent-archive/2026-10-15/ARCHIVE.json): Drei Original-ZIPs samt ursprünglichen Ablaufdaten, GitHub-Digests und vollständigen Dateiinventaren.
-- [docs/validation-v1/evidence/citation-validation.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/8ee417ba8c44c1f32f4e310a6566168d84982d3a/docs/validation-v1/evidence/citation-validation.json): CFF 1.2.0 gegen offizielles Schema geprüft; keine erfundene DOI oder ORCID.
-- [docs/validation-v1/external-report.template.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/8ee417ba8c44c1f32f4e310a6566168d84982d3a/docs/validation-v1/external-report.template.json): Noch nicht eingereichte Erklärung der ausführenden Person; keine externe Bestätigung vorweggenommen.
+- [docs/reference-qe-v0.1/expected-reference.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e5840afa7c7865a48766d1a5366210508a7b1f05/docs/reference-qe-v0.1/expected-reference.json): Festgelegte zehn Berichtshashes; acht bestehende fachliche Berichte unverändert. Neu: QE und ergänzter Fehlerkontrollbericht. Ausführungsabnahme steht in X6-QE/ACCEPTANCE.md.
+- [docs/validation-v1/expected-reference.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e5840afa7c7865a48766d1a5366210508a7b1f05/docs/validation-v1/expected-reference.json): Feste SHA-256-Erwartungen für alle neun Referenzberichte; ursprünglicher Quellenumfang unverändert.
+- [docs/agent-archive/2026-10-15/ARCHIVE.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e5840afa7c7865a48766d1a5366210508a7b1f05/docs/agent-archive/2026-10-15/ARCHIVE.json): Drei Original-ZIPs samt ursprünglichen Ablaufdaten, GitHub-Digests und vollständigen Dateiinventaren.
+- [docs/validation-v1/evidence/citation-validation.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e5840afa7c7865a48766d1a5366210508a7b1f05/docs/validation-v1/evidence/citation-validation.json): CFF 1.2.0 gegen offizielles Schema geprüft; keine erfundene DOI oder ORCID.
+- [docs/validation-v1/external-report.template.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e5840afa7c7865a48766d1a5366210508a7b1f05/docs/validation-v1/external-report.template.json): Noch nicht eingereichte Erklärung der ausführenden Person; keine externe Bestätigung vorweggenommen.
 
 **Nächste Abnahme:** Tatsächliche unabhängige Wiederholung entgegennehmen, Ergebnisdateien erneut prüfen, Abweichungen und personelle Unabhängigkeit bewerten; EXT-1 erst danach schließen.
 
 <a id="x6-qe"></a>
 ### X6-QE: exakte Graphreferenzen und Grenzen spektraler Unterscheidbarkeit
 
-**Stand:** MAIN / SOFTWARE; Branch `main`; Commit `8ee417ba8c44c1f32f4e310a6566168d84982d3a`.
+**Stand:** MAIN / SOFTWARE; Branch `main`; Commit `e5840afa7c7865a48766d1a5366210508a7b1f05`.
 
 **Anleitung:** [aktuelle main-Dokumentation](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/x6_qe/README.md). **Voraussetzungen:** Python 3.12, nur Standardbibliothek. Für gemeinsame Suite zusätzlich Node.js 24. Neue Ausgabewege; keine Downloads/Wolfram-Aufrufe.
 
@@ -978,14 +979,14 @@ python3 -S -B research/x6_qe/verify.py --verify-report /tmp/x6-qe.json
 
 **Vorhandene Evidenz:**
 
-- [research/x6_qe/evidence/local-results.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/8ee417ba8c44c1f32f4e310a6566168d84982d3a/research/x6_qe/evidence/local-results.json): Vollständige exakte Polynome, getrennte Determinantenprüfungen und K4-Zählwege, Quellenhashes und Fehlerkontrollen. Interne Rechnung; keine personell unabhängige Wiederholung.
+- [research/x6_qe/evidence/local-results.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e5840afa7c7865a48766d1a5366210508a7b1f05/research/x6_qe/evidence/local-results.json): Vollständige exakte Polynome, getrennte Determinantenprüfungen und K4-Zählwege, Quellenhashes und Fehlerkontrollen. Interne Rechnung; keine personell unabhängige Wiederholung.
 
 **Nächste Abnahme:** Externe Wiederholung des eingefrorenen Umfangs; vor Spider-/Billiard-Auswertung Originalbild/Erzeugungsregel beschaffen und eigenen Numerikvertrag qualifizieren. Lorentz-n=7 bleibt Priorität.
 
 <a id="rax-cqg-benchmark"></a>
 ### RAX-CQG: endlicher Causal-Set Benchmark 0.2.0
 
-**Stand:** MAIN / SOFTWARE; Branch `main`; Commit `8ee417ba8c44c1f32f4e310a6566168d84982d3a`.
+**Stand:** MAIN / SOFTWARE; Branch `main`; Commit `e5840afa7c7865a48766d1a5366210508a7b1f05`.
 
 **Anleitung:** [aktuelle main-Dokumentation](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/docs/research/rax/cqg-benchmark-v0.2.0/README.md). **Voraussetzungen:** Python 3.12, NumPy 2.3.5, SciPy 1.17.0, Node.js 24; Browser für das eigenständige HTML-Labor. Installation der Python-Abhängigkeiten benötigt Netzwerk oder vorbereitete Wheels.
 
@@ -1001,15 +1002,15 @@ python3 validate.py
 
 **Vorhandene Evidenz:**
 
-- [research/rax_cqg/benchmark-v0.2.0/VALIDATION.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/8ee417ba8c44c1f32f4e310a6566168d84982d3a/research/rax_cqg/benchmark-v0.2.0/VALIDATION.json): Eingefrorener interner Prüflauf mit Quellenhashes und expliziten Grenzen. UI-Logik in Node; keine damalige visuelle Browserprüfung oder personell unabhängige Replikation.
-- [docs/research/rax/cqg-benchmark-v0.2.0/PUBLICATION.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/8ee417ba8c44c1f32f4e310a6566168d84982d3a/docs/research/rax/cqg-benchmark-v0.2.0/PUBLICATION.json): Freigegebenes ZIP, 28 bytegleiche Paketdateien und identische Browserkopie; zusätzliche CI getrennt vom ursprünglichen Bericht.
+- [research/rax_cqg/benchmark-v0.2.0/VALIDATION.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e5840afa7c7865a48766d1a5366210508a7b1f05/research/rax_cqg/benchmark-v0.2.0/VALIDATION.json): Eingefrorener interner Prüflauf mit Quellenhashes und expliziten Grenzen. UI-Logik in Node; keine damalige visuelle Browserprüfung oder personell unabhängige Replikation.
+- [docs/research/rax/cqg-benchmark-v0.2.0/PUBLICATION.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e5840afa7c7865a48766d1a5366210508a7b1f05/docs/research/rax/cqg-benchmark-v0.2.0/PUBLICATION.json): Freigegebenes ZIP, 28 bytegleiche Paketdateien und identische Browserkopie; zusätzliche CI getrennt vom ursprünglichen Bericht.
 
 **Nächste Abnahme:** Unabhängige Replikation und fachliche Prüfung. Vor Ensemblevergleichen Beobachtungsgrösse, Dichtekontrollen, Stichprobengrösse und Fehlerbudget festlegen; keine neue physikalische Schlussfolgerung aus dem Pilot allein.
 
 <a id="free-field-entropy"></a>
 ### RAX-CQG: freies Feld und Entropiereferenz
 
-**Stand:** MAIN / SOFTWARE; Branch `main`; Commit `8ee417ba8c44c1f32f4e310a6566168d84982d3a`.
+**Stand:** MAIN / SOFTWARE; Branch `main`; Commit `e5840afa7c7865a48766d1a5366210508a7b1f05`.
 
 **Anleitung:** [aktuelle main-Dokumentation](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/free_field_entropy/README.md). **Voraussetzungen:** Python 3.12 unter Linux/POSIX; NumPy 2.3.5, SciPy 1.17.0 und threadpoolctl 3.6.0. Vollständiger Referenzlauf: maximal 30 Minuten und 2 GiB; kurze Prüfer ohne neue Zielstichproben.
 
@@ -1025,17 +1026,17 @@ OPENBLAS_NUM_THREADS=1 python3 -B research/free_field_entropy/check.py research/
 
 **Vorhandene Evidenz:**
 
-- [research/free_field_entropy/RESULTS.md](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/8ee417ba8c44c1f32f4e310a6566168d84982d3a/research/free_field_entropy/RESULTS.md): Vollständiger 64-Ordnungen-Befund, vorab fixiertes Kriterium, Cutoff-Empfindlichkeit und Grenzen.
-- [research/free_field_entropy/analytic-validation.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/8ee417ba8c44c1f32f4e310a6566168d84982d3a/research/free_field_entropy/analytic-validation.json): Zwei-Oszillator-Referenz und 13 analytische/strukturelle Gegenprüfungen.
-- [research/free_field_entropy/independent-audit.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/8ee417ba8c44c1f32f4e310a6566168d84982d3a/research/free_field_entropy/independent-audit.json): Vier Größen mit getrenntem hermiteschem Kovarianz-Rechenweg; interne Prüfung, keine externe Replikation.
-- [research/free_field_entropy/freeze.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/8ee417ba8c44c1f32f4e310a6566168d84982d3a/research/free_field_entropy/freeze.json): Öffentlich vor dem Zielversuch fixierte Quellen und Analyse; früherer Pilot separat ausgewiesen.
+- [research/free_field_entropy/RESULTS.md](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e5840afa7c7865a48766d1a5366210508a7b1f05/research/free_field_entropy/RESULTS.md): Vollständiger 64-Ordnungen-Befund, vorab fixiertes Kriterium, Cutoff-Empfindlichkeit und Grenzen.
+- [research/free_field_entropy/analytic-validation.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e5840afa7c7865a48766d1a5366210508a7b1f05/research/free_field_entropy/analytic-validation.json): Zwei-Oszillator-Referenz und 13 analytische/strukturelle Gegenprüfungen.
+- [research/free_field_entropy/independent-audit.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e5840afa7c7865a48766d1a5366210508a7b1f05/research/free_field_entropy/independent-audit.json): Vier Größen mit getrenntem hermiteschem Kovarianz-Rechenweg; interne Prüfung, keine externe Replikation.
+- [research/free_field_entropy/freeze.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e5840afa7c7865a48766d1a5366210508a7b1f05/research/free_field_entropy/freeze.json): Öffentlich vor dem Zielversuch fixierte Quellen und Analyse; früherer Pilot separat ausgewiesen.
 
 **Nächste Abnahme:** Endliche Größeneffekte und Cutoff-Empfindlichkeit in einem neuen vorab festgelegten Versuch klären. Geometrieantworten und Zusatznutzen gegenüber bestehenden Merkmalen bei gleichem Budget bleiben separate offene Gates.
 
 <a id="lorentz-proper-time"></a>
 ### Eigenzeit: Referenz, Fehlergrenzen und sequenzielle Diagnose
 
-**Stand:** MAIN / SOFTWARE; Branch `main`; Commit `8ee417ba8c44c1f32f4e310a6566168d84982d3a`.
+**Stand:** MAIN / SOFTWARE; Branch `main`; Commit `e5840afa7c7865a48766d1a5366210508a7b1f05`.
 
 **Anleitung:** [aktuelle main-Dokumentation](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/lorentz_proper_time_publication/README.md). **Voraussetzungen:** Python 3.12 unter Linux/POSIX; NumPy 2.3.5 und SciPy 1.17.0. Reproduktion in temporären Verzeichnissen; nach Installation kein externer Dienst. Bekannte Dimension, Zeitskala und uniformes unabhängiges Beprobungsgesetz für die statistische Aussage erforderlich.
 
@@ -1051,20 +1052,20 @@ python3 research/lorentz_proper_time_publication/planning.py
 
 **Vorhandene Evidenz:**
 
-- [research/lorentz_proper_time/RESULTS.md](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/8ee417ba8c44c1f32f4e310a6566168d84982d3a/research/lorentz_proper_time/RESULTS.md): Ursprünglich 6.912 Ordnungen: Hauptvergleich qualifiziert, größte exakt abgeglichene Zusatzkontrolle mit nur 63 statt 128 Paaren offen.
-- [research/lorentz_proper_time_domain/results/RESULTS.md](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/8ee417ba8c44c1f32f4e310a6566168d84982d3a/research/lorentz_proper_time_domain/results/RESULTS.md): CONDITIONAL_FLAT_MODEL_CHECK_PASSED; 24 Zellen, Binomialintervalle und Nullzählungsgrenze.
-- [research/lorentz_proper_time_domain/results/verification.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/8ee417ba8c44c1f32f4e310a6566168d84982d3a/research/lorentz_proper_time_domain/results/verification.json): Interne Prüfung aller 49.152 Rohzählungen, Quellenbindung, Quantilinversion und zwölf voller Relationsgegenprüfungen.
-- [research/lorentz_proper_time_sequential/results/RESULTS.md](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/8ee417ba8c44c1f32f4e310a6566168d84982d3a/research/lorentz_proper_time_sequential/results/RESULTS.md): DECLARED_SEQUENTIAL_REFERENCE_CHECK_PASSED; getrennte Zählblock- und Geometriekontrollen, Budgetabbruch und Dichtestörung ausdrücklich ausgewiesen.
-- [research/lorentz_proper_time_sequential/results/verification.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/8ee417ba8c44c1f32f4e310a6566168d84982d3a/research/lorentz_proper_time_sequential/results/verification.json): Interne skalare Stream-Replays, 2.048 Rang-p-Werte und geometrische Integration; keine externe Replikation.
-- [research/lorentz_proper_time_sequential/EXECUTION_HISTORY.md](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/8ee417ba8c44c1f32f4e310a6566168d84982d3a/research/lorentz_proper_time_sequential/EXECUTION_HISTORY.md): Erhaltener Erstlauf mit JSON-Serialisierungsfehler; einzige Typkonvertierung und identische Zählblöcke nach Wiederholung.
-- [research/lorentz_proper_time_publication/planning.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/8ee417ba8c44c1f32f4e310a6566168d84982d3a/research/lorentz_proper_time_publication/planning.json): Analytische Feststichprobenbeispiele für unter 10% relativen Fehler bei tau/T=0,1 in 4D; getrennt von sequenziellen Budgetmedianen.
+- [research/lorentz_proper_time/RESULTS.md](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e5840afa7c7865a48766d1a5366210508a7b1f05/research/lorentz_proper_time/RESULTS.md): Ursprünglich 6.912 Ordnungen: Hauptvergleich qualifiziert, größte exakt abgeglichene Zusatzkontrolle mit nur 63 statt 128 Paaren offen.
+- [research/lorentz_proper_time_domain/results/RESULTS.md](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e5840afa7c7865a48766d1a5366210508a7b1f05/research/lorentz_proper_time_domain/results/RESULTS.md): CONDITIONAL_FLAT_MODEL_CHECK_PASSED; 24 Zellen, Binomialintervalle und Nullzählungsgrenze.
+- [research/lorentz_proper_time_domain/results/verification.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e5840afa7c7865a48766d1a5366210508a7b1f05/research/lorentz_proper_time_domain/results/verification.json): Interne Prüfung aller 49.152 Rohzählungen, Quellenbindung, Quantilinversion und zwölf voller Relationsgegenprüfungen.
+- [research/lorentz_proper_time_sequential/results/RESULTS.md](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e5840afa7c7865a48766d1a5366210508a7b1f05/research/lorentz_proper_time_sequential/results/RESULTS.md): DECLARED_SEQUENTIAL_REFERENCE_CHECK_PASSED; getrennte Zählblock- und Geometriekontrollen, Budgetabbruch und Dichtestörung ausdrücklich ausgewiesen.
+- [research/lorentz_proper_time_sequential/results/verification.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e5840afa7c7865a48766d1a5366210508a7b1f05/research/lorentz_proper_time_sequential/results/verification.json): Interne skalare Stream-Replays, 2.048 Rang-p-Werte und geometrische Integration; keine externe Replikation.
+- [research/lorentz_proper_time_sequential/EXECUTION_HISTORY.md](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e5840afa7c7865a48766d1a5366210508a7b1f05/research/lorentz_proper_time_sequential/EXECUTION_HISTORY.md): Erhaltener Erstlauf mit JSON-Serialisierungsfehler; einzige Typkonvertierung und identische Zählblöcke nach Wiederholung.
+- [research/lorentz_proper_time_publication/planning.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e5840afa7c7865a48766d1a5366210508a7b1f05/research/lorentz_proper_time_publication/planning.json): Analytische Feststichprobenbeispiele für unter 10% relativen Fehler bei tau/T=0,1 in 4D; getrennt von sequenziellen Budgetmedianen.
 
 **Nächste Abnahme:** Externe Replikation des deklarierten Modells. Für eine Erweiterung zuerst eine bestimmte Geometrie-/Beprobungsklasse, unabhängige Maßstabskalibrierung und Modellfehlergrenze festlegen. Kettenwarnungen erlauben ohne bekannte Beprobung keine eindeutige Krümmungsdiagnose.
 
 <a id="lorentz-curvature"></a>
 ### Krümmungsbenchmark: Empfindlichkeit und Dichteverwechslung
 
-**Stand:** MAIN / SOFTWARE; Branch `main`; Commit `8ee417ba8c44c1f32f4e310a6566168d84982d3a`.
+**Stand:** MAIN / SOFTWARE; Branch `main`; Commit `e5840afa7c7865a48766d1a5366210508a7b1f05`.
 
 **Anleitung:** [aktuelle main-Dokumentation](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/lorentz_curvature/README.md). **Voraussetzungen:** Python 3.12 unter Linux/POSIX; NumPy 2.3.5, SciPy 1.17.0 und vollständige Git-Historie. Getrennte temporäre Reproduktion; pro Ziellauf 600 Sekunden und 2 GiB. N=64/128 ist fest, also bedingte Poisson-Beprobung.
 
@@ -1080,19 +1081,19 @@ OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python3 -B research/lorentz_curvature/r
 
 **Vorhandene Evidenz:**
 
-- [research/lorentz_curvature/RESULTS.md](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/8ee417ba8c44c1f32f4e310a6566168d84982d3a/research/lorentz_curvature/RESULTS.md): Alle zwölf Zielzellen, vorab festgelegte Hauptentscheidung, Unsicherheit und exakte Dichteverwechslung.
-- [research/lorentz_curvature/contract.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/8ee417ba8c44c1f32f4e310a6566168d84982d3a/research/lorentz_curvature/contract.json): Unveränderter Vertrag aus dem öffentlichen Quellenstand 31cfd8c vor dem ersten Ziellauf.
-- [research/lorentz_curvature/results/verification.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/8ee417ba8c44c1f32f4e310a6566168d84982d3a/research/lorentz_curvature/results/verification.json): 8.702 volle Ordnungen, 26.106 unabhängige Kettenzählungen, 12.288 Ränge, 3.072 gekoppelte Zwillinge und 1.024 abgewiesene Relationsfehler.
-- [research/lorentz_curvature/results/replay.log](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/8ee417ba8c44c1f32f4e310a6566168d84982d3a/research/lorentz_curvature/results/replay.log): Vollständiger interner Replay aller Seeds, Relationsbytes, Koordinatenhashes und wissenschaftlichen Ausgaben; keine externe Replikation.
-- [research/lorentz_curvature/PORTABILITY.md](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/8ee417ba8c44c1f32f4e310a6566168d84982d3a/research/lorentz_curvature/PORTABILITY.md): Erster CI-Replay scheiterte am Koordinatenhash. Nachträgliche vollständige NumPy-Gegenprüfung: maximale Abweichung 2,22e-16, alle Relationen identisch. Originalquellen unverändert; zusätzlicher begrenzter Replay separat ausgewiesen.
-- [research/lorentz_curvature/results/portable-replay.log](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/8ee417ba8c44c1f32f4e310a6566168d84982d3a/research/lorentz_curvature/results/portable-replay.log): Ergänzter vollständiger Replay mit 8.696 konkret geprüften Hashvarianten und sechs Originalhashes; unbekannte Varianten abgewiesen.
+- [research/lorentz_curvature/RESULTS.md](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e5840afa7c7865a48766d1a5366210508a7b1f05/research/lorentz_curvature/RESULTS.md): Alle zwölf Zielzellen, vorab festgelegte Hauptentscheidung, Unsicherheit und exakte Dichteverwechslung.
+- [research/lorentz_curvature/contract.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e5840afa7c7865a48766d1a5366210508a7b1f05/research/lorentz_curvature/contract.json): Unveränderter Vertrag aus dem öffentlichen Quellenstand 31cfd8c vor dem ersten Ziellauf.
+- [research/lorentz_curvature/results/verification.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e5840afa7c7865a48766d1a5366210508a7b1f05/research/lorentz_curvature/results/verification.json): 8.702 volle Ordnungen, 26.106 unabhängige Kettenzählungen, 12.288 Ränge, 3.072 gekoppelte Zwillinge und 1.024 abgewiesene Relationsfehler.
+- [research/lorentz_curvature/results/replay.log](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e5840afa7c7865a48766d1a5366210508a7b1f05/research/lorentz_curvature/results/replay.log): Vollständiger interner Replay aller Seeds, Relationsbytes, Koordinatenhashes und wissenschaftlichen Ausgaben; keine externe Replikation.
+- [research/lorentz_curvature/PORTABILITY.md](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e5840afa7c7865a48766d1a5366210508a7b1f05/research/lorentz_curvature/PORTABILITY.md): Erster CI-Replay scheiterte am Koordinatenhash. Nachträgliche vollständige NumPy-Gegenprüfung: maximale Abweichung 2,22e-16, alle Relationen identisch. Originalquellen unverändert; zusätzlicher begrenzter Replay separat ausgewiesen.
+- [research/lorentz_curvature/results/portable-replay.log](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e5840afa7c7865a48766d1a5366210508a7b1f05/research/lorentz_curvature/results/portable-replay.log): Ergänzter vollständiger Replay mit 8.696 konkret geprüften Hashvarianten und sechs Originalhashes; unbekannte Varianten abgewiesen.
 
 **Nächste Abnahme:** Externe Replikation. Ein Demonstrator muss Modellabweichungswarnungen und die Dichtezwillinge sichtbar trennen. Vor einer neuen Leistungsstudie unabhängiges Wissen über Beprobung/Volumen und eine identifizierbare geometrische Zielgröße festlegen; kein nachträgliches Retuning dieses Versuchs.
 
 <a id="lorentz-rss-fixed-n"></a>
 ### RSS bei fester Punktzahl: Formeln, Prüfung und Grenzen
 
-**Stand:** MAIN / SOFTWARE; Branch `main`; Commit `8ee417ba8c44c1f32f4e310a6566168d84982d3a`.
+**Stand:** MAIN / SOFTWARE; Branch `main`; Commit `e5840afa7c7865a48766d1a5366210508a7b1f05`.
 
 **Anleitung:** [aktuelle main-Dokumentation](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/lorentz_rss_fixed_n/README.md). **Voraussetzungen:** Python 3.12, Linux/POSIX, gepinnte NumPy-/SciPy-/Matplotlib-Versionen; vollständiger Git-Checkout. Pro Ziellauf 600 Sekunden und 2 GiB.
 
@@ -1107,13 +1108,39 @@ python3 -B research/lorentz_rss_fixed_n/reproduce.py
 
 **Vorhandene Evidenz:**
 
-- [research/lorentz_rss_fixed_n/DERIVATION.md](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/8ee417ba8c44c1f32f4e310a6566168d84982d3a/research/lorentz_rss_fixed_n/DERIVATION.md): Bedingte Mittelwerte, Volumenkorrektur, überlappende Teilmengen und Skalenannahmen.
-- [research/lorentz_rss_fixed_n/RESULTS.md](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/8ee417ba8c44c1f32f4e310a6566168d84982d3a/research/lorentz_rss_fixed_n/RESULTS.md): Alle Entscheidungen, Unsicherheit, Kovarianz und große Rekonstruktionsfehler.
-- [research/lorentz_rss_fixed_n/contract.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/8ee417ba8c44c1f32f4e310a6566168d84982d3a/research/lorentz_rss_fixed_n/contract.json): Unveränderter Vertrag aus dem öffentlichen Quellenstand 485d866 vor dem ersten Zielversuch.
-- [research/lorentz_rss_fixed_n/results/summary.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/8ee417ba8c44c1f32f4e310a6566168d84982d3a/research/lorentz_rss_fixed_n/results/summary.json): Maschinenlesbare Ergebnisse; gemeinsames Präzisionsziel nicht erfüllt.
-- [research/lorentz_rss_fixed_n/VERIFICATION.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/8ee417ba8c44c1f32f4e310a6566168d84982d3a/research/lorentz_rss_fixed_n/VERIFICATION.json): Vollständiger interner Replay aller 24.576 Relationshashes und wissenschaftlichen Ausgaben.
+- [research/lorentz_rss_fixed_n/DERIVATION.md](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e5840afa7c7865a48766d1a5366210508a7b1f05/research/lorentz_rss_fixed_n/DERIVATION.md): Bedingte Mittelwerte, Volumenkorrektur, überlappende Teilmengen und Skalenannahmen.
+- [research/lorentz_rss_fixed_n/RESULTS.md](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e5840afa7c7865a48766d1a5366210508a7b1f05/research/lorentz_rss_fixed_n/RESULTS.md): Alle Entscheidungen, Unsicherheit, Kovarianz und große Rekonstruktionsfehler.
+- [research/lorentz_rss_fixed_n/contract.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e5840afa7c7865a48766d1a5366210508a7b1f05/research/lorentz_rss_fixed_n/contract.json): Unveränderter Vertrag aus dem öffentlichen Quellenstand 485d866 vor dem ersten Zielversuch.
+- [research/lorentz_rss_fixed_n/results/summary.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e5840afa7c7865a48766d1a5366210508a7b1f05/research/lorentz_rss_fixed_n/results/summary.json): Maschinenlesbare Ergebnisse; gemeinsames Präzisionsziel nicht erfüllt.
+- [research/lorentz_rss_fixed_n/VERIFICATION.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e5840afa7c7865a48766d1a5366210508a7b1f05/research/lorentz_rss_fixed_n/VERIFICATION.json): Vollständiger interner Replay aller 24.576 Relationshashes und wissenschaftlichen Ausgaben.
 
 **Nächste Abnahme:** Informationsbedarf vor größerem Budget bestimmen. De-Sitter-Modell mit bekannter Ricci-Beziehung und allgemeine Zweiparameter-Rekonstruktion getrennt prüfen; neue Geometriefamilien, Resttermkontrolle und kovarianzbewusste Unsicherheiten vorab festlegen.
+
+<a id="lorentz-proper-time-validity"></a>
+### Eigenzeit v0.2: Gültigkeitsbereich und Informationsbedarf
+
+**Stand:** MAIN / SOFTWARE; Branch `main`; Commit `e5840afa7c7865a48766d1a5366210508a7b1f05`.
+
+**Anleitung:** [aktuelle main-Dokumentation](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/lorentz_proper_time_validity/README.md). **Voraussetzungen:** Python 3.12, Linux/POSIX, gepinnte NumPy-/SciPy-/Matplotlib-Versionen und vollständige Git-Historie. Numerischer Ziellauf: 600 Sekunden und 2 GiB. Drei BLAS/OpenMP-Threadvariablen vor Python auf 1 setzen.
+
+**Geprüfte Aussage:** 1.176 festgelegte Modell-/Budget-/Intervallkombinationen direkt berechnet. Alle 714 Kombinationen innerhalb ihrer Modellklasse erreichen mindestens 95% Überdeckung; 192 erfüllen zusätzlich das Präzisionsziel, 522 bleiben zu unpräzise. 462 Kombinationen liegen ausserhalb der jeweils vorausgesetzten Klasse. Extern begrenzte Dichtefehler erlauben konservative flache Eigenzeitintervalle, können aber eine irreduzible Präzisionsgrenze erzeugen. Keine allgemeine Krümmungsqualifikation.
+
+```sh
+python3 -m pip install -r research/lorentz_proper_time_validity/requirements.txt
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 python3 -B research/lorentz_proper_time_validity/reproduce.py
+```
+
+**Erwartung:** PASS_FULL_PROPER_TIME_VALIDITY_REPLAY. 1.176 deterministische Kombinationen; vollständige Reproduktion mit unveränderten Forschungsquellen. Keine neuen Punktwolken oder realen Messungen.
+
+**Vorhandene Evidenz:**
+
+- [research/lorentz_proper_time_validity/RESULTS.md](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e5840afa7c7865a48766d1a5366210508a7b1f05/research/lorentz_proper_time_validity/RESULTS.md): Gültigkeitskarte, Budgettabelle, Fehlpräzision bei selektiv fehlenden Ereignissen und verbleibende Grenzen.
+- [research/lorentz_proper_time_validity/DERIVATION.md](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e5840afa7c7865a48766d1a5366210508a7b1f05/research/lorentz_proper_time_validity/DERIVATION.md): Exakte Binomialmodelle, bekannte de-Sitter-Familie und konservative Transformation für extern begrenzte Intensitätsverhältnisse.
+- [research/lorentz_proper_time_validity/contract.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e5840afa7c7865a48766d1a5366210508a7b1f05/research/lorentz_proper_time_validity/contract.json): Öffentlicher Quellenstand 67dc770 vor der ersten Zielgitter-Auswertung.
+- [research/lorentz_proper_time_validity/ARCHIVE.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e5840afa7c7865a48766d1a5366210508a7b1f05/research/lorentz_proper_time_validity/ARCHIVE.json): Prüfsumme und Inventar aller unveränderten Originalausgaben im ZIP.
+- [research/lorentz_proper_time_validity/VERIFICATION.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e5840afa7c7865a48766d1a5366210508a7b1f05/research/lorentz_proper_time_validity/VERIFICATION.json): Getrennte Integral-/CDF-Gegenprüfung aller 1.176 Zellen und vollständiger Replay.
+
+**Nächste Abnahme:** Externe Replikation und unabhängig begründete Dichte-/Erfassungsgrenzen für eine konkrete Datenquelle. Separat kovarianzbewusste Informationsplanung für eine eingeschränkte de-Sitter-Krümmungsrekonstruktion; neuer Vertrag vor neuen Zielversuchen.
 
 ## Branch-Inventar und Pflege
 
@@ -1123,36 +1150,36 @@ Ein historischer Branch kann ungemergte Commits haben, obwohl sein Modul bereits
 
 | Beobachteter Branch | Tip-Commit | Commits nur dort / nur main | Rolle |
 | --- | --- | --- |
-| `docs/wolfram-causal-order-v0-1` | [3f8fb920ddef](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/3f8fb920ddefd9ede13d0855a14f4bfb1c7b1239) | 0 / 122 | Historischer Entwicklungs-/Publikationszweig |
-| `docs/wolfram-zero-failures-v0-1` | [a40a513a9633](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/a40a513a9633cbe6aad4ce66132331d9264c0bab) | 0 / 124 | Historischer Entwicklungs-/Publikationszweig |
-| `feat/signal-validation-lab` | [33032c23dd0e](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/33032c23dd0ef3e035d38c5b9cf7c3db6faf65f0) | 1 / 159 | Historischer Entwicklungs-/Publikationszweig |
-| `feature/sagnac-integration-preview-0.1` | [7aaa8e38acc6](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/7aaa8e38acc60be556614dd4e4c0ac1697b45815) | 1 / 182 | Historischer Entwicklungs-/Publikationszweig |
-| `fix/evidence-audit-20261012` | [680fe6a43e66](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/680fe6a43e664164a26dcf1b8cfb6bf52a1b3b56) | 1 / 160 | Historischer Entwicklungs-/Publikationszweig |
-| `fix/safe-x6-publish` | [f80225268928](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/f802252689284de402a3a322a64a69a07098622f) | 0 / 243 | Historischer Entwicklungs-/Publikationszweig |
-| `fix/signal-lab-evidence-archive` | [d43238b4e110](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/d43238b4e110ea7338f225334f23c6cde179626e) | 1 / 158 | Historischer Entwicklungs-/Publikationszweig |
-| `main` | [8ee417ba8c44](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/8ee417ba8c44c1f32f4e310a6566168d84982d3a) | 0 / 0 | integration, offline-reference, astrolabium, signal-lab, edge-reference, evidence-calibration, phase-contract, industrial-programme, sagnac-import, photonic-design, acvm-concept, acvm-c1, acvm-optical, sagnac-components, acvm-records, acvm-fixture, rax-programme, rax-u1, rax-b1-m1, rax-w1, wolfram-polarity, wolfram-dependence, wolfram-causal, data-agents, lorentz-agent, lorentz-n6-residuals, industrial-v1, industrial-pilot, rax-guarded, reference-edition, x6-qe, rax-cqg-benchmark, lorentz-n7-complete, free-field-entropy, lorentz-proper-time, lorentz-curvature, lorentz-rss-fixed-n |
-| `publication/acvm-c1-v0.1` | [b3def446889b](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/b3def446889b34cc25afeb1aad14930199636c22) | 0 / 138 | Historischer Entwicklungs-/Publikationszweig |
-| `publication/acvm-optical-v0.2` | [94f08ef30a60](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/94f08ef30a60cab4a6534aef9b0d05e1d5b2ff0b) | 0 / 131 | Historischer Entwicklungs-/Publikationszweig |
-| `publication/sagnac-components-v0.1-20261015` | [7f0f8b893e5f](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/7f0f8b893e5fb91708cb75c1460f880adaf2e519) | 0 / 128 | Historischer Entwicklungs-/Publikationszweig |
-| `publication/wolfram-polarity-v0.1-20261015` | [8b6785d55689](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/8b6785d556895bcb19856061a681720c3f3ff228) | 0 / 126 | Historischer Entwicklungs-/Publikationszweig |
-| `publish/photonic-two-qubit-design` | [8f0cdaad0cd8](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/8f0cdaad0cd8823ceb2a3db6f2d9a5815d6134ba) | 1 / 181 | Historischer Entwicklungs-/Publikationszweig |
-| `research/lorentz-v1-workpackages` | [f5116b9970a6](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/f5116b9970a6b7dc788c18623a8386b4cde33ad4) | 1 / 149 | lorentz-n6 |
-| `research/nqk` | [a8fbc70fae3e](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/a8fbc70fae3ecb46bfcd8ceb828ce182e533dd04) | 2 / 157 | nqk |
-| `research/photonic-link` | [7ff72fcd6a16](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/7ff72fcd6a16e9b353d1af277307463f757d3470) | 1 / 156 | photonic-link |
-| `research/rax-w1-publication` | [1cd7e4bb7167](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/1cd7e4bb71672233058e061d18fae6b249d948ad) | 0 / 142 | Historischer Entwicklungs-/Publikationszweig |
-| `research/x6-edge-reference` | [7ac131bcfbab](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/7ac131bcfbabd658b38fb1c97686325ac47fa081) | 0 / 149 | Historischer Entwicklungs-/Publikationszweig |
-| `research/x6-experiment-fabric-v1` | [a34c59f2b0e2](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/a34c59f2b0e2d30c73936363040669941aa8ce09) | 3 / 149 | experiment-fabric |
-| `research/x6-fingerprint-v1` | [f22030f2dae0](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/f22030f2dae0aa670cdbc450c5e881ce250b36b8) | 2 / 149 | fingerprint |
-| `research/x6-integration-v0.1` | [87ca9ad6b12f](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/87ca9ad6b12fd87869b393658f2ed6848f876c12) | 0 / 144 | Historischer Entwicklungs-/Publikationszweig |
-| `research/x6-neutral-discovery-v1` | [1a02c482d59a](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/1a02c482d59a42d554337fb83e0f6d6e6d84b516) | 4 / 149 | neutral-discovery |
-| `x6-bounded-math-agent` | [122ba4eb5ac1](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/122ba4eb5ac1e7496bf3426b0f3e908d08aa74ff) | 0 / 183 | Historischer Entwicklungs-/Publikationszweig |
-| `x6-source-preview` | [24023fd88abd](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/24023fd88abd676336098950ea3a08e93eeebfd8) | 0 / 191 | Historischer Entwicklungs-/Publikationszweig |
-| `research/lorentz-n6-residuals` | [5eaffee5a594](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/5eaffee5a594e2c2c5b86db28a1406dc29168087) | 0 / 113 | Historischer Entwicklungs-/Publikationszweig |
-| `hardware/c1-e01-readiness` | [d99b5f8d6d5c](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/d99b5f8d6d5cc1294397a7072d136d6209381d57) | 0 / 108 | Historischer Entwicklungs-/Publikationszweig |
-| `research/industrial-data-pilot` | [e14eaea1f554](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/e14eaea1f55497d397f297d9310e9c6bec1ee6d9) | 0 / 102 | Historischer Entwicklungs-/Publikationszweig |
-| `research/validation-reference-release` | [2268fb97f90c](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/2268fb97f90cfc09490d0988e4c24e1556c569b5) | 0 / 99 | Historischer Entwicklungs-/Publikationszweig |
-| `research/x6-qe-v0.1` | [d81774785916](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/d81774785916be76e8642ac9909e61ac5f3743e6) | 0 / 94 | Historischer Entwicklungs-/Publikationszweig |
-| `research/curvature-identifiability-v1` | [ced51c97b035](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/ced51c97b03525acc5d9ff907e175afce740974a) | 0 / 12 | Historischer Entwicklungs-/Publikationszweig |
+| `docs/wolfram-causal-order-v0-1` | [3f8fb920ddef](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/3f8fb920ddefd9ede13d0855a14f4bfb1c7b1239) | 0 / 126 | Historischer Entwicklungs-/Publikationszweig |
+| `docs/wolfram-zero-failures-v0-1` | [a40a513a9633](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/a40a513a9633cbe6aad4ce66132331d9264c0bab) | 0 / 128 | Historischer Entwicklungs-/Publikationszweig |
+| `feat/signal-validation-lab` | [33032c23dd0e](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/33032c23dd0ef3e035d38c5b9cf7c3db6faf65f0) | 1 / 163 | Historischer Entwicklungs-/Publikationszweig |
+| `feature/sagnac-integration-preview-0.1` | [7aaa8e38acc6](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/7aaa8e38acc60be556614dd4e4c0ac1697b45815) | 1 / 186 | Historischer Entwicklungs-/Publikationszweig |
+| `fix/evidence-audit-20261012` | [680fe6a43e66](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/680fe6a43e664164a26dcf1b8cfb6bf52a1b3b56) | 1 / 164 | Historischer Entwicklungs-/Publikationszweig |
+| `fix/safe-x6-publish` | [f80225268928](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/f802252689284de402a3a322a64a69a07098622f) | 0 / 247 | Historischer Entwicklungs-/Publikationszweig |
+| `fix/signal-lab-evidence-archive` | [d43238b4e110](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/d43238b4e110ea7338f225334f23c6cde179626e) | 1 / 162 | Historischer Entwicklungs-/Publikationszweig |
+| `main` | [e5840afa7c78](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/e5840afa7c7865a48766d1a5366210508a7b1f05) | 0 / 0 | integration, offline-reference, astrolabium, signal-lab, edge-reference, evidence-calibration, phase-contract, industrial-programme, sagnac-import, photonic-design, acvm-concept, acvm-c1, acvm-optical, sagnac-components, acvm-records, acvm-fixture, rax-programme, rax-u1, rax-b1-m1, rax-w1, wolfram-polarity, wolfram-dependence, wolfram-causal, data-agents, lorentz-agent, lorentz-n6-residuals, industrial-v1, industrial-pilot, rax-guarded, reference-edition, x6-qe, rax-cqg-benchmark, lorentz-n7-complete, free-field-entropy, lorentz-proper-time, lorentz-curvature, lorentz-rss-fixed-n, lorentz-proper-time-validity |
+| `publication/acvm-c1-v0.1` | [b3def446889b](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/b3def446889b34cc25afeb1aad14930199636c22) | 0 / 142 | Historischer Entwicklungs-/Publikationszweig |
+| `publication/acvm-optical-v0.2` | [94f08ef30a60](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/94f08ef30a60cab4a6534aef9b0d05e1d5b2ff0b) | 0 / 135 | Historischer Entwicklungs-/Publikationszweig |
+| `publication/sagnac-components-v0.1-20261015` | [7f0f8b893e5f](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/7f0f8b893e5fb91708cb75c1460f880adaf2e519) | 0 / 132 | Historischer Entwicklungs-/Publikationszweig |
+| `publication/wolfram-polarity-v0.1-20261015` | [8b6785d55689](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/8b6785d556895bcb19856061a681720c3f3ff228) | 0 / 130 | Historischer Entwicklungs-/Publikationszweig |
+| `publish/photonic-two-qubit-design` | [8f0cdaad0cd8](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/8f0cdaad0cd8823ceb2a3db6f2d9a5815d6134ba) | 1 / 185 | Historischer Entwicklungs-/Publikationszweig |
+| `research/lorentz-v1-workpackages` | [f5116b9970a6](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/f5116b9970a6b7dc788c18623a8386b4cde33ad4) | 1 / 153 | lorentz-n6 |
+| `research/nqk` | [a8fbc70fae3e](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/a8fbc70fae3ecb46bfcd8ceb828ce182e533dd04) | 2 / 161 | nqk |
+| `research/photonic-link` | [7ff72fcd6a16](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/7ff72fcd6a16e9b353d1af277307463f757d3470) | 1 / 160 | photonic-link |
+| `research/rax-w1-publication` | [1cd7e4bb7167](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/1cd7e4bb71672233058e061d18fae6b249d948ad) | 0 / 146 | Historischer Entwicklungs-/Publikationszweig |
+| `research/x6-edge-reference` | [7ac131bcfbab](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/7ac131bcfbabd658b38fb1c97686325ac47fa081) | 0 / 153 | Historischer Entwicklungs-/Publikationszweig |
+| `research/x6-experiment-fabric-v1` | [a34c59f2b0e2](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/a34c59f2b0e2d30c73936363040669941aa8ce09) | 3 / 153 | experiment-fabric |
+| `research/x6-fingerprint-v1` | [f22030f2dae0](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/f22030f2dae0aa670cdbc450c5e881ce250b36b8) | 2 / 153 | fingerprint |
+| `research/x6-integration-v0.1` | [87ca9ad6b12f](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/87ca9ad6b12fd87869b393658f2ed6848f876c12) | 0 / 148 | Historischer Entwicklungs-/Publikationszweig |
+| `research/x6-neutral-discovery-v1` | [1a02c482d59a](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/1a02c482d59a42d554337fb83e0f6d6e6d84b516) | 4 / 153 | neutral-discovery |
+| `x6-bounded-math-agent` | [122ba4eb5ac1](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/122ba4eb5ac1e7496bf3426b0f3e908d08aa74ff) | 0 / 187 | Historischer Entwicklungs-/Publikationszweig |
+| `x6-source-preview` | [24023fd88abd](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/24023fd88abd676336098950ea3a08e93eeebfd8) | 0 / 195 | Historischer Entwicklungs-/Publikationszweig |
+| `research/lorentz-n6-residuals` | [5eaffee5a594](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/5eaffee5a594e2c2c5b86db28a1406dc29168087) | 0 / 117 | Historischer Entwicklungs-/Publikationszweig |
+| `hardware/c1-e01-readiness` | [d99b5f8d6d5c](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/d99b5f8d6d5cc1294397a7072d136d6209381d57) | 0 / 112 | Historischer Entwicklungs-/Publikationszweig |
+| `research/industrial-data-pilot` | [e14eaea1f554](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/e14eaea1f55497d397f297d9310e9c6bec1ee6d9) | 0 / 106 | Historischer Entwicklungs-/Publikationszweig |
+| `research/validation-reference-release` | [2268fb97f90c](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/2268fb97f90cfc09490d0988e4c24e1556c569b5) | 0 / 103 | Historischer Entwicklungs-/Publikationszweig |
+| `research/x6-qe-v0.1` | [d81774785916](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/d81774785916be76e8642ac9909e61ac5f3743e6) | 0 / 98 | Historischer Entwicklungs-/Publikationszweig |
+| `research/curvature-identifiability-v1` | [ced51c97b035](https://github.com/thomasmgfeller/x6-spectral-astrolabium/commit/ced51c97b03525acc5d9ff907e175afce740974a) | 0 / 16 | Historischer Entwicklungs-/Publikationszweig |
 
 Bei einer Modulfreigabe zuerst MODULE_REGISTRY.json aktualisieren: Quellencommit, Einstieg, erwartete Ausgabe, Evidenzrevision und nächste Abnahme. Danach rendern und prüfen:
 

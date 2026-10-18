@@ -1,7 +1,7 @@
 {
   "schema": "x6.bilingual-wiki/1",
   "snapshot_date": "2026-10-18",
-  "source_commit": "8ee417ba8c44c1f32f4e310a6566168d84982d3a",
+  "source_commit": "e5840afa7c7865a48766d1a5366210508a7b1f05",
   "articles": [
     {
       "id": "index",
@@ -116,6 +116,10 @@
               {
                 "type": "paragraph",
                 "text": "Neu: Der Krümmungsbenchmark ist abgeschlossen. Beide Diagnosen verfehlen das Empfindlichkeitsziel; die Dichtezwillinge erklären eine grundsätzliche Mehrdeutigkeit. Das Kapitel „Kausale Ordnungen“ zeigt Ergebnisse und Folgen für die geplante Uhr."
+              },
+              {
+                "type": "paragraph",
+                "text": "Neu: Eigenzeit v0.2 erklärt, wann zusätzliche Daten helfen, wann Dichtefehler die Intervalle ungültig machen und wann eine vorsichtigere Rechnung die Präzisionsfreigabe verweigert."
               }
             ]
           }
@@ -232,6 +236,10 @@
               {
                 "type": "paragraph",
                 "text": "New: the curvature benchmark is complete. Both diagnostics miss the sensitivity target; density twins explain a fundamental ambiguity. The “Causal orders” chapter presents the results and consequences for the proposed clock."
+              },
+              {
+                "type": "paragraph",
+                "text": "New: proper time v0.2 explains when additional data help, when density errors invalidate intervals and when a conservative analysis refuses precision."
               }
             ]
           }
@@ -1139,6 +1147,41 @@
                 ]
               }
             ]
+          },
+          {
+            "id": "proper-time-validity",
+            "title": "Eigenzeit v0.2: Wann helfen mehr Daten?",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "Die neue Gültigkeitskarte berechnet 1.176 Kombinationen aus Modell, beobachteter Punktzahl und Intervallverfahren direkt. Es sind keine neuen Punktwolken oder Messungen. Alle 714 Kombinationen innerhalb ihrer jeweils angenommenen Modellklasse erreichen mindestens 95% Überdeckung. Davon erfüllen 192 zusätzlich das festgelegte Präzisionsziel; 522 bleiben zu unpräzise. 462 weitere Kombinationen liegen ausserhalb der vorausgesetzten Klasse."
+              },
+              {
+                "type": "paragraph",
+                "text": "Viele Daten beheben keinen unbekannten Dichtefehler. Im Beispiel mit nur halb so guter Erfassung im inneren Intervall meldet die ungeschützte Rechnung bei 65.536 beobachteten Punkten mit rund 98,81% Wahrscheinlichkeit fälschlich höchstens 10% relativen Fehler. Diese Zahl ist keine Krümmungs- oder Fehlerdetektionsrate."
+              },
+              {
+                "type": "paragraph",
+                "text": "Wenn das Verhältnis der mittleren Erfassungsintensität innen zu aussen von einer unabhängigen Quelle begrenzt ist, lässt sich ein konservativeres Intervall berechnen. Für das breite Verhältnis von 0,5 bis 2 erhält dieses im selben Beispiel rund 97,74% Überdeckung, verweigert aber die gewünschte 10%-Präzision. Das ist eine begründete Enthaltung."
+              },
+              {
+                "type": "paragraph",
+                "text": "Im uniformen flachen 4D-Beispiel mit wahrer Eigenzeit 0,2 des äusseren Massstabs ist 65.536 der erste erfolgreiche Punktumfang des geprüften Gitters. Mit einer vorsichtigeren Dichteannahme von 0,8 bis 1,25 sind es 262.144. Diese Werte sind keine globalen Minimalbudgets und keine sequenziellen Stoppgarantien. Der Browser-Demonstrator behält sein bisheriges flaches Modell."
+              },
+              {
+                "type": "links",
+                "items": [
+                  {
+                    "label": "Ergebnisse und Budgettabelle",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e5840afa7c7865a48766d1a5366210508a7b1f05/research/lorentz_proper_time_validity/RESULTS.md"
+                  },
+                  {
+                    "label": "Herleitung und Annahmen",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e5840afa7c7865a48766d1a5366210508a7b1f05/research/lorentz_proper_time_validity/DERIVATION.md"
+                  }
+                ]
+              }
+            ]
           }
         ]
       },
@@ -1577,6 +1620,41 @@
                   {
                     "label": "RSS: Herleitung / Derivation",
                     "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/8ee417ba8c44c1f32f4e310a6566168d84982d3a/research/lorentz_rss_fixed_n/DERIVATION.md"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "proper-time-validity",
+            "title": "Proper time v0.2: when do more data help?",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "The new validity map directly calculates 1,176 combinations of model, observed count and interval method. These are not new point clouds or measurements. All 714 combinations within their assumed model class retain at least 95% coverage. Of these, 192 also meet the declared precision gate and 522 remain insufficiently precise. Another 462 are outside the assumed class."
+              },
+              {
+                "type": "paragraph",
+                "text": "More data do not repair an unknown density error. In the example with half the retention rate inside the inner interval, the unprotected calculation falsely declares at most 10% relative error with about 98.81% probability at 65,536 observed points. This is not a curvature or error-detection rate."
+              },
+              {
+                "type": "paragraph",
+                "text": "An independently justified bound on mean observed intensity inside versus outside permits a more conservative interval. With a broad ratio range from 0.5 to 2, that interval retains about 97.74% coverage in the same example but refuses the requested 10% precision. This is a justified abstention."
+              },
+              {
+                "type": "paragraph",
+                "text": "For uniform flat 4D data with true proper time 0.2 of the outer scale, 65,536 is the first passing count on the tested grid. Allowing a ratio from 0.8 to 1.25 raises it to 262,144. These are neither global minimum budgets nor sequential stopping guarantees. The browser demonstrator retains its existing flat model."
+              },
+              {
+                "type": "links",
+                "items": [
+                  {
+                    "label": "Results and budget table",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e5840afa7c7865a48766d1a5366210508a7b1f05/research/lorentz_proper_time_validity/RESULTS.md"
+                  },
+                  {
+                    "label": "Derivation and assumptions",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e5840afa7c7865a48766d1a5366210508a7b1f05/research/lorentz_proper_time_validity/DERIVATION.md"
                   }
                 ]
               }

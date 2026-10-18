@@ -4,7 +4,7 @@ Ein Wegweiser für Neugierige, Lernende und Menschen, die selbst prüfen möchte
 
 [English](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/en/) · [Wiki-Übersicht](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/de/)
 
-Quellenstand: 2026-10-18 · `8ee417ba8c44c1f32f4e310a6566168d84982d3a`
+Quellenstand: 2026-10-18 · `e5840afa7c7865a48766d1a5366210508a7b1f05`
 
 ## Was ist X6?
 
@@ -43,3 +43,5 @@ X6 ist eine öffentliche Forschungsvorschau. Eine allgemeine Raumzeittheorie, ei
 - [Eigenzeit-Ergebnisse einfach erklärt](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/de/causal-orders.html)
 
 Neu: Der Krümmungsbenchmark ist abgeschlossen. Beide Diagnosen verfehlen das Empfindlichkeitsziel; die Dichtezwillinge erklären eine grundsätzliche Mehrdeutigkeit. Das Kapitel „Kausale Ordnungen“ zeigt Ergebnisse und Folgen für die geplante Uhr.
+
+Neu: Eigenzeit v0.2 erklärt, wann zusätzliche Daten helfen, wann Dichtefehler die Intervalle ungültig machen und wann eine vorsichtigere Rechnung die Präzisionsfreigabe verweigert.

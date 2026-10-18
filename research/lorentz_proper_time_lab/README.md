@@ -132,3 +132,12 @@ uniform independent sampling, known dimension and an external time scale.
 They do not add a curvature detector or an anytime-valid inference claim.
 
 Code licence: Apache-2.0.
+
+## Weiterführend: Eigenzeit v0.2
+
+Die [Gültigkeitskarte und Budgettabelle](../lorentz_proper_time_validity/RESULTS.md)
+prüfen bekannte Krümmung, Dichteänderungen und fehlende Beobachtungen.
+Vorab begrenzte Dichteunsicherheit ermöglicht konservativere Intervalle
+im flachen Modell. Diese Erweiterung ist separat dokumentiert; der
+Browser-Demonstrator verwendet weiterhin seine ursprünglichen festen
+Stichproben und uniformen flachen Modellannahmen.
