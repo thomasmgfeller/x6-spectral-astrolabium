@@ -4,7 +4,7 @@ Hier geht es um die Frage, welche Struktur in Beziehungen steckt, bevor man eine
 
 [English](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/en/causal-orders.md) · [Wiki-Übersicht](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/de/)
 
-Quellenstand: 2026-10-18 · `01430ce5f0a648ad63d611a451f0d0fd7ccb16aa`
+Quellenstand: 2026-10-18 · `e6a5bce4cafe44ddb929da3ae32d9afa4d64eca1`
 
 ## Ereignisse und ihre Reihenfolge
 
@@ -184,3 +184,16 @@ Der nächste sinnvolle Ansatz konzentriert sich auf Zweierketten und eine vollst
 
 - [Ergebnisse und Datenbedarf](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/01430ce5f0a648ad63d611a451f0d0fd7ccb16aa/research/lorentz_de_sitter_information/RESULTS.md)
 - [Prüfvertrag und Quellen](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/01430ce5f0a648ad63d611a451f0d0fd7ccb16aa/research/lorentz_de_sitter_information/README.md)
+
+## Krümmungsintervalle: verlässlich innerhalb klarer Annahmen
+
+Der nächste Schritt verwendet nur Zweierketten. Für eine festgelegte de-Sitter-Modellfamilie wurde die vollständige geometrische Vorhersage mit exakten Brüchen und einer begrenzten Restunsicherheit berechnet. Eine mathematische Ungleichung bestätigt, dass sich die Vorhersage im gesamten untersuchten Bereich eindeutig umkehren lässt.
+
+Viele Paare aus derselben Punktwolke sind nicht unabhängig. Die neue Fehlerschranke berücksichtigt das. Unter bekannter uniformer physischer Volumendichte, unabhängigen gleichartigen Wolken und einem vorab festen Datenbudget enthalten die Intervalle den wahren Modellwert mit mindestens 95% Wahrscheinlichkeit. Diese Aussage stammt aus der Herleitung; die Simulation allein beweist sie nicht.
+
+16.384 neue Punktwolken wurden gerechnet und vollständig reproduziert. Alle geprüften Intervalle enthalten ihren Modellwert, aber keines erreicht die geforderte relative 20%-Präzision. Bei der stärksten geprüften Krümmung reicht das Intervall nach 4.096 Wolken ungefähr von 0,843 bis 3,131. Der wahre Wert ist 3,131. Das Verfahren verweigert zu Recht die Präzisionsfreigabe.
+
+Die konservative Planung nennt je nach wahrer Krümmung sehr grosse ausreichende Budgets. Diese sind keine notwendigen Mindestzahlen und wurden nicht simuliert. Deshalb ist der nächste Schritt eine schärfere statistische Schranke mit derselben endlichen Absicherung. Unbekannte Dichte, frei gewähltes Stoppen und eine reale Uhr bleiben ausserhalb der jetzigen Garantie.
+
+- [Ergebnisse und Grenzen](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e6a5bce4cafe44ddb929da3ae32d9afa4d64eca1/research/lorentz_de_sitter_c2/RESULTS.md)
+- [Vollständige Herleitung](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e6a5bce4cafe44ddb929da3ae32d9afa4d64eca1/research/lorentz_de_sitter_c2/DERIVATION.md)

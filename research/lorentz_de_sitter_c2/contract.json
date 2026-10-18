@@ -1,0 +1,83 @@
+{
+  "schema": "x6.de-sitter-c2-confidence/1",
+  "scope": "Known uniform physical-volume model, independent equal-N clouds, fixed M, h in [0,1/2]; q=R T squared only",
+  "frozen_paths": [
+    "research/lorentz_de_sitter_c2/contract.json",
+    "research/lorentz_de_sitter_c2/DERIVATION.md",
+    "research/lorentz_de_sitter_c2/exact.py",
+    "research/lorentz_de_sitter_c2/support.py",
+    "research/lorentz_de_sitter_c2/analysis.py",
+    "research/lorentz_de_sitter_c2/run.py",
+    "research/lorentz_de_sitter_c2/verify.py",
+    "research/lorentz_de_sitter_c2/requirements.txt",
+    "research/lorentz_curvature/geometry.py",
+    "research/lorentz_rss_fixed_n/quadrature.py"
+  ],
+  "seed_namespace": "x6/de-sitter-c2-confidence/v01/2026-10-18/new",
+  "fresh_n": 128,
+  "fresh_h": [
+    "0",
+    "1/10",
+    "1/4",
+    "1/2"
+  ],
+  "fresh_clouds_per_h": 4096,
+  "observed_group_sizes": [
+    1,
+    16,
+    256,
+    4096
+  ],
+  "planning_cloud_counts": [
+    1,
+    4,
+    16,
+    64,
+    256,
+    1024,
+    4096,
+    16384,
+    65536,
+    262144,
+    1048576,
+    4194304,
+    16777216,
+    67108864,
+    268435456
+  ],
+  "probability_grid": [
+    "0",
+    "1/40",
+    "1/20",
+    "3/40",
+    "1/10",
+    "1/8",
+    "3/20",
+    "7/40",
+    "1/5",
+    "9/40",
+    "1/4",
+    "11/40",
+    "3/10",
+    "13/40",
+    "7/20",
+    "3/8",
+    "2/5",
+    "17/40",
+    "9/20",
+    "19/40",
+    "1/2"
+  ],
+  "decisions": {
+    "coverage": "Theorem: >=95pct for each fixed budget under the declared model; fresh observed rates are checks only",
+    "precision": "Nonempty q interval, positive lower bound and exact radius <=1/5",
+    "empty": "MODEL_DOMAIN_INCOMPATIBLE, no precision report",
+    "planning": "First passing power of four for 2epsilon sufficient-design rule, never a global minimum"
+  },
+  "limits": {
+    "wall_seconds": 600,
+    "address_space_gib": 2
+  },
+  "failure_policy": "Retain every abstention and failed control; no extra clouds, refitting or optional stopping",
+  "provenance": "Mathematical development and off-grid identities precede this freeze. Target-grid calculation and all fresh clouds begin only after public source freeze."
+}

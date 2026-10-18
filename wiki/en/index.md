@@ -4,7 +4,7 @@ A guide for curious readers, learners and people who want to check the work them
 
 [Deutsch](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/de/) · [Wiki overview](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/en/)
 
-Source snapshot: 2026-10-18 · `01430ce5f0a648ad63d611a451f0d0fd7ccb16aa`
+Source snapshot: 2026-10-18 · `e6a5bce4cafe44ddb929da3ae32d9afa4d64eca1`
 
 ## What is X6?
 
@@ -47,3 +47,5 @@ New: the curvature benchmark is complete. Both diagnostics miss the sensitivity 
 New: proper time v0.2 explains when additional data help, when density errors invalidate intervals and when a conservative analysis refuses precision.
 
 New: 16,384 fresh clouds test a restricted de Sitter curvature estimator. Extra chains add little precision; “Causal orders” explains the result and the next research step.
+
+New: two-element chains now yield conservative curvature intervals with mathematically justified coverage in the known uniform model. Fresh tests also show that the intervals remain too wide for 20% precision.
