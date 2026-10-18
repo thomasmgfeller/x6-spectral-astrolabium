@@ -37,6 +37,15 @@ AUTHORISED_NOTICE_UPDATES = {'app/index.html': 'ff60231155f0fc869564ec0eb24c8756
 # preservation.py proves FFT/filter, graph mapping and all other frames unchanged.
 AUTHORISED_NUMERICS_UPDATES = {'app/index.html': '56df754a1c5c3d26022e54b000f0d9e52ab4067d39e6a664556de12bfd7dc071', 'agent/math-agent-config.json': '6792fc62d3cb6cfe846060dc97dd1e706e24f6fe0a5409f3075cc8d3447053e5'}
 
+# User-authorised end-of-trial cleanup after the exclusive cutoff.
+# Historical baseline and prior amendment digests remain unchanged.
+AUTHORISED_SHUTDOWN_UPDATES = {
+    ".github/workflows/x6-data-agent.yml": "6157003f4c0db607cd14faf435f5fcbc49ad73ed1cae6c61a12cdd80dd89d0ee",
+    ".github/workflows/x6-math-agent.yml": "4c18621f9aada3111bb4e7fe8495e9c6d202f047428b689ac709d9b90366cd27",
+    ".github/workflows/x6-source-agents.yml": "5ee8bda493af01ac14b646997d97486108a7670012841d8997028ea8d35f8216",
+    "agent/math-agent-config.json": "7f7626b4b4e417af35eb5c9c9ecc5e64f02c1762fb36c8687fb53987bc122cf5"
+}
+
 
 def sha(data):
     return hashlib.sha256(data).hexdigest()
@@ -56,7 +65,8 @@ def protected_baseline(existing, check):
     baseline = existing.get("protected_research_baseline")
     if not isinstance(baseline, dict) or sha(canonical(baseline).encode()) != PROTECTED_MAP_SHA:
         raise ValueError("original 17-file research baseline changed")
-    protected = {**baseline, **AUTHORISED_WINDOW_UPDATES, **AUTHORISED_NOTICE_UPDATES, **AUTHORISED_NUMERICS_UPDATES}
+    protected = {**baseline, **AUTHORISED_WINDOW_UPDATES, **AUTHORISED_NOTICE_UPDATES, **AUTHORISED_NUMERICS_UPDATES,
+                 **AUTHORISED_SHUTDOWN_UPDATES}
     if existing.get("protected_research") != protected:
         raise ValueError("research inventory differs from the explicitly authorised amendment")
     for name, expected in protected.items():

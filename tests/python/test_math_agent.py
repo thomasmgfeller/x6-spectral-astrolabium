@@ -152,12 +152,12 @@ class WorkflowWindowTests(unittest.TestCase):
                 with self.subTest(workflow=name, time=now):
                     self.assertEqual(self.guard(name, now), expected)
 
-    def test_cron_includes_sunday_with_existing_cadence(self):
-        for name, expected in [("x6-data-agent.yml", "17 6 11-18 10 *"),
-                               ("x6-source-agents.yml", "37 6 11-18 10 *"),
-                               ("x6-math-agent.yml", "23 */6 11-18 10 *")]:
+    def test_schedules_removed_after_authorised_end(self):
+        for name in ("x6-data-agent.yml", "x6-source-agents.yml", "x6-math-agent.yml"):
             source = (m.ROOT / ".github/workflows" / name).read_text()
-            self.assertEqual(re.findall(r"cron: '([^']+)'", source), [expected])
+            self.assertNotIn("schedule:", source)
+            self.assertEqual(re.findall(r"cron: '([^']+)'", source), [])
+            self.assertRegex(source, r"(?m)^  workflow_dispatch:$")
 
 
 if __name__ == "__main__":
