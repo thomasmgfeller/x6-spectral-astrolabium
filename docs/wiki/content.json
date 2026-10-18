@@ -1,7 +1,7 @@
 {
   "schema": "x6.bilingual-wiki/1",
   "snapshot_date": "2026-10-18",
-  "source_commit": "49710201cdb2e2941404266b25e88051a659b08e",
+  "source_commit": "e947dfbdd49890dcb119940548537d1db59272c2",
   "articles": [
     {
       "id": "index",
@@ -1385,7 +1385,7 @@
               },
               {
                 "type": "paragraph",
-                "text": "Der lokale Operator nach Boguñá und Krioukov ist separat als Quellenprüfung und Koeffizientenvortest dokumentiert. Die intrinsische Reproduktion fehlt. Da ein konstantes Feld dort identisch null ergibt, darf die BD-Regel −2B(1) nicht als Krümmungsmessung übernommen werden."
+                "text": "Der damalige BK-Koeffizientenvortest wurde inzwischen durch den getrennten intrinsischen Phase-1/2-Piloten ergänzt; dessen Abnahme scheitert ebenfalls. Details folgen im nächsten Abschnitt. Die BD-Regel −2B(1) ist weiterhin keine Krümmungsformel für den konstantenannihilierenden BK-Operator."
               },
               {
                 "type": "links",
@@ -1403,8 +1403,51 @@
                     "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/49710201cdb2e2941404266b25e88051a659b08e/research/lorentz_bd_reference/VERIFICATION.json"
                   },
                   {
-                    "label": "Lokaler Operator: offener Reproduktionszweig",
-                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/49710201cdb2e2941404266b25e88051a659b08e/research/lorentz_local_dalembert/README.md"
+                    "label": "BK Phase 1/2: Ergebnisse",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e947dfbdd49890dcb119940548537d1db59272c2/research/lorentz_local_dalembert/PHASE12_RESULTS.md"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "bk-phase12",
+            "title": "BK Phase 1/2: Was trägt die intrinsische Rekonstruktion?",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "Der lokale Boguñá–Krioukov-Pilot implementiert Nachbarschaften aus längsten Ketten und Kausalüberlappungen. Die eigentliche Rekonstruktion erhält Kausalordnung, bekannte Dichte und unabhängige Zufallsmarken für Gleichstände. Einbettungskoordinaten werden nur zum Simulieren und Prüfen benutzt. Untersucht wird zunächst 2+1-dimensionaler flacher Minkowski-Raum."
+              },
+              {
+                "type": "paragraph",
+                "text": "Protokoll und danach Implementierung samt Auswertung wurden vor den jeweiligen Daten öffentlich fixiert. Auf sechs Entwicklungswolken folgen 48 getrennte Testwolken, je 16 bei drei Dichten. Alle Testwolken wurden vollständig nachgerechnet; Produktidentität, konstante Felder, affine Kartenwechsel und drei Umnummerierungsprüfungen bestehen."
+              },
+              {
+                "type": "paragraph",
+                "text": "Bei der höchsten Dichte sinkt der relative Raumabstandsfehler auf 0,104, bedingt auf erfolgreiche Ankersuche. Gleichzeitig fehlen im Mittel 87,8 Prozent der Abstandsschätzungen, und die Auswahl findet nur 15,1 Prozent der gewünschten lokalen Kappenpunkte. Gute Rangkorrelation der verbleibenden Paare ist daher noch keine gute Nachbarschaft."
+              },
+              {
+                "type": "paragraph",
+                "text": "Nur 3 von 16 dichten Wolken liefern einen verwendbaren Operator. Der relative Metrik-RMS-Fehler beträgt 3,110 mit glatten Testkoordinaten und 5,524 mit intrinsisch erzeugten Koordinaten; verlangt waren höchstens 0,5. Die richtige Signatur gelingt jeweils in 2 von 16 Wolken. Deshalb gilt HOLD_PHASE3."
+              },
+              {
+                "type": "paragraph",
+                "text": "Das ist ein negativer Befund für diesen begrenzten Such- und Skalenplan, kein Gegenbeweis zum BK-Kontinuumsgrenzwert. Ein nächster Versuch braucht bessere Suchabdeckung, ausreichende Populationen, einen neuen Vertrag und frische Testdaten. Der BD-C2-NO_GO wird dadurch nicht geändert."
+              },
+              {
+                "type": "links",
+                "items": [
+                  {
+                    "label": "Results / Ergebnisse",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e947dfbdd49890dcb119940548537d1db59272c2/research/lorentz_local_dalembert/PHASE12_RESULTS.md"
+                  },
+                  {
+                    "label": "Protocol / Protokoll",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e947dfbdd49890dcb119940548537d1db59272c2/research/lorentz_local_dalembert/phase12/PROTOCOL.md"
+                  },
+                  {
+                    "label": "Data / Daten",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e947dfbdd49890dcb119940548537d1db59272c2/research/lorentz_local_dalembert/phase12/results/summary.json"
                   }
                 ]
               }
@@ -2057,7 +2100,7 @@
               },
               {
                 "type": "paragraph",
-                "text": "The local Boguñá–Krioukov operator is documented separately as a source audit and coefficient preflight. Intrinsic reproduction is still missing. Its constant-field result is identically zero, so the BD rule −2B(1) cannot be transferred as a curvature measurement."
+                "text": "The original BK coefficient preflight has since been supplemented by a separate intrinsic phase-1/2 pilot, which also fails acceptance. Details follow below. The BD rule −2B(1) is still not a curvature formula for the constant-annihilating BK operator."
               },
               {
                 "type": "links",
@@ -2075,8 +2118,51 @@
                     "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/49710201cdb2e2941404266b25e88051a659b08e/research/lorentz_bd_reference/VERIFICATION.json"
                   },
                   {
-                    "label": "Local operator: open reproduction track",
-                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/49710201cdb2e2941404266b25e88051a659b08e/research/lorentz_local_dalembert/README.md"
+                    "label": "BK phases 1/2: results",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e947dfbdd49890dcb119940548537d1db59272c2/research/lorentz_local_dalembert/PHASE12_RESULTS.md"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "bk-phase12",
+            "title": "BK phases 1/2: what does intrinsic reconstruction deliver?",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "The local Boguñá–Krioukov pilot implements neighborhoods from longest chains and causal overlaps. Inference receives the causal order, known density and independent random marks for ties. Embedding coordinates are restricted to simulation and evaluation. This first pilot uses flat 2+1-dimensional Minkowski spacetime."
+              },
+              {
+                "type": "paragraph",
+                "text": "The protocol, followed by implementation and analysis, was publicly fixed before the corresponding data. Six development clouds precede 48 separate test clouds, 16 at each of three densities. Every test cloud was replayed. Product-identity, constant-field, affine-chart and three relabelling checks pass."
+              },
+              {
+                "type": "paragraph",
+                "text": "At the highest density, relative spatial distance error falls to 0.104, conditional on finding anchors. Meanwhile 87.8 percent of distance estimates are missing on average, and selection recovers only 15.1 percent of the desired local cap events. Good ranking of the remaining pairs therefore does not establish good neighborhood reconstruction."
+              },
+              {
+                "type": "paragraph",
+                "text": "Only 3 of 16 high-density clouds provide a usable operator. Relative metric RMS error is 3.110 with smooth coordinate fields and 5.524 with intrinsically constructed fields, against a limit of 0.5. Correct signature is obtained in 2 of 16 clouds in either chart. The decision is HOLD_PHASE3."
+              },
+              {
+                "type": "paragraph",
+                "text": "This is a negative finding for the bounded search and scale plan, not a counterexample to the BK continuum result. A follow-up requires improved search coverage, sufficient populations, a new protocol and fresh test data. The earlier BD-C2 NO_GO is unchanged."
+              },
+              {
+                "type": "links",
+                "items": [
+                  {
+                    "label": "Results / Ergebnisse",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e947dfbdd49890dcb119940548537d1db59272c2/research/lorentz_local_dalembert/PHASE12_RESULTS.md"
+                  },
+                  {
+                    "label": "Protocol / Protokoll",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e947dfbdd49890dcb119940548537d1db59272c2/research/lorentz_local_dalembert/phase12/PROTOCOL.md"
+                  },
+                  {
+                    "label": "Data / Daten",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e947dfbdd49890dcb119940548537d1db59272c2/research/lorentz_local_dalembert/phase12/results/summary.json"
                   }
                 ]
               }

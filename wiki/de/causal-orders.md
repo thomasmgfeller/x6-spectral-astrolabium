@@ -4,7 +4,7 @@ Hier geht es um die Frage, welche Struktur in Beziehungen steckt, bevor man eine
 
 [English](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/en/causal-orders.md) · [Wiki-Übersicht](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/de/)
 
-Quellenstand: 2026-10-18 · `49710201cdb2e2941404266b25e88051a659b08e`
+Quellenstand: 2026-10-18 · `e947dfbdd49890dcb119940548537d1db59272c2`
 
 ## Ereignisse und ihre Reihenfolge
 
@@ -237,9 +237,25 @@ Im Hauptvergleich beträgt der mittlere quadratische Fehler als Wurzel (RMSE) 14
 
 Das Ergebnis ist begrenzt: C2 kennt die de-Sitter-Modellfamilie und profitiert an der oberen Grenze von der Begrenzung seiner Schätzung. Bei der kleinsten Dichte hat BD in drei Testzellen den kleineren RMSE. Die nominalen Student-Intervalle haben keine bewiesene 95%-Überdeckung, und auch C2 erreicht im Hauptfall die 20%-Breitenvorgabe nicht. Der Vergleich widerlegt weder die BD-Kontinuumsgrenze noch begründet er eine universelle Überlegenheit von C2.
 
-Der lokale Operator nach Boguñá und Krioukov ist separat als Quellenprüfung und Koeffizientenvortest dokumentiert. Die intrinsische Reproduktion fehlt. Da ein konstantes Feld dort identisch null ergibt, darf die BD-Regel −2B(1) nicht als Krümmungsmessung übernommen werden.
+Der damalige BK-Koeffizientenvortest wurde inzwischen durch den getrennten intrinsischen Phase-1/2-Piloten ergänzt; dessen Abnahme scheitert ebenfalls. Details folgen im nächsten Abschnitt. Die BD-Regel −2B(1) ist weiterhin keine Krümmungsformel für den konstantenannihilierenden BK-Operator.
 
 - [Ergebnisse und Grenzen](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/49710201cdb2e2941404266b25e88051a659b08e/research/lorentz_bd_reference/RESULTS.md)
 - [Methoden und Vertrag](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/49710201cdb2e2941404266b25e88051a659b08e/research/lorentz_bd_reference/METHODS.md)
 - [Prüfprotokoll](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/49710201cdb2e2941404266b25e88051a659b08e/research/lorentz_bd_reference/VERIFICATION.json)
-- [Lokaler Operator: offener Reproduktionszweig](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/49710201cdb2e2941404266b25e88051a659b08e/research/lorentz_local_dalembert/README.md)
+- [BK Phase 1/2: Ergebnisse](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e947dfbdd49890dcb119940548537d1db59272c2/research/lorentz_local_dalembert/PHASE12_RESULTS.md)
+
+## BK Phase 1/2: Was trägt die intrinsische Rekonstruktion?
+
+Der lokale Boguñá–Krioukov-Pilot implementiert Nachbarschaften aus längsten Ketten und Kausalüberlappungen. Die eigentliche Rekonstruktion erhält Kausalordnung, bekannte Dichte und unabhängige Zufallsmarken für Gleichstände. Einbettungskoordinaten werden nur zum Simulieren und Prüfen benutzt. Untersucht wird zunächst 2+1-dimensionaler flacher Minkowski-Raum.
+
+Protokoll und danach Implementierung samt Auswertung wurden vor den jeweiligen Daten öffentlich fixiert. Auf sechs Entwicklungswolken folgen 48 getrennte Testwolken, je 16 bei drei Dichten. Alle Testwolken wurden vollständig nachgerechnet; Produktidentität, konstante Felder, affine Kartenwechsel und drei Umnummerierungsprüfungen bestehen.
+
+Bei der höchsten Dichte sinkt der relative Raumabstandsfehler auf 0,104, bedingt auf erfolgreiche Ankersuche. Gleichzeitig fehlen im Mittel 87,8 Prozent der Abstandsschätzungen, und die Auswahl findet nur 15,1 Prozent der gewünschten lokalen Kappenpunkte. Gute Rangkorrelation der verbleibenden Paare ist daher noch keine gute Nachbarschaft.
+
+Nur 3 von 16 dichten Wolken liefern einen verwendbaren Operator. Der relative Metrik-RMS-Fehler beträgt 3,110 mit glatten Testkoordinaten und 5,524 mit intrinsisch erzeugten Koordinaten; verlangt waren höchstens 0,5. Die richtige Signatur gelingt jeweils in 2 von 16 Wolken. Deshalb gilt HOLD_PHASE3.
+
+Das ist ein negativer Befund für diesen begrenzten Such- und Skalenplan, kein Gegenbeweis zum BK-Kontinuumsgrenzwert. Ein nächster Versuch braucht bessere Suchabdeckung, ausreichende Populationen, einen neuen Vertrag und frische Testdaten. Der BD-C2-NO_GO wird dadurch nicht geändert.
+
+- [Results / Ergebnisse](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e947dfbdd49890dcb119940548537d1db59272c2/research/lorentz_local_dalembert/PHASE12_RESULTS.md)
+- [Protocol / Protokoll](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e947dfbdd49890dcb119940548537d1db59272c2/research/lorentz_local_dalembert/phase12/PROTOCOL.md)
+- [Data / Daten](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e947dfbdd49890dcb119940548537d1db59272c2/research/lorentz_local_dalembert/phase12/results/summary.json)

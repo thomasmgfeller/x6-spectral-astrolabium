@@ -4,7 +4,7 @@ For every result, ask: which claim was tested, using what data and under which c
 
 [Deutsch](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/de/evidence.md) · [Wiki overview](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/en/)
 
-Source snapshot: 2026-10-18 · `49710201cdb2e2941404266b25e88051a659b08e`
+Source snapshot: 2026-10-18 · `e947dfbdd49890dcb119940548537d1db59272c2`
 
 ## Four different kinds of evidence
 

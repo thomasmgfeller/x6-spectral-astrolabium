@@ -6,20 +6,20 @@ Registerstand: 2026-10-18. MAIN / SOFTWARE. Kein Live-Prüfsiegel.
 
 Branch: main
 
-Commit: 49710201cdb2e2941404266b25e88051a659b08e
+Commit: e947dfbdd49890dcb119940548537d1db59272c2
 
-[Originaldokumentation](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/49710201cdb2e2941404266b25e88051a659b08e/research/lorentz_bd_reference/README.md)
+[Originaldokumentation](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e947dfbdd49890dcb119940548537d1db59272c2/research/lorentz_bd_reference/README.md)
 
 ## Dokumentierte Aussage
 
 Geglätteter 4D-Benincasa–Dowker-Operator mit Poisson-Punktzahlen, bekannter physischer Dichte und externer Eigenzeit T=1. 384 Entwicklungs- und 6.144 getrennte Testwolken. Im Hauptfall ist das RMSE-Verhältnis BD/C2 33,34; die vorab lokal fixierten Nutzenkriterien scheitern. C2 nutzt die bekannte de-Sitter-Familie und Modellgrenzen. Nominale Student-Intervalle sind keine garantierten 95%-Intervalle; keine universelle Rangordnung oder allgemeine Krümmungsuhr.
 
-- [research/lorentz_bd_reference/RESULTS.md](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/49710201cdb2e2941404266b25e88051a659b08e/research/lorentz_bd_reference/RESULTS.md): Ergebnisse aller zwölf Testzellen, Unsicherheiten, Kosten und Grenzen des NO_GO.
-- [research/lorentz_bd_reference/METHODS.md](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/49710201cdb2e2941404266b25e88051a659b08e/research/lorentz_bd_reference/METHODS.md): Operator, Poisson-Sprinkling, Kontinuumsquadratur und vorab lokal festgelegter Vergleich; keine öffentliche Vorregistrierung.
-- [research/lorentz_bd_reference/contract.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/49710201cdb2e2941404266b25e88051a659b08e/research/lorentz_bd_reference/contract.json): Unveränderter Prüfvertrag mit Budget, Seeds, Entwicklungsauswahl und Abbruchregeln.
-- [research/lorentz_bd_reference/VERIFICATION.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/49710201cdb2e2941404266b25e88051a659b08e/research/lorentz_bd_reference/VERIFICATION.json): Archivierter vollständiger Nachbau und unabhängige Teilkontrollen.
-- [research/lorentz_bd_reference/results/execution.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/49710201cdb2e2941404266b25e88051a659b08e/research/lorentz_bd_reference/results/execution.json): Ausführungsumgebung, ursprüngliche Quellenfixierung und gemessener Aufwand.
-- [research/lorentz_bd_reference/results/summary.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/49710201cdb2e2941404266b25e88051a659b08e/research/lorentz_bd_reference/results/summary.json): Vollständige Kennzahlen und alle Entscheidungen.
+- [research/lorentz_bd_reference/RESULTS.md](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e947dfbdd49890dcb119940548537d1db59272c2/research/lorentz_bd_reference/RESULTS.md): Ergebnisse aller zwölf Testzellen, Unsicherheiten, Kosten und Grenzen des NO_GO.
+- [research/lorentz_bd_reference/METHODS.md](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e947dfbdd49890dcb119940548537d1db59272c2/research/lorentz_bd_reference/METHODS.md): Operator, Poisson-Sprinkling, Kontinuumsquadratur und vorab lokal festgelegter Vergleich; keine öffentliche Vorregistrierung.
+- [research/lorentz_bd_reference/contract.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e947dfbdd49890dcb119940548537d1db59272c2/research/lorentz_bd_reference/contract.json): Unveränderter Prüfvertrag mit Budget, Seeds, Entwicklungsauswahl und Abbruchregeln.
+- [research/lorentz_bd_reference/VERIFICATION.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e947dfbdd49890dcb119940548537d1db59272c2/research/lorentz_bd_reference/VERIFICATION.json): Archivierter vollständiger Nachbau und unabhängige Teilkontrollen.
+- [research/lorentz_bd_reference/results/execution.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e947dfbdd49890dcb119940548537d1db59272c2/research/lorentz_bd_reference/results/execution.json): Ausführungsumgebung, ursprüngliche Quellenfixierung und gemessener Aufwand.
+- [research/lorentz_bd_reference/results/summary.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e947dfbdd49890dcb119940548537d1db59272c2/research/lorentz_bd_reference/results/summary.json): Vollständige Kennzahlen und alle Entscheidungen.
 
 ## Reproduzieren
 
@@ -30,7 +30,7 @@ Neue Arbeits- und Ausgabeordner verwenden; Voraussetzungen aus der Originaldokum
 ```sh
 git clone --branch main https://github.com/thomasmgfeller/x6-spectral-astrolabium.git x6-lorentz-bd-reference
 cd x6-lorentz-bd-reference
-git checkout --detach 49710201cdb2e2941404266b25e88051a659b08e
+git checkout --detach e947dfbdd49890dcb119940548537d1db59272c2
 python3 -m pip install -r research/lorentz_bd_reference/requirements-replay.txt
 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python3 -B research/lorentz_bd_reference/verify.py --archive research/lorentz_bd_reference/results --replay
 ```

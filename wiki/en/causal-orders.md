@@ -4,7 +4,7 @@ This research asks what structure is carried by relationships before a spatial d
 
 [Deutsch](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/de/causal-orders.md) · [Wiki overview](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/en/)
 
-Source snapshot: 2026-10-18 · `49710201cdb2e2941404266b25e88051a659b08e`
+Source snapshot: 2026-10-18 · `e947dfbdd49890dcb119940548537d1db59272c2`
 
 ## Events and their ordering
 
@@ -237,9 +237,25 @@ In the primary comparison, root mean square error (RMSE) is 14.924 for BD and 0.
 
 The conclusion has limits: C2 knows the de Sitter family and benefits from clipping at its upper model boundary. At the lowest density, BD has a smaller RMSE in three cells. Nominal Student intervals have no proven 95% coverage; even C2 misses the primary 20% width requirement. This comparison neither refutes the BD continuum limit nor establishes universal C2 superiority.
 
-The local Boguñá–Krioukov operator is documented separately as a source audit and coefficient preflight. Intrinsic reproduction is still missing. Its constant-field result is identically zero, so the BD rule −2B(1) cannot be transferred as a curvature measurement.
+The original BK coefficient preflight has since been supplemented by a separate intrinsic phase-1/2 pilot, which also fails acceptance. Details follow below. The BD rule −2B(1) is still not a curvature formula for the constant-annihilating BK operator.
 
 - [Results and limits](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/49710201cdb2e2941404266b25e88051a659b08e/research/lorentz_bd_reference/RESULTS.md)
 - [Methods and protocol](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/49710201cdb2e2941404266b25e88051a659b08e/research/lorentz_bd_reference/METHODS.md)
 - [Verification record](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/49710201cdb2e2941404266b25e88051a659b08e/research/lorentz_bd_reference/VERIFICATION.json)
-- [Local operator: open reproduction track](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/49710201cdb2e2941404266b25e88051a659b08e/research/lorentz_local_dalembert/README.md)
+- [BK phases 1/2: results](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e947dfbdd49890dcb119940548537d1db59272c2/research/lorentz_local_dalembert/PHASE12_RESULTS.md)
+
+## BK phases 1/2: what does intrinsic reconstruction deliver?
+
+The local Boguñá–Krioukov pilot implements neighborhoods from longest chains and causal overlaps. Inference receives the causal order, known density and independent random marks for ties. Embedding coordinates are restricted to simulation and evaluation. This first pilot uses flat 2+1-dimensional Minkowski spacetime.
+
+The protocol, followed by implementation and analysis, was publicly fixed before the corresponding data. Six development clouds precede 48 separate test clouds, 16 at each of three densities. Every test cloud was replayed. Product-identity, constant-field, affine-chart and three relabelling checks pass.
+
+At the highest density, relative spatial distance error falls to 0.104, conditional on finding anchors. Meanwhile 87.8 percent of distance estimates are missing on average, and selection recovers only 15.1 percent of the desired local cap events. Good ranking of the remaining pairs therefore does not establish good neighborhood reconstruction.
+
+Only 3 of 16 high-density clouds provide a usable operator. Relative metric RMS error is 3.110 with smooth coordinate fields and 5.524 with intrinsically constructed fields, against a limit of 0.5. Correct signature is obtained in 2 of 16 clouds in either chart. The decision is HOLD_PHASE3.
+
+This is a negative finding for the bounded search and scale plan, not a counterexample to the BK continuum result. A follow-up requires improved search coverage, sufficient populations, a new protocol and fresh test data. The earlier BD-C2 NO_GO is unchanged.
+
+- [Results / Ergebnisse](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e947dfbdd49890dcb119940548537d1db59272c2/research/lorentz_local_dalembert/PHASE12_RESULTS.md)
+- [Protocol / Protokoll](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e947dfbdd49890dcb119940548537d1db59272c2/research/lorentz_local_dalembert/phase12/PROTOCOL.md)
+- [Data / Daten](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e947dfbdd49890dcb119940548537d1db59272c2/research/lorentz_local_dalembert/phase12/results/summary.json)

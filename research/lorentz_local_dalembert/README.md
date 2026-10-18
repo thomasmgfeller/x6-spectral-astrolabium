@@ -1,8 +1,29 @@
 # Local d’Alembertian: independent reproduction track
 
-**Status: source audit and coefficient preflight only. No intrinsic reproduction
-or curved-space estimator has yet been completed.** Run `python3 -B
-research/lorentz_local_dalembert/preflight.py` to check the final assembly.
+**Current status: phase 1/2 implemented and tested; `HOLD_PHASE3`.**
+The bounded 2+1 Minkowski pilot includes longest chains, causal-overlap spatial
+neighborhoods, the BK operator, product-identity metric extraction and an
+exploratory intrinsic chart. All 48 held-out clouds have been replayed. Scientific
+acceptance fails: at the highest density only 3/16 clouds provide a usable
+stencil; relative metric RMS errors are 3.110 for smooth coordinate fields and
+5.524 for intrinsic fields, against the prespecified 0.5 limit. No curved-space
+estimator or continuum-limit reproduction is established.
+
+Read [results and limitations](PHASE12_RESULTS.md),
+[the publicly frozen protocol](phase12/PROTOCOL.md) and
+[implementation decisions](phase12/IMPLEMENTATION.md). The original
+`PREFLIGHT.json` is retained as a historical assembly-only result.
+
+```sh
+python3 -m pip install -r research/lorentz_bd_reference/requirements-replay.txt
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python3 -B research/lorentz_local_dalembert/phase12/verify.py
+```
+
+Requires Python 3.12, NumPy, SciPy, a C++17 compiler and full Git history.
+Expected software result: `PASS_NUMERICAL_REPLAY`, 48 clouds. Expected scientific
+decision: `HOLD_PHASE3`. Coordinate hashes are reported separately from numerical
+agreement; the local archived replay matches all 48. Marks travel with events
+in relabelling controls; no canonical frame of an unmarked poset is claimed.
 
 Boguñá & Krioukov, [Phys. Rev. D 113, 024046, 22 January 2026](https://doi.org/10.1103/np89-qzjp),
 [arXiv:2506.18745v1](https://arxiv.org/abs/2506.18745v1), construct local
@@ -14,7 +35,7 @@ transferred to this operator to obtain curvature. The simulation's selection
 of a central reference event uses a coordinate-based boundary safeguard;
 an independently intrinsic reproduction must distinguish this from inference.
 
-## Proposed acceptance sequence
+## Research acceptance sequence (historical plan, now partly implemented)
 
 1. Implement longest-chain proper time with explicit edge/vertex convention,
    relabelling invariance, finite-density bias and independent replay.
@@ -30,6 +51,6 @@ an independently intrinsic reproduction must distinguish this from inference.
 5. Only after a successful flat reproduction, specify curved benchmarks and
    the precise continuum target. Curvature extraction needs a separate argument.
 
-This track is separate from the BD finite-budget NO_GO. Its full implementation
-is not smuggled into the completed BD benchmark. No changed-curvature run is
-authorized by the preflight result. Apache-2.0 original coefficient assembly.
+This track is separate from the unchanged BD finite-budget NO_GO. The new
+phase-1/2 implementation does not retroactively alter that benchmark. Phase 3
+remains stopped by the new pilot's own gates. Apache-2.0 original implementation.

@@ -8,16 +8,16 @@ Registerstand: 2026-10-18. MAIN / SOFTWARE. Kein Live-Prüfsiegel.
 
 Branch: main
 
-Commit: 49710201cdb2e2941404266b25e88051a659b08e
+Commit: e947dfbdd49890dcb119940548537d1db59272c2
 
-[Originaldokumentation](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/49710201cdb2e2941404266b25e88051a659b08e/docs/SCIENTIFIC_SCOPE.md)
+[Originaldokumentation](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e947dfbdd49890dcb119940548537d1db59272c2/docs/SCIENTIFIC_SCOPE.md)
 
 ## Dokumentierte Aussage
 
 Fünf rationale Referenzfälle prüfen strikte Untergrenzen für endliche gerundete Graph-Laplacians, einschliesslich ungültiger Schranken und getrennter Komponenten.
 
-- [docs/integration-v0.1/evidence/spectral-run.log](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/49710201cdb2e2941404266b25e88051a659b08e/docs/integration-v0.1/evidence/spectral-run.log): Erhaltene Referenzausführung; keine physische oder allgemeine Raumzeitaussage.
-- [evidence/historical_python_results.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/49710201cdb2e2941404266b25e88051a659b08e/evidence/historical_python_results.json): Historischer Python-Befund; datierter Prüfstand.
+- [docs/integration-v0.1/evidence/spectral-run.log](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e947dfbdd49890dcb119940548537d1db59272c2/docs/integration-v0.1/evidence/spectral-run.log): Erhaltene Referenzausführung; keine physische oder allgemeine Raumzeitaussage.
+- [evidence/historical_python_results.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e947dfbdd49890dcb119940548537d1db59272c2/evidence/historical_python_results.json): Historischer Python-Befund; datierter Prüfstand.
 
 ## Reproduzieren
 
@@ -28,7 +28,7 @@ Neue Arbeits- und Ausgabeordner verwenden; Voraussetzungen aus der Originaldokum
 ```sh
 git clone --branch main https://github.com/thomasmgfeller/x6-spectral-astrolabium.git x6-astrolabium
 cd x6-astrolabium
-git checkout --detach 49710201cdb2e2941404266b25e88051a659b08e
+git checkout --detach e947dfbdd49890dcb119940548537d1db59272c2
 python3 x6.py run spectral --output runs/register-spectral
 python3 x6.py verify runs/register-spectral
 ```
