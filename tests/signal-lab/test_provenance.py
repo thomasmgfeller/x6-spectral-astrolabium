@@ -17,7 +17,7 @@ from unittest.mock import patch
 
 
 ROOT = Path(__file__).resolve().parents[2]
-REVIEWED_MAP_SHA256 = "1addafe38752ffcab7dd083907c9beaadf0f108fc47f544bd9a70541eb8c4de5"
+REVIEWED_MAP_SHA256 = "dcb4d1d00a485efc2f8dbf0bb97d4d0aa1171ae95742e71218b914485bcd9ead"
 
 
 def load_module(name, filename):
