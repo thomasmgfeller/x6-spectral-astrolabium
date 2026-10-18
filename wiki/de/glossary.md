@@ -4,7 +4,7 @@ Die Erklärungen sind Einstiegshilfen. Für eine Rechnung gilt immer die präzis
 
 [English](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/en/glossary.md) · [Wiki-Übersicht](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/de/)
 
-Quellenstand: 2026-10-18 · `e6a5bce4cafe44ddb929da3ae32d9afa4d64eca1`
+Quellenstand: 2026-10-18 · `d9bd4d0266faff0fddd70b4067ad4422367f25a1`
 
 ## Die wichtigsten Begriffe
 

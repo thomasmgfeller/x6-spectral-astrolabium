@@ -4,7 +4,7 @@ Nicht jeder Ordner ist eine fertige Anwendung. Diese Karte zeigt, wofür die ein
 
 [English](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/en/research-map.md) · [Wiki-Übersicht](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/de/)
 
-Quellenstand: 2026-10-18 · `e6a5bce4cafe44ddb929da3ae32d9afa4d64eca1`
+Quellenstand: 2026-10-18 · `d9bd4d0266faff0fddd70b4067ad4422367f25a1`
 
 ## Drei direkte Einstiege
 

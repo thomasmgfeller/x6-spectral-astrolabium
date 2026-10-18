@@ -1,7 +1,7 @@
 {
   "schema": "x6.bilingual-wiki/1",
   "snapshot_date": "2026-10-18",
-  "source_commit": "e6a5bce4cafe44ddb929da3ae32d9afa4d64eca1",
+  "source_commit": "d9bd4d0266faff0fddd70b4067ad4422367f25a1",
   "articles": [
     {
       "id": "index",
@@ -128,6 +128,10 @@
               {
                 "type": "paragraph",
                 "text": "Neu: Zweierketten liefern jetzt konservative Krümmungsintervalle mit mathematisch begründeter Überdeckung im bekannten uniformen Modell. Die neuen Tests zeigen zugleich, dass die Intervalle für 20%-Präzision noch zu breit sind."
+              },
+              {
+                "type": "paragraph",
+                "text": "Neu: Die schärfere KL-Schranke senkt hinreichende Datenbudgets um Faktor 2,71–2,77. 77.824 neue Wolken zeigen erste 20%-Präzisionsfreigaben innerhalb der bekannten de-Sitter-Familie; bei kleineren Krümmungen bleiben die Intervalle zu breit."
               }
             ]
           }
@@ -256,6 +260,10 @@
               {
                 "type": "paragraph",
                 "text": "New: two-element chains now yield conservative curvature intervals with mathematically justified coverage in the known uniform model. Fresh tests also show that the intervals remain too wide for 20% precision."
+              },
+              {
+                "type": "paragraph",
+                "text": "New: the sharper KL bound improves sufficient data budgets 2.71–2.77 fold. 77,824 fresh clouds show initial 20% precision qualifications within the known de Sitter family; intervals remain too wide at smaller curvatures."
               }
             ]
           }
@@ -1268,6 +1276,41 @@
                 ]
               }
             ]
+          },
+          {
+            "id": "de-sitter-kl",
+            "title": "Schärfere Intervalle: der Effizienzschritt ist bestanden",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "Die neue Stufe nutzt genauer aus, dass ein Paar kausal vergleichbar ist oder nicht. Sie berücksichtigt weiterhin, dass Paare innerhalb derselben Wolke voneinander abhängen. Die neue KL-Schranke erzeugt Intervalle, die niemals breiter als die bisherige Referenz sind. Die mathematisch begründete Überdeckung von mindestens 95% gilt unter denselben bekannten Modellannahmen und bei vorher festem Datenbudget."
+              },
+              {
+                "type": "paragraph",
+                "text": "Der Prüfvertrag wurde vor den neuen Rechnungen veröffentlicht. Die hinreichenden Planungsbudgets sinken an allen drei vorgegebenen Krümmungen um den Faktor 2,71 bis 2,77. Bei h=0,5 sind es beispielsweise 31.707 statt 85.871 unabhängige Wolken zu je 128 Punkten. Das sind ausreichende Grenzen der geprüften Verfahren, keine bewiesenen optimalen Mindestzahlen."
+              },
+              {
+                "type": "paragraph",
+                "text": "77.824 neue Wolken wurden gerechnet und vollständig reproduziert. Bei h=0,5 mit je 16.384 Wolken erreichen alle vier KL-Intervalle die relative 20%-Vorgabe; die alte Schranke erreicht sie einmal. Im gesamten Datensatz von 65.536 Wolken beträgt der relative Radius 4,89% statt 9,16%. Vier Gruppen erlauben keine präzise Schätzung einer Erfolgsquote; verschiedene Gruppengrössen verwenden dieselben Daten erneut."
+              },
+              {
+                "type": "paragraph",
+                "text": "Bei kleineren Krümmungen reichen die ausgeführten Budgets weiterhin nicht. Die vorab feste obere Modellgrenze hilft bei h=0,5. Unbekannte Dichte und freie Stoppregeln bleiben ausgeschlossen; ein flaches Modell mit anderer Dichte kann dieselben Relationen haben. Als Nächstes sind eine externe Prüfung und Replikation sinnvoll. Weitere Effizienzarbeit braucht wieder eine endliche Absicherung vor zusätzlichen Grossläufen."
+              },
+              {
+                "type": "links",
+                "items": [
+                  {
+                    "label": "Ergebnisse und Präzisionsgrenzen",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/d9bd4d0266faff0fddd70b4067ad4422367f25a1/research/lorentz_de_sitter_kl/RESULTS.md"
+                  },
+                  {
+                    "label": "Herleitung und Prüfvertrag",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/d9bd4d0266faff0fddd70b4067ad4422367f25a1/research/lorentz_de_sitter_kl/DERIVATION.md"
+                  }
+                ]
+              }
+            ]
           }
         ]
       },
@@ -1811,6 +1854,41 @@
                   {
                     "label": "Full derivation",
                     "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e6a5bce4cafe44ddb929da3ae32d9afa4d64eca1/research/lorentz_de_sitter_c2/DERIVATION.md"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "de-sitter-kl",
+            "title": "Sharper intervals: the efficiency gate passes",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "The new stage retains more information from the binary event that a pair is causally comparable. It still accounts for dependence between pairs in the same cloud. Its KL intervals are never wider than the previous reference. Mathematically justified coverage of at least 95% holds under the same known model assumptions and a prespecified fixed data budget."
+              },
+              {
+                "type": "paragraph",
+                "text": "The protocol was public before the new calculations. Sufficient planning budgets improve by factors of 2.71 to 2.77 at all three prespecified curvatures. At h=0.5, for example, the count is 31,707 instead of 85,871 independent clouds of 128 points. These are sufficient boundaries for the tested procedures, not proven statistically optimal minimum counts."
+              },
+              {
+                "type": "paragraph",
+                "text": "77,824 fresh clouds were calculated and fully replayed. At h=0.5 with 16,384 clouds per estimate, all four KL intervals meet the relative 20% precision requirement; the old bound does so once. In the full 65,536-cloud dataset, the relative radius is 4.89% instead of 9.16%. Four groups cannot precisely estimate a success rate, and different group sizes reuse the same observations."
+              },
+              {
+                "type": "paragraph",
+                "text": "At smaller curvatures, the executed budgets still do not suffice. The prespecified upper model boundary helps at h=0.5. Unknown density and freely chosen stopping remain outside the guarantee; a flat model with different density can have the same relations. External proof review and replication are useful next steps. Further efficiency work needs finite-sample protection before additional large runs."
+              },
+              {
+                "type": "links",
+                "items": [
+                  {
+                    "label": "Results and precision limits",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/d9bd4d0266faff0fddd70b4067ad4422367f25a1/research/lorentz_de_sitter_kl/RESULTS.md"
+                  },
+                  {
+                    "label": "Derivation and protocol",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/d9bd4d0266faff0fddd70b4067ad4422367f25a1/research/lorentz_de_sitter_kl/DERIVATION.md"
                   }
                 ]
               }

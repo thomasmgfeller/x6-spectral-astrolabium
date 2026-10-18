@@ -6,19 +6,19 @@ Registerstand: 2026-10-18. MAIN / SOFTWARE. Kein Live-Prüfsiegel.
 
 Branch: main
 
-Commit: e6a5bce4cafe44ddb929da3ae32d9afa4d64eca1
+Commit: d9bd4d0266faff0fddd70b4067ad4422367f25a1
 
-[Originaldokumentation](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e6a5bce4cafe44ddb929da3ae32d9afa4d64eca1/research/lorentz_de_sitter_information/README.md)
+[Originaldokumentation](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/d9bd4d0266faff0fddd70b4067ad4422367f25a1/research/lorentz_de_sitter_information/README.md)
 
 ## Dokumentierte Aussage
 
 Kovarianzbewusste Einparameter-Planung aus öffentlichen Pilotdaten, danach 16.384 neue unabhängige Wolken nach Quellenfixierung. Im Hauptvergleich senkt GLS234 den RMSE gegenüber C2 um 1,37%; das vorab gesetzte 10%-Ziel wird verfehlt. Bei schwacher Krümmung bleibt der approximative Datenbedarf hoch. Keine Freigabe von Krümmungsintervallen.
 
-- [research/lorentz_de_sitter_information/RESULTS.md](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e6a5bce4cafe44ddb929da3ae32d9afa4d64eca1/research/lorentz_de_sitter_information/RESULTS.md): Hauptvergleich, approximative Budgets, negatives 10%-Gate und nächste Entscheidung.
-- [research/lorentz_de_sitter_information/contract.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e6a5bce4cafe44ddb929da3ae32d9afa4d64eca1/research/lorentz_de_sitter_information/contract.json): Öffentlicher Prüfvertrag vor dem frischen Test; Pilotplanung ist deskriptiv.
-- [research/lorentz_de_sitter_information/results/summary.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e6a5bce4cafe44ddb929da3ae32d9afa4d64eca1/research/lorentz_de_sitter_information/results/summary.json): Alle zwölf frischen Ergebniszeilen und gepaarter Bootstrapvergleich.
-- [research/lorentz_de_sitter_information/results/hashes.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e6a5bce4cafe44ddb929da3ae32d9afa4d64eca1/research/lorentz_de_sitter_information/results/hashes.json): Prüfsummen aller Originalausgaben, einschliesslich vollständiger Kettenmerkmale und Relationshashes.
-- [research/lorentz_de_sitter_information/VERIFICATION.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e6a5bce4cafe44ddb929da3ae32d9afa4d64eca1/research/lorentz_de_sitter_information/VERIFICATION.json): Vollständiger interner Replay und getrennte Kausalitäts-, Ketten-, Gewichts- und Momentprüfungen.
+- [research/lorentz_de_sitter_information/RESULTS.md](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/d9bd4d0266faff0fddd70b4067ad4422367f25a1/research/lorentz_de_sitter_information/RESULTS.md): Hauptvergleich, approximative Budgets, negatives 10%-Gate und nächste Entscheidung.
+- [research/lorentz_de_sitter_information/contract.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/d9bd4d0266faff0fddd70b4067ad4422367f25a1/research/lorentz_de_sitter_information/contract.json): Öffentlicher Prüfvertrag vor dem frischen Test; Pilotplanung ist deskriptiv.
+- [research/lorentz_de_sitter_information/results/summary.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/d9bd4d0266faff0fddd70b4067ad4422367f25a1/research/lorentz_de_sitter_information/results/summary.json): Alle zwölf frischen Ergebniszeilen und gepaarter Bootstrapvergleich.
+- [research/lorentz_de_sitter_information/results/hashes.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/d9bd4d0266faff0fddd70b4067ad4422367f25a1/research/lorentz_de_sitter_information/results/hashes.json): Prüfsummen aller Originalausgaben, einschliesslich vollständiger Kettenmerkmale und Relationshashes.
+- [research/lorentz_de_sitter_information/VERIFICATION.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/d9bd4d0266faff0fddd70b4067ad4422367f25a1/research/lorentz_de_sitter_information/VERIFICATION.json): Vollständiger interner Replay und getrennte Kausalitäts-, Ketten-, Gewichts- und Momentprüfungen.
 
 ## Reproduzieren
 
@@ -29,7 +29,7 @@ Neue Arbeits- und Ausgabeordner verwenden; Voraussetzungen aus der Originaldokum
 ```sh
 git clone --branch main https://github.com/thomasmgfeller/x6-spectral-astrolabium.git x6-lorentz-de-sitter-information
 cd x6-lorentz-de-sitter-information
-git checkout --detach e6a5bce4cafe44ddb929da3ae32d9afa4d64eca1
+git checkout --detach d9bd4d0266faff0fddd70b4067ad4422367f25a1
 python3 -m pip install -r research/lorentz_de_sitter_information/requirements.txt
 python3 -B research/lorentz_de_sitter_information/verify.py
 ```

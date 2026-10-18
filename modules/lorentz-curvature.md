@@ -6,20 +6,20 @@ Registerstand: 2026-10-18. MAIN / SOFTWARE. Kein Live-Prüfsiegel.
 
 Branch: main
 
-Commit: e6a5bce4cafe44ddb929da3ae32d9afa4d64eca1
+Commit: d9bd4d0266faff0fddd70b4067ad4422367f25a1
 
-[Originaldokumentation](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e6a5bce4cafe44ddb929da3ae32d9afa4d64eca1/research/lorentz_curvature/README.md)
+[Originaldokumentation](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/d9bd4d0266faff0fddd70b4067ad4422367f25a1/research/lorentz_curvature/README.md)
 
 ## Dokumentierte Aussage
 
 8.702 Ordnungen nach öffentlich fixiertem Prüfvertrag. Im primären de-Sitter-Fall N=128, h=1,25 warnt C2/C3/C4 in 118/512 Fällen, die längste Kette in 5/512; beide verfehlen das Empfindlichkeitsziel. 3.072 konforme Dichtezwillinge bestätigen dieselbe Ordnung trotz verschiedener Krümmung. Keine universelle Krümmungsidentifikation bei unbekannter Beprobungsdichte, keine physische Planck-Uhr und keine fortlaufende Testgarantie.
 
-- [research/lorentz_curvature/RESULTS.md](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e6a5bce4cafe44ddb929da3ae32d9afa4d64eca1/research/lorentz_curvature/RESULTS.md): Alle zwölf Zielzellen, vorab festgelegte Hauptentscheidung, Unsicherheit und exakte Dichteverwechslung.
-- [research/lorentz_curvature/contract.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e6a5bce4cafe44ddb929da3ae32d9afa4d64eca1/research/lorentz_curvature/contract.json): Unveränderter Vertrag aus dem öffentlichen Quellenstand 31cfd8c vor dem ersten Ziellauf.
-- [research/lorentz_curvature/results/verification.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e6a5bce4cafe44ddb929da3ae32d9afa4d64eca1/research/lorentz_curvature/results/verification.json): 8.702 volle Ordnungen, 26.106 unabhängige Kettenzählungen, 12.288 Ränge, 3.072 gekoppelte Zwillinge und 1.024 abgewiesene Relationsfehler.
-- [research/lorentz_curvature/results/replay.log](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e6a5bce4cafe44ddb929da3ae32d9afa4d64eca1/research/lorentz_curvature/results/replay.log): Vollständiger interner Replay aller Seeds, Relationsbytes, Koordinatenhashes und wissenschaftlichen Ausgaben; keine externe Replikation.
-- [research/lorentz_curvature/PORTABILITY.md](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e6a5bce4cafe44ddb929da3ae32d9afa4d64eca1/research/lorentz_curvature/PORTABILITY.md): Erster CI-Replay scheiterte am Koordinatenhash. Nachträgliche vollständige NumPy-Gegenprüfung: maximale Abweichung 2,22e-16, alle Relationen identisch. Originalquellen unverändert; zusätzlicher begrenzter Replay separat ausgewiesen.
-- [research/lorentz_curvature/results/portable-replay.log](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e6a5bce4cafe44ddb929da3ae32d9afa4d64eca1/research/lorentz_curvature/results/portable-replay.log): Ergänzter vollständiger Replay mit 8.696 konkret geprüften Hashvarianten und sechs Originalhashes; unbekannte Varianten abgewiesen.
+- [research/lorentz_curvature/RESULTS.md](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/d9bd4d0266faff0fddd70b4067ad4422367f25a1/research/lorentz_curvature/RESULTS.md): Alle zwölf Zielzellen, vorab festgelegte Hauptentscheidung, Unsicherheit und exakte Dichteverwechslung.
+- [research/lorentz_curvature/contract.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/d9bd4d0266faff0fddd70b4067ad4422367f25a1/research/lorentz_curvature/contract.json): Unveränderter Vertrag aus dem öffentlichen Quellenstand 31cfd8c vor dem ersten Ziellauf.
+- [research/lorentz_curvature/results/verification.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/d9bd4d0266faff0fddd70b4067ad4422367f25a1/research/lorentz_curvature/results/verification.json): 8.702 volle Ordnungen, 26.106 unabhängige Kettenzählungen, 12.288 Ränge, 3.072 gekoppelte Zwillinge und 1.024 abgewiesene Relationsfehler.
+- [research/lorentz_curvature/results/replay.log](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/d9bd4d0266faff0fddd70b4067ad4422367f25a1/research/lorentz_curvature/results/replay.log): Vollständiger interner Replay aller Seeds, Relationsbytes, Koordinatenhashes und wissenschaftlichen Ausgaben; keine externe Replikation.
+- [research/lorentz_curvature/PORTABILITY.md](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/d9bd4d0266faff0fddd70b4067ad4422367f25a1/research/lorentz_curvature/PORTABILITY.md): Erster CI-Replay scheiterte am Koordinatenhash. Nachträgliche vollständige NumPy-Gegenprüfung: maximale Abweichung 2,22e-16, alle Relationen identisch. Originalquellen unverändert; zusätzlicher begrenzter Replay separat ausgewiesen.
+- [research/lorentz_curvature/results/portable-replay.log](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/d9bd4d0266faff0fddd70b4067ad4422367f25a1/research/lorentz_curvature/results/portable-replay.log): Ergänzter vollständiger Replay mit 8.696 konkret geprüften Hashvarianten und sechs Originalhashes; unbekannte Varianten abgewiesen.
 
 ## Reproduzieren
 
@@ -30,7 +30,7 @@ Neue Arbeits- und Ausgabeordner verwenden; Voraussetzungen aus der Originaldokum
 ```sh
 git clone --branch main https://github.com/thomasmgfeller/x6-spectral-astrolabium.git x6-lorentz-curvature
 cd x6-lorentz-curvature
-git checkout --detach e6a5bce4cafe44ddb929da3ae32d9afa4d64eca1
+git checkout --detach d9bd4d0266faff0fddd70b4067ad4422367f25a1
 python3 -m pip install -r research/lorentz_curvature/requirements.txt
 python3 -B research/lorentz_curvature/selftest.py
 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python3 -B research/lorentz_curvature/reproduce_portable.py
