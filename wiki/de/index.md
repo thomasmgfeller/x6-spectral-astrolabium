@@ -4,7 +4,7 @@ Ein Wegweiser für Neugierige, Lernende und Menschen, die selbst prüfen möchte
 
 [English](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/en/) · [Wiki-Übersicht](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/de/)
 
-Quellenstand: 2026-10-18 · `e5840afa7c7865a48766d1a5366210508a7b1f05`
+Quellenstand: 2026-10-18 · `01430ce5f0a648ad63d611a451f0d0fd7ccb16aa`
 
 ## Was ist X6?
 
@@ -45,3 +45,5 @@ X6 ist eine öffentliche Forschungsvorschau. Eine allgemeine Raumzeittheorie, ei
 Neu: Der Krümmungsbenchmark ist abgeschlossen. Beide Diagnosen verfehlen das Empfindlichkeitsziel; die Dichtezwillinge erklären eine grundsätzliche Mehrdeutigkeit. Das Kapitel „Kausale Ordnungen“ zeigt Ergebnisse und Folgen für die geplante Uhr.
 
 Neu: Eigenzeit v0.2 erklärt, wann zusätzliche Daten helfen, wann Dichtefehler die Intervalle ungültig machen und wann eine vorsichtigere Rechnung die Präzisionsfreigabe verweigert.
+
+Neu: 16.384 neue Punktwolken prüfen die de-Sitter-Krümmungsschätzung. Zusätzliche Ketten bringen nur wenig Präzision; das Kapitel „Kausale Ordnungen“ erklärt, was daraus für die nächsten Schritte folgt.

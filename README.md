@@ -76,6 +76,8 @@ Independent external replication and physical device qualification remain open.
 The catalogue renders the dated register without changing its claims or source pins.
 Detailed research updates and reproduction instructions follow below.
 
+**De-Sitter-Informationsplanung abgeschlossen:** [16.384 neue Punktwolken](research/lorentz_de_sitter_information/RESULTS.md) prüfen eine kovarianzbewusste Einparameter-Schätzung. Zusätzliche Ketten senken den RMSE im Hauptvergleich nur um **1,37%**; das vorab gesetzte **10%-Ziel wird verfehlt**. Vollständiger Replay bestanden. Datenbudgets bleiben approximativ; Krümmungsintervalle sind nicht qualifiziert. Der nächste Ansatz konzentriert sich auf Zweierketten und eine kontrollierte geometrische Vorwärtsrechnung. [Einfach erklärt (DE/EN)](wiki/de/causal-orders.html#de-sitter-information).
+
 ## Lorentz: vollständige n=7-Prüfung
 
 Die [vollständige exakte Studie](research/lorentz_n7_complete/README.md) widerlegt
@@ -144,7 +146,7 @@ remain [explicit future gates](research/x6_qe/ROADMAP.md). Lorentz remains the p
 
 ## Start here: actual module and evidence status
 
-The [central module register](docs/MODULE_REGISTRY.md) lists **44 modules** with
+The [central module register](docs/MODULE_REGISTRY.md) lists **45 modules** with
 their authoritative branch and commit, prerequisites, executable entry point,
 expected result, available evidence and next acceptance gate. Its
 [machine-readable source](MODULE_REGISTRY.json) is a dated snapshot, not a live

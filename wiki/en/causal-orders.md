@@ -4,7 +4,7 @@ This research asks what structure is carried by relationships before a spatial d
 
 [Deutsch](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/de/causal-orders.md) · [Wiki overview](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/en/)
 
-Source snapshot: 2026-10-18 · `e5840afa7c7865a48766d1a5366210508a7b1f05`
+Source snapshot: 2026-10-18 · `01430ce5f0a648ad63d611a451f0d0fd7ccb16aa`
 
 ## Events and their ordering
 
@@ -171,3 +171,16 @@ For uniform flat 4D data with true proper time 0.2 of the outer scale, 65,536 is
 
 - [Results and budget table](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e5840afa7c7865a48766d1a5366210508a7b1f05/research/lorentz_proper_time_validity/RESULTS.md)
 - [Derivation and assumptions](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e5840afa7c7865a48766d1a5366210508a7b1f05/research/lorentz_proper_time_validity/DERIVATION.md)
+
+## Curvature: extra chains add little precision here
+
+The new study restricts the problem to a known de Sitter family with one unknown curvature quantity. It combines two-, three- and four-element chains while accounting for their strong correlations within the same event cloud.
+
+Weights were fixed using previously published data. After the protocol was made public, 16,384 independent fresh clouds with 128 events each were generated. In the primary comparison, root mean squared estimation error (RMSE) fell by only 1.37%. The prespecified target of at least 10% was missed.
+
+For weak curvature, the calculation suggests about 1.7 million independent clouds for a nominal relative 20% half-width. At the stronger tested curvature, about 2,700 are suggested. These are approximate noise-only planning counts, not completed large runs or guaranteed precision bounds. Systematic model errors persist.
+
+The next useful approach focuses on two-element chains and a fuller geometric prediction with controlled errors. A qualified curved-spacetime clock has not been achieved. Density assumptions, an independent time scale and external replication remain open.
+
+- [Results and data budgets](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/01430ce5f0a648ad63d611a451f0d0fd7ccb16aa/research/lorentz_de_sitter_information/RESULTS.md)
+- [Protocol and sources](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/01430ce5f0a648ad63d611a451f0d0fd7ccb16aa/research/lorentz_de_sitter_information/README.md)
