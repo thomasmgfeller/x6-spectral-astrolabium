@@ -81,8 +81,11 @@ Algebraic tests cover thinning, the Poisson transform, epsilon=1, linearity,
 density scaling and a deliberately wrong endpoint count. A separate norm-based
 causal predicate checks samples; full replay regenerates every cloud and count.
 All counts, coordinates' hashes, seeds, software versions and source hashes are
-retained. The source commit is published before development and test execution.
-No external replication or independent peer review is claimed.
+retained. The source commit is frozen locally before development and test execution.
+Publication before the run was blocked by automatic approval review; therefore
+this is a local precommitment, not a public preregistration. No target data had
+been generated when this limitation was recorded. No external replication or
+independent peer review is claimed.
 
 ## Primary sources
 
