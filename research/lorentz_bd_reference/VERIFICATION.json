@@ -1,0 +1,34 @@
+{
+  "selftest": {
+    "status": "PASS",
+    "controls": [
+      "epsilon=1 layers",
+      "binomial thinning",
+      "Poisson transform",
+      "linearity",
+      "density scaling",
+      "off-by-one rejection",
+      "36 independent causal predicates",
+      "volume-weighted time and radial sampling",
+      "C2 inversion",
+      "continuum quadrature"
+    ]
+  },
+  "archive": {
+    "status": "PASS_FULL_REPLAY",
+    "clouds": 6528,
+    "independent_predicate_clouds": 102,
+    "decision": {
+      "status": "NO_GO_VARIABLE_CURVATURE_IN_THIS_BUDGET",
+      "checks": {
+        "rmse": false,
+        "bias": false,
+        "width": false,
+        "coverage": true,
+        "flat_bias": false,
+        "cost": true
+      },
+      "controls_pass": true
+    }
+  }
+}

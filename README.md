@@ -84,6 +84,8 @@ Detailed research updates and reproduction instructions follow below.
 
 **De-Sitter-Informationsplanung abgeschlossen:** [16.384 neue Punktwolken](research/lorentz_de_sitter_information/RESULTS.md) prüfen eine kovarianzbewusste Einparameter-Schätzung. Zusätzliche Ketten senken den RMSE im Hauptvergleich nur um **1,37%**; das vorab gesetzte **10%-Ziel wird verfehlt**. Vollständiger Replay bestanden. Datenbudgets bleiben approximativ; Krümmungsintervalle sind nicht qualifiziert. Der nächste Ansatz konzentriert sich auf Zweierketten und eine kontrollierte geometrische Vorwärtsrechnung. [Einfach erklärt (DE/EN)](wiki/de/causal-orders.html#de-sitter-information).
 
+**BD-Poisson-Referenz geprüft:** [Geglätteter Benincasa–Dowker-Operator gegen C2](research/lorentz_bd_reference/RESULTS.md), 384 Entwicklungs- und 6.144 getrennte Testwolken; alle 6.528 Wolken vollständig wiederholt. Der vorab lokal fixierte Hauptvergleich verfehlt den Nutzen: **NO_GO für variable Krümmung in diesem Pilotbudget**. Bei kleinen Dichten bleiben einzelne Vorteile dokumentiert. Bekannte Dichte und Eigenzeit T=1; keine allgemeine Dominanz oder Uhrqualifikation. Der [Boguñá–Krioukov-Zweig](research/lorentz_local_dalembert/README.md) enthält Quellenprüfung und Koeffiziententests; eine intrinsische Reproduktion steht aus.
+
 ## Lorentz: vollständige n=7-Prüfung
 
 Die [vollständige exakte Studie](research/lorentz_n7_complete/README.md) widerlegt
