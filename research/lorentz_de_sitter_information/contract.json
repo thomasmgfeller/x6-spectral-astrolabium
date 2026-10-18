@@ -1,0 +1,41 @@
+{
+  "schema": "x6.de-sitter-information/1",
+  "scope": "Restricted one-parameter local de Sitter estimator; no curvature interval qualification",
+  "pilot_base_commit": "ca43cc55677012bca0884b2e8a4dd6d91a4e28f5",
+  "pilot_sha256": {
+    "research/lorentz_rss_fixed_n/results/raw.npz": "40cb12cacb7fc634863723561fc61c58c0798d2fde8bc3e0527fc7238694eae3",
+    "research/lorentz_rss_fixed_n/results/reference.json": "75116703e6914e900933ec841764ce1525baa3d3ef50499b3a54b23d5b647a5b",
+    "research/lorentz_rss_fixed_n/results/summary.json": "4af8764f0983b33ea990eace15fe297d89702a717ae0ef6f8d13210691b8e510"
+  },
+  "frozen_paths": [
+    "research/lorentz_de_sitter_information/contract.json",
+    "research/lorentz_de_sitter_information/DERIVATION.md",
+    "research/lorentz_de_sitter_information/core.py",
+    "research/lorentz_de_sitter_information/run.py",
+    "research/lorentz_de_sitter_information/verify.py",
+    "research/lorentz_de_sitter_information/requirements.txt",
+    "research/lorentz_curvature/geometry.py",
+    "research/lorentz_rss_fixed_n/core.py",
+    "research/lorentz_rss_fixed_n/quadrature.py"
+  ],
+  "seed_namespace": "x6/de-sitter-information/v01/2026-10-18/fresh-fixed",
+  "h_grid": [
+    0.0,
+    0.1,
+    0.25,
+    0.5
+  ],
+  "fresh_n": 128,
+  "fresh_clouds_per_cell": 4096,
+  "maximum_planned_clouds": 4096,
+  "budget_gate": "Run all four fresh cells only if any fixed estimator at N128 h0.5 has pilot noise-only 20pct relative budget <=4096.",
+  "bootstrap_replicates": 1999,
+  "primary_rmse_ratio_upper_threshold": 0.9,
+  "primary_comparison": "N128 h0.5 GLS234/C2 paired RMSE; 95pct percentile bootstrap upper <=0.9",
+  "limits": {
+    "wall_seconds": 600,
+    "address_space_gib": 2
+  },
+  "claim_boundary": "No finite-sample curvature interval, no independent external replication, no unknown-density identification",
+  "failure_policy": "Retain every failed gate; no retuning, clipping or seed replacement"
+}
