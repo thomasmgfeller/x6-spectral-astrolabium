@@ -1,7 +1,7 @@
 {
   "schema": "x6.bilingual-wiki/1",
   "snapshot_date": "2026-10-18",
-  "source_commit": "78a150f27fdf52187d140f9fcf440ce29c89cb48",
+  "source_commit": "49710201cdb2e2941404266b25e88051a659b08e",
   "articles": [
     {
       "id": "index",
@@ -1362,6 +1362,53 @@
                 ]
               }
             ]
+          },
+          {
+            "id": "bd-c2",
+            "title": "BD gegen C2: Was bedeutet der gestoppte Ausbau?",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "Die Benincasa–Dowker-Referenz schätzt Krümmung aus der Anzahl von Ereignissen in kleinen kausalen Intervallen. Der abgeschlossene Pilot verwendet eine bekannte physische Dichte und die vorgegebene Eigenzeit T=1 in vierdimensionalen Minkowski- und de-Sitter-Modellen. Die Punktzahlen sind tatsächlich Poisson-verteilt."
+              },
+              {
+                "type": "paragraph",
+                "text": "384 flache Entwicklungswolken wählen die Glättung; 6.144 weitere Wolken bilden zwölf getrennte Testzellen. Alle 6.528 Wolken wurden vollständig reproduziert, 102 zusätzlich mit einem zweiten Kausalitätstest. Vertrag und Quellen waren vor den Daten lokal in Git fixiert. Die Veröffentlichung erfolgt danach; dies ist keine öffentliche Vorregistrierung."
+              },
+              {
+                "type": "paragraph",
+                "text": "Im Hauptvergleich beträgt der mittlere quadratische Fehler als Wurzel (RMSE) 14,924 für BD und 0,448 für C2. Das Verhältnis ist 33,34. Die Kriterien für RMSE, Bias und Intervallbreite sowie die flache Bias-Kontrolle scheitern. Überdeckungs- und Kostenkriterium bestehen. Deshalb gilt NO_GO für variable Krümmung innerhalb dieses Budgets."
+              },
+              {
+                "type": "paragraph",
+                "text": "Das Ergebnis ist begrenzt: C2 kennt die de-Sitter-Modellfamilie und profitiert an der oberen Grenze von der Begrenzung seiner Schätzung. Bei der kleinsten Dichte hat BD in drei Testzellen den kleineren RMSE. Die nominalen Student-Intervalle haben keine bewiesene 95%-Überdeckung, und auch C2 erreicht im Hauptfall die 20%-Breitenvorgabe nicht. Der Vergleich widerlegt weder die BD-Kontinuumsgrenze noch begründet er eine universelle Überlegenheit von C2."
+              },
+              {
+                "type": "paragraph",
+                "text": "Der lokale Operator nach Boguñá und Krioukov ist separat als Quellenprüfung und Koeffizientenvortest dokumentiert. Die intrinsische Reproduktion fehlt. Da ein konstantes Feld dort identisch null ergibt, darf die BD-Regel −2B(1) nicht als Krümmungsmessung übernommen werden."
+              },
+              {
+                "type": "links",
+                "items": [
+                  {
+                    "label": "Ergebnisse und Grenzen",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/49710201cdb2e2941404266b25e88051a659b08e/research/lorentz_bd_reference/RESULTS.md"
+                  },
+                  {
+                    "label": "Methoden und Vertrag",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/49710201cdb2e2941404266b25e88051a659b08e/research/lorentz_bd_reference/METHODS.md"
+                  },
+                  {
+                    "label": "Prüfprotokoll",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/49710201cdb2e2941404266b25e88051a659b08e/research/lorentz_bd_reference/VERIFICATION.json"
+                  },
+                  {
+                    "label": "Lokaler Operator: offener Reproduktionszweig",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/49710201cdb2e2941404266b25e88051a659b08e/research/lorentz_local_dalembert/README.md"
+                  }
+                ]
+              }
+            ]
           }
         ]
       },
@@ -1983,6 +2030,53 @@
                   {
                     "label": "Full derivation",
                     "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/78a150f27fdf52187d140f9fcf440ce29c89cb48/research/lorentz_de_sitter_variance/DERIVATION.md"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "bd-c2",
+            "title": "BD versus C2: why is the extension stopped?",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "The Benincasa–Dowker reference estimates curvature from event counts in small causal intervals. The completed pilot assumes known physical density and externally specified proper duration T=1 in four-dimensional Minkowski and de Sitter models. Point counts follow an actual Poisson distribution."
+              },
+              {
+                "type": "paragraph",
+                "text": "384 flat development clouds select smoothing; 6,144 separate clouds form twelve test cells. All 6,528 clouds were fully replayed, with 102 also checked by a second causal predicate. The protocol and sources were frozen locally in Git before the data. Publication follows the run; this is not public preregistration."
+              },
+              {
+                "type": "paragraph",
+                "text": "In the primary comparison, root mean square error (RMSE) is 14.924 for BD and 0.448 for C2, a ratio of 33.34. RMSE, bias, interval width and flat-bias criteria fail. Coverage and cost criteria pass. The decision is therefore NO_GO for variable-curvature expansion within this budget."
+              },
+              {
+                "type": "paragraph",
+                "text": "The conclusion has limits: C2 knows the de Sitter family and benefits from clipping at its upper model boundary. At the lowest density, BD has a smaller RMSE in three cells. Nominal Student intervals have no proven 95% coverage; even C2 misses the primary 20% width requirement. This comparison neither refutes the BD continuum limit nor establishes universal C2 superiority."
+              },
+              {
+                "type": "paragraph",
+                "text": "The local Boguñá–Krioukov operator is documented separately as a source audit and coefficient preflight. Intrinsic reproduction is still missing. Its constant-field result is identically zero, so the BD rule −2B(1) cannot be transferred as a curvature measurement."
+              },
+              {
+                "type": "links",
+                "items": [
+                  {
+                    "label": "Results and limits",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/49710201cdb2e2941404266b25e88051a659b08e/research/lorentz_bd_reference/RESULTS.md"
+                  },
+                  {
+                    "label": "Methods and protocol",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/49710201cdb2e2941404266b25e88051a659b08e/research/lorentz_bd_reference/METHODS.md"
+                  },
+                  {
+                    "label": "Verification record",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/49710201cdb2e2941404266b25e88051a659b08e/research/lorentz_bd_reference/VERIFICATION.json"
+                  },
+                  {
+                    "label": "Local operator: open reproduction track",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/49710201cdb2e2941404266b25e88051a659b08e/research/lorentz_local_dalembert/README.md"
                   }
                 ]
               }

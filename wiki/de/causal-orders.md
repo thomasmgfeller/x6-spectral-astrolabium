@@ -4,7 +4,7 @@ Hier geht es um die Frage, welche Struktur in Beziehungen steckt, bevor man eine
 
 [English](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/en/causal-orders.md) · [Wiki-Übersicht](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/de/)
 
-Quellenstand: 2026-10-18 · `78a150f27fdf52187d140f9fcf440ce29c89cb48`
+Quellenstand: 2026-10-18 · `49710201cdb2e2941404266b25e88051a659b08e`
 
 ## Ereignisse und ihre Reihenfolge
 
@@ -226,3 +226,20 @@ Eine zweite geometrische Rechnung über Kugelschnittvolumina prüft die neue For
 - [Ergebnisse und Gegenbeispiel](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/78a150f27fdf52187d140f9fcf440ce29c89cb48/research/lorentz_de_sitter_variance/RESULTS.md)
 - [Prüfpaket für externe Begutachtung](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/78a150f27fdf52187d140f9fcf440ce29c89cb48/research/lorentz_de_sitter_variance/REVIEW.md)
 - [Vollständige Herleitung](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/78a150f27fdf52187d140f9fcf440ce29c89cb48/research/lorentz_de_sitter_variance/DERIVATION.md)
+
+## BD gegen C2: Was bedeutet der gestoppte Ausbau?
+
+Die Benincasa–Dowker-Referenz schätzt Krümmung aus der Anzahl von Ereignissen in kleinen kausalen Intervallen. Der abgeschlossene Pilot verwendet eine bekannte physische Dichte und die vorgegebene Eigenzeit T=1 in vierdimensionalen Minkowski- und de-Sitter-Modellen. Die Punktzahlen sind tatsächlich Poisson-verteilt.
+
+384 flache Entwicklungswolken wählen die Glättung; 6.144 weitere Wolken bilden zwölf getrennte Testzellen. Alle 6.528 Wolken wurden vollständig reproduziert, 102 zusätzlich mit einem zweiten Kausalitätstest. Vertrag und Quellen waren vor den Daten lokal in Git fixiert. Die Veröffentlichung erfolgt danach; dies ist keine öffentliche Vorregistrierung.
+
+Im Hauptvergleich beträgt der mittlere quadratische Fehler als Wurzel (RMSE) 14,924 für BD und 0,448 für C2. Das Verhältnis ist 33,34. Die Kriterien für RMSE, Bias und Intervallbreite sowie die flache Bias-Kontrolle scheitern. Überdeckungs- und Kostenkriterium bestehen. Deshalb gilt NO_GO für variable Krümmung innerhalb dieses Budgets.
+
+Das Ergebnis ist begrenzt: C2 kennt die de-Sitter-Modellfamilie und profitiert an der oberen Grenze von der Begrenzung seiner Schätzung. Bei der kleinsten Dichte hat BD in drei Testzellen den kleineren RMSE. Die nominalen Student-Intervalle haben keine bewiesene 95%-Überdeckung, und auch C2 erreicht im Hauptfall die 20%-Breitenvorgabe nicht. Der Vergleich widerlegt weder die BD-Kontinuumsgrenze noch begründet er eine universelle Überlegenheit von C2.
+
+Der lokale Operator nach Boguñá und Krioukov ist separat als Quellenprüfung und Koeffizientenvortest dokumentiert. Die intrinsische Reproduktion fehlt. Da ein konstantes Feld dort identisch null ergibt, darf die BD-Regel −2B(1) nicht als Krümmungsmessung übernommen werden.
+
+- [Ergebnisse und Grenzen](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/49710201cdb2e2941404266b25e88051a659b08e/research/lorentz_bd_reference/RESULTS.md)
+- [Methoden und Vertrag](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/49710201cdb2e2941404266b25e88051a659b08e/research/lorentz_bd_reference/METHODS.md)
+- [Prüfprotokoll](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/49710201cdb2e2941404266b25e88051a659b08e/research/lorentz_bd_reference/VERIFICATION.json)
+- [Lokaler Operator: offener Reproduktionszweig](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/49710201cdb2e2941404266b25e88051a659b08e/research/lorentz_local_dalembert/README.md)
