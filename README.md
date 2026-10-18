@@ -119,6 +119,8 @@ Quellenlücken, insbesondere fehlende NQK-Archive, bleiben ausdrücklich offen.
 
 **RSS bei fester Punktzahl abgeschlossen:** [Herleitung, Ergebnisse und Replay](research/lorentz_rss_fixed_n/README.md). 24.576 unabhängige Wolken nach öffentlicher Quellenfixierung. Das gemeinsame ±5%-Präzisionsziel bleibt unerreicht; die unabhängige C2-Integration stützt die korrigierte Vorhersage. Die untersuchte Krümmungsinversion streut bei N=64/128 sehr stark. [Einfach erklärt (DE/EN)](wiki/de/causal-orders.html#rss-fixed-n).
 
+**Eigenzeit v0.2 — Gültigkeitsbereich und Informationsbedarf:** Die [deterministische Gültigkeitskarte](research/lorentz_proper_time_validity/RESULTS.md) umfasst 1.176 Kombinationen. Alle 714 innerhalb ihrer deklarierten Modellklasse erreichen mindestens 95% Überdeckung; 192 erfüllen zusätzlich das Präzisionsziel. Selektive Beobachtungslücken können trotz vieler Daten falsche Präzision erzeugen. Extern begrenzte Dichtefehler lassen sich konservativ absichern, mit einer verbleibenden Genauigkeitsgrenze. Vollständige Daten, getrennte Integral-/CDF-Gegenprüfung und Replay sind veröffentlicht; keine allgemeine Krümmungsfreigabe.
+
 **Freies Feld und Entropiereferenz:** Der [neue RAX-CQG-Baustein](research/free_field_entropy/RESULTS.md) definiert Zustand, Korrelationen, Rand und Nullmoden. 13 Gegenprüfungen einschließlich einer bekannten Oszillatorentropie bestehen; 64 neue Causal-Set-Ordnungen sind vollständig berechnet. Die Hauptsteigung 0,358 mit 95%-Intervall [0,260; 0,458] ist mit 1/3 vereinbar, erfüllt aber die vorab verlangte Präzision und Cutoff-Stabilität nicht: **REFERENCE_NOT_ESTABLISHED**. Geometrieantworten und zusätzlicher Nutzen gegenüber bisherigen Merkmalen bleiben offen.
 
 ## Frozen reference edition and validation hardening
@@ -142,7 +144,7 @@ remain [explicit future gates](research/x6_qe/ROADMAP.md). Lorentz remains the p
 
 ## Start here: actual module and evidence status
 
-The [central module register](docs/MODULE_REGISTRY.md) lists **39 modules** with
+The [central module register](docs/MODULE_REGISTRY.md) lists **44 modules** with
 their authoritative branch and commit, prerequisites, executable entry point,
 expected result, available evidence and next acceptance gate. Its
 [machine-readable source](MODULE_REGISTRY.json) is a dated snapshot, not a live

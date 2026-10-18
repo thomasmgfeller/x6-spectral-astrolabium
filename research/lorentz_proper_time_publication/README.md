@@ -158,3 +158,12 @@ Fehlerkontrolle. Weitere Stichproben im selben Modell ersetzen das nicht.
 - Howard et al., [Time-uniform, nonparametric, nonasymptotic confidence sequences](https://doi.org/10.1214/20-AOS1991), Annals of Statistics 49 (2021), 1055–1080; [Volltext](https://arxiv.org/html/1810.08240v9), Theoreme 1 und 4, Gleichung (8).
 - Brightwell und Gregory, [The structure of random discrete spacetime](https://doi.org/10.1103/PhysRevLett.66.260), PRL 66 (1991), 260–263. Historischer Kettenansatz; die endliche Rangdiagnose hier ist kein daraus übernommener Krümmungssatz.
 - Minguzzi, [Lorentzian causality theory](https://doi.org/10.1007/s41114-019-0019-x), Living Reviews in Relativity 22 (2019). Kontinuumsbedingungen sind von endlicher Poset-Validierung zu unterscheiden.
+
+## Weiterführend: Eigenzeit v0.2
+
+Die [Gültigkeitskarte und Budgettabelle](../lorentz_proper_time_validity/RESULTS.md)
+prüfen bekannte Krümmung, Dichteänderungen und fehlende Beobachtungen.
+Vorab begrenzte Dichteunsicherheit ermöglicht konservativere Intervalle
+im flachen Modell. Diese Erweiterung ist separat dokumentiert; der
+Browser-Demonstrator verwendet weiterhin seine ursprünglichen festen
+Stichproben und uniformen flachen Modellannahmen.

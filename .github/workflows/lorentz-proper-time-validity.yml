@@ -1,0 +1,31 @@
+name: Lorentz Proper-Time Validity Map
+on:
+  pull_request:
+    paths: ['research/lorentz_proper_time_validity/**', '.github/workflows/lorentz-proper-time-validity.yml']
+  push:
+    branches: [main]
+    paths: ['research/lorentz_proper_time_validity/**', '.github/workflows/lorentz-proper-time-validity.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  reproduce:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+      MKL_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - run: python3 -m pip install -r research/lorentz_proper_time_validity/requirements.txt
+      - name: Exact controls, independent geometry/CDF checks and complete replay
+        run: python3 -B research/lorentz_proper_time_validity/reproduce.py
+      - name: Source inventory
+        run: python3 tests/python/verify_manifest.py

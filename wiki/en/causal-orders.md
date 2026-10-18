@@ -4,7 +4,7 @@ This research asks what structure is carried by relationships before a spatial d
 
 [Deutsch](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/de/causal-orders.md) · [Wiki overview](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/en/)
 
-Source snapshot: 2026-10-18 · `8ee417ba8c44c1f32f4e310a6566168d84982d3a`
+Source snapshot: 2026-10-18 · `e5840afa7c7865a48766d1a5366210508a7b1f05`
 
 ## Events and their ordering
 
@@ -158,3 +158,16 @@ The contract, seeds and budget were public before the first target run. Full rep
 
 - [RSS: Ergebnisse / Results](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/8ee417ba8c44c1f32f4e310a6566168d84982d3a/research/lorentz_rss_fixed_n/RESULTS.md)
 - [RSS: Herleitung / Derivation](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/8ee417ba8c44c1f32f4e310a6566168d84982d3a/research/lorentz_rss_fixed_n/DERIVATION.md)
+
+## Proper time v0.2: when do more data help?
+
+The new validity map directly calculates 1,176 combinations of model, observed count and interval method. These are not new point clouds or measurements. All 714 combinations within their assumed model class retain at least 95% coverage. Of these, 192 also meet the declared precision gate and 522 remain insufficiently precise. Another 462 are outside the assumed class.
+
+More data do not repair an unknown density error. In the example with half the retention rate inside the inner interval, the unprotected calculation falsely declares at most 10% relative error with about 98.81% probability at 65,536 observed points. This is not a curvature or error-detection rate.
+
+An independently justified bound on mean observed intensity inside versus outside permits a more conservative interval. With a broad ratio range from 0.5 to 2, that interval retains about 97.74% coverage in the same example but refuses the requested 10% precision. This is a justified abstention.
+
+For uniform flat 4D data with true proper time 0.2 of the outer scale, 65,536 is the first passing count on the tested grid. Allowing a ratio from 0.8 to 1.25 raises it to 262,144. These are neither global minimum budgets nor sequential stopping guarantees. The browser demonstrator retains its existing flat model.
+
+- [Results and budget table](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e5840afa7c7865a48766d1a5366210508a7b1f05/research/lorentz_proper_time_validity/RESULTS.md)
+- [Derivation and assumptions](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e5840afa7c7865a48766d1a5366210508a7b1f05/research/lorentz_proper_time_validity/DERIVATION.md)

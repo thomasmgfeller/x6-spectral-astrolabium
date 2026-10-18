@@ -4,7 +4,7 @@ Hier geht es um die Frage, welche Struktur in Beziehungen steckt, bevor man eine
 
 [English](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/en/causal-orders.md) · [Wiki-Übersicht](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/de/)
 
-Quellenstand: 2026-10-18 · `8ee417ba8c44c1f32f4e310a6566168d84982d3a`
+Quellenstand: 2026-10-18 · `e5840afa7c7865a48766d1a5366210508a7b1f05`
 
 ## Ereignisse und ihre Reihenfolge
 
@@ -158,3 +158,16 @@ Vertrag, Seeds und Budget waren vor dem ersten Zielversuch öffentlich fixiert. 
 
 - [RSS: Ergebnisse / Results](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/8ee417ba8c44c1f32f4e310a6566168d84982d3a/research/lorentz_rss_fixed_n/RESULTS.md)
 - [RSS: Herleitung / Derivation](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/8ee417ba8c44c1f32f4e310a6566168d84982d3a/research/lorentz_rss_fixed_n/DERIVATION.md)
+
+## Eigenzeit v0.2: Wann helfen mehr Daten?
+
+Die neue Gültigkeitskarte berechnet 1.176 Kombinationen aus Modell, beobachteter Punktzahl und Intervallverfahren direkt. Es sind keine neuen Punktwolken oder Messungen. Alle 714 Kombinationen innerhalb ihrer jeweils angenommenen Modellklasse erreichen mindestens 95% Überdeckung. Davon erfüllen 192 zusätzlich das festgelegte Präzisionsziel; 522 bleiben zu unpräzise. 462 weitere Kombinationen liegen ausserhalb der vorausgesetzten Klasse.
+
+Viele Daten beheben keinen unbekannten Dichtefehler. Im Beispiel mit nur halb so guter Erfassung im inneren Intervall meldet die ungeschützte Rechnung bei 65.536 beobachteten Punkten mit rund 98,81% Wahrscheinlichkeit fälschlich höchstens 10% relativen Fehler. Diese Zahl ist keine Krümmungs- oder Fehlerdetektionsrate.
+
+Wenn das Verhältnis der mittleren Erfassungsintensität innen zu aussen von einer unabhängigen Quelle begrenzt ist, lässt sich ein konservativeres Intervall berechnen. Für das breite Verhältnis von 0,5 bis 2 erhält dieses im selben Beispiel rund 97,74% Überdeckung, verweigert aber die gewünschte 10%-Präzision. Das ist eine begründete Enthaltung.
+
+Im uniformen flachen 4D-Beispiel mit wahrer Eigenzeit 0,2 des äusseren Massstabs ist 65.536 der erste erfolgreiche Punktumfang des geprüften Gitters. Mit einer vorsichtigeren Dichteannahme von 0,8 bis 1,25 sind es 262.144. Diese Werte sind keine globalen Minimalbudgets und keine sequenziellen Stoppgarantien. Der Browser-Demonstrator behält sein bisheriges flaches Modell.
+
+- [Ergebnisse und Budgettabelle](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e5840afa7c7865a48766d1a5366210508a7b1f05/research/lorentz_proper_time_validity/RESULTS.md)
+- [Herleitung und Annahmen](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e5840afa7c7865a48766d1a5366210508a7b1f05/research/lorentz_proper_time_validity/DERIVATION.md)

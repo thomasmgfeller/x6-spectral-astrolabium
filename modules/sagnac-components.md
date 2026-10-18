@@ -6,15 +6,15 @@ Registerstand: 2026-10-18. MAIN / CONCEPT. Kein Live-Prüfsiegel.
 
 Branch: main
 
-Commit: 8ee417ba8c44c1f32f4e310a6566168d84982d3a
+Commit: e5840afa7c7865a48766d1a5366210508a7b1f05
 
-[Originaldokumentation](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/8ee417ba8c44c1f32f4e310a6566168d84982d3a/docs/acvm/sagnac-components-v0.1/README.md)
+[Originaldokumentation](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e5840afa7c7865a48766d1a5366210508a7b1f05/docs/acvm/sagnac-components-v0.1/README.md)
 
 ## Dokumentierte Aussage
 
 Beschaffungs- und Aufbauprofil für ppKTP, gemeinsamen Dreiecksloop und Temperaturführung.
 
-- [docs/acvm/sagnac-components-v0.1/README.md](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/8ee417ba8c44c1f32f4e310a6566168d84982d3a/docs/acvm/sagnac-components-v0.1/README.md): Zwölf Abnahmeschritte ungetestet; keine Lieferantenbestätigung.
+- [docs/acvm/sagnac-components-v0.1/README.md](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e5840afa7c7865a48766d1a5366210508a7b1f05/docs/acvm/sagnac-components-v0.1/README.md): Zwölf Abnahmeschritte ungetestet; keine Lieferantenbestätigung.
 
 ## Reproduzieren
 
