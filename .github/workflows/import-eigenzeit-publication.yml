@@ -1,0 +1,28 @@
+name: Import approved Eigenzeit publication
+on:
+  push:
+    branches: [publication/import-eigenzeit-bd-20261018]
+permissions:
+  contents: write
+jobs:
+  import:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09
+        with:
+          fetch-depth: 0
+          persist-credentials: true
+      - name: Verify exact approved bundle and preserve original commits
+        shell: bash
+        run: |
+          set -euo pipefail
+          cat publication-import/part-* > "$RUNNER_TEMP/eigenzeit.bundle"
+          printf '%s  %s\n' '869c3d56290eedafce2a4a13b4210cab4241cac7b7a6e0eaa9983c372b09efcb' "$RUNNER_TEMP/eigenzeit.bundle" | sha256sum --check
+          git bundle verify "$RUNNER_TEMP/eigenzeit.bundle"
+          test "$(git bundle list-heads "$RUNNER_TEMP/eigenzeit.bundle")" = "751dcb7174da8be9f8bb676ce3a34fae96cf43ff refs/heads/research/eigenzeit-bd-reference"
+          git fetch "$RUNNER_TEMP/eigenzeit.bundle" refs/heads/research/eigenzeit-bd-reference:refs/heads/research/eigenzeit-bd-reference
+          git merge-base --is-ancestor 12d3bd8a8896fb60b05199b086bc32b689c44244 research/eigenzeit-bd-reference
+          git merge-base --is-ancestor 2d2539123162ddc032b85ba51af56255ca36a906 research/eigenzeit-bd-reference
+          test "$(git rev-parse research/eigenzeit-bd-reference)" = "751dcb7174da8be9f8bb676ce3a34fae96cf43ff"
+          git push origin refs/heads/research/eigenzeit-bd-reference:refs/heads/research/eigenzeit-bd-reference
