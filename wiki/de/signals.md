@@ -4,7 +4,7 @@ Eine ruhigere Kurve ist nicht automatisch eine bessere Messung. Entscheidend ist
 
 [English](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/en/signals.md) · [Wiki-Übersicht](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/de/)
 
-Quellenstand: 2026-10-19 · `5e164bdc0feaf529af34e019f43dfda949c47302`
+Quellenstand: 2026-10-19 · `694dd9ec0409f35c9c6fd3e835ef187ada72c598`
 
 ## Vom Signal zum Spektrum
 

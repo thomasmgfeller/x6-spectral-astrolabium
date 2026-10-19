@@ -4,7 +4,7 @@ A smoother curve is not automatically a better measurement. What matters is whet
 
 [Deutsch](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/de/signals.md) · [Wiki overview](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/en/)
 
-Source snapshot: 2026-10-19 · `5e164bdc0feaf529af34e019f43dfda949c47302`
+Source snapshot: 2026-10-19 · `694dd9ec0409f35c9c6fd3e835ef187ada72c598`
 
 ## From a signal to a spectrum
 

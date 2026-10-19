@@ -4,7 +4,7 @@ Hier geht es um die Frage, welche Struktur in Beziehungen steckt, bevor man eine
 
 [English](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/en/causal-orders.md) · [Wiki-Übersicht](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/de/)
 
-Quellenstand: 2026-10-19 · `5e164bdc0feaf529af34e019f43dfda949c47302`
+Quellenstand: 2026-10-19 · `694dd9ec0409f35c9c6fd3e835ef187ada72c598`
 
 ## Ereignisse und ihre Reihenfolge
 
@@ -329,3 +329,18 @@ Bei höchster Dichte erlauben 16 von 16 bisherigen Kappen gemeinsame Momente mit
 - [Results / Ergebnisse](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/5e164bdc0feaf529af34e019f43dfda949c47302/research/lorentz_local_dalembert/moment_feasibility/RESULTS.md)
 - [Protocol / Protokoll](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/5e164bdc0feaf529af34e019f43dfda949c47302/research/lorentz_local_dalembert/moment_feasibility/PROTOCOL.md)
 - [Data / Daten](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/5e164bdc0feaf529af34e019f43dfda949c47302/research/lorentz_local_dalembert/moment_feasibility/results/summary.json)
+
+## BK: Landmarkenregel scheitert vor der Kalibrierung
+
+Der nächste feste Versuch leitet ein lokales Bezugssystem ausschließlich aus kausalen Intervallzählungen ab. Drei Landmarken sollen gemeinsam die Koordinatenbasis für eine regulierte Momentenanpassung liefern. Ein zusätzlicher Zählrauschschutz soll instabile Anpassungen abweisen. Bei jedem Ausfall bleiben die bisherigen Intervallgewichte erhalten.
+
+Alle 48 vorab festgelegten Testwolken sind abgeschlossen und vollständig nachgerechnet. Sechs Nachbarschaften bei niedrigster Dichte sind unverfügbar. Auf allen 42 verfügbaren Nachbarschaften fehlt ein zulässiges Landmarken-Triplett. Daher übernehmen beide intrinsischen Varianten in 0 von 48 Wolken neue Gewichte. Bei höchster Dichte bleiben alle drei Fehlerverhältnisse bei 1.0; verlangt war jeweils höchstens 0.75.
+
+Die Auswertung von 20 unabhängigen Sinus- und Kosinusfeldern folgt erst nach der Konstruktion. Ein Vergleich mit bekannten Simulationskoordinaten senkt bei höchster Dichte den Feld-RMS von 27.652 auf 0.964. Dieser diagnostische Erfolg gehört zum koordinatengestützten Vergleich und kann den gescheiterten intrinsischen Ansatz nicht freigeben.
+
+INTRINSIC_MOMENT_HOLD und HOLD_PHASE3 bleiben bestehen. Das Ergebnis verwirft diese konkrete Landmarkenregel in diesem Testbereich. Der Rauschschutz wurde auf den Testwolken nie erreicht und ist damit empirisch noch nicht bewertet. Vor einem neuen Versuch muss die Verfügbarkeit geeigneter Landmarken untersucht werden; Grenzwerte und Testdaten dieses Versuchs bleiben unverändert.
+
+- [Results / Ergebnisse](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/694dd9ec0409f35c9c6fd3e835ef187ada72c598/research/lorentz_local_dalembert/intrinsic_moments/RESULTS.md)
+- [Protocol / Protokoll](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/694dd9ec0409f35c9c6fd3e835ef187ada72c598/research/lorentz_local_dalembert/intrinsic_moments/PROTOCOL.md)
+- [Data / Daten](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/694dd9ec0409f35c9c6fd3e835ef187ada72c598/research/lorentz_local_dalembert/intrinsic_moments/results/summary.json)
+- [Replay](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/694dd9ec0409f35c9c6fd3e835ef187ada72c598/research/lorentz_local_dalembert/intrinsic_moments/VERIFICATION.json)
