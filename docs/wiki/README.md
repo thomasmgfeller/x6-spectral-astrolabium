@@ -75,3 +75,9 @@ Machbarkeit auf 48 frischen Wolken. Bei höchster Dichte 16/16 Kappen mit
 festen Zeitgewichten lösbar, minimale Gewichtssumme im Mittel 0.845×Basis.
 Angepasste Momente sind Nebenbedingungen, keine unabhängige Validierung;
 CAP_MOMENT_FEASIBILITY_SUPPORTED bei weiterhin HOLD_PHASE3.
+
+Sechster Nachtrag 19. Oktober 2026: intrinsische Landmarkenkalibrierung auf
+48 frischen Wolken vollständig nachgerechnet. 42 verfügbare Nachbarschaften
+ohne zulässiges Landmarken-Triplett, sechs unverfügbar, 0/48 Übernahmen.
+Rückfallbasis unverändert; Rauschschutz nicht erreicht. Koordinatengestützte
+Feldverbesserung ist diagnostisch. INTRINSIC_MOMENT_HOLD und HOLD_PHASE3.

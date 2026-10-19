@@ -4,7 +4,7 @@ Ein Wegweiser für Neugierige, Lernende und Menschen, die selbst prüfen möchte
 
 [English](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/en/) · [Wiki-Übersicht](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/de/)
 
-Quellenstand: 2026-10-19 · `5e164bdc0feaf529af34e019f43dfda949c47302`
+Quellenstand: 2026-10-19 · `694dd9ec0409f35c9c6fd3e835ef187ada72c598`
 
 ## Was ist X6?
 

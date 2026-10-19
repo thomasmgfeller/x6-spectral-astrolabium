@@ -4,7 +4,7 @@ This research asks what structure is carried by relationships before a spatial d
 
 [Deutsch](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/de/causal-orders.md) · [Wiki overview](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/en/)
 
-Source snapshot: 2026-10-19 · `5e164bdc0feaf529af34e019f43dfda949c47302`
+Source snapshot: 2026-10-19 · `694dd9ec0409f35c9c6fd3e835ef187ada72c598`
 
 ## Events and their ordering
 
@@ -329,3 +329,18 @@ All 48 fresh clouds and every available linear program were fully replayed. Nonu
 - [Results / Ergebnisse](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/5e164bdc0feaf529af34e019f43dfda949c47302/research/lorentz_local_dalembert/moment_feasibility/RESULTS.md)
 - [Protocol / Protokoll](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/5e164bdc0feaf529af34e019f43dfda949c47302/research/lorentz_local_dalembert/moment_feasibility/PROTOCOL.md)
 - [Data / Daten](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/5e164bdc0feaf529af34e019f43dfda949c47302/research/lorentz_local_dalembert/moment_feasibility/results/summary.json)
+
+## BK: landmark rule fails before calibration
+
+The next fixed trial derives a local frame solely from causal interval counts. Three landmarks are intended to provide the basis for a regularized moment fit. An additional count-noise guard rejects unstable fits. Every failure preserves the previous interval weights.
+
+All 48 preregistered target clouds completed and were fully replayed. Six low-density neighborhoods are unavailable. Every one of the 42 available neighborhoods lacks an eligible landmark triple. Both intrinsic arms therefore adopt new weights on 0 of 48 clouds. At the highest density, all three error ratios remain 1.0; each had to be at most 0.75.
+
+Twenty independent sine and cosine fields are evaluated only after construction. A diagnostic using known simulation coordinates reduces the highest-density field RMS from 27.652 to 0.964. This result belongs to the coordinate-assisted comparator and cannot qualify the unsuccessful intrinsic candidate.
+
+INTRINSIC_MOMENT_HOLD and HOLD_PHASE3 remain. The result rejects this specific landmark rule in the tested regime. No target reached the noise guard, so its empirical effectiveness remains untested. Landmark availability must be examined before a new trial; this trial retains its frozen thresholds and data.
+
+- [Results / Ergebnisse](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/694dd9ec0409f35c9c6fd3e835ef187ada72c598/research/lorentz_local_dalembert/intrinsic_moments/RESULTS.md)
+- [Protocol / Protokoll](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/694dd9ec0409f35c9c6fd3e835ef187ada72c598/research/lorentz_local_dalembert/intrinsic_moments/PROTOCOL.md)
+- [Data / Daten](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/694dd9ec0409f35c9c6fd3e835ef187ada72c598/research/lorentz_local_dalembert/intrinsic_moments/results/summary.json)
+- [Replay](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/694dd9ec0409f35c9c6fd3e835ef187ada72c598/research/lorentz_local_dalembert/intrinsic_moments/VERIFICATION.json)
