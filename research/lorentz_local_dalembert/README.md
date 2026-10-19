@@ -1,5 +1,7 @@
 # Local d’Alembertian: independent reproduction track
 
+**Latest bounded result:** [Joint support/count/frame feasibility](joint_feasibility/RESULTS.md) passes all guards and a hidden second colouring on 16/16 fresh high-density clouds (0/16 low, 1/16 middle). Adaptive temporal and other supports, mixed past/future landmarks in one frame, unchanged acceptance thresholds. No operator weights or derivative qualification; **HOLD_PHASE3**.
+
 **Latest trial (19 October 2026): larger outer diamonds; `OUTER_DIAMOND_HOLD`.**
 The [paired outer-domain trial](outer_diamond/RESULTS.md) completed 48 fresh
 clouds at three nested durations, with identical inner supports and unchanged

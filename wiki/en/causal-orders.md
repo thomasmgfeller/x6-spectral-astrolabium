@@ -4,7 +4,7 @@ This research asks what structure is carried by relationships before a spatial d
 
 [Deutsch](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/de/causal-orders.md) · [Wiki overview](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/en/)
 
-Source snapshot: 2026-10-19 · `6738f129ca31e56a88690a9d17941516ccefb321`
+Source snapshot: 2026-10-19 · `4a6fe9c383e56b5a26f286fba6aa6d8c9263308a`
 
 ## Events and their ordering
 
@@ -372,3 +372,23 @@ The decision is OUTER_DIAMOND_HOLD. Further pure enlargements cannot rescue thes
 - [Report / Bericht](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/6738f129ca31e56a88690a9d17941516ccefb321/research/lorentz_local_dalembert/outer_diamond/RESULTS.md)
 - [Protocol / Protokoll](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/6738f129ca31e56a88690a9d17941516ccefb321/research/lorentz_local_dalembert/outer_diamond/PROTOCOL.md)
 - [Full replay / Vollständiger Replay](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/6738f129ca31e56a88690a9d17941516ccefb321/research/lorentz_local_dalembert/outer_diamond/VERIFICATION.json)
+
+## BK: Joint support, count and frame feasibility
+
+The successor jointly selects temporal and other support points with a stable reference frame. Its three landmarks may come from both past and future; this is still one frame. The previous count and stability thresholds are unchanged.
+
+| Density | Jointly selected | Also passes second colouring |
+| --- | --- | --- |
+| 2048 | 0/16 | 0/16 |
+| 8192 | 1/16 | 1/16 |
+| 32768 | 16/16 | 16/16 |
+
+All 48 target clouds are fresh and generated after the computational sources were publicly frozen. A second random colouring of the same events remained hidden until selection was complete and could not trigger a retry. This tests sensitivity to that colouring; it is not independent physical data or a confidence guarantee.
+
+At the highest density, frame conditions range from 17.5 to 24.8 below the unchanged limit of 100. Supports contain 15–32 events. The lower count-shell scale is about 11.4 percent above the old tau_m; temporal points and actual extent change separately. This is not a universal statement about operator resolution.
+
+JOINT_FEASIBILITY_SUPPORTED means the joint prerequisites can be met in this dense 2+1 reference model. No new operator has been constructed. The next task is to check moment weights with controlled noise amplification before independent derivative tests. HOLD_PHASE3 remains in force.
+
+- [Results / Ergebnisse](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/4a6fe9c383e56b5a26f286fba6aa6d8c9263308a/research/lorentz_local_dalembert/joint_feasibility/RESULTS.md)
+- [Protocol / Protokoll](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/4a6fe9c383e56b5a26f286fba6aa6d8c9263308a/research/lorentz_local_dalembert/joint_feasibility/PROTOCOL.md)
+- [Full replay / Vollständige Wiederholung](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/4a6fe9c383e56b5a26f286fba6aa6d8c9263308a/research/lorentz_local_dalembert/joint_feasibility/VERIFICATION.json)
