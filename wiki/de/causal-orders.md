@@ -4,7 +4,7 @@ Hier geht es um die Frage, welche Struktur in Beziehungen steckt, bevor man eine
 
 [English](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/en/causal-orders.md) · [Wiki-Übersicht](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/de/)
 
-Quellenstand: 2026-10-19 · `6738f129ca31e56a88690a9d17941516ccefb321`
+Quellenstand: 2026-10-19 · `4a6fe9c383e56b5a26f286fba6aa6d8c9263308a`
 
 ## Ereignisse und ihre Reihenfolge
 
@@ -372,3 +372,23 @@ Der Entscheid lautet OUTER_DIAMOND_HOLD. Weitere reine Vergrößerungen können 
 - [Report / Bericht](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/6738f129ca31e56a88690a9d17941516ccefb321/research/lorentz_local_dalembert/outer_diamond/RESULTS.md)
 - [Protocol / Protokoll](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/6738f129ca31e56a88690a9d17941516ccefb321/research/lorentz_local_dalembert/outer_diamond/PROTOCOL.md)
 - [Full replay / Vollständiger Replay](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/6738f129ca31e56a88690a9d17941516ccefb321/research/lorentz_local_dalembert/outer_diamond/VERIFICATION.json)
+
+## BK: Stützpunkte, Zählwerte und Bezugssystem gemeinsam
+
+Der nächste Versuch wählt zeitliche und weitere Stützpunkte gemeinsam mit einem stabilen Bezugssystem. Dessen drei Landmarken dürfen aus Vergangenheit und Zukunft stammen. Es bleibt ein einzelnes Bezugssystem. Die alten Zähl- und Stabilitätsgrenzen wurden nicht gelockert.
+
+| Dichte | Gemeinsam gewählt | Auch zweite Aufteilung bestanden |
+| --- | --- | --- |
+| 2048 | 0/16 | 0/16 |
+| 8192 | 1/16 | 1/16 |
+| 32768 | 16/16 | 16/16 |
+
+Alle 48 Testwolken sind neu und wurden nach öffentlicher Fixierung der Rechenquellen erzeugt. Eine zweite Zufallsaufteilung derselben Punkte blieb bis nach der Auswahl verborgen und durfte keine neue Auswahl auslösen. Sie prüft Stabilität unter dieser Aufteilung, ist aber keine unabhängige physische Messung oder Konfidenzgarantie.
+
+Bei höchster Dichte liegen die Konditionswerte zwischen 17.5 und 24.8 unter der unveränderten Grenze 100. Gewählt werden 15–32 Stützpunkte. Die untere Zählschalen-Skala wächst gegenüber dem alten tau_m um etwa 11.4 Prozent; Zeitstützpunkte und tatsächliche Ausdehnung ändern sich gesondert. Das ist keine pauschale Aussage über die Auflösung eines Operators.
+
+JOINT_FEASIBILITY_SUPPORTED bedeutet: Die gemeinsamen Voraussetzungen lassen sich in diesem hochdichten 2+1-Referenzmodell erfüllen. Ein neuer Operator wurde noch nicht gebaut. Als Nächstes müssen passende Momentgewichte mit kontrollierter Rauschverstärkung geprüft werden; erst danach folgen unabhängige Ableitungstests. HOLD_PHASE3 bleibt bestehen.
+
+- [Results / Ergebnisse](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/4a6fe9c383e56b5a26f286fba6aa6d8c9263308a/research/lorentz_local_dalembert/joint_feasibility/RESULTS.md)
+- [Protocol / Protokoll](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/4a6fe9c383e56b5a26f286fba6aa6d8c9263308a/research/lorentz_local_dalembert/joint_feasibility/PROTOCOL.md)
+- [Full replay / Vollständige Wiederholung](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/4a6fe9c383e56b5a26f286fba6aa6d8c9263308a/research/lorentz_local_dalembert/joint_feasibility/VERIFICATION.json)
