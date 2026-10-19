@@ -4,7 +4,7 @@ Hier geht es um die Frage, welche Struktur in Beziehungen steckt, bevor man eine
 
 [English](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/en/causal-orders.md) · [Wiki-Übersicht](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/de/)
 
-Quellenstand: 2026-10-19 · `ac519f5e4a83de0e570680fe4cfeb2da133db351`
+Quellenstand: 2026-10-19 · `6738f129ca31e56a88690a9d17941516ccefb321`
 
 ## Ereignisse und ihre Reihenfolge
 
@@ -358,3 +358,17 @@ Alle 48 Wolken wurden vollständig wiederholt. Die nächste Konstruktion muss di
 - [Report / Bericht](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/ac519f5e4a83de0e570680fe4cfeb2da133db351/research/lorentz_local_dalembert/landmark_availability/RESULTS.md)
 - [Protocol / Protokoll](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/ac519f5e4a83de0e570680fe4cfeb2da133db351/research/lorentz_local_dalembert/landmark_availability/PROTOCOL.md)
 - [Full replay / Vollständiger Replay](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/ac519f5e4a83de0e570680fe4cfeb2da133db351/research/lorentz_local_dalembert/landmark_availability/VERIFICATION.json)
+
+## BK: Mehr äußerer Raum reicht für die Rekonstruktion nicht
+
+48 frische Punktwolken wurden jeweils in drei ineinander liegenden Diamanten untersucht. Die innere Punktwolke, ihre Stützpunkte, Dichte, Gewichte und Prüfregeln bleiben gleich; nur außerhalb kommen unabhängig gestreute Punkte hinzu. Die äußeren Zeitdurchmesser 1, 1.25 und 1.5 waren vorab festgelegt.
+
+Bei höchster Dichte entstehen bei vollständiger Suche passende Landmarkentripel in 0, 10 und schließlich 16 von 16 Fällen. Die äußere Begrenzung war damit tatsächlich ein Hindernis. In der größten Variante liefert die bisherige Suche unter jeweils 40 Kandidaten jedoch nur in 13 Fällen Tripel; daraus entstehen acht zulässige Bezugssysteme. Keines besteht den unveränderten Rauschschutz.
+
+Alle 42 verfügbaren inneren Nachbarschaften besitzen mindestens ein benötigtes Intervall mit weniger als 16 Ereignissen. Ein Intervall zwischen inneren Punkten liegt vollständig im inneren Diamanten. Zusätzliche äußere Punkte können seinen Zählwert deshalb nicht erhöhen. Alle acht Bezugssysteme scheitern außerdem an der Konditionsgrenze, also an der geforderten numerischen Stabilität.
+
+Der Entscheid lautet OUTER_DIAMOND_HOLD. Weitere reine Vergrößerungen können diese festen Supports unter den gleichen Regeln nicht retten. Vor einer neuen Kampagne müssen Supportauswahl, nötige Zählwerte und stabile Bezugssysteme gemeinsam auf Machbarkeit geprüft werden. Adaptive Supports und mehrere überlappende Bezugssysteme sind mögliche neue Verfahren, aber hier nicht validiert. HOLD_PHASE3 bleibt bestehen.
+
+- [Report / Bericht](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/6738f129ca31e56a88690a9d17941516ccefb321/research/lorentz_local_dalembert/outer_diamond/RESULTS.md)
+- [Protocol / Protokoll](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/6738f129ca31e56a88690a9d17941516ccefb321/research/lorentz_local_dalembert/outer_diamond/PROTOCOL.md)
+- [Full replay / Vollständiger Replay](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/6738f129ca31e56a88690a9d17941516ccefb321/research/lorentz_local_dalembert/outer_diamond/VERIFICATION.json)
