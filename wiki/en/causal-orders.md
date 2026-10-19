@@ -4,7 +4,7 @@ This research asks what structure is carried by relationships before a spatial d
 
 [Deutsch](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/de/causal-orders.md) · [Wiki overview](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/en/)
 
-Source snapshot: 2026-10-19 · `c58cc26adb2b4a646e3940e417351040b5dc9ff0`
+Source snapshot: 2026-10-19 · `d6c9f3d9ddf975cdc6f0c2ce055c5becb1f7a2ee`
 
 ## Events and their ordering
 
@@ -273,3 +273,17 @@ All 48 new test clouds were fully replayed. The outcome is improved search cover
 - [Results / Ergebnisse](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/c58cc26adb2b4a646e3940e417351040b5dc9ff0/research/lorentz_local_dalembert/anchor_audit/RESULTS.md)
 - [Protocol / Protokoll](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/c58cc26adb2b4a646e3940e417351040b5dc9ff0/research/lorentz_local_dalembert/anchor_audit/PROTOCOL.md)
 - [Data / Daten](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/c58cc26adb2b4a646e3940e417351040b5dc9ff0/research/lorentz_local_dalembert/anchor_audit/results/summary.json)
+
+## BK moment diagnosis: shell proper times and reference directions
+
+A further 48 fresh clouds test all eight prespecified combinations of three controls: corrected temporal endpoint proper times (T), constant proper time for all shell points (S), and a common time direction for endpoints and shell references (D). Membership is fixed within each arm. All interventions use known simulation coordinates and are diagnostic controls.
+
+At the highest density both arms are available on all 16 clouds. With all controls, relative metric RMS falls from 7.387 to 2.267 with intrinsic neighbor selection, and from 5.893 to 1.002 with an exact distance cap. Both residual errors exceed the original 0.5 limit.
+
+The full factorial allocation assigns substantially larger error reductions to S and D than to T. Temporal endpoints already have nearly correct proper times on average; shells have systematically larger proper times and substantial spread. The exact moment balance also accounts for cancellation between temporal and shell errors.
+
+The prespecified diagnostic criterion passes, while Phase 3 remains on HOLD. At low density the combined control actually worsens the intrinsic arm. The next candidate is intrinsic shell calibration from causal interval counts, together with a study of common reference directions. This needs new development and fresh validation. All 48 clouds were fully replayed; earlier scientific files and the BD-C2 NO_GO remain unchanged.
+
+- [Results / Ergebnisse](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/d6c9f3d9ddf975cdc6f0c2ce055c5becb1f7a2ee/research/lorentz_local_dalembert/moment_audit/RESULTS.md)
+- [Protocol / Protokoll](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/d6c9f3d9ddf975cdc6f0c2ce055c5becb1f7a2ee/research/lorentz_local_dalembert/moment_audit/PROTOCOL.md)
+- [Data / Daten](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/d6c9f3d9ddf975cdc6f0c2ce055c5becb1f7a2ee/research/lorentz_local_dalembert/moment_audit/results/summary.json)

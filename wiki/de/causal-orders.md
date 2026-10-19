@@ -4,7 +4,7 @@ Hier geht es um die Frage, welche Struktur in Beziehungen steckt, bevor man eine
 
 [English](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/en/causal-orders.md) · [Wiki-Übersicht](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/de/)
 
-Quellenstand: 2026-10-19 · `c58cc26adb2b4a646e3940e417351040b5dc9ff0`
+Quellenstand: 2026-10-19 · `d6c9f3d9ddf975cdc6f0c2ce055c5becb1f7a2ee`
 
 ## Ereignisse und ihre Reihenfolge
 
@@ -273,3 +273,17 @@ Alle 48 neuen Testwolken wurden vollständig wiederholt. Ergebnis: bessere Sucha
 - [Results / Ergebnisse](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/c58cc26adb2b4a646e3940e417351040b5dc9ff0/research/lorentz_local_dalembert/anchor_audit/RESULTS.md)
 - [Protocol / Protokoll](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/c58cc26adb2b4a646e3940e417351040b5dc9ff0/research/lorentz_local_dalembert/anchor_audit/PROTOCOL.md)
 - [Data / Daten](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/c58cc26adb2b4a646e3940e417351040b5dc9ff0/research/lorentz_local_dalembert/anchor_audit/results/summary.json)
+
+## BK-Momentendiagnose: Schalen und Zeitrichtungen als Engpässe
+
+Weitere 48 frische Wolken prüfen alle acht vorab festgelegten Kombinationen von drei Kontrollen: richtige Eigenzeiten der Zeitstützpunkte (T), konstante Eigenzeit aller Schalenpunkte (S) und eine gemeinsame Zeitrichtung für Endpunkte und Schalenreferenzen (D). Die Auswahl bleibt je Arm unverändert. Alle Eingriffe verwenden bekannte Simulationskoordinaten und sind daher diagnostische Kontrollen.
+
+Bei höchster Dichte stehen beide Arme in 16 von 16 Wolken zur Verfügung. Mit allen Kontrollen sinkt der relative Metrik-RMS von 7,387 auf 2,267 bei intrinsischer Nachbarauswahl und von 5,893 auf 1,002 bei exakter Abstandskappe. Beide Restfehler überschreiten die ursprüngliche Grenze 0,5.
+
+Die vollständige faktorielle Fehlerzuordnung weist wesentlich grössere Beiträge für S und D aus als für T. Die Zeitstützpunkte liegen im Mittel bereits nahe der richtigen Eigenzeit; die Schalen besitzen eine systematisch grössere Eigenzeit und erhebliche Streuung. Die exakte Momentenbilanz berücksichtigt auch die gegenseitige Aufhebung von Zeit- und Schalenfehlern.
+
+Das vorab festgelegte Diagnosekriterium ist erfüllt, Phase 3 bleibt auf HOLD. Bei niedriger Dichte verschlechtert die Gesamtkontrolle den intrinsischen Arm sogar. Der nächste Kandidat ist eine intrinsische Schalenkalibrierung über kausale Intervallzählungen, zusammen mit einer Prüfung gemeinsamer Referenzrichtungen. Das erfordert eine neue Entwicklung und frische Validierung. Alle 48 Wolken wurden vollständig wiederholt; frühere wissenschaftliche Dateien und BD-C2 NO_GO bleiben unverändert.
+
+- [Results / Ergebnisse](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/d6c9f3d9ddf975cdc6f0c2ce055c5becb1f7a2ee/research/lorentz_local_dalembert/moment_audit/RESULTS.md)
+- [Protocol / Protokoll](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/d6c9f3d9ddf975cdc6f0c2ce055c5becb1f7a2ee/research/lorentz_local_dalembert/moment_audit/PROTOCOL.md)
+- [Data / Daten](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/d6c9f3d9ddf975cdc6f0c2ce055c5becb1f7a2ee/research/lorentz_local_dalembert/moment_audit/results/summary.json)

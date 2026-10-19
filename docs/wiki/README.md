@@ -8,7 +8,7 @@ GitHub-Pages-Portals, nicht ein getrennt gepflegtes GitHub-Wiki-Repository.
 - [Deutsch](../../wiki/de/index.html)
 - [English](../../wiki/en/index.html)
 
-Aktualisierter Quellenstand: 19. Oktober 2026, Commit `c58cc26adb2b4a646e3940e417351040b5dc9ff0`.
+Aktualisierter Quellenstand: 19. Oktober 2026, Commit `d6c9f3d9ddf975cdc6f0c2ce055c5becb1f7a2ee`.
 Die Eigenzeit-Referenzen bleiben mit ihren jeweiligen Grenzen dokumentiert.
 Neu erklärt sind der vollständige Krümmungsbenchmark, beide verfehlten
 Empfindlichkeitskriterien und die exakte konforme Dichteverwechslung.
@@ -54,3 +54,8 @@ Nachtrag 19. Oktober 2026: gepaarter BK-Ankersuchvergleich auf 48 frischen
 Wolken. Eignungsfilter vor Begrenzung verbessert Abdeckung, aber Metrikfehler
 und Fehlselektionen bleiben sichtbar; HOLD_PHASE3. Bericht und Rohdaten
 sind im Kapitel kausale Ordnungen in beiden Sprachen verlinkt.
+
+Zweiter Nachtrag 19. Oktober 2026: BK-Momentendiagnose mit 48 weiteren frischen
+Wolken und acht Kombinationen von Zeit-, Schalen- und Richtungskontrollen.
+Metrik-RMS bei höchster Dichte 7,387 → 2,267; mit exakter Kappe 5,893 → 1,002.
+Alle Eingriffe koordinatengestützt, Restfehler über 0,5; weiterhin HOLD_PHASE3.
