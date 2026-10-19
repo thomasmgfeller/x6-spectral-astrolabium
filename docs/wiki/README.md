@@ -8,7 +8,7 @@ GitHub-Pages-Portals, nicht ein getrennt gepflegtes GitHub-Wiki-Repository.
 - [Deutsch](../../wiki/de/index.html)
 - [English](../../wiki/en/index.html)
 
-Aktualisierter Quellenstand: 19. Oktober 2026, Commit `d6c9f3d9ddf975cdc6f0c2ce055c5becb1f7a2ee`.
+Aktualisierter Quellenstand: 19. Oktober 2026, Commit `aa2c3dae7bb7afb564cdf4f08b0fe8f2c64c9bfb`.
 Die Eigenzeit-Referenzen bleiben mit ihren jeweiligen Grenzen dokumentiert.
 Neu erklärt sind der vollständige Krümmungsbenchmark, beide verfehlten
 Empfindlichkeitskriterien und die exakte konforme Dichteverwechslung.
@@ -59,3 +59,8 @@ Zweiter Nachtrag 19. Oktober 2026: BK-Momentendiagnose mit 48 weiteren frischen
 Wolken und acht Kombinationen von Zeit-, Schalen- und Richtungskontrollen.
 Metrik-RMS bei höchster Dichte 7,387 → 2,267; mit exakter Kappe 5,893 → 1,002.
 Alle Eingriffe koordinatengestützt, Restfehler über 0,5; weiterhin HOLD_PHASE3.
+
+Dritter Nachtrag 19. Oktober 2026: intrinsische Intervallgewichte auf 48 weiteren
+frischen Wolken. Metrik-RMS 7,089 → 3,765 und affine Drift 3,692 → 2,882 bei
+höchster Dichte; begrenzter Verbesserungsvergleich bestanden. Nur 8/16 richtige
+Lorentz-Signaturen, weiter HOLD_PHASE3.

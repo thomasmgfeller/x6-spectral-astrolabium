@@ -6,16 +6,16 @@ Registerstand: 2026-10-19. MAIN / SOFTWARE. Kein Live-Prüfsiegel.
 
 Branch: main
 
-Commit: d6c9f3d9ddf975cdc6f0c2ce055c5becb1f7a2ee
+Commit: aa2c3dae7bb7afb564cdf4f08b0fe8f2c64c9bfb
 
-[Originaldokumentation](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/d6c9f3d9ddf975cdc6f0c2ce055c5becb1f7a2ee/docs/validation-v1/README.md)
+[Originaldokumentation](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/aa2c3dae7bb7afb564cdf4f08b0fe8f2c64c9bfb/docs/validation-v1/README.md)
 
 ## Dokumentierte Aussage
 
 Konkrete M1-Zugriffswege im begrenzten Planerformat geschlossen: nur öffentliche Modell-/Präfixdaten, frische Worker, kein Callback, vollständige Index-/Zellprüfung, phasengebundener Holdout und exakter Replay. Historische B1/M1-Archive und Ergebnisse unverändert. Keine allgemeine Python-Sandbox oder externe Blindheit.
 
-- [docs/validation-v1/evidence/guarded/qualification.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/d6c9f3d9ddf975cdc6f0c2ce055c5becb1f7a2ee/docs/validation-v1/evidence/guarded/qualification.json): Ausgeführte 33 Negativkontrollen, wirksame Datenmutationen und unabhängige exakte Vorhersage 13/24.
-- [docs/validation-v1/ERROR_BUDGET.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/d6c9f3d9ddf975cdc6f0c2ce055c5becb1f7a2ee/docs/validation-v1/ERROR_BUDGET.json): Nulltoleranz im zugelassenen Profil; menschliche Blindheit, allgemeine Sandbox und externe Wiederholung offen.
+- [docs/validation-v1/evidence/guarded/qualification.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/aa2c3dae7bb7afb564cdf4f08b0fe8f2c64c9bfb/docs/validation-v1/evidence/guarded/qualification.json): Ausgeführte 33 Negativkontrollen, wirksame Datenmutationen und unabhängige exakte Vorhersage 13/24.
+- [docs/validation-v1/ERROR_BUDGET.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/aa2c3dae7bb7afb564cdf4f08b0fe8f2c64c9bfb/docs/validation-v1/ERROR_BUDGET.json): Nulltoleranz im zugelassenen Profil; menschliche Blindheit, allgemeine Sandbox und externe Wiederholung offen.
 
 ## Reproduzieren
 
@@ -26,7 +26,7 @@ Neue Arbeits- und Ausgabeordner verwenden; Voraussetzungen aus der Originaldokum
 ```sh
 git clone --branch main https://github.com/thomasmgfeller/x6-spectral-astrolabium.git x6-rax-guarded
 cd x6-rax-guarded
-git checkout --detach d6c9f3d9ddf975cdc6f0c2ce055c5becb1f7a2ee
+git checkout --detach aa2c3dae7bb7afb564cdf4f08b0fe8f2c64c9bfb
 python3 -S -B tests/rax-guarded/qualify.py --output /tmp/register-rax-g1
 python3 -S -B experimental/rax_guarded/runner.py verify /tmp/register-rax-g1/run
 python3 -S -B tests/rax-guarded/check_budget.py --qualification /tmp/register-rax-g1/qualification.json

@@ -4,7 +4,7 @@ Hier geht es um die Frage, welche Struktur in Beziehungen steckt, bevor man eine
 
 [English](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/en/causal-orders.md) · [Wiki-Übersicht](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/de/)
 
-Quellenstand: 2026-10-19 · `d6c9f3d9ddf975cdc6f0c2ce055c5becb1f7a2ee`
+Quellenstand: 2026-10-19 · `aa2c3dae7bb7afb564cdf4f08b0fe8f2c64c9bfb`
 
 ## Ereignisse und ihre Reihenfolge
 
@@ -287,3 +287,17 @@ Das vorab festgelegte Diagnosekriterium ist erfüllt, Phase 3 bleibt auf HOLD. B
 - [Results / Ergebnisse](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/d6c9f3d9ddf975cdc6f0c2ce055c5becb1f7a2ee/research/lorentz_local_dalembert/moment_audit/RESULTS.md)
 - [Protocol / Protokoll](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/d6c9f3d9ddf975cdc6f0c2ce055c5becb1f7a2ee/research/lorentz_local_dalembert/moment_audit/PROTOCOL.md)
 - [Data / Daten](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/d6c9f3d9ddf975cdc6f0c2ce055c5becb1f7a2ee/research/lorentz_local_dalembert/moment_audit/results/summary.json)
+
+## BK-Schalenkalibrierung: erste intrinsische Gewichtsverbesserung
+
+Der nächste Versuch verwendet die Anzahl der Ereignisse im kausalen Intervall, um die Eigenzeit jedes ausgewählten Schalenpunkts zu schätzen. Daraus entstehen inverse quadratische Gewichte. Die Nachbarn und Referenzrichtungen bleiben unverändert. Der primäre Kandidat braucht nur Kausalordnung und bekannte Dichte, keine Einbettungskoordinaten.
+
+Protokoll und Rechenquellen wurden vor den jeweiligen Daten öffentlich festgelegt. Fünf feste Arme wurden auf 48 frischen Wolken verglichen: ursprüngliche Gewichte, Intervallgewichte nur für Schalen beziehungsweise für Schalen und Zeitpunkte sowie zwei Kontrollen mit exakten Eigenzeiten. Die Kontrollen wählen keine anderen Nachbarn.
+
+Bei höchster Dichte verbessert der primäre Kandidat den Metrik-RMS von 7,089 auf 3,765 und die normierte Drift auf linearen Feldern von 3,692 auf 2,882. Alle 16 Wolken sind verfügbar. Damit bestehen die drei vorab festgelegten Verbesserungsgrenzen gemeinsam; der sekundäre Arm wird nicht nachträglich zum Hauptkandidaten erklärt.
+
+Die richtige Lorentz-Signatur gelingt dennoch nur in 8 von 16 Wolken; der absolute Metrikfehler bleibt über 0,5 und verschwindet in dieser Dichtefolge nicht. Phase 3 bleibt HOLD. Alle 48 Wolken wurden numerisch nachgerechnet; Koordinaten-Bytehashes werden getrennt ausgewiesen. Als nächstes sind gemeinsame Referenzrichtungen und die verbleibenden ersten und zweiten Momente zu untersuchen, mit neuem Protokoll und frischen Testdaten.
+
+- [Results / Ergebnisse](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/aa2c3dae7bb7afb564cdf4f08b0fe8f2c64c9bfb/research/lorentz_local_dalembert/volume_shell/RESULTS.md)
+- [Protocol / Protokoll](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/aa2c3dae7bb7afb564cdf4f08b0fe8f2c64c9bfb/research/lorentz_local_dalembert/volume_shell/PROTOCOL.md)
+- [Data / Daten](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/aa2c3dae7bb7afb564cdf4f08b0fe8f2c64c9bfb/research/lorentz_local_dalembert/volume_shell/results/summary.json)
