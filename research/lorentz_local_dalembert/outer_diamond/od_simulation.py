@@ -41,6 +41,9 @@ def relation(z, block=32):
     n = len(z)
     r = np.empty((n, n), dtype=np.uint8)
     for start in range(0, n, block):
-        delta = z[None, :, :] - z[start:start+block, None, :]
-        r[start:start+block] = (delta[:, :, 0] > 0) & (delta[:, :, 0]**2 > np.sum(delta[:, :, 1:]**2, axis=2))
+        # Identical component operations; avoid a strided (block,n,3) temporary.
+        dt = z[None, :, 0] - z[start:start+block, None, 0]
+        dx = z[None, :, 1] - z[start:start+block, None, 1]
+        dy = z[None, :, 2] - z[start:start+block, None, 2]
+        r[start:start+block] = (dt > 0) & (dt*dt > dx*dx + dy*dy)
     return r
