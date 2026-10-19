@@ -1,6 +1,22 @@
 # Local d’Alembertian: independent reproduction track
 
-**Latest diagnosis (19 October 2026): landmark coverage audited; `HOLD_PHASE3`.**
+**Latest trial (19 October 2026): larger outer diamonds; `OUTER_DIAMOND_HOLD`.**
+The [paired outer-domain trial](outer_diamond/RESULTS.md) completed 48 fresh
+clouds at three nested durations, with identical inner supports and unchanged
+guards. At the highest density, uncapped triple availability increases from
+0/16 at T=1 to 10/16 at T=1.25 and 16/16 at T=1.5. The original capped search
+provides 13/16 triples and 8/16 admissible frames at T=1.5, but 0/16 pass the
+guard. All 42 available inner stencils contain a required interval with fewer
+than 16 events; causal convexity makes these counts invariant under every
+pure outer enlargement. All eight selected frames also fail the condition
+bound. Raw diagnostic RMS ratios are 0.822/0.793/0.837; guarded ratios are 1.0.
+More outer space alone cannot qualify this construction. `HOLD_PHASE3` remains.
+
+```sh
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python3 -B research/lorentz_local_dalembert/outer_diamond/verify_outer.py
+```
+
+**Previous diagnosis: landmark coverage audited; `HOLD_PHASE3`.**
 The 48 archived intrinsic-calibration clouds were examined retrospectively and
 fully replayed. Exhaustive uncapped searches still yield 0/42 full-support
 triples; exact finite-poset packing bounds certify 31/42 failures. At the
