@@ -8,7 +8,7 @@ GitHub-Pages-Portals, nicht ein getrennt gepflegtes GitHub-Wiki-Repository.
 - [Deutsch](../../wiki/de/index.html)
 - [English](../../wiki/en/index.html)
 
-Aktualisierter Quellenstand: 19. Oktober 2026, Commit `26432e3d4cde20adabb510f17d5639891f4ac642`.
+Aktualisierter Quellenstand: 19. Oktober 2026, Commit `5e164bdc0feaf529af34e019f43dfda949c47302`.
 Die Eigenzeit-Referenzen bleiben mit ihren jeweiligen Grenzen dokumentiert.
 Neu erklärt sind der vollständige Krümmungsbenchmark, beide verfehlten
 Empfindlichkeitskriterien und die exakte konforme Dichteverwechslung.
@@ -69,3 +69,9 @@ Vierter Nachtrag 19. Oktober 2026: gemeinsame Referenzrichtungen aus kausalen
 Intervallzählungen auf 48 weiteren frischen Wolken. Metrik-RMS 4.840 → 3.709,
 affine Drift 3.271 → 3.085 bei höchster Dichte. Gesamtentscheid COMMON_AXIS_HOLD;
 weiter HOLD_PHASE3. Erste und zweite Momente werden getrennt ausgewiesen.
+
+Fünfter Nachtrag 19. Oktober 2026: koordinatengestützte gemeinsame Momenten-
+Machbarkeit auf 48 frischen Wolken. Bei höchster Dichte 16/16 Kappen mit
+festen Zeitgewichten lösbar, minimale Gewichtssumme im Mittel 0.845×Basis.
+Angepasste Momente sind Nebenbedingungen, keine unabhängige Validierung;
+CAP_MOMENT_FEASIBILITY_SUPPORTED bei weiterhin HOLD_PHASE3.

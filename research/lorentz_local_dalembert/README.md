@@ -1,6 +1,21 @@
 # Local d’Alembertian: independent reproduction track
 
-**Current status (19 October 2026): common-axis trial `COMMON_AXIS_HOLD`;
+**Current status (19 October 2026): joint-moment feasibility
+`CAP_MOMENT_FEASIBILITY_SUPPORTED`; `HOLD_PHASE3`.**
+A new publicly frozen coordinate-assisted diagnostic tests six fixed
+support/sign policies on 48 fresh clouds. At the highest density,
+16/16 original caps permit simultaneous first/second moments with fixed negative
+temporal weights and nonnegative shell weights; 16/16 have minimum absolute
+weight mass at most twice baseline. Mean minimum-mass ratio: 0.845.
+These are fitted constraints using known coordinates and metric, not intrinsic
+metric validation. Read the [feasibility report](moment_feasibility/RESULTS.md)
+for all policies, certificates, noise-bound limits and full numerical replay.
+
+```sh
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python3 -B research/lorentz_local_dalembert/moment_feasibility/verify_feasibility.py
+```
+
+**Earlier common-axis trial (19 October 2026): `COMMON_AXIS_HOLD`;
 `HOLD_PHASE3`.**
 A new public protocol selects both shell reference directions in a common
 endpoint frame, using only causal interval counts and known density. Four arms

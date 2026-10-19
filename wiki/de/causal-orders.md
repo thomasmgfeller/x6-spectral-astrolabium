@@ -4,7 +4,7 @@ Hier geht es um die Frage, welche Struktur in Beziehungen steckt, bevor man eine
 
 [English](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/en/causal-orders.md) · [Wiki-Übersicht](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/de/)
 
-Quellenstand: 2026-10-19 · `26432e3d4cde20adabb510f17d5639891f4ac642`
+Quellenstand: 2026-10-19 · `5e164bdc0feaf529af34e019f43dfda949c47302`
 
 ## Ereignisse und ihre Reihenfolge
 
@@ -315,3 +315,17 @@ Protokoll und Quellen einschliesslich Analyse wurden vor den jeweiligen Daten ve
 - [Results / Ergebnisse](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/26432e3d4cde20adabb510f17d5639891f4ac642/research/lorentz_local_dalembert/common_axis/RESULTS.md)
 - [Protocol / Protokoll](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/26432e3d4cde20adabb510f17d5639891f4ac642/research/lorentz_local_dalembert/common_axis/PROTOCOL.md)
 - [Data / Daten](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/26432e3d4cde20adabb510f17d5639891f4ac642/research/lorentz_local_dalembert/common_axis/results/summary.json)
+
+## BK: gemeinsame Momente sind auf dichten Kappen machbar
+
+Nach dem gescheiterten Referenzrichtungsversuch wird zuerst eine grundsätzliche Frage geprüft: Können die vorhandenen Punkte bei geeigneten Gewichten gleichzeitig lineare Felder vernichten und die vorgegebene Metrik liefern? Diese Diagnose nutzt bekannte Simulationskoordinaten und die Zielmetrik. Passende polynomiale Antworten sind daher Nebenbedingungen, kein unabhängiger Erfolg eines intrinsischen Operators.
+
+Zwei feste Stützpunktmengen werden verglichen: bisherige Kappen und vollständige Kettenschalen. Jeweils bleiben die Zeitgewichte fest, werden bei erhaltenen Vorzeichen freigegeben oder alle Vorzeichen werden freigegeben. Minimiert wird die absolute Gewichtssumme. Jede Lösbarkeitsaussage benötigt einen geprüften primären und dualen Zeugen; Unlösbarkeit benötigt einen separaten trennenden Zeugen.
+
+Bei höchster Dichte erlauben 16 von 16 bisherigen Kappen gemeinsame Momente mit unveränderten negativen Zeitgewichten und nichtnegativen Schalengewichten. Alle 16 erfüllen auch die vorab gesetzte Massengrenze. Die minimale Gewichtssumme beträgt im Mittel 0.845 der bisherigen. Bei niedrigster Dichte gelingt diese feste Regel nur auf 3 von 16 Wolken; sechs Kappen sind unverfügbar und sieben nach den numerischen Zeugen unlösbar.
+
+48 neue Wolken und alle verfügbaren linearen Programme wurden vollständig nachgerechnet. Nicht eindeutige Gewichts- und Dualvektoren dürfen abweichen, müssen aber jeweils gültige Zeugen sein und denselben minimalen Zielwert liefern. Die Diagnose zeigt bei hoher Dichte Spielraum in der Gewichtswahl; eine Konstruktion ohne Einbettungskoordinaten und Tests auf unabhängigen Feldern bleiben offen. Phase 3 bleibt HOLD.
+
+- [Results / Ergebnisse](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/5e164bdc0feaf529af34e019f43dfda949c47302/research/lorentz_local_dalembert/moment_feasibility/RESULTS.md)
+- [Protocol / Protokoll](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/5e164bdc0feaf529af34e019f43dfda949c47302/research/lorentz_local_dalembert/moment_feasibility/PROTOCOL.md)
+- [Data / Daten](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/5e164bdc0feaf529af34e019f43dfda949c47302/research/lorentz_local_dalembert/moment_feasibility/results/summary.json)

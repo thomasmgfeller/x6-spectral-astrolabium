@@ -1,0 +1,27 @@
+{
+  "status": "PASS_NUMERICAL_REPLAY",
+  "clouds": 48,
+  "coordinate_hashes_equal": 48,
+  "lp_problems": 270,
+  "relation_marks_support_and_classifications_exact": true,
+  "controls": {
+    "status": "PASS_SOFTWARE_CONTROLS",
+    "symmetric_exact_mass": 14.38888888888889,
+    "policy_fixtures": 3,
+    "one_direction_infeasibility_policies": 3,
+    "sign_obstruction_resolved_by_signed_weights": true,
+    "mutation_rejections": 3,
+    "permutation_and_uniform_scaling": true
+  },
+  "baseline_tolerance": {
+    "atol": 1e-10,
+    "rtol": 1e-09
+  },
+  "lp_tolerance": {
+    "atol": 1e-08,
+    "rtol": 1e-07
+  },
+  "decision": "CAP_MOMENT_FEASIBILITY_SUPPORTED",
+  "phase3": "HOLD_PHASE3",
+  "note": "Every archived and replayed witness checked independently. Nonunique weights/dual vectors may differ; objectives and summary must agree. Coordinate byte hashes are separate."
+}

@@ -1,0 +1,650 @@
+{
+  "schema": "x6.bk-moment-feasibility-summary/1",
+  "mode": "test",
+  "complete": true,
+  "budget_pass": true,
+  "certificates_pass": true,
+  "algebra_pass": true,
+  "clouds": 48,
+  "cells": [
+    {
+      "rho": 2048,
+      "supports": {
+        "caps": {
+          "available": 10,
+          "total": 16,
+          "policies": {
+            "fixed_time": {
+              "counts": {
+                "FEASIBLE": 3,
+                "INFEASIBLE": 7,
+                "UNRESOLVED": 0
+              },
+              "unavailable": 6,
+              "total": 16,
+              "feasible_fraction": 0.1875,
+              "bounded_mass_count": 3,
+              "bounded_mass_fraction": 0.1875,
+              "minimum_mass": {
+                "n": 3,
+                "mean": 20.230701517530303,
+                "se": 1.5833926252956851
+              },
+              "mass_ratio": {
+                "n": 3,
+                "mean": 0.967075211049861,
+                "se": 0.1098233985649829
+              },
+              "maximum_mass_ratio": 1.176873156937115,
+              "full_rank_count": 10
+            },
+            "free_time": {
+              "counts": {
+                "FEASIBLE": 5,
+                "INFEASIBLE": 5,
+                "UNRESOLVED": 0
+              },
+              "unavailable": 6,
+              "total": 16,
+              "feasible_fraction": 0.3125,
+              "bounded_mass_count": 5,
+              "bounded_mass_fraction": 0.3125,
+              "minimum_mass": {
+                "n": 5,
+                "mean": 14.508298090215026,
+                "se": 1.786935875202446
+              },
+              "mass_ratio": {
+                "n": 5,
+                "mean": 0.6965918179148117,
+                "se": 0.09449369715264393
+              },
+              "maximum_mass_ratio": 0.9695452940814665,
+              "full_rank_count": 10
+            },
+            "unrestricted": {
+              "counts": {
+                "FEASIBLE": 10,
+                "INFEASIBLE": 0,
+                "UNRESOLVED": 0
+              },
+              "unavailable": 6,
+              "total": 16,
+              "feasible_fraction": 0.625,
+              "bounded_mass_count": 10,
+              "bounded_mass_fraction": 0.625,
+              "minimum_mass": {
+                "n": 10,
+                "mean": 15.735775353865838,
+                "se": 1.7804485256326341
+              },
+              "mass_ratio": {
+                "n": 10,
+                "mean": 0.7492196344689246,
+                "se": 0.0775846999456125
+              },
+              "maximum_mass_ratio": 1.302639478921417,
+              "full_rank_count": 10
+            }
+          },
+          "baseline_metric_rms": 2.7437121573220966,
+          "baseline_affine_rms": 2.844916601725192,
+          "baseline_mass": {
+            "n": 10,
+            "mean": 20.968701859973045,
+            "se": 0.45928617093158175
+          },
+          "support_count": {
+            "n": 10,
+            "mean": 18.4,
+            "se": 0.47609522856952335
+          },
+          "maximum_scaled_distance": {
+            "n": 10,
+            "mean": 2.3355092625270286,
+            "se": 0.06270710946492646
+          }
+        },
+        "full_shells": {
+          "available": 16,
+          "total": 16,
+          "policies": {
+            "fixed_time": {
+              "counts": {
+                "FEASIBLE": 13,
+                "INFEASIBLE": 3,
+                "UNRESOLVED": 0
+              },
+              "unavailable": 0,
+              "total": 16,
+              "feasible_fraction": 0.8125,
+              "bounded_mass_count": 13,
+              "bounded_mass_fraction": 0.8125,
+              "minimum_mass": {
+                "n": 13,
+                "mean": 19.64596617828554,
+                "se": 0.5802616561028204
+              },
+              "mass_ratio": {
+                "n": 13,
+                "mean": 0.9451959441083245,
+                "se": 0.03383387790170332
+              },
+              "maximum_mass_ratio": 1.1396360506236178,
+              "full_rank_count": 16
+            },
+            "free_time": {
+              "counts": {
+                "FEASIBLE": 15,
+                "INFEASIBLE": 1,
+                "UNRESOLVED": 0
+              },
+              "unavailable": 0,
+              "total": 16,
+              "feasible_fraction": 0.9375,
+              "bounded_mass_count": 15,
+              "bounded_mass_fraction": 0.9375,
+              "minimum_mass": {
+                "n": 15,
+                "mean": 9.075806040669358,
+                "se": 0.5190660175532001
+              },
+              "mass_ratio": {
+                "n": 15,
+                "mean": 0.4365631637661695,
+                "se": 0.025282654959631536
+              },
+              "maximum_mass_ratio": 0.6229794734243945,
+              "full_rank_count": 16
+            },
+            "unrestricted": {
+              "counts": {
+                "FEASIBLE": 16,
+                "INFEASIBLE": 0,
+                "UNRESOLVED": 0
+              },
+              "unavailable": 0,
+              "total": 16,
+              "feasible_fraction": 1.0,
+              "bounded_mass_count": 16,
+              "bounded_mass_fraction": 1.0,
+              "minimum_mass": {
+                "n": 16,
+                "mean": 8.377525047323028,
+                "se": 0.40981863150010867
+              },
+              "mass_ratio": {
+                "n": 16,
+                "mean": 0.40307025792517476,
+                "se": 0.019916006952002664
+              },
+              "maximum_mass_ratio": 0.5658356597397911,
+              "full_rank_count": 16
+            }
+          },
+          "baseline_metric_rms": 3.0481969248905867,
+          "baseline_affine_rms": 2.5906368394137664,
+          "baseline_mass": {
+            "n": 16,
+            "mean": 20.816040769873524,
+            "se": 0.23898573427356504
+          },
+          "support_count": {
+            "n": 16,
+            "mean": 28.8125,
+            "se": 0.913868836321712
+          },
+          "maximum_scaled_distance": {
+            "n": 16,
+            "mean": 2.5266973518955718,
+            "se": 0.04766796672318158
+          }
+        }
+      },
+      "paired_transitions": {
+        "caps/fixed_time to caps/free_time": {
+          "INFEASIBLE -> INFEASIBLE": 5,
+          "FEASIBLE -> FEASIBLE": 3,
+          "INFEASIBLE -> FEASIBLE": 2,
+          "UNAVAILABLE -> UNAVAILABLE": 6
+        },
+        "caps/fixed_time to caps/unrestricted": {
+          "INFEASIBLE -> FEASIBLE": 7,
+          "FEASIBLE -> FEASIBLE": 3,
+          "UNAVAILABLE -> UNAVAILABLE": 6
+        },
+        "caps/fixed_time to full_shells/fixed_time": {
+          "INFEASIBLE -> INFEASIBLE": 2,
+          "FEASIBLE -> FEASIBLE": 3,
+          "INFEASIBLE -> FEASIBLE": 5,
+          "UNAVAILABLE -> FEASIBLE": 5,
+          "UNAVAILABLE -> INFEASIBLE": 1
+        }
+      }
+    },
+    {
+      "rho": 8192,
+      "supports": {
+        "caps": {
+          "available": 16,
+          "total": 16,
+          "policies": {
+            "fixed_time": {
+              "counts": {
+                "FEASIBLE": 13,
+                "INFEASIBLE": 3,
+                "UNRESOLVED": 0
+              },
+              "unavailable": 0,
+              "total": 16,
+              "feasible_fraction": 0.8125,
+              "bounded_mass_count": 13,
+              "bounded_mass_fraction": 0.8125,
+              "minimum_mass": {
+                "n": 13,
+                "mean": 16.811760735146283,
+                "se": 0.6270932143717812
+              },
+              "mass_ratio": {
+                "n": 13,
+                "mean": 0.9173337574602667,
+                "se": 0.037004131761232816
+              },
+              "maximum_mass_ratio": 1.121220479348113,
+              "full_rank_count": 16
+            },
+            "free_time": {
+              "counts": {
+                "FEASIBLE": 15,
+                "INFEASIBLE": 1,
+                "UNRESOLVED": 0
+              },
+              "unavailable": 0,
+              "total": 16,
+              "feasible_fraction": 0.9375,
+              "bounded_mass_count": 15,
+              "bounded_mass_fraction": 0.9375,
+              "minimum_mass": {
+                "n": 15,
+                "mean": 9.6281903470574,
+                "se": 0.9098113890542582
+              },
+              "mass_ratio": {
+                "n": 15,
+                "mean": 0.5288272912255095,
+                "se": 0.052606014743827846
+              },
+              "maximum_mass_ratio": 1.0419682153236418,
+              "full_rank_count": 16
+            },
+            "unrestricted": {
+              "counts": {
+                "FEASIBLE": 16,
+                "INFEASIBLE": 0,
+                "UNRESOLVED": 0
+              },
+              "unavailable": 0,
+              "total": 16,
+              "feasible_fraction": 1.0,
+              "bounded_mass_count": 16,
+              "bounded_mass_fraction": 1.0,
+              "minimum_mass": {
+                "n": 16,
+                "mean": 9.157085249338374,
+                "se": 0.6786901051975587
+              },
+              "mass_ratio": {
+                "n": 16,
+                "mean": 0.5030810299795345,
+                "se": 0.03796361760794913
+              },
+              "maximum_mass_ratio": 0.8011940418603857,
+              "full_rank_count": 16
+            }
+          },
+          "baseline_metric_rms": 2.76856414896814,
+          "baseline_affine_rms": 2.1477923237412027,
+          "baseline_mass": {
+            "n": 16,
+            "mean": 18.29663122532292,
+            "se": 0.3743295049532913
+          },
+          "support_count": {
+            "n": 16,
+            "mean": 31.625,
+            "se": 1.657998291112911
+          },
+          "maximum_scaled_distance": {
+            "n": 16,
+            "mean": 2.6161826939331467,
+            "se": 0.06194293558651591
+          }
+        },
+        "full_shells": {
+          "available": 16,
+          "total": 16,
+          "policies": {
+            "fixed_time": {
+              "counts": {
+                "FEASIBLE": 16,
+                "INFEASIBLE": 0,
+                "UNRESOLVED": 0
+              },
+              "unavailable": 0,
+              "total": 16,
+              "feasible_fraction": 1.0,
+              "bounded_mass_count": 16,
+              "bounded_mass_fraction": 1.0,
+              "minimum_mass": {
+                "n": 16,
+                "mean": 15.481459675607503,
+                "se": 0.5584702967720416
+              },
+              "mass_ratio": {
+                "n": 16,
+                "mean": 0.8643687820851144,
+                "se": 0.03447103437129652
+              },
+              "maximum_mass_ratio": 1.1146747790351001,
+              "full_rank_count": 16
+            },
+            "free_time": {
+              "counts": {
+                "FEASIBLE": 16,
+                "INFEASIBLE": 0,
+                "UNRESOLVED": 0
+              },
+              "unavailable": 0,
+              "total": 16,
+              "feasible_fraction": 1.0,
+              "bounded_mass_count": 16,
+              "bounded_mass_fraction": 1.0,
+              "minimum_mass": {
+                "n": 16,
+                "mean": 4.404873492580908,
+                "se": 0.18783087108796562
+              },
+              "mass_ratio": {
+                "n": 16,
+                "mean": 0.24624175348410451,
+                "se": 0.012242825365364576
+              },
+              "maximum_mass_ratio": 0.384932368764601,
+              "full_rank_count": 16
+            },
+            "unrestricted": {
+              "counts": {
+                "FEASIBLE": 16,
+                "INFEASIBLE": 0,
+                "UNRESOLVED": 0
+              },
+              "unavailable": 0,
+              "total": 16,
+              "feasible_fraction": 1.0,
+              "bounded_mass_count": 16,
+              "bounded_mass_fraction": 1.0,
+              "minimum_mass": {
+                "n": 16,
+                "mean": 4.3087599406994865,
+                "se": 0.15182450918193613
+              },
+              "mass_ratio": {
+                "n": 16,
+                "mean": 0.2408742084249166,
+                "se": 0.010319388939588451
+              },
+              "maximum_mass_ratio": 0.3328657318338162,
+              "full_rank_count": 16
+            }
+          },
+          "baseline_metric_rms": 3.989453611737564,
+          "baseline_affine_rms": 2.381059868942767,
+          "baseline_mass": {
+            "n": 16,
+            "mean": 18.0253374626726,
+            "se": 0.3754163366213946
+          },
+          "support_count": {
+            "n": 16,
+            "mean": 69.6875,
+            "se": 1.9508945597682448
+          },
+          "maximum_scaled_distance": {
+            "n": 16,
+            "mean": 2.99985447669477,
+            "se": 0.057866546602767195
+          }
+        }
+      },
+      "paired_transitions": {
+        "caps/fixed_time to caps/free_time": {
+          "INFEASIBLE -> FEASIBLE": 2,
+          "FEASIBLE -> FEASIBLE": 13,
+          "INFEASIBLE -> INFEASIBLE": 1
+        },
+        "caps/fixed_time to caps/unrestricted": {
+          "INFEASIBLE -> FEASIBLE": 3,
+          "FEASIBLE -> FEASIBLE": 13
+        },
+        "caps/fixed_time to full_shells/fixed_time": {
+          "INFEASIBLE -> FEASIBLE": 3,
+          "FEASIBLE -> FEASIBLE": 13
+        }
+      }
+    },
+    {
+      "rho": 32768,
+      "supports": {
+        "caps": {
+          "available": 16,
+          "total": 16,
+          "policies": {
+            "fixed_time": {
+              "counts": {
+                "FEASIBLE": 16,
+                "INFEASIBLE": 0,
+                "UNRESOLVED": 0
+              },
+              "unavailable": 0,
+              "total": 16,
+              "feasible_fraction": 1.0,
+              "bounded_mass_count": 16,
+              "bounded_mass_fraction": 1.0,
+              "minimum_mass": {
+                "n": 16,
+                "mean": 13.605137087184215,
+                "se": 0.47558615970618806
+              },
+              "mass_ratio": {
+                "n": 16,
+                "mean": 0.8445068167565534,
+                "se": 0.03239526770624713
+              },
+              "maximum_mass_ratio": 1.1051036613251584,
+              "full_rank_count": 16
+            },
+            "free_time": {
+              "counts": {
+                "FEASIBLE": 16,
+                "INFEASIBLE": 0,
+                "UNRESOLVED": 0
+              },
+              "unavailable": 0,
+              "total": 16,
+              "feasible_fraction": 1.0,
+              "bounded_mass_count": 16,
+              "bounded_mass_fraction": 1.0,
+              "minimum_mass": {
+                "n": 16,
+                "mean": 6.493875389975747,
+                "se": 0.3751190569185191
+              },
+              "mass_ratio": {
+                "n": 16,
+                "mean": 0.4027194523282569,
+                "se": 0.02438094240925582
+              },
+              "maximum_mass_ratio": 0.585847281281509,
+              "full_rank_count": 16
+            },
+            "unrestricted": {
+              "counts": {
+                "FEASIBLE": 16,
+                "INFEASIBLE": 0,
+                "UNRESOLVED": 0
+              },
+              "unavailable": 0,
+              "total": 16,
+              "feasible_fraction": 1.0,
+              "bounded_mass_count": 16,
+              "bounded_mass_fraction": 1.0,
+              "minimum_mass": {
+                "n": 16,
+                "mean": 6.318197619580703,
+                "se": 0.3638142344658648
+              },
+              "mass_ratio": {
+                "n": 16,
+                "mean": 0.3923394006852029,
+                "se": 0.024229588323160887
+              },
+              "maximum_mass_ratio": 0.5818274149252469,
+              "full_rank_count": 16
+            }
+          },
+          "baseline_metric_rms": 4.116263084244236,
+          "baseline_affine_rms": 2.323100003321471,
+          "baseline_mass": {
+            "n": 16,
+            "mean": 16.187545408056575,
+            "se": 0.307554331995884
+          },
+          "support_count": {
+            "n": 16,
+            "mean": 54.5625,
+            "se": 2.123222295631493
+          },
+          "maximum_scaled_distance": {
+            "n": 16,
+            "mean": 3.10210706834769,
+            "se": 0.06755605092213153
+          }
+        },
+        "full_shells": {
+          "available": 16,
+          "total": 16,
+          "policies": {
+            "fixed_time": {
+              "counts": {
+                "FEASIBLE": 16,
+                "INFEASIBLE": 0,
+                "UNRESOLVED": 0
+              },
+              "unavailable": 0,
+              "total": 16,
+              "feasible_fraction": 1.0,
+              "bounded_mass_count": 16,
+              "bounded_mass_fraction": 1.0,
+              "minimum_mass": {
+                "n": 16,
+                "mean": 13.041632035971867,
+                "se": 0.3808235939494272
+              },
+              "mass_ratio": {
+                "n": 16,
+                "mean": 0.8142729416461674,
+                "se": 0.02363854473785758
+              },
+              "maximum_mass_ratio": 0.9748432498411512,
+              "full_rank_count": 16
+            },
+            "free_time": {
+              "counts": {
+                "FEASIBLE": 16,
+                "INFEASIBLE": 0,
+                "UNRESOLVED": 0
+              },
+              "unavailable": 0,
+              "total": 16,
+              "feasible_fraction": 1.0,
+              "bounded_mass_count": 16,
+              "bounded_mass_fraction": 1.0,
+              "minimum_mass": {
+                "n": 16,
+                "mean": 2.2849470388189346,
+                "se": 0.06552911779022719
+              },
+              "mass_ratio": {
+                "n": 16,
+                "mean": 0.1431187891226236,
+                "se": 0.0050206297736600245
+              },
+              "maximum_mass_ratio": 0.1847378608650731,
+              "full_rank_count": 16
+            },
+            "unrestricted": {
+              "counts": {
+                "FEASIBLE": 16,
+                "INFEASIBLE": 0,
+                "UNRESOLVED": 0
+              },
+              "unavailable": 0,
+              "total": 16,
+              "feasible_fraction": 1.0,
+              "bounded_mass_count": 16,
+              "bounded_mass_fraction": 1.0,
+              "minimum_mass": {
+                "n": 16,
+                "mean": 2.2847387362634786,
+                "se": 0.06544798809030843
+              },
+              "mass_ratio": {
+                "n": 16,
+                "mean": 0.14310581456945137,
+                "se": 0.005016659712151344
+              },
+              "maximum_mass_ratio": 0.18473786086507318,
+              "full_rank_count": 16
+            }
+          },
+          "baseline_metric_rms": 7.393288840054433,
+          "baseline_affine_rms": 2.1030268560900236,
+          "baseline_mass": {
+            "n": 16,
+            "mean": 16.03917185918593,
+            "se": 0.23102750022880028
+          },
+          "support_count": {
+            "n": 16,
+            "mean": 171.25,
+            "se": 4.361288036043175
+          },
+          "maximum_scaled_distance": {
+            "n": 16,
+            "mean": 3.6947012906614387,
+            "se": 0.0688639769141179
+          }
+        }
+      },
+      "paired_transitions": {
+        "caps/fixed_time to caps/free_time": {
+          "FEASIBLE -> FEASIBLE": 16
+        },
+        "caps/fixed_time to caps/unrestricted": {
+          "FEASIBLE -> FEASIBLE": 16
+        },
+        "caps/fixed_time to full_shells/fixed_time": {
+          "FEASIBLE -> FEASIBLE": 16
+        }
+      }
+    }
+  ],
+  "primary_gates": {
+    "feasible_fraction": true,
+    "bounded_mass_fraction": true,
+    "all_available_resolved": true
+  },
+  "decision": "CAP_MOMENT_FEASIBILITY_SUPPORTED",
+  "phase3": "HOLD_PHASE3",
+  "note": "Coordinate-assisted feasibility only. Fitted moments are constraints, not independent metric validation. Nonunique witnesses are not preferred operators."
+}

@@ -4,7 +4,7 @@ This research asks what structure is carried by relationships before a spatial d
 
 [Deutsch](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/de/causal-orders.md) · [Wiki overview](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/en/)
 
-Source snapshot: 2026-10-19 · `26432e3d4cde20adabb510f17d5639891f4ac642`
+Source snapshot: 2026-10-19 · `5e164bdc0feaf529af34e019f43dfda949c47302`
 
 ## Events and their ordering
 
@@ -315,3 +315,17 @@ The protocol and computational sources, including analysis, were published befor
 - [Results / Ergebnisse](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/26432e3d4cde20adabb510f17d5639891f4ac642/research/lorentz_local_dalembert/common_axis/RESULTS.md)
 - [Protocol / Protokoll](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/26432e3d4cde20adabb510f17d5639891f4ac642/research/lorentz_local_dalembert/common_axis/PROTOCOL.md)
 - [Data / Daten](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/26432e3d4cde20adabb510f17d5639891f4ac642/research/lorentz_local_dalembert/common_axis/results/summary.json)
+
+## BK: joint moments are feasible on dense caps
+
+After the failed reference-direction trial, the next diagnostic asks whether suitable weights on the existing points can simultaneously annihilate linear fields and reproduce the prescribed metric. It uses known simulation coordinates and the target metric. Matching polynomial responses are therefore constraints, not independent evidence for an intrinsic operator.
+
+Two fixed support families are compared: existing caps and complete chain shells. Temporal weights are either fixed, freed with their signs retained, or all weight signs are freed. The objective minimizes total absolute weight. Feasible optima require checked primal and dual witnesses; infeasibility requires a separate separating witness.
+
+At the highest density, 16 of 16 existing caps allow joint moments with unchanged negative temporal weights and nonnegative shell weights. All 16 also satisfy the prespecified mass bound. Mean minimum weight mass is 0.845 of baseline. At the lowest density the fixed rule succeeds on only 3 of 16 clouds; six caps are unavailable and seven have numerical infeasibility witnesses.
+
+All 48 fresh clouds and every available linear program were fully replayed. Nonunique primal and dual vectors may differ, but each must be a valid witness with the same minimum objective. Dense supports leave room for better weight choices; deriving those weights without embedding coordinates and testing independent fields remain open. Phase 3 stays on HOLD.
+
+- [Results / Ergebnisse](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/5e164bdc0feaf529af34e019f43dfda949c47302/research/lorentz_local_dalembert/moment_feasibility/RESULTS.md)
+- [Protocol / Protokoll](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/5e164bdc0feaf529af34e019f43dfda949c47302/research/lorentz_local_dalembert/moment_feasibility/PROTOCOL.md)
+- [Data / Daten](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/5e164bdc0feaf529af34e019f43dfda949c47302/research/lorentz_local_dalembert/moment_feasibility/results/summary.json)

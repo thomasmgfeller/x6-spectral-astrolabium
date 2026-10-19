@@ -6,18 +6,18 @@ Registerstand: 2026-10-19. MAIN / SOFTWARE. Kein Live-Prüfsiegel.
 
 Branch: main
 
-Commit: 26432e3d4cde20adabb510f17d5639891f4ac642
+Commit: 5e164bdc0feaf529af34e019f43dfda949c47302
 
-[Originaldokumentation](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/26432e3d4cde20adabb510f17d5639891f4ac642/research/lorentz_n7_complete/README.md)
+[Originaldokumentation](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/5e164bdc0feaf529af34e019f43dfda949c47302/research/lorentz_n7_complete/README.md)
 
 ## Dokumentierte Aussage
 
 Vollständige exakte Prüfung von F0+W_future+W_past bis n=7. Bei n=7 bleiben zwei nichtisomorphe Paare der Höhe drei; die Hypothese ist widerlegt. Zweiter Enumerator prüft alle 2^21 oberen Binärmatrizen, 96.428 natürliche Beschriftungen und 2.045 Klassen. Insgesamt 2.450 Repräsentanten und 7.350 exakte Polynome. D trennt n≤7, ersetzt aber nicht die skalare Hypothese. Keine physische Validierung oder externe Begutachtung.
 
-- [research/lorentz_n7_complete/results/RESULTS.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/26432e3d4cde20adabb510f17d5639891f4ac642/research/lorentz_n7_complete/results/RESULTS.json): Vollständiges negatives Ergebnis, Quellbindung und alle Größenklassen.
-- [research/lorentz_n7_complete/results/independent-results.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/26432e3d4cde20adabb510f17d5639891f4ac642/research/lorentz_n7_complete/results/independent-results.json): Algorithmisch getrennte Enumeration, Isomorphiesuche, natürliche Multiplizitäten und exakte Determinanteninterpolation.
-- [research/lorentz_n7_complete/COUNTEREXAMPLES.md](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/26432e3d4cde20adabb510f17d5639891f4ac642/research/lorentz_n7_complete/COUNTEREXAMPLES.md): Beide minimalen n=7-Paare mit Matrizen und Polynomen; elementarer Nichtisomorphiebeweis und isolierte Erweiterungen für alle n≥7.
-- [research/lorentz_n7_complete/freeze.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/26432e3d4cde20adabb510f17d5639891f4ac642/research/lorentz_n7_complete/freeze.json): Vor dem vollständigen Lauf veröffentlichte Quellhashes; prospektiver Arbeitsablauf, keine externe Präregistrierung.
+- [research/lorentz_n7_complete/results/RESULTS.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/5e164bdc0feaf529af34e019f43dfda949c47302/research/lorentz_n7_complete/results/RESULTS.json): Vollständiges negatives Ergebnis, Quellbindung und alle Größenklassen.
+- [research/lorentz_n7_complete/results/independent-results.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/5e164bdc0feaf529af34e019f43dfda949c47302/research/lorentz_n7_complete/results/independent-results.json): Algorithmisch getrennte Enumeration, Isomorphiesuche, natürliche Multiplizitäten und exakte Determinanteninterpolation.
+- [research/lorentz_n7_complete/COUNTEREXAMPLES.md](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/5e164bdc0feaf529af34e019f43dfda949c47302/research/lorentz_n7_complete/COUNTEREXAMPLES.md): Beide minimalen n=7-Paare mit Matrizen und Polynomen; elementarer Nichtisomorphiebeweis und isolierte Erweiterungen für alle n≥7.
+- [research/lorentz_n7_complete/freeze.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/5e164bdc0feaf529af34e019f43dfda949c47302/research/lorentz_n7_complete/freeze.json): Vor dem vollständigen Lauf veröffentlichte Quellhashes; prospektiver Arbeitsablauf, keine externe Präregistrierung.
 
 ## Reproduzieren
 
@@ -28,7 +28,7 @@ Neue Arbeits- und Ausgabeordner verwenden; Voraussetzungen aus der Originaldokum
 ```sh
 git clone --branch main https://github.com/thomasmgfeller/x6-spectral-astrolabium.git x6-lorentz-n7-complete
 cd x6-lorentz-n7-complete
-git checkout --detach 26432e3d4cde20adabb510f17d5639891f4ac642
+git checkout --detach 5e164bdc0feaf529af34e019f43dfda949c47302
 python3 -O research/lorentz_n7_complete/run.py --verify research/lorentz_n7_complete/results
 ```
 
