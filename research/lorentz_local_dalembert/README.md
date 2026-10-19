@@ -1,6 +1,22 @@
 # Local d’Alembertian: independent reproduction track
 
-**Current status (19 October 2026): `INTRINSIC_MOMENT_HOLD`; `HOLD_PHASE3`.**
+**Latest diagnosis (19 October 2026): landmark coverage audited; `HOLD_PHASE3`.**
+The 48 archived intrinsic-calibration clouds were examined retrospectively and
+fully replayed. Exhaustive uncapped searches still yield 0/42 full-support
+triples; exact finite-poset packing bounds certify 31/42 failures. At the
+highest density the largest achievable minimum mutual count is 2 (required 8).
+Exact-volume proxies also yield 0/42. Root-only relaxation yields 16/16 at high
+density but cannot supply the original support distances. Increasing the
+candidate cap alone cannot rescue this fixed construction. Read the
+[availability diagnosis](landmark_availability/RESULTS.md), including all
+conditional relaxations, witness records and limits. This is not fresh
+validation or a new operator.
+
+```sh
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python3 -B research/lorentz_local_dalembert/landmark_availability/verify_audit.py
+```
+
+**Preceding trial (19 October 2026): `INTRINSIC_MOMENT_HOLD`; `HOLD_PHASE3`.**
 The fixed landmark calibration trial completed 48 fresh target clouds. All 42
 available stencils lack an eligible landmark triple; six low-density stencils
 are unavailable. Both intrinsic arms adopt 0/48 and fall back unchanged. At the

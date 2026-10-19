@@ -1,7 +1,7 @@
 {
   "schema": "x6.bilingual-wiki/1",
   "snapshot_date": "2026-10-19",
-  "source_commit": "694dd9ec0409f35c9c6fd3e835ef187ada72c598",
+  "source_commit": "ac519f5e4a83de0e570680fe4cfeb2da133db351",
   "articles": [
     {
       "id": "index",
@@ -1690,6 +1690,45 @@
                 ]
               }
             ]
+          },
+          {
+            "id": "bk-landmark-availability",
+            "title": "BK: Warum eine größere Landmarkensuche nicht genügt",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "Die folgende Diagnose verwendet die bereits bekannten 48 Wolken des gescheiterten Landmarkenversuchs. Sie ist ausdrücklich retrospektiv. Sechs Nachbarschaften bleiben unverfügbar; alle 42 verfügbaren Stützbereiche werden vollständig durchsucht."
+              },
+              {
+                "type": "paragraph",
+                "text": "Auch ohne die Begrenzung auf 40 Kandidaten findet sich kein zulässiges Dreiergespann. Bei höchster Dichte erreicht der beste kleinste gegenseitige Intervallzählwert nur 2 statt der verlangten 8. Für 31 von 42 Nachbarschaften beweist bereits eine notwendige Zählschranke die Unmöglichkeit: Drei passend getrennte Landmarken benötigen mindestens 27 Zwischenereignisse bis zum äußeren Rand."
+              },
+              {
+                "type": "paragraph",
+                "text": "Werden Landmarken nur um den Mittelpunkt gesucht, gelingen bei höchster Dichte 16 von 16 Fälle. Diese Lockerung liefert jedoch nicht alle für den Operator benötigten Abstände. Auch exakte Volumenwerte aus Simulationskoordinaten ergeben am vollständigen Stützbereich 0 von 42 zulässigen Gruppen. Damit ist weder Zählrauschen allein noch die 40er-Grenze eine ausreichende Erklärung auf diesen Wolken."
+              },
+              {
+                "type": "paragraph",
+                "text": "Alle 48 Wolken wurden vollständig wiederholt. Die nächste Konstruktion muss die gemeinsame Abdeckung und ausreichende kausale Tiefe lösen, beispielsweise durch mehr äußeren Raum oder eigenständig entwickelte überlappende Rahmen. Das benötigt eigene Entwicklung, ein öffentliches Protokoll und frische Testdaten. HOLD_PHASE3 bleibt bestehen; die Diagnose qualifiziert keinen neuen Operator."
+              },
+              {
+                "type": "links",
+                "items": [
+                  {
+                    "label": "Report / Bericht",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/ac519f5e4a83de0e570680fe4cfeb2da133db351/research/lorentz_local_dalembert/landmark_availability/RESULTS.md"
+                  },
+                  {
+                    "label": "Protocol / Protokoll",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/ac519f5e4a83de0e570680fe4cfeb2da133db351/research/lorentz_local_dalembert/landmark_availability/PROTOCOL.md"
+                  },
+                  {
+                    "label": "Full replay / Vollständiger Replay",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/ac519f5e4a83de0e570680fe4cfeb2da133db351/research/lorentz_local_dalembert/landmark_availability/VERIFICATION.json"
+                  }
+                ]
+              }
+            ]
           }
         ]
       },
@@ -2639,6 +2678,45 @@
                   {
                     "label": "Replay",
                     "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/694dd9ec0409f35c9c6fd3e835ef187ada72c598/research/lorentz_local_dalembert/intrinsic_moments/VERIFICATION.json"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "bk-landmark-availability",
+            "title": "BK: Why a larger landmark search is insufficient",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "This diagnosis uses the 48 already observed clouds from the failed landmark trial. It is explicitly retrospective. Six neighborhoods remain unavailable; all 42 available supports are searched exhaustively."
+              },
+              {
+                "type": "paragraph",
+                "text": "Removing the 40-candidate cap still yields no admissible triple. At the highest density, the best minimum mutual interval count is only 2 instead of the required 8. For 31 of 42 neighborhoods, a necessary packing bound already proves impossibility: three sufficiently separated landmarks require at least 27 interior events before the outer boundary."
+              },
+              {
+                "type": "paragraph",
+                "text": "Restricting coverage to the root alone yields 16 of 16 cases at the highest density. This relaxation does not supply all distances required by the operator. Exact volume proxies from simulation coordinates also yield 0 of 42 full-support triples. Thus neither count noise alone nor the 40-candidate cap is a sufficient explanation on these clouds."
+              },
+              {
+                "type": "paragraph",
+                "text": "All 48 clouds were fully replayed. A new construction must address common coverage and sufficient causal depth, for example with more outer space or separately developed overlapping frames. This needs development, a public protocol and fresh targets. HOLD_PHASE3 remains; this diagnosis does not qualify a new operator."
+              },
+              {
+                "type": "links",
+                "items": [
+                  {
+                    "label": "Report / Bericht",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/ac519f5e4a83de0e570680fe4cfeb2da133db351/research/lorentz_local_dalembert/landmark_availability/RESULTS.md"
+                  },
+                  {
+                    "label": "Protocol / Protokoll",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/ac519f5e4a83de0e570680fe4cfeb2da133db351/research/lorentz_local_dalembert/landmark_availability/PROTOCOL.md"
+                  },
+                  {
+                    "label": "Full replay / Vollständiger Replay",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/ac519f5e4a83de0e570680fe4cfeb2da133db351/research/lorentz_local_dalembert/landmark_availability/VERIFICATION.json"
                   }
                 ]
               }

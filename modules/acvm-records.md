@@ -6,15 +6,15 @@ Registerstand: 2026-10-19. MAIN / CONCEPT. Kein Live-Prüfsiegel.
 
 Branch: main
 
-Commit: 694dd9ec0409f35c9c6fd3e835ef187ada72c598
+Commit: ac519f5e4a83de0e570680fe4cfeb2da133db351
 
-[Originaldokumentation](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/694dd9ec0409f35c9c6fd3e835ef187ada72c598/docs/acvm/experiment-records/README.md)
+[Originaldokumentation](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/ac519f5e4a83de0e570680fe4cfeb2da133db351/docs/acvm/experiment-records/README.md)
 
 ## Dokumentierte Aussage
 
 Vorgeschlagenes Run-Archive-Datenmodell mit Provenienz und Abnahmeplan; nicht gleich dem bereits begrenzten CLI-Export.
 
-- [docs/acvm/experiment-records/README.md](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/694dd9ec0409f35c9c6fd3e835ef187ada72c598/docs/acvm/experiment-records/README.md): Vierzehn Records-Prüfungen NOT_RUN.
+- [docs/acvm/experiment-records/README.md](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/ac519f5e4a83de0e570680fe4cfeb2da133db351/docs/acvm/experiment-records/README.md): Vierzehn Records-Prüfungen NOT_RUN.
 
 ## Reproduzieren
 

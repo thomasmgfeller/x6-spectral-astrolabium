@@ -6,18 +6,18 @@ Registerstand: 2026-10-19. MAIN / SOFTWARE. Kein Live-Prüfsiegel.
 
 Branch: main
 
-Commit: 694dd9ec0409f35c9c6fd3e835ef187ada72c598
+Commit: ac519f5e4a83de0e570680fe4cfeb2da133db351
 
-[Originaldokumentation](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/694dd9ec0409f35c9c6fd3e835ef187ada72c598/research/free_field_entropy/README.md)
+[Originaldokumentation](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/ac519f5e4a83de0e570680fe4cfeb2da133db351/research/free_field_entropy/README.md)
 
 ## Dokumentierte Aussage
 
 Freier masseloser SJ-Gaußzustand auf festen 1+1-kausalen Mengen mit expliziten Nullmoden und Cutoffs. 13 Gegenprüfungen und bekannte Oszillatorentropie bestehen. 64 neue Ordnungen: Steigung 0,358, 95%-Intervall [0,260; 0,458]; vorab verlangte Präzision und Cutoff-Stabilität verfehlt (REFERENCE_NOT_ESTABLISHED). Kein nachgewiesener geometrischer oder industrieller Zusatznutzen.
 
-- [research/free_field_entropy/RESULTS.md](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/694dd9ec0409f35c9c6fd3e835ef187ada72c598/research/free_field_entropy/RESULTS.md): Vollständiger 64-Ordnungen-Befund, vorab fixiertes Kriterium, Cutoff-Empfindlichkeit und Grenzen.
-- [research/free_field_entropy/analytic-validation.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/694dd9ec0409f35c9c6fd3e835ef187ada72c598/research/free_field_entropy/analytic-validation.json): Zwei-Oszillator-Referenz und 13 analytische/strukturelle Gegenprüfungen.
-- [research/free_field_entropy/independent-audit.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/694dd9ec0409f35c9c6fd3e835ef187ada72c598/research/free_field_entropy/independent-audit.json): Vier Größen mit getrenntem hermiteschem Kovarianz-Rechenweg; interne Prüfung, keine externe Replikation.
-- [research/free_field_entropy/freeze.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/694dd9ec0409f35c9c6fd3e835ef187ada72c598/research/free_field_entropy/freeze.json): Öffentlich vor dem Zielversuch fixierte Quellen und Analyse; früherer Pilot separat ausgewiesen.
+- [research/free_field_entropy/RESULTS.md](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/ac519f5e4a83de0e570680fe4cfeb2da133db351/research/free_field_entropy/RESULTS.md): Vollständiger 64-Ordnungen-Befund, vorab fixiertes Kriterium, Cutoff-Empfindlichkeit und Grenzen.
+- [research/free_field_entropy/analytic-validation.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/ac519f5e4a83de0e570680fe4cfeb2da133db351/research/free_field_entropy/analytic-validation.json): Zwei-Oszillator-Referenz und 13 analytische/strukturelle Gegenprüfungen.
+- [research/free_field_entropy/independent-audit.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/ac519f5e4a83de0e570680fe4cfeb2da133db351/research/free_field_entropy/independent-audit.json): Vier Größen mit getrenntem hermiteschem Kovarianz-Rechenweg; interne Prüfung, keine externe Replikation.
+- [research/free_field_entropy/freeze.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/ac519f5e4a83de0e570680fe4cfeb2da133db351/research/free_field_entropy/freeze.json): Öffentlich vor dem Zielversuch fixierte Quellen und Analyse; früherer Pilot separat ausgewiesen.
 
 ## Reproduzieren
 
@@ -28,7 +28,7 @@ Neue Arbeits- und Ausgabeordner verwenden; Voraussetzungen aus der Originaldokum
 ```sh
 git clone --branch main https://github.com/thomasmgfeller/x6-spectral-astrolabium.git x6-free-field-entropy
 cd x6-free-field-entropy
-git checkout --detach 694dd9ec0409f35c9c6fd3e835ef187ada72c598
+git checkout --detach ac519f5e4a83de0e570680fe4cfeb2da133db351
 python3 -m pip install -r research/free_field_entropy/requirements.txt
 OPENBLAS_NUM_THREADS=1 python3 -B research/free_field_entropy/test_core.py -v
 OPENBLAS_NUM_THREADS=1 python3 -B research/free_field_entropy/check.py research/free_field_entropy/results
