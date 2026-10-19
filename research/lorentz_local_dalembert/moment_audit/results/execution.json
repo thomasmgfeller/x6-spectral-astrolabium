@@ -1,0 +1,236 @@
+{
+  "mode": "test",
+  "source_commit": "fe7dcd1dbf9c5844459fa138def6ef6fca7294ee",
+  "source_sha256": {
+    "research/lorentz_local_dalembert/anchor_audit/common.py": "853a9703022b91d66692a1cbe5d4f477c353a244df0efc36bf68c1c316607192",
+    "research/lorentz_local_dalembert/anchor_audit/estimator.py": "ca99cf61d2957e27dcaa869b3124addde8d2905dc8901c90ccfa2acc3ced3dee",
+    "research/lorentz_local_dalembert/anchor_audit/run_audit.py": "172d7f68a9b07bfbf6a0cf7c6030ae0e562922e14c812ad01f497c7b55e9be1c",
+    "research/lorentz_local_dalembert/anchor_audit/audit_analysis.py": "3685fbd20a1d2529d474f950523843f1384b5214f881480877dc595cf4c40c33",
+    "research/lorentz_local_dalembert/anchor_audit/controls.py": "7c6c53abc860995b5c731cc620d83138553e14815d08fa23a57522ff67e2cccb",
+    "research/lorentz_local_dalembert/anchor_audit/verify_audit.py": "20e1c4e45b1282155f3fbb63bc89f96889b822f9f9dbf72491153abf33b3a734",
+    "research/lorentz_local_dalembert/anchor_audit/contract.json": "d2913edaba0a32d0227becb602f886b65946b97eaebd8b910010e427c43050c3",
+    "research/lorentz_local_dalembert/anchor_audit/PROTOCOL.md": "11cfd71ac2c7477e50c8259a0c380c705d0af7c3997e6ad61fe60d0bc2c177ad",
+    "research/lorentz_local_dalembert/phase12/core.py": "5ae59cddcbdb455ca205d8522b90d81ae1e21c1827914692d9639e35d4ecd3e6",
+    "research/lorentz_local_dalembert/phase12/experiment.py": "80109ad4921b1f82142fc20f5718f1ff25f3d2be50e2d8827e2473698d13e941",
+    "research/lorentz_local_dalembert/phase12/analyze.py": "ac0d087733ba0e6beabd81d73c48f173fc8849a8781e2df2339c505063b1d895",
+    "research/lorentz_local_dalembert/phase12/tests.py": "a9fe6a4f2b1d5993fd1551b76ddb962f1657edf285ec50870354354e3aabaa4f",
+    "research/lorentz_local_dalembert/phase12/longest.cpp": "83631cef5c6ce5a20b1a756b4cf8bd92afc4f002a5139dbd6355b98cbc7f28fe",
+    "research/lorentz_local_dalembert/phase12/contract.json": "1ba0b01303e91621db48971ff58d80b4fae26348f87fd3e94a0ad24ffab252a8",
+    "research/lorentz_local_dalembert/moment_audit/moment_common.py": "c5a650521473732e7114ebebe6955b1aec7f67fffb1d6589df071ae8d84c3a15",
+    "research/lorentz_local_dalembert/moment_audit/moments.py": "ca6ffa7b8843b38f978dd8974d7b101aabc02a65eee56b443e9a1f578a50821a",
+    "research/lorentz_local_dalembert/moment_audit/moment_controls.py": "14777c8a3abcd7ab194e7a7c555b0e52d026b8c6fb6e25b41a071e98b1015450",
+    "research/lorentz_local_dalembert/moment_audit/run_moments.py": "e582e20a076da4e3f078ecbed8edc5f6610fa2b710d611275827b311d6dae8c7",
+    "research/lorentz_local_dalembert/moment_audit/moment_analysis.py": "9f0eb16c9e0a28343ee5e8b43368e186c662342ab83ba0977010207052b2f4f0",
+    "research/lorentz_local_dalembert/moment_audit/verify_moments.py": "93234768b1d902ea0022d6a774c261486e9ff7fc32f72168c7c3ad8f43d65597",
+    "research/lorentz_local_dalembert/moment_audit/contract.json": "8573bf8f366e1e20a04d99d58d5f23a377408e67a5a7b3740e3c87c0324cbabe",
+    "research/lorentz_local_dalembert/moment_audit/PROTOCOL.md": "22ebd53d3181fb3ac6352a4e234b7a88bbb0f47b32dfd16c7aefcdcef637c2ea"
+  },
+  "numpy": "2.3.5",
+  "scipy": "1.17.0",
+  "controls": {
+    "status": "PASS_SOFTWARE_CONTROLS",
+    "analytic_cap_variants": 8,
+    "isolated_defects": 4,
+    "combined_defect_recovery": true,
+    "lorentz_covariance_variants": 8,
+    "degenerate_rejections": 3,
+    "shapley_conservation": true
+  },
+  "records": [
+    {
+      "file": "rho-2048-seed-2026102800.json",
+      "sha256": "16eff5487f6ddf933e0861d99ffc42831a0e10952ebafc92ad24d57627c2cd16"
+    },
+    {
+      "file": "rho-2048-seed-2026102801.json",
+      "sha256": "169c2d181bf6f24cd02a44b7a7d06ca0cff2225b2711b8e872e2f9410b6c86a3"
+    },
+    {
+      "file": "rho-2048-seed-2026102802.json",
+      "sha256": "79e6384017001949e5fd24895b7a3b1bda6e050742a4da49366de971a1b40238"
+    },
+    {
+      "file": "rho-2048-seed-2026102803.json",
+      "sha256": "20960f622763ebb560adeb0520e727d5763fe78ccf21dede0685079f241fa5a7"
+    },
+    {
+      "file": "rho-2048-seed-2026102804.json",
+      "sha256": "d8b160970f7607a728e773517a240326ceaa3c3d3947a6060c766d6b57776f1b"
+    },
+    {
+      "file": "rho-2048-seed-2026102805.json",
+      "sha256": "8826c3194ab8999e67b4813f6180d30c4eb720c280a0273daecb8064ce71a7b0"
+    },
+    {
+      "file": "rho-2048-seed-2026102806.json",
+      "sha256": "b2244da4efe86db3f3e3c044deba15297bdc9fcd17d5a958069fee78d67a7cdb"
+    },
+    {
+      "file": "rho-2048-seed-2026102807.json",
+      "sha256": "9eceea0384cfbc67ad4e7c7d7868c069d4ee824138a4f39432bb6044afe9216d"
+    },
+    {
+      "file": "rho-2048-seed-2026102808.json",
+      "sha256": "8c08c8a9c32ac9ffc0b24a66026e967395dad90f90eb11b27d14bc38086292b6"
+    },
+    {
+      "file": "rho-2048-seed-2026102809.json",
+      "sha256": "5a55b1c31b68a063c7206b6942a914fba3c59f39a31d5a363e18ff8dff3da77d"
+    },
+    {
+      "file": "rho-2048-seed-2026102810.json",
+      "sha256": "4049aa7627ff56bb80cacb2937562361241fe5611832d0515cdf1b3908d3bb90"
+    },
+    {
+      "file": "rho-2048-seed-2026102811.json",
+      "sha256": "b31f49f16d3f4173e06722bfefb85dd6d43c97f8187953ad50e0af20e7236eff"
+    },
+    {
+      "file": "rho-2048-seed-2026102812.json",
+      "sha256": "d0fc5f3e3ca97e28057972986dea3cbbf571cbd7b55b54f7f9a2437651b3f19c"
+    },
+    {
+      "file": "rho-2048-seed-2026102813.json",
+      "sha256": "c8c7f5624a83040c72bf0fc509b076568d5cb63270c32cfe692938f272a394c0"
+    },
+    {
+      "file": "rho-2048-seed-2026102814.json",
+      "sha256": "e4bef01561c72cb37332870ae247dab7c60ed5eb9e612dc541770b6e41f7ac0a"
+    },
+    {
+      "file": "rho-2048-seed-2026102815.json",
+      "sha256": "d75a00aa57a4199b18e9f4222df410cc9a92c27721dae2e0172fa2730d18f90b"
+    },
+    {
+      "file": "rho-8192-seed-2026102900.json",
+      "sha256": "20c41a7294216d644c5f6a167ebf2ba15335169c287ac8d8be64977c7d0f59f4"
+    },
+    {
+      "file": "rho-8192-seed-2026102901.json",
+      "sha256": "503e19731814bf7912e1f33c67e2ed650033da503a71cab0460206c502146735"
+    },
+    {
+      "file": "rho-8192-seed-2026102902.json",
+      "sha256": "738b28963381443f8733d185f109c0b84c3c56e0e36625a78f83ded882aa74f8"
+    },
+    {
+      "file": "rho-8192-seed-2026102903.json",
+      "sha256": "cd3a1bebb85d885f614507d09b364f6350d9ba9ddcacb480da2a5f3aba9f0a62"
+    },
+    {
+      "file": "rho-8192-seed-2026102904.json",
+      "sha256": "c751fa02abcbe775416951302e72b2a4e002b9b1f269edda0637bdd14e5f3408"
+    },
+    {
+      "file": "rho-8192-seed-2026102905.json",
+      "sha256": "6685778bf0caf922fb93f0e257b29c95f15e42d04119e24f5b51b2fe3c596ad5"
+    },
+    {
+      "file": "rho-8192-seed-2026102906.json",
+      "sha256": "7f75a4942a02b1cefdf312be3153d8c803bf7a8708f321838f563d64e79f409e"
+    },
+    {
+      "file": "rho-8192-seed-2026102907.json",
+      "sha256": "9ad449fd7924d8bf3378934c357c8c799c2b10012ff25e9a1a09da8be918512a"
+    },
+    {
+      "file": "rho-8192-seed-2026102908.json",
+      "sha256": "0fa90ce232facdbeb1e99cbea6391b711764acb1ff1b40855b4238d0e9309ac4"
+    },
+    {
+      "file": "rho-8192-seed-2026102909.json",
+      "sha256": "9ae79ea524019489d59a9146d0e75f6321511e32a6772176e03339bf3ac6fc21"
+    },
+    {
+      "file": "rho-8192-seed-2026102910.json",
+      "sha256": "68fd507512c1b9cefdb54fc496bbc52ecc111a5a5f6feaa918f83038ab2af9d8"
+    },
+    {
+      "file": "rho-8192-seed-2026102911.json",
+      "sha256": "297b634694b9bb9f0a61e4c37eebe331ffcf6def88c7b183827a0c67eab4aa70"
+    },
+    {
+      "file": "rho-8192-seed-2026102912.json",
+      "sha256": "ba175cd11922944f38aef3b5c92fee813b28a112d8605f1be8ff02953a82d760"
+    },
+    {
+      "file": "rho-8192-seed-2026102913.json",
+      "sha256": "e2054337349db3c555ef85bb40bc9e25247178021acac83d1eed8150e8d19162"
+    },
+    {
+      "file": "rho-8192-seed-2026102914.json",
+      "sha256": "fed6dd400c2261be60ddf0efb23e3fc88c5518d3b958c9d91bb7684b036a11e1"
+    },
+    {
+      "file": "rho-8192-seed-2026102915.json",
+      "sha256": "d8eee18d6acec568e1574ffc21f7887dad9de4be703ca54c8a3c2c0f7a9ff225"
+    },
+    {
+      "file": "rho-32768-seed-2026103000.json",
+      "sha256": "f1551e70bed967967e74751b32850cb1fed7ca56342e82af3625d7bc7e491e84"
+    },
+    {
+      "file": "rho-32768-seed-2026103001.json",
+      "sha256": "93a303beda63982d500412c06abc32d6ef6ed021d615739fec4ee876edf9225d"
+    },
+    {
+      "file": "rho-32768-seed-2026103002.json",
+      "sha256": "904653c41924a3c9419743b71dc02696965958d9bff8aaaf2a7ea616e40ecf9f"
+    },
+    {
+      "file": "rho-32768-seed-2026103003.json",
+      "sha256": "aa8669528bef51b90f03485ea8327f0e7375768c01d75d855313682cd9adbef6"
+    },
+    {
+      "file": "rho-32768-seed-2026103004.json",
+      "sha256": "953c0fb5f4c91dc9819cdf6a0efd2e443386bc44688648f662b9b17cf8e31a78"
+    },
+    {
+      "file": "rho-32768-seed-2026103005.json",
+      "sha256": "1caa1a7203ba59b3007e8a817bf6421b41e75b62c16f1682b617c61bf390b5ae"
+    },
+    {
+      "file": "rho-32768-seed-2026103006.json",
+      "sha256": "75bfdee50df496cbfe6d7248173f8dfc9103075be5f2de55f9188eee9f97f413"
+    },
+    {
+      "file": "rho-32768-seed-2026103007.json",
+      "sha256": "3ab3213635242996442631fcb3284117e0e21ff02b8585269b3dae806abec99e"
+    },
+    {
+      "file": "rho-32768-seed-2026103008.json",
+      "sha256": "6eedb3407a3a07629a487860dfd0c1d62e4daa56b513867dc66895c0884d4376"
+    },
+    {
+      "file": "rho-32768-seed-2026103009.json",
+      "sha256": "42fbfd4f1c0326e3817fb8ad8f6edf612765d0979feacef9f068a483f9584386"
+    },
+    {
+      "file": "rho-32768-seed-2026103010.json",
+      "sha256": "e5e90bb87611648d1ffe4f1722571dca2b8f9208f2266aa9c8f5b8bb0586b698"
+    },
+    {
+      "file": "rho-32768-seed-2026103011.json",
+      "sha256": "ed3c4499737ff06c4021cdad6251a4d5fa40763f7476ad14fdefbaa2dff6efb4"
+    },
+    {
+      "file": "rho-32768-seed-2026103012.json",
+      "sha256": "41e06b2bc8e598d61e92ec1aa277a96b5dfa9bcc8fc54cde003e610246e7c1df"
+    },
+    {
+      "file": "rho-32768-seed-2026103013.json",
+      "sha256": "a2c911f33446d8d6f70b08cf03827f8f39d8c3e8d4e01a0294309d5cdc279b82"
+    },
+    {
+      "file": "rho-32768-seed-2026103014.json",
+      "sha256": "1d67087975f09815d59fa947ab2429ae11fe544ad60ad1aee451dd93f33a20eb"
+    },
+    {
+      "file": "rho-32768-seed-2026103015.json",
+      "sha256": "91459f725f72ee935b69e504ffcdd179edc2a188fcc1f3064f5a5ed89a4e2ff3"
+    }
+  ],
+  "status": "COMPLETE",
+  "seconds": 120.71400655700018,
+  "peak_mib": 342.828125
+}

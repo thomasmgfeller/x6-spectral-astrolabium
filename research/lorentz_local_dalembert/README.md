@@ -1,6 +1,21 @@
 # Local d’Alembertian: independent reproduction track
 
-**Current status (19 October 2026): anchor coverage improved; `HOLD_PHASE3`.**
+**Current status (19 October 2026): moment controls informative; `HOLD_PHASE3`.**
+A second publicly frozen follow-up tests temporal scale, shell proper times and
+reference directions in all eight combinations on 48 fresh clouds. At the
+highest density the metric RMS falls from 7.387 to 2.267 with all three controls;
+with exact cap selection it falls from 5.893 to 1.002. Both exceed the inherited
+0.5 limit. Shell and direction controls explain much more reduction than
+endpoint-time calibration. These interventions use simulation coordinates;
+no new intrinsic estimator is qualified. At low density the combined control
+can worsen the error. Read the [moment diagnosis](moment_audit/RESULTS.md),
+including complete factorial results, uncertainty and full replay.
+
+```sh
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python3 -B research/lorentz_local_dalembert/moment_audit/verify_moments.py
+```
+
+**Earlier anchor audit (19 October 2026): coverage improved; `HOLD_PHASE3`.**
 A publicly frozen paired follow-up on 48 fresh clouds fixes the search-cap
 ordering problem. At the highest density, usable neighborhoods rise from 2/16
 to 16/16 and true-cap recall from 11.5% to 94.9%. Selection precision is only
