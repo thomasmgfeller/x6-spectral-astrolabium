@@ -1,0 +1,31 @@
+{
+  "status": "PASS_NUMERICAL_REPLAY",
+  "clouds": 48,
+  "variants": 144,
+  "coordinate_hashes_equal": 144,
+  "discrete_decisions_exact": true,
+  "controls": {
+    "status": "PASS",
+    "inherited": {
+      "status": "PASS_SOFTWARE_CONTROLS",
+      "exact_polarization": true,
+      "uniform_scaling": true,
+      "signature_rejections": 2,
+      "analytic_quadratic_optima": 2,
+      "mutation_rejections": 3,
+      "inconsistent_half_guard_rejected": true,
+      "coordinate_blind_interface": true
+    },
+    "scalar_relation_pairs": 3600,
+    "direct_intervals": 393,
+    "artificial_interiors_excluded": 24,
+    "brute_force_orders": 60,
+    "uniform_moments": true,
+    "shell_count_replicates": 500,
+    "streaming_hash_oracles": 4
+  },
+  "seconds": 372.65720750200126,
+  "peak_mib": 1261.19921875,
+  "decision": "OUTER_DIAMOND_HOLD",
+  "phase3": "HOLD_PHASE3"
+}

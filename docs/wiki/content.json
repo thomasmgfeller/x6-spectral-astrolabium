@@ -1,7 +1,7 @@
 {
   "schema": "x6.bilingual-wiki/1",
   "snapshot_date": "2026-10-19",
-  "source_commit": "ac519f5e4a83de0e570680fe4cfeb2da133db351",
+  "source_commit": "6738f129ca31e56a88690a9d17941516ccefb321",
   "articles": [
     {
       "id": "index",
@@ -1729,6 +1729,45 @@
                 ]
               }
             ]
+          },
+          {
+            "id": "bk-outer-diamond",
+            "title": "BK: Mehr äußerer Raum reicht für die Rekonstruktion nicht",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "48 frische Punktwolken wurden jeweils in drei ineinander liegenden Diamanten untersucht. Die innere Punktwolke, ihre Stützpunkte, Dichte, Gewichte und Prüfregeln bleiben gleich; nur außerhalb kommen unabhängig gestreute Punkte hinzu. Die äußeren Zeitdurchmesser 1, 1.25 und 1.5 waren vorab festgelegt."
+              },
+              {
+                "type": "paragraph",
+                "text": "Bei höchster Dichte entstehen bei vollständiger Suche passende Landmarkentripel in 0, 10 und schließlich 16 von 16 Fällen. Die äußere Begrenzung war damit tatsächlich ein Hindernis. In der größten Variante liefert die bisherige Suche unter jeweils 40 Kandidaten jedoch nur in 13 Fällen Tripel; daraus entstehen acht zulässige Bezugssysteme. Keines besteht den unveränderten Rauschschutz."
+              },
+              {
+                "type": "paragraph",
+                "text": "Alle 42 verfügbaren inneren Nachbarschaften besitzen mindestens ein benötigtes Intervall mit weniger als 16 Ereignissen. Ein Intervall zwischen inneren Punkten liegt vollständig im inneren Diamanten. Zusätzliche äußere Punkte können seinen Zählwert deshalb nicht erhöhen. Alle acht Bezugssysteme scheitern außerdem an der Konditionsgrenze, also an der geforderten numerischen Stabilität."
+              },
+              {
+                "type": "paragraph",
+                "text": "Der Entscheid lautet OUTER_DIAMOND_HOLD. Weitere reine Vergrößerungen können diese festen Supports unter den gleichen Regeln nicht retten. Vor einer neuen Kampagne müssen Supportauswahl, nötige Zählwerte und stabile Bezugssysteme gemeinsam auf Machbarkeit geprüft werden. Adaptive Supports und mehrere überlappende Bezugssysteme sind mögliche neue Verfahren, aber hier nicht validiert. HOLD_PHASE3 bleibt bestehen."
+              },
+              {
+                "type": "links",
+                "items": [
+                  {
+                    "label": "Report / Bericht",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/6738f129ca31e56a88690a9d17941516ccefb321/research/lorentz_local_dalembert/outer_diamond/RESULTS.md"
+                  },
+                  {
+                    "label": "Protocol / Protokoll",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/6738f129ca31e56a88690a9d17941516ccefb321/research/lorentz_local_dalembert/outer_diamond/PROTOCOL.md"
+                  },
+                  {
+                    "label": "Full replay / Vollständiger Replay",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/6738f129ca31e56a88690a9d17941516ccefb321/research/lorentz_local_dalembert/outer_diamond/VERIFICATION.json"
+                  }
+                ]
+              }
+            ]
           }
         ]
       },
@@ -2717,6 +2756,45 @@
                   {
                     "label": "Full replay / Vollständiger Replay",
                     "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/ac519f5e4a83de0e570680fe4cfeb2da133db351/research/lorentz_local_dalembert/landmark_availability/VERIFICATION.json"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "bk-outer-diamond",
+            "title": "BK: More outer space does not suffice for reconstruction",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "48 fresh point clouds were each examined in three nested diamonds. Inner points, supports, density, weights and acceptance rules remain identical; only independent outer Poisson points are added. Outer time durations 1, 1.25 and 1.5 were fixed in advance."
+              },
+              {
+                "type": "paragraph",
+                "text": "At the highest density, an unrestricted search finds qualifying landmark triples in 0, 10 and finally 16 of 16 cases. The outer boundary was therefore a real obstruction. In the largest variant, the unchanged 40-candidate search finds triples in only 13 cases; eight admissible frames result. None passes the unchanged stability guard."
+              },
+              {
+                "type": "paragraph",
+                "text": "All 42 available inner neighborhoods contain at least one required interval with fewer than 16 events. An interval between inner points lies entirely within the inner diamond, so adding outer points cannot increase its count. All eight selected frames also fail the condition-number bound for numerical stability."
+              },
+              {
+                "type": "paragraph",
+                "text": "The decision is OUTER_DIAMOND_HOLD. Further pure enlargements cannot rescue these fixed supports under the same rules. A successor campaign must first establish joint feasibility of support selection, required counts and stable frames. Adaptive supports and overlapping frames are possible new methods, but neither is validated here. HOLD_PHASE3 remains in force."
+              },
+              {
+                "type": "links",
+                "items": [
+                  {
+                    "label": "Report / Bericht",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/6738f129ca31e56a88690a9d17941516ccefb321/research/lorentz_local_dalembert/outer_diamond/RESULTS.md"
+                  },
+                  {
+                    "label": "Protocol / Protokoll",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/6738f129ca31e56a88690a9d17941516ccefb321/research/lorentz_local_dalembert/outer_diamond/PROTOCOL.md"
+                  },
+                  {
+                    "label": "Full replay / Vollständiger Replay",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/6738f129ca31e56a88690a9d17941516ccefb321/research/lorentz_local_dalembert/outer_diamond/VERIFICATION.json"
                   }
                 ]
               }

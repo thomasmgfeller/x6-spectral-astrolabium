@@ -4,7 +4,7 @@ This research asks what structure is carried by relationships before a spatial d
 
 [Deutsch](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/de/causal-orders.md) · [Wiki overview](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/en/)
 
-Source snapshot: 2026-10-19 · `ac519f5e4a83de0e570680fe4cfeb2da133db351`
+Source snapshot: 2026-10-19 · `6738f129ca31e56a88690a9d17941516ccefb321`
 
 ## Events and their ordering
 
@@ -358,3 +358,17 @@ All 48 clouds were fully replayed. A new construction must address common covera
 - [Report / Bericht](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/ac519f5e4a83de0e570680fe4cfeb2da133db351/research/lorentz_local_dalembert/landmark_availability/RESULTS.md)
 - [Protocol / Protokoll](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/ac519f5e4a83de0e570680fe4cfeb2da133db351/research/lorentz_local_dalembert/landmark_availability/PROTOCOL.md)
 - [Full replay / Vollständiger Replay](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/ac519f5e4a83de0e570680fe4cfeb2da133db351/research/lorentz_local_dalembert/landmark_availability/VERIFICATION.json)
+
+## BK: More outer space does not suffice for reconstruction
+
+48 fresh point clouds were each examined in three nested diamonds. Inner points, supports, density, weights and acceptance rules remain identical; only independent outer Poisson points are added. Outer time durations 1, 1.25 and 1.5 were fixed in advance.
+
+At the highest density, an unrestricted search finds qualifying landmark triples in 0, 10 and finally 16 of 16 cases. The outer boundary was therefore a real obstruction. In the largest variant, the unchanged 40-candidate search finds triples in only 13 cases; eight admissible frames result. None passes the unchanged stability guard.
+
+All 42 available inner neighborhoods contain at least one required interval with fewer than 16 events. An interval between inner points lies entirely within the inner diamond, so adding outer points cannot increase its count. All eight selected frames also fail the condition-number bound for numerical stability.
+
+The decision is OUTER_DIAMOND_HOLD. Further pure enlargements cannot rescue these fixed supports under the same rules. A successor campaign must first establish joint feasibility of support selection, required counts and stable frames. Adaptive supports and overlapping frames are possible new methods, but neither is validated here. HOLD_PHASE3 remains in force.
+
+- [Report / Bericht](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/6738f129ca31e56a88690a9d17941516ccefb321/research/lorentz_local_dalembert/outer_diamond/RESULTS.md)
+- [Protocol / Protokoll](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/6738f129ca31e56a88690a9d17941516ccefb321/research/lorentz_local_dalembert/outer_diamond/PROTOCOL.md)
+- [Full replay / Vollständiger Replay](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/6738f129ca31e56a88690a9d17941516ccefb321/research/lorentz_local_dalembert/outer_diamond/VERIFICATION.json)
