@@ -1,6 +1,22 @@
 # Local d’Alembertian: independent reproduction track
 
-**Current status (19 October 2026): intrinsic shell weighting improves the
+**Current status (19 October 2026): common-axis trial `COMMON_AXIS_HOLD`;
+`HOLD_PHASE3`.**
+A new public protocol selects both shell reference directions in a common
+endpoint frame, using only causal interval counts and known density. Four arms
+were tested on 48 fresh clouds. At the highest density, the primary candidate
+changes metric RMS 4.840 → 3.709 and normalized affine drift
+3.271 → 3.085. Correct Lorentz signature: 14/16.
+The joint gate requires both errors to improve by 25%; see the
+[common-axis report](common_axis/RESULTS.md) for the decision, all denominators,
+reference rapidities, exact-time diagnostic and full numerical replay.
+Earlier scientific records remain immutable. No flat/curvature qualification.
+
+```sh
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python3 -B research/lorentz_local_dalembert/common_axis/verify_axis.py
+```
+
+**Earlier shell-weight trial (19 October 2026): intrinsic shell weighting improves the
 bounded comparison; `HOLD_PHASE3`.**
 A new publicly frozen trial uses causal interval counts to set inverse-square
 shell weights, retaining the same neighbors and reference directions. On 48
