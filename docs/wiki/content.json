@@ -1,7 +1,7 @@
 {
   "schema": "x6.bilingual-wiki/1",
   "snapshot_date": "2026-10-19",
-  "source_commit": "d6c9f3d9ddf975cdc6f0c2ce055c5becb1f7a2ee",
+  "source_commit": "aa2c3dae7bb7afb564cdf4f08b0fe8f2c64c9bfb",
   "articles": [
     {
       "id": "index",
@@ -1530,6 +1530,45 @@
                 ]
               }
             ]
+          },
+          {
+            "id": "bk-volume-shell",
+            "title": "BK-Schalenkalibrierung: erste intrinsische Gewichtsverbesserung",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "Der nächste Versuch verwendet die Anzahl der Ereignisse im kausalen Intervall, um die Eigenzeit jedes ausgewählten Schalenpunkts zu schätzen. Daraus entstehen inverse quadratische Gewichte. Die Nachbarn und Referenzrichtungen bleiben unverändert. Der primäre Kandidat braucht nur Kausalordnung und bekannte Dichte, keine Einbettungskoordinaten."
+              },
+              {
+                "type": "paragraph",
+                "text": "Protokoll und Rechenquellen wurden vor den jeweiligen Daten öffentlich festgelegt. Fünf feste Arme wurden auf 48 frischen Wolken verglichen: ursprüngliche Gewichte, Intervallgewichte nur für Schalen beziehungsweise für Schalen und Zeitpunkte sowie zwei Kontrollen mit exakten Eigenzeiten. Die Kontrollen wählen keine anderen Nachbarn."
+              },
+              {
+                "type": "paragraph",
+                "text": "Bei höchster Dichte verbessert der primäre Kandidat den Metrik-RMS von 7,089 auf 3,765 und die normierte Drift auf linearen Feldern von 3,692 auf 2,882. Alle 16 Wolken sind verfügbar. Damit bestehen die drei vorab festgelegten Verbesserungsgrenzen gemeinsam; der sekundäre Arm wird nicht nachträglich zum Hauptkandidaten erklärt."
+              },
+              {
+                "type": "paragraph",
+                "text": "Die richtige Lorentz-Signatur gelingt dennoch nur in 8 von 16 Wolken; der absolute Metrikfehler bleibt über 0,5 und verschwindet in dieser Dichtefolge nicht. Phase 3 bleibt HOLD. Alle 48 Wolken wurden numerisch nachgerechnet; Koordinaten-Bytehashes werden getrennt ausgewiesen. Als nächstes sind gemeinsame Referenzrichtungen und die verbleibenden ersten und zweiten Momente zu untersuchen, mit neuem Protokoll und frischen Testdaten."
+              },
+              {
+                "type": "links",
+                "items": [
+                  {
+                    "label": "Results / Ergebnisse",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/aa2c3dae7bb7afb564cdf4f08b0fe8f2c64c9bfb/research/lorentz_local_dalembert/volume_shell/RESULTS.md"
+                  },
+                  {
+                    "label": "Protocol / Protokoll",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/aa2c3dae7bb7afb564cdf4f08b0fe8f2c64c9bfb/research/lorentz_local_dalembert/volume_shell/PROTOCOL.md"
+                  },
+                  {
+                    "label": "Data / Daten",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/aa2c3dae7bb7afb564cdf4f08b0fe8f2c64c9bfb/research/lorentz_local_dalembert/volume_shell/results/summary.json"
+                  }
+                ]
+              }
+            ]
           }
         ]
       },
@@ -2319,6 +2358,45 @@
                   {
                     "label": "Data / Daten",
                     "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/d6c9f3d9ddf975cdc6f0c2ce055c5becb1f7a2ee/research/lorentz_local_dalembert/moment_audit/results/summary.json"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "bk-volume-shell",
+            "title": "BK shell calibration: an intrinsic weighting improvement",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "The next trial counts events in causal intervals to estimate the proper time of each selected shell point and constructs inverse-square weights. Neighbors and reference directions stay fixed. The primary candidate requires only the causal order and known density, without embedding coordinates."
+              },
+              {
+                "type": "paragraph",
+                "text": "The protocol and computational sources were publicly frozen before their corresponding data. Five fixed arms were compared on 48 fresh clouds: original weights, interval weights for shells alone or shells and temporal endpoints, and two controls using exact proper times. The controls do not select different neighbors."
+              },
+              {
+                "type": "paragraph",
+                "text": "At the highest density the primary candidate reduces metric RMS from 7.089 to 3.765 and normalized affine-field drift from 3.692 to 2.882. All 16 clouds are available. All three prespecified improvement thresholds pass together; the secondary arm is not retrospectively promoted to the primary candidate."
+              },
+              {
+                "type": "paragraph",
+                "text": "Correct Lorentz signature is still obtained on only 8 of 16 clouds; absolute metric error remains above 0.5 and does not vanish over this density sequence. Phase 3 remains on HOLD. All 48 clouds were numerically replayed; coordinate byte hashes are reported separately. Common reference directions and the remaining first/second moments require a separate protocol and fresh test data."
+              },
+              {
+                "type": "links",
+                "items": [
+                  {
+                    "label": "Results / Ergebnisse",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/aa2c3dae7bb7afb564cdf4f08b0fe8f2c64c9bfb/research/lorentz_local_dalembert/volume_shell/RESULTS.md"
+                  },
+                  {
+                    "label": "Protocol / Protokoll",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/aa2c3dae7bb7afb564cdf4f08b0fe8f2c64c9bfb/research/lorentz_local_dalembert/volume_shell/PROTOCOL.md"
+                  },
+                  {
+                    "label": "Data / Daten",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/aa2c3dae7bb7afb564cdf4f08b0fe8f2c64c9bfb/research/lorentz_local_dalembert/volume_shell/results/summary.json"
                   }
                 ]
               }

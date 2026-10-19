@@ -1,6 +1,22 @@
 # Local d’Alembertian: independent reproduction track
 
-**Current status (19 October 2026): moment controls informative; `HOLD_PHASE3`.**
+**Current status (19 October 2026): intrinsic shell weighting improves the
+bounded comparison; `HOLD_PHASE3`.**
+A new publicly frozen trial uses causal interval counts to set inverse-square
+shell weights, retaining the same neighbors and reference directions. On 48
+fresh clouds, the primary candidate passes all three improvement gates. At the
+highest density, metric RMS falls 7.089 → 3.765 and normalized affine drift
+3.692 → 2.882; all 16 clouds are available. Correct Lorentz signature improves
+1/16 → 8/16, still insufficient, and metric error remains above 0.5. No embedding
+coordinates enter the candidate; exact-time oracle comparators are separate.
+Read the [intrinsic shell-weight report](volume_shell/RESULTS.md) for all five
+arms, field responses, limits, uncertainty and full numerical replay.
+
+```sh
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python3 -B research/lorentz_local_dalembert/volume_shell/verify_volume.py
+```
+
+**Earlier moment audit (19 October 2026): controls informative; `HOLD_PHASE3`.**
 A second publicly frozen follow-up tests temporal scale, shell proper times and
 reference directions in all eight combinations on 48 fresh clouds. At the
 highest density the metric RMS falls from 7.387 to 2.267 with all three controls;

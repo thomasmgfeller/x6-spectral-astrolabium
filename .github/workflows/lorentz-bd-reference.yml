@@ -30,3 +30,21 @@ jobs:
       - run: python3 -B research/lorentz_local_dalembert/anchor_audit/verify_audit.py
       - run: python3 -B research/lorentz_local_dalembert/moment_audit/verify_moments.py
       - run: python3 tests/python/verify_manifest.py
+
+  volume-shell-replay:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - run: python3 -m pip install -r research/lorentz_bd_reference/requirements-replay.txt
+      - run: python3 -B research/lorentz_local_dalembert/volume_shell/verify_volume.py
+      - run: python3 tests/python/verify_manifest.py

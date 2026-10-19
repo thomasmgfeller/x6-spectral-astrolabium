@@ -4,7 +4,7 @@ This research asks what structure is carried by relationships before a spatial d
 
 [Deutsch](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/de/causal-orders.md) · [Wiki overview](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/en/)
 
-Source snapshot: 2026-10-19 · `d6c9f3d9ddf975cdc6f0c2ce055c5becb1f7a2ee`
+Source snapshot: 2026-10-19 · `aa2c3dae7bb7afb564cdf4f08b0fe8f2c64c9bfb`
 
 ## Events and their ordering
 
@@ -287,3 +287,17 @@ The prespecified diagnostic criterion passes, while Phase 3 remains on HOLD. At 
 - [Results / Ergebnisse](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/d6c9f3d9ddf975cdc6f0c2ce055c5becb1f7a2ee/research/lorentz_local_dalembert/moment_audit/RESULTS.md)
 - [Protocol / Protokoll](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/d6c9f3d9ddf975cdc6f0c2ce055c5becb1f7a2ee/research/lorentz_local_dalembert/moment_audit/PROTOCOL.md)
 - [Data / Daten](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/d6c9f3d9ddf975cdc6f0c2ce055c5becb1f7a2ee/research/lorentz_local_dalembert/moment_audit/results/summary.json)
+
+## BK shell calibration: an intrinsic weighting improvement
+
+The next trial counts events in causal intervals to estimate the proper time of each selected shell point and constructs inverse-square weights. Neighbors and reference directions stay fixed. The primary candidate requires only the causal order and known density, without embedding coordinates.
+
+The protocol and computational sources were publicly frozen before their corresponding data. Five fixed arms were compared on 48 fresh clouds: original weights, interval weights for shells alone or shells and temporal endpoints, and two controls using exact proper times. The controls do not select different neighbors.
+
+At the highest density the primary candidate reduces metric RMS from 7.089 to 3.765 and normalized affine-field drift from 3.692 to 2.882. All 16 clouds are available. All three prespecified improvement thresholds pass together; the secondary arm is not retrospectively promoted to the primary candidate.
+
+Correct Lorentz signature is still obtained on only 8 of 16 clouds; absolute metric error remains above 0.5 and does not vanish over this density sequence. Phase 3 remains on HOLD. All 48 clouds were numerically replayed; coordinate byte hashes are reported separately. Common reference directions and the remaining first/second moments require a separate protocol and fresh test data.
+
+- [Results / Ergebnisse](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/aa2c3dae7bb7afb564cdf4f08b0fe8f2c64c9bfb/research/lorentz_local_dalembert/volume_shell/RESULTS.md)
+- [Protocol / Protokoll](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/aa2c3dae7bb7afb564cdf4f08b0fe8f2c64c9bfb/research/lorentz_local_dalembert/volume_shell/PROTOCOL.md)
+- [Data / Daten](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/aa2c3dae7bb7afb564cdf4f08b0fe8f2c64c9bfb/research/lorentz_local_dalembert/volume_shell/results/summary.json)
