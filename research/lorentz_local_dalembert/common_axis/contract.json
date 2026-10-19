@@ -1,0 +1,22 @@
+{
+  "schema": "x6.bk-common-axis/1",
+  "date": "2026-10-19",
+  "base_commit": "21b7c59572414f858f2d8eabdb6e842c751fc3f4",
+  "densities": [2048, 8192, 32768],
+  "development_seeds": [2026111101, 2026111102],
+  "test_seed_base": 2026111200,
+  "test_replicates_per_density": 16,
+  "seed_rule": "base + 100*density_index + replicate",
+  "methods": ["raw", "volume_shell", "axis_shell", "oracle_axis_shell"],
+  "baseline_method": "volume_shell",
+  "primary_method": "axis_shell",
+  "primary_density": 32768,
+  "minimum_availability": 0.8,
+  "maximum_paired_metric_rms_ratio": 0.75,
+  "maximum_paired_affine_drift_rms_ratio": 0.75,
+  "wall_budget_seconds": 900,
+  "memory_budget_mib": 2048,
+  "replay_tolerance": {"atol": 1e-10, "rtol": 1e-9},
+  "decision": "COMMON_AXIS_IMPROVED only if complete, within budget, controls pass and all three primary gates pass; otherwise COMMON_AXIS_HOLD. Always HOLD_PHASE3.",
+  "scope": "Intrinsic common-frame reference selection from strict interval counts, known density, 2+1 flat geometry; temporal endpoints/weights unchanged; no field fitting."
+}
