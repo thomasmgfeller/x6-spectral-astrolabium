@@ -1,20 +1,20 @@
 # RAX-W1: exakte Wolfram-Gegenprüfung
 
-Registerstand: 2026-10-18. MAIN / SOFTWARE. Kein Live-Prüfsiegel.
+Registerstand: 2026-10-19. MAIN / SOFTWARE. Kein Live-Prüfsiegel.
 
 ## Quelle
 
 Branch: main
 
-Commit: e947dfbdd49890dcb119940548537d1db59272c2
+Commit: c58cc26adb2b4a646e3940e417351040b5dc9ff0
 
-[Originaldokumentation](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e947dfbdd49890dcb119940548537d1db59272c2/docs/research/rax/wolfram-check-v0.1/README.md)
+[Originaldokumentation](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/c58cc26adb2b4a646e3940e417351040b5dc9ff0/docs/research/rax/wolfram-check-v0.1/README.md)
 
 ## Dokumentierte Aussage
 
 44 ausgewählte U1-Matrizen, zehn gültige Reduktionen und 34 beabsichtigte Verletzungen werden exakt abgeglichen.
 
-- [docs/research/rax/wolfram-check-v0.1/RAX_W1_Exakte_Gegenpruefung_v0_1_Paket.zip](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e947dfbdd49890dcb119940548537d1db59272c2/docs/research/rax/wolfram-check-v0.1/RAX_W1_Exakte_Gegenpruefung_v0_1_Paket.zip): Gespeicherte Wolfram-Antworten und unabhängiger Python-Prüfer; interne Post-hoc-Prüfung.
+- [docs/research/rax/wolfram-check-v0.1/RAX_W1_Exakte_Gegenpruefung_v0_1_Paket.zip](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/c58cc26adb2b4a646e3940e417351040b5dc9ff0/docs/research/rax/wolfram-check-v0.1/RAX_W1_Exakte_Gegenpruefung_v0_1_Paket.zip): Gespeicherte Wolfram-Antworten und unabhängiger Python-Prüfer; interne Post-hoc-Prüfung.
 
 ## Reproduzieren
 
@@ -25,7 +25,7 @@ Neue Arbeits- und Ausgabeordner verwenden; Voraussetzungen aus der Originaldokum
 ```sh
 git clone --branch main https://github.com/thomasmgfeller/x6-spectral-astrolabium.git x6-rax-w1
 cd x6-rax-w1
-git checkout --detach e947dfbdd49890dcb119940548537d1db59272c2
+git checkout --detach c58cc26adb2b4a646e3940e417351040b5dc9ff0
 python3 -m zipfile -e docs/research/rax/wolfram-check-v0.1/RAX_W1_Exakte_Gegenpruefung_v0_1_Paket.zip /tmp/x6-hub-rax-w1
 cd /tmp/x6-hub-rax-w1/RAX_W1_Exakte_Gegenpruefung_v0_1
 python3 -B verify_package.py

@@ -108,7 +108,7 @@ Dies ist experimentelle Forschungssoftware. Ein bestandener Softwaretest ist kei
 - [NQK-Forschungsdossier](https://thomasmgfeller.github.io/x6-spectral-astrolabium/modules/nqk.html): Eigenständiger Forschungszweig mit unvollständigen Reproduktionsarchiven.
 - [Eigenzeit und Unsicherheit](https://thomasmgfeller.github.io/x6-spectral-astrolabium/modules/lorentz-proper-time.html): Bekanntes flaches Modell: Voraussetzungen, Fehlergrenzen, Nachbeproben und Kettenwarnungen nachvollziehen.
 
-Das Register vom 2026-10-18 beschreibt 50 Module. Es dokumentiert Quellenorte und Evidenz; es ist kein Live-Prüfsiegel.
+Das Register vom 2026-10-19 beschreibt 50 Module. Es dokumentiert Quellenorte und Evidenz; es ist kein Live-Prüfsiegel.
 
 Das konfigurierte Agentenfenster schliesst Sonntag, den 18. Oktober 2026, ein. Das exklusive Ende unten begrenzt den Zeitplan und belegt keine Ausführung. Danach ist das Fenster geschlossen.
 2026-10-19T00:00:00+02:00

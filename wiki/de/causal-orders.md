@@ -4,7 +4,7 @@ Hier geht es um die Frage, welche Struktur in Beziehungen steckt, bevor man eine
 
 [English](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/en/causal-orders.md) · [Wiki-Übersicht](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/de/)
 
-Quellenstand: 2026-10-18 · `e947dfbdd49890dcb119940548537d1db59272c2`
+Quellenstand: 2026-10-19 · `c58cc26adb2b4a646e3940e417351040b5dc9ff0`
 
 ## Ereignisse und ihre Reihenfolge
 
@@ -259,3 +259,17 @@ Das ist ein negativer Befund für diesen begrenzten Such- und Skalenplan, kein G
 - [Results / Ergebnisse](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e947dfbdd49890dcb119940548537d1db59272c2/research/lorentz_local_dalembert/PHASE12_RESULTS.md)
 - [Protocol / Protokoll](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e947dfbdd49890dcb119940548537d1db59272c2/research/lorentz_local_dalembert/phase12/PROTOCOL.md)
 - [Data / Daten](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e947dfbdd49890dcb119940548537d1db59272c2/research/lorentz_local_dalembert/phase12/results/summary.json)
+
+## BK-Ankersuche: mehr Nachbarn, aber noch keine genaue Metrik
+
+Am 19. Oktober wurde der Suchengpass mit 48 neuen Punktwolken isoliert geprüft. Bisher wurden zuerst 64 Anker gewählt und erst danach auf Eignung geprüft. Die neue Variante prüft zuerst die unveränderten Kriterien und begrenzt danach auf 64 geeignete Anker. Protokoll und Rechenquellen waren vor den jeweiligen Daten öffentlich fixiert.
+
+Bei der höchsten Dichte liefern jetzt 16 von 16 Wolken verwendbare Nachbarschaften, gegenüber 2 von 16 mit der alten Suche auf denselben neuen Daten. Der Anteil wiedergefundener wahrer Nachbarschaftspunkte steigt von 11,5 auf 94,9 Prozent. Allerdings liegen nur 68,3 Prozent aller ausgewählten Punkte tatsächlich in der gewünschten Nachbarschaft.
+
+Der Metrikfehler steigt im neuen Verfahren auf 7,326, weit über die ursprüngliche Grenze 0,5. Auch wenn die Nachbarn anhand der exakten Simulationsabstände gewählt werden, bleibt der Fehler bei 6,012. Diese Kontrolle ist kein intrinsisches Verfahren; sie zeigt, dass eine bessere Ankersuche allein nicht genügt. Vergleiche auf der gemeinsam verfügbaren Teilmenge sind im Bericht separat ausgewiesen.
+
+Alle 48 neuen Testwolken wurden vollständig wiederholt. Ergebnis: bessere Suchabdeckung, weiterhin HOLD_PHASE3. Als nächster Schritt sollen die Zeit- und Raummomente der diskreten Schablone getrennt geprüft werden. Die früheren Daten, der BD-C2-NO_GO und die beendeten Hintergrundläufe bleiben unverändert.
+
+- [Results / Ergebnisse](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/c58cc26adb2b4a646e3940e417351040b5dc9ff0/research/lorentz_local_dalembert/anchor_audit/RESULTS.md)
+- [Protocol / Protokoll](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/c58cc26adb2b4a646e3940e417351040b5dc9ff0/research/lorentz_local_dalembert/anchor_audit/PROTOCOL.md)
+- [Data / Daten](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/c58cc26adb2b4a646e3940e417351040b5dc9ff0/research/lorentz_local_dalembert/anchor_audit/results/summary.json)

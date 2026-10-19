@@ -1,6 +1,6 @@
 # RAX-CQG: endlicher Causal-Set Benchmark 0.2.0
 
-Registerstand: 2026-10-18. MAIN / SOFTWARE. Kein Live-Prüfsiegel.
+Registerstand: 2026-10-19. MAIN / SOFTWARE. Kein Live-Prüfsiegel.
 
 [Causal-Set-Labor öffnen →](https://thomasmgfeller.github.io/x6-spectral-astrolabium/app/rax-cqg-lab.html)
 
@@ -8,16 +8,16 @@ Registerstand: 2026-10-18. MAIN / SOFTWARE. Kein Live-Prüfsiegel.
 
 Branch: main
 
-Commit: e947dfbdd49890dcb119940548537d1db59272c2
+Commit: c58cc26adb2b4a646e3940e417351040b5dc9ff0
 
-[Originaldokumentation](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e947dfbdd49890dcb119940548537d1db59272c2/docs/research/rax/cqg-benchmark-v0.2.0/README.md)
+[Originaldokumentation](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/c58cc26adb2b4a646e3940e417351040b5dc9ff0/docs/research/rax/cqg-benchmark-v0.2.0/README.md)
 
 ## Dokumentierte Aussage
 
 Explizite endliche Ordnungen, Intervalle, dimensionslose 4D-BDG-Kombination, Graphspektren und induzierte Ausdünnung. Separates klassisches Gaußfeld und vorausgesetzte Zweiqubit-Uhr. Kein Nachweis für Quantengravitation, KR-Unterdrückung oder einen Kontinuumslimes.
 
-- [research/rax_cqg/benchmark-v0.2.0/VALIDATION.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e947dfbdd49890dcb119940548537d1db59272c2/research/rax_cqg/benchmark-v0.2.0/VALIDATION.json): Eingefrorener interner Prüflauf mit Quellenhashes und expliziten Grenzen. UI-Logik in Node; keine damalige visuelle Browserprüfung oder personell unabhängige Replikation.
-- [docs/research/rax/cqg-benchmark-v0.2.0/PUBLICATION.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e947dfbdd49890dcb119940548537d1db59272c2/docs/research/rax/cqg-benchmark-v0.2.0/PUBLICATION.json): Freigegebenes ZIP, 28 bytegleiche Paketdateien und identische Browserkopie; zusätzliche CI getrennt vom ursprünglichen Bericht.
+- [research/rax_cqg/benchmark-v0.2.0/VALIDATION.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/c58cc26adb2b4a646e3940e417351040b5dc9ff0/research/rax_cqg/benchmark-v0.2.0/VALIDATION.json): Eingefrorener interner Prüflauf mit Quellenhashes und expliziten Grenzen. UI-Logik in Node; keine damalige visuelle Browserprüfung oder personell unabhängige Replikation.
+- [docs/research/rax/cqg-benchmark-v0.2.0/PUBLICATION.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/c58cc26adb2b4a646e3940e417351040b5dc9ff0/docs/research/rax/cqg-benchmark-v0.2.0/PUBLICATION.json): Freigegebenes ZIP, 28 bytegleiche Paketdateien und identische Browserkopie; zusätzliche CI getrennt vom ursprünglichen Bericht.
 
 ## Reproduzieren
 
@@ -28,7 +28,7 @@ Neue Arbeits- und Ausgabeordner verwenden; Voraussetzungen aus der Originaldokum
 ```sh
 git clone --branch main https://github.com/thomasmgfeller/x6-spectral-astrolabium.git x6-rax-cqg-benchmark
 cd x6-rax-cqg-benchmark
-git checkout --detach e947dfbdd49890dcb119940548537d1db59272c2
+git checkout --detach c58cc26adb2b4a646e3940e417351040b5dc9ff0
 cd research/rax_cqg/benchmark-v0.2.0
 python3 -m pip install -r requirements.txt
 python3 validate.py

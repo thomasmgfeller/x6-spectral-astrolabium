@@ -4,7 +4,7 @@ Kurze Antworten für den Alltag – mit dem passenden Weg zu den Details.
 
 [English](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/en/faq.md) · [Wiki-Übersicht](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/de/)
 
-Quellenstand: 2026-10-18 · `e947dfbdd49890dcb119940548537d1db59272c2`
+Quellenstand: 2026-10-19 · `c58cc26adb2b4a646e3940e417351040b5dc9ff0`
 
 ## Brauche ich Mathematikkenntnisse oder ein Konto?
 

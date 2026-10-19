@@ -1,25 +1,25 @@
 # Eigenzeit: analytische Wolkenvarianz und Bennett-Intervalle
 
-Registerstand: 2026-10-18. MAIN / SOFTWARE. Kein Live-Prüfsiegel.
+Registerstand: 2026-10-19. MAIN / SOFTWARE. Kein Live-Prüfsiegel.
 
 ## Quelle
 
 Branch: main
 
-Commit: e947dfbdd49890dcb119940548537d1db59272c2
+Commit: c58cc26adb2b4a646e3940e417351040b5dc9ff0
 
-[Originaldokumentation](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e947dfbdd49890dcb119940548537d1db59272c2/research/lorentz_de_sitter_variance/README.md)
+[Originaldokumentation](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/c58cc26adb2b4a646e3940e417351040b5dc9ff0/research/lorentz_de_sitter_variance/README.md)
 
 ## Dokumentierte Aussage
 
 Analytische Varianzgrenze vollständiger C2-Wolken im bekannten uniformen 4D-de-Sitter-Modell, 0≤h≤0,5. Bennett-Inversion erhält mindestens 95% Überdeckung bei festem Budget; hinreichende Budgets sinken gegenüber KL um Faktor 2,89–4,10. 45.056 neue Wolken: bei h=0,5, M=4.096 qualifizieren fünf von acht Bennett-Intervallen für 20%-Präzision, gegenüber null von acht mit KL. Ein kleines Gruppenintervall ist breiter; keine allgemeine Dominanz oder unbekannte Dichteidentifikation.
 
-- [research/lorentz_de_sitter_variance/DERIVATION.md](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e947dfbdd49890dcb119940548537d1db59272c2/research/lorentz_de_sitter_variance/DERIVATION.md): Überlappende Paare, exakte Lorentz-Momente, uniforme Reihenreste und Zellgrenzen sowie vollständiges Bennett-MGF-Argument.
-- [research/lorentz_de_sitter_variance/RESULTS.md](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e947dfbdd49890dcb119940548537d1db59272c2/research/lorentz_de_sitter_variance/RESULTS.md): Alle drei Budgetgewinne, neue Gruppen, erhaltenes Gegenbeispiel zur Intervall-Dominanz und Geltungsgrenzen.
-- [research/lorentz_de_sitter_variance/REVIEW.md](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e947dfbdd49890dcb119940548537d1db59272c2/research/lorentz_de_sitter_variance/REVIEW.md): Prüfpaket mit entscheidenden Beweisstellen, Falsifikationsmöglichkeiten und Reproduktionsbefehlen; externe Prüfung offen.
-- [research/lorentz_de_sitter_variance/contract.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e947dfbdd49890dcb119940548537d1db59272c2/research/lorentz_de_sitter_variance/contract.json): Öffentliche Fixierung b519337 vor Zielbudgetvergleich und neuen Punktwolken.
-- [research/lorentz_de_sitter_variance/results/mathematics.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e947dfbdd49890dcb119940548537d1db59272c2/research/lorentz_de_sitter_variance/results/mathematics.json): Exakte Dreipunktkoeffizienten und Varianzobergrenzen auf 64 vollständigen Parameterzellen.
-- [research/lorentz_de_sitter_variance/VERIFICATION.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e947dfbdd49890dcb119940548537d1db59272c2/research/lorentz_de_sitter_variance/VERIFICATION.json): Getrennte Kugelschnitt-Quadratur, 22 Moment-/Profilkontrollen, 200-stellige Bennett-Gegenrechnung und voller Replay.
+- [research/lorentz_de_sitter_variance/DERIVATION.md](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/c58cc26adb2b4a646e3940e417351040b5dc9ff0/research/lorentz_de_sitter_variance/DERIVATION.md): Überlappende Paare, exakte Lorentz-Momente, uniforme Reihenreste und Zellgrenzen sowie vollständiges Bennett-MGF-Argument.
+- [research/lorentz_de_sitter_variance/RESULTS.md](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/c58cc26adb2b4a646e3940e417351040b5dc9ff0/research/lorentz_de_sitter_variance/RESULTS.md): Alle drei Budgetgewinne, neue Gruppen, erhaltenes Gegenbeispiel zur Intervall-Dominanz und Geltungsgrenzen.
+- [research/lorentz_de_sitter_variance/REVIEW.md](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/c58cc26adb2b4a646e3940e417351040b5dc9ff0/research/lorentz_de_sitter_variance/REVIEW.md): Prüfpaket mit entscheidenden Beweisstellen, Falsifikationsmöglichkeiten und Reproduktionsbefehlen; externe Prüfung offen.
+- [research/lorentz_de_sitter_variance/contract.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/c58cc26adb2b4a646e3940e417351040b5dc9ff0/research/lorentz_de_sitter_variance/contract.json): Öffentliche Fixierung b519337 vor Zielbudgetvergleich und neuen Punktwolken.
+- [research/lorentz_de_sitter_variance/results/mathematics.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/c58cc26adb2b4a646e3940e417351040b5dc9ff0/research/lorentz_de_sitter_variance/results/mathematics.json): Exakte Dreipunktkoeffizienten und Varianzobergrenzen auf 64 vollständigen Parameterzellen.
+- [research/lorentz_de_sitter_variance/VERIFICATION.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/c58cc26adb2b4a646e3940e417351040b5dc9ff0/research/lorentz_de_sitter_variance/VERIFICATION.json): Getrennte Kugelschnitt-Quadratur, 22 Moment-/Profilkontrollen, 200-stellige Bennett-Gegenrechnung und voller Replay.
 
 ## Reproduzieren
 
@@ -30,7 +30,7 @@ Neue Arbeits- und Ausgabeordner verwenden; Voraussetzungen aus der Originaldokum
 ```sh
 git clone --branch main https://github.com/thomasmgfeller/x6-spectral-astrolabium.git x6-lorentz-de-sitter-variance
 cd x6-lorentz-de-sitter-variance
-git checkout --detach e947dfbdd49890dcb119940548537d1db59272c2
+git checkout --detach c58cc26adb2b4a646e3940e417351040b5dc9ff0
 python3 -m pip install -r research/lorentz_de_sitter_variance/requirements.txt
 python3 -B research/lorentz_de_sitter_variance/verify.py
 ```
