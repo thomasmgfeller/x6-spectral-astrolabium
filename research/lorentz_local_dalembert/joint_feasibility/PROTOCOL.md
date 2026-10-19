@@ -1,7 +1,9 @@
 # Joint support, count and frame feasibility
 
-19 October 2026. Protocol before development; implementation will be frozen
-publicly again before fresh target clouds. Parent: outer-diamond HOLD.
+19 October 2026. Revision 3 after reusing the same six development clouds, before any target
+cloud. Revision 1 is public at 8647afdc5177600251faf2cc08e3674568d6b5ee.
+Implementation will be frozen publicly again before fresh targets.
+Parent: outer-diamond HOLD. Development history is retained separately.
 
 ## Question and intervention
 
@@ -13,25 +15,30 @@ change of resolution. It does not recalibrate or qualify a differential operator
 
 Generate the unchanged unit inner diamond, including its two labelled probes,
 and independent physical Poisson shells to outer duration 1.5 using the previous
-sampler. Root and the two temporal points remain the marked longest-chain
-choices of the original inner problem. Probes are never counted as events.
+sampler. Root and its marked longest chain remain those of the original inner
+problem. The two temporal supports are now also adaptive: at each count scale,
+choose the nearest chain point on each side with count >=2k and both half-counts
+>=4. Both points must be physical inner events. Probes are never counted as events.
 The old support and frame rule are a paired diagnostic reference.
 
 All selection receives only the relation, independent marks, known density,
-inner membership, the fixed root/temporal points and selection colours.
+inner membership, the fixed root/chain and selection colours.
 Simulator coordinates are unavailable to the inference module.
 
 ## Fixed bounded joint search
 
 1. For each count scale k=16,32,64, candidates are physical inner events
    causally related to the root with k <= N(root,b) < 2k, excluding the two
-   temporal points. Root intervals must already meet full-count >=16 and
+   selected temporal points. Root intervals must already meet full-count >=16 and
    both selection-colour half-counts >=4. Keep the first 64 by independent
    mark in each time direction. The scale is tau_k=(k/(rho*pi/12))^(1/3).
 2. Frame candidates are in the common past or common future of the root and
    both temporal points. All these intervals must meet the unchanged count
-   guards. Keep 64 per side by mark. Enumerate every three-element causal
-   chain in these finite pools whose mutual intervals meet the same guards.
+   guards. Keep 128 per side by mark. Combine both pools and enumerate every
+   three-element causal chain whose mutual intervals meet the same guards.
+   A frame can be all-past, all-future or mixed; this is one frame, not a
+   multi-frame method. All landmark/support pairs must still be causal.
+   Enumerate through eligible middle vertices, not all unordered triples.
    Gram construction and normalization use the unchanged intrinsic formula.
    Require Lorentz signature, condition <=100, and both half-Gram signatures
    and normalized errors <=0.25. Sort surviving frames by condition then
@@ -44,7 +51,7 @@ Simulator coordinates are unavailable to the inference module.
    Require each point's relative half-feature error <=0.25 (a conservative
    construction filter in addition to the unchanged aggregate guard).
    Keep at most 16 by mark per side and require at least four per side.
-4. Combine these events with the fixed two temporal points. Recheck EVERY
+4. Combine these events with the two selected temporal points. Recheck EVERY
    interval and every inherited aggregate guard on the complete support.
    Require rank nine in the linear/quadratic design, relative SVD threshold
    1e-10, and design condition <=1000. This additional feasibility requirement
@@ -60,6 +67,19 @@ arbitrary perturbations. Count-based selection is itself adaptive and needs
 separate analysis before any subsequent statistical coverage claim.
 
 ## Reporting and decision
+
+Revision rationale: the initial six development clouds selected no support.
+At low density the fixed temporal points failed the count guard; at high
+density the 64-per-side frame pools supplied only three and zero count-qualified
+triples. Revision 2 adapts the temporal supports as part of the joint task and
+raises the bounded frame pool. It neither changes any acceptance threshold
+nor converts these development observations into confirmation evidence.
+Revision 2 produced 2,888 and 3,925 count-qualified triples across three scales
+in the two dense development clouds, but none met the signature/condition gate.
+Revision 3 includes mixed past/future landmark triples to test the restriction
+to one cone. It retains 128 candidates from each cone, 256 total, and performs
+batched Gram algebra checked against scalar computations. The same unchanged
+guards apply; no target seeds were used in these revisions.
 
 Three densities, two development seeds and sixteen fresh target seeds each;
 the exact constants and budgets are in contract.json. Full denominator includes

@@ -1,5 +1,5 @@
 {
-  "schema": "x6.bk-joint-feasibility/1",
+  "schema": "x6.bk-joint-feasibility/3",
   "date": "2026-10-19",
   "base_commit": "e5e5102ef146e094b66e1973c7d41ef100645523",
   "densities": [2048, 8192, 32768],
@@ -10,7 +10,9 @@
   "primary_density": 32768,
   "count_shell_lower_bounds": [16, 32, 64],
   "shell_upper_multiplier": 2,
-  "frame_candidates_per_side": 64,
+  "temporal_count_multiplier": 2,
+  "frame_candidates_per_side": 128,
+  "allow_mixed_frame": true,
   "maximum_frames_per_shell": 128,
   "support_candidates_per_side": 64,
   "minimum_support_per_side": 4,
