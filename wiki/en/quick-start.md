@@ -4,7 +4,7 @@ Start in the browser. Local installation is a separate, optional route for repro
 
 [Deutsch](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/de/quick-start.md) · [Wiki overview](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/en/)
 
-Source snapshot: 2026-10-19 · `26432e3d4cde20adabb510f17d5639891f4ac642`
+Source snapshot: 2026-10-19 · `5e164bdc0feaf529af34e019f43dfda949c47302`
 
 ## Five minutes in the Signal Lab
 

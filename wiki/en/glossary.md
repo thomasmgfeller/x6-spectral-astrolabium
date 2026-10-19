@@ -4,7 +4,7 @@ These definitions are starting points. Calculations always use the precise defin
 
 [Deutsch](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/de/glossary.md) · [Wiki overview](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/en/)
 
-Source snapshot: 2026-10-19 · `26432e3d4cde20adabb510f17d5639891f4ac642`
+Source snapshot: 2026-10-19 · `5e164bdc0feaf529af34e019f43dfda949c47302`
 
 ## Key terms
 

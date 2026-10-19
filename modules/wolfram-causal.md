@@ -6,15 +6,15 @@ Registerstand: 2026-10-19. MAIN / SOFTWARE. Kein Live-Prüfsiegel.
 
 Branch: main
 
-Commit: 26432e3d4cde20adabb510f17d5639891f4ac642
+Commit: 5e164bdc0feaf529af34e019f43dfda949c47302
 
-[Originaldokumentation](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/26432e3d4cde20adabb510f17d5639891f4ac642/docs/research/causal-order/wolfram-countercheck-v0.1/README.md)
+[Originaldokumentation](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/5e164bdc0feaf529af34e019f43dfda949c47302/docs/research/causal-order/wolfram-countercheck-v0.1/README.md)
 
 ## Dokumentierte Aussage
 
 Sechzehn Wolfram-Assertions und exakte Python-Polynome bestätigen ein Drei-Ereignis-Gegenbeispiel gegen Vollständigkeit dieses Fingerprints.
 
-- [docs/research/causal-order/wolfram-countercheck-v0.1/X6_Wolfram_Fall5_v0_1.zip](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/26432e3d4cde20adabb510f17d5639891f4ac642/docs/research/causal-order/wolfram-countercheck-v0.1/X6_Wolfram_Fall5_v0_1.zip): Gespeicherte Erstfehler und korrigierte Wolfram-Antworten, Freeze-Dateien und vollständiges Inventar.
+- [docs/research/causal-order/wolfram-countercheck-v0.1/X6_Wolfram_Fall5_v0_1.zip](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/5e164bdc0feaf529af34e019f43dfda949c47302/docs/research/causal-order/wolfram-countercheck-v0.1/X6_Wolfram_Fall5_v0_1.zip): Gespeicherte Erstfehler und korrigierte Wolfram-Antworten, Freeze-Dateien und vollständiges Inventar.
 
 ## Reproduzieren
 
@@ -25,7 +25,7 @@ Neue Arbeits- und Ausgabeordner verwenden; Voraussetzungen aus der Originaldokum
 ```sh
 git clone --branch main https://github.com/thomasmgfeller/x6-spectral-astrolabium.git x6-wolfram-causal
 cd x6-wolfram-causal
-git checkout --detach 26432e3d4cde20adabb510f17d5639891f4ac642
+git checkout --detach 5e164bdc0feaf529af34e019f43dfda949c47302
 python3 -m zipfile -e docs/research/causal-order/wolfram-countercheck-v0.1/X6_Wolfram_Fall5_v0_1.zip /tmp/x6-hub-wolfram-causal
 cd /tmp/x6-hub-wolfram-causal/X6_Wolfram_Fall5_v0_1
 python3 verify_release.py

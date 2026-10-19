@@ -6,18 +6,18 @@ Registerstand: 2026-10-19. MAIN / SOFTWARE. Kein Live-Prüfsiegel.
 
 Branch: main
 
-Commit: 26432e3d4cde20adabb510f17d5639891f4ac642
+Commit: 5e164bdc0feaf529af34e019f43dfda949c47302
 
-[Originaldokumentation](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/26432e3d4cde20adabb510f17d5639891f4ac642/research/lorentz_n6_residuals/README.md)
+[Originaldokumentation](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/5e164bdc0feaf529af34e019f43dfda949c47302/research/lorentz_n6_residuals/README.md)
 
 ## Dokumentierte Aussage
 
 Alle vier F0-Restpaare des vollständigen n=6-Atlas werden durch gepaarte gerichtete Grade D und bereits durch W_future getrennt. Drei sind Dualpaare. F0+W_future: 318/318 Klassen bei n=6, aber 163/164 für n=7 mit Höhe ≤2; beide Zählgrößen ergeben dort 164. Ein verbundenes n=8-Dualpaar kollidiert sogar für F0+D. Keine allgemeine Vollständigkeit oder physische Validierung.
 
-- [research/lorentz_n6_residuals/evidence/local-results.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/26432e3d4cde20adabb510f17d5639891f4ac642/research/lorentz_n6_residuals/evidence/local-results.json): Vollständige Paarwerte, unabhängig nachgerechnete 318 Atlasfälle, Höhe-zwei-n=7-Enumeration, zwei explizite Grenzpaare und 17 Fehlerkontrollen.
-- [research/lorentz_n6_residuals/evidence/wolfram-result.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/26432e3d4cde20adabb510f17d5639891f4ac642/research/lorentz_n6_residuals/evidence/wolfram-result.json): Wolfram 15.0.1: zwölf Matrizen, 36 exakt übereinstimmende monische Polynome, Grade, Zählgrößen, Isomorphie-/Dualitätsprüfungen. Zwei frühere fehlgeschlagene Versuche bleiben erhalten.
-- [research/lorentz_n6_residuals/contract.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/26432e3d4cde20adabb510f17d5639891f4ac642/research/lorentz_n6_residuals/contract.json): Fixierte Konventionen und Auswahl, Herkunft des bestehenden Separators, Literaturabgrenzung und Hypothese H7-bidirectional-moments.
-- [research/lorentz_n6_residuals/ACCEPTANCE.md](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/26432e3d4cde20adabb510f17d5639891f4ac642/research/lorentz_n6_residuals/ACCEPTANCE.md): Frischer Checkout und Netzwerk-isolierte CI erfolgreich, identisches Neun-Berichte-Bundle; zusätzliche CLI-Manipulationen auch unter Python -O abgelehnt.
+- [research/lorentz_n6_residuals/evidence/local-results.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/5e164bdc0feaf529af34e019f43dfda949c47302/research/lorentz_n6_residuals/evidence/local-results.json): Vollständige Paarwerte, unabhängig nachgerechnete 318 Atlasfälle, Höhe-zwei-n=7-Enumeration, zwei explizite Grenzpaare und 17 Fehlerkontrollen.
+- [research/lorentz_n6_residuals/evidence/wolfram-result.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/5e164bdc0feaf529af34e019f43dfda949c47302/research/lorentz_n6_residuals/evidence/wolfram-result.json): Wolfram 15.0.1: zwölf Matrizen, 36 exakt übereinstimmende monische Polynome, Grade, Zählgrößen, Isomorphie-/Dualitätsprüfungen. Zwei frühere fehlgeschlagene Versuche bleiben erhalten.
+- [research/lorentz_n6_residuals/contract.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/5e164bdc0feaf529af34e019f43dfda949c47302/research/lorentz_n6_residuals/contract.json): Fixierte Konventionen und Auswahl, Herkunft des bestehenden Separators, Literaturabgrenzung und Hypothese H7-bidirectional-moments.
+- [research/lorentz_n6_residuals/ACCEPTANCE.md](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/5e164bdc0feaf529af34e019f43dfda949c47302/research/lorentz_n6_residuals/ACCEPTANCE.md): Frischer Checkout und Netzwerk-isolierte CI erfolgreich, identisches Neun-Berichte-Bundle; zusätzliche CLI-Manipulationen auch unter Python -O abgelehnt.
 
 ## Reproduzieren
 
@@ -28,7 +28,7 @@ Neue Arbeits- und Ausgabeordner verwenden; Voraussetzungen aus der Originaldokum
 ```sh
 git clone --branch main https://github.com/thomasmgfeller/x6-spectral-astrolabium.git x6-lorentz-n6-residuals
 cd x6-lorentz-n6-residuals
-git checkout --detach 26432e3d4cde20adabb510f17d5639891f4ac642
+git checkout --detach 5e164bdc0feaf529af34e019f43dfda949c47302
 python3 -S -B research/lorentz_n6_residuals/verify.py --output /tmp/lorentz-residuals.json
 python3 -S -B research/lorentz_n6_residuals/verify.py --verify-report /tmp/lorentz-residuals.json
 ```

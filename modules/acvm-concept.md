@@ -6,15 +6,15 @@ Registerstand: 2026-10-19. MAIN / CONCEPT. Kein Live-Prüfsiegel.
 
 Branch: main
 
-Commit: 26432e3d4cde20adabb510f17d5639891f4ac642
+Commit: 5e164bdc0feaf529af34e019f43dfda949c47302
 
-[Originaldokumentation](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/26432e3d4cde20adabb510f17d5639891f4ac642/docs/acvm/README.md)
+[Originaldokumentation](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/5e164bdc0feaf529af34e019f43dfda949c47302/docs/acvm/README.md)
 
 ## Dokumentierte Aussage
 
 Historische Gesamtspezifikation. Teilimplementierungen in main ersetzen keine vollständige Geräteabnahme.
 
-- [docs/acvm/ACVM_CONCEPT_v0_1_DE.md](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/26432e3d4cde20adabb510f17d5639891f4ac642/docs/acvm/ACVM_CONCEPT_v0_1_DE.md): Ursprünglicher Anforderungstext; spätere Softwarebelege in C1 und optical-v0.2.
+- [docs/acvm/ACVM_CONCEPT_v0_1_DE.md](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/5e164bdc0feaf529af34e019f43dfda949c47302/docs/acvm/ACVM_CONCEPT_v0_1_DE.md): Ursprünglicher Anforderungstext; spätere Softwarebelege in C1 und optical-v0.2.
 
 ## Reproduzieren
 
