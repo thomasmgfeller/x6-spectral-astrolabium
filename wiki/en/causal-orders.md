@@ -4,7 +4,7 @@ This research asks what structure is carried by relationships before a spatial d
 
 [Deutsch](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/de/causal-orders.md) · [Wiki overview](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/en/)
 
-Source snapshot: 2026-10-19 · `694dd9ec0409f35c9c6fd3e835ef187ada72c598`
+Source snapshot: 2026-10-19 · `ac519f5e4a83de0e570680fe4cfeb2da133db351`
 
 ## Events and their ordering
 
@@ -344,3 +344,17 @@ INTRINSIC_MOMENT_HOLD and HOLD_PHASE3 remain. The result rejects this specific l
 - [Protocol / Protokoll](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/694dd9ec0409f35c9c6fd3e835ef187ada72c598/research/lorentz_local_dalembert/intrinsic_moments/PROTOCOL.md)
 - [Data / Daten](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/694dd9ec0409f35c9c6fd3e835ef187ada72c598/research/lorentz_local_dalembert/intrinsic_moments/results/summary.json)
 - [Replay](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/694dd9ec0409f35c9c6fd3e835ef187ada72c598/research/lorentz_local_dalembert/intrinsic_moments/VERIFICATION.json)
+
+## BK: Why a larger landmark search is insufficient
+
+This diagnosis uses the 48 already observed clouds from the failed landmark trial. It is explicitly retrospective. Six neighborhoods remain unavailable; all 42 available supports are searched exhaustively.
+
+Removing the 40-candidate cap still yields no admissible triple. At the highest density, the best minimum mutual interval count is only 2 instead of the required 8. For 31 of 42 neighborhoods, a necessary packing bound already proves impossibility: three sufficiently separated landmarks require at least 27 interior events before the outer boundary.
+
+Restricting coverage to the root alone yields 16 of 16 cases at the highest density. This relaxation does not supply all distances required by the operator. Exact volume proxies from simulation coordinates also yield 0 of 42 full-support triples. Thus neither count noise alone nor the 40-candidate cap is a sufficient explanation on these clouds.
+
+All 48 clouds were fully replayed. A new construction must address common coverage and sufficient causal depth, for example with more outer space or separately developed overlapping frames. This needs development, a public protocol and fresh targets. HOLD_PHASE3 remains; this diagnosis does not qualify a new operator.
+
+- [Report / Bericht](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/ac519f5e4a83de0e570680fe4cfeb2da133db351/research/lorentz_local_dalembert/landmark_availability/RESULTS.md)
+- [Protocol / Protokoll](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/ac519f5e4a83de0e570680fe4cfeb2da133db351/research/lorentz_local_dalembert/landmark_availability/PROTOCOL.md)
+- [Full replay / Vollständiger Replay](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/ac519f5e4a83de0e570680fe4cfeb2da133db351/research/lorentz_local_dalembert/landmark_availability/VERIFICATION.json)

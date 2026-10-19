@@ -4,7 +4,7 @@ Hier geht es um die Frage, welche Struktur in Beziehungen steckt, bevor man eine
 
 [English](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/en/causal-orders.md) · [Wiki-Übersicht](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/de/)
 
-Quellenstand: 2026-10-19 · `694dd9ec0409f35c9c6fd3e835ef187ada72c598`
+Quellenstand: 2026-10-19 · `ac519f5e4a83de0e570680fe4cfeb2da133db351`
 
 ## Ereignisse und ihre Reihenfolge
 
@@ -344,3 +344,17 @@ INTRINSIC_MOMENT_HOLD und HOLD_PHASE3 bleiben bestehen. Das Ergebnis verwirft di
 - [Protocol / Protokoll](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/694dd9ec0409f35c9c6fd3e835ef187ada72c598/research/lorentz_local_dalembert/intrinsic_moments/PROTOCOL.md)
 - [Data / Daten](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/694dd9ec0409f35c9c6fd3e835ef187ada72c598/research/lorentz_local_dalembert/intrinsic_moments/results/summary.json)
 - [Replay](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/694dd9ec0409f35c9c6fd3e835ef187ada72c598/research/lorentz_local_dalembert/intrinsic_moments/VERIFICATION.json)
+
+## BK: Warum eine größere Landmarkensuche nicht genügt
+
+Die folgende Diagnose verwendet die bereits bekannten 48 Wolken des gescheiterten Landmarkenversuchs. Sie ist ausdrücklich retrospektiv. Sechs Nachbarschaften bleiben unverfügbar; alle 42 verfügbaren Stützbereiche werden vollständig durchsucht.
+
+Auch ohne die Begrenzung auf 40 Kandidaten findet sich kein zulässiges Dreiergespann. Bei höchster Dichte erreicht der beste kleinste gegenseitige Intervallzählwert nur 2 statt der verlangten 8. Für 31 von 42 Nachbarschaften beweist bereits eine notwendige Zählschranke die Unmöglichkeit: Drei passend getrennte Landmarken benötigen mindestens 27 Zwischenereignisse bis zum äußeren Rand.
+
+Werden Landmarken nur um den Mittelpunkt gesucht, gelingen bei höchster Dichte 16 von 16 Fälle. Diese Lockerung liefert jedoch nicht alle für den Operator benötigten Abstände. Auch exakte Volumenwerte aus Simulationskoordinaten ergeben am vollständigen Stützbereich 0 von 42 zulässigen Gruppen. Damit ist weder Zählrauschen allein noch die 40er-Grenze eine ausreichende Erklärung auf diesen Wolken.
+
+Alle 48 Wolken wurden vollständig wiederholt. Die nächste Konstruktion muss die gemeinsame Abdeckung und ausreichende kausale Tiefe lösen, beispielsweise durch mehr äußeren Raum oder eigenständig entwickelte überlappende Rahmen. Das benötigt eigene Entwicklung, ein öffentliches Protokoll und frische Testdaten. HOLD_PHASE3 bleibt bestehen; die Diagnose qualifiziert keinen neuen Operator.
+
+- [Report / Bericht](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/ac519f5e4a83de0e570680fe4cfeb2da133db351/research/lorentz_local_dalembert/landmark_availability/RESULTS.md)
+- [Protocol / Protokoll](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/ac519f5e4a83de0e570680fe4cfeb2da133db351/research/lorentz_local_dalembert/landmark_availability/PROTOCOL.md)
+- [Full replay / Vollständiger Replay](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/ac519f5e4a83de0e570680fe4cfeb2da133db351/research/lorentz_local_dalembert/landmark_availability/VERIFICATION.json)
