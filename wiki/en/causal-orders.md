@@ -4,7 +4,7 @@ This research asks what structure is carried by relationships before a spatial d
 
 [Deutsch](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/de/causal-orders.md) · [Wiki overview](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/en/)
 
-Source snapshot: 2026-10-19 · `aa2c3dae7bb7afb564cdf4f08b0fe8f2c64c9bfb`
+Source snapshot: 2026-10-19 · `26432e3d4cde20adabb510f17d5639891f4ac642`
 
 ## Events and their ordering
 
@@ -301,3 +301,17 @@ Correct Lorentz signature is still obtained on only 8 of 16 clouds; absolute met
 - [Results / Ergebnisse](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/aa2c3dae7bb7afb564cdf4f08b0fe8f2c64c9bfb/research/lorentz_local_dalembert/volume_shell/RESULTS.md)
 - [Protocol / Protokoll](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/aa2c3dae7bb7afb564cdf4f08b0fe8f2c64c9bfb/research/lorentz_local_dalembert/volume_shell/PROTOCOL.md)
 - [Data / Daten](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/aa2c3dae7bb7afb564cdf4f08b0fe8f2c64c9bfb/research/lorentz_local_dalembert/volume_shell/results/summary.json)
+
+## BK: common reference directions and both moments
+
+The new selector uses two existing temporal anchors to estimate a common reference frame from causal interval counts. Each shell chooses its closest reference point in that frame. The previous overlap-based caps and intrinsic shell weights are retained. Embedding coordinates do not enter the primary candidate.
+
+Four prespecified arms are compared on 48 fresh clouds: original weights, the previous volume weights as baseline, the new intrinsic reference selector and a diagnostic selector using exact proper times. The diagnostic changes only selection times; cap distances and shell weights remain intrinsic. It is not an error lower bound.
+
+At the highest density metric RMS changes 4.840 → 3.709, and normalized affine drift changes 3.271 → 3.085. The candidate is available on 16 of 16 clouds, with correct Lorentz signature on 14 of 16. The prespecified decision is COMMON_AXIS_HOLD. Both paired error ratios must improve by at least 25 percent; a closer reference direction alone is insufficient.
+
+The protocol and computational sources, including analysis, were published before their respective data. All 48 target clouds were fully numerically replayed; coordinate byte identity is reported separately. Phase 3 remains on HOLD. Future hypotheses must address first and second moments together under a separate test protocol.
+
+- [Results / Ergebnisse](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/26432e3d4cde20adabb510f17d5639891f4ac642/research/lorentz_local_dalembert/common_axis/RESULTS.md)
+- [Protocol / Protokoll](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/26432e3d4cde20adabb510f17d5639891f4ac642/research/lorentz_local_dalembert/common_axis/PROTOCOL.md)
+- [Data / Daten](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/26432e3d4cde20adabb510f17d5639891f4ac642/research/lorentz_local_dalembert/common_axis/results/summary.json)

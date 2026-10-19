@@ -4,7 +4,7 @@ Hier geht es um die Frage, welche Struktur in Beziehungen steckt, bevor man eine
 
 [English](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/en/causal-orders.md) · [Wiki-Übersicht](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/de/)
 
-Quellenstand: 2026-10-19 · `aa2c3dae7bb7afb564cdf4f08b0fe8f2c64c9bfb`
+Quellenstand: 2026-10-19 · `26432e3d4cde20adabb510f17d5639891f4ac642`
 
 ## Ereignisse und ihre Reihenfolge
 
@@ -301,3 +301,17 @@ Die richtige Lorentz-Signatur gelingt dennoch nur in 8 von 16 Wolken; der absolu
 - [Results / Ergebnisse](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/aa2c3dae7bb7afb564cdf4f08b0fe8f2c64c9bfb/research/lorentz_local_dalembert/volume_shell/RESULTS.md)
 - [Protocol / Protokoll](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/aa2c3dae7bb7afb564cdf4f08b0fe8f2c64c9bfb/research/lorentz_local_dalembert/volume_shell/PROTOCOL.md)
 - [Data / Daten](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/aa2c3dae7bb7afb564cdf4f08b0fe8f2c64c9bfb/research/lorentz_local_dalembert/volume_shell/results/summary.json)
+
+## BK: gemeinsame Referenzrichtungen und beide Momente
+
+Die neue Auswahlregel verwendet zwei vorhandene zeitliche Anker, um aus kausalen Intervallzählungen eine gemeinsame Bezugsrichtung zu schätzen. Auf jeder Schale wird der dazu passendste Referenzpunkt gesucht. Die bisherige Überlappungsauswahl und intrinsische Schalengewichtung bleiben erhalten. Einbettungskoordinaten gehen nicht in den primären Kandidaten ein.
+
+Vier vorher festgelegte Arme werden auf 48 frischen Wolken verglichen: ursprüngliche Gewichte, die bisherige Intervallgewichtung als Basis, die neue intrinsische Referenzwahl und eine diagnostische Referenzwahl mit exakten Eigenzeiten. Die letzte Kontrolle verändert nur die Auswahlzeiten, nicht die intrinsischen Kappenabstände oder Schalengewichte; sie ist keine Fehleruntergrenze.
+
+Bei höchster Dichte beträgt der Metrik-RMS 4.840 → 3.709, die normierte Antwort auf lineare Felder 3.271 → 3.085. Verfügbar sind 16 von 16 Wolken, die richtige Lorentz-Signatur entsteht in 14 von 16. Der vorab festgelegte Gesamtentscheid lautet COMMON_AXIS_HOLD. Beide Fehler müssen im gepaarten Vergleich mindestens 25 Prozent sinken; eine bessere Richtung allein genügt nicht.
+
+Protokoll und Quellen einschliesslich Analyse wurden vor den jeweiligen Daten veröffentlicht. Alle 48 Zielwolken wurden vollständig numerisch nachgerechnet; Koordinaten-Bytehashgleichheit wird separat berichtet. Phase 3 bleibt HOLD. Die nächsten Hypothesen müssen erste und zweite Momente gemeinsam berücksichtigen und benötigen ein eigenes Prüfprotokoll.
+
+- [Results / Ergebnisse](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/26432e3d4cde20adabb510f17d5639891f4ac642/research/lorentz_local_dalembert/common_axis/RESULTS.md)
+- [Protocol / Protokoll](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/26432e3d4cde20adabb510f17d5639891f4ac642/research/lorentz_local_dalembert/common_axis/PROTOCOL.md)
+- [Data / Daten](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/26432e3d4cde20adabb510f17d5639891f4ac642/research/lorentz_local_dalembert/common_axis/results/summary.json)

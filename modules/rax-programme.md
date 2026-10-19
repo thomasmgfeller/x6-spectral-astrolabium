@@ -6,15 +6,15 @@ Registerstand: 2026-10-19. MAIN / CONCEPT. Kein Live-Prüfsiegel.
 
 Branch: main
 
-Commit: aa2c3dae7bb7afb564cdf4f08b0fe8f2c64c9bfb
+Commit: 26432e3d4cde20adabb510f17d5639891f4ac642
 
-[Originaldokumentation](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/aa2c3dae7bb7afb564cdf4f08b0fe8f2c64c9bfb/docs/research/rax/README.md)
+[Originaldokumentation](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/26432e3d4cde20adabb510f17d5639891f4ac642/docs/research/rax/README.md)
 
 ## Dokumentierte Aussage
 
 Gestuftes Programm für prädiktive Reduktionen; U2, Geometrie und Singularitäten bleiben geplant.
 
-- [docs/research/rax/README.md](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/aa2c3dae7bb7afb564cdf4f08b0fe8f2c64c9bfb/docs/research/rax/README.md): Programmbeschreibung und Links zu begrenzten ausgeführten Kontrollen.
+- [docs/research/rax/README.md](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/26432e3d4cde20adabb510f17d5639891f4ac642/docs/research/rax/README.md): Programmbeschreibung und Links zu begrenzten ausgeführten Kontrollen.
 
 ## Reproduzieren
 
