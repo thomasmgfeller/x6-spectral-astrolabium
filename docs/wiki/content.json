@@ -1,7 +1,7 @@
 {
   "schema": "x6.bilingual-wiki/1",
   "snapshot_date": "2026-10-19",
-  "source_commit": "c58cc26adb2b4a646e3940e417351040b5dc9ff0",
+  "source_commit": "d6c9f3d9ddf975cdc6f0c2ce055c5becb1f7a2ee",
   "articles": [
     {
       "id": "index",
@@ -1491,6 +1491,45 @@
                 ]
               }
             ]
+          },
+          {
+            "id": "bk-moment-audit",
+            "title": "BK-Momentendiagnose: Schalen und Zeitrichtungen als Engpässe",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "Weitere 48 frische Wolken prüfen alle acht vorab festgelegten Kombinationen von drei Kontrollen: richtige Eigenzeiten der Zeitstützpunkte (T), konstante Eigenzeit aller Schalenpunkte (S) und eine gemeinsame Zeitrichtung für Endpunkte und Schalenreferenzen (D). Die Auswahl bleibt je Arm unverändert. Alle Eingriffe verwenden bekannte Simulationskoordinaten und sind daher diagnostische Kontrollen."
+              },
+              {
+                "type": "paragraph",
+                "text": "Bei höchster Dichte stehen beide Arme in 16 von 16 Wolken zur Verfügung. Mit allen Kontrollen sinkt der relative Metrik-RMS von 7,387 auf 2,267 bei intrinsischer Nachbarauswahl und von 5,893 auf 1,002 bei exakter Abstandskappe. Beide Restfehler überschreiten die ursprüngliche Grenze 0,5."
+              },
+              {
+                "type": "paragraph",
+                "text": "Die vollständige faktorielle Fehlerzuordnung weist wesentlich grössere Beiträge für S und D aus als für T. Die Zeitstützpunkte liegen im Mittel bereits nahe der richtigen Eigenzeit; die Schalen besitzen eine systematisch grössere Eigenzeit und erhebliche Streuung. Die exakte Momentenbilanz berücksichtigt auch die gegenseitige Aufhebung von Zeit- und Schalenfehlern."
+              },
+              {
+                "type": "paragraph",
+                "text": "Das vorab festgelegte Diagnosekriterium ist erfüllt, Phase 3 bleibt auf HOLD. Bei niedriger Dichte verschlechtert die Gesamtkontrolle den intrinsischen Arm sogar. Der nächste Kandidat ist eine intrinsische Schalenkalibrierung über kausale Intervallzählungen, zusammen mit einer Prüfung gemeinsamer Referenzrichtungen. Das erfordert eine neue Entwicklung und frische Validierung. Alle 48 Wolken wurden vollständig wiederholt; frühere wissenschaftliche Dateien und BD-C2 NO_GO bleiben unverändert."
+              },
+              {
+                "type": "links",
+                "items": [
+                  {
+                    "label": "Results / Ergebnisse",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/d6c9f3d9ddf975cdc6f0c2ce055c5becb1f7a2ee/research/lorentz_local_dalembert/moment_audit/RESULTS.md"
+                  },
+                  {
+                    "label": "Protocol / Protokoll",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/d6c9f3d9ddf975cdc6f0c2ce055c5becb1f7a2ee/research/lorentz_local_dalembert/moment_audit/PROTOCOL.md"
+                  },
+                  {
+                    "label": "Data / Daten",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/d6c9f3d9ddf975cdc6f0c2ce055c5becb1f7a2ee/research/lorentz_local_dalembert/moment_audit/results/summary.json"
+                  }
+                ]
+              }
+            ]
           }
         ]
       },
@@ -2241,6 +2280,45 @@
                   {
                     "label": "Data / Daten",
                     "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/c58cc26adb2b4a646e3940e417351040b5dc9ff0/research/lorentz_local_dalembert/anchor_audit/results/summary.json"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "bk-moment-audit",
+            "title": "BK moment diagnosis: shell proper times and reference directions",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "A further 48 fresh clouds test all eight prespecified combinations of three controls: corrected temporal endpoint proper times (T), constant proper time for all shell points (S), and a common time direction for endpoints and shell references (D). Membership is fixed within each arm. All interventions use known simulation coordinates and are diagnostic controls."
+              },
+              {
+                "type": "paragraph",
+                "text": "At the highest density both arms are available on all 16 clouds. With all controls, relative metric RMS falls from 7.387 to 2.267 with intrinsic neighbor selection, and from 5.893 to 1.002 with an exact distance cap. Both residual errors exceed the original 0.5 limit."
+              },
+              {
+                "type": "paragraph",
+                "text": "The full factorial allocation assigns substantially larger error reductions to S and D than to T. Temporal endpoints already have nearly correct proper times on average; shells have systematically larger proper times and substantial spread. The exact moment balance also accounts for cancellation between temporal and shell errors."
+              },
+              {
+                "type": "paragraph",
+                "text": "The prespecified diagnostic criterion passes, while Phase 3 remains on HOLD. At low density the combined control actually worsens the intrinsic arm. The next candidate is intrinsic shell calibration from causal interval counts, together with a study of common reference directions. This needs new development and fresh validation. All 48 clouds were fully replayed; earlier scientific files and the BD-C2 NO_GO remain unchanged."
+              },
+              {
+                "type": "links",
+                "items": [
+                  {
+                    "label": "Results / Ergebnisse",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/d6c9f3d9ddf975cdc6f0c2ce055c5becb1f7a2ee/research/lorentz_local_dalembert/moment_audit/RESULTS.md"
+                  },
+                  {
+                    "label": "Protocol / Protokoll",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/d6c9f3d9ddf975cdc6f0c2ce055c5becb1f7a2ee/research/lorentz_local_dalembert/moment_audit/PROTOCOL.md"
+                  },
+                  {
+                    "label": "Data / Daten",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/d6c9f3d9ddf975cdc6f0c2ce055c5becb1f7a2ee/research/lorentz_local_dalembert/moment_audit/results/summary.json"
                   }
                 ]
               }

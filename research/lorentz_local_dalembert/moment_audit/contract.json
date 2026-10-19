@@ -1,0 +1,21 @@
+{
+  "schema": "x6.bk-moment-audit/1",
+  "date": "2026-10-19",
+  "densities": [2048, 8192, 32768],
+  "development_seeds": [2026102701, 2026102702],
+  "test_seed_base": 2026102800,
+  "test_replicates_per_density": 16,
+  "seed_rule": "base + 100*density_index + replicate",
+  "arms": ["balanced64", "oracle_cap"],
+  "factors": ["T", "S", "D"],
+  "variants": ["raw", "T", "S", "TS", "D", "TD", "SD", "TSD"],
+  "primary_density": 32768,
+  "availability_min": 0.8,
+  "corrected_to_raw_rms_max": 0.5,
+  "wall_budget_seconds": 600,
+  "memory_budget_mib": 2048,
+  "replay_tolerance": {"atol": 1e-10, "rtol": 1e-9},
+  "inherited_base_commit": "49e66abd1629d120f3a1991d79a1b67659109929",
+  "decision": "MOMENT_CONTROLS_INFORMATIVE if complete, within budget, algebra controls pass, and BOTH arms at primary density have availability >=0.8 and TSD/raw RMS <=0.5; otherwise MOMENT_DIAGNOSIS_MIXED. Phase 3 always HOLD_PHASE3.",
+  "scope": "Coordinate-assisted factorial diagnosis, no intrinsic estimator correction or curvature qualification. Frozen memberships, scales, coefficients and marks. No tuning or seed replacement."
+}
