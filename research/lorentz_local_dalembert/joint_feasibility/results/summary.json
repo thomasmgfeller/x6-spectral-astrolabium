@@ -1,0 +1,146 @@
+{
+  "schema": "x6.bk-joint-summary/1",
+  "mode": "test",
+  "complete": true,
+  "budget_pass": true,
+  "controls_pass": true,
+  "certificates_pass": true,
+  "clouds": 48,
+  "cells": [
+    {
+      "rho": 2048,
+      "total": 16,
+      "original_guarded": 0,
+      "temporal_count_pass": 2,
+      "any_count_triple": 0,
+      "any_conditioned_frame": 0,
+      "any_stable_gram": 0,
+      "selected": 0,
+      "joint_pass": 0,
+      "selection_statuses": {
+        "search_exhausted": 16
+      },
+      "held_out_failure_reasons": {},
+      "selected_frame_families": {
+        "past": 0,
+        "future": 0,
+        "mixed": 0
+      },
+      "selected_count_scales": {
+        "16": 0,
+        "32": 0,
+        "64": 0
+      },
+      "scale_ratio": null,
+      "support_sizes": null,
+      "frame_condition": null,
+      "design_condition": null,
+      "coordinate_lorentz_gram_error": null
+    },
+    {
+      "rho": 8192,
+      "total": 16,
+      "original_guarded": 0,
+      "temporal_count_pass": 16,
+      "any_count_triple": 16,
+      "any_conditioned_frame": 7,
+      "any_stable_gram": 3,
+      "selected": 1,
+      "joint_pass": 1,
+      "selection_statuses": {
+        "search_exhausted": 15,
+        "selected": 1
+      },
+      "held_out_failure_reasons": {},
+      "selected_frame_families": {
+        "past": 0,
+        "future": 0,
+        "mixed": 1
+      },
+      "selected_count_scales": {
+        "16": 1,
+        "32": 0,
+        "64": 0
+      },
+      "scale_ratio": {
+        "minimum": 1.3926397653693312,
+        "median": 1.3926397653693312,
+        "maximum": 1.3926397653693312
+      },
+      "support_sizes": {
+        "minimum": 25.0,
+        "median": 25.0,
+        "maximum": 25.0
+      },
+      "frame_condition": {
+        "minimum": 60.613324134676716,
+        "median": 60.613324134676716,
+        "maximum": 60.613324134676716
+      },
+      "design_condition": {
+        "minimum": 50.46478298347377,
+        "median": 50.46478298347377,
+        "maximum": 50.46478298347377
+      },
+      "coordinate_lorentz_gram_error": {
+        "minimum": 0.13991950676233336,
+        "median": 0.13991950676233336,
+        "maximum": 0.13991950676233336
+      }
+    },
+    {
+      "rho": 32768,
+      "total": 16,
+      "original_guarded": 0,
+      "temporal_count_pass": 16,
+      "any_count_triple": 16,
+      "any_conditioned_frame": 16,
+      "any_stable_gram": 16,
+      "selected": 16,
+      "joint_pass": 16,
+      "selection_statuses": {
+        "selected": 16
+      },
+      "held_out_failure_reasons": {},
+      "selected_frame_families": {
+        "past": 0,
+        "future": 0,
+        "mixed": 16
+      },
+      "selected_count_scales": {
+        "16": 16,
+        "32": 0,
+        "64": 0
+      },
+      "scale_ratio": {
+        "minimum": 1.1141118122954652,
+        "median": 1.1141118122954652,
+        "maximum": 1.1141118122954652
+      },
+      "support_sizes": {
+        "minimum": 15.0,
+        "median": 22.0,
+        "maximum": 32.0
+      },
+      "frame_condition": {
+        "minimum": 17.528598314842917,
+        "median": 20.70140992845834,
+        "maximum": 24.75654675024039
+      },
+      "design_condition": {
+        "minimum": 22.50356291604855,
+        "median": 47.460581870207136,
+        "maximum": 106.9665148105277
+      },
+      "coordinate_lorentz_gram_error": {
+        "minimum": 0.03311882122979313,
+        "median": 0.0631241474657802,
+        "maximum": 0.11136015534376004
+      }
+    }
+  ],
+  "primary_joint_fraction": 1.0,
+  "decision": "JOINT_FEASIBILITY_SUPPORTED",
+  "phase3": "HOLD_PHASE3",
+  "limits": "Bounded search, changed supports and resolution; thinning checks are not confidence guarantees; no derivative or curvature qualification."
+}

@@ -1,0 +1,41 @@
+{
+  "status": "PASS_FULL_JOINT_REPLAY",
+  "clouds": 48,
+  "exact_discrete_decisions": true,
+  "coordinate_hashes_equal": 48,
+  "controls": {
+    "status": "PASS",
+    "inherited": {
+      "status": "PASS",
+      "inherited": {
+        "status": "PASS_SOFTWARE_CONTROLS",
+        "exact_polarization": true,
+        "uniform_scaling": true,
+        "signature_rejections": 2,
+        "analytic_quadratic_optima": 2,
+        "mutation_rejections": 3,
+        "inconsistent_half_guard_rejected": true,
+        "coordinate_blind_interface": true
+      },
+      "scalar_relation_pairs": 3600,
+      "direct_intervals": 393,
+      "artificial_interiors_excluded": 24,
+      "brute_force_orders": 60,
+      "uniform_moments": true,
+      "shell_count_replicates": 500,
+      "streaming_hash_oracles": 4
+    },
+    "direct_intervals": 231,
+    "count_boundary_rejections": 2,
+    "signature_condition_cases": 3,
+    "gram_rejections": 2,
+    "rank_cases": 2,
+    "audit_input_separated": true,
+    "exhaustive_chain_triples": 174,
+    "mixed_chain_triples": 160
+  },
+  "seconds": 311.2528975780042,
+  "peak_mib": 1351.17578125,
+  "decision": "JOINT_FEASIBILITY_SUPPORTED",
+  "phase3": "HOLD_PHASE3"
+}
