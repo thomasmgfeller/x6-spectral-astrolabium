@@ -1,8 +1,9 @@
 """Independent geometry/count oracles and inference transport controls."""
 import copy
+import hashlib
 import itertools
 import numpy as np
-from od_common import core, config
+from od_common import core, config, digest
 from od_simulation import uniform_diamond, shell, extent, relation, VOLUME
 from od_order import PhysicalPoset, chain_witness
 from im_controls import check as inherited_check
@@ -13,6 +14,9 @@ def check():
     inherited = inherited_check()
     c, _, _ = config()
     rng = np.random.default_rng(583921)
+    sample = rng.integers(0, 256, size=(127, 139), dtype=np.uint8)
+    for array in (sample, sample.T, sample[::2, ::3], sample.astype(float)):
+        assert digest(array) == hashlib.sha256(array.tobytes()).hexdigest()
     z = np.vstack(([[-.5, 0, 0], [.5, 0, 0]], uniform_diamond(58, 2, rng)))
     r = relation(z, 7)
     scalar = np.array([[b[0] > a[0] and (b[0]-a[0])**2 > (b[1]-a[1])**2+(b[2]-a[2])**2
@@ -53,7 +57,8 @@ def check():
     assert abs(np.var(counts, ddof=1)/mean-1) < .25
     return dict(status='PASS', inherited=inherited, scalar_relation_pairs=len(g.r)**2,
                 direct_intervals=checked, artificial_interiors_excluded=excluded,
-                brute_force_orders=orders, uniform_moments=True, shell_count_replicates=len(counts))
+                brute_force_orders=orders, uniform_moments=True, shell_count_replicates=len(counts),
+                streaming_hash_oracles=4)
 
 
 def transport(g, s, rho, probes, colours, c, expected, seed):

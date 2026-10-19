@@ -22,4 +22,10 @@ def sources():
 
 
 def digest(array):
-    return hashlib.sha256(array.tobytes()).hexdigest()
+    # Same C-order bytes, without duplicating a potentially gigabyte-sized matrix.
+    if array.flags.c_contiguous:
+        return hashlib.sha256(memoryview(array)).hexdigest()
+    h = hashlib.sha256()
+    for row in array:
+        h.update(row.tobytes())
+    return h.hexdigest()

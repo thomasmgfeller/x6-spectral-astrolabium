@@ -17,3 +17,10 @@ The six development clouds are replayed under the final sources before targets.
 Their complete discrete structures, relation/mark/colour hashes and invariant
 numerical outputs must agree with the initial records. Both generations are
 retained. Development outcomes cannot choose the primary arm or change a gate.
+
+Before targets, hashing was also changed to feed the identical C-order array
+bytes to SHA-256 without a full matrix copy. The initial peak RSS was close to
+the 2048-MiB limit; allocating a second dense matrix solely for its checksum
+was unnecessary. Independent tests compare contiguous, transposed, strided and
+float arrays against SHA-256(array.tobytes()). No scientific values or budget
+limits change. Final targets use the subsequently published source freeze.
