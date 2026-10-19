@@ -1,6 +1,19 @@
 # Local d’Alembertian: independent reproduction track
 
-**Current status: phase 1/2 implemented and tested; `HOLD_PHASE3`.**
+**Current status (19 October 2026): anchor coverage improved; `HOLD_PHASE3`.**
+A publicly frozen paired follow-up on 48 fresh clouds fixes the search-cap
+ordering problem. At the highest density, usable neighborhoods rise from 2/16
+to 16/16 and true-cap recall from 11.5% to 94.9%. Selection precision is only
+68.3%, however, and metric RMS is 7.326 (limit 0.5); exact cap selection still
+gives 6.012. This is a coverage improvement, not metric qualification.
+Read the [anchor-search audit](anchor_audit/RESULTS.md), including paired
+comparisons, controls, uncertainty and the full replay.
+
+```sh
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python3 -B research/lorentz_local_dalembert/anchor_audit/verify_audit.py
+```
+
+**Original phase-1/2 pilot (18 October 2026), retained below:**
 The bounded 2+1 Minkowski pilot includes longest chains, causal-overlap spatial
 neighborhoods, the BK operator, product-identity metric extraction and an
 exploratory intrinsic chart. All 48 held-out clouds have been replayed. Scientific

@@ -108,7 +108,7 @@ This is experimental research software. A passing software test is not physical 
 - [NQK research dossier](https://thomasmgfeller.github.io/x6-spectral-astrolabium/modules/nqk.html): A separate research direction with incomplete reproduction archives.
 - [Proper time and uncertainty](https://thomasmgfeller.github.io/x6-spectral-astrolabium/modules/lorentz-proper-time.html): Known flat model: inspect assumptions, uncertainty bounds, sequential sampling and chain warnings.
 
-50 modules are described in the register dated 2026-10-18. The register records source locations and evidence; it is not a live qualification badge.
+50 modules are described in the register dated 2026-10-19. The register records source locations and evidence; it is not a live qualification badge.
 
 The configured research-agent window includes Sunday, 18 October 2026. The exclusive cutoff below is a schedule limit, not evidence of execution. After this cutoff the window is closed.
 2026-10-19T00:00:00+02:00

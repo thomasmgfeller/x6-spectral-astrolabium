@@ -4,7 +4,7 @@ This research asks what structure is carried by relationships before a spatial d
 
 [Deutsch](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/de/causal-orders.md) · [Wiki overview](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/en/)
 
-Source snapshot: 2026-10-18 · `e947dfbdd49890dcb119940548537d1db59272c2`
+Source snapshot: 2026-10-19 · `c58cc26adb2b4a646e3940e417351040b5dc9ff0`
 
 ## Events and their ordering
 
@@ -259,3 +259,17 @@ This is a negative finding for the bounded search and scale plan, not a countere
 - [Results / Ergebnisse](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e947dfbdd49890dcb119940548537d1db59272c2/research/lorentz_local_dalembert/PHASE12_RESULTS.md)
 - [Protocol / Protokoll](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e947dfbdd49890dcb119940548537d1db59272c2/research/lorentz_local_dalembert/phase12/PROTOCOL.md)
 - [Data / Daten](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e947dfbdd49890dcb119940548537d1db59272c2/research/lorentz_local_dalembert/phase12/results/summary.json)
+
+## BK anchor search: more neighbors, but no accurate metric yet
+
+On 19 October the search bottleneck was isolated using 48 fresh point clouds. Previously the code selected 64 anchors before checking their suitability. The revised arm applies the same suitability rules first and then retains up to 64 eligible anchors. The protocol and computational sources were publicly frozen before their respective data.
+
+At the highest density, 16 of 16 clouds now supply usable neighborhoods, compared with 2 of 16 for the legacy search on the same new data. Recall of true neighborhood points rises from 11.5 to 94.9 percent. However, only 68.3 percent of all selected points actually lie within the intended neighborhood.
+
+Metric RMS rises to 7.326 with the revised search, far above the original 0.5 limit. Selecting neighbors by exact simulation distances still yields 6.012. That diagnostic control is not an intrinsic method; it shows that better anchor coverage alone is insufficient. The report separately compares the subset available to both intrinsic methods.
+
+All 48 new test clouds were fully replayed. The outcome is improved search coverage with HOLD_PHASE3 retained. The next step is to diagnose the temporal and spatial moments of the discrete stencil separately. Earlier data, the BD-C2 NO_GO and the terminated background runs remain unchanged.
+
+- [Results / Ergebnisse](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/c58cc26adb2b4a646e3940e417351040b5dc9ff0/research/lorentz_local_dalembert/anchor_audit/RESULTS.md)
+- [Protocol / Protokoll](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/c58cc26adb2b4a646e3940e417351040b5dc9ff0/research/lorentz_local_dalembert/anchor_audit/PROTOCOL.md)
+- [Data / Daten](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/c58cc26adb2b4a646e3940e417351040b5dc9ff0/research/lorentz_local_dalembert/anchor_audit/results/summary.json)

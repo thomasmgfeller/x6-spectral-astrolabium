@@ -1,7 +1,7 @@
 {
   "schema": "x6.bilingual-wiki/1",
-  "snapshot_date": "2026-10-18",
-  "source_commit": "e947dfbdd49890dcb119940548537d1db59272c2",
+  "snapshot_date": "2026-10-19",
+  "source_commit": "c58cc26adb2b4a646e3940e417351040b5dc9ff0",
   "articles": [
     {
       "id": "index",
@@ -1452,6 +1452,45 @@
                 ]
               }
             ]
+          },
+          {
+            "id": "bk-anchor-audit",
+            "title": "BK-Ankersuche: mehr Nachbarn, aber noch keine genaue Metrik",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "Am 19. Oktober wurde der Suchengpass mit 48 neuen Punktwolken isoliert geprüft. Bisher wurden zuerst 64 Anker gewählt und erst danach auf Eignung geprüft. Die neue Variante prüft zuerst die unveränderten Kriterien und begrenzt danach auf 64 geeignete Anker. Protokoll und Rechenquellen waren vor den jeweiligen Daten öffentlich fixiert."
+              },
+              {
+                "type": "paragraph",
+                "text": "Bei der höchsten Dichte liefern jetzt 16 von 16 Wolken verwendbare Nachbarschaften, gegenüber 2 von 16 mit der alten Suche auf denselben neuen Daten. Der Anteil wiedergefundener wahrer Nachbarschaftspunkte steigt von 11,5 auf 94,9 Prozent. Allerdings liegen nur 68,3 Prozent aller ausgewählten Punkte tatsächlich in der gewünschten Nachbarschaft."
+              },
+              {
+                "type": "paragraph",
+                "text": "Der Metrikfehler steigt im neuen Verfahren auf 7,326, weit über die ursprüngliche Grenze 0,5. Auch wenn die Nachbarn anhand der exakten Simulationsabstände gewählt werden, bleibt der Fehler bei 6,012. Diese Kontrolle ist kein intrinsisches Verfahren; sie zeigt, dass eine bessere Ankersuche allein nicht genügt. Vergleiche auf der gemeinsam verfügbaren Teilmenge sind im Bericht separat ausgewiesen."
+              },
+              {
+                "type": "paragraph",
+                "text": "Alle 48 neuen Testwolken wurden vollständig wiederholt. Ergebnis: bessere Suchabdeckung, weiterhin HOLD_PHASE3. Als nächster Schritt sollen die Zeit- und Raummomente der diskreten Schablone getrennt geprüft werden. Die früheren Daten, der BD-C2-NO_GO und die beendeten Hintergrundläufe bleiben unverändert."
+              },
+              {
+                "type": "links",
+                "items": [
+                  {
+                    "label": "Results / Ergebnisse",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/c58cc26adb2b4a646e3940e417351040b5dc9ff0/research/lorentz_local_dalembert/anchor_audit/RESULTS.md"
+                  },
+                  {
+                    "label": "Protocol / Protokoll",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/c58cc26adb2b4a646e3940e417351040b5dc9ff0/research/lorentz_local_dalembert/anchor_audit/PROTOCOL.md"
+                  },
+                  {
+                    "label": "Data / Daten",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/c58cc26adb2b4a646e3940e417351040b5dc9ff0/research/lorentz_local_dalembert/anchor_audit/results/summary.json"
+                  }
+                ]
+              }
+            ]
           }
         ]
       },
@@ -2163,6 +2202,45 @@
                   {
                     "label": "Data / Daten",
                     "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/e947dfbdd49890dcb119940548537d1db59272c2/research/lorentz_local_dalembert/phase12/results/summary.json"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "bk-anchor-audit",
+            "title": "BK anchor search: more neighbors, but no accurate metric yet",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "On 19 October the search bottleneck was isolated using 48 fresh point clouds. Previously the code selected 64 anchors before checking their suitability. The revised arm applies the same suitability rules first and then retains up to 64 eligible anchors. The protocol and computational sources were publicly frozen before their respective data."
+              },
+              {
+                "type": "paragraph",
+                "text": "At the highest density, 16 of 16 clouds now supply usable neighborhoods, compared with 2 of 16 for the legacy search on the same new data. Recall of true neighborhood points rises from 11.5 to 94.9 percent. However, only 68.3 percent of all selected points actually lie within the intended neighborhood."
+              },
+              {
+                "type": "paragraph",
+                "text": "Metric RMS rises to 7.326 with the revised search, far above the original 0.5 limit. Selecting neighbors by exact simulation distances still yields 6.012. That diagnostic control is not an intrinsic method; it shows that better anchor coverage alone is insufficient. The report separately compares the subset available to both intrinsic methods."
+              },
+              {
+                "type": "paragraph",
+                "text": "All 48 new test clouds were fully replayed. The outcome is improved search coverage with HOLD_PHASE3 retained. The next step is to diagnose the temporal and spatial moments of the discrete stencil separately. Earlier data, the BD-C2 NO_GO and the terminated background runs remain unchanged."
+              },
+              {
+                "type": "links",
+                "items": [
+                  {
+                    "label": "Results / Ergebnisse",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/c58cc26adb2b4a646e3940e417351040b5dc9ff0/research/lorentz_local_dalembert/anchor_audit/RESULTS.md"
+                  },
+                  {
+                    "label": "Protocol / Protokoll",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/c58cc26adb2b4a646e3940e417351040b5dc9ff0/research/lorentz_local_dalembert/anchor_audit/PROTOCOL.md"
+                  },
+                  {
+                    "label": "Data / Daten",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/c58cc26adb2b4a646e3940e417351040b5dc9ff0/research/lorentz_local_dalembert/anchor_audit/results/summary.json"
                   }
                 ]
               }

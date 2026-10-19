@@ -8,7 +8,7 @@ GitHub-Pages-Portals, nicht ein getrennt gepflegtes GitHub-Wiki-Repository.
 - [Deutsch](../../wiki/de/index.html)
 - [English](../../wiki/en/index.html)
 
-Aktualisierter Quellenstand: 17. Oktober 2026, Commit `6ac1363b6d3e0bcef6f863320290e3826977952a`.
+Aktualisierter Quellenstand: 19. Oktober 2026, Commit `c58cc26adb2b4a646e3940e417351040b5dc9ff0`.
 Die Eigenzeit-Referenzen bleiben mit ihren jeweiligen Grenzen dokumentiert.
 Neu erklärt sind der vollständige Krümmungsbenchmark, beide verfehlten
 Empfindlichkeitskriterien und die exakte konforme Dichteverwechslung.
@@ -49,3 +49,8 @@ and interface checks, not a full accessibility audit or scientific validation.
 Nachtrag 18. Oktober 2026: bedingte RSS-Kettenmomente, 24.576 neue Wolken,
 dokumentierter Status FORWARD_SLOPE_NOT_RESOLVED und große
 Einzelordnungsfehler der explorativen Krümmungsinversion.
+
+Nachtrag 19. Oktober 2026: gepaarter BK-Ankersuchvergleich auf 48 frischen
+Wolken. Eignungsfilter vor Begrenzung verbessert Abdeckung, aber Metrikfehler
+und Fehlselektionen bleiben sichtbar; HOLD_PHASE3. Bericht und Rohdaten
+sind im Kapitel kausale Ordnungen in beiden Sprachen verlinkt.

@@ -4,7 +4,7 @@ Beginne im Browser. Die lokale Installation ist ein eigener, optionaler Weg für
 
 [English](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/en/quick-start.md) · [Wiki-Übersicht](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/de/)
 
-Quellenstand: 2026-10-18 · `e947dfbdd49890dcb119940548537d1db59272c2`
+Quellenstand: 2026-10-19 · `c58cc26adb2b4a646e3940e417351040b5dc9ff0`
 
 ## In fünf Minuten im Signal Lab
 

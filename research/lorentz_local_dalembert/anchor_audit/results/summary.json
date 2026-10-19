@@ -1,0 +1,1255 @@
+{
+  "schema": "x6.bk-anchor-audit-summary/1",
+  "decision": "ANCHOR_COVERAGE_IMPROVED",
+  "phase3": "HOLD_PHASE3",
+  "complete": true,
+  "budget_pass": true,
+  "algebra_pass": true,
+  "relabel_clouds_passed": 3,
+  "primary_gates": {
+    "availability_gain": true,
+    "candidate_availability": true,
+    "cap_recall_gain": true
+  },
+  "original_metric_limit": 0.5,
+  "high_density_metric_limit_met": {
+    "legacy64": false,
+    "balanced64": false,
+    "oracle_cap": false
+  },
+  "cells": [
+    {
+      "rho": 2048,
+      "clouds": 16,
+      "methods": {
+        "legacy64": {
+          "available": {
+            "success": 6,
+            "total": 16,
+            "fraction": 0.375,
+            "wilson95": [
+              0.18481232558863633,
+              0.6135895945449727
+            ]
+          },
+          "signature": {
+            "success": 5,
+            "total": 16,
+            "fraction": 0.3125,
+            "wilson95": [
+              0.14164643854782039,
+              0.5559564416525933
+            ]
+          },
+          "chart_available": {
+            "success": 0,
+            "total": 16,
+            "fraction": 0.0,
+            "wilson95": [
+              0.0,
+              0.1936076805344365
+            ]
+          },
+          "chart_signature": {
+            "success": 0,
+            "total": 16,
+            "fraction": 0.0,
+            "wilson95": [
+              0.0,
+              0.1936076805344365
+            ]
+          },
+          "boundary_witness": {
+            "success": 16,
+            "total": 16,
+            "fraction": 1.0,
+            "wilson95": [
+              0.8063923194655637,
+              1.0000000000000002
+            ]
+          },
+          "time_relative_rmse": {
+            "n": 16,
+            "mean": 0.37396719750634794,
+            "se": 0.03953182013496943,
+            "rms": 0.40409520766584883
+          },
+          "space_relative_rmse": {
+            "n": 16,
+            "mean": 0.32223282183695107,
+            "se": 0.014569926447998904,
+            "rms": 0.32713641316659586
+          },
+          "space_spearman": {
+            "n": 16,
+            "mean": 0.8522134203913276,
+            "se": 0.02855413676276044,
+            "rms": 0.8593589440909324
+          },
+          "operator_normalized_rmse": {
+            "n": 6,
+            "mean": 9.009382045913268,
+            "se": 1.2486223956412095,
+            "rms": 9.432086422616596
+          },
+          "oracle_metric_error": {
+            "n": 6,
+            "mean": 3.173680177058492,
+            "se": 0.3678315506034091,
+            "rms": 3.2785280408058983
+          },
+          "chart_metric_error": {
+            "n": 0,
+            "mean": null,
+            "se": null,
+            "rms": null
+          },
+          "chart_field_error": {
+            "n": 0,
+            "mean": null,
+            "se": null,
+            "rms": null
+          },
+          "chart_condition": {
+            "n": 0,
+            "mean": null,
+            "se": null,
+            "rms": null
+          },
+          "cap_recall": {
+            "n": 16,
+            "mean": 0.43398164335664335,
+            "se": 0.041941803031933386,
+            "rms": 0.4633862205483405
+          },
+          "cap_precision": {
+            "n": 16,
+            "mean": 0.5070422632922633,
+            "se": 0.044764148609003074,
+            "rms": 0.5358631278366468
+          },
+          "missing_fraction": {
+            "n": 16,
+            "mean": 0.3504337550237486,
+            "se": 0.0434445536350896,
+            "rms": 0.38873545666471865
+          },
+          "population": {
+            "n": 16,
+            "mean": 4.875,
+            "se": 0.3491060010942235,
+            "rms": 5.059026586212015
+          },
+          "method_seconds": {
+            "n": 16,
+            "mean": 0.016677758874948267,
+            "se": 0.009134528849275148,
+            "rms": 0.039111915071554794
+          }
+        },
+        "balanced64": {
+          "available": {
+            "success": 9,
+            "total": 16,
+            "fraction": 0.5625,
+            "wilson95": [
+              0.331785563988119,
+              0.7690134759450765
+            ]
+          },
+          "signature": {
+            "success": 7,
+            "total": 16,
+            "fraction": 0.4375,
+            "wilson95": [
+              0.23098652405492354,
+              0.6682144360118811
+            ]
+          },
+          "chart_available": {
+            "success": 0,
+            "total": 16,
+            "fraction": 0.0,
+            "wilson95": [
+              0.0,
+              0.1936076805344365
+            ]
+          },
+          "chart_signature": {
+            "success": 0,
+            "total": 16,
+            "fraction": 0.0,
+            "wilson95": [
+              0.0,
+              0.1936076805344365
+            ]
+          },
+          "boundary_witness": {
+            "success": 16,
+            "total": 16,
+            "fraction": 1.0,
+            "wilson95": [
+              0.8063923194655637,
+              1.0000000000000002
+            ]
+          },
+          "time_relative_rmse": {
+            "n": 16,
+            "mean": 0.37396719750634794,
+            "se": 0.03953182013496943,
+            "rms": 0.40409520766584883
+          },
+          "space_relative_rmse": {
+            "n": 16,
+            "mean": 0.3334708174821596,
+            "se": 0.014418729710119446,
+            "rms": 0.3381143040585861
+          },
+          "space_spearman": {
+            "n": 16,
+            "mean": 0.802471374180566,
+            "se": 0.03741386954695133,
+            "rms": 0.8154491221997792
+          },
+          "operator_normalized_rmse": {
+            "n": 9,
+            "mean": 8.576182736843602,
+            "se": 1.029714595451247,
+            "rms": 9.057229572027909
+          },
+          "oracle_metric_error": {
+            "n": 9,
+            "mean": 3.8182636361731173,
+            "se": 0.5248563374264885,
+            "rms": 4.096697522983109
+          },
+          "chart_metric_error": {
+            "n": 0,
+            "mean": null,
+            "se": null,
+            "rms": null
+          },
+          "chart_field_error": {
+            "n": 0,
+            "mean": null,
+            "se": null,
+            "rms": null
+          },
+          "chart_condition": {
+            "n": 0,
+            "mean": null,
+            "se": null,
+            "rms": null
+          },
+          "cap_recall": {
+            "n": 16,
+            "mean": 0.5181283993783994,
+            "se": 0.04072405665122534,
+            "rms": 0.5416029635207006
+          },
+          "cap_precision": {
+            "n": 16,
+            "mean": 0.5333052364302364,
+            "se": 0.04307238334382444,
+            "rms": 0.5587870151566434
+          },
+          "missing_fraction": {
+            "n": 16,
+            "mean": 0.27153948918994475,
+            "se": 0.03806319798389481,
+            "rms": 0.3089754032296968
+          },
+          "population": {
+            "n": 16,
+            "mean": 5.4375,
+            "se": 0.35318491379634737,
+            "rms": 5.606915373001451
+          },
+          "method_seconds": {
+            "n": 16,
+            "mean": 0.006586419499853946,
+            "se": 0.00045993818117900817,
+            "rms": 0.006823054212422038
+          }
+        },
+        "oracle_cap": {
+          "available": {
+            "success": 12,
+            "total": 16,
+            "fraction": 0.75,
+            "wilson95": [
+              0.5050168346449122,
+              0.8981793250878696
+            ]
+          },
+          "signature": {
+            "success": 11,
+            "total": 16,
+            "fraction": 0.6875,
+            "wilson95": [
+              0.44404355834740666,
+              0.8583535614521796
+            ]
+          },
+          "chart_available": {
+            "success": 0,
+            "total": 16,
+            "fraction": 0.0,
+            "wilson95": [
+              0.0,
+              0.1936076805344365
+            ]
+          },
+          "chart_signature": {
+            "success": 0,
+            "total": 16,
+            "fraction": 0.0,
+            "wilson95": [
+              0.0,
+              0.1936076805344365
+            ]
+          },
+          "boundary_witness": {
+            "success": 16,
+            "total": 16,
+            "fraction": 1.0,
+            "wilson95": [
+              0.8063923194655637,
+              1.0000000000000002
+            ]
+          },
+          "time_relative_rmse": {
+            "n": 16,
+            "mean": 0.37396719750634794,
+            "se": 0.03953182013496943,
+            "rms": 0.40409520766584883
+          },
+          "space_relative_rmse": {
+            "n": 16,
+            "mean": 0.0,
+            "se": 0.0,
+            "rms": 0.0
+          },
+          "space_spearman": {
+            "n": 16,
+            "mean": 1.0,
+            "se": 7.166458808248763e-18,
+            "rms": 1.0
+          },
+          "operator_normalized_rmse": {
+            "n": 12,
+            "mean": 8.641746930919151,
+            "se": 0.9330895739663768,
+            "rms": 9.179161601232591
+          },
+          "oracle_metric_error": {
+            "n": 12,
+            "mean": 4.157274528309098,
+            "se": 0.41763961528814003,
+            "rms": 4.381961071776644
+          },
+          "chart_metric_error": {
+            "n": 0,
+            "mean": null,
+            "se": null,
+            "rms": null
+          },
+          "chart_field_error": {
+            "n": 0,
+            "mean": null,
+            "se": null,
+            "rms": null
+          },
+          "chart_condition": {
+            "n": 0,
+            "mean": null,
+            "se": null,
+            "rms": null
+          },
+          "cap_recall": {
+            "n": 16,
+            "mean": 1.0,
+            "se": 0.0,
+            "rms": 1.0
+          },
+          "cap_precision": {
+            "n": 16,
+            "mean": 1.0,
+            "se": 0.0,
+            "rms": 1.0
+          },
+          "missing_fraction": {
+            "n": 16,
+            "mean": 0.0,
+            "se": 0.0,
+            "rms": 0.0
+          },
+          "population": {
+            "n": 16,
+            "mean": 5.59375,
+            "se": 0.3958607446649221,
+            "rms": 5.800053879060091
+          },
+          "method_seconds": {
+            "n": 16,
+            "mean": 0.00231265237499656,
+            "se": 0.00012347542851817885,
+            "rms": 0.002361578651938878
+          }
+        }
+      },
+      "paired": {
+        "gained": 3,
+        "lost": 0,
+        "availability_gain": 0.1875,
+        "mcnemar_exact_two_sided_p": 0.25,
+        "recall_change": {
+          "n": 16,
+          "mean": 0.08414675602175602,
+          "se": 0.022357464398725938,
+          "rms": 0.12074154116992793
+        },
+        "common_available": 6,
+        "common_legacy_metric_error": {
+          "n": 6,
+          "mean": 3.173680177058492,
+          "se": 0.3678315506034091,
+          "rms": 3.2785280408058983
+        },
+        "common_balanced_metric_error": {
+          "n": 6,
+          "mean": 3.095373223822909,
+          "se": 0.3177283385561021,
+          "rms": 3.1758608093504246
+        },
+        "rescued_distances": 30,
+        "originally_missing_distances": 125
+      }
+    },
+    {
+      "rho": 8192,
+      "clouds": 16,
+      "methods": {
+        "legacy64": {
+          "available": {
+            "success": 4,
+            "total": 16,
+            "fraction": 0.25,
+            "wilson95": [
+              0.10182067491213048,
+              0.49498316535508774
+            ]
+          },
+          "signature": {
+            "success": 2,
+            "total": 16,
+            "fraction": 0.125,
+            "wilson95": [
+              0.03497748774324047,
+              0.36022827265758695
+            ]
+          },
+          "chart_available": {
+            "success": 0,
+            "total": 16,
+            "fraction": 0.0,
+            "wilson95": [
+              0.0,
+              0.1936076805344365
+            ]
+          },
+          "chart_signature": {
+            "success": 0,
+            "total": 16,
+            "fraction": 0.0,
+            "wilson95": [
+              0.0,
+              0.1936076805344365
+            ]
+          },
+          "boundary_witness": {
+            "success": 5,
+            "total": 16,
+            "fraction": 0.3125,
+            "wilson95": [
+              0.14164643854782039,
+              0.5559564416525933
+            ]
+          },
+          "time_relative_rmse": {
+            "n": 16,
+            "mean": 0.16943466988643102,
+            "se": 0.03838215130414657,
+            "rms": 0.22540175341052665
+          },
+          "space_relative_rmse": {
+            "n": 16,
+            "mean": 0.1490859717482224,
+            "se": 0.010853361744899122,
+            "rms": 0.1548985438588638
+          },
+          "space_spearman": {
+            "n": 16,
+            "mean": 0.9519774504705342,
+            "se": 0.010447713966185124,
+            "rms": 0.9528370202249525
+          },
+          "operator_normalized_rmse": {
+            "n": 4,
+            "mean": 14.311690141949919,
+            "se": 2.548596487360741,
+            "rms": 14.97699926171291
+          },
+          "oracle_metric_error": {
+            "n": 4,
+            "mean": 2.7595320325223445,
+            "se": 0.45628901012093526,
+            "rms": 2.8704731353538793
+          },
+          "chart_metric_error": {
+            "n": 0,
+            "mean": null,
+            "se": null,
+            "rms": null
+          },
+          "chart_field_error": {
+            "n": 0,
+            "mean": null,
+            "se": null,
+            "rms": null
+          },
+          "chart_condition": {
+            "n": 0,
+            "mean": null,
+            "se": null,
+            "rms": null
+          },
+          "cap_recall": {
+            "n": 16,
+            "mean": 0.19285365355996903,
+            "se": 0.025419774948751285,
+            "rms": 0.21652945773752358
+          },
+          "cap_precision": {
+            "n": 15,
+            "mean": 0.8016931216931217,
+            "se": 0.04139887067420194,
+            "rms": 0.8165206624902107
+          },
+          "missing_fraction": {
+            "n": 16,
+            "mean": 0.7446336236914395,
+            "se": 0.02670441814383129,
+            "rms": 0.7517819649059515
+          },
+          "population": {
+            "n": 16,
+            "mean": 4.03125,
+            "se": 0.3991364376166793,
+            "rms": 4.317479009792636
+          },
+          "method_seconds": {
+            "n": 16,
+            "mean": 0.0669519401250227,
+            "se": 0.003089931000766759,
+            "rms": 0.06801306779102907
+          }
+        },
+        "balanced64": {
+          "available": {
+            "success": 16,
+            "total": 16,
+            "fraction": 1.0,
+            "wilson95": [
+              0.8063923194655637,
+              1.0000000000000002
+            ]
+          },
+          "signature": {
+            "success": 3,
+            "total": 16,
+            "fraction": 0.1875,
+            "wilson95": [
+              0.06591599071428142,
+              0.4300888096197414
+            ]
+          },
+          "chart_available": {
+            "success": 0,
+            "total": 16,
+            "fraction": 0.0,
+            "wilson95": [
+              0.0,
+              0.1936076805344365
+            ]
+          },
+          "chart_signature": {
+            "success": 0,
+            "total": 16,
+            "fraction": 0.0,
+            "wilson95": [
+              0.0,
+              0.1936076805344365
+            ]
+          },
+          "boundary_witness": {
+            "success": 5,
+            "total": 16,
+            "fraction": 0.3125,
+            "wilson95": [
+              0.14164643854782039,
+              0.5559564416525933
+            ]
+          },
+          "time_relative_rmse": {
+            "n": 16,
+            "mean": 0.16943466988643102,
+            "se": 0.03838215130414657,
+            "rms": 0.22540175341052665
+          },
+          "space_relative_rmse": {
+            "n": 16,
+            "mean": 0.27152064323261116,
+            "se": 0.013294104541541308,
+            "rms": 0.27635929138509585
+          },
+          "space_spearman": {
+            "n": 16,
+            "mean": 0.9053671807110006,
+            "se": 0.01825038954863909,
+            "rms": 0.9081221738779105
+          },
+          "operator_normalized_rmse": {
+            "n": 16,
+            "mean": 12.540807759700003,
+            "se": 1.0790303978538691,
+            "rms": 13.218791860761785
+          },
+          "oracle_metric_error": {
+            "n": 16,
+            "mean": 5.467593591469104,
+            "se": 0.39787108207638866,
+            "rms": 5.6805898153944865
+          },
+          "chart_metric_error": {
+            "n": 0,
+            "mean": null,
+            "se": null,
+            "rms": null
+          },
+          "chart_field_error": {
+            "n": 0,
+            "mean": null,
+            "se": null,
+            "rms": null
+          },
+          "chart_condition": {
+            "n": 0,
+            "mean": null,
+            "se": null,
+            "rms": null
+          },
+          "cap_recall": {
+            "n": 16,
+            "mean": 0.8153549820430389,
+            "se": 0.02035783746459954,
+            "rms": 0.8191583301999255
+          },
+          "cap_precision": {
+            "n": 16,
+            "mean": 0.677949074212,
+            "se": 0.022662301303208662,
+            "rms": 0.6836070843183744
+          },
+          "missing_fraction": {
+            "n": 16,
+            "mean": 0.07413592032753559,
+            "se": 0.010607742150256524,
+            "rms": 0.08475846615946774
+          },
+          "population": {
+            "n": 16,
+            "mean": 16.0625,
+            "se": 0.5698592662520575,
+            "rms": 16.21342036709096
+          },
+          "method_seconds": {
+            "n": 16,
+            "mean": 0.10771917637504203,
+            "se": 0.0034909312505344535,
+            "rms": 0.10856435867197294
+          }
+        },
+        "oracle_cap": {
+          "available": {
+            "success": 16,
+            "total": 16,
+            "fraction": 1.0,
+            "wilson95": [
+              0.8063923194655637,
+              1.0000000000000002
+            ]
+          },
+          "signature": {
+            "success": 9,
+            "total": 16,
+            "fraction": 0.5625,
+            "wilson95": [
+              0.331785563988119,
+              0.7690134759450765
+            ]
+          },
+          "chart_available": {
+            "success": 0,
+            "total": 16,
+            "fraction": 0.0,
+            "wilson95": [
+              0.0,
+              0.1936076805344365
+            ]
+          },
+          "chart_signature": {
+            "success": 0,
+            "total": 16,
+            "fraction": 0.0,
+            "wilson95": [
+              0.0,
+              0.1936076805344365
+            ]
+          },
+          "boundary_witness": {
+            "success": 5,
+            "total": 16,
+            "fraction": 0.3125,
+            "wilson95": [
+              0.14164643854782039,
+              0.5559564416525933
+            ]
+          },
+          "time_relative_rmse": {
+            "n": 16,
+            "mean": 0.16943466988643102,
+            "se": 0.03838215130414657,
+            "rms": 0.22540175341052665
+          },
+          "space_relative_rmse": {
+            "n": 16,
+            "mean": 0.0,
+            "se": 0.0,
+            "rms": 0.0
+          },
+          "space_spearman": {
+            "n": 16,
+            "mean": 1.0,
+            "se": 2.0269806481627057e-17,
+            "rms": 1.0
+          },
+          "operator_normalized_rmse": {
+            "n": 16,
+            "mean": 11.503749299513036,
+            "se": 1.1523321010184022,
+            "rms": 12.339136396507211
+          },
+          "oracle_metric_error": {
+            "n": 16,
+            "mean": 5.1508063752772335,
+            "se": 0.42404987574689373,
+            "rms": 5.406300100106443
+          },
+          "chart_metric_error": {
+            "n": 0,
+            "mean": null,
+            "se": null,
+            "rms": null
+          },
+          "chart_field_error": {
+            "n": 0,
+            "mean": null,
+            "se": null,
+            "rms": null
+          },
+          "chart_condition": {
+            "n": 0,
+            "mean": null,
+            "se": null,
+            "rms": null
+          },
+          "cap_recall": {
+            "n": 16,
+            "mean": 1.0,
+            "se": 0.0,
+            "rms": 1.0
+          },
+          "cap_precision": {
+            "n": 16,
+            "mean": 1.0,
+            "se": 0.0,
+            "rms": 1.0
+          },
+          "missing_fraction": {
+            "n": 16,
+            "mean": 0.0,
+            "se": 0.0,
+            "rms": 0.0
+          },
+          "population": {
+            "n": 16,
+            "mean": 13.5,
+            "se": 0.48088460154178364,
+            "rms": 13.627866670906345
+          },
+          "method_seconds": {
+            "n": 16,
+            "mean": 0.00399577387474892,
+            "se": 0.00026534791863114395,
+            "rms": 0.00412581526815661
+          }
+        }
+      },
+      "paired": {
+        "gained": 12,
+        "lost": 0,
+        "availability_gain": 0.75,
+        "mcnemar_exact_two_sided_p": 0.00048828125,
+        "recall_change": {
+          "n": 16,
+          "mean": 0.6225013284830698,
+          "se": 0.023265289428579784,
+          "rms": 0.628988878555194
+        },
+        "common_available": 4,
+        "common_legacy_metric_error": {
+          "n": 4,
+          "mean": 2.7595320325223445,
+          "se": 0.45628901012093526,
+          "rms": 2.8704731353538793
+        },
+        "common_balanced_metric_error": {
+          "n": 4,
+          "mean": 4.812103901826518,
+          "se": 0.7265905099784469,
+          "rms": 4.973946649246071
+        },
+        "rescued_distances": 719,
+        "originally_missing_distances": 795
+      }
+    },
+    {
+      "rho": 32768,
+      "clouds": 16,
+      "methods": {
+        "legacy64": {
+          "available": {
+            "success": 2,
+            "total": 16,
+            "fraction": 0.125,
+            "wilson95": [
+              0.03497748774324047,
+              0.36022827265758695
+            ]
+          },
+          "signature": {
+            "success": 1,
+            "total": 16,
+            "fraction": 0.0625,
+            "wilson95": [
+              0.01111934476464252,
+              0.28328737570298945
+            ]
+          },
+          "chart_available": {
+            "success": 2,
+            "total": 16,
+            "fraction": 0.125,
+            "wilson95": [
+              0.03497748774324047,
+              0.36022827265758695
+            ]
+          },
+          "chart_signature": {
+            "success": 1,
+            "total": 16,
+            "fraction": 0.0625,
+            "wilson95": [
+              0.01111934476464252,
+              0.28328737570298945
+            ]
+          },
+          "boundary_witness": {
+            "success": 1,
+            "total": 16,
+            "fraction": 0.0625,
+            "wilson95": [
+              0.01111934476464252,
+              0.28328737570298945
+            ]
+          },
+          "time_relative_rmse": {
+            "n": 16,
+            "mean": 0.1577845386282597,
+            "se": 0.033951988609950794,
+            "rms": 0.20539479932239327
+          },
+          "space_relative_rmse": {
+            "n": 16,
+            "mean": 0.11840896835039813,
+            "se": 0.01100801864089159,
+            "rms": 0.1258504306777646
+          },
+          "space_spearman": {
+            "n": 16,
+            "mean": 0.9752698377404083,
+            "se": 0.007730973670798971,
+            "rms": 0.9757293557717126
+          },
+          "operator_normalized_rmse": {
+            "n": 2,
+            "mean": 13.926072938888467,
+            "se": 2.607797071211599,
+            "rms": 14.16813724749522
+          },
+          "oracle_metric_error": {
+            "n": 2,
+            "mean": 2.6130762936003173,
+            "se": 0.257190494257558,
+            "rms": 2.625702699566807
+          },
+          "chart_metric_error": {
+            "n": 2,
+            "mean": 3.031109122298113,
+            "se": 0.024392519212037108,
+            "rms": 3.031207268774662
+          },
+          "chart_field_error": {
+            "n": 2,
+            "mean": 0.1263461464365459,
+            "se": 0.03351574502272212,
+            "rms": 0.13071592819466654
+          },
+          "chart_condition": {
+            "n": 2,
+            "mean": 3.3389312686765664,
+            "se": 0.5852199886772773,
+            "rms": 3.3898295609209526
+          },
+          "cap_recall": {
+            "n": 16,
+            "mean": 0.11500141190343859,
+            "se": 0.02029422325925208,
+            "rms": 0.13929521601702577
+          },
+          "cap_precision": {
+            "n": 15,
+            "mean": 0.7515873015873016,
+            "se": 0.06041416493001498,
+            "rms": 0.784844997719904
+          },
+          "missing_fraction": {
+            "n": 16,
+            "mean": 0.8772780123212494,
+            "se": 0.02015770564724643,
+            "rms": 0.8807449729386695
+          },
+          "population": {
+            "n": 16,
+            "mean": 3.59375,
+            "se": 0.38788623224686214,
+            "rms": 3.895109112720721
+          },
+          "method_seconds": {
+            "n": 16,
+            "mean": 1.3079273677500964,
+            "se": 0.07811759728035984,
+            "rms": 1.3424639229351913
+          }
+        },
+        "balanced64": {
+          "available": {
+            "success": 16,
+            "total": 16,
+            "fraction": 1.0,
+            "wilson95": [
+              0.8063923194655637,
+              1.0000000000000002
+            ]
+          },
+          "signature": {
+            "success": 6,
+            "total": 16,
+            "fraction": 0.375,
+            "wilson95": [
+              0.18481232558863633,
+              0.6135895945449727
+            ]
+          },
+          "chart_available": {
+            "success": 7,
+            "total": 16,
+            "fraction": 0.4375,
+            "wilson95": [
+              0.23098652405492354,
+              0.6682144360118811
+            ]
+          },
+          "chart_signature": {
+            "success": 2,
+            "total": 16,
+            "fraction": 0.125,
+            "wilson95": [
+              0.03497748774324047,
+              0.36022827265758695
+            ]
+          },
+          "boundary_witness": {
+            "success": 1,
+            "total": 16,
+            "fraction": 0.0625,
+            "wilson95": [
+              0.01111934476464252,
+              0.28328737570298945
+            ]
+          },
+          "time_relative_rmse": {
+            "n": 16,
+            "mean": 0.1577845386282597,
+            "se": 0.033951988609950794,
+            "rms": 0.20539479932239327
+          },
+          "space_relative_rmse": {
+            "n": 16,
+            "mean": 0.20217112050547698,
+            "se": 0.005085403870861237,
+            "rms": 0.20312824016957032
+          },
+          "space_spearman": {
+            "n": 16,
+            "mean": 0.9642529077899491,
+            "se": 0.004039990880508901,
+            "rms": 0.9643798489579151
+          },
+          "operator_normalized_rmse": {
+            "n": 16,
+            "mean": 15.860646549461645,
+            "se": 1.4817618327389441,
+            "rms": 16.866961223094627
+          },
+          "oracle_metric_error": {
+            "n": 16,
+            "mean": 7.221090249752697,
+            "se": 0.31941299737153317,
+            "rms": 7.32628926117591
+          },
+          "chart_metric_error": {
+            "n": 7,
+            "mean": 12.473230798665767,
+            "se": 1.84106751517191,
+            "rms": 13.263433346208359
+          },
+          "chart_field_error": {
+            "n": 7,
+            "mean": 0.10628470816433648,
+            "se": 0.02093155984106307,
+            "rms": 0.1180051709623701
+          },
+          "chart_condition": {
+            "n": 7,
+            "mean": 4.590816144063801,
+            "se": 1.2658745442045087,
+            "rms": 5.5398757241103045
+          },
+          "cap_recall": {
+            "n": 16,
+            "mean": 0.9488136007394361,
+            "se": 0.009892211713630944,
+            "rms": 0.9495867978952444
+          },
+          "cap_precision": {
+            "n": 16,
+            "mean": 0.6833893793072542,
+            "se": 0.013615063969527597,
+            "rms": 0.6854207417735249
+          },
+          "missing_fraction": {
+            "n": 16,
+            "mean": 0.010897583555287811,
+            "se": 0.002431534148429944,
+            "rms": 0.014402871313359477
+          },
+          "population": {
+            "n": 16,
+            "mean": 26.1875,
+            "se": 0.9809381139161295,
+            "rms": 26.461646774152207
+          },
+          "method_seconds": {
+            "n": 16,
+            "mean": 3.8578951355626714,
+            "se": 0.1726646542044371,
+            "rms": 3.9154247686772363
+          }
+        },
+        "oracle_cap": {
+          "available": {
+            "success": 16,
+            "total": 16,
+            "fraction": 1.0,
+            "wilson95": [
+              0.8063923194655637,
+              1.0000000000000002
+            ]
+          },
+          "signature": {
+            "success": 8,
+            "total": 16,
+            "fraction": 0.5,
+            "wilson95": [
+              0.27999563610326017,
+              0.7200043638967398
+            ]
+          },
+          "chart_available": {
+            "success": 10,
+            "total": 16,
+            "fraction": 0.625,
+            "wilson95": [
+              0.38641040545502714,
+              0.8151876744113636
+            ]
+          },
+          "chart_signature": {
+            "success": 5,
+            "total": 16,
+            "fraction": 0.3125,
+            "wilson95": [
+              0.14164643854782039,
+              0.5559564416525933
+            ]
+          },
+          "boundary_witness": {
+            "success": 1,
+            "total": 16,
+            "fraction": 0.0625,
+            "wilson95": [
+              0.01111934476464252,
+              0.28328737570298945
+            ]
+          },
+          "time_relative_rmse": {
+            "n": 16,
+            "mean": 0.1577845386282597,
+            "se": 0.033951988609950794,
+            "rms": 0.20539479932239327
+          },
+          "space_relative_rmse": {
+            "n": 16,
+            "mean": 0.0,
+            "se": 0.0,
+            "rms": 0.0
+          },
+          "space_spearman": {
+            "n": 16,
+            "mean": 1.0,
+            "se": 1.6024689053196365e-17,
+            "rms": 1.0
+          },
+          "operator_normalized_rmse": {
+            "n": 16,
+            "mean": 15.878923064995872,
+            "se": 1.3468351413497308,
+            "rms": 16.713756943717836
+          },
+          "oracle_metric_error": {
+            "n": 16,
+            "mean": 5.78189807693501,
+            "se": 0.42564721526384725,
+            "rms": 6.01231890787513
+          },
+          "chart_metric_error": {
+            "n": 10,
+            "mean": 8.448751178295392,
+            "se": 1.2125703855938237,
+            "rms": 9.19860527106801
+          },
+          "chart_field_error": {
+            "n": 10,
+            "mean": 0.09663667640153349,
+            "se": 0.014891703628474695,
+            "rms": 0.10646366872581293
+          },
+          "chart_condition": {
+            "n": 10,
+            "mean": 4.067303982452424,
+            "se": 0.33797770524890564,
+            "rms": 4.191780295874438
+          },
+          "cap_recall": {
+            "n": 16,
+            "mean": 1.0,
+            "se": 0.0,
+            "rms": 1.0
+          },
+          "cap_precision": {
+            "n": 16,
+            "mean": 1.0,
+            "se": 0.0,
+            "rms": 1.0
+          },
+          "missing_fraction": {
+            "n": 16,
+            "mean": 0.0,
+            "se": 0.0,
+            "rms": 0.0
+          },
+          "population": {
+            "n": 16,
+            "mean": 19.125,
+            "se": 0.7451230323465604,
+            "rms": 19.341503302484014
+          },
+          "method_seconds": {
+            "n": 16,
+            "mean": 0.007857925750158756,
+            "se": 0.000570174255969947,
+            "rms": 0.00816232058470943
+          }
+        }
+      },
+      "paired": {
+        "gained": 14,
+        "lost": 0,
+        "availability_gain": 0.875,
+        "mcnemar_exact_two_sided_p": 0.0001220703125,
+        "recall_change": {
+          "n": 16,
+          "mean": 0.8338121888359976,
+          "se": 0.019604464613740227,
+          "rms": 0.8372620806792507
+        },
+        "common_available": 2,
+        "common_legacy_metric_error": {
+          "n": 2,
+          "mean": 2.6130762936003173,
+          "se": 0.257190494257558,
+          "rms": 2.625702699566807
+        },
+        "common_balanced_metric_error": {
+          "n": 2,
+          "mean": 5.775239815583099,
+          "se": 1.382103753742305,
+          "rms": 5.938316740761213
+        },
+        "rescued_distances": 2265,
+        "originally_missing_distances": 2292
+      }
+    }
+  ],
+  "source_commit": "6f61cf0b525b9ce4e5fa81bf91be185014b7dfd7",
+  "seconds": 141.58122375399944,
+  "peak_mib": 549.61328125,
+  "caveats": [
+    "Paired cloud-level descriptive audit, not a convergence proof or external replication",
+    "Conditional metric RMS uses different available clouds; common subset also reported",
+    "Oracle cap retains noisy discrete shells and times; not an intrinsic method or lower bound",
+    "Known density, marked posets and 2+1 flat spacetime only; BD-C2 NO_GO unchanged"
+  ]
+}
