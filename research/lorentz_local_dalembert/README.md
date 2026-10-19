@@ -1,6 +1,20 @@
 # Local d’Alembertian: independent reproduction track
 
-**Current status (19 October 2026): joint-moment feasibility
+**Current status (19 October 2026): `INTRINSIC_MOMENT_HOLD`; `HOLD_PHASE3`.**
+The fixed landmark calibration trial completed 48 fresh target clouds. All 42
+available stencils lack an eligible landmark triple; six low-density stencils
+are unavailable. Both intrinsic arms adopt 0/48 and fall back unchanged. At the
+highest density, all three paired error ratios are 1.0 (required <=0.75).
+The count-noise guard is never reached on these targets. The true-coordinate
+oracle improves independent fields but is diagnostic only. Read the
+[intrinsic-calibration report](intrinsic_moments/RESULTS.md) and full replay.
+This closes the specified candidate; it does not rule out intrinsic calibration.
+
+```sh
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python3 -B research/lorentz_local_dalembert/intrinsic_moments/verify_intrinsic.py
+```
+
+**Earlier joint-moment feasibility (19 October 2026):
 `CAP_MOMENT_FEASIBILITY_SUPPORTED`; `HOLD_PHASE3`.**
 A new publicly frozen coordinate-assisted diagnostic tests six fixed
 support/sign policies on 48 fresh clouds. At the highest density,

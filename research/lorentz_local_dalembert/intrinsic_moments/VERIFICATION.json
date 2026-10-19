@@ -1,0 +1,28 @@
+{
+  "status": "PASS_NUMERICAL_REPLAY",
+  "clouds": 48,
+  "coordinate_hashes_equal": 48,
+  "calibrations": 42,
+  "discrete_structure_landmarks_and_adoption_exact": true,
+  "controls": {
+    "status": "PASS_SOFTWARE_CONTROLS",
+    "exact_polarization": true,
+    "uniform_scaling": true,
+    "signature_rejections": 2,
+    "analytic_quadratic_optima": 2,
+    "mutation_rejections": 3,
+    "inconsistent_half_guard_rejected": true,
+    "coordinate_blind_interface": true
+  },
+  "baseline_tolerance": {
+    "atol": 1e-10,
+    "rtol": 1e-09
+  },
+  "calibration_tolerance": {
+    "atol": 1e-07,
+    "rtol": 1e-06
+  },
+  "decision": "INTRINSIC_MOMENT_HOLD",
+  "phase3": "HOLD_PHASE3",
+  "note": "Every stored and recomputed calibration checked. Eigenvector sign choices and iterations are not observables; invariant features, objectives and unique weights are compared. Coordinate byte hashes are separate."
+}

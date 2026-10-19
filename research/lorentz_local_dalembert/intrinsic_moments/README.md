@@ -20,8 +20,15 @@ Six development clouds completed with software and optimization checks passing.
 One has no baseline stencil; the other five have no qualifying landmark
 candidates on either side. The rule, parameters and gates were not changed
 after this finding. The implementation, development records and analysis are
-published before any target cloud is generated. Fresh targets must report
-unavailability and fallback even if all adoption gates fail.
+published before any target cloud was generated.
+
+The completed 48-cloud target campaign returns **INTRINSIC_MOMENT_HOLD**.
+All 42 available stencils have zero eligible landmark triples; six low-density
+stencils are unavailable. Both intrinsic arms adopt 0/48 and preserve baseline
+weights on all available clouds. The count-noise guard is never reached.
+The coordinate-assisted diagnostic improves independent fields but cannot
+qualify the intrinsic method. Read [RESULTS.md](RESULTS.md), the
+[full summary](results/summary.json) and [replay](VERIFICATION.json).
 
 ```sh
 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python3 -B research/lorentz_local_dalembert/intrinsic_moments/verify_intrinsic.py
