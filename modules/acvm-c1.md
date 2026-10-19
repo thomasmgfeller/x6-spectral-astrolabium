@@ -6,17 +6,17 @@ Registerstand: 2026-10-19. MAIN / SOFTWARE. Kein Live-Prüfsiegel.
 
 Branch: main
 
-Commit: aa2c3dae7bb7afb564cdf4f08b0fe8f2c64c9bfb
+Commit: 26432e3d4cde20adabb510f17d5639891f4ac642
 
-[Originaldokumentation](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/aa2c3dae7bb7afb564cdf4f08b0fe8f2c64c9bfb/docs/acvm/control-channel-v0.1/README.md)
+[Originaldokumentation](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/26432e3d4cde20adabb510f17d5639891f4ac642/docs/acvm/control-channel-v0.1/README.md)
 
 ## Dokumentierte Aussage
 
 Host-Protokoll, Compiler, portabler C++-Sequencer und virtueller serieller Weg sind prüfbar. Unveränderte Firmware wurde für RP2040 gebaut; wiederholte Builds ergeben identische UF2-/BIN-Hashes. Keine physische Ausgabe oder Fehlerreaktion gemessen.
 
-- [docs/acvm/control-channel-v0.1/evidence/qualification.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/aa2c3dae7bb7afb564cdf4f08b0fe8f2c64c9bfb/docs/acvm/control-channel-v0.1/evidence/qualification.json): Gespeicherte Softwarequalifikation; kein Pico-Build oder elektrischer Messbeleg.
-- [docs/acvm/c1-e01-target-build/evidence/build-report.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/aa2c3dae7bb7afb564cdf4f08b0fe8f2c64c9bfb/docs/acvm/c1-e01-target-build/evidence/build-report.json): Tatsächlicher RP2040-Zielbuild PASS; Pico SDK 2.3.1/GNU Arm GCC 15.2.1, Firmware-, Werkzeug- und Ausgabehashes. UF2/BIN/ELF und Buildlogs archiviert; kein Flash- oder Messbeleg.
-- [docs/acvm/c1-e01-target-build/evidence/readiness.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/aa2c3dae7bb7afb564cdf4f08b0fe8f2c64c9bfb/docs/acvm/c1-e01-target-build/evidence/readiness.json): BLOCKED_PHYSICAL_MEASUREMENT: 0/10 Normalläufe und 0/6 Fehlerfälle; reale Geräte, Kalibrierung, vorher fixiertes Messprofil und unabhängige Rohaufnahmen fehlen.
+- [docs/acvm/control-channel-v0.1/evidence/qualification.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/26432e3d4cde20adabb510f17d5639891f4ac642/docs/acvm/control-channel-v0.1/evidence/qualification.json): Gespeicherte Softwarequalifikation; kein Pico-Build oder elektrischer Messbeleg.
+- [docs/acvm/c1-e01-target-build/evidence/build-report.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/26432e3d4cde20adabb510f17d5639891f4ac642/docs/acvm/c1-e01-target-build/evidence/build-report.json): Tatsächlicher RP2040-Zielbuild PASS; Pico SDK 2.3.1/GNU Arm GCC 15.2.1, Firmware-, Werkzeug- und Ausgabehashes. UF2/BIN/ELF und Buildlogs archiviert; kein Flash- oder Messbeleg.
+- [docs/acvm/c1-e01-target-build/evidence/readiness.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/26432e3d4cde20adabb510f17d5639891f4ac642/docs/acvm/c1-e01-target-build/evidence/readiness.json): BLOCKED_PHYSICAL_MEASUREMENT: 0/10 Normalläufe und 0/6 Fehlerfälle; reale Geräte, Kalibrierung, vorher fixiertes Messprofil und unabhängige Rohaufnahmen fehlen.
 
 ## Reproduzieren
 
@@ -27,7 +27,7 @@ Neue Arbeits- und Ausgabeordner verwenden; Voraussetzungen aus der Originaldokum
 ```sh
 git clone --branch main https://github.com/thomasmgfeller/x6-spectral-astrolabium.git x6-acvm-c1
 cd x6-acvm-c1
-git checkout --detach aa2c3dae7bb7afb564cdf4f08b0fe8f2c64c9bfb
+git checkout --detach 26432e3d4cde20adabb510f17d5639891f4ac642
 python3 x6.py control qualify --output runs/register-c1
 python3 -B tests/control-channel/test_pico_build.py
 ```

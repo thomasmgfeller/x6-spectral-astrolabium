@@ -6,19 +6,19 @@ Registerstand: 2026-10-19. MAIN / SOFTWARE. Kein Live-Prüfsiegel.
 
 Branch: main
 
-Commit: aa2c3dae7bb7afb564cdf4f08b0fe8f2c64c9bfb
+Commit: 26432e3d4cde20adabb510f17d5639891f4ac642
 
-[Originaldokumentation](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/aa2c3dae7bb7afb564cdf4f08b0fe8f2c64c9bfb/research/lorentz_de_sitter_c2/README.md)
+[Originaldokumentation](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/26432e3d4cde20adabb510f17d5639891f4ac642/research/lorentz_de_sitter_c2/README.md)
 
 ## Dokumentierte Aussage
 
 Rational eingeschlossene C2-Vorwärtsfunktion und strenge Monotonie für bekannte uniforme 4D-de-Sitter-Modelle, 0≤h≤0,5. Eine Hoeffding-U-Statistik-Schranke liefert mindestens 95% Überdeckung bei festem Budget und unabhängigen Wolken. 16.384 neue Wolken: alle geprüften Intervalle enthalten die Modellwerte, keines erreicht 20%-Präzision. Keine allgemeine Uhr oder Identifikation bei unbekannter Dichte.
 
-- [research/lorentz_de_sitter_c2/DERIVATION.md](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/aa2c3dae7bb7afb564cdf4f08b0fe8f2c64c9bfb/research/lorentz_de_sitter_c2/DERIVATION.md): Vollständige geometrische und statistische Herleitung, uniforme Restfehler, konservative Umkehrung und Geltungsbereich.
-- [research/lorentz_de_sitter_c2/RESULTS.md](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/aa2c3dae7bb7afb564cdf4f08b0fe8f2c64c9bfb/research/lorentz_de_sitter_c2/RESULTS.md): Alle Präzisionsverweigerungen, hinreichende Budgetgrenzen und offener Effizienzschritt.
-- [research/lorentz_de_sitter_c2/contract.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/aa2c3dae7bb7afb564cdf4f08b0fe8f2c64c9bfb/research/lorentz_de_sitter_c2/contract.json): Öffentliche Quellenfixierung c2f1659 vor Zielgitter und frischen Punktwolken.
-- [research/lorentz_de_sitter_c2/results/mathematics.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/aa2c3dae7bb7afb564cdf4f08b0fe8f2c64c9bfb/research/lorentz_de_sitter_c2/results/mathematics.json): Exakte Bruchzertifikate, Reihenkoeffizienten und getrennte Quadraturkontrolle.
-- [research/lorentz_de_sitter_c2/VERIFICATION.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/aa2c3dae7bb7afb564cdf4f08b0fe8f2c64c9bfb/research/lorentz_de_sitter_c2/VERIFICATION.json): Symbolische Integralgegenprüfung, abhängiger Paarkern als Negativkontrolle und vollständiger Replay.
+- [research/lorentz_de_sitter_c2/DERIVATION.md](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/26432e3d4cde20adabb510f17d5639891f4ac642/research/lorentz_de_sitter_c2/DERIVATION.md): Vollständige geometrische und statistische Herleitung, uniforme Restfehler, konservative Umkehrung und Geltungsbereich.
+- [research/lorentz_de_sitter_c2/RESULTS.md](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/26432e3d4cde20adabb510f17d5639891f4ac642/research/lorentz_de_sitter_c2/RESULTS.md): Alle Präzisionsverweigerungen, hinreichende Budgetgrenzen und offener Effizienzschritt.
+- [research/lorentz_de_sitter_c2/contract.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/26432e3d4cde20adabb510f17d5639891f4ac642/research/lorentz_de_sitter_c2/contract.json): Öffentliche Quellenfixierung c2f1659 vor Zielgitter und frischen Punktwolken.
+- [research/lorentz_de_sitter_c2/results/mathematics.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/26432e3d4cde20adabb510f17d5639891f4ac642/research/lorentz_de_sitter_c2/results/mathematics.json): Exakte Bruchzertifikate, Reihenkoeffizienten und getrennte Quadraturkontrolle.
+- [research/lorentz_de_sitter_c2/VERIFICATION.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/26432e3d4cde20adabb510f17d5639891f4ac642/research/lorentz_de_sitter_c2/VERIFICATION.json): Symbolische Integralgegenprüfung, abhängiger Paarkern als Negativkontrolle und vollständiger Replay.
 
 ## Reproduzieren
 
@@ -29,7 +29,7 @@ Neue Arbeits- und Ausgabeordner verwenden; Voraussetzungen aus der Originaldokum
 ```sh
 git clone --branch main https://github.com/thomasmgfeller/x6-spectral-astrolabium.git x6-lorentz-de-sitter-c2
 cd x6-lorentz-de-sitter-c2
-git checkout --detach aa2c3dae7bb7afb564cdf4f08b0fe8f2c64c9bfb
+git checkout --detach 26432e3d4cde20adabb510f17d5639891f4ac642
 python3 -m pip install -r research/lorentz_de_sitter_c2/requirements.txt
 python3 -B research/lorentz_de_sitter_c2/verify.py
 ```

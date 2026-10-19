@@ -8,16 +8,16 @@ Registerstand: 2026-10-19. MAIN / SOFTWARE. Kein Live-Prüfsiegel.
 
 Branch: main
 
-Commit: aa2c3dae7bb7afb564cdf4f08b0fe8f2c64c9bfb
+Commit: 26432e3d4cde20adabb510f17d5639891f4ac642
 
-[Originaldokumentation](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/aa2c3dae7bb7afb564cdf4f08b0fe8f2c64c9bfb/docs/SIGNAL_VALIDATION_LAB.md)
+[Originaldokumentation](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/26432e3d4cde20adabb510f17d5639891f4ac642/docs/SIGNAL_VALIDATION_LAB.md)
 
 ## Dokumentierte Aussage
 
 Synthetische Signale werden gegen vier Verfahren verglichen; Roharrays und Qualitätsurteile bleiben im Replay erhalten.
 
-- [docs/integration-v0.1/evidence/signal-run.log](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/aa2c3dae7bb7afb564cdf4f08b0fe8f2c64c9bfb/docs/integration-v0.1/evidence/signal-run.log): Erhaltenes Pulsbeispiel: X6-Phasenfilter FAIL ist ein fachliches Ergebnis, kein Laufabbruch.
-- [docs/perspectives/edge-platform/evidence/independent-reference.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/aa2c3dae7bb7afb564cdf4f08b0fe8f2c64c9bfb/docs/perspectives/edge-platform/evidence/independent-reference.json): Gespeicherte NumPy/SciPy-Gegenprüfung.
+- [docs/integration-v0.1/evidence/signal-run.log](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/26432e3d4cde20adabb510f17d5639891f4ac642/docs/integration-v0.1/evidence/signal-run.log): Erhaltenes Pulsbeispiel: X6-Phasenfilter FAIL ist ein fachliches Ergebnis, kein Laufabbruch.
+- [docs/perspectives/edge-platform/evidence/independent-reference.json](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/26432e3d4cde20adabb510f17d5639891f4ac642/docs/perspectives/edge-platform/evidence/independent-reference.json): Gespeicherte NumPy/SciPy-Gegenprüfung.
 
 ## Reproduzieren
 
@@ -28,7 +28,7 @@ Neue Arbeits- und Ausgabeordner verwenden; Voraussetzungen aus der Originaldokum
 ```sh
 git clone --branch main https://github.com/thomasmgfeller/x6-spectral-astrolabium.git x6-signal-lab
 cd x6-signal-lab
-git checkout --detach aa2c3dae7bb7afb564cdf4f08b0fe8f2c64c9bfb
+git checkout --detach 26432e3d4cde20adabb510f17d5639891f4ac642
 python3 x6.py run signal --output runs/register-signal
 python3 x6.py verify runs/register-signal
 ```
