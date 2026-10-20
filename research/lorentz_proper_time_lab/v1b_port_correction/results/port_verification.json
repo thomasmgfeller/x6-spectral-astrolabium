@@ -1,0 +1,381 @@
+{
+  "validation_id": "V1b_PORT_XOR_CORRECTION",
+  "timestamp_utc": "2026-10-20T14:02:36.974892+00:00",
+  "git_commit": "560f717c0e25c957bc58bb9df5ec5ac6ad23cad0",
+  "source_sha256": "5694637b2387bee6831008c53e86e1427bab341f4170648af8656181aee62795",
+  "runtimes": {
+    "native": {
+      "node": "v24.19.0",
+      "v8": "13.6.233.17-node.51",
+      "platform": "linux",
+      "arch": "x64"
+    },
+    "python": "3.12.14",
+    "os": "Linux-6.18.55-x86_64-with-glibc2.39"
+  },
+  "script_sha256": {
+    "port.py": "3a77a3ee5bc515d6895f1ac2d63ac7a32dd9d4a3a058f58db5432b7a53e14108",
+    "verify_port.py": "b972055501c3b96306ec17e33c9e36b92d787c398c78bb73c6e7e8fa43ff02da",
+    "native_reference.cjs": "4cc66af04bee5a03e92a62a4cd9def075bc4b3a09535086ea994697659d894d3",
+    "protocol.json": "21664c8d079f418ed9842e2a8a940c292016fc9bda958a12a33292ea1c03f877"
+  },
+  "formatting_assumptions": [
+    "232 and 231 interpreted as 2**32 and 2**31",
+    "init and call interpreted as __init__ and __call__",
+    "No historical temporary script or tool log was available; this is a reconstruction from the newly supplied text."
+  ],
+  "first_step_trace": {
+    "seed": 20261017,
+    "advanced_state_uint32": 1851826830,
+    "left_x_signed": 125078561,
+    "second_imul_signed": 609831573,
+    "sum_before_outer_xor": 734910134,
+    "correct_outer_xor_uint32": 750344855,
+    "missing_xor_final_uint32": 734886273,
+    "corrected_final_uint32": 750381170
+  },
+  "vector_results": [
+    {
+      "seed": 0,
+      "old_values_reproduced": 10,
+      "corrected_values_checked": 10000,
+      "corrected_mismatches": 0,
+      "first_ten_corrected": [
+        0.26642920868471265,
+        0.0003297457005828619,
+        0.2232720274478197,
+        0.1462021479383111,
+        0.46732782293111086,
+        0.5450490827206522,
+        0.6152513844426721,
+        0.6489853798411787,
+        0.45600721263326705,
+        0.581218967679888
+      ]
+    },
+    {
+      "seed": 1,
+      "old_values_reproduced": 10,
+      "corrected_values_checked": 10000,
+      "corrected_mismatches": 0,
+      "first_ten_corrected": [
+        0.6270739405881613,
+        0.002735721180215478,
+        0.5274470399599522,
+        0.9810509674716741,
+        0.9683778982143849,
+        0.281103502959013,
+        0.6128388606011868,
+        0.7207431411370635,
+        0.425796952098608,
+        0.9948229456786066
+      ]
+    },
+    {
+      "seed": 20261017,
+      "old_values_reproduced": 10,
+      "corrected_values_checked": 10000,
+      "corrected_mismatches": 0,
+      "first_ten_corrected": [
+        0.17471173079684377,
+        0.3875309091527015,
+        0.03451144276186824,
+        0.6166947388555855,
+        0.36734447185881436,
+        0.5012563306372613,
+        0.013159891357645392,
+        0.42642109910957515,
+        0.05792301311157644,
+        0.030734002124518156
+      ]
+    },
+    {
+      "seed": 4294967295,
+      "old_values_reproduced": 10,
+      "corrected_values_checked": 10000,
+      "corrected_mismatches": 0,
+      "first_ten_corrected": [
+        0.8964226141106337,
+        0.189478256739676,
+        0.7156526781618595,
+        0.9440599093213677,
+        0.8452364315744489,
+        0.5391399988438934,
+        0.6804977387655526,
+        0.4755720964167267,
+        0.13585773925296962,
+        0.9884445976931602
+      ]
+    }
+  ],
+  "normal_results": [
+    {
+      "seed": 0,
+      "values": 1000,
+      "max_absolute_error": 4.440892098500626e-16,
+      "different_binary64": 61,
+      "tolerance_failures": 0
+    },
+    {
+      "seed": 1,
+      "values": 1000,
+      "max_absolute_error": 4.440892098500626e-16,
+      "different_binary64": 55,
+      "tolerance_failures": 0
+    },
+    {
+      "seed": 20261017,
+      "values": 1000,
+      "max_absolute_error": 4.440892098500626e-16,
+      "different_binary64": 53,
+      "tolerance_failures": 0
+    },
+    {
+      "seed": 4294967295,
+      "values": 1000,
+      "max_absolute_error": 4.440892098500626e-16,
+      "different_binary64": 59,
+      "tolerance_failures": 0
+    }
+  ],
+  "cloud_results": [
+    {
+      "m": 16384,
+      "d": 2,
+      "theta": 0.5,
+      "seed": 0,
+      "old_count": 4073,
+      "old_report_count_reproduced": true,
+      "corrected_count": 4078,
+      "native_count": 4078,
+      "inside_mismatches": 0,
+      "values": 32768,
+      "max_absolute_error": 1.1102230246251565e-16,
+      "different_binary64": 154,
+      "tolerance_failures": 0
+    },
+    {
+      "m": 16384,
+      "d": 2,
+      "theta": 0.5,
+      "seed": 1,
+      "old_count": 4125,
+      "old_report_count_reproduced": true,
+      "corrected_count": 4146,
+      "native_count": 4146,
+      "inside_mismatches": 0,
+      "values": 32768,
+      "max_absolute_error": 1.1102230246251565e-16,
+      "different_binary64": 141,
+      "tolerance_failures": 0
+    },
+    {
+      "m": 16384,
+      "d": 2,
+      "theta": 0.5,
+      "seed": 20261017,
+      "old_count": 4158,
+      "old_report_count_reproduced": true,
+      "corrected_count": 4054,
+      "native_count": 4054,
+      "inside_mismatches": 0,
+      "values": 32768,
+      "max_absolute_error": 1.1102230246251565e-16,
+      "different_binary64": 163,
+      "tolerance_failures": 0
+    },
+    {
+      "m": 16384,
+      "d": 2,
+      "theta": 0.5,
+      "seed": 4294967295,
+      "old_count": 4146,
+      "old_report_count_reproduced": true,
+      "corrected_count": 4082,
+      "native_count": 4082,
+      "inside_mismatches": 0,
+      "values": 32768,
+      "max_absolute_error": 1.1102230246251565e-16,
+      "different_binary64": 180,
+      "tolerance_failures": 0
+    },
+    {
+      "m": 16384,
+      "d": 3,
+      "theta": 0.5,
+      "seed": 0,
+      "old_count": 2032,
+      "old_report_count_reproduced": true,
+      "corrected_count": 1992,
+      "native_count": 1992,
+      "inside_mismatches": 0,
+      "values": 49152,
+      "max_absolute_error": 1.1102230246251565e-16,
+      "different_binary64": 11283,
+      "tolerance_failures": 0
+    },
+    {
+      "m": 16384,
+      "d": 3,
+      "theta": 0.5,
+      "seed": 1,
+      "old_count": 2041,
+      "old_report_count_reproduced": true,
+      "corrected_count": 2045,
+      "native_count": 2045,
+      "inside_mismatches": 0,
+      "values": 49152,
+      "max_absolute_error": 1.1102230246251565e-16,
+      "different_binary64": 11305,
+      "tolerance_failures": 0
+    },
+    {
+      "m": 16384,
+      "d": 3,
+      "theta": 0.5,
+      "seed": 20261017,
+      "old_count": 2011,
+      "old_report_count_reproduced": true,
+      "corrected_count": 2080,
+      "native_count": 2080,
+      "inside_mismatches": 0,
+      "values": 49152,
+      "max_absolute_error": 1.6653345369377348e-16,
+      "different_binary64": 11423,
+      "tolerance_failures": 0
+    },
+    {
+      "m": 16384,
+      "d": 3,
+      "theta": 0.5,
+      "seed": 4294967295,
+      "old_count": 2077,
+      "old_report_count_reproduced": true,
+      "corrected_count": 2143,
+      "native_count": 2143,
+      "inside_mismatches": 0,
+      "values": 49152,
+      "max_absolute_error": 1.1102230246251565e-16,
+      "different_binary64": 11236,
+      "tolerance_failures": 0
+    },
+    {
+      "m": 16384,
+      "d": 4,
+      "theta": 0.5,
+      "seed": 0,
+      "old_count": 973,
+      "old_report_count_reproduced": true,
+      "corrected_count": 1104,
+      "native_count": 1104,
+      "inside_mismatches": 0,
+      "values": 65536,
+      "max_absolute_error": 1.1102230246251565e-16,
+      "different_binary64": 16429,
+      "tolerance_failures": 0
+    },
+    {
+      "m": 16384,
+      "d": 4,
+      "theta": 0.5,
+      "seed": 1,
+      "old_count": 1065,
+      "old_report_count_reproduced": true,
+      "corrected_count": 995,
+      "native_count": 995,
+      "inside_mismatches": 0,
+      "values": 65536,
+      "max_absolute_error": 1.6653345369377348e-16,
+      "different_binary64": 16663,
+      "tolerance_failures": 0
+    },
+    {
+      "m": 16384,
+      "d": 4,
+      "theta": 0.5,
+      "seed": 20261017,
+      "old_count": 1033,
+      "old_report_count_reproduced": true,
+      "corrected_count": 1079,
+      "native_count": 1079,
+      "inside_mismatches": 0,
+      "values": 65536,
+      "max_absolute_error": 1.1102230246251565e-16,
+      "different_binary64": 16186,
+      "tolerance_failures": 0
+    },
+    {
+      "m": 16384,
+      "d": 4,
+      "theta": 0.5,
+      "seed": 4294967295,
+      "old_count": 1029,
+      "old_report_count_reproduced": true,
+      "corrected_count": 1067,
+      "native_count": 1067,
+      "inside_mismatches": 0,
+      "values": 65536,
+      "max_absolute_error": 1.6653345369377348e-16,
+      "different_binary64": 16395,
+      "tolerance_failures": 0
+    }
+  ],
+  "fixtures": {
+    "missing_xor": {
+      "sha256": "f1869f9749d3f1f2c8f6c2e9e677a1e657177a6f169dcdf2213ec4e543348781",
+      "bytes": 5744
+    },
+    "corrected": {
+      "sha256": "80c8d5b3e00046dafb59d9b59c447fe8894d2dcfccc7ce7a02fbe499067ca467",
+      "bytes": 5770
+    },
+    "native_points_inside_only": "58d2537e32e365043dcea2422e194f8d21b0e833273968281d5d510082d05297",
+    "corrected_vs_native_bytes_equal": false
+  },
+  "boundary_cases": [
+    {
+      "d": 2,
+      "point": [
+        -0.5,
+        0.0
+      ],
+      "support": 0.5,
+      "strict_support_pass": false
+    },
+    {
+      "d": 3,
+      "point": [
+        -0.5,
+        0.0,
+        -0.0
+      ],
+      "support": 0.5,
+      "strict_support_pass": false
+    },
+    {
+      "d": 4,
+      "point": [
+        -0.5,
+        0.0,
+        -0.0,
+        -0.0
+      ],
+      "support": 0.5,
+      "strict_support_pass": false
+    }
+  ],
+  "gates": {
+    "old_result_provenance": "REPRODUCED_MISSING_XOR_VARIANT",
+    "old_port_equivalence": "FAIL",
+    "corrected_port_matrix": "PASS",
+    "native_strict_support": "FAIL_KNOWN_ZERO_INPUT",
+    "browser_and_export_freeze": "OPEN",
+    "overall_V1b": "NOT_PASSED"
+  },
+  "scope_limits": [
+    "Corrected port matches declared inputs and numeric tolerances, not all seeds and all floating paths.",
+    "Integer streams are exact; Python and JS transcendental arithmetic is only checked numerically.",
+    "The original JavaScript sampler has not been modified; the boundary defect remains.",
+    "No statistical acceptance thresholds or seeds were changed. Existing native statistical diagnostics are not overwritten by this port correction."
+  ]
+}
