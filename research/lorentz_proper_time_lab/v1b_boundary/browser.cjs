@@ -8,7 +8,7 @@ const out=path.resolve(process.argv[2]||'/tmp/x6-v1b-boundary');fs.mkdirSync(out
 const nativeBytes=fs.readFileSync(path.join(out,'native_raw.json.gz'));
 const native=JSON.parse(zlib.gunzipSync(nativeBytes));
 const source=provenance();assert.deepEqual(source.source_sha256,native.provenance.source_sha256);
-const failures=[],records=[],frozen=[];let maximumCoordinateError=0,maximumInferenceError=0;
+const failures=[],records=[],frozen=[];let maximumCoordinateError=0,maximumInferenceError=0,activeCase=null;
 function close(a,b){return Number.isFinite(a)&&Number.isFinite(b)&&Math.abs(a-b)<=q.float_tolerance.absolute+q.float_tolerance.relative*Math.abs(b);}
 async function setCase(page,p){
   await page.evaluate(p=>{
@@ -37,8 +37,9 @@ async function main(){
   await new Promise(r=>server.listen(0,'127.0.0.1',r));let browser;
   try{
     browser=await chromium.launch({headless:true,args:['--no-sandbox']});
-    const page=await browser.newPage({acceptDownloads:true});page.on('pageerror',e=>failures.push(e.message));
-    await page.goto(`http://127.0.0.1:${server.address().port}/app/proper-time.html`);
+    const url=`http://127.0.0.1:${server.address().port}/app/proper-time.html`;
+    let page=await browser.newPage({acceptDownloads:true});page.on('pageerror',e=>failures.push(e.message));
+    await page.goto(url);
     const cdp=await page.context().newCDPSession(page),engine=await cdp.send('Browser.getVersion');
     // Verify PRNG directly in the shipped inline browser core.
     const streams=await page.evaluate(q=>q.seeds.map(seed=>{const r=ProperTime.rng(seed);return {seed,uint32:Array.from({length:q.prng_values_per_seed},()=>r()*2**32)};}),q);
@@ -46,6 +47,10 @@ async function main(){
     for(const c of native.clouds){
       for(const t of c.theta_results){
         const p={d:c.d,m:c.m,theta:t.theta,seed:c.parameters.seed,T:q.T};
+        // Isolate cases: hundreds of downloads from one page can be throttled.
+        // Each pair still regenerates and downloads twice in the same page.
+        activeCase=p;await page.close();page=await browser.newPage({acceptDownloads:true});
+        page.on('pageerror',e=>failures.push(e.message));await page.goto(url);
         await setCase(page,p);const a=await download(page,'export');
         await setCase(page,p);const b=await download(page,'export');assert.ok(a.equals(b),'Same-runtime downloaded JSON must replay byte for byte');
         const data=JSON.parse(a),ref=P.cloud(p);compare(data,ref,p);
@@ -78,4 +83,7 @@ async function main(){
     console.log(JSON.stringify({status:report.status,cases:records.length,browser:report.browser,max_coordinate_error:maximumCoordinateError}));
   }finally{if(browser)await browser.close();await new Promise(r=>server.close(r));}
 }
-main().catch(e=>{console.error(e);process.exitCode=1;});
+main().catch(e=>{
+  fs.writeFileSync(path.join(out,'browser_failure.json'),JSON.stringify({error:e.message,activeCase,completed_cases:records.length,records,page_errors:failures},null,2)+'\n');
+  console.error(e);process.exitCode=1;
+});
