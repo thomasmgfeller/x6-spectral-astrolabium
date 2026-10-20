@@ -7,6 +7,7 @@ neuer vorab festgelegter Wirksamkeitsversuch.
 - **[Demonstrator öffnen](https://thomasmgfeller.github.io/x6-spectral-astrolabium/app/proper-time.html)** — ohne Installation, auch auf dem Smartphone.
 - **[Jupyter-Notebook](eigenzeit.ipynb)** — eigenständig ausführbar, mit gespeicherten Beispielausgaben.
 - [Abhängigkeiten](requirements.txt) und [numerischer Prüfbericht](verification.json).
+- **[V1: Beweis der idealen Sampling-Geometrie](validation/V1_sampling_geometry.md)** — mathematischer PASS; gezielter endlicher Implementierungstest V1b weiterhin OPEN. Der Beweis ersetzt den Normalgenerator mit Untergrenze durch exakte Gaußvariablen und ändert keine bestehenden HOLD-Entscheide.
 - [Bestehender Gültigkeitsvertrag](../lorentz_proper_time_domain/README.md).
 
 ## Bedienung
