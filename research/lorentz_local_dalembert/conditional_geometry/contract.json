@@ -1,0 +1,29 @@
+{
+  "schema": "x6.conditional-geometry/1",
+  "date": "2026-10-20",
+  "parent_commit": "6acc4911962a73ecadfdab1fd2c3216fc5120542",
+  "rho": 32768,
+  "test_seeds": [70110000, 70110031],
+  "test_shards": 2,
+  "field_noise_sigma": 0.001,
+  "prior_sigma": 0.5,
+  "maximum_design_condition": 100000.0,
+  "minimum_calibration_complete": 48,
+  "minimum_test_complete": 26,
+  "minimum_test_coverage": 0.9,
+  "required_rmse_ratio": 0.95,
+  "maximum_clean_rmse_ratio": 1.05,
+  "bootstrap_draws": 5000,
+  "bootstrap_seed": 70120000,
+  "wall_budget_seconds_per_shard": 1800,
+  "memory_budget_mib_per_shard": 2048,
+  "projection": {
+    "margin": 0.0001,
+    "ftol": 1e-11,
+    "maxiter": 500,
+    "feasibility_tolerance": 1e-8,
+    "maximum_relative_shift": 0.25
+  },
+  "scope": "Offline scalar operator pilot; original and relation-projected minimum-variance QP responses share each cloud/field. No embedding covariance or online qualification. HOLD_PHASE3.",
+  "decision": "CONDITIONAL_PILOT_SUPPORTED only if both shards complete within budgets, at least 26/32 joint cases, all accepted projected orders exact, projected clean RMSE <=1.05 original clean RMSE, conditional original posterior RMSE <=0.95 global-original posterior RMSE, and joint-conditional posterior RMSE <=0.95 conditional-original posterior RMSE with joint coverage >=0.90; otherwise CONDITIONAL_HOLD. These are exploratory finite-pilot gates, not population guarantees."
+}
