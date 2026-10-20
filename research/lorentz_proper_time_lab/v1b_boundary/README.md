@@ -1,9 +1,13 @@
 # V1b: endliche Randwerte und nativer Browser-/Exportnachweis
 
-**Gesamtstatus: NOT_PASSED.** Die Randwertreparatur und der native Vergleich
-bestehen lokal. Der eingefrorene Browser-/Exportnachweis wird separat in CI
-ausgeführt. Die geerbte radiale 4D-Diagnostik bleibt FAIL (p=0,0110616450 bei
-unveränderter Einzeltestgrenze 0,05). Ein grüner Softwarejob ist kein V1b-PASS.
+**Technischer Abschluss: PASS. Gesamtstatus: NOT_PASSED.** Randwertreparatur,
+nativer Vergleich und tatsächlicher Chromium-/Exportnachweis sind bestanden.
+Die geerbte radiale 4D-Diagnostik bleibt FAIL (p=0,0110616450 bei unveränderter
+Einzeltestgrenze 0,05). Ein grüner Softwarejob ist kein V1b-PASS.
+
+Die [Originalberichte und Rohdaten](results/) sind vollständig und unverändert
+im Repository eingefroren. [Publikationsnachweis](PUBLICATION.json) und
+[SHA-256-Index](results/SHA256SUMS) binden sie an den ursprünglichen CI-Lauf.
 
 ## Reparatur und mathematische Grenze
 
@@ -108,6 +112,50 @@ bilden die Evidenz. Jeder Bericht bindet Quell- und Testdateien über SHA-256;
 der Browserbericht enthält Chromium-, V8- und Playwright-Version sowie die
 Hashes beider Downloads aller Fälle. Der CI-Quellstand ist eine konkrete
 Git-Commit-ID. Die ursprünglichen Portkorrektur-Dateien bleiben unverändert.
+
+## Eingefrorener Abschlussnachweis vom 20.10.2026
+
+Der erfolgreiche [CI-Lauf 39444754096](https://github.com/thomasmgfeller/x6-spectral-astrolabium/actions/runs/39444754096)
+prüfte PR-Head `4719f96e2ea69d8a7d5ec5543f1b02f7f563505c` über den synthetischen
+GitHub-Merge-Checkout `8262c6f36698e25073571fc61f56427ea2c475f8`. Dieser Checkout
+ist die Quellreferenz der Berichte und nicht die spätere Publikations-Commit-ID.
+Alle elf aufgezeichneten Quellhashes stimmen mit den veröffentlichten Dateien
+überein; dieser Abschluss ergänzt ausschließlich Evidenz, Dokumentation und
+Prüfsummen.
+
+| Prüfung | Ergebnis |
+| --- | --- |
+| Native Regression und reparierter Python-Port | PASS |
+| Strikter Support, unabhängige Decimal-Prüfung | PASS; 0 Verletzungen |
+| Tatsächliche Browser-/Exportprüfung | PASS; 192 Matrixfälle, 196 Replay-Paare |
+| Zeitmarginalen, zusätzliche Moment- und Zähldiagnostik | PASS |
+| Geerbte radiale 4D-Diagnostik | FAIL; p=0,01106164503413279 < 0,05 |
+| V1b gesamt | NOT_PASSED |
+
+Runtime: Node v24.21.0, Python 3.12.15, NumPy 2.3.5, SciPy 1.17.0;
+Chromium 151.0.7922.34, Browser-V8 15.1.206.8, Playwright 1.62.1.
+Der größte Browser-/Node-Koordinatenunterschied beträgt
+2,220446049250313e-16; der größte Inferenzunterschied 7,654987754790454e-14.
+Beide liegen innerhalb der vorab festgelegten Toleranz.
+
+Das originale GitHub-Artefakt (17.622.165 Bytes) wurde heruntergeladen und
+gegen den von GitHub gemeldeten SHA-256-Digest geprüft. Alle 18 enthaltenen
+Dateien liegen bytegleich in `results/`, darunter native und Python-Rohdaten,
+zwölf komprimierte Browserexporte und die exportierte Einzel-HTML-Datei.
+Die dauerhafte Repository-Kopie bleibt unabhängig vom Ablauf des temporären
+Actions-Artefakts am 18.01.2027 verfügbar.
+
+Prüfsummenprüfung vom Repository-Stamm:
+
+```sh
+(cd research/lorentz_proper_time_lab/v1b_boundary/results && sha256sum -c SHA256SUMS)
+```
+
+Die Quelldateien sind in `results/qualification.json` unter
+`provenance.source_sha256` festgehalten. Für neue Reproduktionen immer einen
+separaten Ausgabeordner verwenden; die eingefrorenen Originaldateien nicht
+überschreiben. Der technische Publikationsschritt ist damit abgeschlossen.
+Die Ursache des statistischen Befunds bleibt als eigener Forschungsauftrag offen.
 
 ## Konsequenz
 

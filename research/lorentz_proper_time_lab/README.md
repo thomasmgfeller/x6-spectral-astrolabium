@@ -9,14 +9,15 @@ neuer vorab festgelegter Wirksamkeitsversuch.
 - [Abhängigkeiten](requirements.txt) und [numerischer Prüfbericht](verification.json).
 - [Bestehender Gültigkeitsvertrag](../lorentz_proper_time_domain/README.md).
 
-**V1b-Fortsetzung vom 20.10.2026:** Die [Randwertreparatur und feste
+**V1b-Technikabschluss vom 20.10.2026:** Die [Randwertreparatur und feste
 Browser-/Exportprüfung](v1b_boundary/README.md) ergänzen die
 [erhaltene Python-Portkorrektur](v1b_port_correction/README.md). Der bekannte
 U=0-Randpunkt wird jetzt verworfen und neu gezogen. Die 196.608 bisherigen
 nativen Referenzpunkte bleiben unverändert. **V1b insgesamt bleibt
 NOT_PASSED:** Die radiale 4D-Diagnostik verfehlt weiterhin die ursprüngliche
 0,05-Grenze. Technischer Browsernachweis und Gesamtqualifikation werden
-getrennt ausgewiesen.
+getrennt ausgewiesen. Der Browser-/Exportnachweis ist bestanden;
+[Originalberichte und Rohdaten](v1b_boundary/results/) sind vollständig eingefroren.
 
 ## Bedienung
 
