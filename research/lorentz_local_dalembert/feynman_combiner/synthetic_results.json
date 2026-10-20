@@ -1,0 +1,48 @@
+{
+  "scope": "Scalar one-step synthetic control; not causal-reconstruction or sequential-filter validation",
+  "train": 2000,
+  "test": 20000,
+  "weights": [
+    0.38551853705983946,
+    0.3854765290811041,
+    0.22900493385905663
+  ],
+  "results": {
+    "single": {
+      "measurement_variance_reported": 1.0,
+      "measurement_mse": 0.9959211299368548,
+      "posterior_rmse": 0.7035519109462938,
+      "posterior_variance_reported": 0.5,
+      "coverage_95": 0.9507,
+      "mean_nees": 0.9899705827923634,
+      "mean_nis": 1.0110921097238232
+    },
+    "naive_independence": {
+      "measurement_variance_reported": 0.3333333333333333,
+      "measurement_mse": 0.9408475354742873,
+      "posterior_rmse": 0.766593622678934,
+      "posterior_variance_reported": 0.25,
+      "coverage_95": 0.79995,
+      "mean_nees": 2.3506631293280478,
+      "mean_nis": 1.4770210396741454
+    },
+    "joint_covariance": {
+      "measurement_variance_reported": 0.9313895132430162,
+      "measurement_mse": 0.9411753625606587,
+      "posterior_rmse": 0.6928062416026564,
+      "posterior_variance_reported": 0.48223805030354044,
+      "coverage_95": 0.95055,
+      "mean_nees": 0.995318573682601,
+      "mean_nis": 1.0203297094239665
+    },
+    "conservative_equal": {
+      "measurement_variance_reported": 1.0,
+      "measurement_mse": 0.9408475354742873,
+      "posterior_rmse": 0.6932922922323318,
+      "posterior_variance_reported": 0.5,
+      "coverage_95": 0.95415,
+      "mean_nees": 0.961308404937522,
+      "mean_nis": 0.9846806931160969
+    }
+  }
+}

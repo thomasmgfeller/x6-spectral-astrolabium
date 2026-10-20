@@ -1,0 +1,35 @@
+name: Lorentz Conditional Noise and Relations
+on:
+  pull_request:
+    paths: ['research/lorentz_local_dalembert/conditional_geometry/**', 'research/lorentz_local_dalembert/feynman_combiner/**', '.github/workflows/lorentz-conditional-geometry.yml']
+  push:
+    branches: [main]
+    paths: ['research/lorentz_local_dalembert/conditional_geometry/**', 'research/lorentz_local_dalembert/feynman_combiner/**', '.github/workflows/lorentz-conditional-geometry.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  certificates-and-replay:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - run: python3 -m pip install -r research/lorentz_bd_reference/requirements-replay.txt
+      - name: Controls and portable fresh-cloud certificate replay
+        run: |
+          python3 -B research/lorentz_local_dalembert/conditional_geometry/test_controls.py
+          python3 -m zipfile -e research/lorentz_local_dalembert/conditional_geometry/test_clouds.zip research/lorentz_local_dalembert/conditional_geometry
+          python3 -B research/lorentz_local_dalembert/conditional_geometry/verify_portable.py
+      - name: Previous pilot controls and source inventory
+        run: |
+          python3 -B -m unittest discover -s research/lorentz_local_dalembert/feynman_combiner -p test_fusion.py
+          python3 tests/python/verify_manifest.py
