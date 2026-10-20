@@ -1,5 +1,7 @@
 # Local d’Alembertian: independent reproduction track
 
+**20 October 2026 — independent scalar fusion pilot completed:** [Minimum-variance weights and calibration results](feynman_combiner/CALIBRATION_RESULTS.md). 32 calibration and 32 held-out clouds; 31/32 and 30/32 guarded scalar outputs. Joint fusion improves posterior RMSE by only 0.54%, below the prespecified 5%; paired uncertainty includes no improvement. Reconstructed-relation errors remain. `CALIBRATION_HOLD; HOLD_PHASE3`.
+
 **20 October 2026: [Feynman combiner weight audit and fusion controls](feynman_combiner/README.md).** Retrospective audit of the 48 joint-feasibility clouds: at high density fixed temporal weights are feasible in 1/16 cases, free sign-constrained weights in 12/16, unrestricted in 16/16. Noise amplification remains a concern. Synthetic correlated-data Kalman control executed; no sequential embedding filter qualified. `WEIGHT_POLICY_HOLD; HOLD_PHASE3`.
 
 **Latest bounded result:** [Joint support/count/frame feasibility](joint_feasibility/RESULTS.md) passes all guards and a hidden second colouring on 16/16 fresh high-density clouds (0/16 low, 1/16 middle). Adaptive temporal and other supports, mixed past/future landmarks in one frame, unchanged acceptance thresholds. No operator weights or derivative qualification; **HOLD_PHASE3**.

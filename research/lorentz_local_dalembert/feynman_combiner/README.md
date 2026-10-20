@@ -147,7 +147,7 @@ Korrektur, ungültige Kovarianz, Kausalverletzung und skalare BLUE-Normierung.
    Lichtkegelverträglichkeit vor/nach Fusion/Korrektur, (b) kein Zugriff auf
    zum Ausgabezeitpunkt noch nicht verfügbare Daten. Bestehende Stützen mit
    Vergangenheit UND Zukunft sind eine Offline-Rekonstruktion. Online ist
-   eine deklarierte Verzögerung oder eine neu validierte retadierte Auswahl
+   eine deklarierte Verzögerung oder eine neu validierte retardierte Auswahl
    nötig. `causal_check` prüft nur (a), keine Online-Zulässigkeit.
 7. Fehlende Kalibrierung, unaufgelöste Datenüberlappung oder Kausalverletzung:
    keine Messfreigabe. Eine reine Prädiktion wird als solche ausgewiesen.
@@ -180,3 +180,27 @@ Die importierten LP- und Designfunktionen sind durch den Basiscommit gebunden.
 Die Fusionsformeln sind bekannte Schätztheorie. Der mögliche Forschungsbeitrag
 liegt in der geprüften kausalen Rekonstruktion samt Fehlerkalibrierung und
 Datenprovenienz; dieser Nachweis steht noch aus.
+
+## Fortsetzung: Varianzoptimierung und unabhängiger Pilot
+
+Die nächste Stufe ist im [Kalibrierprotokoll](CALIBRATION_PROTOCOL.md) und im
+[Vertrag](calibration_contract.json) vor den neuen Wolken festgelegt.
+Öffentlicher Freeze: `315d7c31507a852edc84b9e52dece561c81c72b3`.
+Die retrospektive QP-Entwicklung liefert 30 geprüfte Lösungen. Bei hoher
+Dichte reduziert das unbeschränkte QP die bedingte IID-Feldrauschvarianz
+auf 0.298–0.838 der bisherigen L1-Lösung; die 12/16 vorzeichenbeschränkten
+Machbarkeitsfälle bleiben 12/16. Neue physische Kalibrier-/Testwolken
+prüfen zusätzlich die tatsächliche geometrische Fehlerstreuung.
+Die Bias-Korrektur ist spezifisch für die deklarierte Testfeld-Verteilung;
+Übertragung auf andere Felder, Dichten oder Sensoren ist nicht nachgewiesen.
+
+Die Bootstrap-Vergleiche des Piloten konditionieren auf die eingefrorene
+Kalibrierung. Sie erfassen deren Schätzunsicherheit nicht vollständig.
+Auch der Faktor (1+1/n) für die geschätzte Bias-Korrektur macht aus der
+empirischen Kovarianz keine garantierte Fehlergrenze.
+
+Abgeschlossen: [Ergebnisbericht des unabhängigen Piloten](CALIBRATION_RESULTS.md).
+31/32 Kalibrier- und 30/32 Testwolken liefern bewachte Antworten. Der
+zusätzliche Posterior-RMSE-Gewinn durch Fusion beträgt nur 0.54% statt der
+verlangten 5%; `CALIBRATION_HOLD`. Die Relationsdiagnose zeigt weitere
+Grenzen der Einbettung. Rohdaten, Fehlerkovarianz und Zertifikate sind archiviert.
