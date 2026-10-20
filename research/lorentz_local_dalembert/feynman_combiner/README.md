@@ -204,3 +204,5 @@ Abgeschlossen: [Ergebnisbericht des unabhängigen Piloten](CALIBRATION_RESULTS.m
 zusätzliche Posterior-RMSE-Gewinn durch Fusion beträgt nur 0.54% statt der
 verlangten 5%; `CALIBRATION_HOLD`. Die Relationsdiagnose zeigt weitere
 Grenzen der Einbettung. Rohdaten, Fehlerkovarianz und Zertifikate sind archiviert.
+
+Fortsetzung: [Getrennte wolkenbedingte Feldrauschkovarianz und Relationskorrektur](../conditional_geometry/RESULTS.md). 32 frische Testwolken, 30 vollständig auswertbar; Fehlrelationen in 28/30 → 0/30 akzeptierten Rekonstruktionen. Rauschbedingter Filtergewinn nur 1,82%, zusätzliche Fusion ohne Nutzen: `CONDITIONAL_HOLD; HOLD_PHASE3`.

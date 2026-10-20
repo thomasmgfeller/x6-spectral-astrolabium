@@ -1,8 +1,9 @@
 """Independent certificate/field/order replay; not a full search replication."""
 import hashlib
 import json
+import zipfile
 import numpy as np
-from cg_common import HERE, ROOT, config, contract, digest
+from cg_common import HERE, BASE, ROOT, config, contract, digest
 from cg_analyze import load_rows, analyze
 from cg_relations import check
 from cg_inference import prepare
@@ -13,6 +14,26 @@ from variance_weights import certify
 
 
 def main():
+    for prefix in ['test', 'development']:
+        manifest = json.loads((HERE/f'{prefix}_manifest.json').read_text())
+        archive_name = 'test_clouds.zip' if prefix == 'test' else 'development_records.zip'
+        with zipfile.ZipFile(HERE/archive_name) as archive:
+            for path, expected_hash in manifest.items():
+                data = (HERE/path).read_bytes() if path == archive_name else archive.read(path)
+                assert hashlib.sha256(data).hexdigest() == expected_hash, path
+    with zipfile.ZipFile(HERE/'development_records.zip') as archive:
+        development = json.loads(archive.read('development_records.json'))
+    with zipfile.ZipFile(BASE/'feynman_combiner/independent_clouds.zip') as archive:
+        assert len(development) == 64
+        for row in development:
+            assert hashlib.sha256(archive.read(row['source_file'])).hexdigest() == row['source_sha256']
+    complete_development = [r for r in development if r['evaluation']['status'] == 'COMPLETE']
+    cal = json.loads((HERE/'frozen_calibration.json').read_text())
+    clean = np.array([r['evaluation']['clean'] for r in complete_development])+.75
+    np.testing.assert_allclose(cal['bias'], clean.mean(axis=0),atol=1e-12,rtol=1e-12)
+    np.testing.assert_allclose(cal['geometry_covariance'],np.cov(clean,rowvar=False),atol=1e-12,rtol=1e-12)
+    np.testing.assert_allclose(cal['bias_mean_covariance'],np.cov(clean,rowvar=False)/len(clean),atol=1e-12,rtol=1e-12)
+    np.testing.assert_allclose(cal['mean_noise_covariance'],np.mean([r['intrinsic']['conditional_field_covariance'] for r in complete_development],axis=0),atol=1e-12,rtol=1e-12)
     executions, rows = load_rows()
     c = contract()
     expected = list(range(c['test_seeds'][0], c['test_seeds'][1]+1))
@@ -63,11 +84,22 @@ def main():
     prior = (HERE/'summary.json').read_bytes() if (HERE/'summary.json').exists() else None
     summary = analyze()
     if prior is not None:
-        assert prior == (HERE/'summary.json').read_bytes()
+        def compare(a,b):
+            if isinstance(a,dict):
+                assert a.keys()==b.keys()
+                for key in a: compare(a[key],b[key])
+            elif isinstance(a,list):
+                assert len(a)==len(b)
+                for x,y in zip(a,b): compare(x,y)
+            elif isinstance(a,float):
+                np.testing.assert_allclose(a,b,atol=1e-10,rtol=1e-9)
+            else: assert a==b
+        compare(json.loads(prior),summary)
+        (HERE/'summary.json').write_bytes(prior)
     result = dict(status='PASS_ORDER_CERTIFICATES_FIELD_AND_ANALYSIS_REPLAY',clouds=len(rows),
                   complete=summary['complete'],coordinate_hashes=len(rows),
                   independently_counted_intervals=total_intervals,qp_certificates=total_qp,
-                  scope='Not full frame-search replay or external replication; projection repeated, numerical witnesses checked independently.')
+                  scope='Not full frame-search replay or external replication; projection repeated, numerical witnesses checked independently. Summary discrete outputs exact; floats atol=1e-10, rtol=1e-9.')
     (HERE/'verification.json').write_text(json.dumps(result,indent=2)+'\n')
     print(json.dumps(result,indent=2))
 
