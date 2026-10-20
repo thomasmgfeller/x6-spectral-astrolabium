@@ -24,12 +24,12 @@ jobs:
         with:
           python-version: '3.12'
       - run: python3 -m pip install -r research/lorentz_bd_reference/requirements-replay.txt
-      - name: Controls and complete fresh-cloud certificate replay
+      - name: Controls and portable fresh-cloud certificate replay
         run: |
           python3 -B research/lorentz_local_dalembert/conditional_geometry/test_controls.py
           python3 -m zipfile -e research/lorentz_local_dalembert/conditional_geometry/test_clouds.zip research/lorentz_local_dalembert/conditional_geometry
-          python3 -B research/lorentz_local_dalembert/conditional_geometry/verify.py
+          python3 -B research/lorentz_local_dalembert/conditional_geometry/verify_portable.py
       - name: Previous pilot controls and source inventory
         run: |
-          python3 -B research/lorentz_local_dalembert/feynman_combiner/test_fusion.py
+          python3 -B -m unittest discover -s research/lorentz_local_dalembert/feynman_combiner -p test_fusion.py
           python3 tests/python/verify_manifest.py

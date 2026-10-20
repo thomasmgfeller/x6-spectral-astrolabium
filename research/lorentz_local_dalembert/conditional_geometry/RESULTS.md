@@ -60,7 +60,7 @@ Die Bootstrapintervalle konditionieren auf die Kalibrierung. Nominelle Gaussian-
 
 ## Nachprüfung und Reproduktion
 
-**PASS_ORDER_CERTIFICATES_FIELD_AND_ANALYSIS_REPLAY**: 32 Koordinatenhashes, 2768 unabhängig über Koordinaten gezählte Intervalle, 60 QP-Zertifikate, sämtliche Feld-/Rauschantworten und die eingefrorene Auswertung. Die Relationsprojektion wird erneut gerechnet. Die vollständige teure Rahmensuche ist nicht Teil dieses Replay. Fünf Testgruppen decken Fehlrelationen, ungültige Ordnungen, Jacobian/Transport, gemeinsames Rootrauschen und exakte Kovarianzzerlegung ab.
+**PASS_ORDER_CERTIFICATES_FIELD_AND_ANALYSIS_REPLAY**: 32 Koordinatenhashes, 2768 unabhängig über Koordinaten gezählte Intervalle, 60 QP-Zertifikate, sämtliche Feld-/Rauschantworten und die eingefrorene Auswertung. Die Relationsprojektion wird erneut gerechnet. Die vollständige teure Rahmensuche ist nicht Teil dieses Replay. Fünf Testgruppen decken Fehlrelationen, ungültige Ordnungen, Jacobian/Transport, gemeinsames Rootrauschen und exakte Kovarianzzerlegung ab. Diese Hashgleichheit gilt für den lokalen strengen Replay. Der erste GitHub-Replay scheiterte an Koordinaten-Bytehashes. Ein separater numerischer Plattformtest zählt Abweichungen ausdrücklich; siehe [PORTABILITY.md](PORTABILITY.md).
 
 | Testshard | Wolken | Laufzeit (s) | Peak-RSS (MiB) | Status |
 |---|---:|---:|---:|---|

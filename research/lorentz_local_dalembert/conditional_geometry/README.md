@@ -27,13 +27,18 @@ OPENBLAS_NUM_THREADS=1 python -B research/lorentz_local_dalembert/conditional_ge
 OPENBLAS_NUM_THREADS=1 python -B research/lorentz_local_dalembert/conditional_geometry/verify.py
 ```
 
-The replay regenerates sampler coordinates, counts every used causal interval
+The strict replay regenerates sampler coordinates, counts every used causal interval
 independently, checks QP certificates, repeats the relation correction, and
 recomputes fields, noise and statistics. It does not repeat the full frame search.
 Summary discrete outputs must match exactly; floating outputs use the disclosed
 absolute 1e-10 plus relative 1e-9 tolerance. Coordinate hashes are exact here.
 The later verification/presentation additions do not change frozen inference,
 calibration or test gates.
+
+The first GitHub strict replay failed on coordinate bytehash equality. Use
+`verify_portable.py` for the separate numerical-platform diagnostic; hash
+mismatches remain explicitly counted. See [portability limits](PORTABILITY.md).
+This does not claim bitwise coordinates or a componentwise coordinate comparison.
 
 For full search regeneration, use a separate checkout of the source freeze
 without existing test directories, and run `cg_run.py --shard 0` and

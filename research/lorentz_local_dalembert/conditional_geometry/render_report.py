@@ -82,7 +82,9 @@ def main():
         f"**{v['status']}**: {v['clouds']} Koordinatenhashes, {v['independently_counted_intervals']} unabhängig über Koordinaten gezählte Intervalle, "
         f"{v['qp_certificates']} QP-Zertifikate, sämtliche Feld-/Rauschantworten und die eingefrorene Auswertung. "
         'Die Relationsprojektion wird erneut gerechnet. Die vollständige teure Rahmensuche ist nicht Teil dieses Replay. '
-        'Fünf Testgruppen decken Fehlrelationen, ungültige Ordnungen, Jacobian/Transport, gemeinsames Rootrauschen und exakte Kovarianzzerlegung ab.', '',
+        'Fünf Testgruppen decken Fehlrelationen, ungültige Ordnungen, Jacobian/Transport, gemeinsames Rootrauschen und exakte Kovarianzzerlegung ab. '
+        'Diese Hashgleichheit gilt für den lokalen strengen Replay. Der erste GitHub-Replay scheiterte an Koordinaten-Bytehashes. '
+        'Ein separater numerischer Plattformtest zählt Abweichungen ausdrücklich; siehe [PORTABILITY.md](PORTABILITY.md).', '',
         '| Testshard | Wolken | Laufzeit (s) | Peak-RSS (MiB) | Status |', '|---|---:|---:|---:|---|']
     for e in executions:
         lines.append(f"| {e['shard']} | {len(e['records'])} | {e['seconds']:.1f} | {e['peak_mib']:.1f} | {e['status']} |")
