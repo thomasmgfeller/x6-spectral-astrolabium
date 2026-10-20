@@ -9,6 +9,14 @@ neuer vorab festgelegter Wirksamkeitsversuch.
 - [Abhängigkeiten](requirements.txt) und [numerischer Prüfbericht](verification.json).
 - [Bestehender Gültigkeitsvertrag](../lorentz_proper_time_domain/README.md).
 
+**V1b-Audit vom 20.10.2026:** Die [Python-Portkorrektur mit Originaldaten und
+vollständigem Replay](v1b_port_correction/README.md) erklärt die abweichenden
+alten Referenzwerte durch ein fehlendes äußeres XOR. Die deklarierte Portmatrix
+besteht; **V1b insgesamt bleibt NOT_PASSED**. Der unveränderte native Sampler
+erzeugt für einen bekannten Seed einen Randpunkt. Die endliche
+Randwertbehandlung und der V1b-spezifische Browser-/Export-Freeze sind offen.
+Die unten beschriebenen früheren Softwarechecks ersetzen diese Gates nicht.
+
 ## Bedienung
 
 1. Raumzeitdimension, Hintergrundbudget und wahre normierte Eigenzeit einstellen.

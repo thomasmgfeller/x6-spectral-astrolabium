@@ -1,0 +1,37 @@
+name: V1b Port Correction
+on:
+  pull_request:
+    paths: ['research/lorentz_proper_time_lab/v1b_port_correction/**', '.github/workflows/lorentz-v1b-port.yml']
+  push:
+    branches: [main]
+    paths: ['research/lorentz_proper_time_lab/v1b_port_correction/**', '.github/workflows/lorentz-v1b-port.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  frozen-port-matrix:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Check preserved package and rerun the declared port matrix
+        working-directory: research/lorentz_proper_time_lab/v1b_port_correction
+        run: |
+          sha256sum -c SHA256SUMS
+          node native_reference.cjs "$RUNNER_TEMP/v1b-port/native_reference.json.gz"
+          python3 verify_port.py "$RUNNER_TEMP/v1b-port"
+      - name: Preserve replay (port PASS is not overall V1b PASS)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: v1b-port-replay
+          path: ${{ runner.temp }}/v1b-port
+          retention-days: 30

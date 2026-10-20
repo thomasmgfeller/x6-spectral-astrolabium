@@ -1,0 +1,36 @@
+{
+  "publication_date": "2026-10-20",
+  "base_commit": "560f717c0e25c957bc58bb9df5ec5ac6ad23cad0",
+  "original_archive": "V1b_Portkorrektur_2026-10-20.zip",
+  "original_archive_sha256": "66e4aa9c7f90d3901fccde24a7165a1e9ea5a4ec4bac536df9a0abdae86761b4",
+  "original_package_files": 16,
+  "original_package_files_preserved_byte_for_byte": true,
+  "package_sha256_checks": 15,
+  "source_equals_repository_core": true,
+  "replay_commands": [
+    "node native_reference.cjs <scratch>/native_reference.json.gz",
+    "python3 verify_port.py <scratch>"
+  ],
+  "replay_reports_equal_except_timestamp": true,
+  "native_reference_payload_equal_except_timestamp": true,
+  "replay_byte_identical_files": [
+    "corrected_python_clouds.json.gz",
+    "corrected_python_fixture.json",
+    "missing_xor_python_fixture.json",
+    "native_fixture.json"
+  ],
+  "gates": {
+    "old_result_provenance": "REPRODUCED_MISSING_XOR_VARIANT",
+    "old_port_equivalence": "FAIL",
+    "corrected_port_matrix": "PASS",
+    "native_strict_support": "FAIL_KNOWN_ZERO_INPUT",
+    "browser_and_export_freeze": "OPEN",
+    "overall_V1b": "NOT_PASSED"
+  },
+  "limits": [
+    "Local execution, not independent external replication.",
+    "No change to native sampler or scientific acceptance criteria.",
+    "Historical fixture byte identity is runtime-specific.",
+    "The earlier native statistical diagnostic mentioned by the original report was not rerun in this publication."
+  ]
+}

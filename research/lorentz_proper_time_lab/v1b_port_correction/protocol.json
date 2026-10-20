@@ -1,0 +1,16 @@
+{
+  "validation_id": "V1b_PORT_XOR_CORRECTION",
+  "scope": "Diagnose the supplied Python port and verify a corrected sampling port against unchanged commit-pinned JavaScript; no sampler boundary repair or browser certification.",
+  "known_before_run": ["Missing outer XOR reproduces all 40 submitted PRNG values", "Missing outer XOR reproduces the submitted Python 64-point fixture SHA-256"],
+  "dimensions": [2, 3, 4],
+  "seeds": [0, 1, 20261017, 4294967295],
+  "m": 16384,
+  "theta": 0.5,
+  "prng_values_per_seed": 10000,
+  "normal_values_per_seed": 1000,
+  "integer_comparison": "exact equality of uint32 outputs and division by 2^32",
+  "float_tolerance": {"absolute": 1e-12, "relative": 1e-12, "rule": "abs(python-native) <= absolute + relative*abs(native)"},
+  "membership_comparison": "exact equality for all 196608 point flags and all 12 counts",
+  "boundary_seed": 2463401483,
+  "stop_rule": "Run the fixed matrix without replacing seeds or changing tolerances. Exact equality is required for PRNG/flags/counts; floating transforms use the declared numeric tolerance, not cross-runtime bit identity."
+}
