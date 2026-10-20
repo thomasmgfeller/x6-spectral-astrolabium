@@ -1,0 +1,23 @@
+{
+  "schema": "x6.feynman-operator-calibration/1",
+  "date": "2026-10-20",
+  "rho": 32768,
+  "calibration_seeds": [70010000,70010031],
+  "test_seeds": [70020000,70020031],
+  "minimum_calibration_complete": 24,
+  "minimum_test_complete": 24,
+  "field_noise_sigma": 0.001,
+  "field": "exp(t/2)*cos(x/2)*cos(y/2), coordinates relative to selected root, Box f(root)=-0.75",
+  "arms": ["baseline", "unrestricted_l1", "unrestricted_minimum_variance"],
+  "signed_qp": "separate feasibility diagnostic, not silently substituted into primary arms",
+  "fusion": "nonnegative weights summing to one, minimize calibrated joint covariance; bias corrected using calibration means only",
+  "prior_sigma": 0.5,
+  "interval": "Gaussian nominal 95%, exploratory empirical coverage and exact binomial interval; no coverage guarantee",
+  "maximum_covariance_condition": 100000000,
+  "maximum_points": 35000,
+  "wall_budget_seconds_per_split": 1800,
+  "memory_budget_mib": 2048,
+  "minimum_test_coverage": 0.90,
+  "required_rmse_ratio": 0.95,
+  "decision": "PILOT_SUPPORTED only if both splits complete in budget, >=24 complete in each, all used LP/QP certificates pass, paired fused-post RMSE <=0.95 times calibration-selected-single-post RMSE, >=0.90 empirical Gaussian coverage and no covariance rank/conditioning failure; otherwise CALIBRATION_HOLD. This is a scalar offline pilot, never embedding, online, curvature or guaranteed covariance qualification. HOLD_PHASE3 always."
+}
