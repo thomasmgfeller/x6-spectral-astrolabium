@@ -1,17 +1,34 @@
 # Metadata-conditioned, moment-preserving operator correction
 
-**Checkpoint: interrupted after 27/32 clouds; no final analysis.**
-The public pre-test freeze is `3f6109f4bfb9424352893406e0ba92ddfe6ef858`.
-24 recorded clouds have complete measurements; three lack guarded support.
-Seeds 70210027–70210031 are still missing. The tool interruption ended both
-processes before their finalizers; the original RUNNING execution logs are
-preserved byte-for-byte in `interrupted_clouds.zip`. See `checkpoint.json`
-for record hashes and explicit limitations. No final transfer improvement,
-runtime-budget pass, or new scientific qualification is claimed.
+**Completed evidence: 32/32 records, 29 complete measurements; METADATA_HOLD.**
+The [results](RESULTS.md) show transfer RMSE reductions of 3.18% before and
+0.26% after relation projection. Both miss the frozen 5% improvement target;
+both primary 95% cloud-bootstrap intervals include no improvement. The
+scientific HOLD is independent of the resource telemetry gap described below.
 
-Implemented controls and full calibration refit pass. The new test is incomplete;
-the previous scientific HOLD remains. The [embedding-covariance audit](EMBEDDING_COVARIANCE_AUDIT.md)
-documents the separate prerequisites for covariance-weighted relation repair.
+The original public numerical freeze is `3f6109f4bfb9424352893406e0ba92ddfe6ef858`.
+After an operational interruption, the [resumption procedure](RESUMPTION.md)
+was frozen at `69f989dc19172c938ce0e2afc7ff6c6e808eea4c`. All 27 original
+records remain byte-identical in `interrupted_clouds.zip`, including three
+without guarded support. Only missing seeds 70210027–70210031 were computed,
+with unchanged numerical sources, calibration and statistical criteria.
+`continuation_clouds.zip` contains those five records and their execution logs;
+`test_clouds.zip` is the lossless combined archive. `checkpoint.json` remains
+the historical interruption record, not the current completion status.
+
+**Original process total time and peak RSS are unknown.** The original execution
+and budget gates remain UNVERIFIED (boolean false), regardless of the complete
+record set. `summary.json` separates measured continuation values from explicit
+lower bounds and unknown full measurements. The original RUNNING execution
+logs are preserved unchanged; combined logs say RESUMED_COMPLETE.
+
+Five control groups, the full calibration refit and the local strict numerical
+replay pass. All 32 coordinate bytehashes match locally. Passive
+[matrix diagnostics](matrix_diagnostics.json) find no row-rank loss among the
+58 available moment matrices. They examine stored endpoints, not every solver
+iteration, and do not define a stochastic geometry measurement Jacobian.
+The [embedding-covariance audit](EMBEDDING_COVARIANCE_AUDIT.md) documents the
+separate prerequisites for covariance-weighted relation repair. **HOLD_PHASE3.**
 
 Follow-up to [conditional noise and relation repair](../conditional_geometry/RESULTS.md).
 This pilot tests a restricted version of adaptive bias compensation: weights
@@ -32,13 +49,18 @@ Reproduce controls from the repository root:
 OPENBLAS_NUM_THREADS=1 python -B research/lorentz_local_dalembert/metadata_bias/test_controls.py
 ```
 
-After result artifacts are published:
+Replay the published resumed evidence:
 
 ```sh
-OPENBLAS_NUM_THREADS=1 python -B research/lorentz_local_dalembert/metadata_bias/verify.py
+OPENBLAS_NUM_THREADS=1 python -B research/lorentz_local_dalembert/metadata_bias/resume_evidence.py --verify
 ```
 
-The verifier extracts the archived test files without overwriting differences.
+The adapter assembles the two raw archives in a temporary directory, checks all
+original bytes and source hashes, and invokes the unchanged frozen verifier.
+Only resource reporting/gates are conservatively overridden; all statistical
+metrics and gates use the original analyzer. It also replays the passive matrix
+diagnostics. Portable CI output uses an ignored `.local.json` file, preserving
+the published local strict replay record.
 Add `--strict` for exact sampler coordinate bytehashes; the default numerical
 replay explicitly counts bytehash mismatches and uses predeclared tolerances.
 Neither mode repeats the expensive full frame search. To regenerate that search,

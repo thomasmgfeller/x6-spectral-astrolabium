@@ -1,0 +1,3552 @@
+{
+  "scope": "Passive diagnostics; no changed numerical decisions or inferred embedding covariance.",
+  "geometry_measurement_jacobian": null,
+  "geometry_measurement_jacobian_reason": "No statistical full-embedding observation model has been defined.",
+  "clouds": 32,
+  "complete": 29,
+  "full_row_rank_failures": 0,
+  "maximum_moment_residual": 2.1316282072803006e-13,
+  "condition_by_arm": [
+    {
+      "min": 25.63329041508833,
+      "median": 37.14844202375354,
+      "max": 210.2809525635631
+    },
+    {
+      "min": 25.714255837232628,
+      "median": 37.33666262151867,
+      "max": 214.3004522726943
+    }
+  ],
+  "records": [
+    {
+      "seed": 70210000,
+      "status": "COMPLETE",
+      "moments": [
+        {
+          "arm": 0,
+          "matrix": {
+            "shape": [
+              9,
+              21
+            ],
+            "singular_values": [
+              10.238703520772136,
+              5.028401007636414,
+              3.1878341496727476,
+              2.0533950210135163,
+              0.739037124069101,
+              0.659811259015154,
+              0.4854524968701421,
+              0.3829195612864322,
+              0.27561596026625507
+            ],
+            "rank": 9,
+            "relative_rank_threshold": 1e-12,
+            "condition": 37.14844202375354
+          },
+          "full_row_rank": true,
+          "expected_weight_nullity": 12,
+          "noise_weighted_moment_matrix": {
+            "shape": [
+              9,
+              21
+            ],
+            "singular_values": [
+              6.596793665669337,
+              3.289134155775396,
+              2.607018846669882,
+              1.693936266944647,
+              0.7292241862392865,
+              0.64521174989148,
+              0.47740408668843937,
+              0.3749551149940919,
+              0.2723015230561859
+            ],
+            "rank": 9,
+            "relative_rank_threshold": 1e-12,
+            "condition": 24.22606231368076
+          },
+          "maximum_moment_residual": 6.439293542825908e-15,
+          "existing_condition_guard": 100000.0
+        },
+        {
+          "arm": 1,
+          "matrix": {
+            "shape": [
+              9,
+              21
+            ],
+            "singular_values": [
+              10.254025920376776,
+              5.030006827147048,
+              3.1683332277087057,
+              2.041626266229464,
+              0.7436819927020569,
+              0.6535318096567977,
+              0.4902566243967769,
+              0.3849939927273276,
+              0.27281090031353006
+            ],
+            "rank": 9,
+            "relative_rank_threshold": 1e-12,
+            "condition": 37.58656970301501
+          },
+          "full_row_rank": true,
+          "expected_weight_nullity": 12,
+          "noise_weighted_moment_matrix": {
+            "shape": [
+              9,
+              21
+            ],
+            "singular_values": [
+              6.604768808852895,
+              3.279535976165825,
+              2.606078437314842,
+              1.7011555539531145,
+              0.7352622617126112,
+              0.6424128214524304,
+              0.4851890591034681,
+              0.37762105665261186,
+              0.2691891486749187
+            ],
+            "rank": 9,
+            "relative_rank_threshold": 1e-12,
+            "condition": 24.535791436485507
+          },
+          "maximum_moment_residual": 1.1102230246251565e-14,
+          "existing_condition_guard": 100000.0
+        }
+      ],
+      "projection": {
+        "solver_success": true,
+        "iterations": 2,
+        "minimum_constraint_slack": -1.497960826560285e-16,
+        "active_threshold": 1e-07,
+        "active_constraints": 4,
+        "active_constraint_jacobian": {
+          "shape": [
+            4,
+            63
+          ],
+          "singular_values": [
+            2.0,
+            2.0,
+            2.0,
+            2.0
+          ],
+          "rank": 4,
+          "relative_rank_threshold": 1e-10,
+          "condition": 1.0
+        },
+        "meaning": "Constraint Jacobian only. Redundancy is possible; not a stochastic measurement Jacobian."
+      }
+    },
+    {
+      "seed": 70210001,
+      "status": "COMPLETE",
+      "moments": [
+        {
+          "arm": 0,
+          "matrix": {
+            "shape": [
+              9,
+              15
+            ],
+            "singular_values": [
+              6.140365709461814,
+              4.78920091700697,
+              1.940572293884282,
+              1.3558572183976196,
+              0.6737166353632655,
+              0.6115566252007285,
+              0.2752418867385495,
+              0.14484479665264824,
+              0.06755002435252763
+            ],
+            "rank": 9,
+            "relative_rank_threshold": 1e-12,
+            "condition": 90.90101400136726
+          },
+          "full_row_rank": true,
+          "expected_weight_nullity": 6,
+          "noise_weighted_moment_matrix": {
+            "shape": [
+              9,
+              15
+            ],
+            "singular_values": [
+              4.9832311092524195,
+              2.0575107063918563,
+              1.8275439795590893,
+              1.3470763702975916,
+              0.6711927226916825,
+              0.5466267686156462,
+              0.27509144009493575,
+              0.14230856020901686,
+              0.06637054161951912
+            ],
+            "rank": 9,
+            "relative_rank_threshold": 1e-12,
+            "condition": 75.08197142370291
+          },
+          "maximum_moment_residual": 8.526512829121202e-14,
+          "existing_condition_guard": 100000.0
+        },
+        {
+          "arm": 1,
+          "matrix": {
+            "shape": [
+              9,
+              15
+            ],
+            "singular_values": [
+              6.140365709461814,
+              4.78920091700697,
+              1.940572293884282,
+              1.3558572183976196,
+              0.6737166353632655,
+              0.6115566252007285,
+              0.2752418867385495,
+              0.14484479665264824,
+              0.06755002435252763
+            ],
+            "rank": 9,
+            "relative_rank_threshold": 1e-12,
+            "condition": 90.90101400136726
+          },
+          "full_row_rank": true,
+          "expected_weight_nullity": 6,
+          "noise_weighted_moment_matrix": {
+            "shape": [
+              9,
+              15
+            ],
+            "singular_values": [
+              4.9832311092524195,
+              2.0575107063918563,
+              1.8275439795590893,
+              1.3470763702975916,
+              0.6711927226916825,
+              0.5466267686156462,
+              0.27509144009493575,
+              0.14230856020901686,
+              0.06637054161951912
+            ],
+            "rank": 9,
+            "relative_rank_threshold": 1e-12,
+            "condition": 75.08197142370291
+          },
+          "maximum_moment_residual": 8.704148513061227e-14,
+          "existing_condition_guard": 100000.0
+        }
+      ],
+      "projection": {
+        "solver_success": true,
+        "iterations": 1,
+        "minimum_constraint_slack": 0.007292077697435745,
+        "active_threshold": 1e-07,
+        "active_constraints": 0,
+        "active_constraint_jacobian": {
+          "shape": [
+            0,
+            45
+          ],
+          "singular_values": [],
+          "rank": 0,
+          "relative_rank_threshold": 1e-10,
+          "condition": null
+        },
+        "meaning": "Constraint Jacobian only. Redundancy is possible; not a stochastic measurement Jacobian."
+      }
+    },
+    {
+      "seed": 70210002,
+      "status": "COMPLETE",
+      "moments": [
+        {
+          "arm": 0,
+          "matrix": {
+            "shape": [
+              9,
+              31
+            ],
+            "singular_values": [
+              10.121153040621351,
+              6.468837305202919,
+              3.598484873734014,
+              2.471353717557697,
+              1.560121686624208,
+              1.0097464631635966,
+              0.6841199721441461,
+              0.5056838979434729,
+              0.3348542926718508
+            ],
+            "rank": 9,
+            "relative_rank_threshold": 1e-12,
+            "condition": 30.225543653220655
+          },
+          "full_row_rank": true,
+          "expected_weight_nullity": 22,
+          "noise_weighted_moment_matrix": {
+            "shape": [
+              9,
+              31
+            ],
+            "singular_values": [
+              7.299647466944478,
+              4.40324164881306,
+              3.3712102418878205,
+              1.7105462662481623,
+              1.3797914206294732,
+              0.9943567987934533,
+              0.6727194617296075,
+              0.4978268535490333,
+              0.33446775506255094
+            ],
+            "rank": 9,
+            "relative_rank_threshold": 1e-12,
+            "condition": 21.824667270479704
+          },
+          "maximum_moment_residual": 1.3322676295501878e-14,
+          "existing_condition_guard": 100000.0
+        },
+        {
+          "arm": 1,
+          "matrix": {
+            "shape": [
+              9,
+              31
+            ],
+            "singular_values": [
+              10.1215630538827,
+              6.469645680203107,
+              3.5977583872404915,
+              2.4723997818143353,
+              1.558296376429129,
+              1.009717795777959,
+              0.6835225159882745,
+              0.5057167735184999,
+              0.3349579133009006
+            ],
+            "rank": 9,
+            "relative_rank_threshold": 1e-12,
+            "condition": 30.217417329054893
+          },
+          "full_row_rank": true,
+          "expected_weight_nullity": 22,
+          "noise_weighted_moment_matrix": {
+            "shape": [
+              9,
+              31
+            ],
+            "singular_values": [
+              7.299703395446779,
+              4.403188360506695,
+              3.370972186101683,
+              1.7116272694836776,
+              1.379842150245484,
+              0.9946302309137073,
+              0.6722062751590803,
+              0.49778965903318245,
+              0.3345871371259274
+            ],
+            "rank": 9,
+            "relative_rank_threshold": 1e-12,
+            "condition": 21.81704729641001
+          },
+          "maximum_moment_residual": 2.5757174171303632e-14,
+          "existing_condition_guard": 100000.0
+        }
+      ],
+      "projection": {
+        "solver_success": true,
+        "iterations": 4,
+        "minimum_constraint_slack": -9.428493142477068e-17,
+        "active_threshold": 1e-07,
+        "active_constraints": 5,
+        "active_constraint_jacobian": {
+          "shape": [
+            5,
+            93
+          ],
+          "singular_values": [
+            2.5853272278143558,
+            2.0000000000000004,
+            2.0000000000000004,
+            2.0,
+            1.1472066619061008
+          ],
+          "rank": 5,
+          "relative_rank_threshold": 1e-10,
+          "condition": 2.253584566462329
+        },
+        "meaning": "Constraint Jacobian only. Redundancy is possible; not a stochastic measurement Jacobian."
+      }
+    },
+    {
+      "seed": 70210003,
+      "status": "NO_GUARDED_SUPPORT"
+    },
+    {
+      "seed": 70210004,
+      "status": "COMPLETE",
+      "moments": [
+        {
+          "arm": 0,
+          "matrix": {
+            "shape": [
+              9,
+              19
+            ],
+            "singular_values": [
+              8.842983145584078,
+              5.1407584867876555,
+              2.0660676740111157,
+              1.6966666353524262,
+              1.0580215310543148,
+              0.6319489080895068,
+              0.2302856658301571,
+              0.21256719409600575,
+              0.09757792084395996
+            ],
+            "rank": 9,
+            "relative_rank_threshold": 1e-12,
+            "condition": 90.62483673663412
+          },
+          "full_row_rank": true,
+          "expected_weight_nullity": 10,
+          "noise_weighted_moment_matrix": {
+            "shape": [
+              9,
+              19
+            ],
+            "singular_values": [
+              6.174213598789094,
+              2.7465846614387477,
+              2.0382519812347617,
+              1.2971077513302616,
+              1.004160721211949,
+              0.6274128822039242,
+              0.2301780090187631,
+              0.21254163618753127,
+              0.09156146654061201
+            ],
+            "rank": 9,
+            "relative_rank_threshold": 1e-12,
+            "condition": 67.43244546056421
+          },
+          "maximum_moment_residual": 4.9404924595819466e-14,
+          "existing_condition_guard": 100000.0
+        },
+        {
+          "arm": 1,
+          "matrix": {
+            "shape": [
+              9,
+              19
+            ],
+            "singular_values": [
+              8.84623165794868,
+              5.140655612582212,
+              2.061655426022776,
+              1.6954875187434886,
+              1.0585411039517656,
+              0.6321528907706777,
+              0.22626625095349542,
+              0.20970414315982747,
+              0.0964959248967578
+            ],
+            "rank": 9,
+            "relative_rank_threshold": 1e-12,
+            "condition": 91.67466571685151
+          },
+          "full_row_rank": true,
+          "expected_weight_nullity": 10,
+          "noise_weighted_moment_matrix": {
+            "shape": [
+              9,
+              19
+            ],
+            "singular_values": [
+              6.175183486675612,
+              2.7467108554786366,
+              2.035779775992511,
+              1.3000427325125328,
+              1.0085542969708485,
+              0.6280230236448193,
+              0.22617929525723732,
+              0.20967564958069312,
+              0.09064951506014803
+            ],
+            "rank": 9,
+            "relative_rank_threshold": 1e-12,
+            "condition": 68.12152809177454
+          },
+          "maximum_moment_residual": 4.596323321948148e-14,
+          "existing_condition_guard": 100000.0
+        }
+      ],
+      "projection": {
+        "solver_success": true,
+        "iterations": 2,
+        "minimum_constraint_slack": 1.5551524911588954e-16,
+        "active_threshold": 1e-07,
+        "active_constraints": 2,
+        "active_constraint_jacobian": {
+          "shape": [
+            2,
+            57
+          ],
+          "singular_values": [
+            2.0,
+            2.0
+          ],
+          "rank": 2,
+          "relative_rank_threshold": 1e-10,
+          "condition": 1.0
+        },
+        "meaning": "Constraint Jacobian only. Redundancy is possible; not a stochastic measurement Jacobian."
+      }
+    },
+    {
+      "seed": 70210005,
+      "status": "COMPLETE",
+      "moments": [
+        {
+          "arm": 0,
+          "matrix": {
+            "shape": [
+              9,
+              14
+            ],
+            "singular_values": [
+              6.413794536703032,
+              4.800754042598216,
+              2.229870714307168,
+              1.1474057884979438,
+              0.5632426180423724,
+              0.41547428330895764,
+              0.27674858671262537,
+              0.20185108730012377,
+              0.0875657933380574
+            ],
+            "rank": 9,
+            "relative_rank_threshold": 1e-12,
+            "condition": 73.24543400117292
+          },
+          "full_row_rank": true,
+          "expected_weight_nullity": 5,
+          "noise_weighted_moment_matrix": {
+            "shape": [
+              9,
+              14
+            ],
+            "singular_values": [
+              4.811364794082506,
+              2.2885808105864767,
+              1.8651828611753454,
+              1.1300927152182492,
+              0.5622656491575218,
+              0.4131097258887604,
+              0.27617920002973284,
+              0.19815653930656,
+              0.08443323196300084
+            ],
+            "rank": 9,
+            "relative_rank_threshold": 1e-12,
+            "condition": 56.98425468529826
+          },
+          "maximum_moment_residual": 5.179190409876355e-14,
+          "existing_condition_guard": 100000.0
+        },
+        {
+          "arm": 1,
+          "matrix": {
+            "shape": [
+              9,
+              14
+            ],
+            "singular_values": [
+              6.413396394755969,
+              4.800578724775753,
+              2.229900872000665,
+              1.1478684973066666,
+              0.5638989090410791,
+              0.41602126639771086,
+              0.27677739577649096,
+              0.2018760104377223,
+              0.08752173164375372
+            ],
+            "rank": 9,
+            "relative_rank_threshold": 1e-12,
+            "condition": 73.27775941249539
+          },
+          "full_row_rank": true,
+          "expected_weight_nullity": 5,
+          "noise_weighted_moment_matrix": {
+            "shape": [
+              9,
+              14
+            ],
+            "singular_values": [
+              4.811255944857255,
+              2.2885409479101906,
+              1.8642683362805499,
+              1.1304517643107823,
+              0.5628861526912027,
+              0.41374323295321747,
+              0.2762008001842117,
+              0.19811386880256002,
+              0.08439919217758612
+            ],
+            "rank": 9,
+            "relative_rank_threshold": 1e-12,
+            "condition": 57.005947814450515
+          },
+          "maximum_moment_residual": 4.3076653355456074e-14,
+          "existing_condition_guard": 100000.0
+        }
+      ],
+      "projection": {
+        "solver_success": true,
+        "iterations": 2,
+        "minimum_constraint_slack": 1.0000409788463172e-16,
+        "active_threshold": 1e-07,
+        "active_constraints": 1,
+        "active_constraint_jacobian": {
+          "shape": [
+            1,
+            42
+          ],
+          "singular_values": [
+            2.0
+          ],
+          "rank": 1,
+          "relative_rank_threshold": 1e-10,
+          "condition": 1.0
+        },
+        "meaning": "Constraint Jacobian only. Redundancy is possible; not a stochastic measurement Jacobian."
+      }
+    },
+    {
+      "seed": 70210006,
+      "status": "COMPLETE",
+      "moments": [
+        {
+          "arm": 0,
+          "matrix": {
+            "shape": [
+              9,
+              22
+            ],
+            "singular_values": [
+              8.06645950204538,
+              3.9103905056173223,
+              2.485963346606699,
+              1.8839219628110906,
+              1.0964425196240892,
+              0.6519349930675715,
+              0.427833065393901,
+              0.2741082962617229,
+              0.19421879207399878
+            ],
+            "rank": 9,
+            "relative_rank_threshold": 1e-12,
+            "condition": 41.532847650355066
+          },
+          "full_row_rank": true,
+          "expected_weight_nullity": 13,
+          "noise_weighted_moment_matrix": {
+            "shape": [
+              9,
+              22
+            ],
+            "singular_values": [
+              5.083786635514052,
+              2.4870616453968646,
+              2.043739745474056,
+              1.7018624635160235,
+              1.013970816378711,
+              0.620885494107479,
+              0.42772553321744156,
+              0.2739511444935309,
+              0.19418128329595066
+            ],
+            "rank": 9,
+            "relative_rank_threshold": 1e-12,
+            "condition": 26.18062126907401
+          },
+          "maximum_moment_residual": 7.993605777301127e-15,
+          "existing_condition_guard": 100000.0
+        },
+        {
+          "arm": 1,
+          "matrix": {
+            "shape": [
+              9,
+              22
+            ],
+            "singular_values": [
+              8.062446767412357,
+              3.9099751185278397,
+              2.4901730995052342,
+              1.884071392123069,
+              1.0962425415209187,
+              0.6519330822058763,
+              0.42676476336354774,
+              0.27400124131332726,
+              0.19439661168790065
+            ],
+            "rank": 9,
+            "relative_rank_threshold": 1e-12,
+            "condition": 41.47421448042743
+          },
+          "full_row_rank": true,
+          "expected_weight_nullity": 13,
+          "noise_weighted_moment_matrix": {
+            "shape": [
+              9,
+              22
+            ],
+            "singular_values": [
+              5.082148500228648,
+              2.491175853390478,
+              2.04162376485985,
+              1.695862412905769,
+              1.0113609798599472,
+              0.6203314146227954,
+              0.42670367882796495,
+              0.27381430987334004,
+              0.19437051556351106
+            ],
+            "rank": 9,
+            "relative_rank_threshold": 1e-12,
+            "condition": 26.146704840982135
+          },
+          "maximum_moment_residual": 8.881784197001252e-15,
+          "existing_condition_guard": 100000.0
+        }
+      ],
+      "projection": {
+        "solver_success": true,
+        "iterations": 2,
+        "minimum_constraint_slack": 1.6737371037744975e-17,
+        "active_threshold": 1e-07,
+        "active_constraints": 2,
+        "active_constraint_jacobian": {
+          "shape": [
+            2,
+            66
+          ],
+          "singular_values": [
+            2.2908464586436863,
+            1.6589220906720366
+          ],
+          "rank": 2,
+          "relative_rank_threshold": 1e-10,
+          "condition": 1.3809246808665103
+        },
+        "meaning": "Constraint Jacobian only. Redundancy is possible; not a stochastic measurement Jacobian."
+      }
+    },
+    {
+      "seed": 70210007,
+      "status": "COMPLETE",
+      "moments": [
+        {
+          "arm": 0,
+          "matrix": {
+            "shape": [
+              9,
+              24
+            ],
+            "singular_values": [
+              8.893627482037664,
+              6.5952195596268295,
+              3.197059250658149,
+              2.206938196801912,
+              1.4651252405268178,
+              1.2101285425380528,
+              0.454682318663851,
+              0.3387278053838387,
+              0.2735723025931185
+            ],
+            "rank": 9,
+            "relative_rank_threshold": 1e-12,
+            "condition": 32.509239413995324
+          },
+          "full_row_rank": true,
+          "expected_weight_nullity": 15,
+          "noise_weighted_moment_matrix": {
+            "shape": [
+              9,
+              24
+            ],
+            "singular_values": [
+              6.602566775814026,
+              3.3094015375975325,
+              3.1803191853930253,
+              1.6426933352726265,
+              1.386199248464341,
+              1.1355595042207263,
+              0.454449174145622,
+              0.3382559972224612,
+              0.27290010500636375
+            ],
+            "rank": 9,
+            "relative_rank_threshold": 1e-12,
+            "condition": 24.194079279156234
+          },
+          "maximum_moment_residual": 1.554312234475219e-14,
+          "existing_condition_guard": 100000.0
+        },
+        {
+          "arm": 1,
+          "matrix": {
+            "shape": [
+              9,
+              24
+            ],
+            "singular_values": [
+              8.893975279952075,
+              6.59504824027732,
+              3.1976722915019122,
+              2.206521407325816,
+              1.4662035884067708,
+              1.2089436824761024,
+              0.4549570428576446,
+              0.338586803130319,
+              0.2726589841771391
+            ],
+            "rank": 9,
+            "relative_rank_threshold": 1e-12,
+            "condition": 32.61941031135766
+          },
+          "full_row_rank": true,
+          "expected_weight_nullity": 15,
+          "noise_weighted_moment_matrix": {
+            "shape": [
+              9,
+              24
+            ],
+            "singular_values": [
+              6.602662132767425,
+              3.3096371278531493,
+              3.179729846832237,
+              1.6433864709117576,
+              1.3870451403073385,
+              1.135934149913242,
+              0.45468067448825017,
+              0.3381403996421247,
+              0.271951945210236
+            ],
+            "rank": 9,
+            "relative_rank_threshold": 1e-12,
+            "condition": 24.27878251675365
+          },
+          "maximum_moment_residual": 7.993605777301127e-15,
+          "existing_condition_guard": 100000.0
+        }
+      ],
+      "projection": {
+        "solver_success": true,
+        "iterations": 2,
+        "minimum_constraint_slack": -6.652935580914177e-17,
+        "active_threshold": 1e-07,
+        "active_constraints": 3,
+        "active_constraint_jacobian": {
+          "shape": [
+            3,
+            72
+          ],
+          "singular_values": [
+            2.0,
+            2.0,
+            2.0
+          ],
+          "rank": 3,
+          "relative_rank_threshold": 1e-10,
+          "condition": 1.0
+        },
+        "meaning": "Constraint Jacobian only. Redundancy is possible; not a stochastic measurement Jacobian."
+      }
+    },
+    {
+      "seed": 70210008,
+      "status": "COMPLETE",
+      "moments": [
+        {
+          "arm": 0,
+          "matrix": {
+            "shape": [
+              9,
+              17
+            ],
+            "singular_values": [
+              5.8658996278290925,
+              3.842786804528697,
+              2.251027128164763,
+              1.4472068238469262,
+              0.8362589320469809,
+              0.507067194772749,
+              0.3400479925158053,
+              0.256739224345417,
+              0.1754401697162541
+            ],
+            "rank": 9,
+            "relative_rank_threshold": 1e-12,
+            "condition": 33.43532805124522
+          },
+          "full_row_rank": true,
+          "expected_weight_nullity": 8,
+          "noise_weighted_moment_matrix": {
+            "shape": [
+              9,
+              17
+            ],
+            "singular_values": [
+              4.22779617704987,
+              2.6008363917091044,
+              1.5533440371062135,
+              1.4009998170233142,
+              0.823869978242098,
+              0.48369896367703513,
+              0.33425523188110984,
+              0.24790220734340035,
+              0.17120299277410547
+            ],
+            "rank": 9,
+            "relative_rank_threshold": 1e-12,
+            "condition": 24.69463943675479
+          },
+          "maximum_moment_residual": 1.0658141036401503e-14,
+          "existing_condition_guard": 100000.0
+        },
+        {
+          "arm": 1,
+          "matrix": {
+            "shape": [
+              9,
+              17
+            ],
+            "singular_values": [
+              5.864187737013393,
+              3.8428353508594544,
+              2.2517297857714387,
+              1.4479552199052292,
+              0.8363872601052298,
+              0.5075392588607519,
+              0.340009563435412,
+              0.25752602247533685,
+              0.17569105902239546
+            ],
+            "rank": 9,
+            "relative_rank_threshold": 1e-12,
+            "condition": 33.37783817596478
+          },
+          "full_row_rank": true,
+          "expected_weight_nullity": 8,
+          "noise_weighted_moment_matrix": {
+            "shape": [
+              9,
+              17
+            ],
+            "singular_values": [
+              4.227460663459189,
+              2.6013748313494753,
+              1.551369905206274,
+              1.4003096407362245,
+              0.8239525399525518,
+              0.48382610988125396,
+              0.33412857852580274,
+              0.2482632102894688,
+              0.17175792947834065
+            ],
+            "rank": 9,
+            "relative_rank_threshold": 1e-12,
+            "condition": 24.612899540060468
+          },
+          "maximum_moment_residual": 1.061650767297806e-14,
+          "existing_condition_guard": 100000.0
+        }
+      ],
+      "projection": {
+        "solver_success": true,
+        "iterations": 2,
+        "minimum_constraint_slack": -1.1018204577883939e-17,
+        "active_threshold": 1e-07,
+        "active_constraints": 1,
+        "active_constraint_jacobian": {
+          "shape": [
+            1,
+            51
+          ],
+          "singular_values": [
+            2.0
+          ],
+          "rank": 1,
+          "relative_rank_threshold": 1e-10,
+          "condition": 1.0
+        },
+        "meaning": "Constraint Jacobian only. Redundancy is possible; not a stochastic measurement Jacobian."
+      }
+    },
+    {
+      "seed": 70210009,
+      "status": "NO_GUARDED_SUPPORT"
+    },
+    {
+      "seed": 70210010,
+      "status": "COMPLETE",
+      "moments": [
+        {
+          "arm": 0,
+          "matrix": {
+            "shape": [
+              9,
+              23
+            ],
+            "singular_values": [
+              7.3181175902821165,
+              5.693775650341442,
+              2.7019372300044893,
+              2.0896731584979396,
+              1.3288571149904966,
+              1.1434688550869034,
+              0.5692889515846313,
+              0.38383453175055354,
+              0.19794345273819364
+            ],
+            "rank": 9,
+            "relative_rank_threshold": 1e-12,
+            "condition": 36.97074840844215
+          },
+          "full_row_rank": true,
+          "expected_weight_nullity": 14,
+          "noise_weighted_moment_matrix": {
+            "shape": [
+              9,
+              23
+            ],
+            "singular_values": [
+              5.848549989553012,
+              3.041073156952044,
+              2.3383158227639718,
+              1.6013615972611963,
+              1.2342753477166648,
+              1.139208333487713,
+              0.5692884363507338,
+              0.3820722680344551,
+              0.197531886972754
+            ],
+            "rank": 9,
+            "relative_rank_threshold": 1e-12,
+            "condition": 29.60813101714416
+          },
+          "maximum_moment_residual": 5.2513549064769904e-14,
+          "existing_condition_guard": 100000.0
+        },
+        {
+          "arm": 1,
+          "matrix": {
+            "shape": [
+              9,
+              23
+            ],
+            "singular_values": [
+              7.329138245653535,
+              5.693281805973405,
+              2.6880581113736755,
+              2.0911914339845303,
+              1.328280219610778,
+              1.1434600335016185,
+              0.5592073113030417,
+              0.3812607675047935,
+              0.19629869760853902
+            ],
+            "rank": 9,
+            "relative_rank_threshold": 1e-12,
+            "condition": 37.33666262151867
+          },
+          "full_row_rank": true,
+          "expected_weight_nullity": 14,
+          "noise_weighted_moment_matrix": {
+            "shape": [
+              9,
+              23
+            ],
+            "singular_values": [
+              5.851271823850135,
+              3.040626938098935,
+              2.3332835465126913,
+              1.6114182208073142,
+              1.2387675209665874,
+              1.139050906735011,
+              0.5591979513282995,
+              0.3796600992440312,
+              0.19582334909495466
+            ],
+            "rank": 9,
+            "relative_rank_threshold": 1e-12,
+            "condition": 29.880358245802732
+          },
+          "maximum_moment_residual": 4.723998969780041e-14,
+          "existing_condition_guard": 100000.0
+        }
+      ],
+      "projection": {
+        "solver_success": true,
+        "iterations": 2,
+        "minimum_constraint_slack": 1.0000409788463172e-16,
+        "active_threshold": 1e-07,
+        "active_constraints": 2,
+        "active_constraint_jacobian": {
+          "shape": [
+            2,
+            69
+          ],
+          "singular_values": [
+            2.0,
+            2.0
+          ],
+          "rank": 2,
+          "relative_rank_threshold": 1e-10,
+          "condition": 1.0
+        },
+        "meaning": "Constraint Jacobian only. Redundancy is possible; not a stochastic measurement Jacobian."
+      }
+    },
+    {
+      "seed": 70210011,
+      "status": "COMPLETE",
+      "moments": [
+        {
+          "arm": 0,
+          "matrix": {
+            "shape": [
+              9,
+              26
+            ],
+            "singular_values": [
+              12.910804815262034,
+              7.2260447406956985,
+              2.7240553595528465,
+              1.743105992488097,
+              1.3472333367994507,
+              0.8786960526870887,
+              0.3383803703716459,
+              0.22994901168122572,
+              0.14280483559264484
+            ],
+            "rank": 9,
+            "relative_rank_threshold": 1e-12,
+            "condition": 90.40873694284765
+          },
+          "full_row_rank": true,
+          "expected_weight_nullity": 17,
+          "noise_weighted_moment_matrix": {
+            "shape": [
+              9,
+              26
+            ],
+            "singular_values": [
+              8.369568599144982,
+              4.424809861032465,
+              2.300161650226657,
+              1.4784837551008165,
+              1.1978788782856324,
+              0.8183787755340495,
+              0.3373098976920268,
+              0.22152413080540562,
+              0.14168977332895535
+            ],
+            "rank": 9,
+            "relative_rank_threshold": 1e-12,
+            "condition": 59.06967314933659
+          },
+          "maximum_moment_residual": 2.1316282072803006e-13,
+          "existing_condition_guard": 100000.0
+        },
+        {
+          "arm": 1,
+          "matrix": {
+            "shape": [
+              9,
+              26
+            ],
+            "singular_values": [
+              12.909014371237951,
+              7.224987474703421,
+              2.724199210747509,
+              1.7459710896469887,
+              1.346568372856536,
+              0.880023989064392,
+              0.33970767597360224,
+              0.23183886452866545,
+              0.14274008550832357
+            ],
+            "rank": 9,
+            "relative_rank_threshold": 1e-12,
+            "condition": 90.43720497480851
+          },
+          "full_row_rank": true,
+          "expected_weight_nullity": 17,
+          "noise_weighted_moment_matrix": {
+            "shape": [
+              9,
+              26
+            ],
+            "singular_values": [
+              8.369426679070191,
+              4.423764653602228,
+              2.300417469497777,
+              1.4788619481242182,
+              1.1928311149370872,
+              0.8169277044222844,
+              0.33882137693720576,
+              0.2226969920299649,
+              0.14174050139581834
+            ],
+            "rank": 9,
+            "relative_rank_threshold": 1e-12,
+            "condition": 59.047531204211666
+          },
+          "maximum_moment_residual": 1.1057821325266559e-13,
+          "existing_condition_guard": 100000.0
+        }
+      ],
+      "projection": {
+        "solver_success": true,
+        "iterations": 5,
+        "minimum_constraint_slack": -1.721947508626781e-14,
+        "active_threshold": 1e-07,
+        "active_constraints": 6,
+        "active_constraint_jacobian": {
+          "shape": [
+            6,
+            78
+          ],
+          "singular_values": [
+            2.448301312529144,
+            2.3550932879452606,
+            2.0470835848387936,
+            1.9517809294804462,
+            1.566376584693215,
+            1.416269989468134
+          ],
+          "rank": 6,
+          "relative_rank_threshold": 1e-10,
+          "condition": 1.728696739135579
+        },
+        "meaning": "Constraint Jacobian only. Redundancy is possible; not a stochastic measurement Jacobian."
+      }
+    },
+    {
+      "seed": 70210012,
+      "status": "COMPLETE",
+      "moments": [
+        {
+          "arm": 0,
+          "matrix": {
+            "shape": [
+              9,
+              16
+            ],
+            "singular_values": [
+              7.04466647624269,
+              4.061217588242255,
+              2.4431208976183747,
+              1.2341708726222154,
+              0.8446005392768716,
+              0.3138271267411895,
+              0.20974350274932888,
+              0.11947418798680083,
+              0.09927088663709785
+            ],
+            "rank": 9,
+            "relative_rank_threshold": 1e-12,
+            "condition": 70.96407330374417
+          },
+          "full_row_rank": true,
+          "expected_weight_nullity": 7,
+          "noise_weighted_moment_matrix": {
+            "shape": [
+              9,
+              16
+            ],
+            "singular_values": [
+              4.972892836949841,
+              2.48542212791341,
+              1.7356658426782168,
+              1.1952065429619487,
+              0.8072787245781762,
+              0.313816473521445,
+              0.20311249369673856,
+              0.11338585738233288,
+              0.09899573245895456
+            ],
+            "rank": 9,
+            "relative_rank_threshold": 1e-12,
+            "condition": 50.233406162348395
+          },
+          "maximum_moment_residual": 6.750155989720952e-14,
+          "existing_condition_guard": 100000.0
+        },
+        {
+          "arm": 1,
+          "matrix": {
+            "shape": [
+              9,
+              16
+            ],
+            "singular_values": [
+              7.042351361239039,
+              4.06088588216017,
+              2.4418999380109114,
+              1.2357386827421335,
+              0.8474373047708939,
+              0.3137824320564519,
+              0.21291593789453792,
+              0.11969610364488148,
+              0.10033762033480768
+            ],
+            "rank": 9,
+            "relative_rank_threshold": 1e-12,
+            "condition": 70.18654954881372
+          },
+          "full_row_rank": true,
+          "expected_weight_nullity": 7,
+          "noise_weighted_moment_matrix": {
+            "shape": [
+              9,
+              16
+            ],
+            "singular_values": [
+              4.972419341930351,
+              2.4854732698413153,
+              1.7281279211008955,
+              1.1964113425533847,
+              0.8102765876501126,
+              0.3137645857998873,
+              0.2058157765444418,
+              0.11376835895434174,
+              0.10019488894000471
+            ],
+            "rank": 9,
+            "relative_rank_threshold": 1e-12,
+            "condition": 49.627474959404026
+          },
+          "maximum_moment_residual": 2.5757174171303632e-14,
+          "existing_condition_guard": 100000.0
+        }
+      ],
+      "projection": {
+        "solver_success": true,
+        "iterations": 2,
+        "minimum_constraint_slack": -1.497960826560285e-16,
+        "active_threshold": 1e-07,
+        "active_constraints": 1,
+        "active_constraint_jacobian": {
+          "shape": [
+            1,
+            48
+          ],
+          "singular_values": [
+            2.0
+          ],
+          "rank": 1,
+          "relative_rank_threshold": 1e-10,
+          "condition": 1.0
+        },
+        "meaning": "Constraint Jacobian only. Redundancy is possible; not a stochastic measurement Jacobian."
+      }
+    },
+    {
+      "seed": 70210013,
+      "status": "NO_GUARDED_SUPPORT"
+    },
+    {
+      "seed": 70210014,
+      "status": "COMPLETE",
+      "moments": [
+        {
+          "arm": 0,
+          "matrix": {
+            "shape": [
+              9,
+              11
+            ],
+            "singular_values": [
+              5.7998344269239155,
+              4.753731041655102,
+              1.9914149797094784,
+              0.8700093996615781,
+              0.7495934346122815,
+              0.47553096639542236,
+              0.2019096291428989,
+              0.05408182580031675,
+              0.027581358921088008
+            ],
+            "rank": 9,
+            "relative_rank_threshold": 1e-12,
+            "condition": 210.2809525635631
+          },
+          "full_row_rank": true,
+          "expected_weight_nullity": 2,
+          "noise_weighted_moment_matrix": {
+            "shape": [
+              9,
+              11
+            ],
+            "singular_values": [
+              4.759100371512288,
+              2.110224040476849,
+              1.7105894474472447,
+              0.864048700344269,
+              0.7311581533035031,
+              0.47295087919050727,
+              0.20145999850430424,
+              0.05400289419458889,
+              0.027263935602995885
+            ],
+            "rank": 9,
+            "relative_rank_threshold": 1e-12,
+            "condition": 174.55661724015135
+          },
+          "maximum_moment_residual": 1.652011860642233e-13,
+          "existing_condition_guard": 100000.0
+        },
+        {
+          "arm": 1,
+          "matrix": {
+            "shape": [
+              9,
+              11
+            ],
+            "singular_values": [
+              5.800613669178824,
+              4.753803769673841,
+              1.9903214980168773,
+              0.8699238154770222,
+              0.7496028404304098,
+              0.47568152725674534,
+              0.20062997807627192,
+              0.05410798507562686,
+              0.02706766881573178
+            ],
+            "rank": 9,
+            "relative_rank_threshold": 1e-12,
+            "condition": 214.3004522726943
+          },
+          "full_row_rank": true,
+          "expected_weight_nullity": 2,
+          "noise_weighted_moment_matrix": {
+            "shape": [
+              9,
+              11
+            ],
+            "singular_values": [
+              4.759244527828349,
+              2.1101902160498636,
+              1.711062666049283,
+              0.8640178336092573,
+              0.7312595849210216,
+              0.4731690916283409,
+              0.20018867623902348,
+              0.0540249374875864,
+              0.026762041326519853
+            ],
+            "rank": 9,
+            "relative_rank_threshold": 1e-12,
+            "condition": 177.8356318100508
+          },
+          "maximum_moment_residual": 1.8685053504441385e-13,
+          "existing_condition_guard": 100000.0
+        }
+      ],
+      "projection": {
+        "solver_success": true,
+        "iterations": 2,
+        "minimum_constraint_slack": 8.612631007681726e-17,
+        "active_threshold": 1e-07,
+        "active_constraints": 1,
+        "active_constraint_jacobian": {
+          "shape": [
+            1,
+            33
+          ],
+          "singular_values": [
+            2.0
+          ],
+          "rank": 1,
+          "relative_rank_threshold": 1e-10,
+          "condition": 1.0
+        },
+        "meaning": "Constraint Jacobian only. Redundancy is possible; not a stochastic measurement Jacobian."
+      }
+    },
+    {
+      "seed": 70210015,
+      "status": "COMPLETE",
+      "moments": [
+        {
+          "arm": 0,
+          "matrix": {
+            "shape": [
+              9,
+              23
+            ],
+            "singular_values": [
+              7.549019538657543,
+              5.530016614225868,
+              2.4153001084577297,
+              1.43455493262261,
+              0.898154054007606,
+              0.7251967425887634,
+              0.3832224463453603,
+              0.16655056057162262,
+              0.13570045347316428
+            ],
+            "rank": 9,
+            "relative_rank_threshold": 1e-12,
+            "condition": 55.630024406295846
+          },
+          "full_row_rank": true,
+          "expected_weight_nullity": 14,
+          "noise_weighted_moment_matrix": {
+            "shape": [
+              9,
+              23
+            ],
+            "singular_values": [
+              5.685657985167697,
+              2.4154565778592865,
+              1.9417920177030648,
+              1.3527011524008927,
+              0.8724858279994044,
+              0.7250586629315509,
+              0.3786767992792144,
+              0.1645425978163374,
+              0.13278592711628767
+            ],
+            "rank": 9,
+            "relative_rank_threshold": 1e-12,
+            "condition": 42.818227116706915
+          },
+          "maximum_moment_residual": 1.84297022087776e-14,
+          "existing_condition_guard": 100000.0
+        },
+        {
+          "arm": 1,
+          "matrix": {
+            "shape": [
+              9,
+              23
+            ],
+            "singular_values": [
+              7.5452851905145675,
+              5.530172875071184,
+              2.4152487609759223,
+              1.4388839919008314,
+              0.900660111852624,
+              0.7252659276276017,
+              0.3833456275037274,
+              0.1672212466702776,
+              0.13703483429977145
+            ],
+            "rank": 9,
+            "relative_rank_threshold": 1e-12,
+            "condition": 55.06107428136724
+          },
+          "full_row_rank": true,
+          "expected_weight_nullity": 14,
+          "noise_weighted_moment_matrix": {
+            "shape": [
+              9,
+              23
+            ],
+            "singular_values": [
+              5.685579746522945,
+              2.415396823188853,
+              1.9338186521731844,
+              1.3556173647111645,
+              0.8732261805052698,
+              0.725087095997083,
+              0.3784865136164586,
+              0.16511141090537207,
+              0.13436902780549437
+            ],
+            "rank": 9,
+            "relative_rank_threshold": 1e-12,
+            "condition": 42.313171713596795
+          },
+          "maximum_moment_residual": 1.9095836023552692e-14,
+          "existing_condition_guard": 100000.0
+        }
+      ],
+      "projection": {
+        "solver_success": true,
+        "iterations": 4,
+        "minimum_constraint_slack": -3.874606107419527e-12,
+        "active_threshold": 1e-07,
+        "active_constraints": 4,
+        "active_constraint_jacobian": {
+          "shape": [
+            4,
+            69
+          ],
+          "singular_values": [
+            2.201943515631082,
+            2.0,
+            2.0,
+            1.7752309015928696
+          ],
+          "rank": 4,
+          "relative_rank_threshold": 1e-10,
+          "condition": 1.2403702040423776
+        },
+        "meaning": "Constraint Jacobian only. Redundancy is possible; not a stochastic measurement Jacobian."
+      }
+    },
+    {
+      "seed": 70210016,
+      "status": "COMPLETE",
+      "moments": [
+        {
+          "arm": 0,
+          "matrix": {
+            "shape": [
+              9,
+              19
+            ],
+            "singular_values": [
+              7.1669387880702,
+              5.648888961856895,
+              2.89970033055533,
+              1.7665986657913642,
+              0.9957319682489595,
+              0.8617495892176339,
+              0.3086660330035994,
+              0.26110439262315716,
+              0.1641669814663521
+            ],
+            "rank": 9,
+            "relative_rank_threshold": 1e-12,
+            "condition": 43.656396213505005
+          },
+          "full_row_rank": true,
+          "expected_weight_nullity": 10,
+          "noise_weighted_moment_matrix": {
+            "shape": [
+              9,
+              19
+            ],
+            "singular_values": [
+              5.707138871829588,
+              3.2172932002261794,
+              2.521203286006897,
+              1.2730453108920707,
+              0.9957234727381208,
+              0.8318116202483977,
+              0.30465501067636913,
+              0.26073552460860766,
+              0.1629147227406124
+            ],
+            "rank": 9,
+            "relative_rank_threshold": 1e-12,
+            "condition": 35.03144943453829
+          },
+          "maximum_moment_residual": 2.883804306463844e-14,
+          "existing_condition_guard": 100000.0
+        },
+        {
+          "arm": 1,
+          "matrix": {
+            "shape": [
+              9,
+              19
+            ],
+            "singular_values": [
+              7.1669387880702,
+              5.648888961856895,
+              2.89970033055533,
+              1.7665986657913642,
+              0.9957319682489595,
+              0.8617495892176339,
+              0.3086660330035994,
+              0.26110439262315716,
+              0.1641669814663521
+            ],
+            "rank": 9,
+            "relative_rank_threshold": 1e-12,
+            "condition": 43.656396213505005
+          },
+          "full_row_rank": true,
+          "expected_weight_nullity": 10,
+          "noise_weighted_moment_matrix": {
+            "shape": [
+              9,
+              19
+            ],
+            "singular_values": [
+              5.707138871829588,
+              3.2172932002261794,
+              2.521203286006897,
+              1.2730453108920707,
+              0.9957234727381208,
+              0.8318116202483977,
+              0.30465501067636913,
+              0.26073552460860766,
+              0.1629147227406124
+            ],
+            "rank": 9,
+            "relative_rank_threshold": 1e-12,
+            "condition": 35.03144943453829
+          },
+          "maximum_moment_residual": 2.148281552649678e-14,
+          "existing_condition_guard": 100000.0
+        }
+      ],
+      "projection": {
+        "solver_success": true,
+        "iterations": 1,
+        "minimum_constraint_slack": 0.017372622993186357,
+        "active_threshold": 1e-07,
+        "active_constraints": 0,
+        "active_constraint_jacobian": {
+          "shape": [
+            0,
+            57
+          ],
+          "singular_values": [],
+          "rank": 0,
+          "relative_rank_threshold": 1e-10,
+          "condition": null
+        },
+        "meaning": "Constraint Jacobian only. Redundancy is possible; not a stochastic measurement Jacobian."
+      }
+    },
+    {
+      "seed": 70210017,
+      "status": "COMPLETE",
+      "moments": [
+        {
+          "arm": 0,
+          "matrix": {
+            "shape": [
+              9,
+              20
+            ],
+            "singular_values": [
+              7.096200457018018,
+              5.725867898667745,
+              2.782707146270782,
+              2.4615911285844785,
+              1.5103396701227296,
+              0.8965785910252632,
+              0.51966294416846,
+              0.34855222017132914,
+              0.27683533179341796
+            ],
+            "rank": 9,
+            "relative_rank_threshold": 1e-12,
+            "condition": 25.63329041508833
+          },
+          "full_row_rank": true,
+          "expected_weight_nullity": 11,
+          "noise_weighted_moment_matrix": {
+            "shape": [
+              9,
+              20
+            ],
+            "singular_values": [
+              5.7298989324944385,
+              3.2316452142050083,
+              2.470958647637787,
+              1.7570095629053324,
+              1.4794649929096146,
+              0.851736617893861,
+              0.5118432271999219,
+              0.3451039657330006,
+              0.273507198056499
+            ],
+            "rank": 9,
+            "relative_rank_threshold": 1e-12,
+            "condition": 20.949718958807075
+          },
+          "maximum_moment_residual": 6.217248937900877e-15,
+          "existing_condition_guard": 100000.0
+        },
+        {
+          "arm": 1,
+          "matrix": {
+            "shape": [
+              9,
+              20
+            ],
+            "singular_values": [
+              7.097677527161649,
+              5.7258561346735375,
+              2.7823986178520856,
+              2.460511400588258,
+              1.5098119689032996,
+              0.8966275116757415,
+              0.5192534550059519,
+              0.3481047613469359,
+              0.2760211134278542
+            ],
+            "rank": 9,
+            "relative_rank_threshold": 1e-12,
+            "condition": 25.714255837232628
+          },
+          "full_row_rank": true,
+          "expected_weight_nullity": 11,
+          "noise_weighted_moment_matrix": {
+            "shape": [
+              9,
+              20
+            ],
+            "singular_values": [
+              5.729940963248537,
+              3.232855963129649,
+              2.4700454082114014,
+              1.758369138369481,
+              1.4791032747583879,
+              0.8519989514262258,
+              0.5115455456558423,
+              0.3445678864544063,
+              0.2726223858481437
+            ],
+            "rank": 9,
+            "relative_rank_threshold": 1e-12,
+            "condition": 21.01786669287031
+          },
+          "maximum_moment_residual": 1.9984014443252818e-14,
+          "existing_condition_guard": 100000.0
+        }
+      ],
+      "projection": {
+        "solver_success": true,
+        "iterations": 2,
+        "minimum_constraint_slack": -1.220405070403996e-16,
+        "active_threshold": 1e-07,
+        "active_constraints": 1,
+        "active_constraint_jacobian": {
+          "shape": [
+            1,
+            60
+          ],
+          "singular_values": [
+            2.0
+          ],
+          "rank": 1,
+          "relative_rank_threshold": 1e-10,
+          "condition": 1.0
+        },
+        "meaning": "Constraint Jacobian only. Redundancy is possible; not a stochastic measurement Jacobian."
+      }
+    },
+    {
+      "seed": 70210018,
+      "status": "COMPLETE",
+      "moments": [
+        {
+          "arm": 0,
+          "matrix": {
+            "shape": [
+              9,
+              19
+            ],
+            "singular_values": [
+              7.8606765920704715,
+              5.8168760640410735,
+              2.1087412737222637,
+              1.5611639028018693,
+              0.8275691553014934,
+              0.6528865550875331,
+              0.3187513396254456,
+              0.1657500477000276,
+              0.09914678661814681
+            ],
+            "rank": 9,
+            "relative_rank_threshold": 1e-12,
+            "condition": 79.28322097159862
+          },
+          "full_row_rank": true,
+          "expected_weight_nullity": 10,
+          "noise_weighted_moment_matrix": {
+            "shape": [
+              9,
+              19
+            ],
+            "singular_values": [
+              5.833166851605962,
+              3.897232910657397,
+              1.9299358556052424,
+              1.0210476666562847,
+              0.7924238935880622,
+              0.6292541086715514,
+              0.3139550200748745,
+              0.1655550253928225,
+              0.09763348827580985
+            ],
+            "rank": 9,
+            "relative_rank_threshold": 1e-12,
+            "condition": 59.745554057513026
+          },
+          "maximum_moment_residual": 1.3677947663381929e-13,
+          "existing_condition_guard": 100000.0
+        },
+        {
+          "arm": 1,
+          "matrix": {
+            "shape": [
+              9,
+              19
+            ],
+            "singular_values": [
+              7.864099389686552,
+              5.817482658644933,
+              2.101934429948359,
+              1.5624841523355406,
+              0.8258265503789096,
+              0.655247155163183,
+              0.3204029721464616,
+              0.1656080103316154,
+              0.09903117930292102
+            ],
+            "rank": 9,
+            "relative_rank_threshold": 1e-12,
+            "condition": 79.41033768396811
+          },
+          "full_row_rank": true,
+          "expected_weight_nullity": 10,
+          "noise_weighted_moment_matrix": {
+            "shape": [
+              9,
+              19
+            ],
+            "singular_values": [
+              5.833282982542344,
+              3.898280547428304,
+              1.9259488154465045,
+              1.026953231298799,
+              0.7881255416879286,
+              0.6339823037330209,
+              0.3158892754984418,
+              0.16546055091688888,
+              0.09738879205938702
+            ],
+            "rank": 9,
+            "relative_rank_threshold": 1e-12,
+            "condition": 59.89686142718813
+          },
+          "maximum_moment_residual": 7.283063041541027e-14,
+          "existing_condition_guard": 100000.0
+        }
+      ],
+      "projection": {
+        "solver_success": true,
+        "iterations": 5,
+        "minimum_constraint_slack": -1.1018204577883939e-17,
+        "active_threshold": 1e-07,
+        "active_constraints": 2,
+        "active_constraint_jacobian": {
+          "shape": [
+            2,
+            57
+          ],
+          "singular_values": [
+            2.4184122857899517,
+            1.4667249285193937
+          ],
+          "rank": 2,
+          "relative_rank_threshold": 1e-10,
+          "condition": 1.6488519686041283
+        },
+        "meaning": "Constraint Jacobian only. Redundancy is possible; not a stochastic measurement Jacobian."
+      }
+    },
+    {
+      "seed": 70210019,
+      "status": "COMPLETE",
+      "moments": [
+        {
+          "arm": 0,
+          "matrix": {
+            "shape": [
+              9,
+              24
+            ],
+            "singular_values": [
+              9.789999786056745,
+              6.565062404952959,
+              2.74068970109981,
+              2.4433578418814115,
+              1.4214871176556976,
+              1.1469461492884043,
+              0.4772044915626104,
+              0.4006072956855279,
+              0.329094760183011
+            ],
+            "rank": 9,
+            "relative_rank_threshold": 1e-12,
+            "condition": 29.748270013817553
+          },
+          "full_row_rank": true,
+          "expected_weight_nullity": 15,
+          "noise_weighted_moment_matrix": {
+            "shape": [
+              9,
+              24
+            ],
+            "singular_values": [
+              6.981423237455955,
+              4.038353668818684,
+              2.74007276974169,
+              1.567559923180028,
+              1.2903446042781135,
+              1.1044682304929438,
+              0.4649211177986102,
+              0.40049830945606696,
+              0.32905406419115796
+            ],
+            "rank": 9,
+            "relative_rank_threshold": 1e-12,
+            "condition": 21.21664491401092
+          },
+          "maximum_moment_residual": 2.3092638912203256e-14,
+          "existing_condition_guard": 100000.0
+        },
+        {
+          "arm": 1,
+          "matrix": {
+            "shape": [
+              9,
+              24
+            ],
+            "singular_values": [
+              9.807307462828689,
+              6.563186742722661,
+              2.74196398780738,
+              2.408913242219612,
+              1.4225534539738038,
+              1.1422811762603031,
+              0.47900898987069335,
+              0.4014463226302026,
+              0.32108806997448236
+            ],
+            "rank": 9,
+            "relative_rank_threshold": 1e-12,
+            "condition": 30.543979611600328
+          },
+          "full_row_rank": true,
+          "expected_weight_nullity": 15,
+          "noise_weighted_moment_matrix": {
+            "shape": [
+              9,
+              24
+            ],
+            "singular_values": [
+              6.984145670454675,
+              4.03850890456443,
+              2.7418336399810594,
+              1.5585054662498328,
+              1.302854250758579,
+              1.1028308410167342,
+              0.4680008303418727,
+              0.40139736377557406,
+              0.3210879010251963
+            ],
+            "rank": 9,
+            "relative_rank_threshold": 1e-12,
+            "condition": 21.751506824626873
+          },
+          "maximum_moment_residual": 1.8207657603852567e-14,
+          "existing_condition_guard": 100000.0
+        }
+      ],
+      "projection": {
+        "solver_success": true,
+        "iterations": 5,
+        "minimum_constraint_slack": -1.220405070403996e-16,
+        "active_threshold": 1e-07,
+        "active_constraints": 3,
+        "active_constraint_jacobian": {
+          "shape": [
+            3,
+            72
+          ],
+          "singular_values": [
+            2.5255110090857413,
+            1.9999999999999996,
+            1.2734968170304621
+          ],
+          "rank": 3,
+          "relative_rank_threshold": 1e-10,
+          "condition": 1.9831309943708566
+        },
+        "meaning": "Constraint Jacobian only. Redundancy is possible; not a stochastic measurement Jacobian."
+      }
+    },
+    {
+      "seed": 70210020,
+      "status": "COMPLETE",
+      "moments": [
+        {
+          "arm": 0,
+          "matrix": {
+            "shape": [
+              9,
+              25
+            ],
+            "singular_values": [
+              9.459248542303126,
+              5.709335329133489,
+              3.22155821722481,
+              2.399558594474045,
+              1.2879913003254795,
+              1.0192007783084045,
+              0.6032969979264138,
+              0.39357757175793523,
+              0.25424603428069176
+            ],
+            "rank": 9,
+            "relative_rank_threshold": 1e-12,
+            "condition": 37.20509768840666
+          },
+          "full_row_rank": true,
+          "expected_weight_nullity": 16,
+          "noise_weighted_moment_matrix": {
+            "shape": [
+              9,
+              25
+            ],
+            "singular_values": [
+              6.7290680780382335,
+              4.028534728680146,
+              2.4009644260530747,
+              1.7323368521983278,
+              1.2872041690913296,
+              1.002301644491636,
+              0.5969779910225899,
+              0.39322578688912874,
+              0.2503865468602191
+            ],
+            "rank": 9,
+            "relative_rank_threshold": 1e-12,
+            "condition": 26.874718959221102
+          },
+          "maximum_moment_residual": 1.2878587085651816e-14,
+          "existing_condition_guard": 100000.0
+        },
+        {
+          "arm": 1,
+          "matrix": {
+            "shape": [
+              9,
+              25
+            ],
+            "singular_values": [
+              9.458087888522682,
+              5.709054569677726,
+              3.221150957301937,
+              2.399747020174426,
+              1.2889303995085482,
+              1.0191447841039274,
+              0.6046370439976352,
+              0.39447316120681913,
+              0.2547901022044202
+            ],
+            "rank": 9,
+            "relative_rank_threshold": 1e-12,
+            "condition": 37.12109617560567
+          },
+          "full_row_rank": true,
+          "expected_weight_nullity": 16,
+          "noise_weighted_moment_matrix": {
+            "shape": [
+              9,
+              25
+            ],
+            "singular_values": [
+              6.728594555243355,
+              4.02926090066953,
+              2.401144204516313,
+              1.728170713717167,
+              1.288062661176363,
+              1.001726664256582,
+              0.5981874442313584,
+              0.3941574575831123,
+              0.25093976723496164
+            ],
+            "rank": 9,
+            "relative_rank_threshold": 1e-12,
+            "condition": 26.81358410978038
+          },
+          "maximum_moment_residual": 1.532107773982716e-14,
+          "existing_condition_guard": 100000.0
+        }
+      ],
+      "projection": {
+        "solver_success": true,
+        "iterations": 2,
+        "minimum_constraint_slack": -6.999880276109538e-17,
+        "active_threshold": 1e-07,
+        "active_constraints": 3,
+        "active_constraint_jacobian": {
+          "shape": [
+            3,
+            75
+          ],
+          "singular_values": [
+            2.0,
+            2.0,
+            2.0
+          ],
+          "rank": 3,
+          "relative_rank_threshold": 1e-10,
+          "condition": 1.0
+        },
+        "meaning": "Constraint Jacobian only. Redundancy is possible; not a stochastic measurement Jacobian."
+      }
+    },
+    {
+      "seed": 70210021,
+      "status": "COMPLETE",
+      "moments": [
+        {
+          "arm": 0,
+          "matrix": {
+            "shape": [
+              9,
+              20
+            ],
+            "singular_values": [
+              9.126169338005296,
+              5.427001710639116,
+              2.7981527091385985,
+              2.179095386870693,
+              0.8828835495620878,
+              0.6421760431636441,
+              0.44805983497952734,
+              0.3586719478581089,
+              0.2981593186974801
+            ],
+            "rank": 9,
+            "relative_rank_threshold": 1e-12,
+            "condition": 30.608365278916324
+          },
+          "full_row_rank": true,
+          "expected_weight_nullity": 11,
+          "noise_weighted_moment_matrix": {
+            "shape": [
+              9,
+              20
+            ],
+            "singular_values": [
+              6.028685233792857,
+              3.8111551246485806,
+              2.1797644879996025,
+              1.5296427387455367,
+              0.8787313782534097,
+              0.6062591550444505,
+              0.44073698293903174,
+              0.3580920911252493,
+              0.2964637022413769
+            ],
+            "rank": 9,
+            "relative_rank_threshold": 1e-12,
+            "condition": 20.33532330674458
+          },
+          "maximum_moment_residual": 2.042810365310288e-14,
+          "existing_condition_guard": 100000.0
+        },
+        {
+          "arm": 1,
+          "matrix": {
+            "shape": [
+              9,
+              20
+            ],
+            "singular_values": [
+              9.126251850468595,
+              5.426992607176794,
+              2.7982833992413854,
+              2.179264648090529,
+              0.8828523544928213,
+              0.6422433262429654,
+              0.4477976572886637,
+              0.3579648946189965,
+              0.2971518597717075
+            ],
+            "rank": 9,
+            "relative_rank_threshold": 1e-12,
+            "condition": 30.71241707011361
+          },
+          "full_row_rank": true,
+          "expected_weight_nullity": 11,
+          "noise_weighted_moment_matrix": {
+            "shape": [
+              9,
+              20
+            ],
+            "singular_values": [
+              6.028692127238111,
+              3.81091215331406,
+              2.1799089794390545,
+              1.5303654726561629,
+              0.8786877362457132,
+              0.6064526041451251,
+              0.4404572590378511,
+              0.35739365659693917,
+              0.29545317930828346
+            ],
+            "rank": 9,
+            "relative_rank_threshold": 1e-12,
+            "condition": 20.40489847275469
+          },
+          "maximum_moment_residual": 7.105427357601002e-15,
+          "existing_condition_guard": 100000.0
+        }
+      ],
+      "projection": {
+        "solver_success": true,
+        "iterations": 2,
+        "minimum_constraint_slack": 1.6737371037744975e-17,
+        "active_threshold": 1e-07,
+        "active_constraints": 2,
+        "active_constraint_jacobian": {
+          "shape": [
+            2,
+            60
+          ],
+          "singular_values": [
+            2.0,
+            2.0
+          ],
+          "rank": 2,
+          "relative_rank_threshold": 1e-10,
+          "condition": 1.0
+        },
+        "meaning": "Constraint Jacobian only. Redundancy is possible; not a stochastic measurement Jacobian."
+      }
+    },
+    {
+      "seed": 70210022,
+      "status": "COMPLETE",
+      "moments": [
+        {
+          "arm": 0,
+          "matrix": {
+            "shape": [
+              9,
+              16
+            ],
+            "singular_values": [
+              6.936148395344748,
+              4.786874741301416,
+              2.3333487656552188,
+              1.4343022256067053,
+              0.9320965394853854,
+              0.7674451147715668,
+              0.47180406355600074,
+              0.2705865390859162,
+              0.20169075525487642
+            ],
+            "rank": 9,
+            "relative_rank_threshold": 1e-12,
+            "condition": 34.39001647140219
+          },
+          "full_row_rank": true,
+          "expected_weight_nullity": 7,
+          "noise_weighted_moment_matrix": {
+            "shape": [
+              9,
+              16
+            ],
+            "singular_values": [
+              5.169922275614115,
+              3.074425233792721,
+              1.5142071078489188,
+              1.432018631047954,
+              0.9320889937878836,
+              0.7508589696313367,
+              0.4717992581507244,
+              0.2696447620697905,
+              0.19724407535780933
+            ],
+            "rank": 9,
+            "relative_rank_threshold": 1e-12,
+            "condition": 26.210786135074787
+          },
+          "maximum_moment_residual": 1.1546319456101628e-14,
+          "existing_condition_guard": 100000.0
+        },
+        {
+          "arm": 1,
+          "matrix": {
+            "shape": [
+              9,
+              16
+            ],
+            "singular_values": [
+              6.936339684227523,
+              4.7868517420327485,
+              2.3332332537046008,
+              1.4342944607496135,
+              0.9320838736707302,
+              0.7674403772219885,
+              0.47170582234347314,
+              0.27056637151952967,
+              0.20170122898898712
+            ],
+            "rank": 9,
+            "relative_rank_threshold": 1e-12,
+            "condition": 34.3891790793513
+          },
+          "full_row_rank": true,
+          "expected_weight_nullity": 7,
+          "noise_weighted_moment_matrix": {
+            "shape": [
+              9,
+              16
+            ],
+            "singular_values": [
+              5.169955207174105,
+              3.07434173438915,
+              1.514490127445557,
+              1.4320159839860722,
+              0.9320762916130277,
+              0.7508726509068533,
+              0.4717005668789019,
+              0.2696221876738736,
+              0.1972505318661674
+            ],
+            "rank": 9,
+            "relative_rank_threshold": 1e-12,
+            "condition": 26.21009514276935
+          },
+          "maximum_moment_residual": 5.329070518200751e-15,
+          "existing_condition_guard": 100000.0
+        }
+      ],
+      "projection": {
+        "solver_success": true,
+        "iterations": 2,
+        "minimum_constraint_slack": 7.22485222690028e-17,
+        "active_threshold": 1e-07,
+        "active_constraints": 1,
+        "active_constraint_jacobian": {
+          "shape": [
+            1,
+            48
+          ],
+          "singular_values": [
+            2.0
+          ],
+          "rank": 1,
+          "relative_rank_threshold": 1e-10,
+          "condition": 1.0
+        },
+        "meaning": "Constraint Jacobian only. Redundancy is possible; not a stochastic measurement Jacobian."
+      }
+    },
+    {
+      "seed": 70210023,
+      "status": "COMPLETE",
+      "moments": [
+        {
+          "arm": 0,
+          "matrix": {
+            "shape": [
+              9,
+              14
+            ],
+            "singular_values": [
+              7.871864927341165,
+              4.918465309019542,
+              2.1852905115237555,
+              1.7105033978591655,
+              1.1849358814674595,
+              0.6015834700949646,
+              0.3483768932486033,
+              0.16634270723979858,
+              0.106573816643908
+            ],
+            "rank": 9,
+            "relative_rank_threshold": 1e-12,
+            "condition": 73.86302916825433
+          },
+          "full_row_rank": true,
+          "expected_weight_nullity": 5,
+          "noise_weighted_moment_matrix": {
+            "shape": [
+              9,
+              14
+            ],
+            "singular_values": [
+              5.46856892320463,
+              2.7550346025842023,
+              2.141976346632828,
+              1.4486567092129732,
+              1.1030049689326196,
+              0.594665962763602,
+              0.34640491325349526,
+              0.15255926978238038,
+              0.10634280143509249
+            ],
+            "rank": 9,
+            "relative_rank_threshold": 1e-12,
+            "condition": 51.42396898902867
+          },
+          "maximum_moment_residual": 4.241051954068098e-14,
+          "existing_condition_guard": 100000.0
+        },
+        {
+          "arm": 1,
+          "matrix": {
+            "shape": [
+              9,
+              14
+            ],
+            "singular_values": [
+              7.871864927341165,
+              4.918465309019542,
+              2.1852905115237555,
+              1.7105033978591655,
+              1.1849358814674595,
+              0.6015834700949646,
+              0.3483768932486033,
+              0.16634270723979858,
+              0.106573816643908
+            ],
+            "rank": 9,
+            "relative_rank_threshold": 1e-12,
+            "condition": 73.86302916825433
+          },
+          "full_row_rank": true,
+          "expected_weight_nullity": 5,
+          "noise_weighted_moment_matrix": {
+            "shape": [
+              9,
+              14
+            ],
+            "singular_values": [
+              5.46856892320463,
+              2.7550346025842023,
+              2.141976346632828,
+              1.4486567092129732,
+              1.1030049689326196,
+              0.594665962763602,
+              0.34640491325349526,
+              0.15255926978238038,
+              0.10634280143509249
+            ],
+            "rank": 9,
+            "relative_rank_threshold": 1e-12,
+            "condition": 51.42396898902867
+          },
+          "maximum_moment_residual": 4.241051954068098e-14,
+          "existing_condition_guard": 100000.0
+        }
+      ],
+      "projection": {
+        "solver_success": true,
+        "iterations": 1,
+        "minimum_constraint_slack": 0.03770623665117095,
+        "active_threshold": 1e-07,
+        "active_constraints": 0,
+        "active_constraint_jacobian": {
+          "shape": [
+            0,
+            42
+          ],
+          "singular_values": [],
+          "rank": 0,
+          "relative_rank_threshold": 1e-10,
+          "condition": null
+        },
+        "meaning": "Constraint Jacobian only. Redundancy is possible; not a stochastic measurement Jacobian."
+      }
+    },
+    {
+      "seed": 70210024,
+      "status": "COMPLETE",
+      "moments": [
+        {
+          "arm": 0,
+          "matrix": {
+            "shape": [
+              9,
+              28
+            ],
+            "singular_values": [
+              10.29022442742091,
+              6.8881608972436945,
+              3.624242567502964,
+              3.189770140002688,
+              1.938761717909118,
+              1.6123291583497268,
+              0.716374958420426,
+              0.47495339030004147,
+              0.39891937620687445
+            ],
+            "rank": 9,
+            "relative_rank_threshold": 1e-12,
+            "condition": 25.795248466658915
+          },
+          "full_row_rank": true,
+          "expected_weight_nullity": 19,
+          "noise_weighted_moment_matrix": {
+            "shape": [
+              9,
+              28
+            ],
+            "singular_values": [
+              7.1166420898926335,
+              4.082601149953929,
+              3.6116627331752906,
+              2.263855480668381,
+              1.8081018317630801,
+              1.4414623545175602,
+              0.7158117572793875,
+              0.4748602911051323,
+              0.39834460873841815
+            ],
+            "rank": 9,
+            "relative_rank_threshold": 1e-12,
+            "condition": 17.865541377430652
+          },
+          "maximum_moment_residual": 2.0317081350640365e-14,
+          "existing_condition_guard": 100000.0
+        },
+        {
+          "arm": 1,
+          "matrix": {
+            "shape": [
+              9,
+              28
+            ],
+            "singular_values": [
+              10.302420378649776,
+              6.886812192271591,
+              3.616225666074549,
+              3.1753657495612497,
+              1.939619264806915,
+              1.6130476630097867,
+              0.716836979727539,
+              0.4797506494634643,
+              0.38997493111920756
+            ],
+            "rank": 9,
+            "relative_rank_threshold": 1e-12,
+            "condition": 26.418160647102034
+          },
+          "full_row_rank": true,
+          "expected_weight_nullity": 19,
+          "noise_weighted_moment_matrix": {
+            "shape": [
+              9,
+              28
+            ],
+            "singular_values": [
+              7.118873277624639,
+              4.086190094328892,
+              3.59696022808713,
+              2.2693432939083964,
+              1.8142110578039534,
+              1.4521714623313986,
+              0.7161573198034401,
+              0.4796487542227684,
+              0.38963277934922386
+            ],
+            "rank": 9,
+            "relative_rank_threshold": 1e-12,
+            "condition": 18.270724782229028
+          },
+          "maximum_moment_residual": 5.773159728050814e-15,
+          "existing_condition_guard": 100000.0
+        }
+      ],
+      "projection": {
+        "solver_success": true,
+        "iterations": 5,
+        "minimum_constraint_slack": -1.7755165827165742e-16,
+        "active_threshold": 1e-07,
+        "active_constraints": 6,
+        "active_constraint_jacobian": {
+          "shape": [
+            6,
+            84
+          ],
+          "singular_values": [
+            2.47021329328808,
+            2.0240394018629284,
+            2.0,
+            1.9999999999999998,
+            1.9716222845998954,
+            1.3834797982761837
+          ],
+          "rank": 6,
+          "relative_rank_threshold": 1e-10,
+          "condition": 1.785507310165256
+        },
+        "meaning": "Constraint Jacobian only. Redundancy is possible; not a stochastic measurement Jacobian."
+      }
+    },
+    {
+      "seed": 70210025,
+      "status": "COMPLETE",
+      "moments": [
+        {
+          "arm": 0,
+          "matrix": {
+            "shape": [
+              9,
+              22
+            ],
+            "singular_values": [
+              6.667325905014099,
+              5.7273731936816805,
+              2.5740823484906024,
+              1.9008192570762203,
+              1.0909287186168213,
+              0.6054584912266057,
+              0.41232899935542333,
+              0.30108503763837136,
+              0.19901392684598604
+            ],
+            "rank": 9,
+            "relative_rank_threshold": 1e-12,
+            "condition": 33.501805681035805
+          },
+          "full_row_rank": true,
+          "expected_weight_nullity": 13,
+          "noise_weighted_moment_matrix": {
+            "shape": [
+              9,
+              22
+            ],
+            "singular_values": [
+              5.728944860537985,
+              2.574995878994652,
+              1.9025952866012585,
+              1.7280396519425483,
+              1.072559977836521,
+              0.5839772581034294,
+              0.39711180234477267,
+              0.2999986740564324,
+              0.19814126932767506
+            ],
+            "rank": 9,
+            "relative_rank_threshold": 1e-12,
+            "condition": 28.913435752063208
+          },
+          "maximum_moment_residual": 1.2434497875801753e-14,
+          "existing_condition_guard": 100000.0
+        },
+        {
+          "arm": 1,
+          "matrix": {
+            "shape": [
+              9,
+              22
+            ],
+            "singular_values": [
+              6.667325905014099,
+              5.7273731936816805,
+              2.5740823484906024,
+              1.9008192570762203,
+              1.0909287186168213,
+              0.6054584912266057,
+              0.41232899935542333,
+              0.30108503763837136,
+              0.19901392684598604
+            ],
+            "rank": 9,
+            "relative_rank_threshold": 1e-12,
+            "condition": 33.501805681035805
+          },
+          "full_row_rank": true,
+          "expected_weight_nullity": 13,
+          "noise_weighted_moment_matrix": {
+            "shape": [
+              9,
+              22
+            ],
+            "singular_values": [
+              5.728944860537985,
+              2.574995878994652,
+              1.9025952866012585,
+              1.7280396519425483,
+              1.072559977836521,
+              0.5839772581034294,
+              0.39711180234477267,
+              0.2999986740564324,
+              0.19814126932767506
+            ],
+            "rank": 9,
+            "relative_rank_threshold": 1e-12,
+            "condition": 28.913435752063208
+          },
+          "maximum_moment_residual": 3.1530333899354446e-14,
+          "existing_condition_guard": 100000.0
+        }
+      ],
+      "projection": {
+        "solver_success": true,
+        "iterations": 1,
+        "minimum_constraint_slack": 0.0034733761971234563,
+        "active_threshold": 1e-07,
+        "active_constraints": 0,
+        "active_constraint_jacobian": {
+          "shape": [
+            0,
+            66
+          ],
+          "singular_values": [],
+          "rank": 0,
+          "relative_rank_threshold": 1e-10,
+          "condition": null
+        },
+        "meaning": "Constraint Jacobian only. Redundancy is possible; not a stochastic measurement Jacobian."
+      }
+    },
+    {
+      "seed": 70210026,
+      "status": "COMPLETE",
+      "moments": [
+        {
+          "arm": 0,
+          "matrix": {
+            "shape": [
+              9,
+              20
+            ],
+            "singular_values": [
+              8.670877827665196,
+              6.165098716561941,
+              2.7680779451692374,
+              2.2451863531507366,
+              1.4988565013918829,
+              1.0665090977485512,
+              0.5748833671407679,
+              0.29230007579339007,
+              0.20308865051750216
+            ],
+            "rank": 9,
+            "relative_rank_threshold": 1e-12,
+            "condition": 42.695038868840875
+          },
+          "full_row_rank": true,
+          "expected_weight_nullity": 11,
+          "noise_weighted_moment_matrix": {
+            "shape": [
+              9,
+              20
+            ],
+            "singular_values": [
+              6.264697815982933,
+              3.6914454634632863,
+              2.2799056383623935,
+              2.1231014157217984,
+              1.4514207428696733,
+              1.0330601702063482,
+              0.5613091528981531,
+              0.2907385618748283,
+              0.2016795935905182
+            ],
+            "rank": 9,
+            "relative_rank_threshold": 1e-12,
+            "condition": 31.062626141058736
+          },
+          "maximum_moment_residual": 5.329070518200751e-15,
+          "existing_condition_guard": 100000.0
+        },
+        {
+          "arm": 1,
+          "matrix": {
+            "shape": [
+              9,
+              20
+            ],
+            "singular_values": [
+              8.680505427119728,
+              6.165576683699747,
+              2.768205521033616,
+              2.240349058853282,
+              1.4957547439768055,
+              1.0669763461698258,
+              0.5743717075685356,
+              0.2945279383094077,
+              0.20304078711566365
+            ],
+            "rank": 9,
+            "relative_rank_threshold": 1e-12,
+            "condition": 42.75252056708594
+          },
+          "full_row_rank": true,
+          "expected_weight_nullity": 11,
+          "noise_weighted_moment_matrix": {
+            "shape": [
+              9,
+              20
+            ],
+            "singular_values": [
+              6.2675615708386205,
+              3.6894129146714314,
+              2.2867711969242044,
+              2.133887624710863,
+              1.4497321527461198,
+              1.0363121577775984,
+              0.5598021678320799,
+              0.2928777555961788,
+              0.2013137383003606
+            ],
+            "rank": 9,
+            "relative_rank_threshold": 1e-12,
+            "condition": 31.133302792715533
+          },
+          "maximum_moment_residual": 1.709743457922741e-14,
+          "existing_condition_guard": 100000.0
+        }
+      ],
+      "projection": {
+        "solver_success": true,
+        "iterations": 19,
+        "minimum_constraint_slack": -1.0734091309490441e-11,
+        "active_threshold": 1e-07,
+        "active_constraints": 4,
+        "active_constraint_jacobian": {
+          "shape": [
+            4,
+            60
+          ],
+          "singular_values": [
+            2.0576567639809697,
+            2.0,
+            1.9999999999999998,
+            1.940630990591298
+          ],
+          "rank": 4,
+          "relative_rank_threshold": 1e-10,
+          "condition": 1.0603029498946706
+        },
+        "meaning": "Constraint Jacobian only. Redundancy is possible; not a stochastic measurement Jacobian."
+      }
+    },
+    {
+      "seed": 70210027,
+      "status": "COMPLETE",
+      "moments": [
+        {
+          "arm": 0,
+          "matrix": {
+            "shape": [
+              9,
+              18
+            ],
+            "singular_values": [
+              8.50593570573624,
+              6.001260518119816,
+              2.9902808296502394,
+              2.1749522387686713,
+              1.5536929797902461,
+              1.2305895044718207,
+              0.4462994414802043,
+              0.23563857493707338,
+              0.18021072155926038
+            ],
+            "rank": 9,
+            "relative_rank_threshold": 1e-12,
+            "condition": 47.19994255690916
+          },
+          "full_row_rank": true,
+          "expected_weight_nullity": 9,
+          "noise_weighted_moment_matrix": {
+            "shape": [
+              9,
+              18
+            ],
+            "singular_values": [
+              6.2289940837536735,
+              3.9034155095419543,
+              2.2921688031543472,
+              1.6975852015119768,
+              1.543368310563088,
+              1.1378541784812162,
+              0.44595665659096917,
+              0.2327932512976431,
+              0.16922516176968008
+            ],
+            "rank": 9,
+            "relative_rank_threshold": 1e-12,
+            "condition": 36.808911976290496
+          },
+          "maximum_moment_residual": 2.453592884421596e-14,
+          "existing_condition_guard": 100000.0
+        },
+        {
+          "arm": 1,
+          "matrix": {
+            "shape": [
+              9,
+              18
+            ],
+            "singular_values": [
+              8.505706149550187,
+              6.0012843144375845,
+              2.9902938777838104,
+              2.175166066934281,
+              1.5537797647096918,
+              1.2307466010535515,
+              0.4462876305267097,
+              0.2357200688880277,
+              0.18023494908371623
+            ],
+            "rank": 9,
+            "relative_rank_threshold": 1e-12,
+            "condition": 47.192324201225944
+          },
+          "full_row_rank": true,
+          "expected_weight_nullity": 9,
+          "noise_weighted_moment_matrix": {
+            "shape": [
+              9,
+              18
+            ],
+            "singular_values": [
+              6.228954079864768,
+              3.9032701547461968,
+              2.292318048523994,
+              1.697431730080201,
+              1.5434098267472192,
+              1.1379118371968449,
+              0.44595212435839254,
+              0.23286631671151364,
+              0.16925879192877086
+            ],
+            "rank": 9,
+            "relative_rank_threshold": 1e-12,
+            "condition": 36.80136203787924
+          },
+          "maximum_moment_residual": 3.907985046680551e-14,
+          "existing_condition_guard": 100000.0
+        }
+      ],
+      "projection": {
+        "solver_success": true,
+        "iterations": 2,
+        "minimum_constraint_slack": -1.1018204577883939e-17,
+        "active_threshold": 1e-07,
+        "active_constraints": 1,
+        "active_constraint_jacobian": {
+          "shape": [
+            1,
+            54
+          ],
+          "singular_values": [
+            2.0
+          ],
+          "rank": 1,
+          "relative_rank_threshold": 1e-10,
+          "condition": 1.0
+        },
+        "meaning": "Constraint Jacobian only. Redundancy is possible; not a stochastic measurement Jacobian."
+      }
+    },
+    {
+      "seed": 70210028,
+      "status": "COMPLETE",
+      "moments": [
+        {
+          "arm": 0,
+          "matrix": {
+            "shape": [
+              9,
+              17
+            ],
+            "singular_values": [
+              6.819088054933586,
+              5.046397463935813,
+              2.450574882298418,
+              1.8534452686910927,
+              1.0219888077194375,
+              0.5594919524388972,
+              0.46603732708779005,
+              0.3080192954984877,
+              0.20195261263366224
+            ],
+            "rank": 9,
+            "relative_rank_threshold": 1e-12,
+            "condition": 33.76578280422283
+          },
+          "full_row_rank": true,
+          "expected_weight_nullity": 8,
+          "noise_weighted_moment_matrix": {
+            "shape": [
+              9,
+              17
+            ],
+            "singular_values": [
+              5.266209819016729,
+              2.4761005179578315,
+              2.0798479636001095,
+              1.7322354619441322,
+              0.937219524593184,
+              0.5567050910405683,
+              0.45752444600206454,
+              0.30676972699842053,
+              0.20130905267386798
+            ],
+            "rank": 9,
+            "relative_rank_threshold": 1e-12,
+            "condition": 26.159826143279737
+          },
+          "maximum_moment_residual": 7.105427357601002e-15,
+          "existing_condition_guard": 100000.0
+        },
+        {
+          "arm": 1,
+          "matrix": {
+            "shape": [
+              9,
+              17
+            ],
+            "singular_values": [
+              6.817520557267626,
+              5.0465567524251105,
+              2.4518991480244683,
+              1.8535202624452243,
+              1.0220464763052803,
+              0.5593548393073111,
+              0.4657017299213879,
+              0.3080168679414411,
+              0.20195924896358997
+            ],
+            "rank": 9,
+            "relative_rank_threshold": 1e-12,
+            "condition": 33.75691181391111
+          },
+          "full_row_rank": true,
+          "expected_weight_nullity": 8,
+          "noise_weighted_moment_matrix": {
+            "shape": [
+              9,
+              17
+            ],
+            "singular_values": [
+              5.2659574686746335,
+              2.477279880624492,
+              2.079046562717605,
+              1.7308726820046312,
+              0.9366535293805555,
+              0.5564717148717688,
+              0.45715637947928306,
+              0.3067599353128915,
+              0.20128896018976847
+            ],
+            "rank": 9,
+            "relative_rank_threshold": 1e-12,
+            "condition": 26.161183721700713
+          },
+          "maximum_moment_residual": 1.2434497875801753e-14,
+          "existing_condition_guard": 100000.0
+        }
+      ],
+      "projection": {
+        "solver_success": true,
+        "iterations": 2,
+        "minimum_constraint_slack": -6.652935580914177e-17,
+        "active_threshold": 1e-07,
+        "active_constraints": 2,
+        "active_constraint_jacobian": {
+          "shape": [
+            2,
+            51
+          ],
+          "singular_values": [
+            2.0,
+            2.0
+          ],
+          "rank": 2,
+          "relative_rank_threshold": 1e-10,
+          "condition": 1.0
+        },
+        "meaning": "Constraint Jacobian only. Redundancy is possible; not a stochastic measurement Jacobian."
+      }
+    },
+    {
+      "seed": 70210029,
+      "status": "COMPLETE",
+      "moments": [
+        {
+          "arm": 0,
+          "matrix": {
+            "shape": [
+              9,
+              23
+            ],
+            "singular_values": [
+              7.893462795750924,
+              5.2735689243625545,
+              2.564592899512033,
+              1.809009281242771,
+              1.1512557721174952,
+              0.9075772194907815,
+              0.3641668003892509,
+              0.22869874475607654,
+              0.21625762258453116
+            ],
+            "rank": 9,
+            "relative_rank_threshold": 1e-12,
+            "condition": 36.500275465044076
+          },
+          "full_row_rank": true,
+          "expected_weight_nullity": 14,
+          "noise_weighted_moment_matrix": {
+            "shape": [
+              9,
+              23
+            ],
+            "singular_values": [
+              6.015412039472656,
+              2.6817165761808206,
+              2.307494358269527,
+              1.5829564954696027,
+              1.0278113186653297,
+              0.8530794537962046,
+              0.3612111003909273,
+              0.22863180783740678,
+              0.21621688873800327
+            ],
+            "rank": 9,
+            "relative_rank_threshold": 1e-12,
+            "condition": 27.821194147149708
+          },
+          "maximum_moment_residual": 1.5987211554602254e-14,
+          "existing_condition_guard": 100000.0
+        },
+        {
+          "arm": 1,
+          "matrix": {
+            "shape": [
+              9,
+              23
+            ],
+            "singular_values": [
+              7.89130255324986,
+              5.2735434074665966,
+              2.566001495525121,
+              1.8100483703773809,
+              1.1515622868806497,
+              0.9074080443299961,
+              0.36395090407731295,
+              0.22900513398358838,
+              0.2160280028995745
+            ],
+            "rank": 9,
+            "relative_rank_threshold": 1e-12,
+            "condition": 36.52907237640997
+          },
+          "full_row_rank": true,
+          "expected_weight_nullity": 14,
+          "noise_weighted_moment_matrix": {
+            "shape": [
+              9,
+              23
+            ],
+            "singular_values": [
+              6.014970442031307,
+              2.6825856323522235,
+              2.306769637276818,
+              1.5817841810965023,
+              1.0268024701963325,
+              0.8514133867197444,
+              0.3611764733572779,
+              0.22892684608547298,
+              0.2159926500489422
+            ],
+            "rank": 9,
+            "relative_rank_threshold": 1e-12,
+            "condition": 27.848032980142438
+          },
+          "maximum_moment_residual": 2.1316282072803006e-14,
+          "existing_condition_guard": 100000.0
+        }
+      ],
+      "projection": {
+        "solver_success": true,
+        "iterations": 2,
+        "minimum_constraint_slack": -6.652935580914177e-17,
+        "active_threshold": 1e-07,
+        "active_constraints": 2,
+        "active_constraint_jacobian": {
+          "shape": [
+            2,
+            69
+          ],
+          "singular_values": [
+            2.0,
+            2.0
+          ],
+          "rank": 2,
+          "relative_rank_threshold": 1e-10,
+          "condition": 1.0
+        },
+        "meaning": "Constraint Jacobian only. Redundancy is possible; not a stochastic measurement Jacobian."
+      }
+    },
+    {
+      "seed": 70210030,
+      "status": "COMPLETE",
+      "moments": [
+        {
+          "arm": 0,
+          "matrix": {
+            "shape": [
+              9,
+              29
+            ],
+            "singular_values": [
+              8.869421000904135,
+              6.594665759079568,
+              3.13543273155824,
+              2.417848024697311,
+              1.5708239477675356,
+              1.2757482458063183,
+              0.5615921457996648,
+              0.4690508027327325,
+              0.30739939328128324
+            ],
+            "rank": 9,
+            "relative_rank_threshold": 1e-12,
+            "condition": 28.853085577785265
+          },
+          "full_row_rank": true,
+          "expected_weight_nullity": 20,
+          "noise_weighted_moment_matrix": {
+            "shape": [
+              9,
+              29
+            ],
+            "singular_values": [
+              6.664548712855677,
+              3.9776027103657956,
+              2.90113069762607,
+              1.6301508562519018,
+              1.4378872892367833,
+              1.2710084173245468,
+              0.5507027199692768,
+              0.46845535633253693,
+              0.3052859632602918
+            ],
+            "rank": 9,
+            "relative_rank_threshold": 1e-12,
+            "condition": 21.830511438134394
+          },
+          "maximum_moment_residual": 2.1760371282653068e-14,
+          "existing_condition_guard": 100000.0
+        },
+        {
+          "arm": 1,
+          "matrix": {
+            "shape": [
+              9,
+              29
+            ],
+            "singular_values": [
+              8.87746670612354,
+              6.59615431982807,
+              3.1292055035137007,
+              2.4179074651414454,
+              1.5631683177865263,
+              1.2734515118797627,
+              0.56187906652523,
+              0.46775884945861484,
+              0.30428110033244965
+            ],
+            "rank": 9,
+            "relative_rank_threshold": 1e-12,
+            "condition": 29.17521560302053
+          },
+          "full_row_rank": true,
+          "expected_weight_nullity": 20,
+          "noise_weighted_moment_matrix": {
+            "shape": [
+              9,
+              29
+            ],
+            "singular_values": [
+              6.666064550901364,
+              3.9794499718726173,
+              2.8973688078457003,
+              1.630024809135037,
+              1.4489091736954507,
+              1.2698512834102238,
+              0.5520380786070623,
+              0.46712876686725885,
+              0.30265775843702114
+            ],
+            "rank": 9,
+            "relative_rank_threshold": 1e-12,
+            "condition": 22.02509060176126
+          },
+          "maximum_moment_residual": 2.398081733190338e-14,
+          "existing_condition_guard": 100000.0
+        }
+      ],
+      "projection": {
+        "solver_success": true,
+        "iterations": 6,
+        "minimum_constraint_slack": -8.823413462540064e-15,
+        "active_threshold": 1e-07,
+        "active_constraints": 10,
+        "active_constraint_jacobian": {
+          "shape": [
+            10,
+            87
+          ],
+          "singular_values": [
+            2.4709154447040427,
+            2.3687736527148426,
+            2.297346169725336,
+            2.0543855825843855,
+            2.0000000000000004,
+            2.0,
+            1.9440935877856842,
+            1.6499092630954975,
+            1.5456103591151242,
+            1.376436291705148
+          ],
+          "rank": 10,
+          "relative_rank_threshold": 1e-10,
+          "condition": 1.7951542396800937
+        },
+        "meaning": "Constraint Jacobian only. Redundancy is possible; not a stochastic measurement Jacobian."
+      }
+    },
+    {
+      "seed": 70210031,
+      "status": "COMPLETE",
+      "moments": [
+        {
+          "arm": 0,
+          "matrix": {
+            "shape": [
+              9,
+              21
+            ],
+            "singular_values": [
+              8.83381673913504,
+              5.590706112780658,
+              2.4449875371399927,
+              1.8837321274760497,
+              1.1552283071519474,
+              0.9924114202070368,
+              0.3352554565856909,
+              0.26850032853579986,
+              0.2510913065206397
+            ],
+            "rank": 9,
+            "relative_rank_threshold": 1e-12,
+            "condition": 35.18169092170023
+          },
+          "full_row_rank": true,
+          "expected_weight_nullity": 12,
+          "noise_weighted_moment_matrix": {
+            "shape": [
+              9,
+              21
+            ],
+            "singular_values": [
+              6.278222437792984,
+              3.1872597497888244,
+              2.4327767519406813,
+              1.3857170703625845,
+              1.1406785976943383,
+              0.8565729523060935,
+              0.3317357606858706,
+              0.26804682071404984,
+              0.2458935595890834
+            ],
+            "rank": 9,
+            "relative_rank_threshold": 1e-12,
+            "condition": 25.53227684484547
+          },
+          "maximum_moment_residual": 1.2434497875801753e-14,
+          "existing_condition_guard": 100000.0
+        },
+        {
+          "arm": 1,
+          "matrix": {
+            "shape": [
+              9,
+              21
+            ],
+            "singular_values": [
+              8.834361923851775,
+              5.590669084342585,
+              2.444162004462563,
+              1.883981879569611,
+              1.1550770668267447,
+              0.9925943520217079,
+              0.33513786757578223,
+              0.26886003675630615,
+              0.2510872803364216
+            ],
+            "rank": 9,
+            "relative_rank_threshold": 1e-12,
+            "condition": 35.184426355707764
+          },
+          "full_row_rank": true,
+          "expected_weight_nullity": 12,
+          "noise_weighted_moment_matrix": {
+            "shape": [
+              9,
+              21
+            ],
+            "singular_values": [
+              6.278405839262123,
+              3.18753485799734,
+              2.4319648018628586,
+              1.3862483306233115,
+              1.1404495504483783,
+              0.8579099842304232,
+              0.33157220018587197,
+              0.2684420244875896,
+              0.2459175000284016
+            ],
+            "rank": 9,
+            "relative_rank_threshold": 1e-12,
+            "condition": 25.53053702374583
+          },
+          "maximum_moment_residual": 1.865174681370263e-14,
+          "existing_condition_guard": 100000.0
+        }
+      ],
+      "projection": {
+        "solver_success": true,
+        "iterations": 2,
+        "minimum_constraint_slack": 1.6737371037744975e-17,
+        "active_threshold": 1e-07,
+        "active_constraints": 1,
+        "active_constraint_jacobian": {
+          "shape": [
+            1,
+            63
+          ],
+          "singular_values": [
+            2.0
+          ],
+          "rank": 1,
+          "relative_rank_threshold": 1e-10,
+          "condition": 1.0
+        },
+        "meaning": "Constraint Jacobian only. Redundancy is possible; not a stochastic measurement Jacobian."
+      }
+    }
+  ]
+}

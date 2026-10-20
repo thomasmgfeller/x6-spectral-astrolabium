@@ -1,5 +1,7 @@
 # Conditional field noise and relation-compatible reconstruction
 
+Follow-up completed: [metadata-conditioned, moment-preserving correction](../metadata_bias/RESULTS.md), 29/32 guarded outputs. Both transfer-improvement criteria fail; **METADATA_HOLD; HOLD_PHASE3** remains.
+
 Continuation of the [original Feynman/Kalman pilot](../feynman_combiner/CALIBRATION_RESULTS.md).
 See [results and limitations](RESULTS.md), [frozen protocol](PROTOCOL.md),
 [machine-readable contract](contract.json), and [complete metrics](summary.json).

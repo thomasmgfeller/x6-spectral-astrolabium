@@ -1,6 +1,8 @@
 # Local d’Alembertian: independent reproduction track
 
-Latest continuation: [cloud-conditional field noise and explicit relation correction](conditional_geometry/RESULTS.md). The source/calibration freeze precedes 32 fresh test clouds; this remains an offline scalar pilot with **HOLD_PHASE3**.
+Latest continuation: [metadata-conditioned, moment-preserving correction](metadata_bias/RESULTS.md). All 32 planned cloud records are present after a lossless five-cloud resumption; 29 provide guarded outputs. Transfer RMSE falls 3.18% / 0.26% in the two arms, below the frozen 5% target, with both confidence intervals including no gain. Local strict replay passes; original process resource telemetry remains incomplete. **METADATA_HOLD; HOLD_PHASE3**.
+
+Previous continuation: [cloud-conditional field noise and explicit relation correction](conditional_geometry/RESULTS.md). The source/calibration freeze precedes 32 fresh test clouds; this remains an offline scalar pilot with **HOLD_PHASE3**.
 
 **20 October 2026 — independent scalar fusion pilot completed:** [Minimum-variance weights and calibration results](feynman_combiner/CALIBRATION_RESULTS.md). 32 calibration and 32 held-out clouds; 31/32 and 30/32 guarded scalar outputs. Joint fusion improves posterior RMSE by only 0.54%, below the prespecified 5%; paired uncertainty includes no improvement. Reconstructed-relation errors remain. `CALIBRATION_HOLD; HOLD_PHASE3`.
 
