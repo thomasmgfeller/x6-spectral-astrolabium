@@ -1,0 +1,32 @@
+{
+  "schema": "x6.v1b-boundary/1",
+  "validation_id": "V1b_FINITE_IMPLEMENTATION_REGRESSION",
+  "base_commit": "1e9904090c39ef66562dc297b792dc303c65552a",
+  "purpose": "Repair strict support and freeze native browser/export replay without replacing historical statistical failures.",
+  "known_before_run": [
+    "The old Python report used the missing-XOR variant and is superseded by the preserved port-correction audit.",
+    "Native seed 2463401483 starts with U=0 and produces a boundary point.",
+    "The unchanged native 4D radial diagnostic was previously reported at p approximately 0.01106, below the original per-test 0.05 threshold.",
+    "This is an unblinded repair/regression, not a new confirmatory statistical experiment."
+  ],
+  "dimensions": [2, 3, 4],
+  "seeds": [0, 1, 20261017, 4294967295],
+  "boundary_seed": 2463401483,
+  "m": 16384,
+  "theta_percent": [10,15,20,25,30,35,40,45,50,55,60,65,70,75,80,85],
+  "T": 1,
+  "confidence_alpha": 0.05,
+  "float_tolerance": {"absolute": 1e-12, "relative": 1e-12},
+  "prng_values_per_seed": 10000,
+  "same_runtime_export": "byte-identical after regeneration; no timestamp in application export",
+  "cross_runtime": "PRNG integers, flags, counts exact; coordinates and inference use fixed tolerance",
+  "boundary_policy": "Reject u_A=0 immediately; otherwise use the unchanged transform; reject invalid directions or candidates failing finite strict support. At most 128 attempts per accepted point, then throw without a partial result.",
+  "statistics": {
+    "time_and_radial": {"test": "two-sided one-sample KS vs U(0,1), pooled four seeds within dimension", "method": "exact", "alpha_per_test": 0.05, "origin": "Original V1b sections 9 and 10; unchanged, no multiplicity adjustment used to rescue this gate."},
+    "angular_moments": {"standard_error_limit": 6, "origin": "New explicit diagnostic screen; the old report gave no quantitative tolerance."},
+    "expanded_counts": {"test": "two-sided exact binomial per d/seed/theta", "family_alpha": 0.05, "family_size": 192, "origin": "New expanded-grid screen fixed before this run; does not replace the original time/radial gates."},
+    "interpretation": "Finite deterministic PRNG samples are not proven iid. These are regression discrepancy screens, not proofs of independence or uniformity."
+  },
+  "stop_rule": "Run once over the fixed matrix; retain every result. Do not tune seeds, sampler, thresholds or test family in response to p-values. Overall PASS requires engineering and every declared diagnostic gate. A diagnostic failure leaves overall NOT_PASSED.",
+  "dependencies": {"node_major": 24, "python_major_minor": "3.12", "numpy": "2.3.5", "scipy": "1.17.0", "playwright": "1.62.1"}
+}

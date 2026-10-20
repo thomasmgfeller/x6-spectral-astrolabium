@@ -1,0 +1,44 @@
+{
+  "schema": "x6.v1b-boundary/1",
+  "status": "PASS_NATIVE_ENGINEERING",
+  "provenance": {
+    "git_commit": "8262c6f36698e25073571fc61f56427ea2c475f8",
+    "source_sha256": {
+      "app/proper-time.html": "e3d8152c649ab05500db4d5d05965608719d0fe4d82c29f5432bd8ca1246fa58",
+      "research/lorentz_proper_time_lab/core.js": "f6f91dd66b1ac4ea19c0143a5e4e4b996271b10c596bbd0fe2ab42f13ab1e3bc",
+      "research/lorentz_proper_time_lab/ui.js": "41225926236e385cd4a46c2c328a664da7ee68ee15e2b7691a6b5abf13f6166b",
+      "research/lorentz_proper_time_lab/web.html": "a3541b9211c720fe92cf23595c1eac4daa40f3721c6663f93bdf3a8b073a735d",
+      "research/lorentz_proper_time_lab/build.py": "704456cf6f9471d758488e1ea57e3f6be4e7b989b348a99a0ae37ac85f2475e4",
+      "research/lorentz_proper_time_lab/v1b_boundary/protocol.json": "5dbe471b58ac2a94931ccedf9fd2a21a8c58f7742167141c172394d990d7d516",
+      "research/lorentz_proper_time_lab/v1b_boundary/common.cjs": "4c26124a02c2b973e59d0631c9f7cffbb3f460c2366cbf77f4d11f4b2906d89b",
+      "research/lorentz_proper_time_lab/v1b_boundary/native.cjs": "8cf145281ef54479eb6081ee846be0d313f6e7cab09b5bc869a123c3c87f092a",
+      "research/lorentz_proper_time_lab/v1b_boundary/browser.cjs": "fdd1d1a016a607b7f6e1f0af5c18dc6c8baf0a05205a229b7dc41c05b802e9c4",
+      "research/lorentz_proper_time_lab/v1b_boundary/analyze.py": "3914eed40a5ba2246623ca356068525a352aca2728889736735c2bc598353271",
+      "research/lorentz_proper_time_lab/v1b_boundary/requirements.txt": "1668a3152e33680d94637b13421c15e68bd97cd8701f7f555c691f5bc5c0b9f3"
+    },
+    "dirty_source_paths": [],
+    "runtime": {
+      "node": "v24.21.0",
+      "v8": "13.6.233.17-node.53",
+      "platform": "linux",
+      "architecture": "x64",
+      "os_release": "6.17.0-1022-azure"
+    },
+    "timestamp_utc": "2026-10-20T15:03:28.194Z"
+  },
+  "checks": [
+    "PRNG streams unchanged: 40000 exact binary fractions",
+    "Known zero-input seed repaired in d=2,3,4; old sampler rejected as negative control",
+    "Bounded failure and invalid source values",
+    "Inner predicate strictness at exactly representable boundaries",
+    "196608 fixed-matrix points and flags unchanged; support and seed replay pass",
+    "192 dimension/seed/theta cases; exact flags/counts and theta-independent points"
+  ],
+  "unique_matrix_points": 196608,
+  "theta_cases": 192,
+  "boundary_dimensions": 3,
+  "injected_cases": 15,
+  "raw_sha256": "6556765822d1b909966c24e76e17e048289344379e205bd83335b33916ecf8eb",
+  "historical_points_unchanged": true,
+  "statistical_gate": "NOT_EVALUATED_HERE"
+}

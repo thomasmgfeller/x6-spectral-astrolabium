@@ -4,7 +4,9 @@
  */
 (function (root) {
   'use strict';
-  const VERSION = 'x6.proper-time-lab/1.0';
+  const VERSION = 'x6.proper-time-lab/1.1';
+  const SAMPLER_POLICY = 'strict-interior-rejection/1';
+  const MAX_POINT_ATTEMPTS = 128;
   function rng(seed) {
     if (!Number.isInteger(seed) || seed < 0 || seed > 4294967295) throw Error('Seed muss eine ganze Zahl von 0 bis 4294967295 sein.');
     let state = seed >>> 0;
@@ -18,6 +20,34 @@
   function normal(random) {
     const u = Math.max(0.5 / 4294967296, random());
     return Math.sqrt(-2 * Math.log(u)) * Math.cos(2 * Math.PI * random());
+  }
+  function insideDiamond(point,theta=1) {
+    return Math.abs(point[0])+Math.hypot(...point.slice(1))<theta/2;
+  }
+  // Preserve the PRNG and the original transform for every accepted candidate.
+  // Reject endpoints/rounded boundary candidates instead of moving their mass
+  // to an arbitrary interior point. Finite PRNG independence is not assumed.
+  function samplePoint(random, d) {
+    if (typeof random !== 'function' || ![2,3,4].includes(d)) throw Error('Ungültige Punktquelle oder Dimension.');
+    const unit = () => {
+      const u=random();
+      if (!Number.isFinite(u) || u<0 || u>=1) throw Error('Zufallswert außerhalb [0,1).');
+      return u;
+    };
+    const rejected={zeroTemporalUniform:0, invalidDirection:0, outsideSupport:0};
+    for (let attempt=1; attempt<=MAX_POINT_ATTEMPTS; attempt++) {
+      const u=unit();
+      if (u===0) {rejected.zeroTemporalUniform++;continue;}
+      const A=.5*u**(1/d), t=(unit()<.5 ? -1 : 1)*(.5-A);
+      const v=Array.from({length:d-1},()=>normal(unit)), norm=Math.hypot(...v);
+      if (!(norm>0) || !Number.isFinite(norm)) {rejected.invalidDirection++;continue;}
+      const r=A*unit()**(1/(d-1)), point=[t,...v.map(x=>x*r/norm)];
+      if (!point.every(Number.isFinite) || !insideDiamond(point)) {
+        rejected.outsideSupport++;continue;
+      }
+      return {point,attempts:attempt,rejected};
+    }
+    throw Error('Sampler: nach 128 Versuchen kein strikt innerer Punkt. Keine Ausgabe freigegeben.');
   }
   function check(m, d, alpha = .05, T = 1) {
     if (!Number.isInteger(m) || m < 1 || m > 16384) throw Error('m muss zwischen 1 und 16384 liegen.');
@@ -77,16 +107,17 @@
     check(m,d,.05,T);
     if (!(theta > 0 && theta < 1)) throw Error('theta muss zwischen 0 und 1 liegen.');
     const random=rng(seed), points=[], inside=[];
+    const sampling={policy:SAMPLER_POLICY,maxAttemptsPerPoint:MAX_POINT_ATTEMPTS,
+      attempts:0,rejected:{zeroTemporalUniform:0,invalidDirection:0,outsideSupport:0}};
     for (let i=0;i<m;i++) {
-      const A=.5*random()**(1/d), t=(random()<.5 ? -1 : 1)*(.5-A);
-      const v=Array.from({length:d-1},()=>normal(random)), norm=Math.hypot(...v);
-      if (!norm) throw Error('Nullrichtung im Zufallsgenerator.');
-      const r=A*random()**(1/(d-1)), p=[t,...v.map(x=>x*r/norm)];
+      const candidate=samplePoint(random,d),p=candidate.point;
+      sampling.attempts+=candidate.attempts;
+      for (const key of Object.keys(sampling.rejected)) sampling.rejected[key]+=candidate.rejected[key];
       points.push(p);
-      inside.push(Math.abs(t)+Math.hypot(...p.slice(1)) < theta/2);
+      inside.push(insideDiamond(p,theta));
     }
     const k=inside.reduce((s,b)=>s+Number(b),0);
-    return {points,inside,...infer(k,m,d,.05,T)};
+    return {points,inside,sampling,...infer(k,m,d,.05,T)};
   }
   function precedes(a,b) {
     const dt=b[0]-a[0];
@@ -120,7 +151,7 @@
     weights.forEach((w,k)=>{const e=(k/m)**(1/d)-theta;mass+=w;bias+=w*e;mse+=w*e*e;});
     return {bias:bias/mass,rmse:Math.sqrt(mse/mass),expectedK:m*p,zeroProbability:Math.exp(m*Math.log1p(-p))};
   }
-  const api={VERSION,rng,infer,cloud,precedes,longestChain,binomial,exactMoments};
+  const api={VERSION,SAMPLER_POLICY,insideDiamond,samplePoint,rng,infer,cloud,precedes,longestChain,binomial,exactMoments};
   if (typeof module!=='undefined' && module.exports) module.exports=api;
   else root.ProperTime=api;
 })(typeof globalThis!=='undefined' ? globalThis : this);
