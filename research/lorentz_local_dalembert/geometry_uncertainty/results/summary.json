@@ -1,0 +1,918 @@
+{
+  "decision": "INVARIANT_CALIBRATION_COMPLETED",
+  "holds": [
+    "HOLD_EMBEDDING_COVARIANCE",
+    "HOLD_PHASE3",
+    "METADATA_HOLD"
+  ],
+  "development": {
+    "status": "FROZEN_DEVELOPMENT_MODEL",
+    "development_attempts": 64,
+    "development_complete": 58,
+    "interpretation": "Reused historical data; working invariant covariance, not a conditional embedding covariance.",
+    "arms": {
+      "original": {
+        "bias_coefficients": [
+          0.0002767707175137407,
+          -0.004833721115322973,
+          -0.010744601756178813
+        ],
+        "variance_components": [
+          0.002318944721665185,
+          0.0013486205162151288,
+          0.0004768525651074948
+        ],
+        "component_names": [
+          "independent",
+          "shared_endpoint",
+          "shared_cloud"
+        ],
+        "moment_fit_residual": 0.0,
+        "raw_cloud_balanced_mse": 0.027673671860983205,
+        "adjusted_cloud_balanced_mse": 0.027337875283363434
+      },
+      "projected": {
+        "bias_coefficients": [
+          -0.00012918977098869193,
+          -0.004872209979170664,
+          -0.010545041641133984
+        ],
+        "variance_components": [
+          0.002288335842676488,
+          0.0013167079677242636,
+          0.00046912366142920926
+        ],
+        "component_names": [
+          "independent",
+          "shared_endpoint",
+          "shared_cloud"
+        ],
+        "moment_fit_residual": 0.0,
+        "raw_cloud_balanced_mse": 0.027470473158708573,
+        "adjusted_cloud_balanced_mse": 0.027138385949375544
+      }
+    },
+    "support_cut": 21.0,
+    "condition_cut": 40.92647008799799,
+    "metadata_min": [
+      11.0,
+      18.50424009829228
+    ],
+    "metadata_max": [
+      34.0,
+      384.82853653717206
+    ]
+  },
+  "calibration_rule": {
+    "status": "FROZEN",
+    "attempts": 32,
+    "complete": 30,
+    "rank": 30,
+    "quantile": 5.4713576161943696,
+    "marginal_joint_coverage_bound": 0.967741935483871,
+    "scores": [
+      1.5965832206021673,
+      1.9642546848940212,
+      2.511830785573083,
+      2.7340093891247546,
+      2.7872019830026282,
+      2.8071300406000232,
+      2.846038550799396,
+      2.9276246454402552,
+      2.997197074754509,
+      3.089560543791831,
+      3.144980851889141,
+      3.21665624780735,
+      3.2197315973598157,
+      3.344823903857599,
+      3.3494379774707292,
+      3.3570099869290564,
+      3.357837158075969,
+      3.411864318634224,
+      3.4470348505086306,
+      3.4859812414887354,
+      3.4867792037724326,
+      3.755410088141798,
+      3.784460582256578,
+      3.9441547830931105,
+      4.032593952091326,
+      4.110880941677606,
+      4.127924169649313,
+      4.306274423544678,
+      4.380609281456707,
+      5.4713576161943696
+    ],
+    "scope": "Both arms, all intervals, root Gram entries and nonempty blocks of a new COMPLETE cloud; marginal over calibration/test draws."
+  },
+  "phases": {
+    "calibration": {
+      "attempts": 32,
+      "complete": 30,
+      "abstentions": 2,
+      "statuses": {
+        "COMPLETE": 30,
+        "NO_GUARDED_SUPPORT": 2
+      },
+      "simultaneous": {
+        "n": 30,
+        "covered": 30,
+        "rate": 1.0,
+        "clopper_pearson_95": [
+          0.8842966917779722,
+          1.0
+        ]
+      },
+      "scores": {
+        "n": 30,
+        "mean": 3.3665744698160607,
+        "median": 3.353223982199893,
+        "min": 1.5965832206021673,
+        "max": 5.4713576161943696
+      },
+      "arms": {
+        "original": {
+          "simultaneous": {
+            "n": 30,
+            "covered": 30,
+            "rate": 1.0,
+            "clopper_pearson_95": [
+              0.8842966917779722,
+              1.0
+            ]
+          },
+          "family_coverage": {
+            "interval": {
+              "n": 30,
+              "covered": 30,
+              "rate": 1.0,
+              "clopper_pearson_95": [
+                0.8842966917779722,
+                1.0
+              ]
+            },
+            "gram": {
+              "n": 30,
+              "covered": 30,
+              "rate": 1.0,
+              "clopper_pearson_95": [
+                0.8842966917779722,
+                1.0
+              ]
+            },
+            "block": {
+              "n": 30,
+              "covered": 30,
+              "rate": 1.0,
+              "clopper_pearson_95": [
+                0.8842966917779722,
+                1.0
+              ]
+            }
+          },
+          "raw_rmse": 0.1556255809021497,
+          "bias_adjusted_rmse": 0.1551740236503333,
+          "raw_cloud_balanced_mean": 0.013335040957982162,
+          "adjusted_cloud_balanced_mean": 0.002113012403546699,
+          "interval_halfwidth_cloud_medians": {
+            "n": 30,
+            "mean": 0.5863987219577191,
+            "median": 0.5898805297519091,
+            "min": 0.4870658350114124,
+            "max": 0.660995106792027
+          },
+          "interval_halfwidth_physical_cloud_medians": {
+            "n": 30,
+            "mean": 0.008885065405785946,
+            "median": 0.008937821472304083,
+            "min": 0.007379981638691526,
+            "max": 0.010015343718936484
+          },
+          "gram_halfwidth_cloud_medians": {
+            "n": 30,
+            "mean": 0.5717638137319371,
+            "median": 0.5766852495973823,
+            "min": 0.4826771647190444,
+            "max": 0.6579134867030673
+          },
+          "covariance_condition": {
+            "n": 30,
+            "mean": 982.8430165922258,
+            "median": 917.009547257982,
+            "min": 378.2764393510241,
+            "max": 1845.952458201016
+          },
+          "pointwise_second_moment": 0.7879728578059652,
+          "standardized_blocks": {
+            "all": {
+              "n": 30,
+              "mean_z": 0.03877703496211633,
+              "second_moment": 0.8807765297999812,
+              "screen_passed": true,
+              "shared_to_diagonal_variance_ratio": {
+                "n": 30,
+                "mean": 23.02558618926485,
+                "median": 21.884891543050024,
+                "min": 9.332115842864377,
+                "max": 49.6458753211495
+              }
+            },
+            "root": {
+              "n": 30,
+              "mean_z": -0.008803375120709618,
+              "second_moment": 0.6132829436549136,
+              "screen_passed": true,
+              "shared_to_diagonal_variance_ratio": {
+                "n": 30,
+                "mean": 6.321724184564092,
+                "median": 6.31958305984767,
+                "min": 3.989828001733396,
+                "max": 9.459319678272847
+              }
+            },
+            "support": {
+              "n": 30,
+              "mean_z": 0.0389068960820465,
+              "second_moment": 0.8617303178308631,
+              "screen_passed": true,
+              "shared_to_diagonal_variance_ratio": {
+                "n": 30,
+                "mean": 21.526437646270256,
+                "median": 20.45061144404286,
+                "min": 8.375192523585085,
+                "max": 47.37071501341458
+              }
+            },
+            "causal": {
+              "n": 30,
+              "mean_z": 0.017826668125153818,
+              "second_moment": 1.0652480322381939,
+              "screen_passed": true,
+              "shared_to_diagonal_variance_ratio": {
+                "n": 30,
+                "mean": 17.548605545591112,
+                "median": 17.15529260175115,
+                "min": 7.546797125428577,
+                "max": 37.120903821168646
+              }
+            },
+            "spacelike": {
+              "n": 30,
+              "mean_z": 0.17553630876501072,
+              "second_moment": 1.4407222132648374,
+              "screen_passed": true,
+              "shared_to_diagonal_variance_ratio": {
+                "n": 30,
+                "mean": 14.847799238726832,
+                "median": 13.449642689667828,
+                "min": 5.309671640255636,
+                "max": 31.01353587727808
+              }
+            },
+            "near": {
+              "n": 30,
+              "mean_z": 0.09122979787349947,
+              "second_moment": 0.9547352747675634,
+              "screen_passed": true,
+              "shared_to_diagonal_variance_ratio": {
+                "n": 30,
+                "mean": 15.453359894845027,
+                "median": 13.996096758628099,
+                "min": 5.840127110369184,
+                "max": 31.689589814791688
+              }
+            },
+            "far": {
+              "n": 30,
+              "mean_z": 0.029804814175450764,
+              "second_moment": 1.0893708059044585,
+              "screen_passed": true,
+              "shared_to_diagonal_variance_ratio": {
+                "n": 30,
+                "mean": 17.458228670082843,
+                "median": 17.072558785774845,
+                "min": 7.289484648620748,
+                "max": 37.280884530258874
+              }
+            }
+          },
+          "covariance_screen": "WORKING_COVARIANCE_SCREEN_PASSED"
+        },
+        "projected": {
+          "simultaneous": {
+            "n": 30,
+            "covered": 30,
+            "rate": 1.0,
+            "clopper_pearson_95": [
+              0.8842966917779722,
+              1.0
+            ]
+          },
+          "family_coverage": {
+            "interval": {
+              "n": 30,
+              "covered": 30,
+              "rate": 1.0,
+              "clopper_pearson_95": [
+                0.8842966917779722,
+                1.0
+              ]
+            },
+            "gram": {
+              "n": 30,
+              "covered": 30,
+              "rate": 1.0,
+              "clopper_pearson_95": [
+                0.8842966917779722,
+                1.0
+              ]
+            },
+            "block": {
+              "n": 30,
+              "covered": 30,
+              "rate": 1.0,
+              "clopper_pearson_95": [
+                0.8842966917779722,
+                1.0
+              ]
+            }
+          },
+          "raw_rmse": 0.1562330178009318,
+          "bias_adjusted_rmse": 0.15578773329072612,
+          "raw_cloud_balanced_mean": 0.013299804986087627,
+          "adjusted_cloud_balanced_mean": 0.0023684398298881378,
+          "interval_halfwidth_cloud_medians": {
+            "n": 30,
+            "mean": 0.5811888397729439,
+            "median": 0.5850509563792414,
+            "min": 0.483917187802961,
+            "max": 0.6553690347260428
+          },
+          "interval_halfwidth_physical_cloud_medians": {
+            "n": 30,
+            "mean": 0.008806125697640565,
+            "median": 0.00886464417213035,
+            "min": 0.007332273594080793,
+            "max": 0.009930097935799293
+          },
+          "gram_halfwidth_cloud_medians": {
+            "n": 30,
+            "mean": 0.5667835470735898,
+            "median": 0.5717753720046834,
+            "min": 0.4781520364690051,
+            "max": 0.6522943425099555
+          },
+          "covariance_condition": {
+            "n": 30,
+            "mean": 978.3103287406212,
+            "median": 913.7100452266252,
+            "min": 376.35804710827665,
+            "max": 1839.4879349014066
+          },
+          "pointwise_second_moment": 0.7927222964044829,
+          "standardized_blocks": {
+            "all": {
+              "n": 30,
+              "mean_z": 0.04270132857834692,
+              "second_moment": 0.8960264427306128,
+              "screen_passed": true,
+              "shared_to_diagonal_variance_ratio": {
+                "n": 30,
+                "mean": 23.01109563706001,
+                "median": 21.868871112461,
+                "min": 9.320312620745963,
+                "max": 49.613093541323764
+              }
+            },
+            "root": {
+              "n": 30,
+              "mean_z": -0.0063713046793930864,
+              "second_moment": 0.6249371371624004,
+              "screen_passed": true,
+              "shared_to_diagonal_variance_ratio": {
+                "n": 30,
+                "mean": 6.302286801448824,
+                "median": 6.303066890771679,
+                "min": 3.978804784841788,
+                "max": 9.424073806375604
+              }
+            },
+            "support": {
+              "n": 30,
+              "mean_z": 0.042807138285334556,
+              "second_moment": 0.8766540188504838,
+              "screen_passed": true,
+              "shared_to_diagonal_variance_ratio": {
+                "n": 30,
+                "mean": 21.51222113257597,
+                "median": 20.434927222800816,
+                "min": 8.364144975646653,
+                "max": 47.33829313640909
+              }
+            },
+            "causal": {
+              "n": 30,
+              "mean_z": 0.019257587605017976,
+              "second_moment": 1.0847089281629605,
+              "screen_passed": true,
+              "shared_to_diagonal_variance_ratio": {
+                "n": 30,
+                "mean": 17.53765057814816,
+                "median": 17.141664675947432,
+                "min": 7.537835177299766,
+                "max": 37.09988521319014
+              }
+            },
+            "spacelike": {
+              "n": 30,
+              "mean_z": 0.1940369811391492,
+              "second_moment": 1.4490402705714271,
+              "screen_passed": true,
+              "shared_to_diagonal_variance_ratio": {
+                "n": 30,
+                "mean": 14.837427460759772,
+                "median": 13.44032721135921,
+                "min": 5.3037016144207,
+                "max": 31.006696492920163
+              }
+            },
+            "near": {
+              "n": 30,
+              "mean_z": 0.10309290133475449,
+              "second_moment": 0.9574382416274914,
+              "screen_passed": true,
+              "shared_to_diagonal_variance_ratio": {
+                "n": 30,
+                "mean": 15.440963073552076,
+                "median": 13.9877098473162,
+                "min": 5.833883576105567,
+                "max": 31.79896175523304
+              }
+            },
+            "far": {
+              "n": 30,
+              "mean_z": 0.03216873171453774,
+              "second_moment": 1.1068537880436995,
+              "screen_passed": true,
+              "shared_to_diagonal_variance_ratio": {
+                "n": 30,
+                "mean": 17.44915770049656,
+                "median": 17.105129440105628,
+                "min": 7.280875467196741,
+                "max": 37.19878800223311
+              }
+            }
+          },
+          "covariance_screen": "WORKING_COVARIANCE_SCREEN_PASSED"
+        }
+      },
+      "strata": {
+        "support_stratum": {
+          "low": {
+            "n": 18,
+            "covered": 18,
+            "rate": 1.0,
+            "clopper_pearson_95": [
+              0.8146980318621477,
+              1.0
+            ]
+          },
+          "high": {
+            "n": 12,
+            "covered": 12,
+            "rate": 1.0,
+            "clopper_pearson_95": [
+              0.7353515306029488,
+              1.0
+            ]
+          }
+        },
+        "condition_stratum": {
+          "low": {
+            "n": 13,
+            "covered": 13,
+            "rate": 1.0,
+            "clopper_pearson_95": [
+              0.752947361999529,
+              1.0
+            ]
+          },
+          "high": {
+            "n": 17,
+            "covered": 17,
+            "rate": 1.0,
+            "clopper_pearson_95": [
+              0.8049356770309067,
+              1.0
+            ]
+          }
+        }
+      },
+      "outside_development_range": 0
+    },
+    "test": {
+      "attempts": 32,
+      "complete": 29,
+      "abstentions": 3,
+      "statuses": {
+        "COMPLETE": 29,
+        "NO_GUARDED_SUPPORT": 3
+      },
+      "simultaneous": {
+        "n": 29,
+        "covered": 26,
+        "rate": 0.896551724137931,
+        "clopper_pearson_95": [
+          0.726484802107577,
+          0.9781362631701463
+        ]
+      },
+      "scores": {
+        "n": 29,
+        "mean": 3.5023983466036004,
+        "median": 3.2887942280640408,
+        "min": 0.7934297038639114,
+        "max": 6.962836992497044
+      },
+      "arms": {
+        "original": {
+          "simultaneous": {
+            "n": 29,
+            "covered": 26,
+            "rate": 0.896551724137931,
+            "clopper_pearson_95": [
+              0.726484802107577,
+              0.9781362631701463
+            ]
+          },
+          "family_coverage": {
+            "interval": {
+              "n": 29,
+              "covered": 26,
+              "rate": 0.896551724137931,
+              "clopper_pearson_95": [
+                0.726484802107577,
+                0.9781362631701463
+              ]
+            },
+            "gram": {
+              "n": 29,
+              "covered": 29,
+              "rate": 1.0,
+              "clopper_pearson_95": [
+                0.8805551309304973,
+                1.0
+              ]
+            },
+            "block": {
+              "n": 29,
+              "covered": 29,
+              "rate": 1.0,
+              "clopper_pearson_95": [
+                0.8805551309304973,
+                1.0
+              ]
+            }
+          },
+          "raw_rmse": 0.15028073947830617,
+          "bias_adjusted_rmse": 0.15282485130103043,
+          "raw_cloud_balanced_mean": -0.004602439691545333,
+          "adjusted_cloud_balanced_mean": -0.015605108367659633,
+          "interval_halfwidth_cloud_medians": {
+            "n": 29,
+            "mean": 0.5693042604963707,
+            "median": 0.5873823816598667,
+            "min": 0.4612267444605296,
+            "max": 0.636925304701775
+          },
+          "interval_halfwidth_physical_cloud_medians": {
+            "n": 29,
+            "mean": 0.008626051525855084,
+            "median": 0.008899969737025682,
+            "min": 0.006988469855029806,
+            "max": 0.009650640049115677
+          },
+          "gram_halfwidth_cloud_medians": {
+            "n": 29,
+            "mean": 0.5635671480351596,
+            "median": 0.5773050725116318,
+            "min": 0.4626629785620018,
+            "max": 0.6281935191378784
+          },
+          "covariance_condition": {
+            "n": 29,
+            "mean": 961.1332960930041,
+            "median": 879.5214802824312,
+            "min": 412.98756834443594,
+            "max": 1733.212383057149
+          },
+          "pointwise_second_moment": 0.7658075325427967,
+          "standardized_blocks": {
+            "all": {
+              "n": 29,
+              "mean_z": -0.18634230497574847,
+              "second_moment": 1.0021862950748932,
+              "screen_passed": true,
+              "shared_to_diagonal_variance_ratio": {
+                "n": 29,
+                "mean": 22.69398792400519,
+                "median": 21.45310576438453,
+                "min": 8.000860319503742,
+                "max": 38.503624334532155
+              }
+            },
+            "root": {
+              "n": 29,
+              "mean_z": -0.07911702867265345,
+              "second_moment": 0.4180274542468524,
+              "screen_passed": false,
+              "shared_to_diagonal_variance_ratio": {
+                "n": 29,
+                "mean": 6.328919626074327,
+                "median": 6.386813261915011,
+                "min": 3.7428757448751724,
+                "max": 8.36635877477113
+              }
+            },
+            "support": {
+              "n": 29,
+              "mean_z": -0.18903536341941796,
+              "second_moment": 1.014224548834675,
+              "screen_passed": true,
+              "shared_to_diagonal_variance_ratio": {
+                "n": 29,
+                "mean": 21.187758918827125,
+                "median": 19.965269480406143,
+                "min": 7.152426259203472,
+                "max": 36.50501273302293
+              }
+            },
+            "causal": {
+              "n": 29,
+              "mean_z": -0.23353421301050079,
+              "second_moment": 1.0992669656820935,
+              "screen_passed": true,
+              "shared_to_diagonal_variance_ratio": {
+                "n": 29,
+                "mean": 17.20900091019401,
+                "median": 16.266578450518097,
+                "min": 6.696553769115398,
+                "max": 28.496688433797814
+              }
+            },
+            "spacelike": {
+              "n": 29,
+              "mean_z": 0.14291047027858744,
+              "second_moment": 1.9479851309630207,
+              "screen_passed": true,
+              "shared_to_diagonal_variance_ratio": {
+                "n": 29,
+                "mean": 15.086698300702306,
+                "median": 15.136732723922123,
+                "min": 4.4625211609652435,
+                "max": 24.912888120106505
+              }
+            },
+            "near": {
+              "n": 29,
+              "mean_z": 0.09219254679780366,
+              "second_moment": 1.4970539867566737,
+              "screen_passed": true,
+              "shared_to_diagonal_variance_ratio": {
+                "n": 29,
+                "mean": 15.961057142395363,
+                "median": 15.447422200253083,
+                "min": 4.928370994789873,
+                "max": 25.359716166483
+              }
+            },
+            "far": {
+              "n": 29,
+              "mean_z": -0.23248138404140423,
+              "second_moment": 1.1312760093831358,
+              "screen_passed": true,
+              "shared_to_diagonal_variance_ratio": {
+                "n": 29,
+                "mean": 16.976812897994055,
+                "median": 16.283649135133977,
+                "min": 6.5305259070468935,
+                "max": 28.6235213300878
+              }
+            }
+          },
+          "covariance_screen": "WORKING_COVARIANCE_SCREEN_FAILED"
+        },
+        "projected": {
+          "simultaneous": {
+            "n": 29,
+            "covered": 26,
+            "rate": 0.896551724137931,
+            "clopper_pearson_95": [
+              0.726484802107577,
+              0.9781362631701463
+            ]
+          },
+          "family_coverage": {
+            "interval": {
+              "n": 29,
+              "covered": 26,
+              "rate": 0.896551724137931,
+              "clopper_pearson_95": [
+                0.726484802107577,
+                0.9781362631701463
+              ]
+            },
+            "gram": {
+              "n": 29,
+              "covered": 29,
+              "rate": 1.0,
+              "clopper_pearson_95": [
+                0.8805551309304973,
+                1.0
+              ]
+            },
+            "block": {
+              "n": 29,
+              "covered": 29,
+              "rate": 1.0,
+              "clopper_pearson_95": [
+                0.8805551309304973,
+                1.0
+              ]
+            }
+          },
+          "raw_rmse": 0.15006653658139654,
+          "bias_adjusted_rmse": 0.15260992985881916,
+          "raw_cloud_balanced_mean": -0.0047521096294556,
+          "adjusted_cloud_balanced_mean": -0.015462816749238427,
+          "interval_halfwidth_cloud_medians": {
+            "n": 29,
+            "mean": 0.5647366910866378,
+            "median": 0.5823828656641338,
+            "min": 0.45692818465128954,
+            "max": 0.6351597560690431
+          },
+          "interval_halfwidth_physical_cloud_medians": {
+            "n": 29,
+            "mean": 0.00855684408826815,
+            "median": 0.008824217480146508,
+            "min": 0.006923338428876162,
+            "max": 0.009623888600840777
+          },
+          "gram_halfwidth_cloud_medians": {
+            "n": 29,
+            "mean": 0.5594806633227276,
+            "median": 0.5735778365813695,
+            "min": 0.4587609867407333,
+            "max": 0.6228466383913527
+          },
+          "covariance_condition": {
+            "n": 29,
+            "mean": 956.7379243726798,
+            "median": 876.015893662281,
+            "min": 411.097869421047,
+            "max": 1731.9742657835882
+          },
+          "pointwise_second_moment": 0.7622444939348776,
+          "standardized_blocks": {
+            "all": {
+              "n": 29,
+              "mean_z": -0.18602941442531945,
+              "second_moment": 1.009761844616461,
+              "screen_passed": true,
+              "shared_to_diagonal_variance_ratio": {
+                "n": 29,
+                "mean": 22.67789276359312,
+                "median": 21.43991203566784,
+                "min": 7.988359046262261,
+                "max": 38.51564650504177
+              }
+            },
+            "root": {
+              "n": 29,
+              "mean_z": -0.07848398122291918,
+              "second_moment": 0.42371292286582185,
+              "screen_passed": false,
+              "shared_to_diagonal_variance_ratio": {
+                "n": 29,
+                "mean": 6.3091816624765436,
+                "median": 6.367279098009983,
+                "min": 3.7323385929139867,
+                "max": 8.345207195426182
+              }
+            },
+            "support": {
+              "n": 29,
+              "mean_z": -0.1887634312634664,
+              "second_moment": 1.0219226793898537,
+              "screen_passed": true,
+              "shared_to_diagonal_variance_ratio": {
+                "n": 29,
+                "mean": 21.17196707201166,
+                "median": 19.952323880147677,
+                "min": 7.140737343006398,
+                "max": 36.51546180807457
+              }
+            },
+            "causal": {
+              "n": 29,
+              "mean_z": -0.23558061843683525,
+              "second_moment": 1.1141195658525869,
+              "screen_passed": true,
+              "shared_to_diagonal_variance_ratio": {
+                "n": 29,
+                "mean": 17.196990593370053,
+                "median": 16.250994071940273,
+                "min": 6.687215381639205,
+                "max": 28.506391237559086
+              }
+            },
+            "spacelike": {
+              "n": 29,
+              "mean_z": 0.15730451637996207,
+              "second_moment": 1.925028001912776,
+              "screen_passed": true,
+              "shared_to_diagonal_variance_ratio": {
+                "n": 29,
+                "mean": 15.076243351179226,
+                "median": 15.122082873540238,
+                "min": 4.457629529173642,
+                "max": 24.90687510976512
+              }
+            },
+            "near": {
+              "n": 29,
+              "mean_z": 0.10237369125102841,
+              "second_moment": 1.4619630348961479,
+              "screen_passed": true,
+              "shared_to_diagonal_variance_ratio": {
+                "n": 29,
+                "mean": 15.954344414278731,
+                "median": 15.436612597156971,
+                "min": 4.922913988576159,
+                "max": 25.46713443223608
+              }
+            },
+            "far": {
+              "n": 29,
+              "mean_z": -0.23406772075385446,
+              "second_moment": 1.1460911079188498,
+              "screen_passed": true,
+              "shared_to_diagonal_variance_ratio": {
+                "n": 29,
+                "mean": 16.962488247914216,
+                "median": 16.273707754920608,
+                "min": 6.521533570109436,
+                "max": 28.569881608450018
+              }
+            }
+          },
+          "covariance_screen": "WORKING_COVARIANCE_SCREEN_FAILED"
+        }
+      },
+      "strata": {
+        "support_stratum": {
+          "low": {
+            "n": 18,
+            "covered": 17,
+            "rate": 0.9444444444444444,
+            "clopper_pearson_95": [
+              0.7270564003266314,
+              0.9985944438326306
+            ]
+          },
+          "high": {
+            "n": 11,
+            "covered": 9,
+            "rate": 0.8181818181818182,
+            "clopper_pearson_95": [
+              0.4822441476398273,
+              0.9771688017000404
+            ]
+          }
+        },
+        "condition_stratum": {
+          "low": {
+            "n": 10,
+            "covered": 9,
+            "rate": 0.9,
+            "clopper_pearson_95": [
+              0.5549838829718047,
+              0.9974714214555382
+            ]
+          },
+          "high": {
+            "n": 19,
+            "covered": 17,
+            "rate": 0.8947368421052632,
+            "clopper_pearson_95": [
+              0.668623335543234,
+              0.9869878356282226
+            ]
+          }
+        }
+      },
+      "outside_development_range": 0
+    }
+  },
+  "interpretation": "Calibrated marginal invariant prediction sets; covariance shape screened separately. No validated conditional coordinate covariance, geometry correction or 4D transfer."
+}

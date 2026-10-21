@@ -1,0 +1,58 @@
+{
+  "status": "FROZEN_DEVELOPMENT_MODEL",
+  "development_attempts": 64,
+  "development_complete": 58,
+  "interpretation": "Reused historical data; working invariant covariance, not a conditional embedding covariance.",
+  "arms": {
+    "original": {
+      "bias_coefficients": [
+        0.0002767707175137407,
+        -0.004833721115322973,
+        -0.010744601756178813
+      ],
+      "variance_components": [
+        0.002318944721665185,
+        0.0013486205162151288,
+        0.0004768525651074948
+      ],
+      "component_names": [
+        "independent",
+        "shared_endpoint",
+        "shared_cloud"
+      ],
+      "moment_fit_residual": 0.0,
+      "raw_cloud_balanced_mse": 0.027673671860983205,
+      "adjusted_cloud_balanced_mse": 0.027337875283363434
+    },
+    "projected": {
+      "bias_coefficients": [
+        -0.00012918977098869193,
+        -0.004872209979170664,
+        -0.010545041641133984
+      ],
+      "variance_components": [
+        0.002288335842676488,
+        0.0013167079677242636,
+        0.00046912366142920926
+      ],
+      "component_names": [
+        "independent",
+        "shared_endpoint",
+        "shared_cloud"
+      ],
+      "moment_fit_residual": 0.0,
+      "raw_cloud_balanced_mse": 0.027470473158708573,
+      "adjusted_cloud_balanced_mse": 0.027138385949375544
+    }
+  },
+  "support_cut": 21.0,
+  "condition_cut": 40.92647008799799,
+  "metadata_min": [
+    11.0,
+    18.50424009829228
+  ],
+  "metadata_max": [
+    34.0,
+    384.82853653717206
+  ]
+}

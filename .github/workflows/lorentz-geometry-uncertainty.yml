@@ -1,0 +1,29 @@
+name: Lorentz Geometry Uncertainty
+on:
+  pull_request:
+    paths: ['research/lorentz_local_dalembert/geometry_uncertainty/**', '.github/workflows/lorentz-geometry-uncertainty.yml']
+  push:
+    branches: [main]
+    paths: ['research/lorentz_local_dalembert/geometry_uncertainty/**', '.github/workflows/lorentz-geometry-uncertainty.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  invariant-calibration-replay:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r research/lorentz_bd_reference/requirements-replay.txt
+      - run: python -B research/lorentz_local_dalembert/geometry_uncertainty/gu_controls.py
+      - run: python -B research/lorentz_local_dalembert/geometry_uncertainty/gu_verify.py
+      - run: python tests/python/verify_manifest.py
