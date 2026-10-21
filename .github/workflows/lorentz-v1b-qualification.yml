@@ -1,0 +1,33 @@
+name: V1b Scoped Proper-Time Qualification
+on:
+  pull_request:
+    paths: ['research/lorentz_proper_time_lab/**', '.github/workflows/lorentz-v1b-qualification.yml']
+  push:
+    branches: [main]
+    paths: ['research/lorentz_proper_time_lab/**', '.github/workflows/lorentz-v1b-qualification.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  frozen-scoped-qualification:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: python -m pip install -r research/lorentz_proper_time_lab/v1b_boundary/requirements.txt
+      - name: Replay known-seed collector fixtures against native cloud
+        run: node research/lorentz_proper_time_lab/v1b_qualification_v2/collect.cjs --fixture "$RUNNER_TEMP/v1b-v2-fixture"
+      - name: Verify frozen protocol and archived seed-level qualification
+        run: python research/lorentz_proper_time_lab/v1b_qualification_v2/verify.py

@@ -26,6 +26,14 @@ Punkten mit zwei Generatoren wurde keine wiederkehrende systematische radiale
 Abweichung festgestellt. Sampler und alte Prüfschwelle bleiben unverändert;
 der historische V1b-Status bleibt **NOT_PASSED**.
 
+**Begrenzte Qualifikation vom 21.10.2026:** Der vorab veröffentlichte
+[Eigenzeit-Nachweis V2](v1b_qualification_v2/README.md) besteht **52/52 Prüfungen**
+auf 100.663.296 neuen nativen Punkten. Er qualifiziert eine neue, konservativ
+erweiterte Referenz-Inferenz für genau m=4096, d=2/3/4 und θ=0,4/0,7 über
+zufällig gewählte Startseeds. Die Browserintervalle bleiben unverändert.
+Dieses **begrenzte PASS** ändert weder das historische V1b-NOT_PASSED noch
+HOLD_PHASE3; Details, Grenzen und vollständige Rohstatistiken stehen im Bericht.
+
 ## Bedienung
 
 1. Raumzeitdimension, Hintergrundbudget und wahre normierte Eigenzeit einstellen.
