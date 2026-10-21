@@ -18,6 +18,12 @@ Zählkovarianz beschreibt die beobachtete Varianz deutlich besser (4,46 vorherge
 geforderten 16 vollständigen Gruppen. **Rechenprüfung bestanden; keine
 wissenschaftliche Freigabe. Bisherige HOLD-Gates bleiben.**
 
+**Entwicklungsgeschichte der intrinsischen Eigenzeit-Korrektur ergänzt:**
+[Ursprüngliches V1/V2-Paket mit Herleitung, Code, allen alten Fällen und Sage-Nachweisen](research/lorentz_local_dalembert/intrinsic_correction_development/README.md).
+V1 wurde wegen schlechterer Operatorgenauigkeit verworfen; V2 war damals nur
+für exakte Distanzen geprüft. Die spätere Prüfung auf neuen Wolken steht oben.
+**Historische Evidenz unverändert; keine zusätzliche Freigabe.**
+
 **Eigenzeit: unabhängige Sage-Prüfung veröffentlicht (21.10.2026).**
 [Code, Daten, Ergebnisbericht und vollständiges Prüfpaket](research/lorentz_sage_reconstruction_audit/README.md):
 SageMath 10.9 bestätigt 16 exakte Kontrollen und 2.104 Prüfaussagen auf 64

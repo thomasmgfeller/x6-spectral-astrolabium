@@ -1,0 +1,128 @@
+{
+  "calibration": {
+    "scheduled": 32,
+    "previously_complete": 30,
+    "accepted": 30,
+    "old_unavailable": 2,
+    "groups": {
+      "all_previously_complete_with_fallback": {
+        "clouds": 30,
+        "rmse": {
+          "original": 2.32214024103902,
+          "projected": 2.5796131516036023,
+          "oracle": 0.04577281560915802,
+          "candidate_policy": 2.5198570201425734
+        },
+        "linear_response_rmse": {
+          "original": 2.3308980430925215,
+          "projected": 2.5985013225984215,
+          "oracle": 1.0567444978249605e-12,
+          "candidate_policy": 2.5237059771281443
+        },
+        "mean_iid_noise_variance": {
+          "original": 2.511108167558979,
+          "projected": 2.4578498539670033,
+          "oracle": 2.1592634206576875,
+          "candidate_policy": 2.6501373913474047
+        },
+        "rmse_ratio": 1.0851442025805844,
+        "linear_ratio": 1.0827183044779662,
+        "noise_ratio": 1.0553656849930024
+      },
+      "accepted_common_cases": {
+        "clouds": 30,
+        "rmse": {
+          "original": 2.32214024103902,
+          "projected": 2.5796131516036023,
+          "oracle": 0.04577281560915802,
+          "candidate_policy": 2.5198570201425734
+        },
+        "linear_response_rmse": {
+          "original": 2.3308980430925215,
+          "projected": 2.5985013225984215,
+          "oracle": 1.0567444978249605e-12,
+          "candidate_policy": 2.5237059771281443
+        },
+        "mean_iid_noise_variance": {
+          "original": 2.511108167558979,
+          "projected": 2.4578498539670033,
+          "oracle": 2.1592634206576875,
+          "candidate_policy": 2.6501373913474047
+        },
+        "rmse_ratio": 1.0851442025805844,
+        "linear_ratio": 1.0827183044779662,
+        "noise_ratio": 1.0553656849930024
+      }
+    },
+    "gates": {
+      "availability": true,
+      "rmse": false,
+      "linear_response": false,
+      "noise_cost": true
+    },
+    "development_gate": "HOLD"
+  },
+  "test": {
+    "scheduled": 32,
+    "previously_complete": 28,
+    "accepted": 28,
+    "old_unavailable": 4,
+    "groups": {
+      "all_previously_complete_with_fallback": {
+        "clouds": 28,
+        "rmse": {
+          "original": 1.4463113829255445,
+          "projected": 1.4550902133153278,
+          "oracle": 0.06303195540927428,
+          "candidate_policy": 2.592465642125721
+        },
+        "linear_response_rmse": {
+          "original": 1.4474418813183938,
+          "projected": 1.4553685144888078,
+          "oracle": 2.1510731922790322e-13,
+          "candidate_policy": 2.6011992233189245
+        },
+        "mean_iid_noise_variance": {
+          "original": 1.06009902258475,
+          "projected": 1.0616729052085836,
+          "oracle": 1.557246485461451,
+          "candidate_policy": 1.8179893593380307
+        },
+        "rmse_ratio": 1.7924671496962006,
+        "linear_ratio": 1.797100979936851,
+        "noise_ratio": 1.7149240972842148
+      },
+      "accepted_common_cases": {
+        "clouds": 28,
+        "rmse": {
+          "original": 1.4463113829255445,
+          "projected": 1.4550902133153278,
+          "oracle": 0.06303195540927428,
+          "candidate_policy": 2.592465642125721
+        },
+        "linear_response_rmse": {
+          "original": 1.4474418813183938,
+          "projected": 1.4553685144888078,
+          "oracle": 2.1510731922790322e-13,
+          "candidate_policy": 2.6011992233189245
+        },
+        "mean_iid_noise_variance": {
+          "original": 1.06009902258475,
+          "projected": 1.0616729052085836,
+          "oracle": 1.557246485461451,
+          "candidate_policy": 1.8179893593380307
+        },
+        "rmse_ratio": 1.7924671496962006,
+        "linear_ratio": 1.797100979936851,
+        "noise_ratio": 1.7149240972842148
+      }
+    },
+    "gates": {
+      "availability": true,
+      "rmse": false,
+      "linear_response": false,
+      "noise_cost": false
+    },
+    "development_gate": "HOLD"
+  }
+}
