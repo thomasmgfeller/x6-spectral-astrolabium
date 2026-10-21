@@ -1,0 +1,62 @@
+{
+  "schema": "x6.v1b-qualification-raw/2",
+  "fixture": false,
+  "started_utc": "2026-10-21T07:29:35.806Z",
+  "elapsed_seconds": 233.363,
+  "runtime": {
+    "node": "v24.19.0",
+    "v8": "13.6.233.17-node.51",
+    "platform": "linux",
+    "arch": "x64"
+  },
+  "protocol_sha256": "8b8658636ae30c5fb4288ccb584a64c756ef63ca79577e9b8089f3da6d6d3f9b",
+  "groups": [
+    {
+      "id": "native-d2",
+      "d": 2,
+      "arm": "native",
+      "clouds": 8192,
+      "file": "native-d2.jsonl.gz",
+      "sha256": "17a0c12483cf9e5f5768ec7a0c24673ce0f5a19645f7d35dd74044f46ae1e046",
+      "raw_sha256": "3d5352cfffaf0bd6cf76e652ade87083e0e567e9c23bafdbb2356fc6e01d4277"
+    },
+    {
+      "id": "native-d3",
+      "d": 3,
+      "arm": "native",
+      "clouds": 8192,
+      "file": "native-d3.jsonl.gz",
+      "sha256": "03fbeb978b62d9cb5214eb1418c94b5cc62c8c6f0b954ee4382a80e977b8a45a",
+      "raw_sha256": "1e5cc1fef2053f2c1140a396d2e87faedc67768c58c2451bcc33cf6a9c834306"
+    },
+    {
+      "id": "native-d4",
+      "d": 4,
+      "arm": "native",
+      "clouds": 8192,
+      "file": "native-d4.jsonl.gz",
+      "sha256": "0477a68daf82217863ee7f5fd9d07bd3a278889d96e710ac6f800ab7ad505ceb",
+      "raw_sha256": "c3608388452ab310631d6a0f5312f51c084a965beb5e0834cf1b4ab512f10a6b"
+    },
+    {
+      "id": "wrong-radius-d4",
+      "d": 4,
+      "arm": "wrong-radius",
+      "clouds": 512,
+      "file": "wrong-radius-d4.jsonl.gz",
+      "sha256": "5c822d1ead7ccf289c8ce8215ebba34ed3416e6b1249e04cd6b585ce35362274",
+      "raw_sha256": "458c91e3dfa80eb7bb6f2133142d328e4a0e351adc8fc24423a3fd43b8aee565"
+    },
+    {
+      "id": "repeated-point-d4",
+      "d": 4,
+      "arm": "repeated-point",
+      "clouds": 512,
+      "file": "repeated-point-d4.jsonl.gz",
+      "sha256": "7d5a723be11ed1c85bbb520a33fd41902c7718c4d824ae766d7403b5f0a5ca82",
+      "raw_sha256": "3b91778d3df8195b6350bf8e76c1f366020c1d7040be74ddad635089e5b2dd9b"
+    }
+  ],
+  "intervals_sha256": "23ddb887b77ff96ca8f1107bf694e8b79c3a62f80055dd945ef8127e1e9fcc0d",
+  "raw_contract": "Per-cloud sufficient statistics plus ordered-coordinate SHA-256; coordinates are replayable from seeds but not stored."
+}
