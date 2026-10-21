@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Verify evidence completeness, frozen source and numeric reanalysis."""
-import gzip, hashlib, json, subprocess
+import gzip, hashlib, json, math, subprocess
 import numpy as np
 from run_control import HERE, ROOT, digest, analyze, schedule
 
@@ -33,12 +33,31 @@ def main():
             assert hashlib.sha256(data).hexdigest()==g['raw_sha256']
     computed=analyze(out,q)
     computed=json.loads(json.dumps(computed,default=lambda x:x.item() if isinstance(x,np.generic) else x))
-    for k,v in computed.items():assert saved[k]==v,k
+    # Identical raw bytes do not guarantee identical libm/SciPy final bits on
+    # another runner. This numerical replay tolerance is not a statistical gate.
+    # All counts, booleans, decisions, strings and hashes still match exactly.
+    changes=[]
+    def compare(a,b,path):
+        if isinstance(b,dict):
+            assert isinstance(a,dict) and a.keys()==b.keys(),path
+            for k in b:compare(a[k],b[k],path+'/'+k)
+        elif isinstance(b,list):
+            assert isinstance(a,list) and len(a)==len(b),path
+            for i,(x,y) in enumerate(zip(a,b)):compare(x,y,path+'/'+str(i))
+        elif isinstance(b,float):
+            assert isinstance(a,(int,float)) and not isinstance(a,bool),path
+            error=abs(a-b)
+            if error:changes.append(dict(path=path,archived=a,recomputed=b,absolute_error=error))
+            assert math.isfinite(a) and math.isfinite(b) and error<=1e-12+1e-12*abs(a),(path,a,b,error)
+        else:assert type(a)==type(b) and a==b,(path,a,b)
+    for k,v in computed.items():compare(saved[k],v,k)
     assert saved['original_V1b']=='NOT_PASSED'
     assert len(list(out.glob('*.bin.gz')))==64
     result=dict(status='PASS_EVIDENCE_AND_NUMERIC_REANALYSIS',verified_hashes=verified+2,new_points=4194304,
         original_archive_unchanged=True,source_unchanged=True,protocol_unchanged=True,
         fresh_followup_status=saved['status'],overall_V1b='NOT_PASSED',
+        numerical_replay=dict(absolute_tolerance=1e-12,relative_tolerance=1e-12,
+            changed_float_count=len(changes),max_absolute_error=max((x['absolute_error'] for x in changes),default=0),differences=changes),
         scope='All raw radial traces and primary statistics reanalyzed; source hashes verified. This is not a second independent scientific replication.')
     print(json.dumps(result,indent=2))
 if __name__=='__main__':main()

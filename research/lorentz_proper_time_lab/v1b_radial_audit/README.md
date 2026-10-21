@@ -149,6 +149,12 @@ python research/lorentz_proper_time_lab/v1b_radial_audit/verify.py
 
 Erwartetes Ergebnis: `PASS_EVIDENCE_AND_NUMERIC_REANALYSIS`, 4.194.304 Punkte;
 `overall_V1b=NOT_PASSED`. Der historische Datensatz bleibt unverändert.
+Der externe Prüflauf verlangte zunächst auch für neu berechnete
+SciPy-Gleitkommazahlen Bitidentität. Für diesen numerischen Replay-Vergleich
+gilt nun `1e-12 + 1e-12*abs(Archivwert)`; jede abweichende Zahl wird mit ihrer
+Differenz ausgegeben. Rohdatenhashes, Zählwerte, Entscheidungen und alle
+statistischen Schwellen müssen weiterhin exakt übereinstimmen. Dies ändert
+weder den eingefrorenen Auswerter noch seine wissenschaftlichen Kriterien.
 Für flache Git-Checkouts muss der Vorregistrierungscommit zuvor verfügbar
 gemacht werden:
 
