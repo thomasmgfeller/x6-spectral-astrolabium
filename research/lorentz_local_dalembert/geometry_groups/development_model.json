@@ -1,0 +1,172 @@
+{
+  "status": "FROZEN_DEVELOPMENT_MODEL",
+  "development_attempts": 128,
+  "development_complete": 117,
+  "interpretation": "PR74 and PR76 clouds reused for development. No independent claim on those data.",
+  "models": {
+    "pooled": {
+      "original": {
+        "bias_coefficients": [
+          0.004924987819507262,
+          -0.001516974857453026,
+          -0.012582074157224836
+        ],
+        "bias_shrinkage": 0.0,
+        "loo_risk_by_shrinkage": [
+          0.020924618223183956,
+          0.020926830236090512,
+          0.020938359197643367,
+          0.020959205107842566,
+          0.02098936796668807
+        ],
+        "variance_components": [
+          0.002768917428810865,
+          0.0009641250465956456,
+          0.0003985226261198365
+        ],
+        "component_names": [
+          "independent",
+          "shared_endpoint",
+          "shared_cloud"
+        ],
+        "component_gram_condition": 3.751968894101943,
+        "moment_fit_residual": 0.0,
+        "raw_group_balanced_mse": 0.020924618223183946,
+        "adjusted_group_balanced_mse": 0.020924618223183946
+      },
+      "projected": {
+        "bias_coefficients": [
+          0.004655398990222832,
+          -0.0015484125873967275,
+          -0.012447847089372837
+        ],
+        "bias_shrinkage": 0.0,
+        "loo_risk_by_shrinkage": [
+          0.02086081509859361,
+          0.020863231864793757,
+          0.020874808688908623,
+          0.020895545570938215,
+          0.020925442510882516
+        ],
+        "variance_components": [
+          0.0027633397753225363,
+          0.0009542008629837962,
+          0.0003923572701789988
+        ],
+        "component_names": [
+          "independent",
+          "shared_endpoint",
+          "shared_cloud"
+        ],
+        "component_gram_condition": 3.751968894101943,
+        "moment_fit_residual": 0.0,
+        "raw_group_balanced_mse": 0.0208608150985936,
+        "adjusted_group_balanced_mse": 0.0208608150985936
+      }
+    },
+    "grouped": {
+      "original": {
+        "bias_coefficients": [
+          0.061861366864374004,
+          0.05340582249762103,
+          -0.013908216301888663,
+          0.03347911403978211,
+          0.06027881601846431,
+          0.007999132362952431
+        ],
+        "bias_shrinkage": 0.75,
+        "loo_risk_by_shrinkage": [
+          0.020924618223183956,
+          0.020825518548373324,
+          0.020766227147684883,
+          0.02074674402111861,
+          0.0207670691686745
+        ],
+        "variance_components": [
+          0.002865787639835705,
+          0.00139014978430086,
+          3.2981138360864935e-05,
+          0.0010371478129785749,
+          0.002268039631860839,
+          0.0,
+          0.0,
+          0.0008956497899685919,
+          0.00015468150252045203,
+          0.0004013342766547027
+        ],
+        "component_names": [
+          "root_independent",
+          "support_spacelike_independent",
+          "support_causal_independent",
+          "cross_group_endpoint",
+          "support_spacelike_endpoint",
+          "support_causal_endpoint",
+          "root_cloud",
+          "support_spacelike_cloud",
+          "support_causal_cloud",
+          "signed_common_scale"
+        ],
+        "component_gram_condition": 13.634287668374862,
+        "moment_fit_residual": 0.0007717685347654196,
+        "raw_group_balanced_mse": 0.020924618223183946,
+        "adjusted_group_balanced_mse": 0.02062652583122542
+      },
+      "projected": {
+        "bias_coefficients": [
+          0.06215768444088913,
+          0.053711265518424034,
+          -0.013365347749934234,
+          0.031642001129114396,
+          0.05850041462807655,
+          0.0077063087818194
+        ],
+        "bias_shrinkage": 0.75,
+        "loo_risk_by_shrinkage": [
+          0.02086081509859361,
+          0.020765902452370266,
+          0.020709467915227504,
+          0.020691511487165318,
+          0.020712033168183704
+        ],
+        "variance_components": [
+          0.002874561448603344,
+          0.0013511026178209167,
+          4.9162451095759204e-05,
+          0.001023178626232625,
+          0.002224231660877768,
+          0.0,
+          0.0,
+          0.0008774286822596086,
+          0.00015311866416387333,
+          0.0004035856086074122
+        ],
+        "component_names": [
+          "root_independent",
+          "support_spacelike_independent",
+          "support_causal_independent",
+          "cross_group_endpoint",
+          "support_spacelike_endpoint",
+          "support_causal_endpoint",
+          "root_cloud",
+          "support_spacelike_cloud",
+          "support_causal_cloud",
+          "signed_common_scale"
+        ],
+        "component_gram_condition": 13.635016691296233,
+        "moment_fit_residual": 0.000741930989354993,
+        "raw_group_balanced_mse": 0.0208608150985936,
+        "adjusted_group_balanced_mse": 0.020572712762303418
+      }
+    }
+  },
+  "support_cut": 21.0,
+  "condition_cut": 44.64665216737067,
+  "metadata_min": [
+    11.0,
+    18.50424009829228
+  ],
+  "metadata_max": [
+    34.0,
+    384.82853653717206
+  ]
+}
