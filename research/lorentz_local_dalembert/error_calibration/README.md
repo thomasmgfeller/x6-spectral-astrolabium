@@ -72,7 +72,7 @@ Quell-/Seed-Freeze: `c56dd5b18ef4451b2f6e968f4ca8ab859d6474f5`. Kalibrier-Freeze
 
 ```sh
 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python -B research/lorentz_local_dalembert/error_calibration/ec_controls.py
-OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python -B research/lorentz_local_dalembert/error_calibration/ec_verify.py
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python -B research/lorentz_local_dalembert/error_calibration/portable_verify.py
 ```
 
-Replay prüft dieselben Beobachtungen numerisch mit eingefrorenen Toleranzen; Bytehashes werden separat berichtet. Keine vollständige Rahmensuche und keine externe Replikation. Dieser synthetische Flachraum-Pilot in 2+1 Dimensionen qualifiziert weder beliebige Felder und Dichten noch den 4D-Sampler, reale Geräte, Krümmung oder Onlinebetrieb.
+Der [Portabilitätsadapter](REPLAY_PORTABILITY.md) berichtet die historischen Entwicklungs-Bytehashes separat; der unveränderte Originalverifier bleibt als `ec_verify.py` verfügbar. Replay prüft dieselben Beobachtungen numerisch mit eingefrorenen Toleranzen; Bytehashes werden separat berichtet. Keine vollständige Rahmensuche und keine externe Replikation. Dieser synthetische Flachraum-Pilot in 2+1 Dimensionen qualifiziert weder beliebige Felder und Dichten noch den 4D-Sampler, reale Geräte, Krümmung oder Onlinebetrieb.
