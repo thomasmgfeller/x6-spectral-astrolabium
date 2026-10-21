@@ -1,0 +1,427 @@
+{
+  "schema": "x6.v1b-radial-diagnosis/1",
+  "kind": "RETROSPECTIVE_UNBLINDED",
+  "base_commit": "305a882d7c307a0f8e17ce3e18c23609376bd202",
+  "archive_sha256": "6556765822d1b909966c24e76e17e048289344379e205bd83335b33916ecf8eb",
+  "all_18_archived_hashes_verified": true,
+  "runtime": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0"
+  },
+  "input_radial": {
+    "n": 65536,
+    "D": 0.006294515682384372,
+    "p": 0.01106164503413279,
+    "location": 0.43093082611449063,
+    "sign": 1,
+    "direct_D": 0.006294515682384372
+  },
+  "reconstructed_numpy": {
+    "n": 65536,
+    "D": 0.006294515682384372,
+    "p": 0.01106164503413279,
+    "location": 0.43093082611449063,
+    "sign": 1,
+    "direct_D": 0.006294515682384372
+  },
+  "reconstructed_native": {
+    "n": 65536,
+    "D": 0.006294515682384538,
+    "p": 0.01106164503412975,
+    "location": 0.43093082611449046,
+    "sign": 1,
+    "direct_D": 0.006294515682384538
+  },
+  "per_seed": [
+    {
+      "seed": 0,
+      "radial_input": {
+        "n": 16384,
+        "D": 0.011440365109592676,
+        "p": 0.027234003771120174,
+        "location": 0.24094000598415732,
+        "sign": 1,
+        "direct_D": 0.011440365109592676
+      },
+      "reconstructed": {
+        "n": 16384,
+        "D": 0.011440365109592593,
+        "p": 0.027234003771121618,
+        "location": 0.2409400059841574,
+        "sign": 1,
+        "direct_D": 0.011440365109592593
+      },
+      "mean": 0.4938185251074714
+    },
+    {
+      "seed": 1,
+      "radial_input": {
+        "n": 16384,
+        "D": 0.003861397970467806,
+        "p": 0.9667183903588927,
+        "location": 0.5168008510954678,
+        "sign": -1,
+        "direct_D": 0.003861397970467806
+      },
+      "reconstructed": {
+        "n": 16384,
+        "D": 0.003861397970467917,
+        "p": 0.9667183903588841,
+        "location": 0.5168008510954679,
+        "sign": -1,
+        "direct_D": 0.003861397970467917
+      },
+      "mean": 0.5008498235092986
+    },
+    {
+      "seed": 20261017,
+      "radial_input": {
+        "n": 16384,
+        "D": 0.008536001900210977,
+        "p": 0.18251970260234474,
+        "location": 0.685904165962711,
+        "sign": -1,
+        "direct_D": 0.008536001900210977
+      },
+      "reconstructed": {
+        "n": 16384,
+        "D": 0.008536001900211199,
+        "p": 0.1825197026023221,
+        "location": 0.6859041659627112,
+        "sign": -1,
+        "direct_D": 0.008536001900211199
+      },
+      "mean": 0.5010194872509288
+    },
+    {
+      "seed": 4294967295,
+      "radial_input": {
+        "n": 16384,
+        "D": 0.013917110161855817,
+        "p": 0.0034720159434027714,
+        "location": 0.4562977335881442,
+        "sign": 1,
+        "direct_D": 0.013917110161855817
+      },
+      "reconstructed": {
+        "n": 16384,
+        "D": 0.013917110161855761,
+        "p": 0.0034720159434029475,
+        "location": 0.45629773358814424,
+        "sign": 1,
+        "direct_D": 0.013917110161855761
+      },
+      "mean": 0.4930582674182631
+    }
+  ],
+  "max_numpy_transform_error": 3.774758283725532e-15,
+  "max_native_transform_error": 3.774758283725532e-15,
+  "decimal_checks": [
+    {
+      "index": 0,
+      "error": 1.3493824108126433e-16
+    },
+    {
+      "index": 1097,
+      "error": 7.181538004397232e-16
+    },
+    {
+      "index": 4995,
+      "error": 1.0530168132097244e-15
+    },
+    {
+      "index": 6431,
+      "error": 8.999693012702353e-16
+    },
+    {
+      "index": 7200,
+      "error": 7.755938045394794e-16
+    },
+    {
+      "index": 8819,
+      "error": 1.2011483961061168e-15
+    },
+    {
+      "index": 8959,
+      "error": 1.0525699653642694e-15
+    },
+    {
+      "index": 10438,
+      "error": 1.4249382493084796e-16
+    },
+    {
+      "index": 11611,
+      "error": 7.34804316817492e-16
+    },
+    {
+      "index": 12735,
+      "error": 9.407455741558016e-16
+    },
+    {
+      "index": 12806,
+      "error": 9.499704339873788e-16
+    },
+    {
+      "index": 15591,
+      "error": 1.011894439057507e-15
+    },
+    {
+      "index": 16863,
+      "error": 1.0199102124539639e-15
+    },
+    {
+      "index": 19504,
+      "error": 7.893898799273685e-16
+    },
+    {
+      "index": 21143,
+      "error": 1.0955653134668337e-15
+    },
+    {
+      "index": 24172,
+      "error": 8.638812981178207e-16
+    },
+    {
+      "index": 24886,
+      "error": 6.881727628486494e-16
+    },
+    {
+      "index": 26904,
+      "error": 9.928722918979815e-16
+    },
+    {
+      "index": 29225,
+      "error": 9.568503388223996e-16
+    },
+    {
+      "index": 31393,
+      "error": 1.096678419951899e-15
+    },
+    {
+      "index": 35861,
+      "error": 7.827133201373022e-16
+    },
+    {
+      "index": 38296,
+      "error": 7.928367184876114e-16
+    },
+    {
+      "index": 39141,
+      "error": 3.655727247279056e-15
+    },
+    {
+      "index": 41715,
+      "error": 1.135072713192579e-15
+    },
+    {
+      "index": 42966,
+      "error": 1.0245697591567344e-15
+    },
+    {
+      "index": 44454,
+      "error": 1.3392252827738161e-15
+    },
+    {
+      "index": 46811,
+      "error": 7.775395414124929e-16
+    },
+    {
+      "index": 51634,
+      "error": 8.047994487621585e-16
+    },
+    {
+      "index": 51696,
+      "error": 9.840553944920719e-16
+    },
+    {
+      "index": 54340,
+      "error": 1.0228962082377413e-15
+    },
+    {
+      "index": 59678,
+      "error": 1.1009029402748925e-15
+    },
+    {
+      "index": 60519,
+      "error": 7.279725926956522e-16
+    },
+    {
+      "index": 63605,
+      "error": 9.28138621376094e-16
+    },
+    {
+      "index": 64332,
+      "error": 6.960796379882527e-16
+    },
+    {
+      "index": 65535,
+      "error": 2.6501373980414483e-16
+    }
+  ],
+  "trace": {
+    "schema": "x6.v1b-radial-trace/1",
+    "runtime": {
+      "node": "v24.19.0",
+      "v8": "13.6.233.17-node.51",
+      "arch": "x64",
+      "platform": "linux"
+    },
+    "core_sha256": "f6f91dd66b1ac4ea19c0143a5e4e4b996271b10c596bbd0fe2ab42f13ab1e3bc",
+    "trace_sha256": "6e8f340183a1deaa96d6d1a0b690300d9ca94e01222508b995b76681e2323cfd",
+    "groups": [
+      {
+        "id": "historical_d4",
+        "file": "historical_d4.bin.gz",
+        "n": 65536,
+        "raw_sha256": "a277872fdaaf99e642cfc5ade1d59788bbc03ce20b90be43310aec8a30dc87ef",
+        "file_sha256": "4f2e8b5c37139fb7f29029aac0c228e217e3560f6be3e1d8ce840ddfb3eec078",
+        "streams": [
+          {
+            "id": "s0",
+            "seed": 0,
+            "key": null,
+            "n": 16384,
+            "draws": 147456,
+            "rejected": {
+              "zeroTemporalUniform": 0,
+              "invalidDirection": 0,
+              "outsideSupport": 0
+            },
+            "max_transform_error": 1.3322676295501878e-15,
+            "max_support": 0.49998756197260885,
+            "counts": [
+              4,
+              8,
+              31,
+              78,
+              157,
+              265,
+              432,
+              728,
+              1104,
+              1606,
+              2212,
+              3035,
+              4057,
+              5337,
+              6938,
+              8749
+            ],
+            "coordinates_sha256": "80d836d8df3d37675a75318753889eff3044e3f85e03778ef9b2ad1b03fe2b94",
+            "input_file_sha256": null,
+            "historical_coordinate_replay": "EXACT"
+          },
+          {
+            "id": "s1",
+            "seed": 1,
+            "key": null,
+            "n": 16384,
+            "draws": 147456,
+            "rejected": {
+              "zeroTemporalUniform": 0,
+              "invalidDirection": 0,
+              "outsideSupport": 0
+            },
+            "max_transform_error": 1.4432899320127035e-15,
+            "max_support": 0.49998109726378626,
+            "counts": [
+              1,
+              6,
+              18,
+              54,
+              123,
+              242,
+              426,
+              656,
+              995,
+              1457,
+              2094,
+              2921,
+              3876,
+              5140,
+              6689,
+              8510
+            ],
+            "coordinates_sha256": "6d5c378c48b558266a428245e295af7420c8f3772e13cae01821046c31111569",
+            "input_file_sha256": null,
+            "historical_coordinate_replay": "EXACT"
+          },
+          {
+            "id": "s20261017",
+            "seed": 20261017,
+            "key": null,
+            "n": 16384,
+            "draws": 147456,
+            "rejected": {
+              "zeroTemporalUniform": 0,
+              "invalidDirection": 0,
+              "outsideSupport": 0
+            },
+            "max_transform_error": 3.774758283725532e-15,
+            "max_support": 0.4999798759709911,
+            "counts": [
+              3,
+              10,
+              31,
+              84,
+              161,
+              280,
+              445,
+              718,
+              1079,
+              1589,
+              2202,
+              2966,
+              3922,
+              5156,
+              6668,
+              8465
+            ],
+            "coordinates_sha256": "61f4abdc26c65d0207ff8b0ad93d409d1ac3313ef51d6580880096897e6ebe7d",
+            "input_file_sha256": null,
+            "historical_coordinate_replay": "EXACT"
+          },
+          {
+            "id": "s4294967295",
+            "seed": 4294967295,
+            "key": null,
+            "n": 16384,
+            "draws": 147456,
+            "rejected": {
+              "zeroTemporalUniform": 0,
+              "invalidDirection": 0,
+              "outsideSupport": 0
+            },
+            "max_transform_error": 1.2212453270876722e-15,
+            "max_support": 0.499999338909684,
+            "counts": [
+              1,
+              5,
+              23,
+              54,
+              134,
+              263,
+              452,
+              727,
+              1067,
+              1554,
+              2151,
+              2988,
+              4037,
+              5291,
+              6865,
+              8728
+            ],
+            "coordinates_sha256": "80a557ae2f592a8b4f1f9df7f57d4768304099cdfa731e766980358400da4bd4",
+            "input_file_sha256": null,
+            "historical_coordinate_replay": "EXACT"
+          }
+        ]
+      }
+    ]
+  },
+  "original_gate": "FAIL",
+  "overall_V1b": "NOT_PASSED",
+  "conclusion": "The old discrepancy is already present in the sampled radial PRNG inputs. Geometry, normal-direction normalization, and rounding do not create it. This does not establish a systematic PRNG defect; fresh controls are required."
+}
