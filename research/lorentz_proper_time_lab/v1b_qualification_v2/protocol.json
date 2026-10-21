@@ -1,0 +1,80 @@
+{
+  "schema": "x6.v1b-scoped-qualification/2",
+  "date": "2026-10-21",
+  "base_commit": "2bf7b9e29acb120696858758fe8a39d5d71d09db",
+  "scope": "Flat Minkowski; native core.js 1.1; T=1 (homogeneous scaling only); central nested diamonds; d in {2,3,4}; m=4096; theta in {0.4,0.7}; new qualifiedInterval wrapper only.",
+  "inherited_goal": {
+    "relative_precision": 0.1,
+    "coverage": 0.95,
+    "joint_covered_and_precise_probability": 0.9
+  },
+  "engineering_allocation": {
+    "scale_equivalent_mean_bias": 0.02,
+    "marginal_cdf_absolute_tolerance": 0.005
+  },
+  "m": 4096,
+  "repetitions": 8192,
+  "dimensions": [
+    2,
+    3,
+    4
+  ],
+  "theta_grid": [
+    0.1,
+    0.2,
+    0.4,
+    0.7
+  ],
+  "primary_theta": [
+    0.4,
+    0.7
+  ],
+  "family_alpha": 0.05,
+  "gates": 52,
+  "alpha_per_gate": 0.0009615384615384616,
+  "independent_unit": "One cloud from one independently uniform fresh eligible 32-bit seed. No within-cloud independence assumed. OS random source is a declared assumption.",
+  "mean_method": "Clipped empirical Bernstein plus two exact binomial tail upper bounds; four errors alpha_gate/4. See DERIVATION.md.",
+  "proportion_method": "Two-sided exact Clopper-Pearson confidence interval at 1-alpha_gate across independent clouds.",
+  "decision": "PASS if all 52 gates PASS and all engineering/positive controls pass; FAIL if any statistical gate FAIL or hard validation fails; otherwise UNENTSCHIEDEN. Missing/incomplete run is UNENTSCHIEDEN, never PASS.",
+  "primary_points": 100663296,
+  "control_budget": {
+    "clouds_per_arm": 512,
+    "wrong_radius_points": 2097152,
+    "repeated_point_generated_points": 512
+  },
+  "positive_controls": "Wrong radius: replace r=A*U^(1/3) by A*U in 4D; at least one radial gate must FAIL. Repeated point: repeat first point m times; both 4D coverage gates must FAIL.",
+  "zero_radius_policy": "Recover the generating normal direction from the accepted candidate uniform calls; do not discard a point.",
+  "stop_rule": "One execution, all frozen seeds in order; keep duplicate seeds and rejected candidates. No additional seeds, no statistical peeking or threshold/source changes. 1200 seconds total collection; exception/timeout preserves partial records and yields UNENTSCHIEDEN. Reanalysis of identical archived records is permitted; new target generation is not.",
+  "technical_tolerances": {
+    "transform_absolute": 1e-12,
+    "native_interval_absolute": 2e-10,
+    "archive_float_abs": 1e-12,
+    "archive_float_rel": 1e-12
+  },
+  "runtime": {
+    "node_major": 24,
+    "python": "3.12",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0"
+  },
+  "core_sha256": "f6f91dd66b1ac4ea19c0143a5e4e4b996271b10c596bbd0fe2ab42f13ab1e3bc",
+  "frozen_files": {
+    "prepare.py": "0a0074f682c346150a64c72dc92009e2c3a16e7fde541fe732f633e88766a3e3",
+    "bounds.py": "dccfb76a8fa20718ba98338764f695039846fd7a0e1b5a4697cb3db6a1d6dd44",
+    "qualified.cjs": "3cac30b6b50c794ccea7bd46eb49da6d898dcef97e002a03b63b12707b6b24da",
+    "collect.cjs": "5df94a9acee273b66b1eae06873626a7c3eeb1f6095f2d1037fb07e22a7b4ae5",
+    "analyze.py": "ce0eb251e3bfff465b29740df478ad18e216669adc24d2197d5e9f00c154e1cd",
+    "verify.py": "cfb780563e1990788e077a5229fb1aa7de7ed0be2966c70314687b89687e1a83",
+    "DERIVATION.md": "8cc97516821072e6ab5911e5e1a2269e9edb21319224987b3c9775ac96802b45",
+    "planning.json": "0a5a6f2296df265eaff134df901b492bc8ad9d7f39ee172463656c157c0900e1",
+    "seeds.json": "8db406e3e3eb7375dd85bed326c2f320ec9f3db7e797383fd6606e4cbb8cb9ad"
+  },
+  "historical_decision": "V1b NOT_PASSED remains unchanged; HOLD_PHASE3 remains unchanged.",
+  "limits": [
+    "Finite seed-population guarantee, conditional on uniform independent seed selection; no individual-seed guarantee.",
+    "Selected CDF probes are not a global uniformity proof.",
+    "No qualification of other theta, m, placements, adaptive stopping, curved space, unknown T/d, or physical reality.",
+    "The wrapper is a new reference analysis; the existing browser interval is not changed or newly qualified.",
+    "A 2% mean scale-bias bound alone does not imply binomial counts; empirical seed-level coverage is separately required."
+  ]
+}
