@@ -1,0 +1,43 @@
+{
+  "schema": "x6.sage-audit-contract/1",
+  "frozen_at_utc": "2026-10-21T14:37:09.385483+00:00",
+  "scope": "Independent exact algebra plus numerical audit of 64 archived clouds; NOT a new statistical confirmation.",
+  "source_commit": "ee6460971c2b3ec48ea2ebb18002072ca3d22f97",
+  "precision_bits": [
+    128,
+    256
+  ],
+  "archive_tolerance": {
+    "absolute": 1e-08,
+    "relative": 1e-07
+  },
+  "precision_tolerance": {
+    "absolute": "1e-22",
+    "relative": "1e-22"
+  },
+  "high_precision_kkt_and_identity_absolute": "1e-50",
+  "no_imports": [
+    "X6 solvers",
+    "X6 design functions",
+    "X6 field evaluators"
+  ],
+  "solver": "Direct full KKT solve [H D^T;D 0] with H=I+11^T; unscaled mixed monomials; no sqrt(2) row factors",
+  "inputs": "JSON float inputs interpreted as exact binary64 rational values. High precision does not recover unknown continuum coordinates.",
+  "gates": [
+    "Exact rational controls agree with Wolfram; singular and wrong-sign/root-covariance negative controls detected",
+    "All 64 archived statuses retained, all 58 complete records checked",
+    "All original, projected and oracle weights agree within old numeric tolerances",
+    "128 and 256 bit weights converge; high precision moment, KKT, Taylor and MSE identities hold",
+    "No new-cloud confirmation or HOLD removal"
+  ],
+  "failure_policy": "Do not delete, replace or retune failing data. Record exceptions. Implementation mistakes may be fixed with an explicit change log; do not change numerical thresholds based on results.",
+  "artifacts": {
+    "inputs.json": "a209ca4079a50e98c31d1615ec139c76c1e208dd4f46a7e2920d434700f1eced",
+    "audit_sage.py": "ba56759b45ebb007de2e631e9eda1c639ecf45b5962ac85317520b63f8236c7a"
+  },
+  "pre_execution_note": "Low-precision values explicitly promoted to 256 bits before precision-difference comparison. No audit has run; no thresholds changed.",
+  "implementation_corrections": [
+    "Sage 10.9 matrices have no .copy(): construct an independent matrix from rows. First run stopped before any mathematical check. Original code, contract and failure preserved in attempts/. No input, tolerance or mathematical test changed.",
+    "Conda Sage 10.9 launcher does not accept -python; invoke Python inside the Sage environment."
+  ]
+}
