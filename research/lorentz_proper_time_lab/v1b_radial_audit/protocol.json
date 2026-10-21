@@ -1,0 +1,60 @@
+{
+  "schema": "x6.v1b-radial-control/1",
+  "base_commit": "305a882d7c307a0f8e17ce3e18c23609376bd202",
+  "date": "2026-10-21",
+  "purpose": "Localize the known 4D radial anomaly and run a new fixed independent-generator control; do not replace the original V1b gate.",
+  "known_before_run": [
+    "Original pooled n=65536 D=0.006294515682384372 p=0.01106164503413279.",
+    "The radial input U and reconstructed W have exactly the same pooled KS statistic and p-value. Maximum pointwise reconstruction error is 3.774758283725532e-15.",
+    "Historical seeds 0 and 4294967295 have unadjusted radial p-values 0.0272340 and 0.0034720; these subdivisions were examined retrospectively.",
+    "No significant cause is assigned from these unblinded diagnostics; new data have not been generated."
+  ],
+  "dimension": 4,
+  "batches": 32,
+  "streams_per_batch": 4,
+  "m": 16384,
+  "reserved_uniforms_per_stream": 147712,
+  "historical_seeds": [
+    0,
+    1,
+    20261017,
+    4294967295
+  ],
+  "seed_namespace": "x6/v1b/radial-control/2026-10-21/v1",
+  "seed_policy": "SHA256(namespace + /mulberry32/ + candidate), first four bytes little endian. Exclude reserved state intervals overlapping earlier selected intervals or historical intervals, without inspecting PRNG outputs; record every skipped candidate. Philox keys: SHA256(namespace + /philox32/ + index), first sixteen bytes little endian, distinct keys. Seeds and keys are fixed once, not tuned.",
+  "arms": {
+    "mulberry32": "Unchanged core.js rng() and samplePoint().",
+    "philox32": "NumPy Philox 4x64, distinct direct 128-bit keys, high 32 bits of each raw uint64 divided by 2^32, injected into the exact same core.js samplePoint(). Same finite uniform grid as native RNG."
+  },
+  "primary_tests": [
+    "For each of two arms: pooled two-sided KS of recovered W versus U(0,1), method exact.",
+    "For each of two arms: one-sided binomial upper tail for number of 32 batches whose exact radial KS p-value is below 0.05, versus nominal probability 0.05."
+  ],
+  "primary_alpha_per_test": 0.0125,
+  "primary_family_alpha": 0.05,
+  "transform_tolerance": 1e-12,
+  "wrong_exponent_control_max_p": 1e-06,
+  "positive_control": "First Philox batch U^3, corresponding to erroneous uniform radius rather than cube-root radius; must reject at p < 1e-6.",
+  "secondary_diagnostics": [
+    "Raw-input versus reconstructed KS; pointwise identity, strict support, rejections and draw consumption.",
+    "Historical KS location x=0.43093082611449063: fresh signed CDF excess and nominal one-sided binomial p, descriptive.",
+    "Two-sample KS between generators, descriptive.",
+    "Per-stream inner counts at theta=0.10,...,0.85 recorded, with no new proper-time qualification.",
+    "Nominal iid DKW upper CDF-distance radius at 97.5% for each arm; descriptive and conditional on iid, no PRNG independence guarantee."
+  ],
+  "stop_rule": "Execute all 32 batches per arm once. Keep every batch and all radial raw inputs/reconstructions. No seed replacement, extra batches, sampler edits, or threshold changes after observing fresh results. Abort on source mismatch, exceeded fixed draw budget or missing raw data. Preserve failed run if any.",
+  "output_decision": "NO_DISCREPANCY_DETECTED_IN_FIXED_FOLLOWUP only if all four primary screens, support/identity checks, and positive control pass; otherwise FOLLOWUP_HOLD. Neither outcome changes the historical V1b NOT_PASSED.",
+  "versions": {
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "node_major": 24
+  },
+  "core_sha256": "f6f91dd66b1ac4ea19c0143a5e4e4b996271b10c596bbd0fe2ab42f13ab1e3bc",
+  "interpretation_limits": [
+    "Finite deterministic streams are not mathematically independent continuous observations; all KS/binomial/DKW probability statements use the declared ideal iid reference model.",
+    "Distinct non-overlapping native state windows do not prove statistical independence. A different Philox key is a separate algorithmic control, not physical randomness.",
+    "No rejection is not a proof of uniformity, no bound on all seeds or dimensions, and no validation of physical spacetime or curvature.",
+    "The 32-bit grid differs from the continuous uniform CDF by at most 2^-32; no post-hoc adjustment of the old gate is permitted.",
+    "The original four-seed radial FAIL remains a recorded failure even if this fresh follow-up does not reproduce it."
+  ]
+}

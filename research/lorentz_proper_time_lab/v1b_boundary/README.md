@@ -171,3 +171,10 @@ English: The strict-support defect is repaired without altering the frozen
 ordinary sample. Native browser/export replay is a separate engineering gate.
 The inherited 4D radial screen still rejects at alpha=0.05; overall V1b is not
 passed. No physical validation or universal PRNG-quality claim follows.
+
+**Folgeuntersuchung vom 21.10.2026:** Die [radiale Diagnose](../v1b_radial_audit/README.md)
+lokalisiert den alten Befund in der verbrauchten radialen PRNG-Teilstichprobe.
+Ein vorher öffentlich festgelegter Vergleich mit 4.194.304 neuen Punkten
+(Mulberry32 und Philox32, identische native Transformation) zeigt keine
+wiederkehrende systematische Auffälligkeit. Die ursprünglichen Daten,
+Prüfkriterien und das hier dokumentierte `NOT_PASSED` bleiben unverändert.

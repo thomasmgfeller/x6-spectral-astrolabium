@@ -19,6 +19,13 @@ NOT_PASSED:** Die radiale 4D-Diagnostik verfehlt weiterhin die ursprüngliche
 getrennt ausgewiesen. Der Browser-/Exportnachweis ist bestanden;
 [Originalberichte und Rohdaten](v1b_boundary/results/) sind vollständig eingefroren.
 
+**Radiale Diagnose vom 21.10.2026:** Die [gezielte Ursachenprüfung und der vorab
+festgelegte Kontrollversuch](v1b_radial_audit/README.md) lokalisieren die alte
+4D-Auffälligkeit bereits in den radialen Zufallswerten. Auf 4.194.304 neuen
+Punkten mit zwei Generatoren wurde keine wiederkehrende systematische radiale
+Abweichung festgestellt. Sampler und alte Prüfschwelle bleiben unverändert;
+der historische V1b-Status bleibt **NOT_PASSED**.
+
 ## Bedienung
 
 1. Raumzeitdimension, Hintergrundbudget und wahre normierte Eigenzeit einstellen.
