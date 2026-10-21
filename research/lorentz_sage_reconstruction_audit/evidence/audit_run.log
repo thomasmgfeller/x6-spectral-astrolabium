@@ -1,0 +1,141 @@
+Exact Sage controls: PASS (16 checks)
+calibration 00 PASS
+calibration 01 PASS
+calibration 02 PASS
+calibration 03 PASS
+calibration 04 PASS
+calibration 05 PASS
+calibration 06 PASS
+calibration 07 PASS
+calibration 08 PASS
+calibration 09 PASS
+calibration 10 PASS
+calibration 11 PASS
+calibration 12 PASS
+calibration 13 PASS
+calibration 14 PASS
+calibration 15 PASS
+calibration 16 PASS
+calibration 17 PASS
+calibration 18 PASS
+calibration 19 PASS
+calibration 20 PASS
+calibration 21 PRESERVED_UNAVAILABLE
+calibration 22 PASS
+calibration 23 PASS
+calibration 24 PASS
+calibration 25 PASS
+calibration 26 PASS
+calibration 27 PASS
+calibration 28 PASS
+calibration 29 PASS
+calibration 30 PASS
+calibration 31 PRESERVED_UNAVAILABLE
+test 00 PASS
+test 01 PASS
+test 02 PASS
+test 03 PASS
+test 04 PRESERVED_UNAVAILABLE
+test 05 PASS
+test 06 PRESERVED_UNAVAILABLE
+test 07 PASS
+test 08 PASS
+test 09 PRESERVED_UNAVAILABLE
+test 10 PASS
+test 11 PASS
+test 12 PASS
+test 13 PASS
+test 14 PASS
+test 15 PASS
+test 16 PASS
+test 17 PASS
+test 18 PASS
+test 19 PASS
+test 20 PASS
+test 21 PASS
+test 22 PASS
+test 23 PASS
+test 24 PASS
+test 25 PASS
+test 26 PASS
+test 27 PASS
+test 28 PASS
+test 29 PASS
+test 30 PRESERVED_UNAVAILABLE
+test 31 PASS
+{
+  "schema": "x6.sage-independent-audit/1",
+  "sage_version": "10.9",
+  "python": "3.13.16",
+  "mode": "ARCHIVED_AUDIT",
+  "new_cloud_confirmation": "NOT_RUN",
+  "status": "PASS",
+  "exact": {
+    "status": "PASS",
+    "checks": 16,
+    "physical_x_response": "-20/231",
+    "true_weights": [
+      "-1",
+      "2",
+      "-5",
+      "1",
+      "1",
+      "1",
+      "1",
+      "0",
+      "0",
+      "0"
+    ],
+    "reconstructed_weights": [
+      "-1",
+      "2",
+      "-53/11",
+      "200/231",
+      "20/21",
+      "1",
+      "1",
+      "0",
+      "0",
+      "0"
+    ]
+  },
+  "input_sha256": "a209ca4079a50e98c31d1615ec139c76c1e208dd4f46a7e2920d434700f1eced",
+  "source_commit": "ee6460971c2b3ec48ea2ebb18002072ca3d22f97",
+  "phases": {
+    "calibration": {
+      "scheduled": 32,
+      "complete": 30,
+      "rmse": {
+        "original": 2.3221402410391945,
+        "projected": 2.579613151603856,
+        "oracle": 0.04577281560935153
+      },
+      "mse_original": 5.392335299053569,
+      "decomposition": {
+        "discretization_square": 0.002095150648807695,
+        "reconstruction_square": 5.366234330284071,
+        "cross_term": 0.02400581812068941
+      },
+      "rmse_ratio_oracle_original": 0.01971147771370926
+    },
+    "test": {
+      "scheduled": 32,
+      "complete": 28,
+      "rmse": {
+        "original": 1.4463113829255492,
+        "projected": 1.4550902133153611,
+        "oracle": 0.0630319554093474
+      },
+      "mse_original": 2.0918166163800147,
+      "decomposition": {
+        "discretization_square": 0.003973027402725961,
+        "reconstruction_square": 2.0746485182411813,
+        "cross_term": 0.01319507073610747
+      },
+      "rmse_ratio_oracle_original": 0.04358117909702717
+    }
+  },
+  "elapsed_seconds": 5.66034722328186,
+  "checks_total": 2104,
+  "checks_passed": 2104
+}

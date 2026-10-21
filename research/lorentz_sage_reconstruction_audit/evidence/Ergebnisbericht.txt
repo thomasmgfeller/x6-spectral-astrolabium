@@ -1,0 +1,95 @@
+EIGENZEIT – UNABHÄNGIGE SAGEMATH-PRÜFUNG
+Stand: 21. Oktober 2026
+
+ERGEBNIS: EXAKTE KONTROLLEN PASS; ARCHIVIERTE DATENPRÜFUNG PASS.
+NEUE-WOLKEN-BESTÄTIGUNG: NICHT AUSGEFÜHRT.
+
+SageMath 10.9; Python 3.13.16; Rechenpräzision 128 und 256 Bit.
+16 exakte Kontrollen und insgesamt 2104/2104 bestandene Prüfaussagen.
+Die vollständige Prüfsuite einschließlich exakter Kontrollen dauerte 5.660 Sekunden;
+die vorangegangene Installation ist darin nicht enthalten.
+
+1. Exakte unabhängige Gegenrechnung zum Wolfram-Kontrollfall
+Ein rationaler Kontrollfall mit zehn Punkten besteht sämtliche internen
+Polynomtests bis Grad zwei in den rekonstruierten Koordinaten. In den tatsächlichen
+Koordinaten antwortet er auf das lineare Feld x mit -20/231 statt null.
+Sage bestätigt exakt denselben Bruch wie Wolfram. Mit wahrer Geometrie sind die
+Polynomresiduen exakt null. Dies beweist den konstruierten Fehlermechanismus,
+nicht seine statistische Häufigkeit in zufälligen Causal Sets.
+
+Weitere Kontrollen: Lorentzmetrik und Gewichte unter rationalem Boost unverändert;
+Skalennormierung und Umnummerierung korrekt; KKT-Optimalität; gemeinsame
+Rootkovarianz H=I+11^T; signierter MSE-Kreuzterm; Rangdefizienz wird abgelehnt;
+falsches Signaturvorzeichen und Weglassen der Rootkovarianz werden erkannt.
+
+2. Welche Daten tatsächlich unabhängig nachgerechnet wurden
+Alle 64 bereits archivierten Wolken des X6-Versuchs sind enthalten.
+Kalibrierung: 30 von 32 vollständig; alter Testblock: 28 von 32 vollständig.
+Sechs Fälle ohne vollständigen Support wurden beibehalten und nicht ersetzt.
+Jede vollständige Wolke wurde für Original, Relationsprojektion und geometrischen
+Oracle mit beiden Präzisionen neu berechnet. Die vier früheren Sinus-/Kosinusfelder
+wurden in Sage aus den Feldparametern neu ausgewertet. Sie sind keine neuen Felder.
+
+Der Prüfer importiert keine X6-Matrix-, Solver- oder Feldauswertungsfunktionen.
+Er löst direkt das volle Sattelpunkt-/KKT-System mit H=I+11^T. Der X6-Ausgangscode
+verwendet Normalgleichungen und zusätzlich eine SVD-Gegenkontrolle. Die mathematische
+Spezifikation ist absichtlich gleich, die Implementierung separat. Diese Prüfung
+ist von einem anderen Rechenkern gestützt, aber kein externes Peer-Review.
+
+3. Numerische Resultate
+                         Original-RMSE       Projektions-RMSE     Oracle-RMSE
+Alter Kalibrierblock     2.322140241039       2.579613151604      0.045772815609
+Alter Testblock          1.446311382926       1.455090213315      0.063031955409
+
+Quadratische Zerlegung im alten Testblock:
+Diskretisierungsrest:    0.003973027402726
+Rekonstruktionsdifferenz:2.074648518241181
+Signierter Kreuzterm:   0.013195070736107
+Gesamt-MSE:             2.091816616380015
+
+Die drei Beiträge summieren sich zum Gesamt-MSE. Der Kreuzterm darf nicht
+weggelassen werden. Daraus folgen keine zwei unabhängigen positiven Fehlerbudgets.
+
+Alle Archivvergleiche halten die bereits geltenden Grenzen
+|neu-alt| <= 1e-8 + 1e-7 |alt| ein. Der größte genutzte Anteil dieser Toleranz bei
+Gewichten beträgt 0.000100524.
+Der größte Anteil der vorab festgelegten 128/256-Bit-Konvergenztoleranz
+1e-22 + 1e-22 |Referenz| beträgt 2.41699e-13.
+Die geprüften hochpräzisen KKT-, Taylor- und MSE-Identitäten liegen unter 1e-50.
+
+4. Wissenschaftlich zulässige Schlussfolgerung
+Der starke Oracle-Effekt und die vorhandene Fehlerzerlegung sind für diesen
+archivierten Datensatz mit Sage unabhängig rechnerisch bestätigt. Die beobachteten
+Abweichungen der Gewichts- und Feldauswertung zwischen X6 und Sage sind zu klein,
+um den großen Original-Oracle-Unterschied zu erklären. Der Befund stützt damit
+weiterhin den Geometrieaustausch als maßgeblichen Hebel im deklarierten Versuch.
+
+Nicht geprüft: ein neuer Zufallsdatensatz, ein vollständig unabhängiger Generator,
+eine vollständige zweite Implementierung des intrinsischen Rekonstruktors,
+eine nutzbare Korrektur oder die Übertragung auf 3+1 Dimensionen. Sage verwendet die
+archivierten tatsächlichen und rekonstruierten Koordinaten als feste Eingaben.
+Ein möglicher Fehler bei deren Erzeugung oder Rekonstruktion ist damit nicht
+vollständig ausgeschlossen. Hohe Rechenpräzision beseitigt keine Eingabefehler.
+Die Eigenzeitgenauigkeit wird durch diesen Operatoraudit nicht zusätzlich validiert.
+HOLD_PHASE3, HOLD_EMBEDDING_COVARIANCE und METADATA_HOLD bleiben erhalten.
+
+5. Ausführungsprovenienz
+Quellstand: ee6460971c2b3ec48ea2ebb18002072ca3d22f97
+Repository: https://github.com/thomasmgfeller/x6-spectral-astrolabium
+Input-SHA256: a209ca4079a50e98c31d1615ec139c76c1e208dd4f46a7e2920d434700f1eced
+Die Basis ist ein bestimmter archivierter Commit, keine Aussage über aktuelles main.
+CONTRACT.json enthält die vor dem Lauf festgelegten Kriterien und Codehashes.
+Eine API-Korrektur an der Sage-Matrixkopie erfolgte vor der ersten mathematischen
+Prüfaussage; der erste abgebrochene Versuch liegt unverändert in attempts/.
+Keine Daten, mathematischen Bedingungen oder Toleranzen wurden geändert.
+Das Startargument -python wurde vom neuen Sage-Launcher abgelehnt; ausgeführt wurde
+anschließend Python innerhalb der echten Sage-10.9-Umgebung. Es wurde kein SymPy-
+oder Wolfram-Lauf als Sage-Lauf ausgegeben.
+
+6. Nächste Bestätigungsstufe
+Ein eigener Planungspilot mit neuen Wolken und neuen normierten Testfeldern soll
+Streuung, Verfügbarkeit und Stichprobenumfang bestimmen. Erst danach wird ein
+unberührter Bestätigungssatz mit fester Ausfallregel und festem Umfang ausgewertet.
+Die >50%-MSE-Reduktion ist ein vorgeschlagenes künftiges Bestätigungskriterium;
+sie wurde in diesem retrospektiven Audit nicht als bestätigte Populationsaussage
+ausgewiesen.

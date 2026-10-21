@@ -8,6 +8,15 @@ Acht Kapitel je Sprache: Einstieg, Schnellstart, Signale, kausale Ordnungen, Evi
 
 **Public Research Preview — independent validation requested. NOT a scientifically certified stable release.**
 
+**Eigenzeit: unabhängige Sage-Prüfung veröffentlicht (21.10.2026).**
+[Code, Daten, Ergebnisbericht und vollständiges Prüfpaket](research/lorentz_sage_reconstruction_audit/README.md):
+SageMath 10.9 bestätigt 16 exakte Kontrollen und 2.104 Prüfaussagen auf 64
+archivierten Wolken (58 vollständig, sechs Ausfälle erhalten). Im alten Testblock
+reproduziert der Geometrieaustausch den Operator-RMSE **1,446311 → 0,063032**.
+**Retrospektive unabhängige Rechenprüfung; neue Wolken, nutzbare Korrektur und
+4D-Übertragung sind damit nicht bestätigt. Alle bisherigen HOLD-Gates bleiben.**
+English scope and reproduction instructions are included in the linked report.
+
 **Numerical audit (2026-10-15):** [a reproducible small-weight scaling defect](docs/numerics-v1/README.md)
 was reproduced and repaired. Historical 25/27 FAIL evidence remains preserved;
 the repaired solver passes 27/27 frozen cases, 23 regression checks, two exact Sage
