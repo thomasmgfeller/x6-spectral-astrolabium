@@ -8,6 +8,16 @@ Acht Kapitel je Sprache: Einstieg, Schnellstart, Signale, kausale Ordnungen, Evi
 
 **Public Research Preview — independent validation requested. NOT a scientifically certified stable release.**
 
+**Eigenzeit: vier Landmarken auf neuen Wolken geprüft (21.10.2026) — HOLD.**
+[Intrinsische Auswahl, vollständige Zählkovarianz, Daten und Sage-Prüfung](research/lorentz_local_dalembert/four_landmark_count_covariance/README.md):
+32 neue Auswahlwolken, 18 erfolgreiche Auswahlen und 162 Zählwiederholungen;
+nur **1/32 Hauptfälle geometrisch qualifiziert**. Auf 13 gemeinsam berechenbaren
+Diagnosefällen steigt der Operator-RMSE von 2,007 auf 2,533. Die volle
+Zählkovarianz beschreibt die beobachtete Varianz deutlich besser (4,46 vorhergesagt,
+4,92 beobachtet; ohne Korrelationen 65,12), erreicht aber nur 13 statt der
+geforderten 16 vollständigen Gruppen. **Rechenprüfung bestanden; keine
+wissenschaftliche Freigabe. Bisherige HOLD-Gates bleiben.**
+
 **Eigenzeit: unabhängige Sage-Prüfung veröffentlicht (21.10.2026).**
 [Code, Daten, Ergebnisbericht und vollständiges Prüfpaket](research/lorentz_sage_reconstruction_audit/README.md):
 SageMath 10.9 bestätigt 16 exakte Kontrollen und 2.104 Prüfaussagen auf 64

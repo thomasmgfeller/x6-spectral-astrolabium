@@ -1,0 +1,38 @@
+{
+  "schema": "x6.bk-anchor-audit/1",
+  "date": "2026-10-19",
+  "scope": "Paired anchor-search ablation in the existing bounded 2+1 Minkowski pilot; no curvature qualification",
+  "densities": [
+    2048,
+    8192,
+    32768
+  ],
+  "development_seeds": [
+    2026102301,
+    2026102302
+  ],
+  "test_seed_base": 2026102400,
+  "test_replicates_per_density": 16,
+  "seed_rule": "base + 100*density_index + replicate",
+  "methods": [
+    "legacy64",
+    "balanced64",
+    "oracle_cap"
+  ],
+  "wall_budget_seconds": 600,
+  "memory_budget_mib": 2048,
+  "primary": {
+    "density": 32768,
+    "availability_gain_min": 0.25,
+    "balanced64_availability_min": 0.8,
+    "cap_recall_gain_min": 0.25
+  },
+  "replay_tolerance": {
+    "atol": 1e-10,
+    "rtol": 1e-09
+  },
+  "inherited_contract": "../phase12/contract.json",
+  "inherited_source_commit": "eb76e0faaeb08050d7976df37b3e943d89b66196",
+  "decision": "ANCHOR_COVERAGE_IMPROVED if all primary descriptive thresholds pass, otherwise ANCHOR_SEARCH_HOLD. Always retain HOLD_PHASE3; this isolation experiment cannot qualify curvature.",
+  "immutability": "All original phase12 sources, data and gates and all BD-C2 sources/data remain unchanged. No parameter selection on development or test data; no replacement seeds; no scheduled agent restart."
+}
