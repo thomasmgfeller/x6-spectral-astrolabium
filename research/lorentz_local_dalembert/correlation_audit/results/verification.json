@@ -1,0 +1,48 @@
+{
+  "verification": "PASS_NUMERICAL_REPLAY",
+  "records": 128,
+  "truth_replayed": 114,
+  "coordinate_byte_hash_matches": 114,
+  "optimizations_replayed": 1140,
+  "maximum_interval_reoptimization_difference": 0.0,
+  "frozen_files": 423,
+  "controls": {
+    "status": "PASS",
+    "groups": [
+      "positive_definiteness",
+      "fixed_marginal_variances",
+      "group_blocks",
+      "shrinkage_spectrum",
+      "isolated_component_correlations",
+      "zero_component_noop",
+      "exact_loss_decomposition",
+      "scale_energy_bounds",
+      "rank_one_identity",
+      "inference_only_signature",
+      "both_block_gate_negative_controls",
+      "ranking_and_ties"
+    ],
+    "inherited": {
+      "status": "PASS",
+      "groups": [
+        "interval_jacobian_finite_difference",
+        "objective_gradient_finite_difference",
+        "precision_direct_solve",
+        "correlation_negative_control",
+        "canonical_interval_identity",
+        "lorentz_translation_invariance",
+        "node_permutation_invariance",
+        "zero_residual_fixed_point",
+        "known_scale_correction",
+        "correction_boost_invariance",
+        "strict_order_negative_control",
+        "equal_cloud_group_weights",
+        "inference_only_signature",
+        "all_eight_gate_negative_controls"
+      ]
+    }
+  },
+  "decision": "STOP_CORRELATION_CORRECTION_SCREEN",
+  "new_simulations": 0,
+  "limits": "Archived observations are development only; fresh numerical replay is not an independent statistical confirmation."
+}
