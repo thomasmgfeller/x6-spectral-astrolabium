@@ -1,0 +1,22 @@
+{
+  "schema": "x6.correlation-audit/1",
+  "parent_commit": "543777254c5847f43ffad04223e064f00a5b5ddd",
+  "scope": "Development-only diagnosis of archived PR78 clouds; flat 2+1 at rho=32768",
+  "references": ["baseline", "unweighted", "diagonal", "full"],
+  "candidates": ["shrink_010", "shrink_025", "shrink_050", "shrink_075", "within_groups", "drop_cross_group_endpoint", "drop_support_spacelike_endpoint", "drop_support_spacelike_cloud", "drop_support_causal_cloud", "drop_signed_common_scale"],
+  "shrinkage": {"shrink_010": 0.1, "shrink_025": 0.25, "shrink_050": 0.5, "shrink_075": 0.75},
+  "workers": 4,
+  "historical_attempts": 128,
+  "wall_seconds_per_worker": 1800,
+  "memory_mib_per_worker": 2048,
+  "minimum_complete_per_historical_block": 48,
+  "maximum_rmse_ratio_to_baseline": 0.99,
+  "maximum_rmse_ratio_to_diagonal": 1.0,
+  "maximum_group_rmse_ratio": 1.05,
+  "maximum_fallback_rate": 0.10,
+  "maximum_covariance_condition": 100000000.0,
+  "numeric_atol": 1e-7,
+  "numeric_rtol": 1e-6,
+  "optimizer_atol": 2e-5,
+  "optimizer_rtol": 2e-5
+}
