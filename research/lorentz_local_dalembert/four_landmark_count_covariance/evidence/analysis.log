@@ -1,0 +1,83 @@
+{
+  "status": "HOLD",
+  "scheduled": 32,
+  "selected_four": 18,
+  "qualified_primary": 1,
+  "raw_common": {
+    "clouds": 13,
+    "rmse": {
+      "original_A": 2.2239074968014574,
+      "three_B": 2.00700475579712,
+      "four_B": 2.5333439227138967,
+      "oracle": 0.03993011348087864
+    },
+    "linear_rmse": {
+      "original_A": 2.2356061073379885,
+      "three_B": 2.0271462530459816,
+      "four_B": 2.5682636592574926,
+      "oracle": 2.7406278711198475e-14
+    },
+    "mean_iid_noise_variance": {
+      "original_A": 1.2260017324310124,
+      "three_B": 1.6403561707166978,
+      "four_B": 1.2022956283047068,
+      "oracle": 1.2263829811762945
+    },
+    "rmse_ratio": 1.2622510810681817,
+    "linear_ratio": 1.2669355530704458,
+    "noise_ratio": 0.7329479108061054
+  },
+  "qualified_common": {
+    "clouds": 1,
+    "rmse": {
+      "original_A": 2.4571955323997625,
+      "three_B": 1.5405743956182358,
+      "four_B": 0.4736933856389029,
+      "oracle": 0.051231224169825285
+    },
+    "linear_rmse": {
+      "original_A": 2.4471503675041246,
+      "three_B": 1.319722613275462,
+      "four_B": 0.49562726157454656,
+      "oracle": 1.9590384247106064e-14
+    },
+    "mean_iid_noise_variance": {
+      "original_A": 3.8629488479567375,
+      "three_B": 8.666548593328336,
+      "four_B": 2.641143714753259,
+      "oracle": 3.9021988727982317
+    },
+    "rmse_ratio": 0.30747842297405487,
+    "linear_ratio": 0.3755541176523704,
+    "noise_ratio": 0.30475150359007486
+  },
+  "rmse_ratio_cloud_bootstrap_95": [
+    0.6459270726756479,
+    2.2146108935024453
+  ],
+  "uncertainty": {
+    "clouds": 13,
+    "replicates_per_cloud": 8,
+    "mean_empirical_variance": 4.920741675167508,
+    "mean_predicted_full": 4.4565990844349885,
+    "mean_predicted_diagonal": 65.1221837797003,
+    "empirical_over_full": 1.104147261608874,
+    "empirical_over_diagonal": 0.07556168097516085,
+    "scope": "conditional on A, first-order count uncertainty; no interval for unbiased continuum truth"
+  },
+  "gates": {
+    "all_scheduled_recorded": true,
+    "qualified_availability": false,
+    "common_availability": false,
+    "rmse": false,
+    "linear_response": false,
+    "noise_cost": true,
+    "variance_calibration": false
+  },
+  "holds": [
+    "HOLD_PHASE3",
+    "HOLD_EMBEDDING_COVARIANCE",
+    "METADATA_HOLD"
+  ],
+  "note": "Fresh bounded pilot, fixed rules; fields and B repeats do not multiply independent A clouds."
+}

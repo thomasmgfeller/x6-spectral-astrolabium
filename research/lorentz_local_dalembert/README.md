@@ -1,8 +1,20 @@
 # Local d’Alembertian: independent reproduction track
 
-**Latest bounded result:** [Joint support/count/frame feasibility](joint_feasibility/RESULTS.md) passes all guards and a hidden second colouring on 16/16 fresh high-density clouds (0/16 low, 1/16 middle). Adaptive temporal and other supports, mixed past/future landmarks in one frame, unchanged acceptance thresholds. No operator weights or derivative qualification; **HOLD_PHASE3**.
+**Latest trial (21 October 2026): four landmarks and full count covariance; `HOLD`.**
+[Complete evidence, sources and reproduction](four_landmark_count_covariance/README.md):
+32 new independent selection clouds, 18 successful fourth-landmark selections,
+162 count replicates. Only **1/32 primary cases** satisfies the full observed
+order. On 13 common computable diagnostic cases, three/four-landmark operator
+RMSE is 2.007005/2.533344. In 13 complete replicate groups, empirical response
+variance 4.920742 compares with full-covariance prediction 4.456599 and
+independent-count negative control 65.122184; the 16-group calibration gate
+remains unmet. All 162 count records replay; independent Sage checks pass for
+17 valid primary weight/covariance systems. **No scientific qualification;
+`HOLD_PHASE3`, `HOLD_EMBEDDING_COVARIANCE`, `METADATA_HOLD` remain.**
 
-**Latest trial (19 October 2026): larger outer diamonds; `OUTER_DIAMOND_HOLD`.**
+**Earlier bounded result:** [Joint support/count/frame feasibility](joint_feasibility/RESULTS.md) passes all guards and a hidden second colouring on 16/16 fresh high-density clouds (0/16 low, 1/16 middle). Adaptive temporal and other supports, mixed past/future landmarks in one frame, unchanged acceptance thresholds. No operator weights or derivative qualification; **HOLD_PHASE3**.
+
+**Earlier trial (19 October 2026): larger outer diamonds; `OUTER_DIAMOND_HOLD`.**
 The [paired outer-domain trial](outer_diamond/RESULTS.md) completed 48 fresh
 clouds at three nested durations, with identical inner supports and unchanged
 guards. At the highest density, uncapped triple availability increases from

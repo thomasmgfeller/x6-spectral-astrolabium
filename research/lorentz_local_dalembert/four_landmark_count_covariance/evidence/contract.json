@@ -1,0 +1,106 @@
+{
+  "schema": "x6.four-landmark-new-cloud-pilot/1",
+  "date": "2026-10-21",
+  "source_commit": "ee6460971c2b3ec48ea2ebb18002072ca3d22f97",
+  "model": "known-density flat 2+1 Minkowski, complete exact causal order",
+  "selection_density": 32768,
+  "count_density": 32768,
+  "duration": 1.5,
+  "clouds": 32,
+  "selection_seed_base": 2026211000,
+  "count_seed_tag": 782041,
+  "count_replicates": 9,
+  "primary_replicate": 0,
+  "variance_replicates": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "minimum_measurement_count": 8,
+  "selection": {
+    "candidate_cap_per_side": 128,
+    "maximum_landmark_condition": 1000,
+    "maximum_design_condition": 100000,
+    "rule": "retain old selected root, support and first three landmarks on A; select the fourth using A only, minimum inherited full16/half4 counts and causal comparability to all required endpoints; minimize difference-Gram condition, marks break ties; no retries using B"
+  },
+  "count_covariance": "intersection counts for every pair of measured intervals, including shared landmark/root intervals; conditional on A, unbiased estimate of rho_B times overlap volume",
+  "propagation": "first-order delta transform N to squared proper times, then differentiate full constrained KKT solve; all off-diagonals retained; approximate, not exact geometry covariance",
+  "negative_control": "replace interval-count covariance by its diagonal before propagation",
+  "comparison": "four-landmark B versus three-landmark B using identical A support and same independent B sample; original three-landmark A and true-coordinate Oracle are diagnostics",
+  "qualification": "correct signature, bounded moment condition, KKT certificate and exact observed order on all four landmarks plus root and supports",
+  "primary_gates": {
+    "minimum_qualified_primary_clouds": 26,
+    "minimum_common_primary_weight_cases": 26,
+    "maximum_rmse_ratio_four_to_three_B": 0.9,
+    "maximum_linear_response_rmse_ratio": 0.9,
+    "maximum_mean_iid_noise_variance_ratio": 1.25,
+    "minimum_variance_calibration_clouds": 16,
+    "variance_ratio_empirical_to_predicted_range": [
+      0.5,
+      2.0
+    ]
+  },
+  "gate_scope": "bounded prospective pilot; point-estimate engineering gates, not a population theorem; report qualified subset separately and all failures; all gates required for PILOT_SUPPORTED",
+  "fields": [
+    {
+      "name": "cos_A",
+      "kind": "cos",
+      "k": [
+        0.4,
+        0.55,
+        0.25
+      ],
+      "phase": 0.3
+    },
+    {
+      "name": "sin_B",
+      "kind": "sin",
+      "k": [
+        0.6,
+        0.2,
+        0.45
+      ],
+      "phase": -0.4
+    },
+    {
+      "name": "cos_C",
+      "kind": "cos",
+      "k": [
+        0.35,
+        0.7,
+        0.3
+      ],
+      "phase": 0.5
+    },
+    {
+      "name": "sin_D",
+      "kind": "sin",
+      "k": [
+        0.65,
+        0.4,
+        0.55
+      ],
+      "phase": 0.2
+    }
+  ],
+  "field_noise_sigma": 0.001,
+  "bootstrap_draws": 2000,
+  "bootstrap_seed": 782042,
+  "maximum_count_points": 35000,
+  "workers": 2,
+  "worker_seconds": 1200,
+  "worker_memory_mib": 3000,
+  "no_replacements": true,
+  "public_preregistration": false,
+  "freeze": "local code/input hash and UTC timestamp before first new A or B cloud",
+  "holds": [
+    "HOLD_PHASE3",
+    "HOLD_EMBEDDING_COVARIANCE",
+    "METADATA_HOLD"
+  ]
+}
