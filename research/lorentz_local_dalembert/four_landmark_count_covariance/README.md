@@ -8,6 +8,11 @@
 [Vorab festgelegtes Protokoll](evidence/PROTOCOL.txt) ·
 [Alle Daten](evidence/results/)
 
+Die vorausgehende [intrinsische Korrekturentwicklung V1/V2](../intrinsic_correction_development/README.md)
+ist jetzt vollständig archiviert: verworfener V1-Kandidat, Herleitung des
+Vier-Landmarken-Operators und damalige exakte Sage-Kontrollen. Die dortigen
+`NOT_RUN`-Angaben beziehen sich auf den Stand vor dieser neuen Wolkenprüfung.
+
 ## Ergebnis
 
 Die vierte Landmarke wird aus kausaler Ordnung, Intervallzählungen,

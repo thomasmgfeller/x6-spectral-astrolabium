@@ -12,6 +12,11 @@ remains unmet. All 162 count records replay; independent Sage checks pass for
 17 valid primary weight/covariance systems. **No scientific qualification;
 `HOLD_PHASE3`, `HOLD_EMBEDDING_COVARIANCE`, `METADATA_HOLD` remain.**
 
+**Development history now archived:** [Intrinsic correction V1/V2](intrinsic_correction_development/README.md)
+contains the original geometric derivation, all 64 historical cases, 58 checked
+V1 systems and exact V2 controls. V1 was rejected for utility. Historical V2
+`NOT_RUN` labels precede the fresh-cloud study above; both stages retain HOLD.
+
 **Earlier bounded result:** [Joint support/count/frame feasibility](joint_feasibility/RESULTS.md) passes all guards and a hidden second colouring on 16/16 fresh high-density clouds (0/16 low, 1/16 middle). Adaptive temporal and other supports, mixed past/future landmarks in one frame, unchanged acceptance thresholds. No operator weights or derivative qualification; **HOLD_PHASE3**.
 
 **Earlier trial (19 October 2026): larger outer diamonds; `OUTER_DIAMOND_HOLD`.**

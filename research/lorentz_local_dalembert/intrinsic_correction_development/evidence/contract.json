@@ -1,0 +1,24 @@
+{
+  "schema": "x6.intrinsic-distance-consistency-development/1",
+  "date": "2026-10-21",
+  "data_status": "ALL_64_ARCHIVED_CLOUDS_ARE_DEVELOPMENT_DATA",
+  "candidate": "Fixed-landmark metric-distance fit under complete support order",
+  "dimension": "2+1 flat Minkowski",
+  "density": "known homogeneous density inherited from each record",
+  "landmarks": "original three landmarks fixed; no truth alignment",
+  "loss": "sum squared interval-length residuals divided by delta-method Poisson scales; working loss only, correlated and selection-biased counts",
+  "solver": {"margin": 0.00001, "maxiter": 500, "ftol": 1e-10, "feasibility_tolerance": 1e-9},
+  "support_policy": "unchanged identities and scale; all six earlier unavailable records retained",
+  "fallback": "previous relation-projected operator on rejected candidate",
+  "development_criteria": {
+    "all_previously_complete_accepted": true,
+    "exact_observed_order_required": true,
+    "rmse_ratio_candidate_to_original_at_most": 0.9,
+    "linear_response_rmse_ratio_at_most": 0.9,
+    "mean_iid_noise_variance_ratio_at_most": 1.25,
+    "evaluate_each_old_group_separately": true
+  },
+  "criteria_note": "Engineering development criteria, not statistical significance. No parameter retuning after outcomes; failed criteria retain HOLD.",
+  "new_cloud_confirmation": "NOT_RUN",
+  "holds": ["HOLD_PHASE3", "HOLD_EMBEDDING_COVARIANCE", "METADATA_HOLD"]
+}

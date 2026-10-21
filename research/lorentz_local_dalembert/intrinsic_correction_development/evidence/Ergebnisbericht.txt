@@ -1,0 +1,223 @@
+EIGENZEIT — INTRINSISCHE KORREKTUR AUS GEOMETRISCHEN BEDINGUNGEN
+21.10.2026
+
+ERGEBNIS
+
+Es wurde ein erster intrinsischer Korrekturkandidat implementiert, auf allen
+64 archivierten Fällen geprüft und als nutzbare Korrektur verworfen. Er liefert
+für sämtliche 58 zuvor vollständigen Fälle eine mit der beobachteten Ordnung
+verträgliche Geometrie, verschlechtert aber die Operatorgenauigkeit.
+
+Als gezielterer Nachfolger wurde ein Vier-Landmarken-Differenzoperator hergeleitet
+und implementiert. Seine lineare und quadratische Exaktheit bei exakten
+Intervalllängen wurde mit rationaler Sage-Arithmetik geprüft. Die Prüfung dieses
+Nachfolgers auf endlich dichten, verrauschten Punktwolken ist NICHT AUSGEFÜHRT.
+Es liegt somit weiterhin keine nachgewiesen nützliche intrinsische Korrektur vor.
+
+1. WAS DER BISHERIGE FEHLER EINGRENZT
+
+Für einen am Bezugspunkt o zentrierten Operator gilt bei linearen Feldern:
+    B f = Summe_j b_j (f(x_j)-f(o)).
+Die Auslöschung aller linearen Felder ist äquivalent zu Summe_j b_j x_j = 0.
+Sind rekonstruierte und wahre relative Koordinaten durch ein gemeinsames
+invertierbares M verbunden, xhat_j = M x_j, dann folgt aus Summe b_j xhat_j=0
+auch Summe b_j x_j=0. Dies gilt selbst für ein nicht-lorentzsches M; die
+quadratischen Momente können dabei dennoch falsch sein.
+
+Der bereits beobachtete erhebliche lineare Momentfehler ist daher — bei
+korrekt gelösten Momentbedingungen — nicht allein durch einen gemeinsamen
+Boost, eine gemeinsame Skalierung oder eine gemeinsame affine Verzerrung
+erklärbar. Punktweise nicht-affine Fehler müssen berücksichtigt werden.
+Das identifiziert noch nicht deren statistische oder algorithmische Ursache.
+
+2. KONKRETE GEOMETRISCHE KONSISTENZBEDINGUNG
+
+Annahmen: flache 2+1-Minkowski-Geometrie, eta=diag(-1,1,1), bekannte homogene
+Poisson-Dichte rho, vollständige exakte Kausalordnung. Für zeitartige Intervalle
+ist q_ab=tau_ab^2=-(x_a-x_b)^T eta (x_a-x_b). Die verwendete Schätzung lautet
+    qhat_ab = [N(I(a,b))/(rho*pi/12)]^(2/3).
+Sie ist bei endlichen Zählungen nicht exakt oder unverzerrt; Auswahl und
+überlappende Intervalle erzeugen zusätzliche Abhängigkeiten.
+
+Mit Bezugspunkt o=0 und drei linear unabhängigen Landmarken a_i:
+    H_ij = (-q_ai,o - q_aj,o + q_ai,aj)/2,
+    v_i(x) = (-q_ai,o - q_o,x + q_ai,x)/2.
+Für exakte Längen sind H_ij=<a_i,a_j> und v_i=<a_i,x>. Notwendig und bei
+invertierbarem H für diese vier Vektoren hinreichend ist die Schur-Bedingung
+    v(x)^T H^(-1) v(x) = -q_o,x.
+Die erweiterte Grammatrix hat dann Rang drei und dieselbe nichtverschwindende
+Trägheit wie H. Die Formel ist eine algebraische Identität, kein neuer
+physikalischer Satz. Zeitrichtungen und weitere Paarrelationen müssen zusätzlich
+kontrolliert werden. Rang allein ist dafür nicht ausreichend.
+
+3. AUSGEFÜHRTER KANDIDAT V1
+
+Die drei bisherigen Landmarken und deren Grammatrix H bleiben fest. Alle
+Stützpunkte werden gemeinsam so angepasst, dass die vier Abstände zu o und den
+drei Landmarken möglichst gut zu den Zählwerten passen. Optimiert wird
+    1/2 Summe_j,a [(q_pred(a,x_j)-qhat_a,j)/sigma_a,j]^2,
+    sigma_a,j = (2/3) qhat_a,j / sqrt(N_a,j).
+Die Rechnung verwendet dimensionslose q/s^2. sigma ist nur eine Gewichtung aus
+der Delta-Methode, KEIN kalibrierter Unsicherheitsnachweis. Die überlappenden,
+ausgewählten Zählintervalle werden durch diese diagonale Verlustfunktion nicht
+statistisch entkoppelt; keine gemeinsame Likelihood wird behauptet.
+
+Nebenbedingungen: sämtliche gerichteten und unvergleichbaren Paare auf
+o+Stützpunkten bleiben mit der vollständigen beobachteten Ordnung verträglich.
+Alle Stützpunkt-Landmarken-Abstände bleiben zeitartig. Die archivierte
+Schnittstelle enthält keine gerichtete Ordnung zu den Landmarken; deren
+Zeitorientierung ist deshalb NICHT vollständig neu qualifiziert.
+SLSQP ist ein lokaler nichtkonvexer Löser, kein globales Zertifikat.
+
+Anschließend werden die bisherigen Minimum-Varianz-Gewichte vollständig neu
+berechnet, mit gemeinsamem Bezugspunkt: H_noise=I+11^T. Rang, Kondition,
+Momentbedingungen und KKT-Residual werden geprüft. Inferenz sieht keine
+Feldwerte und keine wahren Koordinaten. Alle Gewichte wurden vor deren
+Bewertung versiegelt. root, Supportidentitäten, Skala und Felder blieben gleich.
+
+ERGEBNIS V1 (sämtliche bisherigen vollständigen Fälle, keine Auslese):
+
+Alter Kalibrierblock: 30 von 32 zuvor vollständig; 30 Kandidaten akzeptiert.
+  Operator-RMSE: Original 2.322140; Relationsprojektion 2.579613;
+                 V1 2.519857; Wahrheits-Oracle 0.045773.
+  Linearer Antwort-RMSE: Original 2.330898; V1 2.523706.
+  Mittlere IID-Messvarianz bei sigma_f=0.001: 2.511108 -> 2.650137.
+
+Alter Testblock: 28 von 32 zuvor vollständig; 28 Kandidaten akzeptiert.
+  Operator-RMSE: Original 1.446311; Relationsprojektion 1.455090;
+                 V1 2.592466; Wahrheits-Oracle 0.063032.
+  Linearer Antwort-RMSE: Original 1.447442; V1 2.601199.
+  Mittlere IID-Messvarianz bei sigma_f=0.001: 1.060099 -> 1.817989.
+
+Die Summe der geometrischen Arbeitsverluste sinkt gegenüber dem zulässigen
+Start von 1584.910608 auf 556.997413. Trotzdem steigt der Operatorfehler im
+alten Testblock um rund 79.2%; die Messvarianz steigt um rund 71.5%.
+Die bessere interne Abstandskonsistenz ist somit KEIN Gütenachweis.
+
+Vor dem Ergebnis fixierte Entwicklungsgrenzen: mindestens 10% Verbesserung
+von Operator- und linearer Antwort-RMSE in beiden alten Gruppen, höchstens
+25% Mehrkosten bei mittlerer IID-Messvarianz, keine zusätzlichen Ausfälle.
+V1 besteht diese Grenzen nicht: ENTWICKLUNGSGATE HOLD, KEINE ÜBERNAHME.
+Sechs bereits unverfügbare Fälle bleiben erhalten; keine Nachziehungen.
+Beide früheren Gruppen sind hier bekannte Entwicklungsdaten. Keine neuen
+Konfidenzintervalle, keine Signifikanz und keine neue Population werden behauptet.
+
+4. GEZIELTER NACHFOLGER V2: VIER EXTERNE LANDMARKEN
+
+Die schwächere V1-Korrektur wird nicht nachträglich auf dem alten Testblock
+getunt. Stattdessen wird eine eigenständige algebraische Möglichkeit untersucht.
+
+Wähle vier externe Landmarken a_0,a_1,a_2,a_3. Die drei Differenzvektoren
+d_i=a_i-a_0 müssen linear unabhängig sein. In dieser ersten Implementierung
+müssen alle benötigten Landmarkenintervalle zeitartig sein. Für i=1,2,3:
+    psi_i(x) = 1/2 [q_ai,x - q_a0,x - q_ai,o + q_a0,o].
+Durch Ausmultiplizieren folgt exakt:
+    psi_i(x) = <a_i-a_0, x-o>.
+Das quadratische x^T eta x kürzt sich heraus. Insbesondere ist q_o,x
+überhaupt kein Eingang dieses Verfahrens. Es werden drei intrinsische
+lineare Koordinatenfunktionen aus Abstandsdifferenzen gewonnen.
+
+Die zugehörige Metrik wird ebenfalls aus Landmarkenintervallen berechnet:
+    G_ij = <d_i,d_j> = (q_ai,aj - q_ai,a0 - q_a0,aj)/2.
+Für die physischen Operatorgewichte b_j sind die Momentbedingungen:
+    Summe_j b_j psi_i(x_j) = 0,
+    Summe_j b_j psi_i(x_j) psi_k(x_j) = 2 G_ik,
+mit b_o=-Summe_j b_j für die konstante Funktion.
+
+Beweis: psi_i=M_i,mu x^mu mit invertierbarem M. Die ersten Bedingungen
+implizieren Summe b_j x_j^mu=0. Die zweiten entsprechen unter demselben
+invertierbaren Basiswechsel den physischen quadratischen d'Alembert-Momenten.
+Damit stimmt bei exakten Intervalllängen, vollem Momentenrang und gleicher
+Minimum-Varianz-Zielfunktion der eindeutige Operator mit dem Operator auf
+wahren Koordinaten überein. Die Gleichheit ist ein Satz über exakte Distanzen;
+sie ist kein Nachweis für noisy estimated distances oder die diskrete
+Feldapproximation höherer Ordnung.
+
+Implementierung: z_i=psi_i/s^2, H=G/s^2; dimensionslose Gewichte a erfüllen
+Summe a_j z_i z_k=2 H_ik und b_j=a_j/s^2. Keine Wurzel-/Eigenvektorbasis wird
+zur Koordinatenrekonstruktion benötigt. Eigenwerte werden nur für Signatur-
+und Konditionsprüfung benutzt. Gemeinsames Feldrauschen am Bezugspunkt bleibt
+vollständig in I+11^T enthalten.
+
+Vier EXTERNE Landmarken sind nötig, weil drei davon nur zwei unabhängige
+Differenzen ergeben. Den Bezugspunkt als vierte Landmarke einzusetzen würde
+die gerade entfernte q_o,x-Abhängigkeit wieder einführen.
+
+Status V2: IMPLEMENTIERT; EXAKT GEPRÜFT; VERALLGEMEINERUNG AUF WOLKEN OFFEN.
+Die 58 archivierten ausgewählten Supports enthalten jeweils nur drei externe
+Landmarken. Eine vierte darf nicht aus Simulatorkoordinaten ergänzt werden.
+Der fehlende Messwert kann aus diesem Archiv nicht belastbar erfunden werden.
+Die Schnittstelle von V2 verlangt zusätzlich eine externe vollständige
+Ordnungskontrolle; sie behauptet selbst noch keine end-to-end Zulässigkeit.
+V2 ist nach dem V1-Ergebnis entstanden und daher nicht Teil dessen Freeze.
+
+5. DURCHGEFÜHRTE KONTROLLEN
+
+SageMath 10.9:
+  - 11 exakte Kontrollen der Geometrieidentitäten und Gegenbeispiele PASS.
+  - Alle 58 V1-Gewichtssysteme unabhängig bei 128 und 256 Bit kontrolliert PASS.
+  - 10 exakte V2-Kontrollen PASS, einschließlich physischer linearer und
+    quadratischer Momente, gleicher Minimum-Varianz-Lösung, Skalen- und
+    Landmarken-Permutationsinvarianz.
+Numerik:
+  - 8 V1-Kontrollen PASS, darunter unabhängige Differenzenquotienten für
+    Zielfunktionsgradient und Nebenbedingungs-Jacobi, exakter Fixpunkt und
+    kontrolliert verzerrtes Beispiel.
+  - 4 V2-Implementierungskontrollen PASS, darunter Rangdefekt-Ablehnung.
+
+Die V1-Optimierung dauerte hier rund 19.2 Sekunden für 58 Supports.
+Kontrollzahlen sind keine unabhängigen statistischen Beobachtungen.
+
+Transparenz: Der erste exakte Geometriekontrolllauf scheiterte, weil ein
+Sage-Vektorkonstruktor beim Erzeugen einer Negativkontrolle das Originalobjekt
+wiederverwendete. Ein Element der Negativkontrolle änderte dadurch auch das
+Referenzobjekt. Die Kopie wurde über list(v) erzeugt. Der Erstcode ist unter
+attempts erhalten. Inferenzcode, Grenzwerte und Daten blieben unverändert.
+development_freeze.json bleibt unverändert und bindet deshalb den ursprünglichen
+Kontrollcode; completion_manifest.json dokumentiert beide Versionen ausdrücklich.
+
+6. NÄCHSTER AUSFÜHRBARER VERSUCH
+
+1. Vier externe Landmarken rein anhand von Ordnung, Zählungen und unabhängigen
+   Markierungen auswählen; mindestens Rang drei der Differenz-Grammatrix,
+   Signatur (-,+,+), begrenzte Kondition und ausreichende Zählungen verlangen.
+   Fehlende Landmarken als Ausfall bewahren; nicht über wahre Koordinaten suchen.
+2. Die Auswahl auf einer unabhängigen Poisson-Teilmenge durchführen und Längen
+   auf einer anderen zählen. Die Auswahldichte und Messdichte separat führen.
+   Überlappungszählungen archivieren: dieselben Ereignisse erzeugen korrelierte
+   Abstandsfehler. Für feste Intervalle gilt Cov(N_A,N_B)=rho*Vol(A∩B).
+   Diese Beziehung ersetzt keine Kontrolle der datenabhängigen Auswahl.
+3. V2, Ordnungsprüfung, Rang-/Konditionsgrenzen, Rauschbudget, Abbruchregeln und
+   neue Seeds vor Ergebniszugriff fixieren. Daten, die für die Entwicklung
+   verwendet werden, dauerhaft als Entwicklungsdaten kennzeichnen.
+4. Erst danach neue Wolken mit gleicher Referenzgewichtung und denselben
+   Feldfamilien auswerten; lineare Momentfehler, Operatorfehler, Messvarianz
+   und Verfügbarkeit getrennt berichten. Eine gut passende Geometrie allein
+   darf keine Freigabe auslösen.
+
+Alle bisherigen HOLD_PHASE3, HOLD_EMBEDDING_COVARIANCE und METADATA_HOLD bleiben.
+Keine Krümmungs-, 3+1-, physikalische Sensor- oder Kalman-Freigabe folgt hieraus.
+
+QUELLEN UND HERKUNFT
+
+Archivierter X6-Quellstand: ee6460971c2b3ec48ea2ebb18002072ca3d22f97.
+Die Rechnung wird aus den archivierten Intrinsikwerten reproduziert; die
+unveränderten Sage-Evaluationsdaten werden erst nach dem Inferenz-Siegel gelesen.
+Source: research/lorentz_local_dalembert/error_calibration/results/{calibration,test}.
+Jeder Intrinsikdatensatz enthält den SHA-256 der zugehörigen Originaldatei.
+
+Boguñá & Krioukov, Measuring spatial distances in causal sets via causal
+overlaps, Phys. Rev. D 110, 024008 (2024), arXiv:2401.17376v2.
+https://arxiv.org/html/2401.17376v2
+Relevant: Volumenformel Gl. (6), Zahl-Volumen-Bezug und Poissonprozess,
+sowie Grenzen der intrinsischen Abstandsschätzung. Keine Bestätigung von V1/V2.
+
+Boguñá & Krioukov, Local d'Alembertian for causal sets, Phys. Rev. D 113,
+024046 (2026), arXiv:2506.18745v1.
+https://arxiv.org/html/2506.18745v1
+Relevant: Forschungsrahmen lokaler Operatoren aus intrinsischen Zeit-/Raumabständen.
+Der hier entwickelte Differenzoperator ist nicht als Verfahren dieser Autoren
+ausgegeben. Seine Identitäten sind oben hergeleitet; keine Neuheitsbehauptung.
+
+Schur-Komplement, Polarisationsidentität, affine Distanzdifferenzen und
+Minimum-Varianz-Momentbedingungen sind Standardalgebra, keine neue Physik.
