@@ -16,11 +16,12 @@ Research snapshot · 22 October 2026
 
 How reliably can operator values be reconstructed from finite, noisy causal counts? Explore the latest calculations, their limitations and the corresponding pull requests.
 
-PR #100: The new method retains dependence across all 90 interval counts. It improves the bound in a control example; volume resolution remains insufficient for the studied geometry pair. An improved accuracy guarantee remains open.
+For the same geometry pair, the certified upper bound on statistical distinguishability (TV) decreases from 0.2500 to 0.2212 by retaining the exact Poisson probability. The operator gap remains small; a general accuracy guarantee is still open.
 
 PR #99: A certified upper bound limits operator changes within a specified small perturbation budget. This is a local result, not a general stability proof.
 
-- [PR #100 · Results and checks →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/100)
+- [Latest calculation · Results and limits →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/lorentz_local_dalembert/paired_atoms/README.md)
+- [PR #100 · Joint count regions →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/100)
 - [Check current CI status for PR #100 →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/100/checks)
 - [PR #99 · Local bound →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/99)
 - [Browse all pull requests →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pulls?q=is%3Apr)

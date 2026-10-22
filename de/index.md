@@ -16,11 +16,12 @@ Forschungsstand · 22.10.2026
 
 Wie zuverlässig lassen sich Operatorwerte aus endlichen, verrauschten Kausalzählungen rekonstruieren? Hier findest du die neuesten Rechnungen, ihre Grenzen und die zugehörigen Pull Requests.
 
-PR #100: Die neue Methode berücksichtigt die Abhängigkeiten aller 90 Intervallzählungen. Im Kontrollbeispiel verbessert sie die Schranke; beim untersuchten Geometriepaar reicht die Volumenauflösung noch nicht. Eine verbesserte Genauigkeitsgarantie bleibt offen.
+Für dasselbe Geometriepaar sinkt die zertifizierte Obergrenze der statistischen Unterscheidbarkeit (TV) von 0,2500 auf 0,2212. Die Verbesserung folgt aus der exakten Poisson-Wahrscheinlichkeit. Der Operatorunterschied bleibt klein; eine allgemeine Genauigkeitsgarantie ist weiterhin offen.
 
 PR #99: Eine zertifizierte Obergrenze begrenzt die Operatoränderung innerhalb eines festgelegten kleinen Störungsbudgets. Das ist eine lokale Aussage, kein allgemeiner Stabilitätsbeweis.
 
-- [PR #100 · Ergebnis und Prüfungen →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/100)
+- [Neueste Rechnung · Ergebnis und Grenzen →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/lorentz_local_dalembert/paired_atoms/README.md)
+- [PR #100 · Gemeinsame Zählregionen →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/100)
 - [Aktuellen CI-Status von PR #100 prüfen →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/100/checks)
 - [PR #99 · Lokale Schranke →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/99)
 - [Alle Pull Requests ansehen →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pulls?q=is%3Apr)
