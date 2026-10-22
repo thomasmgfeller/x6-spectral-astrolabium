@@ -16,11 +16,11 @@ Research snapshot · 22 October 2026
 
 How reliably can operator values be reconstructed from finite, noisy causal counts? Explore the latest calculations, their limitations and the corresponding pull requests.
 
-Direct cone tests on the moving surface now fully classify 659 surface cells. Additional cancellation is certified for the same geometry pair: the TV upper bound decreases from 0.01982 to 0.01895. This does not yet establish improved reconstruction accuracy.
+Targeted refinement reduces the unresolved surface intensity upper bound by 49.7%. With 8,192 additional cell checks, the certified TV upper bound decreases from 0.01895 to 0.01706. All previously certified labels are retained; reconstruction accuracy remains open.
 
 PR #99: A certified upper bound limits operator changes within a specified small perturbation budget. This is a local result, not a general stability proof.
 
-- [Latest calculation · Results and limits →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/lorentz_local_dalembert/surface_correlations/README.md)
+- [Latest calculation · Results and limits →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/lorentz_local_dalembert/adaptive_surface/README.md)
 - [PR #100 · Joint count regions →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/100)
 - [Check current CI status for PR #100 →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/100/checks)
 - [PR #99 · Local bound →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/99)
