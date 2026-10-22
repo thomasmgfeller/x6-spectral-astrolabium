@@ -8,6 +8,16 @@ Acht Kapitel je Sprache: Einstieg, Schnellstart, Signale, kausale Ordnungen, Evi
 
 **Public Research Preview — independent validation requested. NOT a scientifically certified stable release.**
 
+**Eigenzeit: Poisson-Abdeckung und endliche Fehlergrenze hergeleitet (22.10.2026) — HOLD.**
+[Beweise, vollständige Auswertung und Reproduktion](research/lorentz_local_dalembert/finite_poisson_bounds/README.md):
+Ein konservativer Bereich deckt unter dem festgelegten Poisson-Modell alle
+1.736 Zählmittelwerte gleichzeitig mit mindestens 97,86 % ab, auch bei
+überlappenden Intervallen. Eine obere Operatorfehlergrenze ist hergeleitet;
+sie zertifiziert auf dem vollständigen Bereich jedoch in keinem der 19
+berechenbaren Fälle höchstens 10 % Gewichtsfehler. Kleine lokale Bereiche sind
+zertifiziert, haben aber keine statistische Abdeckungsgarantie.
+**Keine neue Genauigkeitsfreigabe und kein Unmöglichkeitsbeweis.**
+
 **Eigenzeit: endliche Zählgenauigkeit mathematisch geprüft (22.10.2026) — HOLD.**
 [Herleitung, konkretes Geometriepaar und exaktes Zertifikat](research/lorentz_local_dalembert/stability_information/README.md):
 Zwei Geometrien erfüllen dieselbe Ordnung auf 21 ausgewählten Punkten und

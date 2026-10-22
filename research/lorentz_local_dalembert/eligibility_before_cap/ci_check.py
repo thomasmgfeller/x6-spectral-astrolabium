@@ -51,6 +51,16 @@ def main():
         digest,name=line.split('  ',1)
         assert hashlib.sha256((HERE/name).read_bytes()).hexdigest()==digest,name
     controls=local_module('controls'); analyze=local_module('analyze'); verify=local_module('verify')
+    reference={'status':'SELECTED','packet':{'scale':1.},'selection_counts':[17],
+               'landmark_condition':20.,'design_condition':30.}
+    verify.compare_legacy({**reference,'design_condition':30.+1e-13},reference)
+    for change in [{'status':'HOLD'},{'selection_counts':[18]},
+                   {'packet':{'scale':1.+1e-14}},
+                   {'design_condition':30.+1e-8},
+                   {'landmark_condition':float('nan')}]:
+        try:verify.compare_legacy({**reference,**change},reference)
+        except (AssertionError,ValueError):continue
+        raise AssertionError(('legacy replay accepted changed meaning',change))
     with tempfile.TemporaryDirectory() as directory:
         temp=Path(directory); shutil.copy2(HERE/'contract.json',temp/'contract.json')
         controls.HERE=temp; controls.main()

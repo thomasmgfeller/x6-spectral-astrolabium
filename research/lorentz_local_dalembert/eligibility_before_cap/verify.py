@@ -3,8 +3,21 @@ SPDX-License-Identifier: Apache-2.0
 """
 import hashlib
 import json
+import math
 import numpy as np
 from eb_common import HERE,SOURCE,read,save,encode,frozen
+
+def compare_legacy(actual, expected):
+    """Exact selection replay, except two recomputed condition diagnostics."""
+    actual=json.loads(encode(actual)); expected=json.loads(encode(expected))
+    for key in ['landmark_condition','design_condition']:
+        if key not in expected:continue
+        a=actual.pop(key); b=expected.pop(key)
+        assert type(a) is type(b) is float,(key,a,b)
+        assert math.isfinite(a) and math.isfinite(b),(key,a,b)
+        assert math.isclose(a,b,rel_tol=1e-12,abs_tol=1e-12),(key,a,b)
+        if a!=b:print('Legacy condition replay:',key,repr(a),repr(b))
+    assert encode(actual)==encode(expected),'legacy selection payload changed'
 
 def gram_vectors(q,p):
     lookup={tuple(pair):float(v) for pair,v in zip(p['pairs'],q)}
@@ -95,7 +108,7 @@ def main(write=True):
     replays=[]
     for index in [0,c['clouds']-1]:
         r=read(HERE/f'results/cloud-{index:02d}.json.gz'); s=r['selection']; original,_=selection_cloud(r['seed'],c)
-        assert encode(original['fourth'])==encode(s['arms']['legacy'])
+        compare_legacy(original['fourth'],s['arms']['legacy'])
         for key in ['base_audit','physical_count','coordinates_sha256','relation_sha256','baseline_selected','base_selection_funnel']:
             assert encode(original[key])==encode(s[key]),key
         trpath=HERE/f'results/truth/cloud-{index:02d}.json'
