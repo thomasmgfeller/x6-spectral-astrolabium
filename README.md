@@ -1,5 +1,7 @@
 # X6 Spectral Astrolabium
 
+**Eigenzeit shape coupling (22 October 2026):** [fixed-anchor search and exact full-law bound](research/lorentz_local_dalembert/shape_coupling/) — 288 candidates, 252 geometry passes, no strong pair; 32 true order violations isolated from four margin-only rejections. This finite negative search does not prove stability.
+
 **Eigenzeit full-law bound (22 October 2026):** [exact Poisson reduction and certificate](research/lorentz_local_dalembert/full_law_scaling/) — a close scaling pair gives a small statistical weight-error lower bound; a proved stopping rule excludes this family as a close-law 10% counterexample. All HOLDs retained.
 
 **Eigenzeit held-out Poisson testing (22 October 2026):** [sealed test and full replay](research/lorentz_local_dalembert/poisson_testing/) — the existing witness pair is distinguishable: 76.95% empirical accuracy, conservative lower bound 65.83%; a TV lower bound, not a reconstruction guarantee. All HOLDs retained.
