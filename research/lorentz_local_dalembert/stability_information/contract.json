@@ -1,0 +1,109 @@
+{
+  "schema": "x6.count-operator-stability-audit/1",
+  "source_commit": "598ceb6fc4284d1f3f8697fded324987b9eedb4a",
+  "date": "2026-10-22",
+  "mode": "POSTHOC_DIAGNOSTIC_ON_ARCHIVED_B0",
+  "indices": [
+    0,
+    3,
+    4,
+    5,
+    6,
+    7,
+    9,
+    10,
+    11,
+    12,
+    16,
+    17,
+    18,
+    20,
+    21,
+    24,
+    27,
+    28,
+    29,
+    31
+  ],
+  "rho": 32768,
+  "fit": {
+    "minimum_count": 8,
+    "interval_margin": 1e-08,
+    "time_margin": 1e-08,
+    "coordinate_bound": 100.0,
+    "max_iterations": 250,
+    "ftol": 1e-09,
+    "constraint_tolerance": 1e-08,
+    "fit_seconds": 20.0,
+    "correlation_shrinkage": 0.05
+  },
+  "covariance_shrinkage": 0.05,
+  "pair_discrepancy_limit": 2.0,
+  "observed_squared_discrepancy_per_count_limit": 1.0,
+  "minimum_relative_weight_separation": 0.25,
+  "objective_directions": 2,
+  "signs": [
+    -1,
+    1
+  ],
+  "max_iterations": 120,
+  "seconds_per_search": 12,
+  "worker_seconds": 1200,
+  "backtrack_steps": 20,
+  "coordinate_bound": 100.0,
+  "minimum_count": 8,
+  "round_coordinate_digits": 12,
+  "fields": [
+    {
+      "name": "cos_A",
+      "kind": "cos",
+      "k": [
+        0.4,
+        0.55,
+        0.25
+      ],
+      "phase": 0.3
+    },
+    {
+      "name": "sin_B",
+      "kind": "sin",
+      "k": [
+        0.6,
+        0.2,
+        0.45
+      ],
+      "phase": -0.4
+    },
+    {
+      "name": "cos_C",
+      "kind": "cos",
+      "k": [
+        0.35,
+        0.7,
+        0.3
+      ],
+      "phase": 0.5
+    },
+    {
+      "name": "sin_D",
+      "kind": "sin",
+      "k": [
+        0.65,
+        0.4,
+        0.55
+      ],
+      "phase": 0.2
+    }
+  ],
+  "holds": [
+    "HOLD_PHASE3",
+    "HOLD_EMBEDDING_COVARIANCE",
+    "METADATA_HOLD"
+  ],
+  "no_truth_in_search": true,
+  "no_new_A_or_B": true,
+  "noise_scope": "Fixed empirical C_alpha defines a deterministic discrepancy, not a calibrated confidence region or exact joint Poisson likelihood. C is not modelled as an additional geometry-dependent random observation.",
+  "target_scope": "Geometry-dependent minimum-energy quadratic-moment operator on the fixed selected nodes; not a lower bound for every continuum estimator or the full causal-set observation.",
+  "pair_scope": "Same selected-node order and density/scale/node labels; no proof of indistinguishability of the entire original A/B poset or joint overlap distribution.",
+  "stop_rule": "Run every listed source once; four fixed signed search objectives per qualified base; no adaptive replacement, budget extension or tuning. Select first source by index with a passing rounded pair, then largest relative separation among its prescribed trials. Failed search is not a stability proof."
+}
