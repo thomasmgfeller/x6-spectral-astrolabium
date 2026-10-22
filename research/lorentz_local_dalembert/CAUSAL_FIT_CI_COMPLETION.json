@@ -1,0 +1,105 @@
+{
+  "schema": "x6.causal-fit-ci-completion/1",
+  "research_pr": 84,
+  "head_sha": "ca07a31b19837829ff02bcac8fd5b589761fb089",
+  "merged_commit": "02b841f3cb02380bf21ccea9f9675a8beccdd844",
+  "verified_utc": "2026-10-22T09:01:00.321Z",
+  "status": "ALL_FIVE_WORKFLOWS_SUCCESS",
+  "workflows": [
+    {
+      "id": 39750407186,
+      "name": "X6 Module Register",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/actions/runs/39750407186"
+    },
+    {
+      "id": 39750407337,
+      "name": "X6 Signal Lab",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/actions/runs/39750407337"
+    },
+    {
+      "id": 39750407080,
+      "name": "Photonic Reference",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/actions/runs/39750407080"
+    },
+    {
+      "id": 39750407131,
+      "name": "X6 Validation",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/actions/runs/39750407131"
+    },
+    {
+      "id": 39750407215,
+      "name": "Lorentz BD Poisson Reference",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/actions/runs/39750407215"
+    }
+  ],
+  "lorentz_bd_jobs": [
+    {
+      "id": 119729267328,
+      "name": "common-axis-replay",
+      "status": "completed",
+      "conclusion": "success",
+      "completed_at": "2026-10-22T08:51:51Z"
+    },
+    {
+      "id": 119729267612,
+      "name": "moment-feasibility-replay",
+      "status": "completed",
+      "conclusion": "success",
+      "completed_at": "2026-10-22T08:50:26Z"
+    },
+    {
+      "id": 119729267688,
+      "name": "volume-shell-replay",
+      "status": "completed",
+      "conclusion": "success",
+      "completed_at": "2026-10-22T08:50:28Z"
+    },
+    {
+      "id": 119729267698,
+      "name": "outer-diamond-replay",
+      "status": "completed",
+      "conclusion": "success",
+      "completed_at": "2026-10-22T08:54:36Z"
+    },
+    {
+      "id": 119729267769,
+      "name": "intrinsic-moments-replay",
+      "status": "completed",
+      "conclusion": "success",
+      "completed_at": "2026-10-22T08:50:21Z"
+    },
+    {
+      "id": 119729267801,
+      "name": "joint-feasibility-replay",
+      "status": "completed",
+      "conclusion": "success",
+      "completed_at": "2026-10-22T08:52:48Z"
+    },
+    {
+      "id": 119729267868,
+      "name": "replay",
+      "status": "completed",
+      "conclusion": "success",
+      "completed_at": "2026-10-22T08:55:47Z"
+    },
+    {
+      "id": 119729267874,
+      "name": "landmark-availability-replay",
+      "status": "completed",
+      "conclusion": "success",
+      "completed_at": "2026-10-22T08:48:55Z"
+    }
+  ],
+  "scientific_status": "HOLD",
+  "note": "Technical CI completion, not scientific acceptance. Availability and repeat-variance criteria of PR84 remain failed."
+}

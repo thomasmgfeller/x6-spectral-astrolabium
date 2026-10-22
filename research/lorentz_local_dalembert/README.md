@@ -9,6 +9,9 @@ below 26/32. On 18 common computable cases, operator RMSE ratio is 0.904874
 complete groups. Ten synthetic controls and an internal audit of 177 valid fits
 pass. Enforced order is not independent accuracy evidence. **No adoption;
 HOLD_PHASE3, HOLD_EMBEDDING_COVARIANCE and METADATA_HOLD remain.**
+[CI completion record](CAUSAL_FIT_CI_COMPLETION.json): all five workflows for
+PR #84 completed successfully, including all eight Lorentz BD jobs. This closes
+the technical checks; the scientific HOLD is unchanged.
 
 **Latest diagnosis (22 October 2026): causal-order failures localized; HOLD remains.**
 [Complete diagnosis, data, code and six-node counterexample](causal_order_diagnosis/README.md)

@@ -15,6 +15,9 @@ Auf 18 gemeinsamen berechenbaren Fällen sinkt der Operator-RMSE um 9,51 %
 (gefordert 10 %), die Antwortvarianz über neue Zählwolken steigt auf das
 2,215-Fache. **Ordnungskonsistenz verbessert; Verfügbarkeit und Stabilität
 reichen nicht. Keine Übernahme, alle wissenschaftlichen HOLDs bleiben.**
+[Technischer Abschluss](research/lorentz_local_dalembert/CAUSAL_FIT_CI_COMPLETION.json):
+Alle fünf GitHub-Workflows zu PR #84 sind erfolgreich beendet, einschließlich
+aller acht Lorentz-BD-Teiljobs. Der wissenschaftliche HOLD bleibt unverändert.
 
 **Eigenzeit: Ursachen der Kausalitätsfehler isoliert (22.10.2026) — HOLD bleibt.**
 [Diagnose, vollständige Daten, Code und Sechs-Punkte-Gegenbeispiel](research/lorentz_local_dalembert/causal_order_diagnosis/README.md):
