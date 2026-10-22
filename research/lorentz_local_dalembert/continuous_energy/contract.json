@@ -1,0 +1,19 @@
+{
+  "schema": "eigenzeit.continuous-energy/1",
+  "base": "PR107 source geometry 0, fixed density, landmarks, root, outer domain and selected-node order",
+  "rays": {"nodes":[5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20],"axes":[1,2],"signs":[-1,1],"interval":["0","1/10"]},
+  "uniform_cells_per_ray":128,
+  "refinement_rounds":2,
+  "maximum_parents_per_round":512,
+  "refinement_priority":"unresolved leaves by decreasing width, then numeric (ray, path) order; binary rational midpoint split",
+  "gap_gate":"1/5",
+  "tv_gate":"1/4",
+  "law_tests":"All affected interval Hellinger lower bounds, then at most the two largest such bounds via the inherited exact Poisson event certificate",
+  "poisson":{"log_series_terms":32,"cdf_grid_digits":80,"cdf_upper_steps":2048,"maximum_mean":32768,"target_probability_interval_width":"1/10000000000000000000000000"},
+  "operator":"Exact single-column rank-two moment-covariance update, enclosed with 10^-30 directed intervals; no float inverse proposals",
+  "field_class":"Fixed unit-conductance undirected Hasse graph on all 21 selected nodes; E(f)<=1, constants unrestricted; auxiliary regularity assumption, not physical Lorentzian energy",
+  "field_pairs":"PR107 selected close-law row 329 and all 18 strong-gap rows excluded by PR108",
+  "refinement_model":"Subdivide every auxiliary Hasse edge into n=1,2,4,8 equal edges with conductance n; prove trace compatibility for all dyadic n",
+  "quadrature":"Normalized length measure on the constructed unit-edge metric graph; trapezoidal rule and an energy error bound with exact saturating bubble controls",
+  "stop":"Fixed interval budget; retain all unresolved leaves. No new geometry optimizer, implicit physical prior or claimed causal-set continuum limit."
+}

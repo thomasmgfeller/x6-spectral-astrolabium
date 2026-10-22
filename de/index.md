@@ -16,13 +16,13 @@ Forschungsstand · 22.10.2026
 
 Wie zuverlässig lassen sich Operatorwerte aus endlichen, verrauschten Kausalzählungen rekonstruieren? Hier findest du die neuesten Rechnungen, ihre Grenzen und die zugehörigen Pull Requests.
 
-Die 15 offenen Kandidaten sind geklärt: Zertifizierte Poisson-Zählwahrscheinlichkeiten schließen jetzt alle 18 Kandidaten mit mehr als 20 % Operatorabstand im festen 512-Punkte-Suchraster aus. Jeweils schon eine Zählung erzwingt TV ≥ 0,40933 statt der verlangten TV ≤ 0,25. Zwischen den Rasterpunkten bleibt die Frage offen; dies ist kein allgemeiner Stabilitätsbeweis.
+Alle 64 räumlichen Einzelbewegungen von der festen Referenz sind jetzt auf h ∈ [0; 0,1] als starke statistisch nahe Gegenbeispiele ausgeschlossen. Ein gemeinsamer Test zweier Zählungen in disjunkten Raumzeitbereichen schließt das letzte Intervall: TV ≥ 0,26376136 überschreitet die verlangten TV ≤ 0,25. Die festgelegte Familie ist damit abgeschlossen; koordinierte Bewegungen und allgemeine Rekonstruktionsstabilität bleiben offen.
 
 PR #99: Eine zertifizierte Obergrenze begrenzt die Operatoränderung innerhalb eines festgelegten kleinen Störungsbudgets. Das ist eine lokale Aussage, kein allgemeiner Stabilitätsbeweis.
 
-- [Neueste Rechnung · Ergebnis und Grenzen →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/lorentz_local_dalembert/poisson_tail_obstruction/README.md)
-- [PR #108 · Zertifizierter Kandidatenausschluss →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/108)
-- [Aktuellen CI-Status von PR #108 prüfen →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/108/checks)
+- [Neueste Rechnung · Ergebnis und Grenzen →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/lorentz_local_dalembert/joint_ray_obstruction/README.md)
+- [PR #110 · Alle 64 kontinuierlichen Richtungen geklärt →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/110)
+- [Aktuellen CI-Status von PR #110 prüfen →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/110/checks)
 - [PR #99 · Lokale Schranke →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/99)
 - [Alle Pull Requests ansehen →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pulls?q=is%3Apr)
 

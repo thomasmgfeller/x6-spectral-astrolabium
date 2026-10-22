@@ -1,0 +1,17 @@
+{
+  "schema": "eigenzeit.joint-ray-obstruction/1",
+  "source": "PR109 final head ff90d3b9f364d08c83adc96931f38a71bf58fdfc, continuous_energy",
+  "domain": {"node":15,"axis":1,"sign":-1,"h":["45/1024","51/1024"]},
+  "statistics": {"X":{"index":2,"interval":[2,15]},"Y":{"index":3,"interval":[15,1]}},
+  "event": {"expression":"Y - 2*X <= 787","x_coefficient":2,"threshold":787},
+  "proposal": "Two existing counts selected by their disjoint past/future geometry and opposite mean shifts. Integer coefficient and threshold proposed from the known geometric means before this certificate run; no independent-data or optimal-test claim.",
+  "cdf_grid_digits":80,
+  "x_upper_steps":512,
+  "y_upper_steps":2048,
+  "maximum_mean":32768,
+  "numerical_event_width_target":"1e-65",
+  "tv_gate":"1/4",
+  "gap_gate":"1/5",
+  "budget":"One fixed event and one whole-interval mean enclosure; no threshold search or subdivision after evaluation.",
+  "stop":"If the uniform event-probability separation exceeds 1/4, close the remaining PR109 interval. Otherwise retain HOLD. Either result applies only to the declared 64 fixed-base single-node rays and conditional count/overlap experiment."
+}

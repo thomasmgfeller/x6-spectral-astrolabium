@@ -16,13 +16,13 @@ Research snapshot · 22 October 2026
 
 How reliably can operator values be reconstructed from finite, noisy causal counts? Explore the latest calculations, their limitations and the corresponding pull requests.
 
-The 15 unresolved candidates are settled: certified Poisson count probabilities now exclude all 18 candidates with operator gap above 20% in the fixed 512-point search grid. One count alone forces TV ≥ 0.40933 instead of the required TV ≤ 0.25. The question remains open between grid points; this is not a general stability proof.
+All 64 fixed-base single-node spatial rays are now excluded as strong close-law counterexamples over h ∈ [0,0.1]. A joint event using two geometrically disjoint observed counts closes the last interval: TV ≥ 0.26376136 exceeds the required TV ≤ 0.25. This completes the declared family; coordinated moves and general reconstruction stability remain open.
 
 PR #99: A certified upper bound limits operator changes within a specified small perturbation budget. This is a local result, not a general stability proof.
 
-- [Latest calculation · Results and limits →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/lorentz_local_dalembert/poisson_tail_obstruction/README.md)
-- [PR #108 · Certified candidate exclusion →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/108)
-- [Check current CI status for PR #108 →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/108/checks)
+- [Latest calculation · Results and limits →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/lorentz_local_dalembert/joint_ray_obstruction/README.md)
+- [PR #110 · All 64 continuous rays settled →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/110)
+- [Check current CI status for PR #110 →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/110/checks)
 - [PR #99 · Local bound →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/99)
 - [Browse all pull requests →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pulls?q=is%3Apr)
 

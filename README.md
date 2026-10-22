@@ -1,6 +1,6 @@
 # X6 Spectral Astrolabium
 
-**Eigenzeit: all strong candidates in the fixed spatial grid excluded.** [Certified single-count Poisson tails](research/lorentz_local_dalembert/poisson_tail_obstruction/README.md) settle all 15 previously unresolved candidates: all 18 sampled pairs above 20% operator gap have **TV >= 0.4093301**, incompatible with TV <= 0.25. This closes the finite 512-candidate grid, not the continuous family or the global stability question.
+**Eigenzeit: all 64 continuous fixed-base spatial rays excluded as strong close-law counterexamples.** [A joint Poisson event closes the last interval](research/lorentz_local_dalembert/joint_ray_obstruction/README.md): two geometrically disjoint observed counts prove **TV >= 0.26376136265637454647 > 0.25** throughout the remaining node-15 interval. Combined with the previous continuous cover, no step h in [0,0.1] on these rays satisfies unchanged order, weight gap >20% and TV <=0.25 simultaneously. Coordinated moves, other base geometries and global stability remain open.
 
 **Eigenzeit: larger spatial moves, strong-pair question still open.** [512-candidate spatial search](research/lorentz_local_dalembert/spatial_search/README.md) certifies a **0.0434832%** operator gap at **TV <= 0.2118268**, an 11.9-fold gap gain. Of 18 admissible sampled candidates above 20% gap, a marginal-law certificate excludes three; 15 remain unresolved.
 
