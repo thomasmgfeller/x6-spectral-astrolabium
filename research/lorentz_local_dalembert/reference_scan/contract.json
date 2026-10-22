@@ -1,0 +1,13 @@
+{
+  "schema": "x6.conformal-reference-scan/1",
+  "source_commit": "bfcf94f14c32455ff0107ed1d4655be0d1e96197",
+  "base_parameters": ["-4/5", "-3/5", "-2/5", "-1/5", "0", "1/5", "2/5", "3/5", "4/5"],
+  "relative_steps": ["-9/5000", "9/5000"],
+  "candidate_count": 18,
+  "tv_upper_gate": "1/4",
+  "strong_gap_gate": "1/5",
+  "selection": "largest lower symmetric gap among candidates passing order, margin, intrinsic moments, conditioning and TV gates; first on ties",
+  "stop": "18 candidates only; no adaptive enlargement",
+  "scope": "Conditional homogeneous Poisson count/overlap channel at known density; same outer diamond, scale and causal order. Inner landmarks and root may move. Not physical validation or global stability.",
+  "all_holds_retained": true
+}
