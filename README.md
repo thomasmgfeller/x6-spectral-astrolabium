@@ -8,6 +8,17 @@ Acht Kapitel je Sprache: Einstieg, Schnellstart, Signale, kausale Ordnungen, Evi
 
 **Public Research Preview — independent validation requested. NOT a scientifically certified stable release.**
 
+**Eigenzeit: Suchreihenfolge korrigiert und auf 32 neuen Wolken geprüft (22.10.2026) — HOLD.**
+[Neue Paarprüfung, Code und vollständige Evidenz](research/lorentz_local_dalembert/eligibility_before_cap/README.md):
+Eignung wird nun vor der 128er-Begrenzung geprüft. Die Auswahl steigt von
+18/32 auf 20/32, ohne verlorene Altfälle; gefordert waren 26/32. Auf 180 neuen
+Zählwolken bleibt der paarweise Operatorfehler praktisch gleich, nur 1/32
+Hauptsysteme erfüllt die vollständige Kausalordnung. Zehn Ausfälle haben im
+festen Suchbereich überhaupt keinen zählgeeigneten vierten Punkt, zwei scheitern
+bereits am Basisaudit. Alle 60 verbliebenen Paarfehler betreffen Stützpunktpaare.
+317 Gewichtssysteme und 761 zulässige Kandidatenrahmen intern gegengeprüft.
+**Technische Korrektur belegt; praktische Freigabekriterien verfehlt.**
+
 **Eigenzeit: Suchbegrenzung und Zählvarianz getrennt geprüft (22.10.2026) — HOLD.**
 [Diagnose, neue Zählwolken und vollständige Evidenz](research/lorentz_local_dalembert/stability_followup/README.md):
 Die vollständige Suche findet bei 9/13 alten Auswahlfehlern zulässige vierte

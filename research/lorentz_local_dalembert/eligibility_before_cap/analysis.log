@@ -1,0 +1,126 @@
+{
+  "selection_status": "SELECTION_HOLD",
+  "operator_status": "OPERATOR_HOLD",
+  "selection_gates": {
+    "all_attempts_completed": true,
+    "availability": false,
+    "no_legacy_losses": true,
+    "minimum_gains": false,
+    "paired_exact_tail": false,
+    "selector_cost": true
+  },
+  "operator_gates": {
+    "qualified_primary": false,
+    "common_primary": true,
+    "accuracy": true,
+    "field_noise": true,
+    "complete_repeat_groups": false,
+    "repeat_variance": true,
+    "calibration_groups": true,
+    "covariance_calibration": true
+  },
+  "summaries": {
+    "legacy": {
+      "selected": 18,
+      "qualified_primary": 1,
+      "computable_primary": 17,
+      "all_available_rmse": 1.7308231132065004,
+      "qualified_subset_rmse": 0.3956621507627084,
+      "paired_primary_count": 17,
+      "paired_rmse": 1.7308231132065004,
+      "paired_noise": 1.8202631772364497,
+      "paired_repeat_groups": 12,
+      "paired_repeat_variance": 7.119151533595374,
+      "calibration_groups": 12,
+      "empirical_variance": 7.119151533595374,
+      "predicted_variance": 6.83393050414815,
+      "calibration_ratio": 1.0417360155000253,
+      "selector_seconds": {
+        "median": 0.03751271750024898,
+        "maximum": 0.06609991299956164
+      }
+    },
+    "candidate": {
+      "selected": 20,
+      "qualified_primary": 1,
+      "computable_primary": 19,
+      "all_available_rmse": 1.7418122711163802,
+      "qualified_subset_rmse": 0.7574560959685189,
+      "paired_primary_count": 17,
+      "paired_rmse": 1.7282299717217149,
+      "paired_noise": 1.7529048113628063,
+      "paired_repeat_groups": 12,
+      "paired_repeat_variance": 6.305465732534638,
+      "calibration_groups": 16,
+      "empirical_variance": 5.295066450023164,
+      "predicted_variance": 4.680475275640706,
+      "calibration_ratio": 1.1313095654155179,
+      "selector_seconds": {
+        "median": 0.05927042149960471,
+        "maximum": 0.28791591099979996
+      }
+    }
+  },
+  "ratios": {
+    "paired_rmse": 0.9985017871179329,
+    "paired_noise": 0.9629952598525298,
+    "paired_repeat_variance": 0.8857046661781336
+  },
+  "gain_indices": [
+    24,
+    28
+  ],
+  "loss_indices": [],
+  "one_sided_paired_exact_p": 0.25,
+  "paired_primary_indices": [
+    0,
+    4,
+    5,
+    6,
+    7,
+    9,
+    10,
+    11,
+    12,
+    16,
+    17,
+    18,
+    20,
+    21,
+    27,
+    29,
+    31
+  ],
+  "paired_repeat_indices": [
+    0,
+    4,
+    6,
+    9,
+    10,
+    11,
+    12,
+    17,
+    18,
+    20,
+    21,
+    31
+  ],
+  "status_counts": {
+    "legacy": {
+      "WEIGHTS_VALID": 149,
+      "COUNT_HOLD": 11,
+      "UNRESOLVED": 2
+    },
+    "candidate": {
+      "WEIGHTS_VALID": 168,
+      "COUNT_HOLD": 8,
+      "UNRESOLVED": 4
+    }
+  },
+  "holds": [
+    "HOLD_PHASE3",
+    "HOLD_EMBEDDING_COVARIANCE",
+    "METADATA_HOLD"
+  ],
+  "scope": "Fresh independent A configurations; paired old/new selectors on identical A and B draws. Point-estimate pilot gates, no population qualification. Own-sample and qualified-subset errors are descriptive and selection-biased. No covariance coverage claim."
+}

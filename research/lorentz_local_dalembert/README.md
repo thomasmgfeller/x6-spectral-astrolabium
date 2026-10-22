@@ -1,6 +1,20 @@
 # Local d’Alembertian: independent reproduction track
 
-**Latest follow-up (22 October 2026): candidate-cap diagnosis and covariance fit; HOLD.**
+**Latest fresh test (22 October 2026): eligibility before cap; HOLD.**
+[Corrected selector, paired campaign and complete evidence](eligibility_before_cap/README.md):
+32 fresh A clouds, 180 distinct B clouds, 342 arm records. Stable eligibility
+filtering before the 128-per-side cap preserves every old accepted candidate,
+but observed availability rises only from 18/32 to 20/32 (required 26; paired
+one-sided p=0.25). Primary RMSE ratio on 17 common cases is 0.998502; full-order
+qualification remains 1/32. Twelve complete paired repeat groups fall below 16.
+Ten failures have no count-eligible fourth point in the entire fixed family;
+two fail the inherited base audit. All 60 candidate primary pair mismatches
+involve supports. Seven controls and internal audits of 317 weight systems,
+761 accepted candidate frames and 75,650 inventory entries pass. A dedicated
+CI job now checks the new evidence and first/last A/B replays. **SELECTION_HOLD,
+OPERATOR_HOLD and all global scientific HOLDs remain.**
+
+**Previous follow-up (22 October 2026): candidate-cap diagnosis and covariance fit; HOLD.**
 [Complete diagnosis and conditional test](stability_followup/README.md): all 13
 failed selections replay identically. Exhausting 31,293 candidates finds 55
 feasible fourth landmarks beyond the old early cap in nine cases; eligibility

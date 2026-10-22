@@ -1,0 +1,112 @@
+{
+  "schema": "x6.eligibility-before-cap/1",
+  "date": "2026-10-22",
+  "source_commit": "4c3beae20f0bff17b2140884a06411f0fb54b29c",
+  "model": "known-density flat 2+1 Minkowski, complete exact causal order",
+  "selection_density": 32768,
+  "count_density": 32768,
+  "duration": 1.5,
+  "clouds": 32,
+  "selection_seed_base": 202610220600,
+  "count_seed_tag": 782081,
+  "count_replicates": 9,
+  "primary_replicate": 0,
+  "variance_replicates": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "minimum_measurement_count": 8,
+  "selection": {
+    "candidate_cap_per_side": 128,
+    "maximum_landmark_condition": 1000,
+    "maximum_design_condition": 100000,
+    "rule": "Freeze root/support/first3 on A; stable mark order on each complete common cone, require comparability and full16/half4 counts before first128 cap; same Gram/moment gates and minimum Gram-condition choice. B never influences selection."
+  },
+  "count_covariance": "intersection counts for every pair of measured intervals, including shared landmark/root intervals; conditional on A, unbiased estimate of rho_B times overlap volume",
+  "negative_control": "replace interval-count covariance by its diagonal before propagation",
+  "gate_scope": "All selection gates for SELECTION_PILOT_SUPPORTED; all selection and operator gates for OPERATOR_PILOT_SUPPORTED. Neither lifts global HOLDs. One-sided exact paired discordance test is descriptive for this pilot; no repeated-testing or portfolio-wide error control.",
+  "fields": [
+    {
+      "name": "cos_A",
+      "kind": "cos",
+      "k": [
+        0.4,
+        0.55,
+        0.25
+      ],
+      "phase": 0.3
+    },
+    {
+      "name": "sin_B",
+      "kind": "sin",
+      "k": [
+        0.6,
+        0.2,
+        0.45
+      ],
+      "phase": -0.4
+    },
+    {
+      "name": "cos_C",
+      "kind": "cos",
+      "k": [
+        0.35,
+        0.7,
+        0.3
+      ],
+      "phase": 0.5
+    },
+    {
+      "name": "sin_D",
+      "kind": "sin",
+      "k": [
+        0.65,
+        0.4,
+        0.55
+      ],
+      "phase": 0.2
+    }
+  ],
+  "field_noise_sigma": 0.001,
+  "maximum_count_points": 35000,
+  "workers": 2,
+  "worker_seconds": 1800,
+  "worker_memory_mib": 3000,
+  "no_replacements": true,
+  "public_preregistration": false,
+  "freeze": "local code/input hash and UTC timestamp before first new A or B cloud",
+  "holds": [
+    "HOLD_PHASE3",
+    "HOLD_EMBEDDING_COVARIANCE",
+    "METADATA_HOLD"
+  ],
+  "selection_gates": {
+    "minimum_selected": 26,
+    "minimum_gains": 6,
+    "maximum_one_sided_p": 0.05,
+    "maximum_median_seconds": 2.0,
+    "maximum_seconds": 5.0
+  },
+  "operator_gates": {
+    "minimum_qualified_primary": 26,
+    "minimum_common_primary": 16,
+    "maximum_rmse_ratio": 1.0,
+    "maximum_noise_ratio": 1.25,
+    "minimum_paired_repeat_groups": 16,
+    "maximum_repeat_variance_ratio": 1.25,
+    "minimum_calibration_groups": 16,
+    "calibration_ratio_range": [
+      0.5,
+      2.0
+    ]
+  },
+  "comparison": "Legacy first128-then-eligibility versus eligibility-then-first128, same fresh A, same base selection and same independent B clouds. Unchanged direct four-landmark inversion; no Poisson/GLS retuning.",
+  "qualification": "Full observed causal order still required. Changed fourth landmark may change weights; monotone availability and better A Gram condition do not imply better B operator accuracy.",
+  "propagation": "Unchanged full interval-overlap covariance and first-order delta propagation. B0 covariance predicts B1..B8 response spread; conditional plug-in approximation, not coverage certification."
+}

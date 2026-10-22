@@ -1,0 +1,7 @@
+{
+  "status": "PRE_DATA_IMPORT_CORRECTION",
+  "reason": "Module name common collided with pinned vendor common. Import failed before main(), freeze verification, selection or counting; no A/B outcomes observed and no results created.",
+  "change": "Rename common.py to eb_common.py and update imports only. Contract, seeds, criteria, budgets and numerical code unchanged.",
+  "archive": "preflight-import-abort.zip",
+  "resumption": "Fresh initial campaign start after corrected source freeze; not replacement of a data attempt."
+}
