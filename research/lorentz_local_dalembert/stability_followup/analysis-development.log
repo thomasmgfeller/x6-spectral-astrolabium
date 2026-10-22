@@ -1,0 +1,203 @@
+{
+  "status": "POSTHOC_DIAGNOSTIC",
+  "mode": "development",
+  "configurations": 19,
+  "summaries": {
+    "old_poisson": {
+      "qualified_primary": 18,
+      "common_primary": 18,
+      "rmse": {
+        "four": 2.4429377846558205,
+        "old_poisson": 2.2105512010092707
+      },
+      "rmse_ratio_to_four": 0.904874129375632,
+      "noise": {
+        "four": 1.093871916359672,
+        "old_poisson": 1.3057022714892341
+      },
+      "noise_ratio_to_four": 1.1936518818716166,
+      "complete_repeat_groups": 14,
+      "repeat_group_indices": [
+        1,
+        4,
+        10,
+        13,
+        15,
+        18,
+        20,
+        21,
+        22,
+        23,
+        24,
+        26,
+        30,
+        31
+      ],
+      "variance": {
+        "four": 6.665545299274034,
+        "old_poisson": 14.764486596448105
+      },
+      "variance_ratio_to_four": 2.2150455714487687,
+      "variance_ratio_to_old_poisson": 1.0,
+      "fit_seconds": {
+        "median": 0.09870203800028321,
+        "maximum": 0.3627733220000664
+      }
+    },
+    "full_gls": {
+      "qualified_primary": 18,
+      "common_primary": 18,
+      "rmse": {
+        "four": 2.4429377846558205,
+        "full_gls": 1.8608620019358226
+      },
+      "rmse_ratio_to_four": 0.7617312293517925,
+      "noise": {
+        "four": 1.093871916359672,
+        "full_gls": 1.370230797155971
+      },
+      "noise_ratio_to_four": 1.2526428155464506,
+      "complete_repeat_groups": 14,
+      "repeat_group_indices": [
+        1,
+        4,
+        10,
+        13,
+        15,
+        18,
+        20,
+        21,
+        22,
+        23,
+        24,
+        26,
+        30,
+        31
+      ],
+      "variance": {
+        "four": 6.665545299274034,
+        "full_gls": 3.1986158399545865,
+        "old_poisson": 14.764486596448105
+      },
+      "variance_ratio_to_four": 0.47987309309906845,
+      "variance_ratio_to_old_poisson": 0.21664253741976225,
+      "fit_seconds": {
+        "median": 0.17384364900044602,
+        "maximum": 0.7937334810003449
+      }
+    },
+    "no_support_order": {
+      "qualified_primary": 4,
+      "common_primary": 17,
+      "rmse": {
+        "four": 1.8951438952801656,
+        "no_support_order": 1.9623816426699197
+      },
+      "rmse_ratio_to_four": 1.035478966825268,
+      "noise": {
+        "four": 0.9218027848362701,
+        "no_support_order": 1.1105113833952185
+      },
+      "noise_ratio_to_four": 1.2047168891906381,
+      "complete_repeat_groups": 13,
+      "repeat_group_indices": [
+        1,
+        10,
+        13,
+        15,
+        18,
+        20,
+        21,
+        22,
+        23,
+        24,
+        26,
+        30,
+        31
+      ],
+      "variance": {
+        "four": 6.197779638457523,
+        "old_poisson": 4.3822232014926135,
+        "no_support_order": 3.5227725372700096
+      },
+      "variance_ratio_to_four": 0.5683926733069107,
+      "variance_ratio_to_old_poisson": 0.8038779348505413,
+      "fit_seconds": {
+        "median": 0.05885893100003159,
+        "maximum": 0.16994149499987543
+      }
+    },
+    "diagonal_gls": {
+      "qualified_primary": 18,
+      "common_primary": 18,
+      "rmse": {
+        "four": 2.4429377846558205,
+        "diagonal_gls": 2.0760807781875714
+      },
+      "rmse_ratio_to_four": 0.8498295745505714,
+      "noise": {
+        "four": 1.093871916359672,
+        "diagonal_gls": 1.3776260803111653
+      },
+      "noise_ratio_to_four": 1.2594034637033256,
+      "complete_repeat_groups": 14,
+      "repeat_group_indices": [
+        1,
+        4,
+        10,
+        13,
+        15,
+        18,
+        20,
+        21,
+        22,
+        23,
+        24,
+        26,
+        30,
+        31
+      ],
+      "variance": {
+        "four": 6.665545299274034,
+        "diagonal_gls": 4.20972038786826,
+        "old_poisson": 14.764486596448105
+      },
+      "variance_ratio_to_four": 0.6315642905205001,
+      "variance_ratio_to_old_poisson": 0.28512473903975727,
+      "fit_seconds": {
+        "median": 0.10970794799959549,
+        "maximum": 0.3955705289999969
+      }
+    }
+  },
+  "status_counts": {
+    "four": {
+      "WEIGHTS_VALID": 160,
+      "COUNT_HOLD": 11
+    },
+    "old_poisson": {
+      "WEIGHTS_VALID": 160,
+      "COUNT_HOLD": 11
+    },
+    "full_gls": {
+      "WEIGHTS_VALID": 160,
+      "COUNT_HOLD": 11
+    },
+    "no_support_order": {
+      "WEIGHTS_VALID": 158,
+      "COUNT_HOLD": 11,
+      "UNRESOLVED": 2
+    },
+    "diagonal_gls": {
+      "WEIGHTS_VALID": 160,
+      "COUNT_HOLD": 11
+    }
+  },
+  "gates": {},
+  "holds": [
+    "HOLD_PHASE3",
+    "HOLD_EMBEDDING_COVARIANCE",
+    "METADATA_HOLD"
+  ],
+  "scope": "Same 19 previously selected A configurations. Fresh conditional B draws do not establish new-A selection or global pipeline qualification. Order is fitted input, not independent validation."
+}

@@ -8,6 +8,15 @@ Acht Kapitel je Sprache: Einstieg, Schnellstart, Signale, kausale Ordnungen, Evi
 
 **Public Research Preview — independent validation requested. NOT a scientifically certified stable release.**
 
+**Eigenzeit: Suchbegrenzung und Zählvarianz getrennt geprüft (22.10.2026) — HOLD.**
+[Diagnose, neue Zählwolken und vollständige Evidenz](research/lorentz_local_dalembert/stability_followup/README.md):
+Die vollständige Suche findet bei 9/13 alten Auswahlfehlern zulässige vierte
+Landmarken außerhalb der vorgezogenen Begrenzung. 31.293 Kandidaten geprüft;
+28/32 Auswahlen wären auf den bekannten Konfigurationen geometrisch möglich.
+Ein neuer Kovarianz-Fit senkt auf 171 neuen bedingten Zählwolken die Varianz
+gegenüber dem Poisson-Fit um 40,59 %, verfehlt aber die Operatorgenauigkeit
+gegenüber direkter Inversion. **Keine Übernahme; wissenschaftlicher HOLD bleibt.**
+
 **Eigenzeit: kausal eingeschränkten Rohzähl-Fit auf 32 neuen Wolken geprüft (22.10.2026) — HOLD.**
 [Verfahren, vollständige Evidenz und Entscheidung](research/lorentz_local_dalembert/causal_count_fit/README.md):
 19 Auswahlen, 171 Zählläufe; 18/32 statt 2/32 ordnungskonforme Hauptsysteme.
