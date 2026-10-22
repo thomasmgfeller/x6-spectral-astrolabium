@@ -1,5 +1,7 @@
 # X6 Spectral Astrolabium
 
+**Eigenzeit: common background certified; smoothing gain on hold.** [Common-background audit](research/lorentz_local_dalembert/background_smoothing/README.md) proves positive diagonal intensity for all 158 transfer labels. The additional smoothing bound remains weaker than coupling; best TV upper bound stays **0.01706315569576179848**.
+
 **Eigenzeit: budgeted surface refinement certified.** [Targeted unresolved-cell refinement](research/lorentz_local_dalembert/adaptive_surface/README.md) retains all known certificates and lowers TV to **0.01706315569576179848** with 8,192 additional cell checks. Unresolved intensity upper bound falls by 49.73%; the operator gap is unchanged.
 
 **Eigenzeit: actual-pair cancellation certified.** [Correlation-preserving surface tests](research/lorentz_local_dalembert/surface_correlations/README.md) certify 21 directed transfer patterns and positive cancellation on the unchanged pair. TV upper bound **0.01894939530593638801**; no improved reconstruction-accuracy claim.
