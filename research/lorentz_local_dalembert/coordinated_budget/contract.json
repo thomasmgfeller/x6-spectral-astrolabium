@@ -1,0 +1,16 @@
+{
+  "schema": "x6.coordinated-budget/1",
+  "source_commit": "83335ec3b7945c735a14f14b6a7d54a1538e9254",
+  "base_geometry": 0,
+  "moving_nodes": [5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20],
+  "fixed": "four landmarks, root, scale, density, outer interval and B sampling domain",
+  "budget_norm": "sum_i (abs(dt_i)+sqrt(dx_i^2+dy_i^2)) in PR95 rational boost frame",
+  "enclosing_poisson_budget": "36/125",
+  "tv_gate": "1/4",
+  "strong_symmetric_gap_gate": "1/5",
+  "method": "one budget-aware mean-value enclosure; exact rational inverse, centered residual and outward integer interval arithmetic",
+  "stop": "one enclosure, no subdivision or adaptive enlargement; unresolved if contraction or strong exclusion fails",
+  "audit": "48 exact dual derivative checks; 96 coordinate-axis endpoints, 32 spatial 3-4-5 endpoints, 8 coordinated L1-normalized directions",
+  "scope": "fixed-base-to-shape conditional count/overlap comparison under current sufficient Poisson coupling; not arbitrary pairs or actual-TV/global stability",
+  "all_holds_retained": true
+}
