@@ -1,5 +1,7 @@
 # X6 Spectral Astrolabium
 
+**Eigenzeit: larger spatial moves, strong-pair question still open.** [512-candidate spatial search](research/lorentz_local_dalembert/spatial_search/README.md) certifies a **0.0434832%** operator gap at **TV <= 0.2118268**, an 11.9-fold gap gain. Of 18 admissible sampled candidates above 20% gap, a marginal-law certificate excludes three; 15 remain unresolved.
+
 **Eigenzeit: common background certified; smoothing gain on hold.** [Common-background audit](research/lorentz_local_dalembert/background_smoothing/README.md) proves positive diagonal intensity for all 158 transfer labels. The additional smoothing bound remains weaker than coupling; best TV upper bound stays **0.01706315569576179848**.
 
 **Eigenzeit: budgeted surface refinement certified.** [Targeted unresolved-cell refinement](research/lorentz_local_dalembert/adaptive_surface/README.md) retains all known certificates and lowers TV to **0.01706315569576179848** with 8,192 additional cell checks. Unresolved intensity upper bound falls by 49.73%; the operator gap is unchanged.

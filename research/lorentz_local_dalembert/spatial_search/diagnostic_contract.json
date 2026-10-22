@@ -1,0 +1,11 @@
+{
+  "schema": "eigenzeit.spatial-search.marginal-diagnostic/1",
+  "timing": "Post-search diagnostic, frozen after the 512-candidate scan; does not change its steps, refinement budget or selection",
+  "selection": "All order/rank-passing candidates with certified symmetric gap lower > 1/5",
+  "conditioning": "Check inherited exact intrinsic moment and condition gates for all selected candidates",
+  "statistic": "Maximum over the 90 individual Poisson interval counts of a certified squared-Hellinger lower bound on total variation",
+  "formula": "TV(full law) >= 1-exp(-(sqrt(lambda)-sqrt(mu))^2/2)",
+  "exponent": "Exact pi/square-root intervals; exponent lower capped at 1 before the inherited alternating series",
+  "decision": "TV lower > 1/4 certifies incompatibility with the close-law gate; smaller lower bounds are inconclusive",
+  "stop": "One analytical marginal pass; no classifier, extra geometry or Monte Carlo samples"
+}

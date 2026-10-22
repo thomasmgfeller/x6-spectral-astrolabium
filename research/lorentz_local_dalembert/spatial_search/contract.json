@@ -1,0 +1,17 @@
+{
+  "schema": "eigenzeit.spatial-search/1",
+  "base": "PR95 source geometry 0; fixed outer diamond, landmarks and root",
+  "moved_nodes": [5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20],
+  "axes": [1,2],
+  "signs": [-1,1],
+  "steps": ["1681989/200000000000","1/10000","3/10000","1/1000","3/1000","1/100","3/100","1/10"],
+  "candidate_count": 512,
+  "spatial_level": 16,
+  "coordinate_unit": 262144,
+  "tv_gate": "1/4",
+  "strong_gap_gate": "1/5",
+  "refinement": {"level":64,"maximum_candidates":8,"eligible":"coarse TV upper in (1/4,1/2], order and rank pass","priority":"descending symmetric gap lower, then candidate index"},
+  "conditioning": "exact intrinsic moments; landmark and moment condition upper < 100000 for every law-gate candidate",
+  "law": "Full 90-bit count/overlap channel via a shared Poisson process; retain every unresolved cone-strip cell",
+  "stop": "512 finite single-node spatial moves and at most 8 fixed refinements; no post-result step extension"
+}
