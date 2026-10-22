@@ -1,0 +1,103 @@
+{
+  "status": "HOLD",
+  "mode": "fresh",
+  "scheduled": 32,
+  "selection_statuses": {
+    "SELECTED": 19,
+    "NO_FOUR_LANDMARK_FRAME": 13
+  },
+  "qualified_primary": {
+    "fit": 18,
+    "four": 2
+  },
+  "all_replicates": {
+    "fit": {
+      "WEIGHTS_VALID": 160,
+      "COUNT_HOLD": 11
+    },
+    "four": {
+      "WEIGHTS_VALID": 160,
+      "COUNT_HOLD": 11
+    }
+  },
+  "raw_common": {
+    "clouds": 18,
+    "rmse": {
+      "fit": 2.2105512010092707,
+      "four": 2.4429377846558205,
+      "oracle": 0.04807728332558327
+    },
+    "rmse_ratio": 0.904874129375632,
+    "linear_rmse": {
+      "fit": 2.2038033963484778,
+      "four": 2.4721754440902144
+    },
+    "linear_ratio": 0.891442960335487,
+    "mean_noise_variance": {
+      "fit": 1.3057022714892341,
+      "four": 1.093871916359672
+    },
+    "noise_ratio": 1.1936518818716166,
+    "normalized_signed_interval_rmse": {
+      "fit": 0.2658557120543169,
+      "four": 0.42586062447293327
+    }
+  },
+  "both_qualified_common": {
+    "clouds": 2,
+    "rmse": {
+      "fit": 3.454296846651806,
+      "four": 3.8539978616831547,
+      "oracle": 0.0179991268588456
+    },
+    "rmse_ratio": 0.8962892483659065,
+    "linear_rmse": {
+      "fit": 3.4815892756564035,
+      "four": 3.8379489739034294
+    },
+    "linear_ratio": 0.9071484012241606,
+    "mean_noise_variance": {
+      "fit": 1.9167938905946502,
+      "four": 1.8464822683391047
+    },
+    "noise_ratio": 1.0380786880335386,
+    "normalized_signed_interval_rmse": {
+      "fit": 0.24261313300777593,
+      "four": 0.26817604417348634
+    }
+  },
+  "rmse_ratio_cloud_bootstrap_95": [
+    0.7398677362971763,
+    1.4432134342854939
+  ],
+  "repeat": {
+    "clouds": 14,
+    "variance": {
+      "fit": 14.764486596448105,
+      "four": 6.665545299274032
+    },
+    "ratio": 2.215045571448769,
+    "scope": "Conditional on selected A, complete B1-B8 paired groups only; descriptive, no candidate coverage calibration."
+  },
+  "fit_seconds": {
+    "median": 0.09870203800028321,
+    "maximum": 0.3627733220000664,
+    "total": 19.043500405002305
+  },
+  "gates": {
+    "all_scheduled_recorded": true,
+    "qualified_availability": false,
+    "common_availability": false,
+    "rmse": false,
+    "linear_response": true,
+    "noise_cost": true,
+    "fit_cost": true,
+    "repeat_variance": false
+  },
+  "holds": [
+    "HOLD_PHASE3",
+    "HOLD_EMBEDDING_COVARIANCE",
+    "METADATA_HOLD"
+  ],
+  "note": "Order is fitted input, not independent accuracy evidence. Four analytic fields and B repeats do not multiply independent A selections. Common-set accuracy is conditional; failures are retained in coverage."
+}

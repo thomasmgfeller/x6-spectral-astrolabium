@@ -1,5 +1,15 @@
 # Local d’Alembertian: independent reproduction track
 
+**Latest trial (22 October 2026): joint raw-count/order-constrained fit; HOLD.**
+[Candidate, complete evidence and decision](causal_count_fit/README.md): 32 fresh
+selection attempts, 19 selected configurations, 171 count repetitions. Complete
+primary order consistency rises from 2/32 to 18/32, but availability remains
+below 26/32. On 18 common computable cases, operator RMSE ratio is 0.904874
+(required <=0.9); conditional repeat response variance ratio is 2.215046 on 14
+complete groups. Ten synthetic controls and an internal audit of 177 valid fits
+pass. Enforced order is not independent accuracy evidence. **No adoption;
+HOLD_PHASE3, HOLD_EMBEDDING_COVARIANCE and METADATA_HOLD remain.**
+
 **Latest diagnosis (22 October 2026): causal-order failures localized; HOLD remains.**
 [Complete diagnosis, data, code and six-node counterexample](causal_order_diagnosis/README.md)
 trace all 39 primary mismatches to reconstructed support pairs. Exact landmark
@@ -9,7 +19,7 @@ count records replay; 1,296 interventions and 216 new conditional count clouds
 are documented. Separate 80/120-digit calculations preserve 5,275 pair signs.
 The original 1/32 overall qualification and all scientific holds remain.
 
-**Latest trial (21 October 2026): four landmarks and full count covariance; `HOLD`.**
+**Previous trial (21 October 2026): four landmarks and full count covariance; `HOLD`.**
 [Complete evidence, sources and reproduction](four_landmark_count_covariance/README.md):
 32 new independent selection clouds, 18 successful fourth-landmark selections,
 162 count replicates. Only **1/32 primary cases** satisfies the full observed

@@ -8,6 +8,14 @@ Acht Kapitel je Sprache: Einstieg, Schnellstart, Signale, kausale Ordnungen, Evi
 
 **Public Research Preview — independent validation requested. NOT a scientifically certified stable release.**
 
+**Eigenzeit: kausal eingeschränkten Rohzähl-Fit auf 32 neuen Wolken geprüft (22.10.2026) — HOLD.**
+[Verfahren, vollständige Evidenz und Entscheidung](research/lorentz_local_dalembert/causal_count_fit/README.md):
+19 Auswahlen, 171 Zählläufe; 18/32 statt 2/32 ordnungskonforme Hauptsysteme.
+Auf 18 gemeinsamen berechenbaren Fällen sinkt der Operator-RMSE um 9,51 %
+(gefordert 10 %), die Antwortvarianz über neue Zählwolken steigt auf das
+2,215-Fache. **Ordnungskonsistenz verbessert; Verfügbarkeit und Stabilität
+reichen nicht. Keine Übernahme, alle wissenschaftlichen HOLDs bleiben.**
+
 **Eigenzeit: Ursachen der Kausalitätsfehler isoliert (22.10.2026) — HOLD bleibt.**
 [Diagnose, vollständige Daten, Code und Sechs-Punkte-Gegenbeispiel](research/lorentz_local_dalembert/causal_order_diagnosis/README.md):
 Alle 39 verletzten Beziehungen der gültigen Hauptsysteme betreffen
