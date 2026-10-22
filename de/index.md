@@ -16,11 +16,11 @@ Forschungsstand · 22.10.2026
 
 Wie zuverlässig lassen sich Operatorwerte aus endlichen, verrauschten Kausalzählungen rekonstruieren? Hier findest du die neuesten Rechnungen, ihre Grenzen und die zugehörigen Pull Requests.
 
-Die gezielte Verfeinerung unaufgelöster Flächenzellen senkt deren Intensitäts-Obergrenze um 49,7 %. Mit 8.192 zusätzlichen Zellprüfungen sinkt die zertifizierte TV-Obergrenze von 0,01895 auf 0,01706. Alle zuvor gesicherten Zuordnungen bleiben erhalten; die Rekonstruktionsgenauigkeit ist weiterhin offen.
+Für alle 158 beteiligten Zählmuster ist jetzt ein gemeinsamer positiver Hintergrund nachgewiesen. Die zusätzliche Glättung liefert damit noch keine bessere Schranke: Die TV-Obergrenze bleibt 0,01706. Der festgelegte Prüfversuch endet mit offenem Genauigkeitsgewinn.
 
 PR #99: Eine zertifizierte Obergrenze begrenzt die Operatoränderung innerhalb eines festgelegten kleinen Störungsbudgets. Das ist eine lokale Aussage, kein allgemeiner Stabilitätsbeweis.
 
-- [Neueste Rechnung · Ergebnis und Grenzen →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/lorentz_local_dalembert/adaptive_surface/README.md)
+- [Neueste Rechnung · Ergebnis und Grenzen →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/lorentz_local_dalembert/background_smoothing/README.md)
 - [PR #100 · Gemeinsame Zählregionen →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/100)
 - [Aktuellen CI-Status von PR #100 prüfen →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/100/checks)
 - [PR #99 · Lokale Schranke →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/99)
