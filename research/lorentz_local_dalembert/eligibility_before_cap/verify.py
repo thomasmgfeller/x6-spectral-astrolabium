@@ -109,7 +109,10 @@ def main(write=True):
     for index in [0,c['clouds']-1]:
         r=read(HERE/f'results/cloud-{index:02d}.json.gz'); s=r['selection']; original,_=selection_cloud(r['seed'],c,s['coordinates_sha256'])
         compare_legacy(original['fourth'],s['arms']['legacy'])
-        for key in ['base_audit','physical_count','coordinates_sha256','relation_sha256','baseline_selected','base_selection_funnel']:
+        from replay_baseline import compare_baseline
+        compare_baseline(original['baseline_selected'],s['baseline_selected'])
+        compare_baseline(original['base_selection_funnel'],s['base_selection_funnel'],root='funnel')
+        for key in ['base_audit','physical_count','coordinates_sha256','relation_sha256']:
             assert encode(original[key])==encode(s[key]),key
         trpath=HERE/f'results/truth/cloud-{index:02d}.json'
         if trpath.exists():
