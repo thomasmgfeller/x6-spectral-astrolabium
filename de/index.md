@@ -16,11 +16,11 @@ Forschungsstand · 22.10.2026
 
 Wie zuverlässig lassen sich Operatorwerte aus endlichen, verrauschten Kausalzählungen rekonstruieren? Hier findest du die neuesten Rechnungen, ihre Grenzen und die zugehörigen Pull Requests.
 
-512 räumliche Kandidaten geprüft: Ein neues Paar erreicht 0,04348 % Operatorabstand bei TV ≤ 0,21183 – rund 11,9-mal mehr Abstand als bisher. Von 18 Kandidaten über der 20-%-Zielmarke sind drei nachweislich zu gut unterscheidbar; 15 bleiben offen. Die Stabilitätsfrage ist damit nicht entschieden.
+Die 15 offenen Kandidaten sind geklärt: Zertifizierte Poisson-Zählwahrscheinlichkeiten schließen jetzt alle 18 Kandidaten mit mehr als 20 % Operatorabstand im festen 512-Punkte-Suchraster aus. Jeweils schon eine Zählung erzwingt TV ≥ 0,40933 statt der verlangten TV ≤ 0,25. Zwischen den Rasterpunkten bleibt die Frage offen; dies ist kein allgemeiner Stabilitätsbeweis.
 
 PR #99: Eine zertifizierte Obergrenze begrenzt die Operatoränderung innerhalb eines festgelegten kleinen Störungsbudgets. Das ist eine lokale Aussage, kein allgemeiner Stabilitätsbeweis.
 
-- [Neueste Rechnung · Ergebnis und Grenzen →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/lorentz_local_dalembert/spatial_search/README.md)
+- [Neueste Rechnung · Ergebnis und Grenzen →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/lorentz_local_dalembert/poisson_tail_obstruction/README.md)
 - [PR #107 · Größere räumliche Änderungen →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/107)
 - [Aktuellen CI-Status von PR #107 prüfen →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/107/checks)
 - [PR #99 · Lokale Schranke →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/99)
