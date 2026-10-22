@@ -1,5 +1,7 @@
 # Local d’Alembertian: independent reproduction track
 
+**Eigenzeit held-out Poisson testing (22 October 2026):** [sealed test and full replay](poisson_testing/) — the existing witness pair is distinguishable: 76.95% empirical accuracy, conservative lower bound 65.83%; a TV lower bound, not a reconstruction guarantee. All HOLDs retained.
+
 **Eigenzeit actual overlap audit (22 October 2026):** [volume checks and numerical risk](witness_overlap_volumes/) — both witness geometries satisfy all 8,177 pairwise-volume constraints, subject to explicitly probabilistic integration bounds; no statistical indistinguishability or 10% impossibility claim.
 
 **Eigenzeit joint operator bound (22 October 2026):** [proof and controlled comparison](joint_operator_bounds/) — joint information improves all 19 contraction bounds, but 0/19 full-set accuracy certificates; all HOLDs retained.
