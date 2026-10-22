@@ -1,0 +1,87 @@
+{
+  "status": "ARCHIVE_DESCRIPTIVE_ONLY",
+  "mode": "archive",
+  "scheduled": 32,
+  "selection_statuses": {
+    "NO_FOUR_LANDMARK_FRAME": 11,
+    "SELECTED": 18,
+    "BASE_AUDIT_HOLD": 3
+  },
+  "qualified_primary": {
+    "fit": 17,
+    "four": 1
+  },
+  "all_replicates": {
+    "fit": {
+      "WEIGHTS_VALID": 17,
+      "UNRESOLVED": 1
+    },
+    "four": {
+      "WEIGHTS_VALID": 17,
+      "UNRESOLVED": 1
+    }
+  },
+  "raw_common": {
+    "clouds": 17,
+    "rmse": {
+      "fit": 1.7625793329489574,
+      "four": 2.3589221251484966,
+      "oracle": 0.03626009619512476
+    },
+    "rmse_ratio": 0.7471969142847398,
+    "linear_rmse": {
+      "fit": 1.7581310998613637,
+      "four": 2.3856451032454142
+    },
+    "linear_ratio": 0.7369625504940425,
+    "mean_noise_variance": {
+      "fit": 1.7127134361553706,
+      "four": 1.0108230999381953
+    },
+    "noise_ratio": 1.6943750457029434,
+    "normalized_signed_interval_rmse": {
+      "fit": 0.20635193024665166,
+      "four": 0.24818155908382547
+    }
+  },
+  "both_qualified_common": {
+    "clouds": 1,
+    "rmse": {
+      "fit": 1.752833272616581,
+      "four": 0.4736933856389029,
+      "oracle": 0.051231224169825285
+    },
+    "rmse_ratio": 3.7003541230629895,
+    "linear_rmse": {
+      "fit": 1.6763810382596258,
+      "four": 0.49562726157454656
+    },
+    "linear_ratio": 3.3823422725658197,
+    "mean_noise_variance": {
+      "fit": 14.949135654999479,
+      "four": 2.641143714753259
+    },
+    "noise_ratio": 5.660099286341205,
+    "normalized_signed_interval_rmse": {
+      "fit": 0.20167354743764176,
+      "four": 0.2670184270733401
+    }
+  },
+  "rmse_ratio_cloud_bootstrap_95": [
+    0.4225755063195561,
+    1.2143218163900644
+  ],
+  "repeat": null,
+  "fit_seconds": {
+    "median": 0.0904802995000864,
+    "maximum": 0.2782530099998439,
+    "total": 1.8348725760001798
+  },
+  "gates": null,
+  "holds": [
+    "HOLD_PHASE3",
+    "HOLD_EMBEDDING_COVARIANCE",
+    "METADATA_HOLD"
+  ],
+  "note": "Order is fitted input, not independent accuracy evidence. Four analytic fields and B repeats do not multiply independent A selections. Common-set accuracy is conditional; failures are retained in coverage."
+}
