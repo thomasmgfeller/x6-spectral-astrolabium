@@ -1,0 +1,125 @@
+FOUR EXTERNAL LANDMARKS: INTRINSIC SELECTION AND NEW-CLOUD PILOT
+Frozen before generation, 2026-10-21. Local prospective protocol, not a public
+preregistration. All historical HOLD gates remain regardless of this pilot.
+
+MODEL AND SEPARATION
+32 independent selection clouds A at rho_A=32768 in a flat 2+1 diamond of
+duration 1.5. The inherited generator samples the inner duration-1 diamond
+and independent outer shells; its complete source snapshot is vendored.
+Root, support and the first three landmarks are selected by the existing
+order/count-only joint procedure with its unchanged independent-recolouring
+diagnostic. The recolouring is not claimed to create independent physical data.
+
+A fourth external landmark is selected using A only, as specified in contract.
+The selector sees the complete order, marks, interval counts and declared
+density. It does not receive coordinates, fields or B counts. The first three
+landmarks and support identities are not reselected if the fourth fails.
+Known labelled boundaries and inner/outer sampling domains are inherited
+experimental metadata; this is not reconstruction from a bare unlabeled order
+with unknown density. The search is bounded, not a nonexistence proof.
+
+After sealing selection, nine independently generated Poisson count clouds B_r
+at rho_B=32768 in the same outer diamond measure all required intervals. This
+is equivalent in law to independently labelled Poisson components at a higher
+total intensity; it does not reclassify a fixed set of points independently.
+Conditional on A, the chosen endpoint locations and the counting regions are
+fixed, so their B counts do not carry A's selection-on-count bias. The finite
+nonlinear transformation N^(2/3) remains biased. No bias correction is fitted.
+Each interval between A endpoints is contained in the outer causal diamond.
+
+Primary B_0 is fixed in advance. B_1,...,B_8 measure conditional repeated-count
+variability only. They do not change the primary weights or selection. Their
+mean is not substituted for B_0. Each run stores seeds, counts, overlaps,
+source/coordinate/interval hashes, complete failures and inference seals.
+
+FOUR-LANDMARK OPERATOR
+q_ab = [N_B(I(a,b))/(rho_B*pi/12)]^(2/3), for timelike pairs.
+psi_i(x) = [q_ai,x - q_a0,x - q_ai,o + q_a0,o]/2.
+For exact distances psi_i(x)=<a_i-a_0,x-o>_eta.
+G_ik=[q_ai,ak - q_ai,a0 - q_a0,ak]/2.
+With scale s fixed on A, use z=psi/s^2, h=G/s^2. Solve the full KKT system
+for min a^T(I+11^T)a subject to D(z)a=t(h), where linear targets vanish and
+quadratic targets are twice the entries of h. Full physical weights are
+(-sum(a),a)/s^2. The shared field value at the root is included exactly.
+
+The independent-B three-landmark baseline uses the original first three
+landmarks plus root-to-support counts from the SAME B realization and the
+SAME root/support/scale selected on A. This makes the main comparison paired
+at the same sampled-point budget. The old three-landmark operator measured
+on A and the true-coordinate Oracle are diagnostics only.
+
+COUNT CORRELATIONS
+For fixed intervals I_e,I_f conditional on A:
+  Cov(N_e,N_f | A) = rho_B Vol(I_e intersection I_f).
+The intersection count K_ef is an unbiased conditional estimator of that
+quantity. In particular K_ee=N_e. K is a positive-semidefinite incidence Gram
+matrix. This identity follows by decomposing the two regions into shared and
+disjoint Poisson components. It requires independent B; treating A-selected
+counts as though their endpoints were fixed would not justify the same claim.
+
+At the observed counts, C_q = J_q K J_q^T with
+  (J_q)_ee = (2/3) q_e/N_e
+and the additional s^-2 when q is normalized. This is the first-order delta
+approximation, not an exact covariance for transformed counts.
+
+The full KKT sensitivity is evaluated analytically. With
+  M=[H_noise D^T; D 0], M u=[0;t], u=(a,lambda),
+  M du=[-dD^T lambda; dt-dD a].
+The derivative includes all shared landmark intervals, root terms, mixed
+monomials and the metric target. Propagate C_weights=J_weights C_q J_weights^T.
+Its rows sum to zero because the full operator annihilates constants.
+No independent-coordinate or independent-interval assumption is introduced.
+
+Negative control: diagonalize K before the identical propagation. Both full
+and diagonal predictions are compared against the same held-out B repeats.
+The full covariance is used for uncertainty prediction; this protocol does
+not claim a new covariance-optimized choice of the operator weights.
+
+GEOMETRY AND FIELD NOISE ARE SEPARATE
+For each fixed A and analytic evaluation field f, predicted repeated-count
+variance is f^T C_weights f, compared with the sample variance of responses
+on B_1,...,B_8. All nine weight solutions must be available to enter that
+calibration summary; the number of excluded A clouds is reported. This
+complete-case restriction can bias the variance comparison and is a reason
+for the minimum-availability gate. It is not a confidence interval for the
+continuum d'Alembertian. Systematic geometry/discretization bias remains.
+
+IID field-noise cost at sigma_f=0.001 is separately sigma_f^2 ||w||^2.
+This is an analytic diagnostic, not a newly observed sensor measurement.
+The count covariance is not added to a previously estimated total residual
+covariance. Counting noise and field noise are independent by construction.
+
+QUALIFICATION AND COMPARISON
+Report every case. A four-landmark solution is qualified only if the Lorentz
+signature, rank, condition and KKT checks pass AND its reconstructed order
+on all landmarks/root/supports exactly equals the observed order. There is
+no signature clipping, coordinate-truth alignment, ordering projection or
+replacement of failures. Raw valid weights which fail order are retained as
+diagnostics and never labelled qualified measurements.
+
+Primary accuracy statistics compare all paired B_0 weight-valid cases;
+qualified-four subsets are separately reported. Their availability must
+also pass. Cloud bootstrap samples whole A clouds with all four fields
+together. Neither fields nor B repeats increase the count of independent A
+clouds. Bootstrap intervals are descriptive pilot intervals, not simultaneous
+coverage guarantees for all gates. Thresholds and seeds are in contract.json.
+All gates are needed for PILOT_SUPPORTED; otherwise HOLD.
+
+COMPUTATION AND AUDIT
+Two bounded worker processes, 16 assigned A seeds each. Every scheduled seed
+is accounted for; no replacements. Pure synthetic preflight tests verify exact
+distance recovery, KKT derivatives via differences, relabelled selection,
+Poisson overlap covariance and the independent-count negative control.
+Sage verifies exact geometric identities and covariance algebra. Subsequent
+replay checks use the sealed records, not outcome-adjusted rules.
+
+SOURCES
+Inherited X6 code: ee6460971c2b3ec48ea2ebb18002072ca3d22f97, pinned in vendor_sources.json.
+Boguña & Krioukov, Phys. Rev. D 110, 024008 (2024), arXiv:2401.17376v2:
+https://arxiv.org/html/2401.17376v2 (Alexandrov volume, Poisson counting model).
+Pitman, Lecture 26: Poisson Point Processes, Berkeley:
+https://www.stat.berkeley.edu/users/pitman/s205f02/lecture27.pdf
+(independent increments on disjoint sets, Poisson superposition/thinning).
+Covariance of overlapping counts and the KKT differential are derived above.
+The full pipeline, gates and the proposed correction are not validated by
+these references; that is the purpose of the present finite pilot.

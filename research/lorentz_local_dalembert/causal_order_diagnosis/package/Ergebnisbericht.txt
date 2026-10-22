@@ -1,0 +1,279 @@
+EIGENZEIT — URSACHE DER VERLETZTEN KAUSALBEZIEHUNGEN
+Diagnose vom 22. Oktober 2026
+
+ERGEBNIS
+
+Die verletzten Beziehungen entstehen in den untersuchten Fällen beim Übergang
+von korrelierten, nichtlinear transformierten Intervallzählungen zu einer
+rekonstruierten Geometrie. Betroffen sind insbesondere die gegenseitigen
+Abstände der Stützpunkte: Diese werden aus Landmarkenabständen abgeleitet,
+und ihre bekannten Ordnungsbedingungen werden erst nach der Rekonstruktion
+geprüft. Sie werden beim Aufbau dieser Geometrie nicht erzwungen.
+
+Das ist eine lokalisierte Schwäche dieser konkreten endlichen Pipeline.
+Es ist keine Verletzung der physikalischen Kausalität durch das simulierte
+Modell und kein Gegenbeweis gegen die exakten Vier-Landmarken-Identitäten.
+
+Die Diagnose ist abgeschlossen. Eine praktisch nutzbare intrinsische
+Korrektur ist damit noch nicht nachgewiesen. Alle bisherigen HOLD-Gates bleiben.
+
+1. DATENGRUNDLAGE UND UNVERÄNDERTER AUSGANGSBEFUND
+
+Untersucht wurde das veröffentlichte Paket
+Eigenzeit_Vier_Landmarken_Neue_Wolken_2026-10-21.zip.
+SHA-256:
+2aa0bf345f1522444b8268adca0276693827cb6de8d1ded2c8c61d30bd9941e0
+
+Modell: flaches 2+1-Minkowski-Modell, bekannte Dichte 32768,
+äußerer Alexandrov-Diamant mit Dauer 1,5. Die Auswahlwolke A ist von den
+Zählwolken B getrennt. Die 18 verfügbaren Konfigurationen bleiben unverändert.
+
+Alle 32 ursprünglichen Versuche sind erhalten:
+- 18 erfolgreiche Vier-Landmarken-Auswahlen;
+- 11 ohne vierte Landmarke im festgelegten Suchbudget;
+- 3 mit gescheitertem vorherigem Support-/Frame-Audit.
+
+Von den 18 B0-Hauptsystemen sind 17 rechnerisch gültig. Eines davon erfüllt die
+vollständige beobachtete Ordnung. Der ursprüngliche Gesamtbefund bleibt 1/32.
+Die 16 anderen gültigen Hauptsysteme enthalten insgesamt 39 verletzte
+ungeordnete Paare: 23 tatsächlich kausale Beziehungen fehlen, 16 zusätzliche
+kausale Beziehungen werden erzeugt. In keinem dieser 39 Fälle handelt es sich
+lediglich um eine Umkehr der Zeitrichtung bei unverändert zeitartigem Abstand.
+Alle 39 Fälle wechseln das Vorzeichen des rekonstruierten Intervallquadrats.
+
+Alle 162 archivierten Zählwiederholungen wurden nachgerechnet. Die originale
+Messpipeline liefert 154 WEIGHTS_VALID, 7 COUNT_HOLD und 1 UNRESOLVED.
+Die 14 nicht ausgewählten Konfigurationen werden nicht nachträglich ersetzt.
+
+2. KONTROLLIERTER AUSTAUSCH DER ABSTÄNDE
+
+Die ursprünglichen Landmarken, Stützpunkte und Skalennormierungen bleiben
+fest. Nur jeweils fest bezeichnete Abstandseingaben werden durch die aus den
+exportierten Simulationskoordinaten berechneten exakten Geometriewerte ersetzt.
+Das ist ein Diagnoseinstrument mit Zugang zur Wahrheit, kein einsatzfähiger
+intrinsischer Schätzer.
+
+A: sechs Abstände zwischen den vier Landmarken (Gram-Matrix).
+R: vier Abstände zwischen Landmarken und Wurzelpunkt.
+S: Abstände zwischen Landmarken und Stützpunkten.
+
+Geometrisch korrekte vollständige Ordnung in den 18 Hauptkonfigurationen:
+
+Ersetzte Eingaben                                  Ordnung bestanden
+Keine                                             1/18
+Nur A                                             2/18
+Nur R                                             1/18
+Nur S                                             5/18
+A und R                                           2/18
+A und S                                          18/18
+R und S                                           5/18
+A, R und S                                       18/18
+
+Bei allen 162 archivierten Wiederholungen lauten die entsprechenden Zahlen:
+11, 11, 11, 63, 11, 161, 64 und 162.
+
+Diese Tabelle beschreibt kontrollierte Geometrieinterventionen. Die
+ursprüngliche Mindestzählgrenze wird bei injizierten exakten Abständen nicht
+zu einer neuen Freigabe umgedeutet. Insbesondere dürfen die 11/162 rohen
+Geometrieerfolge ohne Eingriff nicht als Freigabe aller ursprünglichen
+Messvorprüfungen gelesen werden. Alle 18 exakten Hauptkonfigurationen bestehen
+auch den unveränderten algebraischen Gewichts-Solve.
+
+Die Effekte sind nicht additiv: A allein beseitigt die Hauptursache nicht,
+S allein ebenfalls nicht. Erst die gemeinsame Kontrolle der Landmarkenmetrik
+und der Stützpunktabstände beseitigt hier alle B0-Ordnungsfehler.
+
+Die maximale absolute Abweichung der mit exakten Eingaben rekonstruierten
+normierten Paarintervalle von der Koordinatenreferenz beträgt 1,13e-12.
+Es wurde damit kein unvermeidlicher Rangdefekt der 18 fixierten
+Konfigurationen beobachtet. Ihre Stabilität unter Zählrauschen folgt daraus
+ausdrücklich nicht.
+
+3. MATHEMATISCHE LOKALISIERUNG
+
+Sei q(a,b) das positive Quadrat der zeitartigen Eigenzeit, normiert durch
+die unveränderte Auswahlskala s^2. Für Landmarken l0,l1,l2,l3 gilt mit
+eta = diag(-1,+1,+1):
+
+H_ij = [q(li,lj) - q(li,l0) - q(l0,lj)] / 2,  i,j=1,2,3.
+
+Für zwei Stützpunkte x,y wird die Differenz ihrer Landmarkenkoordinaten
+direkt durch
+
+v_i(x,y) = [q(li,y)-q(l0,y)-q(li,x)+q(l0,x)] / 2
+
+bestimmt. Das rekonstruierte normierte Intervallquadrat ist
+
+s_hat^2(x,y) = v(x,y)^T H^(-1) v(x,y).
+
+In den untersuchten Daten werden die 39 verletzten Stützpunktpaare nicht
+direkt gezählt. Ihre Signatur wird über diese Differenzen und die inverse
+geschätzte Gram-Matrix entschieden. Kleine Restabstände entstehen dabei aus
+größeren, korrelierten Abstandseingaben.
+
+Die Wurzelabstände R fallen aus v(x,y) algebraisch heraus. Deshalb kann eine
+isolierte Verbesserung dieser Eingaben die 39 B0-Stützpunktfehler nicht
+beheben. Die Koeffizientenidentität wurde für alle Nichtwurzelpaare geprüft.
+R ist jedoch nicht allgemein irrelevant: Im AS-Austausch verbleibt über alle
+Wiederholungen genau ein Fehler, cloud-27/B7, zwischen Wurzel und Stützpunkt.
+Nach zusätzlichem Austausch von R verschwindet auch dieser Fehler.
+
+Die echten Gram-Konditionszahlen der 18 Konfigurationen liegen zwischen
+45,14 und 1173,92; der Median beträgt 202,03. Das kennzeichnet unterschiedlich
+empfindliche Bezugssysteme. Eine kausale, additive Prozentzuordnung des
+Gesamtfehlers allein zur Konditionszahl wird daraus nicht abgeleitet.
+
+In cloud-28/B0 entsteht außerdem ein separater Signaturfehler:
+Die echte Gram-Matrix hat Eigenwerte ungefähr
+(-201,7593; +0,1719; +4,1634), die aus Zählungen geschätzte Matrix dagegen
+(-201,9761; -0,0237; +4,1203). Ein schwach positiver Eigenwert kippt ins
+Negative. Der vorhandene Signaturtest lehnt diesen Fall korrekt ab.
+
+4. RUNDUNG ALS ERKLÄRUNG AUSGESCHLOSSEN — IM GEPRÜFTEN UMFANG
+
+Für alle 5275 ungeordneten Paarintervalle der 17 rechnerisch gültigen
+B0-Hauptsysteme wurde die Gram-Inversion unabhängig mit exakten rationalen
+Zahlen auf den archivierten Binär64-Eingaben berechnet. Sämtliche
+Intervallvorzeichen stimmen mit dem ursprünglichen Rechenweg überein.
+
+Zusätzlich wurden die nichtlineare Zähltransformation, pi mittels Machin-Formel,
+die Gram-Inversion und die Paarintervalle bei 80 und 120 Dezimalstellen
+nachgerechnet. Wieder stimmen alle 5275 Vorzeichen überein. Die größte
+absolute Differenz zum ursprünglichen normierten Intervallquadrat liegt bei
+1,43e-13. Die beobachteten Ordnungswechsel sind somit keine bloßen
+Binär64-Vorzeichenartefakte in diesen Fällen.
+
+Dies ist eine neue unabhängige Rechenformulierung mit Python-Standardmitteln,
+keine neue Sage-Ausführung und keine externe Replikation durch Dritte.
+
+5. ZÄHLRAUSCHEN UND NICHTLINEARER BIAS
+
+Für den 2+1-Diamanten gilt V(tau)=(pi/12)*tau^3. Die Pipeline verwendet
+
+q(N) = [N/(rho*pi/12)]^(2/3) / s^2.
+
+Diese Funktion ist konkav. Auch bei unverzerrtem Poisson-N gilt deshalb
+E[q(N)] <= q(E[N]); für eine nichtentartete Poissonverteilung ist die
+Ungleichung strikt. Eine richtige Kovarianz beseitigt diesen Effekt nicht.
+
+Wir berechneten für alle 18 Konfigurationen die marginalen Erwartungswerte
+der transformierten Zählungen unter ihren wahren geometrischen Poisson-Mitteln.
+Der relative Eingabebias reicht in diesem Datensatz von ungefähr
+-1,5911 Prozent bis -0,0004302 Prozent. Ein expliziter Poisson-Tail-Bound
+begrenzt den ausgelassenen Erwartungswertanteil auf höchstens 4,20e-11 in den
+normierten q-Einheiten. Die Summation ist Float64, kein Intervallarithmetikbeweis.
+
+Die Rekonstruktion aus diesen mittleren transformierten Eingaben besteht
+15/18 vollständige Ordnungsprüfungen. In cloud-05, cloud-21 und cloud-27
+entsteht jeweils eine zusätzliche Stützpunktbeziehung. Das zeigt, dass der
+skalare Transformationsbias allein empfindliche Entscheidungen verschieben
+kann. Es misst G(E[q]), nicht E[G(q)]: Der gesamte nichtlineare
+Rekonstruktionsbias und seine Wechselwirkung mit der Streuung sind damit
+nicht vollständig zerlegt.
+
+Bei den 39 tatsächlichen B0-Fehlerpaaren beträgt der Median des wahren
+Intervallbetrags geteilt durch die näherungsweise fortgepflanzte Standard-
+abweichung 0,215; 35/39 liegen unter 1. Die vollständige Zählkovarianz wird
+dabei berücksichtigt. Das ist eine nachträgliche, linearisierte Diagnose
+gerade ausgewählter Fehlerfälle, keine kalibrierte Konfidenzaussage.
+
+Die rein geometrische Nähe zum Lichtkegel ist nicht bei allen Fehlern extrem:
+|s^2|/(Delta t^2+Delta x^2+Delta y^2) hat Median 0,0505 und Maximum 0,4647.
+Eine pauschale Erklärung ausschließlich durch nahezu lichtartige Paare wäre
+deshalb zu eng. Entscheidend ist auch die Unsicherheit relativ zum Abstand.
+
+6. NEUE BEDINGTE DICHTEDIAGNOSE
+
+Zusätzlich wurden 216 neue Zählwolken erzeugt: dieselben 18 feststehenden
+Konfigurationen, jeweils vier Wiederholungen bei drei Dichten. Eine getrennte
+Implementierung erzeugt einen Poisson-Prozess in der umschließenden Box,
+verwirft Punkte außerhalb des Diamanten und zählt Intervallmitgliedschaften
+direkt. Insgesamt wurden 43.767.363 Punkte innerhalb des Diamanten verarbeitet.
+
+Dichtefaktor      Zähldichte      Mess-/Solve-/Ordnungsprüfung bestanden
+1                 32768          6/72  =  8,3 Prozent
+4                131072         11/72  = 15,3 Prozent
+16               524288         31/72  = 43,1 Prozent
+
+Bei Faktor 1 gibt es 68 gültige Gewichtssysteme, drei COUNT_HOLD und ein
+UNRESOLVED. Bei Faktoren 4 und 16 sind jeweils alle 72 Gewichtssysteme
+rechnerisch gültig; die vollständige Ordnung scheitert dennoch häufig.
+
+Die deskriptive Verbesserung mit höherer Dichte ist mit einer relevanten
+Zählunsicherheit vereinbar. Eine 16-fache Dichte reicht in diesem festen
+Versuchsaufbau nicht für eine verlässliche vollständige Ordnung.
+
+Vier Wiederholungen ergeben keine vier unabhängigen Landmarkenauswahlen.
+Die Population umfasst weiterhin 18 bereits ausgewählte Konfigurationen.
+Dies ist keine neue Bestätigung der Auswahlpipeline, kein Kontinuumslimes
+und keine physische Veränderung einer fundamentalen Dichte. Die früheren
+32 Auswahlversuche behalten ihren ursprünglichen Status.
+
+7. ENDLICHE GEBIETSGRENZE: KONKRETE TEILHYPOTHESE AUSGESCHLOSSEN
+
+Alle gezählten Intervallendpunkte liegen innerhalb des äußeren Diamanten.
+Der größte geprüfte Wert von 2*(|t|+sqrt(x^2+y^2)) beträgt 1,496552 < 1,5.
+
+Ein Alexandrov-Diamant I(a,b) ist kausal konvex: Liegen u,v darin und gilt
+u << z << v, dann folgt aus a << u und v << b durch Transitivität
+a << z << b. Damit liegt das gesamte Intervall I(u,v) in I(a,b).
+
+Folglich werden die hier gezählten Intervalle durch den äußeren Diamanten
+nicht abgeschnitten. Für feststehende Endpunkte ändert ein größerer äußerer
+Diamant bei gleicher Dichte die gemeinsame Verteilung dieser Intervall-
+zählungen nicht. Ein zusätzlicher Volumenlauf für genau diese Hypothese ist
+daher nicht nötig; der geometrische Nachweis ist stärker.
+
+Das schließt Auswirkungen der endlichen Gebietsgröße auf eine erneut
+ausgeführte Landmarken-/Stützpunktauswahl nicht aus. Ebenso ist es keine
+allgemeine Aussage über linkbasierte Observablen oder unendliche Volumenlimits.
+
+8. KLEINES, SEPARAT PRÜFBARES GEGENBEISPIEL
+
+Das erste fehlerhafte B0-Paar nach Wolkenindex wurde auf sechs Knoten reduziert:
+vier Landmarken und zwei Stützpunkte; benötigt werden 14 gezählte Intervalle.
+In cloud-02 lautet das normierte Intervallquadrat:
+
+Wahre Geometrie:                 +0,05120553304717898  (raumartig)
+Rekonstruktion aus Zählungen:    -0,00999147137836352  (zeitartig)
+
+evidence/minimal_counterexample.json enthält die vollständigen Eingaben.
+verify_witness.py prüft das Vorzeichen mit exakter rationaler Arithmetik und
+benötigt ausschließlich die Python-Standardbibliothek. Es ist ein operatives
+Gegenbeispiel für diese Pipeline, keine neue Unmöglichkeitsaussage.
+
+9. FOLGERUNG FÜR DEN NÄCHSTEN ENTWICKLUNGSSCHRITT
+
+Der nächste Kandidat muss die bekannten gegenseitigen Stützpunktbeziehungen
+bereits in die Geometrieschätzung aufnehmen und die nichtlinearen Zählfehler
+berücksichtigen. Ein nachträglicher Ordnungscheck bleibt erforderlich.
+Korrekte Ordnung allein reicht als Erfolgskriterium nicht: Genauigkeit,
+Enthaltungsquote und Rechenbudget müssen auf neuen Auswahlwolken gemeinsam
+geprüft werden. Ein korrektes Fehlermodell garantiert keine nützliche Korrektur.
+
+Nicht bestätigt sind eine praktische intrinsische Eigenzeitverbesserung,
+Operatorüberlegenheit, Krümmungsrekonstruktion, 3+1-Transfer oder Kalman-Nutzen.
+Die Diagnose ändert keine früheren Abbruchentscheidungen.
+
+10. REPRODUZIERBARKEIT UND EVIDENZGRENZEN
+
+Python 3.12.14, NumPy 2.3.5, SciPy 1.17.0; OPENBLAS_NUM_THREADS=1.
+Alle 140 ursprünglichen Manifest-Einträge und die Bindung der Wahrheitsdaten
+an die archivierten Messdatensätze wurden geprüft. Die Originaldateien werden
+im Paket unverändert mitgeführt. Neue Ergebnisse liegen ausschließlich unter
+evidence/ außerhalb des alten source/-Baums.
+
+PROTOCOL.txt und die beiden Hauptskripte wurden vor ihrer Ausführung lokal
+gehasht. Das ist keine öffentliche Präregistrierung; die alten Ergebnisse
+waren bekannt. Die zusätzlichen Präzisions- und Biasfragen sind als adaptive
+Folgeanalyse in SUPPLEMENT_PLAN.txt gekennzeichnet. Das kleine Gegenbeispiel
+wurde nachträglich aus dem ersten dokumentierten Fehler ausgewählt.
+
+Die unabhängigen Rechenwege teilen die archivierten Eingaben; eine externe
+Replikation des gesamten Generators und Selektors wurde nicht durchgeführt.
+
+Öffentliche Ausgangsevidenz:
+https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/81
+https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/lorentz_local_dalembert/four_landmark_count_covariance/README.md
+
+SPDX-License-Identifier: Apache-2.0

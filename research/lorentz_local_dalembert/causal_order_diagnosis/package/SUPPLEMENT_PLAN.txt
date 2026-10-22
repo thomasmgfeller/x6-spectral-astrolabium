@@ -1,0 +1,21 @@
+Adaptive follow-up, after the fixed intervention and density diagnostics.
+No change to original or new gates; these are explanatory checks.
+
+1. At Decimal precisions 80 and 120, independently recompute pi by Machin's
+formula, count-derived squared distances, the 3x3 Gram inverse, and every
+unordered reconstructed squared interval for the 17 originally valid B0 cases.
+Compare interval signs with the stored binary64 implementation. This complements
+exact rational inversion of the binary64 inputs by checking the nonlinear input
+transformation itself. Does not rerun Sage or qualify a physical model.
+
+2. For each of the 18 fixed configurations, compute E[(N/(rho*pi/12))^(2/3)]
+for each marginal Poisson count using its true geometric mean. Use a Poisson
+tail cutoff with an explicit tail bound; retain the small summation/float error
+distinction from an interval-arithmetic certificate. Reconstruct at these mean
+inputs and compare with exact distances. This isolates the deterministic effect
+of the concave scalar transformation at mean inputs, not E[reconstruction] and
+not the total nonlinear reconstruction bias. No candidate correction is fitted.
+
+3. Identify the lone residual violation under the AS intervention across all
+162 repeats and verify analytically/numerically that R cancels from all pair
+differences not involving the root. Root sensitivity is not globally excluded.

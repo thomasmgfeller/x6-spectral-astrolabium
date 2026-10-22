@@ -1,5 +1,14 @@
 # Local d’Alembertian: independent reproduction track
 
+**Latest diagnosis (22 October 2026): causal-order failures localized; HOLD remains.**
+[Complete diagnosis, data, code and six-node counterexample](causal_order_diagnosis/README.md)
+trace all 39 primary mismatches to reconstructed support pairs. Exact landmark
+metric and support distances restore all 18 selected primary configurations;
+this is an Oracle intervention, not an intrinsic correction. All 162 archived
+count records replay; 1,296 interventions and 216 new conditional count clouds
+are documented. Separate 80/120-digit calculations preserve 5,275 pair signs.
+The original 1/32 overall qualification and all scientific holds remain.
+
 **Latest trial (21 October 2026): four landmarks and full count covariance; `HOLD`.**
 [Complete evidence, sources and reproduction](four_landmark_count_covariance/README.md):
 32 new independent selection clouds, 18 successful fourth-landmark selections,
