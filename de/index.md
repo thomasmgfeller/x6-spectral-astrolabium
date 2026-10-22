@@ -16,11 +16,11 @@ Forschungsstand · 22.10.2026
 
 Wie zuverlässig lassen sich Operatorwerte aus endlichen, verrauschten Kausalzählungen rekonstruieren? Hier findest du die neuesten Rechnungen, ihre Grenzen und die zugehörigen Pull Requests.
 
-Das kontinuierliche Schrittintervall h ∈ [0; 0,1] ist jetzt für alle 64 räumlichen Einzelbewegungen abgedeckt: 63 sind ausgeschlossen; nur für Stützpunkt 15 in negativer x-Richtung bleibt ein kurzes Intervall offen. Eine ausdrücklich gewählte Hilfsenergie ergibt 0,04273 % Antwortabstand beim bekannten statistisch nahen Paar. Verträgliche Verfeinerungen und eine Integrationsfehlerschranke sind für den Hilfsgraphen bewiesen; die physikalische lorentzsche Übertragung bleibt offen.
+Alle 64 räumlichen Einzelbewegungen von der festen Referenz sind jetzt auf h ∈ [0; 0,1] als starke statistisch nahe Gegenbeispiele ausgeschlossen. Ein gemeinsamer Test zweier Zählungen in disjunkten Raumzeitbereichen schließt das letzte Intervall: TV ≥ 0,26376136 überschreitet die verlangten TV ≤ 0,25. Die festgelegte Familie ist damit abgeschlossen; koordinierte Bewegungen und allgemeine Rekonstruktionsstabilität bleiben offen.
 
 PR #99: Eine zertifizierte Obergrenze begrenzt die Operatoränderung innerhalb eines festgelegten kleinen Störungsbudgets. Das ist eine lokale Aussage, kein allgemeiner Stabilitätsbeweis.
 
-- [Neueste Rechnung · Ergebnis und Grenzen →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/lorentz_local_dalembert/continuous_energy/README.md)
+- [Neueste Rechnung · Ergebnis und Grenzen →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/lorentz_local_dalembert/joint_ray_obstruction/README.md)
 - [PR #109 · Kontinuierliche Schranken und Feldantworten →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/109)
 - [Aktuellen CI-Status von PR #109 prüfen →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/109/checks)
 - [PR #99 · Lokale Schranke →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/99)

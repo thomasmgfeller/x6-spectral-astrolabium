@@ -16,11 +16,11 @@ Research snapshot · 22 October 2026
 
 How reliably can operator values be reconstructed from finite, noisy causal counts? Explore the latest calculations, their limitations and the corresponding pull requests.
 
-The continuous interval h ∈ [0,0.1] is now covered on all 64 single-node spatial rays: 63 are excluded, and one short interval remains open for node 15 moving in the negative x direction. A declared auxiliary energy class gives a 0.04273% response gap for the known close-law pair. Compatible refinements and an integration-error bound are proved for the auxiliary graph; physical Lorentzian transfer remains open.
+All 64 fixed-base single-node spatial rays are now excluded as strong close-law counterexamples over h ∈ [0,0.1]. A joint event using two geometrically disjoint observed counts closes the last interval: TV ≥ 0.26376136 exceeds the required TV ≤ 0.25. This completes the declared family; coordinated moves and general reconstruction stability remain open.
 
 PR #99: A certified upper bound limits operator changes within a specified small perturbation budget. This is a local result, not a general stability proof.
 
-- [Latest calculation · Results and limits →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/lorentz_local_dalembert/continuous_energy/README.md)
+- [Latest calculation · Results and limits →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/lorentz_local_dalembert/joint_ray_obstruction/README.md)
 - [PR #109 · Continuous bounds and field responses →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/109)
 - [Check current CI status for PR #109 →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/109/checks)
 - [PR #99 · Local bound →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/99)

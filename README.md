@@ -1,6 +1,6 @@
 # X6 Spectral Astrolabium
 
-**Eigenzeit: 63 of 64 continuous spatial rays excluded.** [Continuous certificates and energy-bounded field responses](research/lorentz_local_dalembert/continuous_energy/README.md) cover every step h in [0,0.1] from the fixed base. Only node 15 in the negative boosted x direction remains unresolved, for h in [0.0439453125,0.0498046875]. A fixed auxiliary energy gives a 0.0427318% response gap for the known close-law pair. Compatible graph refinements and a sharp quadrature bound are proved; physical Lorentzian transfer remains open. No global stability or strong counterexample is claimed.
+**Eigenzeit: all 64 continuous fixed-base spatial rays excluded as strong close-law counterexamples.** [A joint Poisson event closes the last interval](research/lorentz_local_dalembert/joint_ray_obstruction/README.md): two geometrically disjoint observed counts prove **TV >= 0.26376136265637454647 > 0.25** throughout the remaining node-15 interval. Combined with the previous continuous cover, no step h in [0,0.1] on these rays satisfies unchanged order, weight gap >20% and TV <=0.25 simultaneously. Coordinated moves, other base geometries and global stability remain open.
 
 **Eigenzeit: larger spatial moves, strong-pair question still open.** [512-candidate spatial search](research/lorentz_local_dalembert/spatial_search/README.md) certifies a **0.0434832%** operator gap at **TV <= 0.2118268**, an 11.9-fold gap gain. Of 18 admissible sampled candidates above 20% gap, a marginal-law certificate excludes three; 15 remain unresolved.
 
