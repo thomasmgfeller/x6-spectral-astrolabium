@@ -1,0 +1,49 @@
+{
+  "status": "COMPLETE",
+  "scientific_selection_status": "SELECTION_HOLD",
+  "scientific_operator_status": "OPERATOR_HOLD",
+  "technical_verification": "PASS",
+  "completed_utc": "2026-10-22T10:00:30.918867+00:00",
+  "workers": [
+    {
+      "status": "COMPLETE",
+      "worker": 0,
+      "seconds": 332.93439026599845,
+      "peak_mib": 1384.734375,
+      "versions": {
+        "python": "3.12.14",
+        "numpy": "2.3.5",
+        "scipy": "1.17.0"
+      }
+    },
+    {
+      "status": "COMPLETE",
+      "worker": 1,
+      "seconds": 338.0358829050001,
+      "peak_mib": 1382.71875,
+      "versions": {
+        "python": "3.12.14",
+        "numpy": "2.3.5",
+        "scipy": "1.17.0"
+      }
+    }
+  ],
+  "holds": [
+    "HOLD_PHASE3",
+    "HOLD_EMBEDDING_COVARIANCE",
+    "METADATA_HOLD"
+  ],
+  "post_freeze_added": [
+    "verify.py",
+    "diagnose.py",
+    "ci_check.py",
+    "prepare_replay.py",
+    "README.md",
+    "failure-diagnosis.json",
+    "verification.json",
+    "completion.json",
+    "PARENT_CI_COMPLETION.json",
+    "SHA256SUMS.txt"
+  ],
+  "frozen_code_criteria_unchanged": true
+}
