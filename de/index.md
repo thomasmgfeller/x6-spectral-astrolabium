@@ -16,13 +16,13 @@ Forschungsstand · 22.10.2026
 
 Wie zuverlässig lassen sich Operatorwerte aus endlichen, verrauschten Kausalzählungen rekonstruieren? Hier findest du die neuesten Rechnungen, ihre Grenzen und die zugehörigen Pull Requests.
 
-Für alle 158 beteiligten Zählmuster ist jetzt ein gemeinsamer positiver Hintergrund nachgewiesen. Die zusätzliche Glättung liefert damit noch keine bessere Schranke: Die TV-Obergrenze bleibt 0,01706. Der festgelegte Prüfversuch endet mit offenem Genauigkeitsgewinn.
+512 räumliche Kandidaten geprüft: Ein neues Paar erreicht 0,04348 % Operatorabstand bei TV ≤ 0,21183 – rund 11,9-mal mehr Abstand als bisher. Von 18 Kandidaten über der 20-%-Zielmarke sind drei nachweislich zu gut unterscheidbar; 15 bleiben offen. Die Stabilitätsfrage ist damit nicht entschieden.
 
 PR #99: Eine zertifizierte Obergrenze begrenzt die Operatoränderung innerhalb eines festgelegten kleinen Störungsbudgets. Das ist eine lokale Aussage, kein allgemeiner Stabilitätsbeweis.
 
-- [Neueste Rechnung · Ergebnis und Grenzen →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/lorentz_local_dalembert/background_smoothing/README.md)
-- [PR #100 · Gemeinsame Zählregionen →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/100)
-- [Aktuellen CI-Status von PR #100 prüfen →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/100/checks)
+- [Neueste Rechnung · Ergebnis und Grenzen →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/lorentz_local_dalembert/spatial_search/README.md)
+- [PR #107 · Größere räumliche Änderungen →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/107)
+- [Aktuellen CI-Status von PR #107 prüfen →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/107/checks)
 - [PR #99 · Lokale Schranke →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/99)
 - [Alle Pull Requests ansehen →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pulls?q=is%3Apr)
 

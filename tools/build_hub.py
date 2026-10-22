@@ -115,9 +115,9 @@ def home(path, data, content, lang):
     body = '<section class="hero hero-visual"><div class="hero-copy"><p class="eyebrow">OPEN RESEARCH · PUBLIC PREVIEW</p><h1>' + E(t['headline']) + '</h1>' + p(t['lead'])
     body += '<div class="actions">' + link(rel(path, 'app/index.html'), t['launch_astrolabium'], **{'class': 'button'}) + link(rel(path, 'app/signal-lab.html'), t['launch'], **{'class': 'button secondary'}) + link(rel(path, 'app/proper-time.html'), t['launch_proper_time'], **{'class': 'button'}) + link(rel(path, 'modules/index.html'), t['browse'], **{'class': 'button secondary'}) + link(rel(path, 'wiki/' + lang + '/index.html'), 'X6 verständlich erklärt →' if lang == 'de' else 'X6 explained simply →', **{'class': 'button secondary'}) + link('#eigenzeit-results', eigenzeit['jump'], **{'class': 'button secondary'}) + '</div></div>'
     body += '<figure class="setup-visual"><a href="' + rel(path, SETUP_IMAGE) + '" aria-label="' + E(visual['expand'], quote=True) + '"><img src="' + rel(path, SETUP_IMAGE) + '" width="1536" height="1024" fetchpriority="high" alt="' + E(visual['alt'], quote=True) + '"></a><figcaption><span class="eyebrow">' + E(visual['label']) + '</span><strong>' + E(visual['title']) + '</strong>' + p(visual['caption']) + link(REPO + '/blob/main/experiments/photonic-two-qubit/README.md', visual['details']) + '</figcaption></figure></section>'
-    eigenzeit_links = [(REPO + '/blob/main/research/lorentz_local_dalembert/background_smoothing/README.md', eigenzeit['paired_link']),
-                       (REPO + '/pull/100', eigenzeit['latest']),
-                       (REPO + '/pull/100/checks', eigenzeit['checks']),
+    eigenzeit_links = [(REPO + '/blob/main/research/lorentz_local_dalembert/spatial_search/README.md', eigenzeit['paired_link']),
+                       (REPO + '/pull/107', eigenzeit['latest']),
+                       (REPO + '/pull/107/checks', eigenzeit['checks']),
                        (REPO + '/pull/99', eigenzeit['prior']),
                        (REPO + '/pulls?q=is%3Apr', eigenzeit['all'])]
     body += '<section class="research-feature" id="eigenzeit-results" aria-labelledby="eigenzeit-title"><div><p class="eyebrow">' + E(eigenzeit['date']) + '</p><h2 id="eigenzeit-title">' + E(eigenzeit['title']) + '</h2><p class="feature-intro">' + E(eigenzeit['text']) + '</p><p class="feature-intro">' + E(eigenzeit['status']) + '</p><p class="feature-status">' + E(eigenzeit['previous']) + '</p></div><div class="feature-links">'

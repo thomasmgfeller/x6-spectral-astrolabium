@@ -16,13 +16,13 @@ Research snapshot · 22 October 2026
 
 How reliably can operator values be reconstructed from finite, noisy causal counts? Explore the latest calculations, their limitations and the corresponding pull requests.
 
-A common positive background is now certified for all 158 involved count patterns. Additional smoothing still gives no stronger bound: the TV upper bound remains 0.01706. The fixed experiment stops with the accuracy gain unresolved.
+512 spatial candidates checked: a new pair reaches a 0.04348% operator gap with TV ≤ 0.21183 – about 11.9 times the previous gap. Of 18 candidates above the 20% target, three are provably too distinguishable; 15 remain unresolved. The stability question remains open.
 
 PR #99: A certified upper bound limits operator changes within a specified small perturbation budget. This is a local result, not a general stability proof.
 
-- [Latest calculation · Results and limits →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/lorentz_local_dalembert/background_smoothing/README.md)
-- [PR #100 · Joint count regions →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/100)
-- [Check current CI status for PR #100 →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/100/checks)
+- [Latest calculation · Results and limits →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/lorentz_local_dalembert/spatial_search/README.md)
+- [PR #107 · Larger spatial moves →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/107)
+- [Check current CI status for PR #107 →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/107/checks)
 - [PR #99 · Local bound →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/99)
 - [Browse all pull requests →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pulls?q=is%3Apr)
 
