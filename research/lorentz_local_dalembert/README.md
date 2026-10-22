@@ -1,5 +1,7 @@
 # Local d’Alembertian: independent reproduction track
 
+**Eigenzeit full-law bound (22 October 2026):** [exact Poisson reduction and certificate](full_law_scaling/) — a close scaling pair gives a small statistical weight-error lower bound; a proved stopping rule excludes this family as a close-law 10% counterexample. All HOLDs retained.
+
 **Eigenzeit held-out Poisson testing (22 October 2026):** [sealed test and full replay](poisson_testing/) — the existing witness pair is distinguishable: 76.95% empirical accuracy, conservative lower bound 65.83%; a TV lower bound, not a reconstruction guarantee. All HOLDs retained.
 
 **Eigenzeit actual overlap audit (22 October 2026):** [volume checks and numerical risk](witness_overlap_volumes/) — both witness geometries satisfy all 8,177 pairwise-volume constraints, subject to explicitly probabilistic integration bounds; no statistical indistinguishability or 10% impossibility claim.

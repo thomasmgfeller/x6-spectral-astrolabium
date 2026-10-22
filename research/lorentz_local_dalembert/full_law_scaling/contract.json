@@ -1,0 +1,15 @@
+{
+  "schema": "x6.full-law-scaling/1",
+  "source_commit": "85726b9418479b6010b379a9f2c1ce071d9655ab",
+  "base_geometry": 0,
+  "scale_grid_denominator": 1000000,
+  "scale_grid_numerators_added": [1, 1000],
+  "tv_upper_gate": "1/4",
+  "selection": "largest grid scale passing deterministic TV upper gate",
+  "measurement_channel": "90 counts, all pairwise overlaps, optional total B count; fixed selected-node order",
+  "density_fixed": true,
+  "domain_duration": "3/2",
+  "target": "physical minimum-norm quadratic moment weight vector",
+  "stop": "one analytic homothety family; no optimizer or Monte Carlo expansion",
+  "all_holds_retained": true
+}
