@@ -1,0 +1,15 @@
+{
+  "schema": "x6.conformal-transport/1",
+  "source_commit": "3f39cc73afb28567756af41f8de3c78ef88ebb81",
+  "base_geometry": 0,
+  "k_denominator": 10000,
+  "k_numerators": [-20,-19,-18,-17,-16,-15,-14,-13,-12,-11,-10,-9,-8,-7,-6,-5,-4,-3,-2,-1,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20],
+  "tv_upper_gate": "1/4",
+  "selection": "largest lower symmetric relative weight gap among exact admissible candidates with TV upper <=1/4; first on ties",
+  "strong_gate": "symmetric relative weight gap >1/5",
+  "fixed": "outer endpoints and interval, physical B domain, normalization scale and known density",
+  "changed": "inner landmarks, root and support nodes move together; fixed-inner-landmark condition of PR95 is relaxed",
+  "channel": "all 90 interval counts, all overlaps of any order, optional total B count; selected-node causal order",
+  "stop": "40 exact conformal-flow candidates, no adaptive enlargement or Monte Carlo",
+  "all_holds_retained": true
+}

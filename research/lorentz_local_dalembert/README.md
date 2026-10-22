@@ -1,5 +1,7 @@
 # Local d’Alembertian: independent reproduction track
 
+**Eigenzeit conformal transport (22 October 2026):** [quadratic full-law bound and exact search](conformal_transport/) — 40 coordinated deformations preserve order; a same-pair TV bound improves from 1 to 0.24843, with 0.1575% weight separation. Inner landmarks move; no 10% impossibility or stability claim.
+
 **Eigenzeit shape coupling (22 October 2026):** [fixed-anchor search and exact full-law bound](shape_coupling/) — 288 candidates, 252 geometry passes, no strong pair; 32 true order violations isolated from four margin-only rejections. This finite negative search does not prove stability.
 
 **Eigenzeit full-law bound (22 October 2026):** [exact Poisson reduction and certificate](full_law_scaling/) — a close scaling pair gives a small statistical weight-error lower bound; a proved stopping rule excludes this family as a close-law 10% counterexample. All HOLDs retained.
