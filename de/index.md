@@ -21,8 +21,8 @@ Die 15 offenen Kandidaten sind geklärt: Zertifizierte Poisson-Zählwahrscheinli
 PR #99: Eine zertifizierte Obergrenze begrenzt die Operatoränderung innerhalb eines festgelegten kleinen Störungsbudgets. Das ist eine lokale Aussage, kein allgemeiner Stabilitätsbeweis.
 
 - [Neueste Rechnung · Ergebnis und Grenzen →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/lorentz_local_dalembert/poisson_tail_obstruction/README.md)
-- [PR #107 · Größere räumliche Änderungen →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/107)
-- [Aktuellen CI-Status von PR #107 prüfen →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/107/checks)
+- [PR #108 · Zertifizierter Kandidatenausschluss →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/108)
+- [Aktuellen CI-Status von PR #108 prüfen →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/108/checks)
 - [PR #99 · Lokale Schranke →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/99)
 - [Alle Pull Requests ansehen →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pulls?q=is%3Apr)
 

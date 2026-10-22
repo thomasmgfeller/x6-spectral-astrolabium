@@ -21,8 +21,8 @@ The 15 unresolved candidates are settled: certified Poisson count probabilities 
 PR #99: A certified upper bound limits operator changes within a specified small perturbation budget. This is a local result, not a general stability proof.
 
 - [Latest calculation · Results and limits →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/lorentz_local_dalembert/poisson_tail_obstruction/README.md)
-- [PR #107 · Larger spatial moves →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/107)
-- [Check current CI status for PR #107 →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/107/checks)
+- [PR #108 · Certified candidate exclusion →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/108)
+- [Check current CI status for PR #108 →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/108/checks)
 - [PR #99 · Local bound →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/99)
 - [Browse all pull requests →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pulls?q=is%3Apr)
 
