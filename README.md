@@ -1,5 +1,7 @@
 # X6 Spectral Astrolabium
 
+**Eigenzeit: actual-pair cancellation certified.** [Correlation-preserving surface tests](research/lorentz_local_dalembert/surface_correlations/README.md) certify 21 directed transfer patterns and positive cancellation on the unchanged pair. TV upper bound **0.01894939530593638801**; no improved reconstruction-accuracy claim.
+
 **Eigenzeit: boundary localization certified.** [Moving-cone strip integration](research/lorentz_local_dalembert/boundary_transfers/README.md) lowers the unchanged pair's TV upper bound to **0.01981978079819577960**. All unresolved transfers are retained; additional cancellation remains **HOLD_FULL_PATTERN_LOCALIZATION**.
 
 **Eigenzeit: sharper same-pair certificate.** [Paired membership transfers](research/lorentz_local_dalembert/paired_atoms/README.md) retain the exact Poisson void probability: TV upper bound **0.22119921517101921040**, down from 0.24999999774322784776. The operator gap is unchanged; transfer localization remains on hold.

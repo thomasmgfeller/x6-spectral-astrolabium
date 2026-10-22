@@ -16,11 +16,11 @@ Forschungsstand · 22.10.2026
 
 Wie zuverlässig lassen sich Operatorwerte aus endlichen, verrauschten Kausalzählungen rekonstruieren? Hier findest du die neuesten Rechnungen, ihre Grenzen und die zugehörigen Pull Requests.
 
-Die Übergangsregionen an den bewegten Kegelgrenzen sind räumlich eingegrenzt. Für dasselbe Geometriepaar sinkt die zertifizierte TV-Obergrenze von 0,2212 auf 0,01982. Der Gewinn folgt aus der räumlichen Eingrenzung; zusätzliche Aufhebungen sind noch nicht nachgewiesen. Der Operatorunterschied bleibt klein.
+Die direkte Kegelprüfung auf der bewegten Fläche ordnet jetzt 659 Flächenzellen vollständig zu. Erstmals sind zusätzliche Aufhebungen für dasselbe Geometriepaar zertifiziert: Die TV-Obergrenze sinkt von 0,01982 auf 0,01895. Die Rekonstruktionsgenauigkeit ist damit noch nicht verbessert.
 
 PR #99: Eine zertifizierte Obergrenze begrenzt die Operatoränderung innerhalb eines festgelegten kleinen Störungsbudgets. Das ist eine lokale Aussage, kein allgemeiner Stabilitätsbeweis.
 
-- [Neueste Rechnung · Ergebnis und Grenzen →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/lorentz_local_dalembert/boundary_transfers/README.md)
+- [Neueste Rechnung · Ergebnis und Grenzen →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/lorentz_local_dalembert/surface_correlations/README.md)
 - [PR #100 · Gemeinsame Zählregionen →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/100)
 - [Aktuellen CI-Status von PR #100 prüfen →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/100/checks)
 - [PR #99 · Lokale Schranke →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/99)

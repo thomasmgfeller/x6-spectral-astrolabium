@@ -1,0 +1,14 @@
+{
+  "schema": "eigenzeit.surface-correlations/1",
+  "pair": "unchanged PR95 selected pair",
+  "spatial_levels": [
+    16,
+    32,
+    64
+  ],
+  "matched_baseline": "PR103 same spatial rectangles and strip enclosures",
+  "arithmetic": "exact rational cancellation of spatial quadratic terms before interval evaluation",
+  "stop": "three fixed spatial grids; no geometry search or data-dependent refinement",
+  "scope": "conditional 90 interval counts and overlaps",
+  "inherited_certificates": "Intersect outer/affected-interval exclusions with PR103 integer box tests; reuse any complete box label"
+}
