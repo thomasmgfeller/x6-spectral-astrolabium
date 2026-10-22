@@ -21,8 +21,8 @@ Alle 64 räumlichen Einzelbewegungen von der festen Referenz sind jetzt auf h �
 PR #99: Eine zertifizierte Obergrenze begrenzt die Operatoränderung innerhalb eines festgelegten kleinen Störungsbudgets. Das ist eine lokale Aussage, kein allgemeiner Stabilitätsbeweis.
 
 - [Neueste Rechnung · Ergebnis und Grenzen →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/lorentz_local_dalembert/joint_ray_obstruction/README.md)
-- [PR #109 · Kontinuierliche Schranken und Feldantworten →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/109)
-- [Aktuellen CI-Status von PR #109 prüfen →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/109/checks)
+- [PR #110 · Alle 64 kontinuierlichen Richtungen geklärt →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/110)
+- [Aktuellen CI-Status von PR #110 prüfen →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/110/checks)
 - [PR #99 · Lokale Schranke →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/99)
 - [Alle Pull Requests ansehen →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pulls?q=is%3Apr)
 

@@ -21,8 +21,8 @@ All 64 fixed-base single-node spatial rays are now excluded as strong close-law 
 PR #99: A certified upper bound limits operator changes within a specified small perturbation budget. This is a local result, not a general stability proof.
 
 - [Latest calculation · Results and limits →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/lorentz_local_dalembert/joint_ray_obstruction/README.md)
-- [PR #109 · Continuous bounds and field responses →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/109)
-- [Check current CI status for PR #109 →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/109/checks)
+- [PR #110 · All 64 continuous rays settled →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/110)
+- [Check current CI status for PR #110 →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/110/checks)
 - [PR #99 · Local bound →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/99)
 - [Browse all pull requests →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pulls?q=is%3Apr)
 
