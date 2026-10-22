@@ -1,0 +1,120 @@
+{
+  "status": "HOLD",
+  "mode": "conditional",
+  "configurations": 19,
+  "summaries": {
+    "old_poisson": {
+      "qualified_primary": 19,
+      "common_primary": 19,
+      "rmse": {
+        "four": 2.083374295553494,
+        "old_poisson": 3.2514646530998763
+      },
+      "rmse_ratio_to_four": 1.5606723477578728,
+      "noise": {
+        "four": 1.5056598970246737,
+        "old_poisson": 1.6719424828529599
+      },
+      "noise_ratio_to_four": 1.1104383441153451,
+      "complete_repeat_groups": 12,
+      "repeat_group_indices": [
+        0,
+        1,
+        10,
+        15,
+        16,
+        18,
+        20,
+        23,
+        24,
+        26,
+        28,
+        31
+      ],
+      "variance": {
+        "old_poisson": 4.506016793780865,
+        "four": 3.6795869091438385
+      },
+      "variance_ratio_to_four": 1.2245985500664038,
+      "variance_ratio_to_old_poisson": 1.0,
+      "fit_seconds": {
+        "median": 0.11935050499960198,
+        "maximum": 0.7440412380001362
+      }
+    },
+    "full_gls": {
+      "qualified_primary": 19,
+      "common_primary": 19,
+      "rmse": {
+        "four": 2.083374295553494,
+        "full_gls": 2.419883177833835
+      },
+      "rmse_ratio_to_four": 1.1615210876886335,
+      "noise": {
+        "four": 1.5056598970246737,
+        "full_gls": 1.473124876881667
+      },
+      "noise_ratio_to_four": 0.9783915210816871,
+      "complete_repeat_groups": 12,
+      "repeat_group_indices": [
+        0,
+        1,
+        10,
+        15,
+        16,
+        18,
+        20,
+        23,
+        24,
+        26,
+        28,
+        31
+      ],
+      "variance": {
+        "full_gls": 2.6769736532088046,
+        "old_poisson": 4.506016793780865,
+        "four": 3.6795869091438385
+      },
+      "variance_ratio_to_four": 0.7275201590038485,
+      "variance_ratio_to_old_poisson": 0.5940886986714126,
+      "fit_seconds": {
+        "median": 0.1832198089996382,
+        "maximum": 0.7021506430000954
+      }
+    }
+  },
+  "status_counts": {
+    "four": {
+      "WEIGHTS_VALID": 160,
+      "UNRESOLVED": 1,
+      "COUNT_HOLD": 10
+    },
+    "old_poisson": {
+      "WEIGHTS_VALID": 159,
+      "UNRESOLVED": 2,
+      "COUNT_HOLD": 10
+    },
+    "full_gls": {
+      "WEIGHTS_VALID": 160,
+      "UNRESOLVED": 1,
+      "COUNT_HOLD": 10
+    }
+  },
+  "gates": {
+    "all_19_configurations_completed": true,
+    "qualified_primary": true,
+    "common_primary": true,
+    "rmse": false,
+    "field_noise": true,
+    "repeat_groups": false,
+    "repeat_variance_vs_four": true,
+    "repeat_variance_vs_old": true,
+    "cost": true
+  },
+  "holds": [
+    "HOLD_PHASE3",
+    "HOLD_EMBEDDING_COVARIANCE",
+    "METADATA_HOLD"
+  ],
+  "scope": "Same 19 previously selected A configurations. Fresh conditional B draws do not establish new-A selection or global pipeline qualification. Order is fitted input, not independent validation."
+}

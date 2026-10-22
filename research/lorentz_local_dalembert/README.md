@@ -1,6 +1,18 @@
 # Local d’Alembertian: independent reproduction track
 
-**Latest trial (22 October 2026): joint raw-count/order-constrained fit; HOLD.**
+**Latest follow-up (22 October 2026): candidate-cap diagnosis and covariance fit; HOLD.**
+[Complete diagnosis and conditional test](stability_followup/README.md): all 13
+failed selections replay identically. Exhausting 31,293 candidates finds 55
+feasible fourth landmarks beyond the old early cap in nine cases; eligibility
+before capping would permit 28/32 selections on these known configurations.
+This is retrospective feasibility, not qualified operators or new-A validation.
+On 171 fresh B clouds conditional on the same 19 selected A configurations,
+full-covariance nonlinear GLS reduces repeat variance by 40.59% versus the
+Poisson fit but misses accuracy versus direct inversion (RMSE ratio 1.161521)
+and has only 12/14 required complete groups. Six synthetic controls and an
+internal audit of 638 fits pass. **No adoption; all scientific HOLDs remain.**
+
+**Previous trial (22 October 2026): joint raw-count/order-constrained fit; HOLD.**
 [Candidate, complete evidence and decision](causal_count_fit/README.md): 32 fresh
 selection attempts, 19 selected configurations, 171 count repetitions. Complete
 primary order consistency rises from 2/32 to 18/32, but availability remains
