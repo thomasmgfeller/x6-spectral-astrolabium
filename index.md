@@ -16,11 +16,11 @@ Research snapshot · 22 October 2026
 
 How reliably can operator values be reconstructed from finite, noisy causal counts? Explore the latest calculations, their limitations and the corresponding pull requests.
 
-The 15 unresolved candidates are settled: certified Poisson count probabilities now exclude all 18 candidates with operator gap above 20% in the fixed 512-point search grid. One count alone forces TV ≥ 0.40933 instead of the required TV ≤ 0.25. The question remains open between grid points; this is not a general stability proof.
+The continuous interval h ∈ [0,0.1] is now covered on all 64 single-node spatial rays: 63 are excluded, and one short interval remains open for node 15 moving in the negative x direction. A declared auxiliary energy class gives a 0.04273% response gap for the known close-law pair. Compatible refinements and an integration-error bound are proved for the auxiliary graph; physical Lorentzian transfer remains open.
 
 PR #99: A certified upper bound limits operator changes within a specified small perturbation budget. This is a local result, not a general stability proof.
 
-- [Latest calculation · Results and limits →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/lorentz_local_dalembert/poisson_tail_obstruction/README.md)
+- [Latest calculation · Results and limits →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/lorentz_local_dalembert/continuous_energy/README.md)
 - [PR #108 · Certified candidate exclusion →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/108)
 - [Check current CI status for PR #108 →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/108/checks)
 - [PR #99 · Local bound →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/99)
