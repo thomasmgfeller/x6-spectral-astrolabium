@@ -60,3 +60,13 @@ The observation contract and target remain those of PR96: conditional finite
 count/overlap/optional-total data and discrete quadratic moment weights. No
 physical validation, full B causal-matrix inference, A-selection likelihood,
 smooth-field accuracy or global impossibility claim is made.
+
+## CI portability repair
+
+A separately triggered legacy replay failed a raw coordinate hash across CPU
+dispatch paths. Complete verification coordinate fixtures now match the original
+published raw hashes exactly; fresh coordinates are checked point by point at
+2^-50 absolute tolerance while relations, interval bits, integer measurements and
+scientific gates remain exact. Native and AVX512-disabled full replays pass. See
+[diagnosis and evidence](../eligibility_before_cap/coordinate_fixtures/README.md).
+The new interval certificate and original scientific evidence are unchanged.
