@@ -46,6 +46,8 @@ def local_module(name):
 
 def main():
     comparison_controls()
+    from replay_coordinates import controls as coordinate_controls
+    coordinate_controls()
     frozen()
     for line in (HERE/'SHA256SUMS.txt').read_text().splitlines():
         digest,name=line.split('  ',1)

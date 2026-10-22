@@ -104,10 +104,10 @@ def main(write=True):
                 assert np.max(abs(w.sum()))<1e-7
     assert len(Ahash)==32
     # Independent legacy simulation path validates copied A construction and old selection.
-    from simulation import selection_cloud,counting_cloud
+    from replay_coordinates import selection_cloud,counting_cloud
     replays=[]
     for index in [0,c['clouds']-1]:
-        r=read(HERE/f'results/cloud-{index:02d}.json.gz'); s=r['selection']; original,_=selection_cloud(r['seed'],c)
+        r=read(HERE/f'results/cloud-{index:02d}.json.gz'); s=r['selection']; original,_=selection_cloud(r['seed'],c,s['coordinates_sha256'])
         compare_legacy(original['fourth'],s['arms']['legacy'])
         for key in ['base_audit','physical_count','coordinates_sha256','relation_sha256','baseline_selected','base_selection_funnel']:
             assert encode(original[key])==encode(s[key]),key
@@ -116,7 +116,7 @@ def main(write=True):
             tr=read(trpath)
             for arm,pp in tr['arms'].items():
                 pp={**pp,'points':np.array(pp['points'])}; p=s['arms'][arm]['packet']
-                obs=counting_cloud(pp,p,r['seed'],0,c)
+                obs=counting_cloud(pp,p,r['seed'],0,c,r['replicates'][0]['arms'][arm]['observed']['coordinates_sha256'])
                 assert encode(obs)==encode(r['replicates'][0]['arms'][arm]['observed'])
         replays.append(index)
     out=dict(status='PASS',totals=totals,maxima=maxima,legacy_A_and_paired_B0_replays=replays,

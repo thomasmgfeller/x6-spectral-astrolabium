@@ -1,5 +1,7 @@
 # X6 Spectral Astrolabium
 
+**Eigenzeit continuous sensitivity certificate (22 October 2026):** [exact derivative and verified interval cover](research/lorentz_local_dalembert/conformal_sensitivity/) — the fixed-base symmetric gap is uniformly below 16.68% in the current certificate-covered flow range, excluding its >20% strong gate. This is not a global stability or actual-TV exclusion theorem.
+
 **Eigenzeit conformal transport (22 October 2026):** [quadratic full-law bound and exact search](research/lorentz_local_dalembert/conformal_transport/) — 40 coordinated deformations preserve order; a same-pair TV bound improves from 1 to 0.24843, with 0.1575% weight separation. Inner landmarks move; no 10% impossibility or stability claim.
 
 **Eigenzeit shape coupling (22 October 2026):** [fixed-anchor search and exact full-law bound](research/lorentz_local_dalembert/shape_coupling/) — 288 candidates, 252 geometry passes, no strong pair; 32 true order violations isolated from four margin-only rejections. This finite negative search does not prove stability.

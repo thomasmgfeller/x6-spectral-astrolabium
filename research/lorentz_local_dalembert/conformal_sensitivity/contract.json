@@ -1,0 +1,13 @@
+{
+  "schema": "x6.conformal-sensitivity/1",
+  "source_commit": "80c2be9835878b2e86a744329036fd0f04b460b0",
+  "parameter_interval": ["-1/500", "1/500"],
+  "partition_levels": [64, 128, 256, 512, 1024],
+  "stop": "first complete certified partition with symmetric relative gap upper <1/5; otherwise stop after level 1024 and report unresolved",
+  "fixed_point_decimal_digits": 30,
+  "componentwise_refinements": 12,
+  "tv_certificate_gate": "1/4",
+  "family": "PR96 same conformal diamond flow; outer endpoints fixed, inner landmarks/root move",
+  "comparison": "sensitivity per transport upper certificate, not derivative with respect to actual TV or a lower information bound",
+  "all_holds_retained": true
+}
