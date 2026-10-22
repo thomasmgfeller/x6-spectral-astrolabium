@@ -1,5 +1,7 @@
 # X6 Spectral Astrolabium
 
+**Eigenzeit joint-law resolution audit (22 October 2026):** [membership-atom bound and validated integration](research/lorentz_local_dalembert/joint_atoms/) — toy improvement verified; actual PR95 pair remains HOLD_VOLUME_RESOLUTION. Unresolved atom mass is retained; no improved actual-pair TV certificate yet.
+
 **Eigenzeit coordinated-motion certificate (22 October 2026):** [uniform 48-dimensional budget exclusion](research/lorentz_local_dalembert/coordinated_budget/) — all fixed-base support motions passing the exponential slab coupling gate have symmetric weight gap <=2.083767%, below the >20% strong gate. This excludes this sufficient-certificate search, not global instability.
 
 **Eigenzeit reference-point scan (22 October 2026):** [18 exact comparisons across nine conformal references](research/lorentz_local_dalembert/reference_scan/) — six admissible pairs; largest certified gap 0.22651% at TV <=0.248425. No strong pair in this finite search; no global stability claim.
