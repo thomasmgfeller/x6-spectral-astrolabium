@@ -8,6 +8,16 @@ Acht Kapitel je Sprache: Einstieg, Schnellstart, Signale, kausale Ordnungen, Evi
 
 **Public Research Preview — independent validation requested. NOT a scientifically certified stable release.**
 
+**Eigenzeit: Ursachen der Kausalitätsfehler isoliert (22.10.2026) — HOLD bleibt.**
+[Diagnose, vollständige Daten, Code und Sechs-Punkte-Gegenbeispiel](research/lorentz_local_dalembert/causal_order_diagnosis/README.md):
+Alle 39 verletzten Beziehungen der gültigen Hauptsysteme betreffen
+rekonstruierte Stützpunktpaare. Exakte Landmarken- und Stützpunktabstände
+stellen bei denselben 18 ausgewählten Konfigurationen die Ordnung wieder her;
+das ist eine Diagnose mit wahrer Geometrie, keine einsatzfähige Korrektur.
+162 archivierte Zählläufe, 1.296 Austauschtests und 216 neue bedingte Zählwolken
+sind dokumentiert. 80/120-Dezimalstellen bestätigen alle 5.275 geprüften
+Paarvorzeichen. **Keine neue wissenschaftliche Freigabe.**
+
 **Eigenzeit: vier Landmarken auf neuen Wolken geprüft (21.10.2026) — HOLD.**
 [Intrinsische Auswahl, vollständige Zählkovarianz, Daten und Sage-Prüfung](research/lorentz_local_dalembert/four_landmark_count_covariance/README.md):
 32 neue Auswahlwolken, 18 erfolgreiche Auswahlen und 162 Zählwiederholungen;

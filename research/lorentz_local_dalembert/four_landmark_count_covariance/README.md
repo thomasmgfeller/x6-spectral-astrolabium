@@ -13,6 +13,11 @@ ist jetzt vollständig archiviert: verworfener V1-Kandidat, Herleitung des
 Vier-Landmarken-Operators und damalige exakte Sage-Kontrollen. Die dortigen
 `NOT_RUN`-Angaben beziehen sich auf den Stand vor dieser neuen Wolkenprüfung.
 
+**Folgediagnose vom 22.10.2026:**
+[Kontrollierte Abstandsaustausche, Präzision, Zähldichte und Gegenbeispiel](../causal_order_diagnosis/README.md)
+lokalisieren die Kausalitätsfehler in rekonstruierten Stützpunktpaaren.
+Die ursprünglichen Daten, 1/32-Freigabe und HOLD-Gates bleiben unverändert.
+
 ## Ergebnis
 
 Die vierte Landmarke wird aus kausaler Ordnung, Intervallzählungen,

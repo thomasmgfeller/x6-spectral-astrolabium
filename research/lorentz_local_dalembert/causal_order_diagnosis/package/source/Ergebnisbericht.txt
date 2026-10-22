@@ -1,0 +1,217 @@
+EIGENZEIT: VIER LANDMARKEN, NEUE WOLKEN UND ZÄHLKORRELATIONEN
+21.10.2026 — vollständig ausgeführter prospektiver Pilot
+
+ENTSCHEIDUNG: HOLD
+
+Die intrinsische Vier-Landmarken-Auswahl und die Prüfung auf neuen Wolken sind
+ausgeführt. Zählkorrelationen wurden vollständig bis zu den Operatorgewichten
+fortgepflanzt. Die Korrektur besteht die vorab fixierten Freigabekriterien nicht.
+Das Korrelationsmodell liefert ein brauchbares deskriptives Teilergebnis, jedoch
+keine ausreichende Gesamtqualifikation der Geometrie oder des Operators.
+
+1. NEUE DATEN UND VOLLSTÄNDIGE AUSFALLBILANZ
+
+32 neue unabhängige Auswahlwolken A, Seeds 2026211000 bis 2026211031.
+Bekannte Dichte rho_A=32768, flache 2+1-Minkowski-Geometrie, äußerer
+Alexandrov-Diamant mit Dauer 1.5. Der bisherige ordnungsbasierte Selektor
+bestimmt Bezugspunkt, Support und die ersten drei Landmarken. Eine vierte
+externe Landmarke wird anschließend anhand von A-Relationen, A-Zählungen,
+unabhängigen Markierungen, Signatur und Kondition ausgewählt. Dabei sind
+keine wahren Koordinaten und keine Auswertungsfelder verfügbar.
+
+Auswahlbilanz aller 32 Fälle:
+  3: bisheriger Support/Frame besteht die ursprüngliche Auditprüfung nicht.
+ 11: keine vierte Landmarke im festgelegten Suchbudget gefunden.
+ 18: vierte Landmarke ausgewählt.
+
+Für die 18 erfolgreichen Auswahlen wurden jeweils neun unabhängige
+Zählwolken B erzeugt: 162 tatsächlich ausgeführte Zählwiederholungen.
+Für die 14 Auswahlausfälle wurden keine B-Wolken nachgezogen oder Ersatz-
+Auswahlwolken gesucht. Geplant waren maximal 32*9 Zählwiederholungen.
+
+Jede B-Wolke hat dieselbe Dichte 32768 im äußeren Diamanten. B_0 ist der
+vorab bestimmte Hauptfall. B_1,...,B_8 prüfen die vorhergesagte Streuung.
+Die Auswahl ist bereits versiegelt, bevor irgendein B-Wert gelesen wird.
+Die acht Wiederholungen werden nicht zu einer besseren Hauptmessung gemittelt.
+Es bleiben statistisch 32 unabhängige Auswahlwolken, nicht 162 unabhängige
+physische Geometrien und nicht viermal so viele Beobachtungen durch vier Felder.
+
+In den 18 Hauptfällen liefert der Vier-Landmarken-Operator 17 rechnerisch
+gültige Gewichtssysteme; ein Fall scheitert an Signatur/Kondition des Frames.
+Nur eines der 17 Systeme reproduziert die vollständige beobachtete Ordnung
+auf allen vier Landmarken, Bezugspunkt und Stützpunkten exakt.
+GEOMETRISCH QUALIFIZIERT: 1/32 = 3.125%, benötigt waren mindestens 26/32.
+Die anderen 16 gültigen Systeme haben jeweils ein bis vier fehlende oder
+zusätzliche gerichtete Beziehungen. Sie bleiben Diagnosefälle und werden
+nicht als zulässige Messungen ausgegeben.
+
+Über sämtliche 162 B-Wiederholungen: 154 gültige Vier-Landmarken-Gewichtssysteme,
+sieben Zählgrenzen-Unterschreitungen und ein Frame-Fehler. Alle bleiben im
+Archiv enthalten. Die Ordnungsqualifikation ist eine zusätzliche Prüfung.
+
+2. FAIRER GEPAARTER OPERATORVERGLEICH
+
+Hauptreferenz ist der Dreier-Landmarken-Operator, dessen Abstände ebenfalls
+auf derselben unabhängigen B_0-Wolke gemessen werden. Beide Verfahren nutzen
+denselben auf A fixierten Bezugspunkt, dieselben Stützpunkte und dieselbe
+Skala. Der Vergleich erhält somit dasselbe Stichprobenbudget A+B_0.
+Eine Wiederverwendung des auf A optimierten Operators bleibt nur Diagnose.
+
+13 Hauptfälle haben gleichzeitig gültige Drei- und Vier-Landmarken-Gewichte.
+Diese 13 Fälle sind keine Auswahl geometrisch qualifizierter Messungen.
+Die vier unveränderten analytischen Sinus-/Kosinusfelder werden gemeinsam
+pro A-Wolke ausgewertet. Fehlende Gewichtssysteme werden nicht durch Nullfehler
+ersetzt und nicht aus der Verfügbarkeitsbilanz entfernt.
+
+                                      Drei Landmarken B   Vier Landmarken B
+Rauschfreier Operator-RMSE                    2.007005             2.533344
+RMSE der linearen Feldantwort                 2.027146             2.568264
+Mittlere IID-Feldmessvarianz, sigma=0.001       1.640356             1.202296
+
+RMSE-Verhältnis Vier/Drei = 1.262251, also im Punktwert 26.2% schlechter.
+Gefordert war höchstens 0.9. Auch das lineare Fehlerkriterium wird verfehlt.
+Die rechnerische IID-Feldmessvarianz ist geringer (Verhältnis 0.732948),
+aber dieser Vorteil kompensiert die nicht bestandene Geometrie-/Genauigkeits-
+prüfung nicht. Es handelt sich um analytische Kosten eines deklarierten
+Feldrauschmodells, nicht um neue Sensorrauschmessungen.
+
+Der Oracle mit wahren Koordinaten, gleichem Support und gleicher Gewichtspolitik
+hat in diesen 13 Fällen RMSE 0.039930. Der alte A-basierte Dreieroperator liegt
+bei 2.223907. Der Oracle ist weiterhin nur eine nicht praktisch verfügbare
+Diagnose, kein Korrekturverfahren und kein universelles Optimum.
+
+Deskriptives gepaartes 95%-Bootstrapintervall des RMSE-Verhältnisses:
+0.645927 bis 2.214611, mit 2000 Ziehungen ganzer A-Wolken. Das breite Intervall
+trägt weder eine gesicherte Überlegenheit noch eine gesicherte allgemeine
+Verschlechterung. Es gibt keinen Erfolgsnachweis. Die vollständig qualifizierte
+Teilgruppe besteht aus nur einem Fall; dessen günstiges Ergebnis ist keine
+ausreichende Bestätigung und wird nicht als Hauptresultat herausgestellt.
+
+3. WAS DIE ZÄHLKORRELATIONEN ÄNDERN
+
+Bei festgehaltenen Auswahlwolken A sind die B-Zählintervalle feste Regionen.
+Für zwei davon gilt exakt:
+    Cov(N_e,N_f | A) = rho_B * Vol(I_e ∩ I_f).
+Die beobachtete Schnittmengenzählung K_ef ist dafür ein bedingt unverzerrter
+Schätzer. K ist eine positiv semidefinite Inzidenz-Grammatrix und K_ee=N_e.
+Die Beziehungen folgen aus unabhängigen Poisson-Zählungen auf disjunkten
+Regionen; die Schnittmengen sind gemeinsame Zufallsbeiträge.
+
+Alle gemeinsamen Landmarken- und Bezugspunktintervalle wurden mitgeführt.
+Nach der nichtlinearen Umrechnung zu q=tau^2 wird die volle Kovarianz per
+Delta-Methode durch die Ableitung des gesamten KKT-Gewichtsproblems propagiert.
+Die Abhängigkeit sowohl der Momentmatrix als auch der Zielmetrik von den
+Zählungen ist enthalten. Anschließend wird für ein festes Auswertungsfeld f
+die bedingte Streuung durch f^T Cov(w) f vorhergesagt.
+
+Die Kovarianz der rohen Zählungen ist theoretisch begründet; die Fortpflanzung
+durch q und die Gewichte ist eine LINEARE NÄHERUNG. Sie ist kein exaktes
+Intervallzertifikat und korrigiert weder nichtlinearen Zählbias noch den
+systematischen Diskretisierungs-/Geometriefehler.
+
+13 Auswahlwolken haben alle neun benötigten Vier-Landmarken-Lösungen und
+können die Wiederholungsprüfung durchlaufen. Die Kovarianzvorhersage kommt
+nur von B_0; die empirische Varianz aus den davon unabhängigen B_1,...,B_8.
+Diese Varianzgruppe und die 13 gepaarten Genauigkeitsfälle sind separat in
+analysis.json gekennzeichnet. Eine vollständige Fallauswahl kann die
+Varianzbewertung verzerren; fünf ausgewählte A-Fälle fehlen in dieser Prüfung.
+
+Mittlere Antwortvarianz über diese 13 Gruppen und vier feste Felder:
+  Empirisch, aus acht unabhängigen Wiederholungen:          4.920742
+  Vorhergesagt mit voller Zählkovarianz:                    4.456599
+  Negativkontrolle: Zählungen fälschlich unabhängig:       65.122184
+
+Empirisch/Vorhersage = 1.104147 mit Korrelationen.
+Empirisch/Negativkontrolle = 0.075562; die Unabhängigkeitsannahme überschätzt
+hier die Varianz um etwa den Faktor 13.2. Positive gemeinsame Zählanteile
+können sich in Abstandsdifferenzen aufheben. Deshalb ist das Weglassen der
+Korrelationen gerade bei diesem Differenzoperator gravierend.
+
+Dies ist ein positives DESKRIPTIVES Teilergebnis für das Korrelationsmodell.
+Das vorab gesetzte Kalibrierungs-Gate verlangt jedoch mindestens 16 vollständige
+A-Gruppen; erreicht wurden nur 13. Auch dieses Gate bleibt daher offen/HOLD,
+obwohl das beobachtete Varianzverhältnis innerhalb des Bereichs [0.5,2] liegt.
+Es wird insbesondere kein 95%-Intervall für eine unverzerrte Kontinuumsableitung
+oder eine allgemeine Einbettungskovarianz freigegeben.
+
+4. VERIFIKATION UND STATUS
+
+Vor dem ersten neuen A- oder B-Datensatz wurden Code, Gates und Seeds in
+freeze.json mit UTC-Zeit und SHA-256 fixiert. Dies war ein lokaler Freeze,
+keine öffentliche Präregistrierung. Nach Ergebniszugriff wurden weder
+Auswahl, Hauptfall, Dichte, Zählgrenzen, Felder noch Gate-Schwellen verändert.
+
+Alle 32 geplanten Fälle sind vollständig protokolliert. Alle 162 ausgeführten
+Zählwiederholungen wurden aus den archivierten Zählungen und Schnittmengen
+vollständig neu ausgewertet: PASS. 59 eingefrorene Dateien und 55 übernommene
+Quell-/Konfigurationsdateien stimmen mit ihren Prüfsummen überein.
+
+SageMath 10.9 bestätigt unabhängig alle 17 gültigen Haupt-Gewichtssysteme
+und ihre vollständigen Zählkovarianzen. Die Gewichte wurden bei 128 und 256
+Bit gerechnet; die maximale relative Kovarianzabweichung gegenüber dem
+Produktionslauf beträgt rund 1.11e-11. Die Zähl-zu-Distanz-Umrechnung und das
+KKT-System werden in diesem Prüfer separat formuliert.
+
+Zusätzlich: zehn numerische Vorprüfungen und 15 exakte Sage-Vorprüfungen PASS.
+Dazu gehören Umnummerierungsinvarianz der Auswahl, exakte physische Momente,
+KKT-Ableitung gegen Differenzenquotienten, Poisson-Überlappungskovarianz und
+eine Negativkontrolle ohne Korrelationen. Diese Kontrollzahlen sind keine
+zusätzlichen unabhängigen physikalischen Versuchswolken.
+
+Ein synthetischer Vorprüfungsfehler bei der Normierung einer Kovarianzabweichung
+wurde VOR dem Freeze und VOR allen neuen Wolken korrigiert: Ein erwarteter
+Null-Nebendiagonalwert verlangt eine Normierung durch Standardabweichungen,
+nicht durch den erwarteten Kovarianzwert. Ursprung und Korrektur sind unter
+attempts dokumentiert. Der Kampagnen-Inferenzcode war davon nicht betroffen.
+
+Endstatus der Gates:
+  Alle geplanten Fälle protokolliert: PASS
+  Geometrisch qualifizierte Verfügbarkeit: FAIL (1 statt mindestens 26)
+  Gepaarte Hauptfälle: FAIL (13 statt mindestens 26)
+  Operator-RMSE: FAIL
+  Lineare Feldantwort: FAIL
+  IID-Feldrauschkosten: PASS
+  Vollständige Varianzkalibrierung: HOLD (13 statt mindestens 16 Gruppen)
+  Gesamt: HOLD
+
+HOLD_PHASE3, HOLD_EMBEDDING_COVARIANCE und METADATA_HOLD bleiben unverändert.
+Kein Krümmungs-, 3+1-, Kalman- oder physikalischer Sensornachweis folgt daraus.
+
+5. FOLGERUNG FÜR DIE WEITERENTWICKLUNG
+
+Der Schritt ist technisch abgeschlossen und wissenschaftlich informativ:
+Die volle Zählkovarianz ist implementiert, unabhängig kontrolliert und erklärt
+die beobachtete Wiederholungsstreuung in der verfügbaren Teilgruppe deutlich
+besser als die Unabhängigkeitsannahme. Sie macht eine inkonsistente Geometrie
+aber nicht automatisch zulässig und beseitigt den linearen Feldfehler nicht.
+
+Der Fehlschlag betrifft diese konkrete Pipeline: drei alte Landmarken behalten,
+vierte intrinsisch ergänzen, danach den ungezwungenen Differenzoperator lösen.
+Er widerlegt weder die exakten Vier-Landmarken-Identitäten noch grundsätzlich
+alle Verfahren mit vier Landmarken.
+
+Ein begrenzter nächster Ansatz wäre, Bezugspunkt, vier Landmarken und
+Stützpunktgeometrie GEMEINSAM an die vollständige Zählkovarianz und die
+beobachteten Ordnungsbedingungen anzupassen. Die verlorenen Paarrelationen
+müssen vor einer Messfreigabe kontrolliert werden. Dieser Ansatz wurde hier
+nicht nachträglich getestet; dafür wären erneut eingefrorene Regeln und neue
+Bewertungsdaten nötig. Eine Verbesserung wird nicht vorausgesetzt.
+
+QUELLEN
+
+X6-Basis: ee6460971c2b3ec48ea2ebb18002072ca3d22f97. Unveränderte benötigte
+Quellen liegen unter vendor; ihre Herkunft steht in vendor_sources.json.
+
+Boguña & Krioukov, Measuring spatial distances in causal sets via causal
+overlaps, Phys. Rev. D 110, 024008 (2024), arXiv:2401.17376v2:
+https://arxiv.org/html/2401.17376v2
+Grundlagen: Alexandrov-Volumen, Zahl-Volumen-Zusammenhang, Poissonmodell.
+
+Jim Pitman / Ben Hough, Lecture 26: Poisson Point Processes, Berkeley:
+https://www.stat.berkeley.edu/users/pitman/s205f02/lecture27.pdf
+Grundlagen: unabhängige Zählungen in disjunkten Regionen, Poisson-Superposition.
+Die Überlappungskovarianz folgt durch Zerlegung in gemeinsame/disjunkte Teile.
+
+Das vollständige Verfahren und seine Gate-Entscheidung sind eigene hier
+ausgeführte Rechnungen; die Quellen werden nicht als Validierung dieses
+konkreten Korrekturalgorithmus ausgegeben. Keine Neuheitsbehauptung.

@@ -1,0 +1,22 @@
+{
+  "schema": "x6.bk-volume-shell/1",
+  "date": "2026-10-19",
+  "base_commit": "700368d58a440c859e1a2a19c6e24fdcb31f1038",
+  "densities": [2048, 8192, 32768],
+  "development_seeds": [2026103101, 2026103102],
+  "test_seed_base": 2026110100,
+  "test_replicates_per_density": 16,
+  "seed_rule": "base + 100*density_index + replicate",
+  "methods": ["raw", "volume_shell", "volume_both", "oracle_shell", "oracle_both"],
+  "primary_method": "volume_shell",
+  "primary_density": 32768,
+  "minimum_availability": 0.8,
+  "maximum_paired_metric_rms_ratio": 0.75,
+  "maximum_paired_affine_drift_rms_ratio": 1.1,
+  "wall_budget_seconds": 600,
+  "memory_budget_mib": 2048,
+  "replay_tolerance": {"atol": 1e-10, "rtol": 1e-9},
+  "decision": "INTRINSIC_SHELL_WEIGHTING_IMPROVED if complete, within budget, controls pass and all three primary thresholds pass; otherwise SHELL_WEIGHTING_HOLD. Always HOLD_PHASE3: this pilot cannot qualify the full flat operator or curvature.",
+  "zero_interval_rule": "Any required nonpositive strict-interior count makes that weighted stencil unavailable. No pseudocount, clipping, replacement or parameter fit.",
+  "scope": "Intrinsic inverse-square interval-volume weights on unchanged balanced64 memberships. Oracle weights are diagnostic only. Known density and 2+1 flat geometry; reference directions unchanged."
+}

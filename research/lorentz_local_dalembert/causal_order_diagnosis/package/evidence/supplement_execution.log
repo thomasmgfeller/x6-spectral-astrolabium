@@ -1,0 +1,33 @@
+{
+  "status": "PASS",
+  "scope": "adaptive explanatory check; no change to gates",
+  "precision": {
+    "clouds": 17,
+    "pairs": 5275,
+    "all_signs_agree": true,
+    "max_interval_difference": 1.4299672557172016e-13
+  },
+  "mean_input": {
+    "clouds": 18,
+    "geometry_order_pass": 15,
+    "max_poisson_tail_bound": 4.1908922345255286e-11,
+    "interpretation": "G(E[q]) is evaluated, not E[G(q)]; double-precision summation with tail bound, not interval-arithmetic certification"
+  },
+  "exact_AS_residual": [
+    {
+      "index": 27,
+      "replicate": 7,
+      "local_nodes": [
+        4,
+        16
+      ],
+      "involves_root": true
+    }
+  ],
+  "original_measurement_statuses": {
+    "WEIGHTS_VALID": 154,
+    "COUNT_HOLD": 7,
+    "UNRESOLVED": 1
+  },
+  "root_translation_cancellation": "Exact coefficient identities checked for all nonroot pairs in all 162 repeats"
+}
