@@ -1,5 +1,7 @@
 # X6 Spectral Astrolabium
 
+**Eigenzeit joint-overlap audit (22 October 2026):** [proof, results and field target](research/lorentz_local_dalembert/joint_overlap_bounds/) — 21,868 pair-difference ranges tightened, but no marginal-box or full operator accuracy improvement; all HOLDs retained.
+
 **Neu: das verständliche X6-Wiki · New: the plain-language X6 wiki**
 
 **[Deutsch](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/de/)** · **[English](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/en/)**
