@@ -10,6 +10,21 @@ X6 Spectral Astrolabium is an open research hub for signals, graphs and causal o
 - [Open Eigenzeit Lab →](https://thomasmgfeller.github.io/x6-spectral-astrolabium/app/proper-time.html)
 - [Browse all modules →](https://thomasmgfeller.github.io/x6-spectral-astrolabium/modules/)
 
+## Latest Eigenzeit results
+
+Research snapshot · 22 October 2026
+
+How reliably can operator values be reconstructed from finite, noisy causal counts? Explore the latest calculations, their limitations and the corresponding pull requests.
+
+PR #100: The new method retains dependence across all 90 interval counts. It improves the bound in a control example; volume resolution remains insufficient for the studied geometry pair. An improved accuracy guarantee remains open.
+
+PR #99: A certified upper bound limits operator changes within a specified small perturbation budget. This is a local result, not a general stability proof.
+
+- [PR #100 · Results and checks →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/100)
+- [Check current CI status for PR #100 →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/100/checks)
+- [PR #99 · Local bound →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/99)
+- [Browse all pull requests →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pulls?q=is%3Apr)
+
 ## From light signals to measurement data
 
 ![AI concept illustration of the proposed Sagnac laboratory with a photon source, four detector channels, time tagging and digital analysis.](https://thomasmgfeller.github.io/x6-spectral-astrolabium/experiments/photonic-two-qubit/figures/AI_CONCEPT_NOT_PHOTO.png)
