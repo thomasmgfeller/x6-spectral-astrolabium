@@ -1,5 +1,17 @@
 # Local d’Alembertian: independent reproduction track
 
+**Latest mathematical follow-up (22 October 2026): Poisson coverage and finite bounds; HOLD.**
+[Complete proofs, evidence and replay](finite_poisson_bounds/README.md):
+a conservative simultaneous region covers all 1,736 selected B0 mean counts
+with at least 97.8667% probability under the fixed Poisson model, without
+assuming independent overlapping counts. A finite operator perturbation bound
+is proved and evaluated exactly. Zero of 19 computable cases certify <=10%
+weight error over the full region; all 19 certify much smaller local boxes,
+which have no coverage claim. Both PR88 witnesses remain inside the statistical
+region. This is a conservative certification failure, not an instability or
+statistical impossibility theorem. No fresh clouds, optimization or adoption;
+all scientific HOLDs remain.
+
 **Latest mathematical audit (22 October 2026): finite-count accuracy; HOLD.**
 [Theory, explicit pair and exact certificate](stability_information/README.md):
 two geometries have exactly the same order on 21 selected nodes and close mean
