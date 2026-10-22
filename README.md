@@ -1,5 +1,7 @@
 # X6 Spectral Astrolabium
 
+**Eigenzeit: all strong candidates in the fixed spatial grid excluded.** [Certified single-count Poisson tails](research/lorentz_local_dalembert/poisson_tail_obstruction/README.md) settle all 15 previously unresolved candidates: all 18 sampled pairs above 20% operator gap have **TV >= 0.4093301**, incompatible with TV <= 0.25. This closes the finite 512-candidate grid, not the continuous family or the global stability question.
+
 **Eigenzeit: larger spatial moves, strong-pair question still open.** [512-candidate spatial search](research/lorentz_local_dalembert/spatial_search/README.md) certifies a **0.0434832%** operator gap at **TV <= 0.2118268**, an 11.9-fold gap gain. Of 18 admissible sampled candidates above 20% gap, a marginal-law certificate excludes three; 15 remain unresolved.
 
 **Eigenzeit: common background certified; smoothing gain on hold.** [Common-background audit](research/lorentz_local_dalembert/background_smoothing/README.md) proves positive diagonal intensity for all 158 transfer labels. The additional smoothing bound remains weaker than coupling; best TV upper bound stays **0.01706315569576179848**.

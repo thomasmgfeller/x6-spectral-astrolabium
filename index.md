@@ -16,13 +16,13 @@ Research snapshot · 22 October 2026
 
 How reliably can operator values be reconstructed from finite, noisy causal counts? Explore the latest calculations, their limitations and the corresponding pull requests.
 
-512 spatial candidates checked: a new pair reaches a 0.04348% operator gap with TV ≤ 0.21183 – about 11.9 times the previous gap. Of 18 candidates above the 20% target, three are provably too distinguishable; 15 remain unresolved. The stability question remains open.
+The 15 unresolved candidates are settled: certified Poisson count probabilities now exclude all 18 candidates with operator gap above 20% in the fixed 512-point search grid. One count alone forces TV ≥ 0.40933 instead of the required TV ≤ 0.25. The question remains open between grid points; this is not a general stability proof.
 
 PR #99: A certified upper bound limits operator changes within a specified small perturbation budget. This is a local result, not a general stability proof.
 
-- [Latest calculation · Results and limits →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/lorentz_local_dalembert/spatial_search/README.md)
-- [PR #107 · Larger spatial moves →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/107)
-- [Check current CI status for PR #107 →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/107/checks)
+- [Latest calculation · Results and limits →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/lorentz_local_dalembert/poisson_tail_obstruction/README.md)
+- [PR #108 · Certified candidate exclusion →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/108)
+- [Check current CI status for PR #108 →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/108/checks)
 - [PR #99 · Local bound →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/99)
 - [Browse all pull requests →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pulls?q=is%3Apr)
 

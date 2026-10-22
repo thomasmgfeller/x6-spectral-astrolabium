@@ -1,0 +1,16 @@
+{
+  "schema": "eigenzeit.poisson-tail-obstruction/1",
+  "selection": "All 18 strong-gap candidates in the frozen PR107 marginal diagnostic, including the 3 already excluded",
+  "count_selection": "Exactly the inherited largest-Hellinger interval for each candidate; no new count or geometry search",
+  "threshold": "Certify floor((mu-lambda)/log(mu/lambda)) uniformly over the rational mean intervals; if not unique use floor of the midpoint of the mean midpoints as a fixed event",
+  "log_series_terms": 32,
+  "cdf_grid_digits": 80,
+  "cdf_upper_steps": 768,
+  "maximum_mean": 2048,
+  "target_probability_interval_width": "1/10000000000000000000000000",
+  "tv_gate": "1/4",
+  "strong_gap_gate": "1/5",
+  "normalization": "Mode-centered Poisson weights, downward recurrence to zero, fixed upward recurrence and a geometric upper-tail remainder; directed integer rounding",
+  "decision": "Event-probability difference lower > 1/4 excludes a candidate; otherwise retain HOLD. Single-count upper bounds are never full-joint-law upper bounds.",
+  "stop": "One fixed analytical pass over the 18 inherited intervals. No larger budget, extra samples, geometry optimization or joint-law volume integration."
+}
