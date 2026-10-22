@@ -46,6 +46,8 @@ def local_module(name):
 
 def main():
     comparison_controls()
+    from replay_baseline import controls as baseline_controls
+    baseline_controls()
     from replay_coordinates import controls as coordinate_controls
     coordinate_controls()
     frozen()

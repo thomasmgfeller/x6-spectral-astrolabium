@@ -87,3 +87,10 @@ weight amplification can constitute a statistical counterexample.
 
 Derivations and source attribution: [PR96 transport proof](../conformal_transport/THEORY.md)
 and [PR97 sensitivity proof](../conformal_sensitivity/THEORY.md).
+
+## Inherited CI repair
+
+An older selection replay exposed BLAS-dependent last bits in derived baseline
+features and diagnostics. The [narrow numerical replay repair](../eligibility_before_cap/BASELINE_REPLAY_PORTABILITY.md)
+retains exact selected nodes, counts, scales and all decisions. It does not
+change this rational search or any archived scientific evidence.
