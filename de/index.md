@@ -21,8 +21,8 @@ Das kontinuierliche Schrittintervall h ∈ [0; 0,1] ist jetzt für alle 64 räum
 PR #99: Eine zertifizierte Obergrenze begrenzt die Operatoränderung innerhalb eines festgelegten kleinen Störungsbudgets. Das ist eine lokale Aussage, kein allgemeiner Stabilitätsbeweis.
 
 - [Neueste Rechnung · Ergebnis und Grenzen →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/lorentz_local_dalembert/continuous_energy/README.md)
-- [PR #108 · Zertifizierter Kandidatenausschluss →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/108)
-- [Aktuellen CI-Status von PR #108 prüfen →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/108/checks)
+- [PR #109 · Kontinuierliche Schranken und Feldantworten →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/109)
+- [Aktuellen CI-Status von PR #109 prüfen →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/109/checks)
 - [PR #99 · Lokale Schranke →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/99)
 - [Alle Pull Requests ansehen →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pulls?q=is%3Apr)
 
