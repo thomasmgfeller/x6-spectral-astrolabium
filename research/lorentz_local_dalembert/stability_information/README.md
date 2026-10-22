@@ -156,3 +156,6 @@ rigorous covariance bounds are checked by the rational Python certificate.
 
 All files are inventoried by [SHA256SUMS](SHA256SUMS). External background
 sources and their limited role are listed in [THEORY.md](THEORY.md).
+The inherited CI's comparison of fresh floating summaries was made portable
+after a last-bit discrepancy on GitHub; [CI_PORTABILITY.md](CI_PORTABILITY.md)
+records the failure and the exact structure/decision checks retained.
