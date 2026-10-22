@@ -8,6 +8,16 @@ Acht Kapitel je Sprache: Einstieg, Schnellstart, Signale, kausale Ordnungen, Evi
 
 **Public Research Preview — independent validation requested. NOT a scientifically certified stable release.**
 
+**Eigenzeit: endliche Zählgenauigkeit mathematisch geprüft (22.10.2026) — HOLD.**
+[Herleitung, konkretes Geometriepaar und exaktes Zertifikat](research/lorentz_local_dalembert/stability_information/README.md):
+Zwei Geometrien erfüllen dieselbe Ordnung auf 21 ausgewählten Punkten und
+liegen nahe im festgelegten Zählfehlermodell; ihre Operatorgewichte unterscheiden
+sich dennoch um 14,82 %. Daraus folgt für dieses Modell eine untere Grenze von
+7,41 % für den schlimmsten relativen Gewichtsfehler. Die vorab festgelegte
+25%-Schwelle wurde nicht erreicht; keiner der 76 Suchläufe konvergierte.
+**Kein globaler Stabilitätsbeweis und keine statistische Unmöglichkeitsaussage
+für das vollständige Poisson-Experiment.** Alle wissenschaftlichen HOLDs bleiben.
+
 **Eigenzeit: Suchreihenfolge korrigiert und auf 32 neuen Wolken geprüft (22.10.2026) — HOLD.**
 [Neue Paarprüfung, Code und vollständige Evidenz](research/lorentz_local_dalembert/eligibility_before_cap/README.md):
 Eignung wird nun vor der 128er-Begrenzung geprüft. Die Auswahl steigt von

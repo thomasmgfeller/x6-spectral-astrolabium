@@ -1,5 +1,18 @@
 # Local d’Alembertian: independent reproduction track
 
+**Latest mathematical audit (22 October 2026): finite-count accuracy; HOLD.**
+[Theory, explicit pair and exact certificate](stability_information/README.md):
+two geometries have exactly the same order on 21 selected nodes and close mean
+counts under the declared correlated discrepancy, yet their discrete weights
+differ by 14.82%. The corresponding deterministic worst-case relative recovery
+bound is 7.41%. Exact order, moments, conditioning and count-discrepancy bounds
+are reproducible. On 20 archived sources, the fixed search found no >=25% pair;
+all 76 optimizers terminated unsuccessfully. Forty-nine smaller pairs were
+verified, with the strongest certified exactly as a posthoc diagnostic.
+This is neither a global stability theorem nor statistical impossibility for
+the full joint Poisson observation. No fresh clouds or estimator adoption;
+all scientific HOLDs remain.
+
 **Latest fresh test (22 October 2026): eligibility before cap; HOLD.**
 [Corrected selector, paired campaign and complete evidence](eligibility_before_cap/README.md):
 32 fresh A clouds, 180 distinct B clouds, 342 arm records. Stable eligibility
