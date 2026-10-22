@@ -1,0 +1,17 @@
+{
+  "schema": "x6.shape-coupling/1",
+  "source_commit": "2560f1c9d1b522959fb926702c34f3b0ee7569a5",
+  "base_geometry": 0,
+  "moved_nodes": [5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20],
+  "axes_in_rational_boost_frame": [0, 1, 2],
+  "signs": [-1, 1],
+  "tv_budgets": ["1/20", "1/10", "1/4"],
+  "step_grid": 1000000000000,
+  "candidate_count": 288,
+  "selection": "largest certified lower symmetric relative weight gap, first in fixed order on ties",
+  "strong_gate": "weight gap > 0.1*(norm0+norm1), TV upper <=1/4, exact geometry and intrinsic gates",
+  "stop": "one fixed finite search, no adaptive enlargement",
+  "fixed": "all four landmarks, root, outer interval, density, physical normalization and B domain",
+  "channel": "90 recorded interval counts, all overlaps of any order, optional total B count; fixed selected-node order",
+  "all_holds_retained": true
+}
