@@ -1,5 +1,7 @@
 # Local d’Alembertian: independent reproduction track
 
+**Eigenzeit joint operator bound (22 October 2026):** [proof and controlled comparison](joint_operator_bounds/) — joint information improves all 19 contraction bounds, but 0/19 full-set accuracy certificates; all HOLDs retained.
+
 **Eigenzeit joint-overlap audit (22 October 2026):** [proof, results and field target](joint_overlap_bounds/) — 21,868 pair-difference ranges tightened, but no marginal-box or full operator accuracy improvement; all HOLDs retained.
 
 **Latest mathematical follow-up (22 October 2026): Poisson coverage and finite bounds; HOLD.**
