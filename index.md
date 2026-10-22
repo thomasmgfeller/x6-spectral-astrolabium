@@ -21,8 +21,8 @@ How reliably can operator values be reconstructed from finite, noisy causal coun
 PR #99: A certified upper bound limits operator changes within a specified small perturbation budget. This is a local result, not a general stability proof.
 
 - [Latest calculation · Results and limits →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/lorentz_local_dalembert/spatial_search/README.md)
-- [PR #106 · Common background →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/106)
-- [Check CI status for PR #106 →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/106/checks)
+- [PR #107 · Larger spatial moves →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/107)
+- [Check current CI status for PR #107 →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/107/checks)
 - [PR #99 · Local bound →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/99)
 - [Browse all pull requests →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pulls?q=is%3Apr)
 

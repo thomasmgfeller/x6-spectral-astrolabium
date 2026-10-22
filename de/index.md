@@ -21,8 +21,8 @@ Wie zuverlässig lassen sich Operatorwerte aus endlichen, verrauschten Kausalzä
 PR #99: Eine zertifizierte Obergrenze begrenzt die Operatoränderung innerhalb eines festgelegten kleinen Störungsbudgets. Das ist eine lokale Aussage, kein allgemeiner Stabilitätsbeweis.
 
 - [Neueste Rechnung · Ergebnis und Grenzen →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/lorentz_local_dalembert/spatial_search/README.md)
-- [PR #106 · Gemeinsamer Hintergrund →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/106)
-- [CI-Status von PR #106 prüfen →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/106/checks)
+- [PR #107 · Größere räumliche Änderungen →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/107)
+- [Aktuellen CI-Status von PR #107 prüfen →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/107/checks)
 - [PR #99 · Lokale Schranke →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/99)
 - [Alle Pull Requests ansehen →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pulls?q=is%3Apr)
 
