@@ -1,0 +1,37 @@
+{
+  "schema": "eigenzeit.surface-overlap-refinement/1",
+  "source_commit": "cc86d2336789867944ee2c9bd67945d8ade206e6",
+  "source_tree": "20e66ebbfeaacc6700c83689d4ef0b0e8b81a312",
+  "source_hold_cells": 31,
+  "nodes": [
+    15,
+    17
+  ],
+  "axis": 1,
+  "domain": [
+    "-1/10",
+    "1/10"
+  ],
+  "gap_gate": "1/5",
+  "tv_gate": "1/4",
+  "overlap": {
+    "maximum_exclusive_mean": 2048,
+    "probability": {
+      "cdf_grid_digits": 80,
+      "x_upper_steps": 1024,
+      "y_upper_steps": 2048,
+      "maximum_mean": 32768,
+      "numerical_event_width_target": "1e-65"
+    }
+  },
+  "classification": "One best-anchor 64-slice event for each of the16 missing cells, then one identical-rule 512-slice event for every remaining HOLD among the original31, all in numeric path order.",
+  "stop": "Exactly two declared stages, no new marginal events, anchors, thresholds, geometry splits, operator solves or post-evaluation extension.",
+  "freeze_note": "Internal freeze before new event probabilities; PR117 and PR116 results known and used to choose the512-slice budget. Not external preregistration.",
+  "missing_overlap_cells": 16,
+  "prior_overlap_holds": 15,
+  "maximum_refined_cells": 31,
+  "slices": {
+    "missing": 64,
+    "refined": 512
+  }
+}
