@@ -1,0 +1,130 @@
+{
+  "connectivity": "PASS",
+  "exported_pin_connections_checked": 183,
+  "critical_invariants_checked": 34,
+  "boards": {
+    "Frontend": {
+      "components": 60,
+      "nets": 36
+    },
+    "Receiver_Adapter": {
+      "components": 12,
+      "nets": 8
+    }
+  },
+  "errors": [],
+  "algebraic_checks": {
+    "model": "algebraic approximation; beta=100, VBE=0.75V, no device/corner guarantee",
+    "VSET_V": 0.14285714285714285,
+    "Q1_IE_A": 0.00303951367781155,
+    "Q1_IC_A": 0.003009419482981733,
+    "Q2_IC_A": 0.002979623250476963,
+    "VBCAS_V": 1.8516197832777128,
+    "Q1_VB_V": 0.8928571428571428,
+    "Q1_VC_V": 1.1016197832777128,
+    "Q1_VCE_V": 0.95876264042057,
+    "Q1_VCB_V": 0.20876264042057002,
+    "3V3_ANA_V": 3.285414443421513,
+    "AN_OUT_idle_V": 2.302138770764115,
+    "Q2_VCE_V": 1.2005189874864022,
+    "Q2_VCB_V": 0.4505189874864022,
+    "gain_V_per_V": -5.9363518921172735,
+    "SERVO_OUT_V": 1.193799091155316,
+    "REF_load_A": 0.00032831708350996187,
+    "AC_time_constant_s": 3.6327391886155525e-05,
+    "AC_droop_100ns_fraction": 0.0027489583984785515,
+    "DAC_2V2_code": 57672,
+    "threshold_RC_s": 9.999999999999999e-05,
+    "core_thermal_model": "NOT_RUN",
+    "manufacturer_SPICE": "NOT_RUN",
+    "servo_stability": "NOT_RUN",
+    "EM_and_hardware": "NOT_RUN",
+    "KiCad_ERC": "NOT_RUN (KiCad 7 CLI has no ERC command)",
+    "headroom_screen": [
+      {
+        "supply_V": 3.135,
+        "sense_V": 0.005,
+        "linear_estimate_AN_OUT_V": 2.1074570113035285,
+        "estimated_Q2_VCB_V": 0.25583722802581566,
+        "reserve_ge_0p1V": true
+      },
+      {
+        "supply_V": 3.135,
+        "sense_V": 0.025,
+        "linear_estimate_AN_OUT_V": 1.9887299734611832,
+        "estimated_Q2_VCB_V": 0.13711019018347037,
+        "reserve_ge_0p1V": true
+      },
+      {
+        "supply_V": 3.135,
+        "sense_V": 0.05,
+        "linear_estimate_AN_OUT_V": 1.8403211761582512,
+        "estimated_Q2_VCB_V": -0.011298607119461623,
+        "reserve_ge_0p1V": false
+      },
+      {
+        "supply_V": 3.135,
+        "sense_V": 0.1,
+        "linear_estimate_AN_OUT_V": 1.5435035815523874,
+        "estimated_Q2_VCB_V": -0.3081162017253254,
+        "reserve_ge_0p1V": false
+      },
+      {
+        "supply_V": 3.3,
+        "sense_V": 0.005,
+        "linear_estimate_AN_OUT_V": 2.2724570113035285,
+        "estimated_Q2_VCB_V": 0.4208372280258157,
+        "reserve_ge_0p1V": true
+      },
+      {
+        "supply_V": 3.3,
+        "sense_V": 0.025,
+        "linear_estimate_AN_OUT_V": 2.153729973461183,
+        "estimated_Q2_VCB_V": 0.3021101901834702,
+        "reserve_ge_0p1V": true
+      },
+      {
+        "supply_V": 3.3,
+        "sense_V": 0.05,
+        "linear_estimate_AN_OUT_V": 2.0053211761582515,
+        "estimated_Q2_VCB_V": 0.15370139288053863,
+        "reserve_ge_0p1V": true
+      },
+      {
+        "supply_V": 3.3,
+        "sense_V": 0.1,
+        "linear_estimate_AN_OUT_V": 1.7085035815523875,
+        "estimated_Q2_VCB_V": -0.14311620172532535,
+        "reserve_ge_0p1V": false
+      },
+      {
+        "supply_V": 3.465,
+        "sense_V": 0.005,
+        "linear_estimate_AN_OUT_V": 2.4374570113035285,
+        "estimated_Q2_VCB_V": 0.5858372280258157,
+        "reserve_ge_0p1V": true
+      },
+      {
+        "supply_V": 3.465,
+        "sense_V": 0.025,
+        "linear_estimate_AN_OUT_V": 2.318729973461183,
+        "estimated_Q2_VCB_V": 0.4671101901834702,
+        "reserve_ge_0p1V": true
+      },
+      {
+        "supply_V": 3.465,
+        "sense_V": 0.05,
+        "linear_estimate_AN_OUT_V": 2.1703211761582515,
+        "estimated_Q2_VCB_V": 0.31870139288053867,
+        "reserve_ge_0p1V": true
+      },
+      {
+        "supply_V": 3.465,
+        "sense_V": 0.1,
+        "linear_estimate_AN_OUT_V": 1.8735035815523875,
+        "estimated_Q2_VCB_V": 0.021883798274674682,
+        "reserve_ge_0p1V": false
+      }
+    ]
+  }
+}

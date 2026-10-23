@@ -1,0 +1,51 @@
+Cascode topology sanity - SYNTHETIC MODEL, NOT BFP420 / OPA2333 QUALIFICATION
+* This deck tests signs, node connections and a nominal small-signal case only.
+* BJT and diode parameters below are illustrative, NOT vendor models.
+* OPA2333 is replaced by an ideal 1e5-gain DC amplifier; no slew/noise/rails.
+* Comparator, DAC dynamics, CML link, receiver, HV and AQC are NOT simulated.
+VRAW RAW 0 3.3
+R301 RAW VANA 4.7
+C301 VANA 0 10u
+VREF REF 0 2.5
+R107 REF VSET 16.5k
+R108 VSET 0 1k
+C103 VSET 0 1u
+E101 SERVO 0 VSET FB 100k
+R106 E1 FB 100k
+C102 SERVO FB 100n
+R105 SERVO B1 10k
+R109 REF VCREF 3.48k
+R110 VCREF 0 10k
+C104 VCREF 0 1u
+E102 VCBUF 0 VCREF 0 1
+R111 VCBUF B2 100
+C105 B2 0 100n
+C106 B2 0 1n
+IINPUT 0 SENSE PULSE(0 0.5m 1u 1n 1n 20n 100u)
+R101 SENSE 0 49.9
+D101 SENSE 0 DSYN
+D102 0 SENSE DSYN
+C101 SENSE ACIN 10n
+R102 ACIN B1 10
+D103 E1 B1 DSYN
+Q101 C1 B1 E1 QSYN
+Q102 ANOUT B2 C1 QSYN
+R103 E1 0 47
+R104 VANA ANOUT 330
+CLOAD ANOUT 0 1p
+.model QSYN NPN(IS=1e-16 BF=100 VAF=50 CJE=1p CJC=0.3p TF=10p)
+.model DSYN D(IS=1n N=1.08 CJO=2p TT=0)
+.control
+set noaskquit
+op
+print v(vset) v(e1) v(b1) v(c1) v(b2) v(anout) v(servo)
+tran 0.05n 3u
+meas tran idle FIND v(anout) AT=0.9u
+meas tran low MIN v(anout) FROM=1u TO=1.05u
+meas tran sense_peak MAX v(sense) FROM=1u TO=1.05u
+set wr_singlescale
+set wr_vecnames
+wrdata topology_waveform.csv v(sense) v(anout)
+quit
+.endc
+.end

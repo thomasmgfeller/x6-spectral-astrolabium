@@ -1,0 +1,997 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="E">
+  <design>
+    <source>/workspace/scratch/056cfc177cde/output/Kaskoden_Schaltplan_v0_1/kicad/Frontend.kicad_sch</source>
+    <date>Fri Oct 23 16:45:29 2026</date>
+    <tool>Eeschema 7.0.11+dfsg-1build4</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title>Cascode - Analogpfad</title>
+        <company>X6 / Photonik</company>
+        <rev>0.1</rev>
+        <date>2026-10-23</date>
+        <source>Frontend.kicad_sch</source>
+        <comment number="1" value="DRAFT - NOT FOR FABRICATION"/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="2" name="/02 / Schwellen-DAC, Komparator und CML-Ausgaenge/" tstamps="/6d0111bd-e2c6-4e3e-a790-93c501e9f7ff/">
+      <title_block>
+        <title>DAC / Komparator / CML</title>
+        <company>X6 / Photonik</company>
+        <rev>0.1</rev>
+        <date>2026-10-23</date>
+        <source>Threshold_CML.kicad_sch</source>
+        <comment number="1" value="DRAFT - NOT FOR FABRICATION"/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="3" name="/03 / Versorgung, Referenzteiler und Kaskoden-Basisbias/" tstamps="/e0e919b0-b729-4900-b004-ebf63677850b/">
+      <title_block>
+        <title>Versorgung und Basisbias</title>
+        <company>X6 / Photonik</company>
+        <rev>0.1</rev>
+        <date>2026-10-23</date>
+        <source>Power_Bias.kicad_sch</source>
+        <comment number="1" value="DRAFT - NOT FOR FABRICATION"/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="C101">
+      <value>10n C0G</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <libsource lib="Cascode" part="CH" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Frontend.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f1381499-b0f3-4915-aa4d-783ec8da5fd5</tstamps>
+    </comp>
+    <comp ref="C102">
+      <value>100n X7R</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <libsource lib="Cascode" part="CV" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Frontend.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e70978d6-3695-4490-9f4f-b9545ec40fda</tstamps>
+    </comp>
+    <comp ref="C103">
+      <value>1u X7R</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <libsource lib="Cascode" part="CV" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Frontend.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>94574331-1d7d-4196-973e-3114860226ca</tstamps>
+    </comp>
+    <comp ref="D101">
+      <value>BAS70</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23</footprint>
+      <datasheet>https://assets.nexperia.com/documents/data-sheet/BAS70.pdf</datasheet>
+      <libsource lib="Cascode" part="BAS70" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Frontend.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>26bc8624-55df-47f9-bd7e-f759d210da97</tstamps>
+    </comp>
+    <comp ref="D102">
+      <value>BAS70</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23</footprint>
+      <datasheet>https://assets.nexperia.com/documents/data-sheet/BAS70.pdf</datasheet>
+      <libsource lib="Cascode" part="BAS70" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Frontend.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>fef2a542-66e0-4522-90d0-df6813d2c92b</tstamps>
+    </comp>
+    <comp ref="D103">
+      <value>BAS70</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23</footprint>
+      <datasheet>https://assets.nexperia.com/documents/data-sheet/BAS70.pdf</datasheet>
+      <libsource lib="Cascode" part="BAS70" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Frontend.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>fb861973-8052-451b-9189-4fbf7efe33a7</tstamps>
+    </comp>
+    <comp ref="J101">
+      <value>SENSE_IN</value>
+      <libsource lib="Cascode" part="SMA" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Frontend.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c2d7540c-3f1e-4547-aa22-bbe254c5730a</tstamps>
+    </comp>
+    <comp ref="Q101">
+      <value>BFP420</value>
+      <footprint>Package_TO_SOT_SMD:SOT-343_SC-70-4</footprint>
+      <datasheet>https://www.infineon.com/assets/row/public/documents/30/49/infineon-bfp420-datasheet-en.pdf</datasheet>
+      <libsource lib="Cascode" part="BFP420" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Frontend.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>9f8e0255-ef01-4a6e-8021-7e75eb0c83bb</tstamps>
+    </comp>
+    <comp ref="Q102">
+      <value>BFP420</value>
+      <footprint>Package_TO_SOT_SMD:SOT-343_SC-70-4</footprint>
+      <datasheet>https://www.infineon.com/assets/row/public/documents/30/49/infineon-bfp420-datasheet-en.pdf</datasheet>
+      <libsource lib="Cascode" part="BFP420" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Frontend.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a2f956bf-87e7-4acb-b6c3-702043dd4b45</tstamps>
+    </comp>
+    <comp ref="R101">
+      <value>49.9R 0.1%</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <libsource lib="Cascode" part="RV" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Frontend.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>14760167-5cbd-4042-9e45-e5641c4da50c</tstamps>
+    </comp>
+    <comp ref="R102">
+      <value>10R</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <libsource lib="Cascode" part="RH" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Frontend.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e42781ec-c127-4bb2-a475-2d642cc3fed2</tstamps>
+    </comp>
+    <comp ref="R103">
+      <value>47R 0.1%</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <libsource lib="Cascode" part="RV" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Frontend.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>ca770471-3bbd-467b-8c2d-4c0ed0d280eb</tstamps>
+    </comp>
+    <comp ref="R104">
+      <value>330R 0.1%</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <libsource lib="Cascode" part="RV" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Frontend.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>82a508be-ec42-48d2-ab6d-db1907306c06</tstamps>
+    </comp>
+    <comp ref="R105">
+      <value>10k 1%</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <libsource lib="Cascode" part="RV" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Frontend.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e65a3fd2-c914-4671-b3af-0237d229405a</tstamps>
+    </comp>
+    <comp ref="R106">
+      <value>100k 1%</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <libsource lib="Cascode" part="RV" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Frontend.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>d8230d67-40f8-4b85-9611-0d3068c16b48</tstamps>
+    </comp>
+    <comp ref="R107">
+      <value>16.5k 0.1%</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <libsource lib="Cascode" part="RV" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Frontend.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>67ccc457-8c95-497d-a8a4-2e713dd49169</tstamps>
+    </comp>
+    <comp ref="R108">
+      <value>1.00k 0.1%</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <libsource lib="Cascode" part="RV" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Frontend.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>2a7efacb-efee-44ff-8853-38af03ba18e7</tstamps>
+    </comp>
+    <comp ref="U101">
+      <value>OPA2333AIDGKR</value>
+      <footprint>Package_SO:VSSOP-8_3x3mm_P0.65mm</footprint>
+      <datasheet>https://www.ti.com/lit/ds/symlink/opa2333.pdf</datasheet>
+      <libsource lib="Cascode" part="OPA2333" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Frontend.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>281c8ae9-4504-4e4a-8c64-9693f8e545ba</tstamps>
+    </comp>
+    <comp ref="C201">
+      <value>1u X7R</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <libsource lib="Cascode" part="CV" description=""/>
+      <property name="Sheetname" value="02 / Schwellen-DAC, Komparator und CML-Ausgaenge"/>
+      <property name="Sheetfile" value="Threshold_CML.kicad_sch"/>
+      <sheetpath names="/02 / Schwellen-DAC, Komparator und CML-Ausgaenge/" tstamps="/6d0111bd-e2c6-4e3e-a790-93c501e9f7ff/"/>
+      <tstamps>17ca389a-a47e-44d1-8e2b-8d1cfc07910f</tstamps>
+    </comp>
+    <comp ref="C202">
+      <value>10n C0G</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <libsource lib="Cascode" part="CV" description=""/>
+      <property name="Sheetname" value="02 / Schwellen-DAC, Komparator und CML-Ausgaenge"/>
+      <property name="Sheetfile" value="Threshold_CML.kicad_sch"/>
+      <sheetpath names="/02 / Schwellen-DAC, Komparator und CML-Ausgaenge/" tstamps="/6d0111bd-e2c6-4e3e-a790-93c501e9f7ff/"/>
+      <tstamps>e4d5c7e6-90c8-4720-b858-375fcc45d2b2</tstamps>
+    </comp>
+    <comp ref="C203">
+      <value>100n X7R</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <libsource lib="Cascode" part="CV" description=""/>
+      <property name="Sheetname" value="02 / Schwellen-DAC, Komparator und CML-Ausgaenge"/>
+      <property name="Sheetfile" value="Threshold_CML.kicad_sch"/>
+      <sheetpath names="/02 / Schwellen-DAC, Komparator und CML-Ausgaenge/" tstamps="/6d0111bd-e2c6-4e3e-a790-93c501e9f7ff/"/>
+      <tstamps>b2706824-1a6c-4be9-a531-4b0aecebc764</tstamps>
+    </comp>
+    <comp ref="C204">
+      <value>10n C0G</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <libsource lib="Cascode" part="CV" description=""/>
+      <property name="Sheetname" value="02 / Schwellen-DAC, Komparator und CML-Ausgaenge"/>
+      <property name="Sheetfile" value="Threshold_CML.kicad_sch"/>
+      <sheetpath names="/02 / Schwellen-DAC, Komparator und CML-Ausgaenge/" tstamps="/6d0111bd-e2c6-4e3e-a790-93c501e9f7ff/"/>
+      <tstamps>0108afac-c3bf-49b9-b623-143124106c98</tstamps>
+    </comp>
+    <comp ref="C205">
+      <value>100n X7R</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <libsource lib="Cascode" part="CV" description=""/>
+      <property name="Sheetname" value="02 / Schwellen-DAC, Komparator und CML-Ausgaenge"/>
+      <property name="Sheetfile" value="Threshold_CML.kicad_sch"/>
+      <sheetpath names="/02 / Schwellen-DAC, Komparator und CML-Ausgaenge/" tstamps="/6d0111bd-e2c6-4e3e-a790-93c501e9f7ff/"/>
+      <tstamps>1c32924f-d50b-4fb2-abf8-ec0480e18481</tstamps>
+    </comp>
+    <comp ref="C206">
+      <value>1u X7R</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <libsource lib="Cascode" part="CV" description=""/>
+      <property name="Sheetname" value="02 / Schwellen-DAC, Komparator und CML-Ausgaenge"/>
+      <property name="Sheetfile" value="Threshold_CML.kicad_sch"/>
+      <sheetpath names="/02 / Schwellen-DAC, Komparator und CML-Ausgaenge/" tstamps="/6d0111bd-e2c6-4e3e-a790-93c501e9f7ff/"/>
+      <tstamps>92865e05-d9b8-4ac8-bd42-88951b73196a</tstamps>
+    </comp>
+    <comp ref="C207">
+      <value>100n X7R</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <libsource lib="Cascode" part="CV" description=""/>
+      <property name="Sheetname" value="02 / Schwellen-DAC, Komparator und CML-Ausgaenge"/>
+      <property name="Sheetfile" value="Threshold_CML.kicad_sch"/>
+      <sheetpath names="/02 / Schwellen-DAC, Komparator und CML-Ausgaenge/" tstamps="/6d0111bd-e2c6-4e3e-a790-93c501e9f7ff/"/>
+      <tstamps>7a58ce57-4fc4-4d06-a625-356940e087c9</tstamps>
+    </comp>
+    <comp ref="J201">
+      <value>CML_Q</value>
+      <libsource lib="Cascode" part="SMA" description=""/>
+      <property name="Sheetname" value="02 / Schwellen-DAC, Komparator und CML-Ausgaenge"/>
+      <property name="Sheetfile" value="Threshold_CML.kicad_sch"/>
+      <sheetpath names="/02 / Schwellen-DAC, Komparator und CML-Ausgaenge/" tstamps="/6d0111bd-e2c6-4e3e-a790-93c501e9f7ff/"/>
+      <tstamps>7b4191be-032b-4547-8cf4-4f8eb531ea69</tstamps>
+    </comp>
+    <comp ref="J202">
+      <value>CML_QN</value>
+      <libsource lib="Cascode" part="SMA" description=""/>
+      <property name="Sheetname" value="02 / Schwellen-DAC, Komparator und CML-Ausgaenge"/>
+      <property name="Sheetfile" value="Threshold_CML.kicad_sch"/>
+      <sheetpath names="/02 / Schwellen-DAC, Komparator und CML-Ausgaenge/" tstamps="/6d0111bd-e2c6-4e3e-a790-93c501e9f7ff/"/>
+      <tstamps>ccb3e254-50fb-4dbd-b0dc-ed563e5bdcdb</tstamps>
+    </comp>
+    <comp ref="J203">
+      <value>HOST_SPI</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical</footprint>
+      <libsource lib="Cascode" part="CONN6" description=""/>
+      <property name="Sheetname" value="02 / Schwellen-DAC, Komparator und CML-Ausgaenge"/>
+      <property name="Sheetfile" value="Threshold_CML.kicad_sch"/>
+      <sheetpath names="/02 / Schwellen-DAC, Komparator und CML-Ausgaenge/" tstamps="/6d0111bd-e2c6-4e3e-a790-93c501e9f7ff/"/>
+      <tstamps>e90a15e5-698b-4aa2-9123-24fc700b9fcb</tstamps>
+    </comp>
+    <comp ref="R201">
+      <value>100R 1%</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <libsource lib="Cascode" part="RH" description=""/>
+      <property name="Sheetname" value="02 / Schwellen-DAC, Komparator und CML-Ausgaenge"/>
+      <property name="Sheetfile" value="Threshold_CML.kicad_sch"/>
+      <sheetpath names="/02 / Schwellen-DAC, Komparator und CML-Ausgaenge/" tstamps="/6d0111bd-e2c6-4e3e-a790-93c501e9f7ff/"/>
+      <tstamps>30a3b022-5ca2-4b9f-b142-4a4748d2427e</tstamps>
+    </comp>
+    <comp ref="R202">
+      <value>1M 1%</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <libsource lib="Cascode" part="RV" description=""/>
+      <property name="Sheetname" value="02 / Schwellen-DAC, Komparator und CML-Ausgaenge"/>
+      <property name="Sheetfile" value="Threshold_CML.kicad_sch"/>
+      <sheetpath names="/02 / Schwellen-DAC, Komparator und CML-Ausgaenge/" tstamps="/6d0111bd-e2c6-4e3e-a790-93c501e9f7ff/"/>
+      <tstamps>d4f5070a-3f15-4eb1-8b80-c68538bf3610</tstamps>
+    </comp>
+    <comp ref="R203">
+      <value>1k 1%</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <libsource lib="Cascode" part="RV" description=""/>
+      <property name="Sheetname" value="02 / Schwellen-DAC, Komparator und CML-Ausgaenge"/>
+      <property name="Sheetfile" value="Threshold_CML.kicad_sch"/>
+      <sheetpath names="/02 / Schwellen-DAC, Komparator und CML-Ausgaenge/" tstamps="/6d0111bd-e2c6-4e3e-a790-93c501e9f7ff/"/>
+      <tstamps>199df47a-2a7c-43ca-877a-04b926f756bd</tstamps>
+    </comp>
+    <comp ref="R204">
+      <value>33R</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <libsource lib="Cascode" part="RH" description=""/>
+      <property name="Sheetname" value="02 / Schwellen-DAC, Komparator und CML-Ausgaenge"/>
+      <property name="Sheetfile" value="Threshold_CML.kicad_sch"/>
+      <sheetpath names="/02 / Schwellen-DAC, Komparator und CML-Ausgaenge/" tstamps="/6d0111bd-e2c6-4e3e-a790-93c501e9f7ff/"/>
+      <tstamps>90f0d8a7-74d7-4583-b6f2-c53d1a56c425</tstamps>
+    </comp>
+    <comp ref="R205">
+      <value>33R</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <libsource lib="Cascode" part="RH" description=""/>
+      <property name="Sheetname" value="02 / Schwellen-DAC, Komparator und CML-Ausgaenge"/>
+      <property name="Sheetfile" value="Threshold_CML.kicad_sch"/>
+      <sheetpath names="/02 / Schwellen-DAC, Komparator und CML-Ausgaenge/" tstamps="/6d0111bd-e2c6-4e3e-a790-93c501e9f7ff/"/>
+      <tstamps>0e71a1be-3917-4239-bd17-53bd26d6f9ff</tstamps>
+    </comp>
+    <comp ref="R206">
+      <value>33R</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <libsource lib="Cascode" part="RH" description=""/>
+      <property name="Sheetname" value="02 / Schwellen-DAC, Komparator und CML-Ausgaenge"/>
+      <property name="Sheetfile" value="Threshold_CML.kicad_sch"/>
+      <sheetpath names="/02 / Schwellen-DAC, Komparator und CML-Ausgaenge/" tstamps="/6d0111bd-e2c6-4e3e-a790-93c501e9f7ff/"/>
+      <tstamps>e53a59d3-5400-48e7-b50a-8cc601a0d4e1</tstamps>
+    </comp>
+    <comp ref="R207">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <libsource lib="Cascode" part="RV" description=""/>
+      <property name="Sheetname" value="02 / Schwellen-DAC, Komparator und CML-Ausgaenge"/>
+      <property name="Sheetfile" value="Threshold_CML.kicad_sch"/>
+      <sheetpath names="/02 / Schwellen-DAC, Komparator und CML-Ausgaenge/" tstamps="/6d0111bd-e2c6-4e3e-a790-93c501e9f7ff/"/>
+      <tstamps>4522d332-491e-4a7c-b547-d7e5e3ff6298</tstamps>
+    </comp>
+    <comp ref="R208">
+      <value>100k</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <libsource lib="Cascode" part="RV" description=""/>
+      <property name="Sheetname" value="02 / Schwellen-DAC, Komparator und CML-Ausgaenge"/>
+      <property name="Sheetfile" value="Threshold_CML.kicad_sch"/>
+      <sheetpath names="/02 / Schwellen-DAC, Komparator und CML-Ausgaenge/" tstamps="/6d0111bd-e2c6-4e3e-a790-93c501e9f7ff/"/>
+      <tstamps>16c11918-5fed-4154-8702-a9f762ee3978</tstamps>
+    </comp>
+    <comp ref="R209">
+      <value>100k</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <libsource lib="Cascode" part="RV" description=""/>
+      <property name="Sheetname" value="02 / Schwellen-DAC, Komparator und CML-Ausgaenge"/>
+      <property name="Sheetfile" value="Threshold_CML.kicad_sch"/>
+      <sheetpath names="/02 / Schwellen-DAC, Komparator und CML-Ausgaenge/" tstamps="/6d0111bd-e2c6-4e3e-a790-93c501e9f7ff/"/>
+      <tstamps>2b20891c-35e1-41d5-b7fe-dd1c8bc95b46</tstamps>
+    </comp>
+    <comp ref="U201">
+      <value>ADCMP607BCPZ</value>
+      <datasheet>https://www.analog.com/media/en/technical-documentation/data-sheets/ADCMP606_607.pdf</datasheet>
+      <libsource lib="Cascode" part="ADCMP607" description=""/>
+      <property name="Sheetname" value="02 / Schwellen-DAC, Komparator und CML-Ausgaenge"/>
+      <property name="Sheetfile" value="Threshold_CML.kicad_sch"/>
+      <sheetpath names="/02 / Schwellen-DAC, Komparator und CML-Ausgaenge/" tstamps="/6d0111bd-e2c6-4e3e-a790-93c501e9f7ff/"/>
+      <tstamps>c5561590-9c0c-48db-a92b-980c9161d81d</tstamps>
+    </comp>
+    <comp ref="U202">
+      <value>DAC80501ZDGSR</value>
+      <footprint>Package_SO:VSSOP-10_3x3mm_P0.5mm</footprint>
+      <datasheet>https://www.ti.com/lit/ds/symlink/dac80501.pdf</datasheet>
+      <libsource lib="Cascode" part="DAC80501" description=""/>
+      <property name="Sheetname" value="02 / Schwellen-DAC, Komparator und CML-Ausgaenge"/>
+      <property name="Sheetfile" value="Threshold_CML.kicad_sch"/>
+      <sheetpath names="/02 / Schwellen-DAC, Komparator und CML-Ausgaenge/" tstamps="/6d0111bd-e2c6-4e3e-a790-93c501e9f7ff/"/>
+      <tstamps>acc0ec0e-b99c-4aae-9566-065dcce198f8</tstamps>
+    </comp>
+    <comp ref="C104">
+      <value>1u X7R</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <libsource lib="Cascode" part="CV" description=""/>
+      <property name="Sheetname" value="03 / Versorgung, Referenzteiler und Kaskoden-Basisbias"/>
+      <property name="Sheetfile" value="Power_Bias.kicad_sch"/>
+      <sheetpath names="/03 / Versorgung, Referenzteiler und Kaskoden-Basisbias/" tstamps="/e0e919b0-b729-4900-b004-ebf63677850b/"/>
+      <tstamps>532131bf-22c1-4047-8d3e-8a8ece206fa4</tstamps>
+    </comp>
+    <comp ref="C105">
+      <value>100n X7R</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <libsource lib="Cascode" part="CV" description=""/>
+      <property name="Sheetname" value="03 / Versorgung, Referenzteiler und Kaskoden-Basisbias"/>
+      <property name="Sheetfile" value="Power_Bias.kicad_sch"/>
+      <sheetpath names="/03 / Versorgung, Referenzteiler und Kaskoden-Basisbias/" tstamps="/e0e919b0-b729-4900-b004-ebf63677850b/"/>
+      <tstamps>bf7c6fb6-4c94-48bb-85a9-1147473693b6</tstamps>
+    </comp>
+    <comp ref="C106">
+      <value>1n C0G</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <libsource lib="Cascode" part="CV" description=""/>
+      <property name="Sheetname" value="03 / Versorgung, Referenzteiler und Kaskoden-Basisbias"/>
+      <property name="Sheetfile" value="Power_Bias.kicad_sch"/>
+      <sheetpath names="/03 / Versorgung, Referenzteiler und Kaskoden-Basisbias/" tstamps="/e0e919b0-b729-4900-b004-ebf63677850b/"/>
+      <tstamps>e3ad2ede-1b72-41b3-822a-92584d48b1b9</tstamps>
+    </comp>
+    <comp ref="C107">
+      <value>100n X7R</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <libsource lib="Cascode" part="CV" description=""/>
+      <property name="Sheetname" value="03 / Versorgung, Referenzteiler und Kaskoden-Basisbias"/>
+      <property name="Sheetfile" value="Power_Bias.kicad_sch"/>
+      <sheetpath names="/03 / Versorgung, Referenzteiler und Kaskoden-Basisbias/" tstamps="/e0e919b0-b729-4900-b004-ebf63677850b/"/>
+      <tstamps>14244243-e527-4b66-86db-566472aef77e</tstamps>
+    </comp>
+    <comp ref="C301">
+      <value>10u X7R</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <libsource lib="Cascode" part="CV" description=""/>
+      <property name="Sheetname" value="03 / Versorgung, Referenzteiler und Kaskoden-Basisbias"/>
+      <property name="Sheetfile" value="Power_Bias.kicad_sch"/>
+      <sheetpath names="/03 / Versorgung, Referenzteiler und Kaskoden-Basisbias/" tstamps="/e0e919b0-b729-4900-b004-ebf63677850b/"/>
+      <tstamps>d8a63edf-41b5-416a-b8f7-e1ef532306e6</tstamps>
+    </comp>
+    <comp ref="C302">
+      <value>10u X7R</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <libsource lib="Cascode" part="CV" description=""/>
+      <property name="Sheetname" value="03 / Versorgung, Referenzteiler und Kaskoden-Basisbias"/>
+      <property name="Sheetfile" value="Power_Bias.kicad_sch"/>
+      <sheetpath names="/03 / Versorgung, Referenzteiler und Kaskoden-Basisbias/" tstamps="/e0e919b0-b729-4900-b004-ebf63677850b/"/>
+      <tstamps>b6706398-6740-4cec-9670-8282042035bc</tstamps>
+    </comp>
+    <comp ref="C303">
+      <value>10u X7R</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <libsource lib="Cascode" part="CV" description=""/>
+      <property name="Sheetname" value="03 / Versorgung, Referenzteiler und Kaskoden-Basisbias"/>
+      <property name="Sheetfile" value="Power_Bias.kicad_sch"/>
+      <sheetpath names="/03 / Versorgung, Referenzteiler und Kaskoden-Basisbias/" tstamps="/e0e919b0-b729-4900-b004-ebf63677850b/"/>
+      <tstamps>6d723e07-6101-459b-9442-3eb3a0536672</tstamps>
+    </comp>
+    <comp ref="C304">
+      <value>10u X7R</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <libsource lib="Cascode" part="CV" description=""/>
+      <property name="Sheetname" value="03 / Versorgung, Referenzteiler und Kaskoden-Basisbias"/>
+      <property name="Sheetfile" value="Power_Bias.kicad_sch"/>
+      <sheetpath names="/03 / Versorgung, Referenzteiler und Kaskoden-Basisbias/" tstamps="/e0e919b0-b729-4900-b004-ebf63677850b/"/>
+      <tstamps>a425fedb-6b2e-4cda-a790-98f2744b6d78</tstamps>
+    </comp>
+    <comp ref="C305">
+      <value>100n X7R</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <libsource lib="Cascode" part="CV" description=""/>
+      <property name="Sheetname" value="03 / Versorgung, Referenzteiler und Kaskoden-Basisbias"/>
+      <property name="Sheetfile" value="Power_Bias.kicad_sch"/>
+      <sheetpath names="/03 / Versorgung, Referenzteiler und Kaskoden-Basisbias/" tstamps="/e0e919b0-b729-4900-b004-ebf63677850b/"/>
+      <tstamps>9bb02d76-eeb4-40c5-8261-83be8420308e</tstamps>
+    </comp>
+    <comp ref="C306">
+      <value>100n X7R</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <libsource lib="Cascode" part="CV" description=""/>
+      <property name="Sheetname" value="03 / Versorgung, Referenzteiler und Kaskoden-Basisbias"/>
+      <property name="Sheetfile" value="Power_Bias.kicad_sch"/>
+      <sheetpath names="/03 / Versorgung, Referenzteiler und Kaskoden-Basisbias/" tstamps="/e0e919b0-b729-4900-b004-ebf63677850b/"/>
+      <tstamps>9a39409d-4ab9-490e-bd6d-2ed14048cb67</tstamps>
+    </comp>
+    <comp ref="C307">
+      <value>100n X7R</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <libsource lib="Cascode" part="CV" description=""/>
+      <property name="Sheetname" value="03 / Versorgung, Referenzteiler und Kaskoden-Basisbias"/>
+      <property name="Sheetfile" value="Power_Bias.kicad_sch"/>
+      <sheetpath names="/03 / Versorgung, Referenzteiler und Kaskoden-Basisbias/" tstamps="/e0e919b0-b729-4900-b004-ebf63677850b/"/>
+      <tstamps>a3391bf8-db72-40fc-81d7-7a0e1c30f262</tstamps>
+    </comp>
+    <comp ref="C308">
+      <value>100n X7R</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <libsource lib="Cascode" part="CV" description=""/>
+      <property name="Sheetname" value="03 / Versorgung, Referenzteiler und Kaskoden-Basisbias"/>
+      <property name="Sheetfile" value="Power_Bias.kicad_sch"/>
+      <sheetpath names="/03 / Versorgung, Referenzteiler und Kaskoden-Basisbias/" tstamps="/e0e919b0-b729-4900-b004-ebf63677850b/"/>
+      <tstamps>8451815f-c373-4b09-b3d9-f3374879cf43</tstamps>
+    </comp>
+    <comp ref="J301">
+      <value>3V3_IN</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical</footprint>
+      <libsource lib="Cascode" part="CONN2" description=""/>
+      <property name="Sheetname" value="03 / Versorgung, Referenzteiler und Kaskoden-Basisbias"/>
+      <property name="Sheetfile" value="Power_Bias.kicad_sch"/>
+      <sheetpath names="/03 / Versorgung, Referenzteiler und Kaskoden-Basisbias/" tstamps="/e0e919b0-b729-4900-b004-ebf63677850b/"/>
+      <tstamps>be6700d0-8d2a-4619-a11b-4dada151181f</tstamps>
+    </comp>
+    <comp ref="J302">
+      <value>RX_POWER</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical</footprint>
+      <libsource lib="Cascode" part="CONN2" description=""/>
+      <property name="Sheetname" value="03 / Versorgung, Referenzteiler und Kaskoden-Basisbias"/>
+      <property name="Sheetfile" value="Power_Bias.kicad_sch"/>
+      <sheetpath names="/03 / Versorgung, Referenzteiler und Kaskoden-Basisbias/" tstamps="/e0e919b0-b729-4900-b004-ebf63677850b/"/>
+      <tstamps>3f2b59cd-f7b5-49c4-85be-d57a16505091</tstamps>
+    </comp>
+    <comp ref="R109">
+      <value>3.48k 0.1%</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <libsource lib="Cascode" part="RV" description=""/>
+      <property name="Sheetname" value="03 / Versorgung, Referenzteiler und Kaskoden-Basisbias"/>
+      <property name="Sheetfile" value="Power_Bias.kicad_sch"/>
+      <sheetpath names="/03 / Versorgung, Referenzteiler und Kaskoden-Basisbias/" tstamps="/e0e919b0-b729-4900-b004-ebf63677850b/"/>
+      <tstamps>fbc4ea6f-c1cc-4620-afc1-8c9f4f89dbc4</tstamps>
+    </comp>
+    <comp ref="R110">
+      <value>10.0k 0.1%</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <libsource lib="Cascode" part="RV" description=""/>
+      <property name="Sheetname" value="03 / Versorgung, Referenzteiler und Kaskoden-Basisbias"/>
+      <property name="Sheetfile" value="Power_Bias.kicad_sch"/>
+      <sheetpath names="/03 / Versorgung, Referenzteiler und Kaskoden-Basisbias/" tstamps="/e0e919b0-b729-4900-b004-ebf63677850b/"/>
+      <tstamps>0b62be3b-9b30-48d1-bfe1-972868c231a7</tstamps>
+    </comp>
+    <comp ref="R111">
+      <value>100R</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <libsource lib="Cascode" part="RH" description=""/>
+      <property name="Sheetname" value="03 / Versorgung, Referenzteiler und Kaskoden-Basisbias"/>
+      <property name="Sheetfile" value="Power_Bias.kicad_sch"/>
+      <sheetpath names="/03 / Versorgung, Referenzteiler und Kaskoden-Basisbias/" tstamps="/e0e919b0-b729-4900-b004-ebf63677850b/"/>
+      <tstamps>ddb57ef9-a0b6-4ccd-b42e-3fc43a5039e9</tstamps>
+    </comp>
+    <comp ref="R301">
+      <value>4.7R</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <libsource lib="Cascode" part="RH" description=""/>
+      <property name="Sheetname" value="03 / Versorgung, Referenzteiler und Kaskoden-Basisbias"/>
+      <property name="Sheetfile" value="Power_Bias.kicad_sch"/>
+      <sheetpath names="/03 / Versorgung, Referenzteiler und Kaskoden-Basisbias/" tstamps="/e0e919b0-b729-4900-b004-ebf63677850b/"/>
+      <tstamps>a4821ec7-7a20-41d4-bbfd-91700ab0c115</tstamps>
+    </comp>
+    <comp ref="R302">
+      <value>2.2R</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <libsource lib="Cascode" part="RH" description=""/>
+      <property name="Sheetname" value="03 / Versorgung, Referenzteiler und Kaskoden-Basisbias"/>
+      <property name="Sheetfile" value="Power_Bias.kicad_sch"/>
+      <sheetpath names="/03 / Versorgung, Referenzteiler und Kaskoden-Basisbias/" tstamps="/e0e919b0-b729-4900-b004-ebf63677850b/"/>
+      <tstamps>fa944698-c42f-4661-92b5-3c8d60a1bb68</tstamps>
+    </comp>
+    <comp ref="R303">
+      <value>0R</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <libsource lib="Cascode" part="RH" description=""/>
+      <property name="Sheetname" value="03 / Versorgung, Referenzteiler und Kaskoden-Basisbias"/>
+      <property name="Sheetfile" value="Power_Bias.kicad_sch"/>
+      <sheetpath names="/03 / Versorgung, Referenzteiler und Kaskoden-Basisbias/" tstamps="/e0e919b0-b729-4900-b004-ebf63677850b/"/>
+      <tstamps>e94a33ab-1acb-43cf-96f1-ef0f03f6ca32</tstamps>
+    </comp>
+    <comp ref="R304">
+      <value>10R</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <libsource lib="Cascode" part="RH" description=""/>
+      <property name="Sheetname" value="03 / Versorgung, Referenzteiler und Kaskoden-Basisbias"/>
+      <property name="Sheetfile" value="Power_Bias.kicad_sch"/>
+      <sheetpath names="/03 / Versorgung, Referenzteiler und Kaskoden-Basisbias/" tstamps="/e0e919b0-b729-4900-b004-ebf63677850b/"/>
+      <tstamps>29a01610-9441-4865-86af-8c2c71cf3db7</tstamps>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="Cascode" part="ADCMP607">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">ADCMP607</field>
+      </fields>
+      <pins>
+        <pin num="1" name="VCCO" type="power_in"/>
+        <pin num="2" name="VCCI" type="power_in"/>
+        <pin num="3" name="VEE" type="power_in"/>
+        <pin num="4" name="VP_(+)" type="input"/>
+        <pin num="5" name="VEE" type="power_in"/>
+        <pin num="6" name="VN_(-)" type="input"/>
+        <pin num="7" name="SDN" type="input"/>
+        <pin num="8" name="LE/HYS" type="input"/>
+        <pin num="9" name="VEE" type="power_in"/>
+        <pin num="10" name="QN" type="output"/>
+        <pin num="11" name="VEE" type="power_in"/>
+        <pin num="12" name="Q" type="output"/>
+        <pin num="13" name="EP" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="Cascode" part="BAS70">
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">BAS70</field>
+      </fields>
+      <pins>
+        <pin num="1" name="A" type="passive"/>
+        <pin num="2" name="NC" type="no_connect"/>
+        <pin num="3" name="K" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Cascode" part="BFP420">
+      <fields>
+        <field name="Reference">Q</field>
+        <field name="Value">BFP420</field>
+      </fields>
+      <pins>
+        <pin num="1" name="B" type="input"/>
+        <pin num="2" name="E" type="passive"/>
+        <pin num="3" name="C" type="passive"/>
+        <pin num="4" name="E" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Cascode" part="CH">
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">CH</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Cascode" part="CONN2">
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">CONN2</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Cascode" part="CONN6">
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">CONN6</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+        <pin num="4" name="4" type="passive"/>
+        <pin num="5" name="5" type="passive"/>
+        <pin num="6" name="6" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Cascode" part="CV">
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">CV</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Cascode" part="DAC80501">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">DAC80501</field>
+      </fields>
+      <pins>
+        <pin num="1" name="VDD" type="power_in"/>
+        <pin num="2" name="VOUT" type="output"/>
+        <pin num="3" name="NC" type="no_connect"/>
+        <pin num="4" name="AGND" type="power_in"/>
+        <pin num="5" name="SPI2C" type="input"/>
+        <pin num="6" name="SCLK" type="input"/>
+        <pin num="7" name="SYNC" type="input"/>
+        <pin num="8" name="SDIN" type="input"/>
+        <pin num="9" name="NC" type="no_connect"/>
+        <pin num="10" name="VREFIO" type="bidirectional"/>
+      </pins>
+    </libpart>
+    <libpart lib="Cascode" part="OPA2333">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">OPA2333</field>
+      </fields>
+      <pins>
+        <pin num="1" name="OUT" type="output"/>
+        <pin num="2" name="-" type="input"/>
+        <pin num="3" name="+" type="input"/>
+        <pin num="4" name="V-" type="power_in"/>
+        <pin num="5" name="+" type="input"/>
+        <pin num="6" name="-" type="input"/>
+        <pin num="7" name="OUT" type="output"/>
+        <pin num="8" name="V+" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="Cascode" part="RH">
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">RH</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Cascode" part="RV">
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">RV</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Cascode" part="SMA">
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">SMA</field>
+      </fields>
+      <pins>
+        <pin num="1" name="SIG" type="passive"/>
+        <pin num="2" name="SHIELD" type="passive"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="Cascode">
+      <uri>/workspace/scratch/056cfc177cde/output/Kaskoden_Schaltplan_v0_1/kicad/Cascode.kicad_sym</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="3V3_ANA">
+      <node ref="C107" pin="1" pintype="passive"/>
+      <node ref="C301" pin="1" pintype="passive"/>
+      <node ref="C305" pin="1" pintype="passive"/>
+      <node ref="R104" pin="1" pintype="passive"/>
+      <node ref="R301" pin="2" pintype="passive"/>
+      <node ref="U101" pin="8" pinfunction="V+" pintype="power_in"/>
+    </net>
+    <net code="2" name="3V3_CML">
+      <node ref="C204" pin="1" pintype="passive"/>
+      <node ref="C205" pin="1" pintype="passive"/>
+      <node ref="C303" pin="1" pintype="passive"/>
+      <node ref="C307" pin="1" pintype="passive"/>
+      <node ref="J302" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="R303" pin="2" pintype="passive"/>
+      <node ref="U201" pin="1" pinfunction="VCCO" pintype="power_in"/>
+    </net>
+    <net code="3" name="3V3_CMP">
+      <node ref="C202" pin="1" pintype="passive"/>
+      <node ref="C203" pin="1" pintype="passive"/>
+      <node ref="C302" pin="1" pintype="passive"/>
+      <node ref="C306" pin="1" pintype="passive"/>
+      <node ref="R302" pin="2" pintype="passive"/>
+      <node ref="U201" pin="2" pinfunction="VCCI" pintype="power_in"/>
+    </net>
+    <net code="4" name="3V3_DAC">
+      <node ref="C207" pin="1" pintype="passive"/>
+      <node ref="C304" pin="1" pintype="passive"/>
+      <node ref="C308" pin="1" pintype="passive"/>
+      <node ref="J203" pin="6" pinfunction="6" pintype="passive"/>
+      <node ref="R207" pin="1" pintype="passive"/>
+      <node ref="R304" pin="2" pintype="passive"/>
+      <node ref="U202" pin="1" pinfunction="VDD" pintype="power_in"/>
+    </net>
+    <net code="5" name="3V3_RAW">
+      <node ref="J301" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="R301" pin="1" pintype="passive"/>
+      <node ref="R302" pin="1" pintype="passive"/>
+      <node ref="R303" pin="1" pintype="passive"/>
+      <node ref="R304" pin="1" pintype="passive"/>
+    </net>
+    <net code="6" name="AC_IN">
+      <node ref="C101" pin="2" pintype="passive"/>
+      <node ref="R102" pin="1" pintype="passive"/>
+    </net>
+    <net code="7" name="AN_OUT">
+      <node ref="Q102" pin="3" pinfunction="C" pintype="passive"/>
+      <node ref="R104" pin="2" pintype="passive"/>
+      <node ref="U201" pin="6" pinfunction="VN_(-)" pintype="input"/>
+    </net>
+    <net code="8" name="CAS_NODE">
+      <node ref="Q101" pin="3" pinfunction="C" pintype="passive"/>
+      <node ref="Q102" pin="2" pinfunction="E" pintype="passive"/>
+      <node ref="Q102" pin="4" pinfunction="E" pintype="passive"/>
+    </net>
+    <net code="9" name="CML_Q">
+      <node ref="J201" pin="1" pinfunction="SIG" pintype="passive"/>
+      <node ref="U201" pin="12" pinfunction="Q" pintype="output"/>
+    </net>
+    <net code="10" name="CML_QN">
+      <node ref="J202" pin="1" pinfunction="SIG" pintype="passive"/>
+      <node ref="U201" pin="10" pinfunction="QN" pintype="output"/>
+    </net>
+    <net code="11" name="CMP_EN">
+      <node ref="J203" pin="5" pinfunction="5" pintype="passive"/>
+      <node ref="R203" pin="1" pintype="passive"/>
+      <node ref="U201" pin="7" pinfunction="SDN" pintype="input"/>
+    </net>
+    <net code="12" name="DAC_OUT">
+      <node ref="R201" pin="1" pintype="passive"/>
+      <node ref="U202" pin="2" pinfunction="VOUT" pintype="output"/>
+    </net>
+    <net code="13" name="GND">
+      <node ref="C103" pin="2" pintype="passive"/>
+      <node ref="C104" pin="2" pintype="passive"/>
+      <node ref="C105" pin="2" pintype="passive"/>
+      <node ref="C106" pin="2" pintype="passive"/>
+      <node ref="C107" pin="2" pintype="passive"/>
+      <node ref="C201" pin="2" pintype="passive"/>
+      <node ref="C202" pin="2" pintype="passive"/>
+      <node ref="C203" pin="2" pintype="passive"/>
+      <node ref="C204" pin="2" pintype="passive"/>
+      <node ref="C205" pin="2" pintype="passive"/>
+      <node ref="C206" pin="2" pintype="passive"/>
+      <node ref="C207" pin="2" pintype="passive"/>
+      <node ref="C301" pin="2" pintype="passive"/>
+      <node ref="C302" pin="2" pintype="passive"/>
+      <node ref="C303" pin="2" pintype="passive"/>
+      <node ref="C304" pin="2" pintype="passive"/>
+      <node ref="C305" pin="2" pintype="passive"/>
+      <node ref="C306" pin="2" pintype="passive"/>
+      <node ref="C307" pin="2" pintype="passive"/>
+      <node ref="C308" pin="2" pintype="passive"/>
+      <node ref="D101" pin="3" pinfunction="K" pintype="passive"/>
+      <node ref="D102" pin="1" pinfunction="A" pintype="passive"/>
+      <node ref="J101" pin="2" pinfunction="SHIELD" pintype="passive"/>
+      <node ref="J201" pin="2" pinfunction="SHIELD" pintype="passive"/>
+      <node ref="J202" pin="2" pinfunction="SHIELD" pintype="passive"/>
+      <node ref="J203" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="J301" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="J302" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="R101" pin="2" pintype="passive"/>
+      <node ref="R103" pin="2" pintype="passive"/>
+      <node ref="R108" pin="2" pintype="passive"/>
+      <node ref="R110" pin="2" pintype="passive"/>
+      <node ref="R202" pin="2" pintype="passive"/>
+      <node ref="R203" pin="2" pintype="passive"/>
+      <node ref="R208" pin="2" pintype="passive"/>
+      <node ref="R209" pin="2" pintype="passive"/>
+      <node ref="U101" pin="4" pinfunction="V-" pintype="power_in"/>
+      <node ref="U201" pin="11" pinfunction="VEE" pintype="power_in"/>
+      <node ref="U201" pin="13" pinfunction="EP" pintype="power_in"/>
+      <node ref="U201" pin="3" pinfunction="VEE" pintype="power_in"/>
+      <node ref="U201" pin="5" pinfunction="VEE" pintype="power_in"/>
+      <node ref="U201" pin="9" pinfunction="VEE" pintype="power_in"/>
+      <node ref="U202" pin="4" pinfunction="AGND" pintype="power_in"/>
+      <node ref="U202" pin="5" pinfunction="SPI2C" pintype="input"/>
+    </net>
+    <net code="14" name="HOST_CLK">
+      <node ref="J203" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="R204" pin="1" pintype="passive"/>
+    </net>
+    <net code="15" name="HOST_DIN">
+      <node ref="J203" pin="3" pinfunction="3" pintype="passive"/>
+      <node ref="R205" pin="1" pintype="passive"/>
+    </net>
+    <net code="16" name="HOST_SYNC_N">
+      <node ref="J203" pin="4" pinfunction="4" pintype="passive"/>
+      <node ref="R206" pin="1" pintype="passive"/>
+    </net>
+    <net code="17" name="HYS">
+      <node ref="R202" pin="1" pintype="passive"/>
+      <node ref="U201" pin="8" pinfunction="LE/HYS" pintype="input"/>
+    </net>
+    <net code="18" name="Q1_B">
+      <node ref="D103" pin="3" pinfunction="K" pintype="passive"/>
+      <node ref="Q101" pin="1" pinfunction="B" pintype="input"/>
+      <node ref="R102" pin="2" pintype="passive"/>
+      <node ref="R105" pin="2" pintype="passive"/>
+    </net>
+    <net code="19" name="Q1_E">
+      <node ref="D103" pin="1" pinfunction="A" pintype="passive"/>
+      <node ref="Q101" pin="2" pinfunction="E" pintype="passive"/>
+      <node ref="Q101" pin="4" pinfunction="E" pintype="passive"/>
+      <node ref="R103" pin="1" pintype="passive"/>
+      <node ref="R106" pin="1" pintype="passive"/>
+    </net>
+    <net code="20" name="REF2V5">
+      <node ref="C206" pin="1" pintype="passive"/>
+      <node ref="R107" pin="1" pintype="passive"/>
+      <node ref="R109" pin="1" pintype="passive"/>
+      <node ref="U202" pin="10" pinfunction="VREFIO" pintype="bidirectional"/>
+    </net>
+    <net code="21" name="SENSE">
+      <node ref="C101" pin="1" pintype="passive"/>
+      <node ref="D101" pin="1" pinfunction="A" pintype="passive"/>
+      <node ref="D102" pin="3" pinfunction="K" pintype="passive"/>
+      <node ref="J101" pin="1" pinfunction="SIG" pintype="passive"/>
+      <node ref="R101" pin="1" pintype="passive"/>
+    </net>
+    <net code="22" name="SERVO_FB">
+      <node ref="C102" pin="2" pintype="passive"/>
+      <node ref="R106" pin="2" pintype="passive"/>
+      <node ref="U101" pin="2" pinfunction="-" pintype="input"/>
+    </net>
+    <net code="23" name="SERVO_OUT">
+      <node ref="C102" pin="1" pintype="passive"/>
+      <node ref="R105" pin="1" pintype="passive"/>
+      <node ref="U101" pin="1" pinfunction="OUT" pintype="output"/>
+    </net>
+    <net code="24" name="SPI_CLK">
+      <node ref="R204" pin="2" pintype="passive"/>
+      <node ref="R208" pin="1" pintype="passive"/>
+      <node ref="U202" pin="6" pinfunction="SCLK" pintype="input"/>
+    </net>
+    <net code="25" name="SPI_DIN">
+      <node ref="R205" pin="2" pintype="passive"/>
+      <node ref="R209" pin="1" pintype="passive"/>
+      <node ref="U202" pin="8" pinfunction="SDIN" pintype="input"/>
+    </net>
+    <net code="26" name="SPI_SYNC_N">
+      <node ref="R206" pin="2" pintype="passive"/>
+      <node ref="R207" pin="2" pintype="passive"/>
+      <node ref="U202" pin="7" pinfunction="SYNC" pintype="input"/>
+    </net>
+    <net code="27" name="VBCAS">
+      <node ref="C105" pin="1" pintype="passive"/>
+      <node ref="C106" pin="1" pintype="passive"/>
+      <node ref="Q102" pin="1" pinfunction="B" pintype="input"/>
+      <node ref="R111" pin="2" pintype="passive"/>
+    </net>
+    <net code="28" name="VCAS_BUF">
+      <node ref="R111" pin="1" pintype="passive"/>
+      <node ref="U101" pin="6" pinfunction="-" pintype="input"/>
+      <node ref="U101" pin="7" pinfunction="OUT" pintype="output"/>
+    </net>
+    <net code="29" name="VCAS_REF">
+      <node ref="C104" pin="1" pintype="passive"/>
+      <node ref="R109" pin="2" pintype="passive"/>
+      <node ref="R110" pin="1" pintype="passive"/>
+      <node ref="U101" pin="5" pinfunction="+" pintype="input"/>
+    </net>
+    <net code="30" name="VSET">
+      <node ref="C103" pin="1" pintype="passive"/>
+      <node ref="R107" pin="2" pintype="passive"/>
+      <node ref="R108" pin="1" pintype="passive"/>
+      <node ref="U101" pin="3" pinfunction="+" pintype="input"/>
+    </net>
+    <net code="31" name="VTH">
+      <node ref="C201" pin="1" pintype="passive"/>
+      <node ref="R201" pin="2" pintype="passive"/>
+      <node ref="U201" pin="4" pinfunction="VP_(+)" pintype="input"/>
+    </net>
+    <net code="32" name="unconnected-(D101-NC-Pad2)">
+      <node ref="D101" pin="2" pinfunction="NC" pintype="no_connect"/>
+    </net>
+    <net code="33" name="unconnected-(D102-NC-Pad2)">
+      <node ref="D102" pin="2" pinfunction="NC" pintype="no_connect"/>
+    </net>
+    <net code="34" name="unconnected-(D103-NC-Pad2)">
+      <node ref="D103" pin="2" pinfunction="NC" pintype="no_connect"/>
+    </net>
+    <net code="35" name="unconnected-(U202-NC-Pad3)">
+      <node ref="U202" pin="3" pinfunction="NC" pintype="no_connect"/>
+    </net>
+    <net code="36" name="unconnected-(U202-NC-Pad9)">
+      <node ref="U202" pin="9" pinfunction="NC" pintype="no_connect"/>
+    </net>
+  </nets>
+</export>
