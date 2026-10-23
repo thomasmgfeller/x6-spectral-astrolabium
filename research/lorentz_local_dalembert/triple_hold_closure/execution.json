@@ -1,0 +1,80 @@
+{
+  "date": "2026-10-23",
+  "source_commit": "ebe17b12f56a1220ee78d08a129488f1eb6bc944",
+  "internal_freeze_utc": "2026-10-23T12:31:50.168615+00:00",
+  "frozen_files": 227,
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+  "dependencies": {
+    "numpy": "2.3.5",
+    "scipy": "1.17.0"
+  },
+  "run": {
+    "exit_code": 0,
+    "workers": 4,
+    "status": "THREE_PARAMETER_CUBE_EXCLUDED",
+    "log": "run.log",
+    "log_sha256": "aa3b50fb35ba7e2a7c7078933640c4cd8c7bec1d032262709a4b229a9846b06b"
+  },
+  "deterministic_replay": {
+    "exit_code": 0,
+    "workers": 2,
+    "all_round_archives_equal": true,
+    "summary_equal": true,
+    "log": "replay.log",
+    "log_sha256": "f0a0477bc212d382101c24e0ee9a285ceec0ef99e07ffd6f7cfc3039ce457380"
+  },
+  "independent_audit": {
+    "exit_code": 0,
+    "status": "PASS",
+    "checks_summed_across_rounds": {
+      "inherited_algebra_controls_rechecked": 24,
+      "missing_child_controls": 8,
+      "wrong_child_boundary_controls": 4,
+      "missing_stage_input_controls": 6,
+      "independent_exact_q_ranges": 243600,
+      "independent_direct_weight_enclosure_checks": 1384,
+      "missing_projection_rectangle_controls": 6,
+      "closed_projection_covers": 6,
+      "independent_event_mean_rectangles": 444,
+      "independent_100_digit_marginal_PMF_checks": 144,
+      "wrong_cached_certificate_controls": 3,
+      "direct_subset_point_checks": 1908,
+      "whole_rectangle_subset_checks": 212,
+      "missing_overlap_slice_controls": 130,
+      "independent_110_digit_difference_PMF_checks": 133120,
+      "exclusive_rate_rectangles": 66560,
+      "uniform_difference_laws": 130,
+      "wrong_overlap_cache_controls": 6,
+      "new_children": 1160,
+      "whole_box_order_checks": 4
+    },
+    "log": "audit.log",
+    "log_sha256": "17a6121c9a0d0f23274556fdf30377d75c0d2545d7f3cdf704e877c5c703a606"
+  },
+  "per_source_box_inventory": {
+    "status": "PASS",
+    "source_hold_cells": 38,
+    "closed_cells": 38,
+    "unresolved_cells": 0
+  },
+  "fresh_archive_assembly": {
+    "status": "PASS",
+    "archives": 4,
+    "transport_parts": 9,
+    "bytes": 29411042,
+    "byte_identical": true
+  },
+  "prior_source_ci": {
+    "commit": "ebe17b12f56a1220ee78d08a129488f1eb6bc944",
+    "all_five_runs_success": true,
+    "run_ids": [
+      39935649842,
+      39935650001,
+      39935649941,
+      39935650014,
+      39935649905
+    ]
+  },
+  "provenance": "Internal runner/contract/input freeze before new child evaluations; predecessor results known. Audit, inventory generator, transport packaging and documentation were adapted afterwards. No external preregistration, independent personnel review or proof-assistant verification."
+}
