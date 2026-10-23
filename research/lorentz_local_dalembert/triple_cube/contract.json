@@ -1,0 +1,80 @@
+{
+  "schema": "eigenzeit.triple-cube/1",
+  "source_commit": "beb736d5e5a025db924d568092b668e7ac51044b",
+  "source_tree": "ec23c709000fe98237513e0f9cb7ca773c73d5ae",
+  "nodes": [
+    15,
+    17,
+    5
+  ],
+  "axis": 1,
+  "domain": [
+    "-1/10",
+    "1/10"
+  ],
+  "grid_per_axis": 8,
+  "refinement_rounds": 2,
+  "maximum_parents_per_round": 32,
+  "neumann_refinements": 12,
+  "gap_gate": "1/5",
+  "tv_gate": "1/4",
+  "maximum_marginal_cells": 64,
+  "maximum_marginal_events_per_cell": 2,
+  "maximum_overlap_cells": 16,
+  "poisson": {
+    "log_series_terms": 32,
+    "cdf_grid_digits": 80,
+    "cdf_upper_steps": 2048,
+    "maximum_mean": 32768,
+    "target_probability_interval_width": "1e-25"
+  },
+  "overlap": {
+    "overlap_slices": 64,
+    "maximum_exclusive_mean": 2048,
+    "probability": {
+      "cdf_grid_digits": 80,
+      "x_upper_steps": 1024,
+      "y_upper_steps": 2048,
+      "maximum_mean": 32768,
+      "numerical_event_width_target": "1e-65"
+    }
+  },
+  "classification": "Independent-of-node5 source projection, node5 law strips, whole-box order contradiction, joint rank-at-most-six gap bound; otherwise HOLD. After fixed octree budget, bounded exact marginal then pair-overlap events.",
+  "priority": "Descending exact box volume, then numeric octree path.",
+  "stop": "8^3 initial cells, at most2 rounds of32 eight-way splits (at most1024 geometric cells); at most64 marginal-stage cells with2 events each; then at most16 remaining cells with one best pair-anchor event and64 overlap slices. No post-result extension.",
+  "freeze_note": "Internal freeze before first new cube classification or event evaluation. Prior PR118 evidence and the six declared exact algebra controls are known. Not external preregistration.",
+  "node_selection": "Retain nodes15/17; add the smallest support index not already selected, node5. No search over third nodes.",
+  "algebra_controls": [
+    [
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "1/100",
+      "-1/50",
+      "3/100"
+    ],
+    [
+      "-1/25",
+      "1/50",
+      "-1/100"
+    ],
+    [
+      "1/10",
+      "-1/10",
+      "1/10"
+    ],
+    [
+      "-1/10",
+      "1/10",
+      "-1/10"
+    ],
+    [
+      "1/100",
+      "1/50",
+      "0"
+    ]
+  ],
+  "audit_corner_boxes": 8
+}
