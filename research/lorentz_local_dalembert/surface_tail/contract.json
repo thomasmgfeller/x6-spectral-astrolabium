@@ -1,0 +1,41 @@
+{
+  "schema": "eigenzeit.surface-tail/1",
+  "source_commit": "c2af48b6210b24809959a2ffe6e50503308b9f85",
+  "source_tree": "571856c674370564a18c1c027b17b7023db69845",
+  "source_hold_cells": 775,
+  "source_untested_cells": 744,
+  "nodes": [
+    15,
+    17
+  ],
+  "axis": 1,
+  "domain": [
+    "-1/10",
+    "1/10"
+  ],
+  "gap_gate": "1/5",
+  "tv_gate": "1/4",
+  "maximum_marginal_events_per_cell": 2,
+  "maximum_overlap_cells": 128,
+  "poisson": {
+    "log_series_terms": 32,
+    "cdf_grid_digits": 80,
+    "cdf_upper_steps": 2048,
+    "maximum_mean": 32768,
+    "target_probability_interval_width": "1e-25"
+  },
+  "overlap": {
+    "overlap_slices": 64,
+    "maximum_exclusive_mean": 2048,
+    "probability": {
+      "cdf_grid_digits": 80,
+      "x_upper_steps": 1024,
+      "y_upper_steps": 2048,
+      "maximum_mean": 32768,
+      "numerical_event_width_target": "1e-65"
+    }
+  },
+  "classification": "All 744 previously untested source HOLD rectangles receive up to two geometry-ranked exact marginal events; then at most 128 new marginal failures receive one best-anchor overlap event, ranked by descending best common-anchor score then numeric path.",
+  "stop": "One fixed pass, unchanged rectangles, no extra anchors, thresholds, subdivision or post-evaluation budget extension. Preserve other31 HOLDs and every old exclusion.",
+  "freeze_note": "Internal freeze before new event probabilities; PR116 results known, not external preregistration."
+}
