@@ -474,6 +474,8 @@ Read [Sagnac integration and test scope](docs/SAGNAC_INTEGRATION.md).
 
 ## Photonic two-qubit experiment — design preview
 
+**New: [four-layer cascode PCB proposal v0.1](experiments/photonic-two-qubit/hardware/pcb-cascode-v0.1/README.md)** ([PDF](experiments/photonic-two-qubit/manuals/PCB_Kaskoden_Frontend_Entwurf_v0_1.pdf)). Single-channel 3.3 V frontend, controlled 50-ohm CML paths and proposed acceptance criteria. Design starting points only; schematic, routing, SPICE/EM and hardware validation remain open.
+
 [Complete experimental design and supporting materials](experiments/photonic-two-qubit/README.md): Sagnac source concept, v0.7 RTL/host reference, fabrication CAD and corrected Jig manual, detector-development archives, source literature and staged laboratory protocol. The **Photonic Reference** workflow checks software and mechanical models. No physical measurements, demonstrated entanglement, quantum processor or hardware qualification are claimed.
 
 ## Reproduce existing scientific modules

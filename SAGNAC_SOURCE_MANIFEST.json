@@ -8,7 +8,7 @@
   "files": {
     ".github/workflows/photonic-reference.yml": "1770b411f33b34f4d9c8508d71174816abd0a5faefa70369feb7612d7fb3d250",
     ".github/workflows/x6-validation.yml": "e456ea5d0e577540a921cd52c6adbbab7a9c2455063a629e1775ea02a9190615",
-    "README.md": "857589de8ee7be6b916edabe240b6c51a183bd5e00952ee0ae3c83e1a5f27dfd",
+    "README.md": "e77c972d5049ba90ff4b0db39c71d73488603f9b343b0f7a81d34754bb725be2",
     "app/index.html": "56df754a1c5c3d26022e54b000f0d9e52ab4067d39e6a664556de12bfd7dc071",
     "app/sagnac-core.js": "842576f5e2661e42d19bb064cc7e1e27ce8219659d7c73c619ce6d08c1288d72",
     "app/sagnac-ui.js": "c243ca29b0570a0c3ff646b235f9b16929a56c41682707737d583cc13e8d8856",
@@ -25,8 +25,8 @@
     "experiments/photonic-two-qubit/LAB_PROTOCOL.md": "e4086534c65b19a292e7ae7a7554f30c30db4e1f6c189a07adc659c59571709d",
     "experiments/photonic-two-qubit/LICENSES.md": "aaa0e888de729dce3fd753aca4b2328c758808e89daacfb9bd8fd0a83525c8ea",
     "experiments/photonic-two-qubit/OPTICAL_DESIGN.md": "5677ba6a7023324732f284c692b96540afc2b012cd079626147bca44c01c83a9",
-    "experiments/photonic-two-qubit/PROVENANCE.json": "5aef1e130653a6b2237790dfd4c5b909178467466ae414a538dbe4567db80f16",
-    "experiments/photonic-two-qubit/README.md": "5b154108eb55dce5ca00a3114b1b617f7a82791ea659a5fc8698b7399413da19",
+    "experiments/photonic-two-qubit/PROVENANCE.json": "56df007eb57ff202e03ae40283afb2101d6a123ca12c1016ba13974841a12106",
+    "experiments/photonic-two-qubit/README.md": "ce453c044dce4875de7a375a102cac7bb3bd3a66c6525e761d4660c92510d95c",
     "experiments/photonic-two-qubit/REPRODUCE.md": "a748dd23a413853411fbfb82aa130a184cc53b63d67ea127611c68b0aeb818fd",
     "experiments/photonic-two-qubit/SCIENTIFIC_STATUS.md": "ea162f5eddd4f6a386db2b5e1a9fca2ae9ed0f1a55e7cdf7b1d3fc4ee08d8447",
     "experiments/photonic-two-qubit/SOURCES.md": "320cdf36254bada603ec6784f04c44e4b840849e20c49da8797c7560fd97d71b",
@@ -83,7 +83,9 @@
     "tests/python/verify_manifest.py": "cc7a5e7b014f266790a0225b884652d4055e1321604213af6c7d8994d5f5cf0e",
     "tests/sagnac/browser_test.cjs": "8c1542ff94604db704c6ca58e2ed11ede436df01ccae17a42587e3d5693dd9b6",
     "tests/sagnac/test_bridge.py": "f3d81dfdd626b44bb224f1b93993ebc1f6255b12ac2165ee61420eab660cade9",
-    "tests/sagnac/test_core.cjs": "7a665f2b3378d9a86f74af4a580a6afb4e3ec8517d4d2431a9ed34a9adac82d1"
+    "tests/sagnac/test_core.cjs": "7a665f2b3378d9a86f74af4a580a6afb4e3ec8517d4d2431a9ed34a9adac82d1",
+    "experiments/photonic-two-qubit/manuals/PCB_Kaskoden_Frontend_Entwurf_v0_1.pdf": "d67fadfba746e1494bb9a31a2f3753ec5c8e19a1ecd6383ab2214e4f487db3e4",
+    "experiments/photonic-two-qubit/hardware/pcb-cascode-v0.1/README.md": "7de324ade82aef1e41a2890b9e1f5c81fdccf19c8d13ca91e4fc6042ace8b52d"
   },
   "documentation_updates": [
     {
@@ -146,6 +148,37 @@
           "path": "index.html",
           "previous_sha256": "602d4917d2ca6bf181993757a5277bddd209f53bec05e68ad2829b2963076969",
           "sha256": "015d5d78a51f6b8a60aa21ef507f53b7c8a988ebe6fe95edabd070ce7246a2a3"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-23",
+      "scope": "Publish the approved cascode PCB proposal and navigation. No hardware validation, implementation or licensing change.",
+      "files": [
+        {
+          "path": "README.md",
+          "previous_sha256": "857589de8ee7be6b916edabe240b6c51a183bd5e00952ee0ae3c83e1a5f27dfd",
+          "sha256": "e77c972d5049ba90ff4b0db39c71d73488603f9b343b0f7a81d34754bb725be2"
+        },
+        {
+          "path": "experiments/photonic-two-qubit/README.md",
+          "previous_sha256": "5b154108eb55dce5ca00a3114b1b617f7a82791ea659a5fc8698b7399413da19",
+          "sha256": "ce453c044dce4875de7a375a102cac7bb3bd3a66c6525e761d4660c92510d95c"
+        },
+        {
+          "path": "experiments/photonic-two-qubit/PROVENANCE.json",
+          "previous_sha256": "5aef1e130653a6b2237790dfd4c5b909178467466ae414a538dbe4567db80f16",
+          "sha256": "56df007eb57ff202e03ae40283afb2101d6a123ca12c1016ba13974841a12106"
+        },
+        {
+          "path": "experiments/photonic-two-qubit/manuals/PCB_Kaskoden_Frontend_Entwurf_v0_1.pdf",
+          "previous_sha256": null,
+          "sha256": "d67fadfba746e1494bb9a31a2f3753ec5c8e19a1ecd6383ab2214e4f487db3e4"
+        },
+        {
+          "path": "experiments/photonic-two-qubit/hardware/pcb-cascode-v0.1/README.md",
+          "previous_sha256": null,
+          "sha256": "7de324ade82aef1e41a2890b9e1f5c81fdccf19c8d13ca91e4fc6042ace8b52d"
         }
       ]
     }
