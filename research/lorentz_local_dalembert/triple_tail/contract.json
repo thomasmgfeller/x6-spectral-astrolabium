@@ -1,0 +1,45 @@
+{
+  "nodes": [
+    15,
+    17,
+    5
+  ],
+  "axis": 1,
+  "domain": [
+    "-1/10",
+    "1/10"
+  ],
+  "gap_gate": "1/5",
+  "tv_gate": "1/4",
+  "maximum_marginal_events_per_cell": 2,
+  "poisson": {
+    "log_series_terms": 32,
+    "cdf_grid_digits": 80,
+    "cdf_upper_steps": 2048,
+    "maximum_mean": 32768,
+    "target_probability_interval_width": "1e-25"
+  },
+  "overlap": {
+    "overlap_slices": 64,
+    "maximum_exclusive_mean": 2048,
+    "probability": {
+      "cdf_grid_digits": 80,
+      "x_upper_steps": 1024,
+      "y_upper_steps": 2048,
+      "maximum_mean": 32768,
+      "numerical_event_width_target": "1e-65"
+    }
+  },
+  "schema": "eigenzeit.triple-tail/1",
+  "source_commit": "19dbcf0fb9c0e87276a7b76d77dab4d42bfbcabd",
+  "source_tree": "eee2cf2070ed2b79502dd07b7e8805cbd3296b67",
+  "expected_inputs": 398,
+  "expected_source_holds": 421,
+  "expected_terminal_cells": 960,
+  "maximum_marginal_cells": 398,
+  "maximum_overlap_cells": 398,
+  "selection": "All source HOLD boxes absent from both source marginal and overlap stages; numeric octree path order. Preserve the other23 source HOLD boxes.",
+  "cache": "Shared reference and moved laws keyed by pair, anchor, threshold and complete statistics record. Reuse is not independent replication.",
+  "stop": "At most2 geometry-ranked marginal events per input, stopping on exclusion. Every remaining input receives exactly1 highest-ranked pair/anchor event with64 slices. No splits, retuning or post-result extension.",
+  "freeze_note": "Internal freeze before first new event evaluation. Source PR119 outcomes known; not external preregistration."
+}
