@@ -1,0 +1,476 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[provide=*,ngerman]{babel}
+\usepackage{lmodern,microtype,amsmath,amssymb,amsthm,mathtools}
+\usepackage[margin=24mm,headheight=14pt]{geometry}
+\usepackage{booktabs,tabularx,enumitem,fancyhdr,xcolor}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdftitle={Allgemeine Stabilität bei endlichem Fehler},pdfauthor={Arbeitsentwurf für Thomas Gfeller},pdfsubject={General Finite Error Stability Theorem Version 0.1},pdfkeywords={Eigenzeit, kausale Mengen, Poisson, Stabilität, Operatorgewichte}}
+\usepackage{url}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt}
+\setlist{nosep,leftmargin=*}
+\allowdisplaybreaks[1]
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\small Eigenzeitforschung}\fancyhead[R]{\small Wissenschaftlicher Entwurf 0.1}
+\fancyfoot[C]{\small\thepage}
+\renewcommand{\headrulewidth}{0.2pt}
+\newtheorem{theorem}{Satz}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Korollar}
+\theoremstyle{definition}\newtheorem{definition}{Definition}
+\theoremstyle{remark}\newtheorem*{remark}{Bemerkung}
+\newcommand{\TV}{\operatorname{TV}}
+\newcommand{\Pois}{\operatorname{Pois}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newcommand{\abs}[1]{\left|#1\right|}
+\newcommand{\dd}{\mathrm{d}}
+\newcommand{\diag}{\operatorname{diag}}
+\newcommand{\diam}{\operatorname{diam}}
+\newcommand{\rank}{\operatorname{rank}}
+\newcommand{\smin}{\sigma_{\min}}
+\newcommand{\GFEST}{General Finite Error Stability Theorem}
+\title{\textbf{Allgemeine Stabilität bei endlichem Fehler}\\[5pt]\large Ein Satzentwurf für korrelierte Intervallzählungen und diskrete Operatorgewichte}
+\author{Arbeitsentwurf für Thomas Gfeller\\\small X6 Spectral Astrolabium und Eigenzeitforschung}
+\date{23. Oktober 2026 \quad Version 0.1}
+\begin{document}
+\maketitle
+\thispagestyle{fancy}
+\begin{abstract}
+Dieser Entwurf präzisiert einen allgemeinen Stabilitätssatz für die Rekonstruktion diskreter d'Alembert-Operatorgewichte aus endlich vielen, möglicherweise überlappenden Poisson-Intervallzählungen. Der erste Satz charakterisiert auf einer kompakten Modellklasse, wann ein gegen null gehender Stabilitätsmodul existiert. Der zweite Satz gibt für ein vollständig beobachtetes Landmarkenmodell in flacher Raumzeit eine explizite, endliche Fehlerabschätzung. Dabei dürfen alle Stützpunkte, die Landmarken und der Wurzelpunkt gemeinsam variieren; weder eine Einpunktbewegung noch eine Linearisierung wird vorausgesetzt.
+
+Die Aussagen werden unter ihren angegebenen Voraussetzungen bewiesen. Die numerisch nützliche Anwendung auf die gesamte gewünschte X6-Modellklasse ist damit noch nicht nachgewiesen. Insbesondere folgt aus den bisherigen Referenzvergleichen weder ein allgemeiner Zwei-Konfigurationen-Satz noch eine zehnprozentige Rekonstruktionsgarantie. Die Konstanten des expliziten Satzes sind bewusst konservativ und können eine praktisch leere Schranke liefern.
+\end{abstract}
+
+\textbf{Status und Benennung.} Arbeitstitel: \emph{\GFEST} (GFEST). Die Formulierung „infite-error“ wird hier als „finite-error“ verstanden. Ein unbeschränktes Fehlerbudget wäre eine andere Aussage; bei totaler Variation ist bereits die Schranke $\TV\leq1$ informationsleer. Der Grenzfall verschwindenden Fehlers wird ausdrücklich behandelt. Dieser Text ist ein überprüfbarer Beweisentwurf, keine unabhängige Begutachtung oder maschinell formalisierte Verifikation. Es wird kein Prioritäts- oder Neuheitsanspruch erhoben.
+
+\section{Gegenstand und Quantoren}
+
+Eine Konfiguration $\theta$ beschreibt endlich viele beschriftete Punkte, die Dichte, die physikalische Skala und das Beobachtungsprotokoll. Nach Fixierung der nicht variierenden Modellbestandteile sei $K$ die zugelassene Konfigurationsklasse. Isometrien dürfen entweder herausquotientiert oder durch eine explizite Eichung entfernt werden. Eine kompakte Koordinatenmenge darf wegen der nichtkompakten Lorentzgruppe nicht ohne Begründung angenommen werden.
+
+Das Experiment liefert eine Zufallsvariable mit Gesetz $P_\theta$ auf einem gemeinsamen messbaren Raum. Die Zielgröße ist ein Vektor $W(\theta)\in\R^n$ physikalischer Operatorgewichte einschließlich des Wurzelgewichts. Für $P,Q$ verwenden wir
+\begin{equation}
+ \TV(P,Q)=\sup_E\abs{P(E)-Q(E)}\in[0,1].
+\end{equation}
+Für nichtverschwindende Gewichte sei
+\begin{equation}\label{eq:gap}
+ g(\theta,\theta')=
+ \frac{2\norm{W(\theta)-W(\theta')}_2}
+ {\norm{W(\theta)}_2+\norm{W(\theta')}_2}.
+\end{equation}
+Dies ist die bisher verwendete symmetrische relative Gewichtsabweichung. Sie wird hier nicht als Metrik benutzt. Sie ist höchstens $2$ und beschreibt den Operator auf beschrifteten, euklidisch normierten Knotenwerten. Sie ist keine relative Fehlergarantie für jede einzelne skalare Feldantwort.
+
+\textbf{Allgemeine Zielaussage.} Gesucht ist eine explizite Funktion $\Omega_K$ mit $\Omega_K(\varepsilon)\to0$ für $\varepsilon\downarrow0$, so dass
+\begin{equation}\label{eq:goal}
+ \forall\theta,\theta'\in K:\quad
+ \TV(P_\theta,P_{\theta'})\leq\varepsilon
+ \quad\Longrightarrow\quad
+ g(\theta,\theta')\leq\Omega_K(\varepsilon).
+\end{equation}
+Der Quantor umfasst \emph{beide} Konfigurationen. Der bisher untersuchte Spezialfall $\theta'=\theta_0$ mit fester Referenz ist schwächer. Ein Nachweis nur für $\theta_0$ darf nicht in \eqref{eq:goal} eingesetzt werden.
+
+\section{Ein allgemeines Identifizierbarkeitskriterium}
+
+\begin{theorem}[Existenz eines uniformen Stabilitätsmoduls]\label{thm:compact}
+Sei $K\ne\varnothing$ ein kompakter metrischer Raum, $P:K\to\mathcal P(\mathcal X)$ stetig bezüglich totaler Variation und $W:K\to\R^n$ stetig. Definiere
+\begin{equation}\label{eq:omega}
+ \omega_K(\varepsilon)=
+ \max\{\norm{W(\theta)-W(\theta')}_2:
+       \theta,\theta'\in K,\ \TV(P_\theta,P_{\theta'})\leq\varepsilon\}.
+\end{equation}
+Dann sind äquivalent:
+\begin{enumerate}[label=(\roman*)]
+ \item $P_\theta=P_{\theta'}$ impliziert $W(\theta)=W(\theta')$ für alle $\theta,\theta'\in K$.
+ \item $\lim_{\varepsilon\downarrow0}\omega_K(\varepsilon)=0$.
+\end{enumerate}
+Falls zusätzlich $w_*:=\min_K\norm{W(\theta)}_2>0$, gilt \eqref{eq:goal} mit
+$\Omega_K(\varepsilon)=\min\{2,\omega_K(\varepsilon)/w_*\}$.
+\end{theorem}
+
+\begin{proof}
+Die zulässige Paarmenge in \eqref{eq:omega} ist eine nichtleere abgeschlossene Teilmenge von $K\times K$, also kompakt; das Maximum existiert. Aus (ii) folgt (i), weil ein Paar mit gleichem Gesetz für jedes $\varepsilon>0$ zulässig ist.
+
+Angenommen, (i) gilt und (ii) ist falsch. Dann existieren $a>0$, $\varepsilon_k\downarrow0$ und Paare $(\theta_k,\theta'_k)$ mit Gesetzesabstand höchstens $\varepsilon_k$ und Gewichtsabstand mindestens $a$. Eine Teilfolge konvergiert gegen $(\theta,\theta')\in K^2$. Stetigkeit und die Dreiecksungleichung für $\TV$ geben $P_\theta=P_{\theta'}$. Stetigkeit von $W$ gibt hingegen $\norm{W(\theta)-W(\theta')}_2\geq a$, im Widerspruch zu (i). Die relative Schranke folgt aus dem Nenner $\geq2w_*$ in \eqref{eq:gap}.
+\end{proof}
+
+Es genügt somit \emph{Zielidentifizierbarkeit}; die gesamte Geometrie muss nicht eindeutig rekonstruierbar sein. Der Satz liefert aber ohne zusätzliche Arbeit weder eine Rate noch eine brauchbare Konstante. Seine Schlussfolgerung als Annahme zu postulieren wäre zirkulär.
+
+Für $r>0$ ist die äquivalente Trennaufgabe
+\begin{equation}\label{eq:separation}
+ \Delta_K(r)=\min_{\norm{W(\theta)-W(\theta')}_2\geq r}
+                  \TV(P_\theta,P_{\theta'}),
+\end{equation}
+wobei das Minimum über eine leere Menge als $+\infty$ definiert wird. Unter Satz~\ref{thm:compact}(i) ist $\Delta_K(r)>0$. Aus $\varepsilon<\Delta_K(r)$ folgt Gewichtsabstand $<r$. Die Striktheit ist wesentlich: ein Nachweis nur mit Gleichheit am Schwellenwert erlaubt diese Schlussfolgerung nicht.
+
+\section{Das korrelierte Zählexperiment}
+
+Für den expliziten Satz betrachten wir flache $d$-dimensionale Raumzeit, $d\geq2$, mit
+$J=\diag(1,-1,\ldots,-1)$ und
+\[
+ q(x,y)=(x-y)^TJ(x-y).
+\]
+Alle Koordinaten und $q$ werden in physikalischen Einheiten verwendet. Für ein zeitartig getrenntes Paar ist $q>0$ und das Alexandrov-Volumen
+\begin{equation}\label{eq:volume}
+ V_d(q)=c_d q^{d/2},\qquad
+ c_d=\frac{v_{d-1}}{d\,2^{d-1}},
+\end{equation}
+wobei $v_{d-1}$ das Volumen des euklidischen Einheitsballs ist. Tatsächlich ist im Ruhesystem des Intervalls $V_d=2v_{d-1}\int_0^{\sqrt q/2}t^{d-1}\dd t$.
+Insbesondere $c_3=\pi/12$ und $c_4=\pi/24$.
+
+Eine homogene Poisson-Zufallsmaßverteilung mit \emph{bekannter, gemeinsamer} Dichte $\rho>0$ wird auf endlich vielen Intervallen $I_e(\theta)$ beobachtet. Sämtliche verwendeten Intervalle liegen vollständig im Beobachtungsgebiet. Für $Y_e=N(I_e(\theta))$ gilt marginal
+\begin{equation}\label{eq:means}
+ Y_e\sim\Pois(\mu_e(\theta)),\qquad
+ \mu_e(\theta)=\rho c_d q_e(\theta)^{d/2}.
+\end{equation}
+Die Intervalle dürfen sich überlappen. Eine Produktverteilung der $Y_e$ wird nicht vorausgesetzt.
+
+Für jedes nichtleere Teilmuster $S$ der Intervallbeschriftungen sei $A_S$ die Menge der Punkte, die genau in den Intervallen mit Index in $S$ liegen. Die Zählungen $Z_S=N(A_S)$ sind unabhängig und
+\begin{equation}\label{eq:atoms}
+ Y_e=\sum_{S\ni e}Z_S,\qquad
+ \mathbb E\prod_e t_e^{Y_e}
+ =\exp\left[\sum_{S\ne\varnothing}\lambda_S
+           \left(\prod_{e\in S}t_e-1\right)\right],
+ \quad\lambda_S=\rho\,|A_S|.
+\end{equation}
+Für $0<t_e\leq1$ definiert diese erzeugende Funktion das gemeinsame Gesetz der beschrifteten Zählungen. Eine Kovarianzmatrix allein spezifiziert dieses Gesetz nicht.
+
+\textbf{Konditionierung.} Die Geometrie der Intervalle ist hier ein deterministischer Parameter oder wird durch eine von der Zählstichprobe unabhängige Auswahl festgelegt. Werden Stützpunkte adaptiv aus derselben Poisson-Wolke ausgewählt, darf \eqref{eq:means} nach Konditionierung nicht ungeprüft weiterverwendet werden. Die gemeinsame Auswahl- und Beobachtungsverteilung müsste dann gesondert hergeleitet werden. Das bloße Konditionieren auf einen beobachteten Kausalgraphen erhält Poisson-Marginalen ebenfalls nicht automatisch.
+
+\begin{lemma}[Ein hinreichendes Stetigkeitskriterium]
+Sind alle endlich vielen $\lambda_S(\theta)$ stetig, so ist $P_\theta$ TV-stetig. Genauer gilt
+\[
+ \TV(P_\theta,P_{\theta'})
+ \leq1-\exp\!\left(-\sum_{S\ne\varnothing}
+                      |\lambda_S(\theta)-\lambda_S(\theta')|\right).
+\]
+\end{lemma}
+\begin{proof}
+Kopple für jedes $S$ einen gemeinsamen Poisson-Anteil mit Rate $\min(\lambda_S,\lambda'_S)$ und unabhängige Restanteile. Alle Atomzählungen stimmen überein, wenn sämtliche Restanteile null sind. Dieses Ereignis hat die angegebene Exponentialwahrscheinlichkeit. Die Abbildung von Atomzählungen auf $Y$ kann die Wahrscheinlichkeit einer Abweichung nicht erhöhen.
+\end{proof}
+Stetigkeit der Atomvolumina ist eine zu belegende Modellvoraussetzung, kein Ergebnis der bisherigen endlichen Boxenzählung. Für den folgenden quantitativen Satz ist dieses Stetigkeitslemma nicht erforderlich.
+
+\section{Rekonstruktion mit bewegten Landmarken}
+
+Es gibt $d+1$ beschriftete Landmarken $\ell_0,\ldots,\ell_d$ und $n=m+1$ beschriftete Stencilpunkte $x_0=r,x_1,\ldots,x_m$, wobei $r$ der Wurzelpunkt ist. Es werden alle Landmarkenpaare und alle Paare $(x_j,\ell_a)$ gezählt. Wiederholte Beobachtungen werden nicht als unabhängige Daten behandelt. Die hierfür benötigte Menge verschiedener Paarindizes heißt $E_*$. Zusätzliche Beobachtungen sind erlaubt. Die Anzahl der Punkte und ihre Beschriftungen sind im Vergleich fest.
+
+Die Vollständigkeit von $E_*$ ist eine starke Voraussetzung. Fehlen solche Distanzen, muss eine andere hinreichende Identifizierbarkeitsbedingung bewiesen werden; sie folgt nicht aus dem vorliegenden Satz.
+
+Mit $B=[\ell_1-\ell_0,\ldots,\ell_d-\ell_0]$ definieren wir
+\begin{align}
+ G_{ab}&=\frac{q(\ell_a,\ell_0)+q(\ell_b,\ell_0)-q(\ell_a,\ell_b)}2,
+ &&1\leq a,b\leq d,\label{eq:G}\\
+ v_a(x)&=\frac{q(x,\ell_0)+q(\ell_a,\ell_0)-q(x,\ell_a)}2,\\
+ t_j&=v(x_j)-v(r),\qquad c_j=G^{-1}t_j.\label{eq:c}
+\end{align}
+Direkte Expansion ergibt $G=B^TJB$, $v(x)=B^TJ(x-\ell_0)$ und somit, falls $B$ invertierbar ist,
+\begin{equation}\label{eq:coords}
+ c_j=B^{-1}(x_j-r),\qquad c_0=0.
+\end{equation}
+Landmarken und Wurzel dürfen zwischen den verglichenen Konfigurationen verschieden sein. In beiden wird jeweils \eqref{eq:G}--\eqref{eq:c} benutzt. Gemeinsame zeit- und raumorientierte Isometrien ändern diese intrinsischen Größen nicht. Für den skalaren Zieloperator ist auch eine gemeinsame räumliche Spiegelung unerheblich.
+
+Sei $p=1+d+d(d+1)/2$. In einer fest gewählten Reihenfolge setzen wir
+\begin{align}
+ \phi(c)&=(1,c_1,\ldots,c_d,c_1^2,\ldots,c_d^2,
+                         (c_ac_b)_{a<b})^T,\\
+ A&=[\phi(c_0),\ldots,\phi(c_m)]\in\R^{p\times n}.
+\end{align}
+Unsere Vorzeichenkonvention für den d'Alembert-Operator lautet $\Box=-\partial_t^2+\sum_i\partial_{x_i}^2$. In den Landmarkenkoordinaten ist er $-\sum_{a,b}(G^{-1})_{ab}\partial_a\partial_b$. Deshalb enthält der Momentenvektor
+\begin{equation}\label{eq:b}
+ b(G)=\left(0,\underbrace{0,\ldots,0}_{d},
+             (-2(G^{-1})_{aa})_{a=1}^d,
+             (-2(G^{-1})_{ab})_{a<b}\right)^T.
+\end{equation}
+Bei $\rank A=p$ ist die eindeutige Lösung minimaler euklidischer Norm von $Aw=b(G)$
+\begin{equation}\label{eq:weights}
+ W=A^T(AA^T)^{-1}b(G).
+\end{equation}
+Der Beweis folgt aus der orthogonalen Zerlegung $\R^n=\operatorname{ran}(A^T)\oplus\ker A$ und direktem Einsetzen. Die erste Zeile erzwingt die verschwindende Gewichtssumme. Invertible Änderungen der Polynomialbasis verändern weder die zulässige Gewichtsmenge noch ihr Normminimum. Damit stimmt \eqref{eq:weights} mit der Konstruktion in kartesischen Minkowski-Koordinaten überein.
+
+\textbf{Einheiten und bewegte Metrik.} Weil $q$ physikalische Längenquadrate bezeichnet, hat $G^{-1}$ bereits die Einheit Länge$^{-2}$; ein weiterer Faktor „scale$^{-2}$“ wäre hier falsch. Bei dimensionslosen Repository-Koordinaten ist zuerst $q_{\rm phys}=\text{scale}^2q_{\rm code}$ einzusetzen. Außerdem muss $b(G)$ bei Landmarkenbewegungen mitverändert werden. Ein Beweis mit veränderlichem $G$ und stillschweigend festem $b$ würde im Allgemeinen den falschen Operator vergleichen.
+
+\section{Expliziter allgemeiner Satz bei endlichem Fehler}
+
+\begin{theorem}[Quantitative Stabilität im vollständigen Landmarkenmodell]\label{thm:quant}
+Seien $d\geq2$, $n=m+1\geq p$, $\rho>0$, die Beschriftungen und $E_*$ fest. Jede Konfiguration $\theta\in K$ erfüllt das Modell der vorigen Abschnitte. Für gemeinsame Konstanten
+$0<q_*\leq Q<\infty$, $\gamma>0$ und $\kappa>0$ gelte \emph{für alle} $\theta\in K$:
+\begin{enumerate}[label=(H\arabic*)]
+ \item $q_*\leq q_e(\theta)\leq Q$ für alle $e\in E_*$; die Intervalle sind zeitartig, vollständig beobachtet und besitzen die fest deklarierte Orientierung.
+ \item $G(\theta)$ hat die Lorentz-Signatur $(1,d-1)$ und $\smin(G(\theta))\geq\gamma$.
+ \item $\smin(A(\theta))\geq\kappa$, wobei die kleinste der $p$ Zeilensingularwerte gemeint ist.
+ \item Die in \eqref{eq:means} vorausgesetzten Poisson-Marginalen gelten bei derselben bekannten Dichte und physikalischen Skala. $P_\theta$ enthält die benötigten beschrifteten Zählungen als messbare Projektionen.
+\end{enumerate}
+Für die folgenden, ausschließlich aus diesen Konstanten gebildeten Größen
+\begin{align}
+ a_G&=\frac{3d}{2},&
+ R&=\frac{\sqrt d\,Q}{\gamma},&
+ M&=\sqrt{n(1+R^2+R^4)},\label{eq:constants1}\\
+ C_c&=\frac{2\sqrt d}{\gamma}
+       +\frac{a_G\sqrt d\,Q}{\gamma^2},&
+ L_\phi&=\sqrt{d+(d+3)R^2},&
+ C_A&=\sqrt m\,L_\phi C_c,\\
+ B_b&=\frac{2\sqrt d}{\gamma},&
+ C_b&=\frac{2\sqrt d\,a_G}{\gamma^2},&
+ w_*&=\frac{\sqrt{2/d}}{QM},\label{eq:constants2}\\
+ C_W&=2B_bC_A\kappa^{-2}+C_b\kappa^{-1},\label{eq:CW}\\
+ L_q&=\frac{2}{d\rho c_d q_*^{d/2-1}},&
+ \Lambda&=\rho c_dQ^{d/2}\label{eq:constants3}
+\end{align}
+gelten für \emph{alle} $\theta,\theta'\in K$ die Aussagen:
+
+\textnormal{(a) Deterministischer Fehler der mittleren Zählungen.} Mit
+$\eta=\max_{e\in E_*}|\mu_e(\theta)-\mu_e(\theta')|$ gilt
+\begin{equation}\label{eq:det}
+ \norm{W(\theta)-W(\theta')}_2
+ \leq C_W\min\{Q-q_*,L_q\eta\}.
+\end{equation}
+
+\textnormal{(b) Nähe der vollständigen Beobachtungsgesetze.} Für $0\leq\varepsilon<1$ definiere
+\begin{align}
+ B_\mu(\varepsilon)&=\min\left\{\Lambda,
+      \log(1+e^\Lambda\varepsilon),
+      2\sqrt\Lambda\sqrt{-2\log(1-\varepsilon)}\right\},\label{eq:Bmu}\\
+ D_q(\varepsilon)&=\min\{Q-q_*,L_qB_\mu(\varepsilon)\},\\
+ \Omega_K(\varepsilon)&=\min\{2,C_WD_q(\varepsilon)/w_*\}.\label{eq:explicitOmega}
+\end{align}
+Dann impliziert $\TV(P_\theta,P_{\theta'})\leq\varepsilon$
+\begin{equation}\label{eq:mainbound}
+ \norm{W(\theta)-W(\theta')}_2\leq C_WD_q(\varepsilon),
+ \qquad g(\theta,\theta')\leq\Omega_K(\varepsilon).
+\end{equation}
+Insbesondere $\Omega_K(\varepsilon)\to0$ für $\varepsilon\downarrow0$. Keine Unabhängigkeit der beobachteten Intervallzählungen und kein Bewegungsweg zwischen $\theta$ und $\theta'$ werden vorausgesetzt.
+\end{theorem}
+
+Die Konstanten sind hinreichend, nicht optimal. Ein gesondert zertifiziertes größeres $w_*$ oder schärferes $M,C_A,C_b$ darf die entsprechenden konservativen Schranken ersetzen. Die Existenz dieser Formel allein beweist insbesondere nicht $\Omega_K(1/4)\leq1/5$.
+
+\subsection{Beweis der endlichen geometrischen Fehlerfortpflanzung}
+
+Setze $\delta=\max_{e\in E_*}|q_e(\theta)-q_e(\theta')|$; Striche bezeichnen die zweite Konfiguration. Alle Matrixnormen sind Spektralnormen, außer bei explizitem Index $F$.
+Aus \eqref{eq:G} folgt eintragsweise $|G'_{ab}-G_{ab}|\leq3\delta/2$, also
+\begin{equation}
+ \norm{G'-G}_2\leq a_G\delta,\qquad
+ \norm{G'^{-1}-G^{-1}}_2
+ \leq\gamma^{-2}a_G\delta.\label{eq:resolvent}
+\end{equation}
+Die zweite Ungleichung ist die exakte Resolventenidentität
+$G'^{-1}-G^{-1}=G'^{-1}(G-G')G^{-1}$. Sie benutzt die Kondition beider Endpunkte und erfordert keine infinitesimale Näherung.
+
+In $t_j=v(x_j)-v(r)$ hebt sich der Landmarkenterm auf. Jede Komponente enthält vier $q$-Terme mit Faktor $1/2$, so dass
+\[
+ \norm{t_j}_2\leq\sqrt d\,Q,
+ \qquad\norm{t'_j-t_j}_2\leq2\sqrt d\,\delta.
+\]
+Folglich $\norm{c_j}_2,\norm{c'_j}_2\leq R$ und nach \eqref{eq:resolvent}
+\[
+ \norm{c'_j-c_j}_2
+ \leq\norm{G'^{-1}}_2\norm{t'_j-t_j}_2
+       +\norm{G'^{-1}-G^{-1}}_2\norm{t_j}_2
+ \leq C_c\delta.
+\]
+Für die Monomialabbildung gelten
+\[
+ \norm{\phi(c)}_2^2\leq1+R^2+R^4,
+ \qquad\norm{D\phi(c)}_F^2=d+(d+3)\norm{c}_2^2.
+\]
+Die Gerade zwischen $c_j$ und $c'_j$ liegt im euklidischen Ball mit Radius $R$. Der Mittelwertsatz für diese Polynomialabbildung ergibt daher
+\begin{equation}\label{eq:A_bounds}
+ \norm{A}_2,\norm{A'}_2\leq M,\qquad
+ \norm{A'-A}_2\leq\norm{A'-A}_F\leq C_A\delta.
+\end{equation}
+Das erfordert keine zulässige \emph{Geometrie} auf der Verbindungsgeraden. Die Wurzelspalte $\phi(0)$ ändert sich nicht; deshalb steht $\sqrt m$ statt $\sqrt n$ in $C_A$.
+
+Aus \eqref{eq:b}, $\norm{G^{-1}}_F\leq\sqrt d/\gamma$ und \eqref{eq:resolvent} folgt
+\begin{equation}\label{eq:b_bounds}
+ \norm{b}_2,\norm{b'}_2\leq B_b,\qquad
+ \norm{b'-b}_2\leq C_b\delta.
+\end{equation}
+Setze $A^+=A^T(AA^T)^{-1}$, $A'^+=A'^T(A'A'^T)^{-1}$ und $E=A'-A$.
+Beide Pseudoinversen haben Norm höchstens $\kappa^{-1}$. Es gilt die exakte Identität
+\begin{equation}\label{eq:pseudoidentity}
+ A'^+-A^+=-A'^+EA^+
+       +(I-A'^+A')E^T(AA^T)^{-1}.
+\end{equation}
+Zur Kontrolle: Der erste Term rechts ist $A'^+-A'^+A'A^+$; der zweite ist $-(I-A'^+A')A^+$, weil $(I-A'^+A')A'^T=0$. Ihre Summe ist die linke Seite. Da $I-A'^+A'$ ein orthogonaler Projektor ist, folgt
+\[
+ \norm{A'^+-A^+}_2\leq2\kappa^{-2}\norm E_2.
+\]
+Nun zerfällt die gemeinsame Gewichtsänderung exakt in
+\[
+ W'-W=(A'^+-A^+)b+A'^+(b'-b).
+\]
+Mit \eqref{eq:A_bounds} und \eqref{eq:b_bounds} ergibt dies
+$\norm{W'-W}_2\leq(2B_bC_A\kappa^{-2}+C_b\kappa^{-1})\delta=C_W\delta$.
+Diese Projektoridentität vermeidet eine unnötig große Schranke mit $\kappa^{-4}$ aus einer direkten Gram-Resolventenabschätzung.
+
+Für die relative Normierung gilt $|G_{ab}|\leq Q$, also $\norm G_2\leq dQ$ und $\norm{G^{-1}}_F\geq\sqrt d/(dQ)$. Mit \eqref{eq:b} folgt
+\[
+ \norm b_2^2\geq2\norm{G^{-1}}_F^2\geq\frac{2}{dQ^2}.
+\]
+Weil $AW=b$, erhält man $\norm W_2\geq\norm b_2/\norm A_2\geq w_*$, ebenso für $W'$. Der Nenner in \eqref{eq:gap} ist somit kontrolliert.
+
+Schließlich ist auf $[q_*,Q]$
+\[
+ \frac{\dd\mu}{\dd q}=\rho c_d\frac d2q^{d/2-1}
+ \geq L_q^{-1}.
+\]
+Daraus folgen $\delta\leq L_q\eta$ und zusätzlich $\delta\leq Q-q_*$. Dies beweist Teil~(a).
+
+\subsection{Beweis des Übergangs von Gesetzesnähe zu Zählmittelwerten}
+
+Die Projektion auf ein beobachtetes Intervall kann totale Variation nicht vergrößern: für jedes Ereignis der projizierten Daten ist sein Urbild ein Ereignis der Gesamtdaten. Deshalb gilt für jedes $e\in E_*$
+\[
+ \TV(\Pois(\mu_e),\Pois(\mu'_e))\leq\varepsilon.
+\]
+Wir zeigen für beliebige $\mu,\nu\in[0,\Lambda]$ mit diesem Abstand die Schranke $|\mu-\nu|\leq B_\mu(\varepsilon)$.
+
+Erstens ist $|\mu-\nu|\leq\Lambda$. Zweitens dürfen wir $\mu\geq\nu$ annehmen und das Ereignis $\{0\}$ verwenden:
+\[
+ \varepsilon\geq e^{-\nu}-e^{-\mu}
+   =e^{-\mu}(e^{\mu-\nu}-1)
+   \geq e^{-\Lambda}(e^{\mu-\nu}-1).
+\]
+Damit $\mu-\nu\leq\log(1+e^\Lambda\varepsilon)$. Diese Schranke ist mathematisch linear in $\varepsilon$ nahe null, kann bei großen $\Lambda$ jedoch extrem ungünstig sein.
+
+Drittens ist die Poisson-Affinität direkt summierbar:
+\begin{equation}\label{eq:affinity}
+ \sum_{k=0}^\infty
+ \sqrt{e^{-\mu}\frac{\mu^k}{k!}\,
+       e^{-\nu}\frac{\nu^k}{k!}}
+ =\exp\!\left[-\frac{(\sqrt\mu-\sqrt\nu)^2}{2}\right].
+\end{equation}
+Für diskrete Gesetze gilt $\sum_k\min(p_k,q_k)\leq\sum_k\sqrt{p_kq_k}$ und $\TV=1-\sum_k\min(p_k,q_k)$. Folglich
+\[
+ (\sqrt\mu-\sqrt\nu)^2\leq-2\log(1-\varepsilon),
+\]
+und Multiplikation mit $\sqrt\mu+\sqrt\nu\leq2\sqrt\Lambda$ liefert die dritte Schranke in \eqref{eq:Bmu}. Die explizite Rechnung entspricht der skalaren Spezialisierung der Poisson-Hellinger-Identität in \cite{leskela}.
+
+Damit $\eta\leq B_\mu(\varepsilon)$. Teil~(a), die untere Gewichtsnorm und $g\leq2$ geben Teil~(b). Jede Komponente des Minimums verschwindet für $\varepsilon\downarrow0$, abgesehen von der harmlosen konstanten Obergrenze. \hfill$\square$
+
+\section{Was der Satz für koordinierte Aufhebungen bedeutet}
+
+Koordinierte Änderungen dürfen einzelne Zählmittelwerte, Differenzereignisse oder Summen unverändert lassen. Der Satz benutzt jedoch die vollständige Menge der \emph{beschrifteten} benötigten Marginalen. Nähe der gemeinsamen Gesetze erzwingt Nähe jeder solchen Marginale; die rekonstruierbaren $q$-Werte bestimmen $G$, $c_j$ und damit den Operator. Ein bloßer Ausgleich in einer Gesamtsumme kann diese Argumentationskette nicht umgehen.
+
+Die Überlappungsinformation wird für die konservative Obergrenze nicht ausgeschöpft. Sie kann wesentlich schärfere Unterscheidungen ermöglichen. Die Aussage lautet keinesfalls, dass Nähe aller Mittelwerte bereits Nähe des gemeinsamen Gesetzes beweist. In den bisherigen Boxenzertifikaten liefern geeignete Überlappungsereignisse vielmehr \emph{untere} TV-Schranken und damit Ausschlüsse.
+
+Auch der gleichzeitige Austausch aller Stützpunktkoordinaten ist im Satz erlaubt. Die Matrixdifferenz $A'-A$ und der Term $b'-b$ behandeln die gemeinsame Änderung. Einzelstützpunkt-Effekte werden nicht addiert, um eine nichtlineare Gesamtänderung zu behaupten.
+
+\section{Rekonstruktionsfehler und statistische Aussage}
+
+\subsection{Ein gemeinsamer deterministischer Datenfehler}
+Für einen gegebenen Vektor $y$ und ein festes Fehlerbudget $r\geq0$ sei
+\[
+ \mathcal C_r(y)=\{\theta\in K:
+       \norm{\mu_{E_*}(\theta)-y}_\infty\leq r\}.
+\]
+Je zwei Elemente dieser Menge erfüllen $\eta\leq2r$. Ist $\mathcal C_r(y)$ nicht leer, folgt aus Satz~\ref{thm:quant}
+\begin{equation}
+ \diam W(\mathcal C_r(y))
+ \leq C_W\min\{Q-q_*,2L_qr\}.
+\end{equation}
+Jede Wahl $\widehat\theta\in\mathcal C_r(y)$ besitzt diese absolute Worst-Case-Fehlerschranke innerhalb der Menge. Umgekehrt hat jede Schätzung $\widehat w$ für zwei mit denselben Daten verträgliche Ziele mindestens an einem Ziel den Fehler $\norm{w_1-w_0}_2/2$. Beides folgt aus der Dreiecksungleichung. Die Hälfte des Durchmessers ist in mehreren Dimensionen \emph{nicht} automatisch eine erreichbare obere Fehlerschranke.
+
+Diese Aussagen sind deterministisch. Insbesondere ist ein Radius in einer empirisch geschätzten Kovarianznorm nicht ohne Kalibrierung ein Konfidenzniveau. Das bereits archivierte Beispiel mit rund $14{,}8213\,\%$ relativer Gewichtsseparation und einer Worst-Case-Untergrenze von $7{,}4106\,\%$ betrifft ein anderes, fest deklariertes Kovarianz-Fehlermodell \cite{repo_old}. Es widerspricht dem vorliegenden konditionalen Satz nicht.
+
+\subsection{Ein wirklich kalibriertes Konfidenzverfahren}
+Besäße eine zufällige zulässige Menge $\mathcal C(Y)$ die nachgewiesene Überdeckung
+\[
+ \inf_{\theta\in K}P_\theta\{\theta\in\mathcal C(Y)\}\geq1-\alpha,
+\]
+so wäre ein zertifizierter Zieldurchmesser $\diam W(\mathcal C(Y))\leq r$ unmittelbar nutzbar. Für eine messbare Auswahl $\widehat\theta(Y)\in\mathcal C(Y)$ und eine Freigabe nur bei dieser Durchmesserschranke gilt
+\[
+ P_\theta\{\text{Freigabe und }\norm{W(\widehat\theta)-W(\theta)}_2>r\}
+ \leq\alpha.
+\]
+Eine bedingte Fehlerrate $\leq\alpha$ \emph{unter den freigegebenen Fällen} folgt daraus nicht automatisch. Die Überdeckung selbst sowie Auswahl, Mehrfachtests und gegebenenfalls optionales Stoppen sind in diesem Entwurf nicht kalibriert. Eine einzelne beobachtete Zählung ist keine Beobachtung des gesamten Gesetzes $P_\theta$.
+
+\subsection{Feldantworten und Kontinuumsfehler}
+Für denselben beschrifteten Knotenvektor $f$ gilt
+$|(W'-W)^Tf|\leq\norm{W'-W}_2\norm f_2$.
+Wird dagegen ein räumlich definiertes Feld an \emph{verschiedenen} bewegten Knoten ausgewertet, kommt der Term $W'^T(f'-f)$ hinzu. Für eine Kontinuumsaussage ist außerdem der Konsistenzfehler
+$|W(\theta)^Tf_\theta-\Box f(r)|$ auf einer vorab festgelegten glatten Feldklasse separat zu begrenzen. Quadratische Exaktheit allein liefert keine solche allgemeine Fehlerkontrolle.
+
+\section{Notwendige Grenzen und Gegenprüfungen}
+
+\textbf{Unbekannte Dichte und Skala.} Ersetze alle physikalischen Koordinaten durch $a$-fache Koordinaten und die Dichte durch $\rho'=\rho a^{-d}$, $a>0$. Bei mitskaliertem Beobachtungsgebiet bleiben sämtliche Atomintensitäten und damit die vollständigen beschrifteten Zählgesetze gleich. Die Kausalordnung bleibt gleich. Die Gewichte skalieren jedoch als $W'=a^{-2}W$. Daher
+\[
+ \TV(P,P')=0,\qquad
+ g=\frac{2|a^{-2}-1|}{a^{-2}+1}>0\quad(a\ne1).
+\]
+Ein Satz mit $\Omega(0)=0$ ist in dieser erweiterten Klasse falsch. Die bekannte gemeinsame Dichte und physikalische Skala sind somit substantiell, nicht bloß technische Konventionen.
+
+\textbf{Rang allein genügt nicht.} Das abstrakte Beispiel $A(t)=\diag(1,t)$, $b=(0,1)^T$, $t>0$, liefert $W(t)=(0,1/t)^T$. Mit dem Beobachtungsgesetz $\Pois(t)$ gilt $\TV(\Pois(t),\Pois(2t))\leq1-e^{-t}\to0$, während $g(t,2t)=2/3$. Alle Matrizen haben vollen Rang. Dieses Beispiel ist keine konstruierte kausale Stencilgeometrie; es zeigt, warum ein generischer Matrixbeweis eine uniforme untere Singularwertschranke benötigt.
+
+\textbf{Nullgrenzen und unbeschränkte Klassen.} Bei $d>2$ divergiert $L_q$, wenn $q_*\downarrow0$. Das widerlegt nicht jede mögliche Hölder-Stabilität an Nullgrenzen, sondern nur die uniforme Nutzung der vorliegenden Lipschitz-Konstante. Ebenso ist der Satz nicht uniform in $n\to\infty$, in einer verschwindenden Skala oder über beliebig schlechte Landmarken- und Momentenkonditionierung. Für einen Kontinuumslimes wären skalierte Normen und zusätzliche uniforme Schranken nötig.
+
+\textbf{Lokale Tangenten reichen nicht.} Kleine Ableitungen oder volle numerische Jacobiränge an Stichproben ersetzen keinen endlichen, globalen Beweis. Umgekehrt beweist eine numerisch schwache Richtung kein exaktes Nichtidentifizierbarkeitsargument. Satz~\ref{thm:quant} arbeitet deshalb mit endlichen Differenzen und Schranken für beide Endkonfigurationen.
+
+\section{Einordnung des bisherigen Forschungsstands}
+
+Der Stand des Entwurfs ist von der Gültigkeit auf einer konkret gewählten Modellklasse zu trennen.
+
+\begin{center}\small
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{0.32\textwidth}>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}p{0.22\textwidth}@{}}
+\toprule
+Aussage & Reichweite & Status\\
+\midrule
+Satz~\ref{thm:compact} & Kompakte Klasse, TV-Stetigkeit und Zielidentifizierbarkeit & Beweis im Entwurf\\
+Satz~\ref{thm:quant} & Vollständige Landmarkenzählungen und uniforme Schranken H1 bis H4 & Beweis im Entwurf\\
+Schranke $\Omega_K(1/4)\leq1/5$ & Konkrete, vorab festgelegte X6-Klasse & Nicht nachgewiesen\\
+Archiv PR~122 & Feste Referenz, drei ausgewählte Bewegungsparameter & Partiell zertifiziert\\
+Vollständiges Auswahl- und Graphgesetz & Tatsächliches A/B-Protokoll einschließlich Auswahl & Offen\\
+Kontinuumsgenauigkeit & Glatte Felder und Dichte- beziehungsweise Skalenlimes & Offen\\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+PR~122 untersucht am festen rationalen Referenzpunkt in $2+1$ Dimensionen die unabhängigen Bewegungen der Knoten $15,17,5$ entlang einer festgelegten Boost-Raumrichtung. Von 1352 terminalen Boxen bleiben 38 offen; der zertifizierte Ausschlussanteil beträgt exakt $2029/2048=99{,}072265625\,\%$ des deklarierten Parameterwürfels \cite{repo122}. Ausgeschlossen wird dort die gemeinsame Erfüllung von unveränderter Ordnung und Zulässigkeit, Gewichtsabstand $>1/5$ und TV-Abstand $\leq1/4$ zur Referenz. Das Parametervolumen ist keine Wahrscheinlichkeit.
+
+Selbst eine vollständige Schließung dieses Würfels würde nur diesen Referenzvergleich erledigen. Für \eqref{eq:goal} ist der gesamte Paarraum $K\times K$ relevant. Ein Fehlerbudget von $1/4$ ist außerdem kein geometrischer Fehler von $25\,\%$, und ein Gewichtsabstand von $1/5$ ist nicht unmittelbar eine zehnprozentige statistische Rekonstruktionsgarantie.
+
+\section{Prüfbare nächste Beweispflichten}
+
+\begin{enumerate}[label=\arabic*.]
+ \item \textbf{Modellklasse festschreiben.} Beschriftungen, Dimension, Dichte, Skala, erlaubte Bewegungen, Intervallmaske und Auswahlprotokoll deklarieren. Entscheiden, ob nur eine Referenz oder wirklich alle Konfigurationspaare Gegenstand des Claims sind.
+ \item \textbf{Beobachtbarkeit nachweisen.} Für das Landmarkenmodell alle benötigten Paarzählungen und deren Poisson-Marginalen belegen. Bei fehlenden Paaren eine alternative Identifizierbarkeit des Zieloperators beweisen. Kausale Ordnungsinformation allein ersetzt keine positiven Intervalldistanzen.
+ \item \textbf{Uniforme Konstanten zertifizieren.} $q_*,Q,\gamma,\kappa$ in genau der verwendeten intrinsischen Darstellung mit gerichteter Arithmetik oder symbolisch verifizierten Schranken bestimmen. Ein alter Konditionsgrenzwert in einer anderen Basis darf nicht ohne Transformationsfaktoren übernommen werden.
+ \item \textbf{Eine nützliche endliche Schranke auswerten.} Zunächst \eqref{eq:explicitOmega} auswerten. Ist sie trivial, gezielt schärfere gemeinsame Resolventen-, Momenten- und Ereignisschranken herleiten. Ein trivialer Wert $2$ ist kein Instabilitätsbeweis und kein Anlass, den gewünschten Schwellenwert nachträglich zu lockern.
+ \item \textbf{Den Paarraum schließen.} Für den Claim $g>1/5\Rightarrow\TV>1/4$ jedes zulässige Paar behandeln, zum Beispiel durch eine vollständige rationale Überdeckung von $K\times K$. Grenzflächen und verbleibende HOLD-Zellen explizit erhalten. Eine erneute Stichprobensuche ersetzt diese Aufgabe nicht.
+ \item \textbf{Statistik und Kontinuum getrennt ergänzen.} Zuerst das tatsächliche Auswahl- und Beobachtungsgesetz beziehungsweise eine valide Konfidenzmenge kalibrieren; anschließend den Konsistenzfehler auf einer festgelegten Feldklasse kontrollieren.
+\end{enumerate}
+
+\textbf{Abbruchregel.} Sobald die verwendete Klasse keine positive uniforme Rangschranke zulässt, die Zielidentifizierbarkeit widerlegt wird oder das tatsächliche Beobachtungsgesetz nicht dem deklarierten Gesetz entspricht, ist der entsprechende Claim dieses Satzes für diese Klasse auszusetzen. Ein solcher Befund kann eine neue Modellklasse oder zusätzliche Information motivieren, rechtfertigt aber keinen stillen Austausch der Voraussetzungen.
+
+\appendix
+\section{Algebraprüfung und Reproduzierbarkeit}
+
+Dem Quellenpaket liegen \texttt{verify\_algebra.py} und \texttt{validation.json} bei. Die Kontrollen wurden nach Aufstellung des Satzes entworfen; sie sind keine vorregistrierte empirische Kampagne. Sie prüfen mit exakten rationalen Zahlen an einem $2+1$-dimensionalen Beispiel mit vier Landmarken und 17 Stencilpunkten:
+\begin{itemize}
+ \item die Gram- und Koordinatenidentitäten aus \eqref{eq:G}--\eqref{eq:coords};
+ \item die Gleichheit intrinsischer und kartesischer Minimum-Norm-Gewichte;
+ \item eine gleichzeitige Änderung aller Landmarken und aller Stencilpunkte einschließlich der Wurzel und des Momentenvektors $b(G)$;
+ \item das exakte Skalengesetz $W(2x)=W(x)/4$, die Pseudoinversenidentität \eqref{eq:pseudoidentity} und die symbolische Jacobinorm der Monomialabbildung.
+\end{itemize}
+Sechs endliche Normabschätzungen und acht Poisson-Paare werden zusätzlich numerisch kontrolliert. Die Poisson-Rechnungen verwenden 90 Dezimalstellen; die Matrixnormdiagnostik verwendet Gleitkommaarithmetik. Diese numerischen Konstanten sind \emph{keine} gerichteten uniformen X6-Zertifikate. Die Kontrollen ersetzen weder die vorstehenden Beweise noch eine unabhängige fachliche Prüfung.
+
+Die Konservativität ist im Kontrollbeispiel deutlich sichtbar: einem tatsächlichen absoluten Gewichtsabstand von ungefähr $0{,}0327$ steht eine allgemeine Obergrenze von ungefähr $1{,}08\cdot10^{12}$ gegenüber. Das ist kein X6-Ergebnis, sondern eine synthetische Kontrolle. Sie bestätigt, dass die geschlossene Formel zunächst ein rigoroser Existenz- und Ausgangsbeweis ist; eine praktisch nützliche Konstante erfordert erheblich schärfere, klassenbezogene Abschätzungen.
+
+\textbf{Reproduktion.} Python mit \texttt{sympy}, \texttt{numpy} und \texttt{mpmath}; die verwendeten Versionsnummern stehen in \texttt{validation.json}. Aufruf: \texttt{python verify\_algebra.py}. Das PDF wird aus der beigefügten LaTeX-Datei mit \texttt{pdflatex} erstellt. Das Paket enthält außerdem eine SHA-256-Dateiliste und den geprüften Ergebnis-Snapshot aus PR~122.
+
+\section{Quellen und Beweisverantwortung}
+
+Die beiden Sätze und die expliziten Konstanten werden in diesem Entwurf hergeleitet. Die Literaturangaben belegen mathematische Bausteine; sie sind kein externer Beweis des X6-Stabilitätsclaims. Die Pseudoinversenkonstruktion gehört zur klassischen linearen Algebra \cite{penrose}. Die verwendete Poisson-Affinität ist eine elementare Spezialisierung von \cite{leskela}. Die aktuellen numerischen Resultate werden ausschließlich ihrem eingefrorenen Repository-Stand zugeschrieben. Literatur und Repository-Quellen wurden am 23. Oktober 2026 geprüft.
+
+\begin{thebibliography}{9}
+\raggedright
+\bibitem{leskela}
+L. Leskelä. \emph{Information divergences and likelihood ratios of Poisson processes and point patterns}. IEEE Transactions on Information Theory 70(12), 9084--9101, 2024. DOI: \href{https://doi.org/10.1109/TIT.2024.3472448}{10.1109/TIT.2024.3472448}. Zugängliche Fassung: \url{https://arxiv.org/abs/2404.00294}; insbesondere Theorem 5.3. Rolle hier: Poisson-Hellinger-Identität, nicht geometrische Stabilität.
+\bibitem{penrose}
+R. Penrose. \emph{A generalized inverse for matrices}. Mathematical Proceedings of the Cambridge Philosophical Society 51(3), 406--413, 1955. DOI: \href{https://doi.org/10.1017/S0305004100030401}{10.1017/S0305004100030401}. Rolle hier: klassischer Hintergrund zur Pseudoinversen, nicht die konkreten Konstanten dieses Entwurfs.
+\bibitem{repo122}
+X6 Spectral Astrolabium. \emph{One subdivision of the remaining three-support region}. Entwurfs-PR~122, \url{https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/122}. Geprüfter Remote-Commit: \texttt{ebe17b12f56a1220ee78d08a129488f1eb6bc944}; lokaler inhaltsgleicher Baum: \texttt{7ba99c74c10158407093ab0c64d95785662d3b83}. Dateien: \texttt{research/lorentz\_local\_dalembert/triple\_subdivision/}\allowbreak\texttt{summary.json}, \texttt{audit.json}, \texttt{THEOREM.md}. Rolle: begrenzter Referenznachweis; kein allgemeiner Satz.
+\bibitem{repo_old}
+X6 Spectral Astrolabium. \emph{What can and cannot be recovered from the selected interval counts}; ergänzend \emph{Finite-count accuracy and operator sensitivity}. Dateien \texttt{research/lorentz\_local\_dalembert/stability\_information/}\allowbreak\texttt{THEORY.md} und \texttt{README.md}, im selben oben genannten Repository-Baum. Rolle: noiseless Landmarkenidentität, deterministische Zweipunkt-Untergrenze und Abgrenzung zum vollständigen Beobachtungsgesetz.
+\end{thebibliography}
+\end{document}

@@ -1,0 +1,287 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[provide=*,ngerman]{babel}
+\usepackage{lmodern,microtype,amsmath,amssymb,amsthm,mathtools}
+\usepackage[margin=24mm,headheight=14pt]{geometry}
+\usepackage{booktabs,tabularx,enumitem,fancyhdr,xcolor}
+\usepackage[hidelinks]{hyperref}
+\setlength{\parindent}{0pt}\setlength{\parskip}{5pt}
+\setlist{nosep,leftmargin=*}\allowdisplaybreaks[1]
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\small Eigenzeitforschung}\fancyhead[R]{\small GFEST: Ergänzung 0.2}
+\fancyfoot[C]{\small\thepage}\renewcommand{\headrulewidth}{0.2pt}
+\newtheorem{theorem}{Satz}\newtheorem{lemma}{Lemma}\newtheorem{corollary}{Korollar}
+\newcommand{\TV}{\operatorname{TV}}\newcommand{\Pois}{\operatorname{Pois}}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}\newcommand{\abs}[1]{\left|#1\right|}
+\newcommand{\smin}{\sigma_{\min}}\newcommand{\R}{\mathbb R}
+\hypersetup{pdftitle={Eigenzeit: Stabilität mit gemeinsamen Bewegungen, GFEST 0.2},pdfauthor={Arbeitsbericht für Thomas Gfeller}}
+\title{\textbf{Eigenzeit: Stabilität bei gemeinsamen Bewegungen}\\[5pt]\large Lichtkegelgrenzen, orthogonale Fehlerzerlegung und ein lokales Paarraumzertifikat}
+\author{Arbeitsbericht für Thomas Gfeller\\\small X6 Spectral Astrolabium}
+\date{23. Oktober 2026 \quad Ergänzung zu GFEST 0.1}
+\begin{document}\maketitle\thispagestyle{fancy}
+\begin{abstract}
+Der vorliegende Arbeitsschritt erweitert den GFEST-Entwurf in drei Richtungen. Erstens wird eine positive untere Schranke der gezählten zeitartigen Intervallquadrate für den asymptotischen Stabilitätssatz entbehrlich. Zweitens wird die endliche Änderung der Minimum-Norm-Operatorgewichte exakt in zwei orthogonale Anteile zerlegt; koordinierte Bewegungen und Änderungen des Metrikterms werden gemeinsam behandelt. Drittens wird an der archivierten Geometrie cloud 09 ein rationales Zertifikat für \emph{alle Paare} einer expliziten lokalen Modellklasse berechnet.
+
+Für das vollständige, beschriftete Landmarken-Zählexperiment mit bekannter Dichte und Skala gilt in dieser lokalen Klasse: Sind beide Gesetze höchstens $10^{-5}$ vom Referenzgesetz entfernt, liegt ihre symmetrische relative Gewichtsabweichung unter $7\,\%$. Dies ist keine statistische Genauigkeitsgarantie aus einer einzelnen Zählstichprobe. Der ursprüngliche allgemeine Claim bei TV-Budget $1/4$ bleibt offen.
+\end{abstract}
+
+\textbf{Status.} Die Beweise sind ausgeschriebene mathematische Argumente. Die lokale Zertifizierung benutzt rationale Arithmetik und gerichtete Quadratwurzelschranken. Numerische Kontrollen sind separat bezeichnet. Es liegen weder eine formale Beweisassistenten-Verifikation noch eine unabhängige fachliche Begutachtung vor. Kein Neuheitsanspruch wird erhoben.
+
+\begin{center}\begin{tabularx}{\linewidth}{@{}lX@{}}\toprule
+Arbeitsschritt & Ergebnis und Grenze\\\midrule
+Lichtkegelgrenze & Kein positives $q_*$ nötig; feste kausale Paarmaske und uniforme Ränge bleiben nötig.\\
+Gemeinsame Bewegung & Exakte orthogonale Fehleridentität, einschließlich bewegtem Metrikterm.\\
+Lokaler Paarraum & Zertifiziert: $g<0.07$ in der unten definierten Klasse.\\
+Ursprünglicher Claim & $\TV(P_\theta,P_{\theta'})\leq1/4\Rightarrow g\leq1/5$: weiterhin offen.\\
+PR 122 & Die 38 dort offenen Zellen werden durch diesen Bericht nicht geschlossen.\\\bottomrule
+\end{tabularx}\end{center}
+
+\section{Modell und unveränderte Zielgröße}
+Es gilt $q(x,y)=(x-y)^TJ(x-y)$, $J=\operatorname{diag}(1,-1,\ldots,-1)$ in physikalischen Einheiten. In Dimension $d\geq2$ ist $c_d=v_{d-1}/(d2^{d-1})$ und $k=\rho c_d$, mit bekannter gemeinsamer Dichte $\rho>0$. Für jedes gezählte, kausal orientierte Paar $e$ ist
+\begin{equation}\label{eq:poisson}
+ Y_e\sim\Pois(\mu_e),\qquad \mu_e=kq_e^{d/2},\qquad q_e\geq0.
+\end{equation}
+Das gemeinsame Gesetz $P_\theta$ darf korrelierte Zählungen und weitere Beobachtungen enthalten. Die $Y_e$ müssen messbare Projektionen sein. Intervalle sind vollständig beobachtet. Die Geometrie ist fest oder unabhängig von der Zählstichprobe ausgewählt. Auswahl aus derselben Wolke oder Konditionierung auf deren gesamten Graphen rechtfertigen \eqref{eq:poisson} nicht automatisch.
+
+Es gibt $d+1$ beschriftete Landmarken $\ell_0,\ldots,\ell_d$ und $n$ Stencilpunkte, einschließlich $x_0=r$. Benötigt werden alle Landmarkenpaare und alle Paare zwischen Stencil und Landmarken, als Menge verschiedener Indizes $E_*$. Mit
+\begin{align}
+ G_{ab}&=\tfrac12[q(\ell_a,\ell_0)+q(\ell_b,\ell_0)-q(\ell_a,\ell_b)],\\
+ t_{j,a}&=\tfrac12[q(x_j,\ell_0)-q(x_j,\ell_a)-q(r,\ell_0)+q(r,\ell_a)],\\
+ c_j&=G^{-1}t_j
+\end{align}
+ist $c_j=B^{-1}(x_j-r)$, $B=[\ell_1-\ell_0,\ldots,\ell_d-\ell_0]$. Die Spalten von $A$ sind die Monomiale $\phi(c_j)$ bis Grad zwei, einschließlich der Konstanten. Die Zeilenzahl ist $p=1+d+d(d+1)/2$.
+
+Für $\Box=-\partial_t^2+\sum_i\partial_{x_i}^2$ enthält $b(G)$ die Komponenten $-2(G^{-1})_{aa}$ für Quadrate und $-2(G^{-1})_{ab}$ für gemischte Monomiale; die übrigen Einträge sind null. Der Zieloperator lautet
+\begin{equation}
+ W=A^T(AA^T)^{-1}b,\qquad
+ g(\theta,\theta')=\frac{2\norm{W(\theta)-W(\theta')}_2}{\norm{W(\theta)}_2+\norm{W(\theta')}_2}.
+\end{equation}
+Invertible Änderungen der Polynomzeilenbasis verändern diese Minimum-Norm-Lösung nicht. Das Wurzelgewicht gehört zum Vektor. Alle beschrifteten Knotenwerte werden in derselben euklidischen Norm verglichen.
+
+\section{Stabilität ohne positiven Abstand zur Nullgrenze}
+Setze $h(\varepsilon)=\sqrt{-2\log(1-\varepsilon)}$ für $0\leq\varepsilon<1$.
+\begin{lemma}\label{lem:null}
+Sind \eqref{eq:poisson}, $0\leq q_e,q'_e\leq Q$ mit $Q>0$ und $\TV(P_\theta,P_{\theta'})\leq\varepsilon$ erfüllt, dann gilt für $\delta=\max_e|q_e-q'_e|$
+\begin{equation}\label{eq:newD}
+ \delta\leq D_d(\varepsilon):=
+ \begin{cases}
+ \min\{Q,\frac4d Q^{1-d/4}k^{-1/2}h(\varepsilon)\},&2\leq d\leq4,\\
+ \min\{Q,k^{-2/d}h(\varepsilon)^{4/d}\},&d>4.
+ \end{cases}
+\end{equation}
+Für deterministische Mittelwertdifferenz $\eta=\max_e|\mu_e-\mu'_e|$ gilt außerdem $\delta\leq\min\{Q,(\eta/k)^{2/d}\}$.
+\end{lemma}
+\begin{proof}
+Projektion vergrößert TV nicht. Die Poisson-Affinität ist direkt summierbar:
+\[
+ \sum_{j\geq0}\sqrt{p_\mu(j)p_\nu(j)}
+ =\exp[-(\sqrt\mu-\sqrt\nu)^2/2].
+\]
+Weil $\sum_j\min(p_j,q_j)\leq\sum_j\sqrt{p_jq_j}$, folgt $|\sqrt\mu-\sqrt\nu|\leq h(\varepsilon)$. Dies ist die skalare Spezialisierung der Poisson-Hellinger-Identität \cite{leskela}. Nun ist $q=(\sqrt\mu/\sqrt{k})^{4/d}$. Für $d\leq4$ ist die Ableitung der Potenz auf $[0,Q^{d/4}]$ höchstens $(4/d)Q^{1-d/4}$. Für $d>4$ benutzt man $|u^a-v^a|\leq|u-v|^a$, $0<a\leq1$. Dieselbe Potenzung mit Exponent $2/d$ liefert die deterministische Aussage.
+\end{proof}
+
+Insbesondere gilt in $3+1$ Dimensionen mit $c_4=\pi/24$
+\begin{equation}\label{eq:4D}
+ \max_e|q_e-q'_e|\leq\sqrt{\frac{-2\log(1-\varepsilon)}{\rho\pi/24}}.
+\end{equation}
+Diese Schranke enthält weder $q_*$ noch $Q$. Im alten Weg über $\mu\mapsto q$ und dessen Lipschitzkonstante entstand dagegen ein bei $q_*\downarrow0$ divergierender Faktor.
+
+\begin{corollary}\label{cor:global}
+Im vollständigen GFEST-Landmarkenmodell seien $0\leq q_e\leq Q$, $\smin(G)\geq\gamma>0$ mit Lorentz-Signatur und $\smin(A)\geq\kappa>0$ uniform. Dann gilt
+\[
+ g(\theta,\theta')\leq\min\{2,C_WD_d(\varepsilon)/w_*\}
+ \quad\text{bei}\quad\TV(P_\theta,P_{\theta'})\leq\varepsilon.
+\]
+Hier können dieselben, nur von $d,n,Q,\gamma,\kappa$ abhängigen Konstanten $C_W,w_*>0$ wie in GFEST 0.1 verwendet werden.
+\end{corollary}
+\begin{proof}
+Die endliche algebraische Abschätzung $\norm{W'-W}_2\leq C_W\delta$ aus GFEST 0.1 benutzt nur die obere Distanzschranke und die beiden Rangschranken, nicht $q_*$. Dasselbe gilt für $\norm{W}_2\geq w_*$. Lemma~\ref{lem:null} ersetzt ausschließlich den bisherigen Mittelwert-zu-Distanz-Schritt.
+\end{proof}
+Zur vollständigen Spezifikation: Mit $m=n-1$, $a=3d/2$, $R_0=\sqrt d Q/\gamma$, $M=\sqrt{n(1+R_0^2+R_0^4)}$,
+\[
+ C_c=2\sqrt d/\gamma+a\sqrt dQ/\gamma^2,\quad
+ C_A=\sqrt m\sqrt{d+(d+3)R_0^2}\,C_c
+\]
+kann man $C_W=4\sqrt d\,C_A/(\gamma\kappa^2)+2\sqrt d\,a/(\gamma^2\kappa)$ und $w_*=\sqrt{2/d}/(QM)$ setzen. Diese Konstanten bleiben konservativ.
+
+\textbf{Grenze der Erweiterung.} Der Satz erlaubt $q_e=0$, aber keine unbemerkte Fortsetzung eines gezählten Paars in den raumartigen Bereich: Ein leeres Intervall kann negative $q$ nicht aus seinem Volumen rekonstruieren. Schlechte Matrixkonditionierung wird durch \eqref{eq:4D} ebenfalls nicht beseitigt. Der $3+1$-dimensionale Satz ist analytisch; das folgende konkrete Zertifikat betrifft $2+1$ Dimensionen.
+
+\section{Eine exakte Zerlegung der gemeinsamen Gewichtsänderung}
+Die folgenden Matrizen dürfen bereits mit derselben festen invertiblen Zeilentransformation vorkonditioniert sein.
+\begin{theorem}\label{thm:orth}
+Seien $A,A'\in\R^{p\times n}$ vollzeilig, $W=A^+b$, $W'=A'^+b'$, $E=A'-A$, $P'=A'^+A'$. Setze
+\[
+ y=(AA^T)^{-1}b,\qquad r=b'-b-EW,\qquad s=E^Ty.
+\]
+Dann gilt exakt
+\begin{align}\label{eq:orth}
+ W'-W&=A'^+r+(I-P')s,\\
+ \norm{W'-W}_2^2&=\norm{A'^+r}_2^2+\norm{(I-P')s}_2^2\\
+ &\leq\frac{\norm r_2^2}{\smin(A')^2}+\norm s_2^2.\label{eq:bound}
+\end{align}
+Insbesondere: Sind $\smin(A)\geq\sigma_0>0$, $\norm E_2\leq e<\sigma_0$, dann darf im Nenner $\smin(A')$ durch $\sigma_0-e$ ersetzt werden.
+\end{theorem}
+\begin{proof}
+Weil $A'W=b+EW$, ist $A'^+r=W'-P'W$. Ferner $W=A^Ty=(A'^T-E^T)y$ und deshalb $(I-P')W=-(I-P')E^Ty$. Addition liefert \eqref{eq:orth}. Der erste Summand liegt in $\operatorname{ran}(A'^T)$, der zweite in $\ker A'$. Diese Räume sind orthogonal. Die Norm von $A'^+$ ist $1/\smin(A')$, die eines orthogonalen Projektors höchstens eins. Die Singularwertschranke folgt für jedes $z$ aus $\norm{A'^Tz}\geq\norm{A^Tz}-\norm{E^Tz}$.
+\end{proof}
+
+\textbf{Bedeutung für Aufhebungen.} Der Residualvektor $r=\Delta b-EW$ wird für alle Bewegungen gemeinsam gebildet. Ein Ausgleich zwischen Stützpunkten kann diesen Anteil verkleinern. Das allein genügt nicht: Der zweite Anteil misst die Drehung des Zeilenraums. Bei bewegten Landmarken muss auch $\Delta b$ eingesetzt werden. Die Identität benötigt weder einen zulässigen Bewegungspfad zwischen den Endpunkten noch eine infinitesimale Näherung.
+
+\section{Rationale Zertifizierung einer gesamten lokalen Klasse}
+\subsection{Festgelegte Daten und Klasse}
+Referenz $\theta_0$ ist Endpunkt 0 des archivierten \texttt{stability\_information/witness.json}: cloud 09, trial 1, vier Landmarken, Wurzel und 16 weitere Stützpunkte. Alle Dezimalkoordinaten und die Skala $0.12309312773033709$ werden als exakte rationale Zahlen interpretiert. Die Dichte ist $32768$. Die 74 Paarindizes stimmen exakt mit $E_*$ überein. Die ursprünglichen empirischen Zählungen und Kovarianzen werden für dieses Zertifikat nicht als Konfidenzregion benutzt.
+
+Es wird die \emph{neue, ausdrücklich lokale} Modellklasse
+\begin{equation}\label{eq:K}
+ K_\delta=\{\theta:\ |q_e(\theta)-q_e(\theta_0)|\leq\delta\quad\forall e\in E_*\}
+\end{equation}
+im deklarierten flachen, beschrifteten Modell mit identischer Dichte, Skala und kausaler Orientierung betrachtet. Die Lage aller Punkte darf variieren. Keine ausgewählten Bewegungsrichtungen werden festgehalten. Zusätzliche alte Zulässigkeitsbedingungen dürfen $K_\delta$ einschränken; sie sind für die hier bewiesene obere Schranke nicht notwendig. Nicht jede formale Belegung der 74 $q$-Intervalle muss geometrisch realisierbar sein: Die Zertifizierung umschließt sie konservativ mit.
+
+\subsection{Erhalt gemeinsamer Landmarkenterme}
+Zunächst wird die exakte Lorentztransformation
+\[
+ L=\begin{pmatrix}5/3&4/3&0\\4/3&5/3&0\\0&0&1\end{pmatrix},\qquad L^TJL=J
+\]
+angewendet. Sie verändert $q$, das physikalische Gewicht und dessen Norm nicht. Sei $B_0$ die Landmarkenbasis in diesem Referenzrahmen. Für bewegte Geometrien verwenden wir den \emph{festen} Referenzchart
+\[
+ z_j=B_0G^{-1}t_j,\qquad M=B_0G^{-1}B_0^T.
+\]
+Die Momentenspalten sind $\phi(z_j)$ und der rechte Vektor ist $b(M)$ mit denselben $-2M_{ab}$-Regeln. Dies ist eine invertible Änderung der Polynomkoordinaten; die physikalischen Minimum-Norm-Gewichte bleiben gleich. An der Referenz ist $M_0=J$.
+
+Die Gramänderung hängt linear von den sechs Landmarken-Paarquadraten ab. Schreibe
+\[
+ D=B_0^{-T}(G-G_0)B_0^{-1}=\sum_{a=1}^6D_a\Delta q_a,
+ \qquad H=\delta\sum_{a=1}^6|D_a|.
+\]
+Die Matrizen $D_a$ werden vor dem Bilden von Beträgen exakt berechnet. Damit bleiben Auslöschungen gemeinsamer Landmarkenterme erhalten. Für $\norm H_\infty<1$ ist $C=(I-H)^{-1}$ eintragsweise nichtnegativ, und die Neumannreihe gibt
+\begin{equation}\label{eq:RM}
+ |M-J|\leq CH=:R_M.
+\end{equation}
+In der Tat ist $M=(J+D)^{-1}=(I+JD)^{-1}J$ und $|J|=I$. Die gesamte Gerade $J+tD$, $0\leq t\leq1$, bleibt invertierbar, also bleibt auch die Lorentz-Signatur erhalten.
+
+Mit $U=B_0^{-T}$ ist $u_j=Ut_j$, an der Referenz $u_{j,0}=Jz_{j,0}$. Für jeden Nichtwurzelpunkt gilt
+\[
+ z_j-z_{j,0}=(I+JD)^{-1}J(\Delta u_j-Dz_{j,0}).
+\]
+Die wiederholten $q(x_j,\ell_0)$- und $q(r,\ell_0)$-Terme ergeben
+\begin{align}
+ R_u&=\delta\bigl(|U\mathbf1|+|U|\mathbf1\bigr),\\
+ |z_j-z_{j,0}|&\leq C\left(R_u+\delta\sum_a|D_az_{j,0}|\right)=:R_j.\label{eq:Rj}
+\end{align}
+Die Wurzel bleibt im wurzelzentrierten Chart exakt null. Ihr physikalischer Standort ist trotzdem variabel.
+
+Für die quadratischen Spalten folgen die elementweisen Radien
+\[
+ |z_i'^2-z_i^2|\leq2|z_i|R_i+R_i^2,\qquad
+ |z_i'z_k'-z_iz_k|\leq|z_i|R_k+|z_k|R_i+R_iR_k.
+\]
+Sie definieren $R_A$; \eqref{eq:RM} definiert $R_b$. Eine feste rationale Zeilentransformation $T$ wird numerisch vorgeschlagen, dann exakt geprüft. Sei $\bar A_0=TA_0$, $\bar b_0=Tb_0$ und
+\[
+ a=\norm{\bar A_0\bar A_0^T-I}_\infty<1,
+ \quad\sigma_0\leq\sqrt{1-a},\quad
+ R_E=|T|R_A,\quad \bar R_b=|T|R_b.
+\]
+Hier ist $\sigma_0$ eine rationale untere Schranke. Setze $e\geq\norm{R_E}_F$, $e<\sigma_0$, und $y_0=(\bar A_0\bar A_0^T)^{-1}\bar b_0$. Nach Satz~\ref{thm:orth} gilt für alle $\theta\in K_\delta$
+\begin{equation}\label{eq:R2}
+ \begin{aligned}
+ \norm{W(\theta)-W_0}_2^2&\leq R_W^2,\\
+ R_W^2&:=
+ \frac{\norm{\bar R_b+R_E|W_0|}_2^2}{(\sigma_0-e)^2}
+ +\norm{R_E^T|y_0|}_2^2.
+ \end{aligned}
+\end{equation}
+Alle Größen rechts werden rational berechnet. Quadratwurzeln werden durch gerichtete rationale Schranken eingeschlossen. Dies zertifiziert zugleich vollen Momentenrang für die gesamte Klasse.
+
+\subsection{Vom Referenzradius zum gesamten Paarraum}
+Für beliebige $\theta,\theta'\in K_\delta$ gilt bei $R_W<\norm{W_0}$
+\begin{equation}\label{eq:pair}
+ g(\theta,\theta')\leq\frac{2R_W}{\norm{W_0}-R_W}.
+\end{equation}
+Denn der Zählerabstand ist höchstens $2R_W$, während jede Norm mindestens $\norm{W_0}-R_W$ beträgt. Das ist ein Zwei-Konfigurationen-Satz, obwohl zur Zertifizierung eine gemeinsame Referenz benutzt wird. Das Ziel $g\leq1/5$ ist insbesondere durch die rein rationale Prüfung $121R_W^2\leq\norm{W_0}^2$ gesichert.
+
+\section{Ein zertifizierter Weg vom Zählgesetz in die lokale Klasse}
+Für die praktische Lokalisierung wird die kleine quadratische Hellinger-Untergrenze durch einen linearen CDF-Ereignisvergleich geschärft. Das Verfahren setzt weiterhin die Poisson-Marginalen voraus, keine Unabhängigkeit der 74 Zählungen.
+
+Für ein Referenzquadrat $q_0>\delta$, $d=3$, seien $L,U$ rationale Schranken für alle Mittelwerte zwischen $k(q_0-\delta)^{3/2}$ und $k(q_0+\delta)^{3/2}$. Setze $j=\lfloor L\rfloor$, $m=\lfloor U\rfloor$ und wähle eine ganze Zahl $R\geq\sqrt{2U}$, $R\geq1$. Für $X\sim\Pois(\lambda)$, $L\leq\lambda\leq U$, liefert Chebyshev mindestens die Masse $1/2$ auf höchstens $2R+1$ Ganzzahlen. Daher ist die modale Masse mindestens $[2(2R+1)]^{-1}$. Mit dem Poisson-Modus $\lfloor\lambda\rfloor$ und der exakten Rekursion folgt
+\begin{equation}\label{eq:pmflower}
+ p_\lambda(j)\geq p_*:=\frac{1}{2(2R+1)}
+ \prod_{i=j+1}^{m}\min\{1,i/U\}>0.
+\end{equation}
+Ein leeres Produkt ist eins. Die Ableitung der CDF $F_j$ ist $F_j'(\lambda)=-p_\lambda(j)$. Integration und
+\[
+ |\mu(q_0\pm\delta)-\mu(q_0)|
+ \geq\rho\frac{\pi}{8}\sqrt{q_0-\delta}\,\delta=:a_e
+\]
+zeigen, dass die TV-Distanz zur Referenz an beiden Randpunkten mindestens $a_ep_*$ beträgt. Außerhalb des Intervalls wächst der Abstand dieses festen CDF-Ereignisses monoton weiter. Folglich gilt
+\begin{equation}\label{eq:tvlocal}
+ \TV(P_\theta,P_{\theta_0})\leq\tfrac12\min_{e\in E_*}a_ep_{*,e}
+ \quad\Longrightarrow\quad\theta\in K_\delta.
+\end{equation}
+Die Implementierung ersetzt $\pi$ und die Quadratwurzel in $a_e$ durch rationale untere Schranken. $L,U$ werden nach außen begrenzt. Die $\pi$-Schranken folgen aus der Machin-Identität und alternierenden arctan-Reihen. Die CDF-Idee ist mit der klassischen exakten Poisson-TV-Formel vereinbar \cite{adell}; der hier verwendete grobe, aber rationale Unterwert ist oben vollständig hergeleitet.
+
+\section{Ausgeführte Ergebnisse}
+Die feste Radiusliste umfasst $\delta=10^{-2},10^{-3},\ldots,10^{-12}$ in physikalischen Längenquadraten. Sie wurde vor Ausführung dieses Zertifikatlaufs in den Code geschrieben. Es handelt sich um eine deterministische Methodenprüfung auf bekannten Archivdaten, nicht um externe Vorregistrierung oder neue Messdaten. Alle Ergebnisse bleiben erhalten.
+
+\begin{center}\begin{tabular}{@{}llll@{}}\toprule
+$\delta$ & Paar-Gap-Obergrenze & Ergebnis & hinreichendes Referenz-TV-Budget\\\midrule
+$10^{-2}$ bis $10^{-4}$ & nicht zertifiziert & HOLD & --\\
+$10^{-5}$ & $<1.719$ & HOLD für $1/5$ & --\\
+$10^{-6}$ & $<0.069211$ & PASS lokal & $10^{-5}$\\
+$10^{-7}$ & $<0.006566$ & PASS lokal & $10^{-6}$\\
+$10^{-8}$ & $<0.000654$ & PASS lokal & $10^{-7}$\\
+$10^{-9}$ & $<0.000065287$ & PASS lokal & $10^{-8}$\\
+\bottomrule\end{tabular}\end{center}
+Die Tabelle rundet Obergrenzen nach oben und zulässige TV-Budgets nach unten. Die vollständigen rationalen Größen und auch die drei kleineren Radien stehen in \texttt{validation.json}. HOLD bedeutet, dass diese Schranke nicht reicht; es ist kein Instabilitätsnachweis.
+
+\begin{theorem}[Konkretes lokales Ergebnis]
+Im deklarierten vollständigen $2+1$-dimensionalen Landmarkenmodell zur archivierten Referenz cloud 09 gilt für alle $\theta,\theta'$ mit
+\[
+ \TV(P_\theta,P_{\theta_0})\leq10^{-5},\qquad
+ \TV(P_{\theta'},P_{\theta_0})\leq10^{-5}
+\]
+die strenge Schranke $g(\theta,\theta')<7/100$.
+\end{theorem}
+\begin{proof}
+Die rationale Auswertung von \eqref{eq:tvlocal} bei $\delta=10^{-6}$ liefert einen zulässigen Radius größer als $1.0525\cdot10^{-5}$. Beide Konfigurationen liegen daher in $K_{10^{-6}}$. Die rationale Auswertung von \eqref{eq:R2} und \eqref{eq:pair} ergibt einen Wert unter $0.069211<0.07$. Die beiden konservativ gerundeten Claim-Grenzen werden im Skript zusätzlich durch exakte Ungleichungen geprüft.
+\end{proof}
+
+Die Tabelle beschreibt hinreichende Beweisschranken. Ein maximales zulässiges $\delta$ und eine verbesserte empirische Rekonstruktionsgenauigkeit wurden nicht bestimmt.
+
+Am archivierten \emph{Endpunktpaar} wurde zusätzlich die orthogonale Identität exakt geprüft. Dessen tatsächlicher symmetrischer Gap beträgt etwa $0.14821285$. Die neue allgemeine Residualabschätzung liefert dort etwa $0.26441580$, also weiterhin mehr als $0.2$. Diese separate Paardiagnostik und das lokale Zertifikat dürfen nicht verwechselt werden: Der zweite archivierte Endpunkt gehört nicht aufgrund dieses Tests zur kleinen zertifizierten Klasse.
+
+\section{Gegenkontrollen und wissenschaftliche Grenzen}
+\textbf{Gemeinsame Verteilung.} Identische Poisson-Marginalen bestimmen nicht das gemeinsame Gesetz. Beispielsweise haben $(Z,Z)$ und $(Z_1,Z_2)$ mit unabhängigen $Z,Z_1,Z_2\sim\Pois(1)$ dieselben Marginalen. Für das Ereignis der Gleichheit der Komponenten ergibt sich trotzdem ein TV-Unterwert
+\[
+ 1-e^{-2}\sum_{j\geq0}\frac{1}{(j!)^2}>0.69.
+\]
+Dies wird numerisch gegengeprüft. Deshalb wird nur die gültige Richtung benutzt: Nähe des vollen Gesetzes erzwingt Nähe jeder Marginale.
+
+\textbf{Unbekannte Skala.} Bei $x\mapsto ax$, $\rho\mapsto\rho a^{-d}$ und mitskaliertem Gebiet bleiben die vollständigen beschrifteten Zählgesetze gleich; $W\mapsto a^{-2}W$. Die Skalenmehrdeutigkeit aus GFEST 0.1 bleibt bestehen. Das Skalengesetz $W(2x)=W(x)/4$ wird erneut exakt geprüft.
+
+\textbf{Was nicht bewiesen ist.} $7\,\%$ bezeichnet einen Operator-Gap zwischen Modellkonfigurationen. Es ist weder eine Fehlerrate noch ein Konfidenzniveau, noch eine relative Genauigkeit jeder skalaren Feldantwort. Das TV-Budget $10^{-5}$ ist ein Abstand von Wahrscheinlichkeitsgesetzen, kein direkt beobachteter Stichprobenfehler. Die uniforme Auswahl- und Beobachtungsverteilung des tatsächlichen A/B-Protokolls ist nicht hergeleitet. Kontinuumsfehler, unbekannte Dichte und beliebige Rangdegenerationen bleiben außerhalb des Claims.
+
+Der neue lokale Satz ersetzt den ursprünglichen, deutlich stärkeren Claim nicht. Insbesondere genügt die alleinige Bedingung $\TV(P_\theta,P_{\theta'})\leq1/4$ nicht für die Anwendung des lokalen Zertifikats. Der Referenz-TV-Radius ist um den Faktor $25000$ kleiner als $1/4$; eine quantitative Extrapolation wäre unzulässig.
+
+\section{Reproduktion und verbleibender Engpass}
+\texttt{verify\_stability.py} liest ausschließlich die mitgelieferte \texttt{witness.json}, prüft die vollständige Paarmaske, konstruiert die Momentengewichte rational und erstellt \texttt{validation.json}. Die Gleitkomma-Choleskyzerlegung liefert nur einen Vorschlag für $T$. Dessen rationale Rundung wird durch die exakte Gramresidualschranke nachträglich zertifiziert; der Gleitkommaalgorithmus wird nicht als Beweisgrundlage benutzt. Quadratwurzeln werden mittels ganzzahligem \texttt{isqrt} nach unten und oben begrenzt.
+
+Die Prüfungen umfassen bewegte Landmarken samt verändertem Metrikterm, identische physikalische Gewichte im Referenzchart und im kartesischen Chart, die sechs Gramkoeffizienten, die orthogonale Fehleridentität, die Skalengesetzkontrolle und die ausgeschriebenen lokalen Gate-Ungleichungen. Fünf Poisson-Paare werden zusätzlich durch direkte PMF-Summen mit 70 Dezimalstellen kontrolliert; die Übereinstimmung wird auf 60 Stellen verlangt. Die neuen Distanzschranken werden dabei für $d=2,3,4,5,8$ kontrolliert. Diese endlichen Kontrollen ersetzen nicht die analytischen Beweise.
+
+\begin{verbatim}
+python -m pip install -r requirements.txt
+python verify_stability.py
+pdflatex -interaction=nonstopmode GFEST_Stabilitaet_v0_2.tex
+\end{verbatim}
+Das Paket enthält die Quelle des Berichts, den Prüflauf, Laufzeitversionen, einen Quellensnapshot und SHA-256-Prüfsummen. Die 38 HOLD-Zellen von PR 122 wurden in diesem Lauf nicht neu klassifiziert. Ihr alter Umfang und der alte Claim bleiben erhalten.
+
+\textbf{Nächster gezielter Beweisschritt.} Die orthogonale Schranke und die vor Betragsbildung zusammengefassten Gramterme müssen nun in die vorhandenen Zellenabschätzungen übernommen werden. Für den ursprünglichen allgemeinen Satz ist danach eine zertifizierte Überdeckung des tatsächlichen Paarraums oder eine äquivalente globale Trennschranke nötig. Eine weitere reine Stichprobensuche könnte diesen Nachweis nicht ersetzen. Die jetzige Rechnung identifiziert den verbleibenden Engpass klar: ausreichend scharfe endliche Konstanten über eine wesentlich größere Klasse, zusätzlich zur korrekten Auswahlverteilung.
+
+\begin{thebibliography}{9}
+\bibitem{gfest} Arbeitsentwurf für Thomas Gfeller. \emph{General Finite Error Stability Theorem}, Version 0.1, 23.10.2026. Vorliegendes PDF und Quellenpaket vollständig eingesehen; Basisdefinitionen und voriger allgemeiner Satz.
+\bibitem{leskela} L. Leskelä. \emph{Information divergences and likelihood ratios of Poisson processes and point patterns}. IEEE Trans. Information Theory 70(12), 9084--9101, 2024. DOI: 10.1109/TIT.2024.3472448. Theorem 5.3; \url{https://arxiv.org/abs/2404.00294}. Rolle: Poisson-Hellinger-Identität, kein geometrischer Stabilitätsbeweis.
+\bibitem{adell} J. A. Adell und P. Jodrá. \emph{Exact Kolmogorov and total variation distances between some familiar discrete distributions}. Journal of Inequalities and Applications 2006, 64307. DOI: 10.1155/JIA/2006/64307. Rolle: exakte Poisson-TV-Ereignisformel, kein X6-Zertifikat.
+\bibitem{witness} X6 Spectral Astrolabium. \path{research/lorentz_local_dalembert/stability_information/witness.json}. Abgerufen am 23.10.2026. Git-Blob in \texttt{source\_snapshot.json}; vollständiger Inhalt und lokaler SHA-256 im Paket. \url{https://github.com/thomasmgfeller/x6-spectral-astrolabium}.
+\bibitem{pr122} X6 Spectral Astrolabium. PR 122, \emph{One octree subdivision of the remaining three-support region}. Commit \texttt{ebe17b12f56a1220ee78d08a129488f1eb6bc944}. \url{https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/122}. Festes Referenzexperiment, kein allgemeiner Paarraumsatz.
+\end{thebibliography}
+\end{document}

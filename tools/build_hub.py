@@ -115,11 +115,8 @@ def home(path, data, content, lang):
     body = '<section class="hero hero-visual"><div class="hero-copy"><p class="eyebrow">OPEN RESEARCH · PUBLIC PREVIEW</p><h1>' + E(t['headline']) + '</h1>' + p(t['lead'])
     body += '<div class="actions">' + link(rel(path, 'app/index.html'), t['launch_astrolabium'], **{'class': 'button'}) + link(rel(path, 'app/signal-lab.html'), t['launch'], **{'class': 'button secondary'}) + link(rel(path, 'app/proper-time.html'), t['launch_proper_time'], **{'class': 'button'}) + link(rel(path, 'modules/index.html'), t['browse'], **{'class': 'button secondary'}) + link(rel(path, 'wiki/' + lang + '/index.html'), 'X6 verständlich erklärt →' if lang == 'de' else 'X6 explained simply →', **{'class': 'button secondary'}) + link('#eigenzeit-results', eigenzeit['jump'], **{'class': 'button secondary'}) + '</div></div>'
     body += '<figure class="setup-visual"><a href="' + rel(path, SETUP_IMAGE) + '" aria-label="' + E(visual['expand'], quote=True) + '"><img src="' + rel(path, SETUP_IMAGE) + '" width="1536" height="1024" fetchpriority="high" alt="' + E(visual['alt'], quote=True) + '"></a><figcaption><span class="eyebrow">' + E(visual['label']) + '</span><strong>' + E(visual['title']) + '</strong>' + p(visual['caption']) + link(REPO + '/blob/main/experiments/photonic-two-qubit/README.md', visual['details']) + '</figcaption></figure></section>'
-    eigenzeit_links = [(REPO + '/blob/main/research/lorentz_local_dalembert/poisson_tail_obstruction/README.md', eigenzeit['paired_link']),
-                       (REPO + '/pull/108', eigenzeit['latest']),
-                       (REPO + '/pull/108/checks', eigenzeit['checks']),
-                       (REPO + '/pull/99', eigenzeit['prior']),
-                       (REPO + '/pulls?q=is%3Apr', eigenzeit['all'])]
+    eigenzeit_links = [(rel(path, item['path']) if 'path' in item else item['url'], item['label'])
+                       for item in eigenzeit['links']]
     body += '<section class="research-feature" id="eigenzeit-results" aria-labelledby="eigenzeit-title"><div><p class="eyebrow">' + E(eigenzeit['date']) + '</p><h2 id="eigenzeit-title">' + E(eigenzeit['title']) + '</h2><p class="feature-intro">' + E(eigenzeit['text']) + '</p><p class="feature-intro">' + E(eigenzeit['status']) + '</p><p class="feature-status">' + E(eigenzeit['previous']) + '</p></div><div class="feature-links">'
     body += ''.join(link(url, label, **{'class': 'button' if i == 0 else 'feature-link'}) for i, (url, label) in enumerate(eigenzeit_links)) + '</div></section>'
     downloads = [(rel(path, 'app/rax-cqg-lab.html'), feature['benchmark']),
@@ -150,7 +147,7 @@ def home(path, data, content, lang):
     md += '[' + ('Wiki: X6 verständlich erklärt' if lang == 'de' else 'Wiki: X6 explained simply') + '](' + canonical('wiki/' + lang + '/index.html') + ')\n\n'
     for target, label in [('app/index.html', t['launch_astrolabium']), ('app/signal-lab.html', t['launch']), ('app/proper-time.html', t['launch_proper_time']), ('modules/index.html', t['browse'])]:
         md += '- [' + label + '](' + canonical(target) + ')\n'
-    md += '\n## ' + eigenzeit['title'] + '\n\n' + eigenzeit['date'] + '\n\n' + eigenzeit['text'] + '\n\n' + eigenzeit['status'] + '\n\n' + eigenzeit['previous'] + '\n\n' + ''.join('- [' + label + '](' + url + ')\n' for url, label in eigenzeit_links)
+    md += '\n## ' + eigenzeit['title'] + '\n\n' + eigenzeit['date'] + '\n\n' + eigenzeit['text'] + '\n\n' + eigenzeit['status'] + '\n\n' + eigenzeit['previous'] + '\n\n' + ''.join('- [' + item['label'] + '](' + (BASE + item['path'] if 'path' in item else item['url']) + ')\n' for item in eigenzeit['links'])
     md += '\n## ' + visual['title'] + '\n\n![' + visual['alt'] + '](' + BASE + SETUP_IMAGE + ')\n\n' + visual['caption'] + '\n\n[' + visual['details'] + '](' + REPO + '/blob/main/experiments/photonic-two-qubit/README.md)\n'
     md += '\n## RAX-CQG · ' + feature['label'] + '\n\n' + feature['text'] + '\n\n' + feature['status'] + '\n\n'
     for target, label in [(BASE + 'app/rax-cqg-lab.html', feature['benchmark']), (BASE + CQG_BENCHMARK_PATH + 'RAX_CQG_Benchmark_v0_2_0.zip', feature['package']), (BASE + 'modules/rax-cqg-benchmark.html', feature['scope']), (BASE + CQG_PATH + CQG_DOCUMENT + '.pdf', feature['pdf']), (REPO + '/blob/main/' + CQG_PATH + 'ARCHITECTURE.md', feature['read']), (BASE + CQG_PATH + CQG_DOCUMENT + '.docx', feature['word'])]:

@@ -1,0 +1,81 @@
+{
+  "status": "PASS",
+  "exact_rational_configurations": 3,
+  "all_stencil_nodes": 17,
+  "all_landmarks": 4,
+  "moment_rows": 10,
+  "gram_reconstruction": true,
+  "coordinate_reconstruction": true,
+  "intrinsic_cartesian_minimum_norm_identity": true,
+  "moving_landmark_rhs_change_detected": true,
+  "physical_scale_weight_law": true,
+  "symbolic_monomial_jacobian_identity": true,
+  "finite_endpoint_inequalities_checked": 6,
+  "poisson_pairs": [
+    {
+      "mu": "0.0",
+      "nu": "0.0",
+      "tv_diagnostic": "0.0",
+      "mean_bound": "0.0"
+    },
+    {
+      "mu": "0.0",
+      "nu": "0.1",
+      "tv_diagnostic": "0.0951625819640404268357509405535633788052946390195990479437426829442200346557516389874965539",
+      "mean_bound": "0.1"
+    },
+    {
+      "mu": "0.2",
+      "nu": "0.3",
+      "tv_diagnostic": "0.077912532396263992603061729301222552176340024270009324182718694808410530525136327609083253",
+      "mean_bound": "0.0999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999"
+    },
+    {
+      "mu": "1.0",
+      "nu": "2.0",
+      "tv_diagnostic": "0.329753032633046567509049055405468524668727624334808024611196985432702869185336536903000181",
+      "mean_bound": "1.23447203517286341839558847639084686619852222766806110928568184370057941289227455438581905"
+    },
+    {
+      "mu": "4.0",
+      "nu": "4.0",
+      "tv_diagnostic": "0.0",
+      "mean_bound": "0.0"
+    },
+    {
+      "mu": "10.0",
+      "nu": "11.0",
+      "tv_diagnostic": "0.123151047499298968205371762651333627565891655818083407339569027399531105234410943520578025",
+      "mean_bound": "3.40073623596102208421887652674382384535176821029129665628237294989115875460649164412781905"
+    },
+    {
+      "mu": "20.0",
+      "nu": "22.0",
+      "tv_diagnostic": "0.172183840042763644815033429159011214644203515008503556364559328053971427818218980390900066",
+      "mean_bound": "5.76694853266078620321936549841982434741819023814438875618598268556498863715976527406145941"
+    },
+    {
+      "mu": "0.00001",
+      "nu": "0.00002",
+      "tv_diagnostic": "0.00000999985000116666041669249991250025198349454505896984403070135027733999377085406996901464708",
+      "mean_bound": "0.00000999999999999999999999999999999999999999999999999999999999999999999999999999999999999997517"
+    }
+  ],
+  "numerical_constants_not_certified": {
+    "q_min": 2.0,
+    "Q": 290.36135598387506,
+    "gamma": 0.5821719441552513,
+    "kappa": 0.0305129915493782,
+    "delta_q": 1.5005006550768456,
+    "actual_absolute_gap": 0.032733383181830965,
+    "very_conservative_absolute_bound": 1084966016674.6323
+  },
+  "versions": {
+    "python": "3.12.14",
+    "sympy": "1.14.0",
+    "numpy": "2.3.5",
+    "mpmath": "1.3.0"
+  },
+  "limits": "Exact rational identities and numerical diagnostics only. No uniform X6 parameter-domain certificate, no formal proof-assistant verification, no independent reviewer.",
+  "exact_pseudoinverse_identity": true
+}

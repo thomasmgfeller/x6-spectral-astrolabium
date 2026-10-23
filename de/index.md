@@ -12,19 +12,20 @@ X6 Spectral Astrolabium ist ein offener Forschungshub für Signale, Graphen und 
 
 ## Aktuelle Eigenzeit-Ergebnisse
 
-Forschungsstand · 22.10.2026
+GFEST · Dokumente vom 23.10.2026
 
-Wie zuverlässig lassen sich Operatorwerte aus endlichen, verrauschten Kausalzählungen rekonstruieren? Hier findest du die neuesten Rechnungen, ihre Grenzen und die zugehörigen Pull Requests.
+Sie forschen zu Causal Sets, Lorentz-Geometrie oder inversen Problemen? Prüfen Sie mit uns, wie stabil sich diskrete Operatorgewichte aus korrelierten Kausalzählungen rekonstruieren lassen. Hier finden Sie den GFEST-Beweisentwurf, seine Ergänzung und ausführbare Prüfpakete.
 
-Die 15 offenen Kandidaten sind geklärt: Zertifizierte Poisson-Zählwahrscheinlichkeiten schließen jetzt alle 18 Kandidaten mit mehr als 20 % Operatorabstand im festen 512-Punkte-Suchraster aus. Jeweils schon eine Zählung erzwingt TV ≥ 0,40933 statt der verlangten TV ≤ 0,25. Zwischen den Rasterpunkten bleibt die Frage offen; dies ist kein allgemeiner Stabilitätsbeweis.
+v0.1 formuliert bedingte Stabilitätssätze; v0.2 behandelt gemeinsame Punktbewegungen und dokumentiert ein rationales lokales Paarraumzertifikat. Der allgemeine Nachweis für das ursprüngliche TV-Budget 1/4 bleibt offen.
 
-PR #99: Eine zertifizierte Obergrenze begrenzt die Operatoränderung innerhalb eines festgelegten kleinen Störungsbudgets. Das ist eine lokale Aussage, kein allgemeiner Stabilitätsbeweis.
+Wir laden Physikerinnen und Physiker zu unabhängiger Beweisprüfung, Reproduktion und Gegenbeispielen ein. Bitte nennen Sie Dokumentversion, Satz oder Gleichung und Ihre Annahmen. Forschungsentwürfe, noch ohne unabhängige fachliche Begutachtung.
 
-- [Neueste Rechnung · Ergebnis und Grenzen →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/lorentz_local_dalembert/poisson_tail_obstruction/README.md)
-- [PR #108 · Zertifizierter Kandidatenausschluss →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/108)
-- [Aktuellen CI-Status von PR #108 prüfen →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/108/checks)
-- [PR #99 · Lokale Schranke →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/99)
-- [Alle Pull Requests ansehen →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pulls?q=is%3Apr)
+- [Ergänzung v0.2 lesen · PDF, 8 Seiten →](https://thomasmgfeller.github.io/x6-spectral-astrolabium/docs/research/eigenzeit/gfest/GFEST_Stabilitaet_v0_2.pdf)
+- [Beweisentwurf v0.1 lesen · PDF, 11 Seiten →](https://thomasmgfeller.github.io/x6-spectral-astrolabium/docs/research/eigenzeit/gfest/General_Finite_Error_Stability_Theorem_v0_1.pdf)
+- [Prüfpaket v0.2 herunterladen · ZIP ↓](https://thomasmgfeller.github.io/x6-spectral-astrolabium/docs/research/eigenzeit/gfest/GFEST_Stabilitaet_v0_2_Pruefpaket.zip)
+- [Quellen & Prüfungen v0.1 · ZIP ↓](https://thomasmgfeller.github.io/x6-spectral-astrolabium/docs/research/eigenzeit/gfest/GFEST_v0_1_Quellen_und_Pruefungen.zip)
+- [Geltungsbereich, Quellcode & frühere Ergebnisse →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/docs/research/eigenzeit/gfest/README.md)
+- [Fachliche Rückmeldung auf GitHub →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/issues/new?template=01-math.yml&title=GFEST%3A%20)
 
 ## Vom Lichtsignal zur auswertbaren Messung
 
