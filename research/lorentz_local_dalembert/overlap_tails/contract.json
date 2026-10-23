@@ -1,0 +1,25 @@
+{
+  "schema": "eigenzeit.overlap-tails/1",
+  "source_commit": "e65bfac83e51f0b8e0ce60d480bf5d6dc23fbf69",
+  "source_tree": "34a1531af84dda67a8592be0784c5be9555a1517",
+  "source_hold_cells": 38,
+  "source_unresolved_signed_rays": [
+    3,
+    44
+  ],
+  "tv_gate": "1/4",
+  "gap_gate": "1/5",
+  "overlap_slices": 64,
+  "maximum_anchor_events_per_cell": 2,
+  "maximum_exclusive_mean": 2048,
+  "probability": {
+    "cdf_grid_digits": 80,
+    "x_upper_steps": 1024,
+    "y_upper_steps": 2048,
+    "maximum_mean": 32768,
+    "numerical_event_width_target": "1e-65"
+  },
+  "classification": "Try at most two common anchors ranked by exact mean-separation squared over variance bound; threshold floor of midpoint of mean-interval centers. Full overlap range covered by 64 closed rational slices. First TV>1/4 exclusion or HOLD.",
+  "stop": "Exactly one pass over the 38 inherited cells. No subdivision, overlap refinement, added anchors or retuned thresholds.",
+  "freeze_note": "Internal freeze before first new event evaluation. Prior PR114 results and geometry-only statistics are known; not external preregistration."
+}
