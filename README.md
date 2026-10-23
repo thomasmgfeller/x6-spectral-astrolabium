@@ -139,6 +139,17 @@ extends qualification through 120 vertices and records the unresolved-gap limits
 
 This repository publishes the actual **X6 v4.2 RC** browser application, alongside the **v4.3 community audit kit**. The application combines experimental signal/Fourier analysis, a model-dependent signal-to-graph mapping, and exact rational lower bounds for finite weighted undirected graph Laplacians.
 
+## GFEST papers: invitation to physicists / Einladung zur Mitprüfung
+
+The [GFEST publication dossier](docs/research/eigenzeit/gfest/README.md) contains
+the original v0.1 proof draft and v0.2 supplement, both PDFs, executable verification
+packages and explicit scope. Physicists working on causal sets, Lorentzian geometry
+and inverse problems are invited to review, reproduce and propose counterexamples.
+The local certificate does not close the general claim at TV 1/4.
+
+[Deutsch: Dokumente direkt auf der Startseite](https://thomasmgfeller.github.io/x6-spectral-astrolabium/de/#eigenzeit-results)
+· [English landing page](https://thomasmgfeller.github.io/x6-spectral-astrolabium/#eigenzeit-results).
+
 ## New: RAX-CQG Causal-Set Benchmark 0.2.0
 
 **[Open the Causal-Set Lab](https://thomasmgfeller.github.io/x6-spectral-astrolabium/app/rax-cqg-lab.html)** ·

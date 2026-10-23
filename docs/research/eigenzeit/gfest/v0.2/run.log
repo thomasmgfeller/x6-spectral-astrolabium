@@ -1,0 +1,177 @@
+{
+  "schema": "gfest.v0.2.validation/1",
+  "status": "PASS_SCOPED_CHECKS",
+  "input_sha256": "ba64c9381847b07151fe7dc261dcd945f4b2c782318a117878697ac7e74b8cd3",
+  "model": {
+    "dimension": 3,
+    "rho": "32768",
+    "physical_scale": "12309312773033709/100000000000000000",
+    "observed_pairs": 74,
+    "fixed_rational_Lorentz_frame": [
+      [
+        "5/3",
+        "4/3",
+        "0"
+      ],
+      [
+        "4/3",
+        "5/3",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "1"
+      ]
+    ],
+    "supports_including_root": 17,
+    "moment_rows": 10,
+    "complete_required_mask_exact": true
+  },
+  "endpoint_diagnostic": {
+    "actual_relative_gap": "0.148212849855044665",
+    "orthogonal_identity_exact": true,
+    "row_preconditioner_residual": "1.53991528578872313e-12",
+    "finite_E_frobenius_upper": "0.411412908876768521",
+    "absolute_bound": "297.194702703015416",
+    "actual_absolute_gap": "166.586391881557174",
+    "relative_bound_using_exact_endpoint_norms": "0.264415798625105074"
+  },
+  "largest_certified_grid_radius": "1/1000000",
+  "moving_landmark_metric_and_chart_exact": true,
+  "six_Gram_coefficients_exact": true,
+  "control_scale_ambiguity_exact": true,
+  "same_marginals_different_joint_control_TV_lower": "0.6914916774463289604666156807334384599136353742787073670871738410637015",
+  "proof_scope": "All pairs in the declared local physical q-box around endpoint 0. No certificate for TV<=1/4 over the original class, no replacement of the 38 HOLD boxes, no selection-law or continuum guarantee.",
+  "versions": {
+    "python": "3.12.14",
+    "sympy": "1.14.0",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "mpmath": "1.3.0"
+  },
+  "radius_grid": [
+    {
+      "delta_q": "1/100",
+      "status": "HOLD",
+      "inverse_neumann_norm_upper": "1.61806266954057644",
+      "reason": "GRAM_RADIUS"
+    },
+    {
+      "delta_q": "1/1000",
+      "status": "HOLD",
+      "inverse_neumann_norm_upper": "0.161806266954057644",
+      "moment_perturbation_upper": "45.8394711313175536",
+      "reason": "MOMENT_RADIUS"
+    },
+    {
+      "delta_q": "1/10000",
+      "status": "HOLD",
+      "inverse_neumann_norm_upper": "0.0161806266954057644",
+      "moment_perturbation_upper": "3.89395215020292343",
+      "reason": "MOMENT_RADIUS"
+    },
+    {
+      "delta_q": "1/100000",
+      "status": "HOLD",
+      "inverse_neumann_norm_upper": "0.00161806266954057644",
+      "moment_perturbation_upper": "0.383534376771320050",
+      "reason": "BOUND_EXCEEDS_TARGET",
+      "weight_radius_upper": "531.034063072521683",
+      "reference_weight_norm_lower": "1149.18904441549589",
+      "pair_gap_upper": "1.71812596872979089",
+      "exact_gate_121_R2_le_normw2": false
+    },
+    {
+      "delta_q": "1/1000000",
+      "status": "PASS_LOCAL_PAIRSPACE",
+      "inverse_neumann_norm_upper": "0.000161806266954057644",
+      "moment_perturbation_upper": "0.0382957184270976683",
+      "reason": "RADIUS_CERTIFICATE",
+      "weight_radius_upper": "38.4375623900050642",
+      "reference_weight_norm_lower": "1149.18904441549589",
+      "pair_gap_upper": "0.0692100132424094378",
+      "exact_gate_121_R2_le_normw2": true,
+      "reference_TV_Hellinger_radius": "1.70512118389935539e-9",
+      "reference_TV_sufficient_radius": "0.0000105251129184211244"
+    },
+    {
+      "delta_q": "1/10000000",
+      "status": "PASS_LOCAL_PAIRSPACE",
+      "inverse_neumann_norm_upper": "0.0000161806266954057644",
+      "moment_perturbation_upper": "0.00382899552643794587",
+      "reason": "RADIUS_CERTIFICATE",
+      "weight_radius_upper": "3.75997825443023221",
+      "reference_weight_norm_lower": "1149.18904441549589",
+      "pair_gap_upper": "0.00656518743152187323",
+      "exact_gate_121_R2_le_normw2": true,
+      "reference_TV_Hellinger_radius": "1.70512160703328804e-11",
+      "reference_TV_sufficient_radius": "1.05251155125123921e-6"
+    },
+    {
+      "delta_q": "1/100000000",
+      "status": "PASS_LOCAL_PAIRSPACE",
+      "inverse_neumann_norm_upper": "1.61806266954057644e-6",
+      "moment_perturbation_upper": "0.000382893790356032593",
+      "reason": "RADIUS_CERTIFICATE",
+      "weight_radius_upper": "0.375197789096984220",
+      "reference_weight_norm_lower": "1149.18904441549589",
+      "pair_gap_upper": "0.000653191620555041541",
+      "exact_gate_121_R2_le_normw2": true,
+      "reference_TV_Hellinger_radius": "1.70512164908764567e-13",
+      "reference_TV_sufficient_radius": "1.05251157719214837e-7"
+    },
+    {
+      "delta_q": "1/1000000000",
+      "status": "PASS_LOCAL_PAIRSPACE",
+      "inverse_neumann_norm_upper": "1.61806266954057644e-7",
+      "moment_perturbation_upper": "0.0000382893214136004685",
+      "reason": "RADIUS_CERTIFICATE",
+      "weight_radius_upper": "0.0375118147501952749",
+      "reference_weight_norm_lower": "1149.18904441549589",
+      "pair_gap_upper": "0.0000652861066378234639",
+      "exact_gate_121_R2_le_normw2": true,
+      "reference_TV_Hellinger_radius": "1.70512165329049107e-15",
+      "reference_TV_sufficient_radius": "1.05251157978623925e-8"
+    },
+    {
+      "delta_q": "1/10000000000",
+      "status": "PASS_LOCAL_PAIRSPACE",
+      "inverse_neumann_norm_upper": "1.61806266954057644e-8",
+      "moment_perturbation_upper": "3.82893156514089376e-6",
+      "reason": "RADIUS_CERTIFICATE",
+      "weight_radius_upper": "0.00375110186948050130",
+      "reference_weight_norm_lower": "1149.18904441549589",
+      "pair_gap_upper": "6.52828032399259178e-6",
+      "exact_gate_121_R2_le_normw2": true,
+      "reference_TV_Hellinger_radius": "1.70512165371074971e-17",
+      "reference_TV_sufficient_radius": "1.05251158004564834e-9"
+    },
+    {
+      "delta_q": "1/100000000000",
+      "status": "PASS_LOCAL_PAIRSPACE",
+      "inverse_neumann_norm_upper": "1.61806266954057644e-9",
+      "moment_perturbation_upper": "3.82893150751898720e-7",
+      "reason": "RADIUS_CERTIFICATE",
+      "weight_radius_upper": "0.000375109390928701136",
+      "reference_weight_norm_lower": "1149.18904441549589",
+      "pair_gap_upper": "6.52824729215607490e-7",
+      "exact_gate_121_R2_le_normw2": true,
+      "reference_TV_Hellinger_radius": "1.70512165375277531e-19",
+      "reference_TV_sufficient_radius": "1.05251158007158924e-10"
+    },
+    {
+      "delta_q": "1/1000000000000",
+      "status": "PASS_LOCAL_PAIRSPACE",
+      "inverse_neumann_norm_upper": "1.61806266954057644e-10",
+      "moment_perturbation_upper": "3.82893150175679663e-8",
+      "reason": "RADIUS_CERTIFICATE",
+      "weight_radius_upper": "0.0000375109311327126634",
+      "reference_weight_norm_lower": "1149.18904441549589",
+      "pair_gap_upper": "6.52824398899384639e-8",
+      "exact_gate_121_R2_le_normw2": true,
+      "reference_TV_Hellinger_radius": "1.70512165375697787e-21",
+      "reference_TV_sufficient_radius": "1.05251158007418334e-11"
+    }
+  ]
+}

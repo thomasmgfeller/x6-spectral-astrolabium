@@ -1,0 +1,29 @@
+{
+  "date": "2026-10-23",
+  "scope": "Internal computational replay of the unchanged verification scripts; no independent peer review or formal verification. Original archives and their validation files remain unchanged.",
+  "original_archive_checksums": "PASS",
+  "standalone_vs_archived_pdf_extracted_text": "IDENTICAL_FOR_BOTH_VERSIONS",
+  "replays": {
+    "v0.1": {
+      "status": "PASS",
+      "validation_matches_archived_json": true,
+      "versions": {
+        "python": "3.12.14",
+        "sympy": "1.14.0",
+        "numpy": "2.3.5",
+        "mpmath": "1.3.0"
+      }
+    },
+    "v0.2": {
+      "status": "PASS_SCOPED_CHECKS",
+      "validation_matches_archived_json": true,
+      "versions": {
+        "python": "3.12.14",
+        "sympy": "1.14.0",
+        "numpy": "2.3.5",
+        "scipy": "1.17.0",
+        "mpmath": "1.3.0"
+      }
+    }
+  }
+}
