@@ -1,0 +1,49 @@
+{
+  "nodes": [
+    15,
+    17,
+    5
+  ],
+  "axis": 1,
+  "domain": [
+    "-1/10",
+    "1/10"
+  ],
+  "gap_gate": "1/5",
+  "tv_gate": "1/4",
+  "maximum_marginal_events_per_cell": 2,
+  "poisson": {
+    "log_series_terms": 32,
+    "cdf_grid_digits": 80,
+    "cdf_upper_steps": 2048,
+    "maximum_mean": 32768,
+    "target_probability_interval_width": "1e-25"
+  },
+  "overlap": {
+    "overlap_slices": 512,
+    "maximum_exclusive_mean": 2048,
+    "probability": {
+      "cdf_grid_digits": 80,
+      "x_upper_steps": 1024,
+      "y_upper_steps": 2048,
+      "maximum_mean": 32768,
+      "numerical_event_width_target": "1e-65"
+    }
+  },
+  "schema": "eigenzeit.triple-subdivision/1",
+  "source_commit": "44b8a99198a3cbbb51014d94002dd76705b22211",
+  "source_tree": "5df01ed9deecacaedc767b3d6e120318c23477c0",
+  "parent_cells": 56,
+  "child_cells": 448,
+  "source_terminal_cells": 960,
+  "expected_terminal_cells": 1352,
+  "subdivision_rounds": 1,
+  "neumann_refinements": 12,
+  "audit_corner_boxes": 8,
+  "maximum_marginal_cells": 448,
+  "maximum_overlap_cells": 448,
+  "priority": "Numeric octree path order at each stage.",
+  "selection": "All56 source HOLD parents; all8 closed children of every parent. Safe projection, node5 strips, order contradiction, joint rank-six operator bound; every remaining child gets at most2 marginal events then1 highest-ranked overlap event with512 slices.",
+  "stop": "Exactly448 new geometric boxes; no further split. Marginal and overlap budgets448 each, so no pending child truncated. No post-result event retuning, extra pair, resolution change or budget extension.",
+  "freeze_note": "Internal freeze before first child classification or new probability. PR121 source results known; not external preregistration."
+}
