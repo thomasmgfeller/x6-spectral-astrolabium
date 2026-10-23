@@ -1,0 +1,13 @@
+{
+  "schema":"eigenzeit.paired-overlap-difference/1",
+  "selection":"Post-screen follow-up on every terminal HOLD cell of the frozen continuous archive; source screen retained unchanged",
+  "observations":{"A":[5,1],"B":[15,1],"statistic":"D=N(A)-N(B)"},
+  "overlap_bound":"Virtual future tip above node 15 by max(0,spatial separation(5,15)-boosted time separation); use I(virtual tip,1) as a certified subset of A intersection B",
+  "variance":"Upper means minus twice the lower common-subinterval intensity; retain zero overlap lower bound when positivity cannot be proved",
+  "event":"D<=k; k=floor(midpoint of the two mean-enclosure midpoints); one-sided Cantelli bounds with the integer complement D>=k+1",
+  "tv_gate":"1/4",
+  "source_hold_cells":202,
+  "source_hold_interval":["-1001/20480","-321/10240"],
+  "stop":"One analytic variance/event calculation per inherited HOLD cell; no threshold optimization, extra subdivision or new family. Keep HOLD if TV lower does not exceed 1/4.",
+  "freeze_note":"Post-screen method; frozen before evaluating its bounds on the HOLD cells. Not external preregistration."
+}
