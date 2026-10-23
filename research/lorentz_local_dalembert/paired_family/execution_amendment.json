@@ -1,0 +1,33 @@
+{
+  "reason": "Profiled bottleneck: repeated Fraction powers and sums, not a scientific threshold or budget change.",
+  "original_run_sha256": "270779daffdf61c66b5b9f0a4227571b4895659110799f01ebdfeb84a5184ad4",
+  "new_run_sha256": "d6084d4754d5bbd8f757bb2361426a9ec318d0d08da8c70fd12805b7026934bb",
+  "normalization_before": "assert result==read(HERE/name)",
+  "normalization_after": "assert json.loads(json.dumps(result))==read(HERE/name)",
+  "arithmetic": "Same exact 80-term even and 81-term odd Taylor sums, using an integer common denominator. 101 exact-rational equality controls at each fast replay.",
+  "known_partial_results": [
+    {
+      "ray": 3,
+      "evaluated_cells": 192,
+      "terminal_cells": 112,
+      "states": {
+        "DIFFERENCE_LAW_EXCLUDED": 4,
+        "ORDER_EXCLUDED": 16,
+        "GAP_EXCLUDED": 14,
+        "HOLD": 78
+      }
+    },
+    {
+      "ray": 5,
+      "evaluated_cells": 224,
+      "terminal_cells": 128,
+      "states": {
+        "HOLD": 111,
+        "GAP_EXCLUDED": 17
+      }
+    }
+  ],
+  "changes_to_scientific_contract": false,
+  "interrupted_original_execution": true,
+  "outputs_saved_before_amendment": false
+}
