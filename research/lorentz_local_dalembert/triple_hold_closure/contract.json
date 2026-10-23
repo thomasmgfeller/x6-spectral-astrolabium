@@ -1,0 +1,48 @@
+{
+  "nodes": [
+    15,
+    17,
+    5
+  ],
+  "axis": 1,
+  "domain": [
+    "-1/10",
+    "1/10"
+  ],
+  "gap_gate": "1/5",
+  "tv_gate": "1/4",
+  "maximum_marginal_events_per_cell": 2,
+  "poisson": {
+    "log_series_terms": 32,
+    "cdf_grid_digits": 80,
+    "cdf_upper_steps": 2048,
+    "maximum_mean": 32768,
+    "target_probability_interval_width": "1e-25"
+  },
+  "overlap": {
+    "overlap_slices": 512,
+    "maximum_exclusive_mean": 2048,
+    "probability": {
+      "cdf_grid_digits": 80,
+      "x_upper_steps": 1024,
+      "y_upper_steps": 2048,
+      "maximum_mean": 32768,
+      "numerical_event_width_target": "1e-65"
+    }
+  },
+  "schema": "eigenzeit.triple-hold-closure/1",
+  "source_commit": "ebe17b12f56a1220ee78d08a129488f1eb6bc944",
+  "source_tree": "7ba99c74c10158407093ab0c64d95785662d3b83",
+  "neumann_refinements": 12,
+  "audit_corner_boxes": 8,
+  "priority": "Numeric octree path order at each stage.",
+  "source_hold_cells": 38,
+  "source_exclusions": 1314,
+  "maximum_rounds": 6,
+  "maximum_new_geometric_cells": 20000,
+  "selection": "All remaining HOLD leaves in numeric path order. Eight closed midpoint children each. Inherited geometry then at most two ranked marginal events then one highest-ranked pair/anchor overlap event per remaining child; same 512 slices at every round.",
+  "stop": "Stop only on no HOLD, six completed rounds, or before a whole round would exceed 20000 new geometric cells. No partial round, no threshold changes, no event retuning. Every unresolved leaf is retained.",
+  "freeze_note": "Internal freeze of contract, runner and inherited inputs before any new child evaluation; source PR122 results known. The new audit is written afterwards against the declared independent checks, not represented as preregistered.",
+  "audit_plan": "Independent reconstruction of source cover and all paths; exact pair interval ranges; direct nine-moment center solves for every finite enclosure and corners of first eight per round; independent PMF and cover/cache/negative controls as inherited from PR122.",
+  "scope": "One fixed rational reference in 2+1 Minkowski; nodes15/17/5 independently move in boosted x over [-0.1,0.1]^3. Excludes unchanged order AND inherited admissibility AND symmetric physical weight gap>1/5 AND full conditional labelled count/overlap-law TV<=1/4. Reference-vs-moved theorem only, not arbitrary pairs, other references, other directions, full selection likelihood or general GFEST stability."
+}
