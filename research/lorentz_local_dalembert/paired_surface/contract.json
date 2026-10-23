@@ -1,0 +1,45 @@
+{
+  "schema": "eigenzeit.paired-surface/1",
+  "source_commit": "0e016fa058f916480a36d3efade415785089de37",
+  "source_tree": "eff5dd771890b05ffa5cbc3d50b2866ef5caf3d6",
+  "nodes": [
+    15,
+    17
+  ],
+  "axis": 1,
+  "domain": [
+    "-1/10",
+    "1/10"
+  ],
+  "grid_per_axis": 32,
+  "refinement_rounds": 3,
+  "maximum_parents_per_round": 128,
+  "neumann_refinements": 12,
+  "gap_gate": "1/5",
+  "tv_gate": "1/4",
+  "maximum_marginal_cells": 128,
+  "maximum_marginal_events_per_cell": 2,
+  "maximum_overlap_cells": 32,
+  "poisson": {
+    "log_series_terms": 32,
+    "cdf_grid_digits": 80,
+    "cdf_upper_steps": 2048,
+    "maximum_mean": 32768,
+    "target_probability_interval_width": "1e-25"
+  },
+  "overlap": {
+    "overlap_slices": 64,
+    "maximum_exclusive_mean": 2048,
+    "probability": {
+      "cdf_grid_digits": 80,
+      "x_upper_steps": 1024,
+      "y_upper_steps": 2048,
+      "maximum_mean": 32768,
+      "numerical_event_width_target": "1e-65"
+    }
+  },
+  "classification": "Whole-box order contradiction; union of transported law strips; joint rank-four gap; common-anchor Cantelli; marginal Hellinger; otherwise HOLD. After fixed quadtree budget, bounded exact marginal stage followed by bounded overlap stage.",
+  "priority": "Descending exact rectangle area, then numeric quadtree path.",
+  "stop": "32x32 grid, at most 3 rounds of 128 four-way splits, at most 128 marginal-stage cells with 2 events each, then at most 32 overlap-stage cells with one anchor event each. No post-evaluation extension.",
+  "freeze_note": "Internal freeze before first new rectangle classification; prior PR115 evidence and three exact algebra control points known. Not external preregistration."
+}
