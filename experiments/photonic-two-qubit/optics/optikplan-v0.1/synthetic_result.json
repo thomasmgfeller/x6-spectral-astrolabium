@@ -1,0 +1,76 @@
+{
+  "protocol_id": "OPTIK-CHSH-0.1",
+  "data_kind": "synthetic",
+  "scope": "COUNT_ONLY_CONDITIONAL_STATISTICS",
+  "alpha": 0.01,
+  "alpha_each": 0.0025,
+  "n_min_each": 2000,
+  "rows": [
+    {
+      "setting": "00",
+      "counts_pp_pm_mp_mm": [
+        732,
+        4268,
+        4268,
+        732
+      ],
+      "n": 10000,
+      "favourable_k": 8536,
+      "E": -0.7072,
+      "q_hat": 0.8536,
+      "one_sided_CP_lower": 0.8434292163236086
+    },
+    {
+      "setting": "01",
+      "counts_pp_pm_mp_mm": [
+        732,
+        4268,
+        4268,
+        732
+      ],
+      "n": 10000,
+      "favourable_k": 8536,
+      "E": -0.7072,
+      "q_hat": 0.8536,
+      "one_sided_CP_lower": 0.8434292163236086
+    },
+    {
+      "setting": "10",
+      "counts_pp_pm_mp_mm": [
+        732,
+        4268,
+        4268,
+        732
+      ],
+      "n": 10000,
+      "favourable_k": 8536,
+      "E": -0.7072,
+      "q_hat": 0.8536,
+      "one_sided_CP_lower": 0.8434292163236086
+    },
+    {
+      "setting": "11",
+      "counts_pp_pm_mp_mm": [
+        4268,
+        732,
+        732,
+        4268
+      ],
+      "n": 10000,
+      "favourable_k": 8536,
+      "E": 0.7072,
+      "q_hat": 0.8536,
+      "one_sided_CP_lower": 0.8434292163236086
+    }
+  ],
+  "T_signed": 2.8288,
+  "abs_T_descriptive": 2.8288,
+  "T_lower_99_percent": 2.7474337305888685,
+  "statistical_criterion_met": true,
+  "statistical_status": "STATISTICAL_CRITERION_MET",
+  "hardware_validation": "NOT_ASSESSED",
+  "raw_data_integrity": "NOT_ASSESSED",
+  "model_assumptions": "NOT_ASSESSED",
+  "overall_CHSH_acceptance": "NOT_ASSESSED",
+  "warning": "No hardware or entanglement certification. Synthetic data are not experimental evidence."
+}

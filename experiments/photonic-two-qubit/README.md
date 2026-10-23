@@ -10,7 +10,7 @@ Geplant ist eine polarisationsverschränkte Photonenpaarquelle mit einem Typ-II-
 
 | Ebene | Verfügbar | Noch offen |
 |---|---|---|
-| Optik | Literaturgestützter Funktionsentwurf, Analysekonventionen | Konkrete Optikauswahl, Strahlführung, Aufbau, Charakterisierung |
+| Optik | Literaturgestützter Funktionsentwurf, Analysekonventionen; Optikplan v0.1 mit Bauteilspezifikationen, Vierkanal-Schnittstelle und CHSH-Abnahmeprotokoll | Lieferantenspezifische Freigabe, maßstäbliche Strahlführung, Aufbau, Charakterisierung |
 | Digitalteil v0.7 | Vierkanal-Fensterklassifikation, UART-TX, Decoder, CHSH-Auswertung, Simulationstests | Qualifiziertes Detektor/TDC-Frontend, FPGA-Pinplan, Boardtests |
 | Astrolabium | Bereits veröffentlichter SGNCv007-Import, lokale Bridge und synthetische Demo | Ende-zu-Ende-Prüfung mit realer Messkette |
 | JIG-F1 | Fertigungsentwurf mit STEP, STL, DXF, Bauanleitung und Modellrechnungen | Fertigung, Wiederholbarkeit, Drift, Klebe- und Übergabeversuche |
@@ -19,6 +19,8 @@ Geplant ist eine polarisationsverschränkte Photonenpaarquelle mit einem Typ-II-
 Die Bezeichnung „Zwei-Qubit“ beschreibt zwei geplante Polarisationsfreiheitsgrade, einen pro Photonenarm. Sie behauptet weder deterministische Qubit-Erzeugung noch programmierbare Zwei-Qubit-Gatter. Ältere Formulierungen wie „Quantenkern“ sind Projektbezeichnungen. Maßgeblich ist der Status in [SCIENTIFIC_STATUS.md](SCIENTIFIC_STATUS.md).
 
 ## Einstieg und Unterlagen
+
+- **[Neu: Optikplan v0.1 mit CHSH-Abnahmeprotokoll](optics/optikplan-v0.1/README.md)** — [PDF](optics/optikplan-v0.1/Optikplan_v0_1.pdf), [DOCX](optics/optikplan-v0.1/Optikplan_v0_1.docx), [Prüfpaket](downloads/Optikplan_v0_1_Pruefpaket.zip); Bauteilspezifikationen, vierkanalige elektrische Schnittstelle, fester Messplan und bedingte CHSH-Auswertung. 11 Softwaretests bestanden; Hardware und realer CHSH-Nachweis NOT_RUN.
 
 - **[Neu: erster Kaskoden-Schaltplan v0.1](hardware/cascode-schematic-v0.1/README.md)** — [PDF](manuals/Kaskoden_Schaltplan_v0_1.pdf), [KiCad-Paket](downloads/Kaskoden_Schaltplan_v0_1_KiCad.zip); vier Schaltplanblätter, Stückliste und geprüfte Pinverbindungen. Vereinfachter SPICE-Modelltest bestanden; keine Hardware- oder Fertigungsfreigabe.
 - **[Kaskoden-Frontend / vierlagiger PCB-Entwurf v0.1](hardware/pcb-cascode-v0.1/README.md)** — [PDF direkt](manuals/PCB_Kaskoden_Frontend_Entwurf_v0_1.pdf); Startwerte und Abnahmeplan, alle Hardwareprüfungen NOT_RUN.
@@ -36,6 +38,7 @@ Astrolabium: [Research App](https://thomasmgfeller.github.io/x6-spectral-astrola
 
 | Paket | Inhalt / Einordnung |
 |---|---|
+| [Optikplan v0.1 – vollständiges Prüfpaket](downloads/Optikplan_v0_1_Pruefpaket.zip) | PDF/DOCX, Protokollvorlage, 80 Messsegmente, statistischer Prüfer, 11 Tests, synthetisches Beispiel und Prüfsummen; keine Hardwarefreigabe |
 | [Sagnac v0.7 komplett](downloads/Sagnac_v0_7_UART_Host_und_Hardwareplan.zip) | RTL, Host, Tests, Hardwareplan, Metrologie, synthetische Beispiele und ursprüngliche Prüfprotokolle |
 | [Sagnac v0.7 im Browser lesen](reference/sagnac_v0_7/README.md) | Unveränderte Quelltextauswahl; komplette historischen Logdateien im ZIP |
 | [JIG-F1 Baupaket v0.1.1](downloads/JIG_F1_FabLab_Baupaket_v0_1_1.zip) | Vollständige CAD- und Fertigungsunterlagen; Dokumentationskorrektur, Geometrie v0.1 unverändert |

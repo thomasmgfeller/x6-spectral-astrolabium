@@ -1,0 +1,103 @@
+{
+  "protocol_id": "OPTIK-CHSH-0.1",
+  "version": "0.1",
+  "created_date": "2026-10-23",
+  "timezone": "Europe/Zurich",
+  "status": "DESIGN_ONLY_NOT_RUN",
+  "target_state": "Psi_minus",
+  "primary_runs": 1,
+  "statistic": "T = -E00 -E01 -E10 +E11",
+  "absolute_value_for_decision": false,
+  "alpha_family": 0.01,
+  "one_sided_alpha_per_setting": 0.0025,
+  "confidence_method": "Clopper_Pearson_lower_Bonferroni",
+  "min_pairs_per_setting": 2000,
+  "cycles": 20,
+  "setting_duration_s": 30,
+  "total_net_seconds": 2400,
+  "settling_s": 2,
+  "motor_timeout_s": 30,
+  "coincidence_full_width_ps": 2000,
+  "coincidence_half_width_ps": 1000,
+  "pairing": "bipartite_connected_components_exactly_one_A_one_B",
+  "maximum_ambiguous_component_fraction": 0.001,
+  "background_shift_ps": [
+    -100000,
+    -50000,
+    50000,
+    100000
+  ],
+  "background_subtraction": false,
+  "efficiency_correction": false,
+  "optional_stopping": false,
+  "postselection_assumption_explicit": true,
+  "channel_map": {
+    "0": "A+",
+    "1": "A-",
+    "2": "B+",
+    "3": "B-"
+  },
+  "transition_setting_id": 255,
+  "angles_deg": {
+    "00": {
+      "a": 0,
+      "b": 22.5,
+      "hwp_a": 0,
+      "hwp_b": 11.25
+    },
+    "01": {
+      "a": 0,
+      "b": -22.5,
+      "hwp_a": 0,
+      "hwp_b": -11.25
+    },
+    "10": {
+      "a": 45,
+      "b": 22.5,
+      "hwp_a": 22.5,
+      "hwp_b": 11.25
+    },
+    "11": {
+      "a": 45,
+      "b": -22.5,
+      "hwp_a": 22.5,
+      "hwp_b": -11.25
+    }
+  },
+  "freeze_required_before_run": {
+    "run_id": null,
+    "operator": null,
+    "laboratory": null,
+    "pump_wavelength_nm": null,
+    "pump_power_mW": null,
+    "crystal_temperature_C": null,
+    "channel_offsets_ps": [
+      null,
+      null,
+      null,
+      null
+    ],
+    "mechanical_zero_deg": [
+      null,
+      null
+    ],
+    "hardware_ids": null,
+    "calibration_sha256": null,
+    "software_revision": null
+  },
+  "hardware_gates": {
+    "G0": "NOT_RUN",
+    "G1": "NOT_RUN",
+    "G2": "NOT_RUN",
+    "G3": "NOT_RUN",
+    "G4": "NOT_RUN",
+    "G5": "NOT_RUN",
+    "G6": "NOT_RUN"
+  },
+  "statistical_assumptions": [
+    "iid Bernoulli parity conditional on pair count within each setting",
+    "stationary state and measurement map",
+    "fair sampling including coincidence selection"
+  ],
+  "claim_limit": "Conditional laboratory CHSH evidence only; not loophole-free or device independent"
+}
