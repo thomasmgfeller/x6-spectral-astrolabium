@@ -1,0 +1,73 @@
+board,sheet,ref,value,footprint_candidate,datasheet,note
+Frontend,Frontend,J101,SENSE_IN,,,Labor-SMA; konkreten Stecker und Footprint vor Layout festlegen
+Frontend,Frontend,R101,49.9R 0.1%,Resistor_SMD:R_0402_1005Metric,,
+Frontend,Frontend,C101,10n C0G,Capacitor_SMD:C_0402_1005Metric,,AC-Kopplung; kein Isolationsbauteil
+Frontend,Frontend,R102,10R,Resistor_SMD:R_0402_1005Metric,,
+Frontend,Frontend,Q101,BFP420,Package_TO_SOT_SMD:SOT-343_SC-70-4,https://www.infineon.com/assets/row/public/documents/30/49/infineon-bfp420-datasheet-en.pdf,
+Frontend,Frontend,R103,47R 0.1%,Resistor_SMD:R_0402_1005Metric,,
+Frontend,Frontend,Q102,BFP420,Package_TO_SOT_SMD:SOT-343_SC-70-4,https://www.infineon.com/assets/row/public/documents/30/49/infineon-bfp420-datasheet-en.pdf,
+Frontend,Frontend,R104,330R 0.1%,Resistor_SMD:R_0402_1005Metric,,
+Frontend,Frontend,D101,BAS70,Package_TO_SOT_SMD:SOT-23,https://assets.nexperia.com/documents/data-sheet/BAS70.pdf,Positive Sense-Begrenzung; Kapazitaet und Pulsenergie offen
+Frontend,Frontend,D102,BAS70,Package_TO_SOT_SMD:SOT-23,https://assets.nexperia.com/documents/data-sheet/BAS70.pdf,Negative Sense-Begrenzung; kein HV-Schutz
+Frontend,Frontend,D103,BAS70,Package_TO_SOT_SMD:SOT-23,https://assets.nexperia.com/documents/data-sheet/BAS70.pdf,Reverse-BE-Begrenzung; Anode an Emitter
+Frontend,Frontend,R107,16.5k 0.1%,Resistor_SMD:R_0402_1005Metric,,
+Frontend,Frontend,R108,1.00k 0.1%,Resistor_SMD:R_0402_1005Metric,,
+Frontend,Frontend,C103,1u X7R,Capacitor_SMD:C_0603_1608Metric,,
+Frontend,Frontend,U101,OPA2333AIDGKR,Package_SO:VSSOP-8_3x3mm_P0.65mm,https://www.ti.com/lit/ds/symlink/opa2333.pdf,
+Frontend,Frontend,R106,100k 1%,Resistor_SMD:R_0402_1005Metric,,
+Frontend,Frontend,C102,100n X7R,Capacitor_SMD:C_0402_1005Metric,,
+Frontend,Frontend,R105,10k 1%,Resistor_SMD:R_0402_1005Metric,,
+Frontend,Threshold_CML,U202,DAC80501ZDGSR,Package_SO:VSSOP-10_3x3mm_P0.5mm,https://www.ti.com/lit/ds/symlink/dac80501.pdf,
+Frontend,Threshold_CML,C206,1u X7R,Capacitor_SMD:C_0603_1608Metric,,
+Frontend,Threshold_CML,C207,100n X7R,Capacitor_SMD:C_0402_1005Metric,,
+Frontend,Threshold_CML,R201,100R 1%,Resistor_SMD:R_0402_1005Metric,,
+Frontend,Threshold_CML,C201,1u X7R,Capacitor_SMD:C_0603_1608Metric,,
+Frontend,Threshold_CML,U201,ADCMP607BCPZ,,https://www.analog.com/media/en/technical-documentation/data-sheets/ADCMP606_607.pdf,CP-12-5; EP nominal 1.50 mm square; custom footprint/land pattern still required
+Frontend,Threshold_CML,J201,CML_Q,,,"50R kontrolliert, keine zusaetzliche Serienterminierung"
+Frontend,Threshold_CML,J202,CML_QN,,,50R kontrolliert; Abschluss jeweils am Empfaenger nach VCCO
+Frontend,Threshold_CML,R202,1M 1%,Resistor_SMD:R_0402_1005Metric,,"Startwert; Hysterese messen, ausloeten fuer Null-Hysterese-Vergleich"
+Frontend,Threshold_CML,R203,1k 1%,Resistor_SMD:R_0402_1005Metric,,Default Shutdown; Host muss aktiv HIGH treiben
+Frontend,Threshold_CML,J203,HOST_SPI,Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical,,"Pin6 Versorgungssense, nicht parallel fremdspeisen"
+Frontend,Threshold_CML,R204,33R,Resistor_SMD:R_0402_1005Metric,,
+Frontend,Threshold_CML,R205,33R,Resistor_SMD:R_0402_1005Metric,,
+Frontend,Threshold_CML,R206,33R,Resistor_SMD:R_0402_1005Metric,,
+Frontend,Threshold_CML,R207,10k,Resistor_SMD:R_0402_1005Metric,,
+Frontend,Threshold_CML,R208,100k,Resistor_SMD:R_0402_1005Metric,,
+Frontend,Threshold_CML,R209,100k,Resistor_SMD:R_0402_1005Metric,,
+Frontend,Threshold_CML,C202,10n C0G,Capacitor_SMD:C_0402_1005Metric,,
+Frontend,Threshold_CML,C203,100n X7R,Capacitor_SMD:C_0402_1005Metric,,
+Frontend,Threshold_CML,C204,10n C0G,Capacitor_SMD:C_0402_1005Metric,,
+Frontend,Threshold_CML,C205,100n X7R,Capacitor_SMD:C_0402_1005Metric,,
+Frontend,Power_Bias,J301,3V3_IN,Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical,,"Laborversorgung 3.3 V, Stromlimit 100 mA als Startwert"
+Frontend,Power_Bias,R301,4.7R,Resistor_SMD:R_0805_2012Metric,,Mindestens 0.125 W; 100 mA Labor-Stromlimit
+Frontend,Power_Bias,C301,10u X7R,Capacitor_SMD:C_0805_2012Metric,,Nutzkapazitaet unter DC-Bias beachten
+Frontend,Power_Bias,C305,100n X7R,Capacitor_SMD:C_0402_1005Metric,,
+Frontend,Power_Bias,R302,2.2R,Resistor_SMD:R_0805_2012Metric,,Mindestens 0.125 W; 100 mA Labor-Stromlimit
+Frontend,Power_Bias,C302,10u X7R,Capacitor_SMD:C_0805_2012Metric,,Nutzkapazitaet unter DC-Bias beachten
+Frontend,Power_Bias,C306,100n X7R,Capacitor_SMD:C_0402_1005Metric,,
+Frontend,Power_Bias,R303,0R,Resistor_SMD:R_0805_2012Metric,,Mindestens 0.125 W; 100 mA Labor-Stromlimit
+Frontend,Power_Bias,C303,10u X7R,Capacitor_SMD:C_0805_2012Metric,,Nutzkapazitaet unter DC-Bias beachten
+Frontend,Power_Bias,C307,100n X7R,Capacitor_SMD:C_0402_1005Metric,,
+Frontend,Power_Bias,R304,10R,Resistor_SMD:R_0805_2012Metric,,Mindestens 0.125 W; 100 mA Labor-Stromlimit
+Frontend,Power_Bias,C304,10u X7R,Capacitor_SMD:C_0805_2012Metric,,Nutzkapazitaet unter DC-Bias beachten
+Frontend,Power_Bias,C308,100n X7R,Capacitor_SMD:C_0402_1005Metric,,
+Frontend,Power_Bias,J302,RX_POWER,Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical,,Gemeinsame Versorgung fuer CML-Abschlussadapter; kein zweites Netzteil parallel
+Frontend,Power_Bias,R109,3.48k 0.1%,Resistor_SMD:R_0402_1005Metric,,
+Frontend,Power_Bias,R110,10.0k 0.1%,Resistor_SMD:R_0402_1005Metric,,
+Frontend,Power_Bias,C104,1u X7R,Capacitor_SMD:C_0603_1608Metric,,
+Frontend,Power_Bias,R111,100R,Resistor_SMD:R_0402_1005Metric,,
+Frontend,Power_Bias,C105,100n X7R,Capacitor_SMD:C_0402_1005Metric,,
+Frontend,Power_Bias,C106,1n C0G,Capacitor_SMD:C_0402_1005Metric,,
+Frontend,Power_Bias,C107,100n X7R,Capacitor_SMD:C_0402_1005Metric,,
+Receiver_Adapter,Receiver_Adapter,J401,FROM_Q,,,
+Receiver_Adapter,Receiver_Adapter,J402,FROM_QN,,,
+Receiver_Adapter,Receiver_Adapter,R401,49.9R 0.1%,Resistor_SMD:R_0402_1005Metric,,"Am Empfangsende, kurze Rueckleitung nach gepuffertem VCCO"
+Receiver_Adapter,Receiver_Adapter,R402,49.9R 0.1%,Resistor_SMD:R_0402_1005Metric,,
+Receiver_Adapter,Receiver_Adapter,U401,SN65LVDS34D,Package_SO:SOIC-8_3.9x4.9mm_P1.27mm,https://www.ti.com/lit/ds/symlink/sn65lvds33.pdf,
+Receiver_Adapter,Receiver_Adapter,R403,33R,Resistor_SMD:R_0402_1005Metric,,
+Receiver_Adapter,Receiver_Adapter,R404,33R,Resistor_SMD:R_0402_1005Metric,,
+Receiver_Adapter,Receiver_Adapter,J404,LOGIC_OUT,Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical,,Nur kurze 3.3-V-Logikverbindungen; Freigabe/Holdoff im externen Controller
+Receiver_Adapter,Receiver_Adapter,J403,FROM_J302,Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical,,
+Receiver_Adapter,Receiver_Adapter,C401,10u X7R,Capacitor_SMD:C_0805_2012Metric,,
+Receiver_Adapter,Receiver_Adapter,C402,100n X7R,Capacitor_SMD:C_0402_1005Metric,,
+Receiver_Adapter,Receiver_Adapter,C403,10n C0G,Capacitor_SMD:C_0402_1005Metric,,
