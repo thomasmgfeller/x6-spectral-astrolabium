@@ -1,0 +1,70 @@
+{
+  "schema": "eigenzeit.paired-tail/1",
+  "source_commit": "db15b4d056713f4644386df620720d0dc2c7cddc",
+  "source_tree": "e796b814ee72ec35b109609270cbecd1caca3140",
+  "source_hold_cells": 574,
+  "source_unresolved_signed_rays": [
+    3,
+    4,
+    7,
+    11,
+    16,
+    19,
+    20,
+    23,
+    24,
+    27,
+    28,
+    32,
+    33,
+    36,
+    40,
+    43,
+    44,
+    45,
+    48,
+    52,
+    55,
+    56,
+    57,
+    59
+  ],
+  "tv_gate": "1/4",
+  "gap_gate": "1/5",
+  "strip": {
+    "node": 15,
+    "axis": 1,
+    "sign": -1,
+    "step_interval": [
+      "7/160",
+      "45/1024"
+    ],
+    "coefficient": 2,
+    "threshold": 787
+  },
+  "maximum_marginal_tests_per_cell": 2,
+  "maximum_joint_tests_per_cell": 2,
+  "joint_coefficients": [
+    1,
+    2,
+    3
+  ],
+  "maximum_short_mean": 256,
+  "poisson": {
+    "log_series_terms": 32,
+    "cdf_grid_digits": 80,
+    "cdf_upper_steps": 2048,
+    "maximum_mean": 32768,
+    "target_probability_interval_width": "1e-25"
+  },
+  "joint_probability": {
+    "cdf_grid_digits": 80,
+    "x_upper_steps": 512,
+    "y_upper_steps": 2048,
+    "maximum_mean": 32768,
+    "numerical_event_width_target": "1e-65"
+  },
+  "classification": "First the fixed strip event if the whole displacement range is included; then up to two exact marginal CDF events; then up to two disjoint joint events; otherwise HOLD.",
+  "stop": "Exactly one pass over all 574 inherited HOLD subcells. No adaptive subdivision, extra coefficient search or threshold retuning.",
+  "freeze_note": "Internal freeze before first new event evaluation. Historical PR113 intervals and prior source events are known; not external preregistration."
+}
