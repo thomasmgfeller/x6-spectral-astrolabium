@@ -1,0 +1,23 @@
+{
+  "schema": "eigenzeit.coordinated-motions/1",
+  "source_commit": "45cfcc3d8432bcab0fcdfc6694aba0f257f5cf48",
+  "base": "Inherited exact PR95 geometry 0; five fixed nodes 0..4, 16 movable supports, unchanged density/scale/outer domain",
+  "experiment": "The existing labeled 90 interval counts and overlaps; not their scalar sum, not the A-selection or full B causal likelihood",
+  "pivot_node": 15,
+  "partners": [5,6,7,8,9,10,11,12,13,14,16,17,18,19,20],
+  "axes": [1,2],
+  "signs": [-1,1],
+  "balance_anchor": 0,
+  "direction": "Choose c=-g15/gj, g_i=(anchor_axis-node_axis)*sqrt(q_i), round the midpoint of its rigorous enclosure to the nearest 1e-12; normalize (1,c) to maximum absolute speed 1. This nearly cancels the first derivative of the sum of two counts to anchor 0, not the labeled count vector.",
+  "coefficient_unit": 1000000000000,
+  "steps": ["1/10000","1/1000","3/1000","1/100","3/100","1/20","1/10"],
+  "rays": 60,
+  "candidate_count": 420,
+  "gap_gate": "1/5",
+  "tv_gate": "1/4",
+  "law_test": "For every strong order/rank candidate: rank the 90 marginals by exact Hellinger lower bound. If none exceeds 1/4, certify Poisson event differences for at most the best two. Retain HOLD if neither excludes. Never interpret a marginal upper bound as a joint-law upper bound.",
+  "poisson": {"log_series_terms":32,"cdf_grid_digits":80,"cdf_upper_steps":2048,"maximum_mean":32768,"target_probability_interval_width":"1e-25"},
+  "conditioning": "Inherited exact intrinsic conditioning gates on every strong candidate; both bounds below 100000",
+  "stop": "420 fixed points only; no step extension or retuning after outcomes. No continuous paired-ray coverage, no full-law closeness claim, no general operator stability claim. Unresolved cases remain HOLD.",
+  "freeze_note": "Internal source/contract freeze before this finite run; informed by previous single-node results, not external preregistration."
+}

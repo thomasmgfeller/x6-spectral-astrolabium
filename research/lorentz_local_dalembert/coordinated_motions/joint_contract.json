@@ -1,0 +1,15 @@
+{
+  "schema": "eigenzeit.coordinated-joint-diagnostic/1",
+  "selection": "Post-search diagnostic of the sole HOLD candidate 12; original 420-candidate screen and its outputs remain unchanged",
+  "candidate": 12,
+  "statistics": {"X":{"index":73,"interval":[2,5]},"Y":{"index":74,"interval":[5,1]}},
+  "event": {"x_coefficient":2,"threshold":891,"description":"Y-2X<=891"},
+  "event_choice": "After inspecting candidate means, before evaluating this joint event: integer coefficient 2 approximates the ratio of the two Poisson log-likelihood coefficients; 891 is floor of the midpoint of the two expected Y-2X values. No optimality or external preregistration claim.",
+  "cdf_grid_digits":80,
+  "x_upper_steps":512,
+  "y_upper_steps":2048,
+  "maximum_mean":32768,
+  "numerical_event_width_target":"1e-65",
+  "tv_gate":"1/4",
+  "stop":"One event at one exact paired candidate. If lower bound exceeds 1/4, exclude that point; otherwise retain HOLD. No continuous paired-ray exclusion."
+}
