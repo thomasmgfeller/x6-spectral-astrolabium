@@ -46,3 +46,32 @@ jobs:
           path: photonic-evidence/
           retention-days: 7
           if-no-files-found: warn
+  optikplan-statistics:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    defaults:
+      run:
+        working-directory: experiments/photonic-two-qubit/optics/optikplan-v0.1
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Install pinned statistical dependencies
+        run: python -m pip install -r requirements.txt
+      - name: Verify original package and reproduce conditional statistics
+        run: |
+          mkdir -p "${{ github.workspace }}/optikplan-evidence"
+          git rev-parse HEAD > "${{ github.workspace }}/optikplan-evidence/source-commit.txt"
+          sha256sum -c SHA256SUMS.txt
+          python -m unittest -v test_chsh_check
+          python chsh_check.py counts_SYNTHETIC.csv --data-kind synthetic --output "${{ github.workspace }}/optikplan-evidence/synthetic_result.json"
+          cmp synthetic_result.json "${{ github.workspace }}/optikplan-evidence/synthetic_result.json"
+      - name: Preserve fresh synthetic statistical evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: optikplan-statistics-evidence
+          path: optikplan-evidence/
+          retention-days: 7
+          if-no-files-found: warn

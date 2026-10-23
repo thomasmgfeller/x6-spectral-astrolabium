@@ -474,6 +474,8 @@ Read [Sagnac integration and test scope](docs/SAGNAC_INTEGRATION.md).
 
 ## Photonic two-qubit experiment — design preview
 
+**New: [Optikplan v0.1](experiments/photonic-two-qubit/optics/optikplan-v0.1/README.md)** ([PDF](experiments/photonic-two-qubit/optics/optikplan-v0.1/Optikplan_v0_1.pdf), [complete package](experiments/photonic-two-qubit/downloads/Optikplan_v0_1_Pruefpaket.zip)). Component specifications for a 405/810 nm Sagnac source, a four-channel electrical interface and a predefined conditional CHSH acceptance protocol. Includes editable documents, a fixed measurement schedule and 11 software tests. Optical/electrical hardware checks and the experimental CHSH test remain NOT_RUN.
+
 **New: [cascode schematic v0.1](experiments/photonic-two-qubit/hardware/cascode-schematic-v0.1/README.md)** ([PDF](experiments/photonic-two-qubit/manuals/Kaskoden_Schaltplan_v0_1.pdf), [KiCad package](experiments/photonic-two-qubit/downloads/Kaskoden_Schaltplan_v0_1_KiCad.zip)). Four schematic sheets, bill of materials and reproducible checks: 183 pin connections verified and a synthetic SPICE topology test passed. Manufacturer-model validation, full ERC, impedance/timing qualification and the HV/quench power stage remain open; no fabrication approval.
 
 **[four-layer cascode PCB proposal v0.1](experiments/photonic-two-qubit/hardware/pcb-cascode-v0.1/README.md)** ([PDF](experiments/photonic-two-qubit/manuals/PCB_Kaskoden_Frontend_Entwurf_v0_1.pdf)). Single-channel 3.3 V frontend, controlled 50-ohm CML paths and proposed acceptance criteria. Original design starting points; see the newer schematic draft above. Routing, manufacturer-model SPICE/EM and hardware validation remain open.
