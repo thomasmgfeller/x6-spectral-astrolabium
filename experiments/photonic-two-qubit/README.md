@@ -1,6 +1,6 @@
 # Photonischer Zwei-Qubit-Versuchsaufbau
 
-**Entwurf und digitale Referenz · Experimental preview · 12.10.2026**
+**Entwurf und digitale Referenz · Experimental preview · Dokumentationsstand 23.10.2026**
 
 Geplant ist eine polarisationsverschränkte Photonenpaarquelle mit einem Typ-II-ppKTP-Sagnac-Interferometer, zwei lokalen Polarisationsanalysatoren und vier Detektorkanälen. Veröffentlicht werden die vorhandenen Entwurfsunterlagen, CAD-Dateien, Auswertungen und digitalen Referenzkerne. **Es liegen in diesem Paket keine Labormessungen des Gesamtaufbaus vor.**
 
@@ -20,6 +20,7 @@ Die Bezeichnung „Zwei-Qubit“ beschreibt zwei geplante Polarisationsfreiheits
 
 ## Einstieg und Unterlagen
 
+- **[Neu: Kaskoden-Frontend / vierlagiger PCB-Entwurf v0.1](hardware/pcb-cascode-v0.1/README.md)** — [PDF direkt](manuals/PCB_Kaskoden_Frontend_Entwurf_v0_1.pdf); Startwerte und Abnahmeplan, alle Hardwareprüfungen NOT_RUN.
 - [Wissenschaftlicher Status und Aussagegrenzen](SCIENTIFIC_STATUS.md)
 - [Optischer Funktionsentwurf und offene Bauteilspezifikationen](OPTICAL_DESIGN.md)
 - [Stufenweises Laborprotokoll](LAB_PROTOCOL.md)
@@ -40,6 +41,7 @@ Astrolabium: [Research App](https://thomasmgfeller.github.io/x6-spectral-astrola
 | [JIG-F1 Bauanleitung v0.1.1 (PDF)](manuals/JIG_F1_Bauanleitung_v0_1_1.pdf) | 14 Seiten; getrennte 1:1-Druckseiten für P02 und P03; Ausdruck am Kontrollmaß prüfen |
 | [Einkanal-Messkette v0.2](downloads/Photonische_Messkette_v0_2_Einkanal.zip) | Separates SPAD/AQC-Entwicklungsprojekt mit Python-Auswertung; kein fertig qualifizierter Sagnac-Detektor |
 | [Einkanal-Prüfbericht (PDF)](manuals/Photonische_Messkette_v0_2_Pruefbericht.pdf) | Ursprünglicher Bericht mit synthetischen Tests und offenen Hardwarefreigaben |
+| [Kaskoden-PCB-Entwurf v0.1 (PDF)](manuals/PCB_Kaskoden_Frontend_Entwurf_v0_1.pdf) | Vierlagiger Einzelkanal, Kaskoden-Startwerte, 50-Ω-Ausgänge und vorgeschlagene Abnahme; kein geroutetes PCB oder Fertigungsnachweis |
 | [Optionale Tomografie v0.8](optional/Sagnac_v0_8_Optionaler_Weiterentwicklungsvektor.txt) | Planung, nicht implementiert oder aktiviert |
 
 ## Historische Entwicklungsstufen
