@@ -1,0 +1,41 @@
+{
+  "nodes": [
+    15,
+    17,
+    5
+  ],
+  "axis": 1,
+  "domain": [
+    "-1/10",
+    "1/10"
+  ],
+  "gap_gate": "1/5",
+  "tv_gate": "1/4",
+  "overlap": {
+    "maximum_exclusive_mean": 2048,
+    "probability": {
+      "cdf_grid_digits": 80,
+      "x_upper_steps": 1024,
+      "y_upper_steps": 2048,
+      "maximum_mean": 32768,
+      "numerical_event_width_target": "1e-65"
+    }
+  },
+  "schema": "eigenzeit.triple-overlap-refinement/1",
+  "source_commit": "dee0d9df06c03da63fc5147a7e26b67caeae92d5",
+  "source_tree": "c755253ecab2a0b02baaf9f1b9c2ed308111b2a0",
+  "expected_source_holds": 78,
+  "expected_terminal_cells": 960,
+  "missing_overlap_cells": 15,
+  "prior_overlap_holds": 63,
+  "maximum_refined_cells": 78,
+  "slices": {
+    "missing": 64,
+    "refined": 512
+  },
+  "priority": "Numeric octree path order in each stage.",
+  "selection": "All15 missing overlap cases first. Then all remaining source HOLD boxes, including missing-stage failures. Exactly one inherited highest-ranked pair-anchor event per box at each declared resolution; event and geometry unchanged at refinement.",
+  "cache": "Stage, slice count, pair, anchor, threshold and complete statistics; shared reference/moved laws. Cache reuse is not independent replication.",
+  "stop": "Exactly two stages:15 missing64-slice events; at most78 refined512-slice events. No retuning, extra pair, geometric splitting, new operator solve or post-result extension.",
+  "freeze_note": "Internal freeze before first new event evaluation. PR120 source results known; not external preregistration."
+}
