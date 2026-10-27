@@ -85,6 +85,33 @@ Python 3.12 und das FLINT-3.3.1-Wheel sind festgehalten. Eine reine
 Auditkorrektur ist mit Originalfassung und unveränderten Produktionshashes
 in [Amendment 01](amendment_01/RECORD.json) dokumentiert.
 
+## Nachtrag: CPU-Abhängigkeit des früheren Wolken-Replays
+
+Die GitHub-Prüfung von PR #135 deckte einen zusätzlichen Befund im
+unveränderten v0.2-Audit auf: Die aus denselben Zufallsdaten berechneten
+Koordinaten sind zwischen NumPy-CPU-Pfaden nicht generell byteidentisch.
+Das lokale Abschalten von AVX-512 reproduziert Unterschiede bis
+8,89×10⁻¹⁶ L0. Diese Eigenschaft wird nicht als bitgenaue Portabilität ausgegeben.
+
+Der neue [Portabilitätsaudit](portability_audit.py) trennt deshalb:
+
+- Exakte Hashes aller archivierten Wolken und der Ausgaben der RNG-Aufrufe.
+- Einen ausdrücklich nach dem CI-Befund festgelegten numerischen
+  Koordinatenscreen von 2⁻⁴⁸ L0; er ist keine geometrische Fehlerschranke.
+- Exakte Gleichheit sämtlicher Probe-Intervallzahlen und aller drei
+  Gebietsmasken, dazu unveränderte Operator-Replay-Toleranzen.
+- Alle bisherigen deterministischen Referenz- und Zusammenfassungsprüfungen.
+
+Beide lokalen CPU-Pfade bestehen diesen separaten numerischen Replay.
+Nur der ursprüngliche CPU-Pfad reproduziert sämtliche Koordinatenbytes.
+Die Zufallsdatenreferenz wurde nachträglich auf diesem byteidentischen Pfad
+erfasst und als solche gekennzeichnet; die historische Datensammlung wurde
+nicht ersetzt. CI führt beide Portabilitätsmodi aus. Ein allgemeiner Nachweis
+für alle paarweisen Kausalrelationen folgt daraus nicht. G1 bleibt HOLD.
+Nachweise: [Zufallsdatenreferenz](PORTABILITY_STREAMS.json),
+[Standardpfad](results/PORTABILITY_DEFAULT.json),
+[Pfad ohne AVX-512](results/PORTABILITY_BASELINE.json).
+
 ## Nächster fachlicher Schritt
 
 Die Varianzhülle sollte die Feldabnahme und die tatsächlichen gemeinsamen

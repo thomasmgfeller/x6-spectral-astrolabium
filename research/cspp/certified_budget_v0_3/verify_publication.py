@@ -52,6 +52,19 @@ def main():
     check(json.loads((HERE.parent/'e4_v0_1/contract.json').read_text())['freeze_status']=='NOT_FROZEN','E4 freeze unchanged')
     a=json.loads((HERE/'AUDIT.json').read_text())
     check(a['software_status']=='PASS' and a['replay']['reference_amplitudes']==34 and a['replay']['budget_rows']==7,'complete replay')
+    streams=json.loads((HERE/'PORTABILITY_STREAMS.json').read_text())
+    check(streams['script_sha256']==sha(HERE/'portability_audit.py'),'portability source lock')
+    expected_keys={f'd{d}_r{i:02d}' for d in range(3) for i in range(16)}
+    check(len(streams['rows'])==48 and {r['key'] for r in streams['rows']}==expected_keys,'stream inventory')
+    for name in ['PORTABILITY_DEFAULT.json','PORTABILITY_BASELINE.json']:
+        pp=json.loads((HERE/'results'/name).read_text())
+        check(pp['status']=='PASS_NUMERIC_REPLAY_NOT_GENERAL_BITWISE_REPRODUCIBILITY','numeric-only portability status')
+        check(len(pp['runs'])==48 and {r['key'] for r in pp['runs']}==expected_keys,'complete portability replay')
+        check(all(r['rng_draws_probe_counts_and_region_masks_exact'] for r in pp['runs']),'exact stream/count/mask checks')
+        check(all(r['maximum_coordinate_absolute_difference']<=2.0**-48 for r in pp['runs']),'declared coordinate screen')
+        check(pp['negative_controls']==5 and pp['G1']=='HOLD','portability guards and scientific HOLD')
+    check(json.loads((HERE/'results/PORTABILITY_DEFAULT.json').read_text())['coordinate_bytes_identical_for_all_runs'] is True,'original CPU path matches archive bytes')
+    check(json.loads((HERE/'results/PORTABILITY_BASELINE.json').read_text())['coordinate_bytes_identical_for_all_runs'] is False,'cross-CPU byte limitation retained')
     print(f'PASS: {len(manifest)} hashes; 7 witness budgets; 34 reference enclosures; G1/full reference HOLD')
 
 if __name__=='__main__':main()

@@ -209,6 +209,32 @@ Diese Implementierung ist ein reproduzierbarer, begrenzter numerischer
 Nachweis unter den dokumentierten Formeln und FLINT-Annahmen; sie ist weder
 externes Peer-Review noch eine formalisierte Verifikation der Bibliothek.
 
+## 6. Separater Befund zur NumPy-Portabilität des v0.2-Samplers
+
+Der erste CI-Lauf von PR #135 scheiterte im unveränderten historischen
+Seed-zu-Koordinaten-Bytevergleich. Ein kontrollierter lokaler Vergleich mit
+und ohne AVX-512 reproduziert dies an allen 48 gespeicherten Wolken. NumPy
+wählt seine implementierten Rechenpfade anhand der CPU-Funktionen [6].
+Ein Seed allein fixiert daher nicht allgemein alle nachfolgenden
+Gleitkomma-Transformationen. Die höchste beobachtete Koordinatendifferenz
+beträgt 8,881784197001252×10⁻¹⁶ L0, die höchste Operatorabweichung im neuen
+Vergleich 7,160723346098895×10⁻¹⁵. Die RNG-Aufrufausgaben, sämtliche
+Probe-Intervallzahlen und alle Gebietsmasken stimmen exakt überein.
+
+`portability_audit.py` ist eine ausdrücklich nach diesem Befund entwickelte
+Begleitprüfung. Sie verändert weder historische Wolken noch den alten Audit.
+Sie erfasst einen Referenzhash der RNG-Aufrufausgaben auf einem CPU-Pfad, der
+alle historischen Koordinatenbytes exakt rekonstruiert. Das ist keine zuvor
+existierende Rohdatenaufzeichnung. Im numerischen Portabilitätsmodus bleiben
+die Archivhashes und diese RNG-Hashes hart; zusätzlich gelten ein deklarierter
+Koordinatenscreen 2⁻⁴⁸ L0, exakte Zähl-/Maskengleichheit sowie die ursprünglichen
+Operator- und Referenztoleranzen. Fünf Negativkontrollen prüfen Archivkorruption,
+größere Verschiebung, Zählfehler, falschen Seed und eine geänderte Gebietsmaske.
+Alle ursprünglichen deterministischen Referenz- und Summenprüfungen bleiben
+Teil des Replays. CI verwendet diesen expliziten numerischen Modus in zwei
+CPU-Konfigurationen. Allgemeine bitgenaue Portabilität bleibt **nicht erfüllt**;
+ein Beweis für alle Paarrelationen oder das volle E4-Experiment ist dies nicht.
+
 ## Primärquellen
 
 1. Last, Penrose: *Poisson process Fock space representation, chaos expansion
@@ -225,3 +251,7 @@ externes Peer-Review noch eine formalisierte Verifikation der Bibliothek.
    festgehaltene Version 0.8.0; deren Laufzeit-Dokumentation wurde ebenfalls geprüft.
 5. Für den BD-Erwartungswert und die KG-Cauchyformel gelten unverändert die
    [Primärquellen und Herleitungen aus v0.2](../scale_calibration_v0_2/METHODS.md).
+6. NumPy, [CPU Build Options / Runtime Dispatch](https://numpy.org/doc/2.4/reference/simd/build-options.html).
+   Die dort beschriebene CPU-Auswahl motiviert die Diagnose. Die ausgeführte
+   Vergleichsversion ist **2.3.5** mit deren Feature-Namen; aus der neueren
+   Dokumentation wird keine bytegenaue Garantie übernommen.

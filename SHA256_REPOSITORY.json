@@ -320,7 +320,7 @@
     "research/cspp/e4_v0_1/SHA256SUMS": "eb23264d2d1eddfd2e7865254a14826c17153b56dac69a3deea9b8e3cadc1479",
     "research/cspp/e4_v0_1/check_contract.py": "61b39a48fed277265957d44cd6cd3a6916e0aec5a6e0d0ac0165e3349851e343",
     "research/cspp/e4_v0_1/contract.json": "78cc7935b6b54d7ea425e145e65d7fd095d8146ab5158a0857ce33ca6e828f65",
-    ".github/workflows/cspp-contract.yml": "d283740d1bd1c243ba16587a10493a4cb5f68c14ef8d70922514b1e0800e59b4",
+    ".github/workflows/cspp-contract.yml": "0f2ac0dd12c9dccab3586f62f7425fff46755c6599fcb244d2ebcbc87b440e31",
     "research/cspp/scalar_pilot_v0_1/AUDIT.json": "f16a79861f4e51065aa01fdd0330e1efb7c76e29f07f00628ccf132e920a0125",
     "research/cspp/scalar_pilot_v0_1/DATA.md": "37ed7c37377198eb5ea2fafe9ed8c1cce331d15011b05135eb158235a7f42e42",
     "research/cspp/scalar_pilot_v0_1/FREEZE.json": "c9156db0078c8accd033a0d87668ca7267e33fb91c8f515414f01a6f4b333678",
@@ -392,10 +392,10 @@
     "research/cspp/scale_calibration_v0_2/verify_publication.py": "2b94a5145871f339bba3b20b0d17572b8366a313a6eb6d95c06d5319383d91e1",
     "research/cspp/certified_budget_v0_3/AUDIT.json": "eceb071e4f8595d524c84b3dcd7d8d9f4b1b93790109597475444410d84466d6",
     "research/cspp/certified_budget_v0_3/FREEZE.json": "b20fef17eb041c875c698daaf75d81a2eb22ef4858002fe213493ac98f5214da",
-    "research/cspp/certified_budget_v0_3/METHODS.md": "253d84e54b0ed9ed1f916b90dc79a337bd11d85e01dde0122007e5198a0f315c",
+    "research/cspp/certified_budget_v0_3/METHODS.md": "164e2ebaa24617a01997085e4d993e6f52b237f407e65705cf468719968daac2",
     "research/cspp/certified_budget_v0_3/PROTOCOL.json": "f90d331864a04e54cf7baf233fd2d349ec1413a69d27953d72374ea161100f37",
-    "research/cspp/certified_budget_v0_3/README.md": "659a26b938153c2c0529c538586a0ec51ee2117d3c39822ba9aa99fd2e58a4c6",
-    "research/cspp/certified_budget_v0_3/SHA256SUMS": "b644eb4fa63a71b54db61d2bfbed5ace160e8769cd31beefd02e6c1dc09cb6c3",
+    "research/cspp/certified_budget_v0_3/README.md": "82de29c5a2625ac214f0cbd2d17564d7a20948781391b324b0375275cb8c72cb",
+    "research/cspp/certified_budget_v0_3/SHA256SUMS": "2b791e418dda963b2ba0a8ce7caa6533c5b2360d03207e8d124531d1ca396375",
     "research/cspp/certified_budget_v0_3/amendment_01/FREEZE_original.json": "0686b9fa21ea001178b3918ec649d3ea64ba269e30641f438042ecce4ff16da7",
     "research/cspp/certified_budget_v0_3/amendment_01/RECORD.json": "ea285bd6be8260f2530f469d56a73429fdf48f9b18142321377173a3ef1d69c1",
     "research/cspp/certified_budget_v0_3/amendment_01/audit_original.py": "3fb1a7681345767a1dc67becc7c4748123846fab2b8cef0d1e0a68a2916f18a3",
@@ -407,7 +407,11 @@
     "research/cspp/certified_budget_v0_3/results/SOURCE.json": "5643cdd19acb2d1f54100c6a8df2922f6d879c0837c0d38659e71662be520d8f",
     "research/cspp/certified_budget_v0_3/run.py": "bea572e4d08837fab6317129089b7a7ec6e4e4c264744a175167ccd47e31001d",
     "research/cspp/certified_budget_v0_3/source.py": "449b978d5be1cb7566a9fb74747f2a8053b1dc02b04e3e970c6521fc0755a271",
-    "research/cspp/certified_budget_v0_3/verify_publication.py": "9ea2ac23f37e8ab9b38a740d3e5cfe54bbb861a44d59daf1caa63a7983f94082"
+    "research/cspp/certified_budget_v0_3/verify_publication.py": "3968dfd1839d77eeba6e93dd45a4f79f5538f1d0a9bf48d98be68d5d0f0775d2",
+    "research/cspp/certified_budget_v0_3/PORTABILITY_STREAMS.json": "e70fd9b7207010a43874b055f149cbe06306f5647a32540860c27676409fb501",
+    "research/cspp/certified_budget_v0_3/portability_audit.py": "68cb036e97cf5f9f9f847d6d1bd9f973ec8e98aec24006b4c8ab0fdac88d1cc8",
+    "research/cspp/certified_budget_v0_3/results/PORTABILITY_BASELINE.json": "7b5268cd8a4d3e70185667fa9b167fc75216238135c7dce61ed954fa2977e000",
+    "research/cspp/certified_budget_v0_3/results/PORTABILITY_DEFAULT.json": "b0259ae099e43cc5d7985fb81047eb4925f8363ed9d2949a530fd3a6a2d16968"
   },
   "non_historical_documentation_additions": [
     {
@@ -703,6 +707,16 @@
         "research/cspp/certified_budget_v0_3/run.py",
         "research/cspp/certified_budget_v0_3/source.py",
         "research/cspp/certified_budget_v0_3/verify_publication.py"
+      ]
+    },
+    {
+      "date": "2026-10-27",
+      "scope": "Explicit numeric portability qualification after NumPy CPU-path byte mismatch. Historical archives and audits unchanged; stream/count/mask checks exact, numeric screen declared, full E4 HOLD retained.",
+      "paths": [
+        "research/cspp/certified_budget_v0_3/PORTABILITY_STREAMS.json",
+        "research/cspp/certified_budget_v0_3/portability_audit.py",
+        "research/cspp/certified_budget_v0_3/results/PORTABILITY_BASELINE.json",
+        "research/cspp/certified_budget_v0_3/results/PORTABILITY_DEFAULT.json"
       ]
     }
   ],
@@ -1029,6 +1043,37 @@
           "path": ".github/workflows/cspp-contract.yml",
           "previous_sha256": "b64811fe0b417f0a69bb0e4a442c25394aaf97488ca064bdee48998c37044f5e",
           "sha256": "d283740d1bd1c243ba16587a10493a4cb5f68c14ef8d70922514b1e0800e59b4"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-27",
+      "scope": "Explicit numeric portability qualification after NumPy CPU-path byte mismatch. Historical archives and audits unchanged; stream/count/mask checks exact, numeric screen declared, full E4 HOLD retained.",
+      "files": [
+        {
+          "path": ".github/workflows/cspp-contract.yml",
+          "previous_sha256": "d283740d1bd1c243ba16587a10493a4cb5f68c14ef8d70922514b1e0800e59b4",
+          "sha256": "0f2ac0dd12c9dccab3586f62f7425fff46755c6599fcb244d2ebcbc87b440e31"
+        },
+        {
+          "path": "research/cspp/certified_budget_v0_3/METHODS.md",
+          "previous_sha256": "253d84e54b0ed9ed1f916b90dc79a337bd11d85e01dde0122007e5198a0f315c",
+          "sha256": "164e2ebaa24617a01997085e4d993e6f52b237f407e65705cf468719968daac2"
+        },
+        {
+          "path": "research/cspp/certified_budget_v0_3/README.md",
+          "previous_sha256": "659a26b938153c2c0529c538586a0ec51ee2117d3c39822ba9aa99fd2e58a4c6",
+          "sha256": "82de29c5a2625ac214f0cbd2d17564d7a20948781391b324b0375275cb8c72cb"
+        },
+        {
+          "path": "research/cspp/certified_budget_v0_3/SHA256SUMS",
+          "previous_sha256": "b644eb4fa63a71b54db61d2bfbed5ace160e8769cd31beefd02e6c1dc09cb6c3",
+          "sha256": "2b791e418dda963b2ba0a8ce7caa6533c5b2360d03207e8d124531d1ca396375"
+        },
+        {
+          "path": "research/cspp/certified_budget_v0_3/verify_publication.py",
+          "previous_sha256": "9ea2ac23f37e8ab9b38a740d3e5cfe54bbb861a44d59daf1caa63a7983f94082",
+          "sha256": "3968dfd1839d77eeba6e93dd45a4f79f5538f1d0a9bf48d98be68d5d0f0775d2"
         }
       ]
     }

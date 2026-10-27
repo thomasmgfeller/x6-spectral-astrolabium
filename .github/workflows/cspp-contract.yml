@@ -73,8 +73,12 @@ jobs:
       - run: python3 -m pip install numpy==2.3.5 scipy==1.17.0
       - name: Verify calibration package and unchanged science gates
         run: python3 -O -B research/cspp/scale_calibration_v0_2/verify_publication.py
-      - name: Replay 48 clouds and independent continuum-reference controls
-        run: python3 -B research/cspp/scale_calibration_v0_2/audit.py --replay
+      - name: Replay 48 clouds with explicit CPU-portability qualification
+        run: python3 -B research/cspp/certified_budget_v0_3/portability_audit.py --output /tmp/cspp-portability-default.json
+      - name: Replay without AVX-512 while preserving archive hashes and exact counts
+        env:
+          NPY_DISABLE_CPU_FEATURES: 'AVX512F,AVX512_SKX,AVX512_CLX,AVX512_CNL,AVX512_ICL'
+        run: python3 -B research/cspp/certified_budget_v0_3/portability_audit.py --output /tmp/cspp-portability-baseline.json
       - name: Replay descriptive calibration diagnostics
         run: |
           python3 -B research/cspp/scale_calibration_v0_2/report.py --metrics-only
