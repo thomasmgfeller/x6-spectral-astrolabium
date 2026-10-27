@@ -1,4 +1,4 @@
-name: CSPP E4 contract draft
+name: CSPP contract and scalar pilot
 on:
   pull_request:
     paths: ['research/cspp/**', '.github/workflows/cspp-contract.yml']
@@ -33,3 +33,26 @@ jobs:
           print('PASS: optimized Python cannot bypass the draft freeze guard')
           PY
       - run: python3 tests/python/verify_manifest.py
+  scalar-pilot:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+      PYTHONDONTWRITEBYTECODE: '1'
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - run: python3 -m pip install numpy==2.3.5 scipy==1.17.0
+      - name: Verify package integrity and scientific HOLD
+        run: python3 -O -B research/cspp/scalar_pilot_v0_1/verify_publication.py
+      - name: Independent controls and replay of all 64 development runs
+        run: python3 -B research/cspp/scalar_pilot_v0_1/audit.py --replay
+      - name: Replay descriptive diagnostics
+        run: |
+          python3 -B research/cspp/scalar_pilot_v0_1/report.py --metrics-only
+          git diff --exit-code -- research/cspp/scalar_pilot_v0_1/results/DIAGNOSTICS.json
