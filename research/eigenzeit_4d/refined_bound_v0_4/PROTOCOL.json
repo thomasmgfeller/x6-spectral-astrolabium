@@ -1,0 +1,33 @@
+{
+  "version": "0.4",
+  "date": "2026-10-27",
+  "scope": "same 20 fixed v0.2 geometries; independent fresh count vectors; flat 3+1, fixed external labels and known density",
+  "count_seed": 2026102712,
+  "density_expected_outer_counts": [
+    268435456,
+    1073741824,
+    4294967296
+  ],
+  "replicates_per_geometry_per_density": 64,
+  "primary_density_index": 2,
+  "primary_gate": "At the 16x information budget, all 20 geometries must have one-sided Clopper-Pearson certificate-availability lower bound >=0.90, Bonferroni alpha=0.05/20. Lower budgets are descriptive comparisons.",
+  "confidence_region": "Unchanged v0.3 likelihood region sum D(y_i||lambda_i)<=48, noncoverage <=2^30 exp(-24). No repeated-look or simultaneous-observation claim.",
+  "improvements": [
+    "exact square-root remainder with positive count lower envelope",
+    "4x4 PSD matrices bounding matrix-valued and vector-valued linear fluctuations; minimum of trace, Frobenius and row-sum upper bounds"
+  ],
+  "comparison": "v0.3 method on the identical fresh counts; every positive candidate of either method validated at 60 decimal digits",
+  "candidate_policy": "Float scan followed by outward interval validation; failed guards and rejected candidates retained as HOLD. No geometry or true parameters passed to either certifier.",
+  "audit": "Independent exact seed replay; exact certificate inequalities and known-target evaluation; independent interval point solve; first/last new certificate in each nonempty cell repeated at 90 digits; 256 random ellipsoid-boundary directions for each selected certificate; archived region witnesses checked exactly.",
+  "development_data": "Published v0.3 observations used to diagnose and design the bound. They are not fresh validation.",
+  "no_claims": [
+    "physical realizability of unrestricted-mean region witnesses",
+    "general statistical impossibility",
+    "intrinsic landmark selection",
+    "unseen-geometry generalization",
+    "curvature or operator qualification",
+    "independent external review",
+    "closing the original-budget gate by raising the budget"
+  ],
+  "amendment": "AMENDMENT.json records an aborted import-shadowing attempt and a new independent seed; method and acceptance criteria unchanged."
+}

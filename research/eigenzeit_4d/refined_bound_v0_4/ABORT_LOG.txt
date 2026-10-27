@@ -1,0 +1,20 @@
+Observed stdout from the aborted first attempt (seed 2026102710).
+The attempt was interrupted with exit code 130 before writing result files.
+These partial outcomes are excluded from the fresh v0.4 validation.
+
+PASS_CONTROLS reported 2207 checks: the v0.3 controls module was imported.
+level 0, geometries_done 5: 256 new certificates
+level 0, geometries_done 10: 512 new certificates
+level 0, geometries_done 15: 766 new certificates
+level 0, geometries_done 20: 958 new certificates
+level 1, geometries_done 5: 256 new certificates
+level 1, geometries_done 10: 512 new certificates
+level 1, geometries_done 15: 769 new certificates
+level 1, geometries_done 20: 961 new certificates
+level 2, geometries_done 5: 320 new certificates
+
+The first attempt's frozen source and protocol bytes are preserved in
+aborted_attempt/. This is a historical source snapshot, not a standalone
+package: its original relative dependency paths refer to the v0.4 location.
+The mathematical method, budgets and acceptance rules were not changed.
+AMENDMENT.json records the import fix and independent replacement seed.
