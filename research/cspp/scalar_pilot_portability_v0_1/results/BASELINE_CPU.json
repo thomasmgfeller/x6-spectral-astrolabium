@@ -1,0 +1,547 @@
+{
+  "status": "PASS_NUMERIC_REPLAY_NOT_GENERAL_BITWISE_REPRODUCIBILITY",
+  "runtime": {
+    "numpy": "2.3.5",
+    "disabled_features": "AVX512F,AVX512_SKX,AVX512_CLX,AVX512_CNL,AVX512_ICL",
+    "enabled_features": [
+      "MMX",
+      "SSE",
+      "SSE2",
+      "SSE3",
+      "SSSE3",
+      "SSE41",
+      "POPCNT",
+      "SSE42",
+      "AVX",
+      "F16C",
+      "FMA3",
+      "AVX2",
+      "AVX512CD",
+      "AVX512VPOPCNTDQ",
+      "AVX512VL",
+      "AVX512BW",
+      "AVX512DQ",
+      "AVX512VNNI",
+      "AVX512IFMA",
+      "AVX512VBMI",
+      "AVX512VBMI2",
+      "AVX512BITALG"
+    ]
+  },
+  "legacy_controls": [
+    "all toy interval counts against exact-rational brute force",
+    "joint Lorentz transform preserves toy interval counts",
+    "binomial weight oracle epsilon=1",
+    "binomial weight oracle epsilon=0.25",
+    "binomial weight oracle epsilon=0.0625",
+    "invalid epsilon rejected",
+    "analytic Box against centered numerical derivative",
+    "wrong Box sign detected",
+    "retarded triangular solve against independent row recursion",
+    "zero solution preserved",
+    "compact-source continuum normalization",
+    "Fourier grid interpolation at exact nodes",
+    "Fourier KG evolution against exact periodic plane mode for all three masses",
+    "unresolved null pair blocks computation"
+  ],
+  "runs": [
+    {
+      "key": "d0_r00",
+      "bytes_identical": false,
+      "maximum_coordinate_absolute_difference": 8.881784197001252e-16,
+      "changed_coordinate_components": 178,
+      "outer": {
+        "bytes_identical": false,
+        "maximum_coordinate_absolute_difference": 8.881784197001252e-16,
+        "changed_coordinate_components": 409
+      },
+      "rng_counts_and_history_memberships_exact": true
+    },
+    {
+      "key": "d0_r01",
+      "bytes_identical": false,
+      "maximum_coordinate_absolute_difference": 8.881784197001252e-16,
+      "changed_coordinate_components": 211,
+      "outer": {
+        "bytes_identical": false,
+        "maximum_coordinate_absolute_difference": 1.7763568394002505e-15,
+        "changed_coordinate_components": 433
+      },
+      "rng_counts_and_history_memberships_exact": true
+    },
+    {
+      "key": "d0_r02",
+      "bytes_identical": false,
+      "maximum_coordinate_absolute_difference": 4.440892098500626e-16,
+      "changed_coordinate_components": 148,
+      "outer": {
+        "bytes_identical": false,
+        "maximum_coordinate_absolute_difference": 1.7763568394002505e-15,
+        "changed_coordinate_components": 380
+      },
+      "rng_counts_and_history_memberships_exact": true
+    },
+    {
+      "key": "d0_r03",
+      "bytes_identical": false,
+      "maximum_coordinate_absolute_difference": 8.881784197001252e-16,
+      "changed_coordinate_components": 180,
+      "outer": {
+        "bytes_identical": false,
+        "maximum_coordinate_absolute_difference": 8.881784197001252e-16,
+        "changed_coordinate_components": 440
+      },
+      "rng_counts_and_history_memberships_exact": true
+    },
+    {
+      "key": "d0_r04",
+      "bytes_identical": false,
+      "maximum_coordinate_absolute_difference": 4.440892098500626e-16,
+      "changed_coordinate_components": 130,
+      "rng_counts_and_history_memberships_exact": true
+    },
+    {
+      "key": "d0_r05",
+      "bytes_identical": false,
+      "maximum_coordinate_absolute_difference": 4.440892098500626e-16,
+      "changed_coordinate_components": 165,
+      "rng_counts_and_history_memberships_exact": true
+    },
+    {
+      "key": "d0_r06",
+      "bytes_identical": false,
+      "maximum_coordinate_absolute_difference": 4.440892098500626e-16,
+      "changed_coordinate_components": 182,
+      "rng_counts_and_history_memberships_exact": true
+    },
+    {
+      "key": "d0_r07",
+      "bytes_identical": false,
+      "maximum_coordinate_absolute_difference": 4.440892098500626e-16,
+      "changed_coordinate_components": 182,
+      "rng_counts_and_history_memberships_exact": true
+    },
+    {
+      "key": "d0_r08",
+      "bytes_identical": false,
+      "maximum_coordinate_absolute_difference": 6.661338147750939e-16,
+      "changed_coordinate_components": 208,
+      "rng_counts_and_history_memberships_exact": true
+    },
+    {
+      "key": "d0_r09",
+      "bytes_identical": false,
+      "maximum_coordinate_absolute_difference": 8.881784197001252e-16,
+      "changed_coordinate_components": 175,
+      "rng_counts_and_history_memberships_exact": true
+    },
+    {
+      "key": "d0_r10",
+      "bytes_identical": false,
+      "maximum_coordinate_absolute_difference": 4.440892098500626e-16,
+      "changed_coordinate_components": 148,
+      "rng_counts_and_history_memberships_exact": true
+    },
+    {
+      "key": "d0_r11",
+      "bytes_identical": false,
+      "maximum_coordinate_absolute_difference": 8.881784197001252e-16,
+      "changed_coordinate_components": 152,
+      "rng_counts_and_history_memberships_exact": true
+    },
+    {
+      "key": "d0_r12",
+      "bytes_identical": false,
+      "maximum_coordinate_absolute_difference": 4.440892098500626e-16,
+      "changed_coordinate_components": 182,
+      "rng_counts_and_history_memberships_exact": true
+    },
+    {
+      "key": "d0_r13",
+      "bytes_identical": false,
+      "maximum_coordinate_absolute_difference": 8.881784197001252e-16,
+      "changed_coordinate_components": 155,
+      "rng_counts_and_history_memberships_exact": true
+    },
+    {
+      "key": "d0_r14",
+      "bytes_identical": false,
+      "maximum_coordinate_absolute_difference": 4.440892098500626e-16,
+      "changed_coordinate_components": 182,
+      "rng_counts_and_history_memberships_exact": true
+    },
+    {
+      "key": "d0_r15",
+      "bytes_identical": false,
+      "maximum_coordinate_absolute_difference": 4.440892098500626e-16,
+      "changed_coordinate_components": 159,
+      "rng_counts_and_history_memberships_exact": true
+    },
+    {
+      "key": "d1_r00",
+      "bytes_identical": false,
+      "maximum_coordinate_absolute_difference": 8.881784197001252e-16,
+      "changed_coordinate_components": 320,
+      "rng_counts_and_history_memberships_exact": true
+    },
+    {
+      "key": "d1_r01",
+      "bytes_identical": false,
+      "maximum_coordinate_absolute_difference": 8.881784197001252e-16,
+      "changed_coordinate_components": 313,
+      "rng_counts_and_history_memberships_exact": true
+    },
+    {
+      "key": "d1_r02",
+      "bytes_identical": false,
+      "maximum_coordinate_absolute_difference": 8.881784197001252e-16,
+      "changed_coordinate_components": 332,
+      "rng_counts_and_history_memberships_exact": true
+    },
+    {
+      "key": "d1_r03",
+      "bytes_identical": false,
+      "maximum_coordinate_absolute_difference": 4.440892098500626e-16,
+      "changed_coordinate_components": 352,
+      "rng_counts_and_history_memberships_exact": true
+    },
+    {
+      "key": "d1_r04",
+      "bytes_identical": false,
+      "maximum_coordinate_absolute_difference": 8.881784197001252e-16,
+      "changed_coordinate_components": 324,
+      "rng_counts_and_history_memberships_exact": true
+    },
+    {
+      "key": "d1_r05",
+      "bytes_identical": false,
+      "maximum_coordinate_absolute_difference": 4.440892098500626e-16,
+      "changed_coordinate_components": 298,
+      "rng_counts_and_history_memberships_exact": true
+    },
+    {
+      "key": "d1_r06",
+      "bytes_identical": false,
+      "maximum_coordinate_absolute_difference": 4.440892098500626e-16,
+      "changed_coordinate_components": 299,
+      "rng_counts_and_history_memberships_exact": true
+    },
+    {
+      "key": "d1_r07",
+      "bytes_identical": false,
+      "maximum_coordinate_absolute_difference": 4.440892098500626e-16,
+      "changed_coordinate_components": 299,
+      "rng_counts_and_history_memberships_exact": true
+    },
+    {
+      "key": "d1_r08",
+      "bytes_identical": false,
+      "maximum_coordinate_absolute_difference": 8.881784197001252e-16,
+      "changed_coordinate_components": 353,
+      "rng_counts_and_history_memberships_exact": true
+    },
+    {
+      "key": "d1_r09",
+      "bytes_identical": false,
+      "maximum_coordinate_absolute_difference": 8.881784197001252e-16,
+      "changed_coordinate_components": 307,
+      "rng_counts_and_history_memberships_exact": true
+    },
+    {
+      "key": "d1_r10",
+      "bytes_identical": false,
+      "maximum_coordinate_absolute_difference": 6.661338147750939e-16,
+      "changed_coordinate_components": 290,
+      "rng_counts_and_history_memberships_exact": true
+    },
+    {
+      "key": "d1_r11",
+      "bytes_identical": false,
+      "maximum_coordinate_absolute_difference": 8.881784197001252e-16,
+      "changed_coordinate_components": 315,
+      "rng_counts_and_history_memberships_exact": true
+    },
+    {
+      "key": "d1_r12",
+      "bytes_identical": false,
+      "maximum_coordinate_absolute_difference": 4.440892098500626e-16,
+      "changed_coordinate_components": 347,
+      "rng_counts_and_history_memberships_exact": true
+    },
+    {
+      "key": "d1_r13",
+      "bytes_identical": false,
+      "maximum_coordinate_absolute_difference": 4.440892098500626e-16,
+      "changed_coordinate_components": 344,
+      "rng_counts_and_history_memberships_exact": true
+    },
+    {
+      "key": "d1_r14",
+      "bytes_identical": false,
+      "maximum_coordinate_absolute_difference": 8.881784197001252e-16,
+      "changed_coordinate_components": 306,
+      "rng_counts_and_history_memberships_exact": true
+    },
+    {
+      "key": "d1_r15",
+      "bytes_identical": false,
+      "maximum_coordinate_absolute_difference": 8.881784197001252e-16,
+      "changed_coordinate_components": 386,
+      "rng_counts_and_history_memberships_exact": true
+    },
+    {
+      "key": "d2_r00",
+      "bytes_identical": false,
+      "maximum_coordinate_absolute_difference": 8.881784197001252e-16,
+      "changed_coordinate_components": 628,
+      "rng_counts_and_history_memberships_exact": true
+    },
+    {
+      "key": "d2_r01",
+      "bytes_identical": false,
+      "maximum_coordinate_absolute_difference": 8.881784197001252e-16,
+      "changed_coordinate_components": 574,
+      "rng_counts_and_history_memberships_exact": true
+    },
+    {
+      "key": "d2_r02",
+      "bytes_identical": false,
+      "maximum_coordinate_absolute_difference": 8.881784197001252e-16,
+      "changed_coordinate_components": 765,
+      "rng_counts_and_history_memberships_exact": true
+    },
+    {
+      "key": "d2_r03",
+      "bytes_identical": false,
+      "maximum_coordinate_absolute_difference": 8.881784197001252e-16,
+      "changed_coordinate_components": 685,
+      "rng_counts_and_history_memberships_exact": true
+    },
+    {
+      "key": "d2_r04",
+      "bytes_identical": false,
+      "maximum_coordinate_absolute_difference": 8.881784197001252e-16,
+      "changed_coordinate_components": 669,
+      "rng_counts_and_history_memberships_exact": true
+    },
+    {
+      "key": "d2_r05",
+      "bytes_identical": false,
+      "maximum_coordinate_absolute_difference": 8.881784197001252e-16,
+      "changed_coordinate_components": 616,
+      "rng_counts_and_history_memberships_exact": true
+    },
+    {
+      "key": "d2_r06",
+      "bytes_identical": false,
+      "maximum_coordinate_absolute_difference": 8.881784197001252e-16,
+      "changed_coordinate_components": 674,
+      "rng_counts_and_history_memberships_exact": true
+    },
+    {
+      "key": "d2_r07",
+      "bytes_identical": false,
+      "maximum_coordinate_absolute_difference": 8.881784197001252e-16,
+      "changed_coordinate_components": 675,
+      "rng_counts_and_history_memberships_exact": true
+    },
+    {
+      "key": "d2_r08",
+      "bytes_identical": false,
+      "maximum_coordinate_absolute_difference": 8.881784197001252e-16,
+      "changed_coordinate_components": 729,
+      "rng_counts_and_history_memberships_exact": true
+    },
+    {
+      "key": "d2_r09",
+      "bytes_identical": false,
+      "maximum_coordinate_absolute_difference": 8.881784197001252e-16,
+      "changed_coordinate_components": 649,
+      "rng_counts_and_history_memberships_exact": true
+    },
+    {
+      "key": "d2_r10",
+      "bytes_identical": false,
+      "maximum_coordinate_absolute_difference": 8.881784197001252e-16,
+      "changed_coordinate_components": 723,
+      "rng_counts_and_history_memberships_exact": true
+    },
+    {
+      "key": "d2_r11",
+      "bytes_identical": false,
+      "maximum_coordinate_absolute_difference": 8.881784197001252e-16,
+      "changed_coordinate_components": 618,
+      "rng_counts_and_history_memberships_exact": true
+    },
+    {
+      "key": "d2_r12",
+      "bytes_identical": false,
+      "maximum_coordinate_absolute_difference": 8.881784197001252e-16,
+      "changed_coordinate_components": 636,
+      "rng_counts_and_history_memberships_exact": true
+    },
+    {
+      "key": "d2_r13",
+      "bytes_identical": false,
+      "maximum_coordinate_absolute_difference": 8.881784197001252e-16,
+      "changed_coordinate_components": 680,
+      "rng_counts_and_history_memberships_exact": true
+    },
+    {
+      "key": "d2_r14",
+      "bytes_identical": false,
+      "maximum_coordinate_absolute_difference": 8.881784197001252e-16,
+      "changed_coordinate_components": 674,
+      "rng_counts_and_history_memberships_exact": true
+    },
+    {
+      "key": "d2_r15",
+      "bytes_identical": false,
+      "maximum_coordinate_absolute_difference": 8.881784197001252e-16,
+      "changed_coordinate_components": 618,
+      "rng_counts_and_history_memberships_exact": true
+    },
+    {
+      "key": "d3_r00",
+      "bytes_identical": false,
+      "maximum_coordinate_absolute_difference": 8.881784197001252e-16,
+      "changed_coordinate_components": 1329,
+      "outer": {
+        "bytes_identical": false,
+        "maximum_coordinate_absolute_difference": 8.881784197001252e-16,
+        "changed_coordinate_components": 3102
+      },
+      "rng_counts_and_history_memberships_exact": true
+    },
+    {
+      "key": "d3_r01",
+      "bytes_identical": false,
+      "maximum_coordinate_absolute_difference": 8.881784197001252e-16,
+      "changed_coordinate_components": 1321,
+      "outer": {
+        "bytes_identical": false,
+        "maximum_coordinate_absolute_difference": 1.3322676295501878e-15,
+        "changed_coordinate_components": 3038
+      },
+      "rng_counts_and_history_memberships_exact": true
+    },
+    {
+      "key": "d3_r02",
+      "bytes_identical": false,
+      "maximum_coordinate_absolute_difference": 8.881784197001252e-16,
+      "changed_coordinate_components": 1357,
+      "outer": {
+        "bytes_identical": false,
+        "maximum_coordinate_absolute_difference": 1.3322676295501878e-15,
+        "changed_coordinate_components": 3263
+      },
+      "rng_counts_and_history_memberships_exact": true
+    },
+    {
+      "key": "d3_r03",
+      "bytes_identical": false,
+      "maximum_coordinate_absolute_difference": 8.881784197001252e-16,
+      "changed_coordinate_components": 1232,
+      "outer": {
+        "bytes_identical": false,
+        "maximum_coordinate_absolute_difference": 1.7763568394002505e-15,
+        "changed_coordinate_components": 3024
+      },
+      "rng_counts_and_history_memberships_exact": true
+    },
+    {
+      "key": "d3_r04",
+      "bytes_identical": false,
+      "maximum_coordinate_absolute_difference": 8.881784197001252e-16,
+      "changed_coordinate_components": 1296,
+      "rng_counts_and_history_memberships_exact": true
+    },
+    {
+      "key": "d3_r05",
+      "bytes_identical": false,
+      "maximum_coordinate_absolute_difference": 8.881784197001252e-16,
+      "changed_coordinate_components": 1291,
+      "rng_counts_and_history_memberships_exact": true
+    },
+    {
+      "key": "d3_r06",
+      "bytes_identical": false,
+      "maximum_coordinate_absolute_difference": 8.881784197001252e-16,
+      "changed_coordinate_components": 1278,
+      "rng_counts_and_history_memberships_exact": true
+    },
+    {
+      "key": "d3_r07",
+      "bytes_identical": false,
+      "maximum_coordinate_absolute_difference": 8.881784197001252e-16,
+      "changed_coordinate_components": 1163,
+      "rng_counts_and_history_memberships_exact": true
+    },
+    {
+      "key": "d3_r08",
+      "bytes_identical": false,
+      "maximum_coordinate_absolute_difference": 8.881784197001252e-16,
+      "changed_coordinate_components": 1354,
+      "rng_counts_and_history_memberships_exact": true
+    },
+    {
+      "key": "d3_r09",
+      "bytes_identical": false,
+      "maximum_coordinate_absolute_difference": 8.881784197001252e-16,
+      "changed_coordinate_components": 1342,
+      "rng_counts_and_history_memberships_exact": true
+    },
+    {
+      "key": "d3_r10",
+      "bytes_identical": false,
+      "maximum_coordinate_absolute_difference": 8.881784197001252e-16,
+      "changed_coordinate_components": 1322,
+      "rng_counts_and_history_memberships_exact": true
+    },
+    {
+      "key": "d3_r11",
+      "bytes_identical": false,
+      "maximum_coordinate_absolute_difference": 8.881784197001252e-16,
+      "changed_coordinate_components": 1380,
+      "rng_counts_and_history_memberships_exact": true
+    },
+    {
+      "key": "d3_r12",
+      "bytes_identical": false,
+      "maximum_coordinate_absolute_difference": 8.881784197001252e-16,
+      "changed_coordinate_components": 1222,
+      "rng_counts_and_history_memberships_exact": true
+    },
+    {
+      "key": "d3_r13",
+      "bytes_identical": false,
+      "maximum_coordinate_absolute_difference": 8.881784197001252e-16,
+      "changed_coordinate_components": 1238,
+      "rng_counts_and_history_memberships_exact": true
+    },
+    {
+      "key": "d3_r14",
+      "bytes_identical": false,
+      "maximum_coordinate_absolute_difference": 8.881784197001252e-16,
+      "changed_coordinate_components": 1253,
+      "rng_counts_and_history_memberships_exact": true
+    },
+    {
+      "key": "d3_r15",
+      "bytes_identical": false,
+      "maximum_coordinate_absolute_difference": 8.881784197001252e-16,
+      "changed_coordinate_components": 1481,
+      "rng_counts_and_history_memberships_exact": true
+    }
+  ],
+  "negative_controls": 6,
+  "maximum_operator_absolute_difference": 9.099386826154683e-13,
+  "maximum_propagation_absolute_difference": 3.885363069147175e-12,
+  "maximum_backward_residual": 2.98421750681553e-16,
+  "inner_runs": 64,
+  "outer_runs": 8,
+  "all_coordinate_bytes_identical": false,
+  "claim_boundary": "computed interval/probe counts and history memberships exact; original numerical tolerances retained; no general bitwise portability",
+  "G1": "HOLD",
+  "confirmation_seed_used": false
+}

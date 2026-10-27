@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "exact_identities": 253,
+  "poisson_kernel": {
+    "cases": 36,
+    "max_absolute_error": 1.4210854715202004e-14,
+    "negative_controls": 2
+  },
+  "gamma_moments": {
+    "cases": 8,
+    "maximum_difference": 1.1368683772161603e-13,
+    "role": "diagnostic cross-check, not certificate"
+  },
+  "geometry": {
+    "angular_cases": 47,
+    "maximum_difference": 4.118409714821969e-16,
+    "lower_tail_cross_check": true,
+    "role": "diagnostic cross-check; proof in METHODS.md"
+  },
+  "replay": {
+    "precisions": [
+      128,
+      192
+    ],
+    "upper_budgets": 7,
+    "lower_witnesses": 1,
+    "decisions_unchanged": true
+  },
+  "external_independent_review": false,
+  "scope": "implementation controls and deterministic replay; not E4 confirmation"
+}
