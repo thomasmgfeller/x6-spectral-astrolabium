@@ -1,5 +1,7 @@
 # X6 Spectral Astrolabium
 
+**CSPP interval budget: one Gaussian mean and 34 source-reference amplitudes enclosed; G1 remains HOLD.** [Derivation, seven scale budgets and higher-precision replay](research/cspp/certified_budget_v0_3/README.md). A Poisson add-one bound accounts for shared interval counts. The smallest tested scale meets its witness-bias allocation, but the conservative variance guarantee is computationally impractical. Off-center massive reference values and the full E4 pipeline remain open.
+
 **CSPP scale calibration: reduced sprinkling noise, persistent nonlocal bias; G1 remains HOLD.** [Derivation, 48 fresh clouds and independent source-reference checks](research/cspp/scale_calibration_v0_2/README.md). Fixed nonlocality separates the measured density-dependent scatter from the finite-domain mean. A real-space KG reference improves the finest Fourier comparison to about 0.9–1.0% RMS, still above the planned 0.1% diagnostic goal. Changed calibration fields do not replace the E4 gates.
 
 **CSPP scalar pilot: 64 clouds computed; G1 remains HOLD.** [Methods, raw data, complete replay and results](research/cspp/scalar_pilot_v0_1/README.md). None of twelve density/smoothing cells reaches the draft scalar tolerance. Analytic propagation controls, paired boundary extensions and a separate Fourier-reference resolution check expose unresolved scale, boundary and source-reference errors. No Dirac or flavor qualification; the corrected outer-shell sampler and unchanged primary results are documented.
