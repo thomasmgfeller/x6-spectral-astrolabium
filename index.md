@@ -12,16 +12,17 @@ X6 Spectral Astrolabium is an open research hub for signals, graphs and causal o
 
 ## Latest Eigenzeit results
 
-3+1: refined bounds and information budget v0.4 · 27 October 2026; GFEST papers · 23 October 2026
+3+1: geometric consistency v0.5 · 27 October 2026; GFEST papers · 23 October 2026
 
 Do you work on causal sets, Lorentzian geometry or inverse problems? Help us examine how stably discrete operator weights can be reconstructed from correlated causal counts. Read the GFEST proof draft, its supplement and executable verification packages below.
 
-New in 3+1 v0.4: 3,840 fresh count trials. At sixteen times the expected outer count, 1,229/1,280 cases are certified and 19/20 geometries pass the availability criterion; fresh_11 remains open. The sharper bound alone adds only four certificates. All ten tested unrestricted-region witness means violate necessary geometric constraints. Overall and original-budget status remain HOLD. Fixed landmarks and known density; no intrinsic selection or operator qualification. General GFEST questions remain open.
+New in 3+1 v0.5: the conditional primary gate passes at the unchanged high budget. All 1,280 cases are certified; 20/20 fixed geometries pass the availability criterion. On the same fresh data, fresh_11 improves from 12/64 to 64/64. Two exact geometric norm constraints now enter the estimator and error bound. The original budget remains HOLD. Known density, fixed landmarks and flat geometry; unseen geometries, intrinsic selection, operators and general GFEST stability remain open.
 
 Physicists are invited to check the proofs, reproduce the calculations and propose counterexamples. Please specify the document version, theorem or equation, and your assumptions. Research drafts awaiting independent expert review; the PDFs are in German.
 
-- [New v0.4: information budgets, geometry checks & remaining limit →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/eigenzeit_4d/refined_bound_v0_4/README.md)
-- [New v0.3: certificates, derivation & full replay →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/eigenzeit_4d/joint_region_v0_3/README.md)
+- [New v0.5: conditional 20-geometry gate, derivation & replay →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/eigenzeit_4d/constrained_region_v0_5/README.md)
+- [v0.4: information budgets, geometry checks & remaining limit →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/eigenzeit_4d/refined_bound_v0_4/README.md)
+- [v0.3: certificates, derivation & full replay →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/eigenzeit_4d/joint_region_v0_3/README.md)
 - [4D results: report, code & scope →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/eigenzeit_4d/README.md)
 - [Download 4D verification package v0.2 · ZIP ↓](https://thomasmgfeller.github.io/x6-spectral-astrolabium/research/eigenzeit_4d/Eigenzeit_4D_Poisson_v0_2.zip)
 - [Read supplement v0.2 · German PDF, 8 pages →](https://thomasmgfeller.github.io/x6-spectral-astrolabium/docs/research/eigenzeit/gfest/GFEST_Stabilitaet_v0_2.pdf)

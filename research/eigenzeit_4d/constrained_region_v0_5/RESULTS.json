@@ -1,0 +1,829 @@
+{
+  "version": "0.5",
+  "status": "COMPLETED",
+  "date": "2026-10-27",
+  "controls": {
+    "status": "PASS_CONTROLS",
+    "checks": 290,
+    "exact_matrix_identities": 60,
+    "majorant_positivity_checks": 206,
+    "exact_geometry_correction_checks": 20,
+    "fixed_coefficient_derivative_relative_difference": 1.1693188965282125e-07
+  },
+  "fresh_observations": 2560,
+  "selected_validated_certificates": 2237,
+  "geometric_validated_certificates": 2237,
+  "previous_validated_certificates": 2185,
+  "wrong_selected_certificates": 0,
+  "primary_fixed_geometry_gate_pass": true,
+  "records": [
+    {
+      "level": 0,
+      "outer_expected_count": 268435456,
+      "budget_multiplier": 1,
+      "geometry": "base_0",
+      "family": 0,
+      "replicates": 64,
+      "geometric_float_candidates": 64,
+      "geometric_validated_certificates": 64,
+      "previous_float_candidates": 64,
+      "previous_validated_certificates": 64,
+      "selected_validated_certificates": 64,
+      "fallback_certificates": 0,
+      "availability_cp_lower": 0.9106318010137352,
+      "wrong_selected_certificates": 0,
+      "joint_region_coverage": 64,
+      "reasons": {
+        "geometric_constraints": 64
+      }
+    },
+    {
+      "level": 0,
+      "outer_expected_count": 268435456,
+      "budget_multiplier": 1,
+      "geometry": "base_1",
+      "family": 1,
+      "replicates": 64,
+      "geometric_float_candidates": 64,
+      "geometric_validated_certificates": 64,
+      "previous_float_candidates": 64,
+      "previous_validated_certificates": 64,
+      "selected_validated_certificates": 64,
+      "fallback_certificates": 0,
+      "availability_cp_lower": 0.9106318010137352,
+      "wrong_selected_certificates": 0,
+      "joint_region_coverage": 64,
+      "reasons": {
+        "geometric_constraints": 64
+      }
+    },
+    {
+      "level": 0,
+      "outer_expected_count": 268435456,
+      "budget_multiplier": 1,
+      "geometry": "base_2",
+      "family": 2,
+      "replicates": 64,
+      "geometric_float_candidates": 64,
+      "geometric_validated_certificates": 64,
+      "previous_float_candidates": 64,
+      "previous_validated_certificates": 64,
+      "selected_validated_certificates": 64,
+      "fallback_certificates": 0,
+      "availability_cp_lower": 0.9106318010137352,
+      "wrong_selected_certificates": 0,
+      "joint_region_coverage": 64,
+      "reasons": {
+        "geometric_constraints": 64
+      }
+    },
+    {
+      "level": 0,
+      "outer_expected_count": 268435456,
+      "budget_multiplier": 1,
+      "geometry": "base_3",
+      "family": 3,
+      "replicates": 64,
+      "geometric_float_candidates": 0,
+      "geometric_validated_certificates": 0,
+      "previous_float_candidates": 0,
+      "previous_validated_certificates": 0,
+      "selected_validated_certificates": 0,
+      "fallback_certificates": 0,
+      "availability_cp_lower": 0.0,
+      "wrong_selected_certificates": 0,
+      "joint_region_coverage": 64,
+      "reasons": {
+        "PRECISION_HOLD": 64
+      }
+    },
+    {
+      "level": 0,
+      "outer_expected_count": 268435456,
+      "budget_multiplier": 1,
+      "geometry": "fresh_00",
+      "family": 0,
+      "replicates": 64,
+      "geometric_float_candidates": 64,
+      "geometric_validated_certificates": 64,
+      "previous_float_candidates": 64,
+      "previous_validated_certificates": 64,
+      "selected_validated_certificates": 64,
+      "fallback_certificates": 0,
+      "availability_cp_lower": 0.9106318010137352,
+      "wrong_selected_certificates": 0,
+      "joint_region_coverage": 64,
+      "reasons": {
+        "geometric_constraints": 64
+      }
+    },
+    {
+      "level": 0,
+      "outer_expected_count": 268435456,
+      "budget_multiplier": 1,
+      "geometry": "fresh_01",
+      "family": 1,
+      "replicates": 64,
+      "geometric_float_candidates": 64,
+      "geometric_validated_certificates": 64,
+      "previous_float_candidates": 64,
+      "previous_validated_certificates": 64,
+      "selected_validated_certificates": 64,
+      "fallback_certificates": 0,
+      "availability_cp_lower": 0.9106318010137352,
+      "wrong_selected_certificates": 0,
+      "joint_region_coverage": 64,
+      "reasons": {
+        "geometric_constraints": 64
+      }
+    },
+    {
+      "level": 0,
+      "outer_expected_count": 268435456,
+      "budget_multiplier": 1,
+      "geometry": "fresh_02",
+      "family": 2,
+      "replicates": 64,
+      "geometric_float_candidates": 64,
+      "geometric_validated_certificates": 64,
+      "previous_float_candidates": 64,
+      "previous_validated_certificates": 64,
+      "selected_validated_certificates": 64,
+      "fallback_certificates": 0,
+      "availability_cp_lower": 0.9106318010137352,
+      "wrong_selected_certificates": 0,
+      "joint_region_coverage": 64,
+      "reasons": {
+        "geometric_constraints": 64
+      }
+    },
+    {
+      "level": 0,
+      "outer_expected_count": 268435456,
+      "budget_multiplier": 1,
+      "geometry": "fresh_03",
+      "family": 3,
+      "replicates": 64,
+      "geometric_float_candidates": 0,
+      "geometric_validated_certificates": 0,
+      "previous_float_candidates": 0,
+      "previous_validated_certificates": 0,
+      "selected_validated_certificates": 0,
+      "fallback_certificates": 0,
+      "availability_cp_lower": 0.0,
+      "wrong_selected_certificates": 0,
+      "joint_region_coverage": 64,
+      "reasons": {
+        "PRECISION_HOLD": 64
+      }
+    },
+    {
+      "level": 0,
+      "outer_expected_count": 268435456,
+      "budget_multiplier": 1,
+      "geometry": "fresh_04",
+      "family": 0,
+      "replicates": 64,
+      "geometric_float_candidates": 64,
+      "geometric_validated_certificates": 64,
+      "previous_float_candidates": 64,
+      "previous_validated_certificates": 64,
+      "selected_validated_certificates": 64,
+      "fallback_certificates": 0,
+      "availability_cp_lower": 0.9106318010137352,
+      "wrong_selected_certificates": 0,
+      "joint_region_coverage": 64,
+      "reasons": {
+        "geometric_constraints": 64
+      }
+    },
+    {
+      "level": 0,
+      "outer_expected_count": 268435456,
+      "budget_multiplier": 1,
+      "geometry": "fresh_05",
+      "family": 1,
+      "replicates": 64,
+      "geometric_float_candidates": 64,
+      "geometric_validated_certificates": 64,
+      "previous_float_candidates": 64,
+      "previous_validated_certificates": 64,
+      "selected_validated_certificates": 64,
+      "fallback_certificates": 0,
+      "availability_cp_lower": 0.9106318010137352,
+      "wrong_selected_certificates": 0,
+      "joint_region_coverage": 64,
+      "reasons": {
+        "geometric_constraints": 64
+      }
+    },
+    {
+      "level": 0,
+      "outer_expected_count": 268435456,
+      "budget_multiplier": 1,
+      "geometry": "fresh_06",
+      "family": 2,
+      "replicates": 64,
+      "geometric_float_candidates": 61,
+      "geometric_validated_certificates": 61,
+      "previous_float_candidates": 61,
+      "previous_validated_certificates": 61,
+      "selected_validated_certificates": 61,
+      "fallback_certificates": 0,
+      "availability_cp_lower": 0.8267122061283734,
+      "wrong_selected_certificates": 0,
+      "joint_region_coverage": 64,
+      "reasons": {
+        "geometric_constraints": 61,
+        "PRECISION_HOLD": 3
+      }
+    },
+    {
+      "level": 0,
+      "outer_expected_count": 268435456,
+      "budget_multiplier": 1,
+      "geometry": "fresh_07",
+      "family": 3,
+      "replicates": 64,
+      "geometric_float_candidates": 0,
+      "geometric_validated_certificates": 0,
+      "previous_float_candidates": 0,
+      "previous_validated_certificates": 0,
+      "selected_validated_certificates": 0,
+      "fallback_certificates": 0,
+      "availability_cp_lower": 0.0,
+      "wrong_selected_certificates": 0,
+      "joint_region_coverage": 64,
+      "reasons": {
+        "PRECISION_HOLD": 64
+      }
+    },
+    {
+      "level": 0,
+      "outer_expected_count": 268435456,
+      "budget_multiplier": 1,
+      "geometry": "fresh_08",
+      "family": 0,
+      "replicates": 64,
+      "geometric_float_candidates": 64,
+      "geometric_validated_certificates": 64,
+      "previous_float_candidates": 64,
+      "previous_validated_certificates": 64,
+      "selected_validated_certificates": 64,
+      "fallback_certificates": 0,
+      "availability_cp_lower": 0.9106318010137352,
+      "wrong_selected_certificates": 0,
+      "joint_region_coverage": 64,
+      "reasons": {
+        "geometric_constraints": 64
+      }
+    },
+    {
+      "level": 0,
+      "outer_expected_count": 268435456,
+      "budget_multiplier": 1,
+      "geometry": "fresh_09",
+      "family": 1,
+      "replicates": 64,
+      "geometric_float_candidates": 64,
+      "geometric_validated_certificates": 64,
+      "previous_float_candidates": 64,
+      "previous_validated_certificates": 64,
+      "selected_validated_certificates": 64,
+      "fallback_certificates": 0,
+      "availability_cp_lower": 0.9106318010137352,
+      "wrong_selected_certificates": 0,
+      "joint_region_coverage": 64,
+      "reasons": {
+        "geometric_constraints": 64
+      }
+    },
+    {
+      "level": 0,
+      "outer_expected_count": 268435456,
+      "budget_multiplier": 1,
+      "geometry": "fresh_10",
+      "family": 2,
+      "replicates": 64,
+      "geometric_float_candidates": 64,
+      "geometric_validated_certificates": 64,
+      "previous_float_candidates": 64,
+      "previous_validated_certificates": 64,
+      "selected_validated_certificates": 64,
+      "fallback_certificates": 0,
+      "availability_cp_lower": 0.9106318010137352,
+      "wrong_selected_certificates": 0,
+      "joint_region_coverage": 64,
+      "reasons": {
+        "geometric_constraints": 64
+      }
+    },
+    {
+      "level": 0,
+      "outer_expected_count": 268435456,
+      "budget_multiplier": 1,
+      "geometry": "fresh_11",
+      "family": 3,
+      "replicates": 64,
+      "geometric_float_candidates": 0,
+      "geometric_validated_certificates": 0,
+      "previous_float_candidates": 0,
+      "previous_validated_certificates": 0,
+      "selected_validated_certificates": 0,
+      "fallback_certificates": 0,
+      "availability_cp_lower": 0.0,
+      "wrong_selected_certificates": 0,
+      "joint_region_coverage": 64,
+      "reasons": {
+        "PRECISION_HOLD": 49,
+        "INVERSE_RADIUS": 15
+      }
+    },
+    {
+      "level": 0,
+      "outer_expected_count": 268435456,
+      "budget_multiplier": 1,
+      "geometry": "fresh_12",
+      "family": 0,
+      "replicates": 64,
+      "geometric_float_candidates": 64,
+      "geometric_validated_certificates": 64,
+      "previous_float_candidates": 64,
+      "previous_validated_certificates": 64,
+      "selected_validated_certificates": 64,
+      "fallback_certificates": 0,
+      "availability_cp_lower": 0.9106318010137352,
+      "wrong_selected_certificates": 0,
+      "joint_region_coverage": 64,
+      "reasons": {
+        "geometric_constraints": 64
+      }
+    },
+    {
+      "level": 0,
+      "outer_expected_count": 268435456,
+      "budget_multiplier": 1,
+      "geometry": "fresh_13",
+      "family": 1,
+      "replicates": 64,
+      "geometric_float_candidates": 64,
+      "geometric_validated_certificates": 64,
+      "previous_float_candidates": 64,
+      "previous_validated_certificates": 64,
+      "selected_validated_certificates": 64,
+      "fallback_certificates": 0,
+      "availability_cp_lower": 0.9106318010137352,
+      "wrong_selected_certificates": 0,
+      "joint_region_coverage": 64,
+      "reasons": {
+        "geometric_constraints": 64
+      }
+    },
+    {
+      "level": 0,
+      "outer_expected_count": 268435456,
+      "budget_multiplier": 1,
+      "geometry": "fresh_14",
+      "family": 2,
+      "replicates": 64,
+      "geometric_float_candidates": 64,
+      "geometric_validated_certificates": 64,
+      "previous_float_candidates": 64,
+      "previous_validated_certificates": 64,
+      "selected_validated_certificates": 64,
+      "fallback_certificates": 0,
+      "availability_cp_lower": 0.9106318010137352,
+      "wrong_selected_certificates": 0,
+      "joint_region_coverage": 64,
+      "reasons": {
+        "geometric_constraints": 64
+      }
+    },
+    {
+      "level": 0,
+      "outer_expected_count": 268435456,
+      "budget_multiplier": 1,
+      "geometry": "fresh_15",
+      "family": 3,
+      "replicates": 64,
+      "geometric_float_candidates": 0,
+      "geometric_validated_certificates": 0,
+      "previous_float_candidates": 0,
+      "previous_validated_certificates": 0,
+      "selected_validated_certificates": 0,
+      "fallback_certificates": 0,
+      "availability_cp_lower": 0.0,
+      "wrong_selected_certificates": 0,
+      "joint_region_coverage": 64,
+      "reasons": {
+        "PRECISION_HOLD": 64
+      }
+    },
+    {
+      "level": 1,
+      "outer_expected_count": 4294967296,
+      "budget_multiplier": 16,
+      "geometry": "base_0",
+      "family": 0,
+      "replicates": 64,
+      "geometric_float_candidates": 64,
+      "geometric_validated_certificates": 64,
+      "previous_float_candidates": 64,
+      "previous_validated_certificates": 64,
+      "selected_validated_certificates": 64,
+      "fallback_certificates": 0,
+      "availability_cp_lower": 0.9106318010137352,
+      "wrong_selected_certificates": 0,
+      "joint_region_coverage": 64,
+      "reasons": {
+        "geometric_constraints": 64
+      }
+    },
+    {
+      "level": 1,
+      "outer_expected_count": 4294967296,
+      "budget_multiplier": 16,
+      "geometry": "base_1",
+      "family": 1,
+      "replicates": 64,
+      "geometric_float_candidates": 64,
+      "geometric_validated_certificates": 64,
+      "previous_float_candidates": 64,
+      "previous_validated_certificates": 64,
+      "selected_validated_certificates": 64,
+      "fallback_certificates": 0,
+      "availability_cp_lower": 0.9106318010137352,
+      "wrong_selected_certificates": 0,
+      "joint_region_coverage": 64,
+      "reasons": {
+        "geometric_constraints": 64
+      }
+    },
+    {
+      "level": 1,
+      "outer_expected_count": 4294967296,
+      "budget_multiplier": 16,
+      "geometry": "base_2",
+      "family": 2,
+      "replicates": 64,
+      "geometric_float_candidates": 64,
+      "geometric_validated_certificates": 64,
+      "previous_float_candidates": 64,
+      "previous_validated_certificates": 64,
+      "selected_validated_certificates": 64,
+      "fallback_certificates": 0,
+      "availability_cp_lower": 0.9106318010137352,
+      "wrong_selected_certificates": 0,
+      "joint_region_coverage": 64,
+      "reasons": {
+        "geometric_constraints": 64
+      }
+    },
+    {
+      "level": 1,
+      "outer_expected_count": 4294967296,
+      "budget_multiplier": 16,
+      "geometry": "base_3",
+      "family": 3,
+      "replicates": 64,
+      "geometric_float_candidates": 64,
+      "geometric_validated_certificates": 64,
+      "previous_float_candidates": 64,
+      "previous_validated_certificates": 64,
+      "selected_validated_certificates": 64,
+      "fallback_certificates": 0,
+      "availability_cp_lower": 0.9106318010137352,
+      "wrong_selected_certificates": 0,
+      "joint_region_coverage": 64,
+      "reasons": {
+        "geometric_constraints": 64
+      }
+    },
+    {
+      "level": 1,
+      "outer_expected_count": 4294967296,
+      "budget_multiplier": 16,
+      "geometry": "fresh_00",
+      "family": 0,
+      "replicates": 64,
+      "geometric_float_candidates": 64,
+      "geometric_validated_certificates": 64,
+      "previous_float_candidates": 64,
+      "previous_validated_certificates": 64,
+      "selected_validated_certificates": 64,
+      "fallback_certificates": 0,
+      "availability_cp_lower": 0.9106318010137352,
+      "wrong_selected_certificates": 0,
+      "joint_region_coverage": 64,
+      "reasons": {
+        "geometric_constraints": 64
+      }
+    },
+    {
+      "level": 1,
+      "outer_expected_count": 4294967296,
+      "budget_multiplier": 16,
+      "geometry": "fresh_01",
+      "family": 1,
+      "replicates": 64,
+      "geometric_float_candidates": 64,
+      "geometric_validated_certificates": 64,
+      "previous_float_candidates": 64,
+      "previous_validated_certificates": 64,
+      "selected_validated_certificates": 64,
+      "fallback_certificates": 0,
+      "availability_cp_lower": 0.9106318010137352,
+      "wrong_selected_certificates": 0,
+      "joint_region_coverage": 64,
+      "reasons": {
+        "geometric_constraints": 64
+      }
+    },
+    {
+      "level": 1,
+      "outer_expected_count": 4294967296,
+      "budget_multiplier": 16,
+      "geometry": "fresh_02",
+      "family": 2,
+      "replicates": 64,
+      "geometric_float_candidates": 64,
+      "geometric_validated_certificates": 64,
+      "previous_float_candidates": 64,
+      "previous_validated_certificates": 64,
+      "selected_validated_certificates": 64,
+      "fallback_certificates": 0,
+      "availability_cp_lower": 0.9106318010137352,
+      "wrong_selected_certificates": 0,
+      "joint_region_coverage": 64,
+      "reasons": {
+        "geometric_constraints": 64
+      }
+    },
+    {
+      "level": 1,
+      "outer_expected_count": 4294967296,
+      "budget_multiplier": 16,
+      "geometry": "fresh_03",
+      "family": 3,
+      "replicates": 64,
+      "geometric_float_candidates": 64,
+      "geometric_validated_certificates": 64,
+      "previous_float_candidates": 64,
+      "previous_validated_certificates": 64,
+      "selected_validated_certificates": 64,
+      "fallback_certificates": 0,
+      "availability_cp_lower": 0.9106318010137352,
+      "wrong_selected_certificates": 0,
+      "joint_region_coverage": 64,
+      "reasons": {
+        "geometric_constraints": 64
+      }
+    },
+    {
+      "level": 1,
+      "outer_expected_count": 4294967296,
+      "budget_multiplier": 16,
+      "geometry": "fresh_04",
+      "family": 0,
+      "replicates": 64,
+      "geometric_float_candidates": 64,
+      "geometric_validated_certificates": 64,
+      "previous_float_candidates": 64,
+      "previous_validated_certificates": 64,
+      "selected_validated_certificates": 64,
+      "fallback_certificates": 0,
+      "availability_cp_lower": 0.9106318010137352,
+      "wrong_selected_certificates": 0,
+      "joint_region_coverage": 64,
+      "reasons": {
+        "geometric_constraints": 64
+      }
+    },
+    {
+      "level": 1,
+      "outer_expected_count": 4294967296,
+      "budget_multiplier": 16,
+      "geometry": "fresh_05",
+      "family": 1,
+      "replicates": 64,
+      "geometric_float_candidates": 64,
+      "geometric_validated_certificates": 64,
+      "previous_float_candidates": 64,
+      "previous_validated_certificates": 64,
+      "selected_validated_certificates": 64,
+      "fallback_certificates": 0,
+      "availability_cp_lower": 0.9106318010137352,
+      "wrong_selected_certificates": 0,
+      "joint_region_coverage": 64,
+      "reasons": {
+        "geometric_constraints": 64
+      }
+    },
+    {
+      "level": 1,
+      "outer_expected_count": 4294967296,
+      "budget_multiplier": 16,
+      "geometry": "fresh_06",
+      "family": 2,
+      "replicates": 64,
+      "geometric_float_candidates": 64,
+      "geometric_validated_certificates": 64,
+      "previous_float_candidates": 64,
+      "previous_validated_certificates": 64,
+      "selected_validated_certificates": 64,
+      "fallback_certificates": 0,
+      "availability_cp_lower": 0.9106318010137352,
+      "wrong_selected_certificates": 0,
+      "joint_region_coverage": 64,
+      "reasons": {
+        "geometric_constraints": 64
+      }
+    },
+    {
+      "level": 1,
+      "outer_expected_count": 4294967296,
+      "budget_multiplier": 16,
+      "geometry": "fresh_07",
+      "family": 3,
+      "replicates": 64,
+      "geometric_float_candidates": 64,
+      "geometric_validated_certificates": 64,
+      "previous_float_candidates": 64,
+      "previous_validated_certificates": 64,
+      "selected_validated_certificates": 64,
+      "fallback_certificates": 0,
+      "availability_cp_lower": 0.9106318010137352,
+      "wrong_selected_certificates": 0,
+      "joint_region_coverage": 64,
+      "reasons": {
+        "geometric_constraints": 64
+      }
+    },
+    {
+      "level": 1,
+      "outer_expected_count": 4294967296,
+      "budget_multiplier": 16,
+      "geometry": "fresh_08",
+      "family": 0,
+      "replicates": 64,
+      "geometric_float_candidates": 64,
+      "geometric_validated_certificates": 64,
+      "previous_float_candidates": 64,
+      "previous_validated_certificates": 64,
+      "selected_validated_certificates": 64,
+      "fallback_certificates": 0,
+      "availability_cp_lower": 0.9106318010137352,
+      "wrong_selected_certificates": 0,
+      "joint_region_coverage": 64,
+      "reasons": {
+        "geometric_constraints": 64
+      }
+    },
+    {
+      "level": 1,
+      "outer_expected_count": 4294967296,
+      "budget_multiplier": 16,
+      "geometry": "fresh_09",
+      "family": 1,
+      "replicates": 64,
+      "geometric_float_candidates": 64,
+      "geometric_validated_certificates": 64,
+      "previous_float_candidates": 64,
+      "previous_validated_certificates": 64,
+      "selected_validated_certificates": 64,
+      "fallback_certificates": 0,
+      "availability_cp_lower": 0.9106318010137352,
+      "wrong_selected_certificates": 0,
+      "joint_region_coverage": 64,
+      "reasons": {
+        "geometric_constraints": 64
+      }
+    },
+    {
+      "level": 1,
+      "outer_expected_count": 4294967296,
+      "budget_multiplier": 16,
+      "geometry": "fresh_10",
+      "family": 2,
+      "replicates": 64,
+      "geometric_float_candidates": 64,
+      "geometric_validated_certificates": 64,
+      "previous_float_candidates": 64,
+      "previous_validated_certificates": 64,
+      "selected_validated_certificates": 64,
+      "fallback_certificates": 0,
+      "availability_cp_lower": 0.9106318010137352,
+      "wrong_selected_certificates": 0,
+      "joint_region_coverage": 64,
+      "reasons": {
+        "geometric_constraints": 64
+      }
+    },
+    {
+      "level": 1,
+      "outer_expected_count": 4294967296,
+      "budget_multiplier": 16,
+      "geometry": "fresh_11",
+      "family": 3,
+      "replicates": 64,
+      "geometric_float_candidates": 64,
+      "geometric_validated_certificates": 64,
+      "previous_float_candidates": 12,
+      "previous_validated_certificates": 12,
+      "selected_validated_certificates": 64,
+      "fallback_certificates": 0,
+      "availability_cp_lower": 0.9106318010137352,
+      "wrong_selected_certificates": 0,
+      "joint_region_coverage": 64,
+      "reasons": {
+        "geometric_constraints": 64
+      }
+    },
+    {
+      "level": 1,
+      "outer_expected_count": 4294967296,
+      "budget_multiplier": 16,
+      "geometry": "fresh_12",
+      "family": 0,
+      "replicates": 64,
+      "geometric_float_candidates": 64,
+      "geometric_validated_certificates": 64,
+      "previous_float_candidates": 64,
+      "previous_validated_certificates": 64,
+      "selected_validated_certificates": 64,
+      "fallback_certificates": 0,
+      "availability_cp_lower": 0.9106318010137352,
+      "wrong_selected_certificates": 0,
+      "joint_region_coverage": 64,
+      "reasons": {
+        "geometric_constraints": 64
+      }
+    },
+    {
+      "level": 1,
+      "outer_expected_count": 4294967296,
+      "budget_multiplier": 16,
+      "geometry": "fresh_13",
+      "family": 1,
+      "replicates": 64,
+      "geometric_float_candidates": 64,
+      "geometric_validated_certificates": 64,
+      "previous_float_candidates": 64,
+      "previous_validated_certificates": 64,
+      "selected_validated_certificates": 64,
+      "fallback_certificates": 0,
+      "availability_cp_lower": 0.9106318010137352,
+      "wrong_selected_certificates": 0,
+      "joint_region_coverage": 64,
+      "reasons": {
+        "geometric_constraints": 64
+      }
+    },
+    {
+      "level": 1,
+      "outer_expected_count": 4294967296,
+      "budget_multiplier": 16,
+      "geometry": "fresh_14",
+      "family": 2,
+      "replicates": 64,
+      "geometric_float_candidates": 64,
+      "geometric_validated_certificates": 64,
+      "previous_float_candidates": 64,
+      "previous_validated_certificates": 64,
+      "selected_validated_certificates": 64,
+      "fallback_certificates": 0,
+      "availability_cp_lower": 0.9106318010137352,
+      "wrong_selected_certificates": 0,
+      "joint_region_coverage": 64,
+      "reasons": {
+        "geometric_constraints": 64
+      }
+    },
+    {
+      "level": 1,
+      "outer_expected_count": 4294967296,
+      "budget_multiplier": 16,
+      "geometry": "fresh_15",
+      "family": 3,
+      "replicates": 64,
+      "geometric_float_candidates": 64,
+      "geometric_validated_certificates": 64,
+      "previous_float_candidates": 64,
+      "previous_validated_certificates": 64,
+      "selected_validated_certificates": 64,
+      "fallback_certificates": 0,
+      "availability_cp_lower": 0.9106318010137352,
+      "wrong_selected_certificates": 0,
+      "joint_region_coverage": 64,
+      "reasons": {
+        "geometric_constraints": 64
+      }
+    }
+  ],
+  "runtime_seconds": 248.23498892299904,
+  "environment": {
+    "numpy": "2.3.5",
+    "scipy": "1.17.0"
+  },
+  "freeze_sha256": "6a360b9a5a0fd5d09cf6a3d7bee2ae7b1a30896e8833a8963965e4887112d390"
+}
