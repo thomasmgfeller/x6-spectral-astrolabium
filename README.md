@@ -1,5 +1,7 @@
 # X6 Spectral Astrolabium
 
+**CSPP scalar pilot: 64 clouds computed; G1 remains HOLD.** [Methods, raw data, complete replay and results](research/cspp/scalar_pilot_v0_1/README.md). None of twelve density/smoothing cells reaches the draft scalar tolerance. Analytic propagation controls, paired boundary extensions and a separate Fourier-reference resolution check expose unresolved scale, boundary and source-reference errors. No Dirac or flavor qualification; the corrected outer-shell sampler and unchanged primary results are documented.
+
 **CSPP E4-V0.1: protocol draft for a certified scalar–Dirac–flavor pipeline.** [German contract, parameters and executable consistency checks](research/cspp/e4_v0_1/README.md). Defines a flat 3+1 two-flavor reference, detector-weighted coherence, error/risk budgets and complete failure accounting. **DRAFT / NOT_FROZEN / NOT_RUN**: operator choice and final ensemble size remain open; no Dirac or flavor qualification is claimed.
 
 **Eigenzeit 3+1 v0.5: the fixed-geometry high-budget availability gate passes.** [Geometric-constraint certificate and fresh paired comparison](research/eigenzeit_4d/constrained_region_v0_5/README.md): all 1,280 high-budget observations are certified across 20/20 fixed geometries. On the same new data, `fresh_11` improves from 12/64 with v0.4 to 64/64 using the exact target-norm constraints. No further budget increase; the original budget remains HOLD. Fixed labels, known density and flat geometry; unseen geometries, intrinsic selection, operators and general stability remain open.
