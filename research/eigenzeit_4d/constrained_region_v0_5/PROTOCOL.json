@@ -1,0 +1,18 @@
+{
+  "version": "0.5",
+  "date": "2026-10-27",
+  "scope": "Same twenty fixed v0.2 geometries; flat 3+1 model, known density and fixed external labels. Fresh count draws only.",
+  "count_seed": 2026102714,
+  "density_expected_outer_counts": [268435456, 4294967296],
+  "replicates_per_geometry_per_density": 64,
+  "primary_density_index": 1,
+  "primary_gate": "At the unchanged 16x budget, every geometry must have one-sided Clopper-Pearson certificate-availability lower bound >=0.90, with Bonferroni alpha=0.05/20. Original-budget comparisons are secondary.",
+  "confidence_region": "Unchanged v0.3 region sum D(y_i||lambda_i)<=48; noncoverage <=2^30 exp(-24). True model means also satisfy the two exact target-norm constraints.",
+  "estimator": "F=q+k_p r_p+k_q r_q; the norm residuals vanish on the model. Candidate coefficients minimize the local weighted gradient norm, are quantized with denominator 2^20 and capped at magnitude 16.",
+  "bound": "Full square-root remainder plus exact inverse matrix remainder. A regularized spectral absolute value of the 2x2 coefficient matrix gives a PSD majorant; its factor yields an 8-dimensional norm bound.",
+  "selection": "Validate all positive geometric and v0.4 candidates at 60 digits. Select a geometric certificate if it passes, otherwise a v0.4 certificate, otherwise HOLD. Both use the same confidence event.",
+  "comparison": "v0.4 on identical fresh observations, with every positive candidate independently validated. Record geometric-only and fallback availability separately.",
+  "audit": "Exact seed replay, independent corrected-center interval solves, exact certificate inequalities and known-target checks, first and last distinct selected certificates per nonempty cell at 90 digits, 256 ellipsoid-boundary directions per selected audit case with coefficients held fixed.",
+  "development_data": "Archived v0.4 observations only; development candidates are not fresh validation.",
+  "no_claims": ["conditional post-selection coverage", "simultaneous-observation coverage", "unseen-geometry generalization", "intrinsic landmark selection", "curvature or operator qualification", "external peer review", "closing the original-budget gate by testing a higher budget"]
+}

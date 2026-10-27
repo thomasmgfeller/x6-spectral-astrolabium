@@ -3,7 +3,25 @@
 Published 27 October 2026. Conditional flat-space research pilot; known density,
 fixed labelled landmarks, and synthetic Poisson counts.
 
-## Latest: sharper bounds and information budgets, v0.4
+## Latest: geometric constraints, v0.5
+
+[Full German report, derivation and reproducible evidence](constrained_region_v0_5/README.md).
+The exact target-norm constraints now enter the estimator and its complete
+finite-error bound. On 2,560 fresh paired observations, the high-budget
+primary gate passes: **1,280/1,280 certificates and 20/20 fixed geometries**.
+On the same data, `fresh_11` improves from 12/64 with v0.4 to 64/64, at the
+unchanged 16x budget. The original-budget gate remains HOLD (14/20).
+
+This is a conditional fixed-geometry result with known density and external
+labels. Unseen geometries, intrinsic selection, curvature, operators and
+general GFEST stability remain open. No external expert review is asserted.
+
+```sh
+python3 -m pip install -r research/eigenzeit_4d/poisson_v0_2/requirements.txt
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python3 research/eigenzeit_4d/verify_constrained_publication.py
+```
+
+## Earlier: sharper bounds and information budgets, v0.4
 
 [Full German report, evidence and limitations](refined_bound_v0_4/README.md).
 On 3,840 fresh observations, the refined bound issues 3,146 certificates,

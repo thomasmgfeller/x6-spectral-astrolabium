@@ -1,0 +1,22 @@
+{
+  "fresh_counts.npz": {
+    "cells": "int64 [40,64,20]: density-major, then the 20 geometries in poisson_v0_2/geometries.json order, then repeat, then observable-cell index inherited from joint_region_v0_3/joint.py",
+    "metrics": "float64 [40,64,12]; boolean flags are encoded as 0/1; unavailable numerical diagnostics use NaN",
+    "metric_columns": [
+      "geometric_candidate_corrected_qhat",
+      "raw_uncorrected_qhat",
+      "geometric_epsilon_upper",
+      "geometric_first_bound",
+      "geometric_nonlinear_bound",
+      "geometric_float_candidate",
+      "geometric_validated_certificate",
+      "v04_float_candidate",
+      "v04_validated_certificate",
+      "selected_validated_certificate",
+      "selected_certificate_wrong_against_known_simulation_target",
+      "joint_region_divergence_diagnostic"
+    ]
+  },
+  "CERTIFICATES.json": "Canonical outward intervals for the selected estimator, with geometry, density level, repeat, method and exact dyadic coefficient numerators. qhat is the corrected estimator for geometric certificates and the original estimator for fallback certificates. Values use the common count-derived scale; relative proper-time error is scale invariant.",
+  "selection_note": "The floating geometric diagnostics are not automatically the selected estimator when a fallback is used. Read CERTIFICATES.json for the issued decision. This experiment used no fallback certificates."
+}

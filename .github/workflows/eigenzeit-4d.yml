@@ -41,3 +41,18 @@ jobs:
           python-version: '3.12'
       - run: python3 -m pip install -r research/eigenzeit_4d/poisson_v0_2/requirements.txt
       - run: python3 -B research/eigenzeit_4d/verify_refined_publication.py
+  constrained_replay:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - run: python3 -m pip install -r research/eigenzeit_4d/poisson_v0_2/requirements.txt
+      - run: python3 -B research/eigenzeit_4d/verify_constrained_publication.py
