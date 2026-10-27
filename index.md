@@ -12,14 +12,15 @@ X6 Spectral Astrolabium is an open research hub for signals, graphs and causal o
 
 ## Latest Eigenzeit results
 
-3+1 Poisson pilot · 27 October 2026; GFEST papers · 23 October 2026
+3+1: joint confidence region v0.3 · 27 October 2026; GFEST papers · 23 October 2026
 
 Do you work on causal sets, Lorentzian geometry or inverse problems? Help us examine how stably discrete operator weights can be reconstructed from correlated causal counts. Read the GFEST proof draft, its supplement and executable verification packages below.
 
-New in 3+1: 40,960 joint Poisson-count trials. At the highest density, 10,239/10,240 meet the accuracy criteria; data-dependent 10% error certification remains open. Fixed landmarks and known density. v0.1 states conditional stability theorems; v0.2 treats coordinated point movements and reports an exact rational local certificate for configuration pairs. The general result at the original TV budget of 1/4 remains open.
+New in 3+1 v0.3: 5,120 fresh count trials on the existing 20 geometries. At high density, 1,910/2,560 receive an internally verified 10% proper-time error certificate; at the lower density, 0/2,560. The previous bound certifies none on the same data. The all-geometries availability gate remains HOLD. Fixed landmarks and known density; no intrinsic selection or operator qualification. The GFEST proof drafts remain conditional; the general result at the original TV budget of 1/4 remains open.
 
 Physicists are invited to check the proofs, reproduce the calculations and propose counterexamples. Please specify the document version, theorem or equation, and your assumptions. Research drafts awaiting independent expert review; the PDFs are in German.
 
+- [New v0.3: certificates, derivation & full replay →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/eigenzeit_4d/joint_region_v0_3/README.md)
 - [4D results: report, code & scope →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/eigenzeit_4d/README.md)
 - [Download 4D verification package v0.2 · ZIP ↓](https://thomasmgfeller.github.io/x6-spectral-astrolabium/research/eigenzeit_4d/Eigenzeit_4D_Poisson_v0_2.zip)
 - [Read supplement v0.2 · German PDF, 8 pages →](https://thomasmgfeller.github.io/x6-spectral-astrolabium/docs/research/eigenzeit/gfest/GFEST_Stabilitaet_v0_2.pdf)

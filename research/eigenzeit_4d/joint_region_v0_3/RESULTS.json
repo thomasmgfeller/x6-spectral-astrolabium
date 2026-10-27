@@ -1,0 +1,754 @@
+{
+  "version": "0.3",
+  "status": "COMPLETED",
+  "date": "2026-10-27",
+  "controls": {
+    "status": "PASS_CONTROLS",
+    "checks": 2207,
+    "interval_precision": 60,
+    "derivative_relative_norm_difference": 1.671392041098958e-07,
+    "exact_alpha_bound_lt_0_05": true,
+    "alpha_upper_numeric": 0.04053519851419647
+  },
+  "fresh_observations": 5120,
+  "certificate_availability_gate_pass": false,
+  "validated_certificates": 1910,
+  "wrong_issued_certificates": 0,
+  "precision_90_rechecks": 30,
+  "records": [
+    {
+      "level": 0,
+      "outer_expected_count": 16777216,
+      "geometry": "base_0",
+      "family": 0,
+      "epsilon": "1",
+      "replicates": 128,
+      "float_candidates": 0,
+      "validated_certificates": 0,
+      "certificate_cp_lower": 0.0,
+      "wrong_issued_certificates": 0,
+      "old_10pct_certificates": 0,
+      "joint_region_coverage": 128,
+      "max_joint_divergence": 21.757762947713648,
+      "reasons": {
+        "MEAN_LOWER_BOUND": 126,
+        "PRECISION_HOLD": 2
+      }
+    },
+    {
+      "level": 0,
+      "outer_expected_count": 16777216,
+      "geometry": "base_1",
+      "family": 1,
+      "epsilon": "1",
+      "replicates": 128,
+      "float_candidates": 0,
+      "validated_certificates": 0,
+      "certificate_cp_lower": 0.0,
+      "wrong_issued_certificates": 0,
+      "old_10pct_certificates": 0,
+      "joint_region_coverage": 128,
+      "max_joint_divergence": 19.07384480727943,
+      "reasons": {
+        "MEAN_LOWER_BOUND": 128
+      }
+    },
+    {
+      "level": 0,
+      "outer_expected_count": 16777216,
+      "geometry": "base_2",
+      "family": 2,
+      "epsilon": "1/4",
+      "replicates": 128,
+      "float_candidates": 0,
+      "validated_certificates": 0,
+      "certificate_cp_lower": 0.0,
+      "wrong_issued_certificates": 0,
+      "old_10pct_certificates": 0,
+      "joint_region_coverage": 128,
+      "max_joint_divergence": 17.36589094741049,
+      "reasons": {
+        "INVERSE_RADIUS": 128
+      }
+    },
+    {
+      "level": 0,
+      "outer_expected_count": 16777216,
+      "geometry": "base_3",
+      "family": 3,
+      "epsilon": "1/4",
+      "replicates": 128,
+      "float_candidates": 0,
+      "validated_certificates": 0,
+      "certificate_cp_lower": 0.0,
+      "wrong_issued_certificates": 0,
+      "old_10pct_certificates": 0,
+      "joint_region_coverage": 128,
+      "max_joint_divergence": 16.85376616658033,
+      "reasons": {
+        "INVERSE_RADIUS": 128
+      }
+    },
+    {
+      "level": 0,
+      "outer_expected_count": 16777216,
+      "geometry": "fresh_00",
+      "family": 0,
+      "epsilon": "1",
+      "replicates": 128,
+      "float_candidates": 0,
+      "validated_certificates": 0,
+      "certificate_cp_lower": 0.0,
+      "wrong_issued_certificates": 0,
+      "old_10pct_certificates": 0,
+      "joint_region_coverage": 128,
+      "max_joint_divergence": 17.097549379356877,
+      "reasons": {
+        "MEAN_LOWER_BOUND": 128
+      }
+    },
+    {
+      "level": 0,
+      "outer_expected_count": 16777216,
+      "geometry": "fresh_01",
+      "family": 1,
+      "epsilon": "1",
+      "replicates": 128,
+      "float_candidates": 0,
+      "validated_certificates": 0,
+      "certificate_cp_lower": 0.0,
+      "wrong_issued_certificates": 0,
+      "old_10pct_certificates": 0,
+      "joint_region_coverage": 128,
+      "max_joint_divergence": 17.513261972189056,
+      "reasons": {
+        "PRECISION_HOLD": 128
+      }
+    },
+    {
+      "level": 0,
+      "outer_expected_count": 16777216,
+      "geometry": "fresh_02",
+      "family": 2,
+      "epsilon": "1/4",
+      "replicates": 128,
+      "float_candidates": 0,
+      "validated_certificates": 0,
+      "certificate_cp_lower": 0.0,
+      "wrong_issued_certificates": 0,
+      "old_10pct_certificates": 0,
+      "joint_region_coverage": 128,
+      "max_joint_divergence": 18.215730869276403,
+      "reasons": {
+        "INVERSE_RADIUS": 128
+      }
+    },
+    {
+      "level": 0,
+      "outer_expected_count": 16777216,
+      "geometry": "fresh_03",
+      "family": 3,
+      "epsilon": "1/4",
+      "replicates": 128,
+      "float_candidates": 0,
+      "validated_certificates": 0,
+      "certificate_cp_lower": 0.0,
+      "wrong_issued_certificates": 0,
+      "old_10pct_certificates": 0,
+      "joint_region_coverage": 128,
+      "max_joint_divergence": 18.931999787937794,
+      "reasons": {
+        "INVERSE_RADIUS": 127,
+        "NONPOSITIVE_TIME": 1
+      }
+    },
+    {
+      "level": 0,
+      "outer_expected_count": 16777216,
+      "geometry": "fresh_04",
+      "family": 0,
+      "epsilon": "1",
+      "replicates": 128,
+      "float_candidates": 0,
+      "validated_certificates": 0,
+      "certificate_cp_lower": 0.0,
+      "wrong_issued_certificates": 0,
+      "old_10pct_certificates": 0,
+      "joint_region_coverage": 128,
+      "max_joint_divergence": 26.77804713044469,
+      "reasons": {
+        "PRECISION_HOLD": 124,
+        "MEAN_LOWER_BOUND": 4
+      }
+    },
+    {
+      "level": 0,
+      "outer_expected_count": 16777216,
+      "geometry": "fresh_05",
+      "family": 1,
+      "epsilon": "1",
+      "replicates": 128,
+      "float_candidates": 0,
+      "validated_certificates": 0,
+      "certificate_cp_lower": 0.0,
+      "wrong_issued_certificates": 0,
+      "old_10pct_certificates": 0,
+      "joint_region_coverage": 128,
+      "max_joint_divergence": 20.112247259509875,
+      "reasons": {
+        "PRECISION_HOLD": 90,
+        "MEAN_LOWER_BOUND": 38
+      }
+    },
+    {
+      "level": 0,
+      "outer_expected_count": 16777216,
+      "geometry": "fresh_06",
+      "family": 2,
+      "epsilon": "1/4",
+      "replicates": 128,
+      "float_candidates": 0,
+      "validated_certificates": 0,
+      "certificate_cp_lower": 0.0,
+      "wrong_issued_certificates": 0,
+      "old_10pct_certificates": 0,
+      "joint_region_coverage": 128,
+      "max_joint_divergence": 22.808890274155246,
+      "reasons": {
+        "INVERSE_RADIUS": 128
+      }
+    },
+    {
+      "level": 0,
+      "outer_expected_count": 16777216,
+      "geometry": "fresh_07",
+      "family": 3,
+      "epsilon": "1/4",
+      "replicates": 128,
+      "float_candidates": 0,
+      "validated_certificates": 0,
+      "certificate_cp_lower": 0.0,
+      "wrong_issued_certificates": 0,
+      "old_10pct_certificates": 0,
+      "joint_region_coverage": 128,
+      "max_joint_divergence": 26.27146790234324,
+      "reasons": {
+        "INVERSE_RADIUS": 128
+      }
+    },
+    {
+      "level": 0,
+      "outer_expected_count": 16777216,
+      "geometry": "fresh_08",
+      "family": 0,
+      "epsilon": "1",
+      "replicates": 128,
+      "float_candidates": 0,
+      "validated_certificates": 0,
+      "certificate_cp_lower": 0.0,
+      "wrong_issued_certificates": 0,
+      "old_10pct_certificates": 0,
+      "joint_region_coverage": 128,
+      "max_joint_divergence": 22.08373794620075,
+      "reasons": {
+        "MEAN_LOWER_BOUND": 128
+      }
+    },
+    {
+      "level": 0,
+      "outer_expected_count": 16777216,
+      "geometry": "fresh_09",
+      "family": 1,
+      "epsilon": "1",
+      "replicates": 128,
+      "float_candidates": 0,
+      "validated_certificates": 0,
+      "certificate_cp_lower": 0.0,
+      "wrong_issued_certificates": 0,
+      "old_10pct_certificates": 0,
+      "joint_region_coverage": 128,
+      "max_joint_divergence": 20.104258252325753,
+      "reasons": {
+        "MEAN_LOWER_BOUND": 128
+      }
+    },
+    {
+      "level": 0,
+      "outer_expected_count": 16777216,
+      "geometry": "fresh_10",
+      "family": 2,
+      "epsilon": "1/4",
+      "replicates": 128,
+      "float_candidates": 0,
+      "validated_certificates": 0,
+      "certificate_cp_lower": 0.0,
+      "wrong_issued_certificates": 0,
+      "old_10pct_certificates": 0,
+      "joint_region_coverage": 128,
+      "max_joint_divergence": 17.813787643401554,
+      "reasons": {
+        "INVERSE_RADIUS": 128
+      }
+    },
+    {
+      "level": 0,
+      "outer_expected_count": 16777216,
+      "geometry": "fresh_11",
+      "family": 3,
+      "epsilon": "1/4",
+      "replicates": 128,
+      "float_candidates": 0,
+      "validated_certificates": 0,
+      "certificate_cp_lower": 0.0,
+      "wrong_issued_certificates": 0,
+      "old_10pct_certificates": 0,
+      "joint_region_coverage": 128,
+      "max_joint_divergence": 24.44226050596008,
+      "reasons": {
+        "INVERSE_RADIUS": 123,
+        "NONPOSITIVE_TIME": 5
+      }
+    },
+    {
+      "level": 0,
+      "outer_expected_count": 16777216,
+      "geometry": "fresh_12",
+      "family": 0,
+      "epsilon": "1",
+      "replicates": 128,
+      "float_candidates": 0,
+      "validated_certificates": 0,
+      "certificate_cp_lower": 0.0,
+      "wrong_issued_certificates": 0,
+      "old_10pct_certificates": 0,
+      "joint_region_coverage": 128,
+      "max_joint_divergence": 19.800608406463297,
+      "reasons": {
+        "MEAN_LOWER_BOUND": 128
+      }
+    },
+    {
+      "level": 0,
+      "outer_expected_count": 16777216,
+      "geometry": "fresh_13",
+      "family": 1,
+      "epsilon": "1",
+      "replicates": 128,
+      "float_candidates": 0,
+      "validated_certificates": 0,
+      "certificate_cp_lower": 0.0,
+      "wrong_issued_certificates": 0,
+      "old_10pct_certificates": 0,
+      "joint_region_coverage": 128,
+      "max_joint_divergence": 20.424822835648246,
+      "reasons": {
+        "MEAN_LOWER_BOUND": 128
+      }
+    },
+    {
+      "level": 0,
+      "outer_expected_count": 16777216,
+      "geometry": "fresh_14",
+      "family": 2,
+      "epsilon": "1/4",
+      "replicates": 128,
+      "float_candidates": 0,
+      "validated_certificates": 0,
+      "certificate_cp_lower": 0.0,
+      "wrong_issued_certificates": 0,
+      "old_10pct_certificates": 0,
+      "joint_region_coverage": 128,
+      "max_joint_divergence": 23.127034675203024,
+      "reasons": {
+        "INVERSE_RADIUS": 128
+      }
+    },
+    {
+      "level": 0,
+      "outer_expected_count": 16777216,
+      "geometry": "fresh_15",
+      "family": 3,
+      "epsilon": "1/4",
+      "replicates": 128,
+      "float_candidates": 0,
+      "validated_certificates": 0,
+      "certificate_cp_lower": 0.0,
+      "wrong_issued_certificates": 0,
+      "old_10pct_certificates": 0,
+      "joint_region_coverage": 128,
+      "max_joint_divergence": 21.294623077283966,
+      "reasons": {
+        "INVERSE_RADIUS": 126,
+        "NONPOSITIVE_TIME": 2
+      }
+    },
+    {
+      "level": 1,
+      "outer_expected_count": 268435456,
+      "geometry": "base_0",
+      "family": 0,
+      "epsilon": "1",
+      "replicates": 128,
+      "float_candidates": 128,
+      "validated_certificates": 128,
+      "certificate_cp_lower": 0.9542702976692375,
+      "wrong_issued_certificates": 0,
+      "old_10pct_certificates": 0,
+      "joint_region_coverage": 128,
+      "max_joint_divergence": 17.475591643387943,
+      "reasons": {
+        "CERTIFIED": 128
+      }
+    },
+    {
+      "level": 1,
+      "outer_expected_count": 268435456,
+      "geometry": "base_1",
+      "family": 1,
+      "epsilon": "1",
+      "replicates": 128,
+      "float_candidates": 128,
+      "validated_certificates": 128,
+      "certificate_cp_lower": 0.9542702976692375,
+      "wrong_issued_certificates": 0,
+      "old_10pct_certificates": 0,
+      "joint_region_coverage": 128,
+      "max_joint_divergence": 16.748607663111937,
+      "reasons": {
+        "CERTIFIED": 128
+      }
+    },
+    {
+      "level": 1,
+      "outer_expected_count": 268435456,
+      "geometry": "base_2",
+      "family": 2,
+      "epsilon": "1/4",
+      "replicates": 128,
+      "float_candidates": 128,
+      "validated_certificates": 128,
+      "certificate_cp_lower": 0.9542702976692375,
+      "wrong_issued_certificates": 0,
+      "old_10pct_certificates": 0,
+      "joint_region_coverage": 128,
+      "max_joint_divergence": 25.02283588645652,
+      "reasons": {
+        "CERTIFIED": 128
+      }
+    },
+    {
+      "level": 1,
+      "outer_expected_count": 268435456,
+      "geometry": "base_3",
+      "family": 3,
+      "epsilon": "1/4",
+      "replicates": 128,
+      "float_candidates": 0,
+      "validated_certificates": 0,
+      "certificate_cp_lower": 0.0,
+      "wrong_issued_certificates": 0,
+      "old_10pct_certificates": 0,
+      "joint_region_coverage": 128,
+      "max_joint_divergence": 18.03276624747692,
+      "reasons": {
+        "PRECISION_HOLD": 128
+      }
+    },
+    {
+      "level": 1,
+      "outer_expected_count": 268435456,
+      "geometry": "fresh_00",
+      "family": 0,
+      "epsilon": "1",
+      "replicates": 128,
+      "float_candidates": 128,
+      "validated_certificates": 128,
+      "certificate_cp_lower": 0.9542702976692375,
+      "wrong_issued_certificates": 0,
+      "old_10pct_certificates": 0,
+      "joint_region_coverage": 128,
+      "max_joint_divergence": 20.682170763302757,
+      "reasons": {
+        "CERTIFIED": 128
+      }
+    },
+    {
+      "level": 1,
+      "outer_expected_count": 268435456,
+      "geometry": "fresh_01",
+      "family": 1,
+      "epsilon": "1",
+      "replicates": 128,
+      "float_candidates": 128,
+      "validated_certificates": 128,
+      "certificate_cp_lower": 0.9542702976692375,
+      "wrong_issued_certificates": 0,
+      "old_10pct_certificates": 0,
+      "joint_region_coverage": 128,
+      "max_joint_divergence": 19.609911445630587,
+      "reasons": {
+        "CERTIFIED": 128
+      }
+    },
+    {
+      "level": 1,
+      "outer_expected_count": 268435456,
+      "geometry": "fresh_02",
+      "family": 2,
+      "epsilon": "1/4",
+      "replicates": 128,
+      "float_candidates": 128,
+      "validated_certificates": 128,
+      "certificate_cp_lower": 0.9542702976692375,
+      "wrong_issued_certificates": 0,
+      "old_10pct_certificates": 0,
+      "joint_region_coverage": 128,
+      "max_joint_divergence": 19.90381924078084,
+      "reasons": {
+        "CERTIFIED": 128
+      }
+    },
+    {
+      "level": 1,
+      "outer_expected_count": 268435456,
+      "geometry": "fresh_03",
+      "family": 3,
+      "epsilon": "1/4",
+      "replicates": 128,
+      "float_candidates": 0,
+      "validated_certificates": 0,
+      "certificate_cp_lower": 0.0,
+      "wrong_issued_certificates": 0,
+      "old_10pct_certificates": 0,
+      "joint_region_coverage": 128,
+      "max_joint_divergence": 19.729525414965053,
+      "reasons": {
+        "PRECISION_HOLD": 128
+      }
+    },
+    {
+      "level": 1,
+      "outer_expected_count": 268435456,
+      "geometry": "fresh_04",
+      "family": 0,
+      "epsilon": "1",
+      "replicates": 128,
+      "float_candidates": 128,
+      "validated_certificates": 128,
+      "certificate_cp_lower": 0.9542702976692375,
+      "wrong_issued_certificates": 0,
+      "old_10pct_certificates": 0,
+      "joint_region_coverage": 128,
+      "max_joint_divergence": 25.004821579465307,
+      "reasons": {
+        "CERTIFIED": 128
+      }
+    },
+    {
+      "level": 1,
+      "outer_expected_count": 268435456,
+      "geometry": "fresh_05",
+      "family": 1,
+      "epsilon": "1",
+      "replicates": 128,
+      "float_candidates": 128,
+      "validated_certificates": 128,
+      "certificate_cp_lower": 0.9542702976692375,
+      "wrong_issued_certificates": 0,
+      "old_10pct_certificates": 0,
+      "joint_region_coverage": 128,
+      "max_joint_divergence": 21.863215508814914,
+      "reasons": {
+        "CERTIFIED": 128
+      }
+    },
+    {
+      "level": 1,
+      "outer_expected_count": 268435456,
+      "geometry": "fresh_06",
+      "family": 2,
+      "epsilon": "1/4",
+      "replicates": 128,
+      "float_candidates": 118,
+      "validated_certificates": 118,
+      "certificate_cp_lower": 0.8319923222161041,
+      "wrong_issued_certificates": 0,
+      "old_10pct_certificates": 0,
+      "joint_region_coverage": 128,
+      "max_joint_divergence": 19.98379778532062,
+      "reasons": {
+        "CERTIFIED": 118,
+        "PRECISION_HOLD": 10
+      }
+    },
+    {
+      "level": 1,
+      "outer_expected_count": 268435456,
+      "geometry": "fresh_07",
+      "family": 3,
+      "epsilon": "1/4",
+      "replicates": 128,
+      "float_candidates": 0,
+      "validated_certificates": 0,
+      "certificate_cp_lower": 0.0,
+      "wrong_issued_certificates": 0,
+      "old_10pct_certificates": 0,
+      "joint_region_coverage": 128,
+      "max_joint_divergence": 18.196535759589054,
+      "reasons": {
+        "PRECISION_HOLD": 128
+      }
+    },
+    {
+      "level": 1,
+      "outer_expected_count": 268435456,
+      "geometry": "fresh_08",
+      "family": 0,
+      "epsilon": "1",
+      "replicates": 128,
+      "float_candidates": 128,
+      "validated_certificates": 128,
+      "certificate_cp_lower": 0.9542702976692375,
+      "wrong_issued_certificates": 0,
+      "old_10pct_certificates": 0,
+      "joint_region_coverage": 128,
+      "max_joint_divergence": 21.52888147674517,
+      "reasons": {
+        "CERTIFIED": 128
+      }
+    },
+    {
+      "level": 1,
+      "outer_expected_count": 268435456,
+      "geometry": "fresh_09",
+      "family": 1,
+      "epsilon": "1",
+      "replicates": 128,
+      "float_candidates": 128,
+      "validated_certificates": 128,
+      "certificate_cp_lower": 0.9542702976692375,
+      "wrong_issued_certificates": 0,
+      "old_10pct_certificates": 0,
+      "joint_region_coverage": 128,
+      "max_joint_divergence": 18.47365449035759,
+      "reasons": {
+        "CERTIFIED": 128
+      }
+    },
+    {
+      "level": 1,
+      "outer_expected_count": 268435456,
+      "geometry": "fresh_10",
+      "family": 2,
+      "epsilon": "1/4",
+      "replicates": 128,
+      "float_candidates": 128,
+      "validated_certificates": 128,
+      "certificate_cp_lower": 0.9542702976692375,
+      "wrong_issued_certificates": 0,
+      "old_10pct_certificates": 0,
+      "joint_region_coverage": 128,
+      "max_joint_divergence": 17.55989846006048,
+      "reasons": {
+        "CERTIFIED": 128
+      }
+    },
+    {
+      "level": 1,
+      "outer_expected_count": 268435456,
+      "geometry": "fresh_11",
+      "family": 3,
+      "epsilon": "1/4",
+      "replicates": 128,
+      "float_candidates": 0,
+      "validated_certificates": 0,
+      "certificate_cp_lower": 0.0,
+      "wrong_issued_certificates": 0,
+      "old_10pct_certificates": 0,
+      "joint_region_coverage": 128,
+      "max_joint_divergence": 19.649636687380195,
+      "reasons": {
+        "PRECISION_HOLD": 96,
+        "INVERSE_RADIUS": 32
+      }
+    },
+    {
+      "level": 1,
+      "outer_expected_count": 268435456,
+      "geometry": "fresh_12",
+      "family": 0,
+      "epsilon": "1",
+      "replicates": 128,
+      "float_candidates": 128,
+      "validated_certificates": 128,
+      "certificate_cp_lower": 0.9542702976692375,
+      "wrong_issued_certificates": 0,
+      "old_10pct_certificates": 0,
+      "joint_region_coverage": 128,
+      "max_joint_divergence": 19.4410214568033,
+      "reasons": {
+        "CERTIFIED": 128
+      }
+    },
+    {
+      "level": 1,
+      "outer_expected_count": 268435456,
+      "geometry": "fresh_13",
+      "family": 1,
+      "epsilon": "1",
+      "replicates": 128,
+      "float_candidates": 128,
+      "validated_certificates": 128,
+      "certificate_cp_lower": 0.9542702976692375,
+      "wrong_issued_certificates": 0,
+      "old_10pct_certificates": 0,
+      "joint_region_coverage": 128,
+      "max_joint_divergence": 21.13502800580124,
+      "reasons": {
+        "CERTIFIED": 128
+      }
+    },
+    {
+      "level": 1,
+      "outer_expected_count": 268435456,
+      "geometry": "fresh_14",
+      "family": 2,
+      "epsilon": "1/4",
+      "replicates": 128,
+      "float_candidates": 128,
+      "validated_certificates": 128,
+      "certificate_cp_lower": 0.9542702976692375,
+      "wrong_issued_certificates": 0,
+      "old_10pct_certificates": 0,
+      "joint_region_coverage": 128,
+      "max_joint_divergence": 18.179640849282087,
+      "reasons": {
+        "CERTIFIED": 128
+      }
+    },
+    {
+      "level": 1,
+      "outer_expected_count": 268435456,
+      "geometry": "fresh_15",
+      "family": 3,
+      "epsilon": "1/4",
+      "replicates": 128,
+      "float_candidates": 0,
+      "validated_certificates": 0,
+      "certificate_cp_lower": 0.0,
+      "wrong_issued_certificates": 0,
+      "old_10pct_certificates": 0,
+      "joint_region_coverage": 128,
+      "max_joint_divergence": 19.4593600883714,
+      "reasons": {
+        "PRECISION_HOLD": 128
+      }
+    }
+  ],
+  "runtime_seconds": 57.975661914999364,
+  "environment": {
+    "numpy": "2.3.5",
+    "scipy": "1.17.0"
+  },
+  "freeze_sha256": "d5ce7ab92f4b47c263c9381a19646e43e12b320ef3dfcf985f29f95215904b74"
+}

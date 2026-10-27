@@ -12,14 +12,15 @@ X6 Spectral Astrolabium ist ein offener Forschungshub für Signale, Graphen und 
 
 ## Aktuelle Eigenzeit-Ergebnisse
 
-3+1-Poisson-Pilot · 27.10.2026; GFEST-Dokumente · 23.10.2026
+3+1: gemeinsame Konfidenzregion v0.3 · 27.10.2026; GFEST-Dokumente · 23.10.2026
 
 Sie forschen zu Causal Sets, Lorentz-Geometrie oder inversen Problemen? Prüfen Sie mit uns, wie stabil sich diskrete Operatorgewichte aus korrelierten Kausalzählungen rekonstruieren lassen. Hier finden Sie den GFEST-Beweisentwurf, seine Ergänzung und ausführbare Prüfpakete.
 
-Neu in 3+1: 40.960 gemeinsame Poisson-Zählversuche. Bei höchster Dichte bestehen 10.239/10.240 Fälle die Genauigkeitskriterien; ein datenabhängiges 10%-Fehlerzertifikat bleibt offen. Vorgegebene Landmarken, bekannte Dichte. v0.1 formuliert bedingte Stabilitätssätze; v0.2 behandelt gemeinsame Punktbewegungen und dokumentiert ein rationales lokales Paarraumzertifikat. Der allgemeine Nachweis für das ursprüngliche TV-Budget 1/4 bleibt offen.
+Neu in 3+1 v0.3: 5.120 neue Zählversuche auf den bisherigen 20 Geometrien. Bei hoher Dichte erhalten 1.910/2.560 Fälle ein intern geprüftes 10%-Eigenzeitfehlerzertifikat, bei der niedrigeren Dichte 0/2.560. Die bisherige Schranke zertifiziert auf denselben Daten keinen Fall. Die Freigabe über alle Geometrien bleibt HOLD. Vorgegebene Landmarken, bekannte Dichte; keine intrinsische Landmarkenwahl oder Operatorfreigabe. Die GFEST-Beweisentwürfe bleiben bedingt; der allgemeine Nachweis beim ursprünglichen TV-Budget 1/4 bleibt offen.
 
 Wir laden Physikerinnen und Physiker zu unabhängiger Beweisprüfung, Reproduktion und Gegenbeispielen ein. Bitte nennen Sie Dokumentversion, Satz oder Gleichung und Ihre Annahmen. Forschungsentwürfe, noch ohne unabhängige fachliche Begutachtung.
 
+- [Neu v0.3: Zertifikate, Herleitung & vollständige Prüfung →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/eigenzeit_4d/joint_region_v0_3/README.md)
 - [4D-Ergebnisse: Bericht, Code & Grenzen →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/eigenzeit_4d/README.md)
 - [4D-Prüfpaket v0.2 herunterladen · ZIP ↓](https://thomasmgfeller.github.io/x6-spectral-astrolabium/research/eigenzeit_4d/Eigenzeit_4D_Poisson_v0_2.zip)
 - [Ergänzung v0.2 lesen · PDF, 8 Seiten →](https://thomasmgfeller.github.io/x6-spectral-astrolabium/docs/research/eigenzeit/gfest/GFEST_Stabilitaet_v0_2.pdf)
