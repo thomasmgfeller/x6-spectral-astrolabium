@@ -1,0 +1,21 @@
+{
+  "version": "0.3",
+  "date": "2026-10-27",
+  "scope": "same 20 fixed 3+1 chain geometries as v0.2; fresh independent counts; fixed labels and known density",
+  "count_seed": 2026102705,
+  "density_expected_outer_counts": [16777216,268435456],
+  "replicates_per_geometry_per_density": 128,
+  "primary_density_index": 1,
+  "independent_observable_cells": "19 unchanged atoms plus the union of atoms (4,6) and (5,6); exact invertible transform of the 20 observed counts",
+  "likelihood_region": "sum_i [y_i log(y_i/lambda_i)-y_i+lambda_i] <=48",
+  "uniform_noncoverage_bound": "2^30 exp(-24) <0.05",
+  "enclosing_ellipsoid": "sum_i (lambda_i-y_i)^2/U_i <=96, U_i=y_i+48+ceil_sqrt(48^2+96*y_i)",
+  "bound": "correlation-preserving first derivative, square-root Taylor remainder and exact quadratic inverse remainder; Frobenius upper bounds",
+  "minimum_interval_count": 16,
+  "certificate": "outward Decimal interval evaluation at 60 significant digits; q_lower*121 >= qhat_upper*100 and q_upper*81 <= qhat_lower*100",
+  "candidate_policy": "float scan of all observations; all positive candidates undergo directed-rounding verification; noncandidates remain uncertified, never silently removed",
+  "certificate_availability_gate": "At primary density, each geometry has a one-sided Clopper-Pearson lower bound >=0.90 on certificate availability, Bonferroni alpha=0.05 across 20 geometries",
+  "comparison": "v0.2 bound on the same fresh counts; all observations retained",
+  "validation": ["exact integer observable transform", "exact rational Chernoff constant inequality", "interval arithmetic rational controls", "finite-difference derivative and independent high-precision spot checks", "full seed replay", "90-digit repeat of first and last certificate per geometry-density cell"],
+  "no_claims": ["conditional coverage after selecting certified cases", "intrinsic landmark selection", "arbitrary causal sets", "operator or curvature qualification", "external peer review"]
+}

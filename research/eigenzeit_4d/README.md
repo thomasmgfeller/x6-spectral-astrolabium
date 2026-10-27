@@ -3,11 +3,30 @@
 Published 27 October 2026. Conditional flat-space research pilot; known density,
 fixed labelled landmarks, and synthetic Poisson counts.
 
-**Observed accuracy gate: PASS at the highest tested density. Data-dependent
+## Latest: joint-region certificates, v0.3
+
+[Full follow-up report / vollständiger Folgebericht](joint_region_v0_3/README.md).
+A new finite-sample joint region and outward interval arithmetic issue 1,910
+10%-proper-time certificates in 2,560 fresh high-density observations;
+0/2,560 at the lower density. The old bound issues none on the same data.
+All 1,910 certificates replay; no incorrect issued certificate was observed.
+The predeclared availability gate across all 20 geometries remains **HOLD**.
+For each fixed model parameter, the probability of issuing a wrong certificate
+is bounded by 2^30 exp(-24) < 0.040536 per observation, under the stated model.
+This is not conditional coverage after selecting certified cases or simultaneous
+coverage of the full experiment. Geometries remain the fixed v0.2 set.
+
+```sh
+python3 -m pip install -r research/eigenzeit_4d/poisson_v0_2/requirements.txt
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python3 research/eigenzeit_4d/verify_joint_publication.py
+```
+
+
+**Historical v0.2 observed accuracy gate: PASS at the highest tested density. Data-dependent
 10% error certification: HOLD.** These are separate decisions. No intrinsic
 landmark selection, operator, curvature or general GFEST stability claim.
 
-## Ergebnisse / results
+## Earlier v0.2 results / frühere Ergebnisse
 
 The frozen v0.2 campaign contains 40,960 joint count observations across 20
 geometries and four densities. At the primary density (268,435,456 expected
