@@ -1,4 +1,4 @@
-name: CSPP contract and scalar pilot
+name: CSPP contract and scalar calibration
 on:
   pull_request:
     paths: ['research/cspp/**', '.github/workflows/cspp-contract.yml']
@@ -56,3 +56,26 @@ jobs:
         run: |
           python3 -B research/cspp/scalar_pilot_v0_1/report.py --metrics-only
           git diff --exit-code -- research/cspp/scalar_pilot_v0_1/results/DIAGNOSTICS.json
+  scale-calibration:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+      PYTHONDONTWRITEBYTECODE: '1'
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - run: python3 -m pip install numpy==2.3.5 scipy==1.17.0
+      - name: Verify calibration package and unchanged science gates
+        run: python3 -O -B research/cspp/scale_calibration_v0_2/verify_publication.py
+      - name: Replay 48 clouds and independent continuum-reference controls
+        run: python3 -B research/cspp/scale_calibration_v0_2/audit.py --replay
+      - name: Replay descriptive calibration diagnostics
+        run: |
+          python3 -B research/cspp/scale_calibration_v0_2/report.py --metrics-only
+          git diff --exit-code -- research/cspp/scale_calibration_v0_2/results/DIAGNOSTICS.json

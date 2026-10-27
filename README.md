@@ -1,5 +1,7 @@
 # X6 Spectral Astrolabium
 
+**CSPP scale calibration: reduced sprinkling noise, persistent nonlocal bias; G1 remains HOLD.** [Derivation, 48 fresh clouds and independent source-reference checks](research/cspp/scale_calibration_v0_2/README.md). Fixed nonlocality separates the measured density-dependent scatter from the finite-domain mean. A real-space KG reference improves the finest Fourier comparison to about 0.9–1.0% RMS, still above the planned 0.1% diagnostic goal. Changed calibration fields do not replace the E4 gates.
+
 **CSPP scalar pilot: 64 clouds computed; G1 remains HOLD.** [Methods, raw data, complete replay and results](research/cspp/scalar_pilot_v0_1/README.md). None of twelve density/smoothing cells reaches the draft scalar tolerance. Analytic propagation controls, paired boundary extensions and a separate Fourier-reference resolution check expose unresolved scale, boundary and source-reference errors. No Dirac or flavor qualification; the corrected outer-shell sampler and unchanged primary results are documented.
 
 **CSPP E4-V0.1: protocol draft for a certified scalar–Dirac–flavor pipeline.** [German contract, parameters and executable consistency checks](research/cspp/e4_v0_1/README.md). Defines a flat 3+1 two-flavor reference, detector-weighted coherence, error/risk budgets and complete failure accounting. **DRAFT / NOT_FROZEN / NOT_RUN**: operator choice and final ensemble size remain open; no Dirac or flavor qualification is claimed.
