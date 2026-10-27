@@ -1,5 +1,7 @@
 # X6 Spectral Astrolabium
 
+**Eigenzeit 3+1: conditional high-density accuracy gate passes; error certification remains HOLD.** [Code, complete evidence and original packages](research/eigenzeit_4d/README.md): 40,960 joint Poisson count observations on 20 fixed geometries. At the primary density, 10,239/10,240 trials meet all guards and <=10% proper-time error, but zero produce a data-dependent 10% error certificate. Known density and fixed landmarks; no operator, curvature or general stability claim.
+
 **Eigenzeit: all strong candidates in the fixed spatial grid excluded.** [Certified single-count Poisson tails](research/lorentz_local_dalembert/poisson_tail_obstruction/README.md) settle all 15 previously unresolved candidates: all 18 sampled pairs above 20% operator gap have **TV >= 0.4093301**, incompatible with TV <= 0.25. This closes the finite 512-candidate grid, not the continuous family or the global stability question.
 
 **Eigenzeit: larger spatial moves, strong-pair question still open.** [512-candidate spatial search](research/lorentz_local_dalembert/spatial_search/README.md) certifies a **0.0434832%** operator gap at **TV <= 0.2118268**, an 11.9-fold gap gain. Of 18 admissible sampled candidates above 20% gap, a marginal-law certificate excludes three; 15 remain unresolved.
