@@ -1,0 +1,585 @@
+{
+  "schema": "cspp.variance-budget/0.4",
+  "date": "2026-10-27",
+  "precision_bits": 192,
+  "python": "3.12.14",
+  "python_flint": "0.8.0",
+  "epsilon_cap": "1/1048576",
+  "baseline": {
+    "repository": "thomasmgfeller/x6-spectral-astrolabium",
+    "PR": 135,
+    "merge_commit": "3a200404a23d79bde852b29a49f56c809fb68af4",
+    "file": "research/cspp/certified_budget_v0_3/results/BUDGET.json",
+    "snapshot_sha256": "d660a57d7c003c371a5281d9d431dd83a6251e62f5c330af468ab7e82b15ac1d"
+  },
+  "upper_rows": [
+    {
+      "ell_k": "1/8",
+      "H": 20,
+      "upper_coefficient": {
+        "ball": "[248779596419738976.9071616435570642570594448406580840374 +/- 3.62e-38]",
+        "midpoint_display_only": 2.4877959641973898e+17,
+        "radius_display_only": 2.2776286847541355e-39
+      },
+      "rho_sufficient": "203085384832439981150",
+      "expected_N_sufficient": {
+        "ball": "[4253410353606996450993703.096044115570151008568584033689 +/- 2.85e-31]",
+        "midpoint_display_only": 4.2534103536069967e+24,
+        "radius_display_only": 1.908520347867314e-33
+      },
+      "old_expected_N_sufficient": {
+        "ball": "[2.8744689174119918470466282761985158050e+39 +/- 38.3]",
+        "midpoint_display_only": 2.8744689174119916e+39,
+        "radius_display_only": 30.200000047683716
+      },
+      "improvement_factor": {
+        "ball": "[675803338602016.52143425542063159601227 +/- 8.02e-24]",
+        "midpoint_display_only": 675803338602016.5,
+        "radius_display_only": 7.100293311504372e-24
+      },
+      "relative_total_RMS_upper": {
+        "ball": "[0.08044656520760590284461077989303576582965329259721349757 +/- 4.74e-57]",
+        "midpoint_display_only": 0.0804465652076059,
+        "radius_display_only": 3.210518499484403e-58
+      },
+      "single_witness_RMS_at_most_10_percent": true,
+      "relative_bias_baseline": {
+        "ball": "[0.0395639774406 +/- 2.72e-14]",
+        "midpoint_display_only": 0.03956397744060196,
+        "radius_display_only": 2.520000005435515e-14
+      },
+      "relative_boundary_bound_baseline": {
+        "ball": "[8.006188058213583321317830154220908327e-5 +/- 5.54e-42]",
+        "midpoint_display_only": 8.006188058213583e-05,
+        "radius_display_only": 1.1000000038156863e-42
+      },
+      "witness_10_percent_RMS_excluded_by_bias": false,
+      "scope": "one nonoscillating Gaussian witness; no E4 qualification",
+      "upper_bound_components": {
+        "A_upper": {
+          "ball": "[0.2093043525720177397312723494392632320293641488458499051 +/- 1.60e-56]",
+          "midpoint_display_only": 0.20930435257201774,
+          "radius_display_only": 0.0
+        },
+        "B_upper": {
+          "ball": "[0.0002001800806055509543781433176712794266782819434001759565 +/- 1.88e-59]",
+          "midpoint_display_only": 0.00020018008060555096,
+          "radius_display_only": 0.0
+        },
+        "C_upper": {
+          "ball": "[0.2843495753660875173774236899251203272049967932749128195 +/- 2.80e-56]",
+          "midpoint_display_only": 0.2843495753660875,
+          "radius_display_only": 0.0
+        },
+        "epsilon_cap": {
+          "ball": "9.536743164062500000000000000000000000000000000000000000e-7",
+          "midpoint_display_only": 9.5367431640625e-07,
+          "radius_display_only": 0.0
+        },
+        "rho_regime_min": {
+          "ball": "4294967296.000000000000000000000000000000000000000000000",
+          "midpoint_display_only": 4294967296.0,
+          "radius_display_only": 0.0
+        }
+      }
+    },
+    {
+      "ell_k": "3/16",
+      "H": 20,
+      "upper_coefficient": {
+        "ball": "[1918183537675927.892752834459265466376923821522999169209 +/- 3.88e-40]",
+        "midpoint_display_only": 1918183537675928.0,
+        "radius_display_only": 2.505130429881992e-41
+      },
+      "rho_sufficient": "1565864112388512567",
+      "expected_N_sufficient": {
+        "ball": "[32795381279997689519489.49108403999430672216025659612966 +/- 1.68e-33]",
+        "midpoint_display_only": 3.279538127999769e+22,
+        "radius_display_only": 1.4794079774595966e-35
+      },
+      "old_expected_N_sufficient": {
+        "ball": "[864435675238548205430398622002705429.75 +/- 8.19e-3]",
+        "midpoint_display_only": 8.644356752385483e+35,
+        "radius_display_only": 0.008180000018910505
+      },
+      "improvement_factor": {
+        "ball": "[26358457852898.275745661793207110744235 +/- 2.60e-25]",
+        "midpoint_display_only": 26358457852898.277,
+        "radius_display_only": 2.494291746572935e-25
+      },
+      "relative_total_RMS_upper": {
+        "ball": "[0.1011807008904437233731824015581976035235316070444411629 +/- 1.96e-56]",
+        "midpoint_display_only": 0.10118070089044372,
+        "radius_display_only": 3.628325231043137e-58
+      },
+      "single_witness_RMS_at_most_10_percent": false,
+      "relative_bias_baseline": {
+        "ball": "[0.07304261557182 +/- 5.33e-15]",
+        "midpoint_display_only": 0.07304261557181965,
+        "radius_display_only": 4.980000015153243e-15
+      },
+      "relative_boundary_bound_baseline": {
+        "ball": "[1.5814692460668806560627812650312905336e-5 +/- 6.92e-43]",
+        "midpoint_display_only": 1.5814692460668807e-05,
+        "radius_display_only": 3.810000014734766e-43
+      },
+      "witness_10_percent_RMS_excluded_by_bias": false,
+      "scope": "one nonoscillating Gaussian witness; no E4 qualification",
+      "upper_bound_components": {
+        "A_upper": {
+          "ball": "[0.4709347932867841190104891501714286673297412099031622864 +/- 3.92e-56]",
+          "midpoint_display_only": 0.4709347932867841,
+          "radius_display_only": 0.0
+        },
+        "B_upper": {
+          "ball": "[0.002280176230649107844967210619600272358032672044684719098 +/- 4.72e-58]",
+          "midpoint_display_only": 0.002280176230649108,
+          "radius_display_only": 0.0
+        },
+        "C_upper": {
+          "ball": "[1.439519725290818056723207430245921656475296265954246149 +/- 4.22e-55]",
+          "midpoint_display_only": 1.439519725290818,
+          "radius_display_only": 0.0
+        },
+        "epsilon_cap": {
+          "ball": "9.536743164062500000000000000000000000000000000000000000e-7",
+          "midpoint_display_only": 9.5367431640625e-07,
+          "radius_display_only": 0.0
+        },
+        "rho_regime_min": {
+          "ball": "[848388601.6790123456790123456790123456790123456790123457 +/- 2.13e-47]",
+          "midpoint_display_only": 848388601.6790123,
+          "radius_display_only": 1.710569417645189e-49
+        }
+      }
+    },
+    {
+      "ell_k": "1/4",
+      "H": 20,
+      "upper_coefficient": {
+        "ball": "[60784912497343.20639994295670956085429535211579053871209 +/- 5.03e-42]",
+        "midpoint_display_only": 60784912497343.2,
+        "radius_display_only": 5.562837659562259e-43
+      },
+      "rho_sufficient": "49620336732525068",
+      "expected_N_sufficient": {
+        "ball": "[1039245902317016792414.721494915291832156003660657590537 +/- 4.77e-35]",
+        "midpoint_display_only": 1.0392459023170168e+21,
+        "radius_display_only": 4.661656034900113e-37
+      },
+      "old_expected_N_sufficient": {
+        "ball": "[2741312917371657848645921548158033.7775 +/- 4.78e-5]",
+        "midpoint_display_only": 2.741312917371658e+33,
+        "radius_display_only": 2.880000008076422e-05
+      },
+      "improvement_factor": {
+        "ball": "[2637790450998.9917485458023867078853630 +/- 3.58e-26]",
+        "midpoint_display_only": 2637790450998.9917,
+        "radius_display_only": 2.7712824915523814e-26
+      },
+      "relative_total_RMS_upper": {
+        "ball": "[0.1306182109794804903309115952924429156620883416713114056 +/- 4.81e-56]",
+        "midpoint_display_only": 0.13061821097948048,
+        "radius_display_only": 2.6165075677226988e-58
+      },
+      "single_witness_RMS_at_most_10_percent": false,
+      "relative_bias_baseline": {
+        "ball": "[0.11027245094295 +/- 5.50e-15]",
+        "midpoint_display_only": 0.11027245094295392,
+        "radius_display_only": 1.5800000041432533e-15
+      },
+      "relative_boundary_bound_baseline": {
+        "ball": "[5.0038675363834895758236438463880677041e-6 +/- 7.10e-44]",
+        "midpoint_display_only": 5.0038675363834895e-06,
+        "radius_display_only": 6.870000024438142e-44
+      },
+      "witness_10_percent_RMS_excluded_by_bias": true,
+      "scope": "one nonoscillating Gaussian witness; no E4 qualification",
+      "upper_bound_components": {
+        "A_upper": {
+          "ball": "[0.8372174102880709589250893977570529281174565953833996203 +/- 3.63e-56]",
+          "midpoint_display_only": 0.837217410288071,
+          "radius_display_only": 0.0
+        },
+        "B_upper": {
+          "ball": "[0.01281152515875526108020117233096188330741004437761126122 +/- 2.81e-57]",
+          "midpoint_display_only": 0.012811525158755261,
+          "radius_display_only": 0.0
+        },
+        "C_upper": {
+          "ball": "[4.549593205857400278038779038801925235279948692398605112 +/- 4.48e-55]",
+          "midpoint_display_only": 4.5495932058574,
+          "radius_display_only": 0.0
+        },
+        "epsilon_cap": {
+          "ball": "9.536743164062500000000000000000000000000000000000000000e-7",
+          "midpoint_display_only": 9.5367431640625e-07,
+          "radius_display_only": 0.0
+        },
+        "rho_regime_min": {
+          "ball": "268435456.0000000000000000000000000000000000000000000000",
+          "midpoint_display_only": 268435456.0,
+          "radius_display_only": 0.0
+        }
+      }
+    },
+    {
+      "ell_k": "1/2",
+      "H": 16,
+      "upper_coefficient": {
+        "ball": "[14863374356.10931482503740824223678842078211706692474489 +/- 9.99e-46]",
+        "midpoint_display_only": 14863374356.109314,
+        "radius_display_only": 1.3591991016972778e-46
+      },
+      "rho_sufficient": "12133366821315",
+      "expected_N_sufficient": {
+        "ball": "[104087814332834735.4718032230939427884516004763539224316 +/- 4.42e-38]",
+        "midpoint_display_only": 1.0408781433283474e+17,
+        "radius_display_only": 6.518496092757377e-41
+      },
+      "old_expected_N_sufficient": {
+        "ball": "[73592811497635924270351489.09161892463 +/- 5.58e-12]",
+        "midpoint_display_only": 7.359281149763593e+25,
+        "radius_display_only": 7.790000020846638e-13
+      },
+      "improvement_factor": {
+        "ball": "[707026196.76798138058164341268429061739 +/- 7.69e-30]",
+        "midpoint_display_only": 707026196.7679814,
+        "radius_display_only": 7.48417958604276e-30
+      },
+      "relative_total_RMS_upper": {
+        "ball": "[0.2777606467456308399535688631579398913434833700348695569 +/- 4.65e-56]",
+        "midpoint_display_only": 0.27776064674563083,
+        "radius_display_only": 3.1133623547657815e-58
+      },
+      "single_witness_RMS_at_most_10_percent": false,
+      "relative_bias_baseline": {
+        "ball": "[0.266261245852438 +/- 3.96e-16]",
+        "midpoint_display_only": 0.2662612458524377,
+        "radius_display_only": 9.840000028944744e-17
+      },
+      "relative_boundary_bound_baseline": {
+        "ball": "[0.0025341724131115804654476810090132553195 +/- 6.85e-41]",
+        "midpoint_display_only": 0.0025341724131115804,
+        "radius_display_only": 3.5000000089578003e-41
+      },
+      "witness_10_percent_RMS_excluded_by_bias": true,
+      "scope": "one nonoscillating Gaussian witness; no E4 qualification",
+      "upper_bound_components": {
+        "A_upper": {
+          "ball": "[3.348869641152283835700357591028211712469826381533598481 +/- 3.45e-55]",
+          "midpoint_display_only": 3.348869641152284,
+          "radius_display_only": 0.0
+        },
+        "B_upper": {
+          "ball": "[0.8199376101603367091328750291815605316742428401671207179 +/- 8.11e-58]",
+          "midpoint_display_only": 0.8199376101603367,
+          "radius_display_only": 0.0
+        },
+        "C_upper": {
+          "ball": "[72.79349129371840444862046462083080376447917907837768178 +/- 4.85e-54]",
+          "midpoint_display_only": 72.7934912937184,
+          "radius_display_only": 0.0
+        },
+        "epsilon_cap": {
+          "ball": "9.536743164062500000000000000000000000000000000000000000e-7",
+          "midpoint_display_only": 9.5367431640625e-07,
+          "radius_display_only": 0.0
+        },
+        "rho_regime_min": {
+          "ball": "16777216.00000000000000000000000000000000000000000000000",
+          "midpoint_display_only": 16777216.0,
+          "radius_display_only": 0.0
+        }
+      }
+    },
+    {
+      "ell_k": "1",
+      "H": 16,
+      "upper_coefficient": {
+        "ball": "[3640147.676042698798879701677156309936252699924490194180 +/- 4.16e-50]",
+        "midpoint_display_only": 3640147.676042699,
+        "radius_display_only": 3.323653069439189e-50
+      },
+      "rho_sufficient": "2971549125",
+      "expected_N_sufficient": {
+        "ball": "[25491857137339.53728972003816999935024051834895343580842 +/- 4.23e-42]",
+        "midpoint_display_only": 25491857137339.54,
+        "radius_display_only": 1.5946667372481853e-44
+      },
+      "old_expected_N_sufficient": {
+        "ball": "[70275415427950281122.90998505812503528 +/- 2.09e-18]",
+        "midpoint_display_only": 7.027541542795028e+19,
+        "radius_display_only": 7.430000022706774e-19
+      },
+      "improvement_factor": {
+        "ball": "[2756778.9608005228585948415037560585508 +/- 6.81e-32]",
+        "midpoint_display_only": 2756778.960800523,
+        "radius_display_only": 2.914700727735448e-32
+      },
+      "relative_total_RMS_upper": {
+        "ball": "[0.5100089338299893361093100934481999708098063735156551864 +/- 3.83e-56]",
+        "midpoint_display_only": 0.5100089338299894,
+        "radius_display_only": 5.1838075247487326e-58
+      },
+      "single_witness_RMS_at_most_10_percent": false,
+      "relative_bias_baseline": {
+        "ball": "[0.50502387102780721 +/- 6.27e-18]",
+        "midpoint_display_only": 0.5050238710278072,
+        "radius_display_only": 6.150000018090465e-18
+      },
+      "relative_boundary_bound_baseline": {
+        "ball": "[0.00015838577581947377909048006306332845747 +/- 3.04e-42]",
+        "midpoint_display_only": 0.00015838577581947378,
+        "radius_display_only": 2.1900000054706217e-42
+      },
+      "witness_10_percent_RMS_excluded_by_bias": true,
+      "scope": "one nonoscillating Gaussian witness; no E4 qualification",
+      "upper_bound_components": {
+        "A_upper": {
+          "ball": "[13.39547856460913534280143036411284684987930552613439393 +/- 4.63e-54]",
+          "midpoint_display_only": 13.395478564609135,
+          "radius_display_only": 0.0
+        },
+        "B_upper": {
+          "ball": "[52.47600705026154938450400186761987402715154177069572595 +/- 4.35e-54]",
+          "midpoint_display_only": 52.47600705026155,
+          "radius_display_only": 0.0
+        },
+        "C_upper": {
+          "ball": "[1164.695860699494471177927433933292860231666865254042909 +/- 4.43e-52]",
+          "midpoint_display_only": 1164.6958606994945,
+          "radius_display_only": 0.0
+        },
+        "epsilon_cap": {
+          "ball": "9.536743164062500000000000000000000000000000000000000000e-7",
+          "midpoint_display_only": 9.5367431640625e-07,
+          "radius_display_only": 0.0
+        },
+        "rho_regime_min": {
+          "ball": "1048576.000000000000000000000000000000000000000000000000",
+          "midpoint_display_only": 1048576.0,
+          "radius_display_only": 0.0
+        }
+      }
+    },
+    {
+      "ell_k": "3/2",
+      "H": 16,
+      "upper_coefficient": {
+        "ball": "[28143.83640607692220271309000580465588151195866773380523 +/- 4.24e-51]",
+        "midpoint_display_only": 28143.836406076924,
+        "radius_display_only": 3.661884458472381e-52
+      },
+      "rho_sufficient": "22974562",
+      "expected_N_sufficient": {
+        "ball": "[197090550302.4284394133935038274074005290098376443115655 +/- 9.16e-45]",
+        "midpoint_display_only": 197090550302.42844,
+        "radius_display_only": 1.2374578371878975e-46
+      },
+      "old_expected_N_sufficient": {
+        "ball": "[21253765614002605.870775507224850205803 +/- 6.49e-22]",
+        "midpoint_display_only": 2.1253765614002604e+16,
+        "radius_display_only": 2.6500000113558043e-22
+      },
+      "improvement_factor": {
+        "ball": "[107837.56796756342950085403151537774692 +/- 3.15e-33]",
+        "midpoint_display_only": 107837.56796756343,
+        "radius_display_only": 1.3445801731314205e-33
+      },
+      "relative_total_RMS_upper": {
+        "ball": "[0.6294657978830070579974193781560751912828511475967729360 +/- 2.84e-56]",
+        "midpoint_display_only": 0.629465797883007,
+        "radius_display_only": 4.958096941744707e-58
+      },
+      "single_witness_RMS_at_most_10_percent": false,
+      "relative_bias_baseline": {
+        "ball": "[0.62553021454274637 +/- 3.49e-18]",
+        "midpoint_display_only": 0.6255302145427464,
+        "radius_display_only": 1.220000003289203e-18
+      },
+      "relative_boundary_bound_baseline": {
+        "ball": "[3.1286079174217042783304703814978460735e-5 +/- 8.60e-43]",
+        "midpoint_display_only": 3.128607917421704e-05,
+        "radius_display_only": 7.56000002986885e-43
+      },
+      "witness_10_percent_RMS_excluded_by_bias": true,
+      "scope": "one nonoscillating Gaussian witness; no E4 qualification",
+      "upper_bound_components": {
+        "A_upper": {
+          "ball": "[30.13982677035418361667130561097143470910343743380238633 +/- 2.11e-54]",
+          "midpoint_display_only": 30.139826770354183,
+          "radius_display_only": 0.0
+        },
+        "B_upper": {
+          "ball": "[597.7345178072797269110844606644937970241167804818310033 +/- 4.97e-53]",
+          "midpoint_display_only": 597.7345178072798,
+          "radius_display_only": 0.0
+        },
+        "C_upper": {
+          "ball": "[5896.272794791190760338257634287295104922813505348592225 +/- 4.22e-52]",
+          "midpoint_display_only": 5896.272794791191,
+          "radius_display_only": 0.0
+        },
+        "epsilon_cap": {
+          "ball": "9.536743164062500000000000000000000000000000000000000000e-7",
+          "midpoint_display_only": 9.5367431640625e-07,
+          "radius_display_only": 0.0
+        },
+        "rho_regime_min": {
+          "ball": "[207126.1234567901234567901234567901234567901234567901235 +/- 4.33e-50]",
+          "midpoint_display_only": 207126.1234567901,
+          "radius_display_only": 4.176194867297825e-53
+        }
+      }
+    },
+    {
+      "ell_k": "2",
+      "H": 16,
+      "upper_coefficient": {
+        "ball": "[894.2845704164392629202759637365066433731937471001598944 +/- 5.03e-53]",
+        "midpoint_display_only": 894.2845704164392,
+        "radius_display_only": 8.140253854906402e-54
+      },
+      "rho_sufficient": "730030",
+      "expected_N_sufficient": {
+        "ball": "[6262666267.034028053503682011396875579529788283906207751 +/- 2.16e-46]",
+        "midpoint_display_only": 6262666267.034028,
+        "radius_display_only": 3.909078487874537e-48
+      },
+      "old_expected_N_sufficient": {
+        "ball": "[68430594942905.50666418124311034224865 +/- 2.41e-24]",
+        "midpoint_display_only": 68430594942905.51,
+        "radius_display_only": 7.190000020633371e-25
+      },
+      "improvement_factor": {
+        "ball": "[10926.751007492842759886580003561497473 +/- 4.48e-34]",
+        "midpoint_display_only": 10926.751007492843,
+        "radius_display_only": 1.1480908432462148e-34
+      },
+      "relative_total_RMS_upper": {
+        "ball": "[0.6864760561572672906983330811119025477481673767177475444 +/- 4.23e-56]",
+        "midpoint_display_only": 0.6864760561572673,
+        "radius_display_only": 4.672196637298199e-58
+      },
+      "single_witness_RMS_at_most_10_percent": false,
+      "relative_bias_baseline": {
+        "ball": "[0.682887887984319148 +/- 8.49e-19]",
+        "midpoint_display_only": 0.6828878879843191,
+        "radius_display_only": 3.8500000111082003e-19
+      },
+      "relative_boundary_bound_baseline": {
+        "ball": "[9.899110988717111193155003941458028592e-6 +/- 2.10e-43]",
+        "midpoint_display_only": 9.899110988717111e-06,
+        "radius_display_only": 1.3700000036892324e-43
+      },
+      "witness_10_percent_RMS_excluded_by_bias": true,
+      "scope": "one nonoscillating Gaussian witness; no E4 qualification",
+      "upper_bound_components": {
+        "A_upper": {
+          "ball": "[53.58191425843654137120572145645138739951722210453757570 +/- 1.52e-54]",
+          "midpoint_display_only": 53.58191425843654,
+          "radius_display_only": 0.0
+        },
+        "B_upper": {
+          "ball": "[3358.464451216739160608256119527671937737698673324526461 +/- 4.79e-52]",
+          "midpoint_display_only": 3358.4644512167392,
+          "radius_display_only": 0.0
+        },
+        "C_upper": {
+          "ball": "[18635.13377119191153884683894293268576370666984406468654 +/- 3.09e-51]",
+          "midpoint_display_only": 18635.13377119191,
+          "radius_display_only": 0.0
+        },
+        "epsilon_cap": {
+          "ball": "9.536743164062500000000000000000000000000000000000000000e-7",
+          "midpoint_display_only": 9.5367431640625e-07,
+          "radius_display_only": 0.0
+        },
+        "rho_regime_min": {
+          "ball": "65536.00000000000000000000000000000000000000000000000000",
+          "midpoint_display_only": 65536.0,
+          "radius_display_only": 0.0
+        }
+      }
+    }
+  ],
+  "lower_witness": {
+    "ell_k": "1/8",
+    "H": 20,
+    "coefficient": {
+      "ball": "[113537.0467501076508936167655235514333153094840947719244 +/- 3.71e-50]",
+      "midpoint_display_only": 113537.04675010765,
+      "radius_display_only": 2.7240115734633186e-50
+    },
+    "valid_for": "all rho >= q=4096, epsilon=q/rho <=1",
+    "rho_necessary_for_7_percent_stochastic_RMS": {
+      "ball": "[92683303.46947563338254429838657259862474243599573218315 +/- 3.56e-48]",
+      "midpoint_display_only": 92683303.46947563,
+      "radius_display_only": 9.765812087196281e-50
+    },
+    "expected_N_necessary_for_7_percent_stochastic_RMS": {
+      "ball": "[1941154568600.920302012004608824846793435143691564843478 +/- 4.69e-43]",
+      "midpoint_display_only": 1941154568600.9204,
+      "radius_display_only": 2.915095177031218e-45
+    },
+    "rho_necessary_for_10_percent_total_RMS": {
+      "ball": "[53802522.06854574849572043755731435812403815121722211174 +/- 2.67e-48]",
+      "midpoint_display_only": 53802522.06854575,
+      "radius_display_only": 1.0691058840368783e-50
+    },
+    "expected_N_necessary_for_10_percent_total_RMS": {
+      "ball": "[1126837387167.640330645377095781271753154413480153105309 +/- 3.33e-43]",
+      "midpoint_display_only": 1126837387167.6404,
+      "radius_display_only": 8.757622963403125e-46
+    },
+    "absolute_bias_lower_from_baseline": {
+      "ball": "[0.01974195777999731052416729857560555108933628939313466417 +/- 1.39e-57]",
+      "midpoint_display_only": 0.01974195777999731,
+      "radius_display_only": 4.978412240834944e-60
+    },
+    "box": {
+      "x_sqrt_qV": [
+        "3",
+        "31/10"
+      ],
+      "v": [
+        "19/10",
+        "21/10"
+      ]
+    },
+    "components": {
+      "direct_absolute_min": {
+        "ball": "[0.02055768517778798411732587522800987344822158127252862004 +/- 4.77e-57]",
+        "midpoint_display_only": 0.020557685177787985,
+        "radius_display_only": 2.0167576750531632e-58
+      },
+      "indirect_absolute_max": {
+        "ball": "[0.00363136398122999943836561543177946271104557882193458582 +/- 3.06e-57]",
+        "midpoint_display_only": 0.0036313639812299995,
+        "radius_display_only": 1.694913244901809e-57
+      },
+      "response_absolute_min": {
+        "ball": "[0.01692632119655798467896025979623041073717600245059403423 +/- 5.98e-57]",
+        "midpoint_display_only": 0.016926321196557986,
+        "radius_display_only": 1.901567427003306e-57
+      },
+      "box_volume_min": {
+        "ball": "[0.002162538567471109212529518301632756482561976803283894803 +/- 1.69e-58]",
+        "midpoint_display_only": 0.002162538567471109,
+        "radius_display_only": 3.097809266134827e-59
+      }
+    },
+    "meaning": "necessary only; does not assert feasibility at these densities"
+  },
+  "gate_status": {
+    "G1": "HOLD",
+    "G2": "NOT_RUN",
+    "G3": "NOT_RUN"
+  },
+  "new_poisson_clouds": 0,
+  "confirmation_seed_used": false,
+  "full_covariance_spatial_integral": "NOT_EVALUATED",
+  "exact_pair_kernel": "IMPLEMENTED_AND_TESTED; overlaps supplied as inputs",
+  "scope": "fixed Gaussian witness, homogeneous Poisson sampling, exact geometry; numerical arithmetic of F and full E4 pipeline not certified"
+}

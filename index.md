@@ -12,14 +12,15 @@ X6 Spectral Astrolabium is an open research hub for signals, graphs and causal o
 
 ## Latest Eigenzeit results
 
-3+1: geometric consistency v0.5 · 27 October 2026; GFEST papers · 23 October 2026
+CSPP variance v0.4 · 27 October 2026; 3+1: geometric consistency v0.5 · 27 October 2026; GFEST papers · 23 October 2026
 
 Do you work on causal sets, Lorentzian geometry or inverse problems? Help us examine how stably discrete operator weights can be reconstructed from correlated causal counts. Read the GFEST proof draft, its supplement and executable verification packages below.
 
-New in 3+1 v0.5: the conditional primary gate passes at the unchanged high budget. All 1,280 cases are certified; 20/20 fixed geometries pass the availability criterion. On the same fresh data, fresh_11 improves from 12/64 to 64/64. Two exact geometric norm constraints now enter the estimator and error bound. The original budget remains HOLD. Known density, fixed landmarks and flat geometry; unseen geometries, intrinsic selection, operators and general GFEST stability remain open.
+CSPP v0.4: for one fixed Gaussian witness in D20, 7% stochastic RMS has a sufficient budget of 4.25e24 expected points and a necessary minimum of 1.94e12. A 10% total RMS requires at least 1.13e12. The wide gap remains unresolved; G1 HOLD, no full E4 qualification. New in 3+1 v0.5: the conditional primary gate passes at the unchanged high budget. All 1,280 cases are certified; 20/20 fixed geometries pass the availability criterion. On the same fresh data, fresh_11 improves from 12/64 to 64/64. Two exact geometric norm constraints now enter the estimator and error bound. The original budget remains HOLD. Known density, fixed landmarks and flat geometry; unseen geometries, intrinsic selection, operators and general GFEST stability remain open.
 
 Physicists are invited to check the proofs, reproduce the calculations and propose counterexamples. Please specify the document version, theorem or equation, and your assumptions. Research drafts awaiting independent expert review; the PDFs are in German.
 
+- [New: variance bounds, density budget and reproducible checks →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/cspp/variance_budget_v0_4/README.md)
 - [New v0.5: conditional 20-geometry gate, derivation & replay →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/eigenzeit_4d/constrained_region_v0_5/README.md)
 - [v0.4: information budgets, geometry checks & remaining limit →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/eigenzeit_4d/refined_bound_v0_4/README.md)
 - [v0.3: certificates, derivation & full replay →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/eigenzeit_4d/joint_region_v0_3/README.md)

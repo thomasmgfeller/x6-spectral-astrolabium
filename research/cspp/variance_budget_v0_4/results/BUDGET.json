@@ -1,0 +1,585 @@
+{
+  "schema": "cspp.variance-budget/0.4",
+  "date": "2026-10-27",
+  "precision_bits": 128,
+  "python": "3.12.14",
+  "python_flint": "0.8.0",
+  "epsilon_cap": "1/1048576",
+  "baseline": {
+    "repository": "thomasmgfeller/x6-spectral-astrolabium",
+    "PR": 135,
+    "merge_commit": "3a200404a23d79bde852b29a49f56c809fb68af4",
+    "file": "research/cspp/certified_budget_v0_3/results/BUDGET.json",
+    "snapshot_sha256": "d660a57d7c003c371a5281d9d431dd83a6251e62f5c330af468ab7e82b15ac1d"
+  },
+  "upper_rows": [
+    {
+      "ell_k": "1/8",
+      "H": 20,
+      "upper_coefficient": {
+        "ball": "[248779596419738976.9071616435570642570 +/- 8.32e-20]",
+        "midpoint_display_only": 2.4877959641973898e+17,
+        "radius_display_only": 4.186070986314853e-20
+      },
+      "rho_sufficient": "203085384832439981150",
+      "expected_N_sufficient": {
+        "ball": "[4253410353606996450993703.0960441155701 +/- 7.27e-14]",
+        "midpoint_display_only": 4.2534103536069967e+24,
+        "radius_display_only": 3.520598641657547e-14
+      },
+      "old_expected_N_sufficient": {
+        "ball": "[2.8744689174119918470466282761985158050e+39 +/- 38.3]",
+        "midpoint_display_only": 2.8744689174119916e+39,
+        "radius_display_only": 30.200000047683716
+      },
+      "improvement_factor": {
+        "ball": "[675803338602016.5214342554206315960123 +/- 4.51e-23]",
+        "midpoint_display_only": 675803338602016.5,
+        "radius_display_only": 1.600280619229596e-23
+      },
+      "relative_total_RMS_upper": {
+        "ball": "[0.08044656520760590284461077989303576583 +/- 8.77e-39]",
+        "midpoint_display_only": 0.0804465652076059,
+        "radius_display_only": 5.760794991222946e-39
+      },
+      "single_witness_RMS_at_most_10_percent": true,
+      "relative_bias_baseline": {
+        "ball": "[0.0395639774406 +/- 2.72e-14]",
+        "midpoint_display_only": 0.03956397744060196,
+        "radius_display_only": 2.520000005435515e-14
+      },
+      "relative_boundary_bound_baseline": {
+        "ball": "[8.006188058213583321317830154220908327e-5 +/- 6.26e-42]",
+        "midpoint_display_only": 8.006188058213583e-05,
+        "radius_display_only": 1.4587324120192218e-42
+      },
+      "witness_10_percent_RMS_excluded_by_bias": false,
+      "scope": "one nonoscillating Gaussian witness; no E4 qualification",
+      "upper_bound_components": {
+        "A_upper": {
+          "ball": "[0.2093043525720177397312723494392632320279366571570129467 +/- 4.83e-57]",
+          "midpoint_display_only": 0.20930435257201774,
+          "radius_display_only": 0.0
+        },
+        "B_upper": {
+          "ball": "[0.0002001800806055509543781433176712794266765380514606442940 +/- 3.62e-59]",
+          "midpoint_display_only": 0.00020018008060555096,
+          "radius_display_only": 0.0
+        },
+        "C_upper": {
+          "ball": "[0.2843495753660875173774236899251203272170531574260593934 +/- 1.20e-56]",
+          "midpoint_display_only": 0.2843495753660875,
+          "radius_display_only": 0.0
+        },
+        "epsilon_cap": {
+          "ball": "9.536743164062500000000000000000000000000000000000000000e-7",
+          "midpoint_display_only": 9.5367431640625e-07,
+          "radius_display_only": 0.0
+        },
+        "rho_regime_min": {
+          "ball": "4294967296.000000000000000000000000000000000000000000000",
+          "midpoint_display_only": 4294967296.0,
+          "radius_display_only": 0.0
+        }
+      }
+    },
+    {
+      "ell_k": "3/16",
+      "H": 20,
+      "upper_coefficient": {
+        "ball": "[1918183537675927.892752834459265466377 +/- 7.01e-22]",
+        "midpoint_display_only": 1918183537675928.0,
+        "radius_display_only": 4.609271718049144e-22
+      },
+      "rho_sufficient": "1565864112388512567",
+      "expected_N_sufficient": {
+        "ball": "[32795381279997689519489.491084039994307 +/- 6.64e-16]",
+        "midpoint_display_only": 3.279538127999769e+22,
+        "radius_display_only": 2.729026034080145e-16
+      },
+      "old_expected_N_sufficient": {
+        "ball": "[864435675238548205430398622002705429.75 +/- 8.19e-3]",
+        "midpoint_display_only": 8.644356752385483e+35,
+        "radius_display_only": 0.008180000018910505
+      },
+      "improvement_factor": {
+        "ball": "[26358457852898.275745661793207110744235 +/- 6.05e-25]",
+        "midpoint_display_only": 26358457852898.277,
+        "radius_display_only": 5.721686600250213e-25
+      },
+      "relative_total_RMS_upper": {
+        "ball": "[0.10118070089044372337318240155819760352 +/- 7.88e-39]",
+        "midpoint_display_only": 0.10118070089044372,
+        "radius_display_only": 6.678083991629633e-39
+      },
+      "single_witness_RMS_at_most_10_percent": false,
+      "relative_bias_baseline": {
+        "ball": "[0.07304261557182 +/- 5.33e-15]",
+        "midpoint_display_only": 0.07304261557181965,
+        "radius_display_only": 4.980000015153243e-15
+      },
+      "relative_boundary_bound_baseline": {
+        "ball": "[1.5814692460668806560627812650312905336e-5 +/- 7.82e-43]",
+        "midpoint_display_only": 1.5814692460668807e-05,
+        "radius_display_only": 4.706831031902649e-43
+      },
+      "witness_10_percent_RMS_excluded_by_bias": false,
+      "scope": "one nonoscillating Gaussian witness; no E4 qualification",
+      "upper_bound_components": {
+        "A_upper": {
+          "ball": "[0.4709347932867841190104891501714286673256109986416992180 +/- 2.98e-56]",
+          "midpoint_display_only": 0.4709347932867841,
+          "radius_display_only": 0.0
+        },
+        "B_upper": {
+          "ball": "[0.002280176230649107844967210619600272358007471881008842351 +/- 2.77e-58]",
+          "midpoint_display_only": 0.002280176230649108,
+          "radius_display_only": 0.0
+        },
+        "C_upper": {
+          "ball": "[1.439519725290818056723207430245921656557637444578079640 +/- 2.30e-55]",
+          "midpoint_display_only": 1.439519725290818,
+          "radius_display_only": 0.0
+        },
+        "epsilon_cap": {
+          "ball": "9.536743164062500000000000000000000000000000000000000000e-7",
+          "midpoint_display_only": 9.5367431640625e-07,
+          "radius_display_only": 0.0
+        },
+        "rho_regime_min": {
+          "ball": "[848388601.67901234567901234567901234568 +/- 5.71e-30]",
+          "midpoint_display_only": 848388601.6790123,
+          "radius_display_only": 3.155443626761519e-30
+        }
+      }
+    },
+    {
+      "ell_k": "1/4",
+      "H": 20,
+      "upper_coefficient": {
+        "ball": "[60784912497343.2063999429567095608543 +/- 1.89e-23]",
+        "midpoint_display_only": 60784912497343.2,
+        "radius_display_only": 1.0223981644797539e-23
+      },
+      "rho_sufficient": "49620336732525068",
+      "expected_N_sufficient": {
+        "ball": "[1039245902317016792414.7214949152918322 +/- 5.59e-17]",
+        "midpoint_display_only": 1.0392459023170168e+21,
+        "radius_display_only": 8.599237583546603e-18
+      },
+      "old_expected_N_sufficient": {
+        "ball": "[2741312917371657848645921548158033.7775 +/- 7.83e-5]",
+        "midpoint_display_only": 2.741312917371658e+33,
+        "radius_display_only": 4.405878911484251e-05
+      },
+      "improvement_factor": {
+        "ball": "[2637790450998.9917485458023867078853630 +/- 8.52e-26]",
+        "midpoint_display_only": 2637790450998.9917,
+        "radius_display_only": 7.714702836020699e-26
+      },
+      "relative_total_RMS_upper": {
+        "ball": "[0.13061821097948049033091159529244291566 +/- 4.70e-39]",
+        "midpoint_display_only": 0.13061821097948048,
+        "radius_display_only": 4.4634415845837565e-39
+      },
+      "single_witness_RMS_at_most_10_percent": false,
+      "relative_bias_baseline": {
+        "ball": "[0.11027245094295 +/- 5.50e-15]",
+        "midpoint_display_only": 0.11027245094295392,
+        "radius_display_only": 1.5800000041432533e-15
+      },
+      "relative_boundary_bound_baseline": {
+        "ball": "[5.003867536383489575823643846388067704e-6 +/- 1.89e-43]",
+        "midpoint_display_only": 5.0038675363834895e-06,
+        "radius_display_only": 9.11207756735785e-44
+      },
+      "witness_10_percent_RMS_excluded_by_bias": true,
+      "scope": "one nonoscillating Gaussian witness; no E4 qualification",
+      "upper_bound_components": {
+        "A_upper": {
+          "ball": "[0.8372174102880709589250893977570529281117466286280517868 +/- 1.94e-56]",
+          "midpoint_display_only": 0.837217410288071,
+          "radius_display_only": 0.0
+        },
+        "B_upper": {
+          "ball": "[0.01281152515875526108020117233096188330729843529348123481 +/- 3.69e-57]",
+          "midpoint_display_only": 0.012811525158755261,
+          "radius_display_only": 0.0
+        },
+        "C_upper": {
+          "ball": "[4.549593205857400278038779038801925235472850518816950295 +/- 4.09e-55]",
+          "midpoint_display_only": 4.5495932058574,
+          "radius_display_only": 0.0
+        },
+        "epsilon_cap": {
+          "ball": "9.536743164062500000000000000000000000000000000000000000e-7",
+          "midpoint_display_only": 9.5367431640625e-07,
+          "radius_display_only": 0.0
+        },
+        "rho_regime_min": {
+          "ball": "268435456.0000000000000000000000000000000000000000000000",
+          "midpoint_display_only": 268435456.0,
+          "radius_display_only": 0.0
+        }
+      }
+    },
+    {
+      "ell_k": "1/2",
+      "H": 16,
+      "upper_coefficient": {
+        "ball": "[14863374356.10931482503740824223678842 +/- 2.79e-27]",
+        "midpoint_display_only": 14863374356.109314,
+        "radius_display_only": 2.498082494899015e-27
+      },
+      "rho_sufficient": "12133366821315",
+      "expected_N_sufficient": {
+        "ball": "[104087814332834735.47180322309394278845 +/- 2.50e-21]",
+        "midpoint_display_only": 1.0408781433283474e+17,
+        "radius_display_only": 1.2024502916857102e-21
+      },
+      "old_expected_N_sufficient": {
+        "ball": "[73592811497635924270351489.09161892462 +/- 5.99e-12]",
+        "midpoint_display_only": 7.359281149763593e+25,
+        "radius_display_only": 1.0063736783749288e-12
+      },
+      "improvement_factor": {
+        "ball": "[707026196.7679813805816434126842906174 +/- 3.21e-29]",
+        "midpoint_display_only": 707026196.7679814,
+        "radius_display_only": 2.0991977928905314e-29
+      },
+      "relative_total_RMS_upper": {
+        "ball": "[0.27776064674563083995356886315793989134 +/- 5.97e-39]",
+        "midpoint_display_only": 0.27776064674563083,
+        "radius_display_only": 5.7376817116089103e-39
+      },
+      "single_witness_RMS_at_most_10_percent": false,
+      "relative_bias_baseline": {
+        "ball": "[0.266261245852438 +/- 3.96e-16]",
+        "midpoint_display_only": 0.2662612458524377,
+        "radius_display_only": 9.840000028944744e-17
+      },
+      "relative_boundary_bound_baseline": {
+        "ball": "[0.0025341724131115804654476810090132553195 +/- 8.00e-41]",
+        "midpoint_display_only": 0.0025341724131115804,
+        "radius_display_only": 4.647943715209114e-41
+      },
+      "witness_10_percent_RMS_excluded_by_bias": true,
+      "scope": "one nonoscillating Gaussian witness; no E4 qualification",
+      "upper_bound_components": {
+        "A_upper": {
+          "ball": "[3.348869641152283835700357591028211712446986514512207147 +/- 2.78e-55]",
+          "midpoint_display_only": 3.348869641152284,
+          "radius_display_only": 0.0
+        },
+        "B_upper": {
+          "ball": "[0.8199376101603367091328750291815605316670998587827990281 +/- 2.40e-56]",
+          "midpoint_display_only": 0.8199376101603367,
+          "radius_display_only": 0.0
+        },
+        "C_upper": {
+          "ball": "[72.79349129371840444862046462083080376756560830107120471 +/- 3.46e-54]",
+          "midpoint_display_only": 72.7934912937184,
+          "radius_display_only": 0.0
+        },
+        "epsilon_cap": {
+          "ball": "9.536743164062500000000000000000000000000000000000000000e-7",
+          "midpoint_display_only": 9.5367431640625e-07,
+          "radius_display_only": 0.0
+        },
+        "rho_regime_min": {
+          "ball": "16777216.00000000000000000000000000000000000000000000000",
+          "midpoint_display_only": 16777216.0,
+          "radius_display_only": 0.0
+        }
+      }
+    },
+    {
+      "ell_k": "1",
+      "H": 16,
+      "upper_coefficient": {
+        "ball": "[3640147.676042698798879701677156309936 +/- 6.12e-31]",
+        "midpoint_display_only": 3640147.676042699,
+        "radius_display_only": 6.108568168867101e-31
+      },
+      "rho_sufficient": "2971549125",
+      "expected_N_sufficient": {
+        "ball": "[25491857137339.537289720038169999350240 +/- 6.96e-25]",
+        "midpoint_display_only": 25491857137339.54,
+        "radius_display_only": 2.941640918487471e-25
+      },
+      "old_expected_N_sufficient": {
+        "ball": "[70275415427950281122.90998505812503528 +/- 2.53e-18]",
+        "midpoint_display_only": 7.027541542795028e+19,
+        "radius_display_only": 9.598404367677783e-19
+      },
+      "improvement_factor": {
+        "ball": "[2756778.960800522858594841503756058551 +/- 3.29e-31]",
+        "midpoint_display_only": 2756778.960800523,
+        "radius_display_only": 8.179177487755804e-32
+      },
+      "relative_total_RMS_upper": {
+        "ball": "[0.5100089338299893361093100934481999708 +/- 1.34e-38]",
+        "midpoint_display_only": 0.5100089338299894,
+        "radius_display_only": 9.559469101598238e-39
+      },
+      "single_witness_RMS_at_most_10_percent": false,
+      "relative_bias_baseline": {
+        "ball": "[0.50502387102780721 +/- 6.27e-18]",
+        "midpoint_display_only": 0.5050238710278072,
+        "radius_display_only": 6.150000018090465e-18
+      },
+      "relative_boundary_bound_baseline": {
+        "ball": "[0.00015838577581947377909048006306332845747 +/- 3.04e-42]",
+        "midpoint_display_only": 0.00015838577581947378,
+        "radius_display_only": 2.907464819204928e-42
+      },
+      "witness_10_percent_RMS_excluded_by_bias": true,
+      "scope": "one nonoscillating Gaussian witness; no E4 qualification",
+      "upper_bound_components": {
+        "A_upper": {
+          "ball": "[13.39547856460913534280143036411284684978794605804882859 +/- 8.92e-55]",
+          "midpoint_display_only": 13.395478564609135,
+          "radius_display_only": 0.0
+        },
+        "B_upper": {
+          "ball": "[52.47600705026154938450400186761987402669439096209913780 +/- 3.14e-54]",
+          "midpoint_display_only": 52.47600705026155,
+          "radius_display_only": 0.0
+        },
+        "C_upper": {
+          "ball": "[1164.695860699494471177927433933292860281049732817139275 +/- 4.16e-52]",
+          "midpoint_display_only": 1164.6958606994945,
+          "radius_display_only": 0.0
+        },
+        "epsilon_cap": {
+          "ball": "9.536743164062500000000000000000000000000000000000000000e-7",
+          "midpoint_display_only": 9.5367431640625e-07,
+          "radius_display_only": 0.0
+        },
+        "rho_regime_min": {
+          "ball": "1048576.000000000000000000000000000000000000000000000000",
+          "midpoint_display_only": 1048576.0,
+          "radius_display_only": 0.0
+        }
+      }
+    },
+    {
+      "ell_k": "3/2",
+      "H": 16,
+      "upper_coefficient": {
+        "ball": "[28143.83640607692220271309000580465588 +/- 7.93e-33]",
+        "midpoint_display_only": 28143.836406076924,
+        "radius_display_only": 6.73762813961482e-33
+      },
+      "rho_sufficient": "22974562",
+      "expected_N_sufficient": {
+        "ball": "[197090550302.42843941339350382740740053 +/- 4.05e-27]",
+        "midpoint_display_only": 197090550302.42844,
+        "radius_display_only": 2.2827068024611287e-27
+      },
+      "old_expected_N_sufficient": {
+        "ball": "[21253765614002605.870775507224850205803 +/- 7.55e-22]",
+        "midpoint_display_only": 2.1253765614002604e+16,
+        "radius_display_only": 3.7087911954236797e-22
+      },
+      "improvement_factor": {
+        "ball": "[107837.56796756342950085403151537774692 +/- 5.00e-33]",
+        "midpoint_display_only": 107837.56796756343,
+        "radius_display_only": 3.515980871400042e-33
+      },
+      "relative_total_RMS_upper": {
+        "ball": "[0.6294657978830070579974193781560751913 +/- 3.09e-38]",
+        "midpoint_display_only": 0.629465797883007,
+        "radius_display_only": 9.14367417911714e-39
+      },
+      "single_witness_RMS_at_most_10_percent": false,
+      "relative_bias_baseline": {
+        "ball": "[0.62553021454274637 +/- 3.49e-18]",
+        "midpoint_display_only": 0.6255302145427464,
+        "radius_display_only": 1.220000003289203e-18
+      },
+      "relative_boundary_bound_baseline": {
+        "ball": "[3.128607917421704278330470381497846073e-5 +/- 5.84e-42]",
+        "midpoint_display_only": 3.128607917421704e-05,
+        "radius_display_only": 9.353662064204616e-43
+      },
+      "witness_10_percent_RMS_excluded_by_bias": true,
+      "scope": "one nonoscillating Gaussian witness; no E4 qualification",
+      "upper_bound_components": {
+        "A_upper": {
+          "ball": "[30.13982677035418361667130561097143470883910391306874995 +/- 9.66e-56]",
+          "midpoint_display_only": 30.139826770354183,
+          "radius_display_only": 0.0
+        },
+        "B_upper": {
+          "ball": "[597.7345178072797269110844606644937970175107087751819693 +/- 3.30e-53]",
+          "midpoint_display_only": 597.7345178072798,
+          "radius_display_only": 0.0
+        },
+        "C_upper": {
+          "ball": "[5896.272794791190760338257634287295105260082972991814206 +/- 3.82e-52]",
+          "midpoint_display_only": 5896.272794791191,
+          "radius_display_only": 0.0
+        },
+        "epsilon_cap": {
+          "ball": "9.536743164062500000000000000000000000000000000000000000e-7",
+          "midpoint_display_only": 9.5367431640625e-07,
+          "radius_display_only": 0.0
+        },
+        "rho_regime_min": {
+          "ball": "[207126.12345679012345679012345679012346 +/- 4.37e-33]",
+          "midpoint_display_only": 207126.1234567901,
+          "radius_display_only": 7.70371979189824e-34
+        }
+      }
+    },
+    {
+      "ell_k": "2",
+      "H": 16,
+      "upper_coefficient": {
+        "ball": "[894.284570416439262920275963736506643 +/- 4.62e-34]",
+        "midpoint_display_only": 894.2845704164392,
+        "radius_display_only": 1.4961039724447567e-34
+      },
+      "rho_sufficient": "730030",
+      "expected_N_sufficient": {
+        "ball": "[6262666267.0340280535036820113968755795 +/- 8.31e-29]",
+        "midpoint_display_only": 6262666267.034028,
+        "radius_display_only": 7.210977042986512e-29
+      },
+      "old_expected_N_sufficient": {
+        "ball": "[68430594942905.50666418124311034224865 +/- 2.62e-24]",
+        "midpoint_display_only": 68430594942905.51,
+        "radius_display_only": 9.25795155971966e-25
+      },
+      "improvement_factor": {
+        "ball": "[10926.751007492842759886580003561497473 +/- 6.23e-34]",
+        "midpoint_display_only": 10926.751007492843,
+        "radius_display_only": 3.217931705920229e-34
+      },
+      "relative_total_RMS_upper": {
+        "ball": "[0.6864760561572672906983330811119025477 +/- 5.36e-38]",
+        "midpoint_display_only": 0.6864760561572673,
+        "radius_display_only": 8.616483451225023e-39
+      },
+      "single_witness_RMS_at_most_10_percent": false,
+      "relative_bias_baseline": {
+        "ball": "[0.682887887984319148 +/- 8.49e-19]",
+        "midpoint_display_only": 0.6828878879843191,
+        "radius_display_only": 3.8500000111082003e-19
+      },
+      "relative_boundary_bound_baseline": {
+        "ball": "[9.899110988717111193155003941458028592e-6 +/- 3.00e-43]",
+        "midpoint_display_only": 9.899110988717111e-06,
+        "radius_display_only": 1.818415513943652e-43
+      },
+      "witness_10_percent_RMS_excluded_by_bias": true,
+      "scope": "one nonoscillating Gaussian witness; no E4 qualification",
+      "upper_bound_components": {
+        "A_upper": {
+          "ball": "[53.58191425843654137120572145645138739915178423219531436 +/- 3.57e-54]",
+          "midpoint_display_only": 53.58191425843654,
+          "radius_display_only": 0.0
+        },
+        "B_upper": {
+          "ball": "[3358.464451216739160608256119527671937708441021574344819 +/- 6.0e-55]",
+          "midpoint_display_only": 3358.4644512167392,
+          "radius_display_only": 0.0
+        },
+        "C_upper": {
+          "ball": "[18635.13377119191153884683894293268576449679572507422841 +/- 3.36e-51]",
+          "midpoint_display_only": 18635.13377119191,
+          "radius_display_only": 0.0
+        },
+        "epsilon_cap": {
+          "ball": "9.536743164062500000000000000000000000000000000000000000e-7",
+          "midpoint_display_only": 9.5367431640625e-07,
+          "radius_display_only": 0.0
+        },
+        "rho_regime_min": {
+          "ball": "65536.00000000000000000000000000000000000000000000000000",
+          "midpoint_display_only": 65536.0,
+          "radius_display_only": 0.0
+        }
+      }
+    }
+  ],
+  "lower_witness": {
+    "ell_k": "1/8",
+    "H": 20,
+    "coefficient": {
+      "ball": "[113537.046750107650893616765523551433 +/- 8.11e-31]",
+      "midpoint_display_only": 113537.04675010765,
+      "radius_display_only": 5.406230285001588e-31
+    },
+    "valid_for": "all rho >= q=4096, epsilon=q/rho <=1",
+    "rho_necessary_for_7_percent_stochastic_RMS": {
+      "ball": "[92683303.46947563338254429838657259815 +/- 5.10e-30]",
+      "midpoint_display_only": 92683303.46947563,
+      "radius_display_only": 1.801474362444491e-30
+    },
+    "expected_N_necessary_for_7_percent_stochastic_RMS": {
+      "ball": "[1941154568600.9203020120046088248467834 +/- 7.38e-26]",
+      "midpoint_display_only": 1941154568600.9204,
+      "radius_display_only": 5.377401468119991e-26
+    },
+    "rho_necessary_for_10_percent_total_RMS": {
+      "ball": "[53802522.068545748495720437557314357845 +/- 2.26e-31]",
+      "midpoint_display_only": 53802522.06854575,
+      "radius_display_only": 1.9721522630525295e-31
+    },
+    "expected_N_necessary_for_10_percent_total_RMS": {
+      "ball": "[1126837387167.6403306453770957812717473 +/- 2.25e-26]",
+      "midpoint_display_only": 1126837387167.6404,
+      "radius_display_only": 1.6154962949993927e-26
+    },
+    "absolute_bias_lower_from_baseline": {
+      "ball": "[0.019741957779997310524167298575605551089 +/- 2.57e-40]",
+      "midpoint_display_only": 0.01974195777999731,
+      "radius_display_only": 9.18354965001051e-41
+    },
+    "box": {
+      "x_sqrt_qV": [
+        "3",
+        "31/10"
+      ],
+      "v": [
+        "19/10",
+        "21/10"
+      ]
+    },
+    "components": {
+      "direct_absolute_min": {
+        "ball": "[0.02055768517778798411732587522800987345 +/- 4.25e-39]",
+        "midpoint_display_only": 0.020557685177787985,
+        "radius_display_only": 3.720261269039519e-39
+      },
+      "indirect_absolute_max": {
+        "ball": "[0.0036313639812299994383656154317794627 +/- 4.90e-38]",
+        "midpoint_display_only": 0.0036313639812299995,
+        "radius_display_only": 3.4107995890471633e-38
+      },
+      "response_absolute_min": {
+        "ball": "[0.0169263211965579846789602597962304107 +/- 7.25e-38]",
+        "midpoint_display_only": 0.016926321196557986,
+        "radius_display_only": 3.792009269945972e-38
+      },
+      "box_volume_min": {
+        "ball": "[0.002162538567471109212529518301632756482 +/- 9.62e-40]",
+        "midpoint_display_only": 0.002162538567471109,
+        "radius_display_only": 5.714449472155516e-40
+      }
+    },
+    "meaning": "necessary only; does not assert feasibility at these densities"
+  },
+  "gate_status": {
+    "G1": "HOLD",
+    "G2": "NOT_RUN",
+    "G3": "NOT_RUN"
+  },
+  "new_poisson_clouds": 0,
+  "confirmation_seed_used": false,
+  "full_covariance_spatial_integral": "NOT_EVALUATED",
+  "exact_pair_kernel": "IMPLEMENTED_AND_TESTED; overlaps supplied as inputs",
+  "scope": "fixed Gaussian witness, homogeneous Poisson sampling, exact geometry; numerical arithmetic of F and full E4 pipeline not certified"
+}

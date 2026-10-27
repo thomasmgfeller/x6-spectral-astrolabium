@@ -12,14 +12,15 @@ X6 Spectral Astrolabium ist ein offener Forschungshub für Signale, Graphen und 
 
 ## Aktuelle Eigenzeit-Ergebnisse
 
-3+1: geometrische Konsistenz v0.5 · 27.10.2026; GFEST-Dokumente · 23.10.2026
+CSPP-Varianz v0.4 · 27.10.2026; 3+1: geometrische Konsistenz v0.5 · 27.10.2026; GFEST-Dokumente · 23.10.2026
 
 Sie forschen zu Causal Sets, Lorentz-Geometrie oder inversen Problemen? Prüfen Sie mit uns, wie stabil sich diskrete Operatorgewichte aus korrelierten Kausalzählungen rekonstruieren lassen. Hier finden Sie den GFEST-Beweisentwurf, seine Ergänzung und ausführbare Prüfpakete.
 
-Neu in 3+1 v0.5: Der bedingte Primärtest am bisherigen hohen Budget besteht. Alle 1.280 Fälle erhalten Zertifikate; 20/20 feste Geometrien bestehen das Verfügbarkeitskriterium. fresh_11 verbessert sich auf denselben neuen Daten von 12/64 auf 64/64. Zwei exakte geometrische Normbedingungen werden nun in Schätzung und Fehlergrenze genutzt. Das ursprüngliche Budget bleibt HOLD. Bekannte Dichte, feste Landmarken und flache Geometrie; neue Geometrien, intrinsische Auswahl, Operatoren und allgemeine GFEST-Stabilität bleiben offen.
+CSPP v0.4: Für einen festen Gauß-Zeugen in D20 stehen bei 7% stochastischem RMS einer hinreichenden Garantie von 4,25e24 erwarteten Punkten mindestens notwendige 1,94e12 gegenüber. 10% Gesamt-RMS erfordern mindestens 1,13e12. Die große Lücke bleibt offen; G1 HOLD, keine vollständige E4-Freigabe. Neu in 3+1 v0.5: Der bedingte Primärtest am bisherigen hohen Budget besteht. Alle 1.280 Fälle erhalten Zertifikate; 20/20 feste Geometrien bestehen das Verfügbarkeitskriterium. fresh_11 verbessert sich auf denselben neuen Daten von 12/64 auf 64/64. Zwei exakte geometrische Normbedingungen werden nun in Schätzung und Fehlergrenze genutzt. Das ursprüngliche Budget bleibt HOLD. Bekannte Dichte, feste Landmarken und flache Geometrie; neue Geometrien, intrinsische Auswahl, Operatoren und allgemeine GFEST-Stabilität bleiben offen.
 
 Wir laden Physikerinnen und Physiker zu unabhängiger Beweisprüfung, Reproduktion und Gegenbeispielen ein. Bitte nennen Sie Dokumentversion, Satz oder Gleichung und Ihre Annahmen. Forschungsentwürfe, noch ohne unabhängige fachliche Begutachtung.
 
+- [Neu: Varianzgrenzen, Dichtebudget und reproduzierbare Prüfungen →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/cspp/variance_budget_v0_4/README.md)
 - [Neu v0.5: bedingter 20-Geometrien-Test, Herleitung & Prüfung →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/eigenzeit_4d/constrained_region_v0_5/README.md)
 - [v0.4: Informationsbudget, Geometrieprüfung & offene Grenze →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/eigenzeit_4d/refined_bound_v0_4/README.md)
 - [v0.3: Zertifikate, Herleitung & vollständige Prüfung →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/eigenzeit_4d/joint_region_v0_3/README.md)
