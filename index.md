@@ -12,14 +12,16 @@ X6 Spectral Astrolabium is an open research hub for signals, graphs and causal o
 
 ## Latest Eigenzeit results
 
-GFEST · Documents dated 23 October 2026
+3+1 Poisson pilot · 27 October 2026; GFEST papers · 23 October 2026
 
 Do you work on causal sets, Lorentzian geometry or inverse problems? Help us examine how stably discrete operator weights can be reconstructed from correlated causal counts. Read the GFEST proof draft, its supplement and executable verification packages below.
 
-v0.1 states conditional stability theorems; v0.2 treats coordinated point movements and reports an exact rational local certificate for configuration pairs. The general result at the original TV budget of 1/4 remains open.
+New in 3+1: 40,960 joint Poisson-count trials. At the highest density, 10,239/10,240 meet the accuracy criteria; data-dependent 10% error certification remains open. Fixed landmarks and known density. v0.1 states conditional stability theorems; v0.2 treats coordinated point movements and reports an exact rational local certificate for configuration pairs. The general result at the original TV budget of 1/4 remains open.
 
 Physicists are invited to check the proofs, reproduce the calculations and propose counterexamples. Please specify the document version, theorem or equation, and your assumptions. Research drafts awaiting independent expert review; the PDFs are in German.
 
+- [4D results: report, code & scope →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/eigenzeit_4d/README.md)
+- [Download 4D verification package v0.2 · ZIP ↓](https://thomasmgfeller.github.io/x6-spectral-astrolabium/research/eigenzeit_4d/Eigenzeit_4D_Poisson_v0_2.zip)
 - [Read supplement v0.2 · German PDF, 8 pages →](https://thomasmgfeller.github.io/x6-spectral-astrolabium/docs/research/eigenzeit/gfest/GFEST_Stabilitaet_v0_2.pdf)
 - [Read proof draft v0.1 · German PDF, 11 pages →](https://thomasmgfeller.github.io/x6-spectral-astrolabium/docs/research/eigenzeit/gfest/General_Finite_Error_Stability_Theorem_v0_1.pdf)
 - [Download verification package v0.2 · ZIP ↓](https://thomasmgfeller.github.io/x6-spectral-astrolabium/docs/research/eigenzeit/gfest/GFEST_Stabilitaet_v0_2_Pruefpaket.zip)

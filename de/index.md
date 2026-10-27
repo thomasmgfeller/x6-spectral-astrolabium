@@ -12,14 +12,16 @@ X6 Spectral Astrolabium ist ein offener Forschungshub für Signale, Graphen und 
 
 ## Aktuelle Eigenzeit-Ergebnisse
 
-GFEST · Dokumente vom 23.10.2026
+3+1-Poisson-Pilot · 27.10.2026; GFEST-Dokumente · 23.10.2026
 
 Sie forschen zu Causal Sets, Lorentz-Geometrie oder inversen Problemen? Prüfen Sie mit uns, wie stabil sich diskrete Operatorgewichte aus korrelierten Kausalzählungen rekonstruieren lassen. Hier finden Sie den GFEST-Beweisentwurf, seine Ergänzung und ausführbare Prüfpakete.
 
-v0.1 formuliert bedingte Stabilitätssätze; v0.2 behandelt gemeinsame Punktbewegungen und dokumentiert ein rationales lokales Paarraumzertifikat. Der allgemeine Nachweis für das ursprüngliche TV-Budget 1/4 bleibt offen.
+Neu in 3+1: 40.960 gemeinsame Poisson-Zählversuche. Bei höchster Dichte bestehen 10.239/10.240 Fälle die Genauigkeitskriterien; ein datenabhängiges 10%-Fehlerzertifikat bleibt offen. Vorgegebene Landmarken, bekannte Dichte. v0.1 formuliert bedingte Stabilitätssätze; v0.2 behandelt gemeinsame Punktbewegungen und dokumentiert ein rationales lokales Paarraumzertifikat. Der allgemeine Nachweis für das ursprüngliche TV-Budget 1/4 bleibt offen.
 
 Wir laden Physikerinnen und Physiker zu unabhängiger Beweisprüfung, Reproduktion und Gegenbeispielen ein. Bitte nennen Sie Dokumentversion, Satz oder Gleichung und Ihre Annahmen. Forschungsentwürfe, noch ohne unabhängige fachliche Begutachtung.
 
+- [4D-Ergebnisse: Bericht, Code & Grenzen →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/eigenzeit_4d/README.md)
+- [4D-Prüfpaket v0.2 herunterladen · ZIP ↓](https://thomasmgfeller.github.io/x6-spectral-astrolabium/research/eigenzeit_4d/Eigenzeit_4D_Poisson_v0_2.zip)
 - [Ergänzung v0.2 lesen · PDF, 8 Seiten →](https://thomasmgfeller.github.io/x6-spectral-astrolabium/docs/research/eigenzeit/gfest/GFEST_Stabilitaet_v0_2.pdf)
 - [Beweisentwurf v0.1 lesen · PDF, 11 Seiten →](https://thomasmgfeller.github.io/x6-spectral-astrolabium/docs/research/eigenzeit/gfest/General_Finite_Error_Stability_Theorem_v0_1.pdf)
 - [Prüfpaket v0.2 herunterladen · ZIP ↓](https://thomasmgfeller.github.io/x6-spectral-astrolabium/docs/research/eigenzeit/gfest/GFEST_Stabilitaet_v0_2_Pruefpaket.zip)
