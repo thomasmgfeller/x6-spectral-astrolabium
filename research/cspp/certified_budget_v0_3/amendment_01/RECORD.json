@@ -1,0 +1,24 @@
+{
+  "reason": "The initial audit incorrectly required two computed upper bounds, derived from precision-dependent interval endpoints, to overlap. Those bounds need not enclose the same exact number. Correct validation checks the sufficient inequality and stable decisions separately. Physical mean/source enclosures still require overlap.",
+  "observed_failure": "higher-precision overlap relative_RMS_upper_at_sufficient_density",
+  "original_audit_sha256": "3fb1a7681345767a1dc67becc7c4748123846fab2b8cef0d1e0a68a2916f18a3",
+  "corrected_audit_sha256": "a347548a05e0784503eb2fff57220d3602a066ca25a75b369f91870749379e3c",
+  "unchanged_production_results": {
+    "BUDGET.json": "d660a57d7c003c371a5281d9d431dd83a6251e62f5c330af468ab7e82b15ac1d",
+    "COMPUTE.json": "e49ae5aeb9620b977268ddabafea4da8ea270a58caa10aa9cf9f1eca3e614eab",
+    "SOURCE.json": "5643cdd19acb2d1f54100c6a8df2922f6d879c0837c0d38659e71662be520d8f"
+  },
+  "unchanged_sources": [
+    "PROTOCOL.json",
+    "balls.py",
+    "budget.py",
+    "source.py",
+    "run.py",
+    "../scale_calibration_v0_2/results/source.npz",
+    "../scale_calibration_v0_2/results/mean.npz",
+    "../scale_calibration_v0_2/results/MEAN.json",
+    "../scalar_pilot_v0_1/scalar.py",
+    "../e4_v0_1/contract.json"
+  ],
+  "no_results_regenerated": true
+}
