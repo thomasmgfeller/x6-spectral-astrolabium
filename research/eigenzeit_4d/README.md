@@ -3,7 +3,26 @@
 Published 27 October 2026. Conditional flat-space research pilot; known density,
 fixed labelled landmarks, and synthetic Poisson counts.
 
-## Latest: joint-region certificates, v0.3
+## Latest: sharper bounds and information budgets, v0.4
+
+[Full German report, evidence and limitations](refined_bound_v0_4/README.md).
+On 3,840 fresh observations, the refined bound issues 3,146 certificates,
+versus 3,142 from v0.3 on the same data. At 16 times the previous expected
+outer count, 1,229/1,280 cases are certified and 19/20 geometries pass the
+predeclared availability criterion. `fresh_11` remains open; the overall
+gate is **HOLD**, and the original-budget gate remains HOLD too.
+
+All ten tested unrestricted-region witness means violate necessary
+flat-landmark norm constraints. This identifies conservatism in the region;
+it is not a physical impossibility result. Constraining the region by these
+exact model conditions is the next research step, not an implemented gain.
+
+```sh
+python3 -m pip install -r research/eigenzeit_4d/poisson_v0_2/requirements.txt
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python3 research/eigenzeit_4d/verify_refined_publication.py
+```
+
+## Earlier: joint-region certificates, v0.3
 
 [Full follow-up report / vollständiger Folgebericht](joint_region_v0_3/README.md).
 A new finite-sample joint region and outward interval arithmetic issue 1,910

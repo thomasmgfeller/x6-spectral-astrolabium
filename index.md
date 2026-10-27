@@ -12,14 +12,15 @@ X6 Spectral Astrolabium is an open research hub for signals, graphs and causal o
 
 ## Latest Eigenzeit results
 
-3+1: joint confidence region v0.3 · 27 October 2026; GFEST papers · 23 October 2026
+3+1: refined bounds and information budget v0.4 · 27 October 2026; GFEST papers · 23 October 2026
 
 Do you work on causal sets, Lorentzian geometry or inverse problems? Help us examine how stably discrete operator weights can be reconstructed from correlated causal counts. Read the GFEST proof draft, its supplement and executable verification packages below.
 
-New in 3+1 v0.3: 5,120 fresh count trials on the existing 20 geometries. At high density, 1,910/2,560 receive an internally verified 10% proper-time error certificate; at the lower density, 0/2,560. The previous bound certifies none on the same data. The all-geometries availability gate remains HOLD. Fixed landmarks and known density; no intrinsic selection or operator qualification. The GFEST proof drafts remain conditional; the general result at the original TV budget of 1/4 remains open.
+New in 3+1 v0.4: 3,840 fresh count trials. At sixteen times the expected outer count, 1,229/1,280 cases are certified and 19/20 geometries pass the availability criterion; fresh_11 remains open. The sharper bound alone adds only four certificates. All ten tested unrestricted-region witness means violate necessary geometric constraints. Overall and original-budget status remain HOLD. Fixed landmarks and known density; no intrinsic selection or operator qualification. General GFEST questions remain open.
 
 Physicists are invited to check the proofs, reproduce the calculations and propose counterexamples. Please specify the document version, theorem or equation, and your assumptions. Research drafts awaiting independent expert review; the PDFs are in German.
 
+- [New v0.4: information budgets, geometry checks & remaining limit →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/eigenzeit_4d/refined_bound_v0_4/README.md)
 - [New v0.3: certificates, derivation & full replay →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/eigenzeit_4d/joint_region_v0_3/README.md)
 - [4D results: report, code & scope →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/eigenzeit_4d/README.md)
 - [Download 4D verification package v0.2 · ZIP ↓](https://thomasmgfeller.github.io/x6-spectral-astrolabium/research/eigenzeit_4d/Eigenzeit_4D_Poisson_v0_2.zip)
