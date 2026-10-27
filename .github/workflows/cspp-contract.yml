@@ -50,8 +50,12 @@ jobs:
       - run: python3 -m pip install numpy==2.3.5 scipy==1.17.0
       - name: Verify package integrity and scientific HOLD
         run: python3 -O -B research/cspp/scalar_pilot_v0_1/verify_publication.py
-      - name: Independent controls and replay of all 64 development runs
-        run: python3 -B research/cspp/scalar_pilot_v0_1/audit.py --replay
+      - name: Replay all 64 development runs with explicit CPU-portability qualification
+        run: python3 -B research/cspp/scalar_pilot_portability_v0_1/replay.py --output /tmp/cspp-pilot-default.json
+      - name: Replay without AVX-512 with exact archives, RNG outputs and interval counts
+        env:
+          NPY_DISABLE_CPU_FEATURES: 'AVX512F,AVX512_SKX,AVX512_CLX,AVX512_CNL,AVX512_ICL'
+        run: python3 -B research/cspp/scalar_pilot_portability_v0_1/replay.py --output /tmp/cspp-pilot-baseline.json
       - name: Replay descriptive diagnostics
         run: |
           python3 -B research/cspp/scalar_pilot_v0_1/report.py --metrics-only

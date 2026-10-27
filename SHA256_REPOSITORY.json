@@ -320,7 +320,7 @@
     "research/cspp/e4_v0_1/SHA256SUMS": "eb23264d2d1eddfd2e7865254a14826c17153b56dac69a3deea9b8e3cadc1479",
     "research/cspp/e4_v0_1/check_contract.py": "61b39a48fed277265957d44cd6cd3a6916e0aec5a6e0d0ac0165e3349851e343",
     "research/cspp/e4_v0_1/contract.json": "78cc7935b6b54d7ea425e145e65d7fd095d8146ab5158a0857ce33ca6e828f65",
-    ".github/workflows/cspp-contract.yml": "f3e0a0d4db419a007265e874405c65b2db239884145591d6dfce885bcae23d2f",
+    ".github/workflows/cspp-contract.yml": "94faabea2655b6e0a459bed02da539c8591a6a838faf07b93cafcbde48b870f4",
     "research/cspp/scalar_pilot_v0_1/AUDIT.json": "f16a79861f4e51065aa01fdd0330e1efb7c76e29f07f00628ccf132e920a0125",
     "research/cspp/scalar_pilot_v0_1/DATA.md": "37ed7c37377198eb5ea2fafe9ed8c1cce331d15011b05135eb158235a7f42e42",
     "research/cspp/scalar_pilot_v0_1/FREEZE.json": "c9156db0078c8accd033a0d87668ca7267e33fb91c8f515414f01a6f4b333678",
@@ -426,7 +426,12 @@
     "research/cspp/variance_budget_v0_4/results/BUDGET_192bit.json": "2dad439d26ca42cc21ea839575176fd6522a8f2156053b115fc52d9d43540be0",
     "research/cspp/variance_budget_v0_4/run.py": "2dde4f2f9291553ca327014e4ce162042496b1d1f2dd016b20d26f29555ad35f",
     "research/cspp/variance_budget_v0_4/variance.py": "702e418526e5693f10ec168fb100d022ed30c7c23dff27d4e3b2ef11b32c7be1",
-    "research/cspp/variance_budget_v0_4/verify_publication.py": "6725d3ca8d33974869e4f09200574eee2196696012fafea75fc04939fb2945ac"
+    "research/cspp/variance_budget_v0_4/verify_publication.py": "6725d3ca8d33974869e4f09200574eee2196696012fafea75fc04939fb2945ac",
+    "research/cspp/scalar_pilot_portability_v0_1/README.md": "51392bbc673ceef7766bb55d0a88619cb83049130f852e28d12f99aee60dbd5a",
+    "research/cspp/scalar_pilot_portability_v0_1/STREAMS.json": "9901b2e42e93f7900613ec9f3400960859d84cade72818bcbb2e628c6ff4402a",
+    "research/cspp/scalar_pilot_portability_v0_1/replay.py": "ae2a13bf299f221d6a771b19e2f79af119126d87eef52336a645792696d7a5a5",
+    "research/cspp/scalar_pilot_portability_v0_1/results/BASELINE_CPU.json": "fdf8a6d789d92f3c20b1e6a60431c586be2893078ff37165ede5c8523166e045",
+    "research/cspp/scalar_pilot_portability_v0_1/results/DEFAULT.json": "59eaf941e313684f40f5c27ef2c8ab50386d77fc77f75e0eb9057eaeae461296"
   },
   "non_historical_documentation_additions": [
     {
@@ -753,6 +758,17 @@
         "research/cspp/variance_budget_v0_4/run.py",
         "research/cspp/variance_budget_v0_4/variance.py",
         "research/cspp/variance_budget_v0_4/verify_publication.py"
+      ]
+    },
+    {
+      "date": "2026-10-27",
+      "scope": "Explicit scalar-pilot v0.1 numeric portability after PR136 CPU-dependent coordinate-byte failure. Original files and all tolerances unchanged; exact RNG outputs, full interval/probe counts and history masks; G1 HOLD.",
+      "paths": [
+        "research/cspp/scalar_pilot_portability_v0_1/README.md",
+        "research/cspp/scalar_pilot_portability_v0_1/STREAMS.json",
+        "research/cspp/scalar_pilot_portability_v0_1/replay.py",
+        "research/cspp/scalar_pilot_portability_v0_1/results/BASELINE_CPU.json",
+        "research/cspp/scalar_pilot_portability_v0_1/results/DEFAULT.json"
       ]
     }
   ],
@@ -1156,6 +1172,17 @@
           "path": "index.md",
           "previous_sha256": "fb6d5490d9742898365d1f64f259652edcfc2a754f0b0cd4b19e208f8c947e93",
           "sha256": "d42552c79e3cca233d61a6a9681dc78347485cc1007f6ae0ae29b16fadda8369"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-27",
+      "scope": "Explicit scalar-pilot v0.1 numeric portability after PR136 CPU-dependent coordinate-byte failure. Original files and all tolerances unchanged; exact RNG outputs, full interval/probe counts and history masks; G1 HOLD.",
+      "files": [
+        {
+          "path": ".github/workflows/cspp-contract.yml",
+          "previous_sha256": "f3e0a0d4db419a007265e874405c65b2db239884145591d6dfce885bcae23d2f",
+          "sha256": "94faabea2655b6e0a459bed02da539c8591a6a838faf07b93cafcbde48b870f4"
         }
       ]
     }
