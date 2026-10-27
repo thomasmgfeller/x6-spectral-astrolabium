@@ -1,0 +1,35 @@
+name: CSPP E4 contract draft
+on:
+  pull_request:
+    paths: ['research/cspp/**', '.github/workflows/cspp-contract.yml']
+  push:
+    branches: [main]
+    paths: ['research/cspp/**', '.github/workflows/cspp-contract.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  contract:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Replay contract checks
+        run: |
+          python3 -B research/cspp/e4_v0_1/check_contract.py --self-test --output /tmp/cspp-checks.json
+          diff -u research/cspp/e4_v0_1/CHECKS.json /tmp/cspp-checks.json
+      - name: Reject premature freeze even under Python optimization
+        run: |
+          python3 - <<'PY'
+          import json, subprocess, sys
+          result = subprocess.run([sys.executable, '-O', '-B', 'research/cspp/e4_v0_1/check_contract.py', '--require-frozen'], capture_output=True, text=True)
+          if result.returncode != 2 or json.loads(result.stdout)['status'] != 'BLOCKED_NOT_FROZEN':
+              raise SystemExit('FAIL: draft freeze guard did not block')
+          print('PASS: optimized Python cannot bypass the draft freeze guard')
+          PY
+      - run: python3 tests/python/verify_manifest.py

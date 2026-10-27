@@ -219,8 +219,8 @@
     "tools/reference_current.cjs": "58ee27aefdddb0cb774319ea01b0c6151069782fec44f04eb7187b89c743d08e",
     "tools/reference_suite.py": "830c631cd29e5f02de74f7022077ff165275aaf3987d07c429af9b943840b93a",
     ".github/workflows/eigenzeit-4d.yml": "0595add7a546fa827a2a18312473165d6224bcf31da15916dabb085e0ff504f2",
-    "LICENSE_SOURCE_MANIFEST.json": "a76735ed9bd28cb535c05a6055455ca24e1287efc98e764d1b0758324a369cf8",
-    "SAGNAC_SOURCE_MANIFEST.json": "2049c18f154d09d3965c8b33c778a20e72c204d9067c306cc85021214df2695a",
+    "LICENSE_SOURCE_MANIFEST.json": "6d986d2724eac2201d169912f11d00434a8dd645db10c030cf93ca8393a3a3c8",
+    "SAGNAC_SOURCE_MANIFEST.json": "4464a10b27d1a6ccf8f1261175e1c236ca258646630c5709149e81c977e9aa06",
     "de/index.html": "58bf053df098f9aa7c860ccc42b262c9dc35b909de22b4158ed03d2f419aa2c8",
     "de/index.md": "48a5e29dd8593643bb8f1295ce50b993c068207e99215c4f50c8c45f3fea0c92",
     "docs/hub/content.json": "5a533795244833eb9bd6fbcfc476c33fbdedda057df77775e0fde63fded27d9e",
@@ -311,7 +311,16 @@
     "research/eigenzeit_4d/constrained_region_v0_5/SHA256SUMS": "9b5342f09ea8aa7a70141a1550cbb07c8461ee2331e9277be70c4fb9cf06307d",
     "research/eigenzeit_4d/constrained_region_v0_5/RESULTS.json": "66e5c69abbee147102debbeac183135b7f26ad5d00d79439141308c5b166b29f",
     "research/eigenzeit_4d/constrained_region_v0_5/experiment.py": "071840c959e0595414eb2b7be321129d1f52187f0933f0eb92435d6b12910a25",
-    "research/eigenzeit_4d/verify_constrained_publication.py": "3aead88954586d22e144d077a980bd23eaa4b1141c2fbde8721af3cc7712333b"
+    "research/eigenzeit_4d/verify_constrained_publication.py": "3aead88954586d22e144d077a980bd23eaa4b1141c2fbde8721af3cc7712333b",
+    "research/cspp/e4_v0_1/CHECKS.json": "1e253d25ddfa95854050d0df2b7bfc0c1c26e521035d2b4d597ed6fb90afcde9",
+    "research/cspp/e4_v0_1/DATA_CONTRACT.md": "b5adfa73865787067bb3a1fdd35a3a831cd87eb113041aceba0081ae42e79e7b",
+    "research/cspp/e4_v0_1/PROTOCOL.md": "bd2bf4b9c950ac595a4962c09c01fbc3b0be009cb74f39c00458a3bc4ef81c9a",
+    "research/cspp/e4_v0_1/README.md": "8faac91704b8e1e51a7e5cb3b375709daa53ed942fc69338945d297942c9fd7e",
+    "research/cspp/e4_v0_1/REFERENCES.md": "685a6421888ff78a1a6c393b3428226dc54e9d8aa1403bff7ed56742aae6c2fc",
+    "research/cspp/e4_v0_1/SHA256SUMS": "eb23264d2d1eddfd2e7865254a14826c17153b56dac69a3deea9b8e3cadc1479",
+    "research/cspp/e4_v0_1/check_contract.py": "61b39a48fed277265957d44cd6cd3a6916e0aec5a6e0d0ac0165e3349851e343",
+    "research/cspp/e4_v0_1/contract.json": "78cc7935b6b54d7ea425e145e65d7fd095d8146ab5158a0857ce33ca6e828f65",
+    ".github/workflows/cspp-contract.yml": "3553e065a310d023c99c33eb3624230b19012c71f59b8dd6190ccabfb5e7fd80"
   },
   "non_historical_documentation_additions": [
     {
@@ -488,6 +497,21 @@
         "research/eigenzeit_4d/verify_constrained_publication.py"
       ],
       "scope": "Frozen independent count validation and complete geometric-correction certificates. Conditional fixed-geometry primary gate PASS at unchanged 16x budget; original-budget HOLD and generalization limitations retained."
+    },
+    {
+      "date": "2026-10-27",
+      "files": [
+        "research/cspp/e4_v0_1/CHECKS.json",
+        "research/cspp/e4_v0_1/DATA_CONTRACT.md",
+        "research/cspp/e4_v0_1/PROTOCOL.md",
+        "research/cspp/e4_v0_1/README.md",
+        "research/cspp/e4_v0_1/REFERENCES.md",
+        "research/cspp/e4_v0_1/SHA256SUMS",
+        "research/cspp/e4_v0_1/check_contract.py",
+        "research/cspp/e4_v0_1/contract.json",
+        ".github/workflows/cspp-contract.yml"
+      ],
+      "scope": "CSPP E4-V0.1 draft contract only: NOT_FROZEN / NOT_RUN. No scientific qualification or modification of historical evidence."
     }
   ],
   "non_historical_documentation_updates": [
@@ -734,6 +758,22 @@
           "path": "modules/free-field-entropy.md",
           "previous_sha256": "847918fb32d5e6fc06eba4243ae74ef8dfa358c6d5328503f5f9efbe15f4bc0f",
           "sha256": "282cf9a95815b61abe86a1a06defcf06f075e3d14409e64fbe8111392d8e9e84"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-27",
+      "scope": "CSPP E4-V0.1 draft contract only: NOT_FROZEN / NOT_RUN. No scientific qualification or modification of historical evidence.",
+      "files": [
+        {
+          "path": "SAGNAC_SOURCE_MANIFEST.json",
+          "previous_sha256": "2049c18f154d09d3965c8b33c778a20e72c204d9067c306cc85021214df2695a",
+          "sha256": "4464a10b27d1a6ccf8f1261175e1c236ca258646630c5709149e81c977e9aa06"
+        },
+        {
+          "path": "LICENSE_SOURCE_MANIFEST.json",
+          "previous_sha256": "a76735ed9bd28cb535c05a6055455ca24e1287efc98e764d1b0758324a369cf8",
+          "sha256": "6d986d2724eac2201d169912f11d00434a8dd645db10c030cf93ca8393a3a3c8"
         }
       ]
     }
