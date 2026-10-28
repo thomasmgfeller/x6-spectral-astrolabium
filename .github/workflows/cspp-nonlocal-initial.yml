@@ -1,0 +1,56 @@
+name: CSPP nonlocal initial adapter
+on:
+  pull_request:
+    paths: ['research/cspp/nonlocal_initial_v0_11/**', '.github/workflows/cspp-nonlocal-initial.yml']
+  push:
+    branches: [main]
+    paths: ['research/cspp/nonlocal_initial_v0_11/**', '.github/workflows/cspp-nonlocal-initial.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  projection-history-audit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    env:
+      PYTHONDONTWRITEBYTECODE: '1'
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - run: python3 -m pip install -r research/cspp/nonlocal_initial_v0_11/requirements.txt
+      - name: Audit archived certificates and analytical controls
+        run: python3 -B research/cspp/nonlocal_initial_v0_11/verify.py
+      - name: Reproduce both precisions on every existing cloud
+        working-directory: research/cspp/nonlocal_initial_v0_11
+        run: |
+          cp results/BENCHMARK_128.json.gz /tmp/nonlocal-original-128.json.gz
+          cp results/BENCHMARK_192.json.gz /tmp/nonlocal-original-192.json.gz
+          python3 -B run.py --bits 128 --out results/BENCHMARK_128.json.gz
+          python3 -B run.py --bits 192 --out results/BENCHMARK_192.json.gz
+          python3 -B verify.py
+          python3 - <<'PY'
+          import gzip,json
+          from flint import ctx,arb,acb
+          ctx.prec=256
+          def z(v):return acb(arb(v[0]),arb(v[1]))
+          for bits in [128,192]:
+              before=json.load(gzip.open(f'/tmp/nonlocal-original-{bits}.json.gz','rt'))
+              after=json.load(gzip.open(f'results/BENCHMARK_{bits}.json.gz','rt'))
+              assert before['decision']==after['decision']
+              for a,b in zip(before['rows'],after['rows']):
+                  assert a['mesh_sha256']==b['mesh_sha256']
+                  for l,m in zip(a['levels'],b['levels']):
+                      assert l['resolution_pass']==m['resolution_pass']
+                      for u,v in zip(l['coefficient_enclosures'],m['coefficient_enclosures']):
+                          assert all(z(x).overlaps(z(y)) for x,y in zip(u,v))
+                      for u,v in zip(l['windows'],m['windows']):
+                          assert u['history_budget_pass']==v['history_budget_pass']
+                          assert all(z(x).overlaps(z(y)) for x,y in zip(u['responses'],v['responses']))
+          print('PASS: independently replayed targets overlap the published enclosures')
+          PY
