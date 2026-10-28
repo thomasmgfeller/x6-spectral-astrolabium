@@ -1,0 +1,22 @@
+{
+  "date_UTC": "2026-10-28T16:20:24.681147+00:00",
+  "scope": "post-run verification correction only; no production-source, protocol, budget or data change",
+  "original_verifier_sha256": "c40b10e62b027365ea05f610525b6444abc8d0195a1f7a1644ed9ac916bc9f8a",
+  "corrected_verifier_sha256": "84d7d4d1efe308c0c872893892ff1704bc476aa1e1ffdaa1061d35af4e97bba8",
+  "original_frozen_verifier": "verify10.py",
+  "corrected_entry_point": "verify10a.py",
+  "reason": "An abs_upper-based computed upper bound depends on the precision and enclosure representation. It is not the same real-valued target at 128 and 192 bits, so mutual overlap is not required. The old verifier incorrectly treated it as an invariant.",
+  "observed_diagnostic": {
+    "other_overlap_failures": 0,
+    "upper_bound_nonoverlaps": 96,
+    "largest_relative_difference_less_than": "2.01e-9"
+  },
+  "retained_checks": [
+    "all field, oracle, continuum, query and history-transfer enclosures must overlap",
+    "exact geometry hashes and all budget decisions must match",
+    "each computed upper bound must be nonnegative and its budget decision recomputed",
+    "common analytic norm expressions must overlap",
+    "full three-mode scientific replay"
+  ],
+  "unchanged_scientific_decision": "METHOD_HOLD; no initial-data, physical-noise or G1 qualification"
+}

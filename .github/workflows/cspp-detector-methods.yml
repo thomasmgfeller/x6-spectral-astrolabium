@@ -9,9 +9,9 @@ on:
 permissions:
   contents: read
 jobs:
-  detector-methods:
+  method-integrity:
     runs-on: ubuntu-24.04
-    timeout-minutes: 60
+    timeout-minutes: 10
     env:
       PYTHONDONTWRITEBYTECODE: '1'
       OPENBLAS_NUM_THREADS: '1'
@@ -44,6 +44,64 @@ jobs:
           print('PASS: archived development only, no fresh confirmation claim')
           PY
       - name: Verify controls, enclosures and separated scientific gates
-        run: python3 -O -B research/cspp/detector_methods_v0_10/verify10.py
-      - name: Replay all fixed clouds and grids at both precisions and CPU modes
-        run: python3 -B research/cspp/detector_methods_v0_10/verify10.py --replay
+        run: python3 -O -B research/cspp/detector_methods_v0_10/verify10a.py
+      - name: Reproduce post-run descriptive report
+        run: |
+          python3 -O -B research/cspp/detector_methods_v0_10/report10.py --out /tmp/cspp-v10-description.json
+          diff -u research/cspp/detector_methods_v0_10/results/DESCRIPTIVE.json /tmp/cspp-v10-description.json
+  method-replay:
+    needs: method-integrity
+    runs-on: ubuntu-24.04
+    timeout-minutes: 65
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - mode: precision128
+            bits: 128
+          - mode: precision192
+            bits: 192
+          - mode: baseline128
+            bits: 128
+    env:
+      PYTHONDONTWRITEBYTECODE: '1'
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+      REPLAY_MODE: ${{ matrix.mode }}
+      REPLAY_BITS: ${{ matrix.bits }}
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - run: python3 -m pip install -r research/cspp/detector_methods_v0_10/requirements.txt
+      - name: Replay every fixed archive slot and every spatial grid
+        run: |
+          python3 - <<'PY'
+          import json, os, pathlib, subprocess, sys, tempfile
+          root=pathlib.Path('research/cspp/detector_methods_v0_10').resolve()
+          p=json.loads((root/'PROTOCOL.json').read_text())
+          mode=os.environ['REPLAY_MODE'];bits=int(os.environ['REPLAY_BITS'])
+          env=dict(os.environ)
+          if mode=='baseline128':env['NPY_DISABLE_CPU_FEATURES']=p['cpu_modes'][1]
+          else:env.pop('NPY_DISABLE_CPU_FEATURES',None)
+          with tempfile.TemporaryDirectory(prefix='cspp-v10-ci-') as temp:
+              out=pathlib.Path(temp)
+              subprocess.run([sys.executable,'-B',str(root/'run10.py'),'--bits',str(bits),'--out',str(out)],env=env,check=True)
+              sys.path.insert(0,str(root))
+              from common10 import gzread, check, ctx
+              from verify10a import compare
+              from run10 import summarize
+              ctx.prec=256
+              actual=gzread(out/f'BENCHMARK_{bits}.json.gz')
+              ref='BASELINE_128.json.gz' if mode=='baseline128' else f'BENCHMARK_{bits}.json.gz'
+              checks=compare(actual,gzread(root/'results'/ref))
+              expected=json.loads((root/'results'/f'DECISION_{bits}.json').read_text())
+              check(summarize(actual['rows'])==expected,'unchanged complete decisions')
+              stats=json.loads((out/f'COMPUTE_{bits}.json').read_text())
+              check(stats['maximum_RSS_MiB']<4096 and stats['wall_seconds']<=p['resources']['wall_seconds_per_process'],'measured replay resource budget')
+              if mode=='baseline128':check(stats['cpu_features_disabled']==p['cpu_modes'][1],'baseline CPU mask')
+              print(json.dumps({'status':'PASS','mode':mode,'enclosed_comparisons':checks}))
+          PY
