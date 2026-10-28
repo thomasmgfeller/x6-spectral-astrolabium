@@ -161,3 +161,22 @@ jobs:
         run: python3 -O -B research/cspp/joint_budget_v0_6/verify_publication.py
       - name: Replay signed boundaries and joint budgets at 128 and 192 bits
         run: python3 -B research/cspp/joint_budget_v0_6/verify_publication.py --replay
+  scalar-propagation:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 40
+    env:
+      PYTHONDONTWRITEBYTECODE: '1'
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - run: python3 -m pip install -r research/cspp/scalar_propagation_v0_7/requirements.txt
+      - name: Verify 1554 cases, source lock and complete CPU relation scope
+        run: python3 -O -B research/cspp/scalar_propagation_v0_7/verify_publication.py
+      - name: Replay bounded source nodes, all propagations and both CPU modes
+        run: python3 -B research/cspp/scalar_propagation_v0_7/verify_publication.py --replay
