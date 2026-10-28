@@ -1,0 +1,262 @@
+{
+  "schema": "cspp.scalar-detector-interval-cubature/0.5",
+  "precision_bits": 192,
+  "detector": {
+    "time": 1,
+    "center": [
+      0,
+      0,
+      1.5
+    ],
+    "radius": 0.5
+  },
+  "integrand": "G_ij = integral_D phi_mi conjugate(phi_mj) d3x; zero-velocity scalar KG",
+  "masses": [
+    1,
+    2
+  ],
+  "spatial_cells": 648,
+  "source_radial_cells": 128,
+  "source_angular_cells": 16,
+  "spatial_volume_included": {
+    "real_ball": "[0.523598775598277929128177693641694047676118245 +/- 1.76e-46]",
+    "imag_ball": "0",
+    "display_midpoint": [
+      0.5235987755982779,
+      0.0
+    ],
+    "display_radius": [
+      2.4753299295815375e-54,
+      0.0
+    ]
+  },
+  "omitted_cap_volume": {
+    "real_ball": "[2.09439489295369048897663567433217380857022878e-14 +/- 2.48e-54]",
+    "imag_ball": "0",
+    "display_midpoint": [
+      2.0943948929536905e-14,
+      0.0
+    ],
+    "display_radius": [
+      2.475542343456932e-54,
+      0.0
+    ]
+  },
+  "source_component_tail_bounds": {
+    "1": {
+      "real_ball": "[7.57367463536899987910897192808589884998439509e-9 +/- 1.64e-34]",
+      "imag_ball": "0",
+      "display_midpoint": [
+        7.573674635369e-09,
+        0.0
+      ],
+      "display_radius": [
+        1.6344532434011052e-34,
+        0.0
+      ]
+    },
+    "2": {
+      "real_ball": "[7.57438596353145311185216266959243189428964179e-9 +/- 1.64e-34]",
+      "imag_ball": "0",
+      "display_midpoint": [
+        7.574385963531453e-09,
+        0.0
+      ],
+      "display_radius": [
+        1.6346067539663138e-34,
+        0.0
+      ]
+    }
+  },
+  "uniform_field_bounds": {
+    "1": {
+      "real_ball": "[76.4689618198288066033019163923878919657914908 +/- 1.66e-24]",
+      "imag_ball": "0",
+      "display_midpoint": [
+        76.4689618198288,
+        0.0
+      ],
+      "display_radius": [
+        1.6502583009897306e-24,
+        0.0
+      ]
+    },
+    "2": {
+      "real_ball": "[97.1322266735894626884780635727789669687563522 +/- 2.10e-24]",
+      "imag_ball": "0",
+      "display_midpoint": [
+        97.13222667358946,
+        0.0
+      ],
+      "display_radius": [
+        2.0961931647088615e-24,
+        0.0
+      ]
+    }
+  },
+  "rows": [
+    {
+      "entry": "11",
+      "value": {
+        "real_ball": "[0.00734659128074488072067607619416225013523947886 +/- 9.08e-3]",
+        "imag_ball": "0",
+        "display_midpoint": [
+          0.007346591280744881,
+          0.0
+        ],
+        "display_radius": [
+          0.009079154871869832,
+          0.0
+        ]
+      },
+      "interval_cubature_core": {
+        "real_ball": "[0.00734659128074488072067607619416225013523947886 +/- 9.08e-3]",
+        "imag_ball": "0",
+        "display_midpoint": [
+          0.007346591280744881,
+          0.0
+        ],
+        "display_radius": [
+          0.009078548260731623,
+          0.0
+        ]
+      },
+      "source_edge_product_error": {
+        "real_ball": "[6.06485547254957103864767080951319563338531763e-7 +/- 2.62e-32]",
+        "imag_ball": "0",
+        "display_midpoint": [
+          6.064855472549571e-07,
+          0.0
+        ],
+        "display_radius": [
+          2.6176812003146137e-32,
+          0.0
+        ]
+      },
+      "detector_cap_product_error": {
+        "real_ball": "[1.22469785804388904253062738301544170135675681e-10 +/- 5.29e-36]",
+        "imag_ball": "0",
+        "display_midpoint": [
+          1.224697858043889e-10,
+          0.0
+        ],
+        "display_radius": [
+          5.2859820972604584e-36,
+          0.0
+        ]
+      }
+    },
+    {
+      "entry": "22",
+      "value": {
+        "real_ball": "[0.00894767640628108345248663940672244399185170927 +/- 0.0164]",
+        "imag_ball": "0",
+        "display_midpoint": [
+          0.008947676406281083,
+          0.0
+        ],
+        "display_radius": [
+          0.01639057812280953,
+          0.0
+        ]
+      },
+      "interval_cubature_core": {
+        "real_ball": "[0.00894767640628108345248663940672244399185170927 +/- 0.0164]",
+        "imag_ball": "0",
+        "display_midpoint": [
+          0.008947676406281083,
+          0.0
+        ],
+        "display_radius": [
+          0.016389807482482865,
+          0.0
+        ]
+      },
+      "source_edge_product_error": {
+        "real_ball": "[7.70441013914846365069599784846606122556215494e-7 +/- 3.33e-32]",
+        "imag_ball": "0",
+        "display_midpoint": [
+          7.704410139148464e-07,
+          0.0
+        ],
+        "display_radius": [
+          3.325341895251383e-32,
+          0.0
+        ]
+      },
+      "detector_cap_product_error": {
+        "real_ball": "[1.97599235307342556172210625022969798686452355e-10 +/- 8.53e-36]",
+        "imag_ball": "0",
+        "display_midpoint": [
+          1.9759923530734255e-10,
+          0.0
+        ],
+        "display_radius": [
+          8.5287073618747e-36,
+          0.0
+        ]
+      }
+    },
+    {
+      "entry": "12",
+      "value": {
+        "real_ball": "[0.00711485651832554985537602898219398847509712185 +/- 0.0122]",
+        "imag_ball": "[0.00279441904452942239492539937806573671122120356 +/- 0.0115]",
+        "display_midpoint": [
+          0.00711485651832555,
+          0.0027944190445294225
+        ],
+        "display_radius": [
+          0.01212714082794264,
+          0.011404886798118241
+        ]
+      },
+      "interval_cubature_core": {
+        "real_ball": "[0.00711485651832554985537602898219398847509712185 +/- 0.0122]",
+        "imag_ball": "[0.00279441904452942239492539937806573671122120356 +/- 0.0115]",
+        "display_midpoint": [
+          0.00711485651832555,
+          0.0027944190445294225
+        ],
+        "display_radius": [
+          0.012126452216762118,
+          0.01140419818693772
+        ]
+      },
+      "source_edge_product_error": {
+        "real_ball": "[6.88455584540440717465023386045402912530236205e-7 +/- 2.98e-32]",
+        "imag_ball": "0",
+        "display_midpoint": [
+          6.884555845404407e-07,
+          0.0
+        ],
+        "display_radius": [
+          2.971478330884038e-32,
+          0.0
+        ]
+      },
+      "detector_cap_product_error": {
+        "real_ball": "[1.55563286231685412238589873520039995417357183e-10 +/- 6.72e-36]",
+        "imag_ball": "0",
+        "display_midpoint": [
+          1.555632862316854e-10,
+          0.0
+        ],
+        "display_radius": [
+          6.714357341738783e-36,
+          0.0
+        ]
+      }
+    }
+  ],
+  "error_control": "full-cell interval ranges, exact positive cell volumes, separate source edge and detector cap bounds",
+  "radius_goal": "1e-3",
+  "status": "ENCLOSED_BUT_SPATIAL_RADIUS_GOAL_NOT_MET",
+  "E4_Dirac_detector": "HOLD_NOT_A_SPINOR_REFERENCE",
+  "conditional_normalization": "NOT_PERFORMED",
+  "gate_status": {
+    "G1": "HOLD",
+    "G2": "NOT_RUN",
+    "G3": "NOT_RUN"
+  }
+}
