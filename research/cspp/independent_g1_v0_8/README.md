@@ -84,6 +84,11 @@ und kontrolliert jede veröffentlichte Untergrenze zusätzlich bei 256Bit.
 Der ursprüngliche Prüfer, alle eingefrorenen Analysequellen und sämtliche
 Prüfdaten bleiben erhalten und unverändert.
 
+[Amendment02](amendment_02/README.md) korrigiert zusätzlich einen eindeutigen
+Importpfad im Replay-Aufrufer: GitHub hatte wegen eines gleichnamigen
+Vorgängermoduls vor der Neuberechnung abgebrochen. Der richtige eingefrorene
+v0.8-Audit wird jetzt ausdrücklich geladen; keine Prüfung wird übersprungen.
+
 ```bash
 python -m pip install -r research/cspp/independent_g1_v0_8/requirements.txt
 export OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1

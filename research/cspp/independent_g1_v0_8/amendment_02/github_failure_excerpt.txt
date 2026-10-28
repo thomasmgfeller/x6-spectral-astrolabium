@@ -1,0 +1,9 @@
+2026-10-28T11:09:19.0438689Z Traceback (most recent call last):
+2026-10-28T11:09:19.0446684Z   File "/home/runner/work/x6-spectral-astrolabium/x6-spectral-astrolabium/research/cspp/independent_g1_v0_8/publication_checks.py", line 118, in <module>
+2026-10-28T11:09:19.0447888Z     result=replay() if z.replay else verify(HERE/'results')
+2026-10-28T11:09:19.0448375Z            ^^^^^^^^
+2026-10-28T11:09:19.0449631Z   File "/home/runner/work/x6-spectral-astrolabium/x6-spectral-astrolabium/research/cspp/independent_g1_v0_8/publication_checks.py", line 92, in replay
+2026-10-28T11:09:19.0450468Z     out=Path(t);write(out/'AUDIT.json',audit.compute())
+2026-10-28T11:09:19.0450826Z                                        ^^^^^^^^^^^^^
+2026-10-28T11:09:19.0451293Z AttributeError: module 'audit' has no attribute 'compute'. Did you mean: 'compare'?
+2026-10-28T11:09:19.0830024Z ##[error]Process completed with exit code 1.

@@ -3,8 +3,11 @@ import argparse,datetime,json,os,subprocess,sys,tempfile
 from pathlib import Path
 import numpy as np
 from flint import arb,ctx
-from support import HERE,check,sha,write,plan,freeze_check,gzread,unpack,old,digest,norm
-import audit,inference,scalar_operator as op
+from support import HERE,check,sha,write,plan,freeze_check,gzread,unpack,old,digest,norm,load
+import inference,scalar_operator as op
+# support exposes predecessor geometry through sys.path; resolve this audit
+# by its frozen package path, never by the ambiguous bare module name.
+audit=load('v08_frozen_audit',HERE/'audit.py')
 
 def exact_decision(d):
     """Compare exact rational endpoints/counts/decisions, not rounded floors."""
