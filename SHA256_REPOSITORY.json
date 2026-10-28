@@ -7,7 +7,7 @@
     ".github/ISSUE_TEMPLATE/04-bug.yml": "d33cae517294c8101f14eb271881d8908f11b4ecd3bc5ed248a091ea43f78e83",
     ".github/ISSUE_TEMPLATE/config.yml": "13064e7bea658e01e718b414fbb7b3b244f36411fe25ee2055c151f7b534547a",
     ".github/PULL_REQUEST_TEMPLATE.md": "8cf336812e6c9bb21bf9d565137796d60e59af0f40bd596cf6c6defee191f390",
-    ".github/workflows/cspp-contract.yml": "0f94bc75d4d98ee412e6bc1a0e76bd80f9df51361f2e9de3893e10755807393d",
+    ".github/workflows/cspp-contract.yml": "8c31b15f43e916ae5c8673110ccafffad1986917a5b2cf072f2a966ab618ae1a",
     ".github/workflows/eigenzeit-4d.yml": "0595add7a546fa827a2a18312473165d6224bcf31da15916dabb085e0ff504f2",
     ".github/workflows/free-field-entropy.yml": "7f532c6a2422fac00d54d586927f9d034d7153684c02998d93cd6c7f7f709983",
     ".github/workflows/validation.yml": "5908313b4ded9558db047a46d11dd70fa8032778543f7d777fdc8f0454becb4b",
@@ -17,11 +17,11 @@
     "CITATION.cff": "5225a23f7cd2f1841db38dd9f4b6f1b3624cce110cf27d08575b6f4b29cd2bc0",
     "CODE_OF_CONDUCT.md": "dd847b83a025f21bd55935c23b4568b3f1d108455a27b9b15b2a0b35fbc58cb9",
     "CONTRIBUTING.md": "366d6a2ce4b388d1fb77d4a5188157ff99613be932065fa758f8e562a6b45ee0",
-    "LICENSE_SOURCE_MANIFEST.json": "eb2b38e0027005d2d1e4f11b3a5f13c6f4efdf794448f64558b51b07b57748c8",
+    "LICENSE_SOURCE_MANIFEST.json": "4be024c636b49c5931c2d8ead1c72ab09a3b1a37575fea8178fdf342fe97c9ef",
     "MODULE_REGISTRY.json": "722dced0bb939a3e8eeaf50953ac9a96fd95c203f5dad4859581db777cf42e87",
     "README.md": "18fb9a0b21031352b6ff97f1f8dfe5773cc4b272cfba8b98a3b8b35db4350e21",
     "REFERENCE_SOURCE_MANIFEST.json": "0e2275138250cc755ae87969b80fee67016cd293be837a5a89e2eeaa46495876",
-    "SAGNAC_SOURCE_MANIFEST.json": "e04add4167ec088f66b92fe9718986ff1111c3ebab653208116e1a8d0f96d167",
+    "SAGNAC_SOURCE_MANIFEST.json": "a2dc727afed95cc54985ddb3e94bdb988d28440546233de18abe66b862dcbec4",
     "SECURITY.md": "c73f7d7c97f7c30f8d93140c612772ed2b81b1830987a37ae0980903213760d5",
     "app/index.html": "df48fa522498fb79aa3617fe2fefa587ef820b9555a692b5bd253ac88b2298f7",
     "data/reference_certificate.json": "a71288ed81b44f8ec122b7d6a6d14340378c7dfbf9daeb5a0fb4c76caba06d18",
@@ -186,8 +186,8 @@
     "research/cspp/independent_g1_v0_8/METHODS.md": "0391467d5ace94f4a31af2ee8cff5c7c06bd922b264d226966ad5cf1bbb11a86",
     "research/cspp/independent_g1_v0_8/PRE_DATA_AUDIT.json": "47217eeec8c6e21b6941fbf09e39ac489c43b7e7d378c7127f61be675c035c15",
     "research/cspp/independent_g1_v0_8/PROTOCOL.json": "9b9d91725fe63f8a0c764d9fea50fd91901ab719ddf25f81ed98db0501053fdb",
-    "research/cspp/independent_g1_v0_8/README.md": "42bba4e503ee7d82356e7e0035371921089a92466abdec733d6449e41db6edc6",
-    "research/cspp/independent_g1_v0_8/SHA256SUMS": "f348a7af6eaf116490f9f534802814a7113397ebc905fbeb7b55ecfa19be6319",
+    "research/cspp/independent_g1_v0_8/README.md": "224f2a0d8256357395e33ae5d9314ed5b0ee5cf5c8985a79940316b9ed089ab0",
+    "research/cspp/independent_g1_v0_8/SHA256SUMS": "988c6573940f7356b68c0867da63fa104456eb28afa8d1ff942335b3490c7a6d",
     "research/cspp/independent_g1_v0_8/audit.py": "c39d3e68de07d25f6c97cbe101a6de1e4b893bc97ce6a62671051957b7448d8e",
     "research/cspp/independent_g1_v0_8/cpu.py": "fd50c0b9799e32a4ce8bebf0db6f875d728e0da72fecb92be21a2bcfda56b7b8",
     "research/cspp/independent_g1_v0_8/inference.py": "3ad862770e9df2c1725971d5c1c9ceb407c7c4ce26f97cc441f5aa30ff477615",
@@ -510,7 +510,27 @@
     "tools/module_registry.py": "d09317d33e58acabbec4944966242793cf938a942ef6a4ffae5fc26bc4ee4bfe",
     "tools/reference_cases.py": "ed0ce197b501a08e2590305d5f892c3a8fc3ffb714bfb8d4b7b00bee3063b3fa",
     "tools/reference_current.cjs": "58ee27aefdddb0cb774319ea01b0c6151069782fec44f04eb7187b89c743d08e",
-    "tools/reference_suite.py": "830c631cd29e5f02de74f7022077ff165275aaf3987d07c429af9b943840b93a"
+    "tools/reference_suite.py": "830c631cd29e5f02de74f7022077ff165275aaf3987d07c429af9b943840b93a",
+    "research/cspp/independent_g1_v0_8/REGISTRATION.json": "52aa86206cdb7dbebeac1d5add8f0b2595adf9d8d9b1e1fb037b6f259b1d5f4a",
+    "research/cspp/independent_g1_v0_8/amendment_01/AMENDMENT.json": "e91b5fa87c9e2877298d4c6abb95ac1e501eb7c2a29b28b03c47fec8486fd20d",
+    "research/cspp/independent_g1_v0_8/amendment_01/README.md": "5b815faf43c974130388991998326b4958ba6232b14b95e8e2c79c7f20e02953",
+    "research/cspp/independent_g1_v0_8/amendment_01/REPORT_VERIFIER.diff": "57f7f6ff59e4a4700519e2fd0258c12a4c20dab7ab00c8d442cea90c9a69a1cd",
+    "research/cspp/independent_g1_v0_8/amendment_01/original_verifier_failure.txt": "2f58feec15102234da9650aeafd9bc8d6e4dc60e7f62007c11884c32a02bc3bc",
+    "research/cspp/independent_g1_v0_8/publication_checks.py": "46b0478b20d367dc86d0624c00cbdcb97ed1bb8b1bdde80733bce8fec4da0f02",
+    "research/cspp/independent_g1_v0_8/results/AUDIT.json": "47217eeec8c6e21b6941fbf09e39ac489c43b7e7d378c7127f61be675c035c15",
+    "research/cspp/independent_g1_v0_8/results/BENCHMARK_128.json.gz": "bd6e3bec84dc3816795f9cc992e3a9095723e9f5d1fbe6be840cd98adf762b56",
+    "research/cspp/independent_g1_v0_8/results/BENCHMARK_192.json.gz": "3a99b828be3423db0631862ac09d9e66797aa060508529048335d7613f444c9c",
+    "research/cspp/independent_g1_v0_8/results/CHECKS.json": "c836aca091fb03cac348d1d07a168f8c5180c510ea7b29d04f4cdfdd82975f47",
+    "research/cspp/independent_g1_v0_8/results/COMPUTE_128.json": "e27bcaa7f2f237c4339d7049f223a64bf19c844f7ba0ccc842b33b9721c7eecf",
+    "research/cspp/independent_g1_v0_8/results/COMPUTE_192.json": "0c0a7efa2ef9df4216e32192f506efa73cbc4bbf87abecb005605d8a58468140",
+    "research/cspp/independent_g1_v0_8/results/CPU_BASELINE.json": "4db47ec847530191a2507c176f2338fb60c08b9d0049c4ee199ab78245348a9a",
+    "research/cspp/independent_g1_v0_8/results/CPU_DEFAULT.json": "6bc71fa76c74ca48f6cd4f55a8e7cb70a4ce18759d650892f651b54e9859b8ef",
+    "research/cspp/independent_g1_v0_8/results/DECISION_128.json": "8bfc2b451006061ce0723589d835b9a1af0702baa15af1156708221f3dda5897",
+    "research/cspp/independent_g1_v0_8/results/DECISION_192.json": "f52e738b21b5605d3572883c8cd9c4f1a0ba2eb318ee6a6a636d1c63e5a05e07",
+    "research/cspp/independent_g1_v0_8/results/clouds_d0.npz": "682969f043d6d6740e17ca588107b32f3ac207c34accb5d4684610a0cec05fda",
+    "research/cspp/independent_g1_v0_8/results/clouds_d1.npz": "10aff03900ae4838f888e890a08494390c576aa04a1256ee6d3bdb697d6fbd75",
+    "research/cspp/independent_g1_v0_8/results/clouds_d2.npz": "c981c6d7aa792afa7ed7a09c8032db213e102d871e7c08ca14b9979066166b92",
+    "research/cspp/independent_g1_v0_8/results/clouds_d3.npz": "2c21fd21bf71034f37112d79e75fd1e6080365e027cb864e021070e108e99034"
   },
   "non_historical_documentation_additions": [
     {
@@ -956,6 +976,33 @@
         "research/cspp/independent_g1_v0_8/verify_publication.py"
       ],
       "scope": "Frozen rejection test on256 new clouds, not yet drawn. All12 previous cells and10 fields, exact120-test family control; no positive G1 or Dirac release."
+    },
+    {
+      "date": "2026-10-28",
+      "component": "CSPP independent G1 v0.8 results",
+      "paths": [
+        "research/cspp/independent_g1_v0_8/REGISTRATION.json",
+        "research/cspp/independent_g1_v0_8/amendment_01/AMENDMENT.json",
+        "research/cspp/independent_g1_v0_8/amendment_01/README.md",
+        "research/cspp/independent_g1_v0_8/amendment_01/REPORT_VERIFIER.diff",
+        "research/cspp/independent_g1_v0_8/amendment_01/original_verifier_failure.txt",
+        "research/cspp/independent_g1_v0_8/publication_checks.py",
+        "research/cspp/independent_g1_v0_8/results/AUDIT.json",
+        "research/cspp/independent_g1_v0_8/results/BENCHMARK_128.json.gz",
+        "research/cspp/independent_g1_v0_8/results/BENCHMARK_192.json.gz",
+        "research/cspp/independent_g1_v0_8/results/CHECKS.json",
+        "research/cspp/independent_g1_v0_8/results/COMPUTE_128.json",
+        "research/cspp/independent_g1_v0_8/results/COMPUTE_192.json",
+        "research/cspp/independent_g1_v0_8/results/CPU_BASELINE.json",
+        "research/cspp/independent_g1_v0_8/results/CPU_DEFAULT.json",
+        "research/cspp/independent_g1_v0_8/results/DECISION_128.json",
+        "research/cspp/independent_g1_v0_8/results/DECISION_192.json",
+        "research/cspp/independent_g1_v0_8/results/clouds_d0.npz",
+        "research/cspp/independent_g1_v0_8/results/clouds_d1.npz",
+        "research/cspp/independent_g1_v0_8/results/clouds_d2.npz",
+        "research/cspp/independent_g1_v0_8/results/clouds_d3.npz"
+      ],
+      "scope": "256 fresh clouds,all fixed trial identities,128/192-bit enclosures,both complete CPU audits,and exact120-test rejection family. Post-data verifier-only Amendment01 preserves every preregistered source and statistical decision."
     }
   ],
   "non_historical_documentation_updates": [
@@ -1432,6 +1479,37 @@
           "path": "SAGNAC_SOURCE_MANIFEST.json",
           "previous_sha256": "631cc9aa07b7bfc1b8ebeacb4cbf7766a5c178a02167a21a7b796cf6e0772fdb",
           "sha256": "e04add4167ec088f66b92fe9718986ff1111c3ebab653208116e1a8d0f96d167"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-28",
+      "scope": "Publish independent G1 negative results and full replay CI; all frozen analysis files and predecessors unchanged.",
+      "files": [
+        {
+          "path": "research/cspp/independent_g1_v0_8/README.md",
+          "previous_sha256": "42bba4e503ee7d82356e7e0035371921089a92466abdec733d6449e41db6edc6",
+          "sha256": "224f2a0d8256357395e33ae5d9314ed5b0ee5cf5c8985a79940316b9ed089ab0"
+        },
+        {
+          "path": "research/cspp/independent_g1_v0_8/SHA256SUMS",
+          "previous_sha256": "f348a7af6eaf116490f9f534802814a7113397ebc905fbeb7b55ecfa19be6319",
+          "sha256": "988c6573940f7356b68c0867da63fa104456eb28afa8d1ff942335b3490c7a6d"
+        },
+        {
+          "path": ".github/workflows/cspp-contract.yml",
+          "previous_sha256": "0f94bc75d4d98ee412e6bc1a0e76bd80f9df51361f2e9de3893e10755807393d",
+          "sha256": "8c31b15f43e916ae5c8673110ccafffad1986917a5b2cf072f2a966ab618ae1a"
+        },
+        {
+          "path": "LICENSE_SOURCE_MANIFEST.json",
+          "previous_sha256": "eb2b38e0027005d2d1e4f11b3a5f13c6f4efdf794448f64558b51b07b57748c8",
+          "sha256": "4be024c636b49c5931c2d8ead1c72ab09a3b1a37575fea8178fdf342fe97c9ef"
+        },
+        {
+          "path": "SAGNAC_SOURCE_MANIFEST.json",
+          "previous_sha256": "e04add4167ec088f66b92fe9718986ff1111c3ebab653208116e1a8d0f96d167",
+          "sha256": "a2dc727afed95cc54985ddb3e94bdb988d28440546233de18abe66b862dcbec4"
         }
       ]
     }

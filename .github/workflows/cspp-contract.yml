@@ -180,3 +180,42 @@ jobs:
         run: python3 -O -B research/cspp/scalar_propagation_v0_7/verify_publication.py
       - name: Replay bounded source nodes, all propagations and both CPU modes
         run: python3 -B research/cspp/scalar_propagation_v0_7/verify_publication.py --replay
+  independent-g1:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 40
+    env:
+      PYTHONDONTWRITEBYTECODE: '1'
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - run: python3 -m pip install -r research/cspp/independent_g1_v0_8/requirements.txt
+      - name: Verify every analysis source existed in the public pre-data commit
+        run: |
+          python3 - <<'PY'
+          import datetime, hashlib, json, pathlib, posixpath, subprocess
+          root = pathlib.Path('research/cspp/independent_g1_v0_8')
+          receipt = json.loads((root / 'REGISTRATION.json').read_text())
+          freeze = json.loads((root / 'FREEZE.json').read_text())
+          commit = receipt['commit_sha']
+          for name, expected in freeze['files'].items():
+              path = posixpath.normpath(str(root) + '/' + name)
+              original = subprocess.check_output(['git', 'show', commit + ':' + path])
+              if hashlib.sha256(original).hexdigest() != expected:
+                  raise SystemExit('FAIL: analysis differs from public preregistration: ' + path)
+          stamp = int(subprocess.check_output(['git', 'show', '-s', '--format=%ct', commit]))
+          start = datetime.datetime.fromisoformat(json.loads((root / 'results/COMPUTE_128.json').read_text())['started_UTC']).timestamp()
+          if not stamp < start:
+              raise SystemExit('FAIL: sampling did not follow public registration')
+          print('PASS: source lock and public commit precede independent data')
+          PY
+      - name: Verify all fixed trial slots, exact inference and Dirac hold under optimized Python
+        run: python3 -O -B research/cspp/independent_g1_v0_8/publication_checks.py
+      - name: Replay 256 holdout clouds at both precisions and in both CPU modes
+        run: python3 -B research/cspp/independent_g1_v0_8/publication_checks.py --replay
