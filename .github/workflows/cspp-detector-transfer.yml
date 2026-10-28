@@ -1,0 +1,54 @@
+name: CSPP finite detector transfer
+on:
+  pull_request:
+    paths: ['research/cspp/detector_transfer_v0_9/**', '.github/workflows/cspp-detector-transfer.yml']
+  push:
+    branches: [main]
+    paths: ['research/cspp/detector_transfer_v0_9/**', '.github/workflows/cspp-detector-transfer.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  detector-transfer:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    env:
+      PYTHONDONTWRITEBYTECODE: '1'
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - run: python3 -m pip install -r research/cspp/detector_transfer_v0_9/requirements.txt
+      - name: Verify public development sources preceded detector production
+        run: |
+          python3 - <<'PY'
+          import datetime, hashlib, json, pathlib, posixpath, subprocess
+          root = pathlib.Path('research/cspp/detector_transfer_v0_9')
+          receipt = json.loads((root / 'REGISTRATION.json').read_text())
+          freeze = json.loads((root / 'FREEZE.json').read_text())
+          commit = receipt['commit_sha']
+          for name, expected in freeze['files'].items():
+              path = posixpath.normpath(str(root) + '/' + name)
+              original = subprocess.check_output(['git', 'show', commit + ':' + path])
+              if hashlib.sha256(original).hexdigest() != expected:
+                  raise SystemExit('FAIL: analysis differs from public development freeze: ' + path)
+          stamp = int(subprocess.check_output(['git', 'show', '-s', '--format=%ct', commit]))
+          start = datetime.datetime.fromisoformat(json.loads((root / 'results/COMPUTE_128.json').read_text())['started_UTC']).timestamp()
+          if not stamp < start:
+              raise SystemExit('FAIL: integration did not follow public registration')
+          print('PASS: archived-data development registration; no fresh-data claim')
+          PY
+      - name: Verify interval evidence and unchanged scientific gates
+        run: python3 -O -B research/cspp/detector_transfer_v0_9/verify_publication.py
+      - name: Replay every fixed cloud at both precisions and both CPU modes
+        run: python3 -B research/cspp/detector_transfer_v0_9/verify_publication.py --replay
+      - name: Reproduce explicitly post-run source-support diagnosis
+        run: |
+          python3 -O -B research/cspp/detector_transfer_v0_9/report.py --out /tmp/detector-description.json
+          diff -u research/cspp/detector_transfer_v0_9/results/DESCRIPTIVE.json /tmp/detector-description.json

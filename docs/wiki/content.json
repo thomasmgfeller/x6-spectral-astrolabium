@@ -1,7 +1,7 @@
 {
   "schema": "x6.bilingual-wiki/1",
-  "snapshot_date": "2026-10-19",
-  "source_commit": "4a6fe9c383e56b5a26f286fba6aa6d8c9263308a",
+  "snapshot_date": "2026-10-28",
+  "source_commit": "0ea645c9381979a55bc943f5f5ce1dcc4d39b6ca",
   "articles": [
     {
       "id": "index",
@@ -1832,6 +1832,57 @@
                 ]
               }
             ]
+          },
+          {
+            "id": "cspp-scalar-closure-and-detector-transfer",
+            "title": "Skalare Testreihe abgeschlossen: jetzt die endliche Detektorantwort prüfen",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "Die skalare CSPP-Testreihe v0.1–v0.8 ist für ihre festgelegten Quellen, Wellenlängen, Geometrien und Budgets abgeschlossen. Der unabhängige G1-Test betrifft 256 frische Wolken: 119 von 120 Feld-/Zelltests verwerfen eine notwendige 10-%-Bedingung, verteilt über alle zwölf Zellen. G1 bleibt HOLD; Dirac ist nicht freigegeben. Das Ergebnis betrifft diese Modelle und Anforderungen, nicht jede Theorie kausaler Mengen."
+              },
+              {
+                "type": "paragraph",
+                "text": "Der neue Entwicklungsbenchmark v0.9 überträgt dieselben Felder auf einen räumlich und zeitlich ausgedehnten linearen Detektor. Acht bereits bekannte Archivwolken liefern 80 Feld-/Fensterantworten. Das Verfahren schließt Kausalgrenzen, Integrationsreste, Anfangsdatenrundung und numerische Lösungsfehler ein. Quellen und räumlicher Detektor bleiben fest; zwei neue Zeitfenster sind vor der Rechnung ausdrücklich festgelegt."
+              },
+              {
+                "type": "paragraph",
+                "text": "Das Ergebnis lautet QUADRATURE_HOLD: 74 von 80 Antworten verfehlen die festgelegte Integrationsgenauigkeit. Die sechs übrigen Antworten sind exakt null, weil die kompakte H1-Anfangshistorie auf drei Wolken kein nichtverschwindendes Quellendatum enthält. Die breiten Einschließungen messen Rechenunsicherheit und belegen kein physikalisches Rauschen. Präzisionsvergleich, CPU-Vergleich und vollständige Wiederholung bestehen."
+              },
+              {
+                "type": "paragraph",
+                "text": "Als Nächstes müssen die Detektorintegration und die Abbildung der kompakten Anfangsdaten verbessert werden. Die vollständige räumliche Paar-Kovarianz und eine unabhängige Vorhersage des Fluktuationstransfers bleiben offen. Neue Bestätigungswolken, eine Quantengravitationsdeutung und mechanische oder kosmologische Anwendungen folgen erst nach ihren eigenen Voraussetzungen."
+              },
+              {
+                "type": "links",
+                "items": [
+                  {
+                    "label": "Closure / Abschluss",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/0ea645c9381979a55bc943f5f5ce1dcc4d39b6ca/research/cspp/detector_transfer_v0_9/CLOSURE.md"
+                  },
+                  {
+                    "label": "Results / Ergebnisse",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/0ea645c9381979a55bc943f5f5ce1dcc4d39b6ca/research/cspp/detector_transfer_v0_9/RESULTS.md"
+                  },
+                  {
+                    "label": "Methods / Methoden",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/0ea645c9381979a55bc943f5f5ce1dcc4d39b6ca/research/cspp/detector_transfer_v0_9/METHODS.md"
+                  },
+                  {
+                    "label": "Protocol / Protokoll",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/0ea645c9381979a55bc943f5f5ce1dcc4d39b6ca/research/cspp/detector_transfer_v0_9/PROTOCOL.json"
+                  },
+                  {
+                    "label": "Checks / Prüfungen",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/0ea645c9381979a55bc943f5f5ce1dcc4d39b6ca/research/cspp/detector_transfer_v0_9/results/CHECKS.json"
+                  },
+                  {
+                    "label": "Next step / Anschlussentscheidung",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/0ea645c9381979a55bc943f5f5ce1dcc4d39b6ca/research/cspp/detector_transfer_v0_9/NEXT_STEP.md"
+                  }
+                ]
+              }
+            ]
           }
         ]
       },
@@ -2923,6 +2974,57 @@
                   {
                     "label": "Full replay / Vollständige Wiederholung",
                     "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/4a6fe9c383e56b5a26f286fba6aa6d8c9263308a/research/lorentz_local_dalembert/joint_feasibility/VERIFICATION.json"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "cspp-scalar-closure-and-detector-transfer",
+            "title": "Scalar series closed: testing the finite detector response next",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "The scalar CSPP series v0.1–v0.8 is closed for its specified sources, wavelengths, geometries and budgets. The independent G1 test uses 256 fresh clouds: 119 of 120 field/cell tests reject a necessary 10% condition, covering all twelve cells. G1 remains HOLD; Dirac is not cleared. This concerns these models and requirements, not every causal-set theory."
+              },
+              {
+                "type": "paragraph",
+                "text": "The new v0.9 development benchmark transfers the same fields to a spatially and temporally extended linear detector. Eight previously examined archive clouds produce 80 field/window responses. The method encloses causal boundaries, integration remainders, initial-history rounding and numerical solution errors. Sources and the spatial detector stay fixed; two new time windows are explicitly specified before the calculation."
+              },
+              {
+                "type": "paragraph",
+                "text": "The result is QUADRATURE_HOLD: 74 of 80 responses miss the declared integration tolerance. The other six responses are exactly zero because the compact H1 initial history contains no nonzero source datum on three clouds. Wide enclosures measure computational uncertainty and do not establish physical noise. Precision comparison, CPU comparison and full replay pass."
+              },
+              {
+                "type": "paragraph",
+                "text": "The next tasks are to improve detector integration and the compact initial-data adapter. Full spatial pair covariance and an independent fluctuation-transfer prediction remain open. Fresh confirmation clouds, a quantum-gravity interpretation, and mechanical or cosmological applications require their own prerequisites."
+              },
+              {
+                "type": "links",
+                "items": [
+                  {
+                    "label": "Closure / Abschluss",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/0ea645c9381979a55bc943f5f5ce1dcc4d39b6ca/research/cspp/detector_transfer_v0_9/CLOSURE.md"
+                  },
+                  {
+                    "label": "Results / Ergebnisse",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/0ea645c9381979a55bc943f5f5ce1dcc4d39b6ca/research/cspp/detector_transfer_v0_9/RESULTS.md"
+                  },
+                  {
+                    "label": "Methods / Methoden",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/0ea645c9381979a55bc943f5f5ce1dcc4d39b6ca/research/cspp/detector_transfer_v0_9/METHODS.md"
+                  },
+                  {
+                    "label": "Protocol / Protokoll",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/0ea645c9381979a55bc943f5f5ce1dcc4d39b6ca/research/cspp/detector_transfer_v0_9/PROTOCOL.json"
+                  },
+                  {
+                    "label": "Checks / Prüfungen",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/0ea645c9381979a55bc943f5f5ce1dcc4d39b6ca/research/cspp/detector_transfer_v0_9/results/CHECKS.json"
+                  },
+                  {
+                    "label": "Next step / Anschlussentscheidung",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/0ea645c9381979a55bc943f5f5ce1dcc4d39b6ca/research/cspp/detector_transfer_v0_9/NEXT_STEP.md"
                   }
                 ]
               }
