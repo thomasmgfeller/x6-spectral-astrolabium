@@ -142,3 +142,22 @@ jobs:
         run: python3 -O -B research/cspp/massive_reference_v0_5/verify_publication.py
       - name: Replay 50 massive values and spatial enclosures at 128 and 192 bits
         run: python3 -B research/cspp/massive_reference_v0_5/verify_publication.py --replay
+  joint-budget:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    env:
+      PYTHONDONTWRITEBYTECODE: '1'
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - run: python3 -m pip install -r research/cspp/joint_budget_v0_6/requirements.txt
+      - name: Verify fixed physics, all 320 budget exclusions and no-run decision
+        run: python3 -O -B research/cspp/joint_budget_v0_6/verify_publication.py
+      - name: Replay signed boundaries and joint budgets at 128 and 192 bits
+        run: python3 -B research/cspp/joint_budget_v0_6/verify_publication.py --replay
