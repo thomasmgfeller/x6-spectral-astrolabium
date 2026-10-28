@@ -21,11 +21,23 @@ Quelle mit H1-History. Beide Zeitfenster benutzen jeweils dieselbe Wolke.
 Die 256 Boxen je Fenster, Budgets und Abbruchregeln sind vor der neuen
 Integration festgelegt. Es werden keine neuen Zufallswolken erzeugt.
 
-**Vor Produktionsbeginn:** nur synthetische analytische Methodenkontrollen
-ausführen, Quellen einfrieren und den Entwicklungsvertrag öffentlich
-registrieren. Nach dem festgelegten Lauf werden hier die Ergebnisse ergänzt.
-Die unabhängige Bestätigungsserie ist NOT_RUN; sie benötigt einen eigenen
-vorher festgelegten Vorhersage- und Statistikvertrag.
+**Ausgeführt: QUADRATURE_HOLD.** Alle acht festgelegten Wolken und beide
+Fenster sind bei 128/192 Bit sowie im CPU-Modus ohne AVX-512 ausgewertet.
+74 von 80 Feld-/Fensterwerten verfehlen das Integrationsbudget. Die sechs
+engen Werte gehören ausschließlich zu drei Wolken mit exakt leerer
+kompakter H1-Quellhistorie: Dort wird ein Nullsignal exakt integriert.
+Das ist keine erfolgreiche Übertragung der vorgegebenen Kontinuumsquelle.
+
+Die [öffentliche Entwicklungsregistrierung](REGISTRATION.json) erfolgte im
+Commit `400a0f77433453d9ab3cda6cbe3b0c56e7ba511e` vor der neuen Integration.
+Die analytischen Methodenkontrollen, die getrennten numerischen Budgets und
+17.396 Enclosure-Vergleiche bestehen. Die breite Quadratur ist der aktuelle
+Genauigkeitsengpass; sie darf nicht als physikalische Rauschamplitude gelesen
+werden. [Ergebnisse und Aussagegrenzen](RESULTS.md).
+
+Die unabhängige Bestätigungsserie bleibt gemäß vorab festgelegter Regel
+NOT_RUN. Die Quellenbelegungsdiagnose wurde nach dem Lauf ergänzt und ist
+ausdrücklich deskriptiv; sie verändert weder Stichprobe noch Entscheidungen.
 
 ## Was dieses Paket leistet und was offen bleibt
 
@@ -69,7 +81,8 @@ sowie einen exakt lösbaren stochastischen Transfer mit nachgewiesenem
 Linearisierungsrest und Mittelwertverschiebung.
 
 Siehe [METHODS.md](METHODS.md), [PROTOCOL.json](PROTOCOL.json) und
-[CLOSURE.md](CLOSURE.md). Eine methodische Analogie zur Optomechanik oder
+[CLOSURE.md](CLOSURE.md), außerdem die [konkrete Anschlussentscheidung](NEXT_STEP.md).
+Eine methodische Analogie zur Optomechanik oder
 Festkörperphysik wäre erst der nächste Schritt nach einer ausreichend engen
 skalaren Detektorrechnung. Testmassen, Astrometrie und Kosmologie benötigen
 zusätzliche physikalische Kopplungen.
