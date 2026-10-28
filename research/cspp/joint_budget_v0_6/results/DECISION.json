@@ -1,0 +1,542 @@
+{
+  "schema": "cspp.joint-budget/0.6",
+  "decision": "NO_NEW_SPRINKLING_AT_INHERITED_BUDGET",
+  "expected_point_budget": 20000,
+  "systematic_allocation_candidates": 115,
+  "summaries": {
+    "D": {
+      "smallest_admissibility_candidate": {
+        "ell_k": "37/256",
+        "H": "11/4",
+        "expected_N_admissibility_D": {
+          "real_ball": "[17156.2502035552230289410467650530693454966587 +/- 2.91e-34]",
+          "imag_ball": "0",
+          "display_midpoint": [
+            17156.250203555224,
+            0.0
+          ],
+          "display_radius": [
+            2.9034292290943816e-34,
+            0.0
+          ]
+        }
+      },
+      "smallest_necessary_budget_candidate": {
+        "ell_k": "37/256",
+        "H": "11/4"
+      },
+      "necessary_expected_N_plan": {
+        "real_ball": "[177565348.650525425458769821660462143782836354 +/- 5.30e-30]",
+        "imag_ball": "0",
+        "display_midpoint": [
+          177565348.65052542,
+          0.0
+        ],
+        "display_radius": [
+          5.298420656686279e-30,
+          0.0
+        ]
+      },
+      "smallest_sufficient_bound_candidate": {
+        "ell_k": "37/256",
+        "H": "11/4"
+      },
+      "sufficient_expected_N_plan": {
+        "real_ball": "[265782508848750502948.017774510774694653354733 +/- 2.48e-18]",
+        "imag_ball": "0",
+        "display_midpoint": [
+          2.657825088487505e+20,
+          0.0
+        ],
+        "display_radius": [
+          2.4774776052727516e-18,
+          0.0
+        ]
+      },
+      "necessary_is_not_feasible_or_optimal": true
+    },
+    "Omega": {
+      "smallest_admissibility_candidate": {
+        "ell_k": "37/256",
+        "H": "11/4",
+        "expected_N_admissibility_Omega": {
+          "real_ball": "[622739.892386284494346250859495018661703868027 +/- 9.82e-33]",
+          "imag_ball": "0",
+          "display_midpoint": [
+            622739.8923862845,
+            0.0
+          ],
+          "display_radius": [
+            9.81625042729172e-33,
+            0.0
+          ]
+        }
+      },
+      "smallest_necessary_budget_candidate": {
+        "ell_k": "37/256",
+        "H": "11/4"
+      },
+      "necessary_expected_N_plan": {
+        "real_ball": "[6445291062.91809867025709260249010738022922919 +/- 1.86e-28]",
+        "imag_ball": "0",
+        "display_midpoint": [
+          6445291062.918098,
+          0.0
+        ],
+        "display_radius": [
+          1.8573651701054676e-28,
+          0.0
+        ]
+      },
+      "smallest_sufficient_bound_candidate": {
+        "ell_k": "37/256",
+        "H": "11/4"
+      },
+      "sufficient_expected_N_plan": {
+        "real_ball": "[9647409486038441092630.11502655423908891840767 +/- 1.10e-16]",
+        "imag_ball": "0",
+        "display_midpoint": [
+          9.647409486038441e+21,
+          0.0
+        ],
+        "display_radius": [
+          1.0917206910765768e-16,
+          0.0
+        ]
+      },
+      "necessary_is_not_feasible_or_optimal": true
+    }
+  },
+  "relaxed_total_only": {
+    "D": {
+      "ell_k": "3/16",
+      "H": "11/4",
+      "necessary_expected_N_10pct_total_only": {
+        "real_ball": "[26625903.5389333127625305460408166328819993826 +/- 3.53e-31]",
+        "imag_ball": "0",
+        "display_midpoint": [
+          26625903.538933314,
+          0.0
+        ],
+        "display_radius": [
+          3.5218411611919996e-31,
+          0.0
+        ]
+      },
+      "meaning": "necessary Gaussian bound after excluding the known fixed-mode counterexample; relaxing the separate allocations does not establish feasibility"
+    },
+    "Omega": {
+      "ell_k": "3/16",
+      "H": "3",
+      "necessary_expected_N_10pct_total_only": {
+        "real_ball": "[859247858.465954369434415948310817629620613006 +/- 1.14e-29]",
+        "imag_ball": "0",
+        "display_midpoint": [
+          859247858.4659544,
+          0.0
+        ],
+        "display_radius": [
+          1.1379274768297538e-29,
+          0.0
+        ]
+      },
+      "meaning": "necessary Gaussian bound after excluding the known fixed-mode counterexample; relaxing the separate allocations does not establish feasibility"
+    }
+  },
+  "budget_sensitivity": {
+    "D": [
+      {
+        "expected_point_budget": "20000",
+        "inadmissible": 113,
+        "excluded_by_variance_or_total_RMS": 2,
+        "unresolved": 0,
+        "certified_for_single_witness_only": 0
+      },
+      {
+        "expected_point_budget": "100000",
+        "inadmissible": 91,
+        "excluded_by_variance_or_total_RMS": 24,
+        "unresolved": 0,
+        "certified_for_single_witness_only": 0
+      },
+      {
+        "expected_point_budget": "1000000",
+        "inadmissible": 65,
+        "excluded_by_variance_or_total_RMS": 50,
+        "unresolved": 0,
+        "certified_for_single_witness_only": 0
+      },
+      {
+        "expected_point_budget": "10000000",
+        "inadmissible": 43,
+        "excluded_by_variance_or_total_RMS": 72,
+        "unresolved": 0,
+        "certified_for_single_witness_only": 0
+      },
+      {
+        "expected_point_budget": "100000000",
+        "inadmissible": 23,
+        "excluded_by_variance_or_total_RMS": 92,
+        "unresolved": 0,
+        "certified_for_single_witness_only": 0
+      },
+      {
+        "expected_point_budget": "1000000000",
+        "inadmissible": 6,
+        "excluded_by_variance_or_total_RMS": 98,
+        "unresolved": 11,
+        "certified_for_single_witness_only": 0
+      },
+      {
+        "expected_point_budget": "10000000000",
+        "inadmissible": 0,
+        "excluded_by_variance_or_total_RMS": 84,
+        "unresolved": 31,
+        "certified_for_single_witness_only": 0
+      },
+      {
+        "expected_point_budget": "100000000000",
+        "inadmissible": 0,
+        "excluded_by_variance_or_total_RMS": 63,
+        "unresolved": 52,
+        "certified_for_single_witness_only": 0
+      },
+      {
+        "expected_point_budget": "1000000000000",
+        "inadmissible": 0,
+        "excluded_by_variance_or_total_RMS": 42,
+        "unresolved": 73,
+        "certified_for_single_witness_only": 0
+      },
+      {
+        "expected_point_budget": "1000000000000000000",
+        "inadmissible": 0,
+        "excluded_by_variance_or_total_RMS": 0,
+        "unresolved": 115,
+        "certified_for_single_witness_only": 0
+      },
+      {
+        "expected_point_budget": "1000000000000000000000000",
+        "inadmissible": 0,
+        "excluded_by_variance_or_total_RMS": 0,
+        "unresolved": 53,
+        "certified_for_single_witness_only": 62
+      }
+    ],
+    "Omega": [
+      {
+        "expected_point_budget": "20000",
+        "inadmissible": 115,
+        "excluded_by_variance_or_total_RMS": 0,
+        "unresolved": 0,
+        "certified_for_single_witness_only": 0
+      },
+      {
+        "expected_point_budget": "100000",
+        "inadmissible": 115,
+        "excluded_by_variance_or_total_RMS": 0,
+        "unresolved": 0,
+        "certified_for_single_witness_only": 0
+      },
+      {
+        "expected_point_budget": "1000000",
+        "inadmissible": 108,
+        "excluded_by_variance_or_total_RMS": 7,
+        "unresolved": 0,
+        "certified_for_single_witness_only": 0
+      },
+      {
+        "expected_point_budget": "10000000",
+        "inadmissible": 68,
+        "excluded_by_variance_or_total_RMS": 47,
+        "unresolved": 0,
+        "certified_for_single_witness_only": 0
+      },
+      {
+        "expected_point_budget": "100000000",
+        "inadmissible": 33,
+        "excluded_by_variance_or_total_RMS": 82,
+        "unresolved": 0,
+        "certified_for_single_witness_only": 0
+      },
+      {
+        "expected_point_budget": "1000000000",
+        "inadmissible": 10,
+        "excluded_by_variance_or_total_RMS": 105,
+        "unresolved": 0,
+        "certified_for_single_witness_only": 0
+      },
+      {
+        "expected_point_budget": "10000000000",
+        "inadmissible": 1,
+        "excluded_by_variance_or_total_RMS": 109,
+        "unresolved": 5,
+        "certified_for_single_witness_only": 0
+      },
+      {
+        "expected_point_budget": "100000000000",
+        "inadmissible": 0,
+        "excluded_by_variance_or_total_RMS": 87,
+        "unresolved": 28,
+        "certified_for_single_witness_only": 0
+      },
+      {
+        "expected_point_budget": "1000000000000",
+        "inadmissible": 0,
+        "excluded_by_variance_or_total_RMS": 63,
+        "unresolved": 52,
+        "certified_for_single_witness_only": 0
+      },
+      {
+        "expected_point_budget": "1000000000000000000",
+        "inadmissible": 0,
+        "excluded_by_variance_or_total_RMS": 0,
+        "unresolved": 115,
+        "certified_for_single_witness_only": 0
+      },
+      {
+        "expected_point_budget": "1000000000000000000000000",
+        "inadmissible": 0,
+        "excluded_by_variance_or_total_RMS": 0,
+        "unresolved": 72,
+        "certified_for_single_witness_only": 43
+      }
+    ]
+  },
+  "fixed_mode_followups": [
+    {
+      "ell_k": "3/2",
+      "H": "2",
+      "checks": [
+        {
+          "omega": "0",
+          "k": "0",
+          "mean": {
+            "real_ball": "[-0.517594349610302039889748681837297950600533053 +/- 2.29e-21]",
+            "imag_ball": "0",
+            "display_midpoint": [
+              -0.517594349610302,
+              0.0
+            ],
+            "display_radius": [
+              2.280521685927903e-21,
+              0.0
+            ]
+          },
+          "exact_Box": {
+            "real_ball": "-0.500000000000000000000000000000000000000000000",
+            "imag_ball": "0",
+            "display_midpoint": [
+              -0.5,
+              0.0
+            ],
+            "display_radius": [
+              0.0,
+              0.0
+            ]
+          },
+          "relative_bias_lower": {
+            "real_ball": "[0.0351886992206040797749363203027400950340979809 +/- 1.26e-47]",
+            "imag_ball": "0",
+            "display_midpoint": [
+              0.03518869922060408,
+              0.0
+            ],
+            "display_radius": [
+              0.0,
+              0.0
+            ]
+          },
+          "relative_bias_upper": {
+            "real_ball": "[0.0351886992206040797840584070464517073680342315 +/- 1.91e-47]",
+            "imag_ball": "0",
+            "display_midpoint": [
+              0.03518869922060408,
+              0.0
+            ],
+            "display_radius": [
+              0.0,
+              0.0
+            ]
+          },
+          "total_RMS_excluded_at_every_density": false
+        },
+        {
+          "omega": "1/4",
+          "k": "0",
+          "mean": {
+            "real_ball": "[-0.523363062477414146137345335975609101150904468 +/- 2.17e-21]",
+            "imag_ball": "[0.0473600702954777135094114673848448356094373468 +/- 2.17e-21]",
+            "display_midpoint": [
+              -0.5233630624774142,
+              0.047360070295477716
+            ],
+            "display_radius": [
+              2.168441767396393e-21,
+              2.168441767396393e-21
+            ]
+          },
+          "exact_Box": {
+            "real_ball": "-0.437500000000000000000000000000000000000000000",
+            "imag_ball": "0",
+            "display_midpoint": [
+              -0.4375,
+              0.0
+            ],
+            "display_radius": [
+              0.0,
+              0.0
+            ]
+          },
+          "relative_bias_lower": {
+            "real_ball": "[0.224133391844058280896364371504563809189870562 +/- 8.87e-47]",
+            "imag_ball": "0",
+            "display_midpoint": [
+              0.22413339184405828,
+              0.0
+            ],
+            "display_radius": [
+              0.0,
+              0.0
+            ]
+          },
+          "relative_bias_upper": {
+            "real_ball": "[0.224133391844058280909832111497543900306436606 +/- 7.35e-40]",
+            "imag_ball": "0",
+            "display_midpoint": [
+              0.22413339184405828,
+              0.0
+            ],
+            "display_radius": [
+              7.346839692639297e-40,
+              0.0
+            ]
+          },
+          "total_RMS_excluded_at_every_density": true
+        },
+        {
+          "omega": "0",
+          "k": "1/4",
+          "mean": {
+            "real_ball": "[-0.518515092457094941820687113872374587425662410 +/- 2.45e-21]",
+            "imag_ball": "0",
+            "display_midpoint": [
+              -0.5185150924570949,
+              0.0
+            ],
+            "display_radius": [
+              2.4428218339047654e-21,
+              0.0
+            ]
+          },
+          "exact_Box": {
+            "real_ball": "-0.562500000000000000000000000000000000000000000",
+            "imag_ball": "0",
+            "display_midpoint": [
+              -0.5625,
+              0.0
+            ],
+            "display_radius": [
+              0.0,
+              0.0
+            ]
+          },
+          "relative_bias_lower": {
+            "real_ball": "[0.0781953911873867700922134476332811504861114657 +/- 3.68e-40]",
+            "imag_ball": "0",
+            "display_midpoint": [
+              0.07819539118738678,
+              0.0
+            ],
+            "display_radius": [
+              3.6734198463196485e-40,
+              0.0
+            ]
+          },
+          "relative_bias_upper": {
+            "real_ball": "[0.0781953911873867701008990363760536497777918077 +/- 3.68e-40]",
+            "imag_ball": "0",
+            "display_midpoint": [
+              0.07819539118738678,
+              0.0
+            ],
+            "display_radius": [
+              3.6734198463196485e-40,
+              0.0
+            ]
+          },
+          "total_RMS_excluded_at_every_density": false
+        },
+        {
+          "omega": "1/4",
+          "k": "1/4",
+          "mean": {
+            "real_ball": "[-0.524256418950341871788779845042815022502826319 +/- 4.24e-21]",
+            "imag_ball": "[0.0471406712074139182862534329417306438282295557 +/- 4.24e-21]",
+            "display_midpoint": [
+              -0.5242564189503419,
+              0.04714067120741392
+            ],
+            "display_radius": [
+              4.233924224099049e-21,
+              4.233924217788162e-21
+            ]
+          },
+          "exact_Box": {
+            "real_ball": "-0.500000000000000000000000000000000000000000000",
+            "imag_ball": "0",
+            "display_midpoint": [
+              -0.5,
+              0.0
+            ],
+            "display_radius": [
+              0.0,
+              0.0
+            ]
+          },
+          "relative_bias_lower": {
+            "real_ball": "[0.106030500181410214473507672396997658206057464 +/- 1.10e-47]",
+            "imag_ball": "0",
+            "display_midpoint": [
+              0.10603050018141022,
+              0.0
+            ],
+            "display_radius": [
+              0.0,
+              0.0
+            ]
+          },
+          "relative_bias_upper": {
+            "real_ball": "[0.106030500181410214496315439500569655730183950 +/- 2.16e-46]",
+            "imag_ball": "0",
+            "display_midpoint": [
+              0.10603050018141022,
+              0.0
+            ],
+            "display_radius": [
+              0.0,
+              0.0
+            ]
+          },
+          "total_RMS_excluded_at_every_density": true
+        }
+      ]
+    }
+  ],
+  "scope": "finite declared grid and the fixed L=2 necessary witness; no continuum-wide optimum or full E4 exclusion",
+  "new_poisson_clouds": 0,
+  "confirmation_seed_used": false,
+  "gate_status": {
+    "G1": "HOLD",
+    "G2": "NOT_RUN",
+    "G3": "NOT_RUN"
+  },
+  "scan_pairs": 320,
+  "rejection_counts": {
+    "ADMISSIBILITY_REJECT": 197,
+    "GAUSSIAN_TOTAL_RMS_REJECT": 122,
+    "FIXED_MODE_BIAS_REJECT": 1
+  },
+  "physical_parameters_fixed": true,
+  "next_sprinkling": "NOT_STARTED_NO_BUDGETED_CANDIDATE"
+}

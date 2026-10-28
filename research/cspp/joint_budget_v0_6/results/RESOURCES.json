@@ -1,0 +1,221 @@
+{
+  "budget": {
+    "expected_points_per_cloud": 20000,
+    "basis": "inherited certified_budget_v0_3 planning screen, not a new user-supplied numerical budget",
+    "actual_point_cap_if_a_run_is_later_authorized": 20000,
+    "memory_GiB_max": 4,
+    "wall_seconds_max": 21600,
+    "reference_development_ensemble_size": 16,
+    "ensemble_mean_is_not_single_cloud_RMS": true,
+    "planning_overflow_probability_total": "1/100"
+  },
+  "resource_overflow_planning_guard": {
+    "ensemble_clouds": 16,
+    "actual_N_cap": 20000,
+    "overflow_probability_allocation": "1/100",
+    "largest_integer_mean_certified_by_Chernoff_union_bound": 19462,
+    "union_upper_bound": {
+      "real_ball": "[0.00982084817277523331595021510403350207591633529 +/- 9.93e-49]",
+      "imag_ball": "0",
+      "display_midpoint": [
+        0.009820848172775233,
+        0.0
+      ],
+      "display_radius": [
+        1.1569944589514536e-55,
+        0.0
+      ]
+    },
+    "next_integer_union_upper_bound": {
+      "real_ball": "[0.0100963713224203055946286103442220253366054580 +/- 3.91e-48]",
+      "imag_ball": "0",
+      "display_midpoint": [
+        0.010096371322420306,
+        0.0
+      ],
+      "display_radius": [
+        1.1894459795275686e-55,
+        0.0
+      ]
+    },
+    "exceedance_behavior": "RESOURCE_HOLD; preserve failed identity; no redraw"
+  },
+  "count_kernel_memory": [
+    {
+      "domain": "D",
+      "purpose": "admissibility",
+      "ell_k": "37/256",
+      "H": "11/4",
+      "expected_N": {
+        "real_ball": "[17156.2502035552230289410467650530693455710907 +/- 4.97e-41]",
+        "imag_ball": "0",
+        "display_midpoint": [
+          17156.250203555224,
+          0.0
+        ],
+        "display_radius": [
+          4.960000019732254e-41,
+          0.0
+        ]
+      },
+      "expected_count_kernel_memory_lower_GiB": {
+        "real_ball": "[1.16508903774718455417339138665419518596624290 +/- 7.82e-45]",
+        "imag_ball": "0",
+        "display_midpoint": [
+          1.1650890377471845,
+          0.0
+        ],
+        "display_radius": [
+          6.736522580788013e-45,
+          0.0
+        ]
+      },
+      "expected_unordered_pairs": {
+        "real_ball": "[147168460.523494315807634244743907449492552256 +/- 1.08e-36]",
+        "imag_ball": "0",
+        "display_midpoint": [
+          147168460.5234943,
+          0.0
+        ],
+        "display_radius": [
+          8.509500223450096e-37,
+          0.0
+        ]
+      },
+      "memory_is_expectation_lower_bound_not_peak_upper_bound": true
+    },
+    {
+      "domain": "D",
+      "purpose": "necessary_error_budget",
+      "ell_k": "37/256",
+      "H": "11/4",
+      "expected_N": {
+        "real_ball": "[177565348.650525425458769821660462144400021291 +/- 2.95e-37]",
+        "imag_ball": "0",
+        "display_midpoint": [
+          177565348.65052542,
+          0.0
+        ],
+        "display_radius": [
+          2.940000009419863e-37,
+          0.0
+        ]
+      },
+      "expected_count_kernel_memory_lower_GiB": {
+        "real_ball": "[124797389.079377987213391487452132831193498081 +/- 4.33e-37]",
+        "imag_ball": "0",
+        "display_midpoint": [
+          124797389.079378,
+          0.0
+        ],
+        "display_radius": [
+          4.132611816535726e-37,
+          0.0
+        ]
+      },
+      "expected_unordered_pairs": {
+        "real_ball": "[15764726520691325.7660261876191946443292972486 +/- 9.30e-29]",
+        "imag_ball": "0",
+        "display_midpoint": [
+          1.5764726520691326e+16,
+          0.0
+        ],
+        "display_radius": [
+          5.220421306205192e-29,
+          0.0
+        ]
+      },
+      "memory_is_expectation_lower_bound_not_peak_upper_bound": true
+    },
+    {
+      "domain": "Omega",
+      "purpose": "admissibility",
+      "ell_k": "37/256",
+      "H": "11/4",
+      "expected_N": {
+        "real_ball": "[622739.892386284494346250859495018661708875486 +/- 2.85e-40]",
+        "imag_ball": "0",
+        "display_midpoint": [
+          622739.8923862845,
+          0.0
+        ],
+        "display_radius": [
+          2.8400000102498932e-40,
+          0.0
+        ]
+      },
+      "expected_count_kernel_memory_lower_GiB": {
+        "real_ball": "[1534.98145222103941329956813128356886676887200 +/- 4.68e-42]",
+        "imag_ball": "0",
+        "display_midpoint": [
+          1534.9814522210395,
+          0.0
+        ],
+        "display_radius": [
+          1.4000528757869728e-42,
+          0.0
+        ]
+      },
+      "expected_unordered_pairs": {
+        "real_ball": "[193902486784.640596365066726133004452047612864 +/- 4.75e-34]",
+        "imag_ball": "0",
+        "display_midpoint": [
+          193902486784.6406,
+          0.0
+        ],
+        "display_radius": [
+          1.7685813119195099e-34,
+          0.0
+        ]
+      },
+      "memory_is_expectation_lower_bound_not_peak_upper_bound": true
+    },
+    {
+      "domain": "Omega",
+      "purpose": "necessary_error_budget",
+      "ell_k": "37/256",
+      "H": "11/4",
+      "expected_N": {
+        "real_ball": "[6445291062.91809867025709260249010740264269618 +/- 1.19e-36]",
+        "imag_ball": "0",
+        "display_midpoint": [
+          6445291062.918098,
+          0.0
+        ],
+        "display_radius": [
+          1.1800000032278681e-36,
+          0.0
+        ]
+      },
+      "expected_count_kernel_memory_lower_GiB": {
+        "real_ball": "[164427377089.628132211270110638756621781359391 +/- 2.77e-34]",
+        "imag_ball": "0",
+        "display_midpoint": [
+          164427377089.62814,
+          0.0
+        ],
+        "display_radius": [
+          6.020653103953074e-35,
+          0.0
+        ]
+      },
+      "expected_unordered_pairs": {
+        "real_ball": "[20770888442865957075.8635767770997290121190595 +/- 4.15e-26]",
+        "imag_ball": "0",
+        "display_midpoint": [
+          2.077088844286596e+19,
+          0.0
+        ],
+        "display_radius": [
+          7.605443520643249e-27,
+          0.0
+        ]
+      },
+      "memory_is_expectation_lower_bound_not_peak_upper_bound": true
+    }
+  ],
+  "wall_time_status": "NOT_EXTRAPOLATED_OR_CERTIFIED; no candidate passes the point/error screen",
+  "ensemble_note": "The 10% target concerns one cloud. Averaging 16 clouds does not certify a 10% single-cloud operator.",
+  "run_authorized_by_numerical_decision": false,
+  "new_random_realizations": 0
+}

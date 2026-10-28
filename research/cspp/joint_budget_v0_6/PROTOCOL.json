@@ -1,0 +1,152 @@
+{
+  "schema": "cspp.joint-budget/0.6",
+  "date": "2026-10-28",
+  "base_commit": "fd3c15edf5023daf1f1bcbfccc9f02f7cd125362",
+  "mode": "deterministic development planning; no new Poisson clouds",
+  "precision_bits": 128,
+  "replay_precision_bits": 192,
+  "witness": {
+    "L": 2,
+    "omega": 0,
+    "k": 0,
+    "point": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "exact_Box": "-1/2"
+  },
+  "fixed_physics": {
+    "source": "unchanged e4_v0_1 compact bump: t=-1, a=1/2, k0=4",
+    "detector": "unchanged e4_v0_1: t=1, center=(0,0,3/2), radius=1/2",
+    "source_detector_wave_support_margin": "1/2",
+    "calibration": "unchanged L=2; (omega*L,k*L)=(0,0),(1/2,0),(0,1/2),(1/2,1/2)",
+    "scalar_pilot_wavenumbers": [
+      0,
+      2,
+      4,
+      8
+    ],
+    "field_scale_rescaled_with_ell_or_H": false,
+    "all_field_qualification": "Necessary fixed-family rejection only; surviving Gaussian pairs receive all four existing calibration means. No E4 approval follows."
+  },
+  "domains": {
+    "D_H": "I((-H,0),(0,0)); operator witness only; volume=pi*H^4/24",
+    "Omega_H": "I((-H,0),(4,0)); fixed future tip 4 contains source and full propagated support through t=1 with margin>=1/2 for H>=2",
+    "Omega_volume": "pi*(H+4)^4/24",
+    "origin_past_in_Omega": "Omega_H intersect J^-(0) = D_H",
+    "H_is_full_past_duration_not_symmetric_diamond_half_duration": true
+  },
+  "ell_k": [
+    "1/16",
+    "5/64",
+    "3/32",
+    "7/64",
+    "1/8",
+    "17/128",
+    "9/64",
+    "37/256",
+    "19/128",
+    "5/32",
+    "11/64",
+    "3/16",
+    "7/32",
+    "1/4",
+    "3/8",
+    "1/2",
+    "3/4",
+    "1",
+    "3/2",
+    "2"
+  ],
+  "H": [
+    "2",
+    "9/4",
+    "5/2",
+    "11/4",
+    "3",
+    "7/2",
+    "4",
+    "5",
+    "6",
+    "8",
+    "10",
+    "12",
+    "16",
+    "20",
+    "24",
+    "32"
+  ],
+  "rho": "optimized analytically via monotone necessary and sufficient inequalities; rho>=ell_k^-4 always",
+  "epsilon_caps": [
+    "1/4096",
+    "1/1048576",
+    "1/268435456",
+    "1/68719476736",
+    "1/281474976710656",
+    "1/4503599627370496",
+    "1/72057594037927936"
+  ],
+  "lower_boxes_v": [
+    "1",
+    "5/4",
+    "3/2",
+    "17/10",
+    "19/10",
+    "9/4",
+    "5/2",
+    "3",
+    "7/2",
+    "4",
+    "5",
+    "6"
+  ],
+  "lower_box_v_width": "1/5",
+  "lower_box_x": [
+    "3",
+    "31/10"
+  ],
+  "boundary_series_order": 12,
+  "relative_targets": {
+    "nonlocal_bias": "0.05",
+    "boundary": "0.01",
+    "single_cloud_stochastic_RMS": "0.07",
+    "single_cloud_total_RMS": "0.1"
+  },
+  "resource_budget": {
+    "expected_points_per_cloud": 20000,
+    "basis": "inherited certified_budget_v0_3 planning screen, not a new user-supplied numerical budget",
+    "actual_point_cap_if_a_run_is_later_authorized": 20000,
+    "memory_GiB_max": 4,
+    "wall_seconds_max": 21600,
+    "reference_development_ensemble_size": 16,
+    "ensemble_mean_is_not_single_cloud_RMS": true,
+    "planning_overflow_probability_total": "1/100"
+  },
+  "budget_sensitivity_expected_points": [
+    20000,
+    100000,
+    1000000,
+    10000000,
+    100000000,
+    1000000000,
+    10000000000,
+    100000000000,
+    1000000000000,
+    1000000000000000000,
+    1000000000000000000000000
+  ],
+  "confirmation_seed_used": false,
+  "new_poisson_clouds": 0,
+  "scientific_status": {
+    "G1": "HOLD",
+    "G2": "NOT_RUN",
+    "G3": "NOT_RUN"
+  },
+  "global_optimum_claim": false,
+  "production_wall_seconds_max": 1800,
+  "preflight_note": "epsilon cap 1/256 did not give a positive A/B enclosure in the inherited upper-bound routine and is not used in the frozen upper-certificate grid; admissibility remains epsilon<=1",
+  "finite_mean_rule": "Gamma series when c*H^2>=8; direct finite-domain interval quadrature otherwise; all 320 pairs receive a finite-domain total-RMS test",
+  "screening_order": "Admissibility, finite-Gaussian total-RMS lower bound, then all four unchanged L=2 calibration-mode means for any surviving pair. Any one failure rejects the joint error target."
+}
