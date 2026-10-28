@@ -4,7 +4,7 @@ Hier geht es um die Frage, welche Struktur in Beziehungen steckt, bevor man eine
 
 [English](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/en/causal-orders.md) · [Wiki-Übersicht](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/de/)
 
-Quellenstand: 2026-10-28 · `0ea645c9381979a55bc943f5f5ce1dcc4d39b6ca`
+Quellenstand: 2026-10-28 · `ed481912b9330a09d02206beff6f6f535bb4ef85`
 
 ## Ereignisse und ihre Reihenfolge
 
@@ -409,3 +409,22 @@ Als Nächstes müssen die Detektorintegration und die Abbildung der kompakten An
 - [Protocol / Protokoll](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/0ea645c9381979a55bc943f5f5ce1dcc4d39b6ca/research/cspp/detector_transfer_v0_9/PROTOCOL.json)
 - [Checks / Prüfungen](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/0ea645c9381979a55bc943f5f5ce1dcc4d39b6ca/research/cspp/detector_transfer_v0_9/results/CHECKS.json)
 - [Next step / Anschlussentscheidung](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/0ea645c9381979a55bc943f5f5ce1dcc4d39b6ca/research/cspp/detector_transfer_v0_9/NEXT_STEP.md)
+
+## Genauere Detektorintegration und Grenzen lokaler Anfangsdaten
+
+CSPP v0.10 führt das Zeitintegral analytisch entlang der Lichtkegel-Eintrittszeiten aus. Eine Parametrisierung mit bekanntem Volumengewicht erfasst den gesamten Detektorball. Dieselben acht bekannten Wolken, Quellen, Wellenzahlen und Zeitfenster werden auf drei vorab festgelegten räumlichen Gittern geprüft. Es gibt keine neuen Sprinklings.
+
+Auf dem feinsten Gitter sind die 74 nichttrivialen ursprünglichen Intervalle etwa fünf- bis sechsmal enger als in v0.9. Dafür wird auch ein größeres räumliches Zellenbudget eingesetzt. 11 von 80 ursprünglichen Integrationsbudgets bestehen: sechs Nullsignale und jetzt zusätzlich fünf nichtverschwindende kompakte Signale. Alle Wellen bleiben über dem Genauigkeitsziel. Diese Intervalle beschreiben Rechenunsicherheit, kein gemessenes Quantenrauschen.
+
+Für die kompakten Anfangsdaten gibt es getrennte H1-/H3-Fehlerobergrenzen bis zum Detektor. Sie qualifizieren keinen der 32 Fälle. Die großen Oberwerte sind keine gemessenen Fehler oder Fehleruntergrenzen. Ein davon unabhängiges Hindernis ist strukturell: Außerhalb der kompakten Quelle verschwinden alle lokalen Ableitungen. Jede endliche lokale Taylor-History bleibt deshalb null, wenn die Wolke die Quellstütze vollständig verfehlt. Höhere Ordnung allein behebt das nicht.
+
+Im idealen Poisson-Modell beträgt diese Leerwahrscheinlichkeit bei der bisherigen Dichte exakt exp(-21/16), ungefähr 26,9 Prozent. Das folgt aus dem Volumen der Quellhistoryregion und ist keine Schätzung aus den acht Wolken oder universelle Quantenrauschkonstante. Als Nächstes braucht es eine kontrollierte nichtlokale Anfangsdatenabbildung und eine Integration, die gemeinsame Feldabhängigkeiten besser erhält. METHOD_HOLD und G1 HOLD bleiben bestehen.
+
+Neun analytische Kontrollen und 52.284 Präzisions-/CPU-Einschließungsvergleiche bestehen. Eine dokumentierte Korrektur des Prüfprogramms entfernt die falsche Forderung, dass unterschiedlich berechnete Fehlerobergrenzen dieselbe Zahl einschließen müssten. Die fixierten Rechenquellen, Feldvergleiche, Rohdaten und Fehlerbudgets bleiben unverändert.
+
+- [Results / Ergebnisse](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/ed481912b9330a09d02206beff6f6f535bb4ef85/research/cspp/detector_methods_v0_10/RESULTS.md)
+- [Methods / Methoden](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/ed481912b9330a09d02206beff6f6f535bb4ef85/research/cspp/detector_methods_v0_10/METHODS.md)
+- [Protocol / Protokoll](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/ed481912b9330a09d02206beff6f6f535bb4ef85/research/cspp/detector_methods_v0_10/PROTOCOL.json)
+- [Adapter limitation / Adaptergrenze](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/ed481912b9330a09d02206beff6f6f535bb4ef85/research/cspp/detector_methods_v0_10/ADAPTER_OBSTRUCTION.md)
+- [Checks / Prüfungen](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/ed481912b9330a09d02206beff6f6f535bb4ef85/research/cspp/detector_methods_v0_10/results/CHECKS.json)
+- [Verifier amendment / Prüfkorrektur](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/ed481912b9330a09d02206beff6f6f535bb4ef85/research/cspp/detector_methods_v0_10/VERIFICATION_AMENDMENT.json)

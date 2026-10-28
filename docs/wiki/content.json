@@ -1,7 +1,7 @@
 {
   "schema": "x6.bilingual-wiki/1",
   "snapshot_date": "2026-10-28",
-  "source_commit": "0ea645c9381979a55bc943f5f5ce1dcc4d39b6ca",
+  "source_commit": "ed481912b9330a09d02206beff6f6f535bb4ef85",
   "articles": [
     {
       "id": "index",
@@ -1883,6 +1883,61 @@
                 ]
               }
             ]
+          },
+          {
+            "id": "cspp-detector-methods-and-initial-history",
+            "title": "Genauere Detektorintegration und Grenzen lokaler Anfangsdaten",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "CSPP v0.10 führt das Zeitintegral analytisch entlang der Lichtkegel-Eintrittszeiten aus. Eine Parametrisierung mit bekanntem Volumengewicht erfasst den gesamten Detektorball. Dieselben acht bekannten Wolken, Quellen, Wellenzahlen und Zeitfenster werden auf drei vorab festgelegten räumlichen Gittern geprüft. Es gibt keine neuen Sprinklings."
+              },
+              {
+                "type": "paragraph",
+                "text": "Auf dem feinsten Gitter sind die 74 nichttrivialen ursprünglichen Intervalle etwa fünf- bis sechsmal enger als in v0.9. Dafür wird auch ein größeres räumliches Zellenbudget eingesetzt. 11 von 80 ursprünglichen Integrationsbudgets bestehen: sechs Nullsignale und jetzt zusätzlich fünf nichtverschwindende kompakte Signale. Alle Wellen bleiben über dem Genauigkeitsziel. Diese Intervalle beschreiben Rechenunsicherheit, kein gemessenes Quantenrauschen."
+              },
+              {
+                "type": "paragraph",
+                "text": "Für die kompakten Anfangsdaten gibt es getrennte H1-/H3-Fehlerobergrenzen bis zum Detektor. Sie qualifizieren keinen der 32 Fälle. Die großen Oberwerte sind keine gemessenen Fehler oder Fehleruntergrenzen. Ein davon unabhängiges Hindernis ist strukturell: Außerhalb der kompakten Quelle verschwinden alle lokalen Ableitungen. Jede endliche lokale Taylor-History bleibt deshalb null, wenn die Wolke die Quellstütze vollständig verfehlt. Höhere Ordnung allein behebt das nicht."
+              },
+              {
+                "type": "paragraph",
+                "text": "Im idealen Poisson-Modell beträgt diese Leerwahrscheinlichkeit bei der bisherigen Dichte exakt exp(-21/16), ungefähr 26,9 Prozent. Das folgt aus dem Volumen der Quellhistoryregion und ist keine Schätzung aus den acht Wolken oder universelle Quantenrauschkonstante. Als Nächstes braucht es eine kontrollierte nichtlokale Anfangsdatenabbildung und eine Integration, die gemeinsame Feldabhängigkeiten besser erhält. METHOD_HOLD und G1 HOLD bleiben bestehen."
+              },
+              {
+                "type": "paragraph",
+                "text": "Neun analytische Kontrollen und 52.284 Präzisions-/CPU-Einschließungsvergleiche bestehen. Eine dokumentierte Korrektur des Prüfprogramms entfernt die falsche Forderung, dass unterschiedlich berechnete Fehlerobergrenzen dieselbe Zahl einschließen müssten. Die fixierten Rechenquellen, Feldvergleiche, Rohdaten und Fehlerbudgets bleiben unverändert."
+              },
+              {
+                "type": "links",
+                "items": [
+                  {
+                    "label": "Results / Ergebnisse",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/ed481912b9330a09d02206beff6f6f535bb4ef85/research/cspp/detector_methods_v0_10/RESULTS.md"
+                  },
+                  {
+                    "label": "Methods / Methoden",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/ed481912b9330a09d02206beff6f6f535bb4ef85/research/cspp/detector_methods_v0_10/METHODS.md"
+                  },
+                  {
+                    "label": "Protocol / Protokoll",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/ed481912b9330a09d02206beff6f6f535bb4ef85/research/cspp/detector_methods_v0_10/PROTOCOL.json"
+                  },
+                  {
+                    "label": "Adapter limitation / Adaptergrenze",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/ed481912b9330a09d02206beff6f6f535bb4ef85/research/cspp/detector_methods_v0_10/ADAPTER_OBSTRUCTION.md"
+                  },
+                  {
+                    "label": "Checks / Prüfungen",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/ed481912b9330a09d02206beff6f6f535bb4ef85/research/cspp/detector_methods_v0_10/results/CHECKS.json"
+                  },
+                  {
+                    "label": "Verifier amendment / Prüfkorrektur",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/ed481912b9330a09d02206beff6f6f535bb4ef85/research/cspp/detector_methods_v0_10/VERIFICATION_AMENDMENT.json"
+                  }
+                ]
+              }
+            ]
           }
         ]
       },
@@ -3025,6 +3080,61 @@
                   {
                     "label": "Next step / Anschlussentscheidung",
                     "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/0ea645c9381979a55bc943f5f5ce1dcc4d39b6ca/research/cspp/detector_transfer_v0_9/NEXT_STEP.md"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "cspp-detector-methods-and-initial-history",
+            "title": "Tighter detector integration and limits of local initial histories",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "CSPP v0.10 integrates time analytically along causal-cone arrival times. A parametrization with known volume weights covers the entire detector ball. The same eight known clouds, sources, wavenumbers and time windows are tested on three spatial grids specified before the runs. No new sprinklings are generated."
+              },
+              {
+                "type": "paragraph",
+                "text": "On the finest grid, the 74 nontrivial original intervals are roughly five to six times narrower than in v0.9. This also uses a larger spatial cell budget. Eleven of 80 original integration budgets pass: six zero signals plus five additional nonzero compact signals. All wave controls remain above tolerance. These intervals describe computational uncertainty, not measured quantum noise."
+              },
+              {
+                "type": "paragraph",
+                "text": "For compact initial data, separate H1/H3 error upper bounds now reach the detector observable. They qualify none of the 32 cases. Large upper bounds are not measured errors or error lower bounds. A separate structural limitation is decisive: all local derivatives vanish outside the compact source. Any finite local Taylor history therefore remains zero when the cloud misses the entire source support. Higher order alone cannot repair that information loss."
+              },
+              {
+                "type": "paragraph",
+                "text": "In the ideal Poisson model, the empty-history probability at the present density is exactly exp(-21/16), about 26.9 percent. This follows from the source-history region volume, rather than an estimate from eight clouds or a universal quantum-noise constant. A controlled nonlocal initial-data map and integration that better retains shared field dependencies are the next methodological tasks. METHOD_HOLD and G1 HOLD remain in force."
+              },
+              {
+                "type": "paragraph",
+                "text": "Nine analytic controls and 52,284 precision/CPU enclosure comparisons pass. A disclosed verifier correction removes the false requirement that differently computed error upper bounds enclose the same number. Frozen production sources, field comparisons, raw data and error budgets remain unchanged."
+              },
+              {
+                "type": "links",
+                "items": [
+                  {
+                    "label": "Results / Ergebnisse",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/ed481912b9330a09d02206beff6f6f535bb4ef85/research/cspp/detector_methods_v0_10/RESULTS.md"
+                  },
+                  {
+                    "label": "Methods / Methoden",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/ed481912b9330a09d02206beff6f6f535bb4ef85/research/cspp/detector_methods_v0_10/METHODS.md"
+                  },
+                  {
+                    "label": "Protocol / Protokoll",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/ed481912b9330a09d02206beff6f6f535bb4ef85/research/cspp/detector_methods_v0_10/PROTOCOL.json"
+                  },
+                  {
+                    "label": "Adapter limitation / Adaptergrenze",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/ed481912b9330a09d02206beff6f6f535bb4ef85/research/cspp/detector_methods_v0_10/ADAPTER_OBSTRUCTION.md"
+                  },
+                  {
+                    "label": "Checks / Prüfungen",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/ed481912b9330a09d02206beff6f6f535bb4ef85/research/cspp/detector_methods_v0_10/results/CHECKS.json"
+                  },
+                  {
+                    "label": "Verifier amendment / Prüfkorrektur",
+                    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/ed481912b9330a09d02206beff6f6f535bb4ef85/research/cspp/detector_methods_v0_10/VERIFICATION_AMENDMENT.json"
                   }
                 ]
               }

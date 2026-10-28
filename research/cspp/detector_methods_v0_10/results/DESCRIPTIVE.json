@@ -1,0 +1,147 @@
+{
+  "scope": "post-run description of known development clouds; bounds are not measured physical errors or noise",
+  "decision": {
+    "decision": "METHOD_HOLD",
+    "completed_clouds": 8,
+    "planned_clouds": 8,
+    "integration_pass": 17,
+    "integration_total": 96,
+    "original_H1_integration_pass": 11,
+    "original_H1_total": 80,
+    "adapter_upper_bound_pass": 0,
+    "adapter_upper_bound_total": 32,
+    "source_empty_clouds": [
+      "d0_r01",
+      "d0_r04",
+      "d0_r06"
+    ],
+    "fresh_confirmation": "NOT_RUN",
+    "G1": "HOLD",
+    "G2": "NOT_RUN",
+    "G3": "NOT_RUN",
+    "physical_noise": "NOT_ESTABLISHED",
+    "predictive_covariance": "NOT_QUALIFIED"
+  },
+  "levels": [
+    {
+      "grid": 4,
+      "original_H1_pass": 6,
+      "additional_H3_pass": 6,
+      "wave_radii_range": [
+        0.3898993255570531,
+        2.937200203537941
+      ],
+      "nonzero_compact_H1_radii_range": [
+        0.0010914534627271635,
+        0.009322392710644514
+      ],
+      "nonzero_compact_H3_radii_range": [
+        0.26603847293370597,
+        1.9549007980186677
+      ],
+      "old_v09_radius_over_new_radius_range": [
+        1.0819527756588256,
+        1.6263281248670622
+      ],
+      "old_v09_radius_over_new_radius_median": 1.3046689711807837,
+      "H1_initial_error_upper_range": [
+        5509137.8337244075,
+        9279627.987260375
+      ],
+      "H3_initial_error_upper_range": [
+        629724869713.6562,
+        1742697215772.0547
+      ]
+    },
+    {
+      "grid": 8,
+      "original_H1_pass": 8,
+      "additional_H3_pass": 6,
+      "wave_radii_range": [
+        0.187816051999107,
+        1.4900910686701536
+      ],
+      "nonzero_compact_H1_radii_range": [
+        0.0004505864415250641,
+        0.005099896960360921
+      ],
+      "nonzero_compact_H3_radii_range": [
+        0.10982907822152323,
+        1.1109594670564802
+      ],
+      "old_v09_radius_over_new_radius_range": [
+        2.4326636163409923,
+        3.0571702811837693
+      ],
+      "old_v09_radius_over_new_radius_median": 2.673279366175259,
+      "H1_initial_error_upper_range": [
+        4656055.135444639,
+        7619964.686524373
+      ],
+      "H3_initial_error_upper_range": [
+        475545404968.76196,
+        1550024224842.0676
+      ]
+    },
+    {
+      "grid": 16,
+      "original_H1_pass": 11,
+      "additional_H3_pass": 6,
+      "wave_radii_range": [
+        0.09000322036445141,
+        0.7257225196808577
+      ],
+      "nonzero_compact_H1_radii_range": [
+        0.00020669703843958313,
+        0.0025446160011586574
+      ],
+      "nonzero_compact_H3_radii_range": [
+        0.05038177629839901,
+        0.5566505841246805
+      ],
+      "old_v09_radius_over_new_radius_range": [
+        5.0052482432411525,
+        6.253569532281519
+      ],
+      "old_v09_radius_over_new_radius_median": 5.476399824013366,
+      "H1_initial_error_upper_range": [
+        3746781.8714494244,
+        6554961.078327575
+      ],
+      "H3_initial_error_upper_range": [
+        380822754947.8969,
+        1412916399430.0027
+      ]
+    }
+  ],
+  "numeric_maxima": {
+    "input_rounding": 8.59364008603406e-15,
+    "float_nodal_solve": 9.362158080717039e-16,
+    "node_radius": 2.9660955584604247e-24
+  },
+  "support_hits": {
+    "d0_r00": 2,
+    "d0_r01": 0,
+    "d0_r02": 2,
+    "d0_r03": 2,
+    "d0_r04": 0,
+    "d0_r05": 1,
+    "d0_r06": 0,
+    "d0_r07": 2
+  },
+  "ideal_Poisson_adapter_coverage": {
+    "scope": "analytic geometry, not inference from eight binary64 archive clouds",
+    "history_source_volume": "7*pi/16",
+    "volume_fraction": "21/8192",
+    "lambda_at_nu512": "21/16",
+    "empty_probability": [
+      "[0.269146348729183882901199012908005907454290408 +/- 3.13e-46]",
+      "0"
+    ],
+    "nu_for_empty_probability_at_most_one_percent": [
+      "[1796.45496017211640414051295207374396082554509 +/- 4.78e-42]",
+      "0"
+    ],
+    "qualification": "source availability only; not sufficient operator, adapter or G1 budget"
+  }
+}
