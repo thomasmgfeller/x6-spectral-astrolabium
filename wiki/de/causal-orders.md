@@ -4,7 +4,7 @@ Hier geht es um die Frage, welche Struktur in Beziehungen steckt, bevor man eine
 
 [English](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/en/causal-orders.md) · [Wiki-Übersicht](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/de/)
 
-Quellenstand: 2026-10-19 · `4a6fe9c383e56b5a26f286fba6aa6d8c9263308a`
+Quellenstand: 2026-10-28 · `0ea645c9381979a55bc943f5f5ce1dcc4d39b6ca`
 
 ## Ereignisse und ihre Reihenfolge
 
@@ -392,3 +392,20 @@ JOINT_FEASIBILITY_SUPPORTED bedeutet: Die gemeinsamen Voraussetzungen lassen sic
 - [Results / Ergebnisse](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/4a6fe9c383e56b5a26f286fba6aa6d8c9263308a/research/lorentz_local_dalembert/joint_feasibility/RESULTS.md)
 - [Protocol / Protokoll](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/4a6fe9c383e56b5a26f286fba6aa6d8c9263308a/research/lorentz_local_dalembert/joint_feasibility/PROTOCOL.md)
 - [Full replay / Vollständige Wiederholung](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/4a6fe9c383e56b5a26f286fba6aa6d8c9263308a/research/lorentz_local_dalembert/joint_feasibility/VERIFICATION.json)
+
+## Skalare Testreihe abgeschlossen: jetzt die endliche Detektorantwort prüfen
+
+Die skalare CSPP-Testreihe v0.1–v0.8 ist für ihre festgelegten Quellen, Wellenlängen, Geometrien und Budgets abgeschlossen. Der unabhängige G1-Test betrifft 256 frische Wolken: 119 von 120 Feld-/Zelltests verwerfen eine notwendige 10-%-Bedingung, verteilt über alle zwölf Zellen. G1 bleibt HOLD; Dirac ist nicht freigegeben. Das Ergebnis betrifft diese Modelle und Anforderungen, nicht jede Theorie kausaler Mengen.
+
+Der neue Entwicklungsbenchmark v0.9 überträgt dieselben Felder auf einen räumlich und zeitlich ausgedehnten linearen Detektor. Acht bereits bekannte Archivwolken liefern 80 Feld-/Fensterantworten. Das Verfahren schließt Kausalgrenzen, Integrationsreste, Anfangsdatenrundung und numerische Lösungsfehler ein. Quellen und räumlicher Detektor bleiben fest; zwei neue Zeitfenster sind vor der Rechnung ausdrücklich festgelegt.
+
+Das Ergebnis lautet QUADRATURE_HOLD: 74 von 80 Antworten verfehlen die festgelegte Integrationsgenauigkeit. Die sechs übrigen Antworten sind exakt null, weil die kompakte H1-Anfangshistorie auf drei Wolken kein nichtverschwindendes Quellendatum enthält. Die breiten Einschließungen messen Rechenunsicherheit und belegen kein physikalisches Rauschen. Präzisionsvergleich, CPU-Vergleich und vollständige Wiederholung bestehen.
+
+Als Nächstes müssen die Detektorintegration und die Abbildung der kompakten Anfangsdaten verbessert werden. Die vollständige räumliche Paar-Kovarianz und eine unabhängige Vorhersage des Fluktuationstransfers bleiben offen. Neue Bestätigungswolken, eine Quantengravitationsdeutung und mechanische oder kosmologische Anwendungen folgen erst nach ihren eigenen Voraussetzungen.
+
+- [Closure / Abschluss](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/0ea645c9381979a55bc943f5f5ce1dcc4d39b6ca/research/cspp/detector_transfer_v0_9/CLOSURE.md)
+- [Results / Ergebnisse](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/0ea645c9381979a55bc943f5f5ce1dcc4d39b6ca/research/cspp/detector_transfer_v0_9/RESULTS.md)
+- [Methods / Methoden](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/0ea645c9381979a55bc943f5f5ce1dcc4d39b6ca/research/cspp/detector_transfer_v0_9/METHODS.md)
+- [Protocol / Protokoll](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/0ea645c9381979a55bc943f5f5ce1dcc4d39b6ca/research/cspp/detector_transfer_v0_9/PROTOCOL.json)
+- [Checks / Prüfungen](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/0ea645c9381979a55bc943f5f5ce1dcc4d39b6ca/research/cspp/detector_transfer_v0_9/results/CHECKS.json)
+- [Next step / Anschlussentscheidung](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/0ea645c9381979a55bc943f5f5ce1dcc4d39b6ca/research/cspp/detector_transfer_v0_9/NEXT_STEP.md)

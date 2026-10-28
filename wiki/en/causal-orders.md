@@ -4,7 +4,7 @@ This research asks what structure is carried by relationships before a spatial d
 
 [Deutsch](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/de/causal-orders.md) · [Wiki overview](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/en/)
 
-Source snapshot: 2026-10-19 · `4a6fe9c383e56b5a26f286fba6aa6d8c9263308a`
+Source snapshot: 2026-10-28 · `0ea645c9381979a55bc943f5f5ce1dcc4d39b6ca`
 
 ## Events and their ordering
 
@@ -392,3 +392,20 @@ JOINT_FEASIBILITY_SUPPORTED means the joint prerequisites can be met in this den
 - [Results / Ergebnisse](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/4a6fe9c383e56b5a26f286fba6aa6d8c9263308a/research/lorentz_local_dalembert/joint_feasibility/RESULTS.md)
 - [Protocol / Protokoll](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/4a6fe9c383e56b5a26f286fba6aa6d8c9263308a/research/lorentz_local_dalembert/joint_feasibility/PROTOCOL.md)
 - [Full replay / Vollständige Wiederholung](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/4a6fe9c383e56b5a26f286fba6aa6d8c9263308a/research/lorentz_local_dalembert/joint_feasibility/VERIFICATION.json)
+
+## Scalar series closed: testing the finite detector response next
+
+The scalar CSPP series v0.1–v0.8 is closed for its specified sources, wavelengths, geometries and budgets. The independent G1 test uses 256 fresh clouds: 119 of 120 field/cell tests reject a necessary 10% condition, covering all twelve cells. G1 remains HOLD; Dirac is not cleared. This concerns these models and requirements, not every causal-set theory.
+
+The new v0.9 development benchmark transfers the same fields to a spatially and temporally extended linear detector. Eight previously examined archive clouds produce 80 field/window responses. The method encloses causal boundaries, integration remainders, initial-history rounding and numerical solution errors. Sources and the spatial detector stay fixed; two new time windows are explicitly specified before the calculation.
+
+The result is QUADRATURE_HOLD: 74 of 80 responses miss the declared integration tolerance. The other six responses are exactly zero because the compact H1 initial history contains no nonzero source datum on three clouds. Wide enclosures measure computational uncertainty and do not establish physical noise. Precision comparison, CPU comparison and full replay pass.
+
+The next tasks are to improve detector integration and the compact initial-data adapter. Full spatial pair covariance and an independent fluctuation-transfer prediction remain open. Fresh confirmation clouds, a quantum-gravity interpretation, and mechanical or cosmological applications require their own prerequisites.
+
+- [Closure / Abschluss](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/0ea645c9381979a55bc943f5f5ce1dcc4d39b6ca/research/cspp/detector_transfer_v0_9/CLOSURE.md)
+- [Results / Ergebnisse](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/0ea645c9381979a55bc943f5f5ce1dcc4d39b6ca/research/cspp/detector_transfer_v0_9/RESULTS.md)
+- [Methods / Methoden](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/0ea645c9381979a55bc943f5f5ce1dcc4d39b6ca/research/cspp/detector_transfer_v0_9/METHODS.md)
+- [Protocol / Protokoll](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/0ea645c9381979a55bc943f5f5ce1dcc4d39b6ca/research/cspp/detector_transfer_v0_9/PROTOCOL.json)
+- [Checks / Prüfungen](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/0ea645c9381979a55bc943f5f5ce1dcc4d39b6ca/research/cspp/detector_transfer_v0_9/results/CHECKS.json)
+- [Next step / Anschlussentscheidung](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/0ea645c9381979a55bc943f5f5ce1dcc4d39b6ca/research/cspp/detector_transfer_v0_9/NEXT_STEP.md)

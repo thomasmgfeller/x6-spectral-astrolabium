@@ -4,7 +4,7 @@ Frage bei einem Ergebnis immer: Welche Aussage wurde geprüft, mit welchen Daten
 
 [English](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/en/evidence.md) · [Wiki-Übersicht](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/de/)
 
-Quellenstand: 2026-10-19 · `4a6fe9c383e56b5a26f286fba6aa6d8c9263308a`
+Quellenstand: 2026-10-28 · `0ea645c9381979a55bc943f5f5ce1dcc4d39b6ca`
 
 ## Vier unterschiedliche Arten von Belegen
 
