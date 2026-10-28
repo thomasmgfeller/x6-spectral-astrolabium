@@ -1,0 +1,49 @@
+name: CSPP detector methods
+on:
+  pull_request:
+    paths: ['research/cspp/detector_methods_v0_10/**', '.github/workflows/cspp-detector-methods.yml']
+  push:
+    branches: [main]
+    paths: ['research/cspp/detector_methods_v0_10/**', '.github/workflows/cspp-detector-methods.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  detector-methods:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    env:
+      PYTHONDONTWRITEBYTECODE: '1'
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - run: python3 -m pip install -r research/cspp/detector_methods_v0_10/requirements.txt
+      - name: Verify method registration precedes archive integration
+        run: |
+          python3 - <<'PY'
+          import datetime, hashlib, json, pathlib, posixpath, subprocess
+          root=pathlib.Path('research/cspp/detector_methods_v0_10')
+          receipt=json.loads((root/'REGISTRATION.json').read_text())
+          freeze=json.loads((root/'FREEZE.json').read_text())
+          commit=receipt['commit_sha']
+          for name,expected in freeze['files'].items():
+              p=posixpath.normpath(str(root)+'/'+name)
+              b=subprocess.check_output(['git','show',commit+':'+p])
+              if hashlib.sha256(b).hexdigest()!=expected:
+                  raise SystemExit('FAIL: source differs from public method freeze: '+p)
+          stamp=int(subprocess.check_output(['git','show','-s','--format=%ct',commit]))
+          start=datetime.datetime.fromisoformat(json.loads((root/'results/COMPUTE_128.json').read_text())['started_UTC']).timestamp()
+          if not stamp<start:raise SystemExit('FAIL: integration precedes registration')
+          print('PASS: archived development only, no fresh confirmation claim')
+          PY
+      - name: Verify controls, enclosures and separated scientific gates
+        run: python3 -O -B research/cspp/detector_methods_v0_10/verify10.py
+      - name: Replay all fixed clouds and grids at both precisions and CPU modes
+        run: python3 -B research/cspp/detector_methods_v0_10/verify10.py --replay
