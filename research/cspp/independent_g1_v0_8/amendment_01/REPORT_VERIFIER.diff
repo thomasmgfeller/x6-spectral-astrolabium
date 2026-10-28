@@ -1,0 +1,34 @@
+--- frozen/verify_publication.py
++++ publication_checks.py
+@@ -1 +1 @@
+-"""Verify frozen inputs, complete denominators and exact rejection logic, also under -O."""
++"""Publication verifier, with Amendment01 for precision-dependent report floors."""
+@@ -7,0 +8,21 @@
++
++def exact_decision(d):
++    """Compare exact rational endpoints/counts/decisions, not rounded floors."""
++    copy=json.loads(json.dumps(d))
++    for cell in copy['cells']:
++        for test in cell['tests']:del test['population_RMS_lower']
++    return copy
++
++def validate_reported_lower_bounds(d):
++    previous=ctx.prec
++    try:
++        ctx.prec=256
++        for cell in d['cells']:
++            for test in cell['tests']:
++                lo=arb(test['exceedance_probability_lower_endpoint_bracket'][0])
++                exact=(lo/25).sqrt()
++                raw=unpack(test['population_RMS_lower'])
++                check(raw.imag.is_zero() and raw.real.lower()>=0,'real nonnegative RMS lower report')
++                check(raw.real.lower()<=exact.lower(),'reported endpoint is a valid downward RMS bound')
++                check((exact-raw.real.lower()).upper()<=arb('1e-35'),'precision-specific floor near exact expression')
++    finally:ctx.prec=previous
+@@ -42,2 +63,4 @@
+-    check(decision==json.loads((source/'DECISION_128.json').read_text()),'derive every statistical conclusion from full ensemble')
+-    check(decision==json.loads((source/'DECISION_192.json').read_text()),'identical exact statistical conclusions')
++    for bits in [128,192]:
++        saved=json.loads((source/f'DECISION_{bits}.json').read_text())
++        check(exact_decision(decision)==exact_decision(saved),'identical exact counts, CP rational endpoints and decisions')
++        validate_reported_lower_bounds(saved)

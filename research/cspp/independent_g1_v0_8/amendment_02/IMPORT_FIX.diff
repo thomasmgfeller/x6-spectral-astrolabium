@@ -1,0 +1,10 @@
+--- amendment01/publication_checks.py
++++ publication_checks.py
+@@ -6,2 +6,5 @@
+-from support import HERE,check,sha,write,plan,freeze_check,gzread,unpack,old,digest,norm
+-import audit,inference,scalar_operator as op
++from support import HERE,check,sha,write,plan,freeze_check,gzread,unpack,old,digest,norm,load
++import inference,scalar_operator as op
++# support exposes predecessor geometry through sys.path; resolve this audit
++# by its frozen package path, never by the ambiguous bare module name.
++audit=load('v08_frozen_audit',HERE/'audit.py')

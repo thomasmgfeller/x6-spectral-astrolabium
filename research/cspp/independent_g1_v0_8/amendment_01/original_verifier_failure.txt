@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/workspace/scratch/3cfacb966390/x6-g1/research/cspp/independent_g1_v0_8/verify_publication.py", line 95, in <module>
+    result=replay() if z.replay else verify(HERE/'results')
+                                     ^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/3cfacb966390/x6-g1/research/cspp/independent_g1_v0_8/verify_publication.py", line 43, in verify
+    check(decision==json.loads((source/'DECISION_192.json').read_text()),'identical exact statistical conclusions')
+  File "/workspace/scratch/3cfacb966390/x6-g1/research/cspp/scalar_propagation_v0_7/common.py", line 14, in check
+    if not bool(ok):raise RuntimeError('HOLD: '+label)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: HOLD: identical exact statistical conclusions
