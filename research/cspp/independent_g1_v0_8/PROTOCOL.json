@@ -1,0 +1,80 @@
+{
+  "schema": "cspp.independent-g1/0.8",
+  "date": "2026-10-28",
+  "base_remote_commit": "1cdb19d0fd29e12df2746944644907bfdafb3549",
+  "mode": "preregistered independent necessary-condition rejection test; not a positive G1 certificate",
+  "question": "Do any of the twelve unchanged pilot cells survive an independent test of the necessary scalar operator RMS <= 0.1 condition?",
+  "candidate_selection": "all original four densities and three epsilons, no selection by observed effect or best pilot cell",
+  "nu": [512, 1024, 2048, 4096],
+  "epsilon": ["1", "1/4", "1/16"],
+  "realizations_per_density": 64,
+  "independent_clouds": 256,
+  "paired_epsilon_within_cloud": true,
+  "geometry": "unchanged open Omega4, |t|+r<4, volume=512*pi/3; exact stored binary64 coordinates",
+  "fields": ["1", "t", "z", "t2", "z2", "tz", "wave_k0", "wave_k2", "wave_k4", "wave_k8"],
+  "cutoff": "unchanged chi=h(abs(t))*h(r), h(q)=1 for q<=1, 0 for q>=3, logistic(1/s-1/(1-s)) for s=(q-1)/2 in (0,1)",
+  "wave": "chi*exp(i*(k*z-sqrt(k*k+1)*t)), k=0,2,4,8",
+  "probes": "unchanged first 21 pilot probes: t=-1/2,0,1/2 crossed with spatial origin and six axis points at radius1/2; equal weights1/21",
+  "metric": "R=sqrt(mean_21(abs(B_C phi-Box phi)^2))/max(sqrt(mean_21(abs(phi)^2)),sqrt(mean_21(abs(Box phi)^2))); target sqrt(E[R^2])<=1/10 for every field",
+  "operator": "unchanged 4D smoothed BD, a=4*sqrt(epsilon*rho/6), Bphi=a*(-phi+epsilon*sum(w_e(n)*phi)); rho=nu/(512*pi/3), not N/V",
+  "statistics": {
+    "familywise_alpha": "1/40",
+    "hypotheses": 120,
+    "one_sided_alpha_per_field_cell": "1/4800",
+    "exceedance_threshold": "1/5",
+    "null_exceedance_probability_max": "1/4",
+    "critical_successes_out_of_64": 30,
+    "rule": "A success requires certified R_lower>1/5. Exact rational binomial tail at p=1/4 <=1/4800 rejects population RMS<=1/10. Report exact-rational lower Clopper-Pearson endpoints and RMS lower=(1/5)*sqrt(p_lower), simultaneously across all120 tests.",
+    "M_rationale": "fixed64 gives exact binomial power>0.98 for exceedance probability>=0.6 at the family-adjusted threshold; this is rejection power, not precision of an upper RMS confidence limit",
+    "dependence": "independent realizations assumed; fields and epsilon cells may be dependent, Bonferroni does not require their independence",
+    "unavailable": "Keep all64 trial slots. Missing/resource/geometry/numerical cases contribute zero certified exceedances, never redraw or drop. The resulting lower bound remains conservative by monotonicity, even with outcome-dependent missingness.",
+    "no_optional_stopping": true,
+    "no_clipping_of_RMS_or_student_t": true,
+    "positive_acceptance": "not supported by this lower-bound test; nonrejection is INCONCLUSIVE, never PASS"
+  },
+  "rng": {
+    "engine": "numpy==2.3.5 PCG64DXSM SeedSequence",
+    "master_seed": 202610280801,
+    "entropy": "[2,8,1,density_index,realization_index,1,202610280801]",
+    "phase": "method_validation, distinct from all development and E4 confirmation streams",
+    "sampler": "unchanged pilot scalar.points; fresh Poisson(nu), no shell and no redraw",
+    "draw_after_public_preregistration_only": true,
+    "E4_confirmation_seed_used": false,
+    "model_limit": "independent-stream Monte Carlo assumption; no theorem identifying rounded PRNG coordinates with ideal continuous Poisson geometry"
+  },
+  "error_budgets": {
+    "operator_population_RMS_target": "1/10",
+    "reference_and_Arb_component_radius_max": "1e-12",
+    "normalized_input_evaluation_RMS_upper_max": "1e-8",
+    "normalized_coefficient_and_sum_RMS_upper_max": "1e-8",
+    "separation": "exact dyadic geometry; analytic cutoff field and continuum reference enclosed; exact B error separate from B(input-rounded)-B(exact-input) and float-B minus exact B(input-rounded)",
+    "domain": "finite-domain and nonlocality errors remain in exact operator error; no reallocation of v0.6 budgets",
+    "initial_data_and_solve": "not used in local operator stage; a failed necessary operator condition stops before a new propagation ensemble. v0.7 remains separate development evidence, not independent confirmation."
+  },
+  "precision_bits": [128, 192],
+  "cpu": {
+    "geometry": "v0.7 outward binary64 filters and exact rational fallback; strict null exclusion; all cloud/cloud and cloud/probe relation bitsets, probe interval counts and exact Omega4 membership",
+    "modes": ["default", "AVX512F,AVX512CD,AVX512_SKX,AVX512_CLX,AVX512_CNL,AVX512_ICL,AVX512_SPR"],
+    "coordinate_screen": "2^-48",
+    "numeric_atol": "1e-10",
+    "numeric_rtol": "1e-11",
+    "production_coordinates": "canonical archived coordinates; regenerated CPU coordinates audit the sampler, not new realizations"
+  },
+  "resources": {"max_points_per_cloud": 6000, "memory_GiB": 4, "campaign_wall_seconds": 21600, "workers": 1},
+  "stopping": {
+    "complete_operator_stage": "all256 identities and all12 cells, regardless of early failures",
+    "resource_abort": "stop on global wall/memory limit, retain every unattempted slot as unavailable; no successful G1 decision",
+    "integrity_abort": "source freeze, replay or CPU failure => METHOD_HOLD; no inferential release from a broken implementation",
+    "after_fixed_ensemble": "any rejected field rejects its parameter cell; all12 rejected => ALL_TESTED_CELLS_REJECTED; otherwise INCONCLUSIVE_FOR_SURVIVORS; in both cases G1 HOLD pending a complete positive qualification",
+    "no_fermion_run": "G2 remains NOT_RUN and Dirac implementation/fit is not started without a separately complete independently passed G1; Flavor and coherence additionally require G2 and G3"
+  },
+  "future_G2": {
+    "required_evidence": ["direct Q_C psi versus sampled Q psi", "Q_C squared versus (B_C tensor I4) on independent test fields", "spin/Lorentz transformations on jointly transformed regions and inputs", "renumbering invariance", "dispersion and extra-mode tests", "norm/current and causal stability", "separate numerical error evidence and source/detector spin structure"],
+    "direct_and_square_normalized_RMS_max": "0.1",
+    "global_norm_drift_max": "1e-8",
+    "convention": "gamma0=i*beta, gammaj=i*beta*alphaj, eta=(-,+,+,+), Q^2=Box I4; (Q-m)(Q+m)=Box-m^2",
+    "matrix_square_root_is_sufficient": false,
+    "run_ready": false
+  },
+  "forbidden_claims": ["full G1 PASS from nonrejection", "universal scalar impossibility", "new viable budget candidate", "Dirac or flavor validation", "E4 ensemble confirmation", "completed spatial detector cubature"]
+}
