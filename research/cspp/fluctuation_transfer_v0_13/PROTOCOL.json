@@ -1,0 +1,29 @@
+{
+  "schema": "cspp.predictive-fluctuation-transfer/0.13",
+  "base_commit": "978dcac9cc53b90902d39cb9215cc67eff628c98",
+  "mode": "deterministic derivation and exact stochastic control, no fitted covariance and no new random clouds",
+  "scope": {
+    "original_detector": "same spatial ball and two full time windows as v0.12; rigorous Poisson zero-source moment constraints and truncation majorants, no fully evaluated ensemble mean/covariance",
+    "joint_kernel": "all orders from disjoint Poisson atoms with repeated independent thinning marks and explicit Palm insertions",
+    "control": "finite causal skeleton with Poisson interval weights; background points modify counts but are not themselves solution nodes; two node-output channels, not the original spatial detector",
+    "nonlocal_adapter": "not a total ensemble map yet; no silently discarded or zero-filled projection failures",
+    "oscillator": "independent solvable random-frequency control with correlated Cauchy data and exact integration over shifted original time windows"
+  },
+  "original_parameters": {"nu":512,"rho":"3/pi","epsilon":"1/16","mass":1,"Omega":"|t|+r<4","history":"t<=-1","source_support_radius":"1/2","time_windows":[["3/4","1"],["1","5/4"]]},
+  "control_parameters": {
+    "y1":[-2,0,0,0],"y2":[-2,0,0,"1/2"],"x1":[0,0,0,0],"x2":[1,0,0,"1/2"],
+    "A":"I(y1,x1)","B":"I(y2,x2)","C":"I(x1,x2)","H":"A intersect B intersect {t<=-1}",
+    "rho":"3/pi","epsilon":"1/16","mass":1,"Palm_shifts":[0,1,0,0],"kappa":"1/5",
+    "h1":"(1+i/2)*(1+kappa*(w(N_H)-Ew(N_H)))",
+    "h2":"(1-i/3)*(1-kappa/2*(w(N_H)-Ew(N_H)))",
+    "u1":"beta*w(N_A)*h1","u2":"beta*w(N_B+1)*h2+beta*w(N_C)*u1"
+  },
+  "oscillator_parameters": {"xi":[-1,1],"probabilities":["1/2","1/2"],"omega_squared":"1+xi/4","f":"1+xi/5","g":"xi/10","shifted_time_windows":[["7/4","2"],["2","9/4"]]},
+  "precision_bits":[128,192],
+  "exact_target_radius_goal":"1e-22",
+  "count_sum_audit_tolerance":"1e-13",
+  "source_path_order":128,
+  "source_Poisson_count_cutoff":1024,
+  "generic_overlap_box_depth":12,
+  "scientific_status":"CONTROL_PREDICTIONS_CERTIFIED; ORIGINAL_LOCAL_MOMENT_CONSTRAINTS_CERTIFIED; FULL_ENSEMBLE_MOMENTS_NOT_EVALUATED; METHOD_HOLD; G1 HOLD"
+}

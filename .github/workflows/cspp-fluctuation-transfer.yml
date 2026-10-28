@@ -1,0 +1,53 @@
+name: CSPP predictive fluctuation transfer
+on:
+  pull_request:
+    paths: ['research/cspp/fluctuation_transfer_v0_13/**', '.github/workflows/cspp-fluctuation-transfer.yml']
+  push:
+    branches: [main]
+    paths: ['research/cspp/fluctuation_transfer_v0_13/**', '.github/workflows/cspp-fluctuation-transfer.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  predictive-moment-audit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    env:
+      PYTHONDONTWRITEBYTECODE: '1'
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - run: python3 -m pip install -r research/cspp/fluctuation_transfer_v0_13/requirements.txt
+      - name: Audit archived predictions and analytical controls
+        run: python3 -B research/cspp/fluctuation_transfer_v0_13/verify.py
+      - name: Reproduce predictions, independent count sum and exact targets
+        working-directory: research/cspp/fluctuation_transfer_v0_13
+        run: |
+          cp results/PREDICTIONS_128.json /tmp/fluctuation-original-128.json
+          cp results/PREDICTIONS_192.json /tmp/fluctuation-original-192.json
+          python3 -B run.py --bits 128 --out results/PREDICTIONS_128.json
+          python3 -B run.py --bits 192 --out results/PREDICTIONS_192.json
+          python3 -B audit.py
+          python3 -B verify.py
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          from flint import ctx
+          from verify import target_inventory
+          ctx.prec=256
+          for bits in [128,192]:
+              old=json.loads(Path(f'/tmp/fluctuation-original-{bits}.json').read_text())
+              new=json.loads(Path(f'results/PREDICTIONS_{bits}.json').read_text())
+              a,b=target_inventory(old),target_inventory(new)
+              assert a.keys()==b.keys()
+              assert all(a[k].overlaps(b[k]) for k in a)
+              for key in ['overall_status','nonlocal_ensemble','original_ensemble_moments','new_random_clouds','fitted_parameters']:
+                  assert old[key]==new[key]
+          print('PASS: exact predictive targets replayed; original ensemble limitations retained')
+          PY
