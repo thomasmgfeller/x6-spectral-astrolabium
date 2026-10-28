@@ -4,7 +4,7 @@ This research asks what structure is carried by relationships before a spatial d
 
 [Deutsch](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/de/causal-orders.md) · [Wiki overview](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/en/)
 
-Source snapshot: 2026-10-28 · `0ea645c9381979a55bc943f5f5ce1dcc4d39b6ca`
+Source snapshot: 2026-10-28 · `ed481912b9330a09d02206beff6f6f535bb4ef85`
 
 ## Events and their ordering
 
@@ -409,3 +409,22 @@ The next tasks are to improve detector integration and the compact initial-data 
 - [Protocol / Protokoll](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/0ea645c9381979a55bc943f5f5ce1dcc4d39b6ca/research/cspp/detector_transfer_v0_9/PROTOCOL.json)
 - [Checks / Prüfungen](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/0ea645c9381979a55bc943f5f5ce1dcc4d39b6ca/research/cspp/detector_transfer_v0_9/results/CHECKS.json)
 - [Next step / Anschlussentscheidung](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/0ea645c9381979a55bc943f5f5ce1dcc4d39b6ca/research/cspp/detector_transfer_v0_9/NEXT_STEP.md)
+
+## Tighter detector integration and limits of local initial histories
+
+CSPP v0.10 integrates time analytically along causal-cone arrival times. A parametrization with known volume weights covers the entire detector ball. The same eight known clouds, sources, wavenumbers and time windows are tested on three spatial grids specified before the runs. No new sprinklings are generated.
+
+On the finest grid, the 74 nontrivial original intervals are roughly five to six times narrower than in v0.9. This also uses a larger spatial cell budget. Eleven of 80 original integration budgets pass: six zero signals plus five additional nonzero compact signals. All wave controls remain above tolerance. These intervals describe computational uncertainty, not measured quantum noise.
+
+For compact initial data, separate H1/H3 error upper bounds now reach the detector observable. They qualify none of the 32 cases. Large upper bounds are not measured errors or error lower bounds. A separate structural limitation is decisive: all local derivatives vanish outside the compact source. Any finite local Taylor history therefore remains zero when the cloud misses the entire source support. Higher order alone cannot repair that information loss.
+
+In the ideal Poisson model, the empty-history probability at the present density is exactly exp(-21/16), about 26.9 percent. This follows from the source-history region volume, rather than an estimate from eight clouds or a universal quantum-noise constant. A controlled nonlocal initial-data map and integration that better retains shared field dependencies are the next methodological tasks. METHOD_HOLD and G1 HOLD remain in force.
+
+Nine analytic controls and 52,284 precision/CPU enclosure comparisons pass. A disclosed verifier correction removes the false requirement that differently computed error upper bounds enclose the same number. Frozen production sources, field comparisons, raw data and error budgets remain unchanged.
+
+- [Results / Ergebnisse](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/ed481912b9330a09d02206beff6f6f535bb4ef85/research/cspp/detector_methods_v0_10/RESULTS.md)
+- [Methods / Methoden](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/ed481912b9330a09d02206beff6f6f535bb4ef85/research/cspp/detector_methods_v0_10/METHODS.md)
+- [Protocol / Protokoll](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/ed481912b9330a09d02206beff6f6f535bb4ef85/research/cspp/detector_methods_v0_10/PROTOCOL.json)
+- [Adapter limitation / Adaptergrenze](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/ed481912b9330a09d02206beff6f6f535bb4ef85/research/cspp/detector_methods_v0_10/ADAPTER_OBSTRUCTION.md)
+- [Checks / Prüfungen](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/ed481912b9330a09d02206beff6f6f535bb4ef85/research/cspp/detector_methods_v0_10/results/CHECKS.json)
+- [Verifier amendment / Prüfkorrektur](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/ed481912b9330a09d02206beff6f6f535bb4ef85/research/cspp/detector_methods_v0_10/VERIFICATION_AMENDMENT.json)
