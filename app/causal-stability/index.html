@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="canonical" href="https://thomasmgfeller.github.io/x6-spectral-astrolabium/app/causal-stability/">
+  <meta name="theme-color" content="#0a101c">
+  <title>Causal Stability Lab · CSPP</title>
+  <meta name="description" content="Ein interaktives Forschungslabor für kausale Pfadverstärkung, Aufhebung und endliche Störungsantworten. Mit reproduzierbarem CSPP-Kontrollgraphen.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#labor">Zum Labor</a>
+<header class="topbar"><a class="brand" href="#" aria-label="Causal Stability Lab Start"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 23 16 7l11 16H5L16 15l11 8M16 7v8"/><circle cx="5" cy="23" r="3"/><circle cx="16" cy="7" r="3"/><circle cx="27" cy="23" r="3"/><circle cx="16" cy="15" r="2"/></svg><span>CSPP <b>RESEARCH TOOLS</b></span></a><nav aria-label="Hauptnavigation"><a href="../../de/index.html">X6 Übersicht</a><a href="#labor" class="active">Labor</a><a href="#methodik">Mathematik</a><a href="#quellen">Provenienz</a></nav><span class="version">v0.1 <span class="live-dot"></span> lokal berechnet</span></header>
+<main>
+<noscript><p>Dieses Labor benötigt JavaScript für die interaktiven Berechnungen. Die <a href="https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/docs/research/cspp/causal-stability-lab/MATHEMATICS.md">mathematische Herleitung und der Geltungsbereich</a> bleiben ohne JavaScript lesbar.</p></noscript>
+<section class="intro"><div><div class="eyebrow">01 / KAUSALE STABILITÄT</div><h1>Was verstärkt eine Störung?</h1><p>Verfolge kausale Pfade. Prüfe ihre Aufhebung. Sieh, warum ein unauffälliges Spektrum noch keine stabile Ausbreitung bedeutet.</p></div><div class="scope-tag"><span class="amber-dot"></span><div><strong>Endliche Diagnose</strong><span>METHOD & G1 · HOLD</span></div></div></section>
+<section id="labor" aria-label="Interaktives Stabilitätslabor">
+<div class="preset-bar" role="group" aria-label="Kontrollmodell auswählen">
+ <button class="preset selected" data-preset="cspp" aria-pressed="true"><span class="preset-num">01</span><span><strong>CSPP v0.25</strong><small>Publizierter Kontrollgraph</small></span><span class="preset-arrow">↗</span></button>
+ <button class="preset" data-preset="contract" aria-pressed="false"><span class="preset-num">02</span><span><strong>Kontraktive Kette</strong><small>Beschränkte Verstärkung</small></span><span class="preset-arrow">↗</span></button>
+ <button class="preset" data-preset="amplify" aria-pressed="false"><span class="preset-num">03</span><span><strong>Verstärkende Kette</strong><small>Gleiche Eigenwerte, anderes Verhalten</small></span><span class="preset-arrow">↗</span></button>
+ <button class="preset" data-preset="cancel" aria-pressed="false"><span class="preset-num">04</span><span><strong>Gegenläufige Pfade</strong><small>Aufhebung & Empfindlichkeit</small></span><span class="preset-arrow">↗</span></button>
+</div>
+<div id="error" role="alert" hidden></div>
+<div class="metrics" aria-label="Endliche Verstärkungsmaße">
+ <div class="metric"><span>HISTORY → PROBE</span><div><strong id="gain-value">—</strong><em>×</em></div><p>Maximale Verstärkung Γ<sub>H</sub></p></div>
+ <div class="metric"><span>ALLE PFADE ALS BETRÄGE</span><div><strong id="bound-value">—</strong><em>×</em></div><p>Obere Schranke P<sub>H</sub></p></div>
+ <div class="metric"><span>AKTIVE FEHLER</span><div><strong id="resolvent-value">—</strong><em>×</em></div><p>Antwortnorm ‖(I − K)<sup>−1</sup>‖<sub>∞</sub></p></div>
+ <div class="metric"><span>AUFHEBUNG DER PFADE</span><div><strong id="cancellation-value">—</strong><em>%</em></div><p>Reduktion gegenüber P<sub>H</sub></p></div>
+</div>
+<div class="workspace">
+ <section class="panel network-panel" aria-labelledby="network-title">
+  <div class="panel-heading"><div><div class="eyebrow">TRANSFERGRAPH</div><h2 id="network-title">Einfluss sichtbar machen</h2></div><span id="graph-count" class="count-chip"></span></div>
+  <div class="graph-toolbar"><div class="legend"><span><i class="cyan"></i>positiver Beitrag</span><span><i class="rose"></i>negativer Beitrag</span></div><label class="select-inline">Kanten <select id="edge-view" aria-label="Sichtbare Kanten"><option value="all">alle</option><option value="strong">stärkste 12</option><option value="selected">zum gewählten Knoten</option></select></label></div>
+  <div class="graph-scroll"><svg id="network" role="img" aria-labelledby="network-svg-title" viewBox="0 0 1000 350"><title id="network-svg-title">Schematischer kausaler Transfergraph</title></svg></div>
+  <div class="graph-caption"><span id="edge-count"></span><span>Layout-Abstände sind keine Raumzeitabstände.</span></div>
+  <div class="playback"><button id="play" class="primary small"><span aria-hidden="true">▶</span> Berechnung abspielen</button><button id="step" class="icon-btn" title="Einen Rechenschritt weiter" aria-label="Einen Rechenschritt weiter">→|</button><input id="progress" type="range" min="0" max="6" value="6" aria-label="Fortschritt der Vorwärtsrechnung"><span id="step-label"></span></div>
+  <div class="evaluation-note">Die Animation zeigt die Rechenreihenfolge, keine physikalische Uhr. Die Kennzahlen gelten für die vollständige Auswertung.</div>
+  <div class="node-detail"><label for="node-select">Knoten untersuchen <select id="node-select"></select></label><div><span>Störungsantwort</span><strong id="node-value">—</strong></div><div><span>Summe |Beiträge|</span><strong id="node-absolute">—</strong></div><div><span>Eingehende Kanten</span><strong id="node-edges">—</strong></div></div>
+ </section>
+ <aside class="panel controls" aria-label="Versuchsparameter">
+  <div class="panel-heading"><div><div class="eyebrow">VERSUCHSANORDNUNG</div><h2>Parameter</h2></div><button id="reset" class="text-btn">Zurücksetzen ↺</button></div>
+  <p id="model-description" class="muted"></p>
+  <div class="control"><label for="node-count">Aktive Knoten <output id="node-count-out">5</output></label><input id="node-count" type="range" min="3" max="24" step="1" value="5"><div class="range-ends"><span>3</span><span>24</span></div></div>
+  <div class="control" id="theta-control"><label for="theta">Schichtparameter θ <output id="theta-out">21</output></label><input id="theta" type="range" min="-8" max="30" step="0.25" value="21"><div class="range-ends"><span>−8</span><span>30</span></div></div>
+  <div class="control" id="coupling-control" hidden><label for="coupling">Kopplung γ <output id="coupling-out">0,55</output></label><input id="coupling" type="range" min="0.1" max="1.6" step="0.01" value="0.55"><div class="range-ends"><span>0,10</span><span>1,60</span></div></div>
+  <div class="control" id="mismatch-control" hidden><label for="mismatch">Pfad-Asymmetrie ε <output id="mismatch-out">4 %</output></label><input id="mismatch" type="range" min="0" max="1" step="0.01" value="0.04"><div class="range-ends"><span>exakte Aufhebung</span><span>ein Pfad entfällt</span></div></div>
+  <hr>
+  <div class="control"><label for="eta">History-Störung η <output id="eta-out">0,01</output></label><input id="eta" type="range" min="-4" max="0" step="0.25" value="-2"><div class="range-ends"><span>10⁻⁴</span><span>1</span></div></div>
+  <label class="block-label" for="pattern">Störungsmuster</label><select id="pattern"><option value="worst">Ungünstigste Vorzeichen für die Probe</option><option value="common">Alle History-Werte gleich</option><option value="alternating">Abwechselnde Vorzeichen</option></select>
+  <div class="probe-response"><span>Antwort der Probe · δA</span><strong id="probe-value">—</strong><small id="probe-note"></small></div>
+  <div class="numeric-note"><span class="tiny-dot"></span>Deterministisch · kein Ensemble · keine Glättung</div>
+ </aside>
+</div>
+<div class="insight" id="insight"><span class="insight-icon" aria-hidden="true">λ</span><div><strong id="insight-title"></strong><p id="insight-body"></p></div><a href="#methodik">Warum? ↗</a></div>
+<div class="chart-grid">
+ <section class="panel"><div class="panel-heading"><div><div class="eyebrow">GRAPH VERLÄNGERN</div><h2>Was passiert mit mehr Knoten?</h2></div><label class="check"><input type="checkbox" id="log-scale" checked>log. Skala</label></div><div class="chart-legend"><span><i class="cyan"></i>Γ<sub>H</sub></span><span><i class="amber"></i>Pfadmajorante</span><span><i class="lavender"></i>Aktive Fehlernorm</span></div><svg id="horizon-chart" class="chart" viewBox="0 0 600 270" role="img" aria-label="Verstärkungsmaße in Abhängigkeit der aktiven Knotenzahl"></svg><p class="chart-note">Dieselbe Modellfamilie, 3–24 aktive Knoten. Keine Dichte- oder Kontinuumsextrapolation. Exakte Nullen werden auf der logarithmischen Skala nicht gezeichnet.</p></section>
+ <section class="panel"><div class="panel-heading"><div><div class="eyebrow">BEITRÄGE ZUR PROBE</div><h2>Wie heben sich Pfade auf?</h2></div><span class="count-chip">aktuelles Störungsmuster</span></div><div class="chart-legend"><span><i class="cyan"></i>positiv</span><span><i class="rose"></i>negativ</span><span><i class="outline"></i>Summe der Beträge</span></div><svg id="paths-chart" class="chart" viewBox="0 0 600 270" role="img" aria-label="Signierte Pfadbeiträge und ihre Betragssumme nach Pfadlänge"></svg><p class="chart-note">Die Pfadlänge zählt Übertragungskanten. Beiträge sind Amplituden, keine unabhängigen Varianzen oder Wahrscheinlichkeiten.</p></section>
+</div>
+<div class="verdict-grid"><section class="panel verdict"><div class="eyebrow">AUSREICHENDES KRITERIUM</div><h2 id="criterion-title">Kontraktion prüfen</h2><div class="criterion-value">r = ‖K‖<sub>∞</sub> <strong id="row-norm">—</strong></div><p id="criterion-body"></p><div id="criterion-badge" class="status-badge"></div></section><section class="panel scope-panel"><div class="eyebrow">GELTUNGSBEREICH</div><h2 id="scope-title">Was dieser Lauf belegt</h2><p id="scope-body"></p><div class="scope-chips"><span>METHOD · HOLD</span><span>G1 · HOLD</span><span>Dichteuniformität · offen</span></div><p class="muted small-text">Browser-Rechnung mit Float64. Die Kennzahlen sind numerische Diagnosen; sie sind keine neuen Intervallzertifikate.</p></section></div>
+</section>
+<section id="methodik" class="method-section"><div class="section-intro"><div class="eyebrow">DAS MATHEMATISCHE FUNDAMENT</div><h2>Vom Pfad zum prüfbaren Kriterium.</h2><p>Ein endliches History-Problem ist eindeutig lösbar. Ob seine Fehlerverstärkung beherrschbar bleibt, ist eine zusätzliche Frage.</p></div><div class="method-grid">
+ <article><span class="method-num">01</span><h3>Die exakte endliche Antwort</h3><div class="formula">u = Hh + Ku + f<br>R = (I − K)<sup>−1</sup> = ∑<sub>j=0</sub><sup>N−1</sup> K<sup>j</sup></div><p>h enthält vorgeschriebene History-Werte, f aktive Gleichungsfehler. K ist strikt dreieckig. Die Probe liest A = q<sub>H</sub>h + q<sub>A</sub>u aus, ohne selbst die Dynamik zu verändern.</p></article>
+ <article><span class="method-num">02</span><h3>Ein bedingter Stabilitätssatz</h3><div class="formula">sup<sub>N</sub> ‖K<sub>N</sub>‖<sub>∞</sub> ≤ r &lt; 1<br>⇒ sup<sub>N</sub> ‖R<sub>N</sub>‖<sub>∞</sub> ≤ 1 / (1 − r)</div><p>Die geometrische Reihe liefert die Schranke. Für eine Familie muss die Voraussetzung für alle N bewiesen sein. Ein einzelner grüner Messwert reicht nicht. History- und Probenkopplungen benötigen eigene uniforme Schranken.</p></article>
+ <article><span class="method-num">03</span><h3>Warum Eigenwerte nicht reichen</h3><div class="formula">K = γS, &nbsp; spec(K) = {0}<br>‖R‖<sub>∞</sub> = 1 + γ + … + γ<sup>N−1</sup></div><p>Für die hier definierte Kette mit γ ≥ 0 bleibt die Fehlernorm bei γ &lt; 1 beschränkt. Bei γ = 1 wächst sie linear, bei γ &gt; 1 exponentiell mit N. Das Spektrum bleibt in allen Fällen gleich.</p></article>
+</div><details><summary>Aufhebung, Normen und Grenzen der Aussage</summary><div class="details-body"><p>Die History-Verstärkung ist Γ<sub>H</sub> = ‖q<sub>H</sub> + q<sub>A</sub>RH‖<sub>1</sub>. Sie gibt die größte mögliche Probe-Antwort bei ‖δh‖<sub>∞</sub> ≤ 1 an. Das ungünstigste Störungsmuster wählt die Vorzeichen dieser Transferzeile und erreicht die Schranke im reellen Modell.</p><p>Die Pfadmajorante ersetzt alle Gewichte durch ihre Beträge. Die Differenz zur signierten Antwort misst Aufhebung innerhalb des festgelegten Modells. Große Aufhebung kann bei veränderten Gewichten verschwinden und sagt nichts über eine physikalische Rauschvarianz aus.</p><p>Eine einzelne endliche Matrix qualifiziert weder unendliche Vergangenheit noch wachsende Dichte. Ein Scheitern des ausreichenden Kriteriums r &lt; 1 beweist seinerseits keine Instabilität. Eine Animation ersetzt keinen Nachweis. „Wachstum“ in der Modellkurve bezieht sich auf Knotenzahl, nicht auf eine physikalische Zeitrate.</p></div></details></section>
+<section id="quellen" class="provenance"><div><div class="eyebrow">REPRODUZIERBAR & NACHVOLLZIEHBAR</div><h2>Ein Experiment zum Mitnehmen.</h2><p>Exportiere Parameter, Transfergraph, Normen und Geltungsbereich. Jeder Lauf bleibt an seine Definition gebunden.</p><div class="export-buttons"><button id="export-json" class="primary">Versuch als JSON ↓</button><button id="export-csv" class="secondary">Knotenvergleich als CSV ↓</button></div></div><div class="source-list"><a id="proof-link" target="_blank" rel="noopener">CSPP v0.25 · Herleitung & Kontrollgraph <span>↗</span></a><a id="certificate-link" target="_blank" rel="noopener">Originales 192-Bit-Zertifikat <span>↗</span></a><a href="https://arxiv.org/abs/1403.1622" target="_blank" rel="noopener">GCB-Operatoren · Aslanbeigi et al. <span>↗</span></a><p id="source-stamp"></p><p>Die Grad-4-Familie bei festem q wurde im Zweiskalen-Mittelwerttest ausgeschlossen. Diese finite Diagnose hebt den Ausschluss nicht auf.</p></div></section>
+<footer><span>Causal Stability Lab · CSPP</span><span>Prüfen. Eingrenzen. Reproduzieren.</span></footer>
+</main><div id="toast" role="status" aria-live="polite"></div>
+<script type="module" src="app.mjs"></script>
+</body>
+</html>
