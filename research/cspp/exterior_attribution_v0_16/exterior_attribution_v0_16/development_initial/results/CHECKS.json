@@ -1,0 +1,293 @@
+{
+  "validation_status": "PASS",
+  "precision_overlap_comparisons": 2003,
+  "independent_exact_interval_counts": 64,
+  "rational_controls": {
+    "delta": "8641/13200",
+    "direct_only": "79/165",
+    "prescribed_history": "791/2640",
+    "extra_exterior_dynamics": "71/200",
+    "unbounded_boundary_coefficient": "113/880",
+    "controls": 6
+  },
+  "geometry": [
+    {
+      "key": "d0_r00",
+      "exact_intervals": 16,
+      "retained": 245
+    },
+    {
+      "key": "d0_r01",
+      "exact_intervals": 16,
+      "retained": 241
+    },
+    {
+      "key": "d0_r02",
+      "exact_intervals": 16,
+      "retained": 228
+    },
+    {
+      "key": "d0_r03",
+      "exact_intervals": 16,
+      "retained": 246
+    }
+  ],
+  "comparisons": [
+    {
+      "key": "d0_r00",
+      "window": [
+        "3/4",
+        "1"
+      ],
+      "shell_abs_lower": 0.0,
+      "shell_abs_upper": 0.0025387237086927487,
+      "shell_component_radius_upper": 0.0015277551065082662,
+      "old_error_lower": 0.020798199031224398,
+      "extended_error_lower": 0.018511585033467726,
+      "KG_prescribed_error_lower": 0.01843540898891549,
+      "inner_transport_abs_upper": 0.004062103398037106,
+      "extra_exterior_dynamics_abs_upper": 3.1699282690581855e-06,
+      "old_response": [
+        "[0.000229702513230449552734537541316244891095523190 +/- 4.45e-4]",
+        "[-0.00218345923734637665996778257459601489985078323 +/- 4.60e-4]"
+      ],
+      "extended_response": [
+        "[-0.000372084994219271611395458507892349374623354972 +/- 1.97e-3]",
+        "[-0.00195548681742325515798925905491505424737126468 +/- 1.59e-3]"
+      ],
+      "shell_change": [
+        "[-0.000601787507449721164129996049208594265718878162 +/- 1.53e-3]",
+        "[0.000227972419923121501978523519680960652479518547 +/- 1.16e-3]"
+      ],
+      "history_uncertainty_effect_upper": 5.500390072634382e-23,
+      "extended_accuracy_excluded": true,
+      "KG_prescribed_accuracy_excluded": true,
+      "shell_component_radius_pass": false
+    },
+    {
+      "key": "d0_r00",
+      "window": [
+        "1",
+        "5/4"
+      ],
+      "shell_abs_lower": 0.0,
+      "shell_abs_upper": 0.0031485325396136076,
+      "shell_component_radius_upper": 0.001737289989250712,
+      "old_error_lower": 0.008880203975494072,
+      "extended_error_lower": 0.006697870266009418,
+      "KG_prescribed_error_lower": 0.006489495059673142,
+      "inner_transport_abs_upper": 0.004564790496149489,
+      "extra_exterior_dynamics_abs_upper": 9.976115640019483e-06,
+      "old_response": [
+        "[-0.000912389334877526528747866059143806657282823645 +/- 6.98e-4]",
+        "[-0.00198432009551014147658176531854203631363285860 +/- 7.10e-4]"
+      ],
+      "extended_response": [
+        "[-0.00204309804889971566427573917855342495309523010 +/- 2.41e-3]",
+        "[-0.00187943446191488272410023231105691204056118002 +/- 1.84e-3]"
+      ],
+      "shell_change": [
+        "[-0.00113070871402218913552787311940961829581240645 +/- 1.74e-3]",
+        "[0.000104885633595258752481533007485124273071678588 +/- 1.20e-3]"
+      ],
+      "history_uncertainty_effect_upper": 5.512026223816448e-23,
+      "extended_accuracy_excluded": true,
+      "KG_prescribed_accuracy_excluded": true,
+      "shell_component_radius_pass": false
+    },
+    {
+      "key": "d0_r01",
+      "window": [
+        "3/4",
+        "1"
+      ],
+      "shell_abs_lower": 0.001357658512004772,
+      "shell_abs_upper": 0.0038007768626538685,
+      "shell_component_radius_upper": 0.001110943005187437,
+      "old_error_lower": 0.024834906659248836,
+      "extended_error_lower": 0.02612029412879456,
+      "KG_prescribed_error_lower": 0.026065518348586836,
+      "inner_transport_abs_upper": 0.002795481138402963,
+      "extra_exterior_dynamics_abs_upper": 2.165321183374267e-06,
+      "old_response": [
+        "[0.00536006704133049697875740758988019740856914254 +/- 1.36e-3]",
+        "[-0.00121175279363431445259225163025399796831598723 +/- 6.46e-4]"
+      ],
+      "extended_response": [
+        "[0.00782866855852270595364316067183298153546956106 +/- 2.46e-3]",
+        "[-0.000629890889774470471180289669681745090074155711 +/- 1.34e-3]"
+      ],
+      "shell_change": [
+        "[0.00246860151719220897488575308195278412690041852 +/- 1.12e-3]",
+        "[0.000581861903859843981411961960572252878241831514 +/- 6.96e-4]"
+      ],
+      "history_uncertainty_effect_upper": 4.322566583698293e-23,
+      "extended_accuracy_excluded": true,
+      "KG_prescribed_accuracy_excluded": true,
+      "shell_component_radius_pass": false
+    },
+    {
+      "key": "d0_r01",
+      "window": [
+        "1",
+        "5/4"
+      ],
+      "shell_abs_lower": 0.0,
+      "shell_abs_upper": 0.0016821258622085815,
+      "shell_component_radius_upper": 0.001063719220837811,
+      "old_error_lower": 0.012740944707521068,
+      "extended_error_lower": 0.011899319878931143,
+      "KG_prescribed_error_lower": 0.01182071872025235,
+      "inner_transport_abs_upper": 0.00270590968343714,
+      "extra_exterior_dynamics_abs_upper": 8.926607122035524e-06,
+      "old_response": [
+        "[0.00578723776633884251292550548716495264737115787 +/- 1.20e-3]",
+        "[-0.00128393363951574363214378975716482082632493582 +/- 5.57e-4]"
+      ],
+      "extended_response": [
+        "[0.00618971930954840599428185366579293279366118505 +/- 2.26e-3]",
+        "[-0.00141978121020728906926437317068070276181486632 +/- 1.24e-3]"
+      ],
+      "shell_change": [
+        "[0.000402481543209563481356348178627980146290027183 +/- 1.07e-3]",
+        "[-0.000135847570691545437120583413515881935489930498 +/- 6.89e-4]"
+      ],
+      "history_uncertainty_effect_upper": 4.3006786663038025e-23,
+      "extended_accuracy_excluded": true,
+      "KG_prescribed_accuracy_excluded": true,
+      "shell_component_radius_pass": false
+    },
+    {
+      "key": "d0_r02",
+      "window": [
+        "3/4",
+        "1"
+      ],
+      "shell_abs_lower": 0.0,
+      "shell_abs_upper": 0.0030749149717891233,
+      "shell_component_radius_upper": 0.0022867908410262316,
+      "old_error_lower": 0.021393742847596958,
+      "extended_error_lower": 0.01965114241351953,
+      "KG_prescribed_error_lower": 0.01951212047026279,
+      "inner_transport_abs_upper": 0.005050875547396485,
+      "extra_exterior_dynamics_abs_upper": 1.6730282665073037e-07,
+      "old_response": [
+        "[0.00306252485093758717455783640358043423941789800 +/- 2.45e-3]",
+        "[-0.000745026833634885903577662641049894771168514987 +/- 9.90e-4]"
+      ],
+      "extended_response": [
+        "[0.00362555044911914545047720908968833338429313678 +/- 4.73e-3]",
+        "[-0.00102532906372156202083312183450963675824764433 +/- 1.86e-3]"
+      ],
+      "shell_change": [
+        "[0.000563025598181558275919372686107899144875238787 +/- 2.29e-3]",
+        "[-0.000280302230086676117255459193459741987079129347 +/- 8.75e-4]"
+      ],
+      "history_uncertainty_effect_upper": 4.3636244902322014e-23,
+      "extended_accuracy_excluded": true,
+      "KG_prescribed_accuracy_excluded": true,
+      "shell_component_radius_pass": false
+    },
+    {
+      "key": "d0_r02",
+      "window": [
+        "1",
+        "5/4"
+      ],
+      "shell_abs_lower": 8.37150942086937e-07,
+      "shell_abs_upper": 0.003035680003513928,
+      "shell_component_radius_upper": 0.001866099659309839,
+      "old_error_lower": 0.010991049266140196,
+      "extended_error_lower": 0.01015427231724522,
+      "KG_prescribed_error_lower": 0.009950731707892988,
+      "inner_transport_abs_upper": 0.00419134218227372,
+      "extra_exterior_dynamics_abs_upper": 2.6419517108565284e-06,
+      "old_response": [
+        "[0.00525827186039305055476164556385888062544057281 +/- 1.76e-3]",
+        "[0.000175091691835745476542098972104213288950089757 +/- 6.47e-4]"
+      ],
+      "extended_response": [
+        "[0.00611277378104115287647212207629428086282477105 +/- 3.61e-3]",
+        "[-0.000498691592924527814348677185443148084683929176 +/- 1.32e-3]"
+      ],
+      "shell_change": [
+        "[0.000854501920648102321710476512435400237384198234 +/- 1.87e-3]",
+        "[-0.000673783284760273290890776157547361373634018933 +/- 6.73e-4]"
+      ],
+      "history_uncertainty_effect_upper": 5.264024548137046e-23,
+      "extended_accuracy_excluded": true,
+      "KG_prescribed_accuracy_excluded": true,
+      "shell_component_radius_pass": false
+    },
+    {
+      "key": "d0_r03",
+      "window": [
+        "3/4",
+        "1"
+      ],
+      "shell_abs_lower": 0.0005543126876156071,
+      "shell_abs_upper": 0.00207186694422105,
+      "shell_component_radius_upper": 0.0007044579961075215,
+      "old_error_lower": 0.023523787021124412,
+      "extended_error_lower": 0.022007930417949243,
+      "KG_prescribed_error_lower": 0.021973637796408554,
+      "inner_transport_abs_upper": 0.0016695350431886547,
+      "extra_exterior_dynamics_abs_upper": 0.0,
+      "old_response": [
+        "[0.00389124898935637091284914932488936394038879777 +/- 1.11e-3]",
+        "[0.000312323519391810481314612851368397852341239319 +/- 8.16e-4]"
+      ],
+      "extended_response": [
+        "[0.00304490906653405210415953463840770342612070714 +/- 1.80e-3]",
+        "[-0.000642560427300908451039739219015921711401701068 +/- 1.23e-3]"
+      ],
+      "shell_change": [
+        "[-0.000846339922822318808689614686481660514268090628 +/- 7.05e-4]",
+        "[-0.000954883946692718932354352070384319563742940387 +/- 4.20e-4]"
+      ],
+      "history_uncertainty_effect_upper": 2.699023944736167e-23,
+      "extended_accuracy_excluded": true,
+      "KG_prescribed_accuracy_excluded": true,
+      "shell_component_radius_pass": true
+    },
+    {
+      "key": "d0_r03",
+      "window": [
+        "1",
+        "5/4"
+      ],
+      "shell_abs_lower": 0.000532243362498355,
+      "shell_abs_upper": 0.0018554967328308757,
+      "shell_component_radius_upper": 0.0007461655968654668,
+      "old_error_lower": 0.011527827120080662,
+      "extended_error_lower": 0.011743914985774422,
+      "KG_prescribed_error_lower": 0.011677314030926199,
+      "inner_transport_abs_upper": 0.0017273837342021963,
+      "extra_exterior_dynamics_abs_upper": 6.434551509800044e-09,
+      "old_response": [
+        "[0.00445828900812747591957048651792735451007708564 +/- 1.29e-3]",
+        "[-0.00148931561658598915543046797980747398154640806 +/- 8.80e-4]"
+      ],
+      "extended_response": [
+        "[0.00500330407886576285603044627108417234934082465 +/- 2.01e-3]",
+        "[-0.00242171813373553586631500328352963168990722052 +/- 1.27e-3]"
+      ],
+      "shell_change": [
+        "[0.000545015070738286936459959753156817839263739008 +/- 7.47e-4]",
+        "[-0.000932402517149546710884535303722157708360812466 +/- 4.01e-4]"
+      ],
+      "history_uncertainty_effect_upper": 2.7731699167110874e-23,
+      "extended_accuracy_excluded": true,
+      "KG_prescribed_accuracy_excluded": true,
+      "shell_component_radius_pass": true
+    }
+  ],
+  "coefficient_integration": "one shared certified 192-bit stage, not two independent geometry runs",
+  "scientific_status": {
+    "METHOD": "HOLD",
+    "G1": "HOLD",
+    "infinite_domain_remainder": "NOT_CERTIFIED",
+    "fresh_confirmation": "NOT_RUN"
+  },
+  "interpretation": "finite extension attribution only; any excluded accuracy applies to that finite prescription, not all domains"
+}

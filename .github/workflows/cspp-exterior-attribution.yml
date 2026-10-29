@@ -1,0 +1,25 @@
+name: CSPP exterior forcing attribution
+on:
+  pull_request:
+    paths: ['research/cspp/exterior_attribution_v0_16/**', '.github/workflows/cspp-exterior-attribution.yml']
+  push:
+    branches: [main]
+    paths: ['research/cspp/exterior_attribution_v0_16/**', '.github/workflows/cspp-exterior-attribution.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  reproduce:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Install declared numerical runtime
+        run: python3 -m pip install -r research/cspp/exterior_attribution_v0_16/exterior_attribution_v0_16/requirements.txt
+      - name: Verify original package and replay geometry, history and transport
+        run: python3 -B research/cspp/exterior_attribution_v0_16/publication_check.py --replay

@@ -1,0 +1,60 @@
+{
+  "schema": "cspp.detector-transfer/0.9",
+  "date": "2026-10-28",
+  "base_remote_commit": "85ee3cc7ae93bd29f8151e52fd06a482e171e29d",
+  "mode": "frozen development feasibility study on previously seen archived clouds; not independent confirmation",
+  "question": "Can the explicitly defined retarded extension be integrated over the fixed spatial detector and two fixed time windows accurately enough to support a later fluctuation-transfer validation?",
+  "clouds": ["d0_r00", "d0_r01", "d0_r02", "d0_r03", "d0_r04", "d0_r05", "d0_r06", "d0_r07"],
+  "selection": "first eight archived nu512 cloud IDs, fixed before this integration; no selection by detector output",
+  "new_random_clouds": 0,
+  "nu": 512,
+  "epsilon": "1/16",
+  "mass": 1,
+  "domain": "unchanged open Omega4: abs(t)+r<4; exact stored binary64 coordinates",
+  "rho": "nu/(512*pi/3), never observed N divided by volume",
+  "source": "unchanged normalized compact bump at t0=-1, radius1/2, carrier k=4, initial derivative zero",
+  "history_adapter": "unchanged H1=f+(t+1)*g on all cloud nodes t<=-1",
+  "fields": ["wave_k0", "wave_k2", "wave_k4", "wave_k8", "compact_m1"],
+  "wave_oracle_controls": [0, 2, 4, 8],
+  "detector": {
+    "spatial_region": "unchanged ball: norm(x-(0,0,3/2))<1/2",
+    "time_windows": [["3/4", "1"], ["1", "5/4"]],
+    "time_extension": "new declared finite time response around the historical td=1; not a reinterpretation of the old instantaneous detector",
+    "readout": "normalized linear complex field average, uniform in each spacetime window; no intensity/probability claim",
+    "extension": "phi_C(p)=sum_{y in C,y prec p} beta*w_e(n(y,p))*phi_C(y); virtual query p never inserted into the cloud; n counts only original cloud elements",
+    "causal_order": "strict timelike order; exact-null boundaries have zero Lebesgue measure",
+    "partition_leaves_per_window": 256,
+    "partition_rule": "exact integer geometry-only priority=cell_volume*(uncertain point relations + N if sphere-boundary); longest physical edge bisected, smallest axis on ties; insertion order breaks cell ties",
+    "normalization": "Vol(D)*duration=(pi/6)*(1/4)",
+    "quadrature": "enclosed ranges on every full spacetime box; outside sphere zero, partial sphere cells include zero; no Monte Carlo cubature or unbounded extrapolation"
+  },
+  "error_budgets": {
+    "detector_component_radius_over_field_scale_max": "1/1000",
+    "wave_field_scale": "1",
+    "compact_field_scale": "A/e, the maximum magnitude of the initial normalized bump",
+    "nodal_Arb_component_radius_over_scale_max": "1e-18",
+    "rounded_history_and_float_nodal_forward_effect_over_scale_max": "1e-8",
+    "continuum_wave_reference_component_radius_max": "1e-25",
+    "compact_continuum_detector_reference": "NOT_QUALIFIED; no compact continuum mean accuracy decision",
+    "separation": "geometry exact; integration enclosure separate from nodal precision, rounded-history, float-nodal-solve diagnostics; wave oracle gives separate history versus operator/domain contributions; correlated terms are not added as independent variances"
+  },
+  "statistics": {
+    "ensemble_size": 8,
+    "outputs": "enclosed finite-sample means and unbiased two-window covariance for all five fields",
+    "population_inference": "NONE; no Gaussian, independence-between-windows, stationarity or white-noise assumption",
+    "same_cloud": "both windows, all fields, history and all propagation share the same geometry",
+    "future_independent_ensemble": "NOT_FROZEN: must define a predictive operator covariance model, stability and error budget, population confidence method and sample size/power before fresh data; existing v0.8 holdouts are not reused as fresh confirmation"
+  },
+  "precision_bits": [128, 192],
+  "cpu_modes": ["default", "AVX512F,AVX512CD,AVX512_SKX,AVX512_CLX,AVX512_CNL,AVX512_ICL,AVX512_SPR"],
+  "resources": {"max_points_per_cloud": 6000, "memory_GiB": 4, "wall_seconds_per_process": 21600, "workers": 1},
+  "stopping": {
+    "complete_fixed_inventory": "all eight archived IDs and both windows even if early quadrature fails; no replacement or resolution increase after outputs",
+    "quadrature_failure": "QUADRATURE_HOLD, no precise variance interpretation or independent production",
+    "numeric_failure": "NUMERIC_HOLD",
+    "resource_failure": "RESOURCE_HOLD with missing slots retained, no redraw",
+    "all_development_budgets_pass": "DETECTOR_INTEGRATION_READY_ONLY; not population transfer, continuum, quantum-gravity or G1 qualification",
+    "fresh_runs": "blocked until a separate preregistered independent protocol exists"
+  },
+  "scientific_status": {"old_series": "CLOSED_WITH_SCOPED_NEGATIVE_RESULTS", "G1": "HOLD", "G2": "NOT_RUN", "G3": "NOT_RUN", "Dirac": "NOT_AUTHORIZED_BY_SCIENTIFIC_GATE"}
+}
