@@ -1,0 +1,81 @@
+{
+  "archives": [
+    "d0_r00",
+    "d0_r01",
+    "d0_r02",
+    "d0_r03"
+  ],
+  "base_commit": "ff990b1ffe04259f963525e51aa106925b23cf6f",
+  "date": "2026-10-29",
+  "detector_radius_bins": 16,
+  "detector_time_bins": 8,
+  "error_comparison": "1/1000 unchanged; no per-domain allocation or individual-realization guarantee",
+  "field_controls": {
+    "R_minus_tau": [
+      "-3/8",
+      "0",
+      "3/8"
+    ],
+    "deep_direction": "z",
+    "deep_radii": [
+      "0",
+      "1"
+    ],
+    "deep_tau": [
+      "5/2",
+      "4",
+      "5"
+    ],
+    "directions": [
+      "x",
+      "z"
+    ],
+    "tau": [
+      2,
+      3,
+      4,
+      5
+    ]
+  },
+  "first_edge_kernel": "Unchanged exact pointwise kappa=4976184375/4294967296; no claim of sharp conditional kernels over the new full domain",
+  "grid_denominators": [
+    8,
+    16,
+    32
+  ],
+  "history_time_cutoff": "-6",
+  "known_active_nodes": [
+    65,
+    49,
+    59,
+    50
+  ],
+  "new_clouds": 0,
+  "new_random_calls": 0,
+  "new_statistical_rules": false,
+  "nonzero_exterior_tau_range": [
+    "7/4",
+    "5"
+  ],
+  "partition": "Exact intersections of rational tau/R rectangles with the deep interior R<=tau-1/2 and wavefront R>=tau-1/2",
+  "precisions_bits": [
+    128,
+    192
+  ],
+  "radial_domain": "max(0,4-tau) < R < tau+1/2; every spatial direction",
+  "schema": "cspp.finite-exterior/0.22",
+  "status": {
+    "G1": "HOLD",
+    "METHOD": "HOLD",
+    "fresh_confirmation": "NOT_RUN",
+    "infinite_tail_combined": "NOT_PERFORMED_IN_STEP_1"
+  },
+  "step": "Complete finite exterior history only; infinite tail is the next separate step",
+  "tau_definition": "tau=-t-1 for t<=-1",
+  "tau_range": [
+    "0",
+    "5"
+  ],
+  "transport": "Original v0.20 adjoints; full unknown-active Mecke bound with lambda=29/512",
+  "unchanged_model": "Minkowski 3+1; m=1, rho=3/pi, epsilon=1/16, f=exp(1-1/h)exp(4iz), h=1-4r^2, radius1/2, initial time-1 and velocity0"
+}
