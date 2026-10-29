@@ -1,0 +1,31 @@
+name: CSPP global gate reassessment
+on:
+  pull_request:
+    paths: ['research/cspp/global_gate_reassessment_v0_24/**', '.github/workflows/cspp-global-gate-reassessment.yml']
+  push:
+    branches: [main]
+    paths: ['research/cspp/global_gate_reassessment_v0_24/**', '.github/workflows/cspp-global-gate-reassessment.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  reproduce:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    env:
+      PYTHONDONTWRITEBYTECODE: '1'
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Install declared arithmetic runtime
+        run: python3 -m pip install python-flint==0.8.0
+      - name: Verify immutable publication under optimized Python
+        run: python3 -O -B research/cspp/global_gate_reassessment_v0_24/publication_check.py
+      - name: Reproduce both precisions and all four numerical result files exactly
+        run: python3 -B research/cspp/global_gate_reassessment_v0_24/publication_check.py --replay
+      - name: Confirm original publication is unchanged
+        run: git diff --exit-code -- research/cspp/global_gate_reassessment_v0_24
