@@ -1,0 +1,22 @@
+{
+  "schema": "cspp.detector-subdivision/0.21",
+  "date": "2026-10-29",
+  "base_commit": "22eab46877dc03b1c0f1bee81c2d1d65bbf45d65",
+  "unchanged_model": "v0.20: m=1, rho=3/pi, epsilon=1/16, source exp(1-1/h) exp(4iz), initial velocity zero at t=-1",
+  "archives": ["d0_r00", "d0_r01", "d0_r02", "d0_r03"],
+  "finite_root_patch": "[-6,-5] x [-2,2]^3; 256 unchanged uniform cells",
+  "root_grid_per_axis": 4,
+  "detector": {"center": [0,0,1.5], "radius": "1/2", "normalized": true, "windows": [["3/4","1"],["1","5/4"]]},
+  "detector_grids_per_axis": [2,4],
+  "sphere_volume_enclosure_grid_per_axis": 128,
+  "remaining_sphere_boundary": "bounded by the valid whole-sphere kernel; never dropped or renormalized",
+  "envelope_threshold": 95,
+  "precisions_bits": [128,192],
+  "known_and_unknown_active_transport": "unchanged v0.20 validated contributions",
+  "error_target": "1/1000 unchanged, not a per-patch allocation or realization certificate",
+  "new_random_calls": 0,
+  "new_clouds": 0,
+  "new_statistical_rules": false,
+  "scope": "Complete improvement of direct detector integral on the existing finite root patch; exterior complement not newly integrated",
+  "status": {"METHOD":"HOLD", "G1":"HOLD", "fresh_confirmation":"NOT_RUN"}
+}
