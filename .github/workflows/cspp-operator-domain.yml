@@ -1,0 +1,25 @@
+name: CSPP operator and domain diagnosis
+on:
+  pull_request:
+    paths: ['research/cspp/operator_domain_v0_15/**', '.github/workflows/cspp-operator-domain.yml']
+  push:
+    branches: [main]
+    paths: ['research/cspp/operator_domain_v0_15/**', '.github/workflows/cspp-operator-domain.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  reproduce:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Install declared numerical runtime
+        run: python3 -m pip install -r research/cspp/operator_domain_v0_15/operator_gebiet_v0_15/requirements.txt
+      - name: Verify artifacts and reproduce all interval diagnoses
+        run: python3 -B research/cspp/operator_domain_v0_15/publication_check.py --replay
