@@ -1,0 +1,19 @@
+{
+  "schema": "cspp.local-exterior/0.20",
+  "date": "2026-10-29",
+  "base_commit": "b3e2c41bb32fec02a08432b40cc95acba013952a",
+  "unchanged_model": "v0.19; m=1, rho=3/pi, epsilon=1/16, source exp(1-1/h)exp(4iz), zero initial velocity at t=-1",
+  "archives": ["d0_r00","d0_r01","d0_r02","d0_r03"],
+  "known_active_nodes": [65,49,59,50],
+  "precisions_bits": [128,192],
+  "fixed_root_points": [[-6,0,0,0],[-6,0,0,2],[-6,0,0,4],[-5,0,0,2],[-5,0,0,4],[-4,0,0,2],[-4,0,0,3],[-3,0,0,2.25]],
+  "finite_root_patch": "[-6,-5] x [-2,2]^3, volume 64; strict interior conventions do not affect integrals",
+  "uniform_patch_grids_per_axis": [2,4],
+  "conditional_kernel_table": {"n0_inclusive":[0,191],"poisson_mean_bins":512,"bin_width":2,"upper_endpoint":1024,"rounding":"each binary64 entry is outward checked against its Arb upper bound; kappa fallback outside table"},
+  "scope": "Exact actual archive interval counts and conditional kernels at fixed points; complete finite-patch contribution including transport. The complement of the patch is not evaluated by this calculation.",
+  "error_target": "1/1000 unchanged, not a per-patch allocation or a realization certificate",
+  "new_random_calls": 0,
+  "new_clouds": 0,
+  "new_statistical_rules": false,
+  "status": {"METHOD":"HOLD","G1":"HOLD","fresh_confirmation":"NOT_RUN"}
+}

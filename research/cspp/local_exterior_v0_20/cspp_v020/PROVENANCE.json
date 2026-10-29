@@ -1,0 +1,57 @@
+{
+  "repository": "thomasmgfeller/x6-spectral-astrolabium",
+  "commit": "b3e2c41bb32fec02a08432b40cc95acba013952a",
+  "source_files": [
+    {
+      "github_path": "research/cspp/certified_budget_v0_3/source.py",
+      "git_blob_sha1": "8c17d5909145ad4ed960bfdf483b8b874a1ede3f",
+      "sha256": "449b978d5be1cb7566a9fb74747f2a8053b1dc02b04e3e970c6521fc0755a271",
+      "bytes": 5406,
+      "package_path": "legacy/certified_budget_v0_3/source.py"
+    },
+    {
+      "github_path": "research/cspp/certified_budget_v0_3/balls.py",
+      "git_blob_sha1": "1095558eab4ca3170f709b6ce692a644831387ce",
+      "sha256": "b28b58d2860e423be6a32770a4572744cadc2e1ddf71b25bc2b22fc9c8363585",
+      "bytes": 1820,
+      "package_path": "legacy/certified_budget_v0_3/balls.py"
+    },
+    {
+      "github_path": "research/cspp/certified_budget_v0_3/PROTOCOL.json",
+      "git_blob_sha1": "4888873d268244758a107565a440dc94ed4bc365",
+      "sha256": "f90d331864a04e54cf7baf233fd2d349ec1413a69d27953d72374ea161100f37",
+      "bytes": 2098,
+      "package_path": "legacy/certified_budget_v0_3/PROTOCOL.json"
+    },
+    {
+      "github_path": "research/cspp/massive_reference_v0_5/reference.py",
+      "git_blob_sha1": "fb9f4033ce49c9c4009246536acea0870a057408",
+      "sha256": "333e6ee611163393a4f56f411aac9de48fb376ffe07930e51960929739ab1389",
+      "bytes": 6026,
+      "package_path": "legacy/massive_reference_v0_5/reference.py"
+    },
+    {
+      "github_path": "research/cspp/exterior_attribution_v0_16/exterior_attribution_v0_16/results/COEFFICIENTS_192.json.gz",
+      "git_blob_sha1": "4505c732a081355582039279cb613061b1717fc6",
+      "sha256": "733cec5c40a721b2d1edb3ed8527023ebe6dd5bac99b89664ba99b84f6ca0e21",
+      "bytes": 152532,
+      "package_path": "evidence/v16_COEFFICIENTS_192.json.gz"
+    },
+    {
+      "github_path": "research/cspp/scalar_pilot_v0_1/results/RUNS.json",
+      "git_blob_sha1": "0139e02c97102f40b17297fb51bceca1263b62e9",
+      "sha256": "77d83e648a2317f3f55d96ccccb96716cafd8785f6c50fe9c95602d289daf860",
+      "bytes": 39371,
+      "package_path": "evidence/RUNS.json"
+    },
+    {
+      "github_path": "research/cspp/scalar_pilot_v0_1/results/clouds.npz",
+      "git_blob_sha1": "832b47bd30bff6d59c857a61d3dac64d9d4e3fdb",
+      "sha256": "5fcdf5aa8a64eb40e980a6d2a4c1f8a5e92031b7e01b72667b449ec8a1c14cca",
+      "bytes": 5201586,
+      "package_path": null
+    }
+  ],
+  "archive_extraction": "Four exact arrays from original clouds.npz; each raw array SHA256 is checked against pinned RUNS.json. The full binary source was read from the saved v0.16 package and verified against GitHub blob identity.",
+  "legacy_status": "Copied without modification; no independent external peer review."
+}

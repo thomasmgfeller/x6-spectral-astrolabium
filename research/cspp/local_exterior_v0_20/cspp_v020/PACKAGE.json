@@ -1,0 +1,22 @@
+{
+  "schema": "cspp.local-exterior.package/0.20",
+  "version": "0.20",
+  "date": "2026-10-29",
+  "base_commit": "b3e2c41bb32fec02a08432b40cc95acba013952a",
+  "numeric_replay": "PASS; 21 byte-identical result files",
+  "verification": "PASS; see results/CHECKS.json",
+  "pdf_visual_qa": {
+    "pages": 5,
+    "all_pages_rendered_and_inspected": true
+  },
+  "scope": "Finite history root patch only; global complement not newly integrated",
+  "status": {
+    "METHOD": "HOLD",
+    "G1": "HOLD"
+  },
+  "entrypoints": [
+    "reproduce.py",
+    "verify.py",
+    "build_report.py"
+  ]
+}
