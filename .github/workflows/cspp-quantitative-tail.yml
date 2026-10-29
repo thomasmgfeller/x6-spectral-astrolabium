@@ -1,0 +1,27 @@
+name: CSPP quantitative tail bounds
+on:
+  pull_request:
+    paths: ['research/cspp/quantitative_tail_v0_18/**', '.github/workflows/cspp-quantitative-tail.yml']
+  push:
+    branches: [main]
+    paths: ['research/cspp/quantitative_tail_v0_18/**', '.github/workflows/cspp-quantitative-tail.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  reproduce:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    env:
+      PYTHONDONTWRITEBYTECODE: '1'
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Install declared arithmetic runtime
+        run: python3 -m pip install python-flint==0.8.0
+      - name: Verify publication and reproduce both precisions exactly
+        run: python3 -B research/cspp/quantitative_tail_v0_18/publication_check.py --replay

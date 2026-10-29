@@ -1,0 +1,35 @@
+{
+  "schema": "cspp.quantitative-tail-package/0.18",
+  "date": "2026-10-29",
+  "base_repository": "thomasmgfeller/x6-spectral-astrolabium",
+  "base_merge": "808cd43ddc840a6fd87c9095e7698b58f85846a7",
+  "base_pr": 149,
+  "publication_status": "NOT_PUBLISHED",
+  "environment": {
+    "python": "3.12.14",
+    "python-flint": "0.8.0",
+    "reportlab": "4.4.9",
+    "matplotlib": "3.10.8"
+  },
+  "scientific_result_files": [
+    "results/BOUNDS_128.json",
+    "results/BOUNDS_192.json",
+    "results/CHECKS.json"
+  ],
+  "reproduction_command": "python3 reproduce.py",
+  "verification": {
+    "precision_overlaps": 857,
+    "negative_controls": 3,
+    "visual_pdf_pages_checked": 8
+  },
+  "limits": [
+    "conditional L1 upper bounds; no per-realization accuracy certificate",
+    "large upper bounds do not establish large actual error",
+    "no new random samples, seeds, alpha, n, power or source modification"
+  ],
+  "status": {
+    "METHOD": "HOLD",
+    "G1": "HOLD",
+    "fresh_confirmation": "NOT_RUN"
+  }
+}
