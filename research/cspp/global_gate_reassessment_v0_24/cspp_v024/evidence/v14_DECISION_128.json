@@ -1,0 +1,110 @@
+{
+  "schema": "cspp.independent-transfer-admission/0.14",
+  "precision_bits": 128,
+  "base_commit": "1995b37260806841a9b084703e5636793fa7e5a0",
+  "admission": "REJECTED_FOR_CONFIRMATORY_RUN",
+  "candidates": {
+    "local_H1": {
+      "method_evidence": {
+        "control_reproduction": "PASS",
+        "joint_original_moments": "NOT_EVALUATED",
+        "ensemble_numerical_error": "NOT_CERTIFIED",
+        "sampling_law_alignment": "NOT_CERTIFIED",
+        "total_ensemble_map": "PASS",
+        "fourth_moment_or_valid_tail_control": "PASS"
+      },
+      "missing_certificates": [
+        "joint_original_moments",
+        "ensemble_numerical_error",
+        "sampling_law_alignment"
+      ],
+      "decision": "REJECTED_FOR_CONFIRMATORY_RUN"
+    },
+    "nonlocal_PU_H1": {
+      "method_evidence": {
+        "control_reproduction": "PASS",
+        "joint_original_moments": "NOT_EVALUATED",
+        "ensemble_numerical_error": "NOT_CERTIFIED",
+        "sampling_law_alignment": "NOT_CERTIFIED",
+        "total_ensemble_map": "UNDEFINED_ON_POSITIVE_PROBABILITY_SET",
+        "fourth_moment_or_valid_tail_control": "NOT_CERTIFIED"
+      },
+      "missing_certificates": [
+        "total_ensemble_map",
+        "joint_original_moments",
+        "fourth_moment_or_valid_tail_control",
+        "ensemble_numerical_error",
+        "sampling_law_alignment"
+      ],
+      "decision": "REJECTED_FOR_CONFIRMATORY_RUN"
+    }
+  },
+  "fluctuation_prediction_decision": "NOT_TESTED_METHOD_GATE_FAILED",
+  "macroscopic_decision": {
+    "ensemble_mean": "NOT_ESTABLISHED",
+    "local_almost_sure_historical_tolerance_claim": "ANALYTICALLY_REFUTED",
+    "local_RMS": "RIGOROUS_LOWER_BOUNDS_ONLY_NO_NEW_TARGET",
+    "nonlocal_full_ensemble": "UNDEFINED",
+    "previous_operator_cell": "REJECTED",
+    "previous_operator_rejected_fields": 9,
+    "previous_operator_evidence_is_new_detector_test": false
+  },
+  "structural_certificates": {
+    "geometry": {
+      "source_volume_over_pi": "7/16",
+      "history_volume_over_pi": "27"
+    },
+    "source_history_mean": "21/16",
+    "history_mean": "81",
+    "zero_response_probability_lower": "[0.26914634872918388290119901290800590745 +/- 4.51e-39]",
+    "joint_historical_tolerance_failure_probability_lower": "[0.26914634872918388290119901290800590745 +/- 4.51e-39]",
+    "joint_historical_tolerance_success_probability_upper": "[0.73085365127081611709880098709199409255 +/- 8.92e-39]",
+    "historical_per_realization_tolerance": "[0.0010000000000000000000000000000000000000 +/- 8.45e-42]",
+    "reference": [
+      {
+        "re": "[-0.020732687086922060980 +/- 3.77e-22]",
+        "im": "[0.001678303092685356510 +/- 5.43e-22]"
+      },
+      {
+        "re": "[-0.005907886606641349248 +/- 6.65e-22]",
+        "im": "[0.006495610877105028864 +/- 5.63e-22]"
+      }
+    ],
+    "reference_magnitudes": [
+      "[0.020800505164902654530 +/- 8.00e-22]",
+      "[0.008780437621422829679 +/- 5.24e-22]"
+    ],
+    "RMS_error_floor_enclosures": [
+      "[0.010791159921699923994 +/- 3.63e-22]",
+      "[0.004555231029444456317 +/- 3.75e-22]"
+    ],
+    "mean_covariance_PSD_factor": "[0.36826298707161049766892320055024148541 +/- 8.03e-39]",
+    "nonlocal_undefined_probability_lower": "[6.1042536302065439786296254054209549228e-31 +/- 7.60e-69]",
+    "beta": "[0.017823389052144918783981978936440596236 +/- 6.79e-40]",
+    "global_weight_abs_upper": 2,
+    "local_second_moment_majorant": "[13655182118431157.876829040716630162 +/- 4.07e-19]",
+    "local_fourth_moment_majorant": "[2763380817642976918430378329313369.1 +/- 0.0637]",
+    "moment_majorants_are_predictions": false,
+    "macroscopic_mean_rejected": false,
+    "new_RMS_target_selected": false
+  },
+  "new_design": {
+    "parameters": null,
+    "ensemble_size": null,
+    "error_budgets": null,
+    "familywise_alpha": null,
+    "power_target": null,
+    "alternatives_and_equivalence_margins": null,
+    "resource_limits": null,
+    "sampling_seed": null,
+    "stopping_rules": null
+  },
+  "power_and_cost": "NOT_DESIGNED_METHOD_GATE_FAILED",
+  "new_random_clouds": 0,
+  "new_rng_calls": 0,
+  "confirmation_seed_used": false,
+  "public_preregistration": false,
+  "fresh_data_evidence": null,
+  "overall_status": "METHOD_HOLD",
+  "G1": "HOLD"
+}

@@ -1,0 +1,25 @@
+{
+  "schema": "cspp.independent-transfer-admission/0.14",
+  "base_commit": "1995b37260806841a9b084703e5636793fa7e5a0",
+  "mode": "deterministic admission decision before any confirmatory design or fresh draw",
+  "candidate": "unchanged v0.13 original compact-source detector, local H1 and nonlocal PU-H1 distinguished",
+  "ordering": ["method control", "complete joint predictions and numerical error certificates", "fix statistical design and resource feasibility", "public freeze", "fresh independent ensemble", "separate fluctuation and macroscopic decisions"],
+  "required_method_certificates": ["control_reproduction", "total_ensemble_map", "joint_original_moments", "fourth_moment_or_valid_tail_control", "ensemble_numerical_error", "sampling_law_alignment"],
+  "statistical_unit": "one complete independently generated point cloud; both windows and all real/imaginary components remain paired",
+  "historical_data": "all v0.1-v0.13 clouds and results are already known; no reuse as untouched confirmation",
+  "new_design": {
+    "parameters": null,
+    "ensemble_size": null,
+    "error_budgets": null,
+    "familywise_alpha": null,
+    "power_target": null,
+    "alternatives_and_equivalence_margins": null,
+    "resource_limits": null,
+    "sampling_seed": null,
+    "stopping_rules": null
+  },
+  "preflight_stop": "any missing required method certificate => REJECTED_FOR_CONFIRMATORY_RUN; no RNG use, no replacement model, no seed reservation, no inference on fresh data",
+  "macro_target_warning": "v0.12 per-realization tolerance is not silently redefined as an RMS, mean-bias, or probabilistic population target",
+  "publication_freeze": "local evidence snapshot only, not public preregistration of an independent experiment",
+  "precision_bits": [128,192]
+}
