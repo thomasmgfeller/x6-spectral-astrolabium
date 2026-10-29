@@ -1,0 +1,25 @@
+name: CSPP causal closure and KG history
+on:
+  pull_request:
+    paths: ['research/cspp/causal_closure_v0_17/**', '.github/workflows/cspp-causal-closure.yml']
+  push:
+    branches: [main]
+    paths: ['research/cspp/causal_closure_v0_17/**', '.github/workflows/cspp-causal-closure.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  reproduce:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Install declared arithmetic runtime
+        run: python3 -m pip install python-flint==0.8.0
+      - name: Verify original publication and replay all analytic controls
+        run: python3 -B research/cspp/causal_closure_v0_17/publication_check.py --replay
