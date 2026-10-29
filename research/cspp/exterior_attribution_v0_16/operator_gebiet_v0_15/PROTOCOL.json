@@ -1,0 +1,53 @@
+{
+  "schema": "cspp.operator-domain/0.15",
+  "date": "2026-10-29",
+  "base_commit": "56207e7d36be4cddc897edf01a613c0be8837b86",
+  "mode": "deterministic development diagnosis; no independent validation",
+  "source_detector_reference": "unchanged v0.12 compact m=1 source, full detector ball and both complete windows",
+  "operator_mean_control": "pre-existing Gaussian L=2 at origin; necessary operator witness, never substituted for source detector",
+  "rho": "3/pi",
+  "epsilon": [
+    "1",
+    "1/4",
+    "1/16"
+  ],
+  "H": [
+    4,
+    5,
+    8,
+    12,
+    16
+  ],
+  "precision_bits": [
+    128,
+    192
+  ],
+  "paired_existing_clouds": [
+    "d0_r00",
+    "d0_r01",
+    "d0_r02",
+    "d0_r03"
+  ],
+  "history_clouds": [
+    "d0_r00",
+    "d0_r01",
+    "d0_r02",
+    "d0_r03",
+    "d0_r04",
+    "d0_r05",
+    "d0_r06",
+    "d0_r07"
+  ],
+  "history_zero_cutoffs": [
+    "-4",
+    "-3",
+    "-2",
+    "-3/2"
+  ],
+  "interpretation": "History deletion is an explicit diagnostic policy, not domain enlargement or a physical new source. No extrapolation of shell 4-to-5 to infinity.",
+  "new_random_calls": 0,
+  "new_clouds": 0,
+  "G1": "HOLD",
+  "confirmatory_run": "NOT_AUTHORIZED_BY_METHOD_GATE",
+  "decision": "Only a scoped candidate rejection, advancement to method audit, or unresolved attribution is permitted."
+}
