@@ -32,11 +32,11 @@
     "CITATION.cff": "5225a23f7cd2f1841db38dd9f4b6f1b3624cce110cf27d08575b6f4b29cd2bc0",
     "CODE_OF_CONDUCT.md": "dd847b83a025f21bd55935c23b4568b3f1d108455a27b9b15b2a0b35fbc58cb9",
     "CONTRIBUTING.md": "366d6a2ce4b388d1fb77d4a5188157ff99613be932065fa758f8e562a6b45ee0",
-    "LICENSE_SOURCE_MANIFEST.json": "6792dfdb0bb03c15520cb09f371433a05bae04628f9d449be716f9b146c93244",
+    "LICENSE_SOURCE_MANIFEST.json": "6993828a38af2c8e85e5ed6624d37820fe558ad62afffada97352faec82bcc1e",
     "MODULE_REGISTRY.json": "722dced0bb939a3e8eeaf50953ac9a96fd95c203f5dad4859581db777cf42e87",
-    "README.md": "15d9c96e00dac1acd7b83f25cdbbf33d6de3bd77039e5aed11e4c4b650a127a1",
+    "README.md": "18fb9a0b21031352b6ff97f1f8dfe5773cc4b272cfba8b98a3b8b35db4350e21",
     "REFERENCE_SOURCE_MANIFEST.json": "0e2275138250cc755ae87969b80fee67016cd293be837a5a89e2eeaa46495876",
-    "SAGNAC_SOURCE_MANIFEST.json": "096a3e0cca59d8f2f65bf4a55ed3264d28bc9923d2bdf05f299766cd0cd9dbde",
+    "SAGNAC_SOURCE_MANIFEST.json": "7703a3e62da48781dd6b10759ea1c54d8182e467896bceafa74abc5892462b7b",
     "SECURITY.md": "c73f7d7c97f7c30f8d93140c612772ed2b81b1830987a37ae0980903213760d5",
     "app/index.html": "df48fa522498fb79aa3617fe2fefa587ef820b9555a692b5bd253ac88b2298f7",
     "data/reference_certificate.json": "a71288ed81b44f8ec122b7d6a6d14340378c7dfbf9daeb5a0fb4c76caba06d18",
@@ -1283,8 +1283,8 @@
   },
   "non_historical_documentation_additions": [
     {
-      "concept": "ACVM 0.1",
       "date": "2026-10-13",
+      "concept": "ACVM 0.1",
       "paths": [
         "docs/acvm/ACVM_CONCEPT_v0_1_DE.md",
         "docs/acvm/Astrolabium_ACVM_Konzept_v0_1.docx",
@@ -1294,8 +1294,8 @@
       "scope": "New documentation added after the original archive. These entries are not historical archive contents or ACVM validation evidence. All pre-existing digest values are retained."
     },
     {
-      "concept": "ACVM Experiment Records 0.1",
       "date": "2026-10-13",
+      "concept": "ACVM Experiment Records 0.1",
       "paths": [
         "docs/acvm/experiment-records/ACVM_EXPERIMENT_RECORDS_CONCEPT_v0_1_DE.md",
         "docs/acvm/experiment-records/ACVM_Experiment_Records_Konzept_v0_1.docx",
@@ -1305,8 +1305,8 @@
       "scope": "New documentation, not historical archive contents or executed Records acceptance evidence. All pre-existing digest values are retained."
     },
     {
-      "concept": "ACVM Electrical & Thermal Test Fixture 0.1",
       "date": "2026-10-13",
+      "concept": "ACVM Electrical & Thermal Test Fixture 0.1",
       "paths": [
         "docs/acvm/electrical-thermal-fixture/ACVM_ETF_01_Konzept_v0_1.docx",
         "docs/acvm/electrical-thermal-fixture/ACVM_ETF_01_Konzeptansicht_v0_1.png",
@@ -1320,16 +1320,16 @@
       "scope": "Concept publication and illustrative images; no executed hardware evidence. Existing historical digest values retained."
     },
     {
-      "concept": "Industrial Denoising Research Programme v0.2",
       "date": "2026-10-13",
+      "concept": "Industrial Denoising Research Programme v0.2",
       "paths": [
         "docs/industrial-denoising/Astrolabium_Industrial_Denoising_Forschungsprogramm_v0_2.docx"
       ],
       "scope": "Register the unchanged document already published in commit 655b2d6c2509c8b3d2c22b858e0171e9d9b8788d. Byte digest verified from that commit. No document changes or new scientific evidence."
     },
     {
-      "concept": "Sagnac crystal loop and oven specification O02 KSO 01 revision 0.1",
       "date": "2026-10-15",
+      "concept": "Sagnac crystal loop and oven specification O02 KSO 01 revision 0.1",
       "paths": [
         "docs/acvm/sagnac-components-v0.1/Sagnac_Kristall_Schleife_Ofen_Spezifikation_v0_1.docx",
         "docs/acvm/sagnac-components-v0.1/README.md",
@@ -1338,8 +1338,8 @@
       "scope": "Approved ten-page engineering requirements document, unchanged DOCX bytes, publication overview and integrity metadata. KSO01-KSO12 remain NOT_RUN. No supplier confirmation, fabrication approval or physical validation. All pre-existing historical digest values are retained; current optical documentation is tracked by ACVM_OPTICAL_SOURCE_MANIFEST.json."
     },
     {
-      "concept": "Wolfram polarity-inversion countercheck reference case 2 v0.1",
       "date": "2026-10-15",
+      "concept": "Wolfram polarity-inversion countercheck reference case 2 v0.1",
       "paths": [
         "docs/signal-lab/wolfram-polarity-v0.1/X6_Wolfram_Fall2_v0_1.zip",
         "docs/signal-lab/wolfram-polarity-v0.1/PRUEFBERICHT_DE.txt",
@@ -1349,654 +1349,10 @@
       "scope": "Approved unchanged reproduction ZIP and extracted report, overview and publication record. Finite synthetic computation with documented test-adapter correction; no physical validation or external human review. Existing historical digest values retained."
     }
   ],
-  "non_historical_documentation_updates": [
-    {
-      "date": "2026-10-16",
-      "files": [
-        {
-          "path": "MODULE_REGISTRY.json",
-          "previous_sha256": "501b72ed667b2a2494e052dd7be977eb909fc12176085f7133b6c15e08bc1d5a",
-          "sha256": "8e1550b9f551a55669a4df694d2475be3779af175fbfd936ecec06a65863d65d"
-        },
-        {
-          "path": "docs/MODULE_REGISTRY.md",
-          "previous_sha256": "921a8ed79068f4b8886d02f086adfd2a414a3b81c3cb588d3f6e39f36eb45cf0",
-          "sha256": "4a2e646f18295d106203905a527faecca43f15e360e8016fa3aeacd3fa53d26e"
-        }
-      ],
-      "scope": "Current module-register navigation updated for the approved RAX-CQG benchmark. Prior hashes retained below; historical scientific evidence and artifacts unchanged."
-    },
-    {
-      "date": "2026-10-16",
-      "files": [
-        {
-          "path": "research/lorentz_n6_residuals/README.md",
-          "previous_sha256": "78db2ac08999b5cb7ddea781f2777e5ccc3e8971e74e00b6919c5da6ec2284ef",
-          "sha256": "f1148ffed6717580af15deb7a39470495514633196c8b190a8cf29af25504bea"
-        }
-      ],
-      "scope": "Add dated link to the completed H7 refutation; historical scientific artifacts unchanged"
-    },
-    {
-      "date": "2026-10-16",
-      "files": [
-        {
-          "path": "MODULE_REGISTRY.json",
-          "previous_sha256": "8e1550b9f551a55669a4df694d2475be3779af175fbfd936ecec06a65863d65d",
-          "sha256": "3add28ce03552ed85d38a96e45babcc5c7340804c9f25b243d52f0644c2e9fc6"
-        },
-        {
-          "path": "docs/MODULE_REGISTRY.md",
-          "previous_sha256": "4a2e646f18295d106203905a527faecca43f15e360e8016fa3aeacd3fa53d26e",
-          "sha256": "404e0ab9a99c750527f82ee773fe0255c5443cd91250d0d5b7f6d92cafcf197d"
-        }
-      ],
-      "scope": "Register completed n7 scalar refutation and advance current source/navigation pins; archived results unchanged"
-    },
-    {
-      "date": "2026-10-17",
-      "files": [
-        {
-          "path": "MODULE_REGISTRY.json",
-          "previous_sha256": "3add28ce03552ed85d38a96e45babcc5c7340804c9f25b243d52f0644c2e9fc6",
-          "sha256": "13a247bc0a7e8e29d86d3851a347fe76949765060f6c02b3a1bad0c5f1172360"
-        },
-        {
-          "path": "docs/MODULE_REGISTRY.md",
-          "previous_sha256": "404e0ab9a99c750527f82ee773fe0255c5443cd91250d0d5b7f6d92cafcf197d",
-          "sha256": "b10d434decb338cd6aedb4ffff91c6b1311b51c93b66fafa215cf0acc0dc0528"
-        }
-      ],
-      "scope": "Clarify completed reproducible laboratory machine reference for the existing Paderborn pilot; historical results, executable statuses and industrial NOT_READY gate unchanged."
-    },
-    {
-      "date": "2026-10-19",
-      "files": [
-        {
-          "path": "MODULE_REGISTRY.json",
-          "previous_sha256": "73bc30f1f24d551eeaa5894531a1f9d1ad24a7228a26fe5544ce3eacdc9efff7",
-          "sha256": "567f009f09a75874693cefac2fd009514598825d6f13d69e1e0aaab406e1cdcf"
-        },
-        {
-          "path": "docs/MODULE_REGISTRY.md",
-          "previous_sha256": "4f0af0f23b254786cd736e1e35533aadd8518ef20470099b64bb6b7a657107f3",
-          "sha256": "7d475b4d96f1bf4ef8c8e4aa3eeb83b6161b549d93681149adf390e7d89f6800"
-        },
-        {
-          "path": "modules/free-field-entropy.html",
-          "previous_sha256": "5cc134de9e4327464ccf845a24d27b072e57abbcb0f88a7b8bac0a41ecae81b1",
-          "sha256": "c6325ddaa3abcaed868f3f798e23ca44273f53caeaa1322148c161614fd25bb9"
-        },
-        {
-          "path": "modules/free-field-entropy.md",
-          "previous_sha256": "fa4f09b31ade74d7f2df1e854f6c29534567beba77c3528852ee94d118b258e6",
-          "sha256": "c56267b54c0c47e7e93234f6e5c6a841c8a79dc279dd60a3928787830f566043"
-        }
-      ],
-      "scope": "Current navigation for the completed BK moment diagnosis; frozen scientific records and historical evidence unchanged."
-    },
-    {
-      "date": "2026-10-19",
-      "files": [
-        {
-          "path": "MODULE_REGISTRY.json",
-          "previous_sha256": "567f009f09a75874693cefac2fd009514598825d6f13d69e1e0aaab406e1cdcf",
-          "sha256": "95726ad4bda561ae5e47163cafca5afc0d7aee69ecfab62a867efd31c14f7bc8"
-        },
-        {
-          "path": "docs/MODULE_REGISTRY.md",
-          "previous_sha256": "7d475b4d96f1bf4ef8c8e4aa3eeb83b6161b549d93681149adf390e7d89f6800",
-          "sha256": "e6e7a062f1d77b6b3f9dd319889139e3e8846a9ac2725c90a5b723add0e8a928"
-        },
-        {
-          "path": "modules/free-field-entropy.html",
-          "previous_sha256": "c6325ddaa3abcaed868f3f798e23ca44273f53caeaa1322148c161614fd25bb9",
-          "sha256": "b464f54a7a0b02c92be04bd776251f2ec253a90c07a42dda77b0a9c3023616bf"
-        },
-        {
-          "path": "modules/free-field-entropy.md",
-          "previous_sha256": "c56267b54c0c47e7e93234f6e5c6a841c8a79dc279dd60a3928787830f566043",
-          "sha256": "cbaeb942126b8deb6cc6dc79b807332706752c9fa657b613b479cb63add548bf"
-        }
-      ],
-      "scope": "Current navigation for the completed intrinsic BK shell-weight trial; frozen scientific records and historical evidence unchanged."
-    },
-    {
-      "date": "2026-10-19",
-      "files": [
-        {
-          "path": "MODULE_REGISTRY.json",
-          "previous_sha256": "95726ad4bda561ae5e47163cafca5afc0d7aee69ecfab62a867efd31c14f7bc8",
-          "sha256": "3535bec683d7dfe144fcb09228ce0b77211ccf2a4047a98f1e6434878b7ba65b"
-        },
-        {
-          "path": "docs/MODULE_REGISTRY.md",
-          "previous_sha256": "e6e7a062f1d77b6b3f9dd319889139e3e8846a9ac2725c90a5b723add0e8a928",
-          "sha256": "319a129b7d54fcb85c39de4a815847bc45157f4c79fcfa3748f3726f0f3e6cfa"
-        },
-        {
-          "path": "modules/free-field-entropy.html",
-          "previous_sha256": "b464f54a7a0b02c92be04bd776251f2ec253a90c07a42dda77b0a9c3023616bf",
-          "sha256": "e747936f0b6465fe82fa0828240de302fb6a749d859d9548c8a6b021048a79cd"
-        },
-        {
-          "path": "modules/free-field-entropy.md",
-          "previous_sha256": "cbaeb942126b8deb6cc6dc79b807332706752c9fa657b613b479cb63add548bf",
-          "sha256": "cb75d2f70167313f876d532fed7d724eba26cc7704b94d7f16ee20cbd610255e"
-        }
-      ],
-      "scope": "Current navigation for the completed intrinsic BK common-axis trial; frozen scientific records and historical evidence unchanged."
-    },
-    {
-      "date": "2026-10-19",
-      "files": [
-        {
-          "path": "MODULE_REGISTRY.json",
-          "previous_sha256": "3535bec683d7dfe144fcb09228ce0b77211ccf2a4047a98f1e6434878b7ba65b",
-          "sha256": "9f2b181bfef0972874f4bcf2dfcdfe0f44a3f9144cebe7fa63b427aab576c2dc"
-        },
-        {
-          "path": "docs/MODULE_REGISTRY.md",
-          "previous_sha256": "319a129b7d54fcb85c39de4a815847bc45157f4c79fcfa3748f3726f0f3e6cfa",
-          "sha256": "5ce3925cc357dc3c359a1478a573fe8108b26044ffba9ae910b0ca8f1b72aa0a"
-        },
-        {
-          "path": "modules/free-field-entropy.html",
-          "previous_sha256": "e747936f0b6465fe82fa0828240de302fb6a749d859d9548c8a6b021048a79cd",
-          "sha256": "5115e9cc96cccc780b32a9199cbbb61896c51df12d3a80f7c166fed77eda2edf"
-        },
-        {
-          "path": "modules/free-field-entropy.md",
-          "previous_sha256": "cb75d2f70167313f876d532fed7d724eba26cc7704b94d7f16ee20cbd610255e",
-          "sha256": "e821168412eaabfce4276a8c189ebf6c0e0501ebbd9a97ae998744454201613b"
-        }
-      ],
-      "scope": "Current navigation for the completed intrinsic BK joint-moment feasibility audit; frozen scientific records and historical evidence unchanged."
-    },
-    {
-      "date": "2026-10-19",
-      "files": [
-        {
-          "path": "MODULE_REGISTRY.json",
-          "previous_sha256": "9f2b181bfef0972874f4bcf2dfcdfe0f44a3f9144cebe7fa63b427aab576c2dc",
-          "sha256": "d2333f105fcbe71c1dd6691d3523949154f000addb1f3f00e629755c5d1672cf"
-        },
-        {
-          "path": "docs/MODULE_REGISTRY.md",
-          "previous_sha256": "5ce3925cc357dc3c359a1478a573fe8108b26044ffba9ae910b0ca8f1b72aa0a",
-          "sha256": "726b90df9758f27994a87c609f4e9db341da7fd9519b73be9a13a0a31947bec0"
-        },
-        {
-          "path": "modules/free-field-entropy.html",
-          "previous_sha256": "5115e9cc96cccc780b32a9199cbbb61896c51df12d3a80f7c166fed77eda2edf",
-          "sha256": "7cdfc9eacc3b88443952aa25b9f390e06ef74c5829aea6b9bddc35b3684d4d36"
-        },
-        {
-          "path": "modules/free-field-entropy.md",
-          "previous_sha256": "e821168412eaabfce4276a8c189ebf6c0e0501ebbd9a97ae998744454201613b",
-          "sha256": "e13f3988722c34ea46f8894efb812044904c2b33a3bea5010dab6d8740fa2c63"
-        }
-      ],
-      "scope": "Current navigation for the completed intrinsic landmark calibration trial; frozen scientific sources and earlier evidence unchanged."
-    },
-    {
-      "date": "2026-10-19",
-      "files": [
-        {
-          "path": "MODULE_REGISTRY.json",
-          "previous_sha256": "d2333f105fcbe71c1dd6691d3523949154f000addb1f3f00e629755c5d1672cf",
-          "sha256": "e65ec310884de835f0fb75369192e2c323e13c227bdd9c6bead7158e7e9e9520"
-        },
-        {
-          "path": "docs/MODULE_REGISTRY.md",
-          "previous_sha256": "726b90df9758f27994a87c609f4e9db341da7fd9519b73be9a13a0a31947bec0",
-          "sha256": "5acfee96042efc3aeda9e6c26cb567251a9c883afd31409546c3425b6ea3163e"
-        },
-        {
-          "path": "modules/free-field-entropy.html",
-          "previous_sha256": "7cdfc9eacc3b88443952aa25b9f390e06ef74c5829aea6b9bddc35b3684d4d36",
-          "sha256": "16091edcd6e419dbc43b69763fdb28149983400c525f7a63f164780ded618c26"
-        },
-        {
-          "path": "modules/free-field-entropy.md",
-          "previous_sha256": "e13f3988722c34ea46f8894efb812044904c2b33a3bea5010dab6d8740fa2c63",
-          "sha256": "500b54cc0c32cc74bd9580bee9d5f62f55124caaa2795d5ea6053f24c884e20a"
-        }
-      ],
-      "scope": "Current navigation for retrospective landmark availability diagnosis; frozen scientific sources and original target records unchanged."
-    },
-    {
-      "date": "2026-10-19",
-      "files": [
-        {
-          "path": "MODULE_REGISTRY.json",
-          "previous_sha256": "9356a916af53d8365fc5a69b487078cfb866ffbe5f95bcd3e7c48492afb1ac40",
-          "sha256": "722dced0bb939a3e8eeaf50953ac9a96fd95c203f5dad4859581db777cf42e87"
-        },
-        {
-          "path": "README.md",
-          "previous_sha256": "ec1a47391c53989d6412da801240a37c67c457bd649eb40ca4a9e9da1e8e5a02",
-          "sha256": "18fb9a0b21031352b6ff97f1f8dfe5773cc4b272cfba8b98a3b8b35db4350e21"
-        },
-        {
-          "path": "docs/MODULE_REGISTRY.md",
-          "previous_sha256": "6ba5d775a6811bd46414af55dccfdf34c184d75005ed977131f2b7a02bde2371",
-          "sha256": "59916fd4c9e80d84596512d0618b37d0e966348f4d3b93fb22e28f0ffe8fdcd6"
-        },
-        {
-          "path": "modules/free-field-entropy.html",
-          "previous_sha256": "c9ec9702f524a3825e0c897f38b27af7736b8febc975fcc0705a6fad59da07a8",
-          "sha256": "035156b117595d4802bb93e58ec52b72c9e0f5a170aedbc8870957f4257c716c"
-        },
-        {
-          "path": "modules/free-field-entropy.md",
-          "previous_sha256": "847918fb32d5e6fc06eba4243ae74ef8dfa358c6d5328503f5f9efbe15f4bc0f",
-          "sha256": "282cf9a95815b61abe86a1a06defcf06f075e3d14409e64fbe8111392d8e9e84"
-        }
-      ],
-      "scope": "Joint support/count/frame feasibility publication and current navigation; previous frozen scientific evidence retained."
-    },
-    {
-      "date": "2026-10-27",
-      "files": [
-        {
-          "path": "SAGNAC_SOURCE_MANIFEST.json",
-          "previous_sha256": "2049c18f154d09d3965c8b33c778a20e72c204d9067c306cc85021214df2695a",
-          "sha256": "4464a10b27d1a6ccf8f1261175e1c236ca258646630c5709149e81c977e9aa06"
-        },
-        {
-          "path": "LICENSE_SOURCE_MANIFEST.json",
-          "previous_sha256": "a76735ed9bd28cb535c05a6055455ca24e1287efc98e764d1b0758324a369cf8",
-          "sha256": "6d986d2724eac2201d169912f11d00434a8dd645db10c030cf93ca8393a3a3c8"
-        }
-      ],
-      "scope": "CSPP E4-V0.1 draft contract only: NOT_FROZEN / NOT_RUN. No scientific qualification or modification of historical evidence."
-    },
-    {
-      "date": "2026-10-27",
-      "files": [
-        {
-          "path": "SAGNAC_SOURCE_MANIFEST.json",
-          "previous_sha256": "4464a10b27d1a6ccf8f1261175e1c236ca258646630c5709149e81c977e9aa06",
-          "sha256": "9d9d29c18172b15965a0c031aa4fa27cf7a7ec5e4f40116e6f579e75b67ea18c"
-        },
-        {
-          "path": "LICENSE_SOURCE_MANIFEST.json",
-          "previous_sha256": "6d986d2724eac2201d169912f11d00434a8dd645db10c030cf93ca8393a3a3c8",
-          "sha256": "bb3450b15e8e174379076fcdee1347424a9299fcea87208d0585ffcb5ef43ff1"
-        },
-        {
-          "path": ".github/workflows/cspp-contract.yml",
-          "previous_sha256": "3553e065a310d023c99c33eb3624230b19012c71f59b8dd6190ccabfb5e7fd80",
-          "sha256": "d3d52190809ad71c5dbd85acd03f35531ba5819a0e10bb89aefe3d83e4b3299f"
-        }
-      ],
-      "scope": "CSPP scalar development pilot: all 64 runs retained; 0/12 cells meet draft scalar tolerance; scientific HOLD preserved. Documented outer-shell correction leaves primary arrays unchanged."
-    },
-    {
-      "date": "2026-10-27",
-      "files": [
-        {
-          "path": "SAGNAC_SOURCE_MANIFEST.json",
-          "previous_sha256": "9d9d29c18172b15965a0c031aa4fa27cf7a7ec5e4f40116e6f579e75b67ea18c",
-          "sha256": "03c0878fa3e249f0808cb89439b584d67bd24f42931b1bf19a2b6a9816acb021"
-        },
-        {
-          "path": "LICENSE_SOURCE_MANIFEST.json",
-          "previous_sha256": "bb3450b15e8e174379076fcdee1347424a9299fcea87208d0585ffcb5ef43ff1",
-          "sha256": "a2c47cfb42e8570bbb37d905823e9b2d4af232756f42837fa00d215badeac37f"
-        },
-        {
-          "path": ".github/workflows/cspp-contract.yml",
-          "previous_sha256": "d3d52190809ad71c5dbd85acd03f35531ba5819a0e10bb89aefe3d83e4b3299f",
-          "sha256": "b64811fe0b417f0a69bb0e4a442c25394aaf97488ca064bdee48998c37044f5e"
-        }
-      ],
-      "scope": "CSPP scale calibration v0.2: 48 fresh clouds, exact expectation formula, bounded outer-domain tail and independent real-space KG reference; G1 and reference HOLD retained. Historical evidence unchanged."
-    },
-    {
-      "date": "2026-10-27",
-      "files": [
-        {
-          "path": "SAGNAC_SOURCE_MANIFEST.json",
-          "previous_sha256": "03c0878fa3e249f0808cb89439b584d67bd24f42931b1bf19a2b6a9816acb021",
-          "sha256": "3ab6a17d58263640c9136cf8680601c9a0f2222ef89fb7f29214b1268630eda3"
-        },
-        {
-          "path": "LICENSE_SOURCE_MANIFEST.json",
-          "previous_sha256": "a2c47cfb42e8570bbb37d905823e9b2d4af232756f42837fa00d215badeac37f",
-          "sha256": "0bd3758a006c7cfa169074ec2f4ada40b175eb177b6eb3bae5bc5b9eea7c35db"
-        },
-        {
-          "path": ".github/workflows/cspp-contract.yml",
-          "previous_sha256": "b64811fe0b417f0a69bb0e4a442c25394aaf97488ca064bdee48998c37044f5e",
-          "sha256": "d283740d1bd1c243ba16587a10493a4cb5f68c14ef8d70922514b1e0800e59b4"
-        }
-      ],
-      "scope": "CSPP interval budget v0.3: seven Gaussian witness budgets, correlation-safe variance envelope, 34 source enclosures and higher-precision replay; G1/full reference HOLD. Sagnac timeout extended for observed package-mirror delay; tests unchanged."
-    },
-    {
-      "date": "2026-10-27",
-      "files": [
-        {
-          "path": ".github/workflows/cspp-contract.yml",
-          "previous_sha256": "d283740d1bd1c243ba16587a10493a4cb5f68c14ef8d70922514b1e0800e59b4",
-          "sha256": "0f2ac0dd12c9dccab3586f62f7425fff46755c6599fcb244d2ebcbc87b440e31"
-        },
-        {
-          "path": "research/cspp/certified_budget_v0_3/METHODS.md",
-          "previous_sha256": "253d84e54b0ed9ed1f916b90dc79a337bd11d85e01dde0122007e5198a0f315c",
-          "sha256": "164e2ebaa24617a01997085e4d993e6f52b237f407e65705cf468719968daac2"
-        },
-        {
-          "path": "research/cspp/certified_budget_v0_3/README.md",
-          "previous_sha256": "659a26b938153c2c0529c538586a0ec51ee2117d3c39822ba9aa99fd2e58a4c6",
-          "sha256": "82de29c5a2625ac214f0cbd2d17564d7a20948781391b324b0375275cb8c72cb"
-        },
-        {
-          "path": "research/cspp/certified_budget_v0_3/SHA256SUMS",
-          "previous_sha256": "b644eb4fa63a71b54db61d2bfbed5ace160e8769cd31beefd02e6c1dc09cb6c3",
-          "sha256": "2b791e418dda963b2ba0a8ce7caa6533c5b2360d03207e8d124531d1ca396375"
-        },
-        {
-          "path": "research/cspp/certified_budget_v0_3/verify_publication.py",
-          "previous_sha256": "9ea2ac23f37e8ab9b38a740d3e5cfe54bbb861a44d59daf1caa63a7983f94082",
-          "sha256": "3968dfd1839d77eeba6e93dd45a4f79f5538f1d0a9bf48d98be68d5d0f0775d2"
-        }
-      ],
-      "scope": "Explicit numeric portability qualification after NumPy CPU-path byte mismatch. Historical archives and audits unchanged; stream/count/mask checks exact, numeric screen declared, full E4 HOLD retained."
-    },
-    {
-      "date": "2026-10-27",
-      "files": [
-        {
-          "path": ".github/workflows/cspp-contract.yml",
-          "previous_sha256": "0f2ac0dd12c9dccab3586f62f7425fff46755c6599fcb244d2ebcbc87b440e31",
-          "sha256": "f3e0a0d4db419a007265e874405c65b2db239884145591d6dfce885bcae23d2f"
-        },
-        {
-          "path": "LICENSE_SOURCE_MANIFEST.json",
-          "previous_sha256": "0bd3758a006c7cfa169074ec2f4ada40b175eb177b6eb3bae5bc5b9eea7c35db",
-          "sha256": "e627620935399252680d9abbcfdfffaffd7bbbb97cbcb3dbeb17a2f25fb4f90e"
-        },
-        {
-          "path": "SAGNAC_SOURCE_MANIFEST.json",
-          "previous_sha256": "3ab6a17d58263640c9136cf8680601c9a0f2222ef89fb7f29214b1268630eda3",
-          "sha256": "ff13325c2af42422cfabb9da67353ef15b3554db6499983700ef7deb9c63668d"
-        },
-        {
-          "path": "de/index.html",
-          "previous_sha256": "58bf053df098f9aa7c860ccc42b262c9dc35b909de22b4158ed03d2f419aa2c8",
-          "sha256": "22b85f09e964d6b4a3f67f3cc8d1a09eab41e80639458dad4af67454db0406f2"
-        },
-        {
-          "path": "de/index.md",
-          "previous_sha256": "48a5e29dd8593643bb8f1295ce50b993c068207e99215c4f50c8c45f3fea0c92",
-          "sha256": "13bce9be19e8e4f7d2e916c45ce7d7feac7df9417f6935dfa87033eb44edfee6"
-        },
-        {
-          "path": "docs/hub/content.json",
-          "previous_sha256": "5a533795244833eb9bd6fbcfc476c33fbdedda057df77775e0fde63fded27d9e",
-          "sha256": "60dd85b9639c70ad5f4c242c5cb35e4f7c203fc9967344250c4bcea883cffe0e"
-        },
-        {
-          "path": "index.html",
-          "previous_sha256": "c7994993e88018fea2cd3fa65fbfc7254d1754df92d441608ceac5a90dc870b8",
-          "sha256": "455897f229fe6de334d01ea3970c0be7bdb04bacc9b2e62d3511970fe6bceebc"
-        },
-        {
-          "path": "index.md",
-          "previous_sha256": "fb6d5490d9742898365d1f64f259652edcfc2a754f0b0cd4b19e208f8c947e93",
-          "sha256": "d42552c79e3cca233d61a6a9681dc78347485cc1007f6ae0ae29b16fadda8369"
-        }
-      ],
-      "scope": "CSPP variance budget v0.4: unchanged original package and positive necessary/sufficient density bounds; isolated 128/192-bit replay; public DE/EN links; G1 HOLD."
-    },
-    {
-      "date": "2026-10-27",
-      "files": [
-        {
-          "path": ".github/workflows/cspp-contract.yml",
-          "previous_sha256": "f3e0a0d4db419a007265e874405c65b2db239884145591d6dfce885bcae23d2f",
-          "sha256": "94faabea2655b6e0a459bed02da539c8591a6a838faf07b93cafcbde48b870f4"
-        }
-      ],
-      "scope": "Explicit scalar-pilot v0.1 numeric portability after PR136 CPU-dependent coordinate-byte failure. Original files and all tolerances unchanged; exact RNG outputs, full interval/probe counts and history masks; G1 HOLD."
-    },
-    {
-      "date": "2026-10-28",
-      "files": [
-        {
-          "path": ".github/workflows/cspp-contract.yml",
-          "previous_sha256": "94faabea2655b6e0a459bed02da539c8591a6a838faf07b93cafcbde48b870f4",
-          "sha256": "d129e4f01fa1897f483eec8b6e70c469ab726bd63f8de658f69978bfdd7d950b"
-        },
-        {
-          "path": "LICENSE_SOURCE_MANIFEST.json",
-          "previous_sha256": "e627620935399252680d9abbcfdfffaffd7bbbb97cbcb3dbeb17a2f25fb4f90e",
-          "sha256": "0e2cc6fe4c417dc84f27c44da5dd3010be107b8871c78d83c962e04b4353eb83"
-        },
-        {
-          "path": "SAGNAC_SOURCE_MANIFEST.json",
-          "previous_sha256": "ff13325c2af42422cfabb9da67353ef15b3554db6499983700ef7deb9c63668d",
-          "sha256": "255ef08cd432010a5f1402a6e6645550815bc55b81b9dd49852307b30f6858d1"
-        }
-      ],
-      "scope": "Add isolated massive-reference replay job without altering existing jobs."
-    },
-    {
-      "date": "2026-10-28",
-      "files": [
-        {
-          "path": ".github/workflows/cspp-contract.yml",
-          "previous_sha256": "d129e4f01fa1897f483eec8b6e70c469ab726bd63f8de658f69978bfdd7d950b",
-          "sha256": "f66b5847f4018c4a1bbc2fe0fb7e4e1420e00157aadeb8e3a2c51420caa0a122"
-        },
-        {
-          "path": "LICENSE_SOURCE_MANIFEST.json",
-          "previous_sha256": "0e2cc6fe4c417dc84f27c44da5dd3010be107b8871c78d83c962e04b4353eb83",
-          "sha256": "7fef09b22255c4fb43037584a6db177b2e22becabf4d8fe4befe95e452bd2aeb"
-        },
-        {
-          "path": "SAGNAC_SOURCE_MANIFEST.json",
-          "previous_sha256": "255ef08cd432010a5f1402a6e6645550815bc55b81b9dd49852307b30f6858d1",
-          "sha256": "631cc9aa07b7bfc1b8ebeacb4cbf7766a5c178a02167a21a7b796cf6e0772fdb"
-        }
-      ],
-      "scope": "Add isolated joint-budget replay job and navigation without altering existing numerical packages."
-    },
-    {
-      "date": "2026-10-28",
-      "files": [
-        {
-          "path": ".github/workflows/cspp-contract.yml",
-          "previous_sha256": "f66b5847f4018c4a1bbc2fe0fb7e4e1420e00157aadeb8e3a2c51420caa0a122",
-          "sha256": "0f94bc75d4d98ee412e6bc1a0e76bd80f9df51361f2e9de3893e10755807393d"
-        },
-        {
-          "path": "LICENSE_SOURCE_MANIFEST.json",
-          "previous_sha256": "7fef09b22255c4fb43037584a6db177b2e22becabf4d8fe4befe95e452bd2aeb",
-          "sha256": "eb2b38e0027005d2d1e4f11b3a5f13c6f4efdf794448f64558b51b07b57748c8"
-        },
-        {
-          "path": "SAGNAC_SOURCE_MANIFEST.json",
-          "previous_sha256": "631cc9aa07b7bfc1b8ebeacb4cbf7766a5c178a02167a21a7b796cf6e0772fdb",
-          "sha256": "e04add4167ec088f66b92fe9718986ff1111c3ebab653208116e1a8d0f96d167"
-        }
-      ],
-      "scope": "Add complete scalar-propagation replay CI and navigation; previous numerical packages unchanged."
-    },
-    {
-      "date": "2026-10-28",
-      "files": [
-        {
-          "path": "research/cspp/independent_g1_v0_8/README.md",
-          "previous_sha256": "42bba4e503ee7d82356e7e0035371921089a92466abdec733d6449e41db6edc6",
-          "sha256": "224f2a0d8256357395e33ae5d9314ed5b0ee5cf5c8985a79940316b9ed089ab0"
-        },
-        {
-          "path": "research/cspp/independent_g1_v0_8/SHA256SUMS",
-          "previous_sha256": "f348a7af6eaf116490f9f534802814a7113397ebc905fbeb7b55ecfa19be6319",
-          "sha256": "988c6573940f7356b68c0867da63fa104456eb28afa8d1ff942335b3490c7a6d"
-        },
-        {
-          "path": ".github/workflows/cspp-contract.yml",
-          "previous_sha256": "0f94bc75d4d98ee412e6bc1a0e76bd80f9df51361f2e9de3893e10755807393d",
-          "sha256": "8c31b15f43e916ae5c8673110ccafffad1986917a5b2cf072f2a966ab618ae1a"
-        },
-        {
-          "path": "LICENSE_SOURCE_MANIFEST.json",
-          "previous_sha256": "eb2b38e0027005d2d1e4f11b3a5f13c6f4efdf794448f64558b51b07b57748c8",
-          "sha256": "4be024c636b49c5931c2d8ead1c72ab09a3b1a37575fea8178fdf342fe97c9ef"
-        },
-        {
-          "path": "SAGNAC_SOURCE_MANIFEST.json",
-          "previous_sha256": "e04add4167ec088f66b92fe9718986ff1111c3ebab653208116e1a8d0f96d167",
-          "sha256": "a2dc727afed95cc54985ddb3e94bdb988d28440546233de18abe66b862dcbec4"
-        }
-      ],
-      "scope": "Publish independent G1 negative results and full replay CI; all frozen analysis files and predecessors unchanged."
-    },
-    {
-      "date": "2026-10-28",
-      "files": [
-        {
-          "path": "research/cspp/independent_g1_v0_8/README.md",
-          "previous_sha256": "224f2a0d8256357395e33ae5d9314ed5b0ee5cf5c8985a79940316b9ed089ab0",
-          "sha256": "551b14d6675f8b793c3d3571fcdd9faadbbb2f48a64326f759a98fbaab483a60"
-        },
-        {
-          "path": "research/cspp/independent_g1_v0_8/publication_checks.py",
-          "previous_sha256": "46b0478b20d367dc86d0624c00cbdcb97ed1bb8b1bdde80733bce8fec4da0f02",
-          "sha256": "d9e2d921a61be4b08bb082e401d0b2842c6f23589f81c28b11fdf2604f295a99"
-        },
-        {
-          "path": "research/cspp/independent_g1_v0_8/SHA256SUMS",
-          "previous_sha256": "988c6573940f7356b68c0867da63fa104456eb28afa8d1ff942335b3490c7a6d",
-          "sha256": "d4382f067b1fd98ca6cc3fb73551672f1d88aeb09f2b59b45bb3a12b65bf9f71"
-        }
-      ],
-      "scope": "Document and repair replay-only module collision; all preregistered sources, data and decisions unchanged."
-    },
-    {
-      "date": "2026-10-28",
-      "files": [
-        {
-          "path": "LICENSE_SOURCE_MANIFEST.json",
-          "previous_sha256": "4be024c636b49c5931c2d8ead1c72ab09a3b1a37575fea8178fdf342fe97c9ef",
-          "sha256": "117d4227e147727cf582080f97d7314d5b46eddbed4c4afddfd8cc46aedcf432"
-        },
-        {
-          "path": "SAGNAC_SOURCE_MANIFEST.json",
-          "previous_sha256": "a2dc727afed95cc54985ddb3e94bdb988d28440546233de18abe66b862dcbec4",
-          "sha256": "b798378208165be5c44281d2b0ed1bea8689a721f592c3be5994ade1d458f670"
-        }
-      ],
-      "scope": "CSPP v0.9: close scalar series and publish bounded finite-detector transfer; quadrature HOLD and empty-source-history diagnosis, no fresh confirmation or Dirac release."
-    },
-    {
-      "date": "2026-10-28",
-      "files": [
-        {
-          "path": "de/index.html",
-          "previous_sha256": "22b85f09e964d6b4a3f67f3cc8d1a09eab41e80639458dad4af67454db0406f2",
-          "sha256": "da1e10cfcd6c4fa9a7ac28b4553fdb02245a519b5485197782b8397471a2dcf9"
-        },
-        {
-          "path": "de/index.md",
-          "previous_sha256": "13bce9be19e8e4f7d2e916c45ce7d7feac7df9417f6935dfa87033eb44edfee6",
-          "sha256": "c06e29bcc9cccea66d79c5e1eeddf95e5ac5b6eb342dc0907c12443a4a9fa550"
-        },
-        {
-          "path": "docs/hub/content.json",
-          "previous_sha256": "60dd85b9639c70ad5f4c242c5cb35e4f7c203fc9967344250c4bcea883cffe0e",
-          "sha256": "547450f4f25fcf22702c6f11cb77ca0aacc8b786f67f0a8aed0d5f279da75051"
-        },
-        {
-          "path": "index.html",
-          "previous_sha256": "455897f229fe6de334d01ea3970c0be7bdb04bacc9b2e62d3511970fe6bceebc",
-          "sha256": "97340b68801bd6a63053525cb7be1fdfa03edfa50621d18a5c2acf3eb16e348c"
-        },
-        {
-          "path": "index.md",
-          "previous_sha256": "d42552c79e3cca233d61a6a9681dc78347485cc1007f6ae0ae29b16fadda8369",
-          "sha256": "c4160fbfc769715edbf13d95129cc121e122eb17de81ec29d6ad196b280ae1b4"
-        },
-        {
-          "path": "SAGNAC_SOURCE_MANIFEST.json",
-          "previous_sha256": "b798378208165be5c44281d2b0ed1bea8689a721f592c3be5994ade1d458f670",
-          "sha256": "d095fc4e47a59334cd8eb02bd1b26d4e5333a19254071ac2f859f2f8fed6b931"
-        },
-        {
-          "path": "LICENSE_SOURCE_MANIFEST.json",
-          "previous_sha256": "117d4227e147727cf582080f97d7314d5b46eddbed4c4afddfd8cc46aedcf432",
-          "sha256": "233c3005f4ed24276e50dd53c670418e39428ff62a8adb9f006e7a93e5c84a52"
-        }
-      ],
-      "scope": "CSPP v0.9: bilingual closure, finite detector results and integration/initial-history limitations; scientific links pinned to 0ea645c9381979a55bc943f5f5ce1dcc4d39b6ca."
-    },
-    {
-      "date": "2026-10-28",
-      "files": [
-        {
-          "path": "SAGNAC_SOURCE_MANIFEST.json",
-          "previous_sha256": "d095fc4e47a59334cd8eb02bd1b26d4e5333a19254071ac2f859f2f8fed6b931",
-          "sha256": "45351c8e0f6f87f58cb6964425fcc563ae4cc8f2f0952d30b2ae80536c64aeac"
-        },
-        {
-          "path": "LICENSE_SOURCE_MANIFEST.json",
-          "previous_sha256": "233c3005f4ed24276e50dd53c670418e39428ff62a8adb9f006e7a93e5c84a52",
-          "sha256": "0df80856b04a1b335bb97bd10b7bc37d1251eb71783a9e61c5f2ca523b5debeb"
-        }
-      ],
-      "scope": "CSPP v0.10: analytic time integration, tighter finite detector enclosures, compact initial-history error bounds and documented post-run verifier correction; METHOD_HOLD."
-    },
-    {
-      "date": "2026-10-28",
-      "files": [
-        {
-          "path": "de/index.html",
-          "previous_sha256": "da1e10cfcd6c4fa9a7ac28b4553fdb02245a519b5485197782b8397471a2dcf9",
-          "sha256": "03ee87306c1e0709e45d3baf25e93ef175a0fc41f3b70d0d5960c203e7cc0929"
-        },
-        {
-          "path": "de/index.md",
-          "previous_sha256": "c06e29bcc9cccea66d79c5e1eeddf95e5ac5b6eb342dc0907c12443a4a9fa550",
-          "sha256": "1b93f20ff5041aa3e5c8313e9caa4b5bead0600bea1bf10eda160be43fcc9417"
-        },
-        {
-          "path": "docs/hub/content.json",
-          "previous_sha256": "547450f4f25fcf22702c6f11cb77ca0aacc8b786f67f0a8aed0d5f279da75051",
-          "sha256": "bbfec5b6b34aab08be0bb62da4153e0fff97ee59130b0c50a08f8c8b108a66ce"
-        },
-        {
-          "path": "index.html",
-          "previous_sha256": "97340b68801bd6a63053525cb7be1fdfa03edfa50621d18a5c2acf3eb16e348c",
-          "sha256": "2c7e5dd09bc83f9048b39304bf8a7d9153872026cc98770fe458f40be0ba817e"
-        },
-        {
-          "path": "index.md",
-          "previous_sha256": "c4160fbfc769715edbf13d95129cc121e122eb17de81ec29d6ad196b280ae1b4",
-          "sha256": "7b85840b3683031ac00d605bfa76495c7eb8a86bf0bb7835d4608f70d73153f9"
-        },
-        {
-          "path": "SAGNAC_SOURCE_MANIFEST.json",
-          "previous_sha256": "45351c8e0f6f87f58cb6964425fcc563ae4cc8f2f0952d30b2ae80536c64aeac",
-          "sha256": "096a3e0cca59d8f2f65bf4a55ed3264d28bc9923d2bdf05f299766cd0cd9dbde"
-        },
-        {
-          "path": "LICENSE_SOURCE_MANIFEST.json",
-          "previous_sha256": "0df80856b04a1b335bb97bd10b7bc37d1251eb71783a9e61c5f2ca523b5debeb",
-          "sha256": "6792dfdb0bb03c15520cb09f371433a05bae04628f9d449be716f9b146c93244"
-        }
-      ],
-      "scope": "CSPP v0.10 bilingual update: tighter integrals, unchanged METHOD_HOLD, local-history obstruction and disclosed verifier correction; links pinned to ed481912b9330a09d02206beff6f6f535bb4ef85."
-    }
-  ],
   "non_historical_source_additions": [
     {
-      "component": "X6 PF Experiment Contract v0.2.0",
       "date": "2026-10-13",
+      "component": "X6 PF Experiment Contract v0.2.0",
       "paths": [
         "experiments/x6-phase-filter/contract-v0.2.0/README_DE.md",
         "experiments/x6-phase-filter/contract-v0.2.0/X6_PF_Experiment_Contract_v0_2_DRAFT.json",
@@ -2015,8 +1371,8 @@
       "scope": "Approved development-tool publication. All twelve versioned package files are byte-identical to the approved package. The report records 42 local validator tests, not denoising efficacy, portability qualification or physical evidence. Existing historical digests retained."
     },
     {
-      "component": "Eigenzeit 3+1 joint-region v0.3",
       "date": "2026-10-27",
+      "component": "Eigenzeit 3+1 joint-region v0.3",
       "paths": [
         "research/eigenzeit_4d/joint_region_v0_3/AUDIT.json",
         "research/eigenzeit_4d/joint_region_v0_3/CERTIFICATES.json",
@@ -2037,8 +1393,8 @@
       "scope": "Frozen fresh-count experiment and complete evidence, internal directed-rounding certificates and replay. Partial certification; all-geometries availability gate HOLD. No intrinsic selection, operator or general stability qualification."
     },
     {
-      "component": "Eigenzeit 3+1 refined bounds and information budget v0.4",
       "date": "2026-10-27",
+      "component": "Eigenzeit 3+1 refined bounds and information budget v0.4",
       "paths": [
         "research/eigenzeit_4d/refined_bound_v0_4/ABORT_LOG.txt",
         "research/eigenzeit_4d/refined_bound_v0_4/AMENDMENT.json",
@@ -2078,8 +1434,8 @@
       "scope": "Frozen fresh-count experiment, complete internal certificates and replay; original and expanded-budget gates HOLD. Archived aborted import-shadowing attempt and correction retained. Post-freeze geometric nonrealizability diagnosis separated from validation."
     },
     {
-      "component": "Eigenzeit 3+1 geometric constraints v0.5",
       "date": "2026-10-27",
+      "component": "Eigenzeit 3+1 geometric constraints v0.5",
       "paths": [
         "research/eigenzeit_4d/constrained_region_v0_5/AUDIT.json",
         "research/eigenzeit_4d/constrained_region_v0_5/CERTIFICATES.json",
@@ -2118,6 +1474,7 @@
     },
     {
       "date": "2026-10-27",
+      "scope": "CSPP scalar development pilot: all 64 runs retained; 0/12 cells meet draft scalar tolerance; scientific HOLD preserved. Documented outer-shell correction leaves primary arrays unchanged.",
       "files": [
         "research/cspp/scalar_pilot_v0_1/.gitignore",
         "research/cspp/scalar_pilot_v0_1/AUDIT.json",
@@ -2155,11 +1512,11 @@
         "research/cspp/scalar_pilot_v0_1/scalar-pilot.svg",
         "research/cspp/scalar_pilot_v0_1/scalar.py",
         "research/cspp/scalar_pilot_v0_1/verify_publication.py"
-      ],
-      "scope": "CSPP scalar development pilot: all 64 runs retained; 0/12 cells meet draft scalar tolerance; scientific HOLD preserved. Documented outer-shell correction leaves primary arrays unchanged."
+      ]
     },
     {
       "date": "2026-10-27",
+      "scope": "CSPP scale calibration v0.2: 48 fresh clouds, exact expectation formula, bounded outer-domain tail and independent real-space KG reference; G1 and reference HOLD retained. Historical evidence unchanged.",
       "files": [
         "research/cspp/scale_calibration_v0_2/AUDIT.json",
         "research/cspp/scale_calibration_v0_2/DATA.md",
@@ -2194,11 +1551,11 @@
         "research/cspp/scale_calibration_v0_2/results/sprinklings.npz",
         "research/cspp/scale_calibration_v0_2/run.py",
         "research/cspp/scale_calibration_v0_2/verify_publication.py"
-      ],
-      "scope": "CSPP scale calibration v0.2: 48 fresh clouds, exact expectation formula, bounded outer-domain tail and independent real-space KG reference; G1 and reference HOLD retained. Historical evidence unchanged."
+      ]
     },
     {
       "date": "2026-10-27",
+      "scope": "CSPP interval budget v0.3: seven Gaussian witness budgets, correlation-safe variance envelope, 34 source enclosures and higher-precision replay; G1/full reference HOLD. Sagnac timeout extended for observed package-mirror delay; tests unchanged.",
       "paths": [
         "research/cspp/certified_budget_v0_3/AUDIT.json",
         "research/cspp/certified_budget_v0_3/FREEZE.json",
@@ -2218,21 +1575,21 @@
         "research/cspp/certified_budget_v0_3/run.py",
         "research/cspp/certified_budget_v0_3/source.py",
         "research/cspp/certified_budget_v0_3/verify_publication.py"
-      ],
-      "scope": "CSPP interval budget v0.3: seven Gaussian witness budgets, correlation-safe variance envelope, 34 source enclosures and higher-precision replay; G1/full reference HOLD. Sagnac timeout extended for observed package-mirror delay; tests unchanged."
+      ]
     },
     {
       "date": "2026-10-27",
+      "scope": "Explicit numeric portability qualification after NumPy CPU-path byte mismatch. Historical archives and audits unchanged; stream/count/mask checks exact, numeric screen declared, full E4 HOLD retained.",
       "paths": [
         "research/cspp/certified_budget_v0_3/PORTABILITY_STREAMS.json",
         "research/cspp/certified_budget_v0_3/portability_audit.py",
         "research/cspp/certified_budget_v0_3/results/PORTABILITY_BASELINE.json",
         "research/cspp/certified_budget_v0_3/results/PORTABILITY_DEFAULT.json"
-      ],
-      "scope": "Explicit numeric portability qualification after NumPy CPU-path byte mismatch. Historical archives and audits unchanged; stream/count/mask checks exact, numeric screen declared, full E4 HOLD retained."
+      ]
     },
     {
       "date": "2026-10-27",
+      "scope": "CSPP variance budget v0.4: unchanged original package and positive necessary/sufficient density bounds; isolated 128/192-bit replay; public DE/EN links; G1 HOLD.",
       "paths": [
         "research/cspp/variance_budget_v0_4/METHODS.md",
         "research/cspp/variance_budget_v0_4/PUBLICATION.json",
@@ -2249,23 +1606,22 @@
         "research/cspp/variance_budget_v0_4/run.py",
         "research/cspp/variance_budget_v0_4/variance.py",
         "research/cspp/variance_budget_v0_4/verify_publication.py"
-      ],
-      "scope": "CSPP variance budget v0.4: unchanged original package and positive necessary/sufficient density bounds; isolated 128/192-bit replay; public DE/EN links; G1 HOLD."
+      ]
     },
     {
       "date": "2026-10-27",
+      "scope": "Explicit scalar-pilot v0.1 numeric portability after PR136 CPU-dependent coordinate-byte failure. Original files and all tolerances unchanged; exact RNG outputs, full interval/probe counts and history masks; G1 HOLD.",
       "paths": [
         "research/cspp/scalar_pilot_portability_v0_1/README.md",
         "research/cspp/scalar_pilot_portability_v0_1/STREAMS.json",
         "research/cspp/scalar_pilot_portability_v0_1/replay.py",
         "research/cspp/scalar_pilot_portability_v0_1/results/BASELINE_CPU.json",
         "research/cspp/scalar_pilot_portability_v0_1/results/DEFAULT.json"
-      ],
-      "scope": "Explicit scalar-pilot v0.1 numeric portability after PR136 CPU-dependent coordinate-byte failure. Original files and all tolerances unchanged; exact RNG outputs, full interval/probe counts and history masks; G1 HOLD."
+      ]
     },
     {
-      "component": "CSPP massive reference v0.5",
       "date": "2026-10-28",
+      "component": "CSPP massive reference v0.5",
       "paths": [
         "research/cspp/massive_reference_v0_5/FREEZE.json",
         "research/cspp/massive_reference_v0_5/METHODS.md",
@@ -2288,8 +1644,8 @@
       "scope": "50 new noncentral scalar KG enclosures and independently bounded scalar detector cubature; 128/192-bit production; spatial target not met; G1 HOLD."
     },
     {
-      "component": "CSPP joint budget v0.6",
       "date": "2026-10-28",
+      "component": "CSPP joint budget v0.6",
       "paths": [
         "research/cspp/joint_budget_v0_6/FREEZE.json",
         "research/cspp/joint_budget_v0_6/METHODS.md",
@@ -2313,8 +1669,8 @@
       "scope": "Signed boundary enclosures, 320 fixed-physics rho/ell/H budget cases, necessary/sufficient bounds and explicit resource accounting; 128/192-bit replay; no new random clouds; G1 HOLD."
     },
     {
-      "component": "CSPP scalar propagation v0.7",
       "date": "2026-10-28",
+      "component": "CSPP scalar propagation v0.7",
       "paths": [
         "research/cspp/scalar_propagation_v0_7/FREEZE.json",
         "research/cspp/scalar_propagation_v0_7/METHODS.md",
@@ -2350,8 +1706,8 @@
       "scope": "1554 fixed-archive field/adapter cases, 1341 new compact-source node references per precision, separated observable forward errors, exact needed CPU relation graphs and documented pre-completion zero-uncertainty correction; no new sprinklings; G1 HOLD."
     },
     {
-      "component": "CSPP independent G1 v0.8 preregistration",
       "date": "2026-10-28",
+      "component": "CSPP independent G1 v0.8 preregistration",
       "paths": [
         "research/cspp/independent_g1_v0_8/FREEZE.json",
         "research/cspp/independent_g1_v0_8/METHODS.md",
@@ -2371,8 +1727,8 @@
       "scope": "Frozen rejection test on256 new clouds, not yet drawn. All12 previous cells and10 fields, exact120-test family control; no positive G1 or Dirac release."
     },
     {
-      "component": "CSPP independent G1 v0.8 results",
       "date": "2026-10-28",
+      "component": "CSPP independent G1 v0.8 results",
       "paths": [
         "research/cspp/independent_g1_v0_8/REGISTRATION.json",
         "research/cspp/independent_g1_v0_8/amendment_01/AMENDMENT.json",
@@ -2398,8 +1754,8 @@
       "scope": "256 fresh clouds,all fixed trial identities,128/192-bit enclosures,both complete CPU audits,and exact120-test rejection family. Post-data verifier-only Amendment01 preserves every preregistered source and statistical decision."
     },
     {
-      "component": "CSPP independent G1 v0.8 Amendment02",
       "date": "2026-10-28",
+      "component": "CSPP independent G1 v0.8 Amendment02",
       "paths": [
         "research/cspp/independent_g1_v0_8/amendment_02/AMENDMENT.json",
         "research/cspp/independent_g1_v0_8/amendment_02/IMPORT_FIX.diff",
@@ -2410,8 +1766,8 @@
       "scope": "Preserve failed CI trace and old publication verifier; disambiguate frozen-audit import only."
     },
     {
-      "component": "CSPP finite detector transfer v0.9",
       "date": "2026-10-28",
+      "component": "CSPP finite detector transfer v0.9",
       "paths": [
         "research/cspp/detector_transfer_v0_9/CLOSURE.md",
         "research/cspp/detector_transfer_v0_9/FREEZE.json",
@@ -2445,8 +1801,8 @@
       "scope": "CSPP v0.9: close scalar series and publish bounded finite-detector transfer; quadrature HOLD and empty-source-history diagnosis, no fresh confirmation or Dirac release."
     },
     {
-      "component": "CSPP detector methods v0.10",
       "date": "2026-10-28",
+      "component": "CSPP detector methods v0.10",
       "paths": [
         ".github/workflows/cspp-detector-methods.yml",
         "research/cspp/detector_methods_v0_10/ADAPTER_OBSTRUCTION.md",
@@ -2481,8 +1837,8 @@
       ]
     },
     {
-      "component": "CSPP source norms and geometric remainder v0.19",
       "date": "2026-10-29",
+      "component": "CSPP source norms and geometric remainder v0.19",
       "paths": [
         ".github/workflows/cspp-source-overlap.yml",
         "research/cspp/source_overlap_v0_19/CSPP_Quellnormen_Intervallgeometrie_v0_19.zip",
@@ -2519,8 +1875,8 @@
       "scope": "Immutable report and 25-file package, publication integrity checks and exact scientific replay at 384/512 bits. Conditional upper bounds only; METHOD_HOLD and G1 HOLD unchanged."
     },
     {
-      "component": "CSPP complete finite exterior history v0.22",
       "date": "2026-10-29",
+      "component": "CSPP complete finite exterior history v0.22",
       "paths": [
         ".github/workflows/cspp-finite-exterior.yml",
         "research/cspp/finite_exterior_v0_22/CSPP_Endliche_Aussenhistory_v0_22_Pruefpaket.zip",
@@ -2573,6 +1929,671 @@
         "research/cspp/finite_exterior_v0_22/publication_check.py"
       ],
       "scope": "Unchanged original PDF, ZIP and all 43 package files; complete finite exterior region -6<=t<=-1, exact coverage and bounded wavefront, full discrete transport, 128/192-bit replay. The infinite tail is not combined; METHOD/G1 HOLD and no new random data."
+    }
+  ],
+  "non_historical_documentation_updates": [
+    {
+      "date": "2026-10-16",
+      "scope": "Current module-register navigation updated for the approved RAX-CQG benchmark. Prior hashes retained below; historical scientific evidence and artifacts unchanged.",
+      "files": [
+        {
+          "path": "MODULE_REGISTRY.json",
+          "previous_sha256": "501b72ed667b2a2494e052dd7be977eb909fc12176085f7133b6c15e08bc1d5a",
+          "sha256": "8e1550b9f551a55669a4df694d2475be3779af175fbfd936ecec06a65863d65d"
+        },
+        {
+          "path": "docs/MODULE_REGISTRY.md",
+          "previous_sha256": "921a8ed79068f4b8886d02f086adfd2a414a3b81c3cb588d3f6e39f36eb45cf0",
+          "sha256": "4a2e646f18295d106203905a527faecca43f15e360e8016fa3aeacd3fa53d26e"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-16",
+      "scope": "Add dated link to the completed H7 refutation; historical scientific artifacts unchanged",
+      "files": [
+        {
+          "path": "research/lorentz_n6_residuals/README.md",
+          "previous_sha256": "78db2ac08999b5cb7ddea781f2777e5ccc3e8971e74e00b6919c5da6ec2284ef",
+          "sha256": "f1148ffed6717580af15deb7a39470495514633196c8b190a8cf29af25504bea"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-16",
+      "scope": "Register completed n7 scalar refutation and advance current source/navigation pins; archived results unchanged",
+      "files": [
+        {
+          "path": "MODULE_REGISTRY.json",
+          "previous_sha256": "8e1550b9f551a55669a4df694d2475be3779af175fbfd936ecec06a65863d65d",
+          "sha256": "3add28ce03552ed85d38a96e45babcc5c7340804c9f25b243d52f0644c2e9fc6"
+        },
+        {
+          "path": "docs/MODULE_REGISTRY.md",
+          "previous_sha256": "4a2e646f18295d106203905a527faecca43f15e360e8016fa3aeacd3fa53d26e",
+          "sha256": "404e0ab9a99c750527f82ee773fe0255c5443cd91250d0d5b7f6d92cafcf197d"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-17",
+      "scope": "Clarify completed reproducible laboratory machine reference for the existing Paderborn pilot; historical results, executable statuses and industrial NOT_READY gate unchanged.",
+      "files": [
+        {
+          "path": "MODULE_REGISTRY.json",
+          "previous_sha256": "3add28ce03552ed85d38a96e45babcc5c7340804c9f25b243d52f0644c2e9fc6",
+          "sha256": "13a247bc0a7e8e29d86d3851a347fe76949765060f6c02b3a1bad0c5f1172360"
+        },
+        {
+          "path": "docs/MODULE_REGISTRY.md",
+          "previous_sha256": "404e0ab9a99c750527f82ee773fe0255c5443cd91250d0d5b7f6d92cafcf197d",
+          "sha256": "b10d434decb338cd6aedb4ffff91c6b1311b51c93b66fafa215cf0acc0dc0528"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-19",
+      "scope": "Current navigation for the completed BK moment diagnosis; frozen scientific records and historical evidence unchanged.",
+      "files": [
+        {
+          "path": "MODULE_REGISTRY.json",
+          "previous_sha256": "73bc30f1f24d551eeaa5894531a1f9d1ad24a7228a26fe5544ce3eacdc9efff7",
+          "sha256": "567f009f09a75874693cefac2fd009514598825d6f13d69e1e0aaab406e1cdcf"
+        },
+        {
+          "path": "docs/MODULE_REGISTRY.md",
+          "previous_sha256": "4f0af0f23b254786cd736e1e35533aadd8518ef20470099b64bb6b7a657107f3",
+          "sha256": "7d475b4d96f1bf4ef8c8e4aa3eeb83b6161b549d93681149adf390e7d89f6800"
+        },
+        {
+          "path": "modules/free-field-entropy.html",
+          "previous_sha256": "5cc134de9e4327464ccf845a24d27b072e57abbcb0f88a7b8bac0a41ecae81b1",
+          "sha256": "c6325ddaa3abcaed868f3f798e23ca44273f53caeaa1322148c161614fd25bb9"
+        },
+        {
+          "path": "modules/free-field-entropy.md",
+          "previous_sha256": "fa4f09b31ade74d7f2df1e854f6c29534567beba77c3528852ee94d118b258e6",
+          "sha256": "c56267b54c0c47e7e93234f6e5c6a841c8a79dc279dd60a3928787830f566043"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-19",
+      "scope": "Current navigation for the completed intrinsic BK shell-weight trial; frozen scientific records and historical evidence unchanged.",
+      "files": [
+        {
+          "path": "MODULE_REGISTRY.json",
+          "previous_sha256": "567f009f09a75874693cefac2fd009514598825d6f13d69e1e0aaab406e1cdcf",
+          "sha256": "95726ad4bda561ae5e47163cafca5afc0d7aee69ecfab62a867efd31c14f7bc8"
+        },
+        {
+          "path": "docs/MODULE_REGISTRY.md",
+          "previous_sha256": "7d475b4d96f1bf4ef8c8e4aa3eeb83b6161b549d93681149adf390e7d89f6800",
+          "sha256": "e6e7a062f1d77b6b3f9dd319889139e3e8846a9ac2725c90a5b723add0e8a928"
+        },
+        {
+          "path": "modules/free-field-entropy.html",
+          "previous_sha256": "c6325ddaa3abcaed868f3f798e23ca44273f53caeaa1322148c161614fd25bb9",
+          "sha256": "b464f54a7a0b02c92be04bd776251f2ec253a90c07a42dda77b0a9c3023616bf"
+        },
+        {
+          "path": "modules/free-field-entropy.md",
+          "previous_sha256": "c56267b54c0c47e7e93234f6e5c6a841c8a79dc279dd60a3928787830f566043",
+          "sha256": "cbaeb942126b8deb6cc6dc79b807332706752c9fa657b613b479cb63add548bf"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-19",
+      "scope": "Current navigation for the completed intrinsic BK common-axis trial; frozen scientific records and historical evidence unchanged.",
+      "files": [
+        {
+          "path": "MODULE_REGISTRY.json",
+          "previous_sha256": "95726ad4bda561ae5e47163cafca5afc0d7aee69ecfab62a867efd31c14f7bc8",
+          "sha256": "3535bec683d7dfe144fcb09228ce0b77211ccf2a4047a98f1e6434878b7ba65b"
+        },
+        {
+          "path": "docs/MODULE_REGISTRY.md",
+          "previous_sha256": "e6e7a062f1d77b6b3f9dd319889139e3e8846a9ac2725c90a5b723add0e8a928",
+          "sha256": "319a129b7d54fcb85c39de4a815847bc45157f4c79fcfa3748f3726f0f3e6cfa"
+        },
+        {
+          "path": "modules/free-field-entropy.html",
+          "previous_sha256": "b464f54a7a0b02c92be04bd776251f2ec253a90c07a42dda77b0a9c3023616bf",
+          "sha256": "e747936f0b6465fe82fa0828240de302fb6a749d859d9548c8a6b021048a79cd"
+        },
+        {
+          "path": "modules/free-field-entropy.md",
+          "previous_sha256": "cbaeb942126b8deb6cc6dc79b807332706752c9fa657b613b479cb63add548bf",
+          "sha256": "cb75d2f70167313f876d532fed7d724eba26cc7704b94d7f16ee20cbd610255e"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-19",
+      "scope": "Current navigation for the completed intrinsic BK joint-moment feasibility audit; frozen scientific records and historical evidence unchanged.",
+      "files": [
+        {
+          "path": "MODULE_REGISTRY.json",
+          "previous_sha256": "3535bec683d7dfe144fcb09228ce0b77211ccf2a4047a98f1e6434878b7ba65b",
+          "sha256": "9f2b181bfef0972874f4bcf2dfcdfe0f44a3f9144cebe7fa63b427aab576c2dc"
+        },
+        {
+          "path": "docs/MODULE_REGISTRY.md",
+          "previous_sha256": "319a129b7d54fcb85c39de4a815847bc45157f4c79fcfa3748f3726f0f3e6cfa",
+          "sha256": "5ce3925cc357dc3c359a1478a573fe8108b26044ffba9ae910b0ca8f1b72aa0a"
+        },
+        {
+          "path": "modules/free-field-entropy.html",
+          "previous_sha256": "e747936f0b6465fe82fa0828240de302fb6a749d859d9548c8a6b021048a79cd",
+          "sha256": "5115e9cc96cccc780b32a9199cbbb61896c51df12d3a80f7c166fed77eda2edf"
+        },
+        {
+          "path": "modules/free-field-entropy.md",
+          "previous_sha256": "cb75d2f70167313f876d532fed7d724eba26cc7704b94d7f16ee20cbd610255e",
+          "sha256": "e821168412eaabfce4276a8c189ebf6c0e0501ebbd9a97ae998744454201613b"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-19",
+      "scope": "Current navigation for the completed intrinsic landmark calibration trial; frozen scientific sources and earlier evidence unchanged.",
+      "files": [
+        {
+          "path": "MODULE_REGISTRY.json",
+          "previous_sha256": "9f2b181bfef0972874f4bcf2dfcdfe0f44a3f9144cebe7fa63b427aab576c2dc",
+          "sha256": "d2333f105fcbe71c1dd6691d3523949154f000addb1f3f00e629755c5d1672cf"
+        },
+        {
+          "path": "docs/MODULE_REGISTRY.md",
+          "previous_sha256": "5ce3925cc357dc3c359a1478a573fe8108b26044ffba9ae910b0ca8f1b72aa0a",
+          "sha256": "726b90df9758f27994a87c609f4e9db341da7fd9519b73be9a13a0a31947bec0"
+        },
+        {
+          "path": "modules/free-field-entropy.html",
+          "previous_sha256": "5115e9cc96cccc780b32a9199cbbb61896c51df12d3a80f7c166fed77eda2edf",
+          "sha256": "7cdfc9eacc3b88443952aa25b9f390e06ef74c5829aea6b9bddc35b3684d4d36"
+        },
+        {
+          "path": "modules/free-field-entropy.md",
+          "previous_sha256": "e821168412eaabfce4276a8c189ebf6c0e0501ebbd9a97ae998744454201613b",
+          "sha256": "e13f3988722c34ea46f8894efb812044904c2b33a3bea5010dab6d8740fa2c63"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-19",
+      "scope": "Current navigation for retrospective landmark availability diagnosis; frozen scientific sources and original target records unchanged.",
+      "files": [
+        {
+          "path": "MODULE_REGISTRY.json",
+          "previous_sha256": "d2333f105fcbe71c1dd6691d3523949154f000addb1f3f00e629755c5d1672cf",
+          "sha256": "e65ec310884de835f0fb75369192e2c323e13c227bdd9c6bead7158e7e9e9520"
+        },
+        {
+          "path": "docs/MODULE_REGISTRY.md",
+          "previous_sha256": "726b90df9758f27994a87c609f4e9db341da7fd9519b73be9a13a0a31947bec0",
+          "sha256": "5acfee96042efc3aeda9e6c26cb567251a9c883afd31409546c3425b6ea3163e"
+        },
+        {
+          "path": "modules/free-field-entropy.html",
+          "previous_sha256": "7cdfc9eacc3b88443952aa25b9f390e06ef74c5829aea6b9bddc35b3684d4d36",
+          "sha256": "16091edcd6e419dbc43b69763fdb28149983400c525f7a63f164780ded618c26"
+        },
+        {
+          "path": "modules/free-field-entropy.md",
+          "previous_sha256": "e13f3988722c34ea46f8894efb812044904c2b33a3bea5010dab6d8740fa2c63",
+          "sha256": "500b54cc0c32cc74bd9580bee9d5f62f55124caaa2795d5ea6053f24c884e20a"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-19",
+      "scope": "Joint support/count/frame feasibility publication and current navigation; previous frozen scientific evidence retained.",
+      "files": [
+        {
+          "path": "MODULE_REGISTRY.json",
+          "previous_sha256": "9356a916af53d8365fc5a69b487078cfb866ffbe5f95bcd3e7c48492afb1ac40",
+          "sha256": "722dced0bb939a3e8eeaf50953ac9a96fd95c203f5dad4859581db777cf42e87"
+        },
+        {
+          "path": "README.md",
+          "previous_sha256": "ec1a47391c53989d6412da801240a37c67c457bd649eb40ca4a9e9da1e8e5a02",
+          "sha256": "18fb9a0b21031352b6ff97f1f8dfe5773cc4b272cfba8b98a3b8b35db4350e21"
+        },
+        {
+          "path": "docs/MODULE_REGISTRY.md",
+          "previous_sha256": "6ba5d775a6811bd46414af55dccfdf34c184d75005ed977131f2b7a02bde2371",
+          "sha256": "59916fd4c9e80d84596512d0618b37d0e966348f4d3b93fb22e28f0ffe8fdcd6"
+        },
+        {
+          "path": "modules/free-field-entropy.html",
+          "previous_sha256": "c9ec9702f524a3825e0c897f38b27af7736b8febc975fcc0705a6fad59da07a8",
+          "sha256": "035156b117595d4802bb93e58ec52b72c9e0f5a170aedbc8870957f4257c716c"
+        },
+        {
+          "path": "modules/free-field-entropy.md",
+          "previous_sha256": "847918fb32d5e6fc06eba4243ae74ef8dfa358c6d5328503f5f9efbe15f4bc0f",
+          "sha256": "282cf9a95815b61abe86a1a06defcf06f075e3d14409e64fbe8111392d8e9e84"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-27",
+      "scope": "CSPP E4-V0.1 draft contract only: NOT_FROZEN / NOT_RUN. No scientific qualification or modification of historical evidence.",
+      "files": [
+        {
+          "path": "SAGNAC_SOURCE_MANIFEST.json",
+          "previous_sha256": "2049c18f154d09d3965c8b33c778a20e72c204d9067c306cc85021214df2695a",
+          "sha256": "4464a10b27d1a6ccf8f1261175e1c236ca258646630c5709149e81c977e9aa06"
+        },
+        {
+          "path": "LICENSE_SOURCE_MANIFEST.json",
+          "previous_sha256": "a76735ed9bd28cb535c05a6055455ca24e1287efc98e764d1b0758324a369cf8",
+          "sha256": "6d986d2724eac2201d169912f11d00434a8dd645db10c030cf93ca8393a3a3c8"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-27",
+      "scope": "CSPP scalar development pilot: all 64 runs retained; 0/12 cells meet draft scalar tolerance; scientific HOLD preserved. Documented outer-shell correction leaves primary arrays unchanged.",
+      "files": [
+        {
+          "path": "SAGNAC_SOURCE_MANIFEST.json",
+          "previous_sha256": "4464a10b27d1a6ccf8f1261175e1c236ca258646630c5709149e81c977e9aa06",
+          "sha256": "9d9d29c18172b15965a0c031aa4fa27cf7a7ec5e4f40116e6f579e75b67ea18c"
+        },
+        {
+          "path": "LICENSE_SOURCE_MANIFEST.json",
+          "previous_sha256": "6d986d2724eac2201d169912f11d00434a8dd645db10c030cf93ca8393a3a3c8",
+          "sha256": "bb3450b15e8e174379076fcdee1347424a9299fcea87208d0585ffcb5ef43ff1"
+        },
+        {
+          "path": ".github/workflows/cspp-contract.yml",
+          "previous_sha256": "3553e065a310d023c99c33eb3624230b19012c71f59b8dd6190ccabfb5e7fd80",
+          "sha256": "d3d52190809ad71c5dbd85acd03f35531ba5819a0e10bb89aefe3d83e4b3299f"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-27",
+      "scope": "CSPP scale calibration v0.2: 48 fresh clouds, exact expectation formula, bounded outer-domain tail and independent real-space KG reference; G1 and reference HOLD retained. Historical evidence unchanged.",
+      "files": [
+        {
+          "path": "SAGNAC_SOURCE_MANIFEST.json",
+          "previous_sha256": "9d9d29c18172b15965a0c031aa4fa27cf7a7ec5e4f40116e6f579e75b67ea18c",
+          "sha256": "03c0878fa3e249f0808cb89439b584d67bd24f42931b1bf19a2b6a9816acb021"
+        },
+        {
+          "path": "LICENSE_SOURCE_MANIFEST.json",
+          "previous_sha256": "bb3450b15e8e174379076fcdee1347424a9299fcea87208d0585ffcb5ef43ff1",
+          "sha256": "a2c47cfb42e8570bbb37d905823e9b2d4af232756f42837fa00d215badeac37f"
+        },
+        {
+          "path": ".github/workflows/cspp-contract.yml",
+          "previous_sha256": "d3d52190809ad71c5dbd85acd03f35531ba5819a0e10bb89aefe3d83e4b3299f",
+          "sha256": "b64811fe0b417f0a69bb0e4a442c25394aaf97488ca064bdee48998c37044f5e"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-27",
+      "scope": "CSPP interval budget v0.3: seven Gaussian witness budgets, correlation-safe variance envelope, 34 source enclosures and higher-precision replay; G1/full reference HOLD. Sagnac timeout extended for observed package-mirror delay; tests unchanged.",
+      "files": [
+        {
+          "path": "SAGNAC_SOURCE_MANIFEST.json",
+          "previous_sha256": "03c0878fa3e249f0808cb89439b584d67bd24f42931b1bf19a2b6a9816acb021",
+          "sha256": "3ab6a17d58263640c9136cf8680601c9a0f2222ef89fb7f29214b1268630eda3"
+        },
+        {
+          "path": "LICENSE_SOURCE_MANIFEST.json",
+          "previous_sha256": "a2c47cfb42e8570bbb37d905823e9b2d4af232756f42837fa00d215badeac37f",
+          "sha256": "0bd3758a006c7cfa169074ec2f4ada40b175eb177b6eb3bae5bc5b9eea7c35db"
+        },
+        {
+          "path": ".github/workflows/cspp-contract.yml",
+          "previous_sha256": "b64811fe0b417f0a69bb0e4a442c25394aaf97488ca064bdee48998c37044f5e",
+          "sha256": "d283740d1bd1c243ba16587a10493a4cb5f68c14ef8d70922514b1e0800e59b4"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-27",
+      "scope": "Explicit numeric portability qualification after NumPy CPU-path byte mismatch. Historical archives and audits unchanged; stream/count/mask checks exact, numeric screen declared, full E4 HOLD retained.",
+      "files": [
+        {
+          "path": ".github/workflows/cspp-contract.yml",
+          "previous_sha256": "d283740d1bd1c243ba16587a10493a4cb5f68c14ef8d70922514b1e0800e59b4",
+          "sha256": "0f2ac0dd12c9dccab3586f62f7425fff46755c6599fcb244d2ebcbc87b440e31"
+        },
+        {
+          "path": "research/cspp/certified_budget_v0_3/METHODS.md",
+          "previous_sha256": "253d84e54b0ed9ed1f916b90dc79a337bd11d85e01dde0122007e5198a0f315c",
+          "sha256": "164e2ebaa24617a01997085e4d993e6f52b237f407e65705cf468719968daac2"
+        },
+        {
+          "path": "research/cspp/certified_budget_v0_3/README.md",
+          "previous_sha256": "659a26b938153c2c0529c538586a0ec51ee2117d3c39822ba9aa99fd2e58a4c6",
+          "sha256": "82de29c5a2625ac214f0cbd2d17564d7a20948781391b324b0375275cb8c72cb"
+        },
+        {
+          "path": "research/cspp/certified_budget_v0_3/SHA256SUMS",
+          "previous_sha256": "b644eb4fa63a71b54db61d2bfbed5ace160e8769cd31beefd02e6c1dc09cb6c3",
+          "sha256": "2b791e418dda963b2ba0a8ce7caa6533c5b2360d03207e8d124531d1ca396375"
+        },
+        {
+          "path": "research/cspp/certified_budget_v0_3/verify_publication.py",
+          "previous_sha256": "9ea2ac23f37e8ab9b38a740d3e5cfe54bbb861a44d59daf1caa63a7983f94082",
+          "sha256": "3968dfd1839d77eeba6e93dd45a4f79f5538f1d0a9bf48d98be68d5d0f0775d2"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-27",
+      "scope": "CSPP variance budget v0.4: unchanged original package and positive necessary/sufficient density bounds; isolated 128/192-bit replay; public DE/EN links; G1 HOLD.",
+      "files": [
+        {
+          "path": ".github/workflows/cspp-contract.yml",
+          "previous_sha256": "0f2ac0dd12c9dccab3586f62f7425fff46755c6599fcb244d2ebcbc87b440e31",
+          "sha256": "f3e0a0d4db419a007265e874405c65b2db239884145591d6dfce885bcae23d2f"
+        },
+        {
+          "path": "LICENSE_SOURCE_MANIFEST.json",
+          "previous_sha256": "0bd3758a006c7cfa169074ec2f4ada40b175eb177b6eb3bae5bc5b9eea7c35db",
+          "sha256": "e627620935399252680d9abbcfdfffaffd7bbbb97cbcb3dbeb17a2f25fb4f90e"
+        },
+        {
+          "path": "SAGNAC_SOURCE_MANIFEST.json",
+          "previous_sha256": "3ab6a17d58263640c9136cf8680601c9a0f2222ef89fb7f29214b1268630eda3",
+          "sha256": "ff13325c2af42422cfabb9da67353ef15b3554db6499983700ef7deb9c63668d"
+        },
+        {
+          "path": "de/index.html",
+          "previous_sha256": "58bf053df098f9aa7c860ccc42b262c9dc35b909de22b4158ed03d2f419aa2c8",
+          "sha256": "22b85f09e964d6b4a3f67f3cc8d1a09eab41e80639458dad4af67454db0406f2"
+        },
+        {
+          "path": "de/index.md",
+          "previous_sha256": "48a5e29dd8593643bb8f1295ce50b993c068207e99215c4f50c8c45f3fea0c92",
+          "sha256": "13bce9be19e8e4f7d2e916c45ce7d7feac7df9417f6935dfa87033eb44edfee6"
+        },
+        {
+          "path": "docs/hub/content.json",
+          "previous_sha256": "5a533795244833eb9bd6fbcfc476c33fbdedda057df77775e0fde63fded27d9e",
+          "sha256": "60dd85b9639c70ad5f4c242c5cb35e4f7c203fc9967344250c4bcea883cffe0e"
+        },
+        {
+          "path": "index.html",
+          "previous_sha256": "c7994993e88018fea2cd3fa65fbfc7254d1754df92d441608ceac5a90dc870b8",
+          "sha256": "455897f229fe6de334d01ea3970c0be7bdb04bacc9b2e62d3511970fe6bceebc"
+        },
+        {
+          "path": "index.md",
+          "previous_sha256": "fb6d5490d9742898365d1f64f259652edcfc2a754f0b0cd4b19e208f8c947e93",
+          "sha256": "d42552c79e3cca233d61a6a9681dc78347485cc1007f6ae0ae29b16fadda8369"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-27",
+      "scope": "Explicit scalar-pilot v0.1 numeric portability after PR136 CPU-dependent coordinate-byte failure. Original files and all tolerances unchanged; exact RNG outputs, full interval/probe counts and history masks; G1 HOLD.",
+      "files": [
+        {
+          "path": ".github/workflows/cspp-contract.yml",
+          "previous_sha256": "f3e0a0d4db419a007265e874405c65b2db239884145591d6dfce885bcae23d2f",
+          "sha256": "94faabea2655b6e0a459bed02da539c8591a6a838faf07b93cafcbde48b870f4"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-28",
+      "scope": "Add isolated massive-reference replay job without altering existing jobs.",
+      "files": [
+        {
+          "path": ".github/workflows/cspp-contract.yml",
+          "previous_sha256": "94faabea2655b6e0a459bed02da539c8591a6a838faf07b93cafcbde48b870f4",
+          "sha256": "d129e4f01fa1897f483eec8b6e70c469ab726bd63f8de658f69978bfdd7d950b"
+        },
+        {
+          "path": "LICENSE_SOURCE_MANIFEST.json",
+          "previous_sha256": "e627620935399252680d9abbcfdfffaffd7bbbb97cbcb3dbeb17a2f25fb4f90e",
+          "sha256": "0e2cc6fe4c417dc84f27c44da5dd3010be107b8871c78d83c962e04b4353eb83"
+        },
+        {
+          "path": "SAGNAC_SOURCE_MANIFEST.json",
+          "previous_sha256": "ff13325c2af42422cfabb9da67353ef15b3554db6499983700ef7deb9c63668d",
+          "sha256": "255ef08cd432010a5f1402a6e6645550815bc55b81b9dd49852307b30f6858d1"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-28",
+      "scope": "Add isolated joint-budget replay job and navigation without altering existing numerical packages.",
+      "files": [
+        {
+          "path": ".github/workflows/cspp-contract.yml",
+          "previous_sha256": "d129e4f01fa1897f483eec8b6e70c469ab726bd63f8de658f69978bfdd7d950b",
+          "sha256": "f66b5847f4018c4a1bbc2fe0fb7e4e1420e00157aadeb8e3a2c51420caa0a122"
+        },
+        {
+          "path": "LICENSE_SOURCE_MANIFEST.json",
+          "previous_sha256": "0e2cc6fe4c417dc84f27c44da5dd3010be107b8871c78d83c962e04b4353eb83",
+          "sha256": "7fef09b22255c4fb43037584a6db177b2e22becabf4d8fe4befe95e452bd2aeb"
+        },
+        {
+          "path": "SAGNAC_SOURCE_MANIFEST.json",
+          "previous_sha256": "255ef08cd432010a5f1402a6e6645550815bc55b81b9dd49852307b30f6858d1",
+          "sha256": "631cc9aa07b7bfc1b8ebeacb4cbf7766a5c178a02167a21a7b796cf6e0772fdb"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-28",
+      "scope": "Add complete scalar-propagation replay CI and navigation; previous numerical packages unchanged.",
+      "files": [
+        {
+          "path": ".github/workflows/cspp-contract.yml",
+          "previous_sha256": "f66b5847f4018c4a1bbc2fe0fb7e4e1420e00157aadeb8e3a2c51420caa0a122",
+          "sha256": "0f94bc75d4d98ee412e6bc1a0e76bd80f9df51361f2e9de3893e10755807393d"
+        },
+        {
+          "path": "LICENSE_SOURCE_MANIFEST.json",
+          "previous_sha256": "7fef09b22255c4fb43037584a6db177b2e22becabf4d8fe4befe95e452bd2aeb",
+          "sha256": "eb2b38e0027005d2d1e4f11b3a5f13c6f4efdf794448f64558b51b07b57748c8"
+        },
+        {
+          "path": "SAGNAC_SOURCE_MANIFEST.json",
+          "previous_sha256": "631cc9aa07b7bfc1b8ebeacb4cbf7766a5c178a02167a21a7b796cf6e0772fdb",
+          "sha256": "e04add4167ec088f66b92fe9718986ff1111c3ebab653208116e1a8d0f96d167"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-28",
+      "scope": "Publish independent G1 negative results and full replay CI; all frozen analysis files and predecessors unchanged.",
+      "files": [
+        {
+          "path": "research/cspp/independent_g1_v0_8/README.md",
+          "previous_sha256": "42bba4e503ee7d82356e7e0035371921089a92466abdec733d6449e41db6edc6",
+          "sha256": "224f2a0d8256357395e33ae5d9314ed5b0ee5cf5c8985a79940316b9ed089ab0"
+        },
+        {
+          "path": "research/cspp/independent_g1_v0_8/SHA256SUMS",
+          "previous_sha256": "f348a7af6eaf116490f9f534802814a7113397ebc905fbeb7b55ecfa19be6319",
+          "sha256": "988c6573940f7356b68c0867da63fa104456eb28afa8d1ff942335b3490c7a6d"
+        },
+        {
+          "path": ".github/workflows/cspp-contract.yml",
+          "previous_sha256": "0f94bc75d4d98ee412e6bc1a0e76bd80f9df51361f2e9de3893e10755807393d",
+          "sha256": "8c31b15f43e916ae5c8673110ccafffad1986917a5b2cf072f2a966ab618ae1a"
+        },
+        {
+          "path": "LICENSE_SOURCE_MANIFEST.json",
+          "previous_sha256": "eb2b38e0027005d2d1e4f11b3a5f13c6f4efdf794448f64558b51b07b57748c8",
+          "sha256": "4be024c636b49c5931c2d8ead1c72ab09a3b1a37575fea8178fdf342fe97c9ef"
+        },
+        {
+          "path": "SAGNAC_SOURCE_MANIFEST.json",
+          "previous_sha256": "e04add4167ec088f66b92fe9718986ff1111c3ebab653208116e1a8d0f96d167",
+          "sha256": "a2dc727afed95cc54985ddb3e94bdb988d28440546233de18abe66b862dcbec4"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-28",
+      "scope": "Document and repair replay-only module collision; all preregistered sources, data and decisions unchanged.",
+      "files": [
+        {
+          "path": "research/cspp/independent_g1_v0_8/README.md",
+          "previous_sha256": "224f2a0d8256357395e33ae5d9314ed5b0ee5cf5c8985a79940316b9ed089ab0",
+          "sha256": "551b14d6675f8b793c3d3571fcdd9faadbbb2f48a64326f759a98fbaab483a60"
+        },
+        {
+          "path": "research/cspp/independent_g1_v0_8/publication_checks.py",
+          "previous_sha256": "46b0478b20d367dc86d0624c00cbdcb97ed1bb8b1bdde80733bce8fec4da0f02",
+          "sha256": "d9e2d921a61be4b08bb082e401d0b2842c6f23589f81c28b11fdf2604f295a99"
+        },
+        {
+          "path": "research/cspp/independent_g1_v0_8/SHA256SUMS",
+          "previous_sha256": "988c6573940f7356b68c0867da63fa104456eb28afa8d1ff942335b3490c7a6d",
+          "sha256": "d4382f067b1fd98ca6cc3fb73551672f1d88aeb09f2b59b45bb3a12b65bf9f71"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-28",
+      "scope": "CSPP v0.9: close scalar series and publish bounded finite-detector transfer; quadrature HOLD and empty-source-history diagnosis, no fresh confirmation or Dirac release.",
+      "files": [
+        {
+          "path": "LICENSE_SOURCE_MANIFEST.json",
+          "previous_sha256": "4be024c636b49c5931c2d8ead1c72ab09a3b1a37575fea8178fdf342fe97c9ef",
+          "sha256": "117d4227e147727cf582080f97d7314d5b46eddbed4c4afddfd8cc46aedcf432"
+        },
+        {
+          "path": "SAGNAC_SOURCE_MANIFEST.json",
+          "previous_sha256": "a2dc727afed95cc54985ddb3e94bdb988d28440546233de18abe66b862dcbec4",
+          "sha256": "b798378208165be5c44281d2b0ed1bea8689a721f592c3be5994ade1d458f670"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-28",
+      "scope": "CSPP v0.9: bilingual closure, finite detector results and integration/initial-history limitations; scientific links pinned to 0ea645c9381979a55bc943f5f5ce1dcc4d39b6ca.",
+      "files": [
+        {
+          "path": "de/index.html",
+          "previous_sha256": "22b85f09e964d6b4a3f67f3cc8d1a09eab41e80639458dad4af67454db0406f2",
+          "sha256": "da1e10cfcd6c4fa9a7ac28b4553fdb02245a519b5485197782b8397471a2dcf9"
+        },
+        {
+          "path": "de/index.md",
+          "previous_sha256": "13bce9be19e8e4f7d2e916c45ce7d7feac7df9417f6935dfa87033eb44edfee6",
+          "sha256": "c06e29bcc9cccea66d79c5e1eeddf95e5ac5b6eb342dc0907c12443a4a9fa550"
+        },
+        {
+          "path": "docs/hub/content.json",
+          "previous_sha256": "60dd85b9639c70ad5f4c242c5cb35e4f7c203fc9967344250c4bcea883cffe0e",
+          "sha256": "547450f4f25fcf22702c6f11cb77ca0aacc8b786f67f0a8aed0d5f279da75051"
+        },
+        {
+          "path": "index.html",
+          "previous_sha256": "455897f229fe6de334d01ea3970c0be7bdb04bacc9b2e62d3511970fe6bceebc",
+          "sha256": "97340b68801bd6a63053525cb7be1fdfa03edfa50621d18a5c2acf3eb16e348c"
+        },
+        {
+          "path": "index.md",
+          "previous_sha256": "d42552c79e3cca233d61a6a9681dc78347485cc1007f6ae0ae29b16fadda8369",
+          "sha256": "c4160fbfc769715edbf13d95129cc121e122eb17de81ec29d6ad196b280ae1b4"
+        },
+        {
+          "path": "SAGNAC_SOURCE_MANIFEST.json",
+          "previous_sha256": "b798378208165be5c44281d2b0ed1bea8689a721f592c3be5994ade1d458f670",
+          "sha256": "d095fc4e47a59334cd8eb02bd1b26d4e5333a19254071ac2f859f2f8fed6b931"
+        },
+        {
+          "path": "LICENSE_SOURCE_MANIFEST.json",
+          "previous_sha256": "117d4227e147727cf582080f97d7314d5b46eddbed4c4afddfd8cc46aedcf432",
+          "sha256": "233c3005f4ed24276e50dd53c670418e39428ff62a8adb9f006e7a93e5c84a52"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-28",
+      "scope": "CSPP v0.10: analytic time integration, tighter finite detector enclosures, compact initial-history error bounds and documented post-run verifier correction; METHOD_HOLD.",
+      "files": [
+        {
+          "path": "SAGNAC_SOURCE_MANIFEST.json",
+          "previous_sha256": "d095fc4e47a59334cd8eb02bd1b26d4e5333a19254071ac2f859f2f8fed6b931",
+          "sha256": "45351c8e0f6f87f58cb6964425fcc563ae4cc8f2f0952d30b2ae80536c64aeac"
+        },
+        {
+          "path": "LICENSE_SOURCE_MANIFEST.json",
+          "previous_sha256": "233c3005f4ed24276e50dd53c670418e39428ff62a8adb9f006e7a93e5c84a52",
+          "sha256": "0df80856b04a1b335bb97bd10b7bc37d1251eb71783a9e61c5f2ca523b5debeb"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-28",
+      "scope": "CSPP v0.10 bilingual update: tighter integrals, unchanged METHOD_HOLD, local-history obstruction and disclosed verifier correction; links pinned to ed481912b9330a09d02206beff6f6f535bb4ef85.",
+      "files": [
+        {
+          "path": "de/index.html",
+          "previous_sha256": "da1e10cfcd6c4fa9a7ac28b4553fdb02245a519b5485197782b8397471a2dcf9",
+          "sha256": "03ee87306c1e0709e45d3baf25e93ef175a0fc41f3b70d0d5960c203e7cc0929"
+        },
+        {
+          "path": "de/index.md",
+          "previous_sha256": "c06e29bcc9cccea66d79c5e1eeddf95e5ac5b6eb342dc0907c12443a4a9fa550",
+          "sha256": "1b93f20ff5041aa3e5c8313e9caa4b5bead0600bea1bf10eda160be43fcc9417"
+        },
+        {
+          "path": "docs/hub/content.json",
+          "previous_sha256": "547450f4f25fcf22702c6f11cb77ca0aacc8b786f67f0a8aed0d5f279da75051",
+          "sha256": "bbfec5b6b34aab08be0bb62da4153e0fff97ee59130b0c50a08f8c8b108a66ce"
+        },
+        {
+          "path": "index.html",
+          "previous_sha256": "97340b68801bd6a63053525cb7be1fdfa03edfa50621d18a5c2acf3eb16e348c",
+          "sha256": "2c7e5dd09bc83f9048b39304bf8a7d9153872026cc98770fe458f40be0ba817e"
+        },
+        {
+          "path": "index.md",
+          "previous_sha256": "c4160fbfc769715edbf13d95129cc121e122eb17de81ec29d6ad196b280ae1b4",
+          "sha256": "7b85840b3683031ac00d605bfa76495c7eb8a86bf0bb7835d4608f70d73153f9"
+        },
+        {
+          "path": "SAGNAC_SOURCE_MANIFEST.json",
+          "previous_sha256": "45351c8e0f6f87f58cb6964425fcc563ae4cc8f2f0952d30b2ae80536c64aeac",
+          "sha256": "096a3e0cca59d8f2f65bf4a55ed3264d28bc9923d2bdf05f299766cd0cd9dbde"
+        },
+        {
+          "path": "LICENSE_SOURCE_MANIFEST.json",
+          "previous_sha256": "0df80856b04a1b335bb97bd10b7bc37d1251eb71783a9e61c5f2ca523b5debeb",
+          "sha256": "6792dfdb0bb03c15520cb09f371433a05bae04628f9d449be716f9b146c93244"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-29",
+      "scope": "CSPP v0.23 publication README entry; current README hashes updated in Sagnac and license inventories. Original research package unchanged; METHOD and G1 remain HOLD.",
+      "files": [
+        {
+          "path": "README.md",
+          "previous_sha256": "ab9765a49f8417818a89b2cd40cf709da6105046bfcbadae751a3cf8fe2964e3",
+          "sha256": "15d9c96e00dac1acd7b83f25cdbbf33d6de3bd77039e5aed11e4c4b650a127a1"
+        },
+        {
+          "path": "SAGNAC_SOURCE_MANIFEST.json",
+          "previous_sha256": "096a3e0cca59d8f2f65bf4a55ed3264d28bc9923d2bdf05f299766cd0cd9dbde",
+          "sha256": "7703a3e62da48781dd6b10759ea1c54d8182e467896bceafa74abc5892462b7b"
+        },
+        {
+          "path": "LICENSE_SOURCE_MANIFEST.json",
+          "previous_sha256": "6792dfdb0bb03c15520cb09f371433a05bae04628f9d449be716f9b146c93244",
+          "sha256": "6993828a38af2c8e85e5ed6624d37820fe558ad62afffada97352faec82bcc1e"
+        }
+      ]
     }
   ]
 }
