@@ -1,0 +1,14 @@
+{
+  "schema": "cspp.source-overlap-package/0.19",
+  "version": "0.19",
+  "date": "2026-10-29",
+  "base_commit": "995b2184cb5346aee502d8e69089681181c5853e",
+  "publication": "NOT_PUBLISHED",
+  "science": {"METHOD":"HOLD","G1":"HOLD","per_realization_accuracy":"NOT_CERTIFIED","fresh_confirmation":"NOT_RUN"},
+  "runtime": {"python":"3.12","python-flint":"0.8.0"},
+  "precisions_bits": [384,512],
+  "new_random_calls": 0,
+  "validation": {"precision_overlaps":960,"source_norm_identity_checks":35,"certified_direct_quadratures":1,"conditional_kernel_checks":49,"negative_controls":3},
+  "external_check": "Wolfram: direct radial norm J=1 and geometric constants; saved output, not re-executed by local replay",
+  "claim_boundary": "Conditional upper L1 remainder bounds only; neither observed errors nor per-realization guarantees. Exact archive interval overlaps remain unevaluated."
+}

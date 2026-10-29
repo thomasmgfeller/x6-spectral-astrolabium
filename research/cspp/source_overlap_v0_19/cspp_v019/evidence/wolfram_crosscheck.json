@@ -1,0 +1,14 @@
+{
+  "code": "b = Exp[1-1/(1-4 r^2)]; br = D[b,r]; lap = D[b,{r,2}]+2 D[b,r]/r; integrand = 4 Pi r^2 ((17 b-lap)^2+(64/3) br^2); norm = NIntegrate[Evaluate[integrand],{r,0,1/2},WorkingPrecision->70,AccuracyGoal->45,PrecisionGoal->45,Method->{\"GlobalAdaptive\",\"SymbolicProcessing\"->0}]; <|\"NormSquared\"->N[norm,45],\"M0\"->N[Sqrt[norm/(8 Pi)],40],\"Caps\"->Table[((5+t)^2-1)^2/128,{t,{1,5/4}}],\"Dgeom\"->N[16 Exp[Table[((5+t)^2-1)^2/128,{t,{1,5/4}}]],25]|>",
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Out[1]= <|\"NormSquared\" -> 1038.9954956797690630433650441051208659755984447715204563385509`45., \"M0\" -> 6.4296436329638291901829564126398311602654316803010263281932`40., \"Caps\" -> {1225/128, 370881/32768}, \"Dgeom\" -> {229326.31446300309003625016081111972410716157`25., 1.31714703030645160737219091938411925364141099`25.*^6}|>"
+      }
+    ],
+    "structuredContent": null,
+    "isError": false
+  },
+  "scope": "Independent software cross-check for norm J=1 and exact geometric caps; not a rigorous interval proof of the whole argument."
+}
