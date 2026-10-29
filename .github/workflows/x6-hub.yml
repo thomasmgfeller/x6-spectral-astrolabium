@@ -1,10 +1,10 @@
 name: X6 Research Hub
 on:
   pull_request:
-    paths: ['index.html', 'index.md', 'de/**', 'guide/**', 'modules/**', 'wiki/**', 'assets/hub.*', 'assets/wiki.css', 'docs/hub/**', 'docs/wiki/**', 'MODULE_REGISTRY.json', 'hub-index.json', 'sitemap.xml', 'llms.txt', 'tools/*hub*', 'tools/*wiki*', '.github/workflows/x6-hub.yml']
+    paths: ['app/causal-stability/**', 'tests/causal-stability/**', 'docs/research/cspp/causal-stability-lab/**', 'assets/causal-stability-preview.png', 'index.html', 'index.md', 'de/**', 'guide/**', 'modules/**', 'wiki/**', 'assets/hub.*', 'assets/wiki.css', 'docs/hub/**', 'docs/wiki/**', 'MODULE_REGISTRY.json', 'hub-index.json', 'sitemap.xml', 'llms.txt', 'tools/*hub*', 'tools/*wiki*', '.github/workflows/x6-hub.yml']
   push:
     branches: [main]
-    paths: ['index.html', 'index.md', 'de/**', 'guide/**', 'modules/**', 'wiki/**', 'assets/hub.*', 'assets/wiki.css', 'docs/hub/**', 'docs/wiki/**', 'MODULE_REGISTRY.json', 'hub-index.json', 'sitemap.xml', 'llms.txt', 'tools/*hub*', 'tools/*wiki*', '.github/workflows/x6-hub.yml']
+    paths: ['app/causal-stability/**', 'tests/causal-stability/**', 'docs/research/cspp/causal-stability-lab/**', 'assets/causal-stability-preview.png', 'index.html', 'index.md', 'de/**', 'guide/**', 'modules/**', 'wiki/**', 'assets/hub.*', 'assets/wiki.css', 'docs/hub/**', 'docs/wiki/**', 'MODULE_REGISTRY.json', 'hub-index.json', 'sitemap.xml', 'llms.txt', 'tools/*hub*', 'tools/*wiki*', '.github/workflows/x6-hub.yml']
   workflow_dispatch:
 permissions:
   contents: read
@@ -48,3 +48,18 @@ jobs:
           path: ${{ runner.temp }}/x6-hub-browser
           retention-days: 30
           if-no-files-found: error
+  causal-stability:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Check finite-model identities and original CSPP certificate
+        run: |
+          node --check app/causal-stability/app.mjs
+          node --check app/causal-stability/engine.mjs
+          node --test tests/causal-stability/engine.test.mjs

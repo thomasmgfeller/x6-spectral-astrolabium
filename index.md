@@ -5,6 +5,14 @@ X6 Spectral Astrolabium is an open research hub for signals, graphs and causal o
 
 [Wiki: X6 explained simply](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/en/)
 
+## Causal Stability Lab
+
+What amplifies a perturbation? Compare four control models, follow causal paths and inspect cancellation alongside internal error amplification. Includes the CSPP v0.25 reference, adjustable parameters and JSON/CSV export. The lab interface is in German.
+
+Finite, deterministic models. METHOD and G1 remain HOLD. Playback shows evaluation order; it does not establish general spacetime or quantum stability.
+
+[Open Stability Lab (DE) →](https://thomasmgfeller.github.io/x6-spectral-astrolabium/app/causal-stability/) · [Mathematics, tests and source →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/docs/research/cspp/causal-stability-lab/README.md)
+
 - [Open Astrolabium →](https://thomasmgfeller.github.io/x6-spectral-astrolabium/app/)
 - [Open Signal Lab →](https://thomasmgfeller.github.io/x6-spectral-astrolabium/app/signal-lab.html)
 - [Open Eigenzeit Lab →](https://thomasmgfeller.github.io/x6-spectral-astrolabium/app/proper-time.html)

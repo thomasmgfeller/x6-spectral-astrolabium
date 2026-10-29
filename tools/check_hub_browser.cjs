@@ -7,7 +7,7 @@ const http = require('node:http');
 const {chromium} = require('playwright');
 const root = path.resolve(__dirname, '..');
 const prefix = '/x6-spectral-astrolabium/';
-const mime = {'.html':'text/html; charset=utf-8','.css':'text/css; charset=utf-8','.js':'application/javascript; charset=utf-8','.json':'application/json','.xml':'application/xml','.md':'text/plain; charset=utf-8','.txt':'text/plain; charset=utf-8'};
+const mime = {'.html':'text/html; charset=utf-8','.css':'text/css; charset=utf-8','.js':'application/javascript; charset=utf-8','.mjs':'application/javascript; charset=utf-8','.json':'application/json','.xml':'application/xml','.md':'text/plain; charset=utf-8','.txt':'text/plain; charset=utf-8'};
 async function main() {
   const output = process.argv[2];
   assert(output, 'Usage: node tools/check_hub_browser.cjs NEW_OUTPUT_DIRECTORY');
@@ -41,6 +41,21 @@ async function main() {
     await page.waitForURL(url=>url.hash==='#main');
     assert.equal(new URL(page.url()).hash,'#main');
     checks.push('English entry has three routes and a keyboard-accessible skip link');
+    await page.locator('.stability-launch').click();
+    assert.equal(new URL(page.url()).pathname.endsWith('/app/causal-stability/index.html'),true);
+    await page.locator('#gain-value').filter({hasText:'0,619'}).waitFor();
+    assert.equal(await page.locator('[data-preset]').count(),4);
+    await page.locator('[data-preset="cancel"]').click();
+    await page.locator('#mismatch').focus();
+    await page.keyboard.press('Home');
+    assert.equal(await page.locator('#gain-value').innerText(),'0');
+    assert.equal(await page.locator('#cancellation-value').innerText(),'100');
+    assert.ok(Number((await page.locator('#resolvent-value').innerText()).replace(',','.'))>1);
+    await page.getByRole('link',{name:'X6 Übersicht',exact:true}).click();
+    assert.equal(new URL(page.url()).pathname.endsWith('/de/index.html'),true);
+    assert.equal(await page.locator('#causal-stability h2').innerText(),'Causal Stability Lab');
+    await page.goto(base);
+    checks.push('Prominent lab entry loads modules under the project prefix; exact probe cancellation preserves internal amplification; return link reaches the German hub');
     await page.getByRole('link',{name:'Deutsch',exact:true}).click();
     assert.equal(await page.locator('html').getAttribute('lang'),'de');
     await page.getByRole('link',{name:'Ein erstes Experiment starten →',exact:true}).click();
@@ -77,7 +92,7 @@ async function main() {
     checks.push('The NQK dossier retains missing-evidence limits and offers no invented execution command');
     const wiki=JSON.parse(fs.readFileSync(path.join(root,'docs/wiki/content.json')));
     const wikiUrls=wiki.articles.flatMap(a=>['de','en'].map(lang=>`wiki/${lang}/${a.id}.html`));
-    for (const url of ['', 'de/', 'modules/', 'modules/lorentz-n6-residuals.html', 'wiki/', ...wikiUrls]) {
+    for (const url of ['', 'de/', 'app/causal-stability/', 'modules/', 'modules/lorentz-n6-residuals.html', 'wiki/', ...wikiUrls]) {
       await page.setViewportSize({width:360,height:800});
       await page.goto(base+url);
       const overflow = await page.evaluate(()=>({width:innerWidth,scroll:document.documentElement.scrollWidth,elements:Array.from(document.querySelectorAll('main *')).filter(e=>e.getBoundingClientRect().right>innerWidth+1).slice(0,8).map(e=>({tag:e.tagName,cls:e.className,text:e.textContent.slice(0,90)}))}));
