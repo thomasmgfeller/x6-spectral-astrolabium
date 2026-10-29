@@ -1,0 +1,35 @@
+name: CSPP scalar candidate v0.25
+on:
+  pull_request:
+    paths:
+      - 'research/cspp/scalar_candidate_v0_25/**'
+      - '.github/workflows/cspp-scalar-candidate.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'research/cspp/scalar_candidate_v0_25/**'
+      - '.github/workflows/cspp-scalar-candidate.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  reproduce:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    env:
+      PYTHONDONTWRITEBYTECODE: '1'
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12.14'
+      - name: Install recorded numerical dependencies
+        run: python3 -m pip install python-flint==0.8.0 scipy==1.17.0 numpy==2.3.5
+      - name: Verify immutable publication with assertions disabled
+        run: python3 -O -B research/cspp/scalar_candidate_v0_25/publication_check.py
+      - name: Replay both precision certificates in isolation
+        run: python3 -B research/cspp/scalar_candidate_v0_25/publication_check.py --replay
+      - name: Require unchanged published evidence
+        run: git diff --exit-code -- research/cspp/scalar_candidate_v0_25
