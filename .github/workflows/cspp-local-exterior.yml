@@ -1,0 +1,31 @@
+name: CSPP local exterior history
+on:
+  pull_request:
+    paths: ['research/cspp/local_exterior_v0_20/**', '.github/workflows/cspp-local-exterior.yml']
+  push:
+    branches: [main]
+    paths: ['research/cspp/local_exterior_v0_20/**', '.github/workflows/cspp-local-exterior.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  reproduce:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    env:
+      PYTHONDONTWRITEBYTECODE: '1'
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Install declared arithmetic runtime
+        run: python3 -m pip install numpy==2.3.5 python-flint==0.8.0
+      - name: Verify immutable publication under optimized Python
+        run: python3 -O -B research/cspp/local_exterior_v0_20/publication_check.py
+      - name: Reproduce both precisions and all 21 numerical result files exactly
+        run: python3 -B research/cspp/local_exterior_v0_20/publication_check.py --replay
