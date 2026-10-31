@@ -1,0 +1,33 @@
+name: CSPP smoothed-weight stability v0.28
+on:
+  pull_request:
+    paths:
+      - 'research/cspp/smoothed_weight_stability_v0_28/**'
+      - '.github/workflows/cspp-smoothed-weight-stability.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'research/cspp/smoothed_weight_stability_v0_28/**'
+      - '.github/workflows/cspp-smoothed-weight-stability.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  reproduce:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    env:
+      PYTHONDONTWRITEBYTECODE: '1'
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Verify immutable publication with assertions disabled
+        run: python3 -O -B research/cspp/smoothed_weight_stability_v0_28/publication_check.py
+      - name: Replay exact rational checks in isolation with assertions disabled
+        run: python3 -O -B research/cspp/smoothed_weight_stability_v0_28/publication_check.py --replay
+      - name: Require unchanged published evidence
+        run: git diff --exit-code -- research/cspp/smoothed_weight_stability_v0_28
