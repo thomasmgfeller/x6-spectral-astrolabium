@@ -1,0 +1,33 @@
+name: CSPP stability path v0.26
+on:
+  pull_request:
+    paths:
+      - 'research/cspp/stability_path_v0_26/**'
+      - '.github/workflows/cspp-stability-path.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'research/cspp/stability_path_v0_26/**'
+      - '.github/workflows/cspp-stability-path.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  reproduce:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    env:
+      PYTHONDONTWRITEBYTECODE: '1'
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Verify immutable publication with assertions disabled
+        run: python3 -O -B research/cspp/stability_path_v0_26/publication_check.py
+      - name: Replay exact rational checks in isolation
+        run: python3 -B research/cspp/stability_path_v0_26/publication_check.py --replay
+      - name: Require unchanged published evidence
+        run: git diff --exit-code -- research/cspp/stability_path_v0_26

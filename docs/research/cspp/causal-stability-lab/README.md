@@ -7,6 +7,17 @@ history sensitivity and active error amplification. The German interface runs
 locally in the browser without sign-in, dependencies, tracking or a backend.
 The DE and EN landing pages provide a prominent launch button and a preview.
 
+## Follow-up: CSPP v0.26 stability result
+
+[Read the report, full proof and reproducibility package](../../../../research/cspp/stability_path_v0_26/README.md).
+A Minkowski-realizable fan family excludes a deterministic l-infinity bound
+over all realizations for any fixed nontrivial interval kernel. The exact
+response norm is `1 + M |t(r)|`; every nonsingular v0.25 parameter is covered.
+A separate Schur-complement criterion retains signed-path cancellation, with
+a synthetic control bounded by 5 at every length. Typical Poisson stability,
+the qualified physical propagator and the fixed KG detector remain open.
+The current browser models and their published numerical baseline are unchanged.
+
 ## First experiment
 
 Choose **Gegenläufige Pfade** and set **Pfad-Asymmetrie** to zero. The passive
