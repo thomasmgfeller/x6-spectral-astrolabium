@@ -7,6 +7,20 @@ history sensitivity and active error amplification. The German interface runs
 locally in the browser without sign-in, dependencies, tracking or a backend.
 The DE and EN landing pages provide a prominent launch button and a preview.
 
+## Follow-up: CSPP v0.27 finite-time stability
+
+[Read the report, full proof and reproducibility package](../../../../research/cspp/finite_time_stability_v0_27/README.md).
+For Poisson causal sets in 1+3 Minkowski space, a uniform entry envelope
+`|K_ij| <= kappa/rho` gives density-independent expectation and explicit
+failure-probability bounds for a fixed passive probe or deterministic
+detector on a fixed finite time window. A separate estimate treats prescribed
+finite history. The binomial-smoothed interval family satisfies the entry
+envelope at fixed q, rho >= q and nonzero diagonal denominator.
+These bounds remain too large to certify the original error budget.
+They do not establish long-time stability, infinite-history control or
+a spatial global-maximum bound. METHOD and G1 remain HOLD.
+The browser engine and its numerical baseline are unchanged.
+
 ## Follow-up: CSPP v0.26 stability result
 
 [Read the report, full proof and reproducibility package](../../../../research/cspp/stability_path_v0_26/README.md).
@@ -72,8 +86,10 @@ Layout distances have no metric meaning. Playback is evaluation order, not
 physical time. Graph length is not density. Amplitudes are not independent
 variances or quantum probabilities.
 
-**METHOD = HOLD; G1 = HOLD.** Density-uniform stability, infinite-past
-propagation and the original compact KG detector task remain unresolved.
+**METHOD = HOLD; G1 = HOLD.** The v0.27 follow-up proves a scoped local
+density-uniform finite-time bound. Practical error qualification, long-time
+stability, infinite-past propagation and the original compact KG detector
+task remain unresolved.
 No new random clouds or fermionic dynamics are generated. The published
 fixed-q degree-four mean-screen exclusion is preserved.
 
