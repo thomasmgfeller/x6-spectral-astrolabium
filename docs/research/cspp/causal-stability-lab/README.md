@@ -7,6 +7,19 @@ history sensitivity and active error amplification. The German interface runs
 locally in the browser without sign-in, dependencies, tracking or a backend.
 The DE and EN landing pages provide a prominent launch button and a preview.
 
+## Follow-up: CSPP v0.28 smoothed-weight stability
+
+[Read the report, full proof and reproducibility package](../../../../research/cspp/smoothed_weight_stability_v0_28/README.md).
+Exact global bounds on the binomial-smoothed interval weights replace the
+coarse coefficient envelope from v0.27. An analytic tail certificate covers
+all interval counts, and binomial composition extends the bound to every
+higher density. At fixed q and rho >= 3/pi, the theta=21 combined 99%
+finite-time/history upper bound improves by about 2,749. The cancellation
+captured here is inside each smoothed weight; cancellation between distinct
+propagation paths remains open. This is not measured error reduction, and
+the v0.25 accuracy rejection remains unchanged. METHOD and G1 remain HOLD.
+The browser engine and its numerical baseline are unchanged.
+
 ## Follow-up: CSPP v0.27 finite-time stability
 
 [Read the report, full proof and reproducibility package](../../../../research/cspp/finite_time_stability_v0_27/README.md).
