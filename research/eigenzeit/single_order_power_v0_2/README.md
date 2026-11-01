@@ -4,6 +4,8 @@ Eine unbeschriftete Kausalordnung mit **30.000 Ereignissen** genügt, um einen f
 
 [Forschungsbericht (PDF)](Eigenzeit_Trennleistung_Einzelordnung_v0_2.pdf) · [Herleitung](package/BEWEIS.md) · [Vollständiges Prüfpaket (ZIP)](Eigenzeit_Trennleistung_Einzelordnung_v0_2_Pruefpaket.zip)
 
+[Fortsetzung v0.3 mit drei Geometrien und einem kontinuierlichen Krümmungsintervall](../three_geometries_v0_3/README.md).
+
 | Wahre Geometrie | Risiko, sie zu verwerfen | Wahrscheinlichkeit, die andere zu verwerfen |
 |---|---:|---:|
 | Minkowski | höchstens 4,73 % | mindestens 80,30 % |
