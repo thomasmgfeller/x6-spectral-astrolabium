@@ -1,0 +1,102 @@
+{
+  "schema": "x6-mit-fibre-v1",
+  "status": "VERIFIED_MATRIX_SLICE",
+  "source": {
+    "doi": "doi:10.5061/dryad.wdbrv15wk",
+    "title": "Sparsity-constrained wavefront optimization by leveraging complex media",
+    "authors": [
+      "Li-Yu Yu",
+      "Sixian You"
+    ],
+    "published": "2024-05-31",
+    "license": "https://spdx.org/licenses/CC0-1.0.html",
+    "version_api": "https://datadryad.org/api/v2/versions/296860",
+    "file_api": "https://datadryad.org/api/v2/files/3201802",
+    "file": "complexTM.hdf5",
+    "size_bytes": 773234336,
+    "sha256": "3006be2727f3e5761219b02c1c28eef2955a04f09f3c01f9c88d1adbe042ae6f",
+    "download_url": "https://datadryad.org/api/v2/files/3201802/download"
+  },
+  "acquisition": "https://zenodo.org/api/records/11399077/files/complexTM.hdf5/content",
+  "measurement": {
+    "output_row": 0,
+    "input_columns": [
+      0,
+      1
+    ],
+    "channels": {
+      "T1": {
+        "shape": [
+          12449,
+          1941
+        ],
+        "dtype": "complex128",
+        "coefficients": [
+          [
+            -0.011869865643731464,
+            -0.0029042420670614814
+          ],
+          [
+            -0.003271935064022309,
+            -0.0061647416712883275
+          ]
+        ]
+      },
+      "T2": {
+        "shape": [
+          12449,
+          1941
+        ],
+        "dtype": "complex128",
+        "coefficients": [
+          [
+            -0.002550636451084523,
+            -0.000766812465899174
+          ],
+          [
+            -0.0022691436885800245,
+            -6.891194161396739e-05
+          ]
+        ]
+      }
+    }
+  },
+  "model": "two-equal-inputs-phase-error-v1",
+  "predictions": [
+    {
+      "phase_error_deg": -30,
+      "T1_intensity": 2.5159014501223773e-05,
+      "T2_intensity": 6.470484673604156e-06,
+      "total_intensity": 3.162949917482793e-05,
+      "T1_relative_to_constructive": 0.13650743102512566
+    },
+    {
+      "phase_error_deg": -10,
+      "T1_intensity": 1.5028528173429911e-05,
+      "T2_intensity": 4.384971611299453e-06,
+      "total_intensity": 1.9413499784729365e-05,
+      "T1_relative_to_constructive": 0.08154157918005306
+    },
+    {
+      "phase_error_deg": 0,
+      "T1_intensity": 1.373284029220123e-05,
+      "T2_intensity": 3.4057844605445986e-06,
+      "total_intensity": 1.7138624752745828e-05,
+      "T1_relative_to_constructive": 0.07451145389162762
+    },
+    {
+      "phase_error_deg": 10,
+      "T1_intensity": 1.5028528173429906e-05,
+      "T2_intensity": 2.5091814631731545e-06,
+      "total_intensity": 1.753770963660306e-05,
+      "T1_relative_to_constructive": 0.08154157918005303
+    },
+    {
+      "phase_error_deg": 30,
+      "T1_intensity": 2.5159014501223777e-05,
+      "T2_intensity": 1.0693622048034819e-06,
+      "total_intensity": 2.622837670602726e-05,
+      "T1_relative_to_constructive": 0.1365074310251257
+    }
+  ]
+}
