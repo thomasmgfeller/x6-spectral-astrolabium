@@ -16,6 +16,8 @@ In zwei Beispielen stimmen sowohl die ersten Zählungen als auch die Nachmessung
 
 Unter den nachgewiesenen Modellannahmen bleibt die Wahrscheinlichkeit einer Fehlfreigabe bei zu hohem Dichtekontrast unter 0,976 %. Das anschließende Krümmungsintervall behält einschließlich der HOLD-Fälle mindestens 95,15 % Überdeckung. **Für die reale Messung gilt HOLD.** Es fehlen markierte Referenzzählungen und unabhängige Nachweise für Erzeugungsdichte, Drift und Effizienzschwankungen innerhalb der Zellen. [Feldprotokoll](field_worksheet.json)
 
+Die Folgestudie v0.9 prüft die aktiven Zellen nach kumuliert 22, 31 und 46 Millionen Versuchen. Bei günstigen Profilen liegt der erwartete Verbrauch bei höchstens 418.670.605 Versuchen. [Dreistufiger Messplan, Vergleich und Reproduktion](../three_look_followup_v0_9/README.md)
+
 ## Reproduktion
 
 Im Wurzelverzeichnis des Repositorys mit Python 3.12 ausführen.
