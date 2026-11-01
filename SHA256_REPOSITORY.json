@@ -32,11 +32,11 @@
     "CITATION.cff": "5225a23f7cd2f1841db38dd9f4b6f1b3624cce110cf27d08575b6f4b29cd2bc0",
     "CODE_OF_CONDUCT.md": "dd847b83a025f21bd55935c23b4568b3f1d108455a27b9b15b2a0b35fbc58cb9",
     "CONTRIBUTING.md": "366d6a2ce4b388d1fb77d4a5188157ff99613be932065fa758f8e562a6b45ee0",
-    "LICENSE_SOURCE_MANIFEST.json": "d46be73a19b02b7c4f3f763a9cfa9021532367a80388421f39d15a91b79c09dd",
+    "LICENSE_SOURCE_MANIFEST.json": "c4684c4dda642d166fce56635610ebd827e5cd3f43963aef8ff1952e8a36ebd5",
     "MODULE_REGISTRY.json": "722dced0bb939a3e8eeaf50953ac9a96fd95c203f5dad4859581db777cf42e87",
     "README.md": "6f9a68dab2ddf792ba71ed2abe77a1367e9777a021563965ef856324b57169a6",
     "REFERENCE_SOURCE_MANIFEST.json": "0e2275138250cc755ae87969b80fee67016cd293be837a5a89e2eeaa46495876",
-    "SAGNAC_SOURCE_MANIFEST.json": "215be902efbcba144af5de1c3e9a6394ba2206126c3bdbbc204b533870737d08",
+    "SAGNAC_SOURCE_MANIFEST.json": "7ea019e650b376d8677aca83f951bf6f73f575309be23d44c1dbe34642532071",
     "SECURITY.md": "c73f7d7c97f7c30f8d93140c612772ed2b81b1830987a37ae0980903213760d5",
     "app/index.html": "df48fa522498fb79aa3617fe2fefa587ef820b9555a692b5bd253ac88b2298f7",
     "data/reference_certificate.json": "a71288ed81b44f8ec122b7d6a6d14340378c7dfbf9daeb5a0fb4c76caba06d18",
@@ -2350,6 +2350,17 @@
         "research/eigenzeit/c01_gum_v0_12/records/verification.json"
       ],
       "scope": "Publish Eigenzeit v0.12 C01 measurement definition, original report and archive, GUM uncertainty budget, separate 2 ppm conformity decision and reproducible controls."
+    },
+    {
+      "date": "2026-11-01",
+      "component": "Eigenzeit KVF concept v0.13",
+      "paths": [
+        "research/eigenzeit/kvf_concept_v0_13/DESIGN.md",
+        "research/eigenzeit/kvf_concept_v0_13/README.md",
+        "research/eigenzeit/kvf_concept_v0_13/SOURCES.md",
+        "research/eigenzeit/kvf_concept_v0_13/STATUS.json"
+      ],
+      "scope": "Publish Eigenzeit v0.13 concept for a causal vacuum-field measurement vector, electro-optic test stand, multivariate GUM procedure and explicit open model and evidence requirements."
     }
   ],
   "non_historical_documentation_updates": [
@@ -3299,6 +3310,22 @@
           "path": "LICENSE_SOURCE_MANIFEST.json",
           "previous_sha256": "3755d98bb31280bf60b0150d8ce5e0957e57c0c660fd80c30bcdd825dbb87647",
           "sha256": "d46be73a19b02b7c4f3f763a9cfa9021532367a80388421f39d15a91b79c09dd"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-01",
+      "scope": "Publish Eigenzeit v0.13 concept for a causal vacuum-field measurement vector, electro-optic test stand, multivariate GUM procedure and explicit open model and evidence requirements.",
+      "files": [
+        {
+          "path": "SAGNAC_SOURCE_MANIFEST.json",
+          "previous_sha256": "215be902efbcba144af5de1c3e9a6394ba2206126c3bdbbc204b533870737d08",
+          "sha256": "7ea019e650b376d8677aca83f951bf6f73f575309be23d44c1dbe34642532071"
+        },
+        {
+          "path": "LICENSE_SOURCE_MANIFEST.json",
+          "previous_sha256": "d46be73a19b02b7c4f3f763a9cfa9021532367a80388421f39d15a91b79c09dd",
+          "sha256": "c4684c4dda642d166fce56635610ebd827e5cd3f43963aef8ff1952e8a36ebd5"
         }
       ]
     }
