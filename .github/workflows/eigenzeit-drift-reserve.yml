@@ -1,0 +1,32 @@
+name: Eigenzeit drift reserve v0.10
+on:
+  pull_request:
+    paths:
+      - 'research/eigenzeit/drift_reserve_v0_10/**'
+      - 'research/eigenzeit/three_look_followup_v0_9/Eigenzeit_Dreistufige_Nachmessung_v0_9_Pruefpaket.zip'
+      - '.github/workflows/eigenzeit-drift-reserve.yml'
+      - 'tools/workflow/requirements-research.txt'
+  push:
+    branches: [main]
+    paths:
+      - 'research/eigenzeit/drift_reserve_v0_10/**'
+      - 'research/eigenzeit/three_look_followup_v0_9/Eigenzeit_Dreistufige_Nachmessung_v0_9_Pruefpaket.zip'
+      - '.github/workflows/eigenzeit-drift-reserve.yml'
+      - 'tools/workflow/requirements-research.txt'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  reproduce:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r tools/workflow/requirements-research.txt
+      - name: Verify provenance, recompute drift bounds and reproduce the pilot and stress test
+        run: python -B research/eigenzeit/drift_reserve_v0_10/publication_check.py --replay

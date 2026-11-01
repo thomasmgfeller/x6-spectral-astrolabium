@@ -1,0 +1,468 @@
+{
+  "name": "unsafe_mask",
+  "n": 60000,
+  "nominal_go": 992,
+  "robust_go": 356,
+  "nominal_test_threshold": "1/100",
+  "one_sided_p_upper": "1/1000000000000000",
+  "alpha": "1/100",
+  "reject_nominal_rate_at_most_one_percent": true,
+  "batches": [
+    {
+      "repetitions": 5000,
+      "nominal_go": 77,
+      "robust_go": 33,
+      "only_nominal": 51,
+      "only_robust": 7,
+      "nominal_stages": [
+        {
+          "go": 8,
+          "hold": 841
+        },
+        {
+          "go": 9,
+          "hold": 1039
+        },
+        {
+          "go": 60,
+          "hold": 3043
+        }
+      ],
+      "robust_stages": [
+        {
+          "go": 5,
+          "hold": 1230
+        },
+        {
+          "go": 6,
+          "hold": 1298
+        },
+        {
+          "go": 22,
+          "hold": 2439
+        }
+      ],
+      "mean_trials_nominal": "542624200",
+      "mean_trials_robust": "653447200",
+      "raw_counts_sha256": "5fa16bc4537dd9374619ce682a8da34cafc28ddae3bc63afe061ecdef1f8d99a"
+    },
+    {
+      "repetitions": 5000,
+      "nominal_go": 95,
+      "robust_go": 34,
+      "only_nominal": 70,
+      "only_robust": 9,
+      "nominal_stages": [
+        {
+          "go": 8,
+          "hold": 913
+        },
+        {
+          "go": 14,
+          "hold": 1052
+        },
+        {
+          "go": 73,
+          "hold": 2940
+        }
+      ],
+      "robust_stages": [
+        {
+          "go": 4,
+          "hold": 1269
+        },
+        {
+          "go": 9,
+          "hold": 1317
+        },
+        {
+          "go": 21,
+          "hold": 2380
+        }
+      ],
+      "mean_trials_nominal": "537842800",
+      "mean_trials_robust": "650281600",
+      "raw_counts_sha256": "bf8bd0f36effbddc034dc260568ab7c6db4ae2ab063818df73739f1f0b424121"
+    },
+    {
+      "repetitions": 5000,
+      "nominal_go": 93,
+      "robust_go": 34,
+      "only_nominal": 62,
+      "only_robust": 3,
+      "nominal_stages": [
+        {
+          "go": 6,
+          "hold": 832
+        },
+        {
+          "go": 13,
+          "hold": 1013
+        },
+        {
+          "go": 74,
+          "hold": 3062
+        }
+      ],
+      "robust_stages": [
+        {
+          "go": 4,
+          "hold": 1209
+        },
+        {
+          "go": 6,
+          "hold": 1304
+        },
+        {
+          "go": 24,
+          "hold": 2453
+        }
+      ],
+      "mean_trials_nominal": "544922200",
+      "mean_trials_robust": "655661600",
+      "raw_counts_sha256": "1437c117b506dd890cd458cd7d23e6c3684bfcd5f8244f581abd46b49f09d3ef"
+    },
+    {
+      "repetitions": 5000,
+      "nominal_go": 95,
+      "robust_go": 40,
+      "only_nominal": 67,
+      "only_robust": 12,
+      "nominal_stages": [
+        {
+          "go": 5,
+          "hold": 860
+        },
+        {
+          "go": 20,
+          "hold": 1040
+        },
+        {
+          "go": 70,
+          "hold": 3005
+        }
+      ],
+      "robust_stages": [
+        {
+          "go": 3,
+          "hold": 1264
+        },
+        {
+          "go": 7,
+          "hold": 1261
+        },
+        {
+          "go": 30,
+          "hold": 2435
+        }
+      ],
+      "mean_trials_nominal": "542020000",
+      "mean_trials_robust": "653380000",
+      "raw_counts_sha256": "db789e942825191b122e861bced389617eeb60218a0d981fd0f6fc65e67f0a48"
+    },
+    {
+      "repetitions": 5000,
+      "nominal_go": 83,
+      "robust_go": 24,
+      "only_nominal": 63,
+      "only_robust": 4,
+      "nominal_stages": [
+        {
+          "go": 3,
+          "hold": 850
+        },
+        {
+          "go": 11,
+          "hold": 1004
+        },
+        {
+          "go": 69,
+          "hold": 3063
+        }
+      ],
+      "robust_stages": [
+        {
+          "go": 1,
+          "hold": 1181
+        },
+        {
+          "go": 8,
+          "hold": 1288
+        },
+        {
+          "go": 15,
+          "hold": 2507
+        }
+      ],
+      "mean_trials_nominal": "542832400",
+      "mean_trials_robust": "657801600",
+      "raw_counts_sha256": "6a0018d3bcfada3d9e763b4bbaf55f886158d432ea6a0c75d7d8cf2f521e1cba"
+    },
+    {
+      "repetitions": 5000,
+      "nominal_go": 83,
+      "robust_go": 22,
+      "only_nominal": 64,
+      "only_robust": 3,
+      "nominal_stages": [
+        {
+          "go": 5,
+          "hold": 846
+        },
+        {
+          "go": 12,
+          "hold": 1083
+        },
+        {
+          "go": 66,
+          "hold": 2988
+        }
+      ],
+      "robust_stages": [
+        {
+          "go": 7,
+          "hold": 1233
+        },
+        {
+          "go": 4,
+          "hold": 1225
+        },
+        {
+          "go": 11,
+          "hold": 2520
+        }
+      ],
+      "mean_trials_nominal": "541363600",
+      "mean_trials_robust": "656296800",
+      "raw_counts_sha256": "7b371671f060e74ddc787cc8f865f0c18a83f87ed3a9bf8639f1be42c682e895"
+    },
+    {
+      "repetitions": 5000,
+      "nominal_go": 79,
+      "robust_go": 28,
+      "only_nominal": 59,
+      "only_robust": 8,
+      "nominal_stages": [
+        {
+          "go": 6,
+          "hold": 868
+        },
+        {
+          "go": 11,
+          "hold": 1019
+        },
+        {
+          "go": 62,
+          "hold": 3034
+        }
+      ],
+      "robust_stages": [
+        {
+          "go": 3,
+          "hold": 1254
+        },
+        {
+          "go": 4,
+          "hold": 1267
+        },
+        {
+          "go": 21,
+          "hold": 2451
+        }
+      ],
+      "mean_trials_nominal": "540897400",
+      "mean_trials_robust": "651970400",
+      "raw_counts_sha256": "3f4b432719d2c80b0483dfe6623ad4859cadf6eacb1119d9fcaaeead7d30ec08"
+    },
+    {
+      "repetitions": 5000,
+      "nominal_go": 81,
+      "robust_go": 30,
+      "only_nominal": 58,
+      "only_robust": 7,
+      "nominal_stages": [
+        {
+          "go": 4,
+          "hold": 869
+        },
+        {
+          "go": 10,
+          "hold": 1021
+        },
+        {
+          "go": 67,
+          "hold": 3029
+        }
+      ],
+      "robust_stages": [
+        {
+          "go": 4,
+          "hold": 1265
+        },
+        {
+          "go": 4,
+          "hold": 1239
+        },
+        {
+          "go": 22,
+          "hold": 2466
+        }
+      ],
+      "mean_trials_nominal": "542213800",
+      "mean_trials_robust": "652416000",
+      "raw_counts_sha256": "596433ca570e6aac8c7726d1e1dd898d208820074aeed8513cecc9d89d16d8c9"
+    },
+    {
+      "repetitions": 5000,
+      "nominal_go": 66,
+      "robust_go": 20,
+      "only_nominal": 51,
+      "only_robust": 5,
+      "nominal_stages": [
+        {
+          "go": 3,
+          "hold": 856
+        },
+        {
+          "go": 10,
+          "hold": 1028
+        },
+        {
+          "go": 53,
+          "hold": 3050
+        }
+      ],
+      "robust_stages": [
+        {
+          "go": 3,
+          "hold": 1193
+        },
+        {
+          "go": 4,
+          "hold": 1317
+        },
+        {
+          "go": 13,
+          "hold": 2470
+        }
+      ],
+      "mean_trials_nominal": "541559800",
+      "mean_trials_robust": "655812800",
+      "raw_counts_sha256": "e4da51e337969a83d495ad178e9a49d704f490b69b7e19192a76fa706eded307"
+    },
+    {
+      "repetitions": 5000,
+      "nominal_go": 70,
+      "robust_go": 29,
+      "only_nominal": 50,
+      "only_robust": 9,
+      "nominal_stages": [
+        {
+          "go": 5,
+          "hold": 831
+        },
+        {
+          "go": 10,
+          "hold": 1073
+        },
+        {
+          "go": 55,
+          "hold": 3026
+        }
+      ],
+      "robust_stages": [
+        {
+          "go": 3,
+          "hold": 1218
+        },
+        {
+          "go": 3,
+          "hold": 1294
+        },
+        {
+          "go": 23,
+          "hold": 2459
+        }
+      ],
+      "mean_trials_nominal": "542032000",
+      "mean_trials_robust": "655258400",
+      "raw_counts_sha256": "a77110ee75395067c3f72aa2b6107c70d0b34b51ff9a09ead1dca4fb8bcbbeb7"
+    },
+    {
+      "repetitions": 5000,
+      "nominal_go": 93,
+      "robust_go": 30,
+      "only_nominal": 67,
+      "only_robust": 4,
+      "nominal_stages": [
+        {
+          "go": 6,
+          "hold": 855
+        },
+        {
+          "go": 9,
+          "hold": 1086
+        },
+        {
+          "go": 78,
+          "hold": 2966
+        }
+      ],
+      "robust_stages": [
+        {
+          "go": 4,
+          "hold": 1289
+        },
+        {
+          "go": 4,
+          "hold": 1238
+        },
+        {
+          "go": 22,
+          "hold": 2443
+        }
+      ],
+      "mean_trials_nominal": "539786200",
+      "mean_trials_robust": "650992800",
+      "raw_counts_sha256": "5856deff5d986ac569a4b0c0276004bc855257354d15e7de72d898b1e11d02a6"
+    },
+    {
+      "repetitions": 5000,
+      "nominal_go": 77,
+      "robust_go": 32,
+      "only_nominal": 50,
+      "only_robust": 5,
+      "nominal_stages": [
+        {
+          "go": 4,
+          "hold": 819
+        },
+        {
+          "go": 13,
+          "hold": 1054
+        },
+        {
+          "go": 60,
+          "hold": 3050
+        }
+      ],
+      "robust_stages": [
+        {
+          "go": 6,
+          "hold": 1247
+        },
+        {
+          "go": 6,
+          "hold": 1298
+        },
+        {
+          "go": 20,
+          "hold": 2423
+        }
+      ],
+      "mean_trials_nominal": "544316200",
+      "mean_trials_robust": "652081600",
+      "raw_counts_sha256": "1f5ea5125fb40b6901c40239a3fe8b250af6d548e16e49a65c959f83bc45aab4"
+    }
+  ]
+}
