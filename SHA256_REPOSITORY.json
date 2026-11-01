@@ -32,11 +32,11 @@
     "CITATION.cff": "5225a23f7cd2f1841db38dd9f4b6f1b3624cce110cf27d08575b6f4b29cd2bc0",
     "CODE_OF_CONDUCT.md": "dd847b83a025f21bd55935c23b4568b3f1d108455a27b9b15b2a0b35fbc58cb9",
     "CONTRIBUTING.md": "366d6a2ce4b388d1fb77d4a5188157ff99613be932065fa758f8e562a6b45ee0",
-    "LICENSE_SOURCE_MANIFEST.json": "7fcb9276fa0638db690d5620e77d61703314a45da29a6bee01eb5d4019b448b7",
+    "LICENSE_SOURCE_MANIFEST.json": "041c98d15a78c47b1673e9e5e4a76556c8161c1492393c08265c1f826815ccd9",
     "MODULE_REGISTRY.json": "722dced0bb939a3e8eeaf50953ac9a96fd95c203f5dad4859581db777cf42e87",
     "README.md": "6f9a68dab2ddf792ba71ed2abe77a1367e9777a021563965ef856324b57169a6",
     "REFERENCE_SOURCE_MANIFEST.json": "0e2275138250cc755ae87969b80fee67016cd293be837a5a89e2eeaa46495876",
-    "SAGNAC_SOURCE_MANIFEST.json": "5951448c1f978230ea517f2c6f44f9238081d29675be63bbf44349f0f043555d",
+    "SAGNAC_SOURCE_MANIFEST.json": "e4758a1112365e11960e6e942de79d8b5852e5f0fc37ad82464131de616644dd",
     "SECURITY.md": "c73f7d7c97f7c30f8d93140c612772ed2b81b1830987a37ae0980903213760d5",
     "app/index.html": "df48fa522498fb79aa3617fe2fefa587ef820b9555a692b5bd253ac88b2298f7",
     "data/reference_certificate.json": "a71288ed81b44f8ec122b7d6a6d14340378c7dfbf9daeb5a0fb4c76caba06d18",
@@ -2121,6 +2121,24 @@
         "research/eigenzeit/single_order_power_v0_2/publication_check.py"
       ],
       "scope": "Publish the v0.2 single-order power bounds, original report and archive, auditable sources, and four-case replay for the fixed flat/de Sitter comparison."
+    },
+    {
+      "date": "2026-11-01",
+      "component": "Eigenzeit three geometries v0.3",
+      "paths": [
+        ".github/workflows/eigenzeit-three-geometries.yml",
+        "app/eigenzeit-kruemmungsintervalle/index.html",
+        "research/eigenzeit/three_geometries_v0_3/BEWEIS.md",
+        "research/eigenzeit/three_geometries_v0_3/Eigenzeit_Drei_Geometrien_v0_3.pdf",
+        "research/eigenzeit/three_geometries_v0_3/Eigenzeit_Drei_Geometrien_v0_3_Pruefpaket.zip",
+        "research/eigenzeit/three_geometries_v0_3/PUBLICATION.json",
+        "research/eigenzeit/three_geometries_v0_3/README.md",
+        "research/eigenzeit/three_geometries_v0_3/certificate.json",
+        "research/eigenzeit/three_geometries_v0_3/cpu_baseline.json",
+        "research/eigenzeit/three_geometries_v0_3/pilot_audit.json",
+        "research/eigenzeit/three_geometries_v0_3/publication_check.py"
+      ],
+      "scope": "Publish Eigenzeit v0.3 three-model resolution, continuous curvature intervals, original files, interactive viewer and pilot replay."
     }
   ],
   "non_historical_documentation_updates": [
@@ -2910,6 +2928,22 @@
           "path": "LICENSE_SOURCE_MANIFEST.json",
           "previous_sha256": "7d85c0a98dfe98ea9d804894395aabd472de6c027033ff5720ff7b3bc90c7af6",
           "sha256": "7fcb9276fa0638db690d5620e77d61703314a45da29a6bee01eb5d4019b448b7"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-01",
+      "scope": "Publish Eigenzeit v0.3 three-model resolution, continuous curvature intervals, original files, interactive viewer and pilot replay.",
+      "files": [
+        {
+          "path": "SAGNAC_SOURCE_MANIFEST.json",
+          "previous_sha256": "5951448c1f978230ea517f2c6f44f9238081d29675be63bbf44349f0f043555d",
+          "sha256": "e4758a1112365e11960e6e942de79d8b5852e5f0fc37ad82464131de616644dd"
+        },
+        {
+          "path": "LICENSE_SOURCE_MANIFEST.json",
+          "previous_sha256": "7fcb9276fa0638db690d5620e77d61703314a45da29a6bee01eb5d4019b448b7",
+          "sha256": "041c98d15a78c47b1673e9e5e4a76556c8161c1492393c08265c1f826815ccd9"
         }
       ]
     }
