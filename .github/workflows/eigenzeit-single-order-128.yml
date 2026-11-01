@@ -1,0 +1,32 @@
+name: Eigenzeit single order with 128 events
+on:
+  pull_request:
+    paths:
+      - 'research/eigenzeit/single_order_128_v0_1/**'
+      - 'app/eigenzeit-einzelordnung/**'
+      - '.github/workflows/eigenzeit-single-order-128.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'research/eigenzeit/single_order_128_v0_1/**'
+      - 'app/eigenzeit-einzelordnung/**'
+      - '.github/workflows/eigenzeit-single-order-128.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09
+        with:
+          persist-credentials: false
+      - name: Verify archive and reproduce every decision
+        run: python3 -I -B research/eigenzeit/single_order_128_v0_1/publication_check.py
+      - name: Check all interactive viewer cases
+        run: |
+          src=research/eigenzeit/single_order_128_v0_1/Eigenzeit_Einzelordnung_128_v0_1_Pruefpaket.zip
+          unzip -q "$src" -d "$RUNNER_TEMP/eigenzeit-128"
+          cd "$RUNNER_TEMP/eigenzeit-128"
+          node verify_view.cjs
