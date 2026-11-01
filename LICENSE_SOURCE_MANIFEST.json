@@ -45,8 +45,8 @@
     "SAGNAC_SOURCE_MANIFEST.json": "6fb23c9fa932929f284c2b0ff9e7ed5e67e9bd5b056f54aa8be569df162e41fd",
     "app/causal-stability/app.mjs": "88aef8d0da68d1a3e49986bf557597e6e67499e74ec5f91e7f0623be9f12230b",
     "app/causal-stability/engine.mjs": "6230ee3e9da380a10b26d1b555d2ca0bcfe024cb6a2db5d32f628922cccfdae9",
-    "app/causal-stability/index.html": "0ab8319f2f87935f44dfefcd823d44cc4939254951410431ecd5455a88508b95",
-    "app/causal-stability/style.css": "5ed64ef2fb3c2bf20f6c340d4243ffd8770d1eb0b0b3802930e24dc125acf671",
+    "app/causal-stability/index.html": "c209705170b60884be28e35ada290a9937448c4f742839200eb40639a0e134cf",
+    "app/causal-stability/style.css": "043901443afe9e3b0e2744bc49f594eb16851ce8f34f159786a485b460eba7f0",
     "app/proper-time.html": "e3d8152c649ab05500db4d5d05965608719d0fe4d82c29f5432bd8ca1246fa58",
     "app/rax-cqg-lab.html": "2e6bf929405aee66f12113c405c9c1879d71d2c897f4fc7435b5d4bf18c4c8a4",
     "assets/causal-stability-preview.png": "1a5e5d19fe6d1cc24261ee14b52a4b40d96df3eb4596231b4d7566da90f5a2c1",
@@ -3145,7 +3145,15 @@
     "app/causal-stability/fibre-data/record.json": "4e3d84198a7488cc02dd39fd67fd1b6929fc377716ca5f9e35af577e768b4a1e",
     "app/causal-stability/fibre.mjs": "c78094675cccfb10dc1128983adf1a565de221a5f0735e4b955a83081b12b707",
     "docs/research/cspp/causal-stability-lab/FIBRE.md": "c76a7c2bdfc059564571b11f84a49c0678a8927936162b728f9691507c2e2179",
-    "tests/python/test_dryad_fibre.py": "21e7271494d44ca8dfdacbf8e01d6616e14ece75bb16b5f11cbd762d9ac10d8f"
+    "tests/python/test_dryad_fibre.py": "21e7271494d44ca8dfdacbf8e01d6616e14ece75bb16b5f11cbd762d9ac10d8f",
+    ".github/workflows/sed-stations.yml": "ab8255f1f86abf5efacfd4f688ce4e52a8afa3af3b65751b483ddab961cc24ac",
+    "agent/sed-requirements.txt": "260cd7e96acc92555bc5f71bac477134383baa876f3549f423b5afc7494ac571",
+    "agent/sed_three_station.py": "8138b21984162550bc187ce0882adef1404c8a0b101f6d11a1e3b68b6a865332",
+    "app/causal-stability/sed-data/.gitignore": "6abe6bff9d4bf30a37e4d8932b1ca484a0c0da6ceeab4b62d30ff9c48d4d322c",
+    "app/causal-stability/sed-data/summary.json": "6867e83bdb78e2ee24fdcc19144ceb48a6d76c5acc26c1c3d7ca2cb7d3887682",
+    "app/causal-stability/sed.mjs": "81de2b52a3a1221579b27faae1e26b14a870d0eaaa38832c8ec20d6e31fde937",
+    "docs/research/cspp/causal-stability-lab/SED.md": "c24f7a174813b2acfeee221163a69ebd4ef8e1ed21955f2e1f347bd4ce0f60f8",
+    "tests/python/test_sed_three_station.py": "9caae8a53d53f2d6fe6beb05a8feafec9886296a86a8ac19455fc37e31d7cb99"
   },
   "documentation_updates": [
     {
@@ -4465,6 +4473,22 @@
           "sha256": "0ab8319f2f87935f44dfefcd823d44cc4939254951410431ecd5455a88508b95"
         }
       ]
+    },
+    {
+      "date": "2026-11-01",
+      "scope": "Add a three-station comparison using open CH network data in memory. Publish original code, attribution, fingerprints and derived timing statistics only.",
+      "files": [
+        {
+          "path": "app/causal-stability/index.html",
+          "previous_sha256": "0ab8319f2f87935f44dfefcd823d44cc4939254951410431ecd5455a88508b95",
+          "sha256": "c209705170b60884be28e35ada290a9937448c4f742839200eb40639a0e134cf"
+        },
+        {
+          "path": "app/causal-stability/style.css",
+          "previous_sha256": "5ed64ef2fb3c2bf20f6c340d4243ffd8770d1eb0b0b3802930e24dc125acf671",
+          "sha256": "043901443afe9e3b0e2744bc49f594eb16851ce8f34f159786a485b460eba7f0"
+        }
+      ]
     }
   ],
   "publication_additions": [
@@ -5164,6 +5188,20 @@
         "app/causal-stability/fibre.mjs",
         "docs/research/cspp/causal-stability-lab/FIBRE.md",
         "tests/python/test_dryad_fibre.py"
+      ]
+    },
+    {
+      "date": "2026-11-01",
+      "scope": "Add a three-station comparison using open CH network data in memory. Publish original code, attribution, fingerprints and derived timing statistics only.",
+      "paths": [
+        ".github/workflows/sed-stations.yml",
+        "agent/sed-requirements.txt",
+        "agent/sed_three_station.py",
+        "app/causal-stability/sed-data/.gitignore",
+        "app/causal-stability/sed-data/summary.json",
+        "app/causal-stability/sed.mjs",
+        "docs/research/cspp/causal-stability-lab/SED.md",
+        "tests/python/test_sed_three_station.py"
       ]
     }
   ]

@@ -11,3 +11,9 @@
 .hanford-panel a{color:var(--cyan);text-decoration:underline}
 .hanford-panel .chart{max-width:840px}
 .hanford-panel [hidden]{display:none}
+
+.sed-table{width:100%;max-width:700px;border-collapse:collapse;margin-top:1rem;font-variant-numeric:tabular-nums}
+.sed-table caption{text-align:left;color:var(--muted);padding-bottom:.6rem}
+.sed-table th,.sed-table td{text-align:right;padding:.6rem .35rem;border-bottom:1px solid var(--line)}
+.sed-table th:first-child,.sed-table td:first-child{text-align:left}
+@media(max-width:580px){.topbar nav{flex-wrap:wrap;justify-content:flex-start;row-gap:7px}}

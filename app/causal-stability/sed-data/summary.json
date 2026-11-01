@@ -1,0 +1,101 @@
+{
+  "method": "x6-sed-pg-variance-v1",
+  "event_id": "smi:ch.ethz.sed/sc3a/2017epaqsp",
+  "network_doi": "https://doi.org/10.12686/sed/networks/ch",
+  "sample_rate_hz": 120,
+  "bands_hz": [
+    [
+      1,
+      5
+    ],
+    [
+      2,
+      8
+    ],
+    [
+      4,
+      12
+    ]
+  ],
+  "pairs": [
+    {
+      "from": "LLS",
+      "to": "MUO",
+      "delay_s": [
+        2.116634,
+        2.141634,
+        2.1333
+      ],
+      "spread_ms": 25.0
+    },
+    {
+      "from": "LLS",
+      "to": "BNALP",
+      "delay_s": [
+        4.6833,
+        4.849967,
+        4.9583
+      ],
+      "spread_ms": 275.0
+    },
+    {
+      "from": "MUO",
+      "to": "BNALP",
+      "delay_s": [
+        2.566667,
+        2.708333,
+        2.825
+      ],
+      "spread_ms": 258.333
+    }
+  ],
+  "input_counts_sha256_le_i32": {
+    "LLS": "69ec6bf03a1b31bbd38a0b564383e303138ca4141caac3fa0d8dc769ae7f8b10",
+    "MUO": "3970ceffe01733abd6bbb744ab103372187d79844bd8cb042564ab2db6172823",
+    "BNALP": "a4474ea1c702d502ef26aa40d5bdf2e065b5f4ab511d30ffbb95bad6b6d26dbd"
+  },
+  "checks": {
+    "LLS": [
+      {
+        "variance": "OK",
+        "rms": "LEFT_EDGE"
+      },
+      {
+        "variance": "OK",
+        "rms": "OK"
+      },
+      {
+        "variance": "OK",
+        "rms": "OK"
+      }
+    ],
+    "MUO": [
+      {
+        "variance": "OK",
+        "rms": "OK"
+      },
+      {
+        "variance": "OK",
+        "rms": "OK"
+      },
+      {
+        "variance": "OK",
+        "rms": "OK"
+      }
+    ],
+    "BNALP": [
+      {
+        "variance": "OK",
+        "rms": "OK"
+      },
+      {
+        "variance": "OK",
+        "rms": "LEFT_EDGE"
+      },
+      {
+        "variance": "OK",
+        "rms": "LEFT_EDGE"
+      }
+    ]
+  }
+}
