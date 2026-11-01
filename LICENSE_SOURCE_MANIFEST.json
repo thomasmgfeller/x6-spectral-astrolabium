@@ -45,7 +45,7 @@
     "SAGNAC_SOURCE_MANIFEST.json": "6fb23c9fa932929f284c2b0ff9e7ed5e67e9bd5b056f54aa8be569df162e41fd",
     "app/causal-stability/app.mjs": "88aef8d0da68d1a3e49986bf557597e6e67499e74ec5f91e7f0623be9f12230b",
     "app/causal-stability/engine.mjs": "6230ee3e9da380a10b26d1b555d2ca0bcfe024cb6a2db5d32f628922cccfdae9",
-    "app/causal-stability/index.html": "0a20aa7efae6ec2bf80316d78ecf853e630ded5b533605a9e8c471ef603feb83",
+    "app/causal-stability/index.html": "0ab8319f2f87935f44dfefcd823d44cc4939254951410431ecd5455a88508b95",
     "app/causal-stability/style.css": "5ed64ef2fb3c2bf20f6c340d4243ffd8770d1eb0b0b3802930e24dc125acf671",
     "app/proper-time.html": "e3d8152c649ab05500db4d5d05965608719d0fe4d82c29f5432bd8ca1246fa58",
     "app/rax-cqg-lab.html": "2e6bf929405aee66f12113c405c9c1879d71d2c897f4fc7435b5d4bf18c4c8a4",
@@ -3139,7 +3139,13 @@
     "app/causal-stability/hanford-data/index.json": "793223c3bacf1384d0088f8333a9fdd6dffc8e4513eae3265bdd016e8d557d6d",
     "app/causal-stability/hanford.mjs": "a5d42dfca91f08361c3a696c331b051278eb628ab6a554cfade9018f94478d48",
     "docs/research/cspp/causal-stability-lab/HANFORD.md": "a52311e460ed7dfe67f1d005044f954b15cd127ed248cb6e59d2a79794b49e81",
-    "tests/python/test_hanford.py": "ea56b98f23fa7712296ded0d4f48ade8a43affd071b2839ff3adddd2825d61f7"
+    "tests/python/test_hanford.py": "ea56b98f23fa7712296ded0d4f48ade8a43affd071b2839ff3adddd2825d61f7",
+    ".github/workflows/dryad-fibre.yml": "b747851afb2a87f5593eaa7cba627f74a00e79f001cbc2cb6c77b9816319d48f",
+    "agent/dryad_fibre.py": "aad93c1fd64b665db34eb7dd1debfa87ac2215bb9df6975b7ef787431d695c39",
+    "app/causal-stability/fibre-data/record.json": "4e3d84198a7488cc02dd39fd67fd1b6929fc377716ca5f9e35af577e768b4a1e",
+    "app/causal-stability/fibre.mjs": "c78094675cccfb10dc1128983adf1a565de221a5f0735e4b955a83081b12b707",
+    "docs/research/cspp/causal-stability-lab/FIBRE.md": "c76a7c2bdfc059564571b11f84a49c0678a8927936162b728f9691507c2e2179",
+    "tests/python/test_dryad_fibre.py": "21e7271494d44ca8dfdacbf8e01d6616e14ece75bb16b5f11cbd762d9ac10d8f"
   },
   "documentation_updates": [
     {
@@ -4448,6 +4454,17 @@
           "sha256": "5ed64ef2fb3c2bf20f6c340d4243ffd8770d1eb0b0b3802930e24dc125acf671"
         }
       ]
+    },
+    {
+      "date": "2026-11-01",
+      "scope": "Expose the MIT fibre measurement adapter and phase diagnostic in the stability lab. Link the released Hanford version DOI.",
+      "files": [
+        {
+          "path": "app/causal-stability/index.html",
+          "previous_sha256": "0a20aa7efae6ec2bf80316d78ecf853e630ded5b533605a9e8c471ef603feb83",
+          "sha256": "0ab8319f2f87935f44dfefcd823d44cc4939254951410431ecd5455a88508b95"
+        }
+      ]
     }
   ],
   "publication_additions": [
@@ -5135,6 +5152,18 @@
         "app/causal-stability/hanford.mjs",
         "docs/research/cspp/causal-stability-lab/HANFORD.md",
         "tests/python/test_hanford.py"
+      ]
+    },
+    {
+      "date": "2026-11-01",
+      "scope": "Dryad fibre adapter, verified original matrix slice and model predictions; complete source verified against the Dryad SHA-256.",
+      "paths": [
+        ".github/workflows/dryad-fibre.yml",
+        "agent/dryad_fibre.py",
+        "app/causal-stability/fibre-data/record.json",
+        "app/causal-stability/fibre.mjs",
+        "docs/research/cspp/causal-stability-lab/FIBRE.md",
+        "tests/python/test_dryad_fibre.py"
       ]
     }
   ]

@@ -10,7 +10,7 @@
 </head>
 <body>
 <a class="skip" href="#labor">Zum Labor</a>
-<header class="topbar"><a class="brand" href="#" aria-label="Causal Stability Lab Start"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 23 16 7l11 16H5L16 15l11 8M16 7v8"/><circle cx="5" cy="23" r="3"/><circle cx="16" cy="7" r="3"/><circle cx="27" cy="23" r="3"/><circle cx="16" cy="15" r="2"/></svg><span>CSPP <b>RESEARCH TOOLS</b></span></a><nav aria-label="Hauptnavigation"><a href="../../de/index.html">X6 Übersicht</a><a href="#labor" class="active">Labor</a><a href="#methodik">Mathematik</a><a href="#hanford">Hanford</a><a href="#quellen">Provenienz</a></nav><span class="version">v0.1 <span class="live-dot"></span> lokal berechnet</span></header>
+<header class="topbar"><a class="brand" href="#" aria-label="Causal Stability Lab Start"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 23 16 7l11 16H5L16 15l11 8M16 7v8"/><circle cx="5" cy="23" r="3"/><circle cx="16" cy="7" r="3"/><circle cx="27" cy="23" r="3"/><circle cx="16" cy="15" r="2"/></svg><span>CSPP <b>RESEARCH TOOLS</b></span></a><nav aria-label="Hauptnavigation"><a href="../../de/index.html">X6 Übersicht</a><a href="#labor" class="active">Labor</a><a href="#methodik">Mathematik</a><a href="#hanford">Hanford</a><a href="#faser">Glasfaser</a><a href="#quellen">Provenienz</a></nav><span class="version">v0.1 <span class="live-dot"></span> lokal berechnet</span></header>
 <main>
 <noscript><p>Dieses Labor benötigt JavaScript für die interaktiven Berechnungen. Die <a href="https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/docs/research/cspp/causal-stability-lab/MATHEMATICS.md">mathematische Herleitung und der Geltungsbereich</a> bleiben ohne JavaScript lesbar.</p></noscript>
 <section class="intro"><div><div class="eyebrow">01 / KAUSALE STABILITÄT</div><h1>Was verstärkt eine Störung?</h1><p>Verfolge kausale Pfade. Prüfe ihre Aufhebung. Sieh, warum ein unauffälliges Spektrum noch keine stabile Ausbreitung bedeutet.</p></div><div class="scope-tag"><span class="amber-dot"></span><div><strong>Endliche Diagnose</strong><span>METHOD & G1 · HOLD</span></div></div></section>
@@ -71,7 +71,23 @@
     <p id="hanford-metrics"></p><p class="muted">Die Kurve zeigt pro Bildspalte Minimum und Maximum der unveränderten Messwerte. Der lokale Amplitudenwert stammt aus einem 235-Hz-Filter. Die Katalog-SNR stammt aus der GWOSC-Auswertung mit einem anderen Verfahren.</p>
     <p><a id="hanford-download" download>Messfenster, Masken und Ergebnis als JSON ↓</a></p>
   </div>
-  <p><a href="https://gwosc.org/s6hwburst/">GWOSC-Injektionskatalog ↗</a> · <a href="../../docs/research/cspp/causal-stability-lab/HANFORD.md">Import und Auswertungsverfahren ↗</a></p>
+  <p><a href="https://gwosc.org/s6hwburst/">GWOSC-Injektionskatalog ↗</a> · <a href="https://doi.org/10.5281/zenodo.23867126">Hanford-Release auf Zenodo ↗</a> · <a href="../../docs/research/cspp/causal-stability-lab/HANFORD.md">Import und Auswertungsverfahren ↗</a></p>
+</section>
+<section id="faser" class="panel hanford-panel" aria-labelledby="faser-title">
+  <div class="eyebrow">PHOTONIK · MIT / DRYAD</div>
+  <h2 id="faser-title">Wie empfindlich ist eine optische Auslöschung?</h2>
+  <p>Zwei Eingangskanäle einer Multimode-Glasfaser speisen denselben Ausgangsort. Die komplexen Koeffizienten stammen aus einer Kalibriermessung von Li-Yu Yu und Sixian You. Die Phasenabweichung und die angezeigten Intensitäten sind Modellrechnungen.</p>
+  <button id="faser-load" type="button" class="secondary">Glasfaser-Messarchiv öffnen</button>
+  <p id="faser-status" role="status"></p>
+  <div id="faser-result" hidden>
+    <label for="faser-phase">Phasenabweichung am zweiten Eingang</label>
+    <input type="range" id="faser-phase" min="-180" max="180" step="1" value="0">
+    <output id="faser-angle" for="faser-phase"></output>
+    <p id="faser-values" aria-live="polite"></p>
+    <p>Bei 0° ist die erste Polarisation am gewählten Ort für gleich starke Eingänge am schwächsten. Die zweite Polarisation wird getrennt berechnet. Beide Intensitäten werden addiert.</p>
+    <a href="fibre-data/record.json" download="MIT-Dryad-Faser.json">Geprüfte Koeffizienten und Referenzrechnung als JSON ↓</a>
+  </div>
+  <p><a href="https://doi.org/10.5061/dryad.wdbrv15wk">Originaldaten auf Dryad ↗</a> · <a href="../../docs/research/cspp/causal-stability-lab/FIBRE.md">Import und Auswertung ↗</a></p>
 </section>
 <section id="methodik" class="method-section"><div class="section-intro"><div class="eyebrow">DAS MATHEMATISCHE FUNDAMENT</div><h2>Vom Pfad zum prüfbaren Kriterium.</h2><p>Ein endliches History-Problem ist eindeutig lösbar. Ob seine Fehlerverstärkung beherrschbar bleibt, ist eine zusätzliche Frage.</p></div><div class="method-grid">
  <article><span class="method-num">01</span><h3>Die exakte endliche Antwort</h3><div class="formula">u = Hh + Ku + f<br>R = (I − K)<sup>−1</sup> = ∑<sub>j=0</sub><sup>N−1</sup> K<sup>j</sup></div><p>h enthält vorgeschriebene History-Werte, f aktive Gleichungsfehler. K ist strikt dreieckig. Die Probe liest A = q<sub>H</sub>h + q<sub>A</sub>u aus, ohne selbst die Dynamik zu verändern.</p></article>
@@ -83,5 +99,6 @@
 </main><div id="toast" role="status" aria-live="polite"></div>
 <script type="module" src="app.mjs"></script>
 <script type="module" src="hanford.mjs"></script>
+<script type="module" src="fibre.mjs"></script>
 </body>
 </html>
