@@ -1,0 +1,32 @@
+name: Eigenzeit selective follow-up v0.8
+on:
+  pull_request:
+    paths:
+      - 'research/eigenzeit/selective_followup_v0_8/**'
+      - 'research/eigenzeit/two_look_calibration_v0_7/Eigenzeit_Zweistufige_Kalibrierung_v0_7_Pruefpaket.zip'
+      - '.github/workflows/eigenzeit-selective-followup.yml'
+      - 'tools/workflow/requirements-research.txt'
+  push:
+    branches: [main]
+    paths:
+      - 'research/eigenzeit/selective_followup_v0_8/**'
+      - 'research/eigenzeit/two_look_calibration_v0_7/Eigenzeit_Zweistufige_Kalibrierung_v0_7_Pruefpaket.zip'
+      - '.github/workflows/eigenzeit-selective-followup.yml'
+      - 'tools/workflow/requirements-research.txt'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  reproduce:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r tools/workflow/requirements-research.txt
+      - name: Verify provenance, recompute selection bounds and replay the paired pilot
+        run: python -B research/eigenzeit/selective_followup_v0_8/publication_check.py --replay
