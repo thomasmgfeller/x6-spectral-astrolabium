@@ -1,0 +1,31 @@
+name: Eigenzeit KVF response v0.15
+on:
+  pull_request:
+    paths:
+      - 'research/eigenzeit/kvf_response_v0_15/**'
+      - '.github/workflows/eigenzeit-kvf-response.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'research/eigenzeit/kvf_response_v0_15/**'
+      - '.github/workflows/eigenzeit-kvf-response.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  reproduce:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r research/eigenzeit/kvf_response_v0_15/requirements.txt
+      - name: Verify originals and reproduce frozen response experiment and disclosed audit
+        run: python -B research/eigenzeit/kvf_response_v0_15/publication_check.py --replay

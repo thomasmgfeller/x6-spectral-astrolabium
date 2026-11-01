@@ -1,0 +1,56 @@
+{
+  "status": "SYNTHETIC_RESPONSE_CONTROL_COMPLETE",
+  "field_status": "HOLD_FIELD_TRANSFER",
+  "results": {
+    "M0": {
+      "decision": "M0",
+      "primary_raw_contrast": 0.00046439513741909275,
+      "response_estimate": 0.0004644106181858664,
+      "standard_uncertainty": 0.0011309154940826883,
+      "joint_ellipsoid": {
+        "coverage_target": 0.95,
+        "radius_squared": 9.309109932462341,
+        "quantile_99pct_MC_interval": [
+          9.273344468263002,
+          9.34472701594631
+        ],
+        "radius_draws": 500000,
+        "validation_draws": 100000,
+        "validation_hits": 95056,
+        "validation_probability_99pct_interval": [
+          0.9487676270770736,
+          0.9523093426803432
+        ],
+        "center": "exact_pdf_mean",
+        "covariance": "exact_pdf_covariance"
+      }
+    },
+    "M1": {
+      "decision": "M1",
+      "primary_raw_contrast": -0.012977310704334924,
+      "response_estimate": -0.012977743307314877,
+      "standard_uncertainty": 0.0011039990103268525,
+      "joint_ellipsoid": {
+        "coverage_target": 0.95,
+        "radius_squared": 9.297228122609475,
+        "quantile_99pct_MC_interval": [
+          9.264015317065493,
+          9.332996754193765
+        ],
+        "radius_draws": 500000,
+        "validation_draws": 100000,
+        "validation_hits": 94820,
+        "validation_probability_99pct_interval": [
+          0.9463683357783603,
+          0.9499888630109815
+        ],
+        "center": "exact_pdf_mean",
+        "covariance": "exact_pdf_covariance"
+      }
+    }
+  },
+  "conditional_error_bound_each": 0.007420065754868483,
+  "physical_measurements": false,
+  "source_state": "driven coherent control, not an undisturbed vacuum measurement",
+  "quantum_witness": false
+}

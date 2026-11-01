@@ -30,3 +30,7 @@ Der Prüflauf verifiziert die Originale, alle 42 Archiveinträge, beide dokument
 Die vollständigen Rohdaten und das ursprüngliche Paket-README liegen im ZIP. Die direkt sichtbaren Programme und Protokolle sind unveränderte Auszüge. Der Einstieg für die Reproduktion im Repository ist `publication_check.py`; `reproduce.py` wird innerhalb des vollständigen Archivs ausgeführt.
 
 Die anfängliche Fixierung vor Datenerzeugung und eine nachträgliche ergebnisneutrale Präzisierung der gerichteten Nenner-Rundung sind dokumentiert. Die Daten wurden beibehalten. [Arithmetikprüfung](development/REVIEW.json) · [Veröffentlichungsnachweis](PUBLICATION.json)
+
+## Ausgeführter Antworttest v0.15
+
+[Der kontrollierte KVF-Antwortkanal](../kvf_response_v0_15/README.md) ergänzt eine zeitversetzte Quelle und idealisierte Sonde mit expliziter Rückwirkung, kausalen Nullkontrollen und einem bedingten endlichen Messbudget. Die ursprüngliche Einzelabweichung und der separate GUM-Überdeckungs-Audit bleiben dokumentiert. Die reale Feldanwendung bleibt HOLD_FIELD_TRANSFER.
