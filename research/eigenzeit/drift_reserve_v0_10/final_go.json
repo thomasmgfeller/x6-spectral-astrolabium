@@ -1,0 +1,150 @@
+{
+  "design_id": "X6/v0.10/anchored-drift/20ppm",
+  "route": "anchored_drift_three_looks",
+  "mode": "synthetic",
+  "contrast_caps": {
+    "S": "10001/10000",
+    "D": "10001/10000",
+    "C": "10001/10000"
+  },
+  "drift_caps": {
+    "gain_floor": "99/100",
+    "gain_ceiling": "101/100",
+    "absolute_cell_error": "1/50000"
+  },
+  "evidence": {
+    "source_contrast": "synthetic fixture / source_contrast",
+    "within_cell_envelope": "synthetic fixture / within_cell_envelope",
+    "calibration_transfer": "synthetic fixture / calibration_transfer",
+    "partition_and_probe_support": "synthetic fixture / partition_and_probe_support",
+    "fresh_trial_randomness_and_all_attempts": "synthetic fixture / fresh_trial_randomness_and_all_attempts",
+    "independent_geometry_and_preselected_route": "synthetic fixture / independent_geometry_and_preselected_route",
+    "prespecified_three_looks_and_recorded_decisions": "synthetic fixture / prespecified_three_looks_and_recorded_decisions",
+    "prespecified_pair_selection_and_unmodified_first_counts": "synthetic fixture / prespecified_pair_selection_and_unmodified_first_counts",
+    "target_reference_epoch_and_separate_science_transfer": "synthetic fixture / target_reference_epoch_and_separate_science_transfer",
+    "externally_bounded_common_gain_and_aligned_opportunities": "synthetic fixture / externally_bounded_common_gain_and_aligned_opportunities",
+    "external_conditional_cell_residual_bound": "synthetic fixture / external_conditional_cell_residual_bound"
+  },
+  "stages": [
+    {
+      "look": 1,
+      "cells": [
+        {
+          "id": "C01",
+          "attempted": 29000000,
+          "detected": 14491000
+        },
+        {
+          "id": "C02",
+          "attempted": 29000000,
+          "detected": 14509500
+        },
+        {
+          "id": "C03",
+          "attempted": 29000000,
+          "detected": 14507500
+        },
+        {
+          "id": "C04",
+          "attempted": 29000000,
+          "detected": 14500000
+        },
+        {
+          "id": "C05",
+          "attempted": 29000000,
+          "detected": 14500000
+        },
+        {
+          "id": "C06",
+          "attempted": 29000000,
+          "detected": 14500000
+        },
+        {
+          "id": "C07",
+          "attempted": 29000000,
+          "detected": 14500000
+        },
+        {
+          "id": "C08",
+          "attempted": 29000000,
+          "detected": 14500000
+        },
+        {
+          "id": "C09",
+          "attempted": 29000000,
+          "detected": 14500000
+        },
+        {
+          "id": "C10",
+          "attempted": 29000000,
+          "detected": 14500000
+        },
+        {
+          "id": "C11",
+          "attempted": 29000000,
+          "detected": 14500000
+        },
+        {
+          "id": "C12",
+          "attempted": 29000000,
+          "detected": 14500000
+        },
+        {
+          "id": "C13",
+          "attempted": 29000000,
+          "detected": 14500000
+        },
+        {
+          "id": "C14",
+          "attempted": 29000000,
+          "detected": 14500000
+        },
+        {
+          "id": "C15",
+          "attempted": 29000000,
+          "detected": 14500000
+        },
+        {
+          "id": "C16",
+          "attempted": 29000000,
+          "detected": 14500000
+        }
+      ]
+    },
+    {
+      "look": 2,
+      "cells": [
+        {
+          "id": "C01",
+          "attempted": 12000000,
+          "detected": 6000000
+        },
+        {
+          "id": "C02",
+          "attempted": 12000000,
+          "detected": 6005000
+        },
+        {
+          "id": "C03",
+          "attempted": 12000000,
+          "detected": 5995000
+        }
+      ]
+    },
+    {
+      "look": 3,
+      "cells": [
+        {
+          "id": "C01",
+          "attempted": 20000000,
+          "detected": 10000000
+        },
+        {
+          "id": "C02",
+          "attempted": 20000000,
+          "detected": 10000000
+        }
+      ]
+    }
+  ]
+}

@@ -32,11 +32,11 @@
     "CITATION.cff": "5225a23f7cd2f1841db38dd9f4b6f1b3624cce110cf27d08575b6f4b29cd2bc0",
     "CODE_OF_CONDUCT.md": "dd847b83a025f21bd55935c23b4568b3f1d108455a27b9b15b2a0b35fbc58cb9",
     "CONTRIBUTING.md": "366d6a2ce4b388d1fb77d4a5188157ff99613be932065fa758f8e562a6b45ee0",
-    "LICENSE_SOURCE_MANIFEST.json": "23301994ce076b9e7047a1e9ef03f8f06e67ba97349dd1fdec2c678b2fc11183",
+    "LICENSE_SOURCE_MANIFEST.json": "19073aa0f88aee748ef9776ff984aca7766203793bc8337c2d0d9a8cd7b253c8",
     "MODULE_REGISTRY.json": "722dced0bb939a3e8eeaf50953ac9a96fd95c203f5dad4859581db777cf42e87",
     "README.md": "6f9a68dab2ddf792ba71ed2abe77a1367e9777a021563965ef856324b57169a6",
     "REFERENCE_SOURCE_MANIFEST.json": "0e2275138250cc755ae87969b80fee67016cd293be837a5a89e2eeaa46495876",
-    "SAGNAC_SOURCE_MANIFEST.json": "cac58be8c0b8c4d0dd95b3528262c696eb716f0f4614d471f64e617d29413642",
+    "SAGNAC_SOURCE_MANIFEST.json": "3f0bf59447c4914eed559d5bda6f4e76cf939ff0795805329133fa39134b48a6",
     "SECURITY.md": "c73f7d7c97f7c30f8d93140c612772ed2b81b1830987a37ae0980903213760d5",
     "app/index.html": "df48fa522498fb79aa3617fe2fefa587ef820b9555a692b5bd253ac88b2298f7",
     "data/reference_certificate.json": "a71288ed81b44f8ec122b7d6a6d14340378c7dfbf9daeb5a0fb4c76caba06d18",
@@ -2252,6 +2252,28 @@
         "research/eigenzeit/three_look_followup_v0_9/verification.json"
       ],
       "scope": "Publish Eigenzeit v0.9 three-look calibration, original report and archive, conditional endpoint and cost bounds, field examples and paired pilot replay."
+    },
+    {
+      "date": "2026-11-01",
+      "component": "Eigenzeit drift reserve v0.10",
+      "paths": [
+        ".github/workflows/eigenzeit-drift-reserve.yml",
+        "research/eigenzeit/drift_reserve_v0_10/BEWEIS.md",
+        "research/eigenzeit/drift_reserve_v0_10/Eigenzeit_Driftreserve_v0_10.pdf",
+        "research/eigenzeit/drift_reserve_v0_10/Eigenzeit_Driftreserve_v0_10_Pruefpaket.zip",
+        "research/eigenzeit/drift_reserve_v0_10/PUBLICATION.json",
+        "research/eigenzeit/drift_reserve_v0_10/README.md",
+        "research/eigenzeit/drift_reserve_v0_10/certificate.json",
+        "research/eigenzeit/drift_reserve_v0_10/field_worksheet.json",
+        "research/eigenzeit/drift_reserve_v0_10/final_go.json",
+        "research/eigenzeit/drift_reserve_v0_10/final_hold.json",
+        "research/eigenzeit/drift_reserve_v0_10/focus.json",
+        "research/eigenzeit/drift_reserve_v0_10/pilot.json",
+        "research/eigenzeit/drift_reserve_v0_10/publication_check.py",
+        "research/eigenzeit/drift_reserve_v0_10/unsupported_180ppm.json",
+        "research/eigenzeit/drift_reserve_v0_10/verification.json"
+      ],
+      "scope": "Publish Eigenzeit v0.10 drift calibration, original report and archive, conditional error and cost bounds, identifiability limit, field examples and reproducible synthetic stress test."
     }
   ],
   "non_historical_documentation_updates": [
@@ -3153,6 +3175,22 @@
           "path": "LICENSE_SOURCE_MANIFEST.json",
           "previous_sha256": "8bc69f0c477d9d14e6b068283b00cd9893320297cf81e9999fb2ee48f5aaf7bc",
           "sha256": "23301994ce076b9e7047a1e9ef03f8f06e67ba97349dd1fdec2c678b2fc11183"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-01",
+      "scope": "Publish Eigenzeit v0.10 drift calibration, original report and archive, conditional error and cost bounds, identifiability limit, field examples and reproducible synthetic stress test.",
+      "files": [
+        {
+          "path": "SAGNAC_SOURCE_MANIFEST.json",
+          "previous_sha256": "cac58be8c0b8c4d0dd95b3528262c696eb716f0f4614d471f64e617d29413642",
+          "sha256": "3f0bf59447c4914eed559d5bda6f4e76cf939ff0795805329133fa39134b48a6"
+        },
+        {
+          "path": "LICENSE_SOURCE_MANIFEST.json",
+          "previous_sha256": "23301994ce076b9e7047a1e9ef03f8f06e67ba97349dd1fdec2c678b2fc11183",
+          "sha256": "19073aa0f88aee748ef9776ff984aca7766203793bc8337c2d0d9a8cd7b253c8"
         }
       ]
     }

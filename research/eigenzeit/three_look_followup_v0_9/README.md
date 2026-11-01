@@ -25,3 +25,5 @@ python -B research/eigenzeit/three_look_followup_v0_9/publication_check.py --rep
 ```
 
 Die Prüfung vergleicht Bericht, Archiv, die internen Prüfsummenlisten, die oben verlinkten Auszüge und die übernommenen Dateien aus dem veröffentlichten v0.8-Archiv. Der Wiederholungslauf berechnet die Schranken neu und reproduziert die Zählungen aller 80.000 gepaarten synthetischen Durchläufe. Die unabhängige Auswertung prüft unter anderem zwölf feste Profile mittels Binomialverteilungen und 46.656 mögliche Datenverläufe in einem kleinen Dreistufenexperiment. [Prüfprotokoll](verification.json) · [Veröffentlichungsnachweis](PUBLICATION.json)
+
+Die Folgestudie untersucht, wie viel Referenzaufwand eine unabhängig belegte Driftreserve von 20 ppm erfordert und ab welcher Restunsicherheit Zählungen allein keine Entscheidung mehr ermöglichen. [Eigenzeit v0.10 · Driftreserve](../drift_reserve_v0_10/README.md)
