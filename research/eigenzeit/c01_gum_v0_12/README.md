@@ -30,3 +30,11 @@ python -B evaluate.py examples/gum_synthetic.json examples/qualified_synthetic/a
 ```
 
 [Ergebnis für die leere Feldvorlage](records/field.json) · [Synthetische Auswertung](records/synthetic_evaluation.json) · [Veröffentlichungsnachweis](PUBLICATION.json)
+
+## Forschungsentwurf v0.13
+
+[Kausaler Vakuum-Feld-Vektor und metrologischer Teststand](../kvf_concept_v0_13/README.md)
+erweitert die Fragestellung um Feldkorrelationen und kausale Antwort. Der
+Entwurf legt Anforderungen an eine gemeinsame GUM-Auswertung mehrerer
+Messgrößen fest. Die C01-Grenze von 2 ppm und der bestehende Feldstatus
+bleiben an den hier definierten Messvertrag gebunden.
