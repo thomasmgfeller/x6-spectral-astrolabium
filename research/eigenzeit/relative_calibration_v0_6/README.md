@@ -13,6 +13,8 @@ Der tatsächliche Mindestaufwand innerhalb dieser Spanne ist offen. Der Test pr�
 
 **Für eine reale Messung gilt HOLD.** Markierte Referenzzählungen und unabhängige Belege für die externen Grenzen stehen aus. Ohne Freigabe bleiben alle drei Rastermodelle und das volle Krümmungsintervall zulässig. Über alle Wiederholungen einschließlich HOLD bleibt die modellweite Überdeckung bei mindestens 95,15 %. In der günstigen Klasse beträgt die Wahrscheinlichkeit der richtigen Einzelausgabe für jeden Rasterpunkt mindestens 80,11 %. [Leeres Feldprotokoll](field_no_evidence.json)
 
+Die Folgestudie v0.7 prüft einen vorab festgelegten Zwischenentscheid. Unter den günstigen Bedingungen dieser Studie sinkt der erwartete Verbrauch auf höchstens 575.174.011 Versuche, bei höchstens 736 Millionen pro Durchlauf. [Zweistufiger Messplan und Reproduktion](../two_look_calibration_v0_7/README.md)
+
 ## Reproduktion
 
 Vom Wurzelverzeichnis des Repositorys aus mit Python 3.12 ausführen.
