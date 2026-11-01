@@ -1,0 +1,72 @@
+{
+  "study": "X6 Eigenzeit KVF response v0.15",
+  "date": "2026-11-01",
+  "archive": "Eigenzeit_KVF_Antwortkanal_v0_15_Pruefpaket.zip",
+  "report": "Eigenzeit_KVF_Antwortkanal_v0_15.pdf",
+  "archive_members": 43,
+  "files": {
+    "Eigenzeit_KVF_Antwortkanal_v0_15.pdf": "1067e80bd4f21a0ae9290302d310bf14cd3d2f0e7b834057164bcee16c349c33",
+    "Eigenzeit_KVF_Antwortkanal_v0_15_Pruefpaket.zip": "b42f0af8ce474ef539f6cc01ee818f25494826cad72bf6396771da1a2523612b"
+  },
+  "archive_copies": {
+    "AUDIT_FREEZE.sha256": "AUDIT_FREEZE.sha256",
+    "AUDIT_PLAN.json": "AUDIT_PLAN.json",
+    "CONTRACT.json": "CONTRACT.json",
+    "DERIVATION.md": "DERIVATION.md",
+    "FREEZE.sha256": "FREEZE.sha256",
+    "GUM.md": "GUM.md",
+    "LAB_GATES.md": "LAB_GATES.md",
+    "SOURCES.md": "SOURCES.md",
+    "STATUS.json": "STATUS.json",
+    "audit_reproduce.py": "audit_reproduce.py",
+    "certificate.py": "certificate.py",
+    "check.py": "check.py",
+    "coverage_audit.py": "coverage_audit.py",
+    "development/convolutions.txt": "development/convolutions.txt",
+    "figures/response_control.png": "figures/response_control.png",
+    "gum.py": "gum.py",
+    "model.py": "model.py",
+    "previous/CONTRACT.json": "previous/CONTRACT.json",
+    "previous/DERIVATION.md": "previous/DERIVATION.md",
+    "previous/GUM.md": "previous/GUM.md",
+    "previous/ORIGIN.json": "previous/ORIGIN.json",
+    "previous/README.md": "previous/README.md",
+    "records/M0.json": "records/M0.json",
+    "records/M1.json": "records/M1.json",
+    "records/campaign.json": "records/campaign.json",
+    "records/certificate.json": "records/certificate.json",
+    "records/check.json": "records/check.json",
+    "records/coverage_audit.json": "records/coverage_audit.json",
+    "records/environment.json": "records/environment.json",
+    "records/replay.json": "records/replay.json",
+    "records/summary.json": "records/summary.json",
+    "reproduce.py": "reproduce.py",
+    "requirements.txt": "requirements.txt",
+    "run.py": "run.py"
+  },
+  "original_library_ids": {
+    "report": "libfile_bc2804f8d4608191a89da6ef0b35b3f2",
+    "archive": "libfile_f7511b74cd2c8191a7913cee0282b7cd"
+  },
+  "previous_source": {
+    "repository": "thomasmgfeller/x6-spectral-astrolabium",
+    "commit": "438b0158625586bf244adab9572b8bfeb0f869fc",
+    "path": "research/eigenzeit/kvf_control_v0_14",
+    "files": {
+      "README.md": "5981a0102f6bde1de782300fce7360142d9e56363b75ea7d466c864ac43909fa",
+      "CONTRACT.json": "354f03017a2a7eb61f5cb1fb2a7db894d946d009d5dfd886a54f4ecad0e47fbd",
+      "DERIVATION.md": "87d95de58769ecf6f0e0465e186670d43812cecd95808b773d9c29ac48ad7e41",
+      "GUM.md": "ea87b1a2ad5043e03c807e06de7beb0cefe1c58a58fb740b8d364029cbb4de94"
+    }
+  },
+  "previous_source_verification": "All four archived v0.14 documents were byte-compared with the recorded Git commit. CI retains and verifies those source hashes.",
+  "pdf_note": "Standalone original adds provenance metadata. Text and all four rendered pages match the archived PDF at 144 dpi.",
+  "scope": "Conditional synthetic free-scalar response control, same Minkowski geometry. Original M1 outlier and initial coverage mismatch preserved; later fixed-radius audit disclosed. Field transfer HOLD; no quantum witness or quantum-gravity evidence.",
+  "cross_platform_replay": {
+    "policy": "PORTABILITY.md",
+    "raw_rtol": 0,
+    "raw_atol": "8 * float64 epsilon * max(1, max absolute original value)",
+    "original_strict_replay_preserved": true,
+    "first_ci_run": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/actions/runs/41325551714"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "reason": "Initial M1 validation gave 94820/100000, with a 99% interval narrowly below 0.95; preserve all data and radii and audit finite Monte Carlo coverage separately.",
+  "frozen_after_initial_run_before_audit": true,
+  "change_original_data_or_radius": false,
+  "draws_each_model": 1000000,
+  "chunk_size": 100000,
+  "seeds": {"M0": 20261101531, "M1": 20261101532},
+  "interval_alpha_each": 0.005,
+  "scope": "Two marginal 99.5% binomial intervals give at least 99% simultaneous confidence for the two assigned-PDF coverage probabilities. These do not prove physical coverage.",
+  "decision": "Report intervals and whether 0.95 is included; do not adjust radii or repeat until passing."
+}

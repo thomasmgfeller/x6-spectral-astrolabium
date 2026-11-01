@@ -32,11 +32,11 @@
     "CITATION.cff": "5225a23f7cd2f1841db38dd9f4b6f1b3624cce110cf27d08575b6f4b29cd2bc0",
     "CODE_OF_CONDUCT.md": "dd847b83a025f21bd55935c23b4568b3f1d108455a27b9b15b2a0b35fbc58cb9",
     "CONTRIBUTING.md": "366d6a2ce4b388d1fb77d4a5188157ff99613be932065fa758f8e562a6b45ee0",
-    "LICENSE_SOURCE_MANIFEST.json": "770bfae3f7fc79e88904c56ecfecfb53a1343f75aeddd1999fb0fd0ae23e91e3",
+    "LICENSE_SOURCE_MANIFEST.json": "396eb2e8e9b10f0614bc5cce90b395f37d6ab3adbaa70245a44572c4215a8d78",
     "MODULE_REGISTRY.json": "722dced0bb939a3e8eeaf50953ac9a96fd95c203f5dad4859581db777cf42e87",
     "README.md": "6f9a68dab2ddf792ba71ed2abe77a1367e9777a021563965ef856324b57169a6",
     "REFERENCE_SOURCE_MANIFEST.json": "0e2275138250cc755ae87969b80fee67016cd293be837a5a89e2eeaa46495876",
-    "SAGNAC_SOURCE_MANIFEST.json": "8510ee70ea414012018cd1b0c721048c85cf1f5efa377968c55044770522618a",
+    "SAGNAC_SOURCE_MANIFEST.json": "6fb23c9fa932929f284c2b0ff9e7ed5e67e9bd5b056f54aa8be569df162e41fd",
     "SECURITY.md": "c73f7d7c97f7c30f8d93140c612772ed2b81b1830987a37ae0980903213760d5",
     "app/index.html": "df48fa522498fb79aa3617fe2fefa587ef820b9555a692b5bd253ac88b2298f7",
     "data/reference_certificate.json": "a71288ed81b44f8ec122b7d6a6d14340378c7dfbf9daeb5a0fb4c76caba06d18",
@@ -2406,6 +2406,56 @@
         "research/eigenzeit/kvf_control_v0_14/run.py"
       ],
       "scope": "Publish Eigenzeit v0.14 original KVF control report and archive, conditional finite-sample decision, joint GUM propagation, noise nonidentifiability example and clean replay."
+    },
+    {
+      "date": "2026-11-01",
+      "component": "Eigenzeit KVF response v0.15",
+      "paths": [
+        ".github/workflows/eigenzeit-kvf-response.yml",
+        "research/eigenzeit/kvf_response_v0_15/.gitattributes",
+        "research/eigenzeit/kvf_response_v0_15/AUDIT_FREEZE.sha256",
+        "research/eigenzeit/kvf_response_v0_15/AUDIT_PLAN.json",
+        "research/eigenzeit/kvf_response_v0_15/CONTRACT.json",
+        "research/eigenzeit/kvf_response_v0_15/DERIVATION.md",
+        "research/eigenzeit/kvf_response_v0_15/Eigenzeit_KVF_Antwortkanal_v0_15.pdf",
+        "research/eigenzeit/kvf_response_v0_15/Eigenzeit_KVF_Antwortkanal_v0_15_Pruefpaket.zip",
+        "research/eigenzeit/kvf_response_v0_15/FREEZE.sha256",
+        "research/eigenzeit/kvf_response_v0_15/GUM.md",
+        "research/eigenzeit/kvf_response_v0_15/LAB_GATES.md",
+        "research/eigenzeit/kvf_response_v0_15/PORTABILITY.md",
+        "research/eigenzeit/kvf_response_v0_15/PUBLICATION.json",
+        "research/eigenzeit/kvf_response_v0_15/README.md",
+        "research/eigenzeit/kvf_response_v0_15/SOURCES.md",
+        "research/eigenzeit/kvf_response_v0_15/STATUS.json",
+        "research/eigenzeit/kvf_response_v0_15/audit_reproduce.py",
+        "research/eigenzeit/kvf_response_v0_15/certificate.py",
+        "research/eigenzeit/kvf_response_v0_15/check.py",
+        "research/eigenzeit/kvf_response_v0_15/coverage_audit.py",
+        "research/eigenzeit/kvf_response_v0_15/development/convolutions.txt",
+        "research/eigenzeit/kvf_response_v0_15/figures/response_control.png",
+        "research/eigenzeit/kvf_response_v0_15/gum.py",
+        "research/eigenzeit/kvf_response_v0_15/model.py",
+        "research/eigenzeit/kvf_response_v0_15/portable_replay.py",
+        "research/eigenzeit/kvf_response_v0_15/previous/CONTRACT.json",
+        "research/eigenzeit/kvf_response_v0_15/previous/DERIVATION.md",
+        "research/eigenzeit/kvf_response_v0_15/previous/GUM.md",
+        "research/eigenzeit/kvf_response_v0_15/previous/ORIGIN.json",
+        "research/eigenzeit/kvf_response_v0_15/previous/README.md",
+        "research/eigenzeit/kvf_response_v0_15/publication_check.py",
+        "research/eigenzeit/kvf_response_v0_15/records/M0.json",
+        "research/eigenzeit/kvf_response_v0_15/records/M1.json",
+        "research/eigenzeit/kvf_response_v0_15/records/campaign.json",
+        "research/eigenzeit/kvf_response_v0_15/records/certificate.json",
+        "research/eigenzeit/kvf_response_v0_15/records/check.json",
+        "research/eigenzeit/kvf_response_v0_15/records/coverage_audit.json",
+        "research/eigenzeit/kvf_response_v0_15/records/environment.json",
+        "research/eigenzeit/kvf_response_v0_15/records/replay.json",
+        "research/eigenzeit/kvf_response_v0_15/records/summary.json",
+        "research/eigenzeit/kvf_response_v0_15/reproduce.py",
+        "research/eigenzeit/kvf_response_v0_15/requirements.txt",
+        "research/eigenzeit/kvf_response_v0_15/run.py"
+      ],
+      "scope": "Publish Eigenzeit v0.15 original response report and archive, compact source and probe model, conditional risk certificate, joint GUM moments, preserved outlier and separate coverage audit with clean replay."
     }
   ],
   "non_historical_documentation_updates": [
@@ -3387,6 +3437,22 @@
           "path": "LICENSE_SOURCE_MANIFEST.json",
           "previous_sha256": "c4684c4dda642d166fce56635610ebd827e5cd3f43963aef8ff1952e8a36ebd5",
           "sha256": "770bfae3f7fc79e88904c56ecfecfb53a1343f75aeddd1999fb0fd0ae23e91e3"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-01",
+      "scope": "Publish Eigenzeit v0.15 original response report and archive, compact source and probe model, conditional risk certificate, joint GUM moments, preserved outlier and separate coverage audit with clean replay.",
+      "files": [
+        {
+          "path": "SAGNAC_SOURCE_MANIFEST.json",
+          "previous_sha256": "8510ee70ea414012018cd1b0c721048c85cf1f5efa377968c55044770522618a",
+          "sha256": "6fb23c9fa932929f284c2b0ff9e7ed5e67e9bd5b056f54aa8be569df162e41fd"
+        },
+        {
+          "path": "LICENSE_SOURCE_MANIFEST.json",
+          "previous_sha256": "770bfae3f7fc79e88904c56ecfecfb53a1343f75aeddd1999fb0fd0ae23e91e3",
+          "sha256": "396eb2e8e9b10f0614bc5cce90b395f37d6ab3adbaa70245a44572c4215a8d78"
         }
       ]
     }

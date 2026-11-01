@@ -1,0 +1,114 @@
+{
+  "status": "PASS_SCOPED_ANALYTIC_AND_NUMERICAL_CONTROLS",
+  "spatial_convolution": "35*(q - 2)**6*(5*q**5 + 60*q**4 + 288*q**3 + 656*q**2 + 576*q + 192)/(270336*pi)",
+  "temporal_convolution": "-5*(q - 2)**5*(q**4 + 10*q**3 + 36*q**2 + 40*q + 16)/3584",
+  "exact_normalizations": true,
+  "max_direct_fourier_error": 1.2212453270876722e-15,
+  "max_spectral_order_difference": 8.326672684688674e-17,
+  "max_position_spectral_difference": 2.486885831662103e-17,
+  "spectral_tail_bound": 5.345557732481628e-17,
+  "spacelike_support_margin": 0.006000000000000005,
+  "parameter_corner_range": [
+    0.008701771103339327,
+    0.009416560322991013
+  ],
+  "controls": {
+    "M0": {
+      "settings": [
+        {
+          "R": -1.5649636842508397e-17,
+          "Delta_AB": -1.5649636842508397e-17,
+          "H_AB": 0.02768235783232468
+        },
+        {
+          "R": 0.2388586152712054,
+          "Delta_AB": 0.2388586152712054,
+          "H_AB": 0.006359402269664767
+        },
+        {
+          "R": 2.486885831662103e-17,
+          "Delta_AB": 2.486885831662103e-17,
+          "H_AB": -0.008658391606262954
+        },
+        {
+          "R": 0.0,
+          "Delta_AB": -2.486885831662103e-17,
+          "H_AB": -0.008658391606262954
+        }
+      ],
+      "position_late": 0.0,
+      "self_response": {
+        "K_BB": 0.6050338036801416,
+        "H_BB": 1.4079933752316582
+      },
+      "example_normalized_pointer_noise_variance": 0.0003453751613181116,
+      "synthetic_covariance_min_eigenvalue": 0.004000000000000001
+    },
+    "M1": {
+      "settings": [
+        {
+          "R": 3.5129356958435497e-17,
+          "Delta_AB": 3.5129356958435497e-17,
+          "H_AB": 0.023248793849914014
+        },
+        {
+          "R": 0.23434363039642536,
+          "Delta_AB": 0.23434363039642536,
+          "H_AB": -0.0009047787682775559
+        },
+        {
+          "R": -0.009054974392662988,
+          "Delta_AB": -0.009054974392662988,
+          "H_AB": -0.010667982266273957
+        },
+        {
+          "R": 0.0,
+          "Delta_AB": 0.009054974392662988,
+          "H_AB": -0.010667982266273957
+        }
+      ],
+      "position_late": -0.009054974392662986,
+      "self_response": {
+        "K_BB": 0.6048996809073072,
+        "H_BB": 1.3980599962846338
+      },
+      "example_normalized_pointer_noise_variance": 0.00034437979492798543,
+      "synthetic_covariance_min_eigenvalue": 0.004000000000000001
+    }
+  },
+  "gum_checks": {
+    "M0": {
+      "max_mean_error_in_MC_standard_errors": 1.6919954814132376,
+      "relative_covariance_MC_error": 0.0027269999453219396,
+      "validation_probability_interval": [
+        0.9487676270770736,
+        0.9523093426803432
+      ]
+    },
+    "M1": {
+      "max_mean_error_in_MC_standard_errors": 0.80208624273554,
+      "relative_covariance_MC_error": 0.0024462684985583974,
+      "validation_probability_interval": [
+        0.9463683357783603,
+        0.9499888630109815
+      ]
+    }
+  },
+  "negative_controls": {
+    "quadratic_drift_survives_ABBA": true,
+    "setting_dependent_odd_feedthrough_alias": [
+      -5.077899380094389e-17,
+      0.004514984874780026,
+      0.009054974392663012,
+      0.0
+    ],
+    "null_settings_do_not_exclude_alias": true,
+    "AR1_coefficient": 0.9,
+    "AR1_variance_inflation": 18.912109375,
+    "AR1_endpoint_error": 0.23572749049249614,
+    "reversed_commutator_is_not_retarded_response": true,
+    "classical_Klein_Gordon_response_identical": true
+  },
+  "physical_release": "HOLD_FIELD_TRANSFER",
+  "physical_input_missing": true
+}
