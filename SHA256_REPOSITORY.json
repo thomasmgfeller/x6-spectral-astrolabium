@@ -32,11 +32,11 @@
     "CITATION.cff": "5225a23f7cd2f1841db38dd9f4b6f1b3624cce110cf27d08575b6f4b29cd2bc0",
     "CODE_OF_CONDUCT.md": "dd847b83a025f21bd55935c23b4568b3f1d108455a27b9b15b2a0b35fbc58cb9",
     "CONTRIBUTING.md": "366d6a2ce4b388d1fb77d4a5188157ff99613be932065fa758f8e562a6b45ee0",
-    "LICENSE_SOURCE_MANIFEST.json": "6ec2123727e2f51d5b843e9c16f101ea8a5631fc3371d20cf6f7b18d1573fd2c",
+    "LICENSE_SOURCE_MANIFEST.json": "db0a897c6e9715dfb627738f3bdeb3e621409d3dcabccf981bd70eeaadce47b3",
     "MODULE_REGISTRY.json": "722dced0bb939a3e8eeaf50953ac9a96fd95c203f5dad4859581db777cf42e87",
     "README.md": "6f9a68dab2ddf792ba71ed2abe77a1367e9777a021563965ef856324b57169a6",
     "REFERENCE_SOURCE_MANIFEST.json": "0e2275138250cc755ae87969b80fee67016cd293be837a5a89e2eeaa46495876",
-    "SAGNAC_SOURCE_MANIFEST.json": "dd05701a9ed5f730b441765351d0a6ddc888ecf7dac3e528642e583b2af5bbd5",
+    "SAGNAC_SOURCE_MANIFEST.json": "0db4a67e70fef6c66b51a2d9287c59b67a312f543802793bb96bba142af5f52e",
     "SECURITY.md": "c73f7d7c97f7c30f8d93140c612772ed2b81b1830987a37ae0980903213760d5",
     "app/index.html": "df48fa522498fb79aa3617fe2fefa587ef820b9555a692b5bd253ac88b2298f7",
     "data/reference_certificate.json": "a71288ed81b44f8ec122b7d6a6d14340378c7dfbf9daeb5a0fb4c76caba06d18",
@@ -2064,6 +2064,23 @@
         "research/cspp/global_gate_reassessment_v0_24/publication_check.py"
       ],
       "scope": "Approved original PDF, ZIP and all 58 package files plus publication wrapper and reproducible CI. Step 3 complete; METHOD and G1 HOLD, no fresh confirmation or new candidate. Prior evidence unchanged."
+    },
+    {
+      "date": "2026-11-01",
+      "component": "Eigenzeit single-order geometry N=128 v0.1",
+      "paths": [
+        ".github/workflows/eigenzeit-single-order-128.yml",
+        "app/eigenzeit-einzelordnung/index.html",
+        "research/eigenzeit/single_order_128_v0_1/DERIVATION.md",
+        "research/eigenzeit/single_order_128_v0_1/Eigenzeit_Einzelordnung_128_v0_1.pdf",
+        "research/eigenzeit/single_order_128_v0_1/Eigenzeit_Einzelordnung_128_v0_1_Pruefpaket.zip",
+        "research/eigenzeit/single_order_128_v0_1/PUBLICATION.json",
+        "research/eigenzeit/single_order_128_v0_1/README.md",
+        "research/eigenzeit/single_order_128_v0_1/audit.json",
+        "research/eigenzeit/single_order_128_v0_1/publication_check.py",
+        "research/eigenzeit/single_order_128_v0_1/result.json"
+      ],
+      "scope": "Publish the N=128 single-order Eigenzeit study, verified package, interactive explorer and decision replay."
     }
   ],
   "non_historical_documentation_updates": [
@@ -2805,6 +2822,22 @@
           "path": "index.md",
           "previous_sha256": "7b85840b3683031ac00d605bfa76495c7eb8a86bf0bb7835d4608f70d73153f9",
           "sha256": "4d7761a08f0e7e8e7bd7abb42f67ed349e7a66094087f6375868ce531352913f"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-01",
+      "scope": "Publish the N=128 single-order Eigenzeit study, verified package, interactive explorer and decision replay.",
+      "files": [
+        {
+          "path": "LICENSE_SOURCE_MANIFEST.json",
+          "previous_sha256": "6ec2123727e2f51d5b843e9c16f101ea8a5631fc3371d20cf6f7b18d1573fd2c",
+          "sha256": "db0a897c6e9715dfb627738f3bdeb3e621409d3dcabccf981bd70eeaadce47b3"
+        },
+        {
+          "path": "SAGNAC_SOURCE_MANIFEST.json",
+          "previous_sha256": "dd05701a9ed5f730b441765351d0a6ddc888ecf7dac3e528642e583b2af5bbd5",
+          "sha256": "0db4a67e70fef6c66b51a2d9287c59b67a312f543802793bb96bba142af5f52e"
         }
       ]
     }

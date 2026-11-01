@@ -41,8 +41,8 @@
     "LICENSE_SCOPE.md": "fe958f097f83f676f1009a12dceaedf6d1cbd4773d2ed3b0c9b3e9958ad704a7",
     "MODULE_REGISTRY.json": "722dced0bb939a3e8eeaf50953ac9a96fd95c203f5dad4859581db777cf42e87",
     "NOTICE": "1699e29d2ca9ce0518f79446a7714fa41c2b8ce66451729eafe9657c589e760d",
-    "README.md": "2c33beb48caee744d08f78cfa2d320c06613f35833ffd1bd0af3af4f06231f9a",
-    "SAGNAC_SOURCE_MANIFEST.json": "dd05701a9ed5f730b441765351d0a6ddc888ecf7dac3e528642e583b2af5bbd5",
+    "README.md": "5b670957129ccd01c1ab073b8d9ab7fd3f9aefb8fc8801c24f3e928d87779b52",
+    "SAGNAC_SOURCE_MANIFEST.json": "0db4a67e70fef6c66b51a2d9287c59b67a312f543802793bb96bba142af5f52e",
     "app/causal-stability/app.mjs": "88aef8d0da68d1a3e49986bf557597e6e67499e74ec5f91e7f0623be9f12230b",
     "app/causal-stability/engine.mjs": "6230ee3e9da380a10b26d1b555d2ca0bcfe024cb6a2db5d32f628922cccfdae9",
     "app/causal-stability/index.html": "67a6db0c01db8652f7080ea36c983163dfc1c07b12b3ca618044f49acbae61f9",
@@ -2843,7 +2843,17 @@
     "research/cspp/interval_volume_stability_v0_29/cspp_v029/reproduce.py": "b325c7cf066c24ccd0edc9ebf0097266e9f0cc47b7b8656dfde5dcc90483b694",
     "research/cspp/interval_volume_stability_v0_29/cspp_v029/results/RESULTS.json": "41f39a98e15a1d051e2257a00561872e8841c4d0f3411974c54e147db1d0922c",
     "research/cspp/interval_volume_stability_v0_29/publication_check.py": "e21f8ab827cd7c55b0a0f1bcc160e454d355c60269cb790a474cdcf2cb121125",
-    ".github/workflows/cspp-interval-volume-stability.yml": "97f983ed0ea2610ed9e03e6b655005661eaea60b560a08d15d562cfec4dc4287"
+    ".github/workflows/cspp-interval-volume-stability.yml": "97f983ed0ea2610ed9e03e6b655005661eaea60b560a08d15d562cfec4dc4287",
+    ".github/workflows/eigenzeit-single-order-128.yml": "ab9feb197f30bee1b94f96ed3edc71c40386e7ccda0f9fb66aa3f4aaccb00642",
+    "app/eigenzeit-einzelordnung/index.html": "17af11e96230f8c1b68c76739f4ce28a6953abd60dae4853b44f0f7ba9a0275b",
+    "research/eigenzeit/single_order_128_v0_1/DERIVATION.md": "94a9a0008dab37b4319cf61a693aa9010416063b3418a43dd8d41c0ad3415a98",
+    "research/eigenzeit/single_order_128_v0_1/Eigenzeit_Einzelordnung_128_v0_1.pdf": "58b4a0432c399301046d16cb9c806a2d38946ba11a4102b058b705e26a38179d",
+    "research/eigenzeit/single_order_128_v0_1/Eigenzeit_Einzelordnung_128_v0_1_Pruefpaket.zip": "40e3b1f2ff06ee2291f2b976268d8f1660a7d191dd08d286d979288f2564e9c3",
+    "research/eigenzeit/single_order_128_v0_1/PUBLICATION.json": "ccb993e4182537ffa2f41b46f587e63b9a59cb02e093cf2fb72304fe7d3ce831",
+    "research/eigenzeit/single_order_128_v0_1/README.md": "515bc64d7deb73bb75cf88c299911467037760f697517bcb91505a0ca3979165",
+    "research/eigenzeit/single_order_128_v0_1/audit.json": "79d9f19b7619c41c4e77b478d39a2299c311954d4151e75c0a4a20a69bbf3d2d",
+    "research/eigenzeit/single_order_128_v0_1/publication_check.py": "ec2e4040da8b844ffb1d05d8cf4a8706d9820080a45af147278ae29c96b335a2",
+    "research/eigenzeit/single_order_128_v0_1/result.json": "032bffe57ef1ca9aba6383e04c359c53c05bdae885f2ff2e4e524c91609aa691"
   },
   "documentation_updates": [
     {
@@ -3805,6 +3815,22 @@
           "sha256": "bdca9ace31a4782c7d9a1e2c32cf6fa122307de51cbe3dbb03100c69c157d1cf"
         }
       ]
+    },
+    {
+      "date": "2026-11-01",
+      "scope": "Publish the N=128 single-order Eigenzeit study, verified package, interactive explorer and decision replay.",
+      "files": [
+        {
+          "path": "README.md",
+          "previous_sha256": "2c33beb48caee744d08f78cfa2d320c06613f35833ffd1bd0af3af4f06231f9a",
+          "sha256": "5b670957129ccd01c1ab073b8d9ab7fd3f9aefb8fc8801c24f3e928d87779b52"
+        },
+        {
+          "path": "SAGNAC_SOURCE_MANIFEST.json",
+          "previous_sha256": "dd05701a9ed5f730b441765351d0a6ddc888ecf7dac3e528642e583b2af5bbd5",
+          "sha256": "0db4a67e70fef6c66b51a2d9287c59b67a312f543802793bb96bba142af5f52e"
+        }
+      ]
     }
   ],
   "publication_additions": [
@@ -4100,6 +4126,22 @@
         "research/cspp/stability_path_v0_26/cspp_v026/requirements-report.txt",
         "research/cspp/stability_path_v0_26/cspp_v026/results/RESULTS.json",
         "research/cspp/stability_path_v0_26/publication_check.py"
+      ]
+    },
+    {
+      "date": "2026-11-01",
+      "scope": "Publish the N=128 single-order Eigenzeit study, verified package, interactive explorer and decision replay.",
+      "paths": [
+        ".github/workflows/eigenzeit-single-order-128.yml",
+        "app/eigenzeit-einzelordnung/index.html",
+        "research/eigenzeit/single_order_128_v0_1/DERIVATION.md",
+        "research/eigenzeit/single_order_128_v0_1/Eigenzeit_Einzelordnung_128_v0_1.pdf",
+        "research/eigenzeit/single_order_128_v0_1/Eigenzeit_Einzelordnung_128_v0_1_Pruefpaket.zip",
+        "research/eigenzeit/single_order_128_v0_1/PUBLICATION.json",
+        "research/eigenzeit/single_order_128_v0_1/README.md",
+        "research/eigenzeit/single_order_128_v0_1/audit.json",
+        "research/eigenzeit/single_order_128_v0_1/publication_check.py",
+        "research/eigenzeit/single_order_128_v0_1/result.json"
       ]
     }
   ]

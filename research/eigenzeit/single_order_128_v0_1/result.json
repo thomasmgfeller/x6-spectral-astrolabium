@@ -1,0 +1,308 @@
+{
+  "protocol": "X6-FINITE-GEOMETRY-SINGLE-ORDER-0.1",
+  "total_cal": 5997,
+  "total_test": 12288,
+  "profiles": [
+    {
+      "h": "0",
+      "q": 0.0,
+      "forward_p": 0.1,
+      "forward_p_exact": [
+        "1/10",
+        "1/10"
+      ],
+      "observed_mean": 0.09984138068251723,
+      "within_cloud_U_sd": 0.018037296223587424,
+      "mean_z": -0.5628136386440374,
+      "mean_diagnostic": true,
+      "C2_band": [
+        546,
+        1121
+      ],
+      "histogram_mask": [
+        160,
+        0,
+        1,
+        63,
+        32,
+        0,
+        1,
+        3839
+      ],
+      "histogram_size": [
+        160,
+        33,
+        64,
+        3839
+      ],
+      "true_singleton": 0,
+      "false_singleton": 33
+    },
+    {
+      "h": "1/4",
+      "q": 0.7579073023459042,
+      "forward_p": 0.10084203645137119,
+      "forward_p_exact": [
+        "256844656859356359750441472750853752542822964854490977628236171840518619136/2546999901010665728443435938035555092505999343474877872747843665779094107325",
+        "256844656859356359750443735116751454759707618818967282248799281429281243136/2546999901010665728443435938035448785581295243803354773499119075220657985925"
+      ],
+      "observed_mean": 0.1006969542015256,
+      "within_cloud_U_sd": 0.01797457418819804,
+      "mean_z": -0.5165776887340455,
+      "mean_diagnostic": true,
+      "C2_band": [
+        544,
+        1122
+      ],
+      "histogram_mask": [
+        145,
+        0,
+        6,
+        57,
+        33,
+        0,
+        1,
+        3854
+      ],
+      "histogram_size": [
+        145,
+        39,
+        58,
+        3854
+      ],
+      "true_singleton": 6,
+      "false_singleton": 33
+    },
+    {
+      "h": "1/2",
+      "q": 3.1313138147509614,
+      "forward_p": 0.10347763445039257,
+      "forward_p_exact": [
+        "186759352773883260158978726223102279367888688707010560/1804828200469058972749367199538703972177313551153946063",
+        "186759352773910983743617808945721234267123099432386560/1804828200469058972748051532189368153035251275634422183"
+      ],
+      "observed_mean": 0.10299108910748339,
+      "within_cloud_U_sd": 0.01816133736164327,
+      "mean_z": -1.7145709771325948,
+      "mean_diagnostic": true,
+      "C2_band": [
+        570,
+        1151
+      ],
+      "histogram_mask": [
+        149,
+        0,
+        3,
+        48,
+        38,
+        0,
+        0,
+        3858
+      ],
+      "histogram_size": [
+        149,
+        41,
+        48,
+        3858
+      ],
+      "true_singleton": 38,
+      "false_singleton": 3
+    }
+  ],
+  "cells": [
+    [
+      {
+        "statistic": "retention",
+        "hits": 3902,
+        "n": 4096,
+        "rate": 0.95263671875,
+        "simultaneous_interval": [
+          0.942691572836655,
+          0.961354119530887
+        ]
+      },
+      {
+        "statistic": "exclusion",
+        "hits": 192,
+        "n": 4096,
+        "rate": 0.046875,
+        "simultaneous_interval": [
+          0.038203428081026745,
+          0.056775746033094064
+        ]
+      },
+      {
+        "statistic": "exclusion",
+        "hits": 224,
+        "n": 4096,
+        "rate": 0.0546875,
+        "simultaneous_interval": [
+          0.04531293944771212,
+          0.06526856714922277
+        ]
+      }
+    ],
+    [
+      {
+        "statistic": "exclusion",
+        "hits": 185,
+        "n": 4096,
+        "rate": 0.045166015625,
+        "simultaneous_interval": [
+          0.036657022854166874,
+          0.05490919899301315
+        ]
+      },
+      {
+        "statistic": "retention",
+        "hits": 3918,
+        "n": 4096,
+        "rate": 0.95654296875,
+        "simultaneous_interval": [
+          0.9469608522630159,
+          0.964885853060516
+        ]
+      },
+      {
+        "statistic": "exclusion",
+        "hits": 208,
+        "n": 4096,
+        "rate": 0.05078125,
+        "simultaneous_interval": [
+          0.04175037077969466,
+          0.06102992012545242
+        ]
+      }
+    ],
+    [
+      {
+        "statistic": "exclusion",
+        "hits": 190,
+        "n": 4096,
+        "rate": 0.04638671875,
+        "simultaneous_interval": [
+          0.037761248822943724,
+          0.0562427936428387
+        ]
+      },
+      {
+        "statistic": "exclusion",
+        "hits": 187,
+        "n": 4096,
+        "rate": 0.045654296875,
+        "simultaneous_interval": [
+          0.03709850107226928,
+          0.05544284753327457
+        ]
+      },
+      {
+        "statistic": "retention",
+        "hits": 3896,
+        "n": 4096,
+        "rate": 0.951171875,
+        "simultaneous_interval": [
+          0.9410951179242472,
+          0.9600251631258242
+        ]
+      }
+    ]
+  ],
+  "examples": [
+    {
+      "truth": "0",
+      "test_index": 0,
+      "C2": 1139,
+      "h_candidates": [
+        "1/2"
+      ]
+    },
+    {
+      "truth": "1/4",
+      "test_index": 0,
+      "C2": 863,
+      "h_candidates": [
+        "0",
+        "1/4",
+        "1/2"
+      ]
+    },
+    {
+      "truth": "1/2",
+      "test_index": 0,
+      "C2": 473,
+      "h_candidates": []
+    }
+  ],
+  "pairs": [
+    {
+      "i": 0,
+      "j": 1,
+      "status": "BELOW_TARGET"
+    },
+    {
+      "i": 0,
+      "j": 2,
+      "status": "BELOW_TARGET"
+    },
+    {
+      "i": 1,
+      "j": 2,
+      "status": "BELOW_TARGET"
+    }
+  ],
+  "coverage_audit": "PASS",
+  "all_forward_diagnostics": true,
+  "information_bounds": [
+    {
+      "h_i": "0",
+      "h_j": "1/4",
+      "n": 128,
+      "tv_upper": 0.026532,
+      "max_power_at_5pct": 0.076532,
+      "squared_affinity_lower_decimal": 0.9999944987824041,
+      "method": "outward on grid 1e-6; exact rational moments to degree 12 and absolute tail",
+      "delta_i": [
+        "0",
+        "0"
+      ],
+      "delta_j": [
+        "4854741775444079276261907/1233085297509936195622862317",
+        "9709483550888158552523815/2466170595019872391245724633"
+      ]
+    },
+    {
+      "h_i": "0",
+      "h_j": "1/2",
+      "n": 128,
+      "tv_upper": 0.108121,
+      "max_power_at_5pct": 0.158121,
+      "squared_affinity_lower_decimal": 0.9999081381782459,
+      "method": "outward on grid 1e-6; exact rational moments to degree 12 and absolute tail",
+      "delta_i": [
+        "0",
+        "0"
+      ],
+      "delta_j": [
+        "39309750346471971662003981/2436570328224288578136244467",
+        "19654875173235985831001991/1218285164112144289068122233"
+      ]
+    },
+    {
+      "h_i": "1/4",
+      "h_j": "1/2",
+      "n": 128,
+      "tv_upper": 0.081766,
+      "max_power_at_5pct": 0.131766,
+      "squared_affinity_lower_decimal": 0.9999475946894125,
+      "method": "outward on grid 1e-6; exact rational moments to degree 12 and absolute tail",
+      "delta_i": [
+        "4854741775444079276261907/1233085297509936195622862317",
+        "9709483550888158552523815/2466170595019872391245724633"
+      ],
+      "delta_j": [
+        "39309750346471971662003981/2436570328224288578136244467",
+        "19654875173235985831001991/1218285164112144289068122233"
+      ]
+    }
+  ]
+}
