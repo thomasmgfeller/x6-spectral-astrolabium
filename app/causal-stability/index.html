@@ -107,7 +107,26 @@
     <a href="sed-data/summary.json" download="X6-SED-Zeitdifferenzen.json">Eigene Auswertung als JSON ↓</a>
   </div>
   <p>Messdaten und manuelle Phasenmarkierungen: Schweizerischer Erdbebendienst (SED) an der ETH Zürich. Auf dieser Seite stehen die von X6 berechneten Differenzen. Die Quelldaten bezieht der lokale Forschungsimport direkt beim SED.</p>
-  <p><a href="https://doi.org/10.12686/sed/networks/ch">Quelle und Netzwerk-DOI ↗</a> · <a href="https://www.seismo.ethz.ch/de/service/Disclaimer/">Nutzungshinweise des SED ↗</a> · <a href="../../docs/research/cspp/causal-stability-lab/SED.md">Methode und Nachrechnung ↗</a></p>
+  <p><a href="https://doi.org/10.12686/sed/networks/ch">Quelle und Netzwerk-DOI ↗</a> · <a href="https://www.seismo.ethz.ch/de/service/Disclaimer/">Nutzungshinweise des SED ↗</a> · <a href="../../docs/research/cspp/causal-stability-lab/SED.md">Methode und Nachrechnung ↗</a> · <a href="#seismik-vorhersage">Zum Vorhersagetest ↓</a></p>
+</section>
+<section id="seismik-vorhersage" class="panel hanford-panel" aria-labelledby="sed-trial-title">
+  <div class="eyebrow">SEISMIK · ZEITLICH GETRENNTER ARCHIVTEST</div>
+  <h2 id="sed-trial-title">Welches Stationspaar hätten wir vorab freigegeben?</h2>
+  <p>X6 bevorzugt den Zeitversatz, der beim Verschieben des Suchfensters am wenigsten schwankt. Die Vergleichsregel bevorzugt das stärkste Signal im Verhältnis zum Rauschen. Beide wählen ausschliesslich im Band 2–8 Hz und dürfen pro geeignetem Beben je ein Paar freigeben.</p>
+  <button id="sed-trial-load" type="button" class="secondary">Vorhersagetest ansehen</button>
+  <p id="sed-trial-status" role="status"></p>
+  <div id="sed-trial-result" hidden>
+    <table class="sed-table">
+      <caption>Kontrolle mit den zusätzlichen Bändern 1–5 und 4–12 Hz. Eine Freigabe besteht bei einer Spannweite von höchstens 100 ms über alle drei Bänder.</caption>
+      <thead><tr><th scope="col">Auswahlregel</th><th scope="col">Freigaben</th><th scope="col">Im Budget</th><th scope="col">Über Budget</th><th scope="col">Unbestimmt</th></tr></thead>
+      <tbody id="sed-trial-counts"></tbody>
+    </table>
+    <p id="sed-trial-paired"></p>
+  </div>
+  <p>Quelle der lokal ausgewerteten Messdaten: Schweizerischer Erdbebendienst an der ETH Zürich, Netz CH.
+  <a href="https://doi.org/10.12686/sed/networks/ch">Netzwerk-DOI ↗</a> ·
+  <a href="https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/sed_filter_prediction/v1/README.md">Versuchsbericht und Vorabprotokoll ↗</a> ·
+  <a href="../../research/sed_filter_prediction/v1/results.json">Abgeleitete Einzel- und Gesamtergebnisse (JSON) ↓</a></p>
 </section>
 <section id="methodik" class="method-section"><div class="section-intro"><div class="eyebrow">DAS MATHEMATISCHE FUNDAMENT</div><h2>Vom Pfad zum prüfbaren Kriterium.</h2><p>Ein endliches History-Problem ist eindeutig lösbar. Ob seine Fehlerverstärkung beherrschbar bleibt, ist eine zusätzliche Frage.</p></div><div class="method-grid">
  <article><span class="method-num">01</span><h3>Die exakte endliche Antwort</h3><div class="formula">u = Hh + Ku + f<br>R = (I − K)<sup>−1</sup> = ∑<sub>j=0</sub><sup>N−1</sup> K<sup>j</sup></div><p>h enthält vorgeschriebene History-Werte, f aktive Gleichungsfehler. K ist strikt dreieckig. Die Probe liest A = q<sub>H</sub>h + q<sub>A</sub>u aus, ohne selbst die Dynamik zu verändern.</p></article>
@@ -121,5 +140,6 @@
 <script type="module" src="hanford.mjs"></script>
 <script type="module" src="fibre.mjs"></script>
 <script type="module" src="sed.mjs"></script>
+<script type="module" src="sed-prediction.mjs"></script>
 </body>
 </html>

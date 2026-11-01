@@ -5,7 +5,8 @@ on:
       - 'agent/sed*'
       - 'app/causal-stability/sed*'
       - 'app/causal-stability/sed-data/**'
-      - 'tests/python/test_sed_three_station.py'
+      - 'tests/python/test_sed*.py'
+      - 'research/sed_filter_prediction/**'
       - '.github/workflows/sed-stations.yml'
   workflow_dispatch:
 
@@ -24,4 +25,6 @@ jobs:
         with:
           python-version: '3.12'
       - run: python -m pip install -r agent/sed-requirements.txt
-      - run: python -m unittest discover -s tests/python -p test_sed_three_station.py -v
+      - run: python -m unittest discover -s tests/python -p 'test_sed*.py' -v
+      - name: Replay the sealed paired prediction test without SED downloads
+        run: python -m agent.sed_prediction verify --prediction-sha256 d03e62ce1eda687670b162864237fb472cf97ac2278984b3a33a95eff815f755

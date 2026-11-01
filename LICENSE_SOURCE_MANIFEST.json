@@ -45,8 +45,8 @@
     "SAGNAC_SOURCE_MANIFEST.json": "6fb23c9fa932929f284c2b0ff9e7ed5e67e9bd5b056f54aa8be569df162e41fd",
     "app/causal-stability/app.mjs": "88aef8d0da68d1a3e49986bf557597e6e67499e74ec5f91e7f0623be9f12230b",
     "app/causal-stability/engine.mjs": "6230ee3e9da380a10b26d1b555d2ca0bcfe024cb6a2db5d32f628922cccfdae9",
-    "app/causal-stability/index.html": "c209705170b60884be28e35ada290a9937448c4f742839200eb40639a0e134cf",
-    "app/causal-stability/style.css": "043901443afe9e3b0e2744bc49f594eb16851ce8f34f159786a485b460eba7f0",
+    "app/causal-stability/index.html": "7e401d03d2e5e0cefe1e6c23c4c255d9bbbd492b12b836808da070675f0ab239",
+    "app/causal-stability/style.css": "3abb5093ac218ad24b9ddf5a8dad9a2b7ab6aaa8d96631be7239210dbf1ba960",
     "app/proper-time.html": "e3d8152c649ab05500db4d5d05965608719d0fe4d82c29f5432bd8ca1246fa58",
     "app/rax-cqg-lab.html": "2e6bf929405aee66f12113c405c9c1879d71d2c897f4fc7435b5d4bf18c4c8a4",
     "assets/causal-stability-preview.png": "1a5e5d19fe6d1cc24261ee14b52a4b40d96df3eb4596231b4d7566da90f5a2c1",
@@ -3146,14 +3146,22 @@
     "app/causal-stability/fibre.mjs": "c78094675cccfb10dc1128983adf1a565de221a5f0735e4b955a83081b12b707",
     "docs/research/cspp/causal-stability-lab/FIBRE.md": "c76a7c2bdfc059564571b11f84a49c0678a8927936162b728f9691507c2e2179",
     "tests/python/test_dryad_fibre.py": "21e7271494d44ca8dfdacbf8e01d6616e14ece75bb16b5f11cbd762d9ac10d8f",
-    ".github/workflows/sed-stations.yml": "ab8255f1f86abf5efacfd4f688ce4e52a8afa3af3b65751b483ddab961cc24ac",
+    ".github/workflows/sed-stations.yml": "12f77cd3f37d9d88d4dfdc91ed706b89d358ad52c777177b74feb0ae2029db6e",
     "agent/sed-requirements.txt": "260cd7e96acc92555bc5f71bac477134383baa876f3549f423b5afc7494ac571",
-    "agent/sed_three_station.py": "8138b21984162550bc187ce0882adef1404c8a0b101f6d11a1e3b68b6a865332",
+    "agent/sed_three_station.py": "41c26d3fe601e792861dfc836deda4ad7151e00743f9fdd030ba635964ec0643",
     "app/causal-stability/sed-data/.gitignore": "6abe6bff9d4bf30a37e4d8932b1ca484a0c0da6ceeab4b62d30ff9c48d4d322c",
     "app/causal-stability/sed-data/summary.json": "6867e83bdb78e2ee24fdcc19144ceb48a6d76c5acc26c1c3d7ca2cb7d3887682",
     "app/causal-stability/sed.mjs": "81de2b52a3a1221579b27faae1e26b14a870d0eaaa38832c8ec20d6e31fde937",
     "docs/research/cspp/causal-stability-lab/SED.md": "c24f7a174813b2acfeee221163a69ebd4ef8e1ed21955f2e1f347bd4ce0f60f8",
-    "tests/python/test_sed_three_station.py": "9caae8a53d53f2d6fe6beb05a8feafec9886296a86a8ac19455fc37e31d7cb99"
+    "tests/python/test_sed_three_station.py": "9caae8a53d53f2d6fe6beb05a8feafec9886296a86a8ac19455fc37e31d7cb99",
+    "agent/sed_prediction.py": "bd0cf575fe0c76927ab4b619710d0349046837ad77b849ca5eab9b2895829129",
+    "app/causal-stability/sed-prediction.mjs": "012de5e1d26a75615f0709e8f068b715ba7383452a97ba23d8f295da5980c645",
+    "research/sed_filter_prediction/v1/CONTRACT.md": "e797eb794fc267b01bdaf5de3864d80321d54ef07d018f8339704d7954855601",
+    "research/sed_filter_prediction/v1/README.md": "50d82a72881c2e2d6696f6b072455af3bae6f8fa667334e1b6f3e450bae7234e",
+    "research/sed_filter_prediction/v1/cohort.json": "f60672cf88dbd32dba4298132e358f82a8b18849c86505e7854125873c017356",
+    "research/sed_filter_prediction/v1/predictions.json": "d03e62ce1eda687670b162864237fb472cf97ac2278984b3a33a95eff815f755",
+    "research/sed_filter_prediction/v1/results.json": "884af7223637d887d58537cbae3bf9db7211f1a9f8ddb9e7319e236f46be9af2",
+    "tests/python/test_sed_prediction.py": "7aa7c12b49e0a2ad4a6957fa235a3bc351be3e9e06928b88284190662e1413c4"
   },
   "documentation_updates": [
     {
@@ -4489,6 +4497,32 @@
           "sha256": "043901443afe9e3b0e2744bc49f594eb16851ce8f34f159786a485b460eba7f0"
         }
       ]
+    },
+    {
+      "date": "2026-11-01",
+      "scope": "Add the precommitted, reference-only SED event-pair selection test and its sealed predictions, derived control outcomes and offline replay. Only project-generated statistics, identifiers and hashes are distributed.",
+      "files": [
+        {
+          "path": ".github/workflows/sed-stations.yml",
+          "previous_sha256": "ab8255f1f86abf5efacfd4f688ce4e52a8afa3af3b65751b483ddab961cc24ac",
+          "sha256": "12f77cd3f37d9d88d4dfdc91ed706b89d358ad52c777177b74feb0ae2029db6e"
+        },
+        {
+          "path": "agent/sed_three_station.py",
+          "previous_sha256": "8138b21984162550bc187ce0882adef1404c8a0b101f6d11a1e3b68b6a865332",
+          "sha256": "41c26d3fe601e792861dfc836deda4ad7151e00743f9fdd030ba635964ec0643"
+        },
+        {
+          "path": "app/causal-stability/index.html",
+          "previous_sha256": "c209705170b60884be28e35ada290a9937448c4f742839200eb40639a0e134cf",
+          "sha256": "7e401d03d2e5e0cefe1e6c23c4c255d9bbbd492b12b836808da070675f0ab239"
+        },
+        {
+          "path": "app/causal-stability/style.css",
+          "previous_sha256": "043901443afe9e3b0e2744bc49f594eb16851ce8f34f159786a485b460eba7f0",
+          "sha256": "3abb5093ac218ad24b9ddf5a8dad9a2b7ab6aaa8d96631be7239210dbf1ba960"
+        }
+      ]
     }
   ],
   "publication_additions": [
@@ -5202,6 +5236,20 @@
         "app/causal-stability/sed.mjs",
         "docs/research/cspp/causal-stability-lab/SED.md",
         "tests/python/test_sed_three_station.py"
+      ]
+    },
+    {
+      "date": "2026-11-01",
+      "scope": "Add the precommitted, reference-only SED event-pair selection test and its sealed predictions, derived control outcomes and offline replay. Only project-generated statistics, identifiers and hashes are distributed.",
+      "paths": [
+        "agent/sed_prediction.py",
+        "app/causal-stability/sed-prediction.mjs",
+        "research/sed_filter_prediction/v1/CONTRACT.md",
+        "research/sed_filter_prediction/v1/README.md",
+        "research/sed_filter_prediction/v1/cohort.json",
+        "research/sed_filter_prediction/v1/predictions.json",
+        "research/sed_filter_prediction/v1/results.json",
+        "tests/python/test_sed_prediction.py"
       ]
     }
   ]
