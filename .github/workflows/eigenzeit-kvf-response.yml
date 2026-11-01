@@ -28,4 +28,4 @@ jobs:
           python-version: '3.12'
       - run: python -m pip install -r research/eigenzeit/kvf_response_v0_15/requirements.txt
       - name: Verify originals and reproduce frozen response experiment and disclosed audit
-        run: python -B research/eigenzeit/kvf_response_v0_15/publication_check.py --replay
+        run: python -B research/eigenzeit/kvf_response_v0_15/publication_check.py --portable-replay

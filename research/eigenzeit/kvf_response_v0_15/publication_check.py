@@ -25,7 +25,7 @@ def manifest(data):
     return entries
 
 
-def check(replay):
+def check(replay,portable=False):
     rec=json.loads((HERE/'PUBLICATION.json').read_text())
     for name,sha in rec['files'].items():require(digest((HERE/name).read_bytes())==sha,name)
     with ZipFile(HERE/rec['archive']) as z:
@@ -53,9 +53,16 @@ def check(replay):
         if replay:
             with tempfile.TemporaryDirectory() as work:
                 z.extractall(work)
-                subprocess.run([sys.executable,'-B','audit_reproduce.py'],cwd=work,check=True)
+                if portable:
+                    from portable_replay import replay as portable_replay
+                    portable_replay(Path(work))
+                else:
+                    subprocess.run([sys.executable,'-B','audit_reproduce.py'],cwd=work,check=True)
 
 
 if __name__=='__main__':
-    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--replay',action='store_true')
-    check(p.parse_args().replay)
+    p=argparse.ArgumentParser(description=__doc__)
+    group=p.add_mutually_exclusive_group()
+    group.add_argument('--replay',action='store_true')
+    group.add_argument('--portable-replay',action='store_true')
+    args=p.parse_args();check(args.replay or args.portable_replay,args.portable_replay)

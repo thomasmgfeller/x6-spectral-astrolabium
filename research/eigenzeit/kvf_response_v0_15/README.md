@@ -56,7 +56,7 @@ Mit Python 3.12 im Wurzelverzeichnis des Repositorys ausführen:
 
 ~~~sh
 python -m pip install -r research/eigenzeit/kvf_response_v0_15/requirements.txt
-OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python -B research/eigenzeit/kvf_response_v0_15/publication_check.py --replay
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python -B research/eigenzeit/kvf_response_v0_15/publication_check.py --portable-replay
 ~~~
 
 Der erste Lauf prüft das gesamte Inventar, führt den ursprünglichen
@@ -77,3 +77,5 @@ Simulationen allein nicht als Hardwareeigenschaft nachgewiesen werden.
 ## Veröffentlichung
 
 Die direkt sichtbaren Programme und Protokolle sind unveränderte Auszüge. Das ZIP enthält alle Rohdaten und das ursprüngliche README. Der Repository-Einstieg publication_check.py prüft die Originale, alle 43 Archiveinträge, beide Fixierungen und die Herkunft der übernommenen Quellen. Anschließend führt er das vollständige Paket in einem temporären Verzeichnis aus. audit_reproduce.py und reproduce.py benötigen den vollständigen Archivinhalt. [Veröffentlichungsnachweis](PUBLICATION.json)
+
+Der ursprüngliche lokale Lauf war bytegleich. Auf anderen BLAS-Plattformen können Rundungsunterschiede entstehen. Der hier verwendete Modus weist Bytegleichheit separat aus und begrenzt die Rohdatenabweichung auf acht Maschinen-Epsilon mal den dokumentierten Maßstab. Der strenge Archivlauf bleibt über --replay verfügbar. [Plattformvergleich und Fehlersuche](PORTABILITY.md)
