@@ -98,8 +98,10 @@ class AnuTests(unittest.TestCase):
             if status == 200:
                 self.assertEqual(anu.download("fake"), self.fetch.return_value)
             else:
-                with self.assertRaisesRegex(ValueError, str(status)):
+                with self.assertRaisesRegex(anu.AqnHttpError, str(status)) as failure:
                     anu.download("fake")
+                if status == 403:
+                    self.assertIn("ANU_TRIAL_API_KEY", str(failure.exception))
                 reply.read.assert_not_called()
             connection.assert_called_once_with(anu.HOST, timeout=20)
             connection.return_value.request.assert_called_once_with(
