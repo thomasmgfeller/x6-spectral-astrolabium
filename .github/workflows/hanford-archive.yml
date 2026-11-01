@@ -1,0 +1,46 @@
+name: Hanford measurement archive
+on:
+  pull_request:
+    paths:
+      - 'agent/hanford*'
+      - 'agent/source_transport.py'
+      - 'app/causal-stability/hanford*'
+      - 'app/causal-stability/hanford-data/**'
+      - 'tests/python/test_hanford.py'
+      - '.github/workflows/hanford-archive.yml'
+  workflow_dispatch:
+    inputs:
+      count:
+        description: First N matching H1 injections to retrieve (1–6)
+        default: '2'
+        type: choice
+        options: ['1','2','3','4','5','6']
+permissions:
+  contents: read
+jobs:
+  archive:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r agent/hanford-requirements.txt
+      - run: python -m unittest discover -s tests/python -p test_hanford.py -v
+      - name: Import directly from the GWOSC archive
+        if: github.event_name == 'workflow_dispatch'
+        env:
+          WINDOW_COUNT: ${{ inputs.count }}
+        run: |
+          python -m agent.hanford --archive runs/hanford-review --count "$WINDOW_COUNT"
+          python -m agent.hanford --archive runs/hanford-review --verify
+      - uses: actions/upload-artifact@v4
+        if: github.event_name == 'workflow_dispatch' && !cancelled()
+        with:
+          name: hanford-H1-${{ github.run_id }}-${{ github.run_attempt }}
+          path: runs/hanford-review/
+          if-no-files-found: warn
+          retention-days: 30

@@ -45,8 +45,8 @@
     "SAGNAC_SOURCE_MANIFEST.json": "6fb23c9fa932929f284c2b0ff9e7ed5e67e9bd5b056f54aa8be569df162e41fd",
     "app/causal-stability/app.mjs": "88aef8d0da68d1a3e49986bf557597e6e67499e74ec5f91e7f0623be9f12230b",
     "app/causal-stability/engine.mjs": "6230ee3e9da380a10b26d1b555d2ca0bcfe024cb6a2db5d32f628922cccfdae9",
-    "app/causal-stability/index.html": "67a6db0c01db8652f7080ea36c983163dfc1c07b12b3ca618044f49acbae61f9",
-    "app/causal-stability/style.css": "b2de3cb09638c7164c8db9f3086075796be02efab837b34f9e672d013afcbe0d",
+    "app/causal-stability/index.html": "0a20aa7efae6ec2bf80316d78ecf853e630ded5b533605a9e8c471ef603feb83",
+    "app/causal-stability/style.css": "5ed64ef2fb3c2bf20f6c340d4243ffd8770d1eb0b0b3802930e24dc125acf671",
     "app/proper-time.html": "e3d8152c649ab05500db4d5d05965608719d0fe4d82c29f5432bd8ca1246fa58",
     "app/rax-cqg-lab.html": "2e6bf929405aee66f12113c405c9c1879d71d2c897f4fc7435b5d4bf18c4c8a4",
     "assets/causal-stability-preview.png": "1a5e5d19fe6d1cc24261ee14b52a4b40d96df3eb4596231b4d7566da90f5a2c1",
@@ -3130,7 +3130,16 @@
     "research/eigenzeit/kvf_response_v0_15/records/summary.json": "34c20dd1b660361be2b0dd49c74e8803aa9f55fe492de8d640cf749e039d48ea",
     "research/eigenzeit/kvf_response_v0_15/reproduce.py": "127b094ece94fd521c25cc8be95309d09e3dc0bdf08dc83af92459994ea761e4",
     "research/eigenzeit/kvf_response_v0_15/requirements.txt": "68a798d14ab7ceac5f914897b07fd7053ddfd40acabcd6c79e6ba7677e874b13",
-    "research/eigenzeit/kvf_response_v0_15/run.py": "dbf6296c95dd9417239f98cbfb363a150f371ac74cceec985f2fc839ea4fb418"
+    "research/eigenzeit/kvf_response_v0_15/run.py": "dbf6296c95dd9417239f98cbfb363a150f371ac74cceec985f2fc839ea4fb418",
+    ".github/workflows/hanford-archive.yml": "13d65b9a465d014b258bec23e608640c7467761637ae0ac936b4874262a172bb",
+    "agent/hanford-requirements.txt": "462502c2b33d93676f71eab68206de8d502c82ec6481f74fc8f47a60ce4bb1c4",
+    "agent/hanford.py": "ad9c647590cd5a357c55c0060c29acc32a359da808dcc39effc8c7d93b316705",
+    "app/causal-stability/hanford-data/H1-932197539.80.json": "ab920af6cca3915ce2140805c75a1e126d5191f7633732c31cd9c80059a7c541",
+    "app/causal-stability/hanford-data/H1-932316845.40.json": "53c6a7df816789b25fcd2b42b239222d8a77803ff6c24f8da131844b9379a105",
+    "app/causal-stability/hanford-data/index.json": "793223c3bacf1384d0088f8333a9fdd6dffc8e4513eae3265bdd016e8d557d6d",
+    "app/causal-stability/hanford.mjs": "a5d42dfca91f08361c3a696c331b051278eb628ab6a554cfade9018f94478d48",
+    "docs/research/cspp/causal-stability-lab/HANFORD.md": "a52311e460ed7dfe67f1d005044f954b15cd127ed248cb6e59d2a79794b49e81",
+    "tests/python/test_hanford.py": "ea56b98f23fa7712296ded0d4f48ade8a43affd071b2839ff3adddd2825d61f7"
   },
   "documentation_updates": [
     {
@@ -4423,6 +4432,22 @@
           "sha256": "6fb23c9fa932929f284c2b0ff9e7ed5e67e9bd5b056f54aa8be569df162e41fd"
         }
       ]
+    },
+    {
+      "date": "2026-11-01",
+      "scope": "Add Hanford H1 measurement archive navigation and display.",
+      "files": [
+        {
+          "path": "app/causal-stability/index.html",
+          "previous_sha256": "67a6db0c01db8652f7080ea36c983163dfc1c07b12b3ca618044f49acbae61f9",
+          "sha256": "0a20aa7efae6ec2bf80316d78ecf853e630ded5b533605a9e8c471ef603feb83"
+        },
+        {
+          "path": "app/causal-stability/style.css",
+          "previous_sha256": "b2de3cb09638c7164c8db9f3086075796be02efab837b34f9e672d013afcbe0d",
+          "sha256": "5ed64ef2fb3c2bf20f6c340d4243ffd8770d1eb0b0b3802930e24dc125acf671"
+        }
+      ]
     }
   ],
   "publication_additions": [
@@ -5095,6 +5120,21 @@
         "research/eigenzeit/kvf_response_v0_15/reproduce.py",
         "research/eigenzeit/kvf_response_v0_15/requirements.txt",
         "research/eigenzeit/kvf_response_v0_15/run.py"
+      ]
+    },
+    {
+      "date": "2026-11-01",
+      "scope": "Hanford H1 archival adapter, verified S6 strain windows, offline replay and measurement viewer. GWOSC strain and catalogue data are CC BY 4.0.",
+      "paths": [
+        ".github/workflows/hanford-archive.yml",
+        "agent/hanford-requirements.txt",
+        "agent/hanford.py",
+        "app/causal-stability/hanford-data/H1-932197539.80.json",
+        "app/causal-stability/hanford-data/H1-932316845.40.json",
+        "app/causal-stability/hanford-data/index.json",
+        "app/causal-stability/hanford.mjs",
+        "docs/research/cspp/causal-stability-lab/HANFORD.md",
+        "tests/python/test_hanford.py"
       ]
     }
   ]
