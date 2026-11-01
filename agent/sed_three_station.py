@@ -49,9 +49,13 @@ def fetch(service, **params):
         time.sleep(2)
 
 
-def event_references():
-    catalog = read_events(fetch("event", eventid=EVENT, includearrivals="true", format="xml"), format="QUAKEML")
-    require(len(catalog) == 1 and str(catalog[0].resource_id) == EVENT, "Wrong event")
+class PgUnavailable(ValueError):
+    """The requested common manual Pg reference does not exist unambiguously."""
+
+
+def event_references(event_id=EVENT):
+    catalog = read_events(fetch("event", eventid=event_id, includearrivals="true", format="xml"), format="QUAKEML")
+    require(len(catalog) == 1 and str(catalog[0].resource_id) == event_id, "Wrong event")
     event = catalog[0]
     origin = event.preferred_origin()
     require(origin is not None and event.event_type == "earthquake", "Missing earthquake origin")
@@ -67,13 +71,15 @@ def event_references():
         if (wave.network_code, wave.location_code or "", wave.channel_code) != ("CH", "", "HHZ"):
             continue
         if wave.station_code in STATIONS:
-            require(wave.station_code not in references, "Ambiguous manual Pg reference")
+            if wave.station_code in references:
+                raise PgUnavailable("Ambiguous manual Pg reference")
             references[wave.station_code] = pick.time
-    require(set(references) == set(STATIONS), "Manual Pg reference missing for selected station")
+    if set(references) != set(STATIONS):
+        raise PgUnavailable("Manual Pg reference missing for selected station")
     return origin.time, references
 
 
-def open_channel(inv, station, start, end):
+def open_channel(inv, station, start, end, rates=(RATE,)):
     require(len(inv.networks) == 1, "Ambiguous network selection")
     net = inv[0]
     require(net.code == "CH" and len(net.stations) == 1, "Unexpected network or station count")
@@ -84,7 +90,7 @@ def open_channel(inv, station, start, end):
         require(part.restricted_status == "open", "Missing explicit open status at network, station or channel")
         require((part.start_date is None or part.start_date <= start) and
                 (part.end_date is None or part.end_date >= end), "Metadata epoch does not cover the window")
-    require((channel.code, channel.location_code, channel.sample_rate) == ("HHZ", "", RATE)
+    require((channel.code, channel.location_code) == ("HHZ", "") and channel.sample_rate in rates
             and channel.response is not None and channel.response.instrument_sensitivity is not None,
             "Missing or incompatible vertical velocity response")
     sensitivity = channel.response.instrument_sensitivity
@@ -93,31 +99,36 @@ def open_channel(inv, station, start, end):
     return channel
 
 
-def calibrated_station(station, origin):
+def station_velocity(station, origin, rates):
     start, end = origin - 60, origin + 35
     params = dict(net="CH", sta=station, loc="--", cha="HHZ",
                   starttime=start.strftime("%Y-%m-%dT%H:%M:%S.%f"),
                   endtime=end.strftime("%Y-%m-%dT%H:%M:%S.%f"))
     inv = read_inventory(fetch("station", **params, level="response", includerestricted="false"), format="STATIONXML")
-    open_channel(inv, station, start, end)
+    rate = int(open_channel(inv, station, start, end, rates).sample_rate)
     # Fetch waveform bytes only after every applicable metadata epoch passed the open-data gate.
     stream = read(fetch("dataselect", **params), format="MSEED")
-    require(len(stream) > 0 and all(tr.id == f"CH.{station}..HHZ" and tr.stats.sampling_rate == RATE
+    require(len(stream) > 0 and all(tr.id == f"CH.{station}..HHZ" and tr.stats.sampling_rate == rate
                                    for tr in stream), "Wrong waveform channel or sample rate")
     stream.trim(start, end, nearest_sample=False)
     require(len(stream) > 0 and not stream.get_gaps(), "Gap or overlap inside the analysis interval")
     stream.merge(method=-1)
     require(len(stream) == 1, "Cannot form one continuous trace")
     trace = stream[0]
-    require(0 <= trace.stats.starttime - start < 1.01 / RATE and
-            0 <= end - trace.stats.endtime < 1.01 / RATE, "Incomplete waveform interval")
+    require(0 <= trace.stats.starttime - start < 1.01 / rate and
+            0 <= end - trace.stats.endtime < 1.01 / rate, "Incomplete waveform interval")
     require(trace.data.dtype.kind == "i" and trace.data.dtype.itemsize <= 4 and
             not np.ma.isMaskedArray(trace.data), "Expected signed seismic counts of at most 32 bits")
     fingerprint = hashlib.sha256(trace.data.astype("<i4").tobytes()).hexdigest()
     trace.remove_response(inventory=inv, output="VEL", pre_filt=(0.3, 0.6, 15, 20),
                           water_level=None, zero_mean=True, taper=True, taper_fraction=0.05)
     require(np.isfinite(trace.data).all(), "Nonfinite corrected velocity")
-    return trace.data, trace.stats.starttime - origin, fingerprint
+    return trace.data, trace.stats.starttime - origin, fingerprint, rate
+
+
+def calibrated_station(station, origin):
+    velocity, t0, fingerprint, _ = station_velocity(station, origin, (RATE,))
+    return velocity, t0, fingerprint
 
 
 def first_crossing(envelope, times, threshold, start, end):
@@ -133,11 +144,11 @@ def first_crossing(envelope, times, threshold, start, end):
     return float(times[ids[hits[0]]]) if len(hits) else None
 
 
-def variance_onset(signal, times, center, noise_rms):
+def variance_onset(signal, times, center, noise_rms, rate=RATE):
     """Local two-variance change point. Return the first sample of the second segment."""
     ids = np.flatnonzero(np.abs(times-center) <= 1)
     x = signal[ids]
-    margin = round(0.10 * RATE)
+    margin = round(0.10 * rate)
     require(len(x) >= 2*margin+1, "Missing change-point search window")
     # Normalization keeps the log scores independent of the physical unit and numerical scale.
     x = x/noise_rms
@@ -156,24 +167,33 @@ def variance_onset(signal, times, center, noise_rms):
     return float(times[ids[best]]), "OK"
 
 
+def filtered_band(velocity, times, band, rate):
+    noise = (times >= -45) & (times < -15)
+    require(np.count_nonzero(noise) >= 29*rate, "Missing noise baseline")
+    filt = sosfilt(butter(4, band, btype="bandpass", fs=rate, output="sos"), velocity)
+    width = round(0.1*rate)
+    rms = np.sqrt(np.convolve(filt*filt, np.ones(width)/width, mode="full")[:len(filt)])
+    baseline = float(np.median(rms[noise]))
+    require(baseline > 0 and np.isfinite(baseline), "Unusable noise baseline")
+    return filt, rms, baseline
+
+
+def checked_variance_pick(filt, times, reference, baseline, rate):
+    quiet, _ = variance_onset(filt,times,-11,baseline,rate)
+    if quiet is not None:
+        return None, "QUIET_TRIGGER"
+    return variance_onset(filt,times,reference,baseline,rate)
+
+
 def band_picks(velocity, t0, reference):
     times = t0 + np.arange(len(velocity))/RATE
-    noise = (times >= -45) & (times < -15)
-    require(np.count_nonzero(noise) >= 29*RATE, "Missing noise baseline")
     picks, checks = [], []
-    for low, high in BANDS:
-        filt = sosfilt(butter(4, [low, high], btype="bandpass", fs=RATE, output="sos"), velocity)
-        width = round(0.1*RATE)
-        rms = np.sqrt(np.convolve(filt*filt, np.ones(width)/width, mode="full")[:len(filt)])
-        baseline = float(np.median(rms[noise]))
-        require(baseline > 0 and np.isfinite(baseline), "Unusable noise baseline")
+    for band in BANDS:
+        filt, rms, baseline = filtered_band(velocity, times, band, RATE)
         quiet_rms = first_crossing(rms,times,6*baseline,-12,-10)
         crossing = first_crossing(rms,times,6*baseline,reference-1,reference+1)
         rms_status = "OK" if isinstance(crossing,float) else (crossing or "NO_TRIGGER")
-        quiet_onset, _ = variance_onset(filt,times,-11,baseline)
-        pick, status = variance_onset(filt,times,reference,baseline)
-        if quiet_onset is not None:
-            pick, status = None, "QUIET_TRIGGER"
+        pick, status = checked_variance_pick(filt,times,reference,baseline,RATE)
         checks.append({"variance":status, "rms":rms_status if quiet_rms is None else "QUIET_TRIGGER"})
         picks.append(pick)
     return picks, checks
