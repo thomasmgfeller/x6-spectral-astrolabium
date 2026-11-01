@@ -1,0 +1,30 @@
+name: Eigenzeit calibration v0.5
+on:
+  pull_request:
+    paths:
+      - 'research/eigenzeit/calibration_v0_5/**'
+      - '.github/workflows/eigenzeit-calibration.yml'
+      - 'tools/workflow/requirements-research.txt'
+  push:
+    branches: [main]
+    paths:
+      - 'research/eigenzeit/calibration_v0_5/**'
+      - '.github/workflows/eigenzeit-calibration.yml'
+      - 'tools/workflow/requirements-research.txt'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  reproduce:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r tools/workflow/requirements-research.txt
+      - name: Verify originals, recompute certificates and replay calibration counts
+        run: python -B research/eigenzeit/calibration_v0_5/publication_check.py --replay

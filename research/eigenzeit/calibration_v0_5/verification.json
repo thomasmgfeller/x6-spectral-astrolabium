@@ -1,0 +1,57 @@
+{
+  "result": "PASS",
+  "field_without_evidence": {
+    "mode": "field",
+    "status": "HOLD_ASSUMPTIONS",
+    "missing_or_ineligible": [
+      "source_contrast",
+      "within_cell_envelope",
+      "calibration_transfer",
+      "partition_and_probe_support",
+      "fixed_independent_trials_and_all_attempts",
+      "independent_geometry_and_preselected_route",
+      "S",
+      "D",
+      "C"
+    ],
+    "geometry": {
+      "grid": [
+        "0",
+        "1/4",
+        "1/2"
+      ],
+      "h_interval": [
+        "0",
+        "1/2"
+      ],
+      "q_interval": [
+        "0",
+        "626262763/200000000"
+      ],
+      "q_exact_upper": "48*atanh(1/4)^2"
+    }
+  },
+  "synthetic_geometry_example": {
+    "mode": "synthetic",
+    "status": "GO",
+    "geometry": {
+      "grid": [
+        "1/2"
+      ],
+      "h_interval": [
+        "467/1024",
+        "1/2"
+      ],
+      "q_interval": [
+        "2585949527/1000000000",
+        "626262763/200000000"
+      ]
+    }
+  },
+  "v04_primary_recomputed": true,
+  "large_binomials_exact_integer_crosscheck": 2,
+  "relative_rule_boundary_checked": true,
+  "pilot_scalar_rule_checks": 640,
+  "independent_absolute_operating_curve_checks": 4,
+  "source_files_verified": 23
+}
