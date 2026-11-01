@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "normal_checks": 161,
+  "exact_toy_binomial_cases": 9,
+  "integer_sides_checked": 8,
+  "third_moment_quadrature": [
+    {
+      "h": "0",
+      "numeric_third_moment_envelope": 0.002508455718
+    },
+    {
+      "h": "1/2",
+      "numeric_third_moment_envelope": 0.003684497867
+    }
+  ],
+  "checks": "flat analytic first two moments, 4 full-order risk bounds, 4 matching tails, affinity cut, corrupt packed inputs"
+}

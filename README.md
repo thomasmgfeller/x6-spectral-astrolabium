@@ -1,5 +1,7 @@
 # X6 Spectral Astrolabium
 
+**Eigenzeit v0.2 · power from one causal order.** Under uniform physical-volume sampling in a complete 4D diamond, 30,000 events suffice to distinguish Minkowski space from the tested de Sitter geometry (h = 1/2). The finite-sample rule guarantees at least 80.30% power in both directions at a false-alarm rate below 5%. At least 9,857 events are necessary. [Report, proof, code and reproducibility package](research/eigenzeit/single_order_power_v0_2/README.md).
+
 **Eigenzeit · geometry from one 128-event causal order.** In 11,551 of 12,288 held-out orders all three geometries remained compatible. At a 5% false-alarm rate the power to distinguish flat space from the largest tested curvature is at most 15.82% for any order-based test in the specified four-dimensional diamond. [Explore individual orders](https://thomasmgfeller.github.io/x6-spectral-astrolabium/app/eigenzeit-einzelordnung/index.html) · [Report, proof and reproducibility package](research/eigenzeit/single_order_128_v0_1/README.md).
 
 **New: [Open Causal Stability Lab](https://thomasmgfeller.github.io/x6-spectral-astrolabium/app/causal-stability/)** — interactive causal-path reinforcement, cancellation and finite error amplification. Four control models, the published CSPP v0.25 fixture, adjustable parameters and JSON/CSV export. [Mathematics, source and nine regression tests](docs/research/cspp/causal-stability-lab/README.md). Runs directly in the browser without sign-in. German interface; finite diagnostics only. **METHOD and G1 remain HOLD.**
