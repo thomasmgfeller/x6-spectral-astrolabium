@@ -1,0 +1,80 @@
+{
+  "version": "0.14",
+  "frozen_before_synthetic_runs": true,
+  "evidence_class": "SYNTHETIC_FREE_SCALAR_CONTROL",
+  "models": [
+    {
+      "name": "M0",
+      "mass_times_ell0": 0
+    },
+    {
+      "name": "M1",
+      "mass_times_ell0": 0.5
+    }
+  ],
+  "geometry": "3+1 Minkowski in both models",
+  "state": "free scalar Gaussian vacuum",
+  "detector": "ideal joint readout of commuting equally time-centered smeared observables plus independent centered Gaussian detector noise",
+  "eta_time_width_over_effective_width": 0.5,
+  "distance_over_ell0": [
+    1,
+    2,
+    3
+  ],
+  "calibration_hard_assumptions": {
+    "effective_width_over_ell0": [
+      0.98,
+      1.02
+    ],
+    "noise_variance_to_signal_variance": [
+      0.048,
+      0.052
+    ],
+    "noise_covariance_to_signal_geometric_variance": [
+      -0.001,
+      0.001
+    ],
+    "zero_offsets_exact": true,
+    "relative_separations_exact_in_control": true,
+    "positive_constant_gains": true
+  },
+  "physical_calibration_evidence_supplied": false,
+  "physical_release": "HOLD_FIELD_TRANSFER",
+  "decision": {
+    "selected_distance": 3,
+    "p0_lower": "0.58358",
+    "p1_upper": "0.56860",
+    "gap": "0.01498",
+    "pairs": 41045,
+    "threshold": 23645,
+    "rule": "choose M0 if same_sign_count > threshold, else M1; conditional two-model test",
+    "hoeffding_false_M1_upper": "0.00981667783483926908317106554754031191065267",
+    "hoeffding_false_M0_upper": "0.00988410340306829820788644532726939271820313"
+  },
+  "independent_pairs_per_setting": 41045,
+  "raw_seeds": [
+    20261101401,
+    20261101402
+  ],
+  "gum_seeds": [
+    [
+      20261101411,
+      20261101412,
+      20261101413
+    ],
+    [
+      20261101421,
+      20261101422,
+      20261101423
+    ]
+  ],
+  "endpoint_campaign_seed": 20261101431,
+  "endpoint_campaign_trials": 20000,
+  "gum_scope": "first-order and joint assigned-PDF propagation; numerical coverage validation refers to the assigned PDF, not to field-data coverage",
+  "prng": "numpy.default_rng / PCG64",
+  "selection": "best certified sign-probability gap among fixed distances 1,2,3, theory only before synthetic data",
+  "no_optional_stopping": true,
+  "two_model_only": true,
+  "response_channel": "UNMEASURED",
+  "quantum_gravity_claim": false
+}

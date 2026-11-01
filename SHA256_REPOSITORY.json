@@ -32,11 +32,11 @@
     "CITATION.cff": "5225a23f7cd2f1841db38dd9f4b6f1b3624cce110cf27d08575b6f4b29cd2bc0",
     "CODE_OF_CONDUCT.md": "dd847b83a025f21bd55935c23b4568b3f1d108455a27b9b15b2a0b35fbc58cb9",
     "CONTRIBUTING.md": "366d6a2ce4b388d1fb77d4a5188157ff99613be932065fa758f8e562a6b45ee0",
-    "LICENSE_SOURCE_MANIFEST.json": "c4684c4dda642d166fce56635610ebd827e5cd3f43963aef8ff1952e8a36ebd5",
+    "LICENSE_SOURCE_MANIFEST.json": "770bfae3f7fc79e88904c56ecfecfb53a1343f75aeddd1999fb0fd0ae23e91e3",
     "MODULE_REGISTRY.json": "722dced0bb939a3e8eeaf50953ac9a96fd95c203f5dad4859581db777cf42e87",
     "README.md": "6f9a68dab2ddf792ba71ed2abe77a1367e9777a021563965ef856324b57169a6",
     "REFERENCE_SOURCE_MANIFEST.json": "0e2275138250cc755ae87969b80fee67016cd293be837a5a89e2eeaa46495876",
-    "SAGNAC_SOURCE_MANIFEST.json": "7ea019e650b376d8677aca83f951bf6f73f575309be23d44c1dbe34642532071",
+    "SAGNAC_SOURCE_MANIFEST.json": "8510ee70ea414012018cd1b0c721048c85cf1f5efa377968c55044770522618a",
     "SECURITY.md": "c73f7d7c97f7c30f8d93140c612772ed2b81b1830987a37ae0980903213760d5",
     "app/index.html": "df48fa522498fb79aa3617fe2fefa587ef820b9555a692b5bd253ac88b2298f7",
     "data/reference_certificate.json": "a71288ed81b44f8ec122b7d6a6d14340378c7dfbf9daeb5a0fb4c76caba06d18",
@@ -2361,6 +2361,51 @@
         "research/eigenzeit/kvf_concept_v0_13/STATUS.json"
       ],
       "scope": "Publish Eigenzeit v0.13 concept for a causal vacuum-field measurement vector, electro-optic test stand, multivariate GUM procedure and explicit open model and evidence requirements."
+    },
+    {
+      "date": "2026-11-01",
+      "component": "Eigenzeit KVF control v0.14",
+      "paths": [
+        ".github/workflows/eigenzeit-kvf-control.yml",
+        "research/eigenzeit/kvf_control_v0_14/.gitattributes",
+        "research/eigenzeit/kvf_control_v0_14/CONTRACT.json",
+        "research/eigenzeit/kvf_control_v0_14/DERIVATION.md",
+        "research/eigenzeit/kvf_control_v0_14/Eigenzeit_KVF_Kontrollvergleich_v0_14.pdf",
+        "research/eigenzeit/kvf_control_v0_14/Eigenzeit_KVF_Kontrollvergleich_v0_14_Pruefpaket.zip",
+        "research/eigenzeit/kvf_control_v0_14/FREEZE.sha256",
+        "research/eigenzeit/kvf_control_v0_14/GUM.md",
+        "research/eigenzeit/kvf_control_v0_14/PUBLICATION.json",
+        "research/eigenzeit/kvf_control_v0_14/README.md",
+        "research/eigenzeit/kvf_control_v0_14/SOURCES.md",
+        "research/eigenzeit/kvf_control_v0_14/certificate.py",
+        "research/eigenzeit/kvf_control_v0_14/check.py",
+        "research/eigenzeit/kvf_control_v0_14/development/FREEZE_PRE_RUN.sha256",
+        "research/eigenzeit/kvf_control_v0_14/development/REVIEW.json",
+        "research/eigenzeit/kvf_control_v0_14/development/certificate_pre_review.json",
+        "research/eigenzeit/kvf_control_v0_14/development/certificate_pre_review.py",
+        "research/eigenzeit/kvf_control_v0_14/figures/control_comparison.png",
+        "research/eigenzeit/kvf_control_v0_14/gum.py",
+        "research/eigenzeit/kvf_control_v0_14/model.py",
+        "research/eigenzeit/kvf_control_v0_14/previous/DESIGN.md",
+        "research/eigenzeit/kvf_control_v0_14/previous/ORIGIN.json",
+        "research/eigenzeit/kvf_control_v0_14/previous/README.md",
+        "research/eigenzeit/kvf_control_v0_14/previous/SOURCES.md",
+        "research/eigenzeit/kvf_control_v0_14/previous/STATUS.json",
+        "research/eigenzeit/kvf_control_v0_14/publication_check.py",
+        "research/eigenzeit/kvf_control_v0_14/records/M0.json",
+        "research/eigenzeit/kvf_control_v0_14/records/M1.json",
+        "research/eigenzeit/kvf_control_v0_14/records/campaign.json",
+        "research/eigenzeit/kvf_control_v0_14/records/certificate.json",
+        "research/eigenzeit/kvf_control_v0_14/records/check.json",
+        "research/eigenzeit/kvf_control_v0_14/records/controls.json",
+        "research/eigenzeit/kvf_control_v0_14/records/environment.json",
+        "research/eigenzeit/kvf_control_v0_14/records/replay.json",
+        "research/eigenzeit/kvf_control_v0_14/records/summary.json",
+        "research/eigenzeit/kvf_control_v0_14/reproduce.py",
+        "research/eigenzeit/kvf_control_v0_14/requirements.txt",
+        "research/eigenzeit/kvf_control_v0_14/run.py"
+      ],
+      "scope": "Publish Eigenzeit v0.14 original KVF control report and archive, conditional finite-sample decision, joint GUM propagation, noise nonidentifiability example and clean replay."
     }
   ],
   "non_historical_documentation_updates": [
@@ -3326,6 +3371,22 @@
           "path": "LICENSE_SOURCE_MANIFEST.json",
           "previous_sha256": "d46be73a19b02b7c4f3f763a9cfa9021532367a80388421f39d15a91b79c09dd",
           "sha256": "c4684c4dda642d166fce56635610ebd827e5cd3f43963aef8ff1952e8a36ebd5"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-01",
+      "scope": "Publish Eigenzeit v0.14 original KVF control report and archive, conditional finite-sample decision, joint GUM propagation, noise nonidentifiability example and clean replay.",
+      "files": [
+        {
+          "path": "SAGNAC_SOURCE_MANIFEST.json",
+          "previous_sha256": "7ea019e650b376d8677aca83f951bf6f73f575309be23d44c1dbe34642532071",
+          "sha256": "8510ee70ea414012018cd1b0c721048c85cf1f5efa377968c55044770522618a"
+        },
+        {
+          "path": "LICENSE_SOURCE_MANIFEST.json",
+          "previous_sha256": "c4684c4dda642d166fce56635610ebd827e5cd3f43963aef8ff1952e8a36ebd5",
+          "sha256": "770bfae3f7fc79e88904c56ecfecfb53a1343f75aeddd1999fb0fd0ae23e91e3"
         }
       ]
     }
