@@ -4,6 +4,8 @@ Aus einer einzelnen unbeschrifteten Kausalordnung soll ein Test zwischen einem f
 
 [Einzelordnungen im Browser ansehen](https://thomasmgfeller.github.io/x6-spectral-astrolabium/app/eigenzeit-einzelordnung/index.html) · [Forschungsbericht (PDF)](Eigenzeit_Einzelordnung_128_v0_1.pdf) · [Vollständiges Prüfpaket (ZIP)](Eigenzeit_Einzelordnung_128_v0_1_Pruefpaket.zip)
 
+[Fortsetzung v0.2 mit dem 30.000-Ereignis-Test und der verbesserten notwendigen Untergrenze](../single_order_power_v0_2/README.md).
+
 | Dimensionslose Krümmungen RT² | Höchstmögliche Trennleistung bei N = 128¹ | Notwendige Ereigniszahl für 80 % |
 |---|---:|---:|
 | 0 und 0,758 | 7,66 % | 150.272 |

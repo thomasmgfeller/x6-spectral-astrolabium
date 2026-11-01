@@ -1,0 +1,12 @@
+{
+  "version": "X6-EIGENZEIT-SINGLE-ORDER-POWER-v0.2",
+  "model_h": ["0","1/2"],
+  "domain": "One complete four-dimensional causal diamond, iid uniform in physical four-volume conditional on fixed N. Full strict order; no coordinates, extra labels, total Poisson count, external time or additional geometry passed to the decision.",
+  "goals": {"maximum_null_rejection": "1/20", "minimum_alternative_rejection": "4/5", "directions": "both separately; unconditional on issuing a singleton"},
+  "full_order": {"n": 30000, "reject_flat_U_ge": "409/4000", "reject_curved_U_le": "4047/40000", "moment_grid": 128, "residual_step": "1/100000", "residual_multipliers": [1,40]},
+  "matching": {"n": 96000, "m": 48000, "reject_flat_K_ge": 4909, "reject_curved_K_le": 4856, "matching": "uniform perfect matching independent of the observed order, implemented by an independent random permutation of all indices"},
+  "necessary_check": "Event Hellinger affinity at alpha=0.05 and power=0.80 with the same point affinity as v0.1. Round outward. No optimum claim.",
+  "scientific_design": "Deterministic planning using published model moments. Thresholds selected using theoretical planning, not empirical target clouds. Numerical reference computations are audit checks, not the source of the certificate.",
+  "engineering_checks": "After the local freeze generate exactly one new full-budget cloud for each of the two models and each procedure, four total. Use separate SHA-256 namespaced PCG64 streams for coordinates, anonymisation and pairing. No reseeding, tuning, replacing or enlarging the four cases; no empirical power estimate. Independently recount full orders or queried pairs and check decision against integer thresholds. Record hashes of simulated coordinates and, for the full counter, oriented packed rows; matching store pairing hash. Full orders can be regenerated.",
+  "seed_namespace": "X6/geometry/single-order/two-simple-models/achievable-power/0.2/2026-11-01"
+}

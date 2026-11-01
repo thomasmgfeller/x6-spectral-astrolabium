@@ -32,11 +32,11 @@
     "CITATION.cff": "5225a23f7cd2f1841db38dd9f4b6f1b3624cce110cf27d08575b6f4b29cd2bc0",
     "CODE_OF_CONDUCT.md": "dd847b83a025f21bd55935c23b4568b3f1d108455a27b9b15b2a0b35fbc58cb9",
     "CONTRIBUTING.md": "366d6a2ce4b388d1fb77d4a5188157ff99613be932065fa758f8e562a6b45ee0",
-    "LICENSE_SOURCE_MANIFEST.json": "7d85c0a98dfe98ea9d804894395aabd472de6c027033ff5720ff7b3bc90c7af6",
+    "LICENSE_SOURCE_MANIFEST.json": "2c45ea27e42eab5110b0f4012cecd95959b0fb29020d4d71f6a2406853f60f27",
     "MODULE_REGISTRY.json": "722dced0bb939a3e8eeaf50953ac9a96fd95c203f5dad4859581db777cf42e87",
     "README.md": "6f9a68dab2ddf792ba71ed2abe77a1367e9777a021563965ef856324b57169a6",
     "REFERENCE_SOURCE_MANIFEST.json": "0e2275138250cc755ae87969b80fee67016cd293be837a5a89e2eeaa46495876",
-    "SAGNAC_SOURCE_MANIFEST.json": "b668a18526dd40907532c4621bf0a0ef4b2ef2ec646a90b550bbe85a22ba6af9",
+    "SAGNAC_SOURCE_MANIFEST.json": "5951448c1f978230ea517f2c6f44f9238081d29675be63bbf44349f0f043555d",
     "SECURITY.md": "c73f7d7c97f7c30f8d93140c612772ed2b81b1830987a37ae0980903213760d5",
     "app/index.html": "df48fa522498fb79aa3617fe2fefa587ef820b9555a692b5bd253ac88b2298f7",
     "data/reference_certificate.json": "a71288ed81b44f8ec122b7d6a6d14340378c7dfbf9daeb5a0fb4c76caba06d18",
@@ -2081,6 +2081,44 @@
         "research/eigenzeit/single_order_128_v0_1/result.json"
       ],
       "scope": "Publish the N=128 single-order Eigenzeit study, verified package, interactive explorer and decision replay."
+    },
+    {
+      "date": "2026-11-01",
+      "component": "Eigenzeit single-order power v0.2",
+      "paths": [
+        ".github/workflows/eigenzeit-single-order-power.yml",
+        "research/eigenzeit/single_order_power_v0_2/Eigenzeit_Trennleistung_Einzelordnung_v0_2.pdf",
+        "research/eigenzeit/single_order_power_v0_2/Eigenzeit_Trennleistung_Einzelordnung_v0_2_Pruefpaket.zip",
+        "research/eigenzeit/single_order_power_v0_2/PUBLICATION.json",
+        "research/eigenzeit/single_order_power_v0_2/README.md",
+        "research/eigenzeit/single_order_power_v0_2/package/BEWEIS.md",
+        "research/eigenzeit/single_order_power_v0_2/package/Bericht.pdf",
+        "research/eigenzeit/single_order_power_v0_2/package/FREEZE.sha256",
+        "research/eigenzeit/single_order_power_v0_2/package/MANIFEST.sha256",
+        "research/eigenzeit/single_order_power_v0_2/package/README.md",
+        "research/eigenzeit/single_order_power_v0_2/package/REPLAY.txt",
+        "research/eigenzeit/single_order_power_v0_2/package/apply_order.py",
+        "research/eigenzeit/single_order_power_v0_2/package/audit.py",
+        "research/eigenzeit/single_order_power_v0_2/package/certificate.json",
+        "research/eigenzeit/single_order_power_v0_2/package/certificate.py",
+        "research/eigenzeit/single_order_power_v0_2/package/checks.json",
+        "research/eigenzeit/single_order_power_v0_2/package/decision.py",
+        "research/eigenzeit/single_order_power_v0_2/package/design.json",
+        "research/eigenzeit/single_order_power_v0_2/package/environment.json",
+        "research/eigenzeit/single_order_power_v0_2/package/examples.json",
+        "research/eigenzeit/single_order_power_v0_2/package/examples.py",
+        "research/eigenzeit/single_order_power_v0_2/package/pack_relations.cpp",
+        "research/eigenzeit/single_order_power_v0_2/package/source/LICENSE",
+        "research/eigenzeit/single_order_power_v0_2/package/source/provenance.json",
+        "research/eigenzeit/single_order_power_v0_2/package/source/research/lorentz_curvature/geometry.py",
+        "research/eigenzeit/single_order_power_v0_2/package/source/research/lorentz_de_sitter_c2/exact.py",
+        "research/eigenzeit/single_order_power_v0_2/package/source/research/lorentz_de_sitter_kl/core.py",
+        "research/eigenzeit/single_order_power_v0_2/package/source/research/lorentz_de_sitter_variance/common.py",
+        "research/eigenzeit/single_order_power_v0_2/package/source/research/lorentz_de_sitter_variance/moments.py",
+        "research/eigenzeit/single_order_power_v0_2/package/source/research/single_order_v01/information.py",
+        "research/eigenzeit/single_order_power_v0_2/publication_check.py"
+      ],
+      "scope": "Publish the v0.2 single-order power bounds, original report and archive, auditable sources, and four-case replay for the fixed flat/de Sitter comparison."
     }
   ],
   "non_historical_documentation_updates": [
@@ -2854,6 +2892,22 @@
           "path": "LICENSE_SOURCE_MANIFEST.json",
           "previous_sha256": "db0a897c6e9715dfb627738f3bdeb3e621409d3dcabccf981bd70eeaadce47b3",
           "sha256": "7d85c0a98dfe98ea9d804894395aabd472de6c027033ff5720ff7b3bc90c7af6"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-01",
+      "scope": "Publish the v0.2 single-order power bounds, original report and archive, auditable sources, and four-case replay for the fixed flat/de Sitter comparison.",
+      "files": [
+        {
+          "path": "SAGNAC_SOURCE_MANIFEST.json",
+          "previous_sha256": "b668a18526dd40907532c4621bf0a0ef4b2ef2ec646a90b550bbe85a22ba6af9",
+          "sha256": "5951448c1f978230ea517f2c6f44f9238081d29675be63bbf44349f0f043555d"
+        },
+        {
+          "path": "LICENSE_SOURCE_MANIFEST.json",
+          "previous_sha256": "7d85c0a98dfe98ea9d804894395aabd472de6c027033ff5720ff7b3bc90c7af6",
+          "sha256": "2c45ea27e42eab5110b0f4012cecd95959b0fb29020d4d71f6a2406853f60f27"
         }
       ]
     }
