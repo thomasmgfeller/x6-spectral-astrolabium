@@ -1,0 +1,107 @@
+{
+  "anchors": {
+    "common_bias": {
+      "false_certificate_budget": "1/500000",
+      "geometry_release": false,
+      "mode": "synthetic",
+      "node": "C01@1/4",
+      "scope_id": "MODEL_C01_810",
+      "status": "HOLD_2PPM",
+      "worst_ppm": "2534999997/50000000"
+    },
+    "coverage_95_only": {
+      "false_certificate_budget": "100003/2000000",
+      "geometry_release": false,
+      "mode": "synthetic",
+      "node": "C01@1/4",
+      "scope_id": "MODEL_C01_810",
+      "status": "HOLD_RISK",
+      "worst_ppm": "70000003/50000000"
+    },
+    "field": {
+      "geometry_release": false,
+      "missing": [
+        "target",
+        "gain",
+        "comparator",
+        "transfer"
+      ],
+      "mode": "field",
+      "node": "C01@1/4",
+      "scope_id": "C01_REAL_SCOPE_PENDING",
+      "status": "HOLD_EVIDENCE"
+    },
+    "qualified_synthetic": {
+      "false_certificate_budget": "1/500000",
+      "geometry_release": false,
+      "mode": "synthetic",
+      "node": "C01@1/4",
+      "scope_id": "MODEL_C01_810",
+      "status": "SYNTHETIC_BOUND_OK",
+      "worst_ppm": "70000003/50000000"
+    }
+  },
+  "common_mode_identical_counts": {
+    "00": 40,
+    "01": 0,
+    "10": 0,
+    "11": 40
+  },
+  "half_open_boundary_checks": 4,
+  "ideal_zero_disagreement_upper_ppm_at_3300000": "3.976465845",
+  "interval_corner_checks": 48,
+  "joint_node_risk_32": "1/15625",
+  "minimum_zero_disagreements_iid": {
+    "1": 13122357,
+    "2": 6561176
+  },
+  "physical_status": "HOLD_EVIDENCE",
+  "raw_prefixes": {
+    "bench_prefix": {
+      "counts": {
+        "00": 39,
+        "01": 1,
+        "10": 1,
+        "11": 39
+      },
+      "first_stop_id": null,
+      "geometry_release": false,
+      "mode": "synthetic",
+      "node": "C01@1/4",
+      "run_id": "bench_prefix",
+      "scope_id": "MODEL_C01_810",
+      "seen": 80,
+      "status": "PREFIX_VALID_NO_RELEASE"
+    },
+    "stop_26": {
+      "counts": {
+        "00": 27,
+        "01": 13,
+        "10": 13,
+        "11": 27
+      },
+      "first_stop_id": 26,
+      "geometry_release": false,
+      "mode": "synthetic",
+      "node": "C01@1/4",
+      "run_id": "stop_26",
+      "scope_id": "MODEL_C01_810",
+      "seen": 80,
+      "status": "STOP_DISCORDANCE"
+    }
+  },
+  "raw_rejections": [
+    "interior_missing",
+    "end_truncated",
+    "duplicate_id",
+    "wrong_run",
+    "missing_readout",
+    "unknown_precision",
+    "ambiguous_edge",
+    "outside_acquisition",
+    "overlap",
+    "missing_zero"
+  ],
+  "remaining_external_risk": "98197717/1000000000000",
+  "threshold_checks": 2
+}

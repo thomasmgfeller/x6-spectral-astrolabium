@@ -1,0 +1,32 @@
+name: Eigenzeit C01 GUM v0.12
+on:
+  pull_request:
+    paths:
+      - 'research/eigenzeit/c01_gum_v0_12/**'
+      - 'research/eigenzeit/reference_audit_v0_11/Eigenzeit_Referenzaudit_v0_11_Pruefpaket.zip'
+      - '.github/workflows/eigenzeit-c01-gum.yml'
+      - 'tools/workflow/requirements-research.txt'
+  push:
+    branches: [main]
+    paths:
+      - 'research/eigenzeit/c01_gum_v0_12/**'
+      - 'research/eigenzeit/reference_audit_v0_11/Eigenzeit_Referenzaudit_v0_11_Pruefpaket.zip'
+      - '.github/workflows/eigenzeit-c01-gum.yml'
+      - 'tools/workflow/requirements-research.txt'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  reproduce:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r tools/workflow/requirements-research.txt
+      - name: Verify provenance and reproduce the uncertainty budget and field controls
+        run: python -B research/eigenzeit/c01_gum_v0_12/publication_check.py --replay

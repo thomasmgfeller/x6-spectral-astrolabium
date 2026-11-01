@@ -1,0 +1,92 @@
+{
+  "design": "X6/Eigenzeit/v0.12/C01-quarter",
+  "scope_id": "MODEL_C01_810",
+  "node": "C01@1/4",
+  "mode": "synthetic",
+  "model": "paired_YP_independent_A_and_C",
+  "paired_blocks": [
+    [
+      "0.49999893",
+      "0.49999936"
+    ],
+    [
+      "0.50000041",
+      "0.49999976"
+    ],
+    [
+      "0.50000087",
+      "0.50000040"
+    ],
+    [
+      "0.49999974",
+      "0.50000008"
+    ],
+    [
+      "0.50000044",
+      "0.49999952"
+    ],
+    [
+      "0.50000031",
+      "0.50000056"
+    ],
+    [
+      "0.50000029",
+      "0.50000000"
+    ],
+    [
+      "0.50000115",
+      "0.50000032"
+    ],
+    [
+      "0.50000057",
+      "0.49999992"
+    ],
+    [
+      "0.49999953",
+      "0.49999960"
+    ],
+    [
+      "0.50000005",
+      "0.50000048"
+    ],
+    [
+      "0.50000024",
+      "0.49999968"
+    ],
+    [
+      "0.50000026",
+      "0.50000024"
+    ],
+    [
+      "0.49999982",
+      "0.49999944"
+    ],
+    [
+      "0.50000075",
+      "0.50000064"
+    ],
+    [
+      "0.49999984",
+      "0.50000000"
+    ]
+  ],
+  "gain_certificate": {
+    "estimate": "1.0000001",
+    "expanded_U": "0.00000016",
+    "coverage_factor": "2",
+    "dof": "infinite"
+  },
+  "transfer_rectangular": {
+    "low": "-0.00000001",
+    "high": "0.00000009",
+    "dof": "infinite"
+  },
+  "model_evidence": {
+    "paired_repeatability": "Synthetic pairs of corresponding calibrated block estimates from two states. Independent pairs of blocks, stable and approximately Gaussian repeatability assumed here.",
+    "external_input_independence": "Synthetic gain certificate and transfer correction are independent of each other and of the paired block estimates.",
+    "type_b_dof": "Certificate scale and rectangular limits are treated as effectively known in this example.",
+    "correction_inventory": "Signed C for transfer, timing, dark events and rate corrections after accounting for the tagged opportunity definition. Hypothetical aggregate input with a stated rectangular distribution.",
+    "approximate_95_percent": "Illustrative symmetric block variations. The block contrast dominates. Student-t with effective degrees of freedom is an approximate reporting interval only.",
+    "data_origin": "Constructed block probability estimates for testing arithmetic, no measured counts or issued certificate."
+  }
+}
