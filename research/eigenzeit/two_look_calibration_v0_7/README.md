@@ -13,6 +13,8 @@ In der günstigen Klasse hat jede Zelle mindestens 49 % Nachweisrate und das Ver
 
 **Feldstatus HOLD.** Für den realen Aufbau fehlen markierte Referenzzählungen und unabhängige Nachweise für Erzeugungsdichte, Drift und Effizienzschwankung innerhalb der Zellen. Der erste Messstand und seine Entscheidung sind vor einer Fortsetzung festzuhalten. Bei CONTINUE bleibt die Geometrieentscheidung ausstehend. Bei HOLD gibt das Verfahren die vollständige Modellmenge zurück. [Feldprotokoll zum Ausfüllen](field_worksheet.json)
 
+Die Folgestudie v0.8 misst gezielt die Endpunkte noch offener Zellenpaare nach. In der günstigen Klasse liegt der erwartete Gesamtaufwand bei höchstens 480.785.992 Versuchen. [Selektive Nachmessung mit Beweis und Gegenbeispiel](../selective_followup_v0_8/README.md)
+
 ## Reproduktion
 
 Vom Wurzelverzeichnis des Repositorys aus mit Python 3.12 ausführen.

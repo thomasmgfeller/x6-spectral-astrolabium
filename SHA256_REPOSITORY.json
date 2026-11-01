@@ -32,11 +32,11 @@
     "CITATION.cff": "5225a23f7cd2f1841db38dd9f4b6f1b3624cce110cf27d08575b6f4b29cd2bc0",
     "CODE_OF_CONDUCT.md": "dd847b83a025f21bd55935c23b4568b3f1d108455a27b9b15b2a0b35fbc58cb9",
     "CONTRIBUTING.md": "366d6a2ce4b388d1fb77d4a5188157ff99613be932065fa758f8e562a6b45ee0",
-    "LICENSE_SOURCE_MANIFEST.json": "0afb8091ff0db814581c7edc81f4784562c4249c9d00209c687299aff9db18c9",
+    "LICENSE_SOURCE_MANIFEST.json": "8bc69f0c477d9d14e6b068283b00cd9893320297cf81e9999fb2ee48f5aaf7bc",
     "MODULE_REGISTRY.json": "722dced0bb939a3e8eeaf50953ac9a96fd95c203f5dad4859581db777cf42e87",
     "README.md": "6f9a68dab2ddf792ba71ed2abe77a1367e9777a021563965ef856324b57169a6",
     "REFERENCE_SOURCE_MANIFEST.json": "0e2275138250cc755ae87969b80fee67016cd293be837a5a89e2eeaa46495876",
-    "SAGNAC_SOURCE_MANIFEST.json": "c26bfa2c2fe6543e0dcf4e9a40d921171b99694e4a01f01078fd24674b396855",
+    "SAGNAC_SOURCE_MANIFEST.json": "b6e8f60073c14fe5153bd07e95d041e2639da41746b2099d6516028ced85a9ea",
     "SECURITY.md": "c73f7d7c97f7c30f8d93140c612772ed2b81b1830987a37ae0980903213760d5",
     "app/index.html": "df48fa522498fb79aa3617fe2fefa587ef820b9555a692b5bd253ac88b2298f7",
     "data/reference_certificate.json": "a71288ed81b44f8ec122b7d6a6d14340378c7dfbf9daeb5a0fb4c76caba06d18",
@@ -2212,6 +2212,26 @@
         "research/eigenzeit/two_look_calibration_v0_7/verification.json"
       ],
       "scope": "Publish Eigenzeit v0.7 two-look relative calibration, original report and archive, stopped-budget bounds and paired simulation replay."
+    },
+    {
+      "date": "2026-11-01",
+      "component": "Eigenzeit selective follow-up v0.8",
+      "paths": [
+        ".github/workflows/eigenzeit-selective-followup.yml",
+        "research/eigenzeit/selective_followup_v0_8/BEWEIS.md",
+        "research/eigenzeit/selective_followup_v0_8/Eigenzeit_Selektive_Nachmessung_v0_8.pdf",
+        "research/eigenzeit/selective_followup_v0_8/Eigenzeit_Selektive_Nachmessung_v0_8_Pruefpaket.zip",
+        "research/eigenzeit/selective_followup_v0_8/PUBLICATION.json",
+        "research/eigenzeit/selective_followup_v0_8/README.md",
+        "research/eigenzeit/selective_followup_v0_8/certificate.json",
+        "research/eigenzeit/selective_followup_v0_8/field_worksheet.json",
+        "research/eigenzeit/selective_followup_v0_8/pilot.json",
+        "research/eigenzeit/selective_followup_v0_8/publication_check.py",
+        "research/eigenzeit/selective_followup_v0_8/sparse_go.json",
+        "research/eigenzeit/selective_followup_v0_8/sparse_hold.json",
+        "research/eigenzeit/selective_followup_v0_8/verification.json"
+      ],
+      "scope": "Publish Eigenzeit v0.8 selective cell follow-up, original report and archive, endpoint-count bounds, counterexample and paired simulation replay."
     }
   ],
   "non_historical_documentation_updates": [
@@ -3081,6 +3101,22 @@
           "path": "LICENSE_SOURCE_MANIFEST.json",
           "previous_sha256": "f74c619a8a77151ffbffac81aea1a7b746d650819dba9696f2dde9b45058f17b",
           "sha256": "0afb8091ff0db814581c7edc81f4784562c4249c9d00209c687299aff9db18c9"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-01",
+      "scope": "Publish Eigenzeit v0.8 selective cell follow-up, original report and archive, endpoint-count bounds, counterexample and paired simulation replay.",
+      "files": [
+        {
+          "path": "SAGNAC_SOURCE_MANIFEST.json",
+          "previous_sha256": "c26bfa2c2fe6543e0dcf4e9a40d921171b99694e4a01f01078fd24674b396855",
+          "sha256": "b6e8f60073c14fe5153bd07e95d041e2639da41746b2099d6516028ced85a9ea"
+        },
+        {
+          "path": "LICENSE_SOURCE_MANIFEST.json",
+          "previous_sha256": "0afb8091ff0db814581c7edc81f4784562c4249c9d00209c687299aff9db18c9",
+          "sha256": "8bc69f0c477d9d14e6b068283b00cd9893320297cf81e9999fb2ee48f5aaf7bc"
         }
       ]
     }

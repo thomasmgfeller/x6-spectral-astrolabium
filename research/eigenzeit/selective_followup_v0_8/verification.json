@@ -1,0 +1,47 @@
+{
+  "status": "PASS",
+  "previous_files_verified": 39,
+  "independent_profile_pair_checks": 4080,
+  "paired_runs_recomputed": 80000,
+  "negative_protocol_cases": 16,
+  "exact_toy": {
+    "potential_transcripts": 5832,
+    "distinct_operational_transcripts": 758,
+    "two_cell_continuations": 162,
+    "extra_sparse_go": 42
+  },
+  "extremes_only_counterexample": {
+    "pairs": [
+      [
+        "C02",
+        "C01"
+      ],
+      [
+        "C03",
+        "C01"
+      ]
+    ],
+    "selected": [
+      "C01",
+      "C02",
+      "C03"
+    ],
+    "same_extreme_data": true,
+    "completion_A": "GO",
+    "completion_B": "HOLD_COUNTS",
+    "total_attempts": 489000000
+  },
+  "synthetic_geometry": {
+    "grid": [
+      "1/2"
+    ],
+    "h_interval": [
+      "467/1024",
+      "1/2"
+    ],
+    "q_interval": [
+      "2585949527/1000000000",
+      "626262763/200000000"
+    ]
+  }
+}
