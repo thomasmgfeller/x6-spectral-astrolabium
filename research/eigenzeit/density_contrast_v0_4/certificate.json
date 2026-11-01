@@ -1,0 +1,320 @@
+{
+  "positive": {
+    "uniform": {
+      "K": "1",
+      "N": 900000,
+      "comparisons": 3150000,
+      "nominal_radius": "29/50000",
+      "pair_probability_bias_upper": "0",
+      "block_variance_bounds": [
+        "52480290159/7000000000000",
+        "219491764467425217928599/28000000000000000000000000"
+      ],
+      "coverage_lower": "59407313/62500000",
+      "grid": [
+        {
+          "h": "0",
+          "left_error_upper": "3092687/125000000",
+          "right_error_upper": "171174497/1000000000",
+          "correct_singleton_lower": "804084007/1000000000"
+        },
+        {
+          "h": "1/4",
+          "left_error_upper": "171174497/1000000000",
+          "right_error_upper": "3092687/125000000",
+          "correct_singleton_lower": "804084007/1000000000"
+        },
+        {
+          "h": "1/2",
+          "left_error_upper": "3092687/125000000",
+          "right_error_upper": "3092687/125000000",
+          "correct_singleton_lower": "59407313/62500000"
+        }
+      ],
+      "reported_q_width_upper": "1055928767/1000000000",
+      "width_cell_pair": [
+        822,
+        1009
+      ],
+      "ambiguity_q90_floor": "0"
+    },
+    "contrast_0_1": {
+      "K": "1001/1000",
+      "N": 1600000,
+      "comparisons": 5600000,
+      "nominal_radius": "53/100000",
+      "pair_probability_bias_upper": "102778606263/1000000000000000",
+      "block_variance_bounds": [
+        "4770935469000000000000/641472399317308381459637",
+        "31607693808497891278999642362308557530488388657/4000000000000000000000000000000000000000000000000"
+      ],
+      "coverage_lower": "119027309/125000000",
+      "grid": [
+        {
+          "h": "0",
+          "left_error_upper": "5972691/250000000",
+          "right_error_upper": "154311717/1000000000",
+          "correct_singleton_lower": "821797519/1000000000"
+        },
+        {
+          "h": "1/4",
+          "left_error_upper": "154311717/1000000000",
+          "right_error_upper": "5972691/250000000",
+          "correct_singleton_lower": "821797519/1000000000"
+        },
+        {
+          "h": "1/2",
+          "left_error_upper": "5972691/250000000",
+          "right_error_upper": "5972691/250000000",
+          "correct_singleton_lower": "119027309/125000000"
+        }
+      ],
+      "reported_q_width_upper": "1545499/1600000",
+      "width_cell_pair": [
+        830,
+        1001
+      ],
+      "ambiguity_q90_floor": "47984008527/1000000000000"
+    },
+    "contrast_0_2": {
+      "K": "501/500",
+      "N": 3200000,
+      "comparisons": 11200000,
+      "nominal_radius": "1/2000",
+      "pair_probability_bias_upper": "41117833751/200000000000000",
+      "block_variance_bounds": [
+        "22777903714843750000/3087147197852672114223",
+        "871204352949450599397897544934564615125324599/109375000000000000000000000000000000000000000000"
+      ],
+      "coverage_lower": "475784703/500000000",
+      "grid": [
+        {
+          "h": "0",
+          "left_error_upper": "24215297/1000000000",
+          "right_error_upper": "86266229/500000000",
+          "correct_singleton_lower": "160650449/200000000"
+        },
+        {
+          "h": "1/4",
+          "left_error_upper": "86266229/500000000",
+          "right_error_upper": "24215297/1000000000",
+          "correct_singleton_lower": "160650449/200000000"
+        },
+        {
+          "h": "1/2",
+          "left_error_upper": "24215297/1000000000",
+          "right_error_upper": "24215297/1000000000",
+          "correct_singleton_lower": "475784703/500000000"
+        }
+      ],
+      "reported_q_width_upper": "911963551/1000000000",
+      "width_cell_pair": [
+        865,
+        1021
+      ],
+      "ambiguity_q90_floor": "95936068179/1000000000000"
+    },
+    "contrast_0_3": {
+      "K": "1003/1000",
+      "N": 12000000,
+      "comparisons": 42000000,
+      "nominal_radius": "23/50000",
+      "pair_probability_bias_upper": "154215757641/500000000000000",
+      "block_variance_bounds": [
+        "52480290159000000000000/7169774623785399006517927",
+        "224815211858346721629470904682707453488385642039/28000000000000000000000000000000000000000000000000"
+      ],
+      "coverage_lower": "477875759/500000000",
+      "grid": [
+        {
+          "h": "0",
+          "left_error_upper": "22124241/1000000000",
+          "right_error_upper": "20021783/125000000",
+          "correct_singleton_lower": "163540299/200000000"
+        },
+        {
+          "h": "1/4",
+          "left_error_upper": "20021783/125000000",
+          "right_error_upper": "22124241/1000000000",
+          "correct_singleton_lower": "163540299/200000000"
+        },
+        {
+          "h": "1/2",
+          "left_error_upper": "22124241/1000000000",
+          "right_error_upper": "22124241/1000000000",
+          "correct_singleton_lower": "477875759/500000000"
+        }
+      ],
+      "reported_q_width_upper": "840139061/1000000000",
+      "width_cell_pair": [
+        869,
+        1013
+      ],
+      "ambiguity_q90_floor": "35964057489/250000000000"
+    }
+  },
+  "pairs": {
+    "0 to 1/4": {
+      "exact_uniform_curved_flat_or_weaker_varying": "4096/3969",
+      "exact_both_varying": "64/63",
+      "by_K": {
+        "1": {
+          "status": "FINITE_NECESSARY",
+          "necessary_N": 217347,
+          "affinity_squared_lower": "19999889975648082192222345804993/20000000000000000000000000000000",
+          "value_at_predecessor": "30250092961080788437044113815553/100000000000000000000000000000000"
+        },
+        "1001/1000": {
+          "status": "FINITE_NECESSARY",
+          "necessary_N": 247803,
+          "affinity_squared_lower": "3999980699649591921147081386607/4000000000000000000000000000000",
+          "value_at_predecessor": "30250143958544137695070696193571/100000000000000000000000000000000"
+        },
+        "501/500": {
+          "status": "FINITE_NECESSARY",
+          "necessary_N": 285099,
+          "affinity_squared_lower": "49999790305791214855570268014917/50000000000000000000000000000000",
+          "value_at_predecessor": "30250105982063619567056922310013/100000000000000000000000000000000"
+        },
+        "1003/1000": {
+          "status": "FINITE_NECESSARY",
+          "necessary_N": 331443,
+          "affinity_squared_lower": "99999639252633343670273460740661/100000000000000000000000000000000",
+          "value_at_predecessor": "30250107624913532755479377155553/100000000000000000000000000000000"
+        },
+        "10081/10000": {
+          "status": "FINITE_NECESSARY",
+          "necessary_N": 913670,
+          "affinity_squared_lower": "49999934567528254003439833262939/50000000000000000000000000000000",
+          "value_at_predecessor": "30250024157619745370913752807007/100000000000000000000000000000000"
+        },
+        "101/100": {
+          "status": "FINITE_NECESSARY",
+          "necessary_N": 1603478,
+          "affinity_squared_lower": "99999925432451640705343573547753/100000000000000000000000000000000",
+          "value_at_predecessor": "15125001033243978529709798442641/50000000000000000000000000000000"
+        },
+        "203/200": {
+          "status": "FINITE_NECESSARY",
+          "necessary_N": 72926317,
+          "affinity_squared_lower": "99999998360435516427632217647073/100000000000000000000000000000000",
+          "value_at_predecessor": "30250000465715840191227565700259/100000000000000000000000000000000"
+        },
+        "64/63": {
+          "status": "EXACT_TWIN",
+          "necessary_N": null
+        }
+      }
+    },
+    "0 to 1/2": {
+      "exact_uniform_curved_flat_or_weaker_varying": "256/225",
+      "exact_both_varying": "16/15",
+      "by_K": {
+        "1": {
+          "status": "FINITE_NECESSARY",
+          "necessary_N": 13016,
+          "affinity_squared_lower": "799926510542596692656837904427/800000000000000000000000000000",
+          "value_at_predecessor": "189069585035458879076144531503/625000000000000000000000000000"
+        },
+        "1001/1000": {
+          "status": "FINITE_NECESSARY",
+          "necessary_N": 13429,
+          "affinity_squared_lower": "24997774032622683665974609533789/25000000000000000000000000000000",
+          "value_at_predecessor": "1512513873922229442062388728151/5000000000000000000000000000000"
+        },
+        "501/500": {
+          "status": "FINITE_NECESSARY",
+          "necessary_N": 13861,
+          "affinity_squared_lower": "49995686881255416446351516519789/50000000000000000000000000000000",
+          "value_at_predecessor": "6050156788080992975481604570761/20000000000000000000000000000000"
+        },
+        "1003/1000": {
+          "status": "FINITE_NECESSARY",
+          "necessary_N": 14314,
+          "affinity_squared_lower": "99991646727565686252090141232227/100000000000000000000000000000000",
+          "value_at_predecessor": "1890663151651025839935163166851/6250000000000000000000000000000"
+        },
+        "10081/10000": {
+          "status": "FINITE_NECESSARY",
+          "necessary_N": 17000,
+          "affinity_squared_lower": "1999859335094242751153423120179/2000000000000000000000000000000",
+          "value_at_predecessor": "756288258877022117862209606577/2500000000000000000000000000000"
+        },
+        "101/100": {
+          "status": "FINITE_NECESSARY",
+          "necessary_N": 18193,
+          "affinity_squared_lower": "99993427946909607213642905123517/100000000000000000000000000000000",
+          "value_at_predecessor": "30251416164206676703963071211359/100000000000000000000000000000000"
+        },
+        "203/200": {
+          "status": "FINITE_NECESSARY",
+          "necessary_N": 21992,
+          "affinity_squared_lower": "99994563198733308389389890219901/100000000000000000000000000000000",
+          "value_at_predecessor": "6050208924552688159889112859471/20000000000000000000000000000000"
+        },
+        "64/63": {
+          "status": "FINITE_NECESSARY",
+          "necessary_N": 22774,
+          "affinity_squared_lower": "9999474985154895513355643532533/10000000000000000000000000000000",
+          "value_at_predecessor": "30250795822649643387824543839811/100000000000000000000000000000000"
+        }
+      }
+    },
+    "1/4 to 1/2": {
+      "exact_uniform_curved_flat_or_weaker_varying": "441/400",
+      "exact_both_varying": "21/20",
+      "by_K": {
+        "1": {
+          "status": "FINITE_NECESSARY",
+          "necessary_N": 22816,
+          "affinity_squared_lower": "99994759468941248456458518294121/100000000000000000000000000000000",
+          "value_at_predecessor": "30250469204012343216906998683877/100000000000000000000000000000000"
+        },
+        "1001/1000": {
+          "status": "FINITE_NECESSARY",
+          "necessary_N": 23780,
+          "affinity_squared_lower": "99994971975260529517366762634829/100000000000000000000000000000000",
+          "value_at_predecessor": "15125452846572374186446313747197/50000000000000000000000000000000"
+        },
+        "501/500": {
+          "status": "FINITE_NECESSARY",
+          "necessary_N": 24806,
+          "affinity_squared_lower": "49997589939048326592338036598093/50000000000000000000000000000000",
+          "value_at_predecessor": "30250421900250963308425124568441/100000000000000000000000000000000"
+        },
+        "1003/1000": {
+          "status": "FINITE_NECESSARY",
+          "necessary_N": 25898,
+          "affinity_squared_lower": "24998845797744960779482169390077/25000000000000000000000000000000",
+          "value_at_predecessor": "15125474464782493396837448469603/50000000000000000000000000000000"
+        },
+        "10081/10000": {
+          "status": "FINITE_NECESSARY",
+          "necessary_N": 32751,
+          "affinity_squared_lower": "49998174592232932101191474655809/50000000000000000000000000000000",
+          "value_at_predecessor": "15125152584900835414721292610131/50000000000000000000000000000000"
+        },
+        "101/100": {
+          "status": "FINITE_NECESSARY",
+          "necessary_N": 36003,
+          "affinity_squared_lower": "99996678988907956839105987254027/100000000000000000000000000000000",
+          "value_at_predecessor": "30250717968220489485199102603161/100000000000000000000000000000000"
+        },
+        "203/200": {
+          "status": "FINITE_NECESSARY",
+          "necessary_N": 47256,
+          "affinity_squared_lower": "99997469788818690210974907312949/100000000000000000000000000000000",
+          "value_at_predecessor": "30250229334492003568978636667401/100000000000000000000000000000000"
+        },
+        "64/63": {
+          "status": "FINITE_NECESSARY",
+          "necessary_N": 49747,
+          "affinity_squared_lower": "99997596492260273282592494156731/100000000000000000000000000000000",
+          "value_at_predecessor": "15125161419684699970414622102143/50000000000000000000000000000000"
+        }
+      }
+    }
+  },
+  "prior_v03_N": 900000,
+  "scope": "Independent sampling with an externally bounded density contrast. No stochastic or smoothness assumptions on its spatial profile."
+}

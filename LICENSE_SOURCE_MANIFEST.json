@@ -41,8 +41,8 @@
     "LICENSE_SCOPE.md": "fe958f097f83f676f1009a12dceaedf6d1cbd4773d2ed3b0c9b3e9958ad704a7",
     "MODULE_REGISTRY.json": "722dced0bb939a3e8eeaf50953ac9a96fd95c203f5dad4859581db777cf42e87",
     "NOTICE": "1699e29d2ca9ce0518f79446a7714fa41c2b8ce66451729eafe9657c589e760d",
-    "README.md": "d8716f94cb54bd7468c8e9eb26c25a8ceeadc80404713751209b0122561fa372",
-    "SAGNAC_SOURCE_MANIFEST.json": "e4758a1112365e11960e6e942de79d8b5852e5f0fc37ad82464131de616644dd",
+    "README.md": "db5c01c02304a1affcfb5075cf4e7c5c95bb7eb40b90b4ebe9495764baf60486",
+    "SAGNAC_SOURCE_MANIFEST.json": "db18834c78dd1c3b4278fd8ad6d10c13079eea9738bf21422f5098846e896904",
     "app/causal-stability/app.mjs": "88aef8d0da68d1a3e49986bf557597e6e67499e74ec5f91e7f0623be9f12230b",
     "app/causal-stability/engine.mjs": "6230ee3e9da380a10b26d1b555d2ca0bcfe024cb6a2db5d32f628922cccfdae9",
     "app/causal-stability/index.html": "67a6db0c01db8652f7080ea36c983163dfc1c07b12b3ca618044f49acbae61f9",
@@ -2893,11 +2893,23 @@
     "research/eigenzeit/three_geometries_v0_3/Eigenzeit_Drei_Geometrien_v0_3.pdf": "47ea97c81342ccef3be061f1aea23059407f0eb7145732f02ea20217cd869e74",
     "research/eigenzeit/three_geometries_v0_3/Eigenzeit_Drei_Geometrien_v0_3_Pruefpaket.zip": "f644770b1f4bec8eea0e02655582df28fd0c302373be5e82ab30c5464a6061ec",
     "research/eigenzeit/three_geometries_v0_3/PUBLICATION.json": "9b57c1caf68540611fa9c193489c9c9662c2a21fbada58631d0ffe7824f292f7",
-    "research/eigenzeit/three_geometries_v0_3/README.md": "2ea0b8a4c5f4f7104dce2794126e9e15a24a2ce62d15b4b3d8dfb11754683826",
+    "research/eigenzeit/three_geometries_v0_3/README.md": "4472fd611d021195974cf89a4e96758069e2982eb2d03a35193171b77d5816d8",
     "research/eigenzeit/three_geometries_v0_3/certificate.json": "e0d33517c46931e60e5b4cce5fee1fab066434069f894bcf4487cd1ff8c76cb2",
     "research/eigenzeit/three_geometries_v0_3/cpu_baseline.json": "41bfd8728a29548fc03bf85a6e357e1eba656538c2a70c5ae8f5d6109866a572",
     "research/eigenzeit/three_geometries_v0_3/pilot_audit.json": "2107c64d8ba8411c022c6a8821b30946cf2d6ac7cec57a942769135e2874543e",
-    "research/eigenzeit/three_geometries_v0_3/publication_check.py": "39b2b80cb4bc42952de9c803ab436863db882f256546055ecc5e17f5f0ab3376"
+    "research/eigenzeit/three_geometries_v0_3/publication_check.py": "39b2b80cb4bc42952de9c803ab436863db882f256546055ecc5e17f5f0ab3376",
+    ".github/workflows/eigenzeit-density-contrast.yml": "e3d505f1580da431b9c43e4b49f538ee102d1601e1e16fa323f6bd6a5f5b9dab",
+    "app/eigenzeit-dichtevergleich/index.html": "f775da2b52f5c0f0a8e50cbf3f4edc8baf3a4658197f410e345d72197fe69a57",
+    "research/eigenzeit/density_contrast_v0_4/BEWEIS.md": "efef57be75178c74928143be63ed53938e91aa7eeacff662e926e5043c4b1331",
+    "research/eigenzeit/density_contrast_v0_4/Eigenzeit_Dichte_und_Kruemmung_v0_4.pdf": "5773d064a45bef02f206bf3ccf306836db3b4b7bf9de8f2b7a7497ed66f04101",
+    "research/eigenzeit/density_contrast_v0_4/Eigenzeit_Dichte_und_Kruemmung_v0_4_Pruefpaket.zip": "f45ed2135d022d473f32c230f11812dd1b9c0a678811284f419d30816a54dc09",
+    "research/eigenzeit/density_contrast_v0_4/PUBLICATION.json": "8d773d03e6e7bc34e4f678d7c5c72a8f931216d14f5bd1492b8d217d8431693d",
+    "research/eigenzeit/density_contrast_v0_4/README.md": "5284784c40cda8d0620519e8fb14082c2c4bc3af70485a2314da3c8ca443c1d4",
+    "research/eigenzeit/density_contrast_v0_4/certificate.json": "10456f472415916513ac883d26fee410e33c005e58e015e437e293478138fd66",
+    "research/eigenzeit/density_contrast_v0_4/cpu_baseline.json": "adf6c6ff58705a3fa6cf66459cbd9a6135a22aaa8c2161100cb51afb0597018b",
+    "research/eigenzeit/density_contrast_v0_4/pilot_audit.json": "328b9273e04150ba5578d7f827c8d49dc932032e5a0ace53542bb61bbc6fdb87",
+    "research/eigenzeit/density_contrast_v0_4/publication_check.py": "28127cce8217203cc372f99809327e5bfea6e9d48c133a0f5c7c77ca04c28c38",
+    "research/eigenzeit/density_contrast_v0_4/twins.json": "41398280072f5017c75a9a69d5865f546d9fefbea427030fe7fc1db57e3c8165"
   },
   "documentation_updates": [
     {
@@ -3938,6 +3950,27 @@
           "sha256": "e4758a1112365e11960e6e942de79d8b5852e5f0fc37ad82464131de616644dd"
         }
       ]
+    },
+    {
+      "date": "2026-11-01",
+      "scope": "Publish the Eigenzeit v0.4 bounded-density study, original report and ZIP, interactive budget comparison, twin checks and stress-pilot replay.",
+      "files": [
+        {
+          "path": "README.md",
+          "previous_sha256": "d8716f94cb54bd7468c8e9eb26c25a8ceeadc80404713751209b0122561fa372",
+          "sha256": "db5c01c02304a1affcfb5075cf4e7c5c95bb7eb40b90b4ebe9495764baf60486"
+        },
+        {
+          "path": "research/eigenzeit/three_geometries_v0_3/README.md",
+          "previous_sha256": "2ea0b8a4c5f4f7104dce2794126e9e15a24a2ce62d15b4b3d8dfb11754683826",
+          "sha256": "4472fd611d021195974cf89a4e96758069e2982eb2d03a35193171b77d5816d8"
+        },
+        {
+          "path": "SAGNAC_SOURCE_MANIFEST.json",
+          "previous_sha256": "e4758a1112365e11960e6e942de79d8b5852e5f0fc37ad82464131de616644dd",
+          "sha256": "db18834c78dd1c3b4278fd8ad6d10c13079eea9738bf21422f5098846e896904"
+        }
+      ]
     }
   ],
   "publication_additions": [
@@ -4305,6 +4338,24 @@
         "research/eigenzeit/three_geometries_v0_3/cpu_baseline.json",
         "research/eigenzeit/three_geometries_v0_3/pilot_audit.json",
         "research/eigenzeit/three_geometries_v0_3/publication_check.py"
+      ]
+    },
+    {
+      "date": "2026-11-01",
+      "scope": "Publish the Eigenzeit v0.4 bounded-density study, original report and ZIP, interactive budget comparison, twin checks and stress-pilot replay.",
+      "paths": [
+        ".github/workflows/eigenzeit-density-contrast.yml",
+        "app/eigenzeit-dichtevergleich/index.html",
+        "research/eigenzeit/density_contrast_v0_4/BEWEIS.md",
+        "research/eigenzeit/density_contrast_v0_4/Eigenzeit_Dichte_und_Kruemmung_v0_4.pdf",
+        "research/eigenzeit/density_contrast_v0_4/Eigenzeit_Dichte_und_Kruemmung_v0_4_Pruefpaket.zip",
+        "research/eigenzeit/density_contrast_v0_4/PUBLICATION.json",
+        "research/eigenzeit/density_contrast_v0_4/README.md",
+        "research/eigenzeit/density_contrast_v0_4/certificate.json",
+        "research/eigenzeit/density_contrast_v0_4/cpu_baseline.json",
+        "research/eigenzeit/density_contrast_v0_4/pilot_audit.json",
+        "research/eigenzeit/density_contrast_v0_4/publication_check.py",
+        "research/eigenzeit/density_contrast_v0_4/twins.json"
       ]
     }
   ]

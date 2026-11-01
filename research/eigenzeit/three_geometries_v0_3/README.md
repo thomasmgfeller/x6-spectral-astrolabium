@@ -4,6 +4,8 @@ Eine einzelne unbeschriftete Kausalordnung liefert eine Auswahl unter drei Krüm
 
 [120 Pilotfälle und eigene Paarzahlen im Browser prüfen](https://thomasmgfeller.github.io/x6-spectral-astrolabium/app/eigenzeit-kruemmungsintervalle/index.html) · [Forschungsbericht (PDF)](Eigenzeit_Drei_Geometrien_v0_3.pdf) · [Herleitung](BEWEIS.md) · [Prüfpaket mit Quellcode und Daten (ZIP)](Eigenzeit_Drei_Geometrien_v0_3_Pruefpaket.zip)
 
+[Fortsetzung v0.4 mit begrenzter Beprobungsdichte und exakt ununterscheidbaren Geometrien](../density_contrast_v0_4/README.md).
+
 | Verfahren | Ereignisse | Geprüfte Paare | Richtiger Rasterwert allein, mindestens | Intervallüberdeckung, mindestens |
 |---|---:|---:|---:|---:|
 | Vollständige Paarzählung | 600.000 | 179.999.700.000 | 81,67 % | 95,14 % |
