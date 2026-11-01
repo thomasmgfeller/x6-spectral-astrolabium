@@ -45,7 +45,7 @@
     "SAGNAC_SOURCE_MANIFEST.json": "6fb23c9fa932929f284c2b0ff9e7ed5e67e9bd5b056f54aa8be569df162e41fd",
     "app/causal-stability/app.mjs": "88aef8d0da68d1a3e49986bf557597e6e67499e74ec5f91e7f0623be9f12230b",
     "app/causal-stability/engine.mjs": "6230ee3e9da380a10b26d1b555d2ca0bcfe024cb6a2db5d32f628922cccfdae9",
-    "app/causal-stability/index.html": "7e401d03d2e5e0cefe1e6c23c4c255d9bbbd492b12b836808da070675f0ab239",
+    "app/causal-stability/index.html": "e9fe64dee35c1b37ab254c8bd8421b3b331a657c91ecbe685aab4213e7bf341b",
     "app/causal-stability/style.css": "3abb5093ac218ad24b9ddf5a8dad9a2b7ab6aaa8d96631be7239210dbf1ba960",
     "app/proper-time.html": "e3d8152c649ab05500db4d5d05965608719d0fe4d82c29f5432bd8ca1246fa58",
     "app/rax-cqg-lab.html": "2e6bf929405aee66f12113c405c9c1879d71d2c897f4fc7435b5d4bf18c4c8a4",
@@ -3161,7 +3161,14 @@
     "research/sed_filter_prediction/v1/cohort.json": "f60672cf88dbd32dba4298132e358f82a8b18849c86505e7854125873c017356",
     "research/sed_filter_prediction/v1/predictions.json": "d03e62ce1eda687670b162864237fb472cf97ac2278984b3a33a95eff815f755",
     "research/sed_filter_prediction/v1/results.json": "884af7223637d887d58537cbae3bf9db7211f1a9f8ddb9e7319e236f46be9af2",
-    "tests/python/test_sed_prediction.py": "7aa7c12b49e0a2ad4a6957fa235a3bc351be3e9e06928b88284190662e1413c4"
+    "tests/python/test_sed_prediction.py": "7aa7c12b49e0a2ad4a6957fa235a3bc351be3e9e06928b88284190662e1413c4",
+    ".github/workflows/anu-qrng.yml": "f26edbf27d9745cd48e9d5b96bc06bc71d255bb7c4ad3016f59429646f931eb8",
+    "agent/anu_qrng.py": "bd42cf0735efb74ccd7787b68c0f92b86b16db6bf64673bd8664a8ee8b38ee9c",
+    "app/causal-stability/anu-control.mjs": "7487a2d65d4666cab1dc6586d28705f100843c636a37c9576ecdfe47e655c564",
+    "app/causal-stability/anu.mjs": "3af6b76e86df4ae53f2dfb8ba4bfe9762d12b2b6785510b7100c5ec6738f8582",
+    "docs/research/cspp/causal-stability-lab/ANU.md": "ca54753f24b52f9e53e577cf8f2e8619191a856638cdea8e66f55897c96c7b2f",
+    "tests/causal-stability/anu.test.mjs": "ca666124eccc37ced69c86366f867f514f86bc447b3513d480ce34570fd4535d",
+    "tests/python/test_anu_qrng.py": "903e1290d0bf48d796520979817bc9aeb86755fcec32b5f6ac67a1be570fcd1d"
   },
   "documentation_updates": [
     {
@@ -4523,6 +4530,17 @@
           "sha256": "3abb5093ac218ad24b9ddf5a8dad9a2b7ab6aaa8d96631be7239210dbf1ba960"
         }
       ]
+    },
+    {
+      "date": "2026-11-01",
+      "scope": "Add opt-in AQN trial acquisition with weekly reservations, provider-specific usage terms and a replayable finite-graph control.",
+      "files": [
+        {
+          "path": "app/causal-stability/index.html",
+          "previous_sha256": "7e401d03d2e5e0cefe1e6c23c4c255d9bbbd492b12b836808da070675f0ab239",
+          "sha256": "e9fe64dee35c1b37ab254c8bd8421b3b331a657c91ecbe685aab4213e7bf341b"
+        }
+      ]
     }
   ],
   "publication_additions": [
@@ -5250,6 +5268,19 @@
         "research/sed_filter_prediction/v1/predictions.json",
         "research/sed_filter_prediction/v1/results.json",
         "tests/python/test_sed_prediction.py"
+      ]
+    },
+    {
+      "date": "2026-11-01",
+      "scope": "Add opt-in AQN trial acquisition with weekly reservations, provider-specific usage terms and a replayable finite-graph control.",
+      "paths": [
+        ".github/workflows/anu-qrng.yml",
+        "agent/anu_qrng.py",
+        "app/causal-stability/anu-control.mjs",
+        "app/causal-stability/anu.mjs",
+        "docs/research/cspp/causal-stability-lab/ANU.md",
+        "tests/causal-stability/anu.test.mjs",
+        "tests/python/test_anu_qrng.py"
       ]
     }
   ]
