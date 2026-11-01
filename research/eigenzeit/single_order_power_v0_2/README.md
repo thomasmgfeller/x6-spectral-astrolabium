@@ -23,3 +23,17 @@ python3 research/eigenzeit/single_order_power_v0_2/publication_check.py --replay
 ```
 
 Der erste Befehl prüft die vollständigen Originaldateien, die beiden Prüfsummenverzeichnisse und die einzeln zugänglichen Paketdateien. Der zweite berechnet das Zertifikat, die Gegenkontrollen und alle vier Beispiele erneut. Er erfordert Python 3.12, NumPy, SciPy und einen C++17-Compiler. [Umgebung](package/environment.json) · [Abhängigkeiten](../../../tools/workflow/requirements-research.txt) · [Nutzung mit eigenen Ordnungen](package/README.md) · [Veröffentlichungsnachweis](PUBLICATION.json)
+
+### Plattformvergleich der vier Beispiele
+
+Der erste GitHub-Lauf reproduzierte das Zertifikat und die Gegenkontrollen bytegenau und scheiterte am Vergleich der Beispieldatei. Der Originalvergleich bleibt mit `--replay` ausführbar. Für die CI fixiert `--replay --cpu-baseline` bei den vier Simulationen den NumPy-Rechenpfad mit deaktiviertem AVX512F. Auch dieser Vergleich verlangt eine exakte Übereinstimmung aller Datenfelder mit dem jeweils festgelegten Referenzwert.
+
+Die beiden lokalen Läufe unterscheiden sich nur in den Koordinatenprüfsummen. Die maximale Änderung einer Koordinatenkomponente beträgt 2⁻⁵². Beide vollständigen Ordnungsprüfsummen, alle Stichproben- und Paarzahlen, Entscheidungen und Paarungsprüfsummen stimmen überein. Für die Zufallspaarungen wurden zusätzlich alle einzelnen Vergleichbarkeiten abgeglichen. [Geprüfte Koordinatenvarianten](cpu_baseline.json) · [Vergleichsskript](portability_audit.py) · [Erster CI-Lauf](https://github.com/thomasmgfeller/x6-spectral-astrolabium/actions/runs/41292453426)
+
+Auf einem Rechner mit dem ursprünglichen NumPy-Rechenpfad lässt sich der Vergleich im Verzeichnis dieser Studie wiederholen:
+
+```sh
+python -B portability_audit.py --capture /tmp/x6-v02-native
+NPY_DISABLE_CPU_FEATURES=AVX512F python -B portability_audit.py --capture /tmp/x6-v02-baseline
+python -B portability_audit.py --compare /tmp/x6-v02-native /tmp/x6-v02-baseline
+```

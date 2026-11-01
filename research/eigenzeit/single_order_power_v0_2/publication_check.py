@@ -27,7 +27,7 @@ def manifest(data):
     require(len(rows) == len(hashes), "duplicate manifest entry")
     return hashes
 
-def main(replay):
+def main(replay, cpu_baseline):
     record = json.loads((HERE / "PUBLICATION.json").read_bytes())
     for name in (REPORT, ARCHIVE):
         require(digest((HERE / name).read_bytes()) == record["files"][name], name)
@@ -56,11 +56,27 @@ def main(replay):
                 for args, expected in [(["certificate.py"], "certificate.json"),
                                        (["audit.py", "certificate.json"], "checks.json"),
                                        (["examples.py"], "examples.json")]:
+                    expected_bytes = z.read(expected)
+                    if cpu_baseline and expected == "examples.json":
+                        env["NPY_DISABLE_CPU_FEATURES"] = "AVX512F"
+                        cases = json.loads(expected_bytes)
+                        coordinates = json.loads((HERE / "cpu_baseline.json").read_bytes())
+                        require(len(cases) == len(coordinates), "baseline case count")
+                        for case, ref in zip(cases, coordinates):
+                            require((case["method"], case["h"]) == (ref["method"], ref["h"]), "baseline case identity")
+                            case["coordinates_sha256"] = ref["coordinates_sha256"]
+                        expected_bytes = (json.dumps(cases, indent=2) + "\n").encode()
                     actual = subprocess.check_output([sys.executable, "-B", *args], cwd=tmp, env=env)
-                    require(actual == z.read(expected), "replay mismatch: " + expected)
+                    if actual != expected_bytes and expected == "examples.json":
+                        print("Expected and observed example records:", expected_bytes.decode(), actual.decode(), flush=True)
+                    require(actual == expected_bytes, "replay mismatch: " + expected)
                     print("PASS: byte-identical " + expected, flush=True)
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--replay", action="store_true")
-    main(parser.parse_args().replay)
+    parser.add_argument("--cpu-baseline", action="store_true", help="Require the exact separately verified AVX512F-disabled coordinate hashes")
+    args = parser.parse_args()
+    if args.cpu_baseline and not args.replay:
+        parser.error("--cpu-baseline requires --replay")
+    main(args.replay, args.cpu_baseline)

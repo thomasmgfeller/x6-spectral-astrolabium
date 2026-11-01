@@ -28,4 +28,4 @@ jobs:
       - name: Install pinned research dependencies
         run: python -m pip install -r tools/workflow/requirements-research.txt
       - name: Verify original files and replay certificate, audit and four examples
-        run: python -B research/eigenzeit/single_order_power_v0_2/publication_check.py --replay
+        run: python -B research/eigenzeit/single_order_power_v0_2/publication_check.py --replay --cpu-baseline
