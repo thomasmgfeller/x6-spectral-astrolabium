@@ -11,6 +11,8 @@ Für beide Regeln werden unabhängige Referenzversuche, die Erfassung aller Ausf
 
 **Feldstatus HOLD.** Es liegen keine realen Referenzdaten und keine unabhängigen Belege für die drei Grenzen vor. Bei HOLD gibt die Auswertung alle drei Rastermodelle und das volle Krümmungsintervall zurück. Bei GO greift die Regel aus v0.4 für 3.200.000 wissenschaftliche Ereignisse. Über alle Wiederholungen einschließlich HOLD beträgt die modellweite Überdeckung mindestens 95,1569 %. In der jeweils günstigen Klasse liegt die Wahrscheinlichkeit der richtigen Einzelausgabe für jeden Rasterpunkt über 80 %. [Leeres Feldprotokoll](field_no_evidence.json) · [Synthetischer Pilot](pilot.json) · [Prüfergebnis](verification.json) · [Vorstudie v0.4](../density_contrast_v0_4/README.md)
 
+Die Folgestudie v0.6 senkt das hinreichende Budget der relativen Route bei identischen Fehlerzielen von 1,04 Milliarden auf 752 Millionen Referenzversuche. [Budgetgrenzen, Beweis und gepaarter Kontrolllauf](../relative_calibration_v0_6/README.md)
+
 ## Reproduktion
 
 Im Wurzelverzeichnis des Repositorys mit Python 3.12 und den festgelegten NumPy- und SciPy-Versionen ausführen.

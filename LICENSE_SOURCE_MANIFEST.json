@@ -41,8 +41,8 @@
     "LICENSE_SCOPE.md": "fe958f097f83f676f1009a12dceaedf6d1cbd4773d2ed3b0c9b3e9958ad704a7",
     "MODULE_REGISTRY.json": "722dced0bb939a3e8eeaf50953ac9a96fd95c203f5dad4859581db777cf42e87",
     "NOTICE": "1699e29d2ca9ce0518f79446a7714fa41c2b8ce66451729eafe9657c589e760d",
-    "README.md": "5085404550af37c194956d7c2627430af02d9193b5b289bc6ff8f36678593d86",
-    "SAGNAC_SOURCE_MANIFEST.json": "9e09610f2548c1d8840e0e6c9b5f0b88f44b3742a4df2cd77667c88e5c394832",
+    "README.md": "b1c6954b4e1bbd57baece45918998f60dceab02239b0a69c2c18836afcc5e12b",
+    "SAGNAC_SOURCE_MANIFEST.json": "a02e48b5597d40b2d373631484c2557b7680961a4ed9892e82b3c228731faa50",
     "app/causal-stability/app.mjs": "88aef8d0da68d1a3e49986bf557597e6e67499e74ec5f91e7f0623be9f12230b",
     "app/causal-stability/engine.mjs": "6230ee3e9da380a10b26d1b555d2ca0bcfe024cb6a2db5d32f628922cccfdae9",
     "app/causal-stability/index.html": "67a6db0c01db8652f7080ea36c983163dfc1c07b12b3ca618044f49acbae61f9",
@@ -2915,12 +2915,23 @@
     "research/eigenzeit/calibration_v0_5/Eigenzeit_Kalibrierung_v0_5.pdf": "f535232d1b3206b3b4b4e33a0395f87cf913198c3e1d65db95ac1160e9f86d25",
     "research/eigenzeit/calibration_v0_5/Eigenzeit_Kalibrierung_v0_5_Pruefpaket.zip": "ec448e64d128d8ebe9cee9618b523be916929fe4e18d39ac13f784e08f34d83f",
     "research/eigenzeit/calibration_v0_5/PUBLICATION.json": "7fd93534e647fe8fe38b73f2e3eed0f983401cf1b9a84b923e07558eea3f2bdf",
-    "research/eigenzeit/calibration_v0_5/README.md": "ddb5a4e526805ba266c6abba6572e81b49fd5252baca7eddd03c0a48beb6d1ae",
+    "research/eigenzeit/calibration_v0_5/README.md": "f92d62177dc2f3b23d5056f43905d9ffd998e45b2d9705603ee34fcdb4a8b9d3",
     "research/eigenzeit/calibration_v0_5/certificate.json": "cf716e5add90dcf1f26355f624a760cc0385ed2d00998bd2f5e695b9bc81793a",
     "research/eigenzeit/calibration_v0_5/field_no_evidence.json": "2994a143e66aecb95ac3339bc309d5dfb18ff80e2df7e1ff790f11912840f292",
     "research/eigenzeit/calibration_v0_5/pilot.json": "469f7673e93a32240c63b08dcaf1f731b7be86f6faf8d5da09eb121ecbb8a8d2",
     "research/eigenzeit/calibration_v0_5/publication_check.py": "8542989ce789a8c6f505de79a7d8616ab0d589f8204a27418c9eb3dc9d4263aa",
-    "research/eigenzeit/calibration_v0_5/verification.json": "0212f3352c092aa9e88be25429b2554dfc972704eb188296df2100bff96c7829"
+    "research/eigenzeit/calibration_v0_5/verification.json": "0212f3352c092aa9e88be25429b2554dfc972704eb188296df2100bff96c7829",
+    ".github/workflows/eigenzeit-relative-calibration.yml": "99967d96092e9301a972728d545795fe5b5a20a6216fb3389a4ab501ed7b2248",
+    "research/eigenzeit/relative_calibration_v0_6/BEWEIS.md": "328ec3c4ce3cff1d0a8113523ff1cc58f5a99ca45273a239b78d72ff6614d398",
+    "research/eigenzeit/relative_calibration_v0_6/Eigenzeit_Relative_Kalibrierung_v0_6.pdf": "c2a8eb565a6eb869573e72655cd17b8642db8a51ebfa5d4a4121b3d18dcb1fa3",
+    "research/eigenzeit/relative_calibration_v0_6/Eigenzeit_Relative_Kalibrierung_v0_6_Pruefpaket.zip": "fbada3c70e7b6428d6bd4e1b394b170b7b5463cc123f4abd6f97408fd773c37b",
+    "research/eigenzeit/relative_calibration_v0_6/PUBLICATION.json": "8c07122feaec2df18372fb96d3f5730d11ae79d132fa7f1e84deee9d396cbbca",
+    "research/eigenzeit/relative_calibration_v0_6/README.md": "80e88af3a70c8abb74d67e0dee71ec31dfb1a4cf286c49d710ec7476a4546061",
+    "research/eigenzeit/relative_calibration_v0_6/certificate.json": "0f3f719035b27dc803ae155c1c77858a50f8ac7d0b7b7148adea0a9044b2aaf3",
+    "research/eigenzeit/relative_calibration_v0_6/field_no_evidence.json": "c7aa89e3527d6f64e97bdc77218280a60a54d102fdc88ac1c70dac6929e6b99e",
+    "research/eigenzeit/relative_calibration_v0_6/pilot.json": "e1c0f9b955f87d728f393ba6ebbb87609d7557b5a4165d286fbae55ab21e568b",
+    "research/eigenzeit/relative_calibration_v0_6/publication_check.py": "fc620876a221cb33012ee1ab89df341d7b43d7a7f2f1fbfea02e5b1dbb0abcc1",
+    "research/eigenzeit/relative_calibration_v0_6/verification.json": "ae64d797afa719c265997762c3cc06aa08f9cc9262489d680e19dee1bc1bcda4"
   },
   "documentation_updates": [
     {
@@ -4003,6 +4014,27 @@
           "sha256": "9e09610f2548c1d8840e0e6c9b5f0b88f44b3742a4df2cd77667c88e5c394832"
         }
       ]
+    },
+    {
+      "date": "2026-11-01",
+      "scope": "Publish Eigenzeit v0.6 relative calibration, original report and archive, certified fixed-budget bounds and paired simulation replay.",
+      "files": [
+        {
+          "path": "README.md",
+          "previous_sha256": "5085404550af37c194956d7c2627430af02d9193b5b289bc6ff8f36678593d86",
+          "sha256": "b1c6954b4e1bbd57baece45918998f60dceab02239b0a69c2c18836afcc5e12b"
+        },
+        {
+          "path": "research/eigenzeit/calibration_v0_5/README.md",
+          "previous_sha256": "ddb5a4e526805ba266c6abba6572e81b49fd5252baca7eddd03c0a48beb6d1ae",
+          "sha256": "f92d62177dc2f3b23d5056f43905d9ffd998e45b2d9705603ee34fcdb4a8b9d3"
+        },
+        {
+          "path": "SAGNAC_SOURCE_MANIFEST.json",
+          "previous_sha256": "9e09610f2548c1d8840e0e6c9b5f0b88f44b3742a4df2cd77667c88e5c394832",
+          "sha256": "a02e48b5597d40b2d373631484c2557b7680961a4ed9892e82b3c228731faa50"
+        }
+      ]
     }
   ],
   "publication_additions": [
@@ -4405,6 +4437,23 @@
         "research/eigenzeit/calibration_v0_5/pilot.json",
         "research/eigenzeit/calibration_v0_5/publication_check.py",
         "research/eigenzeit/calibration_v0_5/verification.json"
+      ]
+    },
+    {
+      "date": "2026-11-01",
+      "scope": "Publish Eigenzeit v0.6 relative calibration, original report and archive, certified fixed-budget bounds and paired simulation replay.",
+      "paths": [
+        ".github/workflows/eigenzeit-relative-calibration.yml",
+        "research/eigenzeit/relative_calibration_v0_6/BEWEIS.md",
+        "research/eigenzeit/relative_calibration_v0_6/Eigenzeit_Relative_Kalibrierung_v0_6.pdf",
+        "research/eigenzeit/relative_calibration_v0_6/Eigenzeit_Relative_Kalibrierung_v0_6_Pruefpaket.zip",
+        "research/eigenzeit/relative_calibration_v0_6/PUBLICATION.json",
+        "research/eigenzeit/relative_calibration_v0_6/README.md",
+        "research/eigenzeit/relative_calibration_v0_6/certificate.json",
+        "research/eigenzeit/relative_calibration_v0_6/field_no_evidence.json",
+        "research/eigenzeit/relative_calibration_v0_6/pilot.json",
+        "research/eigenzeit/relative_calibration_v0_6/publication_check.py",
+        "research/eigenzeit/relative_calibration_v0_6/verification.json"
       ]
     }
   ]
