@@ -1,0 +1,68 @@
+name: ANU quantum random control
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/anu-qrng.yml'
+      - 'agent/anu_qrng.py'
+      - 'app/causal-stability/anu*.mjs'
+      - 'app/causal-stability/engine.mjs'
+      - 'tests/python/test_anu_qrng.py'
+      - 'tests/causal-stability/anu*.mjs'
+  schedule:
+    - cron: '17 5 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  offline:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          sparse-checkout: |
+            agent
+            app/causal-stability
+            tests/python
+            tests/causal-stability
+      - run: python -m unittest discover -s tests/python -p test_anu_qrng.py -v
+      - run: node --test tests/causal-stability/anu.test.mjs
+
+  archive:
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main' && github.event.repository.visibility == 'public' && vars.ANU_TRIAL_REVIEWED_ON != ''
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    concurrency:
+      group: anu-trial-archive
+      cancel-in-progress: false
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: agent
+      - name: Open the separate data branch
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          ref=refs/heads/anu-qrng-data
+          # ls-remote exits nonzero on transport errors. Only an empty successful
+          # response means the archive has never been created.
+          existing=$(git ls-remote --heads origin "$ref")
+          if [[ -n "$existing" ]]; then
+            git fetch --no-tags --depth=1 origin "$ref"
+            git worktree add --detach "$RUNNER_TEMP/anu-data" FETCH_HEAD
+          else
+            git worktree add --orphan "$RUNNER_TEMP/anu-data"
+          fi
+      - name: Reserve weekly slot, acquire once and archive
+        env:
+          ANU_TRIAL_API_KEY: ${{ secrets.ANU_TRIAL_API_KEY }}
+          ANU_TRIAL_REVIEWED_ON: ${{ vars.ANU_TRIAL_REVIEWED_ON }}
+        run: python -m agent.anu_qrng "$RUNNER_TEMP/anu-data"

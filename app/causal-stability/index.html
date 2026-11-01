@@ -10,7 +10,7 @@
 </head>
 <body>
 <a class="skip" href="#labor">Zum Labor</a>
-<header class="topbar"><a class="brand" href="#" aria-label="Causal Stability Lab Start"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 23 16 7l11 16H5L16 15l11 8M16 7v8"/><circle cx="5" cy="23" r="3"/><circle cx="16" cy="7" r="3"/><circle cx="27" cy="23" r="3"/><circle cx="16" cy="15" r="2"/></svg><span>CSPP <b>RESEARCH TOOLS</b></span></a><nav aria-label="Hauptnavigation"><a href="../../de/index.html">X6 Übersicht</a><a href="#labor" class="active">Labor</a><a href="#methodik">Mathematik</a><a href="#hanford">Hanford</a><a href="#faser">Glasfaser</a><a href="#seismik">Seismik</a><a href="#quellen">Provenienz</a></nav><span class="version">v0.1 <span class="live-dot"></span> lokal berechnet</span></header>
+<header class="topbar"><a class="brand" href="#" aria-label="Causal Stability Lab Start"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 23 16 7l11 16H5L16 15l11 8M16 7v8"/><circle cx="5" cy="23" r="3"/><circle cx="16" cy="7" r="3"/><circle cx="27" cy="23" r="3"/><circle cx="16" cy="15" r="2"/></svg><span>CSPP <b>RESEARCH TOOLS</b></span></a><nav aria-label="Hauptnavigation"><a href="../../de/index.html">X6 Übersicht</a><a href="#labor" class="active">Labor</a><a href="#methodik">Mathematik</a><a href="#hanford">Hanford</a><a href="#faser">Glasfaser</a><a href="#seismik">Seismik</a><a href="#anu">ANU</a><a href="#quellen">Provenienz</a></nav><span class="version">v0.1 <span class="live-dot"></span> lokal berechnet</span></header>
 <main>
 <noscript><p>Dieses Labor benötigt JavaScript für die interaktiven Berechnungen. Die <a href="https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/docs/research/cspp/causal-stability-lab/MATHEMATICS.md">mathematische Herleitung und der Geltungsbereich</a> bleiben ohne JavaScript lesbar.</p></noscript>
 <section class="intro"><div><div class="eyebrow">01 / KAUSALE STABILITÄT</div><h1>Was verstärkt eine Störung?</h1><p>Verfolge kausale Pfade. Prüfe ihre Aufhebung. Sieh, warum ein unauffälliges Spektrum noch keine stabile Ausbreitung bedeutet.</p></div><div class="scope-tag"><span class="amber-dot"></span><div><strong>Endliche Diagnose</strong><span>METHOD & G1 · HOLD</span></div></div></section>
@@ -128,6 +128,16 @@
   <a href="https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/sed_filter_prediction/v1/README.md">Versuchsbericht und Vorabprotokoll ↗</a> ·
   <a href="../../research/sed_filter_prediction/v1/results.json">Abgeleitete Einzel- und Gesamtergebnisse (JSON) ↓</a></p>
 </section>
+<section id="anu" class="panel hanford-panel" aria-labelledby="anu-title">
+  <div class="eyebrow">KONTROLLPROBE · AUSTRALIAN NATIONAL UNIVERSITY</div>
+  <h2 id="anu-title">Wie stark antwortet der Kontrollgraph auf zufällige Vorzeichen?</h2>
+  <p>Aus jedem der 1 024 ANU-Zufallsbytes gewinnt das Lab drei Vorzeichen für die Eingänge des festen CSPP-v0.25-Kontrollgraphen. Es vergleicht die beobachtete quadratische Mittelwertamplitude (RMS) mit dem berechneten Wert für drei unabhängige, gleich wahrscheinliche Vorzeichen.</p>
+  <button id="anu-load" type="button" class="secondary">Letzten archivierten Block auswerten</button>
+  <p id="anu-status" role="status">Der Browser liest einen archivierten Zahlenblock. Ein Seitenaufruf verbraucht kein ANU-Kontingent.</p>
+  <a id="anu-download" download="anu-qrng-block.json" hidden>Geprüften Block als JSON herunterladen ↓</a>
+  <p>Die ANU gewinnt die Zahlen aus optischen Vakuumfluktuationen. Der Vergleich prüft die Antwort des endlichen Modells auf diese Eingaben.</p>
+  <p><a href="https://quantumnumbers.anu.edu.au/faq">Quelle und Nutzungsbedingungen ↗</a> · <a href="https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/docs/research/cspp/causal-stability-lab/ANU.md">Versuch und Einrichtung ↗</a></p>
+</section>
 <section id="methodik" class="method-section"><div class="section-intro"><div class="eyebrow">DAS MATHEMATISCHE FUNDAMENT</div><h2>Vom Pfad zum prüfbaren Kriterium.</h2><p>Ein endliches History-Problem ist eindeutig lösbar. Ob seine Fehlerverstärkung beherrschbar bleibt, ist eine zusätzliche Frage.</p></div><div class="method-grid">
  <article><span class="method-num">01</span><h3>Die exakte endliche Antwort</h3><div class="formula">u = Hh + Ku + f<br>R = (I − K)<sup>−1</sup> = ∑<sub>j=0</sub><sup>N−1</sup> K<sup>j</sup></div><p>h enthält vorgeschriebene History-Werte, f aktive Gleichungsfehler. K ist strikt dreieckig. Die Probe liest A = q<sub>H</sub>h + q<sub>A</sub>u aus, ohne selbst die Dynamik zu verändern.</p></article>
  <article><span class="method-num">02</span><h3>Ein bedingter Stabilitätssatz</h3><div class="formula">sup<sub>N</sub> ‖K<sub>N</sub>‖<sub>∞</sub> ≤ r &lt; 1<br>⇒ sup<sub>N</sub> ‖R<sub>N</sub>‖<sub>∞</sub> ≤ 1 / (1 − r)</div><p>Die geometrische Reihe liefert die Schranke. Für eine Familie muss die Voraussetzung für alle N bewiesen sein. Ein einzelner grüner Messwert reicht nicht. History- und Probenkopplungen benötigen eigene uniforme Schranken.</p></article>
@@ -141,5 +151,6 @@
 <script type="module" src="fibre.mjs"></script>
 <script type="module" src="sed.mjs"></script>
 <script type="module" src="sed-prediction.mjs"></script>
+<script type="module" src="anu.mjs"></script>
 </body>
 </html>
