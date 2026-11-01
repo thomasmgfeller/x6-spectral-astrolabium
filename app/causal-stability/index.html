@@ -10,7 +10,7 @@
 </head>
 <body>
 <a class="skip" href="#labor">Zum Labor</a>
-<header class="topbar"><a class="brand" href="#" aria-label="Causal Stability Lab Start"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 23 16 7l11 16H5L16 15l11 8M16 7v8"/><circle cx="5" cy="23" r="3"/><circle cx="16" cy="7" r="3"/><circle cx="27" cy="23" r="3"/><circle cx="16" cy="15" r="2"/></svg><span>CSPP <b>RESEARCH TOOLS</b></span></a><nav aria-label="Hauptnavigation"><a href="../../de/index.html">X6 Übersicht</a><a href="#labor" class="active">Labor</a><a href="#methodik">Mathematik</a><a href="#quellen">Provenienz</a></nav><span class="version">v0.1 <span class="live-dot"></span> lokal berechnet</span></header>
+<header class="topbar"><a class="brand" href="#" aria-label="Causal Stability Lab Start"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 23 16 7l11 16H5L16 15l11 8M16 7v8"/><circle cx="5" cy="23" r="3"/><circle cx="16" cy="7" r="3"/><circle cx="27" cy="23" r="3"/><circle cx="16" cy="15" r="2"/></svg><span>CSPP <b>RESEARCH TOOLS</b></span></a><nav aria-label="Hauptnavigation"><a href="../../de/index.html">X6 Übersicht</a><a href="#labor" class="active">Labor</a><a href="#methodik">Mathematik</a><a href="#hanford">Hanford</a><a href="#quellen">Provenienz</a></nav><span class="version">v0.1 <span class="live-dot"></span> lokal berechnet</span></header>
 <main>
 <noscript><p>Dieses Labor benötigt JavaScript für die interaktiven Berechnungen. Die <a href="https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/docs/research/cspp/causal-stability-lab/MATHEMATICS.md">mathematische Herleitung und der Geltungsbereich</a> bleiben ohne JavaScript lesbar.</p></noscript>
 <section class="intro"><div><div class="eyebrow">01 / KAUSALE STABILITÄT</div><h1>Was verstärkt eine Störung?</h1><p>Verfolge kausale Pfade. Prüfe ihre Aufhebung. Sieh, warum ein unauffälliges Spektrum noch keine stabile Ausbreitung bedeutet.</p></div><div class="scope-tag"><span class="amber-dot"></span><div><strong>Endliche Diagnose</strong><span>METHOD & G1 · HOLD</span></div></div></section>
@@ -59,6 +59,20 @@
 </div>
 <div class="verdict-grid"><section class="panel verdict"><div class="eyebrow">AUSREICHENDES KRITERIUM</div><h2 id="criterion-title">Kontraktion prüfen</h2><div class="criterion-value">r = ‖K‖<sub>∞</sub> <strong id="row-norm">—</strong></div><p id="criterion-body"></p><div id="criterion-badge" class="status-badge"></div></section><section class="panel scope-panel"><div class="eyebrow">GELTUNGSBEREICH</div><h2 id="scope-title">Was dieser Lauf belegt</h2><p id="scope-body"></p><div class="scope-chips"><span>METHOD · HOLD</span><span>G1 · HOLD</span><span>Dichteuniformität · offen</span></div><p class="muted small-text">Browser-Rechnung mit Float64. Die Kennzahlen sind numerische Diagnosen; sie sind keine neuen Intervallzertifikate.</p></section></div>
 </section>
+<section id="hanford" class="panel hanford-panel" aria-labelledby="hanford-title">
+  <div class="eyebrow">MESSARCHIV · LIGO HANFORD H1 · S6</div>
+  <h2 id="hanford-title">Wie antwortete Hanford auf einen 235-Hz-Testpuls?</h2>
+  <p>Das Interferometer zeichnete eine gezielte Spiegelanregung auf. Pro Aufnahme stehen vier Sekunden kalibrierte Dehnung aus dem GWOSC-Archiv und die Qualitätsmasken des Detektors bereit.</p>
+  <div class="graph-toolbar"><button id="hanford-load" type="button" class="secondary">Messarchiv öffnen</button>
+    <label id="hanford-choice" hidden>Aufnahme (GPS) <select id="hanford-select"></select></label></div>
+  <p role="status" id="hanford-status"></p>
+  <div id="hanford-result" hidden>
+    <svg id="hanford-plot" class="chart" viewBox="0 0 720 175" role="img" aria-label="Vier Sekunden gemessene Dehnung. Senkrechte Markierung am Katalogzeitpunkt."></svg>
+    <p id="hanford-metrics"></p><p class="muted">Die Kurve zeigt pro Bildspalte Minimum und Maximum der unveränderten Messwerte. Der lokale Amplitudenwert stammt aus einem 235-Hz-Filter. Die Katalog-SNR stammt aus der GWOSC-Auswertung mit einem anderen Verfahren.</p>
+    <p><a id="hanford-download" download>Messfenster, Masken und Ergebnis als JSON ↓</a></p>
+  </div>
+  <p><a href="https://gwosc.org/s6hwburst/">GWOSC-Injektionskatalog ↗</a> · <a href="../../docs/research/cspp/causal-stability-lab/HANFORD.md">Import und Auswertungsverfahren ↗</a></p>
+</section>
 <section id="methodik" class="method-section"><div class="section-intro"><div class="eyebrow">DAS MATHEMATISCHE FUNDAMENT</div><h2>Vom Pfad zum prüfbaren Kriterium.</h2><p>Ein endliches History-Problem ist eindeutig lösbar. Ob seine Fehlerverstärkung beherrschbar bleibt, ist eine zusätzliche Frage.</p></div><div class="method-grid">
  <article><span class="method-num">01</span><h3>Die exakte endliche Antwort</h3><div class="formula">u = Hh + Ku + f<br>R = (I − K)<sup>−1</sup> = ∑<sub>j=0</sub><sup>N−1</sup> K<sup>j</sup></div><p>h enthält vorgeschriebene History-Werte, f aktive Gleichungsfehler. K ist strikt dreieckig. Die Probe liest A = q<sub>H</sub>h + q<sub>A</sub>u aus, ohne selbst die Dynamik zu verändern.</p></article>
  <article><span class="method-num">02</span><h3>Ein bedingter Stabilitätssatz</h3><div class="formula">sup<sub>N</sub> ‖K<sub>N</sub>‖<sub>∞</sub> ≤ r &lt; 1<br>⇒ sup<sub>N</sub> ‖R<sub>N</sub>‖<sub>∞</sub> ≤ 1 / (1 − r)</div><p>Die geometrische Reihe liefert die Schranke. Für eine Familie muss die Voraussetzung für alle N bewiesen sein. Ein einzelner grüner Messwert reicht nicht. History- und Probenkopplungen benötigen eigene uniforme Schranken.</p></article>
@@ -68,5 +82,6 @@
 <footer><span>Causal Stability Lab · CSPP</span><span>Prüfen. Eingrenzen. Reproduzieren.</span></footer>
 </main><div id="toast" role="status" aria-live="polite"></div>
 <script type="module" src="app.mjs"></script>
+<script type="module" src="hanford.mjs"></script>
 </body>
 </html>
