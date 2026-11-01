@@ -7,6 +7,20 @@ history sensitivity and active error amplification. The German interface runs
 locally in the browser without sign-in, dependencies, tracking or a backend.
 The DE and EN landing pages provide a prominent launch button and a preview.
 
+## Follow-up: CSPP v0.29 interval-volume stability
+
+[Read the report, full proof and reproducibility package](../../../../research/cspp/interval_volume_stability_v0_29/README.md).
+The new positive path majorant uses the Poisson mean of absolute smoothed
+interval weights instead of a constant entry envelope. Mecke insertions
+are handled explicitly along each chain. **Complete causal intervals are
+required**, as in the project causal diamond; arbitrary clipped intervals
+retain the earlier constant-envelope bound. With the same fixed q, time
+window and history budget, for rho >= 3/pi the theta=21 combined 99%
+amplification upper bound decreases from about 82,031 to at most 34,820.
+These are sufficient upper bounds, not measured errors. Different paths
+may overlap; their covariance and signed cancellation remain open.
+METHOD and G1 remain HOLD. The browser engine and fixture are unchanged.
+
 ## Follow-up: CSPP v0.28 smoothed-weight stability
 
 [Read the report, full proof and reproducibility package](../../../../research/cspp/smoothed_weight_stability_v0_28/README.md).
@@ -99,8 +113,8 @@ Layout distances have no metric meaning. Playback is evaluation order, not
 physical time. Graph length is not density. Amplitudes are not independent
 variances or quantum probabilities.
 
-**METHOD = HOLD; G1 = HOLD.** The v0.27 follow-up proves a scoped local
-density-uniform finite-time bound. Practical error qualification, long-time
+**METHOD = HOLD; G1 = HOLD.** The v0.27-v0.29 follow-ups prove scoped local
+density-uniform finite-time bounds. Practical error qualification, long-time
 stability, infinite-past propagation and the original compact KG detector
 task remain unresolved.
 No new random clouds or fermionic dynamics are generated. The published
