@@ -1,0 +1,74 @@
+{
+  "status": "PASS",
+  "profile_pairs_checked": 4080,
+  "paired_cases_repetitions": 96000,
+  "scalar_threshold_checks": 384000,
+  "negative_protocol_checks": 13,
+  "confirmed_expected_lower_decimal": "149674146.0069132914873",
+  "actual_contrast_rare_unsafe": "45550460036409/45459095455000",
+  "exact_toys": [
+    {
+      "early_go": "7/128",
+      "early_hold": "457/512",
+      "continue": "27/512",
+      "mean_trials": "2385/256",
+      "sequential_go": "2035/32768",
+      "final_only_go": "277/4096"
+    },
+    {
+      "early_go": "189/8192",
+      "early_hold": "31283/32768",
+      "continue": "729/32768",
+      "mean_trials": "149643/16384",
+      "sequential_go": "833193/33554432",
+      "final_only_go": "34263/2097152"
+    }
+  ],
+  "field_example": {
+    "mode": "field",
+    "status": "HOLD_ASSUMPTIONS",
+    "look": null,
+    "evaluated_attempts": 0,
+    "geometry": {
+      "grid": [
+        "0",
+        "1/4",
+        "1/2"
+      ],
+      "h_interval": [
+        "0",
+        "1/2"
+      ],
+      "q_interval": [
+        "0",
+        "626262763/200000000"
+      ],
+      "q_exact_upper": "48*atanh(1/4)^2"
+    },
+    "missing_or_ineligible": [
+      "source_contrast",
+      "within_cell_envelope",
+      "calibration_transfer",
+      "partition_and_probe_support",
+      "independent_stage_trials_and_all_attempts",
+      "independent_geometry_and_preselected_route",
+      "prespecified_two_looks_and_recorded_first_decision",
+      "S",
+      "D",
+      "C"
+    ]
+  },
+  "late_go_geometry": {
+    "grid": [
+      "1/2"
+    ],
+    "h_interval": [
+      "467/1024",
+      "1/2"
+    ],
+    "q_interval": [
+      "2585949527/1000000000",
+      "626262763/200000000"
+    ]
+  }
+}

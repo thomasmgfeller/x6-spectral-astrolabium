@@ -1,0 +1,57 @@
+{
+  "design": "X6/v0.7/relative-two-look-16cells",
+  "minimum_total": 528000000,
+  "maximum_total": 736000000,
+  "v06_fixed_total": 752000000,
+  "false_go_upper": "9826212273/1000000000000",
+  "good_hold_upper": "158229807/62500000000",
+  "good_go_lower": "62341770193/62500000000",
+  "good_early_go_lower": "9665023399/12500000000",
+  "expected_total_good_upper": 575174011,
+  "separated_bad_early_hold_lower": "30458657989/31250000000",
+  "expected_total_separated_bad_upper": 533267173,
+  "coverage_lower": "475784703/500000000",
+  "good_correct_singleton_lower": "200304667459/250000000000",
+  "false_go_terms": [
+    "483053673/125000000000",
+    "5961782889/1000000000000"
+  ],
+  "good_hold_terms": [
+    "125313/12500000000",
+    "78801621/31250000000"
+  ],
+  "final_only_46m": {
+    "false_go_upper": "5961782889/1000000000000",
+    "good_hold_upper": "78801621/31250000000",
+    "total": 736000000
+  },
+  "group_bounds": {
+    "early_missed_go": {
+      "high_count_worst": 8,
+      "worst": "2341264609/1000000000000",
+      "same_half": "608734499/1000000000000",
+      "opposite_direction": "137170769/1000000000000"
+    },
+    "early_hold": {
+      "high_count_worst": 8,
+      "worst": "26029/200000000000",
+      "same_half": "14363/1000000000000",
+      "opposite_direction": "1361/1000000000000"
+    },
+    "final_hold": {
+      "high_count_worst": 8,
+      "worst": "32150557/1000000000000",
+      "same_half": "1960657/500000000000",
+      "opposite_direction": "193977/500000000000"
+    }
+  },
+  "stopped_information_bound": {
+    "good_a": "5001/10001",
+    "unsafe_limit_b": "10020000000000000/20024000600040001",
+    "target_go_good": "997/1000",
+    "target_go_bad": "1/100",
+    "necessary_expected_total_floor": 149674146,
+    "single_trial_kl_upper": "61079/250000000000",
+    "decision_kl_lower": "4570961901973/1000000000000"
+  }
+}
