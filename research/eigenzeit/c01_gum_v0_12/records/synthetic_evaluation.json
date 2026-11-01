@@ -1,0 +1,99 @@
+{
+  "geometry_release": false,
+  "gum": {
+    "audit_risk_certified_by_GUM": false,
+    "covariance_matrix": [
+      [
+        "22439/1200000000000000000",
+        "2471/300000000000000000",
+        "0",
+        "0"
+      ],
+      [
+        "2471/300000000000000000",
+        "1/93750000000000",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "1/156250000000000",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "1/1200000000000000"
+      ]
+    ],
+    "coverage": 0.95,
+    "coverage_status": "approximate; model and degrees of freedom must be justified",
+    "cross_term_in_ppm_squared": -0.016473334980666665,
+    "effective_dof": 21.196549535916244,
+    "estimate_ppm": 0.19,
+    "estimates": [
+      "2500001/5000000",
+      "1/2",
+      "10000001/10000000",
+      "1/25000000"
+    ],
+    "expanded_U_ppm": 0.2574511025630232,
+    "geometry_release": false,
+    "input_degrees_of_freedom": [
+      15,
+      15,
+      "infinite",
+      "infinite"
+    ],
+    "input_order": [
+      "Y",
+      "P",
+      "A",
+      "C"
+    ],
+    "interval_ppm": [
+      -0.06745110256302321,
+      0.44745110256302323
+    ],
+    "k": 2.0796138447276795,
+    "mode": "synthetic",
+    "node": "C01@1/4",
+    "nonlinear_extra_variance_ppm2": 6.826666666666666e-17,
+    "observation_pairs": 16,
+    "report_dof": 21,
+    "scope_id": "MODEL_C01_810",
+    "sensitivity": [
+      "1",
+      "-10000001/10000000",
+      "-1/2",
+      "1"
+    ],
+    "signed_standard_contributions_ppm": [
+      0.1367448963093931,
+      -0.10327956622682004,
+      -0.04,
+      0.028867513459481287
+    ],
+    "standard_uncertainties": [
+      1.367448963093931e-07,
+      1.0327955589886445e-07,
+      8e-08,
+      2.886751345948129e-08
+    ],
+    "status": "GUM_BUDGET_95_APPROX",
+    "uc_exact_moments_ppm": 0.12379755175015987,
+    "uc_first_order_ppm": 0.12379755175015958
+  },
+  "interval_control": {
+    "false_certificate_budget": "1/500000",
+    "geometry_release": false,
+    "mode": "synthetic",
+    "node": "C01@1/4",
+    "scope_id": "MODEL_C01_810",
+    "status": "SYNTHETIC_BOUND_OK",
+    "worst_ppm": "70000003/50000000"
+  },
+  "status": "SYNTHETIC_MODEL_ONLY"
+}

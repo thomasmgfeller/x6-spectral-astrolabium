@@ -31,3 +31,5 @@ python -B research/eigenzeit/reference_audit_v0_11/publication_check.py --replay
 ```
 
 Der Prüflauf vergleicht die Originaldateien, die internen Prüfsummen und vier übernommene Dateien mit dem veröffentlichten v0.10-Archiv. Anschließend erzeugt er das Zertifikat, den synthetischen Pilot mit fünfmal 40.000 Kampagnen, die unabhängigen Prüfungen und die ergänzenden Kontrollen neu und vergleicht alle vier Protokolle byteweise. [Prüfprotokoll](verification.json) · [Veröffentlichungsnachweis](PUBLICATION.json)
+
+Die Folgestudie definiert die Messgröße am ersten Referenzpunkt C01 und rechnet die Unsicherheitsbilanz sowie die gesonderte 2-ppm-Entscheidung an einem synthetischen Beispiel durch. [C01 und die GUM-Bilanz v0.12](../c01_gum_v0_12/README.md)
