@@ -12,6 +12,8 @@ K bezeichnet das Verhältnis der größten zur kleinsten Beprobungsdichte pro ph
 
 Die drei Rasterkrümmungen aus v0.3 sind RT² ≈ 0, 0,758 und 3,131. Für den kontinuierlichen Teil gilt h ∈ [0, 1/2]. Die 72 gekoppelten Beispielpaare hatten dieselben vollständigen gerichteten Ordnungen. Im gesonderten Stresstest bei K = 1,002 enthielten 31 von 32 Intervallen den wahren Wert. Die Leistungsgarantien stammen aus der analytischen Rechnung. [Rationales Zertifikat](certificate.json) · [Gekoppelte Ordnungen](twins.json) · [Pilotauswertung](pilot_audit.json) · [Vorstudie v0.3](../three_geometries_v0_3/README.md)
 
+Die Folgestudie v0.5 prüft die Kontrastgrenze mit markierten Referenzversuchen und gibt bei fehlender Freigabe den gesamten Modellbereich aus. [Kalibrierung und Feldprotokoll](../calibration_v0_5/README.md)
+
 ## Reproduktion
 
 Vom Wurzelverzeichnis des Repositorys aus:
