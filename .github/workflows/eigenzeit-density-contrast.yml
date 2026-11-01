@@ -1,0 +1,36 @@
+name: Eigenzeit density contrast v0.4
+on:
+  pull_request:
+    paths:
+      - 'research/eigenzeit/density_contrast_v0_4/**'
+      - 'app/eigenzeit-dichtevergleich/**'
+      - '.github/workflows/eigenzeit-density-contrast.yml'
+      - 'tools/workflow/requirements-research.txt'
+  push:
+    branches: [main]
+    paths:
+      - 'research/eigenzeit/density_contrast_v0_4/**'
+      - 'app/eigenzeit-dichtevergleich/**'
+      - '.github/workflows/eigenzeit-density-contrast.yml'
+      - 'tools/workflow/requirements-research.txt'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  reproduce:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Install pinned research dependencies
+        run: python -m pip install -r tools/workflow/requirements-research.txt
+      - name: Replay robust bounds, twin orders, density stress pilot and viewer
+        run: python -B research/eigenzeit/density_contrast_v0_4/publication_check.py --replay --cpu-baseline --workers 2
