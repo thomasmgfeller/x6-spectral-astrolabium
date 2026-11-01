@@ -16,6 +16,15 @@ DATA_REF = "HEAD:refs/heads/anu-qrng-data"
 SIZE = 1024
 
 
+class AqnHttpError(ValueError):
+    def __init__(self, status):
+        message = f"AQN HTTP {status}; slot consumed"
+        if status == 403:
+            message += (". Check that Trial is active in the ANU portal and that "
+                        "ANU_TRIAL_API_KEY contains its full key. Next attempt: next UTC week.")
+        super().__init__(message)
+
+
 def parse_block(payload):
     if not isinstance(payload, dict):
         raise ValueError("Unexpected AQN envelope")
@@ -35,7 +44,7 @@ def download(key):
         conn.request("GET", QUERY, headers={"x-api-key": key, "Accept": "application/json"})
         reply = conn.getresponse()
         if reply.status != 200:
-            raise ValueError(f"AQN HTTP {reply.status}; slot consumed")
+            raise AqnHttpError(reply.status)
         body = reply.read(16385)
         if len(body) > 16384:
             raise ValueError("AQN response exceeds limit")
@@ -90,8 +99,10 @@ if __name__ == "__main__":
         acquired = collect(Path(sys.argv[1]), os.environ.get("ANU_TRIAL_API_KEY"),
                            os.environ.get("ANU_TRIAL_REVIEWED_ON"))
         print("Archived one AQN block." if acquired else "Slot already reserved. No request.")
+    except AqnHttpError as exc:
+        # Only the numeric status and our own instructions may enter an annotation.
+        if os.environ.get("GITHUB_ACTIONS") == "true":
+            print(f"::error title=ANU request failed::{exc}", file=sys.stderr)
+        sys.exit(str(exc))
     except (ValueError, OSError, http.client.HTTPException, subprocess.CalledProcessError) as exc:
-        # Responses and credentials must never enter CI logs.
-        if isinstance(exc, ValueError) and str(exc).startswith("AQN HTTP "):
-            print(str(exc), file=sys.stderr)
         sys.exit("AQN acquisition stopped (" + type(exc).__name__ + "). Check settings and archive.")

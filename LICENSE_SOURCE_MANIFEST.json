@@ -3162,13 +3162,13 @@
     "research/sed_filter_prediction/v1/predictions.json": "d03e62ce1eda687670b162864237fb472cf97ac2278984b3a33a95eff815f755",
     "research/sed_filter_prediction/v1/results.json": "884af7223637d887d58537cbae3bf9db7211f1a9f8ddb9e7319e236f46be9af2",
     "tests/python/test_sed_prediction.py": "7aa7c12b49e0a2ad4a6957fa235a3bc351be3e9e06928b88284190662e1413c4",
-    ".github/workflows/anu-qrng.yml": "f26edbf27d9745cd48e9d5b96bc06bc71d255bb7c4ad3016f59429646f931eb8",
-    "agent/anu_qrng.py": "bd42cf0735efb74ccd7787b68c0f92b86b16db6bf64673bd8664a8ee8b38ee9c",
+    ".github/workflows/anu-qrng.yml": "3b2b3fc5cf1c22c012ab634e02c394abf515c9eec5411d275a50b92162521385",
+    "agent/anu_qrng.py": "afbcf10c31f0c46536d713fabfe0105589014ca1e9d96ee6b974065f575ef5a0",
     "app/causal-stability/anu-control.mjs": "7487a2d65d4666cab1dc6586d28705f100843c636a37c9576ecdfe47e655c564",
     "app/causal-stability/anu.mjs": "3af6b76e86df4ae53f2dfb8ba4bfe9762d12b2b6785510b7100c5ec6738f8582",
     "docs/research/cspp/causal-stability-lab/ANU.md": "ca54753f24b52f9e53e577cf8f2e8619191a856638cdea8e66f55897c96c7b2f",
     "tests/causal-stability/anu.test.mjs": "ca666124eccc37ced69c86366f867f514f86bc447b3513d480ce34570fd4535d",
-    "tests/python/test_anu_qrng.py": "903e1290d0bf48d796520979817bc9aeb86755fcec32b5f6ac67a1be570fcd1d"
+    "tests/python/test_anu_qrng.py": "73bc5bd712d26318c701b651c7d35c1e74a2dc5d6052a6b3df8521afe2b74b99"
   },
   "documentation_updates": [
     {
@@ -4539,6 +4539,27 @@
           "path": "app/causal-stability/index.html",
           "previous_sha256": "7e401d03d2e5e0cefe1e6c23c4c255d9bbbd492b12b836808da070675f0ab239",
           "sha256": "e9fe64dee35c1b37ab254c8bd8421b3b331a657c91ecbe685aab4213e7bf341b"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-01",
+      "scope": "Pin the ANU workflow checkout to the Node.js 24 revision used elsewhere in the repository and expose provider HTTP failures as actionable Actions annotations.",
+      "files": [
+        {
+          "path": ".github/workflows/anu-qrng.yml",
+          "previous_sha256": "f26edbf27d9745cd48e9d5b96bc06bc71d255bb7c4ad3016f59429646f931eb8",
+          "sha256": "3b2b3fc5cf1c22c012ab634e02c394abf515c9eec5411d275a50b92162521385"
+        },
+        {
+          "path": "agent/anu_qrng.py",
+          "previous_sha256": "bd42cf0735efb74ccd7787b68c0f92b86b16db6bf64673bd8664a8ee8b38ee9c",
+          "sha256": "afbcf10c31f0c46536d713fabfe0105589014ca1e9d96ee6b974065f575ef5a0"
+        },
+        {
+          "path": "tests/python/test_anu_qrng.py",
+          "previous_sha256": "903e1290d0bf48d796520979817bc9aeb86755fcec32b5f6ac67a1be570fcd1d",
+          "sha256": "73bc5bd712d26318c701b651c7d35c1e74a2dc5d6052a6b3df8521afe2b74b99"
         }
       ]
     }
