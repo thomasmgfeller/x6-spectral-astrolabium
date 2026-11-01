@@ -1,0 +1,14 @@
+{
+  "id": "X6/v0.11/paired-reference/20ppm",
+  "mode": "prospective single fixed audit",
+  "target": "absolute conditional per-opportunity residual no larger than 20 ppm",
+  "cells": 16,
+  "anchor_states": ["1/4","3/4"],
+  "live_state_support": ["0","1"],
+  "reserve_ppm": {"comparator_to_gain_times_target":2, "cell_response_rate_per_state_unit":8, "gain_rate_per_state_unit":4, "live_history_envelope":1},
+  "common_gain_range": ["99/100","101/100"],
+  "pairs_per_node": 3300000,
+  "max_discordances_per_node": 25,
+  "pilot": {"repetitions":40000, "seed":6112033, "profiles":["all_3ppm", "one_14ppm", "one_21ppm", "balanced_30ppm", "common_bias_50ppm"]},
+  "audit_error_budgets": {"false_acceptance":"1/2000", "false_hold_if_all_discordance_at_most_3ppm":"1/2000"}
+}

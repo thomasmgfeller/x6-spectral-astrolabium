@@ -28,3 +28,5 @@ python -B research/eigenzeit/drift_reserve_v0_10/publication_check.py --replay
 ```
 
 Der Prüflauf vergleicht Bericht, Archiv, beide Prüfsummenlisten und alle 56 aus v0.9 übernommenen Dateien. Er berechnet das Zertifikat und die unabhängigen Kontrollen neu, reproduziert die sieben Zählmatrizen des Piloten und erzeugt die zwölf Batches des Stresstests aus ihren Seeds. Alle vier Ergebnisprotokolle werden byteweise mit der veröffentlichten Fassung verglichen. [Unabhängige Kontrollen](verification.json) · [Veröffentlichungsnachweis](PUBLICATION.json)
+
+Die Folgestudie prüft die 20-ppm-Bedingung anhand gepaarter Referenzmessungen und zeigt, wann ein gemeinsamer Fehler beider Kanäle unentdeckt bleibt. [Referenzaudit v0.11 mit Feldprotokoll](../reference_audit_v0_11/README.md)

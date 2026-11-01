@@ -32,11 +32,11 @@
     "CITATION.cff": "5225a23f7cd2f1841db38dd9f4b6f1b3624cce110cf27d08575b6f4b29cd2bc0",
     "CODE_OF_CONDUCT.md": "dd847b83a025f21bd55935c23b4568b3f1d108455a27b9b15b2a0b35fbc58cb9",
     "CONTRIBUTING.md": "366d6a2ce4b388d1fb77d4a5188157ff99613be932065fa758f8e562a6b45ee0",
-    "LICENSE_SOURCE_MANIFEST.json": "19073aa0f88aee748ef9776ff984aca7766203793bc8337c2d0d9a8cd7b253c8",
+    "LICENSE_SOURCE_MANIFEST.json": "3755d98bb31280bf60b0150d8ce5e0957e57c0c660fd80c30bcdd825dbb87647",
     "MODULE_REGISTRY.json": "722dced0bb939a3e8eeaf50953ac9a96fd95c203f5dad4859581db777cf42e87",
     "README.md": "6f9a68dab2ddf792ba71ed2abe77a1367e9777a021563965ef856324b57169a6",
     "REFERENCE_SOURCE_MANIFEST.json": "0e2275138250cc755ae87969b80fee67016cd293be837a5a89e2eeaa46495876",
-    "SAGNAC_SOURCE_MANIFEST.json": "3f0bf59447c4914eed559d5bda6f4e76cf939ff0795805329133fa39134b48a6",
+    "SAGNAC_SOURCE_MANIFEST.json": "cf3cabcb6701e4873a2cb23558ced798f9cd01c34ee2e40b62d2665f7f3d4d2d",
     "SECURITY.md": "c73f7d7c97f7c30f8d93140c612772ed2b81b1830987a37ae0980903213760d5",
     "app/index.html": "df48fa522498fb79aa3617fe2fefa587ef820b9555a692b5bd253ac88b2298f7",
     "data/reference_certificate.json": "a71288ed81b44f8ec122b7d6a6d14340378c7dfbf9daeb5a0fb4c76caba06d18",
@@ -2274,6 +2274,38 @@
         "research/eigenzeit/drift_reserve_v0_10/verification.json"
       ],
       "scope": "Publish Eigenzeit v0.10 drift calibration, original report and archive, conditional error and cost bounds, identifiability limit, field examples and reproducible synthetic stress test."
+    },
+    {
+      "date": "2026-11-01",
+      "component": "Eigenzeit reference audit v0.11",
+      "paths": [
+        ".github/workflows/eigenzeit-reference-audit.yml",
+        "research/eigenzeit/reference_audit_v0_11/BEWEIS.md",
+        "research/eigenzeit/reference_audit_v0_11/Eigenzeit_Referenzaudit_v0_11.pdf",
+        "research/eigenzeit/reference_audit_v0_11/Eigenzeit_Referenzaudit_v0_11_Pruefpaket.zip",
+        "research/eigenzeit/reference_audit_v0_11/FELDPROTOKOLL.md",
+        "research/eigenzeit/reference_audit_v0_11/PUBLICATION.json",
+        "research/eigenzeit/reference_audit_v0_11/README.md",
+        "research/eigenzeit/reference_audit_v0_11/audit.py",
+        "research/eigenzeit/reference_audit_v0_11/certificate.json",
+        "research/eigenzeit/reference_audit_v0_11/controls.json",
+        "research/eigenzeit/reference_audit_v0_11/design.json",
+        "research/eigenzeit/reference_audit_v0_11/examples/all_at_or_below_25.json",
+        "research/eigenzeit/reference_audit_v0_11/examples/field_worksheet.json",
+        "research/eigenzeit/reference_audit_v0_11/examples/no_independent_anchor.json",
+        "research/eigenzeit/reference_audit_v0_11/examples/one_node_26.json",
+        "research/eigenzeit/reference_audit_v0_11/examples/prefix_25.json",
+        "research/eigenzeit/reference_audit_v0_11/examples/prefix_26.json",
+        "research/eigenzeit/reference_audit_v0_11/examples/relabeled_synthetic.json",
+        "research/eigenzeit/reference_audit_v0_11/examples/synthetic_assumptions.txt",
+        "research/eigenzeit/reference_audit_v0_11/examples/synthetic_pass.json",
+        "research/eigenzeit/reference_audit_v0_11/examples/synthetic_receipt.json",
+        "research/eigenzeit/reference_audit_v0_11/pilot.json",
+        "research/eigenzeit/reference_audit_v0_11/publication_check.py",
+        "research/eigenzeit/reference_audit_v0_11/screen.py",
+        "research/eigenzeit/reference_audit_v0_11/verification.json"
+      ],
+      "scope": "Publish Eigenzeit v0.11 paired-reference audit, original report and archive, field protocol and examples, risk bounds and reproducible synthetic controls."
     }
   ],
   "non_historical_documentation_updates": [
@@ -3191,6 +3223,22 @@
           "path": "LICENSE_SOURCE_MANIFEST.json",
           "previous_sha256": "23301994ce076b9e7047a1e9ef03f8f06e67ba97349dd1fdec2c678b2fc11183",
           "sha256": "19073aa0f88aee748ef9776ff984aca7766203793bc8337c2d0d9a8cd7b253c8"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-01",
+      "scope": "Publish Eigenzeit v0.11 paired-reference audit, original report and archive, field protocol and examples, risk bounds and reproducible synthetic controls.",
+      "files": [
+        {
+          "path": "SAGNAC_SOURCE_MANIFEST.json",
+          "previous_sha256": "3f0bf59447c4914eed559d5bda6f4e76cf939ff0795805329133fa39134b48a6",
+          "sha256": "cf3cabcb6701e4873a2cb23558ced798f9cd01c34ee2e40b62d2665f7f3d4d2d"
+        },
+        {
+          "path": "LICENSE_SOURCE_MANIFEST.json",
+          "previous_sha256": "19073aa0f88aee748ef9776ff984aca7766203793bc8337c2d0d9a8cd7b253c8",
+          "sha256": "3755d98bb31280bf60b0150d8ce5e0957e57c0c660fd80c30bcdd825dbb87647"
         }
       ]
     }
