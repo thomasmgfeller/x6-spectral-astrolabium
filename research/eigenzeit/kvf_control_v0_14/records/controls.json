@@ -1,0 +1,59 @@
+{
+  "noise_alias": [
+    {
+      "distance": 1,
+      "noise_covariance_M1": 0.020883412639062238,
+      "minimum_noise_eigenvalue": 0.07911658736093778,
+      "same_observation_covariance": [
+        [
+          1.1,
+          0.8488727670040446
+        ],
+        [
+          0.8488727670040446,
+          1.1
+        ]
+      ]
+    },
+    {
+      "distance": 2,
+      "noise_covariance_M1": 0.05784027115554091,
+      "minimum_noise_eigenvalue": 0.0421597288444591,
+      "same_observation_covariance": [
+        [
+          1.1,
+          0.5380795069127684
+        ],
+        [
+          0.5380795069127684,
+          1.1
+        ]
+      ]
+    },
+    {
+      "distance": 3,
+      "noise_covariance_M1": 0.07551701689223383,
+      "minimum_noise_eigenvalue": 0.02448298310776617,
+      "same_observation_covariance": [
+        [
+          1.1,
+          0.2854993807235991
+        ],
+        [
+          0.2854993807235991,
+          1.1
+        ]
+      ]
+    }
+  ],
+  "noise_alias_scope": "setting-dependent correlated noise outside the frozen calibration bounds can make all three raw Gaussian pair laws identical",
+  "single_setting_width_alias_massless_width": 0.8656043503916421,
+  "width_alias_scope": "matches massive nominal coherence only at R3; outside [0.98,1.02]",
+  "identical_model_probability_gap": 0.0,
+  "identical_model_status": "HOLD_IDENTIFIABILITY",
+  "field_status": {
+    "status": "HOLD_FIELD_TRANSFER",
+    "physical_release": false
+  },
+  "response_channel_status": "UNMEASURED; equal-time-centre commutator is zero by symmetry in both models"
+}

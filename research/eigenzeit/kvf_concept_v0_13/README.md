@@ -51,3 +51,7 @@ Die 2-ppm-Grenze von v0.12 bleibt an die dort definierte C01-Größe gebunden.
 Für den KVF sind Einheiten, Bezugsgrößen und absolute Toleranzen erst noch
 festzulegen. Veröffentlichung und bestandene Repository-Prüfungen ändern
 diesen wissenschaftlichen Status nicht.
+
+## Ausgeführter Kontrollvergleich v0.14
+
+[Der erste KVF-Kontrollvergleich](../kvf_control_v0_14/README.md) rechnet zwei freie Skalarfeldmodelle in derselben flachen Raumzeit mit einer gemeinsamen idealisierten Auslesebeschreibung durch. Er enthält ein bedingtes endliches Messbudget, gemeinsame GUM-Auswertung und ein explizites Rausch-Gegenbeispiel. Der Antwortkanal und die Feldanwendung bleiben offen.
