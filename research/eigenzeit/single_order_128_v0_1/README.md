@@ -2,7 +2,7 @@
 
 Aus einer einzelnen unbeschrifteten Kausalordnung soll ein Test zwischen einem flachen und zwei de-Sitter-Diamanten wählen. Im vollständig beobachteten 4D-Diamanten, bei fester Ereigniszahl und gleichmäßiger Beprobung nach physischem Volumen, blieben bei 11.551 von 12.288 frischen Einzeltests alle drei Kandidaten zulässig.
 
-[Einzelordnungen im Browser ansehen](https://thomasmgfeller.github.io/x6-spectral-astrolabium/app/eigenzeit-einzelordnung/) · [Forschungsbericht (PDF)](Eigenzeit_Einzelordnung_128_v0_1.pdf) · [Vollständiges Prüfpaket (ZIP)](Eigenzeit_Einzelordnung_128_v0_1_Pruefpaket.zip)
+[Einzelordnungen im Browser ansehen](https://thomasmgfeller.github.io/x6-spectral-astrolabium/app/eigenzeit-einzelordnung/index.html) · [Forschungsbericht (PDF)](Eigenzeit_Einzelordnung_128_v0_1.pdf) · [Vollständiges Prüfpaket (ZIP)](Eigenzeit_Einzelordnung_128_v0_1_Pruefpaket.zip)
 
 | Dimensionslose Krümmungen RT² | Höchstmögliche Trennleistung bei N = 128¹ | Notwendige Ereigniszahl für 80 % |
 |---|---:|---:|
