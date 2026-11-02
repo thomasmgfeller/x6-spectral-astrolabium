@@ -1,3 +1,4 @@
+# Measurement series closed 2026-11-02. Pull requests only check stored data or test fixtures.
 name: EPTA timing and filter replay
 on:
   pull_request:
@@ -8,16 +9,6 @@ on:
       - 'research/epta_filter_v1/**'
       - 'tests/python/test_epta.py'
       - '.github/workflows/epta-filter.yml'
-  push:
-    branches: [main]
-    paths:
-      - 'agent/epta*.py'
-      - 'app/causal-stability/engine.mjs'
-      - 'research/epta_filter_v1/**'
-      - '.github/workflows/epta-filter.yml'
-  schedule:
-    - cron: '37 5 1 * *'
-  workflow_dispatch:
 
 permissions:
   contents: read
@@ -43,50 +34,3 @@ jobs:
           "$RUNNER_TEMP/py/bin/pip" install --no-cache-dir --only-binary=:all: numpy==2.3.5
           "$RUNNER_TEMP/py/bin/python" -m unittest discover -s tests/python -p test_epta.py -v
           node --check app/causal-stability/epta.mjs
-
-  archive:
-    needs: test
-    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request' && github.event.repository.private == false
-    runs-on: ubuntu-24.04
-    timeout-minutes: 18
-    concurrency:
-      group: epta-data-writer
-      cancel-in-progress: false
-    permissions:
-      contents: write
-    steps:
-      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09
-        with:
-          sparse-checkout: |
-            agent
-            app/causal-stability
-            research/epta_filter_v1
-      - name: Rebuild from the attributed public release
-        run: |
-          set -euo pipefail
-          bash research/epta_filter_v1/install-tempo2.sh "$RUNNER_TEMP/tempo"
-          python3.12 -m venv "$RUNNER_TEMP/py"
-          "$RUNNER_TEMP/py/bin/pip" install --no-cache-dir --only-binary=:all: numpy==2.3.5
-          "$RUNNER_TEMP/py/bin/python" -m agent.epta_filter --tempo-prefix "$RUNNER_TEMP/tempo" --output "$RUNNER_TEMP/product"
-          "$RUNNER_TEMP/py/bin/python" research/epta_filter_v1/check_replay.py "$RUNNER_TEMP/product"
-      - name: Publish verified residuals and filter comparison
-        run: |
-          set -euo pipefail
-          ref=refs/heads/epta-data
-          dir="$RUNNER_TEMP/epta-data"
-          existing=$(git ls-remote --heads origin "$ref")
-          if [[ -n "$existing" ]]; then
-            git fetch --depth=1 --no-tags origin "$ref"
-            git worktree add --detach "$dir" FETCH_HEAD
-            test -f "$dir/summary.json"
-          else
-            git worktree add --orphan "$dir"
-          fi
-          cp "$RUNNER_TEMP/product/"* "$dir/"
-          cp research/epta_filter_v1/ATTRIBUTION.md "$dir/"
-          git -C "$dir" add -- '*.json' '*.csv.gz' ATTRIBUTION.md
-          if ! git -C "$dir" diff --cached --quiet; then
-            git -C "$dir" -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m 'Reproduce EPTA timing residuals and paired filter comparison'
-            git -C "$dir" push origin "HEAD:$ref"
-          fi
-          echo "Verified EPTA DR2full replay. Read summary.json on the epta-data branch for the scientific decision." >> "$GITHUB_STEP_SUMMARY"

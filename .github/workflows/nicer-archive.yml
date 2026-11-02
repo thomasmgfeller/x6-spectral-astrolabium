@@ -1,3 +1,4 @@
+# Measurement series closed 2026-11-02. Pull requests only check stored data or test fixtures.
 name: NICER pulsar archive
 on:
   pull_request:
@@ -8,14 +9,6 @@ on:
       - 'app/causal-stability/nicer*'
       - 'app/causal-stability/nicer-data/**'
       - '.github/workflows/nicer-archive.yml'
-  push:
-    branches: [main]
-    paths:
-      - 'agent/nicer*'
-      - '.github/workflows/nicer-archive.yml'
-  schedule:
-    - cron: '43 5 * * 1'
-  workflow_dispatch:
 
 permissions:
   contents: read
@@ -38,45 +31,3 @@ jobs:
           "$RUNNER_TEMP/nicer-env/bin/pip" install --only-binary=:all: --no-cache-dir -r agent/nicer-requirements.txt
           "$RUNNER_TEMP/nicer-env/bin/python" -m unittest discover -s tests/python -p test_nicer.py -v
           node --check app/causal-stability/nicer.mjs
-
-  archive:
-    needs: test
-    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main' && github.event.repository.private == false
-    runs-on: ubuntu-24.04
-    timeout-minutes: 8
-    concurrency:
-      group: nicer-data-writer
-      cancel-in-progress: false
-    permissions:
-      contents: write
-    steps:
-      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
-        with:
-          sparse-checkout: |
-            agent
-            app/causal-stability/nicer-data
-      - name: Install FITS reader
-        run: |
-          python3.12 -m venv "$RUNNER_TEMP/nicer-env"
-          "$RUNNER_TEMP/nicer-env/bin/pip" install --only-binary=:all: --no-cache-dir -r agent/nicer-requirements.txt
-      - name: Import one catalog revision into the separate archive branch
-        shell: bash
-        run: |
-          set -euo pipefail
-          dir="$RUNNER_TEMP/nicer-archive"
-          ref=refs/heads/nicer-data
-          existing=$(git ls-remote --heads origin "$ref")
-          if [[ -n "$existing" ]]; then
-            git fetch --depth=1 --no-tags origin "$ref"
-            git worktree add --detach "$dir" FETCH_HEAD
-            test -s "$dir/index.json"
-          else
-            git worktree add --orphan "$dir"
-            cp app/causal-stability/nicer-data/*.json "$dir/"
-          fi
-          "$RUNNER_TEMP/nicer-env/bin/python" -m agent.nicer "$dir"
-          git -C "$dir" add -- '*.json'
-          if ! git -C "$dir" diff --cached --quiet; then
-            git -C "$dir" -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m 'Archive a verified NICER light curve'
-            git -C "$dir" push origin "HEAD:$ref"
-          fi

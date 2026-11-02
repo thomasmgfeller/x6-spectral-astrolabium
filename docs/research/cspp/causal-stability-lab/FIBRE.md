@@ -2,7 +2,9 @@
 
 Li-Yu Yu und Sixian You haben die Übertragung einer Gradientenindex-Multimodefaser experimentell kalibriert. Die Datei `complexTM.hdf5` enthält die komplexen Feldkoeffizienten für zwei orthogonale Ausgangspolarisationen. Im Stabilitätslab öffnet „Glasfaser“ einen Ausschnitt für einen einzigen Ausgangsort (Zeile 0) und zwei Eingangskanäle (Spalten 0 und 1). Die Auswahl ist fest und richtet sich weder nach Intensität noch nach vermuteter Auslöschung.
 
-## Automatischer Import
+## Archivierter Import
+
+Der manuelle Datenabruf über GitHub Actions ist seit dem Abschluss am 2. November 2026 abgeschaltet. Die folgende Beschreibung dokumentiert die Herkunft des archivierten Matrixausschnitts.
 
 Im Repository-Hauptverzeichnis, mit Python 3.12 unter Linux oder macOS:
 
