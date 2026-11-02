@@ -111,6 +111,11 @@ def home(path, data, content, lang):
     t = content[lang]
     guide = 'de/guide.html' if lang == 'de' else 'guide/index.html'
     visual, feature = t['setup_visual'], t['cqg_feature']
+    gauge = t['u1_lab']
+    gauge_app = 'app/eichfeld/index.html'
+    gauge_path = 'research/rax_cqg/eichfeld_u1_v0_1/'
+    gauge_report = gauge_path + 'X6_Eichfeld_U1_Blindtest.pdf'
+    gauge_archive = gauge_path + 'X6_Eichfeld_U1_Pruefpaket.zip'
     dust = t['dust_collapse']
     dust_app = 'app/staubball/index.html?lang=' + lang
     dust_path = 'research/rax_cqg/dust_collapse/'
@@ -120,7 +125,7 @@ def home(path, data, content, lang):
     eigenzeit = t['eigenzeit_results']
     stability = t['stability_lab']
     body = '<section class="hero hero-visual"><div class="hero-copy"><p class="eyebrow">OPEN RESEARCH · PUBLIC PREVIEW</p><h1>' + E(t['headline']) + '</h1>' + p(t['lead'])
-    body += '<div class="actions">' + link(rel(path, 'app/causal-stability/index.html'), stability['launch'], **{'class': 'button stability-launch'}) + link(rel(path, dust_app), dust['launch'], **{'class': 'button dust-launch'}) + link(rel(path, 'app/index.html'), t['launch_astrolabium'], **{'class': 'button'}) + link(rel(path, 'app/signal-lab.html'), t['launch'], **{'class': 'button secondary'}) + link(rel(path, 'app/proper-time.html'), t['launch_proper_time'], **{'class': 'button'}) + link(rel(path, 'modules/index.html'), t['browse'], **{'class': 'button secondary'}) + link(rel(path, 'wiki/' + lang + '/index.html'), 'X6 verständlich erklärt →' if lang == 'de' else 'X6 explained simply →', **{'class': 'button secondary'}) + link('#eigenzeit-results', eigenzeit['jump'], **{'class': 'button secondary'}) + '</div></div>'
+    body += '<div class="actions">' + link(rel(path, 'app/causal-stability/index.html'), stability['launch'], **{'class': 'button stability-launch'}) + link(rel(path, dust_app), dust['launch'], **{'class': 'button dust-launch'}) + link(rel(path, gauge_app), gauge['launch'], **{'class': 'button gauge-launch'}) + link(rel(path, 'app/index.html'), t['launch_astrolabium'], **{'class': 'button'}) + link(rel(path, 'app/signal-lab.html'), t['launch'], **{'class': 'button secondary'}) + link(rel(path, 'app/proper-time.html'), t['launch_proper_time'], **{'class': 'button'}) + link(rel(path, 'modules/index.html'), t['browse'], **{'class': 'button secondary'}) + link(rel(path, 'wiki/' + lang + '/index.html'), 'X6 verständlich erklärt →' if lang == 'de' else 'X6 explained simply →', **{'class': 'button secondary'}) + link('#eigenzeit-results', eigenzeit['jump'], **{'class': 'button secondary'}) + '</div></div>'
     body += '<figure class="setup-visual"><a href="' + rel(path, SETUP_IMAGE) + '" aria-label="' + E(visual['expand'], quote=True) + '"><img src="' + rel(path, SETUP_IMAGE) + '" width="1536" height="1024" fetchpriority="high" alt="' + E(visual['alt'], quote=True) + '"></a><figcaption><span class="eyebrow">' + E(visual['label']) + '</span><strong>' + E(visual['title']) + '</strong>' + p(visual['caption']) + link(REPO + '/blob/main/experiments/photonic-two-qubit/README.md', visual['details']) + '</figcaption></figure></section>'
     eigenzeit_links = [(rel(path, item['path']) if 'path' in item else item['url'], item['label'])
                        for item in eigenzeit['links']]
@@ -135,6 +140,15 @@ def home(path, data, content, lang):
                  (rel(path, CQG_PATH + CQG_DOCUMENT + '.docx'), feature['word'])]
     body += '<section class="research-feature" id="rax-cqg" aria-labelledby="cqg-title"><div><p class="eyebrow">' + E(feature['label']) + '</p><h2 id="cqg-title">RAX-CQG</h2><p class="feature-intro">' + E(feature['text']) + '</p><p class="feature-status">' + E(feature['status']) + '</p></div><div class="feature-links">'
     body += ''.join(link(url, label, **{'class': 'button' if i == 0 else 'feature-link'}) for i, (url, label) in enumerate(downloads)) + '</div></section>'
+    body += (
+        '<section class="research-feature" id="u1-gauge-lab" aria-labelledby="u1-gauge-title">'
+        '<div><p class="eyebrow">RAX-CQG · U(1)</p><h2 id="u1-gauge-title">' + E(gauge['title'])
+        + '</h2><p class="feature-intro">' + E(gauge['text']) + '</p></div><div class="feature-links">'
+        + link(rel(path, gauge_app), gauge['launch'], **{'class': 'button'})
+        + link(rel(path, gauge_report), gauge['report'], **{'class': 'feature-link'})
+        + link(rel(path, gauge_archive), gauge['archive'], **{'class': 'feature-link'})
+        + '</div></section>'
+    )
     body += (
         '<section class="research-feature" id="cst-dust-collapse" aria-labelledby="dust-collapse-title">'
         '<div><p class="eyebrow">' + E(dust['label']) + '</p><h2 id="dust-collapse-title">' + E(dust['title'])
@@ -171,6 +185,10 @@ def home(path, data, content, lang):
     md += '\n## RAX-CQG · ' + feature['label'] + '\n\n' + feature['text'] + '\n\n' + feature['status'] + '\n\n'
     for target, label in [(BASE + 'app/rax-cqg-lab.html', feature['benchmark']), (BASE + CQG_BENCHMARK_PATH + 'RAX_CQG_Benchmark_v0_2_0.zip', feature['package']), (BASE + 'modules/rax-cqg-benchmark.html', feature['scope']), (BASE + CQG_PATH + CQG_DOCUMENT + '.pdf', feature['pdf']), (REPO + '/blob/main/' + CQG_PATH + 'ARCHITECTURE.md', feature['read']), (BASE + CQG_PATH + CQG_DOCUMENT + '.docx', feature['word'])]:
         md += '- [' + label + '](' + target + ')\n'
+    md += ('\n## ' + gauge['title'] + '\n\n' + gauge['text'] + '\n\n'
+           + '[' + gauge['launch'] + '](' + BASE + gauge_app + ') · '
+           + '[' + gauge['report'] + '](' + BASE + gauge_report + ') · '
+           + '[' + gauge['archive'] + '](' + BASE + gauge_archive + ')\n')
     md += ('\n## ' + dust['title'] + '\n\n' + dust['text'] + '\n\n' + dust['scope'] + '\n\n'
            + '[' + dust['launch'] + '](' + BASE + dust_app + ') · '
            + '[' + dust['dossier'] + '](' + dust_guide + ') · '

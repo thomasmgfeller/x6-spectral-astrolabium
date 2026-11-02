@@ -41,6 +41,45 @@ async function main() {
     await page.waitForURL(url=>url.hash==='#main');
     assert.equal(new URL(page.url()).hash,'#main');
     checks.push('English entry has three routes and a keyboard-accessible skip link');
+    await page.locator('.gauge-launch').click();
+    await page.getByRole('heading', {name:'Eichfeld-Labor', exact:true}).waitFor();
+    assert.equal(await page.locator('#case option').count(),256);
+    const displayed = await page.evaluate(() => {
+      const select = document.getElementById('case');
+      return Array.from(select.options, option => {
+        select.value = option.value;
+        select.dispatchEvent(new Event('change'));
+        return document.getElementById('blind').textContent;
+      });
+    });
+    const gaugeCsv = fs.readFileSync(path.join(root,'research/rax_cqg/eichfeld_u1_v0_1/data/scores.csv'),'utf8').trim().split(/\r?\n/);
+    const gaugeColumns = gaugeCsv.shift().split(',');
+    const estimateColumn = gaugeColumns.indexOf('estimate');
+    assert.ok(estimateColumn >= 0);
+    assert.equal(gaugeCsv.length,displayed.length);
+    const gaugeNumber = new Intl.NumberFormat('de-DE',{minimumFractionDigits:4,maximumFractionDigits:4});
+    gaugeCsv.forEach((line,i) => {
+      const field = line.split(',')[estimateColumn];
+      assert.equal(displayed[i],field === '' ? 'Enthaltung · zu wenige Wege' : 'Geschätztes J = '+gaugeNumber.format(Number(field)));
+    });
+    await page.locator('#regauge').click();
+    assert.match(await page.locator('#flux').innerText(),/0,2000 rad$/);
+    await page.locator('#reverse').click();
+    assert.match(await page.locator('#flux').innerText(),/-0,2000 rad$/);
+    await page.locator('#zero').click();
+    assert.match(await page.locator('#flux').innerText(),/0,0000 rad$/);
+    await page.locator('#case').selectOption('1');
+    assert.match(await page.locator('#blind').innerText(),/Enthaltung/);
+    await page.locator('#reveal').click();
+    assert.match(await page.locator('#gold').innerText(),/Elektrisch.*Fehlschlag/);
+    await page.setViewportSize({width:360,height:800});
+    assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
+    await page.screenshot({path:path.join(output,'u1-gauge-mobile-de.png'),fullPage:true});
+    checks.push('U(1) gauge invariance, reversed paths, all 256 held-out predictions and abstentions, unblinding and mobile layout');
+    await page.goto(base+'de/');
+    assert.equal(await page.locator('.gauge-launch').getAttribute('href'),'../app/eichfeld/index.html');
+    await page.setViewportSize({width:1440,height:1040});
+    await page.goto(base);
     await page.locator('.dust-launch').click();
     await page.getByRole('button', {name:/^Order #00/}).waitFor();
     assert.equal(await page.locator('#rows button').count(),12);
