@@ -67,6 +67,11 @@ el('load').addEventListener('click',async () => {
     el('verdict').textContent=(r.decision==='DOES_NOT_QUALIFY'?'Freigabekriterien verfehlt. ':'Freigabekriterien erfüllt. ')+
       'Differenz der Trefferquoten (Filter minus Referenz): '+fmt(100*r.paired_detection_difference)+
       ' Prozentpunkte, gepaartes 95-%-Intervall von '+fmt(100*lo)+' bis '+fmt(100*hi)+'.';
+    const roc = r.empirical_roc;
+    if (roc) el('matched').textContent='Ergänzender Vergleich bei gleicher beobachteter Fehlalarmrate: '+
+      fmt(roc.false_alarms_per_arm)+' von '+fmt(roc.null_trials)+' in beiden Armen. Auf getrennten Signalversuchen: '+
+      fmt(roc.arms.identity.detections)+' Treffer ohne Filter und '+fmt(roc.arms.cspp.detections)+' mit Filter, jeweils von '+
+      fmt(roc.signal_trials)+'. Die Schwellen wurden für diesen Vergleich an den Nullversuchen bestimmt.';
     el('precision').textContent='Bei einigen Pulsaren lassen sich langsame Schwingungen und der quadratische Zeittrend nur schlecht trennen. Die Amplitudenschätzung streut entsprechend stark. Die Simulation bewertet dieses Filter- und Auswerteverfahren unter dem festgelegten Rauschmodell.';
     el('pairs').replaceChildren();
     for (const p of [...r.pairs].sort((a,b)=>a.angle_deg-b.angle_deg))
