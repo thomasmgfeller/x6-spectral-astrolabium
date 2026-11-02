@@ -45,7 +45,7 @@
     "SAGNAC_SOURCE_MANIFEST.json": "6fb23c9fa932929f284c2b0ff9e7ed5e67e9bd5b056f54aa8be569df162e41fd",
     "app/causal-stability/app.mjs": "88aef8d0da68d1a3e49986bf557597e6e67499e74ec5f91e7f0623be9f12230b",
     "app/causal-stability/engine.mjs": "6230ee3e9da380a10b26d1b555d2ca0bcfe024cb6a2db5d32f628922cccfdae9",
-    "app/causal-stability/index.html": "e9fe64dee35c1b37ab254c8bd8421b3b331a657c91ecbe685aab4213e7bf341b",
+    "app/causal-stability/index.html": "8ea6d533487c18e779c6fc1858aaaccafdebcf3529f05ff8c0490ae478f33efd",
     "app/causal-stability/style.css": "3abb5093ac218ad24b9ddf5a8dad9a2b7ab6aaa8d96631be7239210dbf1ba960",
     "app/proper-time.html": "e3d8152c649ab05500db4d5d05965608719d0fe4d82c29f5432bd8ca1246fa58",
     "app/rax-cqg-lab.html": "2e6bf929405aee66f12113c405c9c1879d71d2c897f4fc7435b5d4bf18c4c8a4",
@@ -69,7 +69,7 @@
     "docs/hub/content.json": "bebf15d9259490e7ce20f9e65531bc215855b80d7bab55f2cbf83356b8e9b452",
     "docs/hub/github-metadata.json": "6a0f9ecda6594fa7da04ac767c6c635c3b93f7bf8266ac073137536aa5ee0d3e",
     "docs/research/cspp/causal-stability-lab/MATHEMATICS.md": "38eabc35b218fc882bf02de654cc9d928ce948fcf7037fb05d93199bfb56e0e7",
-    "docs/research/cspp/causal-stability-lab/README.md": "8d75b25fcb531d7b924c55c959bae166eccfa5eec7e9407e63ef0169842e5db4",
+    "docs/research/cspp/causal-stability-lab/README.md": "7a35ea607f2ee884b18fda2f434f0de50055325ec0b748b9e7871d7b983c211c",
     "docs/research/cspp/causal-stability-lab/VALIDATION.md": "759773543a4d0dbede68dbfc036bb2d52c0b9aec972c49bc5fda4b0fc724010d",
     "docs/research/eigenzeit/gfest/GFEST_Stabilitaet_v0_2.pdf": "5c0987ca82b85b615d0651eaa33358991f8c9be877d3558180e7c4c4249daac2",
     "docs/research/eigenzeit/gfest/GFEST_Stabilitaet_v0_2_Pruefpaket.zip": "d84050683d255a18154f855dc6b68db20bcae178c040c5a5386ea7f362ba30af",
@@ -3168,7 +3168,15 @@
     "app/causal-stability/anu.mjs": "3af6b76e86df4ae53f2dfb8ba4bfe9762d12b2b6785510b7100c5ec6738f8582",
     "docs/research/cspp/causal-stability-lab/ANU.md": "ca54753f24b52f9e53e577cf8f2e8619191a856638cdea8e66f55897c96c7b2f",
     "tests/causal-stability/anu.test.mjs": "ca666124eccc37ced69c86366f867f514f86bc447b3513d480ce34570fd4535d",
-    "tests/python/test_anu_qrng.py": "73bc5bd712d26318c701b651c7d35c1e74a2dc5d6052a6b3df8521afe2b74b99"
+    "tests/python/test_anu_qrng.py": "73bc5bd712d26318c701b651c7d35c1e74a2dc5d6052a6b3df8521afe2b74b99",
+    ".github/workflows/nicer-archive.yml": "4befe642620541d62a50fe6b06f44477cdd84714920a26727a4e442cb0db30e5",
+    "agent/nicer-requirements.txt": "d7735262212c73af78afe2d0bd2073b35676b887c8bc0f70a9053f18e7d3102e",
+    "agent/nicer.py": "c6e999936b304c8b240cf2765d2b897096c0f6b26aee7abb13f4520fc440d662",
+    "app/causal-stability/nicer-data/1060020101-a31b5a24313045ce.json": "a31b5a24313045ce0928f503bc356b2ae2df6ebc7e76d54f35b2881e994c16b0",
+    "app/causal-stability/nicer-data/index.json": "6098301b254081ec5c27a75c7ae04a1be59ad0ffcf87d00ccc4c8d38acc1ead9",
+    "app/causal-stability/nicer.mjs": "0d9346ac44c421d9e824eb3aa7e218f90a21555f609b3b4000481680df0f87ea",
+    "docs/research/cspp/causal-stability-lab/NICER.md": "66aff2752b67e3ccb3b6e2afa3cfda930ab7aa4d44a6bdfc806a7f2091090447",
+    "tests/python/test_nicer.py": "cd923a7fc5c3e9e92bf68f00c0d139d4373c22a0316eab6421b7c3d933520451"
   },
   "documentation_updates": [
     {
@@ -4562,6 +4570,22 @@
           "sha256": "73bc5bd712d26318c701b651c7d35c1e74a2dc5d6052a6b3df8521afe2b74b99"
         }
       ]
+    },
+    {
+      "date": "2026-11-02",
+      "scope": "Archive public NASA NICER observations and compare count rates over good time and elapsed time in the stability lab.",
+      "files": [
+        {
+          "path": "app/causal-stability/index.html",
+          "previous_sha256": "e9fe64dee35c1b37ab254c8bd8421b3b331a657c91ecbe685aab4213e7bf341b",
+          "sha256": "8ea6d533487c18e779c6fc1858aaaccafdebcf3529f05ff8c0490ae478f33efd"
+        },
+        {
+          "path": "docs/research/cspp/causal-stability-lab/README.md",
+          "previous_sha256": "8d75b25fcb531d7b924c55c959bae166eccfa5eec7e9407e63ef0169842e5db4",
+          "sha256": "7a35ea607f2ee884b18fda2f434f0de50055325ec0b748b9e7871d7b983c211c"
+        }
+      ]
     }
   ],
   "publication_additions": [
@@ -5302,6 +5326,20 @@
         "docs/research/cspp/causal-stability-lab/ANU.md",
         "tests/causal-stability/anu.test.mjs",
         "tests/python/test_anu_qrng.py"
+      ]
+    },
+    {
+      "date": "2026-11-02",
+      "scope": "Archive public NASA NICER observations and compare count rates over good time and elapsed time in the stability lab.",
+      "paths": [
+        ".github/workflows/nicer-archive.yml",
+        "agent/nicer-requirements.txt",
+        "agent/nicer.py",
+        "app/causal-stability/nicer-data/1060020101-a31b5a24313045ce.json",
+        "app/causal-stability/nicer-data/index.json",
+        "app/causal-stability/nicer.mjs",
+        "docs/research/cspp/causal-stability-lab/NICER.md",
+        "tests/python/test_nicer.py"
       ]
     }
   ]
