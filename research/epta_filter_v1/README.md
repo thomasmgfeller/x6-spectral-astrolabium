@@ -39,9 +39,9 @@ Für die ungefilterte Referenz ist der projizierte Erwartungswert 1,000 und der 
 
 [EPTA-Methoden und Datensatz](https://doi.org/10.1051/0004-6361/202346841) · [EPTA-Suche nach dem winkelkorrelierten Hintergrund](https://doi.org/10.1051/0004-6361/202346844) · [Datenkredit und Lizenz](ATTRIBUTION.md)
 
-## Automatischer Lauf und Wiederholung
+## Abschluss und Reproduktion
 
-Am ersten Kalendertag jedes Monats um 05:37 UTC wiederholt ein öffentlicher GitHub-Standardläufer die Rechnung. Beim Einbau auf main sowie beim manuellen Start läuft derselbe Prozess. Er prüft Zugang, Lizenz und SHA-256 des festgelegten Zenodo-Releases, baut die gesperrte Linux-Umgebung auf und vergleicht das Ergebnis mit der Referenz. Bei bestandenem technischem Vergleich veröffentlicht er Zusammenfassung, Datenkredit und eine nach SHA-256 benannte CSV.GZ auf dem Datenzweig. Auch ein negatives wissenschaftliches Ergebnis wird veröffentlicht. Der Browser lädt die kleine JSON-Datei. Die gesamte CSV bleibt als separater Download verfügbar. Ein neuer wissenschaftlicher Release erfordert eine eigene Referenz. [Laufprotokolle](https://github.com/thomasmgfeller/x6-spectral-astrolabium/actions/workflows/epta-filter.yml) · [Datenzweig](https://github.com/thomasmgfeller/x6-spectral-astrolabium/tree/epta-data)
+Die Messreihe wurde am 2. November 2026 abgeschlossen. Der Monatszeitplan, der Start bei Änderungen an main und der manuelle Start der EPTA-Neuberechnung sind aufgehoben. Der letzte geprüfte Datenstand mit Zusammenfassung, Quellenangabe und Timing-Residuen bleibt öffentlich abrufbar. [Abschliessender Produktionslauf](https://github.com/thomasmgfeller/x6-spectral-astrolabium/actions/runs/41464258179) · [Datenzweig](https://github.com/thomasmgfeller/x6-spectral-astrolabium/tree/epta-data)
 
 Wiederholung ab Repositorywurzel, Linux x86-64, Python 3.12 und Node.js. Der Standardweg verwendet den öffentlichen Zenodo-Endpunkt. Für einen Offline-Lauf akzeptiert `--archive` die identisch geprüfte ZIP-Datei. Die Daten und Modellversionen sind an den in [protocol.json](protocol.json) und [tempo2.lock](tempo2.lock) angegebenen Stand gebunden.
 

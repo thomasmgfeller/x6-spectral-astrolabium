@@ -1,5 +1,7 @@
 # Causal Stability Lab v0.1
 
+**Messreihe am 2. November 2026 abgeschlossen.** Die Messungen mit Hanford, MIT/Dryad, SED, ANU, NICER und EPTA sind gestoppt. Auch die Zwei-Puls-Simulation ist abgeschlossen. Eine Fortsetzung setzt eine neue Zieldefinition und ausdrückliche Freigabe voraus. Die archivierten Referenzen und die Prüfungen mit gespeicherten Daten bleiben zugänglich. Der untersuchte CSPP-Filter hat im EPTA-Versuch die Freigabekriterien verfehlt. Ein beobachtbarer Raumzeiteffekt ist aus dieser Reihe nicht belegt. [Archiv der Messreihe](https://thomasmgfeller.github.io/x6-spectral-astrolabium/app/causal-stability/#abschluss)
+
 [NICER pulsar light curves and exposure-gap comparison](NICER.md) · [Open the observations in the lab](https://thomasmgfeller.github.io/x6-spectral-astrolabium/app/causal-stability/#nicer)
 
 [EPTA radio pulsar timing and paired filter evaluation](../../../../research/epta_filter_v1/README.md) · [Open the measured residuals and injection comparison](https://thomasmgfeller.github.io/x6-spectral-astrolabium/app/causal-stability/#epta)

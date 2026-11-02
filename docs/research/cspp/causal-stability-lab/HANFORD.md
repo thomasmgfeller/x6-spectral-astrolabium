@@ -26,7 +26,7 @@ Der Import liest den öffentlichen H1-Katalog und fragt die GWOSC-API nach den p
 
 Das Standardziel für vollständige Messfenster und Ergebnisindex ist `app/causal-stability/hanford-data/`. Original-HDF5-Dateien und Katalogstand liegen nach einem frischen Abruf unter `runs/hanford-hdf5/`. Jeder erfolgreiche Import schreibt ein JSON pro GPS-Zeit und aktualisiert den Index atomar. Ein Abbruch lässt bereits indexierte Aufnahmen nutzbar. Wiederholte Aufrufe prüfen vorhandene Datensätze und fügen nur fehlende hinzu. Ein späterer Prüffehler beendet den Lauf mit einer Fehlermeldung. Ein Fenster über eine Dateigrenze wird zurückgewiesen. Für die beiden Pilot-Quelldateien prüft der Import feste SHA-256-Werte. Bei später hinzugenommenen Dateien dokumentiert er den beim Abruf berechneten Hash.
 
-Der GitHub-Workflow **Hanford measurement archive** kann nach Aufnahme in den Standardbranch über „Run workflow“ ausgelöst werden. Er ruft bis zu sechs Katalogfenster frisch ab und stellt das Ergebnisarchiv 30 Tage als herunterladbares Artefakt bereit. Die versionierten Pilotdaten sind davon unabhängig dauerhaft über Git verfügbar. Es ist kein periodischer Auftrag eingerichtet.
+Der manuelle GWOSC-Abruf über GitHub Actions wurde zum Abschluss der Messreihe am 2. November 2026 abgeschaltet. Die beiden Pilotfenster sind im Repository archiviert.
 
 ## Messfenster und Auswertung
 

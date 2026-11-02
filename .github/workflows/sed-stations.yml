@@ -1,3 +1,4 @@
+# Measurement series closed 2026-11-02. Pull requests only check stored data or test fixtures.
 name: Swiss station arrival comparison
 on:
   pull_request:
@@ -8,7 +9,6 @@ on:
       - 'tests/python/test_sed*.py'
       - 'research/sed_filter_prediction/**'
       - '.github/workflows/sed-stations.yml'
-  workflow_dispatch:
 
 permissions:
   contents: read

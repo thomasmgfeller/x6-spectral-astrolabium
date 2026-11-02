@@ -1,3 +1,4 @@
+# Measurement series closed 2026-11-02. Pull requests only check stored data or test fixtures.
 name: MIT fibre measurement archive
 on:
   pull_request:
@@ -7,13 +8,12 @@ on:
       - 'app/causal-stability/fibre-data/**'
       - 'tests/python/test_dryad_fibre.py'
       - '.github/workflows/dryad-fibre.yml'
-  workflow_dispatch:
 
 permissions:
   contents: read
 
 jobs:
-  replay:
+  offline:
     runs-on: ubuntu-24.04
     timeout-minutes: 25
     steps:
@@ -25,13 +25,3 @@ jobs:
           python-version: '3.12'
       - run: python -m pip install -r agent/hanford-requirements.txt
       - run: python -m unittest discover -s tests/python -p test_dryad_fibre.py -v
-      - name: Retrieve and verify the original file
-        if: github.event_name == 'workflow_dispatch'
-        run: python -m agent.dryad_fibre --archive runs/fibre-review
-      - uses: actions/upload-artifact@v4
-        if: github.event_name == 'workflow_dispatch' && success()
-        with:
-          name: fibre-review-${{ github.run_id }}-${{ github.run_attempt }}
-          path: runs/fibre-review/record.json
-          if-no-files-found: error
-          retention-days: 30
