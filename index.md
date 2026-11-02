@@ -62,6 +62,14 @@ Exploratory software prototype, not validated quantum gravity. Architecture v0.1
 - [Markdown and sources on GitHub →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/docs/research/rax/cqg-v0.1/ARCHITECTURE.md)
 - [Download the Word document ↓](https://thomasmgfeller.github.io/x6-spectral-astrolabium/docs/research/rax/cqg-v0.1/RAX_CQG_Forschungsarchitektur_v0_1.docx)
 
+## How accurately does a causal set measure the mass of a collapsing dust ball?
+
+In 18 new high-density comparisons on a classical dust background, an analytic time-boundary correction reduced the largest error in the mean mass current from 9.50% to 0.95%. One of six lower-density cases still exceeded the 10% target.
+
+Five research notes trace the assumptions from finite path sums to the mass calculation. The uncertainty for one high-density sprinkling and a bounce derived from causal-set dynamics remain open.
+
+[Research guide and evidence (DE/EN) →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/rax_cqg/dust_collapse/README.md) · [Latest derivation (PDF, DE) →](https://thomasmgfeller.github.io/x6-spectral-astrolabium/research/rax_cqg/dust_collapse/reports/CST_Staubkollaps_Gekruemmter_Randterm.pdf) · [Reproduction code and 24 results (ZIP) ↓](https://thomasmgfeller.github.io/x6-spectral-astrolabium/research/rax_cqg/dust_collapse/packages/CST_Staubkollaps_Gekruemmter_Randterm_Pruefpaket.zip)
+
 ## More tools & references
 
 The browser applications launch directly above. These routes lead to the relevant instructions, prerequisites and documented checks.

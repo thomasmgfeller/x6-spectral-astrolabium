@@ -1,0 +1,11 @@
+{
+  "scope": "Marked continuum references only. c=1, 6*pi*G=1, ts=1, comoving ball volume 1. Fixed protocol before numerical evaluation.",
+  "seed": 2026110209, "reps": 4096, "volume_centers": [0.25,0.65,0.8], "volume_widths": [0.08,0.24], "volume_intensities": [1024,8192,32768], "geometries": ["flat","dust"],
+  "volume_family_coverage": 0.99, "volume_equivalence_relative": 0.08, "single_cloud_cv":0.10,
+  "mass_control_relative":0.08, "mass_control_family_coverage":0.99,
+  "flux_centers": [0.4,0.65], "flux_padding": [0.12,0.24], "flux_intensities": [1000,10000,100000,1000000], "flux_orders":[32,64,96],
+  "flux_required_abs_relative_error":0.1, "flux_max_quadrature_difference_of_mass":0.01,
+  "flux_gate":"At highest two densities all geometry/cut/padding cells must have |M_BD/M-1|<=0.10 and |Q96-Q64|<=0.01; no refit. A failure is finite-domain only.",
+  "poisson_volume_gate":"All simultaneous Garwood-based relative error intervals for corrected volume inside +/-8%; report intrinsic individual precision separately. Independent cells, shared count within nested windows.",
+  "poisson_mass_gate":"For known density weight, compound-Poisson two-sided Bernstein error bound plus observed error must fit 8% relative across all cells. Reference mass not independently inferred."
+}

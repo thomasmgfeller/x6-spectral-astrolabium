@@ -1,0 +1,9 @@
+{
+ "units":"c=6piG=Ts=1; R=E[M_B]/M; late-endpoint density; same marginally bound flat-FLRW dust model. U=Ts-s, p=P/U, f=F/U, L=lambda*U^4.",
+ "windows":[[0.30,0.14,0.23],[0.30,0.23,0.14],[0.50,0.14,0.23],[0.50,0.23,0.14],[0.67,0.14,0.23],[0.67,0.23,0.14]],
+ "intensities":[300000,3000000,12000000,48000000],
+ "formal_prediction":"Rpred=1+(A log(L)+B(p,f))/sqrt(L); A=-17sqrt(6)/(10pi). B from Mellin residue deterministic finite-part integral. No coefficients fitted.",
+ "gates":{"numerical_abs":0.00005,"raw_and_corrected_mass_band":0.10,"improvement":"Record raw and corrected separately in all cells. High-density target: each cell at lambda>=3e6 must have positive Rpred, smaller absolute mean error, and corrected mean within +/-10%. Lowest density is a stress test."},
+ "comparators":"flat coefficient using same physical P,F; uncorrected; also full prediction without log with otherwise fixed constant, as a diagnostic only.",
+ "validation":"Moment integrals for coefficient with two resolutions; exact expectation via conditioned 4D Poisson kernel at two resolutions and independent interval-volume method; a differential-density check cancels B. No new Poisson sample or field dynamics."
+}

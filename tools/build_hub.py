@@ -111,6 +111,11 @@ def home(path, data, content, lang):
     t = content[lang]
     guide = 'de/guide.html' if lang == 'de' else 'guide/index.html'
     visual, feature = t['setup_visual'], t['cqg_feature']
+    dust = t['dust_collapse']
+    dust_path = 'research/rax_cqg/dust_collapse/'
+    dust_report = dust_path + 'reports/CST_Staubkollaps_Gekruemmter_Randterm.pdf'
+    dust_package = dust_path + 'packages/CST_Staubkollaps_Gekruemmter_Randterm_Pruefpaket.zip'
+    dust_guide = REPO + '/blob/main/' + dust_path + 'README.md'
     eigenzeit = t['eigenzeit_results']
     stability = t['stability_lab']
     body = '<section class="hero hero-visual"><div class="hero-copy"><p class="eyebrow">OPEN RESEARCH · PUBLIC PREVIEW</p><h1>' + E(t['headline']) + '</h1>' + p(t['lead'])
@@ -129,6 +134,15 @@ def home(path, data, content, lang):
                  (rel(path, CQG_PATH + CQG_DOCUMENT + '.docx'), feature['word'])]
     body += '<section class="research-feature" id="rax-cqg" aria-labelledby="cqg-title"><div><p class="eyebrow">' + E(feature['label']) + '</p><h2 id="cqg-title">RAX-CQG</h2><p class="feature-intro">' + E(feature['text']) + '</p><p class="feature-status">' + E(feature['status']) + '</p></div><div class="feature-links">'
     body += ''.join(link(url, label, **{'class': 'button' if i == 0 else 'feature-link'}) for i, (url, label) in enumerate(downloads)) + '</div></section>'
+    body += (
+        '<section class="research-feature" id="cst-dust-collapse" aria-labelledby="dust-collapse-title">'
+        '<div><p class="eyebrow">' + E(dust['label']) + '</p><h2 id="dust-collapse-title">' + E(dust['title'])
+        + '</h2><p class="feature-intro">' + E(dust['text']) + '</p><p class="feature-status">'
+        + E(dust['scope']) + '</p></div><div class="feature-links">'
+        + link(dust_guide, dust['dossier'], **{'class': 'button'})
+        + link(rel(path, dust_report), dust['report'], **{'class': 'feature-link'})
+        + link(rel(path, dust_package), dust['package'], **{'class': 'feature-link'}) + '</div></section>'
+    )
     body += '<section aria-labelledby="tools"><h2 id="tools">' + E(t['tools_title']) + '</h2>' + p(t['tools_intro']) + '<div class="tool-grid">'
     for item in t['tools']:
         body += '<article class="card tool-card"><p class="eyebrow">' + E(item['kind']) + '</p><h3>' + E(item['title']) + '</h3>' + p(item['text']) + link(rel(path, 'modules/' + item['module'] + '.html'), item['button'], **{'class': 'button secondary'}) + '</article>'
@@ -155,6 +169,10 @@ def home(path, data, content, lang):
     md += '\n## RAX-CQG · ' + feature['label'] + '\n\n' + feature['text'] + '\n\n' + feature['status'] + '\n\n'
     for target, label in [(BASE + 'app/rax-cqg-lab.html', feature['benchmark']), (BASE + CQG_BENCHMARK_PATH + 'RAX_CQG_Benchmark_v0_2_0.zip', feature['package']), (BASE + 'modules/rax-cqg-benchmark.html', feature['scope']), (BASE + CQG_PATH + CQG_DOCUMENT + '.pdf', feature['pdf']), (REPO + '/blob/main/' + CQG_PATH + 'ARCHITECTURE.md', feature['read']), (BASE + CQG_PATH + CQG_DOCUMENT + '.docx', feature['word'])]:
         md += '- [' + label + '](' + target + ')\n'
+    md += ('\n## ' + dust['title'] + '\n\n' + dust['text'] + '\n\n' + dust['scope'] + '\n\n'
+           + '[' + dust['dossier'] + '](' + dust_guide + ') · '
+           + '[' + dust['report'] + '](' + BASE + dust_report + ') · '
+           + '[' + dust['package'] + '](' + BASE + dust_package + ')\n')
     md += '\n## ' + t['tools_title'] + '\n\n' + t['tools_intro'] + '\n\n'
     for item in t['tools']:
         md += '### ' + item['title'] + '\n\n' + item['kind'] + '. ' + item['text'] + '\n\n[' + item['button'] + '](' + canonical('modules/' + item['module'] + '.html') + ')\n\n'
