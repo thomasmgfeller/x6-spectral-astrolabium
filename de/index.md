@@ -62,6 +62,14 @@ Explorativer Software-Prototyp, keine validierte Quantengravitation. Die Archite
 - [Markdown und Quellen auf GitHub →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/docs/research/rax/cqg-v0.1/ARCHITECTURE.md)
 - [Word-Dokument herunterladen ↓](https://thomasmgfeller.github.io/x6-spectral-astrolabium/docs/research/rax/cqg-v0.1/RAX_CQG_Forschungsarchitektur_v0_1.docx)
 
+## Wie genau misst ein Kausalset die Masse eines kollabierenden Staubballs?
+
+In 18 neuen Hochdichtevergleichen auf klassischer Staubgeometrie senkte eine analytische Zeitrandkorrektur den grössten Fehler des mittleren Massestroms von 9,50 % auf 0,95 %. Bei niedrigerer Dichte blieb einer von sechs Fällen über dem 10-Prozent-Ziel.
+
+Fünf Forschungsnotizen verfolgen die Annahmen von endlichen Pfadsummen bis zur Massenrechnung. Offen sind die Unsicherheit einer einzelnen Hochdichte-Realisierung und eine Herleitung des Rückpralls aus der Kausalset-Dynamik.
+
+[Forschungsübersicht und Belege (DE/EN) →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/rax_cqg/dust_collapse/README.md) · [Aktuelle Herleitung (PDF) →](https://thomasmgfeller.github.io/x6-spectral-astrolabium/research/rax_cqg/dust_collapse/reports/CST_Staubkollaps_Gekruemmter_Randterm.pdf) · [Prüfcode und 24 Vergleiche (ZIP) ↓](https://thomasmgfeller.github.io/x6-spectral-astrolabium/research/rax_cqg/dust_collapse/packages/CST_Staubkollaps_Gekruemmter_Randterm_Pruefpaket.zip)
+
 ## Weitere Werkzeuge & Referenzen
 
 Die Browseranwendungen starten direkt oben. Diese Einstiege führen zu den passenden Anleitungen, Voraussetzungen und dokumentierten Prüfungen.
