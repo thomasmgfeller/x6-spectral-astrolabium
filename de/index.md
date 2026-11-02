@@ -64,11 +64,11 @@ Explorativer Software-Prototyp, keine validierte Quantengravitation. Die Archite
 
 ## Wie genau misst ein Kausalset die Masse eines kollabierenden Staubballs?
 
-In 18 neuen Hochdichtevergleichen auf klassischer Staubgeometrie senkte eine analytische Zeitrandkorrektur den grössten Fehler des mittleren Massestroms von 9,50 % auf 0,95 %. Bei niedrigerer Dichte blieb einer von sechs Fällen über dem 10-Prozent-Ziel. Vier zusätzliche Fälle mit vertauschten Zeitfenstern blieben nach der Korrektur bei 0,74–9,61 % Fehler im Mittelwert.
+Bei Dichte 6 Millionen liegt der korrigierte mittlere Massestrom in zwei Zeitfenstern weniger als 0,8 % neben der Sollmasse. Die Trefferchance einer einzelnen Ordnung im ±10-Prozent-Band beträgt je nach Fenster höchstens 56,5 % bzw. 53,0 % (gemeinsame 99-Prozent-Konfidenz).
 
-Fünf Forschungsnotizen verfolgen die Annahmen von endlichen Pfadsummen bis zur Massenrechnung. Offen sind die Unsicherheit einer einzelnen Hochdichte-Realisierung und eine Herleitung des Rückpralls aus der Kausalset-Dynamik.
+Das Ziel waren 95 % Treffer. Bei Dichte 600 000 lag in beiden Fensterrichtungen keiner von jeweils 16 direkt berechneten Einzelwerten im Band. Die sechs Notizen ordnen diese Modellrechnung in die Forschung zum Staubkollaps ein.
 
-[Forschungsübersicht und Belege (DE/EN) →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/rax_cqg/dust_collapse/README.md) · [Aktuelle Herleitung (PDF) →](https://thomasmgfeller.github.io/x6-spectral-astrolabium/research/rax_cqg/dust_collapse/reports/CST_Staubkollaps_Gekruemmter_Randterm.pdf) · [Prüfcode und 24 Vergleiche (ZIP) ↓](https://thomasmgfeller.github.io/x6-spectral-astrolabium/research/rax_cqg/dust_collapse/packages/CST_Staubkollaps_Gekruemmter_Randterm_Pruefpaket.zip)
+[Forschungsübersicht und Belege (DE/EN) →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/rax_cqg/dust_collapse/README.md) · [Einzelmessung und Schranken (PDF) →](https://thomasmgfeller.github.io/x6-spectral-astrolabium/research/rax_cqg/dust_collapse/reports/CST_Staubkollaps_Einzelmessung.pdf) · [Prüfcode und Einzelwerte (ZIP) ↓](https://thomasmgfeller.github.io/x6-spectral-astrolabium/research/rax_cqg/dust_collapse/packages/CST_Staubkollaps_Einzelmessung_Pruefpaket.zip)
 
 ## Weitere Werkzeuge & Referenzen
 

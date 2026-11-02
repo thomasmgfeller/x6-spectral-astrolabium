@@ -1,0 +1,9 @@
+{
+  "scope":"Unchanged late-endpoint mass current in the homogeneous classical dust reference, unit comoving ball volume, Ts=6piG=c=M=1. Same s,P,F as the preceding four-window test.",
+  "s":0.47, "windows":[[0.11,0.24],[0.24,0.11]], "target_mass":1,
+  "full":{"densities":[4000,16000],"reps":160,"seed":20261102391,"box_side":1.6},
+  "cap":{"densities":[600000,6000000],"reps":128,"seed":20261102393,"height_in_discreteness_lengths":1.5,"difference_thresholds":[0.2,0.5,1,2,4,8]},
+  "gate":"For each high-density cell require at least 95% of individual corrected masses within [0.9,1.1]. Reject if simultaneous upper bound for coverage <0.95. Otherwise unresolved unless supported by independent direct qualification.",
+  "uncertainty":"99% simultaneous family coverage. Bonferroni allocation over 4 high-density cells times 6 fixed difference thresholds and the 4 direct gate frequencies (two bounds each). Use exact one-sided binomial Clopper-Pearson limits. Full sample SD, RMSE and quantiles descriptive; high-density population variance lower bounded using clipped paired differences and disjoint terminal caps.",
+  "stopping":"Fixed sample sizes. Independent parent Poisson clouds across repetitions and cells; two replacement caps share the entire exterior within one pair. Prespecified fallback for speed: write completed row counts, no extrapolation or changing thresholds."
+}

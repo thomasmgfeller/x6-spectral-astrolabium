@@ -64,11 +64,11 @@ Exploratory software prototype, not validated quantum gravity. Architecture v0.1
 
 ## How accurately does a causal set measure the mass of a collapsing dust ball?
 
-In 18 new high-density comparisons on a classical dust background, an analytic time-boundary correction reduced the largest error in the mean mass current from 9.50% to 0.95%. One of six lower-density cases still exceeded the 10% target. In four additional cases with the past and future windows exchanged, the corrected mean errors ranged from 0.74% to 9.61%.
+At density six million, the corrected mean mass current is within 0.8% of the known mass in two windows. The probability that an individual order falls within 10% is at most 56.5% or 53.0%, depending on the window (simultaneous 99% confidence).
 
-Five research notes trace the assumptions from finite path sums to the mass calculation. The uncertainty for one high-density sprinkling and a bounce derived from causal-set dynamics remain open.
+The target was 95% coverage. At density 600,000, none of the 16 directly computed estimates in either window met the target band. Six notes connect these tests on a prescribed dust background to the collapse model.
 
-[Research guide and evidence (DE/EN) →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/rax_cqg/dust_collapse/README.md) · [Latest derivation (PDF, DE) →](https://thomasmgfeller.github.io/x6-spectral-astrolabium/research/rax_cqg/dust_collapse/reports/CST_Staubkollaps_Gekruemmter_Randterm.pdf) · [Reproduction code and 24 results (ZIP) ↓](https://thomasmgfeller.github.io/x6-spectral-astrolabium/research/rax_cqg/dust_collapse/packages/CST_Staubkollaps_Gekruemmter_Randterm_Pruefpaket.zip)
+[Research guide and evidence (DE/EN) →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/rax_cqg/dust_collapse/README.md) · [Single-order study and bounds (PDF, DE) →](https://thomasmgfeller.github.io/x6-spectral-astrolabium/research/rax_cqg/dust_collapse/reports/CST_Staubkollaps_Einzelmessung.pdf) · [Reproduction code and individual values (ZIP) ↓](https://thomasmgfeller.github.io/x6-spectral-astrolabium/research/rax_cqg/dust_collapse/packages/CST_Staubkollaps_Einzelmessung_Pruefpaket.zip)
 
 ## More tools & references
 

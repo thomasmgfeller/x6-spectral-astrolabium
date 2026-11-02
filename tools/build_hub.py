@@ -113,8 +113,8 @@ def home(path, data, content, lang):
     visual, feature = t['setup_visual'], t['cqg_feature']
     dust = t['dust_collapse']
     dust_path = 'research/rax_cqg/dust_collapse/'
-    dust_report = dust_path + 'reports/CST_Staubkollaps_Gekruemmter_Randterm.pdf'
-    dust_package = dust_path + 'packages/CST_Staubkollaps_Gekruemmter_Randterm_Pruefpaket.zip'
+    dust_report = dust_path + 'reports/CST_Staubkollaps_Einzelmessung.pdf'
+    dust_package = dust_path + 'packages/CST_Staubkollaps_Einzelmessung_Pruefpaket.zip'
     dust_guide = REPO + '/blob/main/' + dust_path + 'README.md'
     eigenzeit = t['eigenzeit_results']
     stability = t['stability_lab']
