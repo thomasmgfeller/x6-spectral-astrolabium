@@ -64,7 +64,7 @@ Explorativer Software-Prototyp, keine validierte Quantengravitation. Die Archite
 
 ## Wie genau misst ein Kausalset die Masse eines kollabierenden Staubballs?
 
-In 18 neuen Hochdichtevergleichen auf klassischer Staubgeometrie senkte eine analytische Zeitrandkorrektur den grössten Fehler des mittleren Massestroms von 9,50 % auf 0,95 %. Bei niedrigerer Dichte blieb einer von sechs Fällen über dem 10-Prozent-Ziel.
+In 18 neuen Hochdichtevergleichen auf klassischer Staubgeometrie senkte eine analytische Zeitrandkorrektur den grössten Fehler des mittleren Massestroms von 9,50 % auf 0,95 %. Bei niedrigerer Dichte blieb einer von sechs Fällen über dem 10-Prozent-Ziel. Vier zusätzliche Fälle mit vertauschten Zeitfenstern blieben nach der Korrektur bei 0,74–9,61 % Fehler im Mittelwert.
 
 Fünf Forschungsnotizen verfolgen die Annahmen von endlichen Pfadsummen bis zur Massenrechnung. Offen sind die Unsicherheit einer einzelnen Hochdichte-Realisierung und eine Herleitung des Rückpralls aus der Kausalset-Dynamik.
 
