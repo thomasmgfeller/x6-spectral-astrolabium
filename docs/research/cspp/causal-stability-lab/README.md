@@ -2,6 +2,7 @@
 
 [NICER pulsar light curves and exposure-gap comparison](NICER.md) · [Open the observations in the lab](https://thomasmgfeller.github.io/x6-spectral-astrolabium/app/causal-stability/#nicer)
 
+[EPTA radio pulsar timing and paired filter evaluation](../../../../research/epta_filter_v1/README.md) · [Open the measured residuals and injection comparison](https://thomasmgfeller.github.io/x6-spectral-astrolabium/app/causal-stability/#epta)
 
 **[Open the public lab](https://thomasmgfeller.github.io/x6-spectral-astrolabium/app/causal-stability/)** · [Deutsche Landingpage](https://thomasmgfeller.github.io/x6-spectral-astrolabium/de/#causal-stability) · [Source](../../../../app/causal-stability/)
 
