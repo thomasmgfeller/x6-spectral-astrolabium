@@ -2,7 +2,7 @@
 
 **Forschungsstand vom 2. November 2026.** Wie genau lässt sich die Masse eines kollabierenden Staubballs aus diskreten Ereignissen bestimmen? Für das homogene, marginal gebundene Innere kennen wir die klassische Masse. Damit lässt sich trennen, wie viel einer gemessenen Abweichung vom endlichen Zeitfenster, von der Beprobungsdichte oder von der Streuung einzelner Kausalordnungen stammt.
 
-**English summary.** The five notes connect a conditional bounce model and finite Benincasa–Dowker–Glaser (BDG) path sums to a distinct calibration problem on a prescribed classical dust background. The analytic curved-spacetime boundary correction reduced the largest error in the **mean** mass current from 9.50% to 0.95% across 18 new high-density cases. All 18 already met the 10% target before correction. Over all 24 cases, the corrected mean passed in 23. The remaining low-density case had a 10.79% error. The mass uncertainty of one sprinkling and a collapse law derived from causal-set histories remain open. The primary reports are in German. [Latest report (PDF)](reports/CST_Staubkollaps_Gekruemmter_Randterm.pdf) · [24 case results (CSV)](curved_boundary/holdout.csv) · [Full verification package (ZIP)](packages/CST_Staubkollaps_Gekruemmter_Randterm_Pruefpaket.zip)
+**English summary.** The five notes connect a conditional bounce model and finite Benincasa–Dowker–Glaser (BDG) path sums to a distinct calibration problem on a prescribed classical dust background. The analytic curved-spacetime boundary correction reduced the largest error in the **mean** mass current from 9.50% to 0.95% across 18 new high-density cases. All 18 already met the 10% target before correction. Over all 24 cases, the corrected mean passed in 23. The remaining low-density case had a 10.79% error. Four additional cases at a new time cut, with the past and future windows exchanged, reduced the mean error to 0.74–9.61%. [Additional results (CSV)](additional_windows/results.csv). The mass uncertainty of one sprinkling and a collapse law derived from causal-set histories remain open. The primary reports are in German. [Latest report (PDF)](reports/CST_Staubkollaps_Gekruemmter_Randterm.pdf) · [24 case results (CSV)](curved_boundary/holdout.csv) · [Full verification package (ZIP)](packages/CST_Staubkollaps_Gekruemmter_Randterm_Pruefpaket.zip)
 
 ## Von der Kausalordnung zur überprüfbaren Aussage
 
@@ -25,6 +25,25 @@ $$
 $$
 
 $M_B$ ist der diskrete Massestrom mit Materiegewicht am späteren Endpunkt. Die Korrektur dividiert ihn durch den aus den ersten beiden Termen berechneten Erwartungsfaktor. Sie setzt die Zeitskala $U$ voraus. Auf den 18 höheren Dichtefällen betrug der maximale absolute Mittelwertfehler 9,50 % ohne Korrektur, 3,66 % mit der flachen Referenzformel und 0,95 % mit der Staubformel. Bei der niedrigsten Dichte blieb im späten Fenster mit längerer Vergangenheit ein Restfehler von 10,79 %. Das Prüfmaterial trennt die vorausberechneten Faktoren von der numerischen Referenzintegration. [Versuchsdefinition](curved_boundary/design.json) · [Vorhersagen](curved_boundary/predictions.csv) · [Referenzwerte](curved_boundary/reference.csv) · [Alle Vergleiche](curved_boundary/holdout.csv)
+
+## Zusatzprüfung mit vertauschten Zeitfenstern
+
+Am neuen Schnitt $s=0{,}47$ wurden Vergangenheit $P$ und Zukunft $F$ vertauscht und zwei weitere Beprobungsdichten geprüft. Alle vier Vorhersagen wurden mit dem veröffentlichten Randterm vor Auswertung der Referenzintegrale berechnet. Die Tabelle zeigt den relativen Fehler des **erwarteten** Massestroms gegenüber der bekannten klassischen Staubmasse.
+
+| Beprobungsdichte | Vergangenheit $P$ | Zukunft $F$ | Ohne Korrektur | Mit Staubkorrektur |
+|---:|---:|---:|---:|---:|
+| 600 000 | 0,11 | 0,24 | +39,01 % | +9,16 % |
+| 600 000 | 0,24 | 0,11 | +41,08 % | +9,61 % |
+| 6 000 000 | 0,11 | 0,24 | +9,00 % | +0,74 % |
+| 6 000 000 | 0,24 | 0,11 | +9,49 % | +0,78 % |
+
+Bei der höheren Dichte lag der Fehler schon vor der Korrektur in beiden Orientierungen unter 10 %. Die Zusatzprüfung betrifft dieselbe vorgegebene Geometrie wie die Hauptserie. Die Streuung einer einzelnen Kausalordnung bleibt offen. [Vier Ergebnisse mit beiden Referenzintegralen (CSV)](additional_windows/results.csv) · [Eigenständiges Prüfpaket (ZIP)](packages/CST_Randkorrektur_Vier_Zusatzfaelle.zip)
+
+Zur Reproduktion das Zusatzpaket in ein neues Verzeichnis entpacken und dort mit Python 3.12, NumPy 2.3.5 und SciPy 1.17.0 ausführen. Die Spalten `raw_error` und `corrected_error` in `results.csv` enthalten Bruchteile der Sollmasse. [Quellstand der verwendeten Randkorrektur](https://github.com/thomasmgfeller/x6-spectral-astrolabium/tree/dd78ba05f4d91b6e62579ab41621be5cecaa079c/research/rax_cqg/dust_collapse/curved_boundary)
+
+```sh
+OPENBLAS_NUM_THREADS=1 python3 check_windows.py
+```
 
 ## Anschluss an die bisherigen Forschungen
 
@@ -55,4 +74,4 @@ python3 reference.py
 python3 evaluate.py
 ```
 
-Erwartet werden sechs bestandene Vergleiche je höherer Dichtestufe und fünf von sechs im Belastungstest. Die vier veröffentlichten ZIP-Pakete der Reihe und der ergänzenden Pulsstudie enthalten eigene Prüfsummen. Wer Ergebnisse zitiert, kann Berichtstitel, Datum und den verwendeten Git-Commit angeben. [Zitationsmetadaten](../../../CITATION.cff) · [Lizenzumfang](../../../LICENSE_SCOPE.md)
+Erwartet werden sechs bestandene Vergleiche je höherer Dichtestufe und fünf von sechs im Belastungstest. Die vier ursprünglichen ZIP-Pakete der Reihe und der ergänzenden Pulsstudie enthalten eigene Prüfsummen. Wer Ergebnisse zitiert, kann Berichtstitel, Datum und den verwendeten Git-Commit angeben. [Zitationsmetadaten](../../../CITATION.cff) · [Lizenzumfang](../../../LICENSE_SCOPE.md)
