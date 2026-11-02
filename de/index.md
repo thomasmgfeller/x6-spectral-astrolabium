@@ -64,11 +64,11 @@ Explorativer Software-Prototyp, keine validierte Quantengravitation. Die Archite
 
 ## Wie genau misst ein Kausalset die Masse eines kollabierenden Staubballs?
 
-Bei Dichte 6 Millionen liegt der korrigierte mittlere Massestrom in zwei Zeitfenstern weniger als 0,8 % neben der Sollmasse. Die Trefferchance einer einzelnen Ordnung im ±10-Prozent-Band beträgt je nach Fenster höchstens 56,5 % bzw. 53,0 % (gemeinsame 99-Prozent-Konfidenz).
+Erkunde den klassischen Kollaps und vergleiche die lokale mit der geglätteten Massenschätzung auf denselben zwölf Kausalordnungen. Bei einer Eingangsdichte von 1,2 Millionen lag ein geglätteter Einzelwert im Zielband von ±10 % um die Sollmasse.
 
-Das Ziel waren 95 % Treffer. Bei Dichte 600 000 lag in beiden Fensterrichtungen keiner von jeweils 16 direkt berechneten Einzelwerten im Band. Die sechs Notizen ordnen diese Modellrechnung in die Forschung zum Staubkollaps ein.
+Die zwölf Messpaare gehören zum gleichen Schnitt im periodischen Referenzwürfel. Für die zwei offenen Probeläufe bei sechs Millionen steht ein eigenes Prüfprotokoll bereit.
 
-[Forschungsübersicht und Belege (DE/EN) →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/rax_cqg/dust_collapse/README.md) · [Einzelmessung und Schranken (PDF) →](https://thomasmgfeller.github.io/x6-spectral-astrolabium/research/rax_cqg/dust_collapse/reports/CST_Staubkollaps_Einzelmessung.pdf) · [Prüfcode und Einzelwerte (ZIP) ↓](https://thomasmgfeller.github.io/x6-spectral-astrolabium/research/rax_cqg/dust_collapse/packages/CST_Staubkollaps_Einzelmessung_Pruefpaket.zip)
+[Staubball-Labor öffnen →](https://thomasmgfeller.github.io/x6-spectral-astrolabium/app/staubball/index.html?lang=de) · [Forschungsübersicht und Belege (DE/EN) →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/rax_cqg/dust_collapse/README.md) · [Geglätteter Massestrom (PDF) →](https://thomasmgfeller.github.io/x6-spectral-astrolabium/research/rax_cqg/dust_collapse/reports/CST_Staubkollaps_Geglaetteter_Massestrom.pdf) · [Code und Messpaare (ZIP) ↓](https://thomasmgfeller.github.io/x6-spectral-astrolabium/research/rax_cqg/dust_collapse/packages/CST_Staubkollaps_Geglaetteter_Massestrom_Pruefpaket.zip)
 
 ## Weitere Werkzeuge & Referenzen
 
