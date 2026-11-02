@@ -64,11 +64,11 @@ Exploratory software prototype, not validated quantum gravity. Architecture v0.1
 
 ## How accurately does a causal set measure the mass of a collapsing dust ball?
 
-At density six million, the corrected mean mass current is within 0.8% of the known mass in two windows. The probability that an individual order falls within 10% is at most 56.5% or 53.0%, depending on the window (simultaneous 99% confidence).
+Explore classical collapse and compare the local and smoothed mass estimates on the same twelve causal orders. At an input density of 1.2 million, one smoothed estimate fell within 10% of the known mass.
 
-The target was 95% coverage. At density 600,000, none of the 16 directly computed estimates in either window met the target band. Six notes connect these tests on a prescribed dust background to the collapse model.
+The twelve pairs share a fixed cut in the periodic reference cube. The two open pilots at six million have a separate protocol.
 
-[Research guide and evidence (DE/EN) →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/rax_cqg/dust_collapse/README.md) · [Single-order study and bounds (PDF, DE) →](https://thomasmgfeller.github.io/x6-spectral-astrolabium/research/rax_cqg/dust_collapse/reports/CST_Staubkollaps_Einzelmessung.pdf) · [Reproduction code and individual values (ZIP) ↓](https://thomasmgfeller.github.io/x6-spectral-astrolabium/research/rax_cqg/dust_collapse/packages/CST_Staubkollaps_Einzelmessung_Pruefpaket.zip)
+[Open the dust ball lab →](https://thomasmgfeller.github.io/x6-spectral-astrolabium/app/staubball/index.html?lang=en) · [Research guide and evidence (DE/EN) →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/research/rax_cqg/dust_collapse/README.md) · [Smoothed mass current (PDF, DE) →](https://thomasmgfeller.github.io/x6-spectral-astrolabium/research/rax_cqg/dust_collapse/reports/CST_Staubkollaps_Geglaetteter_Massestrom.pdf) · [Code and paired measurements (ZIP) ↓](https://thomasmgfeller.github.io/x6-spectral-astrolabium/research/rax_cqg/dust_collapse/packages/CST_Staubkollaps_Geglaetteter_Massestrom_Pruefpaket.zip)
 
 ## More tools & references
 

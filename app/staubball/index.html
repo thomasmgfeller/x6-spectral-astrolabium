@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#102f34">
+    <title>Staubball-Labor · X6 Spectral Astrolabium</title>
+    <meta name="description" content="Zwölf Kausalordnungen eines homogenen Staubballs erkunden. Vergleiche lokale und geglättete Massenschätzungen mit der klassischen Referenz.">
+    <link rel="stylesheet" href="lab.css">
+    <script type="module" src="lab.js">
+    </script>
+  </head>
+  <body>
+    <a class="skip" href="#experiment" data-en="Skip to experiment">Zum Experiment</a>
+    <header>
+      <div class="wrap top">
+        <a id="home" class="brand" href="../../de/index.html">
+          <b>X6</b> Spectral Astrolabium</a>
+        <div class="nav">
+          <a id="lang" href="?lang=en" lang="en">English</a>
+          <a href="https://github.com/thomasmgfeller/x6-spectral-astrolabium/issues/192" data-en="Open pilots ↗">Offene Probeläufe ↗</a>
+        </div>
+      </div>
+    </header>
+    <main class="wrap">
+      <section class="intro">
+        <p class="eyebrow">RAX–CQG <span>/</span>
+          <span data-en="Homogeneous dust collapse">Homogener Staubkollaps</span>
+        </p>
+        <h1 data-en="Dust ball lab">Staubball-Labor</h1>
+        <p class="lead" data-en="How accurately can a single causal order recover the mass of a collapsing dust ball? Compare two estimators against the same known mass.">Wie genau lässt sich die Masse eines kollabierenden Staubballs aus einer einzelnen Kausalordnung bestimmen? Vergleiche zwei Schätzer mit derselben bekannten Masse.</p>
+        <div class="parameters">
+          <span>
+            <small data-en="Input density">Eingangsdichte</small>
+            <strong data-en="1.2 million">1,2 Millionen</strong>
+          </span>
+          <span>
+            <small data-en="Smoothing density">Glättungsdichte</small>
+            <strong data-en="600,000">600 000</strong>
+          </span>
+          <span>
+            <small data-en="Reference mass">Sollmasse</small>
+            <strong>M = 1</strong>
+          </span>
+        </div>
+      </section>
+      <noscript>
+        <p>Für die Interaktion JavaScript aktivieren. Die Messungen stehen auch als CSV bereit. · Enable JavaScript to use the controls or download the data below.</p>
+      </noscript>
+      <div id="experiment" class="panels">
+        <section class="panel">
+          <div class="panelhead">
+            <p class="eyebrow">
+              <em>01</em>
+              <span data-en="Reference geometry">Referenzgeometrie</span>
+            </p>
+            <h2 data-en="Inside the observing window">Im Beobachtungsfenster</h2>
+            <p data-en="The dust surface contracts. Earlier events outside the ball can still influence a later measurement inside it.">Die Stauboberfläche zieht sich zusammen. Frühere Ereignisse ausserhalb der Kugel können eine spätere Messung im Inneren beeinflussen.</p>
+          </div>
+          <figure class="geometry">
+            <svg id="diagram" viewBox="0 0 450 300" role="img" aria-labelledby="geom-title geom-desc">
+              <title id="geom-title" data-en="Dust surface and causal envelope">Stauboberfläche und kausales Einzugsgebiet</title>
+              <desc id="geom-desc" data-en="A section through the centre. Proper time increases upwards. The outer envelope contains all possible ancestors of measured future endpoints.">Schnitt durch den Mittelpunkt. Die Eigenzeit nimmt nach oben zu. Die äussere Hülle enthält alle möglichen Vorfahren der gemessenen zukünftigen Endpunkte.</desc>
+            </svg>
+            <figcaption>
+              <span>
+                <i class="sw ball">
+                </i>
+                <span data-en="Dust surface">Stauboberfläche</span>
+              </span>
+              <span>
+                <i class="sw halo">
+                </i>
+                <span data-en="Causal envelope">Einzugsgebiet</span>
+              </span>
+              <span>
+                <i class="sw cut">
+                </i>
+                <span data-en="Measurement cut">Messschnitt</span>
+              </span>
+            </figcaption>
+          </figure>
+          <div class="sliderblock">
+            <label for="time">
+              <b data-en="Explore a time slice">Zeitscheibe erkunden</b>
+              <output id="time-value" for="time">T = 0,47</output>
+            </label>
+            <input type="range" id="time" min="23" max="58" value="47" step="1">
+            <div class="ends">
+              <span>T = 0,23</span>
+              <span class="time-actions">
+                <button id="play" type="button" data-en="Play">Abspielen</button>
+                <button id="reset" type="button" data-en="Back to cut">Zum Messschnitt</button>
+              </span>
+              <span>T = 0,58</span>
+            </div>
+            <p id="radii">
+            </p>
+            <p class="note" data-en="The slider moves the viewing slice. All twelve mass estimates belong to the fixed cut.">Der Regler verschiebt die Ansicht. Alle zwölf Massenwerte gehören zum festen Messschnitt.</p>
+          </div>
+          <div class="order-context">
+            <span id="context-id" class="tag">#00</span>
+            <p id="context">
+            </p>
+          </div>
+        </section>
+        <section class="panel">
+          <div class="panelhead">
+            <p class="eyebrow">
+              <em>02</em>
+              <span data-en="Single-order measurements">Einzelmessungen</span>
+            </p>
+            <h2 data-en="Twelve orders, two estimates">Zwölf Ordnungen, zwei Schätzer</h2>
+            <p data-en="Each row shows one independent order. Select a row to read its two mass estimates and event counts.">Jede Zeile zeigt eine unabhängige Ordnung. Wähle eine Zeile für ihre beiden Massenwerte und Ereigniszahlen.</p>
+          </div>
+          <div class="plot-zone">
+            <div class="legend">
+              <span>
+                <i class="dot local">
+                </i>
+                <span data-en="Local">Lokal</span>
+              </span>
+              <span>
+                <i class="dot smooth">
+                </i>
+                <span data-en="Smoothed">Geglättet</span>
+              </span>
+              <span>
+                <i class="sw target">
+                </i>
+                <span data-en="Target ±10%">Zielband ±10 %</span>
+              </span>
+            </div>
+            <div class="axis-head">
+              <label for="scale" data-en="Common mass scale">Gemeinsame Massenskala</label>
+              <select id="scale">
+                <option value="linear">Linear</option>
+                <option value="focus" data-en="Expand around M = 1">Um M = 1 spreizen</option>
+              </select>
+            </div>
+            <div id="axis" aria-hidden="true">
+            </div>
+            <div id="rows" role="group" aria-label="Kausalordnung wählen">
+            </div>
+            <p class="scale-explain" id="scale-note">
+            </p>
+          </div>
+          <div class="readout" aria-live="polite" aria-atomic="true">
+            <div class="read-title">
+              <b id="selected">
+              </b>
+              <span id="verdict" class="verdict">
+              </span>
+            </div>
+            <div class="values">
+              <div>
+                <span data-en="Local mass">Lokale Masse</span>
+                <strong id="local-value">—</strong>
+              </div>
+              <div>
+                <span data-en="Smoothed mass">Geglättete Masse</span>
+                <strong id="smooth-value">—</strong>
+              </div>
+            </div>
+          </div>
+          <p class="cohort" id="cohort" role="status">
+          </p>
+        </section>
+      </div>
+      <section class="interpret">
+        <p class="eyebrow" data-en="Interpretation">Einordnung</p>
+        <h2 data-en="What does a point measure?">Was misst ein Punkt?</h2>
+        <div class="notes">
+          <p data-en="Each point estimates the same positive mass. Signed layer contributions can produce negative estimates. The twelve orders use a periodic comoving cube of side 1.6. The reference diagram shows the lifted radial geometry; the event locations of individual orders are not stored here.">Jeder Punkt schätzt dieselbe positive Masse. Schichtbeiträge mit Vorzeichen können negative Schätzwerte ergeben. Die zwölf Ordnungen stammen aus einem periodischen, komovierenden Würfel der Seitenlänge 1,6. Das Diagramm zeigt die radiale Referenzgeometrie im Überlagerungsraum. Einzelne Ereignisorte sind hier nicht archiviert.</p>
+          <p data-en="The dust geometry and its time evolution are prescribed. The measurements test the mass estimator on that classical background. At an input density of six million the single-order accuracy in unbounded space is still open. The two volunteer pilots have their own protocol.">Die Staubgeometrie und ihr zeitlicher Verlauf sind vorgegeben. Die Messwerte prüfen den Masseschätzer auf diesem klassischen Hintergrund. Bei sechs Millionen Eingangspunkten pro Vierervolumeneinheit ist die Einzelgenauigkeit im unbeschränkten Raum offen. Für die zwei freiwilligen Probeläufe gilt ein eigener Prüfplan.</p>
+        </div>
+      </section>
+      <footer>
+        <strong data-en="Data &amp; methods">Daten und Methode</strong>
+        <div>
+          <a href="../../research/rax_cqg/dust_collapse/smoothed/full_scores.csv" download data-en="Mass estimates (CSV)">Massenwerte (CSV)</a>
+          <a href="../../research/rax_cqg/dust_collapse/smoothed/full.csv" download data-en="Raw sums and counts (CSV)">Rohsummen und Anzahlen (CSV)</a>
+          <a href="../../research/rax_cqg/dust_collapse/reports/CST_Staubkollaps_Geglaetteter_Massestrom.pdf" data-en="Research report (PDF, DE)">Forschungsbericht (PDF)</a>
+          <a href="../../research/rax_cqg/dust_collapse/packages/CST_Staubkollaps_Geglaetteter_Massestrom_Pruefpaket.zip" data-en="Report &amp; code (ZIP)">Bericht und Code (ZIP)</a>
+          <a href="https://github.com/thomasmgfeller/x6-spectral-astrolabium/issues/192" data-en="Volunteer for a pilot ↗">Probelauf übernehmen ↗</a>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>
