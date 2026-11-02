@@ -1,5 +1,8 @@
 # Causal Stability Lab v0.1
 
+[NICER pulsar light curves and exposure-gap comparison](NICER.md) · [Open the observations in the lab](https://thomasmgfeller.github.io/x6-spectral-astrolabium/app/causal-stability/#nicer)
+
+
 **[Open the public lab](https://thomasmgfeller.github.io/x6-spectral-astrolabium/app/causal-stability/)** · [Deutsche Landingpage](https://thomasmgfeller.github.io/x6-spectral-astrolabium/de/#causal-stability) · [Source](../../../../app/causal-stability/)
 
 An interactive instrument for causal-path reinforcement, cancellation, finite
