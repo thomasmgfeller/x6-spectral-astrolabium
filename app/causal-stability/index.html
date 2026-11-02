@@ -10,7 +10,7 @@
 </head>
 <body>
 <a class="skip" href="#labor">Zum Labor</a>
-<header class="topbar"><a class="brand" href="#" aria-label="Causal Stability Lab Start"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 23 16 7l11 16H5L16 15l11 8M16 7v8"/><circle cx="5" cy="23" r="3"/><circle cx="16" cy="7" r="3"/><circle cx="27" cy="23" r="3"/><circle cx="16" cy="15" r="2"/></svg><span>CSPP <b>RESEARCH TOOLS</b></span></a><nav aria-label="Hauptnavigation"><a href="../../de/index.html">X6 Übersicht</a><a href="#labor" class="active">Labor</a><a href="#methodik">Mathematik</a><a href="#hanford">Hanford</a><a href="#faser">Glasfaser</a><a href="#seismik">Seismik</a><a href="#anu">ANU</a><a href="#nicer">NICER</a><a href="#quellen">Provenienz</a></nav><span class="version">v0.1 <span class="live-dot"></span> lokal berechnet</span></header>
+<header class="topbar"><a class="brand" href="#" aria-label="Causal Stability Lab Start"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 23 16 7l11 16H5L16 15l11 8M16 7v8"/><circle cx="5" cy="23" r="3"/><circle cx="16" cy="7" r="3"/><circle cx="27" cy="23" r="3"/><circle cx="16" cy="15" r="2"/></svg><span>CSPP <b>RESEARCH TOOLS</b></span></a><nav aria-label="Hauptnavigation"><a href="../../de/index.html">X6 Übersicht</a><a href="#labor" class="active">Labor</a><a href="#methodik">Mathematik</a><a href="#hanford">Hanford</a><a href="#faser">Glasfaser</a><a href="#seismik">Seismik</a><a href="#anu">ANU</a><a href="#nicer">NICER</a><a href="#epta">EPTA</a><a href="#quellen">Provenienz</a></nav><span class="version">v0.1 <span class="live-dot"></span> lokal berechnet</span></header>
 <main>
 <noscript><p>Dieses Labor benötigt JavaScript für die interaktiven Berechnungen. Die <a href="https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/docs/research/cspp/causal-stability-lab/MATHEMATICS.md">mathematische Herleitung und der Geltungsbereich</a> bleiben ohne JavaScript lesbar.</p></noscript>
 <section class="intro"><div><div class="eyebrow">01 / KAUSALE STABILITÄT</div><h1>Was verstärkt eine Störung?</h1><p>Verfolge kausale Pfade. Prüfe ihre Aufhebung. Sieh, warum ein unauffälliges Spektrum noch keine stabile Ausbreitung bedeutet.</p></div><div class="scope-tag"><span class="amber-dot"></span><div><strong>Endliche Diagnose</strong><span>METHOD & G1 · HOLD</span></div></div></section>
@@ -153,6 +153,29 @@
   </div>
   <p><a href="https://heasarc.gsfc.nasa.gov/docs/nicer/nicer_archive.html">NASA / HEASARC-Archiv ↗</a> · <a href="https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/docs/research/cspp/causal-stability-lab/NICER.md">Messverfahren und Quellenangabe ↗</a></p>
 </section>
+<section id="epta" class="panel hanford-panel" aria-labelledby="epta-title">
+  <div class="eyebrow">PULSARUHREN · EUROPEAN PULSAR TIMING ARRAY</div>
+  <h2 id="epta-title">Bleibt ein schwaches gemeinsames Zeitsignal nach dem Filtern erhalten?</h2>
+  <p>J0030+0451 ist derselbe Pulsar wie im NICER-Versuch. Hier messen Radioteleskope, um wie viele Mikrosekunden ein Puls früher oder später als im Timing-Modell ankommt. Acht Pulsare liefern 28 Paare für einen kontrollierten Vergleich.</p>
+  <button id="epta-load" type="button" class="secondary">Messungen und Filtervergleich öffnen</button>
+  <p id="epta-status" role="status"></p>
+  <div id="epta-result" hidden>
+    <h3>Beobachtet · PSR J0030+0451</h3>
+    <p id="epta-reference"></p>
+    <svg id="epta-plot" class="chart" viewBox="0 0 680 185" role="img" aria-label="Gewichtetes Timing-Residuum in beobachteten 90-Tage-Fenstern, in Mikrosekunden über der baryzentrischen Zeit"></svg>
+    <p class="muted">Jeder Punkt ist das gewichtete Mittel eines belegten 90-Tage-Fensters. Die CSV-Datei enthält die einzelnen Residuen aller acht Pulsare.</p>
+    <h3>Simuliert · Vergleich bei angestrebten 5 % Fehlalarmen</h3>
+    <table class="sed-table"><thead><tr><th>Verfahren</th><th>Fehlalarme</th><th>Treffer mit Signal</th></tr></thead><tbody id="epta-rates"></tbody></table>
+    <p id="epta-verdict"></p>
+    <p id="epta-precision" class="muted"></p>
+    <details><summary>Erwartetes Winkelmuster für alle 28 Paare</summary>
+      <p>Analytischer Mittelwert der Kreuzprodukte für den simulierten Hintergrund bei den echten Messzeiten, geteilt durch die eingespeiste Signalleistung. Die ungefilterte Rechnung reproduziert die Hellings–Downs-Vorlage. Negative Werte bezeichnen eine Antikorrelation.</p>
+      <table class="sed-table"><thead><tr><th>Pulsarpaar</th><th>Winkel</th><th>Vorlage</th><th>Nach Filter und Schätzung</th></tr></thead><tbody id="epta-pairs"></tbody></table>
+    </details>
+    <p><a id="epta-json">Versuchsergebnis mit Unsicherheiten (JSON) ↓</a> · <a id="epta-csv">Timing-Residuen aller Pulsare (CSV.GZ) ↓</a></p>
+  </div>
+  <p>Messdaten von J. Antoniadis et al. (EPTA Collaboration), DR2 v2.1, CC BY 4.0. Auswahl, Residuenberechnung und Filterversuch durch X6. <a href="https://doi.org/10.5281/zenodo.8300645">Originaldaten ↗</a> · <a href="https://creativecommons.org/licenses/by/4.0/">Lizenz ↗</a> · <a href="https://github.com/thomasmgfeller/x6-spectral-astrolabium/tree/main/research/epta_filter_v1">Versuchsbericht und Vorabprotokoll ↗</a></p>
+</section>
 <section id="methodik" class="method-section"><div class="section-intro"><div class="eyebrow">DAS MATHEMATISCHE FUNDAMENT</div><h2>Vom Pfad zum prüfbaren Kriterium.</h2><p>Ein endliches History-Problem ist eindeutig lösbar. Ob seine Fehlerverstärkung beherrschbar bleibt, ist eine zusätzliche Frage.</p></div><div class="method-grid">
  <article><span class="method-num">01</span><h3>Die exakte endliche Antwort</h3><div class="formula">u = Hh + Ku + f<br>R = (I − K)<sup>−1</sup> = ∑<sub>j=0</sub><sup>N−1</sup> K<sup>j</sup></div><p>h enthält vorgeschriebene History-Werte, f aktive Gleichungsfehler. K ist strikt dreieckig. Die Probe liest A = q<sub>H</sub>h + q<sub>A</sub>u aus, ohne selbst die Dynamik zu verändern.</p></article>
  <article><span class="method-num">02</span><h3>Ein bedingter Stabilitätssatz</h3><div class="formula">sup<sub>N</sub> ‖K<sub>N</sub>‖<sub>∞</sub> ≤ r &lt; 1<br>⇒ sup<sub>N</sub> ‖R<sub>N</sub>‖<sub>∞</sub> ≤ 1 / (1 − r)</div><p>Die geometrische Reihe liefert die Schranke. Für eine Familie muss die Voraussetzung für alle N bewiesen sein. Ein einzelner grüner Messwert reicht nicht. History- und Probenkopplungen benötigen eigene uniforme Schranken.</p></article>
@@ -168,5 +191,6 @@
 <script type="module" src="sed-prediction.mjs"></script>
 <script type="module" src="anu.mjs"></script>
 <script type="module" src="nicer.mjs"></script>
+<script type="module" src="epta.mjs"></script>
 </body>
 </html>

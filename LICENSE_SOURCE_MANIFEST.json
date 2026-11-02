@@ -45,7 +45,7 @@
     "SAGNAC_SOURCE_MANIFEST.json": "6fb23c9fa932929f284c2b0ff9e7ed5e67e9bd5b056f54aa8be569df162e41fd",
     "app/causal-stability/app.mjs": "88aef8d0da68d1a3e49986bf557597e6e67499e74ec5f91e7f0623be9f12230b",
     "app/causal-stability/engine.mjs": "6230ee3e9da380a10b26d1b555d2ca0bcfe024cb6a2db5d32f628922cccfdae9",
-    "app/causal-stability/index.html": "8ea6d533487c18e779c6fc1858aaaccafdebcf3529f05ff8c0490ae478f33efd",
+    "app/causal-stability/index.html": "5a52dafbb0cef6cad3257add00e7d5577f2b99b3ac86ae1dcb34bbc958f2f44f",
     "app/causal-stability/style.css": "3abb5093ac218ad24b9ddf5a8dad9a2b7ab6aaa8d96631be7239210dbf1ba960",
     "app/proper-time.html": "e3d8152c649ab05500db4d5d05965608719d0fe4d82c29f5432bd8ca1246fa58",
     "app/rax-cqg-lab.html": "2e6bf929405aee66f12113c405c9c1879d71d2c897f4fc7435b5d4bf18c4c8a4",
@@ -69,7 +69,7 @@
     "docs/hub/content.json": "bebf15d9259490e7ce20f9e65531bc215855b80d7bab55f2cbf83356b8e9b452",
     "docs/hub/github-metadata.json": "6a0f9ecda6594fa7da04ac767c6c635c3b93f7bf8266ac073137536aa5ee0d3e",
     "docs/research/cspp/causal-stability-lab/MATHEMATICS.md": "38eabc35b218fc882bf02de654cc9d928ce948fcf7037fb05d93199bfb56e0e7",
-    "docs/research/cspp/causal-stability-lab/README.md": "7a35ea607f2ee884b18fda2f434f0de50055325ec0b748b9e7871d7b983c211c",
+    "docs/research/cspp/causal-stability-lab/README.md": "7491b80708ca3ce3d408517e3ecf15b6994044677d858722671e5c0f39ac1cb2",
     "docs/research/cspp/causal-stability-lab/VALIDATION.md": "759773543a4d0dbede68dbfc036bb2d52c0b9aec972c49bc5fda4b0fc724010d",
     "docs/research/eigenzeit/gfest/GFEST_Stabilitaet_v0_2.pdf": "5c0987ca82b85b615d0651eaa33358991f8c9be877d3558180e7c4c4249daac2",
     "docs/research/eigenzeit/gfest/GFEST_Stabilitaet_v0_2_Pruefpaket.zip": "d84050683d255a18154f855dc6b68db20bcae178c040c5a5386ea7f362ba30af",
@@ -3176,7 +3176,19 @@
     "app/causal-stability/nicer-data/index.json": "6098301b254081ec5c27a75c7ae04a1be59ad0ffcf87d00ccc4c8d38acc1ead9",
     "app/causal-stability/nicer.mjs": "0d9346ac44c421d9e824eb3aa7e218f90a21555f609b3b4000481680df0f87ea",
     "docs/research/cspp/causal-stability-lab/NICER.md": "66aff2752b67e3ccb3b6e2afa3cfda930ab7aa4d44a6bdfc806a7f2091090447",
-    "tests/python/test_nicer.py": "cd923a7fc5c3e9e92bf68f00c0d139d4373c22a0316eab6421b7c3d933520451"
+    "tests/python/test_nicer.py": "cd923a7fc5c3e9e92bf68f00c0d139d4373c22a0316eab6421b7c3d933520451",
+    ".github/workflows/epta-filter.yml": "b6458a76548455b6fbf189cf1c90e63fc9776e0ec552aa65cf54aac4baa857de",
+    "agent/epta_timing.py": "ff7726ffd47035dc5f3ba07f724b3f97b4cb6c1d585104be19ae40e5af9125ee",
+    "agent/epta_filter.py": "ccfb881b448ba2e9204b5dff14106ecae0cc801d74c7d29b371c4856676990f4",
+    "app/causal-stability/epta.mjs": "8cfe5b11367c1ea588fa5ed0a29643630328f20034ba27b032fd69db48b5efcf",
+    "research/epta_filter_v1/ATTRIBUTION.md": "de0dbffa6663765f066722f73b9fa504af0bfd84acce251563476f947c73909d",
+    "research/epta_filter_v1/README.md": "1c23d35c59375a111224a55bdd42f5ec51d18881ed52099a662e5ebed7b1af32",
+    "research/epta_filter_v1/protocol.json": "9124e60fdd8bdb674f3a2e5522a9af9ace1458b5ba766b6540e9321fc8d0b17a",
+    "research/epta_filter_v1/reference.json": "b3686d3554a62fbcdd0668c5e2f90b0c55085bb2bd23260c14855ff11124bc1d",
+    "research/epta_filter_v1/check_replay.py": "3855d25cc89783bad147c8cd96c565940a8c92efe3cb564de60f3e85c865a0f0",
+    "research/epta_filter_v1/install-tempo2.sh": "362a6967eba7d5543466780033c18785067715af0da8a13325cd68da6fa4ffb3",
+    "research/epta_filter_v1/tempo2.lock": "1f429f490be1b540d92b3bee4c9b1a8ea16da90aff4e448cb5822d8bb95d0a4b",
+    "tests/python/test_epta.py": "91f76ba287aada5845fd7808bdc01f73d576e3c9e5ab97b6958968df23c852e6"
   },
   "documentation_updates": [
     {
@@ -4586,6 +4598,22 @@
           "sha256": "7a35ea607f2ee884b18fda2f434f0de50055325ec0b748b9e7871d7b983c211c"
         }
       ]
+    },
+    {
+      "date": "2026-11-02",
+      "scope": "Publish the EPTA DR2 fixed-model timing replay, controlled injection benchmark, negative qualification and automated archive with CC BY 4.0 source attribution.",
+      "files": [
+        {
+          "path": "app/causal-stability/index.html",
+          "previous_sha256": "8ea6d533487c18e779c6fc1858aaaccafdebcf3529f05ff8c0490ae478f33efd",
+          "sha256": "5a52dafbb0cef6cad3257add00e7d5577f2b99b3ac86ae1dcb34bbc958f2f44f"
+        },
+        {
+          "path": "docs/research/cspp/causal-stability-lab/README.md",
+          "previous_sha256": "7a35ea607f2ee884b18fda2f434f0de50055325ec0b748b9e7871d7b983c211c",
+          "sha256": "7491b80708ca3ce3d408517e3ecf15b6994044677d858722671e5c0f39ac1cb2"
+        }
+      ]
     }
   ],
   "publication_additions": [
@@ -5340,6 +5368,24 @@
         "app/causal-stability/nicer.mjs",
         "docs/research/cspp/causal-stability-lab/NICER.md",
         "tests/python/test_nicer.py"
+      ]
+    },
+    {
+      "date": "2026-11-02",
+      "scope": "Publish the EPTA DR2 fixed-model timing replay, controlled injection benchmark, negative qualification and automated archive with CC BY 4.0 source attribution.",
+      "paths": [
+        ".github/workflows/epta-filter.yml",
+        "agent/epta_timing.py",
+        "agent/epta_filter.py",
+        "app/causal-stability/epta.mjs",
+        "research/epta_filter_v1/ATTRIBUTION.md",
+        "research/epta_filter_v1/README.md",
+        "research/epta_filter_v1/protocol.json",
+        "research/epta_filter_v1/reference.json",
+        "research/epta_filter_v1/check_replay.py",
+        "research/epta_filter_v1/install-tempo2.sh",
+        "research/epta_filter_v1/tempo2.lock",
+        "tests/python/test_epta.py"
       ]
     }
   ]
