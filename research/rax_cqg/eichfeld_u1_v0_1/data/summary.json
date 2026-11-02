@@ -1,0 +1,46 @@
+{
+  "cases": 256,
+  "per_side_alpha": 0.00125,
+  "classes": {
+    "E": {
+      "n": 128,
+      "abstained": 2,
+      "baseline_hits": 126,
+      "median_relative_error": 18.08252210695675,
+      "sign_hit": {
+        "k": 65,
+        "lo": 0.37270369586494306,
+        "hi": 0.6421250117304326,
+        "gate": 0.9,
+        "decision": "FAIL"
+      },
+      "magnitude_hit": {
+        "k": 1,
+        "lo": 9.771685863427836e-06,
+        "hi": 0.06805251927255249,
+        "gate": 0.8,
+        "decision": "FAIL"
+      }
+    },
+    "B": {
+      "n": 128,
+      "abstained": 2,
+      "baseline_hits": 126,
+      "median_relative_error": 0.1751954876878473,
+      "sign_hit": {
+        "k": 126,
+        "lo": 0.9173000262291522,
+        "hi": 0.9996012298027211,
+        "gate": 0.9,
+        "decision": "PASS"
+      },
+      "magnitude_hit": {
+        "k": 86,
+        "lo": 0.5361957146296872,
+        "hi": 0.790000169492096,
+        "gate": 0.8,
+        "decision": "FAIL"
+      }
+    }
+  }
+}

@@ -62,6 +62,12 @@ Exploratory software prototype, not validated quantum gravity. Architecture v0.1
 - [Markdown and sources on GitHub →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/docs/research/rax/cqg-v0.1/ARCHITECTURE.md)
 - [Download the Word document ↓](https://thomasmgfeller.github.io/x6-spectral-astrolabium/docs/research/rax/cqg-v0.1/RAX_CQG_Forschungsarchitektur_v0_1.docx)
 
+## U(1) gauge field lab
+
+The four-event diamond recovers the gauge-invariant flux phase to roundoff in all 6,144 checks. In the blinded 4D test the estimator recovers the Maxwell contribution within 25% in 1 of 128 electric and 86 of 128 magnetic cases. Both classes miss the prespecified accuracy target.
+
+[Open gauge field lab (DE) →](https://thomasmgfeller.github.io/x6-spectral-astrolabium/app/eichfeld/index.html) · [Research report (PDF, DE) →](https://thomasmgfeller.github.io/x6-spectral-astrolabium/research/rax_cqg/eichfeld_u1_v0_1/X6_Eichfeld_U1_Blindtest.pdf) · [Code and 256 blind cases (ZIP) ↓](https://thomasmgfeller.github.io/x6-spectral-astrolabium/research/rax_cqg/eichfeld_u1_v0_1/X6_Eichfeld_U1_Pruefpaket.zip)
+
 ## How accurately does a causal set measure the mass of a collapsing dust ball?
 
 Explore classical collapse and compare the local and smoothed mass estimates on the same twelve causal orders. At an input density of 1.2 million, one smoothed estimate fell within 10% of the known mass.

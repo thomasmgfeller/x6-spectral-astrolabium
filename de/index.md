@@ -62,6 +62,12 @@ Explorativer Software-Prototyp, keine validierte Quantengravitation. Die Archite
 - [Markdown und Quellen auf GitHub →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/docs/research/rax/cqg-v0.1/ARCHITECTURE.md)
 - [Word-Dokument herunterladen ↓](https://thomasmgfeller.github.io/x6-spectral-astrolabium/docs/research/rax/cqg-v0.1/RAX_CQG_Forschungsarchitektur_v0_1.docx)
 
+## U(1)-Eichfeld-Labor
+
+Auf dem Vier-Ereignis-Diamanten bleibt die Flussphase bei allen 6 144 Kontrollen eichinvariant bis auf Rundung. Im verblindeten 4D-Test trifft der Schätzer den Maxwell-Beitrag auf ±25 % in 1 von 128 elektrischen und 86 von 128 magnetischen Fällen. Beide Feldtypen verfehlen das vorab festgelegte Genauigkeitsziel.
+
+[Eichfeld-Labor öffnen →](https://thomasmgfeller.github.io/x6-spectral-astrolabium/app/eichfeld/index.html) · [Forschungsbericht (PDF) →](https://thomasmgfeller.github.io/x6-spectral-astrolabium/research/rax_cqg/eichfeld_u1_v0_1/X6_Eichfeld_U1_Blindtest.pdf) · [Code und 256 Blindtestfälle (ZIP) ↓](https://thomasmgfeller.github.io/x6-spectral-astrolabium/research/rax_cqg/eichfeld_u1_v0_1/X6_Eichfeld_U1_Pruefpaket.zip)
+
 ## Wie genau misst ein Kausalset die Masse eines kollabierenden Staubballs?
 
 Erkunde den klassischen Kollaps und vergleiche die lokale mit der geglätteten Massenschätzung auf denselben zwölf Kausalordnungen. Bei einer Eingangsdichte von 1,2 Millionen lag ein geglätteter Einzelwert im Zielband von ±10 % um die Sollmasse.
