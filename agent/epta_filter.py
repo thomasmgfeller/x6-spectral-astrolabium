@@ -138,6 +138,22 @@ def evaluate(obs):
     alt_detect = scores["injection_test"] > cutoff
     diff = alt_detect[:, 1].astype(int)-alt_detect[:, 0].astype(int)
     delta, margin = float(diff.mean()), Z95*diff.std(ddof=1)/np.sqrt(len(diff))
+    # Descriptive ROC comparison added after the frozen decision. Match the observed
+    # null count in both arms, without using signal trials to select a threshold.
+    target = math.floor(P["alpha"]*len(null_detect))
+    roc_cut = np.sort(scores["null_test"], axis=0)[-target-1]
+    roc_null = scores["null_test"] > roc_cut
+    require(np.all(roc_null.sum(axis=0) == target), "Tied scores at the empirical ROC cutoff")
+    roc_hits = scores["injection_test"] > roc_cut
+    roc_diff = roc_hits[:,1].astype(int)-roc_hits[:,0].astype(int)
+    roc_delta = float(roc_diff.mean())
+    roc_margin = Z95*roc_diff.std(ddof=1)/np.sqrt(len(roc_diff))
+    matched = {"condition": "descriptive, thresholds chosen on null_test, evaluated on injection_test",
+               "false_alarms_per_arm": target, "null_trials": len(roc_null),
+               "signal_trials": len(roc_hits), "paired_difference": roc_delta,
+               "conditional_mc95": [roc_delta-roc_margin, roc_delta+roc_margin],
+               "arms": {key: {"detections": int(roc_hits[:,j].sum()), "threshold_us2": float(roc_cut[j])}
+                        for j,key in enumerate(ARMS)}}
     replay = simulate(models, hd, pairs, "observed_replay")/P["injected_rms_us"]**2
     recovered = replay.mean(axis=0)
     arms = {}
@@ -176,7 +192,7 @@ def evaluate(obs):
             "engine_sha256": sha256(HERE/"app/causal-stability/engine.mjs"), "pulsars": pulsars, "raw_taps": raw.tolist(),
             "unit_sum_taps": taps.tolist(), "span_days": stop-start, "calibration_rank": rank, "arms": arms,
             "paired_detection_difference": delta, "paired_difference_mc95": [delta-margin, delta+margin],
-            "pairs": pair_rows, "checks": checks, "decision": "QUALIFIES" if all(checks.values()) else "DOES_NOT_QUALIFY"}
+            "pairs": pair_rows, "empirical_roc": matched, "checks": checks, "decision": "QUALIFIES" if all(checks.values()) else "DOES_NOT_QUALIFY"}
 
 
 def reference_plot(obs):

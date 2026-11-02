@@ -25,6 +25,12 @@ def check(path):
                 raise ValueError("Decision counts differ")
         for key in ("threshold_us2", "power_fraction", "angular_cosine", "expected_hd_power_projection", "expected_angular_cosine"):
             close(r[key], ref["arms"][arm][key])
+    for key in ("false_alarms_per_arm", "null_trials", "signal_trials"):
+        if run["empirical_roc"][key] != ref["empirical_roc"][key]:
+            raise ValueError("Empirical ROC denominator or null counts differ")
+    for key in ("identity", "cspp"):
+        if run["empirical_roc"]["arms"][key]["detections"] != ref["empirical_roc"]["arms"][key]["detections"]:
+            raise ValueError("Empirical ROC detections differ")
     for a,b in zip(run["pairs"], ref["pairs"], strict=True):
         if (a["p"],a["q"]) != (b["p"],b["q"]):
             raise ValueError("Sky pairs differ")

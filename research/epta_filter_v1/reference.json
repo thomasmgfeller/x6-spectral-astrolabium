@@ -454,6 +454,27 @@
       "expected_cspp": 19.55462895476192
     }
   ],
+  "empirical_roc": {
+    "condition": "descriptive, thresholds chosen on null_test, evaluated on injection_test",
+    "false_alarms_per_arm": 102,
+    "null_trials": 2048,
+    "signal_trials": 2048,
+    "paired_difference": 0.005859375,
+    "conditional_mc95": [
+      -0.007332928084316591,
+      0.01905167808431659
+    ],
+    "arms": {
+      "identity": {
+        "detections": 94,
+        "threshold_us2": 230688393.60119918
+      },
+      "cspp": {
+        "detections": 106,
+        "threshold_us2": 2034844202.2497303
+      }
+    }
+  },
   "checks": {
     "false_alarm_intervals_cover_5pct": false,
     "paired_power_gain": false,
