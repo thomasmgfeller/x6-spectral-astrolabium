@@ -30,9 +30,9 @@ class SourceRedirect(urllib.request.HTTPRedirectHandler):
         return super().redirect_request(req, fp, code, msg, headers, newurl)
 
 
-def download(url, destination, limit, byte_range=None, deadline_seconds=240, *, allowed_hosts=HOSTS):
+def download(url, destination, limit, byte_range=None, deadline_seconds=240):
     """Two attempts, socket timeout, wall-clock deadline, hard byte cap."""
-    require(urlsplit(url).scheme == "https" and urlsplit(url).hostname in allowed_hosts,
+    require(urlsplit(url).scheme == "https" and urlsplit(url).hostname in HOSTS,
             "Source is not allowlisted")
     destination = Path(destination)
     destination.parent.mkdir(parents=True, exist_ok=True)

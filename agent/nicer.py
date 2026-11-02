@@ -7,17 +7,20 @@ import json
 import math
 import re
 import tempfile
+import time
 import xml.etree.ElementTree as ET
 from datetime import date, timedelta
 from pathlib import Path
+from urllib.error import HTTPError, URLError
 from urllib.parse import urlencode
+from urllib.request import Request, build_opener
 
 import numpy as np
 from astropy.io import fits
 from astropy.io.votable import parse_single_table
 
-from agent.run_agent import require, utcnow
-from agent.source_transport import download
+from agent.run_agent import require, stamp, utcnow
+from agent.source_transport import SourceRedirect
 
 TARGET = "PSR_J0030+0451"
 HOST = "heasarc.gsfc.nasa.gov"
@@ -34,12 +37,36 @@ INDEX_SCHEMA = "x6-nicer-index-v1"
 RECORD_SCHEMA = "x6-nicer-lightcurve-v1"
 
 
+def download(url, path, limit):
+    """Read one complete public HEASARC response into a private temporary directory."""
+    require(url.startswith(BASE + "/"), "Unexpected archive address")
+    req = Request(url, headers={"User-Agent": "X6-NICER/1", "Accept-Encoding": "identity"})
+    for attempt in range(2):
+        try:
+            with build_opener(SourceRedirect).open(req, timeout=45) as response:
+                length = response.headers.get("Content-Length")
+                require(response.status == 200 and (length is None or 0 < int(length) <= limit),
+                        "Incomplete or oversized archive response")
+                data = response.read(limit + 1)
+                require(0 < len(data) <= limit and (length is None or int(length) == len(data)),
+                        "Truncated or oversized archive response")
+            path.write_bytes(data)
+            return {"retrieved_at": stamp(), "sha256": hashlib.sha256(data).hexdigest()}
+        except HTTPError as exc:
+            if attempt or exc.code not in (429, 502, 503, 504):
+                raise
+        except (TimeoutError, URLError):
+            if attempt:
+                raise
+        time.sleep(2)
+
+
 def catalog(tmp):
     today = (utcnow().date() - MJD0).days
     query = QUERY.format(today=today)
     url = TAP + "?" + urlencode({"REQUEST": "doQuery", "LANG": "ADQL", "QUERY": query})
     path = tmp / "catalog.xml"
-    download(url, path, 512_000, allowed_hosts={HOST})
+    download(url, path, 512_000)
     statuses = [e.get("value") for e in ET.parse(path).findall(".//{*}INFO[@name='QUERY_STATUS']")]
     require(statuses and all(status == "OK" for status in statuses), "HEASARC TAP query failed")
     rows = []
@@ -117,7 +144,7 @@ def acquire(row, tmp):
     url = (f"{BASE}/FTP/nicer/data/obs/{row['month']}/{obsid}/xti/event_cl/"
            f"ni{obsid}_0mpu7_cl.evt.gz")
     packed = tmp / "events.gz"
-    meta = download(url, packed, 16 * 1024**2, allowed_hosts={HOST})
+    meta = download(url, packed, 16 * 1024**2)
     path = tmp / "events.fits"
     with gzip.open(packed, "rb") as src, path.open("wb") as dst:
         while block := src.read(1024**2):
