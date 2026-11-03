@@ -119,6 +119,8 @@ def home(path, data, content, lang):
     dust = t['dust_collapse']
     dust_app = 'app/staubball/index.html?lang=' + lang
     dust_path = 'research/rax_cqg/dust_collapse/'
+    dust_coupling_report = dust_path + 'reports/CST_Staubkopplung_Endliche_Summe.pdf'
+    dust_coupling_package = dust_path + 'packages/CST_Staubkopplung_Endliche_Summe_Pruefpaket.zip'
     dust_derivation = dust_path + 'reports/CST_Staubkollaps_Quantendynamik_Herleitung.pdf'
     dust_report = dust_path + 'reports/CST_Staubkollaps_Geglaetteter_Massestrom.pdf'
     dust_package = dust_path + 'packages/CST_Staubkollaps_Geglaetteter_Massestrom_Pruefpaket.zip'
@@ -157,6 +159,8 @@ def home(path, data, content, lang):
         + E(dust['scope']) + '</p></div><div class="feature-links">'
         + link(rel(path, dust_app), dust['launch'], **{'class': 'button'})
         + link(dust_guide, dust['dossier'], **{'class': 'feature-link'})
+        + link(rel(path, dust_coupling_report), dust['coupling_report'], **{'class': 'feature-link'})
+        + link(rel(path, dust_coupling_package), dust['coupling_package'], **{'class': 'feature-link'})
         + link(rel(path, dust_derivation), dust['derivation'], **{'class': 'feature-link'})
         + link(rel(path, dust_report), dust['report'], **{'class': 'feature-link'})
         + link(rel(path, dust_package), dust['package'], **{'class': 'feature-link'}) + '</div></section>'
@@ -194,6 +198,8 @@ def home(path, data, content, lang):
     md += ('\n## ' + dust['title'] + '\n\n' + dust['text'] + '\n\n' + dust['scope'] + '\n\n'
            + '[' + dust['launch'] + '](' + BASE + dust_app + ') · '
            + '[' + dust['dossier'] + '](' + dust_guide + ') · '
+           + '[' + dust['coupling_report'] + '](' + BASE + dust_coupling_report + ') · '
+           + '[' + dust['coupling_package'] + '](' + BASE + dust_coupling_package + ') · '
            + '[' + dust['derivation'] + '](' + BASE + dust_derivation + ') · '
            + '[' + dust['report'] + '](' + BASE + dust_report + ') · '
            + '[' + dust['package'] + '](' + BASE + dust_package + ')\n')

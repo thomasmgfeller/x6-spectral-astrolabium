@@ -1,5 +1,21 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Endliche Staubkopplung · 3. November 2026
+
+Für dieselben 6 241 beschrifteten Kausalordnungen sinkt bei der dimensionslosen Dichteobergrenze $s=0{,}5$ der Betrag der Summe von 2 668,574 bei ausgeschalteter gravitativer Phase auf 72,277 bei $g=4\pi/5$. In einer getrennten Klasse mit 75 Historien erfüllt keine der 24 Parametereinstellungen die vorab gewählte Regel für eine Vorhersage des späteren Zählwerts. Bei festgehaltener idealer Staubzeit ergibt die unabhängige lokale Dichteintegration eine mittlere Dichte von $\Sigma/2$. Halbiert sich das mitbewegte Volumen, halbiert sich die so berechnete Masse. Damit scheitert diese Modellwahl an der Erhaltung der Staubmasse.
+
+**English.** Switching on the gravitational phase reduces the amplitude magnitude to 2.71% of its value on the same 6,241 orders at the stated coupling and density cutoff. None of the 24 window tests met the prediction rule. At fixed ideal dust time the chosen local density measure fails the classical mass-conservation test. The calculation leaves singularity resolution open.
+
+[Prüfbericht (PDF, 4 Seiten)](reports/CST_Staubkopplung_Endliche_Summe.pdf) · [Prüfpaket mit Code und Ergebnistabellen (ZIP)](packages/CST_Staubkopplung_Endliche_Summe_Pruefpaket.zip)
+
+Zur Reproduktion das Prüfpaket entpacken und im entpackten Verzeichnis mit Python und NumPy ausführen. Die Referenzauswertung verwendet Python 3.12.14 und NumPy 2.3.5.
+
+```sh
+sha256sum -c SHA256SUMS
+python3 run.py
+python3 score.py
+```
+
 ## Vom Staubkollaps zur Quantendynamik · 3. November 2026
 
 Im homogenen Staubmodell mit Dirichlet-Randbedingung lässt sich der Erwartungswert des Volumens exakt aus dem Anfangszustand berechnen. Bei einem kontrahierenden Zustand erreicht er ein positives Minimum. Im selben Modell kann das inverse zweite Volumenmoment am Minimum divergieren. Für die vierdimensionale Kausalset-Summe gibt Gleichung (21) auf Seite 7 eine hinreichende Fehlerschranke. Ob die staubgekoppelte Summe ihre Voraussetzungen erfüllt, bleibt offen. [Herleitung und Gegenbeispiele (PDF, 10 Seiten)](reports/CST_Staubkollaps_Quantendynamik_Herleitung.pdf)
