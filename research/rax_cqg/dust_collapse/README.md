@@ -1,5 +1,21 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Erhaltener Massenfluss · 3. November 2026
+
+In 75 endlichen Kausalordnungen überquert die anfänglich festgelegte Masse $M=3$ alle 1 006 zulässigen Schnitte unverändert. Wird im Inneren absichtlich eine Einheit entnommen, lautet die Folge der vier gemessenen Flüsse $(3,3,2,2)$. Beim normierten Transport und der untersuchten Wegphase erhalten alle Geometrien denselben Materiefaktor. Keine der 24 geprüften Einstellungen erfüllt die vorab festgelegte Regel für eine Vorhersage des späteren Volumens. Die Massenerhaltung gilt im gewählten diskreten Transportmodell. Eine vierdimensionale Kollapsdynamik und die Singularitätsauflösung bleiben offen.
+
+**English.** The initially prepared mass crosses all 1,006 admissible cuts of 75 finite geometries unchanged. Normalized routing with the chosen path phase leaves their relative amplitudes unchanged. None of the 24 settings qualified for a late-volume prediction.
+
+[Bericht zum Massenfluss (PDF, 4 Seiten)](reports/CST_Staubtransport_Massenfluss.pdf) · [Prüfpaket mit Code und Ergebnistabellen (ZIP)](packages/CST_Staubtransport_Massenfluss_Pruefpaket.zip)
+
+Reproduktion mit Python und NumPy im entpackten Verzeichnis:
+
+```sh
+sha256sum -c SHA256SUMS
+python3 transport.py
+python3 score.py
+```
+
 ## Endliche Staubkopplung · 3. November 2026
 
 Für dieselben 6 241 beschrifteten Kausalordnungen sinkt bei der dimensionslosen Dichteobergrenze $s=0{,}5$ der Betrag der Summe von 2 668,574 bei ausgeschalteter gravitativer Phase auf 72,277 bei $g=4\pi/5$. In einer getrennten Klasse mit 75 Historien erfüllt keine der 24 Parametereinstellungen die vorab gewählte Regel für eine Vorhersage des späteren Zählwerts. Bei festgehaltener idealer Staubzeit ergibt die unabhängige lokale Dichteintegration eine mittlere Dichte von $\Sigma/2$. Halbiert sich das mitbewegte Volumen, halbiert sich die so berechnete Masse. Damit scheitert diese Modellwahl an der Erhaltung der Staubmasse.
