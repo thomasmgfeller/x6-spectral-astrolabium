@@ -1,5 +1,22 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Wegabhängige Staubphasen · 3. November 2026
+
+In 58 von 75 endlichen Kausalordnungen unterscheiden die Zählungen zweier aufeinanderfolgender Intervalle Wege mit gleichen Endpunkten. Keine der 32 geprüften Einstellungen erfüllt die vorab festgelegte Regel für eine Vorhersage des späteren Volumens. Bei der gravitativen Kopplung $g=4\pi/5$ schliesst ein reproduzierbares Zertifikat die Freigabe des klassischen Zielzählwerts eins für jede Phasenstärke aus, wenn dieselbe reelle Funktion der Intervallzahl auf beide Wegsegmente angewandt wird. Der Satz gilt für die untersuchten 75 Geometrien, die beiden Paketaufteilungen, den normierten Transport und den gemeinsamen eindimensionalen Endraum.
+
+**English.** The two-interval duration distinguishes paths with identical endpoints in 58 of 75 finite geometries. None of 32 settings qualifies for a late-volume prediction. At the stated coupling, the certificate excludes release of target count one for any phase strength in the specified two-block model. The four-dimensional collapse dynamics and singularity question remain open.
+
+[Bericht zu den Wegphasen (PDF, 5 Seiten)](reports/CST_Staubtransport_Wegphasen.pdf) · [Code, Ergebnistabellen und Ausschlusszertifikat (ZIP)](packages/CST_Staubtransport_Wegphasen_Pruefpaket.zip)
+
+Zur Reproduktion im entpackten Verzeichnis ausführen. Die ersten beiden Rechnungen verwenden NumPy und SciPy. Für das Zertifikat genügt die Python-Standardbibliothek.
+
+```sh
+sha256sum -c SHA256SUMS
+python3 calibrate.py
+python3 phase.py
+python3 certify.py
+```
+
 ## Erhaltener Massenfluss · 3. November 2026
 
 In 75 endlichen Kausalordnungen überquert die anfänglich festgelegte Masse $M=3$ alle 1 006 zulässigen Schnitte unverändert. Wird im Inneren absichtlich eine Einheit entnommen, lautet die Folge der vier gemessenen Flüsse $(3,3,2,2)$. Beim normierten Transport und der untersuchten Wegphase erhalten alle Geometrien denselben Materiefaktor. Keine der 24 geprüften Einstellungen erfüllt die vorab festgelegte Regel für eine Vorhersage des späteren Volumens. Die Massenerhaltung gilt im gewählten diskreten Transportmodell. Eine vierdimensionale Kollapsdynamik und die Singularitätsauflösung bleiben offen.
