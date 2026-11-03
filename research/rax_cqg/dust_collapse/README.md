@@ -1,5 +1,23 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Endzustände im Staubkollaps · 3. November 2026
+
+Was verraten die Ankunftswege dreier markierter Quellen über die späte Schichtbreite k? Ein lokaler Speicher vergleicht, welche Quellen das Endereignis über denselben unmittelbaren Vorgänger erreichen. Für die ursprüngliche frühe Präparation bleibt die Interferenz bei der geprüften Gravitationskopplung in beiden endlichen Familien über der Freigabegrenze 1/21. Das Zertifikat umfasst alle Stärken des untersuchten Ankunftsspeichers und jede reelle Materiephasenstärke.
+
+Für die gröbere Frage „k = 1 oder k = 2 bzw. 3?“ erfüllt der Bereich 2 bis 3 in der Familie mit 588 Historien die Regel (Interferenz 0,02963). In den 6734 Kontrollhistorien mit fester Randbreite steigt sie auf 0,15678. Auch nach Änderung einer frühen Verbindung in der ursprünglichen Familie liegt sie mit 0,09299 über der Grenze. Bereits die reine Zählung der Historien bevorzugt den Bereich 2 bis 3. Eine belastbare Vorhersage des physikalischen Staubvolumens bleibt offen.
+
+**English.** In this finite model, endpoint records compare the last incoming events of three marked sources. They partially distinguish late layer widths. At the tested gravitational coupling they do not support a single-width forecast in either ensemble for the original preparation. The coarser outcome “2 or 3” passes the rule in the 588-history ensemble. It fails under the fixed boundary width and under the changed early preparation.
+
+[Endzustandsbericht (PDF, 5 Seiten)](reports/Kausalordnung_Endzustaende_Pruefbericht.pdf) · [Reproduktionspaket mit Code, Daten und Zertifikaten (ZIP)](packages/Kausalordnung_Endzustaende_Reproduktionspaket.zip)
+
+Die README im Archiv beschreibt den vollständigen Reproduktionslauf. Für die erneute Prüfung des kontinuierlichen Interferenzausschlusses aus den mitgelieferten rationalen Koeffizienten genügen diese Schritte im entpackten Verzeichnis.
+
+```sh
+sha256sum -c SHA256SUMS
+python3 certify_records.py
+sha256sum -c SHA256SUMS
+```
+
 ## Von zwei auf vier Wegabschnitte · 3. November 2026
 
 Wie stabil ist die Staubwegphase, wenn die Kausalordnung drei innere Wegpunkte bestimmt? Bei der Referenzbesetzung ν = 16 384 bestand die erste Halbierung in allen 256 neuen Versuchen. Beim Übergang von zwei auf vier Abschnitte erfüllten 217 von 256 Wegen beide Toleranzen (84,77 %). Das simultane 99-Prozent-Intervall von 77,51 bis 90,46 % liegt unter dem 95-Prozent-Ziel. Alle 256 Wege blieben innerhalb der absoluten Toleranz von 0,20 rad. Die 39 Fehlschläge betrafen die Änderung um mehr als 0,10 rad beim Unterteilen.
