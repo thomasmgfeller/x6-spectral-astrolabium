@@ -1,5 +1,26 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Wegphasen unter Verfeinerung in vier Dimensionen · 3. November 2026
+
+Auf einer vorgegebenen kontrahierenden Staubraumzeit wurde derselbe markierte Weg auf denselben Poisson-Ereignissen mit vier und acht Abschnitten ausgewertet. Bei vollständiger Beobachtung erfüllten mit der Referenzbesetzung 256 genau 32 247 von 32 768 Realisierungen beide Anforderungen: höchstens 0,10 Radiant Unterschied bei der Unterteilung und höchstens 0,20 Radiant Abweichung vom bekannten Wert für beide Schätzungen. Das sind 98,41 %. Bei Besetzung 64 waren es 76,65 %. Die Referenzbesetzung bezeichnet die erwartete Ereigniszahl in einem vollständigen flachen Intervall der feinsten Abschnittslänge.
+
+Wenn die Beobachtungsebene jedes Intervall genau halbiert, kann die Schätzung unter Verfeinerung stabil bleiben und den richtigen Phasenwert dennoch verfehlen. Für diesen symmetrischen Rand wurde die analytische Korrektur an frischen Realisierungen geprüft. Die Ergebnisse gelten für die markierten Wege auf den vorgegebenen Hintergründen.
+
+**English.** With four versus eight segments on a prescribed contracting dust spacetime, 98.41% of trials at reference occupancy 256 met both phase tolerances, compared with 76.65% at 64. A centered observation boundary can leave the estimate stable while biasing its absolute value. An independent run checks the correction for that symmetric boundary.
+
+[4D-Verfeinerungsbericht (PDF, 5 Seiten)](reports/CST_Wegphasen_4D_Verfeinerung.pdf) · [Prüfpaket mit Code und Ergebnistabellen (ZIP)](packages/CST_Wegphasen_4D_Verfeinerung_Pruefpaket.zip)
+
+Wiederholung im entpackten Verzeichnis mit Python, NumPy und SciPy:
+
+```sh
+sha256sum -c SHA256SUMS
+export OPENBLAS_NUM_THREADS=1
+python3 run.py
+python3 check_points.py
+python3 curvature.py
+python3 check_half.py
+```
+
 ## Wegabhängige Staubphasen · 3. November 2026
 
 In 58 von 75 endlichen Kausalordnungen unterscheiden die Zählungen zweier aufeinanderfolgender Intervalle Wege mit gleichen Endpunkten. Keine der 32 geprüften Einstellungen erfüllt die vorab festgelegte Regel für eine Vorhersage des späteren Volumens. Bei der gravitativen Kopplung $g=4\pi/5$ schliesst ein reproduzierbares Zertifikat die Freigabe des klassischen Zielzählwerts eins für jede Phasenstärke aus, wenn dieselbe reelle Funktion der Intervallzahl auf beide Wegsegmente angewandt wird. Der Satz gilt für die untersuchten 75 Geometrien, die beiden Paketaufteilungen, den normierten Transport und den gemeinsamen eindimensionalen Endraum.

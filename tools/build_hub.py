@@ -125,6 +125,8 @@ def home(path, data, content, lang):
     dust_massflow_package = dust_path + 'packages/CST_Staubtransport_Massenfluss_Pruefpaket.zip'
     dust_path_phase_report = dust_path + 'reports/CST_Staubtransport_Wegphasen.pdf'
     dust_path_phase_package = dust_path + 'packages/CST_Staubtransport_Wegphasen_Pruefpaket.zip'
+    dust_refinement_report = dust_path + 'reports/CST_Wegphasen_4D_Verfeinerung.pdf'
+    dust_refinement_package = dust_path + 'packages/CST_Wegphasen_4D_Verfeinerung_Pruefpaket.zip'
     dust_derivation = dust_path + 'reports/CST_Staubkollaps_Quantendynamik_Herleitung.pdf'
     dust_report = dust_path + 'reports/CST_Staubkollaps_Geglaetteter_Massestrom.pdf'
     dust_package = dust_path + 'packages/CST_Staubkollaps_Geglaetteter_Massestrom_Pruefpaket.zip'
@@ -169,6 +171,8 @@ def home(path, data, content, lang):
         + link(rel(path, dust_massflow_package), dust['massflow_package'], **{'class': 'feature-link'})
         + link(rel(path, dust_path_phase_report), dust['path_phase_report'], **{'class': 'feature-link'})
         + link(rel(path, dust_path_phase_package), dust['path_phase_package'], **{'class': 'feature-link'})
+        + link(rel(path, dust_refinement_report), dust['refinement_report'], **{'class': 'feature-link'})
+        + link(rel(path, dust_refinement_package), dust['refinement_package'], **{'class': 'feature-link'})
         + link(rel(path, dust_derivation), dust['derivation'], **{'class': 'feature-link'})
         + link(rel(path, dust_report), dust['report'], **{'class': 'feature-link'})
         + link(rel(path, dust_package), dust['package'], **{'class': 'feature-link'}) + '</div></section>'
@@ -212,6 +216,8 @@ def home(path, data, content, lang):
            + '[' + dust['massflow_package'] + '](' + BASE + dust_massflow_package + ') · '
            + '[' + dust['path_phase_report'] + '](' + BASE + dust_path_phase_report + ') · '
            + '[' + dust['path_phase_package'] + '](' + BASE + dust_path_phase_package + ') · '
+           + '[' + dust['refinement_report'] + '](' + BASE + dust_refinement_report + ') · '
+           + '[' + dust['refinement_package'] + '](' + BASE + dust_refinement_package + ') · '
            + '[' + dust['derivation'] + '](' + BASE + dust_derivation + ') · '
            + '[' + dust['report'] + '](' + BASE + dust_report + ') · '
            + '[' + dust['package'] + '](' + BASE + dust_package + ')\n')
