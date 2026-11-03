@@ -1,5 +1,27 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Ein Wegpunkt aus der Kausalordnung · 3. November 2026
+
+Wie genau wird die Eigenzeit eines Staubwegs rekonstruiert, wenn nur die Enden vorgegeben sind? In diesem Versuch wählt die Kausalordnung den Zwischenpunkt. Eine unabhängige Zählung misst anschliessend die Phase des einmal halbierten Weges. Ein Treffer verlangt höchstens 0,10 rad Unterschied zwischen ganzem und geteiltem Weg sowie höchstens 0,20 rad Abstand beider Schätzungen vom Referenzwert 8.
+
+Im vorgegebenen kontrahierenden Staubmodell erreichten bei Referenzbesetzung ν = 1024 genau 696 von 1024 Realisierungen beide Toleranzen, bei ν = 4096 waren es 972 von 1024. Im separat geplanten Zusatzversuch bei ν = 16 384 bestanden 256 von 256 Realisierungen. Das exakte zweiseitige 99-Prozent-Konfidenzintervall reicht dort von 97,95 bis 100 %. ν ist die erwartete Besetzung eines vollständigen flachen Halbintervalls der Dauer 4 t₀. Im Hauptversuch lagen 1021 von 1024 Wegen innerhalb der absoluten Toleranz. Für das gemeinsame Ergebnis war der Vergleich der beiden Unterteilungen ausschlaggebend.
+
+Der Bericht beweist die Konvergenz des Zwischenpunkts bei steigender Dichte für die untersuchten Geometrien und zeigt ein Gegenbeispiel zur pauschalen Halbvolumen-Korrektur am Beobachtungsrand. Die dynamische vierdimensionale Kausalset-Summe und die Singularitätsauflösung bleiben offen.
+
+**English.** With fixed outer endpoints and one waypoint selected by causal order, independent counts met both phase tolerances in 696 of 1024 dust trials at reference occupancy 1024 and 972 of 1024 at 4096. At occupancy 16,384, all 256 fresh trials in a separately planned follow-up passed. The exact two-sided 99% lower confidence limit there is 97.95%. These results concern prescribed backgrounds and one bisection.
+
+[Wegpunkt-Prüfbericht (PDF, 5 Seiten)](reports/Kausalordnung_Wegpunkt_Pruefbericht.pdf) · [Reproduktionspaket mit Code, Rohdaten und Prüfsummen (ZIP)](packages/Kausalordnung_Wegpunkt_Reproduktionspaket.zip)
+
+Die README im ZIP beschreibt den vollständigen Lauf mit Python, NumPy, SciPy und C++17. Für den Abgleich der gelieferten Daten und Ergebnistabellen genügt dieser kürzere Lauf im entpackten Verzeichnis.
+
+```sh
+sha256sum -c SHA256SUMS
+export OPENBLAS_NUM_THREADS=1
+python3 score.py
+python3 holdout_check.py
+sha256sum -c SHA256SUMS
+```
+
 ## Wegphasen unter Verfeinerung in vier Dimensionen · 3. November 2026
 
 Auf einer vorgegebenen kontrahierenden Staubraumzeit wurde derselbe markierte Weg auf denselben Poisson-Ereignissen mit vier und acht Abschnitten ausgewertet. Bei vollständiger Beobachtung erfüllten mit der Referenzbesetzung 256 genau 32 247 von 32 768 Realisierungen beide Anforderungen: höchstens 0,10 Radiant Unterschied bei der Unterteilung und höchstens 0,20 Radiant Abweichung vom bekannten Wert für beide Schätzungen. Das sind 98,41 %. Bei Besetzung 64 waren es 76,65 %. Die Referenzbesetzung bezeichnet die erwartete Ereigniszahl in einem vollständigen flachen Intervall der feinsten Abschnittslänge.
