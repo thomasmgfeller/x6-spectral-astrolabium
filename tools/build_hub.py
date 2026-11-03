@@ -121,6 +121,8 @@ def home(path, data, content, lang):
     dust_path = 'research/rax_cqg/dust_collapse/'
     dust_coupling_report = dust_path + 'reports/CST_Staubkopplung_Endliche_Summe.pdf'
     dust_coupling_package = dust_path + 'packages/CST_Staubkopplung_Endliche_Summe_Pruefpaket.zip'
+    dust_massflow_report = dust_path + 'reports/CST_Staubtransport_Massenfluss.pdf'
+    dust_massflow_package = dust_path + 'packages/CST_Staubtransport_Massenfluss_Pruefpaket.zip'
     dust_derivation = dust_path + 'reports/CST_Staubkollaps_Quantendynamik_Herleitung.pdf'
     dust_report = dust_path + 'reports/CST_Staubkollaps_Geglaetteter_Massestrom.pdf'
     dust_package = dust_path + 'packages/CST_Staubkollaps_Geglaetteter_Massestrom_Pruefpaket.zip'
@@ -161,6 +163,8 @@ def home(path, data, content, lang):
         + link(dust_guide, dust['dossier'], **{'class': 'feature-link'})
         + link(rel(path, dust_coupling_report), dust['coupling_report'], **{'class': 'feature-link'})
         + link(rel(path, dust_coupling_package), dust['coupling_package'], **{'class': 'feature-link'})
+        + link(rel(path, dust_massflow_report), dust['massflow_report'], **{'class': 'feature-link'})
+        + link(rel(path, dust_massflow_package), dust['massflow_package'], **{'class': 'feature-link'})
         + link(rel(path, dust_derivation), dust['derivation'], **{'class': 'feature-link'})
         + link(rel(path, dust_report), dust['report'], **{'class': 'feature-link'})
         + link(rel(path, dust_package), dust['package'], **{'class': 'feature-link'}) + '</div></section>'
@@ -200,6 +204,8 @@ def home(path, data, content, lang):
            + '[' + dust['dossier'] + '](' + dust_guide + ') · '
            + '[' + dust['coupling_report'] + '](' + BASE + dust_coupling_report + ') · '
            + '[' + dust['coupling_package'] + '](' + BASE + dust_coupling_package + ') · '
+           + '[' + dust['massflow_report'] + '](' + BASE + dust_massflow_report + ') · '
+           + '[' + dust['massflow_package'] + '](' + BASE + dust_massflow_package + ') · '
            + '[' + dust['derivation'] + '](' + BASE + dust_derivation + ') · '
            + '[' + dust['report'] + '](' + BASE + dust_report + ') · '
            + '[' + dust['package'] + '](' + BASE + dust_package + ')\n')
