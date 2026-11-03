@@ -1,5 +1,26 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Von zwei auf vier Wegabschnitte · 3. November 2026
+
+Wie stabil ist die Staubwegphase, wenn die Kausalordnung drei innere Wegpunkte bestimmt? Bei der Referenzbesetzung ν = 16 384 bestand die erste Halbierung in allen 256 neuen Versuchen. Beim Übergang von zwei auf vier Abschnitte erfüllten 217 von 256 Wegen beide Toleranzen (84,77 %). Das simultane 99-Prozent-Intervall von 77,51 bis 90,46 % liegt unter dem 95-Prozent-Ziel. Alle 256 Wege blieben innerhalb der absoluten Toleranz von 0,20 rad. Die 39 Fehlschläge betrafen die Änderung um mehr als 0,10 rad beim Unterteilen.
+
+Die endliche Kausalset-Summe wurde getrennt untersucht. Vier belegte Teilintervalle brauchen eine Kette mit mindestens neun Ereignissen. Die 75 bisherigen Historien haben maximale Kettenlänge fünf. In einer Erweiterung mit 588 markierten Historien unterscheiden sich die Wegphasen. Bei der geprüften Gravitationskopplung und einem gemeinsamen Endkanal verhindert die Interferenz für jede reelle Materiephasenstärke die Freigabe einer späten Volumenprognose. Das Zertifikat deckt den gesamten Phasenkreis mit 443 Teilbögen ab. Die vierdimensionale Kollapsbewegung und die Singularitätsauflösung bleiben offen.
+
+**English.** At reference occupancy 16,384, all 256 new dust trials met both phase tolerances on the first subdivision, and 217 of 256 met them on the second. In a separate finite sum over 588 refined histories, a certificate covering the full phase circle excludes a late-volume forecast under the specified coupling, common final channel and interference rule.
+
+[Bericht zur rekursiven Wegteilung (PDF, 5 Seiten)](reports/Kausalordnung_Rekursive_Wegteilung.pdf) · [Prüfpaket mit Code, Rohdaten und Ausschlusszertifikat (ZIP)](packages/Kausalordnung_Rekursive_Wegteilung_Pruefpaket.zip)
+
+Die README im Archiv beschreibt den vollständigen Reproduktionslauf. Für die Auswertung der vorhandenen Rohdaten und die Wiederholung des Ausschlusszertifikats genügen im entpackten Verzeichnis diese Schritte.
+
+```sh
+sha256sum -c SHA256SUMS
+export OPENBLAS_NUM_THREADS=1
+python3 score.py
+python3 defect.py
+python3 certify.py
+sha256sum -c SHA256SUMS
+```
+
 ## Ein Wegpunkt aus der Kausalordnung · 3. November 2026
 
 Wie genau wird die Eigenzeit eines Staubwegs rekonstruiert, wenn nur die Enden vorgegeben sind? In diesem Versuch wählt die Kausalordnung den Zwischenpunkt. Eine unabhängige Zählung misst anschliessend die Phase des einmal halbierten Weges. Ein Treffer verlangt höchstens 0,10 rad Unterschied zwischen ganzem und geteiltem Weg sowie höchstens 0,20 rad Abstand beider Schätzungen vom Referenzwert 8.

@@ -125,6 +125,8 @@ def home(path, data, content, lang):
     dust_massflow_package = dust_path + 'packages/CST_Staubtransport_Massenfluss_Pruefpaket.zip'
     dust_path_phase_report = dust_path + 'reports/CST_Staubtransport_Wegphasen.pdf'
     dust_path_phase_package = dust_path + 'packages/CST_Staubtransport_Wegphasen_Pruefpaket.zip'
+    dust_recursive_report = dust_path + 'reports/Kausalordnung_Rekursive_Wegteilung.pdf'
+    dust_recursive_package = dust_path + 'packages/Kausalordnung_Rekursive_Wegteilung_Pruefpaket.zip'
     dust_waypoint_report = dust_path + 'reports/Kausalordnung_Wegpunkt_Pruefbericht.pdf'
     dust_waypoint_package = dust_path + 'packages/Kausalordnung_Wegpunkt_Reproduktionspaket.zip'
     dust_refinement_report = dust_path + 'reports/CST_Wegphasen_4D_Verfeinerung.pdf'
@@ -173,6 +175,8 @@ def home(path, data, content, lang):
         + link(rel(path, dust_massflow_package), dust['massflow_package'], **{'class': 'feature-link'})
         + link(rel(path, dust_path_phase_report), dust['path_phase_report'], **{'class': 'feature-link'})
         + link(rel(path, dust_path_phase_package), dust['path_phase_package'], **{'class': 'feature-link'})
+        + link(rel(path, dust_recursive_report), dust['recursive_report'], **{'class': 'feature-link'})
+        + link(rel(path, dust_recursive_package), dust['recursive_package'], **{'class': 'feature-link'})
         + link(rel(path, dust_waypoint_report), dust['waypoint_report'], **{'class': 'feature-link'})
         + link(rel(path, dust_waypoint_package), dust['waypoint_package'], **{'class': 'feature-link'})
         + link(rel(path, dust_refinement_report), dust['refinement_report'], **{'class': 'feature-link'})
@@ -220,6 +224,8 @@ def home(path, data, content, lang):
            + '[' + dust['massflow_package'] + '](' + BASE + dust_massflow_package + ') · '
            + '[' + dust['path_phase_report'] + '](' + BASE + dust_path_phase_report + ') · '
            + '[' + dust['path_phase_package'] + '](' + BASE + dust_path_phase_package + ') · '
+           + '[' + dust['recursive_report'] + '](' + BASE + dust_recursive_report + ') · '
+           + '[' + dust['recursive_package'] + '](' + BASE + dust_recursive_package + ') · '
            + '[' + dust['waypoint_report'] + '](' + BASE + dust_waypoint_report + ') · '
            + '[' + dust['waypoint_package'] + '](' + BASE + dust_waypoint_package + ') · '
            + '[' + dust['refinement_report'] + '](' + BASE + dust_refinement_report + ') · '
