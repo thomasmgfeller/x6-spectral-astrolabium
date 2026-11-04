@@ -1,5 +1,13 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Offene Staubhistorien mit fünf Volumenablesungen · 4. November 2026
+
+Der Generator erzeugt nach derselben frühen Kontraktion 27 Fortsetzungen einer homogenen, periodischen Modellzelle. Eine erfüllt die im CST Dynamic Bounce Gate v0.1 festgelegte Folge „zweimal schrumpfen, zweimal wachsen“. Die 27 Verläufe werden auf zwei Auflösungen ausgewertet. Das Bounce-Zweiggewicht beträgt grob 13,45 % und fein 3,01 %.
+
+Das Gate ergibt auf beiden Stufen **HOLD**. Die Bounce-Historie und fünf weitere Verläufe enden beim selben Volumen. Schon in der kinematischen Kontrolle beträgt die Interferenz exakt 2/37 und liegt damit über der Freigabegrenze 1/21. Das verhindert sowohl eine Freigabe als auch einen physikalischen Ausschluss der Umkehr in dieser Modellfamilie.
+
+[Prüfbericht mit Volumenverläufen (PDF)](reports/CST_Offene_Staubhistorien.pdf) · [Generator, Gate-Eingaben und unabhängige Gegenrechnung (ZIP)](packages/CST_Offene_Staubhistorien_Pruefpaket.zip)
+
 ## CST Dynamic Bounce Gate v0.1 · 4. November 2026
 
 Das Gate prüft, ob ein dynamisches Kausalset-Modell nach anfänglicher Kontraktion eine Volumenumkehr bevorzugt. Es verlangt fünf vorab festgelegte Staubeigenzeiten je Historie, eine kinematische Vergleichsrechnung und zwei Auflösungen desselben physikalischen Gebiets. Die Auswertung unterscheidet eine aufgelöste Umkehr, einen Verlauf ohne diese Umkehr und unaufgelöste Fälle.
