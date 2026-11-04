@@ -1,5 +1,13 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Zwei-Massen-Test für Randfamilie C · 4. November 2026
+
+Bei vierfacher Staubmasse ändern sich die relativen späten Zweigamplituden unter allen drei untersuchten Gewichtungen. Beim dynamischen Wachstumsmass steigt das Zweiggewicht für eine späte Breite von zwei oder drei von 2,33 % auf 4,70 %, die Interferenz von 0,28526 auf 0,34940. Auch bei abgeschalteter Gravitationsphase reagieren die Amplituden auf die Masse. Der Befund allein belegt daher keine gravitative Rückwirkung.
+
+Auf vorgegebenen klassischen Staubverläufen bestand die feinere Volumenablesung die Prüfung für alle drei getesteten Massen. Für die Bewegungsgleichung aus der Kausalset-Summe bleibt der Status **HOLD**. Es fehlen kalibrierte räumliche Volumina zu mehreren Staubeigenzeiten aus denselben dynamischen Historien.
+
+[Bericht zum Zwei-Massen-Test (PDF)](reports/Staubball_C_Zwei_Massen.pdf) · [Prüfpaket mit Amplituden, unabhängiger Gegenrechnung und Einzelzählungen (ZIP)](packages/Staubball_C_Zwei_Massen_Pruefpaket.zip)
+
 ## Geometrisches Referenzmass für Randfamilie C · 4. November 2026
 
 Der Quotiententest bestätigt, dass das Entfernen von Punktnummern in den exakten Kontrollfällen die Wahrscheinlichkeiten der Ordnungsklassen erhält. Die unabhängige Zählung der 54 579 beschrifteten C-Geometrien reproduziert alle 840 Klassen mit ihren Vielfachheiten.
