@@ -1,5 +1,13 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Volumen-Bounce und Krümmungsregularität · 4. November 2026
+
+Alle 840 Ausgangsgeometrien der Familie C besitzen durch die vorgeschriebene Schichtfolge ein inneres Minimum der Breite. Bei 793 Geometrien ist es strikt, bei 47 bildet es ein Plateau. Für eine dynamische Volumenprognose fehlen kalibrierte Messungen vor und nach einer möglichen Umkehr in denselben Historien.
+
+Im homogenen Dirichlet-Modell kann das mittlere Volumen umkehren. Für die untersuchten normierten Zustände mit ungerader Schwartz-Fortsetzung bleibt das zweite inverse Volumenmoment auf keinem offenen Zeitintervall durchgehend endlich. Im separat angenommenen effektiven Sinus-Modell ist die Krümmung bei fester Volumenschrittweite beschränkt. Eine Halbierung dieser Schrittweite erhöht die maximale Krümmung um den Faktor 16. Für die vierdimensionale Kausalset-Dynamik bleiben sowohl die Umkehr als auch die Singularitätsauflösung auf **HOLD**.
+
+[Prüfbericht mit Beweis und Abbildung (PDF)](reports/Staubball_Bounce_Regularitaet.pdf) · [Reproduktionspaket mit Katalogauswertung und 70 Momentkontrollen (ZIP)](packages/Staubball_Bounce_Regularitaet_Pruefpaket.zip)
+
 ## Lokaler Horizonttest auf einer bekannten Staubgeometrie · 4. November 2026
 
 Der Detektor schätzt den Radius, an dem eine auslaufende Lichtfront ihre Flächenzunahme einstellt, während einlaufendes Licht weiterhin konvergiert. Auf der vorgegebenen klassischen Staubgeometrie traf er bei feiner Auflösung das Toleranzband von ±10 % am frühen Schnitt in 512 von 512 Fällen und am späten Schnitt in 510 von 512 Fällen. Die grobe Auflösung verfehlte das 95-%-Trefferziel an beiden Schnitten. In der flachen Minkowski-Kontrolle gab es keinen Fehlalarm.
