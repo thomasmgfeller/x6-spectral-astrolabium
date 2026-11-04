@@ -1,5 +1,11 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Massestreuung aus vier Zeitabschnitten · 4. November 2026
+
+Für den geglätteten Massestrom im räumlich unbeschränkten Staubmodell liefert eine Poisson-Projektion eine Untergrenze für die Standardabweichung. Bei der Eingangsdichte 6 Millionen beträgt der numerisch ausgewertete Wert in Fenster B (kurze Zukunft) 0,1335 % der Sollmasse. Die frühere statistische Untergrenze aus dem Endbereichstest betrug 0,0568 %. In Fenster A bleibt der frühere Wert von 2,8437 % stärker. Die Ungleichung ist exakt. Die Zahlen beruhen auf gegengeprüften Quadraturen ohne garantierte Rundungsfehlereinschliessung. Die Trefferwahrscheinlichkeit der vollständigen Piloten bleibt offen.
+
+[Bericht und Herleitung (PDF)](reports/Staubball_Zaehlfluktuationen.pdf) · [Code, Referenzwerte und Quadraturvergleiche (ZIP)](packages/Staubball_Zaehlfluktuationen_Pruefpaket.zip)
+
 ## Freiwillige Rechenzeit für die Staubball-Läufe · 4. November 2026
 
 Für die zwei vollständigen Hochdichteläufe kann je eine Person einen eigenen Linux-Rechner oder bereits bewilligte Rechenzeit unentgeltlich bereitstellen. Das Projektbudget beträgt CHF 0. Die Vier-Thread-Variante wurde an den publizierten Laufzeitstichproben und den kleinen Kontrollfällen geprüft. Auf dem Vergleichsrechner ergibt die Hochrechnung rund fünf Stunden je Lauf. Das Prüfpaket enthält ausserdem die Vergleiche für die endlichen Staubhistorien und die Eigenzeit-Merkmale.
