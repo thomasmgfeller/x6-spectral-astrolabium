@@ -1,5 +1,13 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Geometrisches Referenzmass für Randfamilie C · 4. November 2026
+
+Der Quotiententest bestätigt, dass das Entfernen von Punktnummern in den exakten Kontrollfällen die Wahrscheinlichkeiten der Ordnungsklassen erhält. Die unabhängige Zählung der 54 579 beschrifteten C-Geometrien reproduziert alle 840 Klassen mit ihren Vielfachheiten.
+
+Je Geometrie wurden 1 048 576 frühe Fünferkonfigurationen geprüft. Im Staubinneren passten 232 zur festgelegten frühen Ordnung. Ihre späten Fortsetzungen ergaben keinen C-Treffer. In der flachen Minkowski-Kontrolle passten 4 752 frühe Konfigurationen und es gab 50 C-Treffer. Die simultane 95-%-Obergrenze für die bedingte Wahrscheinlichkeit von C im gewählten Staubfenster liegt bei 1,052 %. Ein exakter geometrischer Nachweis zeigt, dass dort alle drei späten Breiten positives Gewicht haben. Die Pilotdaten reichen für deren relative Gewichte nicht aus. Die Auswertung von Zweiggewicht und Interferenz bleibt auf **HOLD**.
+
+[Prüfbericht zum geometrischen Referenzmass (PDF)](reports/Staubball_C_Geometrisches_Referenzmass.pdf) · [Reproduktionspaket mit Quotiententest, Piloten und geometrischem Nachweis (ZIP)](packages/Staubball_C_Geometrisches_Referenzmass_Pruefpaket.zip)
+
 ## Wachstumsmass und Robustheitskarte für Randfamilie C · 4. November 2026
 
 **Wachstumsmass.** Wie ändern sich die späten Schichtbreiten, wenn die 840 Geometrien nach ihrer Entstehungswahrscheinlichkeit gewichtet werden? Beim geprüften Wachstum durch transitive Perkolation mit `p = 1/2` erhalten die drei möglichen Endgrössen dieselbe Stoppwahrscheinlichkeit. Für die Vorhersage „Breite zwei oder drei“ beträgt das normierte Zweiggewicht 2,33 % (gefordert sind mindestens 80 %). Die Interferenz erreicht 0,28526 und überschreitet die Grenze von 1/21. Damit bleibt auch die Vorhersage der Breite eins offen. Die lineare Verwendung der klassischen Gewichte in der Amplitudensumme ist eine Modellannahme.
