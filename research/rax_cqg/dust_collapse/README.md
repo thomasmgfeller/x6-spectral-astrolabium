@@ -1,5 +1,13 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Dichtespur und Interferenz im Staubball · 4. November 2026
+
+Ein modellierter Dichtemesser summiert entlang der Staubeigenzeit auf, wie lange der Staub bei welcher Dichte verweilt. Bei den 27 offenen Historien aus [PR 218](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/218) senkt diese zusätzliche Aufzeichnung die Interferenz zwischen Bounce und Nicht-Bounce auf dem groben Gitter von 0,31611 auf 0,06285 und auf dem feinen von 0,20959 auf 0,05401. Die Messauflösung wurde aus der frühen Präparation festgelegt.
+
+Nur die Nullkontrolle ohne dynamische Phasen unterschreitet mit 0,03336 die Grenze von 1/21. Das dynamische Bounce-Gate bleibt auf **HOLD**. Eine direkte Summe über alle Historienpaare bestätigt den Befund auf beiden Gittern.
+
+[Ergebnisbericht (PDF)](reports/CST_Staubball_Dichtespur_v0_1.pdf) · [Prüfpaket mit Python-Code, Originaleingaben und Ergebnissen (ZIP)](packages/CST_Staubball_Dichtespur_v0_1_Pruefpaket.zip)
+
 ## Offene Staubhistorien mit fünf Volumenablesungen · 4. November 2026
 
 Der Generator erzeugt nach derselben frühen Kontraktion 27 Fortsetzungen einer homogenen, periodischen Modellzelle. Eine erfüllt die im CST Dynamic Bounce Gate v0.1 festgelegte Folge „zweimal schrumpfen, zweimal wachsen“. Die 27 Verläufe werden auf zwei Auflösungen ausgewertet. Das Bounce-Zweiggewicht beträgt grob 13,45 % und fein 3,01 %.
