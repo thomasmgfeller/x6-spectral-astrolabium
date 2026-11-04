@@ -1,0 +1,18 @@
+{
+  "scope": "DEVELOPMENT / structural reachability only",
+  "base_commit": "203a1849e3b09cfbdb1d38b388ee0c57efa14991",
+  "stim_version": "1.16.0",
+  "circuit": {"task": "surface_code:rotated_memory_x", "distance": 5, "rounds": 5, "after_clifford_depolarization": 0.005},
+  "other_noise": "Stim generator defaults (zero)",
+  "dem": "decompose_errors=True, other options default; iterate flattened error instructions in order",
+  "population": "One row per distinct nonempty syndrome of one whole DEM source mechanism, uniformly counted. Report the empty input separately. Section 17 applies per cluster.",
+  "primary": "Assign components the mask of their syntactic L0 occurrences. Verify detection and observable XOR against the unsplit source. Store every component and original p; collapse only identical endpoints plus mask in the Boolean existence search.",
+  "sensitivity": "Within each source retain detector components and total observable XOR, assign total XOR to first component and zero to others. Same entire-source outcomes; deliberate change of local representatives for sensitivity only.",
+  "cluster": "Connect active detectors at detector-only shortest hop distance <= 2, take connected components. Maximum cluster size 8, no adaptive enlargement.",
+  "DD_paths": "All simple paths of at most 4 detector-detector edges between active members of the same cluster. Every visited detector is within 2 detector hops of at least one endpoint. No third active detector internally, no boundary transit. Equivalently two radius-2 searches may meet.",
+  "boundary_paths": "One active detector to terminal boundary in at most 2 edges including the boundary edge, no other active detector internally. Unlimited boundary assignments. Every boundary edge keeps its mask.",
+  "explanations": "Each active detector exactly once as an endpoint. Paths may overlap; bits of chosen paths XOR. Existence only, no weights, pruning, ties, margins, inference PASS or sampling.",
+  "shot": "XOR product of cluster classes reported for diagnostics. A nonempty shot advances past section 17 only if every cluster has both classes. Any missing explanation blocks it. Empty shot has one empty explanation of parity 0 and no clusters; no decoder status assigned.",
+  "boundary_stratum": "boundary_adjacent if at least one active detector has a direct boundary edge; otherwise interior. This is graph adjacency, not a spacetime coordinate classification.",
+  "controls": ["main single-edge fixture and empty input", "separator A/B counterexample", "boundary cannot connect clusters in transit", "shared observable masks cancel by XOR", "independent pattern verifier on every nonempty source syndrome"]
+}
