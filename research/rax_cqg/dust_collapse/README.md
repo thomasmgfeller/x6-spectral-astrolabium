@@ -1,5 +1,13 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Kopplungsscan der Dichtespur v0.2 · 4. November 2026
+
+Der Test vergleicht die Gesamtspur der Staubdichte mit getrennten Aufzeichnungen für die frühe und späte Hälfte desselben Zeitfensters. Der aus der frühen Präparation abgeleitete Modellbereich der Messkopplung reicht von 32/45 bis 162/95. Auf den 27 bekannten Pfaden wechselt das numerische Bounce-Gate mit steigender Kopplung von **HOLD** zu **FAIL**. Der Übergang liegt für die Gesamtspur bei etwa 1,156 und für die geteilte Spur bei etwa 1,621.
+
+Auf 17 neuen positiven Volumenverläufen mit derselben frühen Kontraktion ergibt sich für beide Messvarianten und den ganzen Bereich **FAIL**. Der diagonale Bounce-Anteil beträgt auf beiden Gittern höchstens 6,82 %. Nur eine von vier vorab festgelegten Statusvorhersagen überträgt sich auf die neue Familie. Der Ausschluss eines dominanten Bounce gilt für diese endliche Modellfamilie und das geprüfte Zeitfenster.
+
+[Ergebnisbericht (PDF)](reports/CST_Staubball_Kopplungsscan_v0_2.pdf) · [Prüfpaket mit Wirkungsdaten, Code und Intervallgrenzen (ZIP)](packages/CST_Staubball_Kopplungsscan_v0_2_Pruefpaket.zip)
+
 ## Dichtespur und Interferenz im Staubball · 4. November 2026
 
 Ein modellierter Dichtemesser summiert entlang der Staubeigenzeit auf, wie lange der Staub bei welcher Dichte verweilt. Bei den 27 offenen Historien aus [PR 218](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/218) senkt diese zusätzliche Aufzeichnung die Interferenz zwischen Bounce und Nicht-Bounce auf dem groben Gitter von 0,31611 auf 0,06285 und auf dem feinen von 0,20959 auf 0,05401. Die Messauflösung wurde aus der frühen Präparation festgelegt.
