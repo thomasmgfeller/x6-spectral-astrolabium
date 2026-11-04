@@ -1,5 +1,13 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## CST Dynamic Bounce Gate v0.1 · 4. November 2026
+
+Das Gate prüft, ob ein dynamisches Kausalset-Modell nach anfänglicher Kontraktion eine Volumenumkehr bevorzugt. Es verlangt fünf vorab festgelegte Staubeigenzeiten je Historie, eine kinematische Vergleichsrechnung und zwei Auflösungen desselben physikalischen Gebiets. Die Auswertung unterscheidet eine aufgelöste Umkehr, einen Verlauf ohne diese Umkehr und unaufgelöste Fälle.
+
+Für Randfamilie C gilt **HOLD**. Die 840 Ausgangsgeometrien haben bereits durch ihre Schichtfolge ein Breitenminimum. Kalibrierte Volumenverläufe durch eine mögliche Umkehr fehlen. Das Paket enthält 17 reproduzierbare Softwarekontrollen. Eine physikalische Aussage über Krümmungsregularität oder Singularitätsauflösung erfordert eigene Prüfungen.
+
+[Prüfstandard v0.1 (PDF)](reports/CST_Dynamic_Bounce_Gate_v0_1.pdf) · [Ausführbares Prüfpaket mit Beispieldaten und Testfällen (ZIP)](packages/CST_Dynamic_Bounce_Gate_v0_1_Pruefpaket.zip)
+
 ## Volumen-Bounce und Krümmungsregularität · 4. November 2026
 
 Alle 840 Ausgangsgeometrien der Familie C besitzen durch die vorgeschriebene Schichtfolge ein inneres Minimum der Breite. Bei 793 Geometrien ist es strikt, bei 47 bildet es ein Plateau. Für eine dynamische Volumenprognose fehlen kalibrierte Messungen vor und nach einer möglichen Umkehr in denselben Historien.
