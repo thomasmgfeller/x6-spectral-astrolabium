@@ -1,5 +1,11 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Freiwillige Rechenzeit für die Staubball-Läufe · 4. November 2026
+
+Für die zwei vollständigen Hochdichteläufe kann je eine Person einen eigenen Linux-Rechner oder bereits bewilligte Rechenzeit unentgeltlich bereitstellen. Das Projektbudget beträgt CHF 0. Die Vier-Thread-Variante wurde an den publizierten Laufzeitstichproben und den kleinen Kontrollfällen geprüft. Auf dem Vergleichsrechner ergibt die Hochrechnung rund fünf Stunden je Lauf. Das Prüfpaket enthält ausserdem die Vergleiche für die endlichen Staubhistorien und die Eigenzeit-Merkmale.
+
+[Anleitung für einen vollständigen Lauf](community_pilots/README.md) · [Lauf A oder B reservieren](https://github.com/thomasmgfeller/x6-spectral-astrolabium/issues/192) · [CPU-Prüfpaket herunterladen](packages/X6_CPU_Optimierung_Pruefpaket.zip)
+
 ## Endzustände im Staubkollaps · 3. November 2026
 
 Was verraten die Ankunftswege dreier markierter Quellen über die späte Schichtbreite k? Ein lokaler Speicher vergleicht, welche Quellen das Endereignis über denselben unmittelbaren Vorgänger erreichen. Für die ursprüngliche frühe Präparation bleibt die Interferenz bei der geprüften Gravitationskopplung in beiden endlichen Familien über der Freigabegrenze 1/21. Das Zertifikat umfasst alle Stärken des untersuchten Ankunftsspeichers und jede reelle Materiephasenstärke.

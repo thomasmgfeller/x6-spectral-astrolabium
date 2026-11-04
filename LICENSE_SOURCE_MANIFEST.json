@@ -3192,7 +3192,7 @@
     "research/eigenzeit/two_pulse_links/CST_Zwei_Pulse_Bericht.pdf": "c23ea8135f7cbc2a25660d0e5229a37f63053e2e5fe3ae3fc3bdd9d1a700a46d",
     "research/eigenzeit/two_pulse_links/CST_Zwei_Pulse_Pruefpaket.zip": "c361e67a9cb95da7034bacc39ae76491d33daf3c89af72200bc920401be279bf",
     "research/eigenzeit/two_pulse_links/README.md": "9e633dc5e10f2324d326944ea5233ab41d74ba539b0bbbff58c8a70ea5cf42e9",
-    "research/rax_cqg/dust_collapse/README.md": "a6cf2b10260085ce9c2cb05f866ff8a79de2dbae06c3bf4c74a67c0f998d674f",
+    "research/rax_cqg/dust_collapse/README.md": "2dcd11a226e4ad438c593cef6160ea9804a79324517ae1b485e3f1ae76ac66d5",
     "research/rax_cqg/dust_collapse/bdg/bdgpruefung.py": "855c26d7991b7b7eca55e66e912f8402cafca354ee8c757a472e7d7abec13411",
     "research/rax_cqg/dust_collapse/curved_boundary/.gitattributes": "e69e007833183235a7f506617861b0b7a8da63a3b0d987bdbb57d22be64c738e",
     "research/rax_cqg/dust_collapse/curved_boundary/README.txt": "fca69bb734ca492939a8e7a6037d0a1f5c99f47d6e7ec4328a2dfef6906daca6",
@@ -3267,7 +3267,10 @@
     "research/rax_cqg/dust_collapse/reports/Kausalordnung_Rekursive_Wegteilung.pdf": "0d9bc304124a0d6068f97fa74695613a5ff3236d3b99786abddc81f172967953",
     "research/rax_cqg/dust_collapse/packages/Kausalordnung_Rekursive_Wegteilung_Pruefpaket.zip": "f76440ad4ec263067e3c3e8975449aec122585d6a59c4f87d629af76bc138ca9",
     "research/rax_cqg/dust_collapse/reports/Kausalordnung_Endzustaende_Pruefbericht.pdf": "0cb16a067d3c5767af3ebccaed04cdd580ee9f4d9203d21ccc4c921b8623dbcd",
-    "research/rax_cqg/dust_collapse/packages/Kausalordnung_Endzustaende_Reproduktionspaket.zip": "82230266ff128334660ea03c49be766770358e98828c2e5f38c3fa451b5a0190"
+    "research/rax_cqg/dust_collapse/packages/Kausalordnung_Endzustaende_Reproduktionspaket.zip": "82230266ff128334660ea03c49be766770358e98828c2e5f38c3fa451b5a0190",
+    "research/rax_cqg/dust_collapse/community_pilots/README.md": "0d626ba2c86e82fe9dfdec3f38bedc99a27b2edefde259e6825e4f39fc51d5ef",
+    "research/rax_cqg/dust_collapse/community_pilots/run.sh": "b2d71f4cff406111534a8ebea10bc032765a7bf475a5f71f2c89288d0af1aa9a",
+    "research/rax_cqg/dust_collapse/packages/X6_CPU_Optimierung_Pruefpaket.zip": "47d02094f4c04310af6bbef6b6860b9119735d8b242714ef82fe65d296196bb1"
   },
   "documentation_updates": [
     {
@@ -5413,6 +5416,17 @@
           "sha256": "aea994cd107f6aa470b38d3fff64cd302ea127bddfecbc1a6e2cca3cb2badda3"
         }
       ]
+    },
+    {
+      "date": "2026-11-04",
+      "scope": "Publish the CPU benchmark and the optional local four-thread handoff for the two volunteer dust pilots in issue #192.",
+      "files": [
+        {
+          "path": "research/rax_cqg/dust_collapse/README.md",
+          "previous_sha256": "a6cf2b10260085ce9c2cb05f866ff8a79de2dbae06c3bf4c74a67c0f998d674f",
+          "sha256": "2dcd11a226e4ad438c593cef6160ea9804a79324517ae1b485e3f1ae76ac66d5"
+        }
+      ]
     }
   ],
   "publication_additions": [
@@ -6342,6 +6356,15 @@
       "paths": [
         "research/rax_cqg/dust_collapse/reports/Kausalordnung_Endzustaende_Pruefbericht.pdf",
         "research/rax_cqg/dust_collapse/packages/Kausalordnung_Endzustaende_Reproduktionspaket.zip"
+      ]
+    },
+    {
+      "date": "2026-11-04",
+      "scope": "Publish the CPU benchmark and the optional local four-thread handoff for the two volunteer dust pilots in issue #192.",
+      "paths": [
+        "research/rax_cqg/dust_collapse/community_pilots/README.md",
+        "research/rax_cqg/dust_collapse/community_pilots/run.sh",
+        "research/rax_cqg/dust_collapse/packages/X6_CPU_Optimierung_Pruefpaket.zip"
       ]
     }
   ]
