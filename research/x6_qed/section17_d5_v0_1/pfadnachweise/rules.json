@@ -1,0 +1,13 @@
+{
+  "scope": "DEVELOPMENT witness follow-up to PR 222; no calibration or random shots",
+  "base_commit": "bc4ae11e55f032cb977ab722c5fcbad33c16bcd7",
+  "population": "All 924 gained and all 55 shared nonempty single-source syndrome patterns. Compare archived cluster classes also for the 700 others.",
+  "geometry": "Complete detector vertex sequences for every path in one admissible cluster explanation, including boundary endpoints and pairing. Independent choice of source-component representatives per edge occurrence as in the original existence test.",
+  "primary_policy": "syntactic",
+  "alternative_policy": "first_component",
+  "same_geometry_witness": "Two admissible explanations with identical paths, differing by the logical mask of exactly one edge occurrence. Sources/components underlying that edge may differ.",
+  "single_site_intervention": "Start from syntactic edge/mask support. At selected endpoint pair(s) enable the alternative extra mask. A site is sufficient for an originally single-class cluster iff some complete geometry traverses it. Shot advances only when every cluster has both classes. Count minimum number of distinct sites; certify whether one common site suffices.",
+  "control": "For shared cases also decide whether two syntactic classes can use the same pairing type or require switching between detector-detector and two boundary assignments.",
+  "whole_sources": "Compare each syndrome to the logical XORs of all whole single DEM error instructions producing it. Do not infer impossibility under multiple active sources.",
+  "tie_break": "Use shortest paths in total hops then lexicographic geometry for display. Prefer a flip on a singly used edge if possible. For each step cite the first sorted source_event_id/component_index yielding its policy mask. Counters concern existence, not probability or weights."
+}
