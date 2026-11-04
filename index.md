@@ -3,6 +3,8 @@ Inspect the evidence.
 
 X6 Spectral Astrolabium is an open research hub for signals, graphs and causal orders. Start with a browser experiment, explore a research module, or reproduce a finite reference calculation.
 
+[Open photonics lab notebook (DE) →](https://thomasmgfeller.github.io/x6-spectral-astrolabium/experiments/photonic-two-qubit/laborbetrieb-v0.1/X6_Photonik_Laborbuch.html)
+
 [Wiki: X6 explained simply](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/en/)
 
 ## Causal Stability Lab
@@ -41,11 +43,15 @@ Physicists are invited to check the proofs, reproduce the calculations and propo
 - [Scope, source code & earlier results →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/docs/research/eigenzeit/gfest/README.md)
 - [Submit scientific feedback on GitHub →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/issues/new?template=01-math.yml&title=GFEST%3A%20)
 
-## From light signals to measurement data
+## What do the four detector channels see?
 
 ![AI concept illustration of the proposed Sagnac laboratory with a photon source, four detector channels, time tagging and digital analysis.](https://thomasmgfeller.github.io/x6-spectral-astrolabium/experiments/photonic-two-qubit/figures/AI_CONCEPT_NOT_PHOTO.png)
 
-AI concept illustration, not a photograph of an assembled experiment. Optics, devices and displays are illustrative; the setup provides no experimental evidence for RAX-CQG yet.
+The AI illustration shows the proposed setup. The lab notebook lets you explore the four channels of a photon-pair source using synthetic data. The optical CHSH measurement is pending.
+
+Four settings, each with 4,000 time windows. In 8,972 of the 16,000 windows, exactly one detector output on each side fires. In the notebook you can compare how the correlation changes when all windows are included.
+
+Choose “03 · Daten-Replay” in the German notebook, then select “Synthetisches Beispiel laden” to load the example.
 
 [Explore the design and schematic →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/experiments/photonic-two-qubit/README.md)
 

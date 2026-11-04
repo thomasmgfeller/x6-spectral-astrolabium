@@ -3,6 +3,8 @@ Die Evidenz prüfen.
 
 X6 Spectral Astrolabium ist ein offener Forschungshub für Signale, Graphen und kausale Ordnungen. Beginne mit einem Browserexperiment, erkunde einen Forschungszweig oder rechne eine endliche Referenz nach.
 
+[Photonik-Laborbuch öffnen →](https://thomasmgfeller.github.io/x6-spectral-astrolabium/experiments/photonic-two-qubit/laborbetrieb-v0.1/X6_Photonik_Laborbuch.html)
+
 [Wiki: X6 verständlich erklärt](https://thomasmgfeller.github.io/x6-spectral-astrolabium/wiki/de/)
 
 ## Causal Stability Lab
@@ -41,11 +43,15 @@ Wir laden Physikerinnen und Physiker zu unabhängiger Beweisprüfung, Reprodukti
 - [Geltungsbereich, Quellcode & frühere Ergebnisse →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/docs/research/eigenzeit/gfest/README.md)
 - [Fachliche Rückmeldung auf GitHub →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/issues/new?template=01-math.yml&title=GFEST%3A%20)
 
-## Vom Lichtsignal zur auswertbaren Messung
+## Was sehen die vier Detektorkanäle?
 
 ![KI-Konzeptvisualisierung des geplanten Sagnac-Labors mit Photonenquelle, vier Detektorkanälen, Zeitmessung und digitaler Auswertung.](https://thomasmgfeller.github.io/x6-spectral-astrolabium/experiments/photonic-two-qubit/figures/AI_CONCEPT_NOT_PHOTO.png)
 
-KI-Konzeptvisualisierung, kein Foto eines aufgebauten Experiments. Optik, Geräte und Anzeigen sind illustrativ; der Aufbau liefert noch keinen experimentellen Nachweis für RAX-CQG.
+Das KI-Konzeptbild zeigt den geplanten Aufbau. Im Laborbuch kannst du die vier Kanäle einer Photonenpaarquelle auswerten. Das Beispiel verwendet synthetische Daten. Die optische CHSH-Messung steht aus.
+
+Vier Einstellungen mit je 4.000 Zeitfenstern. In 8.972 der insgesamt 16.000 Fenster spricht auf jeder Seite genau ein Detektorausgang an. Im Laborbuch kannst du vergleichen, wie sich die Korrelation ändert, wenn alle Fenster einfließen.
+
+Im Laborbuch „03 · Daten-Replay“ wählen und „Synthetisches Beispiel laden“ antippen.
 
 [Versuchsplanung und Prinzipschema ansehen →](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/main/experiments/photonic-two-qubit/README.md)
 
