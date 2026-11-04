@@ -1,0 +1,34 @@
+{
+  "scope": "DEVELOPMENT only. Structural upper bound; CAL and C0-VALIDATION on HOLD.",
+  "base_commit": "afd6efb795193a4d8414d18469ca14f85aa81dc4",
+  "source_tree": "research/x6_qed/section17_d5_v0_1/",
+  "input_sha256": {
+    "protocol.json": "a7a037e9f651f3777d03e399ebf66802af718752993310e6481b52a085ffc333",
+    "measure.py": "9f2fa2b36cb4497dbf3cd7d786ca8d2101c04d6ecb5e7722dcf2c99333c0e2c5",
+    "verify.py": "33f11d223ddcc5eec13a5af99303b7e6ab9d17c7bdcc746fac6e8f51b55aa3c7",
+    "results/development.stim": "8b477bc072abb1fd892d7998608f562e14e6930075b697dd27906194ddf81f46",
+    "results/development.dem": "fa406fca2e330335e79eb239dfa08a65e2f82dfaaf486998f32d81f5c291b480",
+    "results/development_syntactic_edges.json": "b83285a59c2beff2ae5123797f550e999dd7035e5cf7c0bc5aae24c0f297bbf2",
+    "results/development_syndromes.csv": "eb40fd4943f9ede0923e36bb3f04f99701ac14c4b0a530d40ea75f599353481c"
+  },
+  "fixed_shots": 50000,
+  "seed": 2688799165999426676,
+  "sampler": "Stim 1.16.0 circuit.compile_detector_sampler(seed=seed).sample(shots=50000,bit_packed=True) once; little-endian detector order; no logical labels",
+  "primary_graph": "syntactic only; identical graph, whole-circuit noise and DD/boundary path rules as PR 222",
+  "primary_estimand": "P(all clusters have both classes | nonempty syndrome). Every shot counted by frequency.",
+  "primary_interval": "two-sided fixed-sample exact Clopper-Pearson 99%, conditional on observed number nonempty, model assumes independent identically distributed shots",
+  "minimum_nonempty_coverage": 0.05,
+  "threshold_rationale": "Provisional engineering screen: at least one in twenty nonempty inputs must have the possibility of a fast-path decision; not derived from a measured runtime or user-specified target.",
+  "decision": "NO_GO_5PCT if upper < 0.05; REACHABILITY_FEASIBLE_5PCT if lower >= 0.05; otherwise INCONCLUSIVE. No PASS or error-risk conclusions.",
+  "precedence": [
+    "EMPTY_SEPARATE",
+    "CLUSTER_OVERFLOW (any size >8, no search started)",
+    "NO_LOCAL_PAIRING (any mask empty)",
+    "SINGLE_CLASS_BLOCKS (any one-class cluster)",
+    "ALL_CLUSTERS_BOTH (all masks contain both parities)"
+  ],
+  "guard": "Fixed N. No early stop, sample replacement, alternate-mask analysis or threshold tuning. A validation disagreement stops the result. Source-enumeration controls and a deterministic multi-cluster/overflow control before sampling.",
+  "crosscheck": "Independently determine clusters and overflow for all sampled patterns. Compare full per-cluster reachability for the preselected shot IDs 0,199,... (zero based) and every eligible nonempty shot using the archived half-path/matching verifier. Recheck all 1,679 original source patterns during controls.",
+  "descriptive": "Report status counts for all shots; frequency by number of active detectors; empty fraction; count eligible / all. No decision or interval from subgroups.",
+  "budget": "Oversized clusters always HOLD. An unhandled runtime or memory error invalidates the run; no relabeling."
+}
