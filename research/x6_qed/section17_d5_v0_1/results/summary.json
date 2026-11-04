@@ -1,0 +1,97 @@
+{
+  "development": {
+    "first_component": {
+      "all_clusters_both_by_stratum": {
+        "boundary_adjacent": 847,
+        "interior": 132
+      },
+      "cluster_class_counts": {
+        "1": 895,
+        "2": 1961
+      },
+      "cluster_sizes": {
+        "1": 704,
+        "2": 2152
+      },
+      "deduplicated_edges": 563,
+      "distinct_nonempty": 1679,
+      "nonempty_by_stratum": {
+        "boundary_adjacent": 1512,
+        "interior": 167
+      },
+      "shot_reachable_class_counts": {
+        "1": 357,
+        "2": 1322
+      },
+      "shot_status": {
+        "ALL_CLUSTERS_BOTH": 979,
+        "SINGLE_CLASS_BLOCKS": 700
+      }
+    },
+    "shot_status_transitions": {
+      "ALL_CLUSTERS_BOTH -> ALL_CLUSTERS_BOTH": 55,
+      "SINGLE_CLASS_BLOCKS -> ALL_CLUSTERS_BOTH": 924,
+      "SINGLE_CLASS_BLOCKS -> SINGLE_CLASS_BLOCKS": 700
+    },
+    "syntactic": {
+      "all_clusters_both_by_stratum": {
+        "interior": 55
+      },
+      "cluster_class_counts": {
+        "1": 2602,
+        "2": 254
+      },
+      "cluster_sizes": {
+        "1": 704,
+        "2": 2152
+      },
+      "deduplicated_edges": 502,
+      "distinct_nonempty": 1679,
+      "nonempty_by_stratum": {
+        "boundary_adjacent": 1512,
+        "interior": 167
+      },
+      "shot_reachable_class_counts": {
+        "1": 1425,
+        "2": 254
+      },
+      "shot_status": {
+        "ALL_CLUSTERS_BOTH": 55,
+        "SINGLE_CLASS_BLOCKS": 1624
+      }
+    }
+  },
+  "main_fixture": {
+    "syntactic": {
+      "all_clusters_both_by_stratum": {},
+      "cluster_class_counts": {
+        "1": 1
+      },
+      "cluster_sizes": {
+        "1": 1
+      },
+      "deduplicated_edges": 1,
+      "distinct_nonempty": 1,
+      "nonempty_by_stratum": {
+        "boundary_adjacent": 1
+      },
+      "shot_reachable_class_counts": {
+        "1": 1
+      },
+      "shot_status": {
+        "SINGLE_CLASS_BLOCKS": 1
+      }
+    }
+  },
+  "model": {
+    "circuit_sha256": "8b477bc072abb1fd892d7998608f562e14e6930075b697dd27906194ddf81f46",
+    "dem_sha256": "fa406fca2e330335e79eb239dfa08a65e2f82dfaaf486998f32d81f5c291b480",
+    "detectors": 120,
+    "graph_components_with_multiplicity": 3718,
+    "observables": 1,
+    "protocol_sha256": "a7a037e9f651f3777d03e399ebf66802af718752993310e6481b52a085ffc333",
+    "separator_events": 1456,
+    "source_events": 1958,
+    "source_events_with_no_syndrome": 0
+  }
+}
