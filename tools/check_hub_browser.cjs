@@ -41,6 +41,25 @@ async function main() {
     await page.waitForURL(url=>url.hash==='#main');
     assert.equal(new URL(page.url()).hash,'#main');
     checks.push('English entry has three routes and a keyboard-accessible skip link');
+    for (const lang of ['', 'de/']) {
+      await page.goto(base + lang);
+      const sample = page.locator('.photonics-sample');
+      await sample.locator('summary').click();
+      assert.ok(await sample.locator('p').first().isVisible());
+      await page.locator('.photonics-launch').click();
+      await page.locator('[data-view="replay"]').click();
+      await page.locator('#demo').click();
+      await page.locator('#replayResult').waitFor();
+      assert.equal(await page.locator('#kind').innerText(), 'SYNTHETISCH');
+      const rows = await page.locator('#records tr').allTextContents();
+      assert.equal(rows.length, 4);
+      const totals = await page.locator('#records tr').evaluateAll(records =>
+        records.reduce((sum, r) => [sum[0] + Number(r.cells[2].textContent),
+                                    sum[1] + Number(r.cells[3].textContent)], [0, 0]));
+      assert.deepEqual(totals, [16000, 8972]);
+    }
+    checks.push('Both homepages open the photonics notebook and reproduce the synthetic window counts');
+    await page.goto(base);
     await page.locator('.gauge-launch').click();
     await page.getByRole('heading', {name:'Eichfeld-Labor', exact:true}).waitFor();
     assert.equal(await page.locator('#case option').count(),256);
