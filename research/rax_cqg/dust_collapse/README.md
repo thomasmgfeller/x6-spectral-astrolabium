@@ -1,5 +1,13 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Lokaler Horizonttest auf einer bekannten Staubgeometrie · 4. November 2026
+
+Der Detektor schätzt den Radius, an dem eine auslaufende Lichtfront ihre Flächenzunahme einstellt, während einlaufendes Licht weiterhin konvergiert. Auf der vorgegebenen klassischen Staubgeometrie traf er bei feiner Auflösung das Toleranzband von ±10 % am frühen Schnitt in 512 von 512 Fällen und am späten Schnitt in 510 von 512 Fällen. Die grobe Auflösung verfehlte das 95-%-Trefferziel an beiden Schnitten. In der flachen Minkowski-Kontrolle gab es keinen Fehlalarm.
+
+Die Messung verwendet ein markiertes Zentrum, kalibrierte Eigenzeitfenster und vorbereitete Lichtsignalpaare. Ob die Dynamik der Kausalsets selbst eine marginal gefangene Kugel erzeugt, bleibt offen.
+
+[Prüfbericht mit lokalem Lichtstrahlendiagramm (PDF)](reports/Staubball_Horizont_Referenztest.pdf) · [Prüfpaket mit Code, Rohzählungen und 4 096 Einzelentscheidungen (ZIP)](packages/Staubball_Horizont_Referenztest_Pruefpaket.zip)
+
 ## Zwei-Massen-Test für Randfamilie C · 4. November 2026
 
 Bei vierfacher Staubmasse ändern sich die relativen späten Zweigamplituden unter allen drei untersuchten Gewichtungen. Beim dynamischen Wachstumsmass steigt das Zweiggewicht für eine späte Breite von zwei oder drei von 2,33 % auf 4,70 %, die Interferenz von 0,28526 auf 0,34940. Auch bei abgeschalteter Gravitationsphase reagieren die Amplituden auf die Masse. Der Befund allein belegt daher keine gravitative Rückwirkung.
