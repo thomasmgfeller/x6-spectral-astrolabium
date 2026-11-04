@@ -1,5 +1,13 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Paartest B auf unabhängigen Rechnern · 4. November 2026
+
+Für die 149 festen Paarkennungen steht ein Paket zur Erstberechnung, unabhängigen Nachrechnung und einmaligen Verbuchung bereit. Es schliesst für die gespeicherten Binärkoordinaten den Fehler an der Abstandsschwelle ein. Vier historische Kontrollen reproduzierten ihre Einstufungen. Die Schlussauswertung setzt 149 verifizierte Kennungen voraus. Die Übertragung auf das ideale kontinuierliche Poisson-Modell bleibt an die im Bericht beschriebenen Generatorannahmen gebunden.
+
+**Gespendete Rechenzeit gesucht.** Eine Kennung oder ein kleiner Bereich genügt als Beitrag. Zusätzlich suchen wir eine unabhängige Prüfstelle für das vollständige Nachrechnen. Der Kernaufwand ist auf rund 26 Stunden pro Durchgang, insgesamt rund 52 Kernstunden, geschätzt. Freiwillige übernehmen Rechenzeit und Betrieb auf eigener oder bereits bewilligter Infrastruktur. Für Thomas Gfeller und das Projekt gilt CHF 0.
+
+[Mitmachen: Kennungen und Nachrechnung koordinieren (#208)](https://github.com/thomasmgfeller/x6-spectral-astrolabium/issues/208) · [Prüfbericht (PDF)](reports/Staubball_B_Paarrueckgabe.pdf) · [Ausführbares Rückgabepaket (ZIP)](packages/Staubball_B_Paarrueckgabe_Pruefpaket.zip)
+
 ## Garantierte Streuungsuntergrenze für Fenster B · 4. November 2026
 
 Für den festgelegten Staubmassenschätzer in Fenster B ist die Standardabweichung grösser als 0,156 % der Sollmasse. Auch mit der bei 403 Schichten abgeschnittenen Tabelle liegt sie in exakter Arithmetik über 0,155 %. Damit scheitert der untersuchte symmetrische Tschebyscheff-Nachweis einer Trefferwahrscheinlichkeit von 95 %. Die tatsächliche Trefferwahrscheinlichkeit bleibt offen. Der Bericht enthält den Rechenbeweis mit Fehlergrenzen und den Entwurf eines getrennten Paartests.
