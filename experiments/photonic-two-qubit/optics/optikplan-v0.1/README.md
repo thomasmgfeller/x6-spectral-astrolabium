@@ -6,6 +6,8 @@
 
 Der 13-seitige Plan spezifiziert eine 405-nm-Pumpe, eine Typ-II-ppKTP-Sagnac-Quelle für Photonenpaare um 810 nm, zwei lokale Polarisationsanalysatoren und vier Detektorkanäle. Er enthält Bauteilanforderungen, die elektrische Schnittstelle zur Messkette und ein vorab definiertes CHSH-Abnahmeprotokoll. Beschaffung, maßstäblicher Aufbau, elektrische Qualifikation und optische Abnahme stehen noch aus.
 
+Der [Optikplan v0.2](../optikplan-v0.2/README.md) ergänzt diese Spezifikation um Quellenrechnung, Kopplungsbudgets und Kalibrier-Replays.
+
 ## Umfang und Schnittstelle
 
 | Teil | Festlegung |

@@ -1,0 +1,217 @@
+{
+  "coincidence_budget": {
+    "common_mismatch_300rad_m": {
+      "accidental_to_true": 0.006929359811832211,
+      "expected_true_pairs_in_600s": 69270.46841764187,
+      "raw_DA_symmetric_background_scenario": 0.9769194104860596,
+      "relative_spectral_yield": 0.9531947445823926,
+      "true_pairs_per_s_lower_scenario": 115.45078069606977
+    },
+    "delay_0.25ps": {
+      "accidental_to_true": 0.006605029355958901,
+      "expected_true_pairs_in_600s": 72671.8950260161,
+      "raw_DA_symmetric_background_scenario": 0.9529058807731431,
+      "relative_spectral_yield": 1.0,
+      "true_pairs_per_s_lower_scenario": 121.11982504336015
+    },
+    "delay_1ps": {
+      "accidental_to_true": 0.006605029355958901,
+      "expected_true_pairs_in_600s": 72671.8950260161,
+      "raw_DA_symmetric_background_scenario": 0.6979220687995873,
+      "relative_spectral_yield": 1.0,
+      "true_pairs_per_s_lower_scenario": 121.11982504336015
+    },
+    "delay_2ps": {
+      "accidental_to_true": 0.006605029355958901,
+      "expected_true_pairs_in_600s": 72671.8950260161,
+      "raw_DA_symmetric_background_scenario": 0.31666454621340673,
+      "relative_spectral_yield": 1.0,
+      "true_pairs_per_s_lower_scenario": 121.11982504336015
+    },
+    "filter_B_plus1nm": {
+      "accidental_to_true": 0.0087661706681535,
+      "expected_true_pairs_in_600s": 54755.94968094625,
+      "raw_DA_symmetric_background_scenario": 0.9751405877706395,
+      "relative_spectral_yield": 0.7534680313667884,
+      "true_pairs_per_s_lower_scenario": 91.25991613491041
+    },
+    "matched": {
+      "accidental_to_true": 0.006605029355958901,
+      "expected_true_pairs_in_600s": 72671.8950260161,
+      "raw_DA_symmetric_background_scenario": 0.9772341761672495,
+      "relative_spectral_yield": 1.0,
+      "true_pairs_per_s_lower_scenario": 121.11982504336015
+    },
+    "mismatch_CCW_300rad_m": {
+      "accidental_to_true": 0.006754789182097936,
+      "expected_true_pairs_in_600s": 71060.69294836515,
+      "raw_DA_symmetric_background_scenario": 0.7022394863511796,
+      "relative_spectral_yield": 0.9778290895390281,
+      "true_pairs_per_s_lower_scenario": 118.43448824727524
+    },
+    "stress_combined": {
+      "accidental_to_true": 0.009609328107908042,
+      "expected_true_pairs_in_600s": 49951.46326671702,
+      "raw_DA_symmetric_background_scenario": 0.6600401126482692,
+      "relative_spectral_yield": 0.6873560026036847,
+      "true_pairs_per_s_lower_scenario": 83.2524387778617
+    }
+  },
+  "crystal": {
+    "fixed_pump_unfiltered_pm_fwhm_THz": 0.2525623004852076,
+    "full_crystal_dgd_ps": 3.5076214449938883,
+    "half_power_delta_k_abs_rad_per_m": 278.311475650302,
+    "n_y": 1.7559279078737635,
+    "n_z": 1.8438321539044293,
+    "ng_y": 1.8037204012762633,
+    "ng_z": 1.9088762467490863
+  },
+  "fiber": {
+    "axial_95_um": 11.122388644223264,
+    "collection_zR_y_mm": 43.58645108629736,
+    "collimated_radius_mm": 0.5156620156177409,
+    "eta_joint_example": 0.9668283629163512,
+    "eta_mirror_20urad": 0.9936204363791489,
+    "eta_mirror_50urad": 0.9607894391523231,
+    "facet_tilt_95_mrad": 23.35745033586183,
+    "lateral_95_um": 0.5662005739331171,
+    "mirror_95_urad": 56.62005739331171,
+    "pump_10pct_displacement_um": 34.65703216519296,
+    "rayleigh_air_um": 24.240684055476798,
+    "relay_magnification": 0.03125,
+    "waist_um": 2.5
+  },
+  "hardware_gates": {
+    "CHSH": "NOT_RUN",
+    "G3": "NOT_RUN",
+    "G4": "NOT_RUN",
+    "G5": "NOT_RUN",
+    "fabrication": "HOLD",
+    "jig_transfer": "NOT_RUN",
+    "spectral_phase": "NOT_MEASURED",
+    "supplier_QPM": "OPEN"
+  },
+  "nominal_residual_delay_ps_at_90pct": 0.4606105953766296,
+  "pump_slope_sensitivity_at_1ps": {
+    "0": 0.7834783170599225,
+    "0.1": 0.7141809873421178,
+    "0.2": 0.5577331834708623
+  },
+  "scope": "DESIGN_ONLY",
+  "spectral": {
+    "common_mismatch_300rad_m": {
+      "gamma_abs": 1.0,
+      "gamma_im": 0.0,
+      "gamma_re": 1.0,
+      "integrated_weight_THz2": 0.05755456551371982,
+      "power_balance_factor": 0.9986139979479093,
+      "signed_DA_contrast_before_background": 0.9836888365884806
+    },
+    "delay_0.25ps": {
+      "gamma_abs": 0.9751049482432932,
+      "gamma_im": 0.0,
+      "gamma_re": 0.9751049482432932,
+      "integrated_weight_THz2": 0.06038069957984844,
+      "power_balance_factor": 0.9986139979479093,
+      "signed_DA_contrast_before_background": 0.9591998520891156
+    },
+    "delay_1ps": {
+      "gamma_abs": 0.7141809873421178,
+      "gamma_im": 1.7505650853139064e-17,
+      "gamma_re": 0.7141809873421178,
+      "integrated_weight_THz2": 0.06038069957984844,
+      "power_balance_factor": 0.9986139979479093,
+      "signed_DA_contrast_before_background": 0.7025318645521802
+    },
+    "delay_2ps": {
+      "gamma_abs": 0.3240416206639205,
+      "gamma_im": -3.501130170627813e-17,
+      "gamma_re": 0.3240416206639205,
+      "integrated_weight_THz2": 0.06038069957984844,
+      "power_balance_factor": 0.9986139979479093,
+      "signed_DA_contrast_before_background": 0.3187561248371377
+    },
+    "filter_B_plus1nm": {
+      "gamma_abs": 0.9999999999999998,
+      "gamma_im": 0.0,
+      "gamma_re": 0.9999999999999998,
+      "integrated_weight_THz2": 0.04549492684497788,
+      "power_balance_factor": 0.9986139979479093,
+      "signed_DA_contrast_before_background": 0.9836888365884804
+    },
+    "matched": {
+      "gamma_abs": 1.0,
+      "gamma_im": 0.0,
+      "gamma_re": 1.0,
+      "integrated_weight_THz2": 0.06038069957984844,
+      "power_balance_factor": 0.9986139979479093,
+      "signed_DA_contrast_before_background": 0.9836888365884806
+    },
+    "mismatch_CCW_300rad_m": {
+      "gamma_abs": 0.7198190576035844,
+      "gamma_im": 0.0,
+      "gamma_re": 0.7198190576035844,
+      "integrated_weight_THz2": 0.05904200449589278,
+      "power_balance_factor": 0.9970696939924741,
+      "signed_DA_contrast_before_background": 0.7069829660368266
+    },
+    "stress_combined": {
+      "gamma_abs": 0.6824154440694838,
+      "gamma_im": -0.10806166775775797,
+      "gamma_re": 0.6738052495090572,
+      "integrated_weight_THz2": 0.04150303629761861,
+      "power_balance_factor": 0.9880900192725337,
+      "signed_DA_contrast_before_background": 0.666382654655087
+    }
+  },
+  "timing": [
+    {
+      "accidentals_per_s": 0.19999999999999998,
+      "core_fwhm_ps": 554.2171240697371,
+      "core_window": 0.9999751415057779,
+      "delayed_5pct_window": 0.9511220442673789,
+      "electronics_rms_ps": 94.16297927883689,
+      "pair_offset_ps": -30,
+      "ports": [
+        0,
+        2
+      ]
+    },
+    {
+      "accidentals_per_s": 0.19999999999999998,
+      "core_fwhm_ps": 600.6714679319055,
+      "core_window": 0.9998694642842624,
+      "delayed_5pct_window": 0.950579408490862,
+      "electronics_rms_ps": 100.82988974836115,
+      "pair_offset_ps": 60,
+      "ports": [
+        0,
+        3
+      ]
+    },
+    {
+      "accidentals_per_s": 0.19999999999999998,
+      "core_fwhm_ps": 588.312410339608,
+      "core_window": 0.9998921377288945,
+      "delayed_5pct_window": 0.9520281309585495,
+      "electronics_rms_ps": 97.42518497116988,
+      "pair_offset_ps": -70,
+      "ports": [
+        1,
+        2
+      ]
+    },
+    {
+      "accidentals_per_s": 0.19999999999999998,
+      "core_fwhm_ps": 632.2666240874486,
+      "core_window": 0.9997961694194002,
+      "delayed_5pct_window": 0.9511259326178889,
+      "electronics_rms_ps": 103.88294694831615,
+      "pair_offset_ps": 20,
+      "ports": [
+        1,
+        3
+      ]
+    }
+  ]
+}

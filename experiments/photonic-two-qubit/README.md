@@ -1,6 +1,6 @@
 # Photonischer Zwei-Qubit-Versuchsaufbau
 
-**Entwurf und digitale Referenz · Experimental preview · Dokumentationsstand 23.10.2026**
+**Entwurf und digitale Referenz · Experimental preview · Dokumentationsstand 04.11.2026**
 
 Geplant ist eine polarisationsverschränkte Photonenpaarquelle mit einem Typ-II-ppKTP-Sagnac-Interferometer, zwei lokalen Polarisationsanalysatoren und vier Detektorkanälen. Veröffentlicht werden die vorhandenen Entwurfsunterlagen, CAD-Dateien, Auswertungen und digitalen Referenzkerne. **Es liegen in diesem Paket keine Labormessungen des Gesamtaufbaus vor.**
 
@@ -20,9 +20,11 @@ Die Bezeichnung „Zwei-Qubit“ beschreibt zwei geplante Polarisationsfreiheits
 
 ## Einstieg und Unterlagen
 
+- **[Optikplan v0.2 · Quellenüberlappung und Messkette](optics/optikplan-v0.2/README.md)** — [PDF](optics/optikplan-v0.2/Optikplan_v0_2.pdf), [Prüfpaket](optics/optikplan-v0.2/Optikplan_v0_2_Pruefpaket.zip), Rechenmodell und Kalibrierprogramme für spektrale Unterscheidbarkeit, zeitlichen Restversatz, vier Faserkopplungen und Paarjitter. Optische und elektrische Laborabnahme stehen auf `NOT_RUN`.
+
 - **[X6-QED C0.1 · Anschluss an den Zwei-Qubit-Versuchsaufbau](../../docs/research/x6-qed/README.md)** — Synthetische Eingangsprüfung für den d=5-Decoderpfad und gemeinsamer Herkunftsnachweis. Photonik-Snapshots werden am QED-Eingang abgewiesen. CAL und C0-VALIDATION stehen auf HOLD.
 
-- **[Neu: Optikplan v0.1 mit CHSH-Abnahmeprotokoll](optics/optikplan-v0.1/README.md)** — [PDF](optics/optikplan-v0.1/Optikplan_v0_1.pdf), [DOCX](optics/optikplan-v0.1/Optikplan_v0_1.docx), [Prüfpaket](downloads/Optikplan_v0_1_Pruefpaket.zip); Bauteilspezifikationen, vierkanalige elektrische Schnittstelle, fester Messplan und bedingte CHSH-Auswertung. 11 Softwaretests bestanden; Hardware und realer CHSH-Nachweis NOT_RUN.
+- **[Optikplan v0.1 mit CHSH-Abnahmeprotokoll](optics/optikplan-v0.1/README.md)** — [PDF](optics/optikplan-v0.1/Optikplan_v0_1.pdf), [DOCX](optics/optikplan-v0.1/Optikplan_v0_1.docx), [Prüfpaket](downloads/Optikplan_v0_1_Pruefpaket.zip); Bauteilspezifikationen, vierkanalige elektrische Schnittstelle, fester Messplan und bedingte CHSH-Auswertung. 11 Softwaretests bestanden; Hardware und realer CHSH-Nachweis NOT_RUN.
 
 - **[Neu: erster Kaskoden-Schaltplan v0.1](hardware/cascode-schematic-v0.1/README.md)** — [PDF](manuals/Kaskoden_Schaltplan_v0_1.pdf), [KiCad-Paket](downloads/Kaskoden_Schaltplan_v0_1_KiCad.zip); vier Schaltplanblätter, Stückliste und geprüfte Pinverbindungen. Vereinfachter SPICE-Modelltest bestanden; keine Hardware- oder Fertigungsfreigabe.
 - **[Kaskoden-Frontend / vierlagiger PCB-Entwurf v0.1](hardware/pcb-cascode-v0.1/README.md)** — [PDF direkt](manuals/PCB_Kaskoden_Frontend_Entwurf_v0_1.pdf); Startwerte und Abnahmeplan, alle Hardwareprüfungen NOT_RUN.
