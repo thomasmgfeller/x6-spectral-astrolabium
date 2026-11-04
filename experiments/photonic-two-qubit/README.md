@@ -18,6 +18,12 @@ Geplant ist eine polarisationsverschränkte Photonenpaarquelle mit einem Typ-II-
 
 Die Bezeichnung „Zwei-Qubit“ beschreibt zwei geplante Polarisationsfreiheitsgrade, einen pro Photonenarm. Sie behauptet weder deterministische Qubit-Erzeugung noch programmierbare Zwei-Qubit-Gatter. Ältere Formulierungen wie „Quantenkern“ sind Projektbezeichnungen. Maßgeblich ist der Status in [SCIENTIFIC_STATUS.md](SCIENTIFIC_STATUS.md).
 
+## Laborbuch und Gerätelauf
+
+**[Betriebspaket v0.1 herunterladen](downloads/X6_Photonik_Laborbetrieb_v0_1.zip)** · [Startanleitung und Geräteliste](laborbetrieb-v0.1/README.md) · [HTML-Laborbuch](laborbetrieb-v0.1/X6_Photonik_Laborbuch.html)
+
+Auf dem Linux-Messrechner das Paket entpacken und `python3 labor_server.py` starten. Ohne Geräteprofil lässt sich der vollständige Ablauf mit vier synthetischen Frames ausprobieren. Der Reiter **06 · Gerätelauf** verbindet sich mit dem lokalen Dienst. Er zeigt Erfassungsstatus, Kanalraten und Geräteantworten an und stellt die archivierten Rohdaten bereit. Der Stand umfasst 19 Softwaretests mit virtuellen Anschlüssen und einem SDK-Testadapter. Geräteabnahme und physischer CHSH-Nachweis stehen aus.
+
 ## Einstieg und Unterlagen
 
 - **[Optikplan v0.2 · Quellenüberlappung und Messkette](optics/optikplan-v0.2/README.md)** — [PDF](optics/optikplan-v0.2/Optikplan_v0_2.pdf), [Prüfpaket](optics/optikplan-v0.2/Optikplan_v0_2_Pruefpaket.zip), Rechenmodell und Kalibrierprogramme für spektrale Unterscheidbarkeit, zeitlichen Restversatz, vier Faserkopplungen und Paarjitter. Optische und elektrische Laborabnahme stehen auf `NOT_RUN`.

@@ -556,6 +556,8 @@ Read [Sagnac integration and test scope](docs/SAGNAC_INTEGRATION.md).
 
 ## Photonic two-qubit experiment — design preview
 
+**[Photonics lab console v0.1](experiments/photonic-two-qubit/laborbetrieb-v0.1/README.md)** records four-channel time tags or FPGA snapshots through a local Linux service. The tablet interface shows run status, device replies and the raw-data archive. Physical commissioning is pending. [Download the complete package](experiments/photonic-two-qubit/downloads/X6_Photonik_Laborbetrieb_v0_1.zip)
+
 **[Optikplan v0.2](experiments/photonic-two-qubit/optics/optikplan-v0.2/README.md)** connects the two Sagnac alternatives to a predicted polarization contrast, four fiber-coupling tolerances and calibrated detector timing. Includes seven software checks and replay tools for phase-sensitive spectral and time-tag calibration data. Physical tests remain NOT_RUN. [Design PDF](experiments/photonic-two-qubit/optics/optikplan-v0.2/Optikplan_v0_2.pdf) · [Reproducible package](experiments/photonic-two-qubit/optics/optikplan-v0.2/Optikplan_v0_2_Pruefpaket.zip)
 
 **[Optikplan v0.1](experiments/photonic-two-qubit/optics/optikplan-v0.1/README.md)** ([PDF](experiments/photonic-two-qubit/optics/optikplan-v0.1/Optikplan_v0_1.pdf), [complete package](experiments/photonic-two-qubit/downloads/Optikplan_v0_1_Pruefpaket.zip)). Component specifications for a 405/810 nm Sagnac source, a four-channel electrical interface and a predefined conditional CHSH acceptance protocol. Includes editable documents, a fixed measurement schedule and 11 software tests. Optical/electrical hardware checks and the experimental CHSH test remain NOT_RUN.

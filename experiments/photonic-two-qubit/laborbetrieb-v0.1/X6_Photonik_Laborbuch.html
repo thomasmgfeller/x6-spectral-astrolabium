@@ -1,0 +1,973 @@
+<!doctype html>
+<html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light"><title>X6 · Photonik-Laborbuch</title>
+<style>
+:root{--bg:#f2f4f1;--card:#fff;--line:#cbd6cd;--ink:#142d2a;--muted:#455e55;--green:#006457;--mint:#d5ebe1;--amber:#79430d;--cream:#fbefdb;--num:ui-monospace,SFMono-Regular,Consolas,monospace}*{box-sizing:border-box}body{margin:0;color:var(--ink);background:var(--bg);font:16px/1.52 system-ui,sans-serif}header{background:#163a33;color:#f0f8f4}.wrap{max-width:1060px;margin:auto;padding:0 24px}.mast{padding-block:18px;display:flex;align-items:center;justify-content:space-between;gap:12px}.mark{font:700 21px var(--num);letter-spacing:-.07em;border:1px solid #83b6a5;border-radius:5px;padding:4px 8px}.brand{font-weight:650;display:flex;gap:12px;align-items:center}.quiet{color:#d1e5db;font-size:.86rem}.tag{font:600 .79rem/1.4 var(--num);display:inline-block;padding:4px 8px;border-radius:5px;background:#e8efea;color:#274c40}.warn{background:var(--cream);color:var(--amber)}.model{background:var(--mint);color:#14584a}main{padding-bottom:30px}h1{font-size:clamp(1.7rem,3.5vw,2.65rem);line-height:1.1;margin:.4rem 0 0;letter-spacing:-.045em}h2{font-size:1.36rem;line-height:1.25;letter-spacing:-.025em;margin:.2rem 0 .7rem}h3{font-size:1.02rem;margin:.25rem 0 .4rem}p{margin:.3rem 0 .8rem}.intro{padding:26px 0 16px}.over{font:650 .73rem var(--num);letter-spacing:.085em;color:var(--muted);text-transform:uppercase}nav{display:flex;flex-wrap:wrap;gap:6px;padding:2px 0 18px}button,select,input{font:inherit}button,.filebutton{cursor:pointer;border-radius:7px;min-height:44px;padding:8px 15px;font-weight:600;background:white;border:1px solid #a6b8ac;color:var(--ink)}button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible,a:focus-visible{outline:3px solid #ab6216;outline-offset:3px}nav button[aria-pressed=true],button.primary{background:var(--green);border-color:var(--green);color:white}button:hover:not(:disabled){box-shadow:inset 0 0 0 1px currentColor}button:disabled{opacity:.45;cursor:not-allowed}.panel{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:clamp(14px,2.5vw,25px);margin-bottom:14px}.grid{display:grid;grid-template-columns:1.2fr 1fr;gap:15px}.grid .panel{margin:0}.cols{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.small{font-size:.9rem;color:var(--muted)}.sep{border-top:1px solid var(--line);padding-top:12px;margin-top:10px}.tools{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin:12px 0}.metric{padding:14px 11px;background:#f1f5f1;border-radius:7px}.metric span{display:block;font-size:.8rem;color:var(--muted)}.metric strong{font:600 clamp(1.2rem,2.5vw,1.7rem) var(--num)}.row{display:flex;align-items:baseline;justify-content:space-between;gap:10px;margin:0;padding:9px 0;border-bottom:1px solid #e4ebe5}.row:last-child{border:0}.stage{display:flex;gap:11px;margin-top:14px}.idx{font:600 .9rem var(--num);background:var(--mint);color:#165744;border-radius:6px;padding:4px 6px;height:max-content}.stage p{color:var(--muted);font-size:.9rem;margin:2px 0}.timeline{margin-top:14px}.scale{position:relative;height:21px;border-radius:4px;background:#e4ebe6;margin:6px 0}.bar{display:block;height:100%;background:#2a8272;border-radius:4px;transition:width .2s}.threshold{position:absolute;left:90%;border-left:2px dashed #362c1d;height:calc(100% + 8px);top:-4px}.form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.form label,label.stack{display:grid;gap:4px;font-size:.89rem;font-weight:600}select,input{min-width:0;max-width:100%;min-height:44px;padding:6px;border:1px solid #a4b4a9;border-radius:5px;background:#fff;color:var(--ink)}.plot{margin:22px 0}.note{border-left:3px solid #bb8a51;padding:5px 12px;background:#faf6ed;margin:12px 0}.mono{font-family:var(--num);overflow-wrap:anywhere;font-size:.85rem}summary{padding:10px 0;cursor:pointer;font-weight:600}details[open] summary{margin-bottom:4px}.scroll{overflow-x:auto}table{border-collapse:collapse;width:100%;font-size:.91rem}th,td{text-align:left;padding:8px 5px;border-bottom:1px solid var(--line);font-variant-numeric:tabular-nums}th{color:var(--muted);font-size:.82rem}a{color:var(--green)}footer{padding:16px 0 24px;color:var(--muted);font-size:.85rem}pre{white-space:pre-wrap;font-size:.76rem;overflow-wrap:anywhere}.error{color:#8b261b;font-weight:600}.hidden,[hidden]{display:none!important}@media(max-width:720px){.grid{grid-template-columns:1fr}.wrap{padding-inline:14px}.form{grid-template-columns:1fr}.quiet{font-size:.75rem}.cols{gap:5px}.metric{padding:8px}.intro{padding-top:20px}.mast{flex-wrap:wrap}.panel{border-radius:8px}nav button{padding:7px 10px}}@media(prefers-reduced-motion:reduce){.bar{transition:none}}
+.calOffsets{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;border:1px solid var(--line);border-radius:7px;margin:12px 0;padding:10px}.calOffsets label{display:grid;gap:4px;font-size:.9rem}.calOffsets legend{font-weight:600}.calOffsets input{width:100%}#calChart svg{display:block;max-width:100%;width:100%;height:auto;margin-top:12px}#calStats{display:grid;grid-template-columns:minmax(9em,1fr) 1.25fr;gap:5px 12px;font-size:.92rem}#calStats dd{margin:0;font-variant-numeric:tabular-nums}@media(max-width:560px){.calOffsets{grid-template-columns:1fr 1fr}}
+.ctrlChannels{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}.ctrlChannels strong{font-size:1.1rem}#ctArchive button{margin:3px}#ctOutput .small{margin-top:12px}@media(max-width:500px){.ctrlChannels{grid-template-columns:1fr 1fr}}
+#lbFields{border:0;padding:0;margin:0;min-width:0}#lbMetrics{display:grid;grid-template-columns:minmax(7rem,1fr) 2fr;gap:6px 14px;font-size:.9rem}#lbMetrics dd{margin:0;overflow-wrap:anywhere}#lbMetrics dt{color:var(--muted)}.lbCheck{display:flex;align-items:flex-start;gap:10px;margin:12px 0}.lbCheck input{width:auto;flex:none;margin-top:5px}#lbArchive a{display:inline-block;padding:6px}#bench [hidden]{display:none!important}</style></head><body>
+<header><div class="wrap mast"><div class="brand"><span class="mark">X6</span> Spectral Astrolabium</div><span class="quiet">Photonik · Laborplatz und Replay</span></div></header>
+<main class="wrap"><div class="intro"><div class="over">Photonik / Zwei-Qubit-Versuchsaufbau</div><h1>Laborbuch</h1></div>
+<nav aria-label="Arbeitsbereich"><button data-view="plan" aria-pressed="true">01 · Versuchsstand</button><button data-view="model" aria-pressed="false">02 · Modellvergleich</button><button data-view="replay" aria-pressed="false">03 · Daten-Replay</button><button data-view="calibration" aria-pressed="false">04 · Zeitkalibrierung</button><button data-view="control" aria-pressed="false">05 · Leitstand</button><button data-view="bench" aria-pressed="false">06 · Gerätelauf</button></nav>
+<noscript><p class="note">Für Modellvergleich und Replay bitte JavaScript im Browser aktivieren.</p></noscript>
+<section id="plan"><div class="panel"><span class="over">Arbeitsstand · Optikplan v0.2</span><h2>Kristall und Arbeitspunkt bestätigen</h2><p>Benötigt werden Kristallschnitt, Polungsperiode und Temperatur-Abstimmkurve für die tatsächliche 405-nm-Pumpe. Der passende Arbeitspunkt muss im nutzbaren Temperaturbereich liegen.</p><div class="tools"><span class="tag warn">Fertigung · HOLD</span><span class="tag">Physischer CHSH-Lauf · NOT_RUN</span></div></div>
+<div class="grid"><div class="panel"><div class="over">Messablauf · OPTIK-CHSH-0.1</div><h2>Vom Entwurf zum Nachweis</h2>
+<div class="stage"><b class="idx">01</b><div><strong>Kalibrieren</strong><p>Ports, Winkel, Kanaloffsets und Laufzeitverteilungen an eigenen Kalibrierdaten bestimmen.</p></div></div>
+<div class="stage"><b class="idx">02</b><div><strong>Laufplan einfrieren</strong><p>Vier Einstellungen, 20 Zyklen, 30 s je Einstellung und Zyklus. Das Koinzidenzfenster ist insgesamt 2 ns breit.</p></div></div>
+<div class="stage"><b class="idx">03</b><div><strong>Erfassen und auswerten</strong><p>Geplant sind unveränderte Zeitmarken, Zählungen je Einstellung und ein bedingter CHSH-Bericht mit Unsicherheit.</p></div></div></div>
+<div class="panel"><div class="over">Offene Abnahme</div><h2>Gates vor dem Laborlauf</h2><div id="gates"></div><p class="small sep">Anzeige aus dem veröffentlichten Entwurf. Modellwerte oder ein gültiger Import erteilen keine Laborfreigabe.</p></div></div></section>
+<section id="model" hidden><div class="panel"><span class="tag model">Entwurfsrechnung · Optikplan v0.2</span><h2 style="margin-top:12px">Welche Annahme verändert den Kontrast?</h2><p class="small">Wähle einen veröffentlichten Rechenfall. Die Werte stammen aus der gespeicherten Modellrechnung.</p><label class="stack">Modellfall<select id="scenario"></select></label><p id="caseText" class="small"></p><div class="cols"><div class="metric"><span>D/A-Kontrast</span><strong id="contrast"></strong></div><div class="metric"><span>Echte Paare/s¹</span><strong id="pairs"></strong></div><div class="metric"><span>Spektrale Ausbeute²</span><strong id="yield"></strong></div></div>
+<div class="plot"><div class="row"><strong>Erwarteter D/A-Kontrast</strong><span class="small">G4-Ziel 0,90</span></div><div class="scale" aria-hidden="true"><span class="bar" id="bar"></span><i class="threshold"></i></div><p class="small" aria-live="polite" id="modelDecision"></p></div>
+<p class="small">¹ Modellwert unter den angesetzten Verlusten und Fenstereffizienzen. ² Bezogen auf die nominelle Filter- und Phasenanpassung.</p></div><div class="panel"><div class="over">Vierkanal-Timing · Modellfall</div><h2>Paar-Zeitantworten</h2><div class="scroll"><table><thead><tr><th>Portpaar</th><th>Restoffset</th><th>Peak-FWHM</th><th>Anteil in ±1 ns</th></tr></thead><tbody id="timing"></tbody></table></div></div></section>
+<section id="replay" hidden><div class="panel"><div class="over">Transportprüfung · SGNCv007</div><h2>Fensterzähler erneut auswerten</h2><p>Der Sagnac-Kern v0.7 prüft Binärformat, Sequenz, CRC32 und Zählerbilanz. Eine Datei enthält aggregierte Fenster je Einstellung.</p>
+<div class="tools"><button id="demo" class="primary">Synthetisches Beispiel laden</button></div>
+<details><summary>Eigene SGNCv007-Datei öffnen</summary><div class="form"><label>Deklarierte Herkunft<select id="origin"><option value="">Bitte wählen</option><option value="synthetic">Synthetisch</option><option value="hardware">Hardware · selbst deklariert</option></select></label><label>Erwartete erste Sequenz<input id="seq" type="text" inputmode="numeric" placeholder="laut Erfassungsprotokoll"></label></div><label class="stack" style="margin-top:10px">Binärdatei bis 976 KiB<input id="raw" type="file" accept=".bin,application/octet-stream"></label><p class="small">Quelle und Startsequenz vor dem Import angeben. Bei einem Fehler werden etwaige ältere Ergebnisse verworfen.</p></details><p role="status" id="message" class="small">Bereit zum lokalen Replay.</p></div>
+<div class="panel" id="replayResult" hidden><span class="tag" id="kind"></span><h2 style="margin-top:10px">Geprüfte Snapshots</h2><p class="small" id="counts"></p><div class="scroll"><table><thead><tr><th>Sequenz</th><th>Einstellung</th><th>Fenster</th><th>Bedingte Paare</th><th>E bedingt</th></tr></thead><tbody id="records"></tbody></table></div><p id="chsh" class="small sep"></p><p class="note">Die v0.7-Korrelation dient hier der Diagnose. Für die optische Abnahme gelten das eigene Zeitmarkenprotokoll und die Freigaberegeln von OPTIK-CHSH-0.1. Physikalischer Nachweis im Replay: NOT_ASSESSED.</p><details><summary>Datenherkunft und SHA-256</summary><p class="mono" id="digest"></p></details><div class="tools"><button id="download" disabled>Replay-Bericht speichern · JSON</button></div></div></section>
+<section id="calibration" hidden>
+<div class="panel"><span class="over">Optikplan v0.2 · Zeitkalibrierung</span><h2>Zeitmarken der vier Portpaare prüfen</h2>
+<p>Verwende eine gepulste Referenz mit unabhängig vergebenen Puls-IDs. Die Auswertung vergleicht die korrigierte Differenz <i>t′</i><sub>B</sub> − <i>t′</i><sub>A</sub> für Treffer derselben Puls-ID.</p>
+<div class="tools"><button id="calDemo" class="primary">Kalibrierbeispiel laden</button><button id="calDemoFile">Beispiel-CSV speichern</button></div>
+<details id="calForm"><summary>Eigene Zeitmarken importieren</summary>
+<label class="stack">Zeitmarkendatei · CSV <input id="calFile" type="file" accept=".csv,text/csv"></label>
+<p class="small">UTF-8, Komma als Trennzeichen, Kopfzeile <code>pulse_id,channel,raw_ps</code>. Kanäle 0–3, Zeitmarken als ganze Pikosekunden. Maximal 6 MiB und 100.000 Treffer. Die Datei wird lokal verarbeitet.</p>
+<div class="form"><label>Run-ID<input id="calRun" maxlength="120" placeholder="z. B. CAL-2026-001"></label><label>Kalibrierversion<input id="calVersion" maxlength="120" placeholder="z. B. OFFSET-001"></label><label>Datenherkunft<select id="calOrigin"><option value="">Bitte wählen</option><option value="synthetic">Synthetisch</option><option value="lab_declared">Labor · selbst deklariert</option></select></label></div>
+<fieldset class="calOffsets"><legend>Vorab bestimmte Kanaloffsets (ps)</legend>
+<label>A+ · d₀ <input id="co0" type="text" readonly value="0"></label><label>A− · d₁ <input id="co1" type="text" inputmode="text" placeholder="ps"></label>
+<label>B+ · d₂ <input id="co2" type="text" inputmode="text" placeholder="ps"></label><label>B− · d₃ <input id="co3" type="text" inputmode="text" placeholder="ps"></label></fieldset>
+<p class="small">Die Referenz ist A+. Positive wie negative Offsets sind zulässig. Für bereits korrigierte Daten alle vier Werte ausdrücklich auf null setzen.</p>
+<button class="primary" id="calAnalyse">CSV auswerten</button></details>
+<p id="calMsg" role="status" class="small">Bereit für Kalibrierdaten.</p></div>
+<div class="panel" id="calResult" hidden><div class="tools"><span id="calBadge" class="tag"></span><span class="tag">G3 · NOT_ASSESSED</span></div>
+<h2>Zeitantwort nach Portpaar</h2><p class="small" id="calSub"></p>
+<div class="scroll"><table><thead><tr><th>Portpaar</th><th>Pulse mit beiden Treffern</th><th>Halbwertsbreite¹</th><th>Im Fenster</th><th>Modell im Fenster</th></tr></thead><tbody id="calRows"></tbody></table></div>
+<p class="small">¹ Äußere Halbwertsbreite über alle belegten Histogrammklassen mit mindestens halber Maximalhöhe. Raster 50 ps. Alle Fensteranteile beziehen sich auf die Pulse mit Treffern in beiden gewählten Kanälen.</p>
+<label class="stack">Portpaar im Detail<select id="calPair"><option value="0">A+ / B+</option><option value="1">A+ / B−</option><option value="2">A− / B+</option><option value="3">A− / B−</option></select></label>
+<div id="calChart"></div><p class="small" id="calLegend"></p><dl id="calStats"></dl>
+<details><summary>Herkunft, Offsets und Prüfsumme</summary><p id="calMeta" class="small"></p><p class="mono" id="calSha"></p></details>
+<p class="note">Fehlende Trigger sind aus einer reinen Trefferdatei nicht vollständig rekonstruierbar. Für G3 sind zusätzlich Triggerinventar, elektrische Jittermessung und unabhängige Hardwareprüfung erforderlich.</p>
+<button id="calSave" disabled>Kalibrierbericht speichern · JSON</button></div></section>
+<section id="control" hidden>
+<div class="panel"><div class="tools"><span class="tag model">SIMULATION · lokal</span><span class="tag">Gerät · nicht verbunden</span></div><h2>Leitstand</h2>
+<p>Wähle ein Profil, friere die Konfiguration ein und gib den Simulationslauf frei. Die Quittungen stammen vom lokalen Simulator. Gerätebefehle werden nicht übertragen.</p>
+<div class="form"><label>Betriebsprofil<select id="ctProfile"><option value="sagnac-v007">Sagnac · vier synthetische Zählerframes</option><option value="qed-c0-input">X6-QED · synthetischer d=5-Kontrollshot</option></select></label>
+<label>Laufbezeichnung<input id="ctRun" type="text" maxlength="64" value="Tischversuch-01"></label><label>Umfang<select id="ctLimit"></select></label>
+<label>Simulationsfortschritt<select id="ctPace"><option value="manual">Einzelschritt per Taste</option><option value="auto_1s">Automatisch · ein Datensatz je Sekunde</option></select></label></div>
+<p id="ctDesc" class="small sep"></p>
+<div class="tools"><button id="ctFreeze" class="primary">Konfiguration einfrieren</button><button id="ctCfgOut">Profil speichern</button></div>
+<details><summary>Gespeichertes Profil laden</summary><label class="stack">Konfigurationsdatei · JSON<input id="ctCfgIn" type="file" accept=".json,application/json"></label><p class="small">Der Import füllt die Eingabefelder. Der Lauf bleibt im Entwurf, bis die Konfiguration geprüft und eingefroren ist.</p></details></div>
+<div class="panel"><span class="over">Betriebsanzeigen · Simulatordaten</span><h2 id="ctState" aria-live="polite">Entwurf</h2><p id="ctHelp"></p>
+<div class="cols"><div class="metric"><span>Verarbeitet / geplant</span><strong id="ctProgress">0 / 4</strong></div><div class="metric"><span>Abgewiesene Eingaben</span><strong id="ctErr">0</strong></div><div class="metric"><span>Letzte lokale Quittung</span><strong style="font-size:1rem" id="ctAck">—</strong></div></div>
+<div class="tools"><button id="ctArm">Freigeben (ARM)</button><button id="ctStart" class="primary">Lauf starten</button><button id="ctStep">Einzelschritt</button><button id="ctStop">Lauf stoppen</button><button id="ctAbort">Lauf abbrechen</button></div>
+<div class="tools"><button id="ctFault">Fehler einspeisen</button><button id="ctNew">Neuer Lauf</button></div>
+<p class="small" id="ctIncident" role="status"></p><p class="small" id="ctNotice">Gerätezustand, FIFO-Füllstand, Temperaturen und Verriegelungen: keine Telemetrie verfügbar.</p>
+<details><summary>Eingefrorener Stand</summary><p id="ctIdentity" class="mono"></p></details></div>
+<div class="panel"><div class="over">Datenpfad</div><h2 id="ctDecoder">Decoder</h2><p id="ctLast" aria-live="polite"></p><div id="ctOutput"></div>
+<p class="note" id="ctBoundary"></p></div>
+<div class="panel"><h2>Kommandoprotokoll</h2><div class="scroll"><table><thead><tr><th>Nr.</th><th>Befehl</th><th>Antwort</th><th>Folgezustand</th></tr></thead><tbody id="ctLog"></tbody></table></div>
+<div class="tools"><button id="ctExport" disabled>Laufbericht speichern · JSON</button></div>
+<details><summary>Frühere Läufe dieser Sitzung</summary><p class="small">Beim Anlegen eines neuen Laufs wird der letzte Bericht für diese geöffnete Seite aufbewahrt. Berichte zur dauerhaften Ablage herunterladen.</p><div id="ctArchive"></div></details></div>
+<div class="panel"><details><summary>Vom Simulator zur realen Ansteuerung</summary>
+<p>Der Reiter <strong>06 · Gerätelauf</strong> verbindet das Laborbuch mit dem lokalen Messrechner. Dort werden Geräteprofil und Kalibrierung eingefroren, reale Erfassungen gestartet und Rohdaten archiviert. Für den Offline-Test bleibt Reiter 05 verfügbar.</p></details></div>
+</section>
+<section id="bench" hidden>
+<div class="panel"><div class="over">06 · Erfassung am Laborplatz</div><h2>Gerätelauf</h2>
+<p>Der Dienst am Messrechner zeichnet auf. Das Tablet zeigt den letzten bestätigten Stand. Nach einer Unterbrechung kannst du dich wieder mit demselben Lauf verbinden.</p>
+<div class="tools"><span id="lbLink" class="tag">Getrennt</span><span id="lbSource" class="tag">Quelle unbekannt</span></div>
+<label class="stack">Zugangscode vom Messrechner<input id="lbToken" type="password" autocomplete="off" maxlength="128" placeholder="Code aus dem Startfenster"></label>
+<div class="tools"><button class="primary" id="lbLogin">Mit Labordienst verbinden</button><button id="lbRefresh" disabled>Status abrufen</button></div>
+<p id="lbMsg" class="small" role="status">Zum Verbinden das Laborbuch über die Adresse des laufenden Dienstes öffnen.</p></div>
+<div class="grid"><div class="panel"><div class="over">Vorbereitung</div><h2>Lauf konfigurieren</h2>
+<fieldset id="lbFields" disabled><div class="form"><label>Verantwortliche Person<input id="lbOp" maxlength="80"></label><label>Laufbezeichnung<input id="lbLabel" maxlength="80" value="Inbetriebnahme-01"></label></div>
+<div id="lbSnap" class="form"><label>Erste FPGA-Sequenz<input id="lbSeq" inputmode="numeric" value="100" maxlength="20"></label><label>Frames<input id="lbFrames" type="number" min="1" max="4096" value="4"></label><label>Empfangsfrist (s)<input id="lbTimeout" type="number" min="1" max="3600" value="120"></label></div>
+<div id="lbTags" hidden><label>Time-Tagger-Aufnahme<select id="lbMode"><option value="fixed">Einzelsegment · ohne Winkelzuweisung</option><option id="lbSchedule" value="schedule">80 Segmente · bestätigte Achsen</option></select></label><label id="lbDuration">Einzelsegment (s)<input id="lbSeconds" type="number" min="1" max="3600" value="30"></label></div>
+<label id="lbCalLabel" class="stack">Kalibrierdatensatz (max. 2 MiB)<input id="lbCal" type="file"></label><p class="small">Für Hardwareläufe werden die gewählten Kalibrierbytes samt SHA-256 archiviert.</p>
+<label class="lbCheck"><input type="checkbox" id="lbReady">Ich habe Profil, Verkabelung und die lokale Betriebsfreigabe geprüft. Bei Achsbetrieb sind Referenzfahrt und optischer Nullpunkt bestätigt.</label></fieldset>
+<div class="tools"><button id="lbArm" disabled>Konfiguration einfrieren</button><button id="lbStart" disabled class="primary">Erfassung starten</button></div>
+<div class="tools"><button id="lbStop" disabled>Erfassung stoppen</button><button id="lbAbort" disabled>Lauf abbrechen</button></div>
+<p class="small">Stopp und Abbruch beenden die Aufzeichnung. Laserfreigabe und Strahlunterbrechung werden lokal bedient.</p></div>
+<div class="panel"><div class="over">Letzte Antwort vom Messrechner</div><h2 id="lbState" aria-live="polite">Keine Verbindung</h2>
+<div class="cols"><div class="metric"><span>Gültige Frames</span><strong id="lbN">—</strong></div><div class="metric"><span>Gespeicherte Tags</span><strong id="lbEvents">—</strong></div><div class="metric"><span>Speicher frei</span><strong id="lbDisk">—</strong></div></div>
+<dl id="lbMetrics"></dl><div class="tools"><button id="lbShutter" disabled>KSC101-Zustand abfragen</button><button id="lbOff" disabled>Shutter-Magnet ausschalten</button></div><p id="lbShInfo" class="small">Blattlage und Interlock unbekannt.</p></div></div>
+<div class="panel"><div class="over">Lokales Archiv</div><h2>Abgeschlossene und unterbrochene Läufe</h2><p class="small">Die letzten 50 versiegelten Läufe. Das Manifest führt die Einzeldateien mit Größe und SHA-256 auf. SGNCv007-Dateien kannst du im Daten-Replay öffnen.</p><div id="lbArchive">Noch kein Archiv geladen.</div></div>
+<details class="panel"><summary>Geräteauswahl für den 405/810-nm-Aufbau</summary><div class="scroll"><table><thead><tr><th>Anzahl</th><th>Modell</th><th>Aufgabe und Anschluss</th></tr></thead><tbody>
+<tr><td>4</td><td>Excelitas SPCM-AQRH-14-FC</td><td>Si-Einzelphotonendetektion bei 810 nm, FC-Eingang, BNC-Ausgang. Je ein Kanal für A+, A−, B+, B−.</td></tr>
+<tr><td>1</td><td>Swabian Instruments Time Tagger Ultra · 8 Eingänge</td><td>USB 3 am Messrechner, positive Flanken auf 1 bis 4. Schwellen je Kanal im Profil.</td></tr>
+<tr><td>2 + 2</td><td>Thorlabs ELL14K + AHWP05M-980</td><td>Motorisierter SM1-Halter und gefasste Halbwellenplatte je Arm. Seriennummer, Drehsinn, Encoder und optischer Nullpunkt je Achse.</td></tr>
+<tr><td>1 + 1</td><td>Thorlabs SH05R/M + KSC101</td><td>Strahlverschluss und lokaler Controller. Magnetstatus über USB abfragen oder den Ausgang im Leerlauf ausschalten.</td></tr>
+<tr><td>1 optional</td><td>Terasic DE10-Nano mit X6-Firmware v0.7</td><td>UART-Empfang separater SGNCv007-Zählerframes.</td></tr>
+</tbody></table></div><p class="small">Auswahl für die Bedien- und Messkette. Herstellerunterlagen, Inbetriebnahme und offener Qualifikationsumfang stehen im Betriebspaket.</p></details></section>
+<footer><div class="row"><span>X6 · Photonik-Laborbuch · Funktionsentwurf</span><a href="https://github.com/thomasmgfeller/x6-spectral-astrolabium/tree/69db6c69dc580b6d2889d5ee5c5aa4d90034e85f/experiments/photonic-two-qubit" target="_blank" rel="noopener">Quellstand ↗</a></div><details><summary>Herkunft und Lizenz</summary><p>Modellergebnisse, synthetischer Datensatz und unveränderter Sagnac-Kern stammen aus dem oben verlinkten Repository.</p><pre>X6 Spectral Astrolabium
+Copyright 2026 Thomas Gfeller
+
+This project is independent of the Apache Software Foundation.
+This NOTICE is informational and does not modify the Apache License 2.0.
+
+
+                                 Apache License
+                           Version 2.0, January 2004
+                        http://www.apache.org/licenses/
+
+   TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+
+   1. Definitions.
+
+      &quot;License&quot; shall mean the terms and conditions for use, reproduction,
+      and distribution as defined by Sections 1 through 9 of this document.
+
+      &quot;Licensor&quot; shall mean the copyright owner or entity authorized by
+      the copyright owner that is granting the License.
+
+      &quot;Legal Entity&quot; shall mean the union of the acting entity and all
+      other entities that control, are controlled by, or are under common
+      control with that entity. For the purposes of this definition,
+      &quot;control&quot; means (i) the power, direct or indirect, to cause the
+      direction or management of such entity, whether by contract or
+      otherwise, or (ii) ownership of fifty percent (50%) or more of the
+      outstanding shares, or (iii) beneficial ownership of such entity.
+
+      &quot;You&quot; (or &quot;Your&quot;) shall mean an individual or Legal Entity
+      exercising permissions granted by this License.
+
+      &quot;Source&quot; form shall mean the preferred form for making modifications,
+      including but not limited to software source code, documentation
+      source, and configuration files.
+
+      &quot;Object&quot; form shall mean any form resulting from mechanical
+      transformation or translation of a Source form, including but
+      not limited to compiled object code, generated documentation,
+      and conversions to other media types.
+
+      &quot;Work&quot; shall mean the work of authorship, whether in Source or
+      Object form, made available under the License, as indicated by a
+      copyright notice that is included in or attached to the work
+      (an example is provided in the Appendix below).
+
+      &quot;Derivative Works&quot; shall mean any work, whether in Source or Object
+      form, that is based on (or derived from) the Work and for which the
+      editorial revisions, annotations, elaborations, or other modifications
+      represent, as a whole, an original work of authorship. For the purposes
+      of this License, Derivative Works shall not include works that remain
+      separable from, or merely link (or bind by name) to the interfaces of,
+      the Work and Derivative Works thereof.
+
+      &quot;Contribution&quot; shall mean any work of authorship, including
+      the original version of the Work and any modifications or additions
+      to that Work or Derivative Works thereof, that is intentionally
+      submitted to Licensor for inclusion in the Work by the copyright owner
+      or by an individual or Legal Entity authorized to submit on behalf of
+      the copyright owner. For the purposes of this definition, &quot;submitted&quot;
+      means any form of electronic, verbal, or written communication sent
+      to the Licensor or its representatives, including but not limited to
+      communication on electronic mailing lists, source code control systems,
+      and issue tracking systems that are managed by, or on behalf of, the
+      Licensor for the purpose of discussing and improving the Work, but
+      excluding communication that is conspicuously marked or otherwise
+      designated in writing by the copyright owner as &quot;Not a Contribution.&quot;
+
+      &quot;Contributor&quot; shall mean Licensor and any individual or Legal Entity
+      on behalf of whom a Contribution has been received by Licensor and
+      subsequently incorporated within the Work.
+
+   2. Grant of Copyright License. Subject to the terms and conditions of
+      this License, each Contributor hereby grants to You a perpetual,
+      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+      copyright license to reproduce, prepare Derivative Works of,
+      publicly display, publicly perform, sublicense, and distribute the
+      Work and such Derivative Works in Source or Object form.
+
+   3. Grant of Patent License. Subject to the terms and conditions of
+      this License, each Contributor hereby grants to You a perpetual,
+      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+      (except as stated in this section) patent license to make, have made,
+      use, offer to sell, sell, import, and otherwise transfer the Work,
+      where such license applies only to those patent claims licensable
+      by such Contributor that are necessarily infringed by their
+      Contribution(s) alone or by combination of their Contribution(s)
+      with the Work to which such Contribution(s) was submitted. If You
+      institute patent litigation against any entity (including a
+      cross-claim or counterclaim in a lawsuit) alleging that the Work
+      or a Contribution incorporated within the Work constitutes direct
+      or contributory patent infringement, then any patent licenses
+      granted to You under this License for that Work shall terminate
+      as of the date such litigation is filed.
+
+   4. Redistribution. You may reproduce and distribute copies of the
+      Work or Derivative Works thereof in any medium, with or without
+      modifications, and in Source or Object form, provided that You
+      meet the following conditions:
+
+      (a) You must give any other recipients of the Work or
+          Derivative Works a copy of this License; and
+
+      (b) You must cause any modified files to carry prominent notices
+          stating that You changed the files; and
+
+      (c) You must retain, in the Source form of any Derivative Works
+          that You distribute, all copyright, patent, trademark, and
+          attribution notices from the Source form of the Work,
+          excluding those notices that do not pertain to any part of
+          the Derivative Works; and
+
+      (d) If the Work includes a &quot;NOTICE&quot; text file as part of its
+          distribution, then any Derivative Works that You distribute must
+          include a readable copy of the attribution notices contained
+          within such NOTICE file, excluding those notices that do not
+          pertain to any part of the Derivative Works, in at least one
+          of the following places: within a NOTICE text file distributed
+          as part of the Derivative Works; within the Source form or
+          documentation, if provided along with the Derivative Works; or,
+          within a display generated by the Derivative Works, if and
+          wherever such third-party notices normally appear. The contents
+          of the NOTICE file are for informational purposes only and
+          do not modify the License. You may add Your own attribution
+          notices within Derivative Works that You distribute, alongside
+          or as an addendum to the NOTICE text from the Work, provided
+          that such additional attribution notices cannot be construed
+          as modifying the License.
+
+      You may add Your own copyright statement to Your modifications and
+      may provide additional or different license terms and conditions
+      for use, reproduction, or distribution of Your modifications, or
+      for any such Derivative Works as a whole, provided Your use,
+      reproduction, and distribution of the Work otherwise complies with
+      the conditions stated in this License.
+
+   5. Submission of Contributions. Unless You explicitly state otherwise,
+      any Contribution intentionally submitted for inclusion in the Work
+      by You to the Licensor shall be under the terms and conditions of
+      this License, without any additional terms or conditions.
+      Notwithstanding the above, nothing herein shall supersede or modify
+      the terms of any separate license agreement you may have executed
+      with Licensor regarding such Contributions.
+
+   6. Trademarks. This License does not grant permission to use the trade
+      names, trademarks, service marks, or product names of the Licensor,
+      except as required for reasonable and customary use in describing the
+      origin of the Work and reproducing the content of the NOTICE file.
+
+   7. Disclaimer of Warranty. Unless required by applicable law or
+      agreed to in writing, Licensor provides the Work (and each
+      Contributor provides its Contributions) on an &quot;AS IS&quot; BASIS,
+      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+      implied, including, without limitation, any warranties or conditions
+      of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A
+      PARTICULAR PURPOSE. You are solely responsible for determining the
+      appropriateness of using or redistributing the Work and assume any
+      risks associated with Your exercise of permissions under this License.
+
+   8. Limitation of Liability. In no event and under no legal theory,
+      whether in tort (including negligence), contract, or otherwise,
+      unless required by applicable law (such as deliberate and grossly
+      negligent acts) or agreed to in writing, shall any Contributor be
+      liable to You for damages, including any direct, indirect, special,
+      incidental, or consequential damages of any character arising as a
+      result of this License or out of the use or inability to use the
+      Work (including but not limited to damages for loss of goodwill,
+      work stoppage, computer failure or malfunction, or any and all
+      other commercial damages or losses), even if such Contributor
+      has been advised of the possibility of such damages.
+
+   9. Accepting Warranty or Additional Liability. While redistributing
+      the Work or Derivative Works thereof, You may choose to offer,
+      and charge a fee for, acceptance of support, warranty, indemnity,
+      or other liability obligations and/or rights consistent with this
+      License. However, in accepting such obligations, You may act only
+      on Your own behalf and on Your sole responsibility, not on behalf
+      of any other Contributor, and only if You agree to indemnify,
+      defend, and hold each Contributor harmless for any liability
+      incurred by, or claims asserted against, such Contributor by reason
+      of your accepting any such warranty or additional liability.
+
+   END OF TERMS AND CONDITIONS
+
+   APPENDIX: How to apply the Apache License to your work.
+
+      To apply the Apache License to your work, attach the following
+      boilerplate notice, with the fields enclosed by brackets &quot;[]&quot;
+      replaced with your own identifying information. (Don&#x27;t include
+      the brackets!)  The text should be enclosed in the appropriate
+      comment syntax for the file format. We also recommend that a
+      file or class name and description of purpose be included on the
+      same &quot;printed page&quot; as the copyright notice for easier
+      identification within third-party archives.
+
+   Copyright [yyyy] [name of copyright owner]
+
+   Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+</pre></details></footer></main>
+<script id="modeldata" type="application/json">{"coincidence_budget":{"common_mismatch_300rad_m":{"accidental_to_true":0.006929359811832211,"expected_true_pairs_in_600s":69270.46841764187,"raw_DA_symmetric_background_scenario":0.9769194104860596,"relative_spectral_yield":0.9531947445823926,"true_pairs_per_s_lower_scenario":115.45078069606977},"delay_0.25ps":{"accidental_to_true":0.006605029355958901,"expected_true_pairs_in_600s":72671.8950260161,"raw_DA_symmetric_background_scenario":0.9529058807731431,"relative_spectral_yield":1.0,"true_pairs_per_s_lower_scenario":121.11982504336015},"delay_1ps":{"accidental_to_true":0.006605029355958901,"expected_true_pairs_in_600s":72671.8950260161,"raw_DA_symmetric_background_scenario":0.6979220687995873,"relative_spectral_yield":1.0,"true_pairs_per_s_lower_scenario":121.11982504336015},"delay_2ps":{"accidental_to_true":0.006605029355958901,"expected_true_pairs_in_600s":72671.8950260161,"raw_DA_symmetric_background_scenario":0.31666454621340673,"relative_spectral_yield":1.0,"true_pairs_per_s_lower_scenario":121.11982504336015},"filter_B_plus1nm":{"accidental_to_true":0.0087661706681535,"expected_true_pairs_in_600s":54755.94968094625,"raw_DA_symmetric_background_scenario":0.9751405877706395,"relative_spectral_yield":0.7534680313667884,"true_pairs_per_s_lower_scenario":91.25991613491041},"matched":{"accidental_to_true":0.006605029355958901,"expected_true_pairs_in_600s":72671.8950260161,"raw_DA_symmetric_background_scenario":0.9772341761672495,"relative_spectral_yield":1.0,"true_pairs_per_s_lower_scenario":121.11982504336015},"mismatch_CCW_300rad_m":{"accidental_to_true":0.006754789182097936,"expected_true_pairs_in_600s":71060.69294836515,"raw_DA_symmetric_background_scenario":0.7022394863511796,"relative_spectral_yield":0.9778290895390281,"true_pairs_per_s_lower_scenario":118.43448824727524},"stress_combined":{"accidental_to_true":0.009609328107908042,"expected_true_pairs_in_600s":49951.46326671702,"raw_DA_symmetric_background_scenario":0.6600401126482692,"relative_spectral_yield":0.6873560026036847,"true_pairs_per_s_lower_scenario":83.2524387778617}},"crystal":{"fixed_pump_unfiltered_pm_fwhm_THz":0.2525623004852076,"full_crystal_dgd_ps":3.5076214449938883,"half_power_delta_k_abs_rad_per_m":278.311475650302,"n_y":1.7559279078737635,"n_z":1.8438321539044293,"ng_y":1.8037204012762633,"ng_z":1.9088762467490863},"fiber":{"axial_95_um":11.122388644223264,"collection_zR_y_mm":43.58645108629736,"collimated_radius_mm":0.5156620156177409,"eta_joint_example":0.9668283629163512,"eta_mirror_20urad":0.9936204363791489,"eta_mirror_50urad":0.9607894391523231,"facet_tilt_95_mrad":23.35745033586183,"lateral_95_um":0.5662005739331171,"mirror_95_urad":56.62005739331171,"pump_10pct_displacement_um":34.65703216519296,"rayleigh_air_um":24.240684055476798,"relay_magnification":0.03125,"waist_um":2.5},"hardware_gates":{"CHSH":"NOT_RUN","G3":"NOT_RUN","G4":"NOT_RUN","G5":"NOT_RUN","fabrication":"HOLD","jig_transfer":"NOT_RUN","spectral_phase":"NOT_MEASURED","supplier_QPM":"OPEN"},"nominal_residual_delay_ps_at_90pct":0.4606105953766296,"pump_slope_sensitivity_at_1ps":{"0":0.7834783170599225,"0.1":0.7141809873421178,"0.2":0.5577331834708623},"scope":"DESIGN_ONLY","spectral":{"common_mismatch_300rad_m":{"gamma_abs":1.0,"gamma_im":0.0,"gamma_re":1.0,"integrated_weight_THz2":0.05755456551371982,"power_balance_factor":0.9986139979479093,"signed_DA_contrast_before_background":0.9836888365884806},"delay_0.25ps":{"gamma_abs":0.9751049482432932,"gamma_im":0.0,"gamma_re":0.9751049482432932,"integrated_weight_THz2":0.06038069957984844,"power_balance_factor":0.9986139979479093,"signed_DA_contrast_before_background":0.9591998520891156},"delay_1ps":{"gamma_abs":0.7141809873421178,"gamma_im":1.7505650853139064e-17,"gamma_re":0.7141809873421178,"integrated_weight_THz2":0.06038069957984844,"power_balance_factor":0.9986139979479093,"signed_DA_contrast_before_background":0.7025318645521802},"delay_2ps":{"gamma_abs":0.3240416206639205,"gamma_im":-3.501130170627813e-17,"gamma_re":0.3240416206639205,"integrated_weight_THz2":0.06038069957984844,"power_balance_factor":0.9986139979479093,"signed_DA_contrast_before_background":0.3187561248371377},"filter_B_plus1nm":{"gamma_abs":0.9999999999999998,"gamma_im":0.0,"gamma_re":0.9999999999999998,"integrated_weight_THz2":0.04549492684497788,"power_balance_factor":0.9986139979479093,"signed_DA_contrast_before_background":0.9836888365884804},"matched":{"gamma_abs":1.0,"gamma_im":0.0,"gamma_re":1.0,"integrated_weight_THz2":0.06038069957984844,"power_balance_factor":0.9986139979479093,"signed_DA_contrast_before_background":0.9836888365884806},"mismatch_CCW_300rad_m":{"gamma_abs":0.7198190576035844,"gamma_im":0.0,"gamma_re":0.7198190576035844,"integrated_weight_THz2":0.05904200449589278,"power_balance_factor":0.9970696939924741,"signed_DA_contrast_before_background":0.7069829660368266},"stress_combined":{"gamma_abs":0.6824154440694838,"gamma_im":-0.10806166775775797,"gamma_re":0.6738052495090572,"integrated_weight_THz2":0.04150303629761861,"power_balance_factor":0.9880900192725337,"signed_DA_contrast_before_background":0.666382654655087}},"timing":[{"accidentals_per_s":0.19999999999999998,"core_fwhm_ps":554.2171240697371,"core_window":0.9999751415057779,"delayed_5pct_window":0.9511220442673789,"electronics_rms_ps":94.16297927883689,"pair_offset_ps":-30,"ports":[0,2]},{"accidentals_per_s":0.19999999999999998,"core_fwhm_ps":600.6714679319055,"core_window":0.9998694642842624,"delayed_5pct_window":0.950579408490862,"electronics_rms_ps":100.82988974836115,"pair_offset_ps":60,"ports":[0,3]},{"accidentals_per_s":0.19999999999999998,"core_fwhm_ps":588.312410339608,"core_window":0.9998921377288945,"delayed_5pct_window":0.9520281309585495,"electronics_rms_ps":97.42518497116988,"pair_offset_ps":-70,"ports":[1,2]},{"accidentals_per_s":0.19999999999999998,"core_fwhm_ps":632.2666240874486,"core_window":0.9997961694194002,"delayed_5pct_window":0.9511259326178889,"electronics_rms_ps":103.88294694831615,"pair_offset_ps":20,"ports":[1,3]}]}</script><script id="demo64" type="text/plain">U0dOQ3YwMDcHAAAABwAAAFDDAAAAAAAAUMw9AAAAAADoAwAAAAAAAGQAAAAAAAAAFQEAAAAAAABzAQAAAAAAAGIBAAAAAAAAAAAAAAAAAACJAQAAAAAAALcAAAAAAAAAsQMAAAAAAAAAAAAAAAAAAH0BAAAAAAAAmwMAAAAAAACtAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACgDwAAAAAAAAAAAAAAAAAAxQUAAAAAAADABQAAAAAAAPEFAAAAAAAAxQUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAetEvOFNHTkN2MDA3BwEAAAcAAABQwwAAAAAAAFDMPQAAAAAA6AMAAAAAAABlAAAAAAAAAP8AAAAAAAAAcwEAAAAAAABuAQAAAAAAAAAAAAAAAAAAXgEAAAAAAACdAAAAAAAAANcDAAAAAAAAAAAAAAAAAABlAQAAAAAAANwDAAAAAAAArQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoA8AAAAAAAAAAAAAAAAAAOwFAAAAAAAA8gUAAAAAAADSBQAAAAAAAO4FAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHWqKjhTR05DdjAwNwcCAAAHAAAAUMMAAAAAAABQzD0AAAAAAOgDAAAAAAAAZgAAAAAAAAD4AAAAAAAAAJMBAAAAAAAAcQEAAAAAAAAAAAAAAAAAAI4BAAAAAAAAoQAAAAAAAACyAwAAAAAAAAAAAAAAAAAAjAEAAAAAAACfAwAAAAAAAJgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKAPAAAAAAAAAAAAAAAAAADTBQAAAAAAALsFAAAAAAAA4QUAAAAAAADDBQAAAAAAAAAAAAAAAAAAAAAAAAAAAACdu5fpU0dOQ3YwMDcHAwAABwAAAFDDAAAAAAAAUMw9AAAAAADoAwAAAAAAAGcAAAAAAAAA9wAAAAAAAABZAQAAAAAAAJQBAAAAAAAAAAAAAAAAAABjAQAAAAAAANwDAAAAAAAAmwAAAAAAAAAAAAAAAAAAAIQBAAAAAAAAowAAAAAAAAC7AwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACgDwAAAAAAAAAAAAAAAAAA2AUAAAAAAADqBQAAAAAAANoFAAAAAAAA4gUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAdlbFfQ==</script>
+<script>/* X6 Sagnac integration 0.1: raw counts, explicit provenance, no actuator control. */
+(function (root) {
+  'use strict';
+  const FRAME_BYTES = 244, U64 = 1n << 64n;
+  function need(ok, message) { if (!ok) throw new Error(message); }
+  function uint(value) {
+    need(typeof value === 'string' && /^[0-9]+$/.test(value), 'Unsigned decimal string required');
+    const n = BigInt(value); need(n < U64, 'uint64 overflow'); return n;
+  }
+  function crc32(bytes) {
+    let c = 0xffffffff;
+    for (const b of bytes) { c ^= b; for (let i = 0; i < 8; i++) c = (c >>> 1) ^ ((c & 1) ? 0xedb88320 : 0); }
+    return (c ^ 0xffffffff) >>> 0;
+  }
+  function correlation(pos, neg) {
+    const n = pos + neg;
+    return { n: String(n), positive: String(pos), negative: String(neg),
+      E: n ? Number(pos - neg) / Number(n) : null };
+  }
+  function validateRecord(r) {
+    const c = r.counters.map(uint), cfg = r.configuration;
+    need(r.flags === 0, 'Acquisition integrity flag: ' + r.flags);
+    const start = uint(cfg.start_ps), stop = uint(cfg.stop_ps), width = uint(cfg.window_ps);
+    need(width > 0n && stop > start && (stop - start) % width === 0n, 'Invalid time-window configuration');
+    const n = (stop - start) / width;
+    need(c[16] === n && c.slice(0, 16).reduce((a, b) => a + b, 0n) === n, 'Trial accounting mismatch');
+    const presence = [0n, 0n, 0n, 0n]; let multi = 0n, allPos = 0n;
+    for (let m = 0; m < 16; m++) {
+      for (let ch = 0; ch < 4; ch++) if (m & (1 << ch)) presence[ch] += c[m];
+      if ((m & 3) === 3 || ((m >> 2) & 3) === 3) multi += c[m];
+      if (((m & 3) === 2) === (((m >> 2) & 3) === 2)) allPos += c[m];
+    }
+    need(presence.every((v, i) => c[18 + i] >= v), 'Click accounting mismatch');
+    const extras = c.slice(18, 22).reduce((a, b) => a + b, 0n) - presence.reduce((a, b) => a + b, 0n);
+    need(c[22] === extras && c[17] <= n && c[17] <= extras && ((c[17] === 0n) === (extras === 0n)), 'Repeat accounting mismatch');
+    need(c[23] === multi, 'Multiport accounting mismatch');
+    const seconds = Number(stop - start) / 1e12;
+    return { setting_index: r.setting_index, sequence: r.transport.sequence, calibration_id: r.calibration_id,
+      duration_seconds: seconds, trials: String(n), clicks: c.slice(18, 22).map(String),
+      observed_clicks_per_second: c.slice(18, 22).map(v => Number(v) / seconds),
+      repeat_trials: String(c[17]), multiport_trials: String(c[23]),
+      conditional_coincidences: correlation(c[5] + c[10], c[9] + c[6]),
+      all_trials_fixed_assignment: correlation(allPos, n - allPos) };
+  }
+  function combine(values, alpha) {
+    if (values.some(v => v.E === null)) return { status: 'INSUFFICIENT_DATA', S: null, model_conditional_gate: false };
+    const S = values.reduce((a, v, i) => a + (i === 3 ? -1 : 1) * v.E, 0);
+    const lower = -S - values.reduce((a, v) => a + Math.sqrt(2 * Math.log(4 / alpha) / Number(v.n)), 0);
+    return { status: 'MODEL_CONDITIONAL_DIAGNOSTIC', S, singlet_T: -S,
+      singlet_T_lower_hoeffding: lower, hoeffding_alpha: alpha, model_conditional_gate: lower > 2 };
+  }
+  function decode(bytes, origin, firstSequence, alpha = 0.0027) {
+    need(bytes instanceof Uint8Array, 'Binary capture required');
+    need(['synthetic', 'hardware'].includes(origin), 'Explicit data origin required');
+    const first = uint(firstSequence);
+    need(Number.isFinite(alpha) && alpha > 0 && alpha < 1, 'Invalid alpha');
+    need(bytes.length > 0 && bytes.length % FRAME_BYTES === 0 && bytes.length <= FRAME_BYTES * 4096, 'Empty, truncated or oversized capture');
+    const records = [], summaries = [];
+    for (let offset = 0, i = 0; offset < bytes.length; offset += FRAME_BYTES, i++) {
+      const b = bytes.subarray(offset, offset + FRAME_BYTES), v = new DataView(b.buffer, b.byteOffset, b.byteLength);
+      need(crc32(b.subarray(0, 240)) === v.getUint32(240, true), 'CRC32 mismatch in frame ' + i);
+      need(String.fromCharCode(...b.subarray(0, 8)) === 'SGNCv007' && b[8] === 7 && b[11] === 0, 'Unsupported frame version or reserved field');
+      need(b[9] < 4, 'Invalid measurement setting');
+      const seq = v.getBigUint64(40, true);
+      need(first + BigInt(i) < U64 && seq === first + BigInt(i), 'Missing, repeated or reordered frame');
+      const r = { format: 'sagnac.fixed_bins.v0.6', origin, complete: true,
+        setting_index: b[9], flags: b[10], calibration_id: String(v.getUint32(12, true)),
+        configuration: { start_ps: String(v.getBigUint64(16, true)), stop_ps: String(v.getBigUint64(24, true)), window_ps: String(v.getBigUint64(32, true)) },
+        counters: Array.from({ length: 24 }, (_, j) => String(v.getBigUint64(48 + j * 8, true))),
+        transport: { format: 'SGNCv007', sequence: String(seq), crc32: v.getUint32(240, true).toString(16).padStart(8, '0') } };
+      summaries.push(validateRecord(r)); records.push(r);
+    }
+    let chsh = { status: 'REQUIRES_EXACTLY_FOUR_DISTINCT_SETTINGS', conditional_coincidences: null, all_trials_fixed_assignment: null };
+    if (records.length === 4 && new Set(records.map(r => r.setting_index)).size === 4) {
+      need(new Set(records.map(r => r.calibration_id + '/' + r.configuration.window_ps)).size === 1, 'Incompatible calibration IDs or window widths');
+      const sorted = summaries.slice().sort((a, b) => a.setting_index - b.setting_index);
+      chsh = { status: 'MODEL_CONDITIONAL_DIAGNOSTIC',
+        conditional_coincidences: combine(sorted.map(r => r.conditional_coincidences), alpha),
+        all_trials_fixed_assignment: combine(sorted.map(r => r.all_trials_fixed_assignment), alpha) };
+    }
+    return { schema: 'x6.sagnac.evidence/1', version: '0.1', origin,
+      provenance_verification: 'DECLARED_NOT_AUTHENTICATED', integrity: 'VALIDATED_TRANSPORT_AND_COUNTERS',
+      calibration_status: 'ID_PRESENT_PHYSICAL_CALIBRATION_NOT_VERIFIED', physical_quantum_claim: 'NOT_ASSESSED',
+      control: { status: 'UNAVAILABLE', actuator_commands: false, reason: 'SGNCv007 is a snapshot output; no command or actuator protocol is implemented.' },
+      records, summaries, chsh,
+      assumptions: ['Correct detector and analyzer calibration is not established.',
+        'Hoeffding bounds require iid trials within each setting; drift and dead time are not included.',
+        'Conditional coincidences require representative detection (fair sampling).',
+        'Setting independence, stationarity and Bell-test loopholes are not established.',
+        'Rates are observed clicks per run duration, not photon-pair generation rates.',
+        'Snapshot data cannot reconstruct per-photon arrival times or within-run drift.'],
+      processing: { background_subtraction: false, efficiency_compensation: false, outcome_filtering: false } };
+  }
+  const api = Object.freeze({ FRAME_BYTES, crc32, decode, uint });
+  if (typeof module !== 'undefined' && module.exports) module.exports = api;
+  else root.X6Sagnac = api;
+})(typeof globalThis !== 'undefined' ? globalThis : this);
+</script>
+<script>
+'use strict';
+const $=id=>document.getElementById(id);
+const model=JSON.parse($('modeldata').textContent), revision='69db6c69dc580b6d2889d5ee5c5aa4d90034e85f';
+const labels=['A+','A−','B+','B−'], views=['plan','model','replay','calibration','control','bench'];
+const format=(n,d=0)=>n==null?'–':n.toLocaleString('de-CH',{minimumFractionDigits:d,maximumFractionDigits:d});
+function node(tag,t,cls){const el=document.createElement(tag);el.textContent=t;if(cls)el.className=cls;return el}
+function tableRow(values){const r=document.createElement('tr');for(const val of values)r.append(node('td',val));return r}
+function view(v){for(const name of views)$(name).hidden=name!==v;for(const b of document.querySelectorAll('[data-view]'))b.setAttribute('aria-pressed',String(v===b.dataset.view))}
+for(const b of document.querySelectorAll('[data-view]'))b.addEventListener('click',()=>view(b.dataset.view));
+for(const [name,status] of [['G0 · Mechanik und Schutz','NOT_RUN'],['G1 · Elektrische Kette','NOT_RUN'],['G2 · Detektoren','NOT_RUN'],['G3 · Zeitkalibrierung',model.hardware_gates.G3],['G4 · Quelle und Analysatoren',model.hardware_gates.G4],['G5 · Hintergrund',model.hardware_gates.G5],['G6 · Negativkontrolle','NOT_RUN']]){const r=node('div','','row');r.append(node('span',name),node('span',status,'tag'));$('gates').append(r)}
+const cases=[['matched','Nomineller Arbeitspunkt','Beide Umlaufrichtungen sind spektral abgeglichen.'],['delay_0.25ps','Restverzögerung 0,25 ps','Nur die Restverzögerung zwischen den Erzeugungsalternativen ändert sich.'],['delay_1ps','Restverzögerung 1,00 ps','Die Paarzahl bleibt im Modell stabil, während die Kohärenz abnimmt.'],['delay_2ps','Restverzögerung 2,00 ps','Zeitliche Unterscheidbarkeit der Erzeugungsalternativen.'],['filter_B_plus1nm','Filter B um +1 nm verschoben','Beide Richtungen sehen denselben geänderten Filter.'],['stress_combined','Kombinierter Störfall','Restverzögerung, Phasenfehlanpassung und Filterverschiebung wirken gemeinsam.']];
+for(const [id,title] of cases){const op=node('option',title);op.value=id;$('scenario').append(op)}
+function showCase(){const k=$('scenario').value,r=model.coincidence_budget[k],v=r.raw_DA_symmetric_background_scenario;$('caseText').textContent=cases.find(c=>c[0]===k)[2];$('contrast').textContent=format(v,3);$('pairs').textContent=format(r.true_pairs_per_s_lower_scenario,1);$('yield').textContent=format(100*r.relative_spectral_yield,1)+' %';$('bar').style.width=(100*v)+'%';$('modelDecision').textContent=(v>=.90?'Über der':'Unter der')+' G4-Ziellinie im Modell. Für G4 sind reale rohe Sichtbarkeiten in H/V und D/A erforderlich.'}
+$('scenario').addEventListener('change',showCase);showCase();
+for(const r of model.timing)$('timing').append(tableRow([r.ports.map(i=>labels[i]).join(' / '),format(r.pair_offset_ps)+' ps',format(r.core_fwhm_ps)+' ps',format(100*r.core_window,3)+' %']));
+let ticket=0,current=null;
+function clearResult(){++ticket;current=null;$('download').disabled=true;$('replayResult').hidden=true;$('records').replaceChildren();$('digest').textContent='';$('message').className='small';$('message').textContent='Bereit zum lokalen Replay.';return ticket}
+function fail(err,id){if(id!==ticket)return;clearResult();$('message').className='error';$('message').textContent='Import verworfen · '+err.message}
+function sha256Local(input){
+  const k=[0x428a2f98,0x71374491,0xb5c0fbcf,0xe9b5dba5,0x3956c25b,0x59f111f1,0x923f82a4,0xab1c5ed5,0xd807aa98,0x12835b01,0x243185be,0x550c7dc3,0x72be5d74,0x80deb1fe,0x9bdc06a7,0xc19bf174,0xe49b69c1,0xefbe4786,0x0fc19dc6,0x240ca1cc,0x2de92c6f,0x4a7484aa,0x5cb0a9dc,0x76f988da,0x983e5152,0xa831c66d,0xb00327c8,0xbf597fc7,0xc6e00bf3,0xd5a79147,0x06ca6351,0x14292967,0x27b70a85,0x2e1b2138,0x4d2c6dfc,0x53380d13,0x650a7354,0x766a0abb,0x81c2c92e,0x92722c85,0xa2bfe8a1,0xa81a664b,0xc24b8b70,0xc76c51a3,0xd192e819,0xd6990624,0xf40e3585,0x106aa070,0x19a4c116,0x1e376c08,0x2748774c,0x34b0bcb5,0x391c0cb3,0x4ed8aa4a,0x5b9cca4f,0x682e6ff3,0x748f82ee,0x78a5636f,0x84c87814,0x8cc70208,0x90befffa,0xa4506ceb,0xbef9a3f7,0xc67178f2];
+  const h=[0x6a09e667,0xbb67ae85,0x3c6ef372,0xa54ff53a,0x510e527f,0x9b05688c,0x1f83d9ab,0x5be0cd19];
+  const data=new Uint8Array(Math.ceil((input.length+9)/64)*64);
+  data.set(input);data[input.length]=128;
+  const dv=new DataView(data.buffer);dv.setBigUint64(data.length-8,BigInt(input.length)*8n);
+  const rotr=(v,n)=>(v>>>n)|(v<<(32-n));
+  const w=new Uint32Array(64);
+  for(let off=0;off<data.length;off+=64){
+    for(let i=0;i<16;i++)w[i]=dv.getUint32(off+4*i);
+    for(let i=16;i<64;i++){
+      const x=w[i-15],y=w[i-2];
+      w[i]=w[i-16]+(rotr(x,7)^rotr(x,18)^(x>>>3))+w[i-7]+(rotr(y,17)^rotr(y,19)^(y>>>10));
+    }
+    let [a,b,c,d,e,f,g,v]=h;
+    for(let i=0;i<64;i++){
+      const sum=v+(rotr(e,6)^rotr(e,11)^rotr(e,25))+((e&f)^(~e&g))+k[i]+w[i];
+      const extra=(rotr(a,2)^rotr(a,13)^rotr(a,22))+((a&b)^(a&c)^(b&c));
+      v=g;g=f;f=e;e=(d+sum)>>>0;d=c;c=b;b=a;a=(sum+extra)>>>0;
+    }
+    const state=[a,b,c,d,e,f,g,v];for(let i=0;i<8;i++)h[i]=(h[i]+state[i])>>>0;
+  }
+  return h.map(x=>x.toString(16).padStart(8,'0')).join('');
+}
+
+async function decode(raw,origin,seq,name,id){
+  const r=X6Sagnac.decode(raw,origin,seq);let hash=null;
+  if(globalThis.crypto?.subtle){const h=await crypto.subtle.digest('SHA-256',raw);hash=Array.from(new Uint8Array(h),b=>b.toString(16).padStart(2,'0')).join('')}else{hash=sha256Local(raw)}
+  if(id!==ticket)return;
+  $('kind').textContent=r.origin==='synthetic'?'SYNTHETISCH':'HARDWARE · deklariert';
+  $('counts').textContent=r.records.length+' Frames · '+raw.byteLength+' Bytes · '+name;
+  for(const row of r.summaries.slice(0,100))$('records').append(tableRow([row.sequence,['00','01','10','11'][row.setting_index],row.trials,row.conditional_coincidences.n,format(row.conditional_coincidences.E,3)]));
+  if(r.records.length>100)$('counts').textContent+=' · Tabelle auf 100 Frames begrenzt';
+  const c=r.chsh.conditional_coincidences,a=r.chsh.all_trials_fixed_assignment;
+  $('chsh').textContent=c?.singlet_T!=null&&a?.singlet_T!=null?'v0.7-Singulettdiagnostik · T bedingt '+format(c.singlet_T,3)+' · T über alle Fenster '+format(a.singlet_T,3):'Keine kombinierte Statistik verfügbar.';
+  $('digest').textContent=hash||'SHA-256 in dieser Browserumgebung nicht verfügbar. Export gesperrt.';
+  current={schema:'x6.photonics.frontend-replay/0.1',source_commit:revision,source_format:'SGNCv007',input_name:name,input_bytes:raw.byteLength,input_sha256:hash,expected_first_sequence:seq,decoded:r,physical_CHSH:'NOT_ASSESSED'};
+  $('download').disabled=!hash;$('replayResult').hidden=false;$('message').textContent='Transport und Zählerbilanz geprüft.';
+}
+$('demo').addEventListener('click',async()=>{const i=clearResult();$('raw').value='';try{await decode(Uint8Array.from(atob($('demo64').textContent.trim()),c=>c.charCodeAt(0)),'synthetic','100','synthetic_chsh_capture.bin',i)}catch(e){fail(e,i)}});
+for(const [id,event] of [['origin','change'],['seq','input']])$(id).addEventListener(event,()=>{clearResult();$('raw').value=''});
+$('raw').addEventListener('change',async()=>{const i=clearResult();const f=$('raw').files[0];if(!f)return;try{const origin=$('origin').value,seq=$('seq').value.trim();if(!origin||!/^\d+$/.test(seq))throw Error('Herkunft und erwartete Startsequenz fehlen.');if(f.size===0||f.size>244*4096||f.size%244!==0)throw Error('Dateigröße passt nicht zu SGNCv007.');await decode(new Uint8Array(await f.arrayBuffer()),origin,seq,f.name,i)}catch(e){fail(e,i)}});
+$('download').addEventListener('click',()=>{if(!current?.input_sha256)return;const url=URL.createObjectURL(new Blob([JSON.stringify(current,null,2)+'\n'],{type:'application/json'}));const a=document.createElement('a');a.href=url;a.download='X6_Sagnac_Replay.json';document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1500)});
+</script>
+<script>
+const TimingCal = (() => {
+  'use strict';
+  const MAX_BYTES = 6 * 1024 * 1024, MAX_HITS = 100000, BIN = 50, HALF_WINDOW = 1000;
+  const ports = [[0,2],[0,3],[1,2],[1,3]];
+  function requireThat(ok, message) { if (!ok) throw new Error(message); }
+  function field(s) {
+    s=s.trim();
+    if (s.startsWith('"') && s.endsWith('"') && s.length>=2) s=s.slice(1,-1).trim();
+    return s;
+  }
+  function integerText(s) {
+    requireThat(/^\+?\d+$/.test(s), 'Nichtnegative ganze Zahl erwartet.');
+    return s.replace(/^\+/,'').replace(/^0+(?=\d)/,'');
+  }
+  function read(bytes) {
+    requireThat(bytes.length>0 && bytes.length<=MAX_BYTES,'Dateigröße außerhalb 1 Byte bis 6 MiB.');
+    const lines = new TextDecoder('utf-8',{fatal:true}).decode(bytes).split(/\r\n|\n|\r/);
+    const header=lines.shift().split(',').map(field);
+    requireThat(header.length===3 && header.join(',')==='pulse_id,channel,raw_ps','CSV-Kopf erwartet: pulse_id,channel,raw_ps');
+    const groups=new Map(), hits=[0,0,0,0]; let n=0;
+    for(let i=0;i<lines.length;i++){
+      if(!lines[i].trim()) continue;
+      try {
+        requireThat(++n<=MAX_HITS,'Maximal 100.000 Treffer pro Datei.');
+        const fields=lines[i].split(',').map(field);
+        requireThat(fields.length===3,'Genau drei Felder erwartet.');
+        const [pid,channel,raw]=fields.map(integerText);
+        requireThat(/^[0-3]$/.test(channel),'Kanal außerhalb 0–3.');
+        requireThat(raw.length<=20 && BigInt(raw)<(1n<<64n),'Zeitmarke außerhalb uint64.');
+        if(!groups.has(pid)) groups.set(pid,Array(4));
+        const row=groups.get(pid), ch=Number(channel);
+        requireThat(row[ch]===undefined,'Doppelter Treffer für Puls-ID und Kanal.');
+        row[ch]=BigInt(raw);hits[ch]++;
+      } catch(e){throw new Error('Zeile '+(i+2)+' · '+e.message);}
+    }
+    requireThat(n>0,'Die Datei enthält keine Treffer.');
+    return {groups,hits,n};
+  }
+  function quantile(sorted,q) {
+    const i=(sorted.length-1)*q,lo=Math.floor(i),hi=Math.ceil(i);
+    return sorted[lo]+(sorted[hi]-sorted[lo])*(i-lo);
+  }
+  function analyse(bytes,offsets) {
+    requireThat(offsets.length===4 && offsets.every(Number.isFinite) && offsets[0]===0,'Vier endliche Kanaloffsets, mit d₀ = 0, erforderlich.');
+    const {groups,hits,n}=read(bytes);
+    const pairs=ports.map(([a,b])=>{
+      const dt=[], hist=new Map();
+      let sum=0,compensation=0,inWindow=0;
+      for(const row of groups.values()){
+        if(row[a]===undefined||row[b]===undefined)continue;
+        const delta=row[b]-row[a];
+        requireThat(delta>=-9007199254740991n && delta<=9007199254740991n,'Paarzeitdifferenz außerhalb der ps-genauen Browserdarstellung.');
+        const t=Number(delta)-(offsets[b]-offsets[a]);
+        requireThat(Number.isFinite(t) && Math.abs(t)<=Number.MAX_SAFE_INTEGER,'Korrigierte Zeitdifferenz unzulässig.');
+        dt.push(t);const y=t-compensation,updated=sum+y;compensation=(updated-sum)-y;sum=updated;
+        if(Math.abs(t)<=HALF_WINDOW)inWindow++;
+        const k=Math.floor(t/BIN+.5);hist.set(k,(hist.get(k)||0)+1);
+      }
+      requireThat(dt.length>0,'Keine gemeinsamen Referenzpulse für Kanäle '+a+' und '+b+'.');
+      dt.sort((x,y)=>x-y);
+      const bins=Array.from(hist.entries()).sort((x,y)=>x[0]-y[0]);
+      const peak=bins.reduce((max,p)=>Math.max(max,p[1]),0);
+      const half=bins.filter(p=>2*p[1]>=peak);
+      return {ports:[a,b],paired_pulses:dt.length,pair_mean_ps:sum/dt.length,q01_q99_ps:[quantile(dt,.01),quantile(dt,.99)],
+        half_height_outer_span_ps:(half.at(-1)[0]-half[0][0]+1)*BIN,
+        fraction_in_fixed_window:inWindow/dt.length,inside_window:inWindow,outside_window:dt.length-inWindow,
+        modal_bin_centers_ps:bins.filter(p=>p[1]===peak).map(p=>p[0]*BIN),
+        bins_center_ps_counts:bins.map(([k,c])=>[k*BIN,c])};
+    });
+    return {pulse_ids_with_any_hit:groups.size,hits_per_channel:hits,hit_rows:n,bin_ps:BIN,full_window_ps:2*HALF_WINDOW,pairs};
+  }
+  function example(){
+    // Seeded demonstration, with sparse missing channels and a delayed population on B−.
+    let state=32230407;
+    const uniform=()=>{state=(Math.imul(1664525,state)+1013904223)>>>0;return (state+.5)/4294967296;};
+    const normal=()=>Math.sqrt(-2*Math.log(uniform()))*Math.cos(2*Math.PI*uniform());
+    const lines=['pulse_id,channel,raw_ps'],sigmas=[150,170,155,180],offsets=[0,40,-30,60];
+    for(let i=0;i<512;i++){
+      const t=(1n<<60n)+BigInt(i)*100000n;
+      for(let ch=0;ch<4;ch++){
+        if((i+ch*11)%37===0) continue;
+        const delay=ch===3 && i%23===0 ? 1480 : 0;
+        lines.push([i,ch,t+BigInt(Math.round(offsets[ch]+sigmas[ch]*normal()+delay))].join(','));
+      }
+    }
+    return new TextEncoder().encode(lines.join('\n')+'\n');
+  }
+  return {analyse,example,MAX_BYTES,MAX_HITS};
+})();
+
+(() => {
+  'use strict';
+  let serial=0, selected=null, report=null;
+  const offsets=[0,1,2,3].map(i=>$('co'+i));
+  const originText=o=>o==='synthetic'?'SYNTHETISCH':'LABOR · selbst deklariert';
+  const portsText=p=>p.map(i=>labels[i]).join(' / ');
+  function invalidate(msg='Geänderte Eingaben · bitte erneut auswerten.'){
+    serial++;report=null;$('calSave').disabled=true;$('calResult').hidden=true;
+    $('calRows').replaceChildren();$('calChart').replaceChildren();$('calSha').textContent='';
+    $('calMsg').className='small';$('calMsg').textContent=msg;return serial;
+  }
+  function bad(e,token){if(token!==serial)return;invalidate();$('calMsg').className='error';$('calMsg').textContent='Auswertung verworfen · '+e.message;}
+  function save(data,type,filename){const u=URL.createObjectURL(new Blob([data],{type}));const a=document.createElement('a');a.href=u;a.download=filename;document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(u),1500);}
+  function num(s){
+    const t=s.trim().replace(',','.');
+    if(!/^[+-]?(?:\d+(?:\.\d*)?|\.\d+)(?:e[+-]?\d+)?$/i.test(t)||!Number.isFinite(Number(t)))throw Error('Bitte jeden Kanaloffset in Pikosekunden angeben.');
+    return Number(t);
+  }
+  function compare(p,m){
+    return {nominal_pair_mean_ps:m.pair_offset_ps,nominal_core_fwhm_ps:m.core_fwhm_ps,nominal_fraction_in_window:m.core_window,
+      mean_minus_model_ps:p.pair_mean_ps-m.pair_offset_ps,outer_span_minus_model_core_fwhm_ps:p.half_height_outer_span_ps-m.core_fwhm_ps,
+      observed_minus_model_percentage_points:100*(p.fraction_in_fixed_window-m.core_window)};
+  }
+  function svgNode(type,attrs,text){
+    const el=document.createElementNS('http://www.w3.org/2000/svg',type);
+    for(const [key,value] of Object.entries(attrs))el.setAttribute(key,String(value));
+    if(text!=null)el.textContent=text;return el;
+  }
+  function draw(index){
+    if(!report)return;
+    const p=report.analysis.pairs[index], m=report.model_comparison[index], n=p.paired_pulses;
+    const svg=svgNode('svg',{viewBox:'0 0 600 185',role:'img','aria-label':'Zeitdifferenz-Histogramm und nominale Gaußkurve für '+portsText(p.ports)});
+    const counts=new Map(p.bins_center_ps_counts);
+    const sigma=m.nominal_core_fwhm_ps/(2*Math.sqrt(2*Math.log(2)));
+    const density=t=>Math.exp(-.5*((t-m.nominal_pair_mean_ps)/sigma)**2)/(Math.sqrt(2*Math.PI)*sigma);
+    const plotted=[];
+    for(let t=-2000;t<=2000;t+=50){
+      // Simpson integration of the model density over the same 50 ps bin.
+      plotted.push([t,(counts.get(t)||0)/n,50*(density(t-25)+4*density(t)+density(t+25))/6]);
+    }
+    const peak=Math.max(...plotted.map(v=>Math.max(v[1],v[2])));const ymax=peak||1;
+    const x=t=>55+(t+2025)*525/4050,y=v=>143-108*v/ymax;
+    svg.append(svgNode('rect',{x:x(-1000),y:24,width:x(1000)-x(-1000),height:119,fill:'#e4f1eb'}));
+    svg.append(svgNode('text',{x:5,y:18,fill:'#324c42','font-size':12},'Anteil je 50-ps-Klasse'));
+    for(const [t,a] of plotted){if(a)svg.append(svgNode('rect',{x:x(t-24),y:y(a),width:x(24)-x(-24),height:143-y(a),fill:'#126b5b'}));}
+    svg.append(svgNode('polyline',{points:plotted.map(([t,,b])=>x(t)+','+y(b)).join(' '),fill:'none',stroke:'#99441c','stroke-width':2.5}));
+    svg.append(svgNode('line',{x1:x(-2025),x2:x(2025),y1:143,y2:143,stroke:'#62786c'}));
+    for(const t of [-2000,-1000,0,1000,2000])svg.append(svgNode('text',{x:x(t),y:160,'text-anchor':'middle',fill:'#334e43','font-size':12},t));
+    svg.append(svgNode('text',{x:315,y:182,'text-anchor':'middle',fill:'#334e43','font-size':12},'korrigierte Zeitdifferenz (ps)'));
+    svg.append(svgNode('text',{x:47,y:39,'text-anchor':'end',fill:'#334e43','font-size':11},format(100*ymax,1)+'%'));
+    $('calChart').replaceChildren(svg);
+    const clipped=p.bins_center_ps_counts.reduce((s,[t,c])=>s+(Math.abs(t)>2000?c:0),0);
+    $('calLegend').textContent='Balken: importierte Treffer · Linie: nomineller Gaußkern aus Optikplan v0.2 · helles Band: ±1 ns. '+clipped+' Treffer außerhalb der dargestellten Klassen bleiben in allen Kennzahlen enthalten.';
+    const modes=p.modal_bin_centers_ps;
+    const values=[['Häufigste Peakklasse',modes.length===1?format(modes[0])+' ps':modes.length+' gleich hohe Klassen (siehe JSON)'],
+      ['Mittlere Differenz',format(p.pair_mean_ps,1)+' ps · Modell '+format(m.nominal_pair_mean_ps)+' ps'],
+      ['1-%- bis 99-%-Quantil',p.q01_q99_ps.map(t=>format(t,1)+' ps').join(' bis ')],
+      ['Halbwertsbreite',format(p.half_height_outer_span_ps)+' ps · Modellkern '+format(m.nominal_core_fwhm_ps)+' ps'],
+      ['Fensteranteil',p.inside_window+' / '+n+' · '+format(100*p.fraction_in_fixed_window,2)+' %'],
+      ['Abweichung zum Modell',format(m.observed_minus_model_percentage_points,2)+' Prozentpunkte']];
+    $('calStats').replaceChildren(...values.flatMap(([k,v])=>[node('dt',k),node('dd',v)]));
+  }
+  function render(){
+    const a=report.analysis;
+    $('calBadge').textContent=originText(report.origin);
+    $('calSub').textContent=report.run_id+' · '+report.calibration_version+' · '+a.hit_rows+' Treffer · '+a.pulse_ids_with_any_hit+' Puls-IDs mit mindestens einem Treffer.';
+    $('calRows').replaceChildren(...a.pairs.map((p,i)=>tableRow([portsText(p.ports),p.paired_pulses,format(p.half_height_outer_span_ps)+' ps',format(100*p.fraction_in_fixed_window,2)+' %',format(100*report.model_comparison[i].nominal_fraction_in_window,2)+' %'])));
+    $('calMeta').textContent='Datei: '+report.input_name+' · '+report.input_bytes+' Bytes · Run-ID: '+report.run_id+' · Kalibrierversion: '+report.calibration_version+' · Kanaloffsets (ps): '+report.offsets_ps.join(', ')+' · Quelle: '+originText(report.origin);
+    $('calSha').textContent='SHA-256 · '+report.input_sha256;
+    $('calPair').value='0';$('calResult').hidden=false;draw(0);$('calSave').disabled=false;
+    $('calMsg').textContent='CSV ausgewertet · vier Portpaare. Hardwarefreigabe bleibt offen.';
+  }
+  async function process(){
+    const token=invalidate('Kalibrierdaten werden geprüft …');
+    try{
+      if(!selected)throw Error('Zuerst eine CSV-Datei wählen.');
+      const src=selected,run=$('calRun').value.trim(),version=$('calVersion').value.trim(),origin=$('calOrigin').value;
+      if(!run||!version||!['synthetic','lab_declared'].includes(origin))throw Error('Run-ID, Kalibrierversion und Datenherkunft angeben.');
+      const d=offsets.map(el=>num(el.value));
+      if(src.demo && origin!=='synthetic')throw Error('Das eingebaute Beispiel hat synthetische Herkunft.');
+      if(!src.demo && (src.file.size===0||src.file.size>TimingCal.MAX_BYTES))throw Error('Dateigröße außerhalb des Importlimits.');
+      const bytes=src.demo?TimingCal.example():new Uint8Array(await src.file.arrayBuffer());
+      if(token!==serial)return;
+      const a=TimingCal.analyse(bytes,d);
+      const hash=globalThis.crypto?.subtle?Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',bytes)),v=>v.toString(16).padStart(2,'0')).join(''):sha256Local(bytes);
+      if(token!==serial)return;
+      report={schema:'x6.photonics.timing-calibration-replay/0.1',frontend_version:'0.2',source_commit:revision,model:'Optikplan v0.2 · nomineller Gaußkern',origin,run_id:run,calibration_version:version,
+        input_name:src.demo?'X6_Kalibrierbeispiel.csv':src.file.name,input_bytes:bytes.byteLength,input_sha256:hash,offsets_ps:d,scope:'CALIBRATION_DIAGNOSTIC',hardware_gate:'NOT_ASSESSED',
+        analysis:a,model_comparison:a.pairs.map((p,i)=>compare(p,model.timing[i]))};
+      render();
+    } catch(e){bad(e,token);}
+  }
+  for(const el of [$('calRun'),$('calVersion'),$('calOrigin'),...offsets.slice(1)])el.addEventListener(el.tagName==='SELECT'?'change':'input',()=>invalidate());
+  $('calFile').addEventListener('change',()=>{
+    if(selected?.demo){$('calRun').value='';$('calVersion').value='';$('calOrigin').value='';offsets.slice(1).forEach(o=>o.value='');}
+    selected=$('calFile').files.length?{file:$('calFile').files[0]}:null;invalidate(selected?'Datei gewählt · Herkunft und eingefrorene Offsets prüfen.':'Bereit für Kalibrierdaten.');
+  });
+  $('calDemo').addEventListener('click',()=>{selected={demo:true};$('calFile').value='';$('calRun').value='DEMO-TIMING-001';$('calVersion').value='SYN-OFFSETS-v1';$('calOrigin').value='synthetic';offsets.forEach((el,i)=>el.value=[0,40,-30,60][i]);process();});
+  $('calDemoFile').addEventListener('click',()=>save(TimingCal.example(),'text/csv;charset=utf-8','X6_Kalibrierbeispiel.csv'));
+  $('calAnalyse').addEventListener('click',process);
+  $('calPair').addEventListener('change',()=>draw(Number($('calPair').value)));
+  $('calSave').addEventListener('click',()=>{if(report)save(JSON.stringify(report,null,2)+'\n','application/json','X6_Zeitkalibrierung.json');});
+})();
+
+</script><script id="ctFixture" type="application/json">{"graph":{"scope":"synthetic_single_fault_input_control","task":"surface_code:rotated_memory_x","distance":5,"rounds":5,"detector_count":120,"detector_order":"ascending Stim detector ID","circuit_sha256":"cd19518c075141192cc9d61e8be5733aa83e16dd07757810709eeedd2f7bf22d","dem_sha256":"1ebf43bb3ac5e646b0458797b3776abaa377369350fadfcf29d5ba89988543cb","edges":[{"edge_id":0,"endpoints":[108,"boundary"],"error_probability":0.125,"weight":1.9459101490553132,"observable_mask":1,"adapter_provenance":{"source_event_id":0,"source_component_index":0}}]},"shot":{"schema":"x6.qed.detector-shot/1","frozen_graph_sha256":"8a0ae08f5df8e2e027a239f274efd6dd2580e0086d5aa5a3b511cfdf597f11d1","detector_bits":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0]}}</script>
+<script>
+/* A finite offline command adapter. All inputs and acknowledgements are local to the session. */
+const LocalBench = (() => {
+  'use strict';
+  const PROFILE={SAGNAC:'sagnac-v007',QED:'qed-c0-input'};
+  const allowed={
+    EDIT:['FREEZE'], FROZEN:['ARM','ABORT'], ARMED:['START','ABORT'],
+    RUNNING:['STEP','CORRUPT','STOP','ABORT'], COMPLETE:[], STOPPED:[], ABORTED:[], FAULT:[]
+  };
+  const end=s=>['COMPLETE','STOPPED','ABORTED','FAULT'].includes(s);
+  function ask(ok,msg){if(!ok)throw new Error(msg);}
+  function canon(v){
+    if(Array.isArray(v))return '['+v.map(canon).join(',')+']';
+    if(v!==null && typeof v==='object')return '{'+Object.keys(v).sort().map(k=>JSON.stringify(k)+':'+canon(v[k])).join(',')+'}';
+    return JSON.stringify(v);
+  }
+  const jsonHash=o=>sha256Local(new TextEncoder().encode(canon(o)));
+  function config(user){
+    ask(user&&Object.keys(user).sort().join(',')==='count,pace,profile,run_label,schema','Ungültige Profilfelder.');
+    ask(user.schema==='x6.lab.sim-config/1' && Object.values(PROFILE).includes(user.profile),'Unbekanntes Profil oder Schema.');
+    ask(typeof user.run_label==='string' && /^[\p{L}\p{N} ._:/−-]{1,64}$/u.test(user.run_label) && user.run_label.trim()===user.run_label,'Laufbezeichnung ungültig (1–64 Zeichen).');
+    const max=user.profile===PROFILE.SAGNAC?4:1;
+    ask(Number.isInteger(user.count)&&user.count>=1&&user.count<=max,'Anzahl außerhalb des Profils.');
+    ask(['manual','auto_1s'].includes(user.pace),'Unbekannter Simulatortakt.');
+    return Object.freeze({...user});
+  }
+  function inputCheck(s,hash,n){
+    ask(s&&typeof s==='object'&&!Array.isArray(s)&&s.schema==='x6.qed.detector-shot/1','QED_INPUT_SCHEMA');
+    ask(Object.keys(s).sort().join(',')==='detector_bits,frozen_graph_sha256,schema','QED_INPUT_FIELDS');
+    ask(s.frozen_graph_sha256===hash,'QED_MODEL_MISMATCH');
+    ask(Array.isArray(s.detector_bits)&&s.detector_bits.length===n&&s.detector_bits.every(b=>b===0||b===1),'QED_BIT_VECTOR');
+    return [...s.detector_bits];
+  }
+  function adapters(fixture,raw,core){
+    const graphHash=jsonHash(fixture.graph);
+    ask(graphHash===fixture.shot.frozen_graph_sha256,'QED-Kontrollgraph stimmt nicht mit dem Shot überein.');
+    ask(raw.length===4*core.FRAME_BYTES,'Sagnac-Testdatei unvollständig.');
+    const sh=sha256Local(raw),qh=jsonHash(fixture.shot);
+    return {
+      [PROFILE.SAGNAC]:{
+        contract:{input:'SGNCv007',origin:'synthetic',decoder:'X6Sagnac.decode',first_sequence:'100',
+                  fixture_sha256:sh,physical_quantum_claim:'NOT_ASSESSED'},
+        read(i,corrupt){
+          const bytes=raw.slice(i*core.FRAME_BYTES,(i+1)*core.FRAME_BYTES);
+          if(corrupt)bytes[60]^=1;
+          const result=core.decode(bytes,'synthetic',String(100+i)),r=result.summaries[0];
+          return {kind:'SAGNAC_FRAME',sequence:r.sequence,setting:r.setting_index,clicks:r.clicks,
+            windows:r.trials,pairs:r.conditional_coincidences.n,frame_sha256:sha256Local(bytes),status:'TRANSPORT_OK'};
+        },
+        final(count){
+          if(count!==4)return null;
+          const r=core.decode(raw,'synthetic','100');
+          return {kind:'SYNTHETIC_V07_DIAGNOSTIC',T_conditional:r.chsh.conditional_coincidences.singlet_T,
+            T_all:r.chsh.all_trials_fixed_assignment.singlet_T,physical_quantum_claim:'NOT_ASSESSED'};
+        }
+      },
+      [PROFILE.QED]:{
+        contract:{input:'x6.qed.detector-shot/1',origin:'synthetic',decoder:'C0 input check + single-edge reference',
+          graph_sha256:graphHash,fixture_sha256:qh,detector_count:fixture.graph.detector_count,cal:'HOLD',validation:'HOLD'},
+        read(i,corrupt){
+          ask(i===0,'Kein weiterer Kontrollshot.');
+          const shot={...fixture.shot};if(corrupt)shot.frozen_graph_sha256='0'.repeat(64);
+          const bits=inputCheck(shot,graphHash,fixture.graph.detector_count);
+          const active=bits.flatMap((b,id)=>b?[id]:[]);
+          const edge=fixture.graph.edges[0];
+          ask(fixture.graph.edges.length===1 && edge.endpoints[1]==='boundary' && edge.observable_mask===1,'Kontrollgraph unerwartet.');
+          const single=active.length===1&&active[0]===edge.endpoints[0];
+          return {kind:'QED_CONTROL_SHOT',active_detectors:active,input_status:'VALIDATED',reachable_classes:single?[1]:active.length?[]:[0],
+            status:single?'HOLD / SINGLE_CLASS_REACHABLE':active.length?'HOLD / NO_LOCAL_PAIRING':'EMPTY_SEPARATE',
+            logical_prediction:null,weighted_inference:'NOT_IMPLEMENTED',graph_sha256:graphHash};
+        },final(){return null;}
+      }
+    };
+  }
+  class Run {
+    constructor(id,available,clock=()=>new Date().toISOString()){
+      this.id=id;this.available=available;this.clock=clock;this.state='EDIT';this.frozen=null;this.digest=null;
+      this.entries=[];this.samples=[];this.errors=0;this.failure=null;this.diagnostic=null;this.started=null;this.ended=null;
+    }
+    can(command){return allowed[this.state].includes(command);}
+    command(name,input){
+      const before=this.state,time=this.clock(), seq=this.entries.length+1;
+      const event={command_id:this.id+'/'+seq,utc:time,command:name,from:before,ack:'ACK_LOCAL'};
+      if(!this.can(name)){
+        event.ack='REJECTED_LOCAL';event.reason='INVALID_TRANSITION';event.to=this.state;this.entries.push(event);return event;
+      }
+      try {
+        switch(name){
+          case 'FREEZE':{
+            const cfg=config(input), decoder=this.available[cfg.profile];
+            const frozen=Object.freeze({profile:cfg,adapter:Object.freeze({...decoder.contract}),source_commit:revision,
+              device:'NONE',transport:'IN_MEMORY',execution:'SIMULATION'});
+            const digest=jsonHash(frozen);
+            this.frozen=frozen;this.digest=digest;this.state='FROZEN';break;
+          }
+          case 'ARM':this.state='ARMED';break;
+          case 'START':this.state='RUNNING';this.started=time;break;
+          case 'STOP':this.state='STOPPED';break;
+          case 'ABORT':this.state='ABORTED';break;
+          case 'STEP':
+          case 'CORRUPT':{
+            const i=this.samples.length, cfg=this.frozen.profile;
+            const data=this.available[cfg.profile].read(i,name==='CORRUPT');
+            this.samples.push(data);event.data_index=i;
+            if(this.samples.length===cfg.count){
+              this.diagnostic=this.available[cfg.profile].final(cfg.count);
+              this.state='COMPLETE';
+            }
+            break;
+          }
+        }
+      } catch(e){
+        event.reason=e.message;event.ack='REJECTED_LOCAL';
+        if(name==='STEP'||name==='CORRUPT'){this.errors++;this.failure=e.message;this.state='FAULT';}
+      }
+      if(end(this.state))this.ended=time;
+      event.to=this.state;event.frozen_sha256=this.digest;this.entries.push(event);return event;
+    }
+    report(){
+      return JSON.parse(JSON.stringify({schema:'x6.lab.sim-run/1',run_id:this.id,execution:'SIMULATION',device_connected:false,
+        state:this.state,config:this.frozen,config_sha256:this.digest,started_utc:this.started,ended_utc:this.ended,
+        accepted_count:this.samples.length,rejected_inputs:this.errors,fault:this.failure,
+        trace:this.entries,data:this.samples,diagnostic:this.diagnostic,hardware_gate:'NOT_ASSESSED'}));
+    }
+  }
+  return {PROFILE,Run,config,adapters,inputCheck,jsonHash,terminal:end};
+})();
+
+(() => {
+  'use strict';
+  const fixture=JSON.parse($('ctFixture').textContent);
+  const bytes=Uint8Array.from(atob($('demo64').textContent.trim()),c=>c.charCodeAt(0));
+  const adapters=LocalBench.adapters(fixture,bytes,X6Sagnac);
+  const P=LocalBench.PROFILE,fields=['ctProfile','ctRun','ctLimit','ctPace'];
+  const labelsState={EDIT:'Entwurf',FROZEN:'Konfiguration eingefroren',ARMED:'Freigegeben',RUNNING:'Lauf aktiv',COMPLETE:'Vollständig',STOPPED:'Vorzeitig gestoppt',ABORTED:'Abgebrochen',FAULT:'Störung'};
+  const help={EDIT:'Profil und Umfang wählen. Danach die Konfiguration einfrieren.',FROZEN:'Die Konfiguration ist gesperrt. Freigeben oder den Entwurf abbrechen.',ARMED:'Die lokale Freigabe liegt vor. Der Lauf wartet auf Start.',RUNNING:'Verarbeitete Datensätze und Quittungen erscheinen unten.',COMPLETE:'Der bestellte Umfang ist vollständig verarbeitet.',STOPPED:'Teilergebnis erhalten. Der Lauf wird als vorzeitig gestoppt exportiert.',ABORTED:'Der Lauf ist beendet. Bereits verarbeitete Daten bleiben im Protokoll.',FAULT:'Der fehlerhafte Datensatz wurde abgewiesen. Der Lauf ist beendet.'};
+  const cmds={ctFreeze:'FREEZE',ctArm:'ARM',ctStart:'START',ctStep:'STEP',ctStop:'STOP',ctAbort:'ABORT',ctFault:'CORRUPT'};
+  const opNames={FREEZE:'Einfrieren',ARM:'Freigeben',START:'Start',STEP:'Datensatz',STOP:'Stopp',ABORT:'Abbruch',CORRUPT:'Fehlertest'};
+  let number=0,timer=null,intent=0;const archive=[];
+  const newSession=()=>new LocalBench.Run('SIM-'+new Date().toISOString().replace(/\D/g,'')+'-'+(++number),adapters);
+  let run=newSession();
+  function draft(){return {schema:'x6.lab.sim-config/1',profile:$('ctProfile').value,run_label:$('ctRun').value.trim(),count:Number($('ctLimit').value),pace:$('ctPace').value};}
+  function save(value,filename){const url=URL.createObjectURL(new Blob([JSON.stringify(value,null,2)+'\n'],{type:'application/json'}));
+    const a=document.createElement('a');a.href=url;a.download=filename;document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1500);}
+  function limitOptions(value){const sg=$('ctProfile').value===P.SAGNAC,el=$('ctLimit');el.replaceChildren();
+    for(const i of sg?[1,2,3,4]:[1]){const o=node('option',i+(sg?' Frame'+(i===1?'':'s'):' Kontrollshot'));o.value=String(i);el.append(o);}
+    el.value=String(value??(sg?4:1));}
+  function setDraft(cfg){$('ctProfile').value=cfg.profile;limitOptions(cfg.count);$('ctRun').value=cfg.run_label;$('ctPace').value=cfg.pace;}
+  function msg(s,err=false){$('ctIncident').textContent=s;$('ctIncident').className=err?'error':'small';}
+  function render(){
+    const cfg=run.frozen?.profile||draft(),sg=cfg.profile===P.SAGNAC,end=LocalBench.terminal(run.state);
+    for(const id of fields)$(id).disabled=run.state!=='EDIT';
+    $('ctCfgIn').disabled=run.state!=='EDIT';$('ctCfgOut').disabled=false;
+    for(const [id,cmd] of Object.entries(cmds))$(id).disabled=!run.can(cmd)||(cmd==='STEP'&&cfg.pace==='auto_1s');
+    $('ctNew').disabled=!end;$('ctExport').disabled=!end;
+    $('ctFault').textContent=sg?'CRC-Fehler einspeisen':'Fremden Graphhash einspeisen';
+    $('ctState').textContent=labelsState[run.state];$('ctHelp').textContent=help[run.state];
+    $('ctProgress').textContent=run.samples.length+' / '+cfg.count;$('ctErr').textContent=String(run.errors);
+    const lastAck=run.entries.at(-1);
+    $('ctAck').textContent=lastAck?(lastAck.ack==='ACK_LOCAL'?'ACK':'ABGEWIESEN')+' · '+run.entries.length:'—';
+    $('ctDesc').textContent=sg?'Eingabe: SGNCv007 · 244 Bytes je Frame · Startsequenz 100. Quelle ist die bestehende synthetische Vier-Frame-Datei.':'Eingabe: x6.qed.detector-shot/1 · 120 binäre Detektoren. Beispiel ist der veröffentlichte d=5-Kontrollshot mit aktivem D108 und einer möglichen Fehlerkante.';
+    $('ctIdentity').textContent=run.digest?run.id+' · SHA-256 '+run.digest+' · Adapter '+run.frozen.adapter.decoder:run.id+' · noch nicht eingefroren';
+    $('ctDecoder').textContent=sg?'Sagnac · Snapshot-Decoder':'X6-QED · Eingangsprüfung und Kontrollgraph';
+    $('ctBoundary').textContent=sg?'Gültige CRC, Sequenz und Zählerbilanz betreffen die Übertragung. Eine CHSH-Diagnostik ist erst nach vier gültigen Einstellungen verfügbar. Physikalischer Nachweis: NOT_ASSESSED.':'Synthetischer Ein-Kanten-Kontrollgraph. Der Sollwert bleibt außerhalb der Eingabe. Die gewichtete C0-Inferenz ist offen. CAL / VALIDATION: HOLD. Photonik-Zeitmarken und Sagnac-Snapshots haben andere Datenverträge.';
+    const result=run.samples.at(-1);$('ctOutput').replaceChildren();
+    if(!result){$('ctLast').textContent=run.failure?'Letzter Versuch verworfen · '+run.failure:'Noch kein validierter Datensatz.';}
+    else if(sg){
+      $('ctLast').textContent='Letzter gültiger Frame · Sequenz '+result.sequence+' · Einstellung '+['00','01','10','11'][result.setting]+' · '+result.windows+' Fenster · '+result.pairs+' bedingte Paare.';
+      const box=node('div','','ctrlChannels');
+      result.clicks.forEach((v,i)=>{const card=node('div','','metric');card.append(node('span',labels[i]+' · Klicks'),node('strong',v));box.append(card)});$('ctOutput').append(box);
+      if(run.diagnostic)$('ctOutput').append(node('p','v0.7-Singulettdiagnose · T bedingt '+format(run.diagnostic.T_conditional,3)+' · T über alle Fenster '+format(run.diagnostic.T_all,3),'small sep'));
+    }else{
+      $('ctLast').textContent=result.status+' · Eingangsvertrag erfüllt · aktiv: '+result.active_detectors.map(x=>'D'+x).join(', ');
+      $('ctOutput').append(node('p','Lokal erreichbare Klasse: '+result.reachable_classes.join(', ')+' · Logische Vorhersage: keine.','small'));
+    }
+    if(run.failure)msg('Simulierte Störung gespeichert · '+run.failure,true);
+    $('ctLog').replaceChildren(...run.entries.map((e,i)=>tableRow([i+1,opNames[e.command],e.ack,labelsState[e.to]])));
+    const arch=$('ctArchive');arch.replaceChildren();
+    if(!archive.length)arch.append(node('p','Noch keine früheren Läufe in dieser Sitzung.','small'));
+    for(const r of archive){const b=node('button',r.config?.profile.run_label+' · '+labelsState[r.state]+' · JSON');b.addEventListener('click',()=>save(r,r.run_id+'.json'));arch.append(b);}
+  }
+  function schedule(){
+    if(timer!==null){clearTimeout(timer);timer=null;}
+    if(run.state==='RUNNING'&&run.frozen.profile.pace==='auto_1s'){
+      const token=run.id;timer=setTimeout(()=>{timer=null;if(run.id===token&&run.state==='RUNNING')dispatch('STEP');},1000);
+    }
+  }
+  function dispatch(cmd){intent++;msg('');const event=run.command(cmd,cmd==='FREEZE'?draft():undefined);
+    if(event.reason)msg(event.reason,true);render();schedule();}
+  for(const [id,cmd] of Object.entries(cmds))$(id).addEventListener('click',()=>dispatch(cmd));
+  $('ctProfile').addEventListener('change',()=>{intent++;limitOptions();msg('');render();});
+  for(const id of ['ctLimit','ctPace','ctRun'])$(id).addEventListener(id==='ctRun'?'input':'change',()=>{intent++;msg('');render();});
+  $('ctNew').addEventListener('click',()=>{if(!LocalBench.terminal(run.state))return;intent++;archive.unshift(run.report());run=newSession();msg('Neuer Entwurf. Der letzte Lauf ist im Sitzungsarchiv verfügbar.');render();schedule();});
+  $('ctCfgOut').addEventListener('click',()=>{try{const cfg=LocalBench.config(run.frozen?.profile||draft());save({schema:'x6.lab.sim-profile-file/1',profile:cfg,profile_sha256:LocalBench.jsonHash(cfg)},'X6_Simulationsprofil.json');}catch(e){msg(e.message,true);}});
+  $('ctCfgIn').addEventListener('change',async()=>{const epoch=++intent;const f=$('ctCfgIn').files[0];if(!f)return;
+    try{if(f.size>8192||run.state!=='EDIT')throw Error('Profilimport außerhalb des erlaubten Umfangs.');
+      const data=JSON.parse(await f.text());if(epoch!==intent||run.state!=='EDIT')return;
+      if(data?.schema!=='x6.lab.sim-profile-file/1'||Object.keys(data).sort().join(',')!=='profile,profile_sha256,schema')throw Error('Unbekanntes Profilformat.');
+      const cfg=LocalBench.config(data.profile);if(LocalBench.jsonHash(cfg)!==data.profile_sha256)throw Error('Profil-Prüfsumme stimmt nicht.');
+      setDraft(cfg);msg('Profil geladen · zum Freigeben erneut einfrieren.');render();
+    }catch(e){if(epoch===intent)msg('Profil verworfen · '+e.message,true);}finally{$('ctCfgIn').value='';}});
+  $('ctExport').addEventListener('click',()=>{if(LocalBench.terminal(run.state))save(run.report(),run.id+'.json');});
+  limitOptions();render();
+})();
+
+</script><script>
+(() => {
+  const el = id => document.getElementById("lb"+id);
+  const served=!!document.querySelector('meta[name="x6-daemon"][content="x6.bench.v1"]');
+  let info=null, healthy=false, busy=false, epoch=0, tracking=false, polling=false, lastStatus=0, archived="";
+  const names={example:"Synthetisches Beispiel",sagnac:"FPGA · SGNCv007",swabian:"Time Tagger Ultra · USB"};
+  const states={IDLE:"Bereit",ARMED:"Konfiguration eingefroren",RUNNING:"Erfassung läuft",STOPPING:"Stopp angefordert",ABORTING:"Abbruch angefordert",SEALING:"Archiv wird versiegelt",COMPLETE:"Erfassung abgeschlossen",ABORTED:"Abgebrochen",STOPPED:"Gestoppt",ERROR:"Fehler",INTERRUPTED:"Unterbrochen",ARCHIVE_ERROR:"Archivfehler"};
+  const active=["ARMED","RUNNING","STOPPING","ABORTING","SEALING"];
+  function buttons(){
+    const st=info?.run.state, ok=healthy&&!busy, idle=!active.includes(st);
+    el("Login").disabled=busy||!served;
+    el("Refresh").disabled=busy||!tracking;
+    el("Fields").disabled=!(ok&&idle);
+    el("Arm").disabled=!(ok&&idle);
+    el("Start").disabled=!(ok&&st==="ARMED");
+    el("Abort").disabled=el("Stop").disabled=!(ok&&["ARMED","RUNNING"].includes(st));
+    el("Off").disabled=el("Shutter").disabled=!(ok&&idle&&info?.shutter_configured);
+  }
+  function appendMetric(parent,key,value){
+    const dt=document.createElement("dt"),dd=document.createElement("dd");
+    dt.textContent=key;dd.textContent=value??"—";parent.append(dt,dd);
+  }
+  function render(){
+    const r=info.run, tt=info.source==="swabian";
+    el("Link").textContent="Verbunden · "+new Date(info.utc).toLocaleTimeString("de-CH");
+    el("Source").textContent=names[info.source]; el("State").textContent=states[r.state]||r.state;
+    el("N").textContent=tt?"—":r.frames??"—";el("Events").textContent=r.events??"—";
+    el("Disk").textContent=(info.free_bytes/(1024**3)).toLocaleString("de-CH",{maximumFractionDigits:1})+" GiB";
+    el("Tags").hidden=!tt;el("Snap").hidden=tt;el("Schedule").disabled=!info.axes;
+    el("CalLabel").hidden=info.source==="example";el("Duration").hidden=el("Mode").value==="schedule";
+    const m=el("Metrics");m.replaceChildren();
+    const rates=(r.channel_hz||[]).map((v,i)=>["A+","A−","B+","B−"][i]+" "+(v==null?"—":v.toLocaleString("de-CH",{maximumFractionDigits:1})+" Hz")).join(" / ");
+    const axes=(r.hwp_readback||[]).map(a=>a.serial+" · "+a.readback_deg.toFixed(3)+"°").join(" / ");
+    for(const [k,v] of Object.entries({"Lauf-ID":r.run_id,"Phase":r.phase,"Kanalraten · Segment/Frame":rates||null,"Konfigurationshash":r.config_sha256,"Quelle geöffnet":r.source_open==null?"unbekannt":r.source_open?"ja":"nein","Segment":r.segment?r.segment+" / "+r.segments:null,"Einstellung":r.setting??null,"Achsen · letzte Rückmeldung":axes||null,"Empfangene Bytes":tt?null:r.bytes_received,"Letzte Sequenz":r.last_sequence,"Frame-Flags":r.flags==null?null:"0x"+r.flags.toString(16),"Time-Tagger-Überlauf":r.overflows==null?"unbekannt":r.overflows?"gemeldet":"kein Überlauf gemeldet","Letzte Datenmeldung":r.last_data,"Abschluss":r.reason}))appendMetric(m,k,v);
+    const sh=info.shutter;el("ShInfo").textContent=(sh?"Magnet "+sh.solenoid+" · gelesen "+sh.utc+". ":"Keine aktuelle Abfrage. ")+"Mechanische Blattlage und Interlock unbekannt.";
+    buttons();
+  }
+  async function api(path,body){
+    const abort=new AbortController(),tm=setTimeout(()=>abort.abort(),8000);
+    try {
+      const r=await fetch("/api/"+path,{method:body?"POST":"GET",credentials:"same-origin",redirect:"error",cache:"no-store",signal:abort.signal,headers:body?{"Content-Type":"application/json"}:{},body:body?JSON.stringify(body):undefined});
+      let data;try{data=await r.json()}catch{throw Error("Hier antwortet kein X6-Labordienst.")}
+      if(!r.ok)throw Error(data.error||"HTTP "+r.status);return data;
+    }finally{clearTimeout(tm)}
+  }
+  async function archive(){
+    const rows=await api("archive"), box=el("Archive");box.replaceChildren();
+    if(!rows.length)box.textContent="Keine versiegelten Läufe.";
+    for(const row of rows){
+      const d=document.createElement("details"),s=document.createElement("summary");
+      s.textContent=(states[row.state]||row.state)+" · "+row.utc+" · "+row.id.slice(0,8);d.append(s);
+      for(const f of row.files){const a=document.createElement("a");a.textContent=f;a.href="/api/files/"+encodeURIComponent(row.id)+"/"+encodeURIComponent(f);a.download=f;d.append(a,document.createTextNode("  "));}box.append(d);
+    }
+  }
+  function stale(e){
+    healthy=false;el("Link").textContent="Verbindung unterbrochen";el("State").textContent="Letzter Stand · veraltet";
+    el("Msg").textContent=e.message+" Der Gerätezustand ist unbekannt.";buttons();
+  }
+  async function poll(force=false){
+    if(!tracking||((busy||polling)&&!force))return;
+    polling=true;
+    const ticket=++epoch;
+    try{const next=await api("status");if(ticket!==epoch)return;
+      if(next.api!=="x6.bench.v1")throw Error("Dienstkennung unerwartet");
+      info=next;healthy=true;lastStatus=Date.now();render();const key=info.run.run_id+"/"+info.run.state;
+      if(force||archived!==key){await archive();archived=key;}
+    }catch(e){if(ticket===epoch)stale(e)}finally{if(ticket===epoch)polling=false}
+  }
+  el("Login").onclick=async()=>{
+    busy=true;buttons();try{await api("login",{token:el("Token").value});el("Token").value="";tracking=true;archived="";await poll(true);if(healthy)el("Msg").textContent="Mit dem lokalen Erfassungsdienst verbunden.";}
+    catch(e){stale(e)}finally{busy=false;buttons()}
+  };
+  el("Refresh").onclick=()=>poll(true);el("Mode").onchange=()=>el("Duration").hidden=el("Mode").value==="schedule";
+  async function command(action){
+    if(!healthy||busy)return;
+    busy=true;++epoch;buttons();
+    try{
+      const req={action,run_id:info.run.run_id,request_id:crypto.randomUUID().replaceAll("-","")};
+      if(action==="arm"){
+        let sha=null;
+        if(info.source!=="example"){
+          const file=el("Cal").files[0];if(!file||!file.size||file.size>2097152)throw Error("Kalibrierdatei von 1 Byte bis 2 MiB auswählen.");
+          const b=new Uint8Array(await file.arrayBuffer()), parts=[];
+          sha=Array.from(new Uint8Array(await crypto.subtle.digest("SHA-256",b)),x=>x.toString(16).padStart(2,"0")).join("");
+          for(let i=0;i<b.length;i+=8192)parts.push(String.fromCharCode(...b.subarray(i,i+8192)));req.calibration_b64=btoa(parts.join(""));
+        }
+        req.config={operator:el("Op").value,label:el("Label").value,mode:el("Mode").value,seconds:Number(el("Seconds").value),frames:Number(el("Frames").value),first_sequence:el("Seq").value.trim(),timeout_s:Number(el("Timeout").value),calibration_sha256:sha,local_ready:el("Ready").checked};
+      }
+      const ack=await api("command",req);el("Msg").textContent=(ack.scope==="host"?"Messrechner":"Controller")+" bestätigt · "+ack.action+" · "+ack.utc;
+      if(action==="arm")el("Ready").checked=false;
+    }catch(e){el("Msg").textContent=e.message+" · Vor einem erneuten Befehl Laufstatus prüfen."}
+    finally{await poll(true);busy=false;buttons()}
+  }
+  for(const [id,cmd] of Object.entries({Arm:"arm",Start:"start",Stop:"stop",Abort:"abort",Shutter:"shutter",Off:"shutter_off"}))el(id).onclick=()=>command(cmd);
+  const checkAge=()=>{if(healthy&&Date.now()-lastStatus>7000)stale(Error("Letzte Statusantwort älter als 7 s."));};
+  document.addEventListener("visibilitychange",()=>{if(!document.hidden){checkAge();poll()}});
+  setInterval(()=>{checkAge();if(!document.hidden&&!document.getElementById("bench").hidden)poll()},2500);
+  el("Token").disabled=!served;
+  if(!served)el("Msg").textContent="Offline-Ansicht. Für den Gerätebetrieb die vom Messrechner ausgegebene Adresse öffnen.";
+  buttons();
+})();
+
+</script></body></html>
