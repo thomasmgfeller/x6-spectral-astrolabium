@@ -1,5 +1,15 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Wachstumsmass und Robustheitskarte für Randfamilie C · 4. November 2026
+
+**Wachstumsmass.** Wie ändern sich die späten Schichtbreiten, wenn die 840 Geometrien nach ihrer Entstehungswahrscheinlichkeit gewichtet werden? Beim geprüften Wachstum durch transitive Perkolation mit `p = 1/2` erhalten die drei möglichen Endgrössen dieselbe Stoppwahrscheinlichkeit. Für die Vorhersage „Breite zwei oder drei“ beträgt das normierte Zweiggewicht 2,33 % (gefordert sind mindestens 80 %). Die Interferenz erreicht 0,28526 und überschreitet die Grenze von 1/21. Damit bleibt auch die Vorhersage der Breite eins offen. Die lineare Verwendung der klassischen Gewichte in der Amplitudensumme ist eine Modellannahme.
+
+[Prüfbericht zum Wachstumsmass (PDF)](reports/Staubball_C_Wachstumsmass.pdf) · [Reproduktionspaket zum Wachstumsmass (ZIP)](packages/Staubball_C_Wachstumsmass_Pruefpaket.zip)
+
+**Robustheitskarte.** Zwischen der früheren Symmetriegewichtung und der Gleichzählung der Geometrien variiert die Karte die Gesamtgewichte der Breitenklassen und die Verteilung innerhalb jeder Klasse unabhängig. Auf dieser Fläche bleibt das Zweiggewicht über 99 %. Bis zu einer Umstellung der Klassengewichte von 21,2 % besteht das Gate für jede Verteilung auf der zweiten Achse. Ab 23,9 % scheitert es für jede davon an der Interferenz. Das Wachstumsmass wird gesondert ausgewertet.
+
+[Zweidimensionale Robustheitskarte (PDF)](reports/Staubball_C_Robustheitskarte.pdf) · [Reproduktionspaket zur Karte (ZIP)](packages/Staubball_C_Robustheitskarte_Pruefpaket.zip)
+
 ## Wie die Gewichtung der Geometrien die Prognose in Randfamilie C verändert · 4. November 2026
 
 Der Test hält die frühen Daten und alle 822 792 markierten Historien fest. Er vergleicht die bisherige Gewichtung nach Symmetrie mit der Gleichgewichtung der 840 unmarkierten Geometrien. Das normierte Zweiggewicht für eine späte Schichtbreite von zwei oder drei bleibt auf dem gesamten linearen Übergang über 99 %. Die Interferenz überschreitet ihre Grenze von 1/21, sobald der Anteil der Gleichgewichtung die zertifizierte Schwelle von rund 22,5 % übersteigt.
