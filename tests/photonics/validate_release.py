@@ -104,7 +104,16 @@ def main():
                         geometry_count += 1
             assert (jig / 'JIG_F1_Bauanleitung.pdf').read_bytes() == (PUB / 'manuals/JIG_F1_Bauanleitung_v0_1_1.pdf').read_bytes()
             report['checks'].append({'name': 'reference_identity_and_unchanged_jig_geometry', 'status': 'PASS', 'geometry_files': geometry_count})
+            lab = packages['X6_Photonik_Laborbetrieb_v0_1.zip']
+            lab_source = PUB / 'laborbetrieb-v0.1'
+            published = {p.relative_to(lab_source) for p in lab_source.rglob('*')
+                         if p.is_file() and '__pycache__' not in p.parts}
+            packaged = {p.relative_to(lab) for p in lab.rglob('*') if p.is_file()}
+            assert published == packaged, 'lab package and source file sets differ'
+            for rel in sorted(packaged):
+                assert (lab / rel).read_bytes() == (lab_source / rel).read_bytes(), rel
             suites = [
+                ('laborbetrieb_v01', lab, 'test_labor.py'),
                 ('sagnac_v07_host', sagnac / 'host', 'test_*.py'),
                 ('sagnac_v06_host', packages['Sagnac_v0_6_Referenzkern_und_Pruefprotokoll.zip'] / 'host', 'test_*.py'),
                 ('legacy_v01_statistics', packages['Photonische_Messkette_v0_1_Auswertung.zip'], 'test_photon_stats.py'),
