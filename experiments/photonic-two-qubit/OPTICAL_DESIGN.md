@@ -6,6 +6,10 @@ Ein nominaler 405-nm-Pumpstrahl soll einen Typ-II-ppKTP-Kristall in zwei gegenl�
 
 Nach Pumpunterdrückung und geeigneter Auskopplung besitzt jeder der zwei Messarme einen Polarisationsanalysator. Je ein QWP/HWP/PBS-System soll die Analysebasis einstellen und die Ausgänge auf A+/A− bzw. B+/B− führen. Optikreihenfolge, Achsenkonventionen und tatsächliche Stellwinkel sind experimentell zu kalibrieren. Die Winkel 0°, 45°, +22,5°, −22,5° in der CHSH-Referenz sind Analyseachsen, keine ungeprüft übertragbaren Motor- oder Wellenplattenwinkel.
 
+## Übergang vom Funktionsentwurf zur Auslegung
+
+Die [Bauteilspezifikation v0.1](optics/optikplan-v0.1/README.md) legt unter anderem Pumpbandbreite, Kristalllänge, Filter und Timingziele fest. Der [Optikplan v0.2](optics/optikplan-v0.2/README.md) berechnet die spektral-zeitliche Überlappung beider Sagnac-Richtungen, die Modenanpassung und die vier Paar-Zeitantworten und benennt die erforderlichen Kalibrierdaten. Die folgende Übersicht beschreibt den ursprünglichen Funktionsbedarf.
+
 ## Vor einer Beschaffung zu schließen
 
 | Baugruppe | Vorgesehene Funktion | Noch zu spezifizieren / nachzuweisen |

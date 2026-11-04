@@ -58,6 +58,8 @@ def main():
         for item in provenance['files']:
             assert hashlib.sha256((PUB / item['path']).read_bytes()).hexdigest() == item['sha256'], item['path']
         report['checks'].append({'name': 'primary_artifact_hashes', 'status': 'PASS', 'count': len(provenance['files'])})
+        run('optics_v02_design', [sys.executable, '-m', 'unittest', '-v', 'test_model'],
+            PUB / 'optics/optikplan-v0.2')
         with tempfile.TemporaryDirectory(prefix='x6-photonic-') as tmp:
             work = Path(tmp)
             packages = {}
