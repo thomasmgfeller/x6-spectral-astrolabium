@@ -1,5 +1,11 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Massestreuung innerhalb und ausserhalb der Staubkugel · 4. November 2026
+
+Die räumliche Aufteilung ergänzt die vier bisherigen Zeitabschnitte. Bei einer Eingangsdichte von 6 Millionen Ereignissen je Einheit Vierervolumen steigt die numerisch ausgewertete Untergrenze der Standardabweichung in Fenster B von 0,1335 % auf 0,1521 % der Sollmasse. In Fenster A steigt sie von 0,0892 % auf 0,1796 %. Dort bleibt die frühere statistische Untergrenze von 2,8437 % aus dem Endbereichstest stärker. Zwei Integrationsverfahren und 216 Geometriekontrollen prüfen die Rechnung. Eine garantierte numerische Fehlerschranke und die Trefferwahrscheinlichkeit der vollständigen Piloten bleiben offen.
+
+[Räumlicher Prüfbericht (PDF)](reports/Staubball_Raeumliche_Zaehlfluktuationen.pdf) · [Reproduktionspaket mit Code, Eingaben und Ergebnissen (ZIP)](packages/Staubball_Raeumliche_Zaehlfluktuationen_Pruefpaket.zip)
+
 ## Massestreuung aus vier Zeitabschnitten · 4. November 2026
 
 Für den geglätteten Massestrom im räumlich unbeschränkten Staubmodell liefert eine Poisson-Projektion eine Untergrenze für die Standardabweichung. Bei der Eingangsdichte 6 Millionen beträgt der numerisch ausgewertete Wert in Fenster B (kurze Zukunft) 0,1335 % der Sollmasse. Die frühere statistische Untergrenze aus dem Endbereichstest betrug 0,0568 %. In Fenster A bleibt der frühere Wert von 2,8437 % stärker. Die Ungleichung ist exakt. Die Zahlen beruhen auf gegengeprüften Quadraturen ohne garantierte Rundungsfehlereinschliessung. Die Trefferwahrscheinlichkeit der vollständigen Piloten bleibt offen.
