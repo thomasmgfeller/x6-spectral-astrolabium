@@ -1,5 +1,13 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Frühe Daten und späte Schichtbreite in Randfamilie C · 4. November 2026
+
+Die vorab festgelegte Aussage „Die späte Schicht enthält zwei oder drei Ereignisse“ besteht im endlichen Modell auch bei einer festen vorletzten Schichtbreite von vier. Die Summe über 54 579 Ausgangsgeometrien und 822 792 markierte Historien ergibt für die ursprünglichen frühen Daten ein normiertes Zweiggewicht von 0,999947 und eine Interferenz von 0,014077. Die zuvor geprüfte Familie B verfehlt mit denselben frühen Daten die Interferenzschwelle von 1/21.
+
+In C besteht die Aussage schon bei reiner Zählung mit den ursprünglichen Geometriegewichten. Werden die Gesamtgewichte der drei Breitenklassen versuchsweise angeglichen, sinkt das Zweiggewicht für „zwei oder drei“ auf 0,002594 und die Freigabe scheitert. Eine Vorhersage des physikalischen Staubvolumens allein aus den frühen Daten bleibt offen.
+
+[Prüfbericht zur Randfamilie C (PDF)](reports/Staubball_Randfamilie_C.pdf) · [Reproduktionspaket mit Testplan, Code und Gegenrechnungen (ZIP)](packages/Staubball_Randfamilie_C_Pruefpaket.zip)
+
 ## Paartest B auf unabhängigen Rechnern · 4. November 2026
 
 Für die 149 festen Paarkennungen steht ein Paket zur Erstberechnung, unabhängigen Nachrechnung und einmaligen Verbuchung bereit. Es schliesst für die gespeicherten Binärkoordinaten den Fehler an der Abstandsschwelle ein. Vier historische Kontrollen reproduzierten ihre Einstufungen. Die Schlussauswertung setzt 149 verifizierte Kennungen voraus. Die Übertragung auf das ideale kontinuierliche Poisson-Modell bleibt an die im Bericht beschriebenen Generatorannahmen gebunden.
