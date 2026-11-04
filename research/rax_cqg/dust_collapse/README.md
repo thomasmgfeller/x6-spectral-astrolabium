@@ -1,5 +1,13 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Garantierte Streuungsuntergrenze für Fenster B · 4. November 2026
+
+Für den festgelegten Staubmassenschätzer in Fenster B ist die Standardabweichung grösser als 0,156 % der Sollmasse. Auch mit der bei 403 Schichten abgeschnittenen Tabelle liegt sie in exakter Arithmetik über 0,155 %. Damit scheitert der untersuchte symmetrische Tschebyscheff-Nachweis einer Trefferwahrscheinlichkeit von 95 %. Die tatsächliche Trefferwahrscheinlichkeit bleibt offen. Der Bericht enthält den Rechenbeweis mit Fehlergrenzen und den Entwurf eines getrennten Paartests.
+
+[Prüfbericht (PDF)](reports/Staubball_B_Streuungszertifikat.pdf) · [Reproduktionspaket mit beiden Zertifikaten (ZIP)](packages/Staubball_B_Streuungszertifikat_Pruefpaket.zip)
+
+**Freiwillige für zwei kurze CPU-Zeitmessungen gesucht.** Ein Durchlauf von `budget.py` misst zwei technische Fälle auf dem eigenen Rechner. Auf dem Referenzrechner betrug die gemessene CPU-Zeit zusammen rund 23 Sekunden, zuzüglich Einrichtung und Kompilierung. Die daraus hochgerechneten 14,54 bis 16,34 Kernstunden gelten für einen späteren Test mit 149 Paaren. Freiwillige stellen Rechner und Betriebszeit unentgeltlich zur Verfügung. Für Thomas Gfeller und das Projekt gilt CHF 0. [Zeitmessungen übernehmen und Ergebnisse zurückgeben (#206)](https://github.com/thomasmgfeller/x6-spectral-astrolabium/issues/206)
+
 ## Massestreuung innerhalb und ausserhalb der Staubkugel · 4. November 2026
 
 Die räumliche Aufteilung ergänzt die vier bisherigen Zeitabschnitte. Bei einer Eingangsdichte von 6 Millionen Ereignissen je Einheit Vierervolumen steigt die numerisch ausgewertete Untergrenze der Standardabweichung in Fenster B von 0,1335 % auf 0,1521 % der Sollmasse. In Fenster A steigt sie von 0,0892 % auf 0,1796 %. Dort bleibt die frühere statistische Untergrenze von 2,8437 % aus dem Endbereichstest stärker. Zwei Integrationsverfahren und 216 Geometriekontrollen prüfen die Rechnung. Eine garantierte numerische Fehlerschranke und die Trefferwahrscheinlichkeit der vollständigen Piloten bleiben offen.
