@@ -1,5 +1,13 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Wie die Gewichtung der Geometrien die Prognose in Randfamilie C verändert · 4. November 2026
+
+Der Test hält die frühen Daten und alle 822 792 markierten Historien fest. Er vergleicht die bisherige Gewichtung nach Symmetrie mit der Gleichgewichtung der 840 unmarkierten Geometrien. Das normierte Zweiggewicht für eine späte Schichtbreite von zwei oder drei bleibt auf dem gesamten linearen Übergang über 99 %. Die Interferenz überschreitet ihre Grenze von 1/21, sobald der Anteil der Gleichgewichtung die zertifizierte Schwelle von rund 22,5 % übersteigt.
+
+Schon der Austausch der Gesamtgewichte der drei Breitenklassen lässt die Prognose scheitern. Ändert man nur die Verteilung innerhalb der Klassen, besteht sie weiterhin. Welches Mass physikalisch begründet ist und wie zuverlässig sich das Staubvolumen einer einzelnen Ordnung bestimmen lässt, bleibt offen.
+
+[Prüfbericht zum Mass-Gate C (PDF)](reports/Staubball_C_Massgate.pdf) · [Prüfpaket mit Code, Daten und Interferenzzertifikat (ZIP)](packages/Staubball_C_Massgate_Pruefpaket.zip)
+
 ## Frühe Daten und späte Schichtbreite in Randfamilie C · 4. November 2026
 
 Die vorab festgelegte Aussage „Die späte Schicht enthält zwei oder drei Ereignisse“ besteht im endlichen Modell auch bei einer festen vorletzten Schichtbreite von vier. Die Summe über 54 579 Ausgangsgeometrien und 822 792 markierte Historien ergibt für die ursprünglichen frühen Daten ein normiertes Zweiggewicht von 0,999947 und eine Interferenz von 0,014077. Die zuvor geprüfte Familie B verfehlt mit denselben frühen Daten die Interferenzschwelle von 1/21.
