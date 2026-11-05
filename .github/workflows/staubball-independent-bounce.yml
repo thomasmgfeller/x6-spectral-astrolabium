@@ -26,6 +26,7 @@ jobs:
           cache: pip
           cache-dependency-path: research/rax_cqg/dust_collapse/independent_bounce_v0_1/publication-requirements.txt
       - name: Install pinned numerical dependencies
-        run: python3 -m pip install --only-binary=:all: -r research/rax_cqg/dust_collapse/independent_bounce_v0_1/publication-requirements.txt
+        run: |
+          python3 -m pip install --only-binary=:all: -r research/rax_cqg/dust_collapse/independent_bounce_v0_1/publication-requirements.txt
       - name: Verify original artifacts, forecasts and numerical replay
         run: python3 research/rax_cqg/dust_collapse/independent_bounce_v0_1/publication_check.py --replay
