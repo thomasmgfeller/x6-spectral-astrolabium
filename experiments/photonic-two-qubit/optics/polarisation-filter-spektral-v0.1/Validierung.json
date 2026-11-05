@@ -1,0 +1,52 @@
+{
+  "date": "2026-11-05",
+  "baseline_commit": "f97307cd93070d1a57a62cb2e1c1d4dc232fb45e",
+  "python_tests": {
+    "status": "PASS",
+    "count": 15,
+    "command": "python -m unittest -v test_analysis"
+  },
+  "coherence_sign_check": {
+    "status": "PASS",
+    "method": "Independent 4x4 Pauli expectations for four pure HV/VH states"
+  },
+  "schema_consistency": {
+    "status": "PASS",
+    "transfer_rows": 16,
+    "spectral_tests": 23,
+    "filter_bom_positions": 6,
+    "measured_results_empty": true
+  },
+  "empty_spectral_template": {
+    "status": "PASS_REJECTED_AS_REQUIRED"
+  },
+  "workbook": {
+    "status": "PASS",
+    "sheets": 4,
+    "formula_count": 27,
+    "exported_error_cells": 0,
+    "measured_inputs_empty": true,
+    "rendered_all_sheets": true,
+    "checks": [
+      "OD required vs independent Python",
+      "OD14 rate vs independent Python",
+      "Jones leakage vs independent Python",
+      "remove upstream rejection",
+      "valid zero power",
+      "Edited inputs, missing/zero distinction, incomplete evidence and restored measured blanks"
+    ],
+    "error_scan": "{\"kind\":\"notice\",\"message\":\"Cell search matched 0 entries.\"}",
+    "native_excel": "NOT_RUN",
+    "all_measurement_inputs_empty": true
+  },
+  "pdf": {
+    "pages": 16,
+    "rendered_visual_inspection": "PASS"
+  },
+  "hardware_status": "NOT_RUN",
+  "bom_status": "HOLD",
+  "catalog_data": "Manufacturer catalogue bounds checked; serial-specific numeric curves unavailable",
+  "uncertainty_certification": "NOT_RUN",
+  "supplier_messages_sent": false,
+  "github_publication_this_package": "NOT_RUN"
+}

@@ -1,0 +1,32 @@
+{
+  "schema": "x6.filter-curve/0.1",
+  "origin": "TEMPLATE_NOT_MEASURED",
+  "bom_id": null,
+  "manufacturer": null,
+  "part_number": null,
+  "serial_number": null,
+  "data_kind": null,
+  "wavelength_convention": "vacuum_nm",
+  "temperature_C": null,
+  "aoi_deg": null,
+  "azimuth_deg": null,
+  "cone_half_angle_deg": null,
+  "propagation_direction": null,
+  "coating_face": null,
+  "polarization_basis": null,
+  "lsf_fwhm_nm": null,
+  "wavelength_expanded_uncertainty_nm": null,
+  "power_calibration": null,
+  "detection_floor": null,
+  "columns": [
+    "wavelength_nm",
+    "T_H",
+    "T_V",
+    "T_H_upper",
+    "T_V_upper",
+    "phase_H_rad",
+    "phase_V_rad"
+  ],
+  "rows": [],
+  "notes": "No phase may be inferred from intensity. Upper bounds at detection floor are censored data, never T=0. No extrapolation beyond measured support."
+}
