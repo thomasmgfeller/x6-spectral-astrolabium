@@ -556,6 +556,8 @@ Read [Sagnac integration and test scope](docs/SAGNAC_INTEGRATION.md).
 
 ## Photonic two-qubit experiment — design preview
 
+**[Mount drawings and CAD v0.1](experiments/photonic-two-qubit/mechanics/halter-v0.1/README.md)** provides nine dimensioned A3 sheets, six STEP parts and nine DXF drawings. Manufacturing remains HOLD: actual component interfaces are open and the centred O04/DM base arrangement collides. [PDF drawings](experiments/photonic-two-qubit/mechanics/halter-v0.1/X6_Halterzeichnungen_v0_1.pdf) · [CAD package](experiments/photonic-two-qubit/mechanics/halter-v0.1/X6_Halterzeichnungen_v0_1_CAD.zip)
+
 **[Reference detector qualification and separate frontend characterization v0.1](experiments/photonic-two-qubit/hardware/detection-qualification-v0.1/README.md)** provides 15 reference-chain checks, 10 frontend checks and seven optical detector metrics, with a 15-page PDF, empty measurement templates and offline analysis. All 47 synthetic software tests pass; physical qualification remains NOT_RUN and BOM freeze HOLD. [Complete package](experiments/photonic-two-qubit/hardware/detection-qualification-v0.1/X6_Detektionsqualifikation_v0_1_Pruefpaket.zip)
 
 **[Polarization transfer, filter budget and spectral test matrix v0.1](experiments/photonic-two-qubit/optics/polarisation-filter-spektral-v0.1/README.md)** documents 16 CW/CCW transfer steps, a count-rate-based rejection budget and 23 spectral tests, with PDF, editable Excel and a reproducible Python package. All 15 model checks pass; serial filter curves and laboratory spectra are still missing. Hardware NOT_RUN, BOM freeze HOLD.

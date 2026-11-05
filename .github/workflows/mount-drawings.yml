@@ -1,0 +1,25 @@
+name: Mount Drawings Integrity
+on:
+  pull_request:
+    paths:
+      - 'experiments/photonic-two-qubit/mechanics/halter-v0.1/**'
+      - '.github/workflows/mount-drawings.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'experiments/photonic-two-qubit/mechanics/halter-v0.1/**'
+      - '.github/workflows/mount-drawings.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  package-integrity:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Verify delivered CAD package and unresolved collision
+        run: python experiments/photonic-two-qubit/mechanics/halter-v0.1/publication_check.py

@@ -27,6 +27,8 @@ Auf dem Linux-Messrechner das Paket entpacken und `python3 labor_server.py` star
 
 ## Einstieg und Unterlagen
 
+- **[Halterzeichnungen und CAD v0.1](mechanics/halter-v0.1/README.md)** — neun bemaßte A3-Blätter, sechs STEP-Bauteile und neun DXF-Zeichnungen; Fertigung `HOLD`, reale Schnittstellen offen, Kollision der zentrierten O04/DM-Sockel dokumentiert.
+
 - **[Referenzdetektion elektrisch qualifizieren; Eigenfrontend getrennt charakterisieren v0.1](hardware/detection-qualification-v0.1/README.md)** — 15 Referenzprüfungen, 10 Frontendprüfungen, sieben optische Detektormetriken; PDF, leere Messvorlagen und 47 bestandene Softwaretests. Reale Hardwarequalifikation `NOT_RUN`, BOM-Freeze `HOLD`.
 
 - **[Polarisationstransfer, Filterbudget und spektrale Prüfmatrix v0.1](optics/polarisation-filter-spektral-v0.1/README.md)** — 16 CW/CCW-Transferschritte, vier Excel-Arbeitsblätter, 23 Prüfungen und 15 bestandene Rechentests. Serienfilterkurven, komplexe Transferdaten und reale Spektren fehlen; Hardware `NOT_RUN`, BOM-Freeze `HOLD`.
