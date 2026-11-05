@@ -1,0 +1,365 @@
+{
+  "document_id": "X6-PUMP-SYSTEM-TARGETS-0.1",
+  "scope": "DESIGN_ONLY",
+  "date": "2026-11-05",
+  "targets": [
+    {
+      "id": "P03",
+      "name": "pump spectral FWHM",
+      "unit": "nm",
+      "upper": 0.1,
+      "origin": "S1",
+      "kind": "REQUIREMENT",
+      "verification_rule": "Resolved line or conservative upper bound; include instrument function and uncertainty",
+      "measurement_status": "NOT_RUN",
+      "evidence_refs": []
+    },
+    {
+      "id": "P04",
+      "name": "total incident crystal pump power",
+      "unit": "mW",
+      "lower": 0.1,
+      "upper": 3,
+      "origin": "S1 with new operational definition PC_cw + PC_ccw",
+      "kind": "REQUIREMENT",
+      "verification_rule": "Adjustable operating range; calibrated two-direction sum, not source output power",
+      "measurement_status": "NOT_RUN",
+      "evidence_refs": []
+    },
+    {
+      "id": "P05",
+      "name": "DOP at P1",
+      "unit": "1",
+      "lower": 0.99,
+      "origin": "NEW_PROJECT_TARGET",
+      "kind": "REQUIREMENT",
+      "verification_rule": "Calibrated Stokes measurement; estimate minus U >= lower",
+      "measurement_status": "NOT_RUN",
+      "evidence_refs": []
+    },
+    {
+      "id": "P06",
+      "name": "M2 per principal axis",
+      "unit": "1",
+      "upper": 1.3,
+      "origin": "NEW_PROJECT_TARGET",
+      "kind": "DESIGN_PREFERENCE",
+      "verification_rule": "Preference only; values above require adapted propagation and overlap model",
+      "measurement_status": "NOT_RUN",
+      "evidence_refs": []
+    },
+    {
+      "id": "P07",
+      "name": "centre wavelength expanded uncertainty",
+      "unit": "nm",
+      "upper": 0.02,
+      "origin": "NEW_METROLOGY_TARGET",
+      "kind": "METROLOGY_TARGET",
+      "verification_rule": "U with k=2; report air/vacuum convention",
+      "measurement_status": "NOT_RUN",
+      "evidence_refs": []
+    },
+    {
+      "id": "P08",
+      "name": "spectrometer instrumental FWHM",
+      "unit": "nm",
+      "upper": 0.02,
+      "origin": "NEW_METROLOGY_TARGET",
+      "kind": "METROLOGY_TARGET",
+      "verification_rule": "Characterize line spread function; no proof from pixel spacing alone",
+      "measurement_status": "NOT_RUN",
+      "evidence_refs": []
+    },
+    {
+      "id": "P09",
+      "name": "absolute power relative expanded uncertainty",
+      "unit": "percent",
+      "upper": 5,
+      "origin": "NEW_METROLOGY_TARGET",
+      "kind": "METROLOGY_TARGET",
+      "verification_rule": "k=2 at actual wavelength and measurement plane",
+      "measurement_status": "NOT_RUN",
+      "evidence_refs": []
+    },
+    {
+      "id": "P10",
+      "name": "beam diameter relative expanded uncertainty",
+      "unit": "percent",
+      "upper": 5,
+      "origin": "NEW_METROLOGY_TARGET",
+      "kind": "METROLOGY_TARGET",
+      "verification_rule": "k=2; D4sigma plus background/ROI/pixel calibration",
+      "measurement_status": "NOT_RUN",
+      "evidence_refs": []
+    },
+    {
+      "id": "P11",
+      "name": "M2 relative expanded uncertainty",
+      "unit": "percent",
+      "upper": 10,
+      "origin": "NEW_METROLOGY_TARGET",
+      "kind": "METROLOGY_TARGET",
+      "verification_rule": "k=2; fit covariance and systematic effects",
+      "measurement_status": "NOT_RUN",
+      "evidence_refs": []
+    },
+    {
+      "id": "P12",
+      "name": "relative power-change expanded uncertainty",
+      "unit": "percentage_points",
+      "upper": 0.5,
+      "origin": "NEW_METROLOGY_TARGET",
+      "kind": "METROLOGY_TARGET",
+      "verification_rule": "k=2 for change relative to prefrozen setpoint, shared calibration correlations included",
+      "measurement_status": "NOT_RUN",
+      "evidence_refs": []
+    },
+    {
+      "id": "S01",
+      "name": "raw visibility HV and DA",
+      "unit": "1",
+      "lower": 0.9,
+      "origin": "S1",
+      "kind": "REQUIREMENT",
+      "verification_rule": "Separate calibration scan, equal exposure, no background subtraction, uncertainty reported",
+      "measurement_status": "NOT_RUN",
+      "evidence_refs": []
+    },
+    {
+      "id": "S02",
+      "name": "unique pairs per setting",
+      "unit": "count",
+      "lower": 2000,
+      "origin": "S1",
+      "kind": "REQUIREMENT",
+      "verification_rule": "Four settings each 600 s; 20 x 4 x 30 s total; no post-hoc extension",
+      "measurement_status": "NOT_RUN",
+      "evidence_refs": []
+    },
+    {
+      "id": "S03a",
+      "name": "relative electrical jitter",
+      "unit": "ps_RMS",
+      "upper": 200,
+      "origin": "S1",
+      "kind": "REQUIREMENT",
+      "verification_rule": "Common-input pulse characterization; reference contributions documented",
+      "measurement_status": "NOT_RUN",
+      "evidence_refs": []
+    },
+    {
+      "id": "S03b",
+      "name": "local corrected residual channel offset",
+      "unit": "ps",
+      "abs_upper": 100,
+      "origin": "S1",
+      "kind": "REQUIREMENT",
+      "verification_rule": "Frozen local offsets, checked across channel pairs",
+      "measurement_status": "NOT_RUN",
+      "evidence_refs": []
+    },
+    {
+      "id": "S03c",
+      "name": "timestamp step",
+      "unit": "ps",
+      "upper": 100,
+      "origin": "S1",
+      "kind": "REQUIREMENT",
+      "verification_rule": "Separately from measured timing jitter",
+      "measurement_status": "NOT_RUN",
+      "evidence_refs": []
+    },
+    {
+      "id": "S04",
+      "name": "optical coincidence peak FWHM",
+      "unit": "ps",
+      "upper": 1000,
+      "origin": "S1",
+      "kind": "REQUIREMENT",
+      "verification_rule": "Report full response including tails; primary coincidence window full width 2000 ps",
+      "measurement_status": "NOT_RUN",
+      "evidence_refs": []
+    },
+    {
+      "id": "S05a",
+      "name": "peak centroid drift",
+      "unit": "ps",
+      "abs_upper": 100,
+      "origin": "S1",
+      "kind": "REQUIREMENT",
+      "verification_rule": "Relative to frozen calibration",
+      "measurement_status": "NOT_RUN",
+      "evidence_refs": []
+    },
+    {
+      "id": "S05b",
+      "name": "overflow sequence loss and count mismatch",
+      "unit": "count",
+      "equals": 0,
+      "origin": "S1",
+      "kind": "REQUIREMENT",
+      "verification_rule": "Individual 1e6-pulse tests at 1 MHz; simultaneous 1 MHz/channel test; complete archive path",
+      "measurement_status": "NOT_RUN",
+      "evidence_refs": []
+    },
+    {
+      "id": "S06a",
+      "name": "pump deviation from frozen total setpoint",
+      "unit": "percent",
+      "abs_upper": 2,
+      "origin": "S1",
+      "kind": "REQUIREMENT",
+      "verification_rule": "All logged samples during full run; guard band includes U_delta",
+      "measurement_status": "NOT_RUN",
+      "evidence_refs": []
+    },
+    {
+      "id": "S06b",
+      "name": "crystal temperature deviation",
+      "unit": "degC",
+      "abs_upper": 0.05,
+      "origin": "S1",
+      "kind": "REQUIREMENT",
+      "verification_rule": "Full run; sensor location, gradients and uncertainty documented",
+      "measurement_status": "NOT_RUN",
+      "evidence_refs": []
+    },
+    {
+      "id": "S07a",
+      "name": "singles per channel",
+      "unit": "counts_per_s",
+      "upper": 100000,
+      "origin": "S1",
+      "kind": "REQUIREMENT",
+      "verification_rule": "Ceiling, not operating setpoint",
+      "measurement_status": "NOT_RUN",
+      "evidence_refs": []
+    },
+    {
+      "id": "S07b",
+      "name": "ambiguous event-component fraction per setting",
+      "unit": "1",
+      "upper": 0.001,
+      "origin": "S1",
+      "kind": "REQUIREMENT",
+      "verification_rule": "M/(M+U), fixed bipartite component rule",
+      "measurement_status": "NOT_RUN",
+      "evidence_refs": []
+    },
+    {
+      "id": "S08",
+      "name": "delayed coincidences divided by central coincidences",
+      "unit": "1",
+      "upper": 0.01,
+      "origin": "S1",
+      "kind": "DESIGN_TARGET",
+      "verification_rule": "Four shifted windows +-50 and +-100 ns, full width 2 ns; no primary subtraction",
+      "measurement_status": "NOT_RUN",
+      "evidence_refs": []
+    },
+    {
+      "id": "S09",
+      "name": "detector system efficiency",
+      "unit": "1",
+      "lower": 0.4,
+      "origin": "S1 clarified reference plane",
+      "kind": "REQUIREMENT",
+      "verification_rule": "Calibrated photon flux at module input; actual wavelength; not bare sensor PDE",
+      "measurement_status": "NOT_RUN",
+      "evidence_refs": []
+    },
+    {
+      "id": "S10a",
+      "name": "dark rate upper one-sided 99 percent Poisson limit",
+      "unit": "counts_per_s",
+      "upper": 150,
+      "origin": "S1",
+      "kind": "REQUIREMENT",
+      "verification_rule": "Per channel 600 s after stabilization; statistical bound, no extra U guard band",
+      "measurement_status": "NOT_RUN",
+      "evidence_refs": []
+    },
+    {
+      "id": "S10b",
+      "name": "dead time",
+      "unit": "ns",
+      "upper": 50,
+      "origin": "S1",
+      "kind": "REQUIREMENT",
+      "verification_rule": "Optical recovery measurement; afterpulsing characterized separately",
+      "measurement_status": "NOT_RUN",
+      "evidence_refs": []
+    },
+    {
+      "id": "S11",
+      "name": "conditional CHSH lower confidence bound",
+      "unit": "1",
+      "strict_lower": 2,
+      "origin": "S1",
+      "kind": "REQUIREMENT",
+      "verification_rule": "L_T=2*sum(one-sided CP lower bounds alpha=.0025)-4; technical/model gates required",
+      "measurement_status": "NOT_RUN",
+      "evidence_refs": []
+    },
+    {
+      "id": "D01",
+      "name": "calibration pair-rate reserve",
+      "unit": "pairs_per_s",
+      "lower": 10,
+      "origin": "NEW_PLANNING_TARGET",
+      "kind": "PLANNING_TARGET",
+      "verification_rule": "Per setting across four output combinations; no performance guarantee or replacement of 2000-pair gate",
+      "measurement_status": "NOT_RUN",
+      "evidence_refs": []
+    },
+    {
+      "id": "D02",
+      "name": "crystal pump waist radius per axis",
+      "unit": "um",
+      "lower": 100,
+      "upper": 180,
+      "origin": "S1",
+      "kind": "DESIGN_SEARCH_RANGE",
+      "verification_rule": "Search range only; final accepted tolerances follow Gaussian/collection budget",
+      "measurement_status": "NOT_RUN",
+      "evidence_refs": []
+    }
+  ],
+  "pending_system_limits": [
+    "wavelength drift from QPM and spectral budget",
+    "position and pointing drift from collection budget",
+    "CW/CCW focus and spectral overlap tolerances"
+  ],
+  "sources": [
+    {
+      "id": "S1",
+      "title": "Optikplan_v0_1.pdf, 23.10.2026, insbesondere Seiten 2 bis 10",
+      "url": "https://chatgpt.com/library?file_id=libfile_d7993480d07c8191b1d0e30b25e09e82&account_id=personal"
+    },
+    {
+      "id": "S2",
+      "title": "X6_Photonik_Laborbuch.html, Version 3, Geräteauswahl",
+      "url": "https://chatgpt.com/library?file_id=libfile_2af811204a98819195f8a27e196ea8ed&account_id=personal"
+    },
+    {
+      "id": "S3",
+      "title": "Edmund Optics: Propagation of a Gaussian Beam Through a Thin Lens",
+      "url": "https://www.edmundoptics.com/knowledge-center/application-notes/lasers/gaussian-beam-propagation"
+    },
+    {
+      "id": "S4",
+      "title": "Edmund Optics: Beam Quality and Strehl Ratio",
+      "url": "https://www.edmundoptics.com/knowledge-center/application-notes/lasers/beam-quality-and-strehl-ratio"
+    },
+    {
+      "id": "S5",
+      "title": "Kim, Fiorentino, Wong: Polarization Sagnac source, PRA 73, 012316",
+      "url": "https://arxiv.org/abs/quant-ph/0509219"
+    },
+    {
+      "id": "S6",
+      "title": "Gerrits et al.: Calibration of free-space and fiber-coupled single-photon detectors",
+      "url": "https://www.nist.gov/publications/calibration-free-space-and-fiber-coupled-single-photon-detectors-0"
+    }
+  ]
+}

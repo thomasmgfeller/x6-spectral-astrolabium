@@ -1,0 +1,479 @@
+{
+  "contract_id": "X6-REFERENCE-ELECTRICAL-0.1",
+  "date": "2026-11-05",
+  "baseline_commit": "11bd0f067775080d36e5f9c650788a868d72a3c9",
+  "scope": "PLANNED_QUALIFICATION_AND_OFFLINE_SCREEN",
+  "hardware_status": "NOT_RUN",
+  "bom_freeze": "HOLD",
+  "channel_map": [
+    "A+",
+    "A-",
+    "B+",
+    "B-"
+  ],
+  "pair_order": [
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      2
+    ],
+    [
+      0,
+      3
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      1,
+      3
+    ],
+    [
+      2,
+      3
+    ]
+  ],
+  "eight_count_tests": [
+    "single_0",
+    "single_1",
+    "single_2",
+    "single_3",
+    "sim_0",
+    "sim_1",
+    "sim_2",
+    "sim_3"
+  ],
+  "cross_talk_order": [
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      2
+    ],
+    [
+      0,
+      3
+    ],
+    [
+      1,
+      0
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      1,
+      3
+    ],
+    [
+      2,
+      0
+    ],
+    [
+      2,
+      1
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      3,
+      0
+    ],
+    [
+      3,
+      1
+    ],
+    [
+      3,
+      2
+    ]
+  ],
+  "required_identity": [
+    "run_id",
+    "operator",
+    "utc_start",
+    "detector_serials",
+    "cable_ids",
+    "tagger_serial",
+    "tagger_license",
+    "sdk_version",
+    "generator_id",
+    "scope_id",
+    "timebase_calibration_id",
+    "channel_map"
+  ],
+  "identity_array_lengths": {
+    "detector_serials": 4,
+    "cable_ids": 4
+  },
+  "required_configuration": {
+    "instrument_model": "Time Tagger Ultra",
+    "resolution_mode": "Standard",
+    "sdk_channels": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "rising_edges_only": true,
+    "event_dividers": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "test_signals": [
+      false,
+      false,
+      false,
+      false
+    ],
+    "software_filter_enabled": false,
+    "additional_software_deadtime_ps": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "hardware_delay_ps": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "offset_application": "OFFLINE_ONCE_FROZEN"
+  },
+  "numeric_rules": [
+    {
+      "key": "supply_V",
+      "count": 4,
+      "unit": "V",
+      "origin": "S2",
+      "lower": 4.75,
+      "upper": 5.25
+    },
+    {
+      "key": "input_V",
+      "count": 4,
+      "unit": "V",
+      "origin": "S3",
+      "lower": -3,
+      "upper": 3
+    },
+    {
+      "key": "low_margin_V",
+      "count": 4,
+      "unit": "V",
+      "origin": "NEW_ENGINEERING_REQUIREMENT",
+      "lower": 0.1
+    },
+    {
+      "key": "high_margin_V",
+      "count": 4,
+      "unit": "V",
+      "origin": "NEW_ENGINEERING_REQUIREMENT",
+      "lower": 0.1
+    },
+    {
+      "key": "pulse_width_ns",
+      "count": 4,
+      "unit": "ns",
+      "origin": "S3",
+      "lower": 0.5
+    },
+    {
+      "key": "electrical_pair_sigma_ps",
+      "count": 6,
+      "unit": "ps_RMS",
+      "origin": "P1",
+      "lower": 0,
+      "upper": 200
+    },
+    {
+      "key": "offset_abs_ps",
+      "count": 6,
+      "unit": "ps",
+      "origin": "P1",
+      "lower": 0,
+      "upper": 100
+    },
+    {
+      "key": "drift_abs_ps",
+      "count": 6,
+      "unit": "ps",
+      "origin": "P1",
+      "lower": 0,
+      "upper": 100
+    },
+    {
+      "key": "timestamp_step_ps",
+      "count": 1,
+      "unit": "ps",
+      "origin": "P1",
+      "exclusive_lower": 0,
+      "upper": 100
+    },
+    {
+      "key": "issued_pulses",
+      "count": 8,
+      "unit": "count",
+      "origin": "P1",
+      "lower": 1000000,
+      "type": "integer"
+    },
+    {
+      "key": "mismatch_count",
+      "count": 8,
+      "unit": "count",
+      "origin": "P1",
+      "lower": 0,
+      "upper": 0,
+      "type": "integer"
+    },
+    {
+      "key": "missing_count",
+      "count": 8,
+      "unit": "count",
+      "origin": "P1",
+      "lower": 0,
+      "upper": 0,
+      "type": "integer"
+    },
+    {
+      "key": "duplicate_count",
+      "count": 8,
+      "unit": "count",
+      "origin": "P1",
+      "lower": 0,
+      "upper": 0,
+      "type": "integer"
+    },
+    {
+      "key": "overflow_count",
+      "count": 1,
+      "unit": "count",
+      "origin": "P1",
+      "lower": 0,
+      "upper": 0,
+      "type": "integer"
+    },
+    {
+      "key": "sequence_loss_count",
+      "count": 1,
+      "unit": "count",
+      "origin": "P1",
+      "lower": 0,
+      "upper": 0,
+      "type": "integer"
+    },
+    {
+      "key": "roundtrip_count_difference",
+      "count": 1,
+      "unit": "count",
+      "origin": "P1",
+      "lower": 0,
+      "upper": 0,
+      "type": "integer"
+    },
+    {
+      "key": "cross_talk_count",
+      "count": 12,
+      "unit": "count",
+      "origin": "NEW_ENGINEERING_REQUIREMENT",
+      "lower": 0,
+      "upper": 0,
+      "type": "integer"
+    },
+    {
+      "key": "sustained_duration_s",
+      "count": 1,
+      "unit": "s",
+      "origin": "NEW_ENGINEERING_REQUIREMENT",
+      "lower": 2400
+    },
+    {
+      "key": "generator_rate_hz",
+      "count": 5,
+      "unit": "Hz",
+      "origin": "NEW_TEST_SETUP_TOLERANCE",
+      "lower": 990000,
+      "upper": 1010000
+    },
+    {
+      "key": "sustained_rate_hz",
+      "count": 4,
+      "unit": "Hz",
+      "origin": "NEW_ELECTRONICAL_STRESS_ONLY",
+      "lower": 100000
+    }
+  ],
+  "required_tests": [
+    "R00",
+    "R01",
+    "R02",
+    "R03",
+    "R04",
+    "R05",
+    "R06",
+    "R07",
+    "R08",
+    "R09",
+    "R10",
+    "R11",
+    "R12",
+    "R13",
+    "R14"
+  ],
+  "tests": [
+    {
+      "id": "R00",
+      "name": "Identität und Konfiguration",
+      "procedure": "Seriennummern, Modellrevision, Ultra-Lizenz und Standardmodus; Detektor A+, A−, B+, B− eindeutig auf SDK 1..4. Kanaltausch als Negativkontrolle. Vollständiger Konfigurationsdump, positive Flanken, Divider=1, Testsignale/Filter/zusätzliche Softwaretotzeit aus.",
+      "criterion": "Keine unaufgelöste Identität; keine fremde Konfiguration. Konkrete Readback-Felder für installierte SDK-Version prüfen.",
+      "origin": "P2/P3/S3",
+      "status": "NOT_RUN",
+      "evidence_refs": []
+    },
+    {
+      "id": "R01",
+      "name": "Versorgung am Verbraucher",
+      "procedure": "Alle vier Detektoren angeschlossen; DC, Ripple, Start und Lastsprung direkt am Stecker aufnehmen. Leitungs- und Kontaktwiderstände, Strombegrenzung, Sicherungszweige, Gehäusetemperatur und Masseversatz protokollieren.",
+      "criterion": "Konservative Spannungsgrenzen vollständig 4,75..5,25 V; keine Strombegrenzung im Betrieb. Hersteller-Temperaturbereich und Montagebedingungen eingehalten.",
+      "origin": "S2",
+      "status": "NOT_RUN",
+      "evidence_refs": []
+    },
+    {
+      "id": "R02",
+      "name": "Puls am tatsächlichen Empfänger",
+      "procedure": "Jeden realen Detektor zuerst mit alleiniger 50-Ohm-Scope-Last messen; danach denselben Pfad zum Ultra. Nicht doppelt terminieren. Pegel, Breite auf Triggerhöhe, Flanke, Overshoot und Nachschwingen über Rate/Last erfassen.",
+      "criterion": "Mit Unsicherheit innerhalb −3..+3 V; Puls auf Triggerhöhe ≥0,5 ns; je Ereignis genau eine positive Überquerung.",
+      "origin": "S2/S3",
+      "status": "NOT_RUN",
+      "evidence_refs": []
+    },
+    {
+      "id": "R03",
+      "name": "Schwellenplateau und Zeitwanderung",
+      "procedure": "Schwelle vorsichtig um 1,0 V abtasten, z.B. 0,9/1,0/1,1 V nach Pegelprüfung. Zählrate und Mittelzeit vs. Schwelle/Amplitude; stabilen Bereich bestimmen und vor Validierung einfrieren.",
+      "criterion": "High- und Low-Reserve jeweils ≥0,10 V einschließlich Messunsicherheit (neue technische Reserve); keine zusätzlichen Flanken.",
+      "origin": "NEW/S2",
+      "status": "NOT_RUN",
+      "evidence_refs": []
+    },
+    {
+      "id": "R04",
+      "name": "Kanal- und Flankenbeweis",
+      "procedure": "Jeden Eingang einzeln anregen, negative Flanken separat prüfen, Steckplan fotografieren. Inaktive Eingänge an kontrollierten ruhigen Testlasten; reale Dunkelpulse nicht als Übersprechen klassifizieren.",
+      "criterion": "Nur erwarteter positiver SDK-Kanal; kanonische Zuordnung 0=A+, 1=A−, 2=B+, 3=B−.",
+      "origin": "P1/P3",
+      "status": "NOT_RUN",
+      "evidence_refs": []
+    },
+    {
+      "id": "R05",
+      "name": "Zählverluste und doppelte Ereignisse",
+      "procedure": "Asynchronen Pulsgeber unabhängig zählen: vier einzelne Läufe und ein gleichzeitiger Vierkanallauf, je 1 000 000 Pulse/Kanal bei nominal 1 MHz. 8 Kanalbeobachtungen. Bin- oder Pulsmuster mit unabhängigem Stimulus-ID-Nachweis; gleiche Summen allein reichen nicht.",
+      "criterion": "Mismatch=0, fehlend=0, doppelt=0, Overflow=0, Sequenzverlust=0. 1-MHz-Testtoleranz ±1 % als neue Messaufbau-Regel.",
+      "origin": "P1",
+      "status": "NOT_RUN",
+      "evidence_refs": []
+    },
+    {
+      "id": "R06",
+      "name": "Elektrischer Paarjitter",
+      "procedure": "Gleicher Puls über charakterisierten aktiven Verteiler/angepassten Splitter zu allen vier Eingängen. Amplitude, Fan-out-Skew und Kabel einzeln erfassen. Alle sechs Paare, unabhängige Puls-IDs, gesamte Verteilung ohne Fensterbeschnitt.",
+      "criterion": "Obergrenze der Standardabweichung ≤200 ps für jedes Paar. Referenz-/Verteilerbeiträge und Zeitbasis dokumentieren.",
+      "origin": "P1",
+      "status": "NOT_RUN",
+      "evidence_refs": []
+    },
+    {
+      "id": "R07",
+      "name": "Offsets unabhängig validieren",
+      "procedure": "Trainingslauf: vier feste Offsets relativ Kanal 0 bestimmen, Hash einfrieren. Neuer Validierungslauf mit getrennten Puls-IDs; Offsets einmal anwenden, keine Zentrierung auf Validierungsdaten.",
+      "criterion": "Für sechs Paare |Mittelwert|+U ≤100 ps. Unsicherheitsmethode und Abdeckung dokumentieren.",
+      "origin": "P1",
+      "status": "NOT_RUN",
+      "evidence_refs": []
+    },
+    {
+      "id": "R08",
+      "name": "Rate und Gleichzeitigkeit",
+      "procedure": "Neue Prüfpunkte z.B. 1, 10, 100, 500 und 1000 kHz/Kanal, einzeln/gleichzeitig; Impulspegel kontrollieren, Counts gegen unabhängigen Stimulus. Keine Aussage über optische Recovery aus diesem Test.",
+      "criterion": "Kein Verlust, kein zusätzlicher Impuls im vereinbarten Bereich; 100 kcps/Kanal ist später die optische Betriebsobergrenze.",
+      "origin": "P1/NEW",
+      "status": "NOT_RUN",
+      "evidence_refs": []
+    },
+    {
+      "id": "R09",
+      "name": "Dauer, Drift und Archiv",
+      "procedure": "2400 s zusammenhängende elektrische Belastung mit mindestens 100 kcps/Kanal; 30-s-Blöcke, eingefrorene Kalibrierung. Temperatur, Versorgung, Dateigrößen und alle Verlustindikatoren protokollieren.",
+      "criterion": "Für alle Blöcke Driftabschnitt einschließlich Unsicherheit ≤100 ps; alle Verlustzähler 0. Speicherbedarf vor Start belegt.",
+      "origin": "P1/NEW",
+      "status": "NOT_RUN",
+      "evidence_refs": []
+    },
+    {
+      "id": "R10",
+      "name": "Dateirücklesen und Roundtrip",
+      "procedure": "Native .ttbin-Dateien schließen und mit installierter SDK wieder lesen. Unabhängige Counts und Ereignistypen prüfen, Konverter zum kanonischen Archiv mit bekannten Grenzfällen validieren. Kein Paketbestandteil ist ein fertiger .ttbin-Konverter.",
+      "criterion": "Gleiche Zahl gültiger Tags, keine ignorierten Fehler-/Überlaufmarker; Vorzeichen, Einheit, Kanal, Reihenfolge und Segment-IDs erhalten.",
+      "origin": "P3",
+      "status": "NOT_RUN",
+      "evidence_refs": []
+    },
+    {
+      "id": "R11",
+      "name": "Zeitbasis und Abtastung",
+      "procedure": "Unabhängiger asynchroner Generator, nicht phasenstarr zur aktiven Time-Tagger-Referenz. Phasenabdeckung, Zeitraster und Delay-Scan prüfen; DNL/periodische Effekte diagnostisch ausweisen.",
+      "criterion": "Zeitstempelschritt >0 und ≤100 ps; Raster ist kein Jitternachweis. Generatorverhältnis/Referenztakt dokumentiert.",
+      "origin": "P1/S3",
+      "status": "NOT_RUN",
+      "evidence_refs": []
+    },
+    {
+      "id": "R12",
+      "name": "Übersprechen",
+      "procedure": "Nur jeweils ein Eingang elektrisch getrieben; übrige Detektoren abgetrennt und Testzustand definiert. 1 000 000 Anregungen je Quelle; alle drei stillen Empfänger kontrollieren.",
+      "criterion": "0 zusätzliche Ereignisse in jedem der 12 gerichteten Quelle-Empfänger-Tests; kontextbezogene Fehlerwahrscheinlichkeit berichten.",
+      "origin": "NEW",
+      "status": "NOT_RUN",
+      "evidence_refs": []
+    },
+    {
+      "id": "R13",
+      "name": "Start, Stop und Fehlzustände",
+      "procedure": "Start/Stop, Kabelverlust, Dateirotation, Stromwiederkehr und Gate-Zustände prüfen. Messfreigabe unabhängig von Signalpegel. Testsignale nach Diagnose deaktivieren; Konfiguration erneut lesen.",
+      "criterion": "Ungültige Intervalle ausdrücklich markiert/gesperrt; kein fälschlich gültiges Ereignis. Keine Paare über Segmentgrenzen.",
+      "origin": "NEW/P3",
+      "status": "NOT_RUN",
+      "evidence_refs": []
+    },
+    {
+      "id": "R14",
+      "name": "Unabhängige Freigabe",
+      "procedure": "Reviewer prüft Rohdaten, Unsicherheiten, unveränderte Grenzwerte, instrumentelle Kalibrierungen, Dateihashes, alle R00..R13 und verbleibende Abweichungen.",
+      "criterion": "Nur reale vollständige Nachweise erlauben eine elektrische Referenzfreigabe; PDE, optische Recovery, CHSH und BOM bleiben eigene Entscheidungen.",
+      "origin": "NEW",
+      "status": "NOT_RUN",
+      "evidence_refs": []
+    }
+  ],
+  "screen_limitations": [
+    "Bounds are reviewer-supplied; no raw-waveform extraction or uncertainty propagation.",
+    "Configuration names are abstract contract fields, not promises of matching SDK getter names. Preserve full original configuration dump.",
+    "A numerical screen never grants hardware, optical or BOM approval.",
+    "Zero-error probability statements are conditional on the trial model; deterministic errors need structured patterns and independent observations."
+  ]
+}

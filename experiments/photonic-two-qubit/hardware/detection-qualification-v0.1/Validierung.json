@@ -1,0 +1,58 @@
+{
+  "created": "2026-11-05",
+  "scope": "SOFTWARE_AND_DESIGN_ONLY",
+  "software_tests": {
+    "status": "PASS",
+    "count": 47,
+    "failures": 0,
+    "errors": 0,
+    "origin": "SYNTHETIC",
+    "python_version": "3.12.14"
+  },
+  "independent_numerical_check": {
+    "source": "scipy.stats.chi2.ppf; optional verification dependency, not runtime dependency",
+    "status": "PASS",
+    "cases": [
+      {
+        "counts": 0,
+        "exposure_s": 600,
+        "calculated_Hz": 0.007675283643313485,
+        "chi2_reference_Hz": 0.007675283643313483,
+        "absolute_difference_Hz": 1.734723475976807e-18
+      },
+      {
+        "counts": 1,
+        "exposure_s": 600,
+        "calculated_Hz": 0.01106392011332302,
+        "chi2_reference_Hz": 0.011063920113323017,
+        "absolute_difference_Hz": 3.469446951953614e-18
+      },
+      {
+        "counts": 100,
+        "exposure_s": 600,
+        "calculated_Hz": 0.2097310881393427,
+        "chi2_reference_Hz": 0.2097310881393421,
+        "absolute_difference_Hz": 5.828670879282072e-16
+      },
+      {
+        "counts": 60000,
+        "exposure_s": 600,
+        "calculated_Hz": 100.95385247406134,
+        "chi2_reference_Hz": 100.95385247407138,
+        "absolute_difference_Hz": 1.0047074283647817e-11
+      }
+    ]
+  },
+  "reference_template_screen": "HOLD",
+  "hardware_measurements": "NOT_RUN",
+  "reference_electrical_qualification": "NOT_RUN",
+  "frontend_characterization": "NOT_RUN",
+  "optical_detector_benchmark": "NOT_RUN",
+  "bom_freeze": "HOLD",
+  "pdf_qa": {
+    "pages": 15,
+    "rendered_all_pages": true,
+    "visual_review": "PASS",
+    "no_hardware_evidence_inferred": true
+  }
+}

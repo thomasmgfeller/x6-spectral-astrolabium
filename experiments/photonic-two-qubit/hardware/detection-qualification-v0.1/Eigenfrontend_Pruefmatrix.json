@@ -1,0 +1,146 @@
+{
+  "version": "0.1",
+  "baseline_commit": "11bd0f067775080d36e5f9c650788a868d72a3c9",
+  "electrical": [
+    {
+      "id": "F00",
+      "name": "Entwurf und Schutz",
+      "procedure": "Stückliste/Revision/Footprints und KiCad-ERC unabhängig prüfen; APD/HV/Quench fehlen. J101 ausschließlich niedervoltig, kein Direktanschluss an APD.",
+      "criterion": "ERC und Pinprüfung ohne ungeklärten Befund; gültiger Laboreingangsvertrag.",
+      "status": "NOT_RUN",
+      "evidence_refs": []
+    },
+    {
+      "id": "F01",
+      "name": "Versorgung und Arbeitspunkt",
+      "procedure": "3,3 V an J301, Pilotstromlimit 100 mA; GND/Polarität vor Einschalten prüfen. DC an REF2V5, Servo, AN_OUT und VTH aufnehmen; Servo-Einschwingen messen.",
+      "criterion": "Keine Überlast/Oszillation; nominal 142,86 mV/47 Ohm =3,04 mA nur Modellvergleich. Reale Toleranzen festlegen.",
+      "status": "NOT_RUN",
+      "evidence_refs": []
+    },
+    {
+      "id": "F02",
+      "name": "Kleinsignaltransfer",
+      "procedure": "J101 tatsächlich 5/10/25 mV positiv, 1/10 kHz und 5/20/100 ns; reale Flanke/Last erfassen. AN_OUT muss beim positiven Puls fallen; Q-Ereignis steigt.",
+      "criterion": "Verstärkung, Bandbreite, Baseline und Mehrfachüberquerungen pro Arbeitspunkt; noch kein universeller Grenzwert.",
+      "status": "NOT_RUN",
+      "evidence_refs": []
+    },
+    {
+      "id": "F03",
+      "name": "Schwelle und Rauschen",
+      "procedure": "Schwellenscan und Click-S-Kurve bei bekannten Amplituden. VTH mit Messgerät kalibrieren, DAC besitzt keinen SPI-Readback. Hysterese und Fake-Clicks mit ruhigem Ersatzabschluss.",
+      "criterion": "Eingangsbezogenes Rauschen nur bei kalibriertem Gain/Modell; Elektronik-Fake-Clicks nicht APD-Dark-Count nennen.",
+      "status": "NOT_RUN",
+      "evidence_refs": []
+    },
+    {
+      "id": "F04",
+      "name": "Zeitwanderung und Jitter",
+      "procedure": "Feste Schwelle, Variation Amplitude/Flanke, unabhängige Referenz; Mittelzeit je Bedingung (Time walk) getrennt von Streuung innerhalb der Bedingung. Kein SPI während Timing.",
+      "criterion": "50 ps Paarstreuung bleibt Entwicklungsziel; kein Datenblatt-RJ als Gesamtnachweis. Für Referenzersatz strengere aktuelle 100-ps-Offsetregel anwenden.",
+      "status": "NOT_RUN",
+      "evidence_refs": []
+    },
+    {
+      "id": "F05",
+      "name": "CML und Ausgangsadapter",
+      "procedure": "J201/Q und J202/QN je 50-Ohm-Kabel, am Empfänger je 49,9 Ohm nach gemeinsamer 3V3_TERM; geeignete Differenz-/hochohmige Messung. U401 SN65LVDS34D, doppelte Eingangsgruppe als Last.",
+      "criterion": "Reflexion/Timing unter Last messen. J404 RAW-CMOS ist kein 50-Ohm-Treiber: zusätzlicher geprüfter Leitungsadapter erforderlich.",
+      "status": "NOT_RUN",
+      "evidence_refs": []
+    },
+    {
+      "id": "F06",
+      "name": "Gültigkeit bei Fehlern",
+      "procedure": "Start, CMP_EN, Kabelabzug, Netzteilverlust und Wiederfreigabe. U401 kann bei fehlendem Signal HIGH liefern; externe Validitätslogik separat beobachten.",
+      "criterion": "Ungültige Intervalle dürfen keine freigegebenen EVENT-/QUENCH-Ereignisse erzeugen; Zustandsfolge belegen.",
+      "status": "NOT_RUN",
+      "evidence_refs": []
+    },
+    {
+      "id": "F07",
+      "name": "Elektrische Doppelpulsantwort",
+      "procedure": "Zwei reproduzierbare Niedervoltpulse, Delay-Scan und Amplitudenvariation. Sättigung/Grundlinienverschiebung, zweiter Puls und Mehrfachauslösung messen.",
+      "criterion": "Elektrische Recovery als Funktion der Bedingungen; weder optische APD-Totzeit noch Quench-Nachweis.",
+      "status": "NOT_RUN",
+      "evidence_refs": []
+    },
+    {
+      "id": "F08",
+      "name": "Rate, Versorgung, Temperatur",
+      "procedure": "Matrix aus Rate, tatsächlicher Flankensteilheit, erlaubten Versorgungsecken und vorab festgelegten Temperaturen. Erste Pulse bei 5..25 mV; höhere Überlastpunkte erst nach Prüfung der Knotengrenzen.",
+      "criterion": "Gültigen elektrischen Betriebsbereich mit Unsicherheiten festhalten; Grenzen offen lassen, wenn kein Nachweis vorliegt.",
+      "status": "NOT_RUN",
+      "evidence_refs": []
+    },
+    {
+      "id": "F09",
+      "name": "Übergabe an optischen Benchmark",
+      "procedure": "Vollständige APD-/HV-/Quench-/Hold-off-Schaltung, Schutz und elektrische Lasttests separat entwickeln/freigeben. APD-Seriennummer, Temperatur, Bias/Excess-Bias und Quenchzustand messen.",
+      "criterion": "Erst dann B01..B07; J404 QUENCH ist nur eine Logikanforderung, kein Leistungsschalter.",
+      "status": "NOT_RUN",
+      "evidence_refs": []
+    }
+  ],
+  "full_detector_only": [
+    {
+      "id": "B01",
+      "name": "PDE / Systemeffizienz",
+      "procedure": "Kalibrierter Photonfluss bei 810 nm am festgelegten Moduleingang; Spektrum/Polarisation/Faseranschluss protokollieren. Isolierte schwache Pulse oder validierter CW-Niedrigratenansatz; Quelle und Dämpfung unabhängig kalibrieren.",
+      "criterion": "ηsys−U ≥0,40 (S09). Neue Metrologieplanung Urel(k=2) ≤5 %. Bare-APD-PDE braucht getrennten Verlustnachweis; SPCM ist ohne Kalibrierung kein absoluter PDE-Standard.",
+      "status": "NOT_RUN",
+      "evidence_refs": []
+    },
+    {
+      "id": "B02",
+      "name": "Dunkelzählrate",
+      "procedure": "600 s je Kanal nach Temperatur-/Biasstabilisierung, Eingang lichtdicht. 30-s-Blöcke und Interarrival-Verteilung, Lichtleck, Drift, Cluster und Afterpulse prüfen.",
+      "criterion": "Poisson-Obergrenze einseitig 99 % je Kanal ≤150/s (S10a), nur bei tragfähigem Modell; bei Überdispersion HOLD bis geeignete Inferenz. Kein zusätzliches statistisches U doppelt addieren.",
+      "status": "NOT_RUN",
+      "evidence_refs": []
+    },
+    {
+      "id": "B03",
+      "name": "Optische Totzeit / Recovery",
+      "procedure": "Optisches Doppelpulsverfahren mit unabhängig bekanntem Abstand; auf registrierten ersten Puls konditionieren. p2(Δ)/p∞, Amplituden und Hintergrund erfassen. Neues Delay-Raster: 5,10,15,20,25,30,40,50,75,100,200 ns und 1 µs.",
+      "criterion": "S10b ≤50 ns. Neue operative Ergänzung: t95 als nachhaltig erreichte 95-%-Recovery bis zum längsten validierten Delay; Unsicherheitsbänder/Gridfehler einbeziehen. Nicht nur minimale Interarrival-Zeit.",
+      "status": "NOT_RUN",
+      "evidence_refs": []
+    },
+    {
+      "id": "B04",
+      "name": "Afterpulsing",
+      "procedure": "Isolierte Primärereignisse, vorab festes Beobachtungsfenster 50 ns..10 µs als Startentwurf; Hold-off, verlorene Bereiche und Messrearmierung dokumentieren. Mindestens ein Sekundärereignis pro Fenster getrennt von der mittleren Sekundärzahl. Gematchter Hintergrund.",
+      "criterion": "Kein eingefrorenes Projektlimit. ≤1 % im beobachteten Fenster ist ein neuer Entwicklungswunsch; Fenster verlängern, bis Restschwanz begrenzt. Keine Behauptung für verborgene frühe oder späte Ereignisse.",
+      "status": "NOT_RUN",
+      "evidence_refs": []
+    },
+    {
+      "id": "B05",
+      "name": "Optischer Timing-Jitter",
+      "procedure": "Schmaler gepulster Laser, unabhängige Zeitreferenz, komplette Timingantwort mit FWHM, RMS und Quantilen/Tails; optische Pulsbreite, Referenz und Instrumentfunktion vermessen.",
+      "criterion": "S04: optische Paar-FWHM ≤1000 ps. DUT-Einzeljitter nur aus validiertem Kovarianzmodell; kein automatisches Teilen durch sqrt(2), negative Varianz bleibt unaufgelöst.",
+      "status": "NOT_RUN",
+      "evidence_refs": []
+    },
+    {
+      "id": "B06",
+      "name": "Zählratenlinearität",
+      "procedure": "Relative Flussreihe mit Kontrollmonitor; niedriges Flussintervall für Gain vorher einfrieren, unabhängige Prüfpunkte bis 100 kcps/Kanal. Dark, Totzeit und Drift separat messen.",
+      "criterion": "Neues Entwicklungsziel |Nichtlinearität|+U ≤1 % im deklarierten Bereich. Nichtparalysierbares Modell nur nach Prüfung; keine Totzeitkorrektur der primären Bell-Zählungen.",
+      "status": "NOT_RUN",
+      "evidence_refs": []
+    },
+    {
+      "id": "B07",
+      "name": "Koinzidenzleistung",
+      "procedure": "Referenz vor/nach DUT-Tausch, gleicher optischer Eingangsplan und kontrollierte Quelle; A/B vertauschte Reihenfolge ausgleichen. Feste Offsets, volles 2-ns-Fenster, bipartite Komponenten; verzögert ±50/±100 ns.",
+      "criterion": "S07b M/(M+U) ≤0,001, S08 verzögert/zentral ≤0,01 als Designziel; Rohcounts behalten. Kein Untergrundabzug und kein Verschränkungsnachweis aus diesem Benchmark.",
+      "status": "NOT_RUN",
+      "evidence_refs": []
+    }
+  ],
+  "status": "NOT_RUN",
+  "handoff_gate": "F09_REQUIRED_FOR_B01_B07"
+}
