@@ -1,5 +1,13 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Abschluss des bisherigen Bounce-Kandidaten · 5. November 2026
+
+**Als Kandidat für einen dominanten dynamischen Bounce abgeschlossen und verworfen.** Bei unverändertem Historienträger, gleichen Amplitudenbeträgen und erhaltenen Endvolumenkanälen gilt auf beiden geprüften Familien `q_B ≤ 1/2 < 4/5`. Beliebige normierte passive Zusatzzeiger können die geforderte 80-%-Dominanz nicht erreichen. Der Bericht konsolidiert den vorhandenen Ausschlusssatz, nennt seine Voraussetzungen und bestätigt die konkreten isolierten Endkanäle für 27 Entwicklungs- und 17 Prüfpfade.
+
+Die historischen Gate-Entscheidungen bleiben erhalten: HOLD bei unzureichender Interferenzkontrolle, FAIL auf den 17 Prüfpfaden für beide Dichtespuren im gesamten vereinbarten Kopplungsband. Acht nachgerechnete Ergebnisdateien stimmen bytegenau mit den Originalen überein. Die Aussage betrifft die festgelegte Umkehrfolge im festen Zeitfenster; ein allgemeiner CST-Bounce und Singularitätsauflösung bleiben **HOLD**.
+
+[Abschlussbericht (PDF)](reports/CST_Staubball_Bounce_Kandidat_Abschluss_v0_1.pdf) · [Vollständiges Prüfpaket (ZIP)](packages/CST_Staubball_Bounce_Kandidat_Abschluss_v0_1_Pruefpaket.zip) · [Quellen, lesbarer Prüfcode und Wiederaufnahmekriterien](bounce_closure_v0_1/PUBLICATION.md)
+
 ## Kopplungsscan der Dichtespur v0.2 · 4. November 2026
 
 Der Test vergleicht die Gesamtspur der Staubdichte mit getrennten Aufzeichnungen für die frühe und späte Hälfte desselben Zeitfensters. Der aus der frühen Präparation abgeleitete Modellbereich der Messkopplung reicht von 32/45 bis 162/95. Auf den 27 bekannten Pfaden wechselt das numerische Bounce-Gate mit steigender Kopplung von **HOLD** zu **FAIL**. Der Übergang liegt für die Gesamtspur bei etwa 1,156 und für die geteilte Spur bei etwa 1,621.
