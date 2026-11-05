@@ -1,0 +1,32 @@
+name: Detection Qualification Reference
+on:
+  pull_request:
+    paths:
+      - 'experiments/photonic-two-qubit/hardware/detection-qualification-v0.1/**'
+      - '.github/workflows/detection-qualification.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'experiments/photonic-two-qubit/hardware/detection-qualification-v0.1/**'
+      - '.github/workflows/detection-qualification.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  offline-reference:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    defaults:
+      run:
+        working-directory: experiments/photonic-two-qubit/hardware/detection-qualification-v0.1
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Reproduce 47 synthetic diagnostic checks
+        run: python -m unittest -v test_analysis
+      - name: Verify original package and separate unmeasured status
+        run: |
+          python verify_package.py
+          python publication_check.py

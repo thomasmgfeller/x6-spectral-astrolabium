@@ -1,0 +1,50 @@
+{
+  "scope": "MANUFACTURER_CONDITIONS_AND_OWN_CALCULATIONS_ONLY",
+  "hardware_status": "NOT_RUN",
+  "bom_status": "HOLD",
+  "reference": {
+    "detector_model": "SPCM-AQRH-14-FC",
+    "tagger_model": "Time Tagger Ultra",
+    "channel_map": {
+      "1": "A+",
+      "2": "A-",
+      "3": "B+",
+      "4": "B-"
+    },
+    "single_termination_ohm": 50,
+    "tagger_recommended_input_V": [
+      -3,
+      3
+    ],
+    "initial_trigger_V": 1.0,
+    "supply_at_module_V": [
+      4.75,
+      5.25
+    ],
+    "conditional_interface_assessment": "COMPATIBLE_IF_DELIVERED_REVISION_AND_MEASURED_WAVEFORMS_MATCH",
+    "open": [
+      "exact serials/revisions/license",
+      "cable SKU and delay",
+      "scope waveforms including ringing",
+      "connector-loaded supply transients",
+      "threshold plateau",
+      "raw archive converter and independent roundtrip"
+    ]
+  },
+  "frontend": {
+    "scope": "LOW_VOLTAGE_ONLY",
+    "apd_hv_quench_complete": false,
+    "cml_per_line_receiver_termination_ohm": 49.9,
+    "cml_termination_reference": "shared 3V3_TERM, not ground",
+    "raw_j404_to_ultra": "HOLD_NEEDS_QUALIFIED_LINE_ADAPTER",
+    "open": [
+      "ERC and footprints",
+      "analog recovery/noise",
+      "CML receiver loading/reflections",
+      "external validity logic",
+      "APD/HV/quench/hold-off path",
+      "seven full-module optical metrics"
+    ]
+  },
+  "calculations_file": "Rechenergebnisse.json"
+}
