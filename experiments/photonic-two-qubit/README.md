@@ -1,6 +1,6 @@
 # Photonischer Zwei-Qubit-Versuchsaufbau
 
-**Entwurf und digitale Referenz · Experimental preview · Dokumentationsstand 04.11.2026**
+**Entwurf und digitale Referenz · Experimental preview · Dokumentationsstand 05.11.2026**
 
 Geplant ist eine polarisationsverschränkte Photonenpaarquelle mit einem Typ-II-ppKTP-Sagnac-Interferometer, zwei lokalen Polarisationsanalysatoren und vier Detektorkanälen. Veröffentlicht werden die vorhandenen Entwurfsunterlagen, CAD-Dateien, Auswertungen und digitalen Referenzkerne. **Es liegen in diesem Paket keine Labormessungen des Gesamtaufbaus vor.**
 
@@ -25,6 +25,8 @@ Die Bezeichnung „Zwei-Qubit“ beschreibt zwei geplante Polarisationsfreiheits
 Auf dem Linux-Messrechner das Paket entpacken und `python3 labor_server.py` starten. Ohne Geräteprofil lässt sich der vollständige Ablauf mit vier synthetischen Frames ausprobieren. Der Reiter **06 · Gerätelauf** verbindet sich mit dem lokalen Dienst. Er zeigt Erfassungsstatus, Kanalraten und Geräteantworten an und stellt die archivierten Rohdaten bereit. Der Stand umfasst 19 Softwaretests mit virtuellen Anschlüssen und einem SDK-Testadapter. Geräteabnahme und physischer CHSH-Nachweis stehen aus.
 
 ## Einstieg und Unterlagen
+
+- **[Pump-Eingangsprofil und Systemziele v0.1](optics/pump-input-v0.1/README.md)** — [ausfüllbares PDF](optics/pump-input-v0.1/X6_Pump_Eingangsprofil_Systemziele_v0_1.pdf), [Prüfpaket](optics/pump-input-v0.1/X6_Pump_Eingangsprofil_v0_1_Pruefpaket.zip); Bezugsebenen P0/P1/PC, Messplan und digitale Vorlagen für die nächste Strahlrechnung. Tatsächliche Pumpquelle und Messwerte offen; Hardware `NOT_RUN`, Beschaffung `HOLD`.
 
 - **[Optikplan v0.2 · Quellenüberlappung und Messkette](optics/optikplan-v0.2/README.md)** — [PDF](optics/optikplan-v0.2/Optikplan_v0_2.pdf), [Prüfpaket](optics/optikplan-v0.2/Optikplan_v0_2_Pruefpaket.zip), Rechenmodell und Kalibrierprogramme für spektrale Unterscheidbarkeit, zeitlichen Restversatz, vier Faserkopplungen und Paarjitter. Optische und elektrische Laborabnahme stehen auf `NOT_RUN`.
 

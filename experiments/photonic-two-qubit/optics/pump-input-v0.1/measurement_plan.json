@@ -1,0 +1,55 @@
+{
+  "document_id": "X6-PUMP-MEASUREMENT-PLAN-0.1",
+  "steps": [
+    {
+      "id": "M01",
+      "task": "Gerät und Messmittel erfassen",
+      "evidence_required": "Modelle, Seriennummern, Kalibrierungen, Ausgangsart, Faser/Kollimator, Referenzebenen und verantwortliche Person.",
+      "execution_status": "NOT_RUN"
+    },
+    {
+      "id": "M02",
+      "task": "Aufwärmen und Arbeitspunkt vorbereiten",
+      "evidence_required": "Hersteller-Aufwärmzeit einhalten; bei unbekannter Vorgabe mindestens 30 min als vorläufiger Ansatz. Gleichgewicht anschließend anhand der Zeitreihen beurteilen.",
+      "execution_status": "NOT_RUN"
+    },
+    {
+      "id": "M03",
+      "task": "Spektrum und Polarisationszustand messen",
+      "evidence_required": "λp, Instrumentenprofil, FWHM/Obergrenze, Nebenmoden, Stokes-Werte und DOP. Rohdaten und Unsicherheitsmodell archivieren.",
+      "execution_status": "NOT_RUN"
+    },
+    {
+      "id": "M04",
+      "task": "Räumliche Kaustik aufnehmen",
+      "evidence_required": "P1 als Ursprung; mindestens 10 geeignete Ebenen oder kalibriertes M²-Gerät. Fit und Fehlerfortpflanzung; Hilfslinsen vollständig erfassen.",
+      "execution_status": "NOT_RUN"
+    },
+    {
+      "id": "M05",
+      "task": "Leistungswege und Stabilität bestimmen",
+      "evidence_required": "P1-Leistung und getrennte Übertragungen zu PC dokumentieren. Für schon vorhandene Schleife beide Pumpwege getrennt messen; ohne Schleife bleiben diese Werte OPEN.",
+      "execution_status": "NOT_RUN"
+    },
+    {
+      "id": "M06",
+      "task": "Eingang der Strahlrechnung freigeben",
+      "evidence_required": "M01 bis M04 plausibel, vollständig und mit Unsicherheiten. Ungeklärte Stabilität wird als Szenario weitergeführt. Keine finale O04-/Kristallfreigabe daraus ableiten.",
+      "execution_status": "NOT_RUN"
+    },
+    {
+      "id": "M07",
+      "task": "Systemabnahme nach Aufbau",
+      "evidence_required": "Elektrik, Referenzdetektoren, Timing, Spektralvergleich, Sichtbarkeit, Hintergrund und Negativkontrolle nach S1. Erst danach separater Nachweislauf.",
+      "execution_status": "NOT_RUN"
+    }
+  ],
+  "stability_duration_rule": "max(3600 s, planned full run including transitions)",
+  "power_sampling_hz_min": 1,
+  "power_averaging_s_max": 1,
+  "spectral_sampling_interval_s_max": 60,
+  "caustic_planes_min": 10,
+  "statistical_protocol": "OPTIK-CHSH-0.1",
+  "auto_acquisition": false,
+  "auto_release": false
+}
