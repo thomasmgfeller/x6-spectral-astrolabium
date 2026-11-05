@@ -1,0 +1,58 @@
+{
+  "schema": "x6-classical-backreaction-check/v0.1",
+  "date": "2026-11-05",
+  "status": "LOCAL_TEST_SPECIFICATION_NOT_EXTERNAL_PREREGISTRATION",
+  "scope": "Reduced Einstein-irrotational-dust reference and audit of existing finite CST carriers; no new CST histories",
+  "units": "c=1,V0=1; dimensionless benchmark kappa=1",
+  "reference": {
+    "q0": 4,
+    "masses_classical_central": [
+      0.25,
+      1,
+      4
+    ],
+    "rk_steps": [
+      20,
+      40,
+      80
+    ],
+    "T_end": 0.5,
+    "hbar_sequence": [
+      0.04,
+      0.02,
+      0.01
+    ],
+    "initial_sigma_q_squared": "hbar/2",
+    "initial_p": "sqrt(M_central/kappa)",
+    "mean_quantum_mass": "M_central+kappa*hbar/2",
+    "dirichlet_interval_L": 12,
+    "interior_grid_points": [
+      1024,
+      2048
+    ],
+    "times": [
+      0,
+      0.125,
+      0.25,
+      0.375,
+      0.5
+    ]
+  },
+  "tolerances": {
+    "rk_q_max_abs": 1e-06,
+    "spectral_norm_error": 1e-11,
+    "spectral_vs_analytic_L2": 1e-09,
+    "spectral_volume_moment_abs": 1e-09,
+    "spectral_mass_expectation_abs": 1e-09,
+    "family_C_replay_abs": 1e-12
+  },
+  "decisions": {
+    "reference_classical": "TO_BE_CHECKED",
+    "reference_semiclassical": "TO_BE_CHECKED",
+    "reference_mass_response": "TO_BE_CHECKED",
+    "full_CST_classical_limit": "HOLD_MISSING_DYNAMICAL_KERNEL",
+    "full_CST_backreaction": "HOLD_MISSING_CONSTRAINT_AND_VOLUME_DYNAMICS",
+    "new_bounce_test": "NOT_RUN"
+  },
+  "prohibited_inference": "Reference agreement and mass-sensitive endpoint amplitudes do not establish a full CST classical limit or singularity resolution."
+}
