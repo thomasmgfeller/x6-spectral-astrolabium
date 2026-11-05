@@ -1,0 +1,30 @@
+name: Gaussian Layout Reference
+on:
+  push:
+    paths:
+      - 'experiments/photonic-two-qubit/optics/gaussian-layout-v0.1/**'
+      - '.github/workflows/gaussian-layout.yml'
+  pull_request:
+    paths:
+      - 'experiments/photonic-two-qubit/optics/gaussian-layout-v0.1/**'
+      - '.github/workflows/gaussian-layout.yml'
+permissions:
+  contents: read
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+jobs:
+  reference:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Optical model, geometry and worksheet state
+        run: node --test experiments/photonic-two-qubit/optics/gaussian-layout-v0.1/test_model.cjs
+      - name: Workbook, drawing scale and archive integrity
+        run: python3 experiments/photonic-two-qubit/optics/gaussian-layout-v0.1/test_assets.py
+      - name: Rebuild workbook without differences
+        run: |
+          node experiments/photonic-two-qubit/optics/gaussian-layout-v0.1/build_workbook.cjs
+          git diff --exit-code -- experiments/photonic-two-qubit/optics/gaussian-layout-v0.1/X6_Gaussian_Worksheet_v0_1.xlsx

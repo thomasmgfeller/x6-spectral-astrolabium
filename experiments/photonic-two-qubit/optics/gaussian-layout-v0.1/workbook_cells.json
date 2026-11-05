@@ -1,0 +1,2846 @@
+{
+  "sheets": [
+    {
+      "name": "Start",
+      "cells": {
+        "A1": {
+          "value": "X6 Gaussian-Worksheet v0.1",
+          "style": 1
+        },
+        "B1": {
+          "value": "05.11.2026",
+          "style": 1
+        },
+        "A2": {
+          "value": "Status",
+          "style": 0
+        },
+        "B2": {
+          "value": "SYNTHETIC_DESIGN_SCENARIO / NOT_RUN / HOLD",
+          "style": 0
+        },
+        "A3": {
+          "value": "Eingang",
+          "style": 0
+        },
+        "B3": {
+          "value": "Blaue Zahlen sind Szenarioeingaben; keine Istwerte.",
+          "style": 0
+        },
+        "A4": {
+          "value": "Messwerte",
+          "style": 0
+        },
+        "B4": {
+          "value": "Leere Felder bis zur Messung unverändert lassen.",
+          "style": 0
+        },
+        "A5": {
+          "value": "Strahl",
+          "style": 0
+        },
+        "B5": {
+          "value": "w_sigma = D4sigma/2; nur für Gaußprofil ein 1/e²-Radius.",
+          "style": 0
+        },
+        "A6": {
+          "value": "Wellenfront",
+          "style": 0
+        },
+        "B6": {
+          "value": "1/R signiert; 0 bedeutet ebene Wellenfront.",
+          "style": 0
+        },
+        "A7": {
+          "value": "Ausbreitung",
+          "style": 0
+        },
+        "B7": {
+          "value": "Q=q/n; Freiraum L/n; dünne Linse 1/Q'=1/Q-1/f.",
+          "style": 0
+        },
+        "A8": {
+          "value": "Achsen",
+          "style": 0
+        },
+        "B8": {
+          "value": "Entkoppelte u/v-Achsen; M² bleibt konstant.",
+          "style": 0
+        },
+        "A9": {
+          "value": "Δz",
+          "style": 0
+        },
+        "B9": {
+          "value": "Positiv stromabwärts der Kristallmitte je Richtung.",
+          "style": 0
+        },
+        "A10": {
+          "value": "Extrapolation",
+          "style": 0
+        },
+        "B10": {
+          "value": "Außerhalb Kristall ist Δz nicht die reale Luft-Fokuskoordinate.",
+          "style": 0
+        },
+        "A11": {
+          "value": "Material",
+          "style": 0
+        },
+        "B11": {
+          "value": "n-Werte sind ausdrücklich angenommene Platzhalter.",
+          "style": 0
+        },
+        "A12": {
+          "value": "Geometrie",
+          "style": 0
+        },
+        "B12": {
+          "value": "Optische Bezugsebenen, keine Gehäusekoordinaten.",
+          "style": 0
+        },
+        "A13": {
+          "value": "Layout",
+          "style": 0
+        },
+        "B13": {
+          "value": "Koordinatenblatt ist Referenzsnapshot; HTML aktualisiert Pumpgeometrie.",
+          "style": 0
+        },
+        "A14": {
+          "value": "Sensitivität",
+          "style": 0
+        },
+        "B14": {
+          "value": "Referenzsnapshot; HTML rechnet neue Sweeps und 32 Eckfälle.",
+          "style": 0
+        },
+        "A15": {
+          "value": "Unsicherheit",
+          "style": 0
+        },
+        "B15": {
+          "value": "Kein Konfidenzintervall; gemessene Fit-Kovarianz fehlt.",
+          "style": 0
+        },
+        "A16": {
+          "value": "Grenzen",
+          "style": 0
+        },
+        "B16": {
+          "value": "Oblique Platten, anisotrope Beugung, reale Relais und Halter OPEN.",
+          "style": 0
+        },
+        "A17": {
+          "value": "Abnahme",
+          "style": 0
+        },
+        "B17": {
+          "value": "Keine rechnerische Zelle erteilt eine Beschaffungsfreigabe.",
+          "style": 0
+        },
+        "A18": {
+          "value": "Druck",
+          "style": 0
+        },
+        "B18": {
+          "value": "SVG A2 quer, 100 %, 1:2. Maßbalken prüfen.",
+          "style": 0
+        },
+        "A19": {
+          "value": "Quellen",
+          "style": 0
+        },
+        "B19": {
+          "value": "Pump-Eingangsprofil v0.1, Optikplan v0.2, Kim 2006, Self 1983.",
+          "style": 0
+        }
+      },
+      "widths": [
+        32,
+        100
+      ]
+    },
+    {
+      "name": "Eingang",
+      "cells": {
+        "A1": {
+          "value": "Szenarioeingaben",
+          "style": 1
+        },
+        "B1": {
+          "value": "Wert (editierbar)",
+          "style": 1
+        },
+        "C1": {
+          "value": "Herkunft",
+          "style": 1
+        },
+        "A2": {
+          "value": "Keine gemessenen Hardwarewerte!",
+          "style": 4
+        },
+        "A4": {
+          "value": "λ₀ / nm",
+          "style": 0
+        },
+        "B4": {
+          "value": 405,
+          "style": 2
+        },
+        "C4": {
+          "value": "ANGENOMMEN",
+          "style": 4
+        },
+        "A5": {
+          "value": "D4σ,u an P1 / mm",
+          "style": 0
+        },
+        "B5": {
+          "value": 0.6,
+          "style": 2
+        },
+        "C5": {
+          "value": "ANGENOMMEN",
+          "style": 4
+        },
+        "A6": {
+          "value": "D4σ,v an P1 / mm",
+          "style": 0
+        },
+        "B6": {
+          "value": 0.6,
+          "style": 2
+        },
+        "C6": {
+          "value": "ANGENOMMEN",
+          "style": 4
+        },
+        "A7": {
+          "value": "M² u",
+          "style": 0
+        },
+        "B7": {
+          "value": 1.2,
+          "style": 2
+        },
+        "C7": {
+          "value": "ANGENOMMEN",
+          "style": 4
+        },
+        "A8": {
+          "value": "M² v",
+          "style": 0
+        },
+        "B8": {
+          "value": 1.2,
+          "style": 2
+        },
+        "C8": {
+          "value": "ANGENOMMEN",
+          "style": 4
+        },
+        "A9": {
+          "value": "1/R u / mm⁻¹",
+          "style": 0
+        },
+        "B9": {
+          "value": 0,
+          "style": 2
+        },
+        "C9": {
+          "value": "ANGENOMMEN",
+          "style": 4
+        },
+        "A10": {
+          "value": "1/R v / mm⁻¹",
+          "style": 0
+        },
+        "B10": {
+          "value": 0,
+          "style": 2
+        },
+        "C10": {
+          "value": "ANGENOMMEN",
+          "style": 4
+        },
+        "A11": {
+          "value": "f bei 405 nm / mm",
+          "style": 0
+        },
+        "B11": {
+          "value": 300,
+          "style": 2
+        },
+        "C11": {
+          "value": "ANGENOMMEN",
+          "style": 4
+        },
+        "A12": {
+          "value": "O04-Verschiebung ab P1 / mm",
+          "style": 0
+        },
+        "B12": {
+          "value": 0,
+          "style": 2
+        },
+        "C12": {
+          "value": "ANGENOMMEN",
+          "style": 4
+        },
+        "A13": {
+          "value": "P1 bis PBS-Mitte / mm",
+          "style": 0
+        },
+        "B13": {
+          "value": 72.21226541192883,
+          "style": 2
+        },
+        "C13": {
+          "value": "ANGENOMMEN",
+          "style": 4
+        },
+        "A14": {
+          "value": "Sagnac-Katheten / mm",
+          "style": 0
+        },
+        "B14": {
+          "value": 100,
+          "style": 2
+        },
+        "C14": {
+          "value": "ANGENOMMEN",
+          "style": 4
+        },
+        "A15": {
+          "value": "Kristallversatz entlang CCW / mm",
+          "style": 0
+        },
+        "B15": {
+          "value": -0.1774193548387097,
+          "style": 2
+        },
+        "C15": {
+          "value": "ANGENOMMEN",
+          "style": 4
+        },
+        "A16": {
+          "value": "Kristalllänge / mm",
+          "style": 0
+        },
+        "B16": {
+          "value": 10,
+          "style": 2
+        },
+        "C16": {
+          "value": "ANGENOMMEN",
+          "style": 4
+        },
+        "A17": {
+          "value": "n Kristall (Szenario)",
+          "style": 0
+        },
+        "B17": {
+          "value": 1.85,
+          "style": 2
+        },
+        "C17": {
+          "value": "ANGENOMMEN",
+          "style": 4
+        },
+        "A18": {
+          "value": "PBS-Glasweg / mm",
+          "style": 0
+        },
+        "B18": {
+          "value": 10,
+          "style": 2
+        },
+        "C18": {
+          "value": "ANGENOMMEN",
+          "style": 4
+        },
+        "A19": {
+          "value": "n PBS (Szenario)",
+          "style": 0
+        },
+        "B19": {
+          "value": 1.53,
+          "style": 2
+        },
+        "C19": {
+          "value": "ANGENOMMEN",
+          "style": 4
+        },
+        "A20": {
+          "value": "HWP-Dicke / mm",
+          "style": 0
+        },
+        "B20": {
+          "value": 1,
+          "style": 2
+        },
+        "C20": {
+          "value": "ANGENOMMEN",
+          "style": 4
+        },
+        "A21": {
+          "value": "n HWP (Szenario)",
+          "style": 0
+        },
+        "B21": {
+          "value": 1.55,
+          "style": 2
+        },
+        "C21": {
+          "value": "ANGENOMMEN",
+          "style": 4
+        }
+      },
+      "widths": [
+        45,
+        26,
+        26
+      ]
+    },
+    {
+      "name": "Gaussian",
+      "cells": {
+        "A1": {
+          "value": "Pump-Ausbreitung",
+          "style": 1
+        },
+        "A2": {
+          "value": "Richtung",
+          "style": 0
+        },
+        "A3": {
+          "value": "Achse",
+          "style": 0
+        },
+        "A4": {
+          "value": "D4sigma P1 / mm",
+          "style": 0
+        },
+        "A5": {
+          "value": "M²",
+          "style": 0
+        },
+        "A6": {
+          "value": "1/R P1 / mm^-1",
+          "style": 0
+        },
+        "A7": {
+          "value": "b / mm^-1",
+          "style": 0
+        },
+        "A8": {
+          "value": "Re Q Eingang / mm",
+          "style": 0
+        },
+        "A9": {
+          "value": "Im Q Eingang / mm",
+          "style": 0
+        },
+        "A10": {
+          "value": "Re Q vor Linse / mm",
+          "style": 0
+        },
+        "A11": {
+          "value": "Linsen-Nenner",
+          "style": 0
+        },
+        "A12": {
+          "value": "Re Q nach Linse / mm",
+          "style": 0
+        },
+        "A13": {
+          "value": "Im Q nach Linse / mm",
+          "style": 0
+        },
+        "A14": {
+          "value": "Geometrischer Weg / mm",
+          "style": 0
+        },
+        "A15": {
+          "value": "Reduzierter Weg B / mm",
+          "style": 0
+        },
+        "A16": {
+          "value": "Re Q Kristallmitte / mm",
+          "style": 0
+        },
+        "A17": {
+          "value": "w0 / µm",
+          "style": 0
+        },
+        "A18": {
+          "value": "w Kristallmitte / µm",
+          "style": 0
+        },
+        "A19": {
+          "value": "Δz lokal / mm",
+          "style": 0
+        },
+        "A20": {
+          "value": "zR Kristall / mm",
+          "style": 0
+        },
+        "A21": {
+          "value": "Taillenlage",
+          "style": 0
+        },
+        "A22": {
+          "value": "Fokus in reiner Luft / mm",
+          "style": 0
+        },
+        "A23": {
+          "value": "Winkel / Phasen nicht berechnet",
+          "style": 0
+        },
+        "A24": {
+          "value": "w Eintritt / µm",
+          "style": 0
+        },
+        "A25": {
+          "value": "w Austritt / µm",
+          "style": 0
+        },
+        "A26": {
+          "value": "Taillenkoordinate entlang CCW / mm",
+          "style": 0
+        },
+        "A27": {
+          "value": "Status",
+          "style": 0
+        },
+        "B1": {
+          "value": "CW / u",
+          "style": 1
+        },
+        "B2": {
+          "value": "CW",
+          "style": 0
+        },
+        "B3": {
+          "value": "u",
+          "style": 0
+        },
+        "B4": {
+          "value": 0.6,
+          "style": 3,
+          "formula": "'Eingang'!$B$5"
+        },
+        "B5": {
+          "value": 1.2,
+          "style": 3,
+          "formula": "'Eingang'!$B$7"
+        },
+        "B6": {
+          "value": 0,
+          "style": 3,
+          "formula": "'Eingang'!$B$9"
+        },
+        "B7": {
+          "value": 0.0017188733853924696,
+          "style": 3,
+          "formula": "B5*'Eingang'!$B$4*0.000001/(PI()*(B4/2)^2)"
+        },
+        "B8": {
+          "value": 0,
+          "style": 3,
+          "formula": "B6/(B6^2+B7^2)"
+        },
+        "B9": {
+          "value": 581.7764173314432,
+          "style": 3,
+          "formula": "B7/(B6^2+B7^2)"
+        },
+        "B10": {
+          "value": 0,
+          "style": 3,
+          "formula": "B8+'Eingang'!$B$12"
+        },
+        "B11": {
+          "value": 4.760708886255662,
+          "style": 3,
+          "formula": "(1-B10/'Eingang'!$B$11)^2+(B9/'Eingang'!$B$11)^2"
+        },
+        "B12": {
+          "value": -236.9841745908659,
+          "style": 3,
+          "formula": "(B10-(B10^2+B9^2)/'Eingang'!$B$11)/B11"
+        },
+        "B13": {
+          "value": 122.20373713903253,
+          "style": 3,
+          "formula": "B9/B11"
+        },
+        "B14": {
+          "value": 243.1003628854223,
+          "style": 3,
+          "formula": "'Eingang'!$B$13-'Eingang'!$B$12+'Eingang'!$B$14*(1+SQRT(2)/2)+-'Eingang'!$B$15"
+        },
+        "B15": {
+          "value": 236.9841745908659,
+          "style": 3,
+          "formula": "B14-'Eingang'!$B$18*(1-1/'Eingang'!$B$19)-'Eingang'!$B$16/2*(1-1/'Eingang'!$B$17)-'Eingang'!$B$20*(1-1/'Eingang'!$B$21)"
+        },
+        "B16": {
+          "value": 0,
+          "style": 3,
+          "formula": "B12+B15"
+        },
+        "B17": {
+          "value": 137.49453670142762,
+          "style": 3,
+          "formula": "1000*SQRT(B5*'Eingang'!$B$4*0.000001*B13/PI())"
+        },
+        "B18": {
+          "value": 137.49453670142762,
+          "style": 3,
+          "formula": "B17*SQRT(1+(B16/B13)^2)"
+        },
+        "B19": {
+          "value": 0,
+          "style": 3,
+          "formula": "-'Eingang'!$B$17*B16"
+        },
+        "B20": {
+          "value": 226.0769137072102,
+          "style": 3,
+          "formula": "'Eingang'!$B$17*B13"
+        },
+        "B22": {
+          "value": 236.9841745908659,
+          "style": 3,
+          "formula": "-B12"
+        },
+        "B24": {
+          "value": 137.52815919553655,
+          "style": 3,
+          "formula": "B17*SQRT(1+((B16-'Eingang'!$B$16/(2*'Eingang'!$B$17))/B13)^2)"
+        },
+        "B25": {
+          "value": 137.52815919553655,
+          "style": 3,
+          "formula": "B17*SQRT(1+((B16+'Eingang'!$B$16/(2*'Eingang'!$B$17))/B13)^2)"
+        },
+        "B26": {
+          "value": 0,
+          "style": 3,
+          "formula": "-B19"
+        },
+        "B21": {
+          "value": "IM_KRISTALL",
+          "style": 4,
+          "formula": "IF(ABS(B19)<='Eingang'!$B$16/2,\"IM_KRISTALL\",\"EXTRAPOLIERT\")"
+        },
+        "B23": {
+          "value": "OPEN",
+          "style": 4
+        },
+        "B27": {
+          "value": "HOLD",
+          "style": 4
+        },
+        "C1": {
+          "value": "CW / v",
+          "style": 1
+        },
+        "C2": {
+          "value": "CW",
+          "style": 0
+        },
+        "C3": {
+          "value": "v",
+          "style": 0
+        },
+        "C4": {
+          "value": 0.6,
+          "style": 3,
+          "formula": "'Eingang'!$B$6"
+        },
+        "C5": {
+          "value": 1.2,
+          "style": 3,
+          "formula": "'Eingang'!$B$8"
+        },
+        "C6": {
+          "value": 0,
+          "style": 3,
+          "formula": "'Eingang'!$B$10"
+        },
+        "C7": {
+          "value": 0.0017188733853924696,
+          "style": 3,
+          "formula": "C5*'Eingang'!$B$4*0.000001/(PI()*(C4/2)^2)"
+        },
+        "C8": {
+          "value": 0,
+          "style": 3,
+          "formula": "C6/(C6^2+C7^2)"
+        },
+        "C9": {
+          "value": 581.7764173314432,
+          "style": 3,
+          "formula": "C7/(C6^2+C7^2)"
+        },
+        "C10": {
+          "value": 0,
+          "style": 3,
+          "formula": "C8+'Eingang'!$B$12"
+        },
+        "C11": {
+          "value": 4.760708886255662,
+          "style": 3,
+          "formula": "(1-C10/'Eingang'!$B$11)^2+(C9/'Eingang'!$B$11)^2"
+        },
+        "C12": {
+          "value": -236.9841745908659,
+          "style": 3,
+          "formula": "(C10-(C10^2+C9^2)/'Eingang'!$B$11)/C11"
+        },
+        "C13": {
+          "value": 122.20373713903253,
+          "style": 3,
+          "formula": "C9/C11"
+        },
+        "C14": {
+          "value": 243.1003628854223,
+          "style": 3,
+          "formula": "'Eingang'!$B$13-'Eingang'!$B$12+'Eingang'!$B$14*(1+SQRT(2)/2)+-'Eingang'!$B$15"
+        },
+        "C15": {
+          "value": 236.9841745908659,
+          "style": 3,
+          "formula": "C14-'Eingang'!$B$18*(1-1/'Eingang'!$B$19)-'Eingang'!$B$16/2*(1-1/'Eingang'!$B$17)-'Eingang'!$B$20*(1-1/'Eingang'!$B$21)"
+        },
+        "C16": {
+          "value": 0,
+          "style": 3,
+          "formula": "C12+C15"
+        },
+        "C17": {
+          "value": 137.49453670142762,
+          "style": 3,
+          "formula": "1000*SQRT(C5*'Eingang'!$B$4*0.000001*C13/PI())"
+        },
+        "C18": {
+          "value": 137.49453670142762,
+          "style": 3,
+          "formula": "C17*SQRT(1+(C16/C13)^2)"
+        },
+        "C19": {
+          "value": 0,
+          "style": 3,
+          "formula": "-'Eingang'!$B$17*C16"
+        },
+        "C20": {
+          "value": 226.0769137072102,
+          "style": 3,
+          "formula": "'Eingang'!$B$17*C13"
+        },
+        "C22": {
+          "value": 236.9841745908659,
+          "style": 3,
+          "formula": "-C12"
+        },
+        "C24": {
+          "value": 137.52815919553655,
+          "style": 3,
+          "formula": "C17*SQRT(1+((C16-'Eingang'!$B$16/(2*'Eingang'!$B$17))/C13)^2)"
+        },
+        "C25": {
+          "value": 137.52815919553655,
+          "style": 3,
+          "formula": "C17*SQRT(1+((C16+'Eingang'!$B$16/(2*'Eingang'!$B$17))/C13)^2)"
+        },
+        "C26": {
+          "value": 0,
+          "style": 3,
+          "formula": "-C19"
+        },
+        "C21": {
+          "value": "IM_KRISTALL",
+          "style": 4,
+          "formula": "IF(ABS(C19)<='Eingang'!$B$16/2,\"IM_KRISTALL\",\"EXTRAPOLIERT\")"
+        },
+        "C23": {
+          "value": "OPEN",
+          "style": 4
+        },
+        "C27": {
+          "value": "HOLD",
+          "style": 4
+        },
+        "D1": {
+          "value": "CCW / u",
+          "style": 1
+        },
+        "D2": {
+          "value": "CCW",
+          "style": 0
+        },
+        "D3": {
+          "value": "u",
+          "style": 0
+        },
+        "D4": {
+          "value": 0.6,
+          "style": 3,
+          "formula": "'Eingang'!$B$5"
+        },
+        "D5": {
+          "value": 1.2,
+          "style": 3,
+          "formula": "'Eingang'!$B$7"
+        },
+        "D6": {
+          "value": 0,
+          "style": 3,
+          "formula": "'Eingang'!$B$9"
+        },
+        "D7": {
+          "value": 0.0017188733853924696,
+          "style": 3,
+          "formula": "D5*'Eingang'!$B$4*0.000001/(PI()*(D4/2)^2)"
+        },
+        "D8": {
+          "value": 0,
+          "style": 3,
+          "formula": "D6/(D6^2+D7^2)"
+        },
+        "D9": {
+          "value": 581.7764173314432,
+          "style": 3,
+          "formula": "D7/(D6^2+D7^2)"
+        },
+        "D10": {
+          "value": 0,
+          "style": 3,
+          "formula": "D8+'Eingang'!$B$12"
+        },
+        "D11": {
+          "value": 4.760708886255662,
+          "style": 3,
+          "formula": "(1-D10/'Eingang'!$B$11)^2+(D9/'Eingang'!$B$11)^2"
+        },
+        "D12": {
+          "value": -236.9841745908659,
+          "style": 3,
+          "formula": "(D10-(D10^2+D9^2)/'Eingang'!$B$11)/D11"
+        },
+        "D13": {
+          "value": 122.20373713903253,
+          "style": 3,
+          "formula": "D9/D11"
+        },
+        "D14": {
+          "value": 242.74552417574486,
+          "style": 3,
+          "formula": "'Eingang'!$B$13-'Eingang'!$B$12+'Eingang'!$B$14*(1+SQRT(2)/2)+'Eingang'!$B$15"
+        },
+        "D15": {
+          "value": 236.98417459086588,
+          "style": 3,
+          "formula": "D14-'Eingang'!$B$18*(1-1/'Eingang'!$B$19)-'Eingang'!$B$16/2*(1-1/'Eingang'!$B$17)"
+        },
+        "D16": {
+          "value": -2.842170943040401e-14,
+          "style": 3,
+          "formula": "D12+D15"
+        },
+        "D17": {
+          "value": 137.49453670142762,
+          "style": 3,
+          "formula": "1000*SQRT(D5*'Eingang'!$B$4*0.000001*D13/PI())"
+        },
+        "D18": {
+          "value": 137.49453670142762,
+          "style": 3,
+          "formula": "D17*SQRT(1+(D16/D13)^2)"
+        },
+        "D19": {
+          "value": 5.2580162446247416e-14,
+          "style": 3,
+          "formula": "-'Eingang'!$B$17*D16"
+        },
+        "D20": {
+          "value": 226.0769137072102,
+          "style": 3,
+          "formula": "'Eingang'!$B$17*D13"
+        },
+        "D22": {
+          "value": 236.9841745908659,
+          "style": 3,
+          "formula": "-D12"
+        },
+        "D24": {
+          "value": 137.52815919553655,
+          "style": 3,
+          "formula": "D17*SQRT(1+((D16-'Eingang'!$B$16/(2*'Eingang'!$B$17))/D13)^2)"
+        },
+        "D25": {
+          "value": 137.52815919553655,
+          "style": 3,
+          "formula": "D17*SQRT(1+((D16+'Eingang'!$B$16/(2*'Eingang'!$B$17))/D13)^2)"
+        },
+        "D26": {
+          "value": 5.2580162446247416e-14,
+          "style": 3,
+          "formula": "D19"
+        },
+        "D21": {
+          "value": "IM_KRISTALL",
+          "style": 4,
+          "formula": "IF(ABS(D19)<='Eingang'!$B$16/2,\"IM_KRISTALL\",\"EXTRAPOLIERT\")"
+        },
+        "D23": {
+          "value": "OPEN",
+          "style": 4
+        },
+        "D27": {
+          "value": "HOLD",
+          "style": 4
+        },
+        "E1": {
+          "value": "CCW / v",
+          "style": 1
+        },
+        "E2": {
+          "value": "CCW",
+          "style": 0
+        },
+        "E3": {
+          "value": "v",
+          "style": 0
+        },
+        "E4": {
+          "value": 0.6,
+          "style": 3,
+          "formula": "'Eingang'!$B$6"
+        },
+        "E5": {
+          "value": 1.2,
+          "style": 3,
+          "formula": "'Eingang'!$B$8"
+        },
+        "E6": {
+          "value": 0,
+          "style": 3,
+          "formula": "'Eingang'!$B$10"
+        },
+        "E7": {
+          "value": 0.0017188733853924696,
+          "style": 3,
+          "formula": "E5*'Eingang'!$B$4*0.000001/(PI()*(E4/2)^2)"
+        },
+        "E8": {
+          "value": 0,
+          "style": 3,
+          "formula": "E6/(E6^2+E7^2)"
+        },
+        "E9": {
+          "value": 581.7764173314432,
+          "style": 3,
+          "formula": "E7/(E6^2+E7^2)"
+        },
+        "E10": {
+          "value": 0,
+          "style": 3,
+          "formula": "E8+'Eingang'!$B$12"
+        },
+        "E11": {
+          "value": 4.760708886255662,
+          "style": 3,
+          "formula": "(1-E10/'Eingang'!$B$11)^2+(E9/'Eingang'!$B$11)^2"
+        },
+        "E12": {
+          "value": -236.9841745908659,
+          "style": 3,
+          "formula": "(E10-(E10^2+E9^2)/'Eingang'!$B$11)/E11"
+        },
+        "E13": {
+          "value": 122.20373713903253,
+          "style": 3,
+          "formula": "E9/E11"
+        },
+        "E14": {
+          "value": 242.74552417574486,
+          "style": 3,
+          "formula": "'Eingang'!$B$13-'Eingang'!$B$12+'Eingang'!$B$14*(1+SQRT(2)/2)+'Eingang'!$B$15"
+        },
+        "E15": {
+          "value": 236.98417459086588,
+          "style": 3,
+          "formula": "E14-'Eingang'!$B$18*(1-1/'Eingang'!$B$19)-'Eingang'!$B$16/2*(1-1/'Eingang'!$B$17)"
+        },
+        "E16": {
+          "value": -2.842170943040401e-14,
+          "style": 3,
+          "formula": "E12+E15"
+        },
+        "E17": {
+          "value": 137.49453670142762,
+          "style": 3,
+          "formula": "1000*SQRT(E5*'Eingang'!$B$4*0.000001*E13/PI())"
+        },
+        "E18": {
+          "value": 137.49453670142762,
+          "style": 3,
+          "formula": "E17*SQRT(1+(E16/E13)^2)"
+        },
+        "E19": {
+          "value": 5.2580162446247416e-14,
+          "style": 3,
+          "formula": "-'Eingang'!$B$17*E16"
+        },
+        "E20": {
+          "value": 226.0769137072102,
+          "style": 3,
+          "formula": "'Eingang'!$B$17*E13"
+        },
+        "E22": {
+          "value": 236.9841745908659,
+          "style": 3,
+          "formula": "-E12"
+        },
+        "E24": {
+          "value": 137.52815919553655,
+          "style": 3,
+          "formula": "E17*SQRT(1+((E16-'Eingang'!$B$16/(2*'Eingang'!$B$17))/E13)^2)"
+        },
+        "E25": {
+          "value": 137.52815919553655,
+          "style": 3,
+          "formula": "E17*SQRT(1+((E16+'Eingang'!$B$16/(2*'Eingang'!$B$17))/E13)^2)"
+        },
+        "E26": {
+          "value": 5.2580162446247416e-14,
+          "style": 3,
+          "formula": "E19"
+        },
+        "E21": {
+          "value": "IM_KRISTALL",
+          "style": 4,
+          "formula": "IF(ABS(E19)<='Eingang'!$B$16/2,\"IM_KRISTALL\",\"EXTRAPOLIERT\")"
+        },
+        "E23": {
+          "value": "OPEN",
+          "style": 4
+        },
+        "E27": {
+          "value": "HOLD",
+          "style": 4
+        }
+      },
+      "widths": [
+        40,
+        24,
+        24,
+        24,
+        24,
+        60
+      ]
+    },
+    {
+      "name": "Sensitivitaet",
+      "cells": {
+        "A1": {
+          "value": "Referenz-Sweep",
+          "style": 1
+        },
+        "B1": {
+          "value": "w0 / um",
+          "style": 1
+        },
+        "C1": {
+          "value": "w Mitte / um",
+          "style": 1
+        },
+        "D1": {
+          "value": "Delta z / mm",
+          "style": 1
+        },
+        "E1": {
+          "value": "zR / mm",
+          "style": 1
+        },
+        "F1": {
+          "value": "Status",
+          "style": 1
+        },
+        "A2": {
+          "value": "D_u −5%",
+          "style": 0
+        },
+        "B2": {
+          "value": 141.3887932646762,
+          "style": 3
+        },
+        "C2": {
+          "value": 141.8834643644767,
+          "style": 3
+        },
+        "D2": {
+          "value": -20.015231183522932,
+          "style": 3
+        },
+        "E2": {
+          "value": 239.06461966987226,
+          "style": 3
+        },
+        "F2": {
+          "value": "SYNTHETISCH; statischer Snapshot",
+          "style": 0
+        },
+        "A3": {
+          "value": "D_u +5%",
+          "style": 0
+        },
+        "B3": {
+          "value": 133.4558258698551,
+          "style": 3
+        },
+        "C3": {
+          "value": 133.87821217103465,
+          "style": 3
+        },
+        "D3": {
+          "value": 16.959182378268014,
+          "style": 3
+        },
+        "E3": {
+          "value": 212.99058492119437,
+          "style": 3
+        },
+        "F3": {
+          "value": "SYNTHETISCH; statischer Snapshot",
+          "style": 0
+        },
+        "A4": {
+          "value": "M²_u −0.1",
+          "style": 0
+        },
+        "B4": {
+          "value": 128.20566231418226,
+          "style": 3
+        },
+        "C4": {
+          "value": 128.52818892463284,
+          "style": 3
+        },
+        "D4": {
+          "value": 15.219677268819481,
+          "style": 3
+        },
+        "E4": {
+          "value": 214.43136290097604,
+          "style": 3
+        },
+        "F4": {
+          "value": "SYNTHETISCH; statischer Snapshot",
+          "style": 0
+        },
+        "A5": {
+          "value": "M²_u +0.1",
+          "style": 0
+        },
+        "B5": {
+          "value": 146.30854980502534,
+          "style": 3
+        },
+        "C5": {
+          "value": 146.61996159628023,
+          "style": 3
+        },
+        "D5": {
+          "value": -15.425572093741005,
+          "style": 3
+        },
+        "E5": {
+          "value": 236.29940978506946,
+          "style": 3
+        },
+        "F5": {
+          "value": "SYNTHETISCH; statischer Snapshot",
+          "style": 0
+        },
+        "A6": {
+          "value": "f −1%",
+          "style": 0
+        },
+        "B6": {
+          "value": 136.40497968185264,
+          "style": 3
+        },
+        "C6": {
+          "value": 136.41402353110504,
+          "style": 3
+        },
+        "D6": {
+          "value": -2.5622973257523953,
+          "style": 3
+        },
+        "E6": {
+          "value": 222.5080779605647,
+          "style": 3
+        },
+        "F6": {
+          "value": "SYNTHETISCH; statischer Snapshot",
+          "style": 0
+        },
+        "A7": {
+          "value": "f +1%",
+          "style": 0
+        },
+        "B7": {
+          "value": 138.57724944762919,
+          "style": 3
+        },
+        "C7": {
+          "value": 138.58560892398,
+          "style": 3
+        },
+        "D7": {
+          "value": 2.522518275354726,
+          "style": 3
+        },
+        "E7": {
+          "value": 229.65145737116725,
+          "style": 3
+        },
+        "F7": {
+          "value": "SYNTHETISCH; statischer Snapshot",
+          "style": 0
+        },
+        "A8": {
+          "value": "Linse −1 mm",
+          "style": 0
+        },
+        "B8": {
+          "value": 137.3982072265392,
+          "style": 3
+        },
+        "C8": {
+          "value": 137.40400928331334,
+          "style": 3
+        },
+        "D8": {
+          "value": -2.074758252301574,
+          "style": 3
+        },
+        "E8": {
+          "value": 225.76024306628813,
+          "style": 3
+        },
+        "F8": {
+          "value": "SYNTHETISCH; statischer Snapshot",
+          "style": 0
+        },
+        "A9": {
+          "value": "Linse +1 mm",
+          "style": 0
+        },
+        "B9": {
+          "value": 137.5907474933362,
+          "style": 3
+        },
+        "C9": {
+          "value": 137.59653177479478,
+          "style": 3
+        },
+        "D9": {
+          "value": 2.0759335498653173,
+          "style": 3
+        },
+        "E9": {
+          "value": 226.3934157222991,
+          "style": 3
+        },
+        "F9": {
+          "value": "SYNTHETISCH; statischer Snapshot",
+          "style": 0
+        },
+        "A10": {
+          "value": "Krümmung −0.001/mm",
+          "style": 0
+        },
+        "B10": {
+          "value": 110.61455109147732,
+          "style": 3
+        },
+        "C10": {
+          "value": 122.47052915244156,
+          "style": 3
+        },
+        "D10": {
+          "value": -69.5382127094167,
+          "style": 3
+        },
+        "E10": {
+          "value": 146.32207598385935,
+          "style": 3
+        },
+        "F10": {
+          "value": "SYNTHETISCH; statischer Snapshot",
+          "style": 0
+        },
+        "A11": {
+          "value": "Krümmung +0.001/mm",
+          "style": 0
+        },
+        "B11": {
+          "value": 177.93120614246564,
+          "style": 3
+        },
+        "C11": {
+          "value": 181.43741222739575,
+          "style": 3
+        },
+        "D11": {
+          "value": 75.53117643200135,
+          "style": 3
+        },
+        "E11": {
+          "value": 378.60781769730744,
+          "style": 3
+        },
+        "F11": {
+          "value": "SYNTHETISCH; statischer Snapshot",
+          "style": 0
+        },
+        "A12": {
+          "value": "n_K −0.05",
+          "style": 0
+        },
+        "B12": {
+          "value": 137.49453670142762,
+          "style": 3
+        },
+        "C12": {
+          "value": 137.49456264787972,
+          "style": 3
+        },
+        "D12": {
+          "value": -0.13513513513511272,
+          "style": 3
+        },
+        "E12": {
+          "value": 219.96672685025854,
+          "style": 3
+        },
+        "F12": {
+          "value": "SYNTHETISCH; statischer Snapshot",
+          "style": 0
+        },
+        "A13": {
+          "value": "n_K +0.05",
+          "style": 0
+        },
+        "B13": {
+          "value": 137.49453670142762,
+          "style": 3
+        },
+        "C13": {
+          "value": 137.49455998854827,
+          "style": 3
+        },
+        "D13": {
+          "value": 0.13513513513516673,
+          "style": 3
+        },
+        "E13": {
+          "value": 232.1871005641618,
+          "style": 3
+        },
+        "F13": {
+          "value": "SYNTHETISCH; statischer Snapshot",
+          "style": 0
+        },
+        "A16": {
+          "value": "32 Eckfälle im HTML",
+          "style": 0
+        },
+        "F16": {
+          "value": "Keine globale Extremums- oder Wahrscheinlichkeitsgarantie.",
+          "style": 0
+        }
+      },
+      "widths": [
+        40,
+        24,
+        24,
+        24,
+        24,
+        60
+      ]
+    },
+    {
+      "name": "Layout",
+      "cells": {
+        "A1": {
+          "value": "ID",
+          "style": 1
+        },
+        "B1": {
+          "value": "Funktion",
+          "style": 1
+        },
+        "C1": {
+          "value": "X / mm",
+          "style": 1
+        },
+        "D1": {
+          "value": "Y / mm",
+          "style": 1
+        },
+        "E1": {
+          "value": "Z / mm",
+          "style": 1
+        },
+        "F1": {
+          "value": "Richtung / Grad",
+          "style": 1
+        },
+        "G1": {
+          "value": "AOI / Grad",
+          "style": 1
+        },
+        "H1": {
+          "value": "Status",
+          "style": 1
+        },
+        "A2": {
+          "value": "P0",
+          "style": 0
+        },
+        "B2": {
+          "value": "Pumpquelle + Kollimator",
+          "style": 0
+        },
+        "C2": {
+          "value": 400,
+          "style": 3
+        },
+        "D2": {
+          "value": 60,
+          "style": 3
+        },
+        "E2": {
+          "value": 75,
+          "style": 3
+        },
+        "F2": {
+          "value": 90,
+          "style": 3
+        },
+        "G2": {
+          "value": 0,
+          "style": 3
+        },
+        "H2": {
+          "value": "HOLD / NOT_RUN",
+          "style": 0
+        },
+        "A3": {
+          "value": "ATT",
+          "style": 0
+        },
+        "B3": {
+          "value": "Abschwaecher",
+          "style": 0
+        },
+        "C3": {
+          "value": 400,
+          "style": 3
+        },
+        "D3": {
+          "value": 100,
+          "style": 3
+        },
+        "E3": {
+          "value": 75,
+          "style": 3
+        },
+        "F3": {
+          "value": 90,
+          "style": 3
+        },
+        "G3": {
+          "value": 0,
+          "style": 3
+        },
+        "H3": {
+          "value": "HOLD / NOT_RUN",
+          "style": 0
+        },
+        "A4": {
+          "value": "ISO",
+          "style": 0
+        },
+        "B4": {
+          "value": "Isolator mit Ruecklauf-Dump",
+          "style": 0
+        },
+        "C4": {
+          "value": 400,
+          "style": 3
+        },
+        "D4": {
+          "value": 145,
+          "style": 3
+        },
+        "E4": {
+          "value": 75,
+          "style": 3
+        },
+        "F4": {
+          "value": 90,
+          "style": 3
+        },
+        "G4": {
+          "value": 0,
+          "style": 3
+        },
+        "H4": {
+          "value": "HOLD / NOT_RUN",
+          "style": 0
+        },
+        "A5": {
+          "value": "BD0",
+          "style": 0
+        },
+        "B5": {
+          "value": "Ruecklauf-Dump",
+          "style": 0
+        },
+        "C5": {
+          "value": 340,
+          "style": 3
+        },
+        "D5": {
+          "value": 145,
+          "style": 3
+        },
+        "E5": {
+          "value": 75,
+          "style": 3
+        },
+        "F5": {
+          "value": 180,
+          "style": 3
+        },
+        "G5": {
+          "value": 0,
+          "style": 3
+        },
+        "H5": {
+          "value": "HOLD / NOT_RUN",
+          "style": 0
+        },
+        "A6": {
+          "value": "HP",
+          "style": 0
+        },
+        "B6": {
+          "value": "Pump-HWP",
+          "style": 0
+        },
+        "C6": {
+          "value": 400,
+          "style": 3
+        },
+        "D6": {
+          "value": 205,
+          "style": 3
+        },
+        "E6": {
+          "value": 75,
+          "style": 3
+        },
+        "F6": {
+          "value": 90,
+          "style": 3
+        },
+        "G6": {
+          "value": 0,
+          "style": 3
+        },
+        "H6": {
+          "value": "HOLD / NOT_RUN",
+          "style": 0
+        },
+        "A7": {
+          "value": "QP",
+          "style": 0
+        },
+        "B7": {
+          "value": "Pump-QWP",
+          "style": 0
+        },
+        "C7": {
+          "value": 400,
+          "style": 3
+        },
+        "D7": {
+          "value": 270,
+          "style": 3
+        },
+        "E7": {
+          "value": 75,
+          "style": 3
+        },
+        "F7": {
+          "value": 90,
+          "style": 3
+        },
+        "G7": {
+          "value": 0,
+          "style": 3
+        },
+        "H7": {
+          "value": "HOLD / NOT_RUN",
+          "style": 0
+        },
+        "A8": {
+          "value": "MP1",
+          "style": 0
+        },
+        "B8": {
+          "value": "Pump-Faltspiegel 1",
+          "style": 0
+        },
+        "C8": {
+          "value": 400,
+          "style": 3
+        },
+        "D8": {
+          "value": 340,
+          "style": 3
+        },
+        "E8": {
+          "value": 75,
+          "style": 3
+        },
+        "F8": {
+          "value": 90,
+          "style": 3
+        },
+        "G8": {
+          "value": 45,
+          "style": 3
+        },
+        "H8": {
+          "value": "HOLD / NOT_RUN",
+          "style": 0
+        },
+        "A9": {
+          "value": "MP2",
+          "style": 0
+        },
+        "B9": {
+          "value": "Pump-Faltspiegel 2",
+          "style": 0
+        },
+        "C9": {
+          "value": 460,
+          "style": 3
+        },
+        "D9": {
+          "value": 340,
+          "style": 3
+        },
+        "E9": {
+          "value": 75,
+          "style": 3
+        },
+        "F9": {
+          "value": 0,
+          "style": 3
+        },
+        "G9": {
+          "value": 45,
+          "style": 3
+        },
+        "H9": {
+          "value": "HOLD / NOT_RUN",
+          "style": 0
+        },
+        "A10": {
+          "value": "O04",
+          "style": 0
+        },
+        "B10": {
+          "value": "Pump-Fokuslinse",
+          "style": 0
+        },
+        "C10": {
+          "value": 460,
+          "style": 3
+        },
+        "D10": {
+          "value": 377.7877345880712,
+          "style": 3
+        },
+        "E10": {
+          "value": 75,
+          "style": 3
+        },
+        "F10": {
+          "value": 90,
+          "style": 3
+        },
+        "G10": {
+          "value": 0,
+          "style": 3
+        },
+        "H10": {
+          "value": "HOLD / NOT_RUN",
+          "style": 0
+        },
+        "A11": {
+          "value": "DM",
+          "style": 0
+        },
+        "B11": {
+          "value": "Pump-Einkopplung",
+          "style": 0
+        },
+        "C11": {
+          "value": 460,
+          "style": 3
+        },
+        "D11": {
+          "value": 410,
+          "style": 3
+        },
+        "E11": {
+          "value": 75,
+          "style": 3
+        },
+        "F11": {
+          "value": 90,
+          "style": 3
+        },
+        "G11": {
+          "value": 45,
+          "style": 3
+        },
+        "H11": {
+          "value": "HOLD / NOT_RUN",
+          "style": 0
+        },
+        "A12": {
+          "value": "PBS0",
+          "style": 0
+        },
+        "B12": {
+          "value": "Dual-Wavelength PBS",
+          "style": 0
+        },
+        "C12": {
+          "value": 500,
+          "style": 3
+        },
+        "D12": {
+          "value": 410,
+          "style": 3
+        },
+        "E12": {
+          "value": 75,
+          "style": 3
+        },
+        "F12": {
+          "value": 0,
+          "style": 3
+        },
+        "G12": {
+          "value": 0,
+          "style": 3
+        },
+        "H12": {
+          "value": "HOLD / NOT_RUN",
+          "style": 0
+        },
+        "A13": {
+          "value": "M1",
+          "style": 0
+        },
+        "B13": {
+          "value": "Sagnac-Spiegel 1",
+          "style": 0
+        },
+        "C13": {
+          "value": 600,
+          "style": 3
+        },
+        "D13": {
+          "value": 410,
+          "style": 3
+        },
+        "E13": {
+          "value": 75,
+          "style": 3
+        },
+        "F13": {
+          "value": 0,
+          "style": 3
+        },
+        "G13": {
+          "value": 22.5,
+          "style": 3
+        },
+        "H13": {
+          "value": "HOLD / NOT_RUN",
+          "style": 0
+        },
+        "A14": {
+          "value": "K",
+          "style": 0
+        },
+        "B14": {
+          "value": "ppKTP + Ofen",
+          "style": 0
+        },
+        "C14": {
+          "value": 550.1254544289202,
+          "style": 3
+        },
+        "D14": {
+          "value": 459.8745455710798,
+          "style": 3
+        },
+        "E14": {
+          "value": 75,
+          "style": 3
+        },
+        "F14": {
+          "value": 135,
+          "style": 3
+        },
+        "G14": {
+          "value": 0,
+          "style": 3
+        },
+        "H14": {
+          "value": "HOLD / NOT_RUN",
+          "style": 0
+        },
+        "A15": {
+          "value": "M2",
+          "style": 0
+        },
+        "B15": {
+          "value": "Sagnac-Spiegel 2",
+          "style": 0
+        },
+        "C15": {
+          "value": 500,
+          "style": 3
+        },
+        "D15": {
+          "value": 510,
+          "style": 3
+        },
+        "E15": {
+          "value": 75,
+          "style": 3
+        },
+        "F15": {
+          "value": 135,
+          "style": 3
+        },
+        "G15": {
+          "value": 22.5,
+          "style": 3
+        },
+        "H15": {
+          "value": "HOLD / NOT_RUN",
+          "style": 0
+        },
+        "A16": {
+          "value": "HD",
+          "style": 0
+        },
+        "B16": {
+          "value": "Dual-Wavelength HWP",
+          "style": 0
+        },
+        "C16": {
+          "value": 500,
+          "style": 3
+        },
+        "D16": {
+          "value": 460,
+          "style": 3
+        },
+        "E16": {
+          "value": 75,
+          "style": 3
+        },
+        "F16": {
+          "value": 90,
+          "style": 3
+        },
+        "G16": {
+          "value": 0,
+          "style": 3
+        },
+        "H16": {
+          "value": "HOLD / NOT_RUN",
+          "style": 0
+        },
+        "A17": {
+          "value": "DB",
+          "style": 0
+        },
+        "B17": {
+          "value": "Pump-Auskopplung B",
+          "style": 0
+        },
+        "C17": {
+          "value": 500,
+          "style": 3
+        },
+        "D17": {
+          "value": 370,
+          "style": 3
+        },
+        "E17": {
+          "value": 75,
+          "style": 3
+        },
+        "F17": {
+          "value": -90,
+          "style": 3
+        },
+        "G17": {
+          "value": 45,
+          "style": 3
+        },
+        "H17": {
+          "value": "HOLD / NOT_RUN",
+          "style": 0
+        },
+        "A18": {
+          "value": "BD1",
+          "style": 0
+        },
+        "B18": {
+          "value": "Pump-Dump B",
+          "style": 0
+        },
+        "C18": {
+          "value": 560,
+          "style": 3
+        },
+        "D18": {
+          "value": 370,
+          "style": 3
+        },
+        "E18": {
+          "value": 75,
+          "style": 3
+        },
+        "F18": {
+          "value": 0,
+          "style": 3
+        },
+        "G18": {
+          "value": 0,
+          "style": 3
+        },
+        "H18": {
+          "value": "HOLD / NOT_RUN",
+          "style": 0
+        },
+        "A19": {
+          "value": "L1A",
+          "style": 0
+        },
+        "B19": {
+          "value": "Sammellinse A",
+          "style": 0
+        },
+        "C19": {
+          "value": 414.93355309788524,
+          "style": 3
+        },
+        "D19": {
+          "value": 410,
+          "style": 3
+        },
+        "E19": {
+          "value": 75,
+          "style": 3
+        },
+        "F19": {
+          "value": 180,
+          "style": 3
+        },
+        "G19": {
+          "value": 0,
+          "style": 3
+        },
+        "H19": {
+          "value": "HOLD / NOT_RUN",
+          "style": 0
+        },
+        "A20": {
+          "value": "FA",
+          "style": 0
+        },
+        "B20": {
+          "value": "Filterpaket A",
+          "style": 0
+        },
+        "C20": {
+          "value": 370,
+          "style": 3
+        },
+        "D20": {
+          "value": 410,
+          "style": 3
+        },
+        "E20": {
+          "value": 75,
+          "style": 3
+        },
+        "F20": {
+          "value": 180,
+          "style": 3
+        },
+        "G20": {
+          "value": 0,
+          "style": 3
+        },
+        "H20": {
+          "value": "HOLD / NOT_RUN",
+          "style": 0
+        },
+        "A21": {
+          "value": "QA",
+          "style": 0
+        },
+        "B21": {
+          "value": "Analysator-QWP A",
+          "style": 0
+        },
+        "C21": {
+          "value": 320,
+          "style": 3
+        },
+        "D21": {
+          "value": 410,
+          "style": 3
+        },
+        "E21": {
+          "value": 75,
+          "style": 3
+        },
+        "F21": {
+          "value": 180,
+          "style": 3
+        },
+        "G21": {
+          "value": 0,
+          "style": 3
+        },
+        "H21": {
+          "value": "HOLD / NOT_RUN",
+          "style": 0
+        },
+        "A22": {
+          "value": "HA",
+          "style": 0
+        },
+        "B22": {
+          "value": "Analysator-HWP A",
+          "style": 0
+        },
+        "C22": {
+          "value": 270,
+          "style": 3
+        },
+        "D22": {
+          "value": 410,
+          "style": 3
+        },
+        "E22": {
+          "value": 75,
+          "style": 3
+        },
+        "F22": {
+          "value": 180,
+          "style": 3
+        },
+        "G22": {
+          "value": 0,
+          "style": 3
+        },
+        "H22": {
+          "value": "HOLD / NOT_RUN",
+          "style": 0
+        },
+        "A23": {
+          "value": "PA",
+          "style": 0
+        },
+        "B23": {
+          "value": "Analysator-PBS A",
+          "style": 0
+        },
+        "C23": {
+          "value": 220,
+          "style": 3
+        },
+        "D23": {
+          "value": 410,
+          "style": 3
+        },
+        "E23": {
+          "value": 75,
+          "style": 3
+        },
+        "F23": {
+          "value": 180,
+          "style": 3
+        },
+        "G23": {
+          "value": 0,
+          "style": 3
+        },
+        "H23": {
+          "value": "HOLD / NOT_RUN",
+          "style": 0
+        },
+        "A24": {
+          "value": "L1B",
+          "style": 0
+        },
+        "B24": {
+          "value": "Sammellinse B",
+          "style": 0
+        },
+        "C24": {
+          "value": 500,
+          "style": 3
+        },
+        "D24": {
+          "value": 324.93355309788524,
+          "style": 3
+        },
+        "E24": {
+          "value": 75,
+          "style": 3
+        },
+        "F24": {
+          "value": -90,
+          "style": 3
+        },
+        "G24": {
+          "value": 0,
+          "style": 3
+        },
+        "H24": {
+          "value": "HOLD / NOT_RUN",
+          "style": 0
+        },
+        "A25": {
+          "value": "FB",
+          "style": 0
+        },
+        "B25": {
+          "value": "Filterpaket B",
+          "style": 0
+        },
+        "C25": {
+          "value": 500,
+          "style": 3
+        },
+        "D25": {
+          "value": 285,
+          "style": 3
+        },
+        "E25": {
+          "value": 75,
+          "style": 3
+        },
+        "F25": {
+          "value": -90,
+          "style": 3
+        },
+        "G25": {
+          "value": 0,
+          "style": 3
+        },
+        "H25": {
+          "value": "HOLD / NOT_RUN",
+          "style": 0
+        },
+        "A26": {
+          "value": "QB",
+          "style": 0
+        },
+        "B26": {
+          "value": "Analysator-QWP B",
+          "style": 0
+        },
+        "C26": {
+          "value": 500,
+          "style": 3
+        },
+        "D26": {
+          "value": 245,
+          "style": 3
+        },
+        "E26": {
+          "value": 75,
+          "style": 3
+        },
+        "F26": {
+          "value": -90,
+          "style": 3
+        },
+        "G26": {
+          "value": 0,
+          "style": 3
+        },
+        "H26": {
+          "value": "HOLD / NOT_RUN",
+          "style": 0
+        },
+        "A27": {
+          "value": "HB",
+          "style": 0
+        },
+        "B27": {
+          "value": "Analysator-HWP B",
+          "style": 0
+        },
+        "C27": {
+          "value": 500,
+          "style": 3
+        },
+        "D27": {
+          "value": 200,
+          "style": 3
+        },
+        "E27": {
+          "value": 75,
+          "style": 3
+        },
+        "F27": {
+          "value": -90,
+          "style": 3
+        },
+        "G27": {
+          "value": 0,
+          "style": 3
+        },
+        "H27": {
+          "value": "HOLD / NOT_RUN",
+          "style": 0
+        },
+        "A28": {
+          "value": "PB",
+          "style": 0
+        },
+        "B28": {
+          "value": "Analysator-PBS B",
+          "style": 0
+        },
+        "C28": {
+          "value": 500,
+          "style": 3
+        },
+        "D28": {
+          "value": 150,
+          "style": 3
+        },
+        "E28": {
+          "value": 75,
+          "style": 3
+        },
+        "F28": {
+          "value": -90,
+          "style": 3
+        },
+        "G28": {
+          "value": 0,
+          "style": 3
+        },
+        "H28": {
+          "value": "HOLD / NOT_RUN",
+          "style": 0
+        },
+        "A29": {
+          "value": "L2A+",
+          "style": 0
+        },
+        "B29": {
+          "value": "Faserkoppler A+",
+          "style": 0
+        },
+        "C29": {
+          "value": 153.5560696541766,
+          "style": 3
+        },
+        "D29": {
+          "value": 410,
+          "style": 3
+        },
+        "E29": {
+          "value": 75,
+          "style": 3
+        },
+        "F29": {
+          "value": 180,
+          "style": 3
+        },
+        "G29": {
+          "value": 0,
+          "style": 3
+        },
+        "H29": {
+          "value": "HOLD / NOT_RUN",
+          "style": 0
+        },
+        "A30": {
+          "value": "FC_A+",
+          "style": 0
+        },
+        "B30": {
+          "value": "Faser A+",
+          "style": 0
+        },
+        "C30": {
+          "value": 145.5560696541766,
+          "style": 3
+        },
+        "D30": {
+          "value": 410,
+          "style": 3
+        },
+        "E30": {
+          "value": 75,
+          "style": 3
+        },
+        "F30": {
+          "value": 180,
+          "style": 3
+        },
+        "G30": {
+          "value": 0,
+          "style": 3
+        },
+        "H30": {
+          "value": "HOLD / NOT_RUN",
+          "style": 0
+        },
+        "A31": {
+          "value": "L2A-",
+          "style": 0
+        },
+        "B31": {
+          "value": "Faserkoppler A-",
+          "style": 0
+        },
+        "C31": {
+          "value": 220,
+          "style": 3
+        },
+        "D31": {
+          "value": 343.5560696541766,
+          "style": 3
+        },
+        "E31": {
+          "value": 75,
+          "style": 3
+        },
+        "F31": {
+          "value": -90,
+          "style": 3
+        },
+        "G31": {
+          "value": 0,
+          "style": 3
+        },
+        "H31": {
+          "value": "HOLD / NOT_RUN",
+          "style": 0
+        },
+        "A32": {
+          "value": "FC_A-",
+          "style": 0
+        },
+        "B32": {
+          "value": "Faser A-",
+          "style": 0
+        },
+        "C32": {
+          "value": 220,
+          "style": 3
+        },
+        "D32": {
+          "value": 335.5560696541766,
+          "style": 3
+        },
+        "E32": {
+          "value": 75,
+          "style": 3
+        },
+        "F32": {
+          "value": -90,
+          "style": 3
+        },
+        "G32": {
+          "value": 0,
+          "style": 3
+        },
+        "H32": {
+          "value": "HOLD / NOT_RUN",
+          "style": 0
+        },
+        "A33": {
+          "value": "L2B+",
+          "style": 0
+        },
+        "B33": {
+          "value": "Faserkoppler B+",
+          "style": 0
+        },
+        "C33": {
+          "value": 500,
+          "style": 3
+        },
+        "D33": {
+          "value": 63.55606965417661,
+          "style": 3
+        },
+        "E33": {
+          "value": 75,
+          "style": 3
+        },
+        "F33": {
+          "value": -90,
+          "style": 3
+        },
+        "G33": {
+          "value": 0,
+          "style": 3
+        },
+        "H33": {
+          "value": "HOLD / NOT_RUN",
+          "style": 0
+        },
+        "A34": {
+          "value": "FC_B+",
+          "style": 0
+        },
+        "B34": {
+          "value": "Faser B+",
+          "style": 0
+        },
+        "C34": {
+          "value": 500,
+          "style": 3
+        },
+        "D34": {
+          "value": 55.55606965417661,
+          "style": 3
+        },
+        "E34": {
+          "value": 75,
+          "style": 3
+        },
+        "F34": {
+          "value": -90,
+          "style": 3
+        },
+        "G34": {
+          "value": 0,
+          "style": 3
+        },
+        "H34": {
+          "value": "HOLD / NOT_RUN",
+          "style": 0
+        },
+        "A35": {
+          "value": "L2B-",
+          "style": 0
+        },
+        "B35": {
+          "value": "Faserkoppler B-",
+          "style": 0
+        },
+        "C35": {
+          "value": 586.4439303458234,
+          "style": 3
+        },
+        "D35": {
+          "value": 150,
+          "style": 3
+        },
+        "E35": {
+          "value": 75,
+          "style": 3
+        },
+        "F35": {
+          "value": 0,
+          "style": 3
+        },
+        "G35": {
+          "value": 0,
+          "style": 3
+        },
+        "H35": {
+          "value": "HOLD / NOT_RUN",
+          "style": 0
+        },
+        "A36": {
+          "value": "FC_B-",
+          "style": 0
+        },
+        "B36": {
+          "value": "Faser B-",
+          "style": 0
+        },
+        "C36": {
+          "value": 594.4439303458234,
+          "style": 3
+        },
+        "D36": {
+          "value": 150,
+          "style": 3
+        },
+        "E36": {
+          "value": 75,
+          "style": 3
+        },
+        "F36": {
+          "value": 0,
+          "style": 3
+        },
+        "G36": {
+          "value": 0,
+          "style": 3
+        },
+        "H36": {
+          "value": "HOLD / NOT_RUN",
+          "style": 0
+        }
+      },
+      "widths": [
+        18,
+        39,
+        20,
+        20,
+        15,
+        18,
+        19,
+        28
+      ]
+    },
+    {
+      "name": "Messwerte",
+      "cells": {
+        "A1": {
+          "value": "Pflichtgröße",
+          "style": 1
+        },
+        "B1": {
+          "value": "Istwert",
+          "style": 1
+        },
+        "C1": {
+          "value": "Unsicherheit",
+          "style": 1
+        },
+        "D1": {
+          "value": "k / Einheit",
+          "style": 1
+        },
+        "E1": {
+          "value": "Evidenz / Status",
+          "style": 1
+        },
+        "A2": {
+          "value": "Pumpmodell / Seriennummer",
+          "style": 0
+        },
+        "E2": {
+          "value": "NOT_RUN / OPEN",
+          "style": 4
+        },
+        "A3": {
+          "value": "lambda P1",
+          "style": 0
+        },
+        "E3": {
+          "value": "NOT_RUN / OPEN",
+          "style": 4
+        },
+        "A4": {
+          "value": "D4sigma u",
+          "style": 0
+        },
+        "E4": {
+          "value": "NOT_RUN / OPEN",
+          "style": 4
+        },
+        "A5": {
+          "value": "D4sigma v",
+          "style": 0
+        },
+        "E5": {
+          "value": "NOT_RUN / OPEN",
+          "style": 4
+        },
+        "A6": {
+          "value": "M2 u",
+          "style": 0
+        },
+        "E6": {
+          "value": "NOT_RUN / OPEN",
+          "style": 4
+        },
+        "A7": {
+          "value": "M2 v",
+          "style": 0
+        },
+        "E7": {
+          "value": "NOT_RUN / OPEN",
+          "style": 4
+        },
+        "A8": {
+          "value": "R oder explizit plane u",
+          "style": 0
+        },
+        "E8": {
+          "value": "NOT_RUN / OPEN",
+          "style": 4
+        },
+        "A9": {
+          "value": "R oder explizit plane v",
+          "style": 0
+        },
+        "E9": {
+          "value": "NOT_RUN / OPEN",
+          "style": 4
+        },
+        "A10": {
+          "value": "Achswinkel u/v",
+          "style": 0
+        },
+        "E10": {
+          "value": "NOT_RUN / OPEN",
+          "style": 4
+        },
+        "A11": {
+          "value": "Fit-Kovarianz / Parameterordnung",
+          "style": 0
+        },
+        "E11": {
+          "value": "NOT_RUN / OPEN",
+          "style": 4
+        },
+        "A12": {
+          "value": "Material n(λ,T) und Achsen",
+          "style": 0
+        },
+        "E12": {
+          "value": "NOT_RUN / OPEN",
+          "style": 4
+        },
+        "A13": {
+          "value": "Linsenhauptflächen / f(λ)",
+          "style": 0
+        },
+        "E13": {
+          "value": "NOT_RUN / OPEN",
+          "style": 4
+        },
+        "A14": {
+          "value": "Glasdicken / reale AOI",
+          "style": 0
+        },
+        "E14": {
+          "value": "NOT_RUN / OPEN",
+          "style": 4
+        },
+        "A15": {
+          "value": "Optische Aperturen",
+          "style": 0
+        },
+        "E15": {
+          "value": "NOT_RUN / OPEN",
+          "style": 4
+        },
+        "A16": {
+          "value": "Halter und Ofen-CAD",
+          "style": 0
+        },
+        "E16": {
+          "value": "NOT_RUN / OPEN",
+          "style": 4
+        }
+      },
+      "widths": [
+        46,
+        25,
+        25,
+        25,
+        58
+      ]
+    }
+  ],
+  "input_definitions": [
+    [
+      "lambda_nm",
+      "λ₀ / nm",
+      405,
+      1,
+      1000,
+      0.001
+    ],
+    [
+      "axes.u.diameter_mm",
+      "D4σ,u an P1 / mm",
+      0.6,
+      0.001,
+      10,
+      0.001
+    ],
+    [
+      "axes.v.diameter_mm",
+      "D4σ,v an P1 / mm",
+      0.6,
+      0.001,
+      10,
+      0.001
+    ],
+    [
+      "axes.u.M2",
+      "M² u",
+      1.2,
+      1,
+      20,
+      0.01
+    ],
+    [
+      "axes.v.M2",
+      "M² v",
+      1.2,
+      1,
+      20,
+      0.01
+    ],
+    [
+      "axes.u.curvature_per_mm",
+      "1/R u / mm⁻¹",
+      0,
+      -0.1,
+      0.1,
+      0.00001
+    ],
+    [
+      "axes.v.curvature_per_mm",
+      "1/R v / mm⁻¹",
+      0,
+      -0.1,
+      0.1,
+      0.00001
+    ],
+    [
+      "f_mm",
+      "f bei 405 nm / mm",
+      300,
+      1,
+      2000,
+      1
+    ],
+    [
+      "lens_shift_mm",
+      "O04-Verschiebung ab P1 / mm",
+      0,
+      -10,
+      10,
+      0.1
+    ],
+    [
+      "common_mm",
+      "P1 bis PBS-Mitte / mm",
+      72.21226541192883,
+      40,
+      200,
+      0.01
+    ],
+    [
+      "leg_mm",
+      "Sagnac-Katheten / mm",
+      100,
+      50,
+      180,
+      1
+    ],
+    [
+      "crystal_shift_mm",
+      "Kristallversatz entlang CCW / mm",
+      -0.1774193548387097,
+      -20,
+      20,
+      0.01
+    ],
+    [
+      "crystal_length_mm",
+      "Kristalllänge / mm",
+      10,
+      1,
+      30,
+      0.1
+    ],
+    [
+      "n_crystal",
+      "n Kristall (Szenario)",
+      1.85,
+      1,
+      3,
+      0.001
+    ],
+    [
+      "pbs_mm",
+      "PBS-Glasweg / mm",
+      10,
+      0,
+      40,
+      0.1
+    ],
+    [
+      "n_pbs",
+      "n PBS (Szenario)",
+      1.53,
+      1,
+      3,
+      0.001
+    ],
+    [
+      "hwp_mm",
+      "HWP-Dicke / mm",
+      1,
+      0,
+      5,
+      0.01
+    ],
+    [
+      "n_hwp",
+      "n HWP (Szenario)",
+      1.55,
+      1,
+      3,
+      0.001
+    ]
+  ]
+}
