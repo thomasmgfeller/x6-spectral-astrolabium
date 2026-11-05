@@ -1,0 +1,51 @@
+RFQ-PBS | Dual-wavelength PBS for a polarization Sagnac
+To: Newlight Photonics <sales@newlightphotonics.com>
+Subject: RFQ-PBS - PBS0012-405/810; improved/custom option if required
+
+Please quote quantity 1 plus an optional separately priced spare. This is a technical and budgetary RFQ, not a purchase order. No manufacturing release is implied.
+Requester: Thomas Gfeller, X6 photonics project, Switzerland. Please return the quotation to the sender. Delivery address and billing details will be supplied with any later order.
+
+RFQ-PBS-01 Bands and power
+Nominal 405/810 nm, CW pump. Quote at the nominal wavelengths now; final guaranteed bands depend on measured pump and SPDC spectra.
+Please provide: Provide full s/p spectral curves over 400-410 and 800-820 nm where available. These are requested characterization spans, not newly imposed operating bandwidths.
+
+RFQ-PBS-02 Port convention
+External faces normal to beam; diagonal coating nominal 45°. Label P1=west,P2=east,P3=north,P4=south. H lies in bench plane; V is vertical.
+Please provide: A marked drawing showing coating normal and exact entrance/exit ports. Required routing: P1-H→P2, P1-V→P3; P2-H→P1, P2-V→P4; P3-H→P4, P3-V→P1.
+
+RFQ-PBS-03 Extinction
+Project target ER_T=T_H/T_V≥1000 and ER_R=R_V/R_H≥1000 at both wavelength bands, at every used input direction. Ratios use separately normalized equal incident powers.
+Please provide: Guaranteed values for P1,P2,P3 incidence, both outputs and both wavelengths; specify minima, typical values, uncertainty and test conditions. Published family >300:1 does not establish compliance.
+
+RFQ-PBS-04 Throughput
+Report desired throughput T_H,R_V and undesired T_V,R_H independently; low transmission cannot be hidden by a large extinction ratio.
+Please provide: Absolute power fractions with absorption/scatter budget and curves. No additional absolute-throughput threshold is frozen before the complete loss budget; quote guaranteed achievable values.
+
+RFQ-PBS-05 Phase and dispersion
+The two SPDC alternatives must retain coherent polarization transfer in reverse traversal. Intensity extinction alone is insufficient.
+Please provide: Complex Jones coefficients or phase/retardance versus wavelength for transmission/reflection and reverse ports; coating asymmetry, group-delay difference and conventions. State if these are unavailable.
+
+RFQ-PBS-06 Dimensions and glass
+Catalog candidate is 12.7 x 12.7 x 12.7 mm; worksheet assumed 10 mm. Clear aperture at least 5 mm on all used faces.
+Please provide: Actual glass, cement, index model at 405/810, optical path lengths, tolerances, beam deviation and dimensional CAD. A 10-mm option may be quoted separately, with full specifications.
+
+RFQ-PBS-07 Mechanical integration
+All four beam ports remain accessible; center beam height 75 mm. The old generic 26-mm mount square is not a clearance guarantee.
+Please provide: Suitable mount part number/CAD, beam-center offset, required pads/adhesive limits and available adjustment.
+
+RFQ-PBS-08 Angular/thermal response
+Normal face incidence nominal; report sensitivity to small alignment errors and laboratory temperature.
+Please provide: Provide acceptance angle, s/p behavior, depolarization, wavefront error and coating/adhesive temperature limits; identify tested angles and temperatures.
+
+RFQ-PBS-09 405-nm CW suitability
+System operates at 0.1-3 mW total incident crystal power; upstream PBS power and accidental exposure depend on actual source.
+Please provide: 405-nm CW handling/fluorescence/aging information and maximum permitted incident power; no transfer of a 1064-nm pulsed damage number.
+
+RFQ-PBS-10 Alternatives and certification
+If standard PBS0012-405/810 cannot guarantee the target, quote a compliant custom or selected unit and separately report the standard-unit deviation.
+Please provide: Serial/lot test data, price/NRE difference, lead time and acceptance/remedy terms. Do not substitute a 405-only or 810-only PBS.
+
+State unit price, currency, NRE, minimum order, lead time from approved specifications, quotation validity, warranty and shipping/tax terms separately. Identify included mounts, controllers and certificates to avoid double counting.
+For each requirement ID, return COMPLY / DEVIATION / NOT AVAILABLE, the guaranteed value and conditions, and a document/curve reference. Highlight every exception; silence is not acceptance.
+Data preferred: PDF datasheet/drawing, STEP geometry and CSV wavelength/temperature curves. Provide units, wavelength convention, polarization/port labels, measurement uncertainty and instrument resolution. Do not send proprietary information that must not be included in a public engineering record without flagging it.
+Before an order: confirm the measured pump profile, final spectral bands, optical/mechanical fit and all agreed deviations in writing. Nominal 405/810 values permit preliminary quotation only.

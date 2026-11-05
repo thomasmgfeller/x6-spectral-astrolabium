@@ -1,0 +1,2701 @@
+{
+  "version": "0.1",
+  "created": "2026-11-05",
+  "scope": "DESIGN_AND_RFQ_ONLY",
+  "baseline_commit": "85615bf4fe9995aa5a69a95a258067aebaaf9656",
+  "status": "HOLD",
+  "hardware_status": "NOT_RUN",
+  "sources": {
+    "P1": {
+      "title": "Optikplan v0.1, 23.10.2026, S. 2-5, 9-12",
+      "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/85615bf4fe9995aa5a69a95a258067aebaaf9656/experiments/photonic-two-qubit/optics/optikplan-v0.1/Optikplan_v0_1.pdf",
+      "scope": "Projektanforderungen; keine Produktnachweise.",
+      "retrieved": "2026-11-05"
+    },
+    "P2": {
+      "title": "Pump-Eingangsprofil: Systemziele v0.1",
+      "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/85615bf4fe9995aa5a69a95a258067aebaaf9656/experiments/photonic-two-qubit/optics/pump-input-v0.1/system_targets.json",
+      "scope": "Neuere Betriebsdefinition: Gesamtpumpleistung aus beiden Richtungen; System-PDE am Moduleingang.",
+      "retrieved": "2026-11-05"
+    },
+    "P3": {
+      "title": "Gaussian/Layout v0.1: Eingabevertrag",
+      "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/85615bf4fe9995aa5a69a95a258067aebaaf9656/experiments/photonic-two-qubit/optics/gaussian-layout-v0.1/eingaben.json",
+      "scope": "35 optische Positionen, Z=75 mm; Werte aus Annahmen, keine Montagefreigabe.",
+      "retrieved": "2026-11-05"
+    },
+    "S1": {
+      "title": "Raicol: ppKTP",
+      "url": "https://raicol.com/product/quantum-components/ppktp",
+      "scope": "Bulk-ppKTP als kundenspezifische Anfrage; typische Apertur 1 x 2 mm. Kein verifizierter Bestellcode für unsere Konfiguration.",
+      "retrieved": "2026-11-05"
+    },
+    "S2": {
+      "title": "Newlight: Dual/Broadband PBS",
+      "url": "https://www.newlightphotonics.com/SPDC-Components/Broadband-Polarizing-Beamsplitters-SPDC",
+      "scope": "Familienangabe Extinktion >300:1; 1000:1 je Port/Wellenlänge damit nicht belegt.",
+      "retrieved": "2026-11-05"
+    },
+    "S3": {
+      "title": "Newlight: Dual wavelength waveplates",
+      "url": "https://www.newlightphotonics.com/wp-dual.html",
+      "scope": "WPD03-H810-H405: Halb/Halb, 15 mm, Halter 25,4 mm. Familienangabe Retardanz <λ/100 für Multiorder; konkrete Bandkurve offen.",
+      "retrieved": "2026-11-05"
+    },
+    "S4": {
+      "title": "Newlight: QE parts list 2023, S. 1-2",
+      "url": "https://www.newlightphotonics.com/QE-parts-list-2023-pump405nm.pdf",
+      "scope": "Artikelcodes WPA03-H/Q-405/810, PBS0012-405/810 und Pumpfaltspiegel dokumentiert. Alte Preise/Lieferzeiten nicht übernommen.",
+      "retrieved": "2026-11-05"
+    },
+    "S5": {
+      "title": "Newlight: Air-spaced zero order waveplates",
+      "url": "https://www.newlightphotonics.com/SPDC-Components/Air-Spaced-0th-Order-Waveplates-SPDC",
+      "scope": "Familienangabe Retardanz <λ/300; exakte Angebotsversion und Kurven anfordern.",
+      "retrieved": "2026-11-05"
+    },
+    "S6": {
+      "title": "Excelitas: SPCM-AQRH, aktuelle Produktseite",
+      "url": "https://www.excelitas.com/product/spcm-aqrh",
+      "scope": "Bestelllogik 1X, Dunkelklasse 4, FC-Option. Typische 2,2-V-/10-ns-Ausgabe; kein garantierter System-PDE-Wert bei 810 nm.",
+      "retrieved": "2026-11-05"
+    },
+    "S7": {
+      "title": "Excelitas: SPCM-AQRH Manual Rev. 2023-1",
+      "url": "https://www.excelitas.com/sites/default/files/assets/product/document/27464.pdf",
+      "scope": "Versorgung und Anschlussbedingungen; modellbezogenes aktuelles Datenblatt ist vor Anschluss maßgebend.",
+      "retrieved": "2026-11-05"
+    },
+    "S8": {
+      "title": "Swabian: Hardware manual 2.22.6.0",
+      "url": "https://www.swabianinstruments.com/static/documentation/TimeTagger/sections/hardware.html",
+      "scope": "Ultra: interne 50 Ohm, empfohlene -3 bis +3 V, Mindestpuls 0,5 ns; Kanallizenz und Modus prüfen.",
+      "retrieved": "2026-11-05"
+    },
+    "S9": {
+      "title": "Thorlabs: BK7 lenses, Katalogseite 700",
+      "url": "https://www.thorlabs.com/catalogpages/700.pdf",
+      "scope": "Historische LA1484-Geometrie: nominell f=300 mm. Beschichtungsvariante/aktuelles Modell im Angebot bestätigen.",
+      "retrieved": "2026-11-05"
+    },
+    "S10": {
+      "title": "Thorlabs: M2MS manual, Katalogarchiv 2021",
+      "url": "https://www.thorlabs.com/catalogpages/obsolete/2021/M2MS-BC106UV-AL_M.pdf",
+      "scope": "LA1461-B, nominell f=250 mm und AR 650-1050 nm dokumentiert. EFL bei 810 nm offen.",
+      "retrieved": "2026-11-05"
+    },
+    "S11": {
+      "title": "Thorlabs: Aspheres, Katalogarchiv 2018",
+      "url": "https://www.thorlabs.com/catalogpages/Obsolete/2018/352240-B.pdf",
+      "scope": "C240TME-B nominell f=8 mm, NA 0,5. Historischer Nachweis; aktuelles Angebot und Arbeitsabstand bei 810 nm offen.",
+      "retrieved": "2026-11-05"
+    },
+    "S12": {
+      "title": "Thorlabs: FC/PC fibers, Katalogarchiv 2022",
+      "url": "https://www.thorlabs.com/catalogpages/Obsolete/2022/P1-2000-FC-1.pdf",
+      "scope": "P1-780A-FC-2: 2 m, FC/PC beidseitig, 780-970 nm. MFD-Angabe bei 850 nm darf nicht als Messwert bei 810 nm gelten.",
+      "retrieved": "2026-11-05"
+    },
+    "S13": {
+      "title": "Thorlabs: Hybrid fibers, Katalogarchiv 2022",
+      "url": "https://www.thorlabs.com/catalogpages/Obsolete/2022/P2-2000-PCSMA-1.pdf",
+      "scope": "P5-780A-FC-2 hat FC/PC und FC/APC; kein Ersatz für beidseitig FC/PC ohne Anpassung.",
+      "retrieved": "2026-11-05"
+    }
+  },
+  "bom": [
+    {
+      "id": "PUMP-01",
+      "layout_ids": [
+        "P0"
+      ],
+      "quantity": 1,
+      "unit": "Stk",
+      "scope": "BASIS",
+      "component": "CW-Pumpquelle mit Kollimator",
+      "manufacturer": "OFFEN",
+      "manufacturer_part": null,
+      "internal_spec": "PUMP-01",
+      "requirement": "405 nm nominal; FWHM ≤0,1 nm; 0,1-3 mW Gesamtleistung am Kristall einstellbar; DOP ≥0,99 bei P1. Seriennummer, D4σ, M² und Krümmung beider Achsen messen.",
+      "status": "HOLD",
+      "missing_evidence": "Tatsächliche Quelle und Pumpmessung fehlen. Keine Laser-Neubeschaffung festlegen.",
+      "source_ids": [
+        "P1",
+        "P2",
+        "P3"
+      ],
+      "catalog_evidence": "OPEN",
+      "hardware_status": "NOT_RUN",
+      "route": "BESTAND PRÜFEN",
+      "legacy_id": "O01",
+      "quote_id": null,
+      "currency": null,
+      "unit_price": null,
+      "lead_weeks": null
+    },
+    {
+      "id": "ATT-01",
+      "layout_ids": [
+        "ATT"
+      ],
+      "quantity": 1,
+      "unit": "Stk",
+      "scope": "BASIS",
+      "component": "HWP für variablen Abschwächer",
+      "manufacturer": "Newlight Photonics",
+      "manufacturer_part": "WPA03-H-405",
+      "internal_spec": "ATT-01",
+      "requirement": "405 nm; mit ATT-02 und ATT-03 als Abschwächer; Polarisation nach HP/QP unabhängig einstellen.",
+      "status": "OPEN",
+      "missing_evidence": "Datenblattversion, Montage und Leistungsbereich bestätigen.",
+      "source_ids": [
+        "S4",
+        "S5",
+        "P1"
+      ],
+      "catalog_evidence": "VERIFIED: Katalogcode und Nennfunktion",
+      "hardware_status": "NOT_RUN",
+      "route": "ANFRAGE",
+      "legacy_id": "O02",
+      "quote_id": null,
+      "currency": null,
+      "unit_price": null,
+      "lead_weeks": null
+    },
+    {
+      "id": "ATT-02",
+      "layout_ids": [
+        "ATT"
+      ],
+      "quantity": 1,
+      "unit": "Stk",
+      "scope": "BASIS",
+      "component": "Polarisator des Abschwächers",
+      "manufacturer": "OFFEN",
+      "manufacturer_part": null,
+      "internal_spec": "ATT-02",
+      "requirement": "405-nm-PBS mit zugänglichem Abwurfport; Gehäuseabstand zu ATT-01 festlegen.",
+      "status": "OPEN",
+      "missing_evidence": "Hersteller-PN, ER/Transmission, Portlage und Bauraum anbieten.",
+      "source_ids": [
+        "P1"
+      ],
+      "catalog_evidence": "OPEN",
+      "hardware_status": "NOT_RUN",
+      "route": "ANFRAGE",
+      "legacy_id": "",
+      "quote_id": null,
+      "currency": null,
+      "unit_price": null,
+      "lead_weeks": null
+    },
+    {
+      "id": "ATT-03",
+      "layout_ids": [
+        "ATT"
+      ],
+      "quantity": 1,
+      "unit": "Stk",
+      "scope": "BASIS",
+      "component": "Strahlfänger Abschwächerport",
+      "manufacturer": "OFFEN",
+      "manufacturer_part": null,
+      "internal_spec": "ATT-03",
+      "requirement": "405 nm, volle Quellenleistung im Fehlerfall aufnehmen; vom Kristall-Leistungsziel unabhängig dimensionieren.",
+      "status": "HOLD",
+      "missing_evidence": "Quellenleistung, Abwurfgeometrie und Modell fehlen.",
+      "source_ids": [
+        "P1"
+      ],
+      "catalog_evidence": "OPEN",
+      "hardware_status": "NOT_RUN",
+      "route": "ANFRAGE",
+      "legacy_id": "",
+      "quote_id": null,
+      "currency": null,
+      "unit_price": null,
+      "lead_weeks": null
+    },
+    {
+      "id": "SH-01",
+      "layout_ids": [],
+      "quantity": 1,
+      "unit": "Stk",
+      "scope": "BASIS",
+      "component": "Shutter mit Rückmeldung",
+      "manufacturer": "OFFEN",
+      "manufacturer_part": null,
+      "internal_spec": "SH-01",
+      "requirement": "Pumpstrahl vor ISO schließen; Ruhestellung geschlossen; Rückmeldung an Laborfrontend.",
+      "status": "HOLD",
+      "missing_evidence": "Treiber/Modell und Koordinate nachtragen; Eingriff darf keinen Detektor beleuchten.",
+      "source_ids": [
+        "P1",
+        "P3"
+      ],
+      "catalog_evidence": "OPEN",
+      "hardware_status": "NOT_RUN",
+      "route": "ANFRAGE",
+      "legacy_id": "",
+      "quote_id": null,
+      "currency": null,
+      "unit_price": null,
+      "lead_weeks": null
+    },
+    {
+      "id": "MON-01",
+      "layout_ids": [],
+      "quantity": 1,
+      "unit": "Stk",
+      "scope": "BASIS",
+      "component": "Pump-Monitorpickoff",
+      "manufacturer": "OFFEN",
+      "manufacturer_part": null,
+      "internal_spec": "MON-01",
+      "requirement": "Schwacher Pickoff 405 nm vor Ring; Teilungsverhältnis kalibrieren, Rückreflex vermeiden.",
+      "status": "OPEN",
+      "missing_evidence": "Optik/Koordinate und Übertragungsfaktor zur Summe CW+CCW fehlen.",
+      "source_ids": [
+        "P2"
+      ],
+      "catalog_evidence": "OPEN",
+      "hardware_status": "NOT_RUN",
+      "route": "ANFRAGE",
+      "legacy_id": "",
+      "quote_id": null,
+      "currency": null,
+      "unit_price": null,
+      "lead_weeks": null
+    },
+    {
+      "id": "MON-02",
+      "layout_ids": [],
+      "quantity": 1,
+      "unit": "Stk",
+      "scope": "BASIS",
+      "component": "Monitor-Photodiode mit Auslesung",
+      "manufacturer": "OFFEN",
+      "manufacturer_part": null,
+      "internal_spec": "MON-02",
+      "requirement": "Lineare Messung im eingestellten Pumpbereich; relative Leistungsdrift ±2 % über Lauf prüfen.",
+      "status": "OPEN",
+      "missing_evidence": "Responsivität, Verstärkung, ADC-Interface und Kalibrierung auswählen.",
+      "source_ids": [
+        "P2"
+      ],
+      "catalog_evidence": "OPEN",
+      "hardware_status": "NOT_RUN",
+      "route": "ANFRAGE",
+      "legacy_id": "",
+      "quote_id": null,
+      "currency": null,
+      "unit_price": null,
+      "lead_weeks": null
+    },
+    {
+      "id": "ISO-01",
+      "layout_ids": [
+        "ISO"
+      ],
+      "quantity": 1,
+      "unit": "Stk",
+      "scope": "BASIS",
+      "component": "Pumpisolator",
+      "manufacturer": "OFFEN",
+      "manufacturer_part": null,
+      "internal_spec": "ISO-01",
+      "requirement": "405 nm, Polarisation und freier Rücklauf zum Dump BD0; Leistungsfestigkeit an voller Quelle.",
+      "status": "HOLD",
+      "missing_evidence": "Modell, Isolationskurve und realer Reject-Port bestimmen; Layoutsymbol ist kein Portnachweis.",
+      "source_ids": [
+        "P3"
+      ],
+      "catalog_evidence": "OPEN",
+      "hardware_status": "NOT_RUN",
+      "route": "ANFRAGE",
+      "legacy_id": "",
+      "quote_id": null,
+      "currency": null,
+      "unit_price": null,
+      "lead_weeks": null
+    },
+    {
+      "id": "DUMP-01",
+      "layout_ids": [
+        "BD0"
+      ],
+      "quantity": 1,
+      "unit": "Stk",
+      "scope": "BASIS",
+      "component": "Pump-Strahlfänger",
+      "manufacturer": "OFFEN",
+      "manufacturer_part": null,
+      "internal_spec": "DUMP-01",
+      "requirement": "405 nm; sichere Fassung für gesamte mögliche Quellleistung.",
+      "status": "HOLD",
+      "missing_evidence": "Quellenleistung und Haltergeometrie fehlen.",
+      "source_ids": [
+        "P1",
+        "P3"
+      ],
+      "catalog_evidence": "OPEN",
+      "hardware_status": "NOT_RUN",
+      "route": "ANFRAGE",
+      "legacy_id": "",
+      "quote_id": null,
+      "currency": null,
+      "unit_price": null,
+      "lead_weeks": null
+    },
+    {
+      "id": "DUMP-02",
+      "layout_ids": [
+        "BD1"
+      ],
+      "quantity": 1,
+      "unit": "Stk",
+      "scope": "BASIS",
+      "component": "Pump-Strahlfänger",
+      "manufacturer": "OFFEN",
+      "manufacturer_part": null,
+      "internal_spec": "DUMP-02",
+      "requirement": "405 nm; sichere Fassung für gesamte mögliche Quellleistung.",
+      "status": "HOLD",
+      "missing_evidence": "Quellenleistung und Haltergeometrie fehlen.",
+      "source_ids": [
+        "P1",
+        "P3"
+      ],
+      "catalog_evidence": "OPEN",
+      "hardware_status": "NOT_RUN",
+      "route": "ANFRAGE",
+      "legacy_id": "",
+      "quote_id": null,
+      "currency": null,
+      "unit_price": null,
+      "lead_weeks": null
+    },
+    {
+      "id": "WP-01",
+      "layout_ids": [
+        "HP"
+      ],
+      "quantity": 1,
+      "unit": "Stk",
+      "scope": "BASIS",
+      "component": "Pump-HWP",
+      "manufacturer": "Newlight Photonics",
+      "manufacturer_part": "WPA03-H-405",
+      "internal_spec": "WP-01",
+      "requirement": "405 nm nominal, Retardanzfehler ≤λ/100; drehbare Fassung und markierte Achsen.",
+      "status": "OPEN",
+      "missing_evidence": "Gemessene Pumpwellenlänge, Betriebsband und Lieferzeichnung bestätigen.",
+      "source_ids": [
+        "S4",
+        "S5",
+        "P1"
+      ],
+      "catalog_evidence": "VERIFIED: Katalogcode und Nennfunktion",
+      "hardware_status": "NOT_RUN",
+      "route": "ANFRAGE",
+      "legacy_id": "O03",
+      "quote_id": null,
+      "currency": null,
+      "unit_price": null,
+      "lead_weeks": null
+    },
+    {
+      "id": "WP-02",
+      "layout_ids": [
+        "QP"
+      ],
+      "quantity": 1,
+      "unit": "Stk",
+      "scope": "BASIS",
+      "component": "Pump-QWP",
+      "manufacturer": "Newlight Photonics",
+      "manufacturer_part": "WPA03-Q-405",
+      "internal_spec": "WP-02",
+      "requirement": "405 nm nominal, Retardanzfehler ≤λ/100; drehbare Fassung und markierte Achsen.",
+      "status": "OPEN",
+      "missing_evidence": "Gemessene Pumpwellenlänge, Betriebsband und Lieferzeichnung bestätigen.",
+      "source_ids": [
+        "S4",
+        "S5",
+        "P1"
+      ],
+      "catalog_evidence": "VERIFIED: Katalogcode und Nennfunktion",
+      "hardware_status": "NOT_RUN",
+      "route": "ANFRAGE",
+      "legacy_id": "O03",
+      "quote_id": null,
+      "currency": null,
+      "unit_price": null,
+      "lead_weeks": null
+    },
+    {
+      "id": "MIR-01",
+      "layout_ids": [
+        "MP1"
+      ],
+      "quantity": 1,
+      "unit": "Stk",
+      "scope": "BASIS",
+      "component": "Pump-Faltspiegel",
+      "manufacturer": "Newlight Photonics",
+      "manufacturer_part": "BHR10-380-420-45",
+      "internal_spec": "MIR-01",
+      "requirement": "405 nm, AOI 45°, beide Polarisationen; kinematischer Halter separat.",
+      "status": "OPEN",
+      "missing_evidence": "Aktuelle s/p-Kurve, Phasenwirkung und Haltergeometrie fehlen.",
+      "source_ids": [
+        "S4",
+        "P3"
+      ],
+      "catalog_evidence": "VERIFIED: Katalogcode und Nennband/AOI",
+      "hardware_status": "NOT_RUN",
+      "route": "ANFRAGE",
+      "legacy_id": "",
+      "quote_id": null,
+      "currency": null,
+      "unit_price": null,
+      "lead_weeks": null
+    },
+    {
+      "id": "MIR-02",
+      "layout_ids": [
+        "MP2"
+      ],
+      "quantity": 1,
+      "unit": "Stk",
+      "scope": "BASIS",
+      "component": "Pump-Faltspiegel",
+      "manufacturer": "Newlight Photonics",
+      "manufacturer_part": "BHR10-380-420-45",
+      "internal_spec": "MIR-02",
+      "requirement": "405 nm, AOI 45°, beide Polarisationen; kinematischer Halter separat.",
+      "status": "OPEN",
+      "missing_evidence": "Aktuelle s/p-Kurve, Phasenwirkung und Haltergeometrie fehlen.",
+      "source_ids": [
+        "S4",
+        "P3"
+      ],
+      "catalog_evidence": "VERIFIED: Katalogcode und Nennband/AOI",
+      "hardware_status": "NOT_RUN",
+      "route": "ANFRAGE",
+      "legacy_id": "",
+      "quote_id": null,
+      "currency": null,
+      "unit_price": null,
+      "lead_weeks": null
+    },
+    {
+      "id": "LENS-01",
+      "layout_ids": [
+        "O04"
+      ],
+      "quantity": 1,
+      "unit": "Stk",
+      "scope": "BASIS",
+      "component": "Pumpfokuslinse",
+      "manufacturer": "Thorlabs",
+      "manufacturer_part": "LA1484",
+      "internal_spec": "LENS-01",
+      "requirement": "Katalog-Basistyp nominell f=300 mm; AR405 anfragen. Tatsächliche EFL405, Hauptebenen und Glasdaten ins Worksheet.",
+      "status": "HOLD",
+      "missing_evidence": "Gemessener Eingangsstrahl; f bei 405 nm ist nicht automatisch 300 mm; Beschichtungs-PN offen.",
+      "source_ids": [
+        "S9",
+        "P3"
+      ],
+      "catalog_evidence": "VERIFIED: historischer Basistyp, kein freigegebener Bestellcode",
+      "hardware_status": "NOT_RUN",
+      "route": "ANFRAGE",
+      "legacy_id": "O04",
+      "quote_id": null,
+      "currency": null,
+      "unit_price": null,
+      "lead_weeks": null
+    },
+    {
+      "id": "DIC-01",
+      "layout_ids": [
+        "DM"
+      ],
+      "quantity": 1,
+      "unit": "Stk",
+      "scope": "BASIS",
+      "component": "Dichroitischer Pumpseparator",
+      "manufacturer": "Kundenspezifische Anfrage",
+      "manufacturer_part": null,
+      "internal_spec": "DIC-01",
+      "requirement": "AOI45°; R405 ≥99 %, T810 ≥95 % je s/p; erster Oberflächenreflex; reale Dicke, Keil und Dispersion.",
+      "status": "HOLD",
+      "missing_evidence": "PN und garantierte s/p-Kurven fehlen; DM wird aus beiden Richtungen genutzt.",
+      "source_ids": [
+        "P1",
+        "P3"
+      ],
+      "catalog_evidence": "OPEN",
+      "hardware_status": "NOT_RUN",
+      "route": "ANFRAGE",
+      "legacy_id": "O05",
+      "quote_id": null,
+      "currency": null,
+      "unit_price": null,
+      "lead_weeks": null
+    },
+    {
+      "id": "DIC-02",
+      "layout_ids": [
+        "DB"
+      ],
+      "quantity": 1,
+      "unit": "Stk",
+      "scope": "BASIS",
+      "component": "Dichroitischer Pumpseparator",
+      "manufacturer": "Kundenspezifische Anfrage",
+      "manufacturer_part": null,
+      "internal_spec": "DIC-02",
+      "requirement": "AOI45°; R405 ≥99 %, T810 ≥95 % je s/p; erster Oberflächenreflex; reale Dicke, Keil und Dispersion.",
+      "status": "HOLD",
+      "missing_evidence": "PN und garantierte s/p-Kurven fehlen; DM wird aus beiden Richtungen genutzt.",
+      "source_ids": [
+        "P1",
+        "P3"
+      ],
+      "catalog_evidence": "OPEN",
+      "hardware_status": "NOT_RUN",
+      "route": "ANFRAGE",
+      "legacy_id": "O12",
+      "quote_id": null,
+      "currency": null,
+      "unit_price": null,
+      "lead_weeks": null
+    },
+    {
+      "id": "PBS-01",
+      "layout_ids": [
+        "PBS0"
+      ],
+      "quantity": 1,
+      "unit": "Stk",
+      "scope": "BASIS",
+      "component": "Dual-Wavelength-PBS",
+      "manufacturer": "Newlight Photonics",
+      "manufacturer_part": "PBS0012-405/810",
+      "internal_spec": "PBS-01",
+      "requirement": "405/810 nm; freie Apertur ≥5 mm; ER ≥1000:1 je relevanter Port/Band; 12,7-mm-Kandidat statt 10-mm-Modell.",
+      "status": "HOLD",
+      "missing_evidence": "RFQ-PBS: Familienangabe >300:1 reicht nicht; Rückwärtsports, Phase und Glaswege offen.",
+      "source_ids": [
+        "S2",
+        "S4",
+        "P1",
+        "P3"
+      ],
+      "catalog_evidence": "VERIFIED: Katalogcode/12,7 mm; Systemfit offen",
+      "hardware_status": "NOT_RUN",
+      "route": "ANFRAGE",
+      "legacy_id": "O06",
+      "quote_id": null,
+      "currency": null,
+      "unit_price": null,
+      "lead_weeks": null
+    },
+    {
+      "id": "MIR-03",
+      "layout_ids": [
+        "M1"
+      ],
+      "quantity": 1,
+      "unit": "Stk",
+      "scope": "BASIS",
+      "component": "Ring-Dualbandspiegel",
+      "manufacturer": "Kundenspezifische Anfrage",
+      "manufacturer_part": null,
+      "internal_spec": "MIR-03",
+      "requirement": "AOI22,5°; R ≥99 % bei 405 und 810 nm für s/p, Phasen-/Gruppenlaufzeitdaten; klemmfähiger Halter.",
+      "status": "HOLD",
+      "missing_evidence": "Keine 45°-Kurve substituieren; PN, Spektralkurven und relative Phase fehlen.",
+      "source_ids": [
+        "P1",
+        "P3"
+      ],
+      "catalog_evidence": "OPEN",
+      "hardware_status": "NOT_RUN",
+      "route": "ANFRAGE",
+      "legacy_id": "O08",
+      "quote_id": null,
+      "currency": null,
+      "unit_price": null,
+      "lead_weeks": null
+    },
+    {
+      "id": "MIR-04",
+      "layout_ids": [
+        "M2"
+      ],
+      "quantity": 1,
+      "unit": "Stk",
+      "scope": "BASIS",
+      "component": "Ring-Dualbandspiegel",
+      "manufacturer": "Kundenspezifische Anfrage",
+      "manufacturer_part": null,
+      "internal_spec": "MIR-04",
+      "requirement": "AOI22,5°; R ≥99 % bei 405 und 810 nm für s/p, Phasen-/Gruppenlaufzeitdaten; klemmfähiger Halter.",
+      "status": "HOLD",
+      "missing_evidence": "Keine 45°-Kurve substituieren; PN, Spektralkurven und relative Phase fehlen.",
+      "source_ids": [
+        "P1",
+        "P3"
+      ],
+      "catalog_evidence": "OPEN",
+      "hardware_status": "NOT_RUN",
+      "route": "ANFRAGE",
+      "legacy_id": "O08",
+      "quote_id": null,
+      "currency": null,
+      "unit_price": null,
+      "lead_weeks": null
+    },
+    {
+      "id": "XTAL-01",
+      "layout_ids": [
+        "K"
+      ],
+      "quantity": 1,
+      "unit": "Stk",
+      "scope": "BASIS",
+      "component": "Bulk-ppKTP Typ II",
+      "manufacturer": "Raicol",
+      "manufacturer_part": null,
+      "internal_spec": "XTAL-01",
+      "requirement": "10 mm Länge, freie Apertur ≥1 x 2 mm; kollinear 405→810+810, bidirektional, AR beide Endflächen. RFQ-KTP.",
+      "status": "HOLD",
+      "missing_evidence": "Pumpwellenlänge, Polung, Achsen, T_QPM, Spektren und Liefercode offen.",
+      "source_ids": [
+        "S1",
+        "P1",
+        "P2"
+      ],
+      "catalog_evidence": "VERIFIED: Hersteller bietet ppKTP; Sonderkonfiguration offen",
+      "hardware_status": "NOT_RUN",
+      "route": "ANFRAGE",
+      "legacy_id": "O09",
+      "quote_id": null,
+      "currency": null,
+      "unit_price": null,
+      "lead_weeks": null
+    },
+    {
+      "id": "OVEN-01",
+      "layout_ids": [
+        "K"
+      ],
+      "quantity": 1,
+      "unit": "Stk",
+      "scope": "BASIS",
+      "component": "Spannungsarme Kristallfassung / Ofen",
+      "manufacturer": "Raicol oder Mechaniklieferant",
+      "manufacturer_part": null,
+      "internal_spec": "OVEN-01",
+      "requirement": "Für XTAL-01; reversible Einbaurichtung; lichte Apertur; Strahlhöhe 75 mm. Heiz-/Kühlfähigkeit 20-60 °C.",
+      "status": "HOLD",
+      "missing_evidence": "Zeichnung, Kontaktflächen, tatsächlicher T_QPM und thermische Auslegung fehlen.",
+      "source_ids": [
+        "P1",
+        "P3"
+      ],
+      "catalog_evidence": "OPEN",
+      "hardware_status": "NOT_RUN",
+      "route": "ANFRAGE",
+      "legacy_id": "O10",
+      "quote_id": null,
+      "currency": null,
+      "unit_price": null,
+      "lead_weeks": null
+    },
+    {
+      "id": "TEC-01",
+      "layout_ids": [],
+      "quantity": 1,
+      "unit": "Stk",
+      "scope": "BASIS",
+      "component": "TEC-Modul",
+      "manufacturer": "OFFEN",
+      "manufacturer_part": null,
+      "internal_spec": "TEC-01",
+      "requirement": "Auslegung für Ofen, Wärmeverluste und Umgebung; Heiz-/Kühlbetrieb, Strombegrenzung.",
+      "status": "HOLD",
+      "missing_evidence": "Lastrechnung und freigegebene Schnittstelle OVEN-01 fehlen.",
+      "source_ids": [
+        "P1"
+      ],
+      "catalog_evidence": "OPEN",
+      "hardware_status": "NOT_RUN",
+      "route": "ANFRAGE",
+      "legacy_id": "",
+      "quote_id": null,
+      "currency": null,
+      "unit_price": null,
+      "lead_weeks": null
+    },
+    {
+      "id": "SENS-01",
+      "layout_ids": [],
+      "quantity": 1,
+      "unit": "Stk",
+      "scope": "BASIS",
+      "component": "Temperaturfühler Kristallhalter",
+      "manufacturer": "OFFEN",
+      "manufacturer_part": null,
+      "internal_spec": "SENS-01",
+      "requirement": "Kalibrierbarer Fühler unmittelbar am Halter; Messunsicherheit/Gradienten in ±0,05-°C-Laufbudget.",
+      "status": "OPEN",
+      "missing_evidence": "Sensortyp, Anschluss und Kalibrierung festlegen; Regleranzeige ist keine Kristalltemperatur.",
+      "source_ids": [
+        "P1",
+        "P2"
+      ],
+      "catalog_evidence": "OPEN",
+      "hardware_status": "NOT_RUN",
+      "route": "ANFRAGE",
+      "legacy_id": "",
+      "quote_id": null,
+      "currency": null,
+      "unit_price": null,
+      "lead_weeks": null
+    },
+    {
+      "id": "CTRL-01",
+      "layout_ids": [],
+      "quantity": 1,
+      "unit": "Stk",
+      "scope": "BASIS",
+      "component": "TEC-PID-Regler mit Logging",
+      "manufacturer": "OFFEN",
+      "manufacturer_part": null,
+      "internal_spec": "CTRL-01",
+      "requirement": "Bidirektionaler TEC-Strom, Sensorinterface, Limits 20-60 °C, Ist-/Sollwert-Zeitreihe und Alarm.",
+      "status": "HOLD",
+      "missing_evidence": "TEC- und Sensorkonfiguration sowie Schnittstelle auswählen.",
+      "source_ids": [
+        "P1",
+        "P2"
+      ],
+      "catalog_evidence": "OPEN",
+      "hardware_status": "NOT_RUN",
+      "route": "ANFRAGE",
+      "legacy_id": "",
+      "quote_id": null,
+      "currency": null,
+      "unit_price": null,
+      "lead_weeks": null
+    },
+    {
+      "id": "THERM-01",
+      "layout_ids": [],
+      "quantity": 1,
+      "unit": "Stk",
+      "scope": "BASIS",
+      "component": "Kühlkörper / Wärmeabfuhr",
+      "manufacturer": "OFFEN",
+      "manufacturer_part": null,
+      "internal_spec": "THERM-01",
+      "requirement": "Zur heißen TEC-Seite; thermische Verlustleistung und maximale Umgebung berücksichtigen.",
+      "status": "HOLD",
+      "missing_evidence": "Thermische Bilanz und Mechanik fehlen.",
+      "source_ids": [
+        "P1"
+      ],
+      "catalog_evidence": "OPEN",
+      "hardware_status": "NOT_RUN",
+      "route": "ANFRAGE",
+      "legacy_id": "",
+      "quote_id": null,
+      "currency": null,
+      "unit_price": null,
+      "lead_weeks": null
+    },
+    {
+      "id": "WP-03",
+      "layout_ids": [
+        "HD"
+      ],
+      "quantity": 1,
+      "unit": "Stk",
+      "scope": "BASIS",
+      "component": "Dual-Wavelength-HWP",
+      "manufacturer": "Newlight Photonics",
+      "manufacturer_part": "WPD03-H810-H405",
+      "internal_spec": "WP-03",
+      "requirement": "Halbwelle bei 405 UND810 nm; |δ-π mod 2π|≤2π/100; nominelle Achse 45°. RFQ-HWP.",
+      "status": "HOLD",
+      "missing_evidence": "Reale Dicke statt Modell 1 mm; δ(λ,T), Achsen und Gruppenlaufzeit in beiden Richtungen fehlen.",
+      "source_ids": [
+        "S3",
+        "P1",
+        "P3"
+      ],
+      "catalog_evidence": "VERIFIED: Halb/Halb-Katalogfunktion",
+      "hardware_status": "NOT_RUN",
+      "route": "ANFRAGE",
+      "legacy_id": "O07",
+      "quote_id": null,
+      "currency": null,
+      "unit_price": null,
+      "lead_weeks": null
+    },
+    {
+      "id": "COL-A",
+      "layout_ids": [
+        "L1A"
+      ],
+      "quantity": 1,
+      "unit": "Stk",
+      "scope": "BASIS",
+      "component": "Gemeinsame Sammellinse Arm A",
+      "manufacturer": "Thorlabs",
+      "manufacturer_part": "LA1461-B",
+      "internal_spec": "COL-A",
+      "requirement": "Nominell f 250 mm; AR für 810 nm; EFL/Hauptebenen in vollständiger 810-ABCD-Kette.",
+      "status": "HOLD",
+      "missing_evidence": "Katalogarchiv, aktuelle Verfügbarkeit und Modenüberlappung prüfen; 250-mm-Dünnlinse nur Modell.",
+      "source_ids": [
+        "S10",
+        "P3"
+      ],
+      "catalog_evidence": "VERIFIED: historischer Katalogtyp",
+      "hardware_status": "NOT_RUN",
+      "route": "ANFRAGE",
+      "legacy_id": "O16",
+      "quote_id": null,
+      "currency": null,
+      "unit_price": null,
+      "lead_weeks": null
+    },
+    {
+      "id": "COL-B",
+      "layout_ids": [
+        "L1B"
+      ],
+      "quantity": 1,
+      "unit": "Stk",
+      "scope": "BASIS",
+      "component": "Gemeinsame Sammellinse Arm B",
+      "manufacturer": "Thorlabs",
+      "manufacturer_part": "LA1461-B",
+      "internal_spec": "COL-B",
+      "requirement": "Nominell f 250 mm; AR für 810 nm; EFL/Hauptebenen in vollständiger 810-ABCD-Kette.",
+      "status": "HOLD",
+      "missing_evidence": "Katalogarchiv, aktuelle Verfügbarkeit und Modenüberlappung prüfen; 250-mm-Dünnlinse nur Modell.",
+      "source_ids": [
+        "S10",
+        "P3"
+      ],
+      "catalog_evidence": "VERIFIED: historischer Katalogtyp",
+      "hardware_status": "NOT_RUN",
+      "route": "ANFRAGE",
+      "legacy_id": "O16",
+      "quote_id": null,
+      "currency": null,
+      "unit_price": null,
+      "lead_weeks": null
+    },
+    {
+      "id": "FIL-LP-A",
+      "layout_ids": [
+        "FA"
+      ],
+      "quantity": 1,
+      "unit": "Stk",
+      "scope": "BASIS",
+      "component": "Pumpblocker Arm A",
+      "manufacturer": "Kundenspezifische Anfrage",
+      "manufacturer_part": null,
+      "internal_spec": "FIL-LP-A",
+      "requirement": "Bei tatsächlichem AOI0°; gemeinsam mit Bandpass gesamte OD405≥6; Transmission 810 und Fluoreszenz prüfen.",
+      "status": "HOLD",
+      "missing_evidence": "Konkrete Kurven, Partnummer und Messdynamik für OD-Nachweis fehlen.",
+      "source_ids": [
+        "P1",
+        "P3"
+      ],
+      "catalog_evidence": "OPEN",
+      "hardware_status": "NOT_RUN",
+      "route": "ANFRAGE",
+      "legacy_id": "O12",
+      "quote_id": null,
+      "currency": null,
+      "unit_price": null,
+      "lead_weeks": null
+    },
+    {
+      "id": "FIL-BP-A",
+      "layout_ids": [
+        "FA"
+      ],
+      "quantity": 1,
+      "unit": "Stk",
+      "scope": "BASIS",
+      "component": "Bandpass Arm A",
+      "manufacturer": "Kundenspezifische Anfrage",
+      "manufacturer_part": null,
+      "internal_spec": "FIL-BP-A",
+      "requirement": "Zentrum 810 nm nominal; FWHM3±0,5 nm; PeakT≥80 %; gepaart mit anderem Arm, s/p- und Temperaturkurven.",
+      "status": "HOLD",
+      "missing_evidence": "Filterfenster erst gegen gemessene CW/CCW- und A/B-Spektren schließen. 810/10 kein Ersatz.",
+      "source_ids": [
+        "P1",
+        "P3"
+      ],
+      "catalog_evidence": "OPEN",
+      "hardware_status": "NOT_RUN",
+      "route": "ANFRAGE",
+      "legacy_id": "O13",
+      "quote_id": null,
+      "currency": null,
+      "unit_price": null,
+      "lead_weeks": null
+    },
+    {
+      "id": "FIL-LP-B",
+      "layout_ids": [
+        "FB"
+      ],
+      "quantity": 1,
+      "unit": "Stk",
+      "scope": "BASIS",
+      "component": "Pumpblocker Arm B",
+      "manufacturer": "Kundenspezifische Anfrage",
+      "manufacturer_part": null,
+      "internal_spec": "FIL-LP-B",
+      "requirement": "Bei tatsächlichem AOI0°; gemeinsam mit Bandpass gesamte OD405≥6; Transmission 810 und Fluoreszenz prüfen.",
+      "status": "HOLD",
+      "missing_evidence": "Konkrete Kurven, Partnummer und Messdynamik für OD-Nachweis fehlen.",
+      "source_ids": [
+        "P1",
+        "P3"
+      ],
+      "catalog_evidence": "OPEN",
+      "hardware_status": "NOT_RUN",
+      "route": "ANFRAGE",
+      "legacy_id": "O12",
+      "quote_id": null,
+      "currency": null,
+      "unit_price": null,
+      "lead_weeks": null
+    },
+    {
+      "id": "FIL-BP-B",
+      "layout_ids": [
+        "FB"
+      ],
+      "quantity": 1,
+      "unit": "Stk",
+      "scope": "BASIS",
+      "component": "Bandpass Arm B",
+      "manufacturer": "Kundenspezifische Anfrage",
+      "manufacturer_part": null,
+      "internal_spec": "FIL-BP-B",
+      "requirement": "Zentrum 810 nm nominal; FWHM3±0,5 nm; PeakT≥80 %; gepaart mit anderem Arm, s/p- und Temperaturkurven.",
+      "status": "HOLD",
+      "missing_evidence": "Filterfenster erst gegen gemessene CW/CCW- und A/B-Spektren schließen. 810/10 kein Ersatz.",
+      "source_ids": [
+        "P1",
+        "P3"
+      ],
+      "catalog_evidence": "OPEN",
+      "hardware_status": "NOT_RUN",
+      "route": "ANFRAGE",
+      "legacy_id": "O13",
+      "quote_id": null,
+      "currency": null,
+      "unit_price": null,
+      "lead_weeks": null
+    },
+    {
+      "id": "ANA-Q-A",
+      "layout_ids": [
+        "QA"
+      ],
+      "quantity": 1,
+      "unit": "Stk",
+      "scope": "BASIS",
+      "component": "Analysator-QWP A",
+      "manufacturer": "Newlight Photonics",
+      "manufacturer_part": "WPA03-Q-810",
+      "internal_spec": "ANA-Q-A",
+      "requirement": "810 nm, Retardanzfehler≤λ/100 als Projektanforderung; Nullstellung dokumentieren; im Layout vor HWP.",
+      "status": "OPEN",
+      "missing_evidence": "Genaue Kurve im 3-nm-Band und Lieferzeichnung bestätigen.",
+      "source_ids": [
+        "S4",
+        "S5",
+        "P3"
+      ],
+      "catalog_evidence": "VERIFIED: Katalogcode/Nennfunktion",
+      "hardware_status": "NOT_RUN",
+      "route": "ANFRAGE",
+      "legacy_id": "",
+      "quote_id": null,
+      "currency": null,
+      "unit_price": null,
+      "lead_weeks": null
+    },
+    {
+      "id": "ANA-H-A",
+      "layout_ids": [
+        "HA"
+      ],
+      "quantity": 1,
+      "unit": "Stk",
+      "scope": "BASIS",
+      "component": "Analysator-HWP A",
+      "manufacturer": "Newlight Photonics",
+      "manufacturer_part": "WPA03-H-810",
+      "internal_spec": "ANA-H-A",
+      "requirement": "810 nm, Retardanzfehler≤λ/100; motorisierte Winkelposition mit Rückmeldung, Wiederholbarkeit≤0,1°.",
+      "status": "OPEN",
+      "missing_evidence": "Spektralkurve und mechanischer Antrieb bestätigen.",
+      "source_ids": [
+        "S4",
+        "S5",
+        "P1"
+      ],
+      "catalog_evidence": "VERIFIED: Katalogcode/Nennfunktion",
+      "hardware_status": "NOT_RUN",
+      "route": "ANFRAGE",
+      "legacy_id": "O14",
+      "quote_id": null,
+      "currency": null,
+      "unit_price": null,
+      "lead_weeks": null
+    },
+    {
+      "id": "ANA-P-A",
+      "layout_ids": [
+        "PA"
+      ],
+      "quantity": 1,
+      "unit": "Stk",
+      "scope": "BASIS",
+      "component": "Analysator-PBS A",
+      "manufacturer": "Kundenspezifische Anfrage",
+      "manufacturer_part": null,
+      "internal_spec": "ANA-P-A",
+      "requirement": "810 nm und gesamtes Filterband; ER≥1000:1 für Transmission und Reflexion, beide Ports nutzbar.",
+      "status": "HOLD",
+      "missing_evidence": "Kein pauschaler Broadband-PBS mit nur 300:1; exakte PN/Kurven/Phasen fehlen.",
+      "source_ids": [
+        "P1",
+        "P3"
+      ],
+      "catalog_evidence": "OPEN",
+      "hardware_status": "NOT_RUN",
+      "route": "ANFRAGE",
+      "legacy_id": "O15",
+      "quote_id": null,
+      "currency": null,
+      "unit_price": null,
+      "lead_weeks": null
+    },
+    {
+      "id": "ANA-Q-B",
+      "layout_ids": [
+        "QB"
+      ],
+      "quantity": 1,
+      "unit": "Stk",
+      "scope": "BASIS",
+      "component": "Analysator-QWP B",
+      "manufacturer": "Newlight Photonics",
+      "manufacturer_part": "WPA03-Q-810",
+      "internal_spec": "ANA-Q-B",
+      "requirement": "810 nm, Retardanzfehler≤λ/100 als Projektanforderung; Nullstellung dokumentieren; im Layout vor HWP.",
+      "status": "OPEN",
+      "missing_evidence": "Genaue Kurve im 3-nm-Band und Lieferzeichnung bestätigen.",
+      "source_ids": [
+        "S4",
+        "S5",
+        "P3"
+      ],
+      "catalog_evidence": "VERIFIED: Katalogcode/Nennfunktion",
+      "hardware_status": "NOT_RUN",
+      "route": "ANFRAGE",
+      "legacy_id": "",
+      "quote_id": null,
+      "currency": null,
+      "unit_price": null,
+      "lead_weeks": null
+    },
+    {
+      "id": "ANA-H-B",
+      "layout_ids": [
+        "HB"
+      ],
+      "quantity": 1,
+      "unit": "Stk",
+      "scope": "BASIS",
+      "component": "Analysator-HWP B",
+      "manufacturer": "Newlight Photonics",
+      "manufacturer_part": "WPA03-H-810",
+      "internal_spec": "ANA-H-B",
+      "requirement": "810 nm, Retardanzfehler≤λ/100; motorisierte Winkelposition mit Rückmeldung, Wiederholbarkeit≤0,1°.",
+      "status": "OPEN",
+      "missing_evidence": "Spektralkurve und mechanischer Antrieb bestätigen.",
+      "source_ids": [
+        "S4",
+        "S5",
+        "P1"
+      ],
+      "catalog_evidence": "VERIFIED: Katalogcode/Nennfunktion",
+      "hardware_status": "NOT_RUN",
+      "route": "ANFRAGE",
+      "legacy_id": "O14",
+      "quote_id": null,
+      "currency": null,
+      "unit_price": null,
+      "lead_weeks": null
+    },
+    {
+      "id": "ANA-P-B",
+      "layout_ids": [
+        "PB"
+      ],
+      "quantity": 1,
+      "unit": "Stk",
+      "scope": "BASIS",
+      "component": "Analysator-PBS B",
+      "manufacturer": "Kundenspezifische Anfrage",
+      "manufacturer_part": null,
+      "internal_spec": "ANA-P-B",
+      "requirement": "810 nm und gesamtes Filterband; ER≥1000:1 für Transmission und Reflexion, beide Ports nutzbar.",
+      "status": "HOLD",
+      "missing_evidence": "Kein pauschaler Broadband-PBS mit nur 300:1; exakte PN/Kurven/Phasen fehlen.",
+      "source_ids": [
+        "P1",
+        "P3"
+      ],
+      "catalog_evidence": "OPEN",
+      "hardware_status": "NOT_RUN",
+      "route": "ANFRAGE",
+      "legacy_id": "O15",
+      "quote_id": null,
+      "currency": null,
+      "unit_price": null,
+      "lead_weeks": null
+    },
+    {
+      "id": "COUP-A+",
+      "layout_ids": [
+        "L2A+"
+      ],
+      "quantity": 1,
+      "unit": "Stk",
+      "scope": "BASIS",
+      "component": "Endkopplungs-Asphäre A+",
+      "manufacturer": "Thorlabs",
+      "manufacturer_part": "C240TME-B",
+      "internal_spec": "COUP-A+",
+      "requirement": "Nominell f 8 mm,810 nm; reale Hauptebenen/Arbeitsabstand statt 8 mm mechanischem Abstand verwenden.",
+      "status": "HOLD",
+      "missing_evidence": "Aktuelles Modell, NA, FC-Fassung und Kopplungsrechnung offen.",
+      "source_ids": [
+        "S11",
+        "P3"
+      ],
+      "catalog_evidence": "VERIFIED: historischer Katalogtyp",
+      "hardware_status": "NOT_RUN",
+      "route": "ANFRAGE",
+      "legacy_id": "O16",
+      "quote_id": null,
+      "currency": null,
+      "unit_price": null,
+      "lead_weeks": null
+    },
+    {
+      "id": "FIB-A+",
+      "layout_ids": [
+        "FC_A+"
+      ],
+      "quantity": 1,
+      "unit": "Stk",
+      "scope": "BASIS",
+      "component": "Singlemode-Patchkabel A+",
+      "manufacturer": "Thorlabs",
+      "manufacturer_part": "P1-780A-FC-2",
+      "internal_spec": "FIB-A+",
+      "requirement": "2 m, FC/PC beidseitig; SM bei 810 nm; MFD810 und Einfügedämpfung bestätigen.",
+      "status": "OPEN",
+      "missing_evidence": "Aktuelle Verfügbarkeit, Steckertyp am Koppler und MFD810 fehlen. Nicht P5-Hybridkabel verwenden.",
+      "source_ids": [
+        "S12",
+        "S13",
+        "P3"
+      ],
+      "catalog_evidence": "VERIFIED: historischer Code/Stecker",
+      "hardware_status": "NOT_RUN",
+      "route": "ANFRAGE",
+      "legacy_id": "O16",
+      "quote_id": null,
+      "currency": null,
+      "unit_price": null,
+      "lead_weeks": null
+    },
+    {
+      "id": "DET-0",
+      "layout_ids": [],
+      "quantity": 1,
+      "unit": "Stk",
+      "scope": "BASIS",
+      "component": "Referenz-SPAD-Modul A+",
+      "manufacturer": "Excelitas",
+      "manufacturer_part": "SPCM-AQRH-14-FC",
+      "internal_spec": "DET-0",
+      "requirement": "1X-Ausgang, Dunkelklasse 4; Systemeffizienz≥40 % am Moduleingang 810 nm; Totzeit≤50 ns.",
+      "status": "HOLD",
+      "missing_evidence": "Modell-/Seriennachweise, FC-Optik 810, elektrische Pulsgrenzen und Leihverfügbarkeit fehlen.",
+      "source_ids": [
+        "S6",
+        "S7",
+        "P1",
+        "P2"
+      ],
+      "catalog_evidence": "VERIFIED: Bestelllogik; System-PDE offen",
+      "hardware_status": "NOT_RUN",
+      "route": "LEIHE BEVORZUGT",
+      "legacy_id": "D0",
+      "quote_id": null,
+      "currency": null,
+      "unit_price": null,
+      "lead_weeks": null
+    },
+    {
+      "id": "CAB-0",
+      "layout_ids": [],
+      "quantity": 1,
+      "unit": "Stk",
+      "scope": "BASIS",
+      "component": "Detektorsignalkabel A+",
+      "manufacturer": "OFFEN",
+      "manufacturer_part": null,
+      "internal_spec": "CAB-0",
+      "requirement": "50-Ohm-Koax, BNC male→SMA male, nominell 1 m als Planwert; Laufzeit je Kabel kalibrieren.",
+      "status": "OPEN",
+      "missing_evidence": "Konkrete PN, Länge, Dämpfung und Stecker prüfen; genau ein 50-Ohm-Abschluss im Ultra.",
+      "source_ids": [
+        "P1",
+        "S8"
+      ],
+      "catalog_evidence": "OPEN",
+      "hardware_status": "NOT_RUN",
+      "route": "ANFRAGE",
+      "legacy_id": "",
+      "quote_id": null,
+      "currency": null,
+      "unit_price": null,
+      "lead_weeks": null
+    },
+    {
+      "id": "COUP-A-",
+      "layout_ids": [
+        "L2A-"
+      ],
+      "quantity": 1,
+      "unit": "Stk",
+      "scope": "BASIS",
+      "component": "Endkopplungs-Asphäre A-",
+      "manufacturer": "Thorlabs",
+      "manufacturer_part": "C240TME-B",
+      "internal_spec": "COUP-A-",
+      "requirement": "Nominell f 8 mm,810 nm; reale Hauptebenen/Arbeitsabstand statt 8 mm mechanischem Abstand verwenden.",
+      "status": "HOLD",
+      "missing_evidence": "Aktuelles Modell, NA, FC-Fassung und Kopplungsrechnung offen.",
+      "source_ids": [
+        "S11",
+        "P3"
+      ],
+      "catalog_evidence": "VERIFIED: historischer Katalogtyp",
+      "hardware_status": "NOT_RUN",
+      "route": "ANFRAGE",
+      "legacy_id": "O16",
+      "quote_id": null,
+      "currency": null,
+      "unit_price": null,
+      "lead_weeks": null
+    },
+    {
+      "id": "FIB-A-",
+      "layout_ids": [
+        "FC_A-"
+      ],
+      "quantity": 1,
+      "unit": "Stk",
+      "scope": "BASIS",
+      "component": "Singlemode-Patchkabel A-",
+      "manufacturer": "Thorlabs",
+      "manufacturer_part": "P1-780A-FC-2",
+      "internal_spec": "FIB-A-",
+      "requirement": "2 m, FC/PC beidseitig; SM bei 810 nm; MFD810 und Einfügedämpfung bestätigen.",
+      "status": "OPEN",
+      "missing_evidence": "Aktuelle Verfügbarkeit, Steckertyp am Koppler und MFD810 fehlen. Nicht P5-Hybridkabel verwenden.",
+      "source_ids": [
+        "S12",
+        "S13",
+        "P3"
+      ],
+      "catalog_evidence": "VERIFIED: historischer Code/Stecker",
+      "hardware_status": "NOT_RUN",
+      "route": "ANFRAGE",
+      "legacy_id": "O16",
+      "quote_id": null,
+      "currency": null,
+      "unit_price": null,
+      "lead_weeks": null
+    },
+    {
+      "id": "DET-1",
+      "layout_ids": [],
+      "quantity": 1,
+      "unit": "Stk",
+      "scope": "BASIS",
+      "component": "Referenz-SPAD-Modul A-",
+      "manufacturer": "Excelitas",
+      "manufacturer_part": "SPCM-AQRH-14-FC",
+      "internal_spec": "DET-1",
+      "requirement": "1X-Ausgang, Dunkelklasse 4; Systemeffizienz≥40 % am Moduleingang 810 nm; Totzeit≤50 ns.",
+      "status": "HOLD",
+      "missing_evidence": "Modell-/Seriennachweise, FC-Optik 810, elektrische Pulsgrenzen und Leihverfügbarkeit fehlen.",
+      "source_ids": [
+        "S6",
+        "S7",
+        "P1",
+        "P2"
+      ],
+      "catalog_evidence": "VERIFIED: Bestelllogik; System-PDE offen",
+      "hardware_status": "NOT_RUN",
+      "route": "LEIHE BEVORZUGT",
+      "legacy_id": "D1",
+      "quote_id": null,
+      "currency": null,
+      "unit_price": null,
+      "lead_weeks": null
+    },
+    {
+      "id": "CAB-1",
+      "layout_ids": [],
+      "quantity": 1,
+      "unit": "Stk",
+      "scope": "BASIS",
+      "component": "Detektorsignalkabel A-",
+      "manufacturer": "OFFEN",
+      "manufacturer_part": null,
+      "internal_spec": "CAB-1",
+      "requirement": "50-Ohm-Koax, BNC male→SMA male, nominell 1 m als Planwert; Laufzeit je Kabel kalibrieren.",
+      "status": "OPEN",
+      "missing_evidence": "Konkrete PN, Länge, Dämpfung und Stecker prüfen; genau ein 50-Ohm-Abschluss im Ultra.",
+      "source_ids": [
+        "P1",
+        "S8"
+      ],
+      "catalog_evidence": "OPEN",
+      "hardware_status": "NOT_RUN",
+      "route": "ANFRAGE",
+      "legacy_id": "",
+      "quote_id": null,
+      "currency": null,
+      "unit_price": null,
+      "lead_weeks": null
+    },
+    {
+      "id": "COUP-B+",
+      "layout_ids": [
+        "L2B+"
+      ],
+      "quantity": 1,
+      "unit": "Stk",
+      "scope": "BASIS",
+      "component": "Endkopplungs-Asphäre B+",
+      "manufacturer": "Thorlabs",
+      "manufacturer_part": "C240TME-B",
+      "internal_spec": "COUP-B+",
+      "requirement": "Nominell f 8 mm,810 nm; reale Hauptebenen/Arbeitsabstand statt 8 mm mechanischem Abstand verwenden.",
+      "status": "HOLD",
+      "missing_evidence": "Aktuelles Modell, NA, FC-Fassung und Kopplungsrechnung offen.",
+      "source_ids": [
+        "S11",
+        "P3"
+      ],
+      "catalog_evidence": "VERIFIED: historischer Katalogtyp",
+      "hardware_status": "NOT_RUN",
+      "route": "ANFRAGE",
+      "legacy_id": "O16",
+      "quote_id": null,
+      "currency": null,
+      "unit_price": null,
+      "lead_weeks": null
+    },
+    {
+      "id": "FIB-B+",
+      "layout_ids": [
+        "FC_B+"
+      ],
+      "quantity": 1,
+      "unit": "Stk",
+      "scope": "BASIS",
+      "component": "Singlemode-Patchkabel B+",
+      "manufacturer": "Thorlabs",
+      "manufacturer_part": "P1-780A-FC-2",
+      "internal_spec": "FIB-B+",
+      "requirement": "2 m, FC/PC beidseitig; SM bei 810 nm; MFD810 und Einfügedämpfung bestätigen.",
+      "status": "OPEN",
+      "missing_evidence": "Aktuelle Verfügbarkeit, Steckertyp am Koppler und MFD810 fehlen. Nicht P5-Hybridkabel verwenden.",
+      "source_ids": [
+        "S12",
+        "S13",
+        "P3"
+      ],
+      "catalog_evidence": "VERIFIED: historischer Code/Stecker",
+      "hardware_status": "NOT_RUN",
+      "route": "ANFRAGE",
+      "legacy_id": "O16",
+      "quote_id": null,
+      "currency": null,
+      "unit_price": null,
+      "lead_weeks": null
+    },
+    {
+      "id": "DET-2",
+      "layout_ids": [],
+      "quantity": 1,
+      "unit": "Stk",
+      "scope": "BASIS",
+      "component": "Referenz-SPAD-Modul B+",
+      "manufacturer": "Excelitas",
+      "manufacturer_part": "SPCM-AQRH-14-FC",
+      "internal_spec": "DET-2",
+      "requirement": "1X-Ausgang, Dunkelklasse 4; Systemeffizienz≥40 % am Moduleingang 810 nm; Totzeit≤50 ns.",
+      "status": "HOLD",
+      "missing_evidence": "Modell-/Seriennachweise, FC-Optik 810, elektrische Pulsgrenzen und Leihverfügbarkeit fehlen.",
+      "source_ids": [
+        "S6",
+        "S7",
+        "P1",
+        "P2"
+      ],
+      "catalog_evidence": "VERIFIED: Bestelllogik; System-PDE offen",
+      "hardware_status": "NOT_RUN",
+      "route": "LEIHE BEVORZUGT",
+      "legacy_id": "D2",
+      "quote_id": null,
+      "currency": null,
+      "unit_price": null,
+      "lead_weeks": null
+    },
+    {
+      "id": "CAB-2",
+      "layout_ids": [],
+      "quantity": 1,
+      "unit": "Stk",
+      "scope": "BASIS",
+      "component": "Detektorsignalkabel B+",
+      "manufacturer": "OFFEN",
+      "manufacturer_part": null,
+      "internal_spec": "CAB-2",
+      "requirement": "50-Ohm-Koax, BNC male→SMA male, nominell 1 m als Planwert; Laufzeit je Kabel kalibrieren.",
+      "status": "OPEN",
+      "missing_evidence": "Konkrete PN, Länge, Dämpfung und Stecker prüfen; genau ein 50-Ohm-Abschluss im Ultra.",
+      "source_ids": [
+        "P1",
+        "S8"
+      ],
+      "catalog_evidence": "OPEN",
+      "hardware_status": "NOT_RUN",
+      "route": "ANFRAGE",
+      "legacy_id": "",
+      "quote_id": null,
+      "currency": null,
+      "unit_price": null,
+      "lead_weeks": null
+    },
+    {
+      "id": "COUP-B-",
+      "layout_ids": [
+        "L2B-"
+      ],
+      "quantity": 1,
+      "unit": "Stk",
+      "scope": "BASIS",
+      "component": "Endkopplungs-Asphäre B-",
+      "manufacturer": "Thorlabs",
+      "manufacturer_part": "C240TME-B",
+      "internal_spec": "COUP-B-",
+      "requirement": "Nominell f 8 mm,810 nm; reale Hauptebenen/Arbeitsabstand statt 8 mm mechanischem Abstand verwenden.",
+      "status": "HOLD",
+      "missing_evidence": "Aktuelles Modell, NA, FC-Fassung und Kopplungsrechnung offen.",
+      "source_ids": [
+        "S11",
+        "P3"
+      ],
+      "catalog_evidence": "VERIFIED: historischer Katalogtyp",
+      "hardware_status": "NOT_RUN",
+      "route": "ANFRAGE",
+      "legacy_id": "O16",
+      "quote_id": null,
+      "currency": null,
+      "unit_price": null,
+      "lead_weeks": null
+    },
+    {
+      "id": "FIB-B-",
+      "layout_ids": [
+        "FC_B-"
+      ],
+      "quantity": 1,
+      "unit": "Stk",
+      "scope": "BASIS",
+      "component": "Singlemode-Patchkabel B-",
+      "manufacturer": "Thorlabs",
+      "manufacturer_part": "P1-780A-FC-2",
+      "internal_spec": "FIB-B-",
+      "requirement": "2 m, FC/PC beidseitig; SM bei 810 nm; MFD810 und Einfügedämpfung bestätigen.",
+      "status": "OPEN",
+      "missing_evidence": "Aktuelle Verfügbarkeit, Steckertyp am Koppler und MFD810 fehlen. Nicht P5-Hybridkabel verwenden.",
+      "source_ids": [
+        "S12",
+        "S13",
+        "P3"
+      ],
+      "catalog_evidence": "VERIFIED: historischer Code/Stecker",
+      "hardware_status": "NOT_RUN",
+      "route": "ANFRAGE",
+      "legacy_id": "O16",
+      "quote_id": null,
+      "currency": null,
+      "unit_price": null,
+      "lead_weeks": null
+    },
+    {
+      "id": "DET-3",
+      "layout_ids": [],
+      "quantity": 1,
+      "unit": "Stk",
+      "scope": "BASIS",
+      "component": "Referenz-SPAD-Modul B-",
+      "manufacturer": "Excelitas",
+      "manufacturer_part": "SPCM-AQRH-14-FC",
+      "internal_spec": "DET-3",
+      "requirement": "1X-Ausgang, Dunkelklasse 4; Systemeffizienz≥40 % am Moduleingang 810 nm; Totzeit≤50 ns.",
+      "status": "HOLD",
+      "missing_evidence": "Modell-/Seriennachweise, FC-Optik 810, elektrische Pulsgrenzen und Leihverfügbarkeit fehlen.",
+      "source_ids": [
+        "S6",
+        "S7",
+        "P1",
+        "P2"
+      ],
+      "catalog_evidence": "VERIFIED: Bestelllogik; System-PDE offen",
+      "hardware_status": "NOT_RUN",
+      "route": "LEIHE BEVORZUGT",
+      "legacy_id": "D3",
+      "quote_id": null,
+      "currency": null,
+      "unit_price": null,
+      "lead_weeks": null
+    },
+    {
+      "id": "CAB-3",
+      "layout_ids": [],
+      "quantity": 1,
+      "unit": "Stk",
+      "scope": "BASIS",
+      "component": "Detektorsignalkabel B-",
+      "manufacturer": "OFFEN",
+      "manufacturer_part": null,
+      "internal_spec": "CAB-3",
+      "requirement": "50-Ohm-Koax, BNC male→SMA male, nominell 1 m als Planwert; Laufzeit je Kabel kalibrieren.",
+      "status": "OPEN",
+      "missing_evidence": "Konkrete PN, Länge, Dämpfung und Stecker prüfen; genau ein 50-Ohm-Abschluss im Ultra.",
+      "source_ids": [
+        "P1",
+        "S8"
+      ],
+      "catalog_evidence": "OPEN",
+      "hardware_status": "NOT_RUN",
+      "route": "ANFRAGE",
+      "legacy_id": "",
+      "quote_id": null,
+      "currency": null,
+      "unit_price": null,
+      "lead_weeks": null
+    },
+    {
+      "id": "TDC-01",
+      "layout_ids": [],
+      "quantity": 1,
+      "unit": "Stk",
+      "scope": "BASIS",
+      "component": "Gemeinsamer Zeitstempler",
+      "manufacturer": "Swabian Instruments",
+      "manufacturer_part": "Time Tagger Ultra (Konfiguration offen)",
+      "internal_spec": "TDC-01",
+      "requirement": "Mindestens 4 gleichzeitig lizenzierte Kanäle; Standardmodus 1,2,3,4; Rohereignisse und Overflow-Logging.",
+      "status": "HOLD",
+      "missing_evidence": "Exakte Hardware-/Lizenzkonfiguration, Host-SDK und elektrische Abnahme offen.",
+      "source_ids": [
+        "S8",
+        "P1",
+        "P2"
+      ],
+      "catalog_evidence": "VERIFIED: Ultra-Eingangsfamilie",
+      "hardware_status": "NOT_RUN",
+      "route": "LEIHE BEVORZUGT",
+      "legacy_id": "E01",
+      "quote_id": null,
+      "currency": null,
+      "unit_price": null,
+      "lead_weeks": null
+    },
+    {
+      "id": "PSU-01",
+      "layout_ids": [],
+      "quantity": 1,
+      "unit": "Stk",
+      "scope": "BASIS",
+      "component": "Referenzdetektor-Netzteil",
+      "manufacturer": "OFFEN",
+      "manufacturer_part": null,
+      "internal_spec": "PSU-01",
+      "requirement": "5 V geregelt; Vorbemessung ≥4,8 A für 4 Module, zusätzliche Reserve und Kabelabfall auslegen; getrennte Sicherungszweige.",
+      "status": "HOLD",
+      "missing_evidence": "Aktuelle Maximalströme, Ripplegrenze, DC-Stecker, Polarität und Modell bestätigen.",
+      "source_ids": [
+        "S7"
+      ],
+      "catalog_evidence": "OPEN",
+      "hardware_status": "NOT_RUN",
+      "route": "ANFRAGE",
+      "legacy_id": "",
+      "quote_id": null,
+      "currency": null,
+      "unit_price": null,
+      "lead_weeks": null
+    },
+    {
+      "id": "PWR-01",
+      "layout_ids": [],
+      "quantity": 4,
+      "unit": "Stk",
+      "scope": "BASIS",
+      "component": "Detektor-Versorgungsleitung",
+      "manufacturer": "OFFEN",
+      "manufacturer_part": null,
+      "internal_spec": "PWR-01",
+      "requirement": "Je Modul eigener abgesicherter Zweig; passender Werksstecker, markierte Polarität.",
+      "status": "OPEN",
+      "missing_evidence": "Stecker-PN, Länge/Querschnitt und gemessener Spannungsabfall fehlen.",
+      "source_ids": [
+        "S7"
+      ],
+      "catalog_evidence": "OPEN",
+      "hardware_status": "NOT_RUN",
+      "route": "ANFRAGE",
+      "legacy_id": "",
+      "quote_id": null,
+      "currency": null,
+      "unit_price": null,
+      "lead_weeks": null
+    },
+    {
+      "id": "PSU-02",
+      "layout_ids": [],
+      "quantity": 1,
+      "unit": "Stk",
+      "scope": "BASIS",
+      "component": "Temperier-/Antriebsversorgung",
+      "manufacturer": "OFFEN",
+      "manufacturer_part": null,
+      "internal_spec": "PSU-02",
+      "requirement": "Passend zu TEC-Regler, Shutter und Motoren; keine angenommene gemeinsame Spannung.",
+      "status": "HOLD",
+      "missing_evidence": "Elektrische Verbraucherübersicht und Modell fehlen.",
+      "source_ids": [
+        "P1"
+      ],
+      "catalog_evidence": "OPEN",
+      "hardware_status": "NOT_RUN",
+      "route": "ANFRAGE",
+      "legacy_id": "",
+      "quote_id": null,
+      "currency": null,
+      "unit_price": null,
+      "lead_weeks": null
+    },
+    {
+      "id": "HOST-01",
+      "layout_ids": [],
+      "quantity": 1,
+      "unit": "Stk",
+      "scope": "BASIS",
+      "component": "USB3-Datenhost",
+      "manufacturer": "OFFEN",
+      "manufacturer_part": null,
+      "internal_spec": "HOST-01",
+      "requirement": "Kompatibler SDK-Host, SSD-Archiv, kontinuierlicher Stream; Raspberry-Frontend separat anbinden.",
+      "status": "OPEN",
+      "missing_evidence": "Bestand, OS/SDK-Unterstützung und Durchsatztest; Raspberry-Kompatibilität nicht vorausgesetzt.",
+      "source_ids": [
+        "P1",
+        "P2",
+        "S8"
+      ],
+      "catalog_evidence": "OPEN",
+      "hardware_status": "NOT_RUN",
+      "route": "BESTAND ODER LEIHE",
+      "legacy_id": "",
+      "quote_id": null,
+      "currency": null,
+      "unit_price": null,
+      "lead_weeks": null
+    },
+    {
+      "id": "USB-01",
+      "layout_ids": [],
+      "quantity": 1,
+      "unit": "Stk",
+      "scope": "BASIS",
+      "component": "Zeitstempler-Datenkabel",
+      "manufacturer": "Swabian oder OEM",
+      "manufacturer_part": null,
+      "internal_spec": "USB-01",
+      "requirement": "Zur konkreten Ultra-Hardware passend; USB3-Verbindung direkt zum Host.",
+      "status": "OPEN",
+      "missing_evidence": "Lieferumfang und Steckertyp bestätigen; kein Doppelbedarf bei mitgeliefertem Kabel.",
+      "source_ids": [
+        "S8"
+      ],
+      "catalog_evidence": "OPEN",
+      "hardware_status": "NOT_RUN",
+      "route": "ANFRAGE",
+      "legacy_id": "",
+      "quote_id": null,
+      "currency": null,
+      "unit_price": null,
+      "lead_weeks": null
+    },
+    {
+      "id": "ROT-01",
+      "layout_ids": [],
+      "quantity": 2,
+      "unit": "Stk",
+      "scope": "BASIS",
+      "component": "Motorisierter Analysator-Drehhalter",
+      "manufacturer": "OFFEN",
+      "manufacturer_part": null,
+      "internal_spec": "ROT-01",
+      "requirement": "Für 25,4-mm-Halter ANA-H-A/B; Winkelrückmeldung, Wiederholbarkeit≤0,1°, definierte Nullstellung.",
+      "status": "HOLD",
+      "missing_evidence": "PN, Controller, Kabel, Treiber und tatsächlicher Außenumriss fehlen.",
+      "source_ids": [
+        "P1",
+        "P3"
+      ],
+      "catalog_evidence": "OPEN",
+      "hardware_status": "NOT_RUN",
+      "route": "ANFRAGE",
+      "legacy_id": "",
+      "quote_id": null,
+      "currency": null,
+      "unit_price": null,
+      "lead_weeks": null
+    },
+    {
+      "id": "MOT-01",
+      "layout_ids": [],
+      "quantity": 1,
+      "unit": "Stk",
+      "scope": "BASIS",
+      "component": "Drehhalter-Controller",
+      "manufacturer": "OFFEN",
+      "manufacturer_part": null,
+      "internal_spec": "MOT-01",
+      "requirement": "Zwei Achsen zu ROT-01; Soll/Ist/Busy/Fehler mit Zeitstempel.",
+      "status": "HOLD",
+      "missing_evidence": "Konkreter Controller/Lieferumfang und API offen; entfallen falls vollständig integriert.",
+      "source_ids": [
+        "P1"
+      ],
+      "catalog_evidence": "OPEN",
+      "hardware_status": "NOT_RUN",
+      "route": "ANFRAGE",
+      "legacy_id": "",
+      "quote_id": null,
+      "currency": null,
+      "unit_price": null,
+      "lead_weeks": null
+    },
+    {
+      "id": "ROT-02",
+      "layout_ids": [],
+      "quantity": 6,
+      "unit": "Stk",
+      "scope": "BASIS",
+      "component": "Manueller Drehhalter",
+      "manufacturer": "OFFEN",
+      "manufacturer_part": null,
+      "internal_spec": "ROT-02",
+      "requirement": "Je 1 für ATT-01,HP,QP,HD,QA,QB; zu jeweiligem 25,4-mm-Fassungsdurchmesser.",
+      "status": "HOLD",
+      "missing_evidence": "Gewinde, Umriss und erreichbare Strahlhöhe fehlen.",
+      "source_ids": [
+        "P3"
+      ],
+      "catalog_evidence": "OPEN",
+      "hardware_status": "NOT_RUN",
+      "route": "ANFRAGE",
+      "legacy_id": "",
+      "quote_id": null,
+      "currency": null,
+      "unit_price": null,
+      "lead_weeks": null
+    },
+    {
+      "id": "MNT-01",
+      "layout_ids": [],
+      "quantity": 6,
+      "unit": "Stk",
+      "scope": "BASIS",
+      "component": "Kinematischer Spiegelhalter",
+      "manufacturer": "OFFEN",
+      "manufacturer_part": null,
+      "internal_spec": "MNT-01",
+      "requirement": "Je 1 für MP1,MP2,M1,M2,DM,DB; Optikdurchmesser und Klemmung passend.",
+      "status": "HOLD",
+      "missing_evidence": "Kollisionsprüfung mit Zeichnungen; 26-mm-Symbol ist kein realer Halter.",
+      "source_ids": [
+        "P3"
+      ],
+      "catalog_evidence": "OPEN",
+      "hardware_status": "NOT_RUN",
+      "route": "ANFRAGE",
+      "legacy_id": "",
+      "quote_id": null,
+      "currency": null,
+      "unit_price": null,
+      "lead_weeks": null
+    },
+    {
+      "id": "MNT-02",
+      "layout_ids": [],
+      "quantity": 4,
+      "unit": "Stk",
+      "scope": "BASIS",
+      "component": "PBS-Halter",
+      "manufacturer": "OFFEN",
+      "manufacturer_part": null,
+      "internal_spec": "MNT-02",
+      "requirement": "Je 1 für ATT-02,PBS0,PA,PB; alle benötigten Ports offen.",
+      "status": "HOLD",
+      "missing_evidence": "Würfelmaße und Zugänge fehlen; PBS0-Kandidat 12,7 mm statt 10 mm.",
+      "source_ids": [
+        "P3"
+      ],
+      "catalog_evidence": "OPEN",
+      "hardware_status": "NOT_RUN",
+      "route": "ANFRAGE",
+      "legacy_id": "",
+      "quote_id": null,
+      "currency": null,
+      "unit_price": null,
+      "lead_weeks": null
+    },
+    {
+      "id": "MNT-03",
+      "layout_ids": [],
+      "quantity": 3,
+      "unit": "Stk",
+      "scope": "BASIS",
+      "component": "Linsenhalter",
+      "manufacturer": "OFFEN",
+      "manufacturer_part": null,
+      "internal_spec": "MNT-03",
+      "requirement": "Für O04,L1A,L1B; tatsächliche Linsendurchmesser, Z-Verstellung O04 vorsehen.",
+      "status": "HOLD",
+      "missing_evidence": "Linsen-/Halterzeichnung, Wege und Kollisionsprüfung fehlen.",
+      "source_ids": [
+        "P3"
+      ],
+      "catalog_evidence": "OPEN",
+      "hardware_status": "NOT_RUN",
+      "route": "ANFRAGE",
+      "legacy_id": "",
+      "quote_id": null,
+      "currency": null,
+      "unit_price": null,
+      "lead_weeks": null
+    },
+    {
+      "id": "MNT-04",
+      "layout_ids": [],
+      "quantity": 4,
+      "unit": "Stk",
+      "scope": "BASIS",
+      "component": "Filterhalter",
+      "manufacturer": "OFFEN",
+      "manufacturer_part": null,
+      "internal_spec": "MNT-04",
+      "requirement": "Je 2 pro Arm für Pumpblocker und Bandpass; Normalstellung und Anpassungsweg dokumentiert.",
+      "status": "HOLD",
+      "missing_evidence": "Filtermaße und realer axialer Platzbedarf fehlen.",
+      "source_ids": [
+        "P3"
+      ],
+      "catalog_evidence": "OPEN",
+      "hardware_status": "NOT_RUN",
+      "route": "ANFRAGE",
+      "legacy_id": "",
+      "quote_id": null,
+      "currency": null,
+      "unit_price": null,
+      "lead_weeks": null
+    },
+    {
+      "id": "COUP-MNT",
+      "layout_ids": [],
+      "quantity": 4,
+      "unit": "Stk",
+      "scope": "BASIS",
+      "component": "Fünfachs-Faserkoppelmechanik",
+      "manufacturer": "OFFEN",
+      "manufacturer_part": null,
+      "internal_spec": "COUP-MNT",
+      "requirement": "Je Kanal x/y/z plus Kippung; integrierte Asphärenaufnahme und FC/PC-Rezeptakel, keine zusätzliche Doppelzählung.",
+      "status": "HOLD",
+      "missing_evidence": "Passende PN/Adapter/Arbeitswege und Fußabdruck offen.",
+      "source_ids": [
+        "P3"
+      ],
+      "catalog_evidence": "OPEN",
+      "hardware_status": "NOT_RUN",
+      "route": "ANFRAGE",
+      "legacy_id": "",
+      "quote_id": null,
+      "currency": null,
+      "unit_price": null,
+      "lead_weeks": null
+    },
+    {
+      "id": "Z-STAGE",
+      "layout_ids": [],
+      "quantity": 1,
+      "unit": "Stk",
+      "scope": "BASIS",
+      "component": "Längsverstellung Pumpfokus",
+      "manufacturer": "OFFEN",
+      "manufacturer_part": null,
+      "internal_spec": "Z-STAGE",
+      "requirement": "O04 um berechnete Nennposition verschiebbar; ±10 mm Planreserve, Verstellbereich aus Toleranzanalyse bestätigen.",
+      "status": "HOLD",
+      "missing_evidence": "Bauraum zwischen MP2 und DM sowie reale Linsenhauptebene fehlen.",
+      "source_ids": [
+        "P3"
+      ],
+      "catalog_evidence": "OPEN",
+      "hardware_status": "NOT_RUN",
+      "route": "ANFRAGE",
+      "legacy_id": "",
+      "quote_id": null,
+      "currency": null,
+      "unit_price": null,
+      "lead_weeks": null
+    },
+    {
+      "id": "BASE-01",
+      "layout_ids": [],
+      "quantity": 1,
+      "unit": "Stk",
+      "scope": "BASIS",
+      "component": "Optische Grundplatte",
+      "manufacturer": "Mechaniklieferant",
+      "manufacturer_part": null,
+      "internal_spec": "BASE-01",
+      "requirement": "800 x 600 mm Planfläche laut neuem Layout; Z75 mm. Vorherige 600 x 900 mm war Platzreserve; Bohrbild erst nach CAD.",
+      "status": "HOLD",
+      "missing_evidence": "Material (Invar als Option), Dicke, Lagerung, Bohrplan und Wärmedrift offen.",
+      "source_ids": [
+        "P1",
+        "P3"
+      ],
+      "catalog_evidence": "OPEN",
+      "hardware_status": "NOT_RUN",
+      "route": "ANFRAGE",
+      "legacy_id": "O11",
+      "quote_id": null,
+      "currency": null,
+      "unit_price": null,
+      "lead_weeks": null
+    },
+    {
+      "id": "MECH-POST",
+      "layout_ids": [],
+      "quantity": null,
+      "unit": "Stk",
+      "scope": "BASIS",
+      "component": "Stative / Sockel / Schrauben",
+      "manufacturer": "OFFEN",
+      "manufacturer_part": null,
+      "internal_spec": "MECH-POST",
+      "requirement": "Stückweise nach Halter-Stückliste auflösen; M6/M4/imperiale Schnittstellen nicht mischen.",
+      "status": "HOLD",
+      "missing_evidence": "Menge und einzelne Bestellcodes sind TBD; bewusst kein erfundener Satzpreis.",
+      "source_ids": [
+        "P3"
+      ],
+      "catalog_evidence": "OPEN",
+      "hardware_status": "NOT_RUN",
+      "route": "ANFRAGE",
+      "legacy_id": "",
+      "quote_id": null,
+      "currency": null,
+      "unit_price": null,
+      "lead_weeks": null
+    },
+    {
+      "id": "GUARD-01",
+      "layout_ids": [],
+      "quantity": 1,
+      "unit": "Stk",
+      "scope": "BASIS",
+      "component": "Lichtdichte Einhausung",
+      "manufacturer": "Mechaniklieferant",
+      "manufacturer_part": null,
+      "internal_spec": "GUARD-01",
+      "requirement": "Zu Grundplatte, Justagezugängen und Shutter; Streulichtabschluss und Kabeldurchführungen.",
+      "status": "HOLD",
+      "missing_evidence": "Maßzeichnung, Deckel-/Interlockkonzept und Quellenleistung offen.",
+      "source_ids": [
+        "P1",
+        "P3"
+      ],
+      "catalog_evidence": "OPEN",
+      "hardware_status": "NOT_RUN",
+      "route": "ANFRAGE",
+      "legacy_id": "",
+      "quote_id": null,
+      "currency": null,
+      "unit_price": null,
+      "lead_weeks": null
+    },
+    {
+      "id": "MET-01",
+      "layout_ids": [],
+      "quantity": 1,
+      "unit": "Stk",
+      "scope": "PRÜFMITTEL",
+      "component": "Kalibrierter Leistungsmesser405/810",
+      "manufacturer": "OFFEN",
+      "manufacturer_part": null,
+      "internal_spec": "MET-01",
+      "requirement": "Pumpmessung U_rel≤5 % (k 2); für Detektor-PDE separate kalibrierte Abschwächkette.",
+      "status": "OPEN",
+      "missing_evidence": "Modell, Kalibrierschein und passende Messbereiche sichern.",
+      "source_ids": [
+        "P2"
+      ],
+      "catalog_evidence": "OPEN",
+      "hardware_status": "NOT_RUN",
+      "route": "LEIHE BEVORZUGT",
+      "legacy_id": "",
+      "quote_id": null,
+      "currency": null,
+      "unit_price": null,
+      "lead_weeks": null
+    },
+    {
+      "id": "MET-02",
+      "layout_ids": [],
+      "quantity": 1,
+      "unit": "Stk",
+      "scope": "PRÜFMITTEL",
+      "component": "Spektrometer / Spektralreferenz",
+      "manufacturer": "OFFEN",
+      "manufacturer_part": null,
+      "internal_spec": "MET-02",
+      "requirement": "Pump-Instrumentfunktion≤0,02 nm; U_λ≤0,02 nm(k 2). 810-nm-Spektren beider Arme/Richtungen mit IRF.",
+      "status": "OPEN",
+      "missing_evidence": "Auflösung/Dynamik und Kalibrierung belegen; ggf. zwei Leihgeräte erforderlich.",
+      "source_ids": [
+        "P2"
+      ],
+      "catalog_evidence": "OPEN",
+      "hardware_status": "NOT_RUN",
+      "route": "LEIHE BEVORZUGT",
+      "legacy_id": "",
+      "quote_id": null,
+      "currency": null,
+      "unit_price": null,
+      "lead_weeks": null
+    },
+    {
+      "id": "MET-03",
+      "layout_ids": [],
+      "quantity": 1,
+      "unit": "Stk",
+      "scope": "PRÜFMITTEL",
+      "component": "Beamprofiler / Kaustikmessplatz",
+      "manufacturer": "OFFEN",
+      "manufacturer_part": null,
+      "internal_spec": "MET-03",
+      "requirement": "405 nm, D4σ beider Hauptachsen, M², Krümmung; Pixel-, z- und Hintergrundkalibrierung.",
+      "status": "OPEN",
+      "missing_evidence": "Modell, Verfahrweg und Abschwächung bestimmen.",
+      "source_ids": [
+        "P2"
+      ],
+      "catalog_evidence": "OPEN",
+      "hardware_status": "NOT_RUN",
+      "route": "LEIHE BEVORZUGT",
+      "legacy_id": "",
+      "quote_id": null,
+      "currency": null,
+      "unit_price": null,
+      "lead_weeks": null
+    },
+    {
+      "id": "MET-04",
+      "layout_ids": [],
+      "quantity": 1,
+      "unit": "Stk",
+      "scope": "PRÜFMITTEL",
+      "component": "Oszilloskop mit geeigneter Abtastung",
+      "manufacturer": "OFFEN",
+      "manufacturer_part": null,
+      "internal_spec": "MET-04",
+      "requirement": "An 50 Ohm Pulsform, Über-/Unterschwingen und relative Verzögerung prüfen; Instrumentantwort dokumentieren.",
+      "status": "OPEN",
+      "missing_evidence": "Bandbreite und Timingunsicherheit passend zu≤200 ps RMS auslegen.",
+      "source_ids": [
+        "P1",
+        "P2"
+      ],
+      "catalog_evidence": "OPEN",
+      "hardware_status": "NOT_RUN",
+      "route": "LEIHE BEVORZUGT",
+      "legacy_id": "",
+      "quote_id": null,
+      "currency": null,
+      "unit_price": null,
+      "lead_weeks": null
+    },
+    {
+      "id": "MET-05",
+      "layout_ids": [],
+      "quantity": 1,
+      "unit": "Stk",
+      "scope": "PRÜFMITTEL",
+      "component": "Synchroner Vierkanal-Pulstest",
+      "manufacturer": "OFFEN",
+      "manufacturer_part": null,
+      "internal_spec": "MET-05",
+      "requirement": "Elektrische Einspeisung 1 MHz je Kanal; vier gleichzeitige Kanäle,1e 6 Pulse, zulässige Ultra-Pegel.",
+      "status": "OPEN",
+      "missing_evidence": "Generator/Verteiler, Amplituden und Delaykalibrierung festlegen.",
+      "source_ids": [
+        "P2"
+      ],
+      "catalog_evidence": "OPEN",
+      "hardware_status": "NOT_RUN",
+      "route": "LEIHE BEVORZUGT",
+      "legacy_id": "",
+      "quote_id": null,
+      "currency": null,
+      "unit_price": null,
+      "lead_weeks": null
+    },
+    {
+      "id": "MET-06",
+      "layout_ids": [],
+      "quantity": 1,
+      "unit": "Stk",
+      "scope": "PRÜFMITTEL",
+      "component": "Schwache gepulste810-nm-Quelle",
+      "manufacturer": "OFFEN",
+      "manufacturer_part": null,
+      "internal_spec": "MET-06",
+      "requirement": "PDE/Timing/Recovery-Messung mit Referenzsignal und charakterisierter Pulsform; externe Quelle nicht durch SPDC-Paarquelle ersetzen.",
+      "status": "OPEN",
+      "missing_evidence": "Quellenmodell, Pulsbreite, Wiederholrate und Referenzjitter offen.",
+      "source_ids": [
+        "P1",
+        "P2"
+      ],
+      "catalog_evidence": "OPEN",
+      "hardware_status": "NOT_RUN",
+      "route": "LEIHE BEVORZUGT",
+      "legacy_id": "",
+      "quote_id": null,
+      "currency": null,
+      "unit_price": null,
+      "lead_weeks": null
+    },
+    {
+      "id": "MET-07",
+      "layout_ids": [],
+      "quantity": 1,
+      "unit": "Stk",
+      "scope": "PRÜFMITTEL",
+      "component": "Kalibrierte Abschwäch- und Referenzkette",
+      "manufacturer": "OFFEN",
+      "manufacturer_part": null,
+      "internal_spec": "MET-07",
+      "requirement": "Für Photonfluss am SPAD-Moduleingang 810 nm; Unsicherheitsbudget, variable Flussstufen, Dunkelverschluss.",
+      "status": "OPEN",
+      "missing_evidence": "Abschwächerwerte, Streulicht, Referenzdetektor und Steckerverluste bestimmen.",
+      "source_ids": [
+        "P2"
+      ],
+      "catalog_evidence": "OPEN",
+      "hardware_status": "NOT_RUN",
+      "route": "LEIHE BEVORZUGT",
+      "legacy_id": "",
+      "quote_id": null,
+      "currency": null,
+      "unit_price": null,
+      "lead_weeks": null
+    },
+    {
+      "id": "MET-08",
+      "layout_ids": [],
+      "quantity": 2,
+      "unit": "Stk",
+      "scope": "PRÜFMITTEL",
+      "component": "Justageblende",
+      "manufacturer": "OFFEN",
+      "manufacturer_part": null,
+      "internal_spec": "MET-08",
+      "requirement": "Zur Strahlhöhenreferenz 75 mm; entfernbare Messpositionen; keinen unkontrollierten Rückreflex.",
+      "status": "OPEN",
+      "missing_evidence": "Öffnung, Halter und Position auswählen.",
+      "source_ids": [
+        "P3"
+      ],
+      "catalog_evidence": "OPEN",
+      "hardware_status": "NOT_RUN",
+      "route": "ANFRAGE",
+      "legacy_id": "",
+      "quote_id": null,
+      "currency": null,
+      "unit_price": null,
+      "lead_weeks": null
+    },
+    {
+      "id": "ALT-01",
+      "layout_ids": [],
+      "quantity": 1,
+      "unit": "Stk",
+      "scope": "OPTION",
+      "component": "Eigen-SPAD-/CML-Prototyp",
+      "manufacturer": "Projektentwicklung",
+      "manufacturer_part": null,
+      "internal_spec": "ALT-01",
+      "requirement": "Separate Entwicklungs-BOM: APD, Quench, Komparator, HV, CML-Empfänger; ersetzt keinen Referenzdetektor ohne Vergleich.",
+      "status": "HOLD",
+      "missing_evidence": "Schaltplanrevision, komponentengenaue Elektronik-BOM und elektrische Abnahme fehlen.",
+      "source_ids": [
+        "P1"
+      ],
+      "catalog_evidence": "OPEN",
+      "hardware_status": "NOT_RUN",
+      "route": "ENTWICKLUNG",
+      "legacy_id": "",
+      "quote_id": null,
+      "currency": null,
+      "unit_price": null,
+      "lead_weeks": null
+    },
+    {
+      "id": "ALT-02",
+      "layout_ids": [],
+      "quantity": 1,
+      "unit": "Stk",
+      "scope": "OPTION",
+      "component": "FPGA-Koinzidenzpfad",
+      "manufacturer": "Projektentwicklung",
+      "manufacturer_part": null,
+      "internal_spec": "ALT-02",
+      "requirement": "Separate Implementierung mit eigenem Pegeladapter und kalibrierter Zeitbasis; nicht parallel doppelt in Basis kalkulieren.",
+      "status": "HOLD",
+      "missing_evidence": "Boardbestand, I/O-Hardware, Firmwareversion und TDC-Kalibrierung offen.",
+      "source_ids": [
+        "P1"
+      ],
+      "catalog_evidence": "OPEN",
+      "hardware_status": "NOT_RUN",
+      "route": "BESTAND PRÜFEN",
+      "legacy_id": "",
+      "quote_id": null,
+      "currency": null,
+      "unit_price": null,
+      "lead_weeks": null
+    }
+  ],
+  "rfqs": [
+    {
+      "code": "RFQ-KTP",
+      "title": "Bulk ppKTP for bidirectional Type-II SPDC",
+      "supplier": "Raicol Crystals",
+      "contact": "info@raicol.com",
+      "candidate": "Custom configuration; manufacturer order code to be assigned",
+      "quantity": 1,
+      "requirements": [
+        {
+          "id": "RFQ-KTP-01",
+          "topic": "Interaction",
+          "requirement": "Collinear Type-II, nominal vacuum pump wavelength 405 nm, degenerate 810+810 nm. Bulk crystal. Same crystal pumped from both ends in a polarization Sagnac. Measured pump wavelength and drift are pending.",
+          "evidence_requested": "Confirm interaction tensor, propagation axis, pump/signal/idler polarizations and feasible wavelength range. Do not fix the poling period from nominal wavelength alone.",
+          "supplier_answer": null,
+          "evidence_file": null,
+          "review": "OPEN"
+        },
+        {
+          "id": "RFQ-KTP-02",
+          "topic": "Geometry",
+          "requirement": "Optical length 10 mm; usable poled clear aperture at least 1 x 2 mm. Input/output faces at normal incidence.",
+          "evidence_requested": "Dimensioned drawing, length/aperture tolerances, wedge, edge exclusion, surface quality and mount datum.",
+          "supplier_answer": null,
+          "evidence_file": null,
+          "review": "OPEN"
+        },
+        {
+          "id": "RFQ-KTP-03",
+          "topic": "Poling and QPM",
+          "requirement": "Poling period to be calculated by supplier for measured pump and achievable operating temperature. Approximately 10 µm is only a literature starting point.",
+          "evidence_requested": "Actual period/reference temperature, duty cycle, useful poled region, domain uniformity and serial-specific certificate; distinguish calculated and measured data.",
+          "supplier_answer": null,
+          "evidence_file": null,
+          "review": "OPEN"
+        },
+        {
+          "id": "RFQ-KTP-04",
+          "topic": "Temperature",
+          "requirement": "Initial controller design 20-60 °C, heating and cooling. System temperature-deviation target±0.05 °C during 2400 s run.",
+          "evidence_requested": "T_QPM(λp), tuning slope and acceptance width. Identify if proposed crystal requires a different temperature window; sensor location, gradient and settling recommendations.",
+          "supplier_answer": null,
+          "evidence_file": null,
+          "review": "OPEN"
+        },
+        {
+          "id": "RFQ-KTP-05",
+          "topic": "Pump operating envelope",
+          "requirement": "CW, total incident crystal power P_CW+P_CCW=0.1-3 mW; search waist radius 100-180 µm per axis (1/e² intensity). Per-direction balance is adjustable.",
+          "evidence_requested": "Allowed CW405-nm intensity, absorption/heating and long-term degradation. Maximum incident power remains conditional on the actual source and interlock;1064-nm pulsed LIDT is not sufficient.",
+          "supplier_answer": null,
+          "evidence_file": null,
+          "review": "OPEN"
+        },
+        {
+          "id": "RFQ-KTP-06",
+          "topic": "Coatings",
+          "requirement": "Dual-band AR405/810 nm on BOTH end faces, suitable for bidirectional use. Design bands to be finalized from measured pump and SPDC/filter spectra.",
+          "evidence_requested": "Guaranteed R/T versus wavelength and polarization, angular and temperature range, scatter/fluorescence information, coating orientation and individual-face data.",
+          "supplier_answer": null,
+          "evidence_file": null,
+          "review": "OPEN"
+        },
+        {
+          "id": "RFQ-KTP-07",
+          "topic": "Spectral indistinguishability",
+          "requirement": "Provide CW and CCW predictions or measurements at the same T and λp, resolving orthogonal signal/idler components.",
+          "evidence_requested": "λs, λi, FWHM and temperature slopes; raw CSV with resolution/instrument response. Provide temporal walk-off/group delay and spatial walk-off; propose compensation if needed.",
+          "supplier_answer": null,
+          "evidence_file": null,
+          "review": "OPEN"
+        },
+        {
+          "id": "RFQ-KTP-08",
+          "topic": "Optical model data",
+          "requirement": "Current focusing worksheet uses an isotropic placeholder n 405=1.85. It is not material certification.",
+          "evidence_requested": "Validated refractive/group-index model for 405 and 810 nm, temperature validity, principal axes and anisotropic diffraction terms or equivalent propagation model.",
+          "supplier_answer": null,
+          "evidence_file": null,
+          "review": "OPEN"
+        },
+        {
+          "id": "RFQ-KTP-09",
+          "topic": "Axis and polarity drawing",
+          "requirement": "Global bench X right,Y up,Z vertical; crystal propagation diagonal in XY. Local u=Z×k,v=Z. Final mount rotation is adjustable.",
+          "evidence_requested": "Mark crystallographic X/Y/Z, poling direction, input-face labels, nonlinear pump axis and fast/slow axes; explicitly describe reverse propagation. Do not assume our provisional H/V assignment.",
+          "supplier_answer": null,
+          "evidence_file": null,
+          "review": "OPEN"
+        },
+        {
+          "id": "RFQ-KTP-10",
+          "topic": "Mount/oven option",
+          "requirement": "Quote bare crystal and a separately priced low-stress holder/oven option. Beam height 75 mm; current 40-mm drawing envelope is provisional.",
+          "evidence_requested": "CAD/STEP, thermal interfaces, sensor/TEC inclusion, cable exit, clear beam paths from both ends, lead times for both options.",
+          "supplier_answer": null,
+          "evidence_file": null,
+          "review": "OPEN"
+        },
+        {
+          "id": "RFQ-KTP-11",
+          "topic": "Acceptance package",
+          "requirement": "No guaranteed Bell-state fidelity or pair rate is requested from a bare-crystal certificate. Component acceptance and assembled-source tests are separate.",
+          "evidence_requested": "Serial certificate and deviations against this RFQ; recommended incoming checks, warranty and remediation if a guaranteed component parameter fails.",
+          "supplier_answer": null,
+          "evidence_file": null,
+          "review": "OPEN"
+        }
+      ]
+    },
+    {
+      "code": "RFQ-PBS",
+      "title": "Dual-wavelength PBS for a polarization Sagnac",
+      "supplier": "Newlight Photonics",
+      "contact": "sales@newlightphotonics.com",
+      "candidate": "PBS0012-405/810; improved/custom option if required",
+      "quantity": 1,
+      "requirements": [
+        {
+          "id": "RFQ-PBS-01",
+          "topic": "Bands and power",
+          "requirement": "Nominal 405/810 nm, CW pump. Quote at the nominal wavelengths now; final guaranteed bands depend on measured pump and SPDC spectra.",
+          "evidence_requested": "Provide full s/p spectral curves over 400-410 and 800-820 nm where available. These are requested characterization spans, not newly imposed operating bandwidths.",
+          "supplier_answer": null,
+          "evidence_file": null,
+          "review": "OPEN"
+        },
+        {
+          "id": "RFQ-PBS-02",
+          "topic": "Port convention",
+          "requirement": "External faces normal to beam; diagonal coating nominal 45°. Label P1=west,P2=east,P3=north,P4=south. H lies in bench plane; V is vertical.",
+          "evidence_requested": "A marked drawing showing coating normal and exact entrance/exit ports. Required routing: P1-H→P2, P1-V→P3; P2-H→P1, P2-V→P4; P3-H→P4, P3-V→P1.",
+          "supplier_answer": null,
+          "evidence_file": null,
+          "review": "OPEN"
+        },
+        {
+          "id": "RFQ-PBS-03",
+          "topic": "Extinction",
+          "requirement": "Project target ER_T=T_H/T_V≥1000 and ER_R=R_V/R_H≥1000 at both wavelength bands, at every used input direction. Ratios use separately normalized equal incident powers.",
+          "evidence_requested": "Guaranteed values for P1,P2,P3 incidence, both outputs and both wavelengths; specify minima, typical values, uncertainty and test conditions. Published family >300:1 does not establish compliance.",
+          "supplier_answer": null,
+          "evidence_file": null,
+          "review": "OPEN"
+        },
+        {
+          "id": "RFQ-PBS-04",
+          "topic": "Throughput",
+          "requirement": "Report desired throughput T_H,R_V and undesired T_V,R_H independently; low transmission cannot be hidden by a large extinction ratio.",
+          "evidence_requested": "Absolute power fractions with absorption/scatter budget and curves. No additional absolute-throughput threshold is frozen before the complete loss budget; quote guaranteed achievable values.",
+          "supplier_answer": null,
+          "evidence_file": null,
+          "review": "OPEN"
+        },
+        {
+          "id": "RFQ-PBS-05",
+          "topic": "Phase and dispersion",
+          "requirement": "The two SPDC alternatives must retain coherent polarization transfer in reverse traversal. Intensity extinction alone is insufficient.",
+          "evidence_requested": "Complex Jones coefficients or phase/retardance versus wavelength for transmission/reflection and reverse ports; coating asymmetry, group-delay difference and conventions. State if these are unavailable.",
+          "supplier_answer": null,
+          "evidence_file": null,
+          "review": "OPEN"
+        },
+        {
+          "id": "RFQ-PBS-06",
+          "topic": "Dimensions and glass",
+          "requirement": "Catalog candidate is 12.7 x 12.7 x 12.7 mm; worksheet assumed 10 mm. Clear aperture at least 5 mm on all used faces.",
+          "evidence_requested": "Actual glass, cement, index model at 405/810, optical path lengths, tolerances, beam deviation and dimensional CAD. A 10-mm option may be quoted separately, with full specifications.",
+          "supplier_answer": null,
+          "evidence_file": null,
+          "review": "OPEN"
+        },
+        {
+          "id": "RFQ-PBS-07",
+          "topic": "Mechanical integration",
+          "requirement": "All four beam ports remain accessible; center beam height 75 mm. The old generic 26-mm mount square is not a clearance guarantee.",
+          "evidence_requested": "Suitable mount part number/CAD, beam-center offset, required pads/adhesive limits and available adjustment.",
+          "supplier_answer": null,
+          "evidence_file": null,
+          "review": "OPEN"
+        },
+        {
+          "id": "RFQ-PBS-08",
+          "topic": "Angular/thermal response",
+          "requirement": "Normal face incidence nominal; report sensitivity to small alignment errors and laboratory temperature.",
+          "evidence_requested": "Provide acceptance angle, s/p behavior, depolarization, wavefront error and coating/adhesive temperature limits; identify tested angles and temperatures.",
+          "supplier_answer": null,
+          "evidence_file": null,
+          "review": "OPEN"
+        },
+        {
+          "id": "RFQ-PBS-09",
+          "topic": "405-nm CW suitability",
+          "requirement": "System operates at 0.1-3 mW total incident crystal power; upstream PBS power and accidental exposure depend on actual source.",
+          "evidence_requested": "405-nm CW handling/fluorescence/aging information and maximum permitted incident power; no transfer of a 1064-nm pulsed damage number.",
+          "supplier_answer": null,
+          "evidence_file": null,
+          "review": "OPEN"
+        },
+        {
+          "id": "RFQ-PBS-10",
+          "topic": "Alternatives and certification",
+          "requirement": "If standard PBS0012-405/810 cannot guarantee the target, quote a compliant custom or selected unit and separately report the standard-unit deviation.",
+          "evidence_requested": "Serial/lot test data, price/NRE difference, lead time and acceptance/remedy terms. Do not substitute a 405-only or 810-only PBS.",
+          "supplier_answer": null,
+          "evidence_file": null,
+          "review": "OPEN"
+        }
+      ]
+    },
+    {
+      "code": "RFQ-HWP",
+      "title": "Dual half-wave plate for405 and810 nm",
+      "supplier": "Newlight Photonics",
+      "contact": "sales@newlightphotonics.com",
+      "candidate": "WPD03-H810-H405",
+      "quantity": 1,
+      "requirements": [
+        {
+          "id": "RFQ-HWP-01",
+          "topic": "Required retardance",
+          "requirement": "Half-wave at BOTH405 and 810 nm: δ(λ)=π modulo 2π. WPD03-H810-F405 is not an equivalent substitution.",
+          "evidence_requested": "Confirm exact order code and retardance at both wavelengths.808/404 variants require a new fit to actual wavelengths.",
+          "supplier_answer": null,
+          "evidence_file": null,
+          "review": "OPEN"
+        },
+        {
+          "id": "RFQ-HWP-02",
+          "topic": "Accuracy and band",
+          "requirement": "Project target nearest-half-wave phase error≤2π/100 radians (λ/100 retardance) at each operating band, not merely at one catalog center.",
+          "evidence_requested": "Guaranteed error and measurement uncertainty at actual wavelengths; provide δ(λ) over 400-410 and 800-820 nm where available, with temperature/AOI stated. Spans are characterization requests, not frozen passbands.",
+          "supplier_answer": null,
+          "evidence_file": null,
+          "review": "OPEN"
+        },
+        {
+          "id": "RFQ-HWP-03",
+          "topic": "Orders and axes",
+          "requirement": "Nominal fast-axis angle 45° relative to local H/V. The plate rotates the pump before generation in one direction and the pair after generation in the other.",
+          "evidence_requested": "Unwrapped retardance/order integers, fast/slow-axis identification at both wavelengths, marking tolerance and a clearly defined viewing direction.",
+          "supplier_answer": null,
+          "evidence_file": null,
+          "review": "OPEN"
+        },
+        {
+          "id": "RFQ-HWP-04",
+          "topic": "Bidirectional transfer",
+          "requirement": "Reverse traversal must be included in the source Jones model. Forward intensity swapping is not sufficient.",
+          "evidence_requested": "Forward/reverse Jones description, axis convention and any asymmetric/coating phase; state reciprocity assumptions explicitly.",
+          "supplier_answer": null,
+          "evidence_file": null,
+          "review": "OPEN"
+        },
+        {
+          "id": "RFQ-HWP-05",
+          "topic": "Temporal distinguishability",
+          "requirement": "The two photons encounter different polarization histories. A half-wave value modulo 2π does not specify differential delay.",
+          "evidence_requested": "dδ/dω or group-delay difference over 810 band, temperature dependence and thickness/material information sufficient for an independent estimate.",
+          "supplier_answer": null,
+          "evidence_file": null,
+          "review": "OPEN"
+        },
+        {
+          "id": "RFQ-HWP-06",
+          "topic": "Geometry",
+          "requirement": "Catalog candidate: optical diameter 15 mm in 25.4-mm holder. Current worksheet assumes 1 mm optical material, not verified.",
+          "evidence_requested": "Actual number/material/thickness of plates and air gaps; thickness tolerances, wedge, clear aperture, holder thickness, optical-center datum and CAD.",
+          "supplier_answer": null,
+          "evidence_file": null,
+          "review": "OPEN"
+        },
+        {
+          "id": "RFQ-HWP-07",
+          "topic": "AR and transmission",
+          "requirement": "AR at 405 and 810 for incidence nominal 0°; sufficient clear aperture for the complete beam and adjustment range.",
+          "evidence_requested": "Per-face R and total T versus wavelength and polarization, scatter, wavefront and fluorescence data; confirm family specification applies to offered unit.",
+          "supplier_answer": null,
+          "evidence_file": null,
+          "review": "OPEN"
+        },
+        {
+          "id": "RFQ-HWP-08",
+          "topic": "Angular/thermal response",
+          "requirement": "Laboratory use; adjacent crystal oven 20-60 °C does not define the plate temperature. Small alignment tilt must be budgeted.",
+          "evidence_requested": "δ sensitivity to angle and temperature, recommended operating limits and axis stability; propose zero-order alternative if bandwidth demands it.",
+          "supplier_answer": null,
+          "evidence_file": null,
+          "review": "OPEN"
+        },
+        {
+          "id": "RFQ-HWP-09",
+          "topic": "Mount and calibration",
+          "requirement": "One adjustable manual holder for this plate. Nominal 45° is a start setting only.",
+          "evidence_requested": "Compatible holder part number and envelope; recommended polarization/retardance calibration and marking inspection.",
+          "supplier_answer": null,
+          "evidence_file": null,
+          "review": "OPEN"
+        },
+        {
+          "id": "RFQ-HWP-10",
+          "topic": "Documentation",
+          "requirement": "Supplier data must separate guaranteed values from typical or calculated values.",
+          "evidence_requested": "Serial/lot certificate, spectral data in CSV, drawings, part revision and acceptance/remedy terms. Price any selected-performance option separately.",
+          "supplier_answer": null,
+          "evidence_file": null,
+          "review": "OPEN"
+        }
+      ]
+    }
+  ],
+  "commercial_terms": [
+    "Please quote quantity 1 plus an optional separately priced spare. This is a technical and budgetary RFQ, not a purchase order. No manufacturing release is implied.",
+    "Requester: Thomas Gfeller, X6 photonics project, Switzerland. Please return the quotation to the sender. Delivery address and billing details will be supplied with any later order.",
+    "State unit price, currency, NRE, minimum order, lead time from approved specifications, quotation validity, warranty and shipping/tax terms separately. Identify included mounts, controllers and certificates to avoid double counting.",
+    "For each requirement ID, return COMPLY / DEVIATION / NOT AVAILABLE, the guaranteed value and conditions, and a document/curve reference. Highlight every exception; silence is not acceptance.",
+    "Data preferred: PDF datasheet/drawing, STEP geometry and CSV wavelength/temperature curves. Provide units, wavelength convention, polarization/port labels, measurement uncertainty and instrument resolution. Do not send proprietary information that must not be included in a public engineering record without flagging it.",
+    "Before an order: confirm the measured pump profile, final spectral bands, optical/mechanical fit and all agreed deviations in writing. Nominal 405/810 values permit preliminary quotation only."
+  ],
+  "issues": [
+    [
+      "H01",
+      "Pumpdaten fehlen",
+      "PUMP-01, LENS-01, XTAL-01, PBS-01, WP-03",
+      "Quelle/Seriennummer, Spektrum, D4σ, M², Krümmung und Unsicherheiten messen; tatsächliche Betriebsbänder ableiten."
+    ],
+    [
+      "H02",
+      "PBS unterschreitet Nachweisumfang",
+      "PBS-01",
+      "Familienangabe >300:1 belegt die geforderten1000:1 nicht. Alle verwendeten Ports und beide Wellenlängen prüfen; Abweichung nicht still übernehmen."
+    ],
+    [
+      "H03",
+      "Geometrie verändert Fokus",
+      "PBS-01, WP-03, LENS-01",
+      "12,7-mm-PBS und reale HWP-Dicke/Hauptebenen ins Worksheet. 810-nm-Sammelkette mit tatsächlichen Teilen rechnen."
+    ],
+    [
+      "H04",
+      "Spektren und Phase offen",
+      "XTAL-01, WP-03, FIL-BP-A/B, MIR-03/04",
+      "CW/CCW sowie A/B über Temperatur aufnehmen; Intensitätsspektren sind notwendig, aber allein kein Nachweis kohärenter Ununterscheidbarkeit."
+    ],
+    [
+      "H05",
+      "Mechanik nicht montagefreigegeben",
+      "Alle optischen Positionen / MECH-POST",
+      "Herstellerumrisse, Kabel, Justagezugänge und Koordinaten ergänzter Shutter-/Monitor-/Abschwächerteile in CAD schließen. Schrauben/Stative einzeln auflösen."
+    ],
+    [
+      "H06",
+      "Detektorkette nur plausibel",
+      "DET-0..3, TDC-01, PSU-01",
+      "Modellgrenzen bestätigen, reale Pulse unter50 Ohm messen, vierkanalig Verlust/Offset/Jitter prüfen. Keine Betriebsfreigabe aus typischen Katalogwerten."
+    ]
+  ]
+}

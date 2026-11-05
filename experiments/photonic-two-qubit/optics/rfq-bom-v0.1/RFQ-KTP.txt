@@ -1,0 +1,55 @@
+RFQ-KTP | Bulk ppKTP for bidirectional Type-II SPDC
+To: Raicol Crystals <info@raicol.com>
+Subject: RFQ-KTP - Custom configuration; manufacturer order code to be assigned
+
+Please quote quantity 1 plus an optional separately priced spare. This is a technical and budgetary RFQ, not a purchase order. No manufacturing release is implied.
+Requester: Thomas Gfeller, X6 photonics project, Switzerland. Please return the quotation to the sender. Delivery address and billing details will be supplied with any later order.
+
+RFQ-KTP-01 Interaction
+Collinear Type-II, nominal vacuum pump wavelength 405 nm, degenerate 810+810 nm. Bulk crystal. Same crystal pumped from both ends in a polarization Sagnac. Measured pump wavelength and drift are pending.
+Please provide: Confirm interaction tensor, propagation axis, pump/signal/idler polarizations and feasible wavelength range. Do not fix the poling period from nominal wavelength alone.
+
+RFQ-KTP-02 Geometry
+Optical length 10 mm; usable poled clear aperture at least 1 x 2 mm. Input/output faces at normal incidence.
+Please provide: Dimensioned drawing, length/aperture tolerances, wedge, edge exclusion, surface quality and mount datum.
+
+RFQ-KTP-03 Poling and QPM
+Poling period to be calculated by supplier for measured pump and achievable operating temperature. Approximately 10 µm is only a literature starting point.
+Please provide: Actual period/reference temperature, duty cycle, useful poled region, domain uniformity and serial-specific certificate; distinguish calculated and measured data.
+
+RFQ-KTP-04 Temperature
+Initial controller design 20-60 °C, heating and cooling. System temperature-deviation target±0.05 °C during 2400 s run.
+Please provide: T_QPM(λp), tuning slope and acceptance width. Identify if proposed crystal requires a different temperature window; sensor location, gradient and settling recommendations.
+
+RFQ-KTP-05 Pump operating envelope
+CW, total incident crystal power P_CW+P_CCW=0.1-3 mW; search waist radius 100-180 µm per axis (1/e² intensity). Per-direction balance is adjustable.
+Please provide: Allowed CW405-nm intensity, absorption/heating and long-term degradation. Maximum incident power remains conditional on the actual source and interlock;1064-nm pulsed LIDT is not sufficient.
+
+RFQ-KTP-06 Coatings
+Dual-band AR405/810 nm on BOTH end faces, suitable for bidirectional use. Design bands to be finalized from measured pump and SPDC/filter spectra.
+Please provide: Guaranteed R/T versus wavelength and polarization, angular and temperature range, scatter/fluorescence information, coating orientation and individual-face data.
+
+RFQ-KTP-07 Spectral indistinguishability
+Provide CW and CCW predictions or measurements at the same T and λp, resolving orthogonal signal/idler components.
+Please provide: λs, λi, FWHM and temperature slopes; raw CSV with resolution/instrument response. Provide temporal walk-off/group delay and spatial walk-off; propose compensation if needed.
+
+RFQ-KTP-08 Optical model data
+Current focusing worksheet uses an isotropic placeholder n 405=1.85. It is not material certification.
+Please provide: Validated refractive/group-index model for 405 and 810 nm, temperature validity, principal axes and anisotropic diffraction terms or equivalent propagation model.
+
+RFQ-KTP-09 Axis and polarity drawing
+Global bench X right,Y up,Z vertical; crystal propagation diagonal in XY. Local u=Z×k,v=Z. Final mount rotation is adjustable.
+Please provide: Mark crystallographic X/Y/Z, poling direction, input-face labels, nonlinear pump axis and fast/slow axes; explicitly describe reverse propagation. Do not assume our provisional H/V assignment.
+
+RFQ-KTP-10 Mount/oven option
+Quote bare crystal and a separately priced low-stress holder/oven option. Beam height 75 mm; current 40-mm drawing envelope is provisional.
+Please provide: CAD/STEP, thermal interfaces, sensor/TEC inclusion, cable exit, clear beam paths from both ends, lead times for both options.
+
+RFQ-KTP-11 Acceptance package
+No guaranteed Bell-state fidelity or pair rate is requested from a bare-crystal certificate. Component acceptance and assembled-source tests are separate.
+Please provide: Serial certificate and deviations against this RFQ; recommended incoming checks, warranty and remediation if a guaranteed component parameter fails.
+
+State unit price, currency, NRE, minimum order, lead time from approved specifications, quotation validity, warranty and shipping/tax terms separately. Identify included mounts, controllers and certificates to avoid double counting.
+For each requirement ID, return COMPLY / DEVIATION / NOT AVAILABLE, the guaranteed value and conditions, and a document/curve reference. Highlight every exception; silence is not acceptance.
+Data preferred: PDF datasheet/drawing, STEP geometry and CSV wavelength/temperature curves. Provide units, wavelength convention, polarization/port labels, measurement uncertainty and instrument resolution. Do not send proprietary information that must not be included in a public engineering record without flagging it.
+Before an order: confirm the measured pump profile, final spectral bands, optical/mechanical fit and all agreed deviations in writing. Nominal 405/810 values permit preliminary quotation only.
