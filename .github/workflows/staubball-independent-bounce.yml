@@ -1,0 +1,31 @@
+name: Staubball Independent Bounce Reference Forecast
+on:
+  pull_request:
+    paths:
+      - 'research/rax_cqg/dust_collapse/**'
+      - '.github/workflows/staubball-independent-bounce.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'research/rax_cqg/dust_collapse/**'
+      - '.github/workflows/staubball-independent-bounce.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  independent-bounce-reference:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: research/rax_cqg/dust_collapse/independent_bounce_v0_1/publication-requirements.txt
+      - name: Install pinned numerical dependencies
+        run: python3 -m pip install --only-binary=:all: -r research/rax_cqg/dust_collapse/independent_bounce_v0_1/publication-requirements.txt
+      - name: Verify original artifacts, forecasts and numerical replay
+        run: python3 research/rax_cqg/dust_collapse/independent_bounce_v0_1/publication_check.py --replay

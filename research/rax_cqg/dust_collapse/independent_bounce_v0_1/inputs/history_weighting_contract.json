@@ -1,0 +1,89 @@
+{
+  "schema": "x6-history-weight-contract/v0.1",
+  "id": "CST_HISTORY_WEIGHT_FOUNDATION_V0_1",
+  "date": "2026-11-05",
+  "evidence_class": "ANALYTIC_CONDITIONAL_DERIVATION_WITH_FINITE_DIAGNOSTICS",
+  "status": "CONDITIONAL_REFERENCE_DERIVED_CST_MEASURE_OPEN",
+  "not_external_preregistration": true,
+  "no_new_bounce_optimization": true,
+  "old_candidate_decision_preserved": "CLOSED_REJECTED_FOR_DOMINANT_BOUNCE",
+  "reference": {
+    "space": "flat homogeneous periodic dust cell; V0 fixed; Lambda=0; c=1",
+    "coordinate": "q=sqrt(V)",
+    "clock": "positive-orientation irrotational dust time T",
+    "constraint": "p_T - kappa*p_q^2 = 0",
+    "kappa": "3*pi*G/2",
+    "physical_hamiltonian_classical": "-kappa*p_q^2",
+    "physical_hamiltonian_quantum": "kappa*hbar^2*d_qq",
+    "measure_q": "dq",
+    "measure_V": "dV/(2*sqrt(V))",
+    "canonical_ordering_choice": "direct Schrodinger quantization in q",
+    "boundary_condition": "Dirichlet for benchmark only; physical choice not derived",
+    "initial_density_operator": "OPEN; early state must be normalized, with independently fixed spread",
+    "collapse_solution": "q=q_i-sqrt(6*pi*G*M)*(T-T_i), until q=0",
+    "numerical_check": "finite Dirichlet interval (0,5), 16 and 32 sine modes; kappa=hbar=1",
+    "reference_is_derived_from_full_CST": false
+  },
+  "cst_candidate": {
+    "measure_proposal": "equal arbitrary labeled contributions divided by allowed label group volume",
+    "unmarked_fixed_n_weight": "1/abs(Aut(C))",
+    "marked_weight": "1/abs(Aut_boundary(C,fields)) under specified invariant base matter measure",
+    "natural_label_correction": "1/L(C) per natural labeled copy for unmarked quotient target",
+    "variable_n_sector_factors": "OPEN; zeta_n must be fixed independently",
+    "full_carrier": "OPEN",
+    "dust_matter_measure_and_action": "OPEN",
+    "boundary_action_and_basis": "OPEN",
+    "cst_to_volume_coarse_map_and_fibres": "OPEN",
+    "amplitude_or_decoherence_consistency": "OPEN"
+  },
+  "checks": {
+    "exact_poset_counts_n1_to_n5": true,
+    "marked_stabilizer_example": true,
+    "coordinate_measure_quadrature": true,
+    "finite_spectral_composition_and_unitarity": true,
+    "wrong_measure_negative_control": true,
+    "classical_dust_identity_rational_cases": true,
+    "full_4d_classical_limit": "NOT_RUN",
+    "full_4d_refinement": "NOT_RUN"
+  },
+  "gates": [
+    {
+      "id": "G0",
+      "status": "PASS_FINITE_IDENTITIES",
+      "criterion": "Do not mix measure, state amplitude and classical probability; quotient under correct mark-preserving group"
+    },
+    {
+      "id": "G1",
+      "status": "HOLD",
+      "criterion": "Freeze normalized early state, mass sector, ordering, boundaries, readout windows"
+    },
+    {
+      "id": "G2",
+      "status": "HOLD",
+      "criterion": "Specify full CST carrier, sector weights, matter measure, total action and boundary data"
+    },
+    {
+      "id": "G3",
+      "status": "PASS_REFERENCE_ONLY",
+      "criterion": "Positive normalized decoherence functional and consistent composition"
+    },
+    {
+      "id": "G4",
+      "status": "HOLD",
+      "criterion": "Match classical contracting dust and reduced kernel at low curvature"
+    },
+    {
+      "id": "G5",
+      "status": "HOLD",
+      "criterion": "Control coarse fibres, omitted contributions and physical refinement"
+    },
+    {
+      "id": "G6",
+      "status": "NOT_RUN",
+      "criterion": "Only after upstream gates evaluate new independent bounce data"
+    }
+  ],
+  "stop_rule": "Reject or hold the specific measure if normalization, composition, classical limit or refinement fail; no tuning to B",
+  "singularity_resolution": "HOLD",
+  "global_cst_bounce": "HOLD"
+}

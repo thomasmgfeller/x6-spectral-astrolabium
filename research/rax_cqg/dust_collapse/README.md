@@ -1,5 +1,13 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Vorabprüfung einer Bounce-Vorhersage v0.1 · 5. November 2026
+
+Zehn neue synthetische Anfangszustände bestehen die vorher festgelegte Prognoseprüfung für Umkehrzeit und Minimalwert des mittleren Volumens. Die frühe Prognose wurde vor einer getrennten numerischen Entwicklung fixiert. 30 Läufe auf drei Auflösungen liefern 7230 Ablesewerte; auf dem feinsten Gitter liegen alle Fälle innerhalb von 1 % Zeitfehler und 3 % Volumenfehler. Die Maximalfehler betragen rund 0,615 % und 1,324 %.
+
+**PASS gilt allein für die angenommene reduzierte Referenz.** Ein Mittelvolumenminimum bestimmt weder die Randphysik noch eine mehrzeitige Bounce-Historienwahrscheinlichkeit. Bei den acht Gaußfällen divergiert das inverse zweite Volumenmoment bereits anfangs und am Minimum; Singularitätsauflösung ist nicht nachgewiesen. Der vollständige CST-Test bleibt **HOLD_NOT_ELIGIBLE**, der alte dominante Bounce-Kandidat verworfen. Die früheren NOT_RUN-Angaben unten bezeichnen den damaligen Stand vor dieser getrennten Referenzprüfung.
+
+[Bericht (PDF, sechs Seiten)](reports/CST_Staubball_Unabhaengige_Bounce_Vorhersage_v0_1.pdf) · [Unverändertes Prüfpaket (ZIP)](packages/CST_Staubball_Unabhaengige_Bounce_Vorhersage_v0_1_Pruefpaket.zip) · [Vorhersage, Kontrollen und Nachrechnung](independent_bounce_v0_1/PUBLICATION.md)
+
 ## Klassische Staubbewegung und gravitative Rückwirkung v0.1 · 5. November 2026
 
 Die ausdrücklich gewählte reduzierte Einstein-Staub-Referenz liefert klassische Kollapsbewegung, Massenerhaltung und gravitative Quellwirkung. Neun Beschleunigungsintegrationen und 90 Auswertungen des normierten Quantenkerns bestätigen die Referenz und ihren geprüften semiklassischen Grenzfall vor der Singularität. Bei gleichem Anfangsvolumen verdoppelt vierfache klassische Masse die Kollapsrate von `sqrt(V)`, wenn der Anfangszwang erfüllt wird. Die Referenz beginnt bereits mit der gekoppelten Kontinuumswirkung; die Herleitung dieser Dynamik aus der vollständigen vierdimensionalen CST-Summe bleibt **HOLD**.
