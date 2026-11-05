@@ -10,7 +10,7 @@ Geplant ist eine polarisationsverschränkte Photonenpaarquelle mit einem Typ-II-
 
 | Ebene | Verfügbar | Noch offen |
 |---|---|---|
-| Optik | Funktionsentwurf und CHSH-Protokoll; Gaussian-Worksheet und maßstäblicher Layoutentwurf; RFQs und Arbeits-BOM mit 83 Positionen | Lieferantenspezifische Freigabe, mechanisch geprüfte Strahlführung, Aufbau, Charakterisierung |
+| Optik | Funktionsentwurf und CHSH-Protokoll; Gaussian-Worksheet und maßstäblicher Layoutentwurf; RFQs und Arbeits-BOM mit 83 Positionen; Polarisationstransfer, Filterbudget und spektraler Prüfplan | Lieferantenspezifische Freigabe, mechanisch geprüfte Strahlführung, Aufbau, Charakterisierung |
 | Digitalteil v0.7 | Vierkanal-Fensterklassifikation, UART-TX, Decoder, CHSH-Auswertung, Simulationstests | Qualifiziertes Detektor/TDC-Frontend, FPGA-Pinplan, Boardtests |
 | Astrolabium | Bereits veröffentlichter SGNCv007-Import, lokale Bridge und synthetische Demo | Ende-zu-Ende-Prüfung mit realer Messkette |
 | JIG-F1 | Fertigungsentwurf mit STEP, STL, DXF, Bauanleitung und Modellrechnungen | Fertigung, Wiederholbarkeit, Drift, Klebe- und Übergabeversuche |
@@ -25,6 +25,8 @@ Die Bezeichnung „Zwei-Qubit“ beschreibt zwei geplante Polarisationsfreiheits
 Auf dem Linux-Messrechner das Paket entpacken und `python3 labor_server.py` starten. Ohne Geräteprofil lässt sich der vollständige Ablauf mit vier synthetischen Frames ausprobieren. Der Reiter **06 · Gerätelauf** verbindet sich mit dem lokalen Dienst. Er zeigt Erfassungsstatus, Kanalraten und Geräteantworten an und stellt die archivierten Rohdaten bereit. Der Stand umfasst 19 Softwaretests mit virtuellen Anschlüssen und einem SDK-Testadapter. Geräteabnahme und physischer CHSH-Nachweis stehen aus.
 
 ## Einstieg und Unterlagen
+
+- **[Polarisationstransfer, Filterbudget und spektrale Prüfmatrix v0.1](optics/polarisation-filter-spektral-v0.1/README.md)** — 16 CW/CCW-Transferschritte, vier Excel-Arbeitsblätter, 23 Prüfungen und 15 bestandene Rechentests. Serienfilterkurven, komplexe Transferdaten und reale Spektren fehlen; Hardware `NOT_RUN`, BOM-Freeze `HOLD`.
 
 - **[ppKTP-/PBS-/HWP-Anfragen und komponentengenaue BOM v0.1](optics/rfq-bom-v0.1/README.md)** — [Gesamt-PDF](optics/rfq-bom-v0.1/X6_Photonik_RFQ_BOM_v0_1.pdf), [Excel-BOM](optics/rfq-bom-v0.1/X6_Photonik_BOM_v0_1.xlsx), [vollständiges Paket](optics/rfq-bom-v0.1/X6_Photonik_RFQ_BOM_v0_1_Pruefpaket.zip). Drei englische Anfragen mit 31 Prüfpunkten; 83 BOM-Positionen und Zuordnung aller 35 optischen Layoutpositionen. 32 `OPEN`, 51 `HOLD`; Hardware `NOT_RUN`. Anfragen vorbereitet, nicht versendet.
 

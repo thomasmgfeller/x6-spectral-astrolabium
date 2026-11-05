@@ -1,0 +1,30 @@
+name: Polarisation Filter Spectral Reference
+on:
+  pull_request:
+    paths:
+      - 'experiments/photonic-two-qubit/optics/polarisation-filter-spektral-v0.1/**'
+      - '.github/workflows/polarisation-filter-spektral.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'experiments/photonic-two-qubit/optics/polarisation-filter-spektral-v0.1/**'
+      - '.github/workflows/polarisation-filter-spektral.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  reference:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    defaults:
+      run:
+        working-directory: experiments/photonic-two-qubit/optics/polarisation-filter-spektral-v0.1
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Reproduce 15 physical-model checks
+        run: python -m unittest -v test_analysis
+      - name: Verify delivered bytes and unmeasured status
+        run: python verify_package.py
