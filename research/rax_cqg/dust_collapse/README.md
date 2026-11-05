@@ -1,5 +1,13 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Klassische Staubbewegung und gravitative Rückwirkung v0.1 · 5. November 2026
+
+Die ausdrücklich gewählte reduzierte Einstein-Staub-Referenz liefert klassische Kollapsbewegung, Massenerhaltung und gravitative Quellwirkung. Neun Beschleunigungsintegrationen und 90 Auswertungen des normierten Quantenkerns bestätigen die Referenz und ihren geprüften semiklassischen Grenzfall vor der Singularität. Bei gleichem Anfangsvolumen verdoppelt vierfache klassische Masse die Kollapsrate von `sqrt(V)`, wenn der Anfangszwang erfüllt wird. Die Referenz beginnt bereits mit der gekoppelten Kontinuumswirkung; die Herleitung dieser Dynamik aus der vollständigen vierdimensionalen CST-Summe bleibt **HOLD**.
+
+Die alten frühen Volumenwerte implizieren klassisch eine Singularität bei `T ≈ 1,406`, während der positive Historienkatalog bis `T = 1,6` reicht. Ein kontrollierter Klassikvergleich muss zunächst vor diesem Zeitpunkt liegen. Die nachgerechnete Massenantwort der Randfamilie C bestätigt veränderte Endamplituden, liefert aber noch keinen Nachweis gravitativer Rückwirkung. Der alte Bounce-Kandidat bleibt verworfen; neuer Bounce-Test **NOT_RUN**, Singularitätsauflösung nicht nachgewiesen.
+
+[Bericht (PDF, sechs Seiten)](reports/CST_Staubball_Klassik_Rueckwirkung_v0_1.pdf) · [Vollständiges Prüfpaket (ZIP)](packages/CST_Staubball_Klassik_Rueckwirkung_v0_1_Pruefpaket.zip) · [Herleitung, Nachrechnung und offene Nachweise](classical_backreaction_v0_1/PUBLICATION.md)
+
 ## Physikalische Begründung der Historiengewichtung v0.1 · 5. November 2026
 
 Für die ausdrücklich reduzierte homogene Staubzelle ergibt die kanonische Quantisierung in `q = sqrt(V)` das Integrationsmaß `dq = dV/(2 sqrt(V))`. Die reelle Wirkung bestimmt die Phase. Ein Symmetriefaktor folgt nur unter der angegebenen beschrifteten Ausgangszählung; natürliche Beschriftungen benötigen eine andere Vielfachheitskorrektur. Die maßgebliche physikalische Gewichtung der vollständigen vierdimensionalen CST-Summe bleibt **HOLD**.
