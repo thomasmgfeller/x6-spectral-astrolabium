@@ -1,0 +1,129 @@
+$ python3 scan.py --out <temporary>/scan
+development total [(0.7111111, 1.1559432, 'HOLD'), (1.1559432, 1.1560342, 'OPEN'), (1.1560342, 1.7052632, 'FAIL')] {'0': 'HOLD', '32/45': 'HOLD', '1': 'HOLD', '5/4': 'FAIL', '162/95': 'FAIL'}
+development split [(0.7111111, 1.6210114, 'HOLD'), (1.6210114, 1.6211025, 'OPEN'), (1.6211025, 1.7052632, 'FAIL')] {'0': 'HOLD', '32/45': 'HOLD', '1': 'HOLD', '5/4': 'HOLD', '162/95': 'FAIL'}
+holdout total [(0.7111111, 1.7052632, 'FAIL')] {'0': 'HOLD', '32/45': 'FAIL', '1': 'FAIL', '5/4': 'FAIL', '162/95': 'FAIL'}
+holdout split [(0.7111111, 1.7052632, 'FAIL')] {'0': 'HOLD', '32/45': 'FAIL', '1': 'FAIL', '5/4': 'FAIL', '162/95': 'FAIL'}
+
+$ python3 audit.py --out <temporary>/scan
+Passed direct pair sums, published baseline comparisons and predeclared prediction checks.
+
+$ python3 run.py --out <temporary>/density
+off: HOLD on: HOLD physical: HOLD_PENDING_EVIDENCE_REVIEW
+off 1/5 [('dynamic', 0.31611155, 0.13445027), ('null', 0.05405405, 0.00540541)]
+off 1/10 [('dynamic', 0.2095875, 0.03013833), ('null', 0.05405405, 0.00540541)]
+on 1/5 [('dynamic', 0.06285146, 0.05631944), ('null', 0.03336355, 0.0126846)]
+on 1/10 [('dynamic', 0.05401316, 0.0288137), ('null', 0.03336355, 0.0126846)]
+
+$ python3 finite_checks.py
+{
+  "catalogue": [
+    {
+      "k": 1,
+      "widths": [
+        3,
+        2,
+        1,
+        4,
+        1
+      ],
+      "orbits": {
+        "strict": 1
+      },
+      "labelled": {
+        "strict": 1
+      }
+    },
+    {
+      "k": 2,
+      "widths": [
+        3,
+        2,
+        2,
+        4,
+        1
+      ],
+      "orbits": {
+        "plateau": 47
+      },
+      "labelled": {
+        "plateau": 553
+      }
+    },
+    {
+      "k": 3,
+      "widths": [
+        3,
+        2,
+        3,
+        4,
+        1
+      ],
+      "orbits": {
+        "strict": 792
+      },
+      "labelled": {
+        "strict": 54025
+      }
+    }
+  ],
+  "terminal_completions": {
+    "same_early_until": 1,
+    "end_volume": 1,
+    "contract_end_derivative": -1,
+    "bounce_end_derivative": "1",
+    "bounce_time_bracket": [
+      "12053584907/4294967296",
+      "3013396227/1073741824"
+    ],
+    "positive_lower_bound": "37/64"
+  },
+  "effective": {
+    "effective_units": "6*pi*G=M=hbar=1",
+    "physical_resolution": [
+      {
+        "nu": "1",
+        "Vmin": "1/4",
+        "Kmax": "256/3"
+      },
+      {
+        "nu": "1/2",
+        "Vmin": "1/16",
+        "Kmax": "4096/3"
+      },
+      {
+        "nu": "1/4",
+        "Vmin": "1/64",
+        "Kmax": "65536/3"
+      },
+      {
+        "nu": "1/8",
+        "Vmin": "1/256",
+        "Kmax": "1048576/3"
+      }
+    ],
+    "half_shifted_time_grid_at_nu_one": [
+      {
+        "step": "1/8",
+        "grid_min": "65/256",
+        "grid_max_K": "7651459072/96393375"
+      },
+      {
+        "step": "1/16",
+        "grid_min": "257/1024",
+        "grid_max_K": "9869918732288/117786700827"
+      },
+      {
+        "step": "1/32",
+        "grid_min": "1025/4096",
+        "grid_max_K": "506325373026304/5960589609375"
+      },
+      {
+        "step": "1/64",
+        "grid_min": "4097/16384",
+        "grid_max_K": "648412814699921408/7607248793026587"
+      }
+    ]
+  },
+  "dynamic_CST_bounce": "HOLD",
+  "dynamic_CST_regularity": "HOLD"
+}

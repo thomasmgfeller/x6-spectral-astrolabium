@@ -1,0 +1,27 @@
+name: Staubball Bounce Candidate Closure
+on:
+  pull_request:
+    paths:
+      - 'research/rax_cqg/dust_collapse/**'
+      - '.github/workflows/staubball-bounce-closure.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'research/rax_cqg/dust_collapse/**'
+      - '.github/workflows/staubball-bounce-closure.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  closure-replay:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Verify unchanged artifacts and reproduce the finite-model closure
+        run: python3 research/rax_cqg/dust_collapse/bounce_closure_v0_1/publication_check.py --replay

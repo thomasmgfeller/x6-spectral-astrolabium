@@ -1,0 +1,208 @@
+{
+  "schema": "x6-bounce-candidate-closure/v0.1",
+  "date": "2026-11-05",
+  "source_commit": "5f7994400869c921dec5b335f04a384a713e5e64",
+  "sources": [
+    {
+      "name": "CST_Staubball_Kopplungsscan_v0_2_Pruefpaket.zip",
+      "sha256": "93741d09f47c87fc757653886f6c93fb42b8699b9830c66639b195bf05457ee0",
+      "git_blob_sha1": "097533f6089fe0d2dadcd6e9261e1e7dab16fffb",
+      "repository_path": "research/rax_cqg/dust_collapse/packages/CST_Staubball_Kopplungsscan_v0_2_Pruefpaket.zip",
+      "verified_member_count": 19
+    },
+    {
+      "name": "CST_Staubball_Dichtespur_v0_1_Pruefpaket.zip",
+      "sha256": "e687a058e77a686ea40d0eb817981c1213d32a52b79c5eef7fe4915f5ef6760e",
+      "git_blob_sha1": "5820f35cf6674d92ad5c68c63c994e88346d41cb",
+      "repository_path": "research/rax_cqg/dust_collapse/packages/CST_Staubball_Dichtespur_v0_1_Pruefpaket.zip",
+      "verified_member_count": 19
+    },
+    {
+      "name": "Staubball_Bounce_Regularitaet_Pruefpaket.zip",
+      "sha256": "b0515a05125a8366daddc1752e4f8bdf23804ccfa83d441f358dd6242b641376",
+      "git_blob_sha1": "0796bc5ebef0f405a7aad1cd6dfc03e7c458482c",
+      "repository_path": "research/rax_cqg/dust_collapse/packages/Staubball_Bounce_Regularitaet_Pruefpaket.zip",
+      "verified_member_count": 13
+    }
+  ],
+  "candidate_snapshot_sha256": "0a017e1f2ab894578fb5f007a473f480d1460e39fc4369be629dc06ea1d248e0",
+  "evidence_class": "RETROSPECTIVE_FINITE_MODEL_REANALYSIS",
+  "decision": "CLOSED_REJECTED_FOR_DOMINANT_BOUNCE",
+  "global_cst_bounce": "HOLD",
+  "singularity_resolution": "HOLD",
+  "original_gate_statuses_preserved": true,
+  "certificates": {
+    "development": {
+      "history_count": 27,
+      "bounce": [
+        5,
+        4,
+        3,
+        4,
+        5
+      ],
+      "isolated_non_bounce": [
+        [
+          5,
+          4,
+          5,
+          6,
+          7
+        ]
+      ],
+      "end_channel_sizes": {
+        "0": 10,
+        "2": 7,
+        "4": 6,
+        "6": 3,
+        "10": 1
+      },
+      "uniform_amplitude_magnitude": "1/27",
+      "pointer_bound": "1/2",
+      "required_dominance": "4/5",
+      "ideal_full_path_decoherence_qB": "1/27"
+    },
+    "holdout": {
+      "history_count": 17,
+      "bounce": [
+        5,
+        4,
+        2,
+        3,
+        4
+      ],
+      "isolated_non_bounce": [
+        [
+          5,
+          4,
+          6,
+          7,
+          8
+        ]
+      ],
+      "end_channel_sizes": {
+        "0": 7,
+        "2": 2,
+        "4": 2,
+        "6": 3,
+        "10": 2,
+        "16": 1
+      },
+      "uniform_amplitude_magnitude": "1/17",
+      "pointer_bound": "1/2",
+      "required_dominance": "4/5",
+      "ideal_full_path_decoherence_qB": "1/17"
+    }
+  },
+  "holdout_coupling_interval": [
+    "32/45",
+    "162/95"
+  ],
+  "holdout_bands": {
+    "total": [
+      [
+        "32/45",
+        "162/95",
+        "FAIL"
+      ]
+    ],
+    "split": [
+      [
+        "32/45",
+        "162/95",
+        "FAIL"
+      ]
+    ]
+  },
+  "holdout_qB_upper_exact": "6814643775950010068069306599250042873/100000000000000000000000000000000000000",
+  "transfer": [
+    {
+      "meter": "total",
+      "lambda_value": "1",
+      "prediction": "HOLD",
+      "actual": "FAIL"
+    },
+    {
+      "meter": "total",
+      "lambda_value": "5/4",
+      "prediction": "FAIL",
+      "actual": "FAIL"
+    },
+    {
+      "meter": "split",
+      "lambda_value": "1",
+      "prediction": "HOLD",
+      "actual": "FAIL"
+    },
+    {
+      "meter": "split",
+      "lambda_value": "5/4",
+      "prediction": "HOLD",
+      "actual": "FAIL"
+    }
+  ],
+  "independent_statistical_trials": false,
+  "replay_comparisons": [
+    {
+      "file": "scan.json",
+      "byte_identical": true,
+      "replay_sha256": "b343da446c203d087b6aaa73c0a4a301e7318aaf6e21d6227505fecdf2fa598c",
+      "status": "PASS"
+    },
+    {
+      "file": "audit.json",
+      "byte_identical": true,
+      "replay_sha256": "a14253e57d12b6aca792562ab42592d8200122e6746a963615de6f972b8a5d71",
+      "status": "PASS"
+    },
+    {
+      "file": "certified_pairs.json",
+      "byte_identical": true,
+      "replay_sha256": "ffdc524e3b166db1ced0537ca702b57556a13e194cd269b3da01e5e2f26cf93f",
+      "status": "PASS"
+    },
+    {
+      "file": "gram_audit.json",
+      "byte_identical": true,
+      "replay_sha256": "335bbc35fa3a9e5d6d65953ff1f6ff92a763372009d88332f3b9348a71ec88ac",
+      "status": "PASS"
+    },
+    {
+      "file": "histories.csv",
+      "byte_identical": true,
+      "replay_sha256": "d643dceb86d94d2b5935d0083007bccc8be9971288a62ae918ab32bbfcd4929f",
+      "status": "PASS"
+    },
+    {
+      "file": "pointer_input.json",
+      "byte_identical": true,
+      "replay_sha256": "49f46c26edcf8c43bec600362e1e6ef28793546a48d46649174d2eacc90d2f7c",
+      "status": "PASS"
+    },
+    {
+      "file": "pointer_result.json",
+      "byte_identical": true,
+      "replay_sha256": "9c5eaad8967e6e05c7febf069ceb83455d9585ba3937a898297fd33325e303f7",
+      "status": "PASS"
+    },
+    {
+      "file": "finite.json",
+      "byte_identical": true,
+      "replay_sha256": "1dfa68d5abdf16b745a5d90878a9990b598ea4bfcbc8d1f88e357d0b91a71cea",
+      "status": "PASS"
+    }
+  ],
+  "direct_pair_comparisons": 120,
+  "scope_controls": {
+    "unequal_amplitudes_qB": "4/5",
+    "protected_endpoints_qB": "1/3",
+    "removed_endpoint_protection_qB": "1"
+  },
+  "not_rerun": [
+    "full causal-order generation",
+    "18 explicit-order recounts",
+    "70 inverse-moment quadratures"
+  ],
+  "physical_measurements_performed": false,
+  "external_preregistration": false
+}

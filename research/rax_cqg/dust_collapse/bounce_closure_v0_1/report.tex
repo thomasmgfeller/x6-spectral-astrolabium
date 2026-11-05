@@ -1,0 +1,185 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,microtype,amsmath,amssymb,booktabs,tabularx,array,geometry,fancyhdr,xcolor,hyperref}
+\geometry{left=21mm,right=21mm,top=20mm,bottom=22mm}
+\definecolor{ink}{HTML}{19313B}\definecolor{teal}{HTML}{17695F}\definecolor{wash}{HTML}{EAF3F0}
+\definecolor{muted}{HTML}{50626A}
+\color{ink}\hypersetup{colorlinks=true,urlcolor=teal,pdftitle={CST-Staubball: Abschluss des bisherigen Bounce-Kandidaten v0.1},pdfauthor={X6 Astrolabium}}
+\setlength{\parindent}{0pt}\setlength{\parskip}{6pt}\setlength{\emergencystretch}{2em}
+\renewcommand{\arraystretch}{1.22}
+\pagestyle{fancy}\fancyhf{}\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[L]{\sffamily\footnotesize X6 Astrolabium / Staubball / Kandidatenabschluss v0.1}
+\fancyfoot[R]{\sffamily\footnotesize\thepage\,/\,6}
+\newcommand{\kicker}[1]{{\sffamily\bfseries\small\color{teal}#1}\par}
+\newcommand{\tit}[1]{{\sffamily\bfseries\LARGE\raggedright #1\par}\vspace{3pt}}
+\newcommand{\sect}[1]{\par\vspace{3pt}{\sffamily\bfseries\large #1}\par}
+\newcommand{\note}[1]{\par\colorbox{wash}{\parbox{\dimexpr\linewidth-2\fboxsep}{\vspace{4pt}#1\vspace{4pt}}}\par}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\begin{document}
+\kicker{WISSENSCHAFTLICHER ABSCHLUSS \hfill 5. NOVEMBER 2026}
+\tit{Der bisherige Bounce-Kandidat ist abgeschlossen}
+\note{\textbf{Entscheidung: als Kandidat für einen dominanten dynamischen Bounce verworfen.} Bei unverändertem Historienträger, gleichen Amplitudenbeträgen und erhaltenen Endvolumenkanälen ist das geforderte Bounce-Gewicht von mindestens 80\,\% mathematisch unerreichbar. Weitere passive Zeiger oder eine Optimierung ihrer Messstärke können diese Hürde nicht überwinden.}
+
+Abgeschlossen wird die endliche Modellserie mit 27 Entwicklungspfaden und 17 disjunkten Prüfpfaden, einschliesslich der Gesamt- und der geteilten Dichtespur [S1, S2]. Der Schluss betrifft diese definierte Kandidatenklasse. Ein genereller Ausschluss von Bounces in der Kausalset-Theorie folgt daraus nicht.
+
+\sect{Drei Ebenen des Ergebnisses}
+\par\begin{tabularx}{\linewidth}{@{}p{35mm}Yp{31mm}@{}}\toprule
+\textbf{Aussage} & \textbf{Begründung} & \textbf{Entscheidung}\\\midrule
+Dominanter Bounce dieses Kandidaten & Ein Bounce-Pfad und ein geschützter Nicht-Bounce-Endkanal erzwingen $q_B\le 1/2<4/5$. & Abgeschlossen; verworfen\\
+Gate im festgelegten Messmodell & Auf 17 Prüfpfaden für beide Dichtespuren über das ganze vereinbarte Kopplungsband FAIL. Auf 27 Entwicklungspfaden weiterhin HOLD-, OPEN- und FAIL-Bereiche. & Historische Status erhalten\\
+CST-Bounce und Singularitätsauflösung allgemein & Physikalisch begründetes Mass, Rückwirkung, Kontinuumskontrolle und Regularitätsnachweis fehlen. & Weiterhin HOLD\\\bottomrule
+\end{tabularx}\par\vspace{3pt}
+
+\sect{Was dieser Abschluss neu leistet}
+Der bekannte Ausschlusssatz aus der Dichtespur-Analyse wird mit allen Voraussetzungen und beiden konkreten Zeugen zusammengeführt. Ein eigenständiger rationaler Prüfer bestätigt die vollständigen Träger, die eindeutigen Bounce-Pfade und die isolierten Endkanäle auf beiden Auflösungen. Die vorhandenen numerischen Befunde werden erneut ausgeführt und mit den archivierten Ergebnissen verglichen.
+
+Der Abschluss ist eine \textbf{retrospektive Modellbewertung}. Er ist keine neue verblindete Bestätigung, keine neue experimentelle Messung und keine allgemein gültige Theorie der Gravitation. Die negative Entscheidung ist ein Ergebnis: Sie begrenzt konkret, welche Änderungen am vorhandenen Messmodell wissenschaftlich noch Aussicht auf das erklärte Ziel haben.
+
+\sect{Beendete Untersuchungsrichtung}
+Die Suche nach einem 80-\%-Bounce allein durch stärkere, schwächere, anders geteilte oder zusätzliche passive Aufzeichnungen wird für diesen Kandidaten beendet. Die bisherigen Resultate bleiben als reproduzierbarer negativer Referenzfall erhalten. Laufende technische Jobs, Repository-Inhalte oder andere Forschungsprogramme werden durch dieses Dokument nicht verändert.
+
+\newpage
+\kicker{EINGEFRORENER KANDIDAT}
+\tit{Was genau wird verworfen?}
+\par\begin{tabularx}{\linewidth}{@{}p{37mm}Y@{}}\toprule
+\textbf{Bestandteil} & \textbf{Festgelegter Inhalt}\\\midrule
+Geometrie & Homogene periodische Modellzelle (Torus); Seitenlänge $a=w/5$, räumliches Volumen $V=a^3$, Referenzvolumen $V_{\rm ref}=1$. Zwischen den Marken ist $a$ stückweise linear.\\
+Zeit und Präparation & Fünf Staubeigenzeiten $T=(0,2/5,4/5,6/5,8/5)$; identischer früher Verlauf $w=(5,4)$.\\
+Entwicklungsfamilie & Drei freie Schritte $\Delta w\in\{-1,0,1\}$; alle 27 vollständigen Verläufe.\\
+Prüffamilie & Erster freier Schritt $\Delta w=\pm2$, danach zweimal $\{-1,0,1\}$. Von 18 Folgen ist $(5,4,2,1,0)$ wegen Nullvolumen ausgeschlossen; alle 17 positiven Folgen sind enthalten.\\
+Amplituden & Je Familie gleicher Betrag $|A_h|=1/n$. Archivierte 4D-Intervallwirkungsphasen bei $\ell=1/5$ und $1/10$; Nullkontrolle setzt ausschliesslich diese Phasen auf null.\\
+Endzustände & Orthogonale Endvolumenkanäle $b_h=\lfloor4V_h(T_4)\rfloor$; keine Nachauswahl von Messergebnissen.\\
+Zusatzzeiger & Normierte passive Messzustände; Gesamtspur oder getrennte frühe/späte Dichtespur. Die Modellierung enthält keine dynamische Rückwirkung auf die Geometrie.\\\bottomrule
+\end{tabularx}\par\vspace{3pt}
+
+\sect{Das Ereignis B ist eine präzise, begrenzte Frage}
+Für die fünf Ablesungen gilt $V_0-V_1\ge1/20$, $V_1-V_2\ge1/20$, $V_3-V_2\ge1/20$, $V_4-V_3\ge1/20$ und $V_2\ge1/20$. B bezeichnet also die aufgelöste Folge \emph{zweimal schrumpfen, zweimal wachsen} im festen Fenster. N verneint dieses Ereignis; U erfasst unaufgelöste Fälle. In den beiden exakt vorgegebenen Familien tritt U nicht auf.
+
+\textbf{N bedeutet weder dauerhaftes Schrumpfen noch Abwesenheit jeder denkbaren Umkehr.} Ein Bounce zu anderen Zeiten, mit anderer Mindestgrösse oder anderer Dauer ist eine andere Hypothese und wurde hier nicht ausgeschlossen.
+
+\sect{Unveränderte Entscheidungsregel}
+Gate v0.1 verlangt für PASS auf beiden Gittern mindestens $q_B=4/5$, Interferenz $\epsilon\le1/21$, unaufgelöstes Gewicht höchstens $1/20$, dynamischen Mehranteil gegenüber der Nullkontrolle mindestens $1/10$ und Gitterdrift höchstens $1/20$. FAIL verlangt eine stabile N-Dominanz mit ausreichender Interferenzkontrolle auch in der Nullkontrolle. Andernfalls gilt HOLD [S1].
+
+Die Schwellen werden zum Abschluss nicht nachträglich angepasst. Der Ausschlusssatz scheitert bereits an der notwendigen 80-\%-Bedingung; er benötigt weder den dynamischen Mehranteil noch eine bestimmte Wirkungsphase.
+
+\newpage
+\kicker{ANALYTISCHER AUSSCHLUSS}
+\tit{Warum passive Messung das Ziel nicht retten kann}
+\sect{Voraussetzungen und Beweis}
+Sei $\mathcal H$ eine der vollständigen endlichen Familien. Für jede Historie sei
+\[
+ |v_h\rangle=A_h\,|b_h\rangle\otimes|m_h\rangle,\qquad
+ |A_h|=\alpha>0,\quad \langle m_h|m_h\rangle=1,
+ \quad\langle b_h|b_k\rangle=\delta_{b_hb_k}.
+\]
+Die Messzustände $|m_h\rangle$ dürfen beliebig überlappen und mehrere Zusatzzeiger enthalten. Das Skalarprodukt ist positiv. Amplitudenbeträge und Endkanäle bleiben erhalten; es gibt keine Nachauswahl. Genau eine Historie $h_B$ gehört zu B. Mindestens eine Nicht-Bounce-Historie $h_*$ belegt allein ihren Endkanal.
+
+Mit $|\Psi_X\rangle=\sum_{h\in X}|v_h\rangle$ und $D_{XY}=\langle\Psi_X|\Psi_Y\rangle$ gilt
+\[
+ D_{BB}=\alpha^2,\qquad
+ D_{NN}=\sum_b\left\|\sum_{h\in N:\,b_h=b}A_h|m_h\rangle\right\|^2
+ \ge \alpha^2.
+\]
+Der isolierte Endkanal trägt genau $\alpha^2$ bei. Alle anderen Kanalnormen sind nichtnegativ, auch wenn sich darin Amplituden auslöschen. Somit
+\[
+ \boxed{\quad q_B=\frac{D_{BB}}{D_{BB}+D_{NN}}\le\frac12<\frac45.\quad}
+\]
+Der Satz gilt für beliebige Phasen und beliebige normierte Zusatzzeiger innerhalb dieser Voraussetzungen, nicht nur für die gescannten Gauß-Zeiger. Er war für die Entwicklungsfamilie bereits in [S2] angegeben; hier werden seine Voraussetzungen auf beiden Trägern explizit zertifiziert.
+
+\sect{Konkrete Zeugen im archivierten Träger}
+\par\begin{tabularx}{\linewidth}{@{}p{37mm}Y Y@{}}\toprule
+ & \textbf{27 Entwicklungspfade} & \textbf{17 Prüfpfade}\\\midrule
+Einziger B-Pfad & $(5,4,3,4,5)$; Endkanal 4 & $(5,4,2,3,4)$; Endkanal 2\\
+Isolierter N-Pfad & $(5,4,5,6,7)$; Endkanal 10 & $(5,4,6,7,8)$; Endkanal 16\\
+Vollständig getrennte Pfade & $q_B=1/27$ & $q_B=1/17$\\\bottomrule
+\end{tabularx}\par\vspace{3pt}
+
+\sect{Was der Satz allein nicht beweist}
+Er beweist \textbf{kein allgemeines FAIL des Gates}: Bei zu grosser B/N-Interferenz bleibt der jeweilige Messfall HOLD. $q_B$ ist zunächst ein normierter Diagonalanteil und ohne genügende Dekohärenz keine freigegebene Bounce-Wahrscheinlichkeit. Auch die Schranke $1/2$ ist keine Behauptung, dass dieser Wert erreichbar wäre.
+
+Die Voraussetzungen sind wesentlich. Unterschiedliche Amplitudenbeträge können die Schranke verletzen; bei Beträgen 2 und 1 in zwei orthogonalen Kanälen ist $q_B=4/5$. Wird der geschützte Endkanal aufgehoben, können sich N-Beiträge vollständig auslöschen. Solche Änderungen definieren ein anderes Modell und sind keine Widerlegung dieses Satzes.
+
+\newpage
+\kicker{REPRODUZIERTE NUMERISCHE BEFUNDE}
+\tit{Die vorhandenen Daten stützen den Abschluss}
+Die erneute Auswertung nutzt dieselben archivierten Wirkungszahlen. Sie reproduziert die Intervallsummen, den Vergleich mit der separaten direkten Paarsumme und die Dichtespur-Auswertung. Dies prüft Reproduzierbarkeit und innere Konsistenz; es erzeugt keine neue unabhängige Stichprobe.
+
+\sect{27 Entwicklungspfade: Interferenz bleibt entscheidend}
+\par\begin{tabularx}{\linewidth}{@{}Yrrr@{}}\toprule
+\textbf{Modell} & $\epsilon$, nur Ende & $\epsilon$, Dichtespur & $q_B$, Dichtespur\\\midrule
+Dynamisch, grob & 0,316112 & 0,062851 & 0,056319\\
+Dynamisch, fein & 0,209587 & 0,054013 & 0,028814\\
+Null, beide Gitter & 0,054054 & 0,033364 & 0,012685\\\bottomrule
+\end{tabularx}\par\vspace{3pt}
+Bei $\lambda=1$ liegen die dynamischen Interferenzen über $1/21\simeq0{,}047619$. Der ursprüngliche HOLD-Befund bleibt bestehen [S2].
+
+\sect{Kontinuierlicher Kopplungsscan}
+Für $32/45\le\lambda\le162/95$ prüft die Intervallrechnung alle Zwischenwerte. Die modellierte frühe Kalibrierung dieses Bereichs ist keine empirische Detektorkalibrierung.
+\par\begin{tabularx}{\linewidth}{@{}p{30mm}p{30mm}Y@{}}\toprule
+\textbf{Familie} & \textbf{Aufzeichnung} & \textbf{Befund}\\\midrule
+27 Entwicklung & Gesamt & HOLD; offenes Übergangsband $[1{,}15594,1{,}15604]$; danach FAIL.\\
+27 Entwicklung & Früh / spät & HOLD; offenes Übergangsband $[1{,}62101,1{,}62111]$; danach FAIL.\\
+17 Prüfpfade & Beide Varianten & FAIL im gesamten geschlossenen Kopplungsintervall.\\\bottomrule
+\end{tabularx}\par\vspace{3pt}
+Die gedruckten Übergangsbänder sind nach aussen gerundet. Numerisches OPEN in einem solchen Band bedeutet eine verbleibende Unbestimmtheit der Intervallrechnung, nicht eine neue physikalische Gate-Kategorie. Lage und Anzahl von Statuswechseln im Band werden nicht behauptet.
+
+Auf der Prüffamilie gilt über das gesamte Band auf beiden Gittern $q_B<0{,}0682$. Bei $\lambda=0$, ausserhalb dieses Bandes, lautet das Gate auch dort HOLD. Ein FAIL im gesamten Band ist deshalb kein Ausschluss für jedes beliebige Messmodell. Die phasenunabhängige 80-\%-Unmöglichkeit folgt stattdessen aus Seite 3.
+
+\sect{Übertragbarkeit der Statusvorhersagen}
+Gesamtspur: bei $\lambda=1$ HOLD vorhergesagt, FAIL erhalten; bei $5/4$ FAIL vorhergesagt und erhalten. Geteilte Spur: an beiden Punkten HOLD vorhergesagt, jeweils FAIL erhalten. Damit stimmt nur \textbf{eine von vier} Vorhersagen überein. Die Vergleiche sind korreliert und ergeben keine statistische Erfolgsquote für vier unabhängige Versuche [S1].
+
+\newpage
+\kicker{GÜLTIGKEIT UND ABSCHLUSSREGEL}
+\tit{Was bleibt offen, und was rechtfertigt einen Neustart?}
+\sect{Die vorangehende Familie C liefert keine dynamische Umkehr}
+Die erneut ausgeführte Katalogprüfung bestätigt bei allen 840 Geometrien die vorgegebene Breitenfolge $(3,2,k,4,1)$: 793 strikte und 47 flache innere Minima. Die Senke folgt aus der Auswahl der Geometrien. Rangbreite ist hier weder kalibriertes räumliches Volumen noch Staubeigenzeit. Diese alten Minima dürfen daher nicht als unabhängiger positiver Bounce-Nachweis weitergezählt werden [S3].
+
+\sect{Die Singularitätsfrage bleibt separat}
+Ein positives Minimum von $\langle V\rangle$ genügt nicht als Regularitätsnachweis. Der vorhandene Dirichlet-Bericht zeigt für normierte Zustände mit ungerader Schwartz-Fortsetzung, dass $\langle V^{-2}\rangle$ auf keinem offenen Zeitintervall überall endlich ist. Dieses positive Volumenmoment wurde nicht mit einem quantisierten Krümmungsoperator gleichgesetzt. Der analytische Geltungsbereich bleibt unverändert [S3].
+
+Im gesondert angenommenen effektiven Sinus-Modell ist die Krümmung bei fester physikalischer Schrittweite $\nu>0$ beschränkt. Wird stattdessen $\nu$ halbiert, steigt die maximale Krümmung um Faktor 16. Das ist eine Änderung des Modells, nicht bloss eine feinere numerische Ablesung. Der endliche Staubball mit Rand und Aussenraum ist durch die periodische Modellzelle ebenfalls nicht abgedeckt.
+
+\sect{Kriterien für eine neue Kandidaten-ID}
+Eine Wiederaufnahme benötigt eine sachlich begründete Änderung mindestens einer ausschlussrelevanten Voraussetzung, etwa eines unabhängig begründeten Historienmasses, eines vollständigeren physikalischen Trägers oder einer echten rückwirkenden Dynamik. Eine Änderung nur der passiven Messstärke oder ihrer Optimierung genügt nicht.
+
+Vor Betrachtung neuer später Resultate sind Mass und Amplitudenregel, Wirkung und Materiekopplung, Randdaten, Endzustandssumme, Messmodell, U-Behandlung und Verfeinerungsabbildung festzulegen. Die Wahl darf nicht durch das gewünschte Bounce-Ergebnis begründet werden. Zuerst müssen kleine exakt auswertbare Fälle und der klassische kontrahierende Staubgrenzfall bestanden sein. Erst danach ist ein neuer unabhängiger Bounce-Test sinnvoll.
+
+\note{\textbf{Abschlussentscheidung im maschinenlesbaren Ergebnis:}\par
+\texttt{CLOSED\_REJECTED\_FOR\_DOMINANT\_BOUNCE}\par
+Allgemeiner dynamischer CST-Bounce: \texttt{HOLD}.\par
+Singularitätsauflösung: \texttt{HOLD}.}
+
+Der Ausschluss wird nicht als Beleg für eine bestimmte alternative Dynamik verwendet. Archivierte Vorhersagen, negative Befunde und numerische Übergangsbereiche bleiben erhalten. Ein neuer Kandidat beginnt mit einem neuen Vertrag und darf die bisherigen Entwicklungspfade nicht als unbenutzte Prüfdaten deklarieren.
+
+\newpage
+\kicker{QUELLENBINDUNG UND REPRODUKTION}
+\tit{Ein überprüfbarer Abschlussstand}
+\textbf{Repository:} \texttt{thomasmgfeller/x6-spectral-astrolabium}\par
+\textbf{Geprüfter Main-Commit am 5. November 2026:}\par
+{\small\texttt{5f7994400869c921dec5b335f04a384a713e5e64}}
+
+Die drei Originalarchive wurden unverändert übernommen. Ihre Git-Blob-IDs stimmen mit dem Verzeichnisbaum dieses Commits überein; zusätzlich wurden alle 51 Einträge ihrer internen SHA-256-Listen geprüft. Die vollständigen Archiv- und Konfigurationshashes stehen in \texttt{source\_snapshot.json}, \texttt{candidate\_snapshot.json} und \texttt{results/closure\_result.json}. Die Prüfsumme des Kandidatensnapshots bezeichnet Eingaben, keine physikalische Wahrheit.
+
+\sect{Primärquellen}
+\textbf{[S1]} \href{https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/5f7994400869c921dec5b335f04a384a713e5e64/research/rax_cqg/dust_collapse/packages/CST_Staubball_Kopplungsscan_v0_2_Pruefpaket.zip}{Kopplungsscan der Dichtespur v0.2, 4. November 2026}. Enthält Plan, Gate-Vertrag, beide Historien-CSV, Scan und Prüfresultate. Veröffentlichung: PR 220.\par
+\textbf{[S2]} \href{https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/5f7994400869c921dec5b335f04a384a713e5e64/research/rax_cqg/dust_collapse/packages/CST_Staubball_Dichtespur_v0_1_Pruefpaket.zip}{Dichtespur v0.1, 4. November 2026}. Bericht Seite 2: Ausschluss durch isolierten Endkanal. \texttt{run.py}, \texttt{gram\_check.py} und archivierte Intervallgrenzen. Veröffentlichung: PR 219.\par
+\textbf{[S3]} \href{https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/5f7994400869c921dec5b335f04a384a713e5e64/research/rax_cqg/dust_collapse/packages/Staubball_Bounce_Regularitaet_Pruefpaket.zip}{Bounce und Regularität, 4. November 2026}. Katalogprüfung, Beweis für inverse Volumenmomente und separates effektives Sinus-Modell. Veröffentlichung: PR 216.
+
+\sect{Was in diesem Abschluss tatsächlich neu ausgeführt wurde}
+\begin{itemize}\setlength\itemsep{0pt}
+\item Integritätsprüfung aller drei Archive und 51 interner Dateieinträge.
+\item Eigenständige exakte Träger- und Endkanalprüfung für beide Familien und beide Gitter; Gegenbeispiele zur notwendigen Begrenzung der Satzvoraussetzungen.
+\item Kontinuierlicher Scan, direkte Paarsummen-Kontrolle mit 120 Zahlenvergleichen und erneute Dichtespur-Auswertung.
+\item Erneute endliche Katalog- und effektive Referenzprüfung aus [S3]; Vergleich von insgesamt acht Ergebnisdateien mit den Originalen.
+\end{itemize}
+Nicht erneut ausgeführt wurden die vollständige Erzeugung der Kausalordnungen, die 18 expliziten Ordnungsnachzählungen und die 70 inversen Momentquadraturen. Ihre ursprünglichen Nachweise bleiben im jeweiligen Quellarchiv; die Regularitätsaussage wird als vorhandenes analytisches Ergebnis eingeordnet.
+
+\sect{Wiederholung}
+Im entpackten Abschlussverzeichnis, Python 3.10 oder neuer, Standardbibliothek:
+\begin{verbatim}
+sha256sum -c SHA256SUMS
+python3 verify_closure.py --out replay
+\end{verbatim}
+Nicht mit \texttt{python -O} ausführen. Exakte Bruchgrenzen müssen unverändert übereinstimmen. Für reine Gleitkomma-Kontrollwerte erlaubt der Prüfer höchstens $10^{-12}$ absolute bzw. relative Abweichung. Die alten Plan-Hashes sind lokale Integritätssiegel und keine externe Präregistrierung. Dieses Paket verändert oder veröffentlicht nichts auf GitHub.
+\end{document}
