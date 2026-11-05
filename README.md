@@ -556,6 +556,8 @@ Read [Sagnac integration and test scope](docs/SAGNAC_INTEGRATION.md).
 
 ## Photonic two-qubit experiment — design preview
 
+**[ppKTP/PBS/HWP RFQs and component BOM v0.1](experiments/photonic-two-qubit/optics/rfq-bom-v0.1/README.md)** provides three supplier enquiries with 31 requirements and an 83-position working BOM linked to all 35 optical layout positions. Includes PDF, editable Excel and individual RFQ files. Procurement remains HOLD; physical checks remain NOT_RUN. No enquiries have been sent. [Complete package](experiments/photonic-two-qubit/optics/rfq-bom-v0.1/X6_Photonik_RFQ_BOM_v0_1_Pruefpaket.zip)
+
 **[Photonics lab console v0.1](experiments/photonic-two-qubit/laborbetrieb-v0.1/README.md)** records four-channel time tags or FPGA snapshots through a local Linux service. The tablet interface shows run status, device replies and the raw-data archive. Physical commissioning is pending. [Download the complete package](experiments/photonic-two-qubit/downloads/X6_Photonik_Laborbetrieb_v0_1.zip)
 
 **[Optikplan v0.2](experiments/photonic-two-qubit/optics/optikplan-v0.2/README.md)** connects the two Sagnac alternatives to a predicted polarization contrast, four fiber-coupling tolerances and calibrated detector timing. Includes seven software checks and replay tools for phase-sensitive spectral and time-tag calibration data. Physical tests remain NOT_RUN. [Design PDF](experiments/photonic-two-qubit/optics/optikplan-v0.2/Optikplan_v0_2.pdf) · [Reproducible package](experiments/photonic-two-qubit/optics/optikplan-v0.2/Optikplan_v0_2_Pruefpaket.zip)
@@ -688,5 +690,6 @@ or a completed independent rights audit. See the
 [dated activation record](docs/LICENSE_ACTIVATION_2026-10-13.md).
 
 See [provenance](docs/PROVENANCE.md), [release checklist](docs/RELEASE_CHECKLIST.md), and draft [citation metadata](CITATION.cff).
+
 
 

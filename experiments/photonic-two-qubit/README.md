@@ -10,7 +10,7 @@ Geplant ist eine polarisationsverschränkte Photonenpaarquelle mit einem Typ-II-
 
 | Ebene | Verfügbar | Noch offen |
 |---|---|---|
-| Optik | Literaturgestützter Funktionsentwurf, Analysekonventionen; Optikplan v0.1 mit Bauteilspezifikationen, Vierkanal-Schnittstelle und CHSH-Abnahmeprotokoll | Lieferantenspezifische Freigabe, maßstäbliche Strahlführung, Aufbau, Charakterisierung |
+| Optik | Funktionsentwurf und CHSH-Protokoll; Gaussian-Worksheet und maßstäblicher Layoutentwurf; RFQs und Arbeits-BOM mit 83 Positionen | Lieferantenspezifische Freigabe, mechanisch geprüfte Strahlführung, Aufbau, Charakterisierung |
 | Digitalteil v0.7 | Vierkanal-Fensterklassifikation, UART-TX, Decoder, CHSH-Auswertung, Simulationstests | Qualifiziertes Detektor/TDC-Frontend, FPGA-Pinplan, Boardtests |
 | Astrolabium | Bereits veröffentlichter SGNCv007-Import, lokale Bridge und synthetische Demo | Ende-zu-Ende-Prüfung mit realer Messkette |
 | JIG-F1 | Fertigungsentwurf mit STEP, STL, DXF, Bauanleitung und Modellrechnungen | Fertigung, Wiederholbarkeit, Drift, Klebe- und Übergabeversuche |
@@ -25,6 +25,8 @@ Die Bezeichnung „Zwei-Qubit“ beschreibt zwei geplante Polarisationsfreiheits
 Auf dem Linux-Messrechner das Paket entpacken und `python3 labor_server.py` starten. Ohne Geräteprofil lässt sich der vollständige Ablauf mit vier synthetischen Frames ausprobieren. Der Reiter **06 · Gerätelauf** verbindet sich mit dem lokalen Dienst. Er zeigt Erfassungsstatus, Kanalraten und Geräteantworten an und stellt die archivierten Rohdaten bereit. Der Stand umfasst 19 Softwaretests mit virtuellen Anschlüssen und einem SDK-Testadapter. Geräteabnahme und physischer CHSH-Nachweis stehen aus.
 
 ## Einstieg und Unterlagen
+
+- **[ppKTP-/PBS-/HWP-Anfragen und komponentengenaue BOM v0.1](optics/rfq-bom-v0.1/README.md)** — [Gesamt-PDF](optics/rfq-bom-v0.1/X6_Photonik_RFQ_BOM_v0_1.pdf), [Excel-BOM](optics/rfq-bom-v0.1/X6_Photonik_BOM_v0_1.xlsx), [vollständiges Paket](optics/rfq-bom-v0.1/X6_Photonik_RFQ_BOM_v0_1_Pruefpaket.zip). Drei englische Anfragen mit 31 Prüfpunkten; 83 BOM-Positionen und Zuordnung aller 35 optischen Layoutpositionen. 32 `OPEN`, 51 `HOLD`; Hardware `NOT_RUN`. Anfragen vorbereitet, nicht versendet.
 
 - **[Pump-Eingangsprofil und Systemziele v0.1](optics/pump-input-v0.1/README.md)** — [ausfüllbares PDF](optics/pump-input-v0.1/X6_Pump_Eingangsprofil_Systemziele_v0_1.pdf), [Prüfpaket](optics/pump-input-v0.1/X6_Pump_Eingangsprofil_v0_1_Pruefpaket.zip); Bezugsebenen P0/P1/PC, Messplan und digitale Vorlagen für die nächste Strahlrechnung. Tatsächliche Pumpquelle und Messwerte offen; Hardware `NOT_RUN`, Beschaffung `HOLD`.
 
@@ -85,3 +87,4 @@ Prinzipübersicht aus dem Entwurfsstand. Kein maßstäblicher Strahlplan; keine 
 Der unmittelbare Nutzen liegt in überprüfbaren Ereignisdefinitionen, nachvollziehbarer Auswertung, Testfällen für Fehlzustände und einem nachbaubaren mechanischen Entwurf. Community-Beiträge sind besonders für Optikreview, Timing/CDC, Kalibrierung, statistische Annahmen und unabhängige Reproduktion hilfreich. Messdaten bitte mit vollständigem Protokoll, Rohdaten und Unsicherheiten beitragen; Bilder oder einzelne Kennzahlen genügen nicht als Validierung.
 
 Eine spätere lokale/„Edge“-Auswertung kann Datenübertragung und Reaktionszeiten reduzieren. Für das Gesamtsystem gibt es noch keine gemessenen Latenz-, Leistungsaufnahme- oder Kostenvorteile. Eine GF-651-Anbindung ist hier nicht spezifiziert; ohne belastbare Schnittstellen- und Chipunterlagen wird keine Kompatibilität behauptet.
+
