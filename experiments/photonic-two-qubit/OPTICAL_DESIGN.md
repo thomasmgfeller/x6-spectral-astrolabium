@@ -10,6 +10,8 @@ Nach Pumpunterdrückung und geeigneter Auskopplung besitzt jeder der zwei Messar
 
 Die [Bauteilspezifikation v0.1](optics/optikplan-v0.1/README.md) legt unter anderem Pumpbandbreite, Kristalllänge, Filter und Timingziele fest. Der [Optikplan v0.2](optics/optikplan-v0.2/README.md) berechnet die spektral-zeitliche Überlappung beider Sagnac-Richtungen, die Modenanpassung und die vier Paar-Zeitantworten und benennt die erforderlichen Kalibrierdaten. Die folgende Übersicht beschreibt den ursprünglichen Funktionsbedarf.
 
+Das [Pump-Eingangsprofil und die Systemziele v0.1](optics/pump-input-v0.1/README.md) konkretisieren jetzt die Bezugsebenen, die räumlich-spektrale Eingangscharakterisierung, Unsicherheiten und messbaren Abnahmekriterien. Die Spezifikation enthält keine Istwerte; Pumpmodell, reale Kaustik und Lieferantendaten bleiben offen. Sie ergänzt die Szenariorechnung aus v0.2 und lässt die reale O04-/Kristallfreigabe auf HOLD.
+
 ## Vor einer Beschaffung zu schließen
 
 | Baugruppe | Vorgesehene Funktion | Noch zu spezifizieren / nachzuweisen |

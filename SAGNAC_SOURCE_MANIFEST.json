@@ -24,9 +24,9 @@
     "experiments/photonic-two-qubit/.gitattributes": "a57e96975362a5eb8ea3bee22f084d2298262dd005fdc4d7d1a6e192381e0b46",
     "experiments/photonic-two-qubit/LAB_PROTOCOL.md": "e4086534c65b19a292e7ae7a7554f30c30db4e1f6c189a07adc659c59571709d",
     "experiments/photonic-two-qubit/LICENSES.md": "aaa0e888de729dce3fd753aca4b2328c758808e89daacfb9bd8fd0a83525c8ea",
-    "experiments/photonic-two-qubit/OPTICAL_DESIGN.md": "80212d147a673965f21da4f276ff14cebf1c1eb7d6b6beb58b699e86edb7364e",
-    "experiments/photonic-two-qubit/PROVENANCE.json": "e0770dac3a3d80ac866465d25a8ddcd8c431cbd7200ab1e8ee15d65a0555f834",
-    "experiments/photonic-two-qubit/README.md": "34172a4c582619acded12ddac32b71f15fa3325564929bc1b548d4c73d0c9a6f",
+    "experiments/photonic-two-qubit/OPTICAL_DESIGN.md": "bd5abd13bf811985ad0dfd7b9955d364e1e1f6d81d48b0edb2aafdcdf7ed4d25",
+    "experiments/photonic-two-qubit/PROVENANCE.json": "69494bf48f4876c19d24ff94cdaf27761fc7319ed6982f5148778a1419c5405a",
+    "experiments/photonic-two-qubit/README.md": "69f4c92ce161b136d8f371a1508c5437fc9d2c6a1584c158268fae570fbe3ad5",
     "experiments/photonic-two-qubit/REPRODUCE.md": "a748dd23a413853411fbfb82aa130a184cc53b63d67ea127611c68b0aeb818fd",
     "experiments/photonic-two-qubit/SCIENTIFIC_STATUS.md": "ea162f5eddd4f6a386db2b5e1a9fca2ae9ed0f1a55e7cdf7b1d3fc4ee08d8447",
     "experiments/photonic-two-qubit/SOURCES.md": "320cdf36254bada603ec6784f04c44e4b840849e20c49da8797c7560fd97d71b",
@@ -212,7 +212,15 @@
     "experiments/photonic-two-qubit/laborbetrieb-v0.1/vendor/LICENSE": "c84da18ecdedc903f95ab290bdeb581450124ddc62458bad477972faa6ef96f6",
     "experiments/photonic-two-qubit/laborbetrieb-v0.1/vendor/analyze.py": "30cb1bc6ef71f27c8b49c8eed0fa78784651d9689285a75700d1cbf39cf0c95f",
     "experiments/photonic-two-qubit/laborbetrieb-v0.1/vendor/frame_codec.py": "4c618af421745186cbcef1f3bba142b7d5f7b535a16dd73d2cea5bac57c28e4a",
-    "experiments/photonic-two-qubit/laborbetrieb-v0.1/verify_run.py": "e4120a85e96c5a44adb33a5d5f86d4d6b73e85f2f625b46295dcf5baab8970f1"
+    "experiments/photonic-two-qubit/laborbetrieb-v0.1/verify_run.py": "e4120a85e96c5a44adb33a5d5f86d4d6b73e85f2f625b46295dcf5baab8970f1",
+    "experiments/photonic-two-qubit/optics/pump-input-v0.1/README.md": "270f78941b8d84ef2bc2f5566685187d5340d06a0d247cb6bccf53f87431ea7b",
+    "experiments/photonic-two-qubit/optics/pump-input-v0.1/README.txt": "dbbb034d5897dda291c5d8958e6c0d8cddf1c8229de05f9826d72e8d352ce68c",
+    "experiments/photonic-two-qubit/optics/pump-input-v0.1/SHA256.json": "f0e489d4a317fc96dfe2ec5e00dcd49373bb5b813da2bff38f3d5fb5aa9423bf",
+    "experiments/photonic-two-qubit/optics/pump-input-v0.1/X6_Pump_Eingangsprofil_Systemziele_v0_1.pdf": "0ea94e6fe104c0f72364ea459f11d5f6a1712103057ce042053625efcb22c66f",
+    "experiments/photonic-two-qubit/optics/pump-input-v0.1/X6_Pump_Eingangsprofil_v0_1_Pruefpaket.zip": "ae614b609fcaf4e03d1795149adaa7e52980fcd2af6a64f4199e574d2d9aaffe",
+    "experiments/photonic-two-qubit/optics/pump-input-v0.1/measurement_plan.json": "4db95f3645899241c62e34f7db75e5794d7934f7d83b1d71de69fb3d5c791a2c",
+    "experiments/photonic-two-qubit/optics/pump-input-v0.1/pump_profile.template.json": "a8c1e8f199919fac0838596ed32e56b226235069d77c7d9393bb381d74f8eb6e",
+    "experiments/photonic-two-qubit/optics/pump-input-v0.1/system_targets.json": "2639d2ebf0c74a4a6944f866f4b902679f1c783d2f8e782bb5052c6b0ca14078"
   },
   "documentation_updates": [
     {
@@ -1016,6 +1024,67 @@
           "path": "index.html",
           "previous_sha256": "e9b3955f994e6bd087e8de5bf3e45c421de40c9fb4dc2c6bd6dadcc1b2a3e426",
           "sha256": "96a6ee9a064e268e792bb71c618ea659d373a46d9c313092b03be3bf40e86287"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-05",
+      "scope": "Publish pump-input specification, fillable PDF, unchanged verification archive and empty data templates; link from photonic overview and optical design. Hardware NOT_RUN, procurement HOLD; no device or scientific qualification.",
+      "files": [
+        {
+          "path": "experiments/photonic-two-qubit/OPTICAL_DESIGN.md",
+          "previous_sha256": "80212d147a673965f21da4f276ff14cebf1c1eb7d6b6beb58b699e86edb7364e",
+          "sha256": "bd5abd13bf811985ad0dfd7b9955d364e1e1f6d81d48b0edb2aafdcdf7ed4d25"
+        },
+        {
+          "path": "experiments/photonic-two-qubit/PROVENANCE.json",
+          "previous_sha256": "e0770dac3a3d80ac866465d25a8ddcd8c431cbd7200ab1e8ee15d65a0555f834",
+          "sha256": "69494bf48f4876c19d24ff94cdaf27761fc7319ed6982f5148778a1419c5405a"
+        },
+        {
+          "path": "experiments/photonic-two-qubit/README.md",
+          "previous_sha256": "34172a4c582619acded12ddac32b71f15fa3325564929bc1b548d4c73d0c9a6f",
+          "sha256": "69f4c92ce161b136d8f371a1508c5437fc9d2c6a1584c158268fae570fbe3ad5"
+        },
+        {
+          "path": "experiments/photonic-two-qubit/optics/pump-input-v0.1/README.md",
+          "previous_sha256": null,
+          "sha256": "270f78941b8d84ef2bc2f5566685187d5340d06a0d247cb6bccf53f87431ea7b"
+        },
+        {
+          "path": "experiments/photonic-two-qubit/optics/pump-input-v0.1/README.txt",
+          "previous_sha256": null,
+          "sha256": "dbbb034d5897dda291c5d8958e6c0d8cddf1c8229de05f9826d72e8d352ce68c"
+        },
+        {
+          "path": "experiments/photonic-two-qubit/optics/pump-input-v0.1/SHA256.json",
+          "previous_sha256": null,
+          "sha256": "f0e489d4a317fc96dfe2ec5e00dcd49373bb5b813da2bff38f3d5fb5aa9423bf"
+        },
+        {
+          "path": "experiments/photonic-two-qubit/optics/pump-input-v0.1/X6_Pump_Eingangsprofil_Systemziele_v0_1.pdf",
+          "previous_sha256": null,
+          "sha256": "0ea94e6fe104c0f72364ea459f11d5f6a1712103057ce042053625efcb22c66f"
+        },
+        {
+          "path": "experiments/photonic-two-qubit/optics/pump-input-v0.1/X6_Pump_Eingangsprofil_v0_1_Pruefpaket.zip",
+          "previous_sha256": null,
+          "sha256": "ae614b609fcaf4e03d1795149adaa7e52980fcd2af6a64f4199e574d2d9aaffe"
+        },
+        {
+          "path": "experiments/photonic-two-qubit/optics/pump-input-v0.1/measurement_plan.json",
+          "previous_sha256": null,
+          "sha256": "4db95f3645899241c62e34f7db75e5794d7934f7d83b1d71de69fb3d5c791a2c"
+        },
+        {
+          "path": "experiments/photonic-two-qubit/optics/pump-input-v0.1/pump_profile.template.json",
+          "previous_sha256": null,
+          "sha256": "a8c1e8f199919fac0838596ed32e56b226235069d77c7d9393bb381d74f8eb6e"
+        },
+        {
+          "path": "experiments/photonic-two-qubit/optics/pump-input-v0.1/system_targets.json",
+          "previous_sha256": null,
+          "sha256": "2639d2ebf0c74a4a6944f866f4b902679f1c783d2f8e782bb5052c6b0ca14078"
         }
       ]
     }
