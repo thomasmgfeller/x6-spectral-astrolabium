@@ -1,0 +1,196 @@
+{
+  "schema": "x6-independent-bounce-reference/v0.1",
+  "date": "2026-11-05",
+  "not_external_preregistration": true,
+  "source_commit": "dc8d5e5bf3039ed1eb4bc905b54bf616126e59cf",
+  "scope": "New synthetic initial states; early moments fixed before independent late evolution. No independent experiment or full CST validation.",
+  "reference": {
+    "kappa": 1.0,
+    "coordinate": "q=sqrt(V)>0",
+    "hamiltonian": "H=hbar^2*d_qq",
+    "boundary": "Dirichlet",
+    "domain_L": 32.0,
+    "T_end": 6.0,
+    "readout_dt": 0.025,
+    "levels": [
+      {
+        "N": 2048,
+        "dt": 0.005
+      },
+      {
+        "N": 4096,
+        "dt": 0.0025
+      },
+      {
+        "N": 8192,
+        "dt": 0.00125
+      }
+    ]
+  },
+  "cases": [
+    {
+      "id": "G01",
+      "hbar": 0.03,
+      "sigma": 0.25,
+      "components": [
+        {
+          "q": 3.0,
+          "p": 0.7,
+          "amplitude": 1.0,
+          "phase": 0.0
+        }
+      ]
+    },
+    {
+      "id": "G02",
+      "hbar": 0.06,
+      "sigma": 0.25,
+      "components": [
+        {
+          "q": 3.0,
+          "p": 0.7,
+          "amplitude": 1.0,
+          "phase": 0.0
+        }
+      ]
+    },
+    {
+      "id": "G03",
+      "hbar": 0.03,
+      "sigma": 0.25,
+      "components": [
+        {
+          "q": 3.0,
+          "p": 1.3,
+          "amplitude": 1.0,
+          "phase": 0.0
+        }
+      ]
+    },
+    {
+      "id": "G04",
+      "hbar": 0.06,
+      "sigma": 0.25,
+      "components": [
+        {
+          "q": 3.0,
+          "p": 1.3,
+          "amplitude": 1.0,
+          "phase": 0.0
+        }
+      ]
+    },
+    {
+      "id": "G05",
+      "hbar": 0.03,
+      "sigma": 0.25,
+      "components": [
+        {
+          "q": 5.0,
+          "p": 0.7,
+          "amplitude": 1.0,
+          "phase": 0.0
+        }
+      ]
+    },
+    {
+      "id": "G06",
+      "hbar": 0.06,
+      "sigma": 0.25,
+      "components": [
+        {
+          "q": 5.0,
+          "p": 0.7,
+          "amplitude": 1.0,
+          "phase": 0.0
+        }
+      ]
+    },
+    {
+      "id": "G07",
+      "hbar": 0.03,
+      "sigma": 0.25,
+      "components": [
+        {
+          "q": 5.0,
+          "p": 1.3,
+          "amplitude": 1.0,
+          "phase": 0.0
+        }
+      ]
+    },
+    {
+      "id": "G08",
+      "hbar": 0.06,
+      "sigma": 0.25,
+      "components": [
+        {
+          "q": 5.0,
+          "p": 1.3,
+          "amplitude": 1.0,
+          "phase": 0.0
+        }
+      ]
+    },
+    {
+      "id": "C01",
+      "hbar": 0.03,
+      "sigma": 0.25,
+      "components": [
+        {
+          "q": 3.4,
+          "p": 1.0,
+          "amplitude": 1.0,
+          "phase": 0.0
+        },
+        {
+          "q": 4.6,
+          "p": 1.0,
+          "amplitude": 0.6,
+          "phase": 1.0471975511965976
+        }
+      ]
+    },
+    {
+      "id": "C02",
+      "hbar": 0.06,
+      "sigma": 0.3,
+      "components": [
+        {
+          "q": 3.0,
+          "p": 0.8,
+          "amplitude": 1.0,
+          "phase": 0.0
+        },
+        {
+          "q": 4.2,
+          "p": 1.2,
+          "amplitude": 0.8,
+          "phase": 1.5707963267948966
+        }
+      ]
+    }
+  ],
+  "forecast": "A=<q^2>, J=2*hbar*integral q Im(conj(psi)*psi_prime), E=hbar^2*integral |psi_prime|^2; T_b=J/(4*E), V_b=A-J^2/(4*E). Initial data only.",
+  "late_solver": "Crank-Nicolson for second-order spatial difference Hamiltonian; no use of forecast moments or bounce time during propagation. Same readout times for every case.",
+  "late_estimator": "Global grid minimum, parabolic interpolation of that value and its two neighbours, strict decline and rise on surrounding readouts.",
+  "acceptance": {
+    "finest_relative_T_b_error": 0.01,
+    "finest_relative_V_b_error": 0.03,
+    "norm_error": 1e-09,
+    "minimum_interior": true,
+    "errors_decrease_across_three_levels": true,
+    "spectral_crosscheck_absolute_V": 1e-08
+  },
+  "controls": {
+    "neumann": "Same full-line incoming Gaussian, even image. Compare predicted mean-volume bounce and wall behaviour for G01 and G08.",
+    "transparent_line": "G01 propagated on full q line; signed q crosses zero while <q^2> turns. Diagnostic outside physical half-line model.",
+    "inverse_second_volume": "For all 8 Gaussian Dirichlet states, evaluate analytic nonzero boundary slope at predicted bounce; cutoff quadrature on G01 at eps=2^(-6),...,2^(-12). V^-2 is not assumed identical to a curvature operator."
+  },
+  "cst_gate": {
+    "status": "HOLD_NOT_ELIGIBLE",
+    "reason": "Full CST kernel, physical measure/coarse fibres and classical/backreaction gate are unestablished.",
+    "old_dominant_candidate": "CLOSED_REJECTED_FOR_DOMINANT_BOUNCE"
+  },
+  "budget": "CPU only, no new CST orders or external compute"
+}
