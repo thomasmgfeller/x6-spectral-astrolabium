@@ -26,6 +26,7 @@ jobs:
           cache: pip
           cache-dependency-path: research/rax_cqg/dust_collapse/classical_backreaction_v0_1/publication-requirements.txt
       - name: Install pinned numerical dependencies
-        run: python3 -m pip install --only-binary=:all: -r research/rax_cqg/dust_collapse/classical_backreaction_v0_1/publication-requirements.txt
+        run: |
+          python3 -m pip install --only-binary=:all: -r research/rax_cqg/dust_collapse/classical_backreaction_v0_1/publication-requirements.txt
       - name: Verify immutable artifacts and replay the reference tests
         run: python3 research/rax_cqg/dust_collapse/classical_backreaction_v0_1/publication_check.py --replay
