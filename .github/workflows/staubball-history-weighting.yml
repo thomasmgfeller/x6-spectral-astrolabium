@@ -1,0 +1,27 @@
+name: Staubball History Weighting Reference
+on:
+  pull_request:
+    paths:
+      - 'research/rax_cqg/dust_collapse/**'
+      - '.github/workflows/staubball-history-weighting.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'research/rax_cqg/dust_collapse/**'
+      - '.github/workflows/staubball-history-weighting.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  history-weighting-reference:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Verify original artifacts and replay the finite reference checks
+        run: python3 research/rax_cqg/dust_collapse/history_weighting_v0_1/publication_check.py --replay

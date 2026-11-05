@@ -1,0 +1,281 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[provide=*,ngerman]{babel}
+\usepackage{lmodern,microtype,amsmath,amssymb,booktabs,tabularx,array,xcolor,fancyhdr,geometry,hyperref}
+\geometry{left=20mm,right=20mm,top=20mm,bottom=21mm}
+\definecolor{ink}{HTML}{173643}
+\definecolor{teal}{HTML}{08786F}
+\definecolor{muted}{HTML}{53636B}
+\definecolor{pale}{HTML}{EFF6F5}
+\hypersetup{colorlinks=true,urlcolor=teal,linkcolor=teal,pdftitle={CST Staubball: Historiengewichtung v0.1},pdfauthor={X6 Astrolabium Arbeitsdokument}}
+\pagestyle{fancy}\fancyhf{}\fancyfoot[L]{\small\sffamily\color{muted}X6 Astrolabium · Historiengewichtung v0.1}\fancyfoot[R]{\small\thepage/9}
+\renewcommand{\headrulewidth}{0pt}
+\setlength{\parindent}{0pt}\setlength{\parskip}{5pt}
+\setlength{\emergencystretch}{2em}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\newcommand{\kicker}[1]{{\sffamily\small\bfseries\color{teal}#1}\par}
+\newcommand{\tit}[1]{{\sffamily\LARGE\bfseries\color{ink}#1}\par\vspace{6pt}}
+\newcommand{\sect}[1]{\par\vspace{6pt}{\sffamily\large\bfseries\color{ink}#1}\par}
+\newcommand{\note}[1]{\par\vspace{4pt}\colorbox{pale}{\parbox{\dimexpr\linewidth-2\fboxsep}{#1}}\par}
+\newcommand{\Aut}{\operatorname{Aut}}
+\begin{document}
+\kicker{FORSCHUNGSSCHRITT · 5. NOVEMBER 2026}
+\tit{Die Gewichtung der Historien\\physikalisch begründen}
+\textbf{Ergebnis: eine bedingte Herleitung und ein überprüfbarer Referenzvertrag.}
+Das vorhandene homogene Staubmodell besitzt mit $q=\sqrt V$ ein begründbares kanonisches Integrationsmaß $dq=dV/(2\sqrt V)$. Für endliche Kausalsets lässt sich die Korrektur mehrfacher Beschriftungen exakt herleiten. Beides bestimmt jedoch noch kein eindeutiges physikalisches Maß der vierdimensionalen CST-Summe.
+
+\sect{Was jetzt feststeht}
+\begin{tabularx}{\linewidth}{@{}p{36mm}Y@{}}\toprule
+\textbf{Bestandteil} & \textbf{Begründung und Reichweite}\\\midrule
+Wirkungsphase & $\exp(iS/\hbar)$ ist der Lorentzsche Ansatz. Bei reellem $S$ bleibt sein Betrag eins. Die Wirkung verändert Interferenz, ohne allein einzelne Historienbeträge festzulegen [1,2].\\
+Symmetriefaktor & $1/|\Aut(h)|$ folgt aus gleich gewichteten beliebigen Beschriftungen \emph{und} Division durch die volle Permutationsgruppe. Diese Ausgangsregel ist eine zusätzliche Maßwahl.\\
+Reduziertes Maß & Kanonische Quantisierung der flachen homogenen Staubzelle in Staubzeit liefert $dq$; in $V$ wird daraus $dV/(2\sqrt V)$. Ordnung, Randbedingung und Reduktion sind angegeben.\\
+Grobe Historien & Ihr Gewicht entsteht durch kohärente Summation feiner Beiträge. Ein einzelner repräsentativer Verlauf ersetzt diese Summe nicht.\\\bottomrule
+\end{tabularx}
+
+\sect{Ausgangspunkt im abgeschlossenen Kandidaten}
+Der Stand von PR 234 [8] verwendet 27 Entwicklungs- und 17 Prüfpfade mit jeweils gleichem Amplitudenbetrag $1/n$, identischer früher Volumenfolge und normierten passiven Zusatzzeigern. Genau ein Pfad erfüllt die festgelegte Bounce-Frage; ein Nicht-Bounce-Pfad besitzt einen isolierten Endkanal. Daher gilt unter diesen Voraussetzungen $q_B\le 1/2$.
+
+Die hier geprüften CSV-Dateien enthalten Wirkungszählungen für insgesamt 88 Zeilen auf zwei Auflösungen. Sie enthalten keine Automorphismen, keine Gewichte zusammengefasster Mikrohistorien-Fasern und keinen daraus abgeleiteten Übergangskern. Die gleiche frühe Volumenfolge legt auch noch keinen normierten Quantenzustand mit bestimmter Impulsstreuung fest.
+
+\note{\textbf{Entscheidung:} Die Gleichgewichtung bleibt eine dokumentierte Modellannahme. Der alte Ausschluss bleibt gültig. Es wird kein Gewicht so gewählt, dass ein Bounce wahrscheinlicher wird. Neuer CST-Bounce-Test: \texttt{NOT\_RUN}; physikalisches CST-Maß und Singularitätsauflösung: \texttt{HOLD}.}
+
+\newpage
+\kicker{01 · WIRKUNG, MAß UND ZUSTAND}
+\tit{Drei verschiedene Arten von Gewicht}
+Sei $h=(C,\phi,\text{Randmarken})$ eine vollständige, physikalisch markierte Historie. Ein regulierter Übergangskern hat schematisch die Form
+\[
+ K(b_f,b_i)=\sum_{[h]:\,b_i\to b_f}\mu([h])\int d\nu_h(\phi)\,
+ \exp\!\left[\frac{i}{\hbar}(S_{\rm grav}+S_{\rm dust}+S_{\partial})[h]\right].
+\]
+Die Summe läuft über die ausdrücklich gewählten Äquivalenzklassen. $\mu$ ist hier ein Integrations- beziehungsweise Zählmaß, $d\nu$ ein Materiemaß. Der Anfangszustand geht \emph{danach} durch $\psi_f(b_f)=\int d\mu_i(b_i)K(b_f,b_i)\psi_i(b_i)$ ein. Randzustandsnorm, Basis und Maß müssen zusammenpassen.
+
+\sect{Gravitationsphase aus kausalen Intervallen}
+Mit $N_j$ als Zahl der Intervalle mit genau $j$ inneren Elementen lautet das lokale 4D-Polynom
+\[
+ Q(C)=N-N_0+9N_1-16N_2+8N_3,\qquad S_{\rm grav}/\hbar=\gamma_\ell Q(C).
+\]
+Die BD/BDG-Konstruktion motiviert dieses Polynom durch den Kontinuumsbezug [1,2]. In der üblichen rationalisierten Konvention ist $\gamma_\ell=4\ell^2/(\sqrt6\,\ell_p^2)$ mit $\ell_p^2=8\pi G\hbar$ und $c=1$. Ein geglätteter Operator hat andere Schichtgewichte. Randbeiträge, Kosmologieterm, Materie und der physikalische Bezug der Diskretisierung müssen separat fixiert werden; der Zähler allein ist keine vollständige Staubdynamik.
+
+Für reelle Gesamtwirkung gilt exakt $|e^{iS/\hbar}|=1$. Eine Änderung von $\gamma_\ell$ kann Zweiggewichte durch Interferenz verändern. Sie kann den alten, phasenunabhängigen Ausschluss bei unveränderten Beträgen und Endkanälen nicht aufheben. Ein Austausch gegen $e^{-S/\hbar}$ wäre ein anderes Modell; eine gerechtfertigte analytische Fortsetzung wäre eigens nachzuweisen.
+
+\sect{Klassische Wahrscheinlichkeit ist keine Amplitude}
+Aus $P(h)$ folgt ohne weiteres Quantisierungsprinzip weder $A_h=P(h)e^{iS_h/\hbar}$ noch ein vollständiger Übergangskern. Für orthogonale Zustände und gewünschte Diagonalwahrscheinlichkeiten $P_h$ wären Zustandskoeffizienten $\sqrt{P_h}e^{i\theta_h}$ möglich; dies legt Dynamik und Phasen nicht fest. Beispiel: $P=(1/4,3/4)$ ergibt bei linearer Verwendung als Amplitude die normierten Quadrate $(1/10,9/10)$.
+
+Das klassisch begründete sequentielle Wachstum [4] ist deshalb eine eigene Modellfamilie, kein automatisches Quantenmaß. Auch aktuelle Arbeiten zur Quantenkausalität untersuchen zusätzliche algebraische Bedingungen und liefern kein universelles Staubball-Gewicht [6]. Eine Poisson-Verteilung auf einer \emph{vorgegebenen} Geometrie ist analog ein Referenzensemble, keine bereits hergeleitete Summe über dynamische Geometrien.
+
+\newpage
+\kicker{02 · EXAKTE QUOTIENTENRECHNUNG}
+\tit{Wann der Symmetriefaktor gilt}
+Sei $\mathcal L_n$ die Menge aller strikten Ordnungen auf der beschrifteten Menge $\{1,\ldots,n\}$. Für ein permutationsinvariantes $F$ liefert der Orbit-Stabilisator-Satz
+\[
+ \frac{1}{n!}\sum_{C\in\mathcal L_n}F(C)
+ =\sum_{[C]}\frac{F(C)}{|\Aut(C)|}.
+\]
+\textbf{Beweis.} Eine Klasse besitzt $n!/|\Aut(C)|$ verschiedene Beschriftungen. Jede trägt denselben Wert $F(C)$ bei; Division durch $n!$ ergibt die rechte Seite. Der Schluss ist exakt. Dass \emph{diese} beschriftete Ausgangssumme physikalisch richtig ist, folgt nicht aus dem Satz.
+
+\sect{Natürliche Beschriftungen sind eine andere Zählung}
+Bei einer natürlichen Beschriftung gilt $x\prec y\Rightarrow x<y$. Sei $L(C)$ die Zahl der linearen Erweiterungen einer Ordnung auf ihren unterscheidbaren Elementen. Dann gibt es $L(C)/|\Aut(C)|$ verschiedene natürlich beschriftete Darstellungen. Deshalb
+\[
+ \sum_{C\in\mathcal N_n}F(C)=\sum_{[C]}\frac{L(C)}{|\Aut(C)|}F(C),\qquad
+ \sum_{C\in\mathcal N_n}\frac{F(C)}{L(C)}=\sum_{[C]}\frac{F(C)}{|\Aut(C)|}.
+\]
+Für ein Zielmaß mit einer Einheit pro unbeschrifteter Klasse wäre die Korrektur stattdessen $|\Aut(C)|/L(C)$. Ein Katalog mit einem Repräsentanten pro Klasse benötigt wiederum keine Korrektur für natürliche Beschriftungen.
+
+\begin{tabularx}{\linewidth}{@{}Y r r r r@{}}\toprule
+\textbf{Drei-Element-Ordnung} & $|\Aut|$ & $L$ & \textbf{nat. Kopien} & $1/|\Aut|$\\\midrule
+Antikette & 6 & 6 & 1 & $1/6$\\
+Eine Relation, ein isolierter Punkt & 1 & 3 & 3 & $1$\\
+Zwei Vorgänger, ein Maximum & 2 & 2 & 1 & $1/2$\\
+Kette & 1 & 1 & 1 & $1$\\\bottomrule
+\end{tabularx}
+
+\sect{Marken und variable Elementzahl}
+Bei festen Randmarken ist die erlaubte Gruppe $G_\partial$ zu verwenden: $|G_\partial|^{-1}\sum_{h\,\rm labeled}F(h)=\sum_{[h]}F(h)/|\Aut_\partial(h)|$. Physikalische Staubmarken dürfen nicht als bedeutungslose Nummern entfernt werden. Im Drei-Element-Beispiel hat eine markierte untere Spitze den Stabilisator 1, das markierte Maximum den Stabilisator 2.
+
+Wer mehrere $n$ vergleicht, muss zusätzlich die relativen Sektorgewichte festlegen, etwa $Z=\sum_n\zeta_n\sum_{[C]_n}F(C)/|\Aut(C)|$. Ein fehlendes oder zusätzliches $n!$ ist dann keine gemeinsame Normierung. Im alten Träger schwankt $N$ bereits auf der groben Stufe zwischen 199 und 1260. \textbf{Eine nachträgliche Fakultätsgewichtung ohne definiertes Ensemble ist daher unzulässig.} Kovarianz erlaubt mehrere unterschiedliche invariante Maße; sie wählt keines allein aus.
+
+\newpage
+\kicker{03 · KANONISCHE STAUBREFERENZ}
+\tit{Das Maß aus der reduzierten Dynamik}
+Annahmen: räumlich flache, homogene periodische Zelle mit festem mitbewegtem Koordinatenvolumen $V_0$, $\Lambda=0$, druckloser irrotationaler Staub, $c=1$, positive Orientierung der Staubzeit. Dies beschreibt die vorhandene Torusreferenz; Rand und Außenraum eines endlichen Staubballs fehlen.
+
+Nach Aufnahme des zeitlichen Randterms in die Einstein-Hilbert-Wirkung ist
+\[
+ S_g=-\frac{3V_0}{8\pi G}\int dt\,\frac{a\dot a^2}{N},\qquad
+ V=V_0a^3,\quad q=\sqrt V,
+\]
+\[
+ S_g=-\frac1{6\pi G}\int dt\,\frac{\dot q^2}{N}.
+\]
+Für Staub kann $S_d=-\frac12\int d^4x\sqrt{-g}\,\rho(g^{ab}\partial_aT\partial_bT+1)$ als Ausgang dienen. Variation nach $\rho$ normiert den Staubfluss, Variation nach $T$ ergibt dessen Erhaltung. Die kanonische Behandlung von Staub als physikalischer Zeit ist durch [3] motiviert; die folgende homogene Reduktion ist explizit angegeben.
+
+\sect{Zwang zuerst, Zeitwahl danach}
+Mit $\kappa=3\pi G/2$ lautet im gewählten Zweig der homogene Zwang $p_T-\kappa p_q^2=0$. In der Eichung $T=t$ folgt
+\[
+ H_{\rm phys}=-\kappa p_q^2,\qquad
+ S_{\rm red}=\int dT\,(p_q\dot q+\kappa p_q^2)
+             =-\frac1{4\kappa}\int dT\,\dot q^2.
+\]
+Die Staubmasse ist $M=p_T=\kappa p_q^2>0$. Die scheinbar verschwindende Staub-Lagrangedichte auf der Zwangsfläche darf nicht vor der Variation benutzt werden, um den Zwang zu verlieren.
+
+Die kanonische Liouville-Integration nutzt $dq\,dp_q/(2\pi\hbar)$. Wählen wir die direkte Schrödinger-Quantisierung in $q$, so ist
+\[
+ \mathcal H=L^2(\mathbb R_+,dq),\quad
+ \widehat H=\kappa\hbar^2\partial_q^2,\qquad
+ \boxed{d\mu(V)=\frac{dV}{2\sqrt V}}.
+\]
+Das ist die Koordinatentransformation des festgelegten Hilbertraummaßes, kein nachträglicher Vorteil für kleine Volumina. In $a$ ist $dq=(3/2)\sqrt{V_0}\,a^{1/2}da$. Ein gleichmäßiges Gitter in $a$ oder $V$ hat daher ungleiche Quadraturgewichte.
+
+\sect{Klassische Kontrolle und verbleibende Freiheit}
+Es folgt $\dot q=-2\kappa p_q$, $q(T)=q_i-\sqrt{6\pi GM}(T-T_i)$ auf dem kontrahierenden Zweig. Damit gilt $H_a^2=(8\pi G/3)M/V$. Die klassische Singularität bleibt in endlicher Staubzeit erreicht. Die Quantisierungsordnung und die selbstadjungierte Randbedingung bei $q=0$ werden durch diese klassische Rechnung nicht eindeutig bestimmt. Auch Homogenisierung vor Quantisierung ist eine Modellentscheidung.
+
+\newpage
+\kicker{04 · KERN STATT BELIEBIGER PFADGEWICHTE}
+\tit{Wie das Maß in die Rechnung eingeht}
+Für den vollen $q$-Raum und $t>0$ liefert die Gauß-Integration über $p_q$ im festgelegten Modell
+\[
+ K_0(q',q;t)=\frac{1}{\sqrt{-4\pi i\kappa\hbar t}}
+ \exp\!\left[-\frac{i(q'-q)^2}{4\kappa\hbar t}\right].
+\]
+Der Wurzelzweig wird durch die Fourier-Darstellung und den Grenzwert $t\to0$ bestimmt. Auf $q>0$ ergibt die \emph{gewählte} Dirichlet-Erweiterung
+\[
+ K_D(q',q;t)=K_0(q'-q;t)-K_0(q'+q;t)
+ =\frac2\pi\int_0^\infty dk\,\sin(kq')\sin(kq)e^{i\kappa\hbar k^2t}.
+\]
+Die Schreibweise $K_0(x;t)$ meint die Differenzvariable. Neumann- oder geeignete Robin-Bedingungen liefern andere Kerne. Der Bildterm ist eine Konsequenz der gewählten Randbedingung; eine daraus entstehende Reflexion ist kein Nachweis einer CST-Singularitätsauflösung.
+
+\sect{Zusammensetzung fixiert die Zwischengewichte}
+\[
+ K_D(q_2,q_0;t_1+t_2)=\int_0^\infty dq_1\,
+ K_D(q_2,q_1;t_2)K_D(q_1,q_0;t_1).
+\]
+Für feste Endpunkte und $m$ Schritte ist die approximative Summe über ein vollständiges Zwischenraster
+\[
+ K^{(m)}\simeq\sum_{j_1,\ldots,j_{m-1}}
+ \left(\prod_{r=1}^{m-1}w_{j_r}\right)
+ \prod_{r=0}^{m-1}K_D(q_{j_{r+1}},q_{j_r};\Delta T_r),\quad
+ w_j\simeq\int_{I_j}dq.
+\]
+Für eine Volumenzelle $[V_-,V_+]$ ist $w_j=\sqrt{V_+}-\sqrt{V_-}$. Diese Gewichte gehören zu inneren Integrationen. Ein ausgelesener Endzustand braucht die dazu passende Born-Integration, keine zusätzliche ungeprüfte Vervielfachung seines Amplitudenbetrags.
+
+Wer statt $d\mu(V)$ das flache Maß $dV$ benutzen möchte, transformiert auch die Zustände: $\chi(V)=\sqrt{J(V)}\,\psi(\sqrt V)$ mit $J=1/(2\sqrt V)$. Dann ist $\widetilde K(V',V)=\sqrt{J(V')J(V)}K_D(\sqrt{V'},\sqrt V)$. Nur den Integrationsfaktor auszutauschen verletzt die Zusammensetzung.
+
+\sect{Anfangsdaten und beobachtete Volumenfolgen}
+Ein zulässiger Referenzzustand ist eine normierte, ungerade fortgesetzte Gauß-Wellenpackung, lokalisiert bei $q_i>0$ und $p_i>0$; dann kontrahiert ihr Schwerpunkt zunächst. Breite, Impulsstreuung und Randbedingung sind vor späten Ergebnissen festzulegen. Für endliche Volumenfenster $I_r$ lauten die Klassenoperatoren $C_\alpha=P_{I_m}U_m\cdots P_{I_1}U_1$ und $D(\alpha,\beta)=\operatorname{Tr}(C_\alpha\rho_i C_\beta^\dagger)$. Das nutzt echte Zustände und endliche Fenster. Exakte Orts- oder Volumenwerte sind keine normierten Präparationen.
+
+\newpage
+\kicker{05 · VON FEINEN ZU GROBEN HISTORIEN}
+\tit{Die fehlende Verbindung zur CST-Summe}
+Sei $\pi(h)=\alpha$ die physikalisch definierte Zuordnung einer feinen Historie zu einem groben Verlauf. Im einfachsten Fall eines reinen Anfangszustands und gemeinsamer Endzustandsbasis lautet der grobe Zweigvektor
+\[
+ |\Psi_\alpha\rangle=\sum_{h:\pi(h)=\alpha}a_h|e_h\rangle,\qquad
+ D(\alpha,\beta)=\langle\Psi_\beta|\Psi_\alpha\rangle.
+\]
+Hier enthält $a_h$ Maß, Phase und Präparation; $|e_h\rangle$ enthält die erhaltenen End- und Umweltzustände. Zwei feine Beiträge $1$ und $-1$ zum selben Zustand ergeben Gewicht null; ihre getrennten Diagonalgewichte summieren sich zu zwei. Deshalb reicht eine Zahl von Vertretern pro Volumenpfad nicht aus. Eine effektive Wirkung kann nach Integration ausgelassener Freiheitsgrade komplex und nichtlokal sein, ohne dass dies als frei einstellbare Dämpfung eingeführt werden darf.
+
+\sect{Passive Aufzeichnung verändert die Kreuzterme}
+Für normierte Umweltzustände ist $F_{hk}=\langle e_k|e_h\rangle$ positiv semidefinit und $F_{hh}=1$. Ein unitärer konditionierter Umweltprozess hat $F_{hk}=\operatorname{Tr}(U_h\rho_E U_k^\dagger)$. Er dämpft bestimmte Interferenzen, nicht automatisch einzelne mikroskopische Diagonalbeiträge. Rückwirkung erfordert eine gemeinsame Geometrie-Materie-Dynamik; eine Normierung der Zeiger ersetzt sie nicht.
+
+Bei einer vollständigen Partition ist $D(\Omega,\Omega)=1$ die Normierungsbedingung. $\sum_\alpha D(\alpha,\alpha)=1$ folgt erst bei verschwindenden relevanten Kreuztermen. Der alte Quotient $q_B=D_{BB}/(D_{BB}+D_{NN})$ bleibt daher ohne ausreichende Dekohärenz ein Diagonalanteil [5].
+
+\sect{Gewichtete Fassung des alten Ausschlusses}
+Wenn weiterhin genau ein B-Pfad vorliegt und $\mathcal S$ die N-Pfade mit allein belegten orthogonalen Endkanälen bezeichnet, dann gilt für beliebige Phasen und normierte passive Zeiger
+\[
+ D_{BB}=|a_B|^2,\qquad D_{NN}\ge\sum_{s\in\mathcal S}|a_s|^2,
+ \qquad
+ q_B\le\frac{|a_B|^2}{|a_B|^2+\sum_{s\in\mathcal S}|a_s|^2}.
+\]
+Damit erfordert $q_B\ge4/5$ notwendigerweise
+\[
+ \boxed{|a_B|^2\ge4\sum_{s\in\mathcal S}|a_s|^2.}
+\]
+Bei einem isolierten Zeugen wäre mindestens $|a_B|\ge2|a_s|$ nötig. Das ist \textbf{keine Konstruktionsvorschrift} und keine hinreichende Bedingung für das Bounce-Gate. Ein physikalisch unabhängig bestimmtes Maß könnte sie verfehlen. Bei mehr B-Pfaden oder veränderten Endkanälen ist die Schranke neu herzuleiten.
+
+Die alten 27 und 17 ausgewählten Verläufe bilden weder eine nachgewiesene Quadratur des reduzierten Pfadintegrals noch die vollständigen Fasern einer CST-Vergröberung. Daher wird das hergeleitete $dq$-Maß hier ausdrücklich nicht auf diese Zeilen aufgeklebt.
+
+\newpage
+\kicker{06 · AUSGEFÜHRTE PRÜFUNGEN}
+\tit{Was nachgerechnet wurde}
+\begin{tabularx}{\linewidth}{@{}Y Y@{}}\toprule
+\textbf{Kontrolle} & \textbf{Ergebnis}\\\midrule
+Quotienten aller Ordnungen bis $n=5$ & Exakt: 87 unbeschriftete Klassen über $n=1,\ldots,5$; Orbitgrößen und $L/|\Aut|$ stimmen.\\
+Zählung bei $n=5$ & 63 Klassen, 357 natürlich beschriftete und 4231 beliebig beschriftete Ordnungen.\\
+Korrigierte natürliche Summe & Für $F(C)=1+\#\text{Relationen}$ exakt $\sum_{\rm nat}F/L=\sum_{[C]}F/|\Aut|$.\\
+Markierter Drei-Punkt-Test & Die stabilisierende Gruppe hängt von der physikalischen Marke ab; Größen 1, 1, 2.\\
+Kernzusammensetzung & Endlicher Sinusraum, 16 und 32 Moden: maximaler absoluter Fehler $2{,}22\cdot10^{-14}$.\\
+Unitarität derselben Referenz & Maximaler Matrixfehler $4{,}10\cdot10^{-15}$.\\
+Absichtlich falsches Volumenmaß & Weglassen des Jacobifaktors verletzt die Zusammensetzung deutlich: Fehler 8,31 bzw. 12,49.\\
+Unabhängige Koordinatenquadratur & $\int_1^2e^{-q^2}dq=\int_1^4e^{-V}dV/(2\sqrt V)$; bei 128 Teilintervallen Fehler $4{,}57\cdot10^{-11}$ bzw. $2{,}03\cdot10^{-9}$.\\
+Klassischer Staubzweig & Friedmann-Gleichung und konstante Masse an vier Zeiten mit rationaler Arithmetik exakt bestätigt.\\\bottomrule
+\end{tabularx}
+
+\sect{Was die Kernprüfung tatsächlich bedeutet}
+Die numerische Referenz nutzt den endlichen Sinusraum auf $0<q<5$ mit Dirichlet-Rändern und $\kappa=\hbar=1$. Diskrete Sinusorthogonalität gestattet eine unabhängige Kontrolle von Zusammensetzung und Norm. Das ist keine Konvergenzprüfung der vierdimensionalen CST, kein Nachweis des Halbraum-Limes $q_{\max}\to\infty$ und keine Intervallzertifizierung der Gleitkommazahlen. Die Nullkontrolle mit falschem Maß zeigt einen konkreten Implementationsfehler zuverlässig an.
+
+\sect{Befund an den unveränderten Projekteingaben}
+\begin{tabularx}{\linewidth}{@{}Y r r@{}}\toprule
+ & \textbf{Entwicklung} & \textbf{Prüffamilie}\\\midrule
+Volumenpfade & 27 & 17\\
+CSV-Zeilen, beide Auflösungen & 54 & 34\\
+Elementzahl grob & 225--873 & 199--1260\\
+Elementzahl fein & 3024--11970 & 2572--17381\\\bottomrule
+\end{tabularx}
+Alle 88 Wirkungszähler erfüllen das archivierte BD-Polynom. Die CSV-Hashes stimmen mit dem abgeschlossenen Kandidatensnapshot überein. Eine vollständige neue Ordnungserzeugung, der alte Kopplungsscan und die inversen Volumenmomentrechnungen wurden nicht wiederholt. Es wurden keine neuen Bounce-Daten erzeugt.
+
+\newpage
+\kicker{07 · ENTSCHEIDUNG UND WEITERARBEIT}
+\tit{Ein Vertrag vor dem nächsten Bounce-Test}
+Für die Weiterentwicklung ist die kanonische Staubreferenz der konkrete Vergleichsmaßstab. Für die CST-Seite ist die \emph{symmetriequotientierte beschriftete Summe} ein nachvollziehbarer zu prüfender Ansatz; sie ist kein freigegebenes physikalisches Maß. Natürliche Wachstumssummen und gleich gewichtete Klassen werden als unterschiedliche Modelle geführt.
+
+\begin{tabularx}{\linewidth}{@{}p{9mm}Y >{\raggedright\arraybackslash}p{28mm}@{}}\toprule
+ & \textbf{Erforderlicher Nachweis} & \textbf{Stand}\\\midrule
+G0 & Maßdichte, Zustandskoeffizienten und klassische Wahrscheinlichkeiten getrennt; Quotient und Marken korrekt. & Endliche Tests bestanden\\
+G1 & Früher Zustand $\rho_i$, Massensektor, Zeitrichtung, Volumenfenster, Operatorordnung und Randbedingung unabhängig von B festgelegt. & Auswahl offen\\
+G2 & Vollständiger markierter CST-Träger, Sektorgewichte $\zeta_n$, Materiemaß, Wirkungsnormierung und Randterme spezifiziert. & HOLD\\
+G3 & Normierter positiver Dekohärenzfunktional; konsistente Endzustandssumme und zulässige Zusammensetzung. & Referenz geprüft; CST offen\\
+G4 & CST-Wirkung und Übergangsamplituden ergeben im Niedrigkrümmungsbereich denselben kontrahierenden Staubgrenzfall. & HOLD\\
+G5 & Kontrollierte Vergröberung: Fasern, ausgelassene Beiträge und Fehlergrenzen; gleicher physikalischer Bereich bei Verfeinerung. & HOLD\\
+G6 & Erst danach neue, unabhängige Bounce-Familie samt unverändertem oder neu sachlich begründetem Gate. & NOT\_RUN\\\bottomrule
+\end{tabularx}
+
+\sect{Konkrete nächste Rechnung}
+Auf einer kleinen vollständigen Familie markierter Ordnungen ist zunächst ein Übergangskern für feste frühe Daten zu bilden. Beschriftungsvarianten werden über den nachgewiesenen Quotienten behandelt. Getrennte feste-$n$-Sektoren verhindern vorläufig eine versteckte Fakultätspräferenz. Vor einer Summe über $n$ müssen $\zeta_n$ und die Randdaten feststehen. Die Hilbertraumnorm und die Bedeutung einer Verklebung am Zwischenschnitt sind mitzudefinieren; eine naive Multiplikation von Ordnungsgewichten genügt nicht.
+
+Dieser CST-Kern muss unter einer expliziten Abbildung auf $q=\sqrt V$ mit dem reduzierten Kern verglichen werden. Die BDG-Wirkung enthält Intervalle über einen Zwischenschnitt hinweg; eine einfache Markov-Regel nur in $V$ darf daher nicht vorausgesetzt werden. Nötigenfalls muss der Zustandsraum mehr Kausalgeschichte enthalten.
+
+\note{\textbf{Abbruchregel:} Scheitern Zusammensetzung, klassischer Grenzfall oder Vergröberung, wird der konkrete Maßansatz verworfen oder als unaufgelöst zurückgestellt. Ein späterer Bounce darf keine dieser Prüfungen ersetzen. Die alten Entwicklungs- und Prüfpfade sind bekannt und gelten nicht erneut als unabhängige Daten.}
+
+\newpage
+\kicker{08 · QUELLEN UND REPRODUKTION}
+\tit{Nachvollziehbarer Arbeitsstand}
+Die algebraischen Ableitungen auf den Seiten 3--6 und der ausführbare Prüfer sind neue Ausarbeitungen für dieses Paket. Die Literatur begründet den physikalischen Rahmen; sie wird nicht als Beweis einer bereits bestimmten CST-Staubdynamik ausgegeben.
+
+{\small
+\textbf{[1]} D. M. T. Benincasa, F. Dowker, \emph{The Scalar Curvature of a Causal Set}, Phys. Rev. Lett. 104, 181301 (2010), Version 4 (2011). \href{https://arxiv.org/abs/1001.2725}{arXiv:1001.2725}. Intervallwirkung und Nichtlokalität.
+
+\textbf{[2]} F. Dowker, L. Glaser, \emph{Causal set d'Alembertians for various dimensions}, Class. Quantum Grav. 30, 195016 (2013). \href{https://arxiv.org/abs/1305.2588}{arXiv:1305.2588}. Dimensionsabhängige Operatoren und Wirkungen.
+
+\textbf{[3]} J. D. Brown, K. V. Kucha\v r, \emph{Dust as a Standard of Space and Time in Canonical Quantum Gravity}, Phys. Rev. D 51, 5600 (1995). \href{https://arxiv.org/abs/gr-qc/9409001}{arXiv:gr-qc/9409001}. Kanonischer Staubzeitrahmen; die hier gewählte homogene Quantisierung ist zusätzlich spezifiziert.
+
+\textbf{[4]} D. P. Rideout, R. D. Sorkin, \emph{A Classical Sequential Growth Dynamics for Causal Sets}, Phys. Rev. D 61, 024002 (2000). \href{https://arxiv.org/abs/gr-qc/9904062}{arXiv:gr-qc/9904062}. Klassische Wachstumswahrscheinlichkeiten aus Kausalitäts- und Kovarianzannahmen.
+
+\textbf{[5]} R. D. Sorkin, \emph{Quantum Mechanics as Quantum Measure Theory}, Mod. Phys. Lett. A 9, 3119 (1994). \href{https://arxiv.org/abs/gr-qc/9401003}{arXiv:gr-qc/9401003}. Unterschied zwischen Quantenmaß und klassischer Additivität.
+
+\textbf{[6]} R. Srivastava, S. Surya, \emph{Implementing Bell causality in quantum sequential growth}, Phys. Rev. D 114, 086007 (7. Oktober 2026). \href{https://doi.org/10.1103/thx5-dknv}{doi:10.1103/thx5-dknv}. Der geprüfte Abstract beschreibt Einschränkungen nichtkommutativer Übergangsalgebren, keine vollständige Staubgewichtung.
+
+\textbf{[7]} S. Carlip, \emph{Causal sets and an emerging continuum}, Gen. Relativ. Gravit. 56, 95 (2024). \href{https://doi.org/10.1007/s10714-024-03281-1}{doi:10.1007/s10714-024-03281-1}. Lorentzsche Pfadsumme und Unterdrückung bestimmter nichtmannigfaltiger Familien; kein Bounce-Nachweis.
+
+\textbf{[8]} X6-Projekt, \emph{Abschluss des bisherigen Bounce-Kandidaten v0.1}, 5. November 2026, \href{https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/234}{PR 234}. Gelesener Main-Commit:\par
+\texttt{60de9ac01bacc0f86dc68adc8e5784c08338df87}.
+}
+
+\sect{Reproduktionspaket}
+\texttt{verify.py} benötigt Python 3.10 oder neuer und nur die Standardbibliothek. \texttt{inputs/} enthält die zwei unveränderten Historientabellen und den Kandidatensnapshot. \texttt{provenance.json} dokumentiert Ursprung und Hashes; \texttt{contract.json} hält Annahmen und offene Gatter fest. \texttt{results/verification.json} enthält die tatsächlich errechneten Werte.
+\begin{verbatim}
+sha256sum -c SHA256SUMS
+python3 verify.py
+\end{verbatim}
+Exakte Größen werden als rationale Zahlen geprüft. Für numerische Kernprüfungen gilt eine absolute Toleranz von $2\cdot10^{-11}$; konkrete Fehlerwerte können plattformabhängig leicht abweichen. Keine externe Präregistrierung, keine Messdaten und keine neue öffentliche Veröffentlichung sind Teil dieser Ausarbeitung.
+\end{document}

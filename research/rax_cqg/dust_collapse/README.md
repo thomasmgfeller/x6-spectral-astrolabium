@@ -1,5 +1,13 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Physikalische Begründung der Historiengewichtung v0.1 · 5. November 2026
+
+Für die ausdrücklich reduzierte homogene Staubzelle ergibt die kanonische Quantisierung in `q = sqrt(V)` das Integrationsmaß `dq = dV/(2 sqrt(V))`. Die reelle Wirkung bestimmt die Phase. Ein Symmetriefaktor folgt nur unter der angegebenen beschrifteten Ausgangszählung; natürliche Beschriftungen benötigen eine andere Vielfachheitskorrektur. Die maßgebliche physikalische Gewichtung der vollständigen vierdimensionalen CST-Summe bleibt **HOLD**.
+
+Die exakten Kontrollen umfassen alle 87 Ordnungsklassen bis fünf Elemente. Der endliche Sinuskern besteht Norm- und Zusammensetzungsprüfungen; eine absichtlich falsche Volumenintegration scheitert. Die unveränderten 27 Entwicklungs- und 17 Prüfpfade werden nicht neu gewichtet. Der alte Bounce-Kandidat bleibt verworfen; neuer Bounce-Test **NOT_RUN**, Singularitätsauflösung **HOLD**.
+
+[Bericht (PDF, neun Seiten)](reports/CST_Staubball_Historiengewichtung_v0_1.pdf) · [Vollständiges Prüfpaket (ZIP)](packages/CST_Staubball_Historiengewichtung_v0_1_Pruefpaket.zip) · [Herleitung, Prüfcode und offene Nachweise](history_weighting_v0_1/PUBLICATION.md)
+
 ## Abschluss des bisherigen Bounce-Kandidaten · 5. November 2026
 
 **Als Kandidat für einen dominanten dynamischen Bounce abgeschlossen und verworfen.** Bei unverändertem Historienträger, gleichen Amplitudenbeträgen und erhaltenen Endvolumenkanälen gilt auf beiden geprüften Familien `q_B ≤ 1/2 < 4/5`. Beliebige normierte passive Zusatzzeiger können die geforderte 80-%-Dominanz nicht erreichen. Der Bericht konsolidiert den vorhandenen Ausschlusssatz, nennt seine Voraussetzungen und bestätigt die konkreten isolierten Endkanäle für 27 Entwicklungs- und 17 Prüfpfade.

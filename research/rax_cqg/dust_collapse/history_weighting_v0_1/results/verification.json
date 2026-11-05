@@ -1,0 +1,221 @@
+{
+  "schema": "x6-history-weight-foundation/v0.1",
+  "scientific_status": "CONDITIONAL_REFERENCE_DERIVED_CST_MEASURE_OPEN",
+  "source_audit": {
+    "development": {
+      "histories": 27,
+      "rows": 54,
+      "events_by_level": {
+        "0": [
+          225,
+          873
+        ],
+        "1": [
+          3024,
+          11970
+        ]
+      },
+      "automorphism_data_present": false,
+      "microhistory_fibres_present": false
+    },
+    "holdout": {
+      "histories": 17,
+      "rows": 34,
+      "events_by_level": {
+        "0": [
+          199,
+          1260
+        ],
+        "1": [
+          2572,
+          17381
+        ]
+      },
+      "automorphism_data_present": false,
+      "microhistory_fibres_present": false
+    }
+  },
+  "quotients": [
+    {
+      "n": 1,
+      "unlabeled": 1,
+      "natural": 1,
+      "arbitrary_labels": 1,
+      "corrected_invariant_sum": "1",
+      "naive_natural_sum": "1",
+      "examples": []
+    },
+    {
+      "n": 2,
+      "unlabeled": 2,
+      "natural": 2,
+      "arbitrary_labels": 3,
+      "corrected_invariant_sum": "5/2",
+      "naive_natural_sum": "3",
+      "examples": []
+    },
+    {
+      "n": 3,
+      "unlabeled": 5,
+      "natural": 7,
+      "arbitrary_labels": 19,
+      "corrected_invariant_sum": "55/6",
+      "naive_natural_sum": "17",
+      "examples": [
+        {
+          "relations": 0,
+          "aut": 6,
+          "linear_extensions": 6,
+          "natural_copies": 1,
+          "quotient_weight": "1/6"
+        },
+        {
+          "relations": 1,
+          "aut": 1,
+          "linear_extensions": 3,
+          "natural_copies": 3,
+          "quotient_weight": "1"
+        },
+        {
+          "relations": 2,
+          "aut": 2,
+          "linear_extensions": 2,
+          "natural_copies": 1,
+          "quotient_weight": "1/2"
+        },
+        {
+          "relations": 2,
+          "aut": 2,
+          "linear_extensions": 2,
+          "natural_copies": 1,
+          "quotient_weight": "1/2"
+        },
+        {
+          "relations": 3,
+          "aut": 1,
+          "linear_extensions": 1,
+          "natural_copies": 1,
+          "quotient_weight": "1"
+        }
+      ]
+    },
+    {
+      "n": 4,
+      "unlabeled": 16,
+      "natural": 40,
+      "arbitrary_labels": 219,
+      "corrected_invariant_sum": "337/8",
+      "naive_natural_sum": "150",
+      "examples": []
+    },
+    {
+      "n": 5,
+      "unlabeled": 63,
+      "natural": 357,
+      "arbitrary_labels": 4231,
+      "corrected_invariant_sum": "28711/120",
+      "naive_natural_sum": "1943",
+      "examples": []
+    }
+  ],
+  "marked_quotient": [
+    {
+      "mark": 0,
+      "boundary_preserving_aut": 1,
+      "orbit": 2
+    },
+    {
+      "mark": 1,
+      "boundary_preserving_aut": 1,
+      "orbit": 2
+    },
+    {
+      "mark": 2,
+      "boundary_preserving_aut": 2,
+      "orbit": 1
+    }
+  ],
+  "spectral_reference": [
+    {
+      "n": 16,
+      "composition_max_abs_error": 4.695862805838358e-15,
+      "unitarity_max_abs_error": 1.5762442465419988e-15,
+      "wrong_dV_composition_error": 8.305892904301048,
+      "model": "finite sine subspace on 0<q<5; kappa=hbar=1"
+    },
+    {
+      "n": 32,
+      "composition_max_abs_error": 2.2169460883295707e-14,
+      "unitarity_max_abs_error": 4.091227012616118e-15,
+      "wrong_dV_composition_error": 12.485658355776033,
+      "model": "finite sine subspace on 0<q<5; kappa=hbar=1"
+    }
+  ],
+  "coordinate_quadrature": [
+    {
+      "n": 32,
+      "q_error": 1.167632482368397e-08,
+      "volume_error": 5.125557360208255e-07
+    },
+    {
+      "n": 64,
+      "q_error": 7.298476267791898e-10,
+      "volume_error": 3.237782522647059e-08
+    },
+    {
+      "n": 128,
+      "q_error": 4.561664934676912e-11,
+      "volume_error": 2.0291276159323246e-09
+    }
+  ],
+  "classical_dust": {
+    "status": "PASS_EXACT",
+    "rows": [
+      {
+        "time": "0",
+        "q": "2",
+        "volume": "4",
+        "mass": "1/16"
+      },
+      {
+        "time": "1",
+        "q": "3/2",
+        "volume": "9/4",
+        "mass": "1/16"
+      },
+      {
+        "time": "2",
+        "q": "1",
+        "volume": "1",
+        "mass": "1/16"
+      },
+      {
+        "time": "3",
+        "q": "1/2",
+        "volume": "1/4",
+        "mass": "1/16"
+      }
+    ],
+    "singular_time": "4",
+    "continuation_across_q_zero": "NOT_DERIVED"
+  },
+  "distinctions": {
+    "p": [
+      "1/4",
+      "3/4"
+    ],
+    "normalized_squared_linear_weights": [
+      "1/10",
+      "9/10"
+    ],
+    "coherent_opposite_phase_cell": 0,
+    "incoherent_cell": 2,
+    "equal_amplitude_singleton_bound": "1/2",
+    "weighted_necessary_condition": "abs(A_B)^2 >= 4 * sum_singleton abs(A_s)^2",
+    "condition_is_sufficient": false
+  },
+  "new_bounce_test": "NOT_RUN",
+  "cst_measure": "HOLD",
+  "singularity_resolution": "HOLD",
+  "floating_point_checks_are_rigorous_interval_certificates": false
+}
