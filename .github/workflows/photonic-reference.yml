@@ -19,11 +19,40 @@ jobs:
       - uses: actions/setup-python@v6
         with:
           python-version: '3.12'
-      - uses: ghdl/setup-ghdl@29a77b3cd7a547947bc81539d4f7eb60913affdb
-        with:
-          version: '5.0.1'
-          backend: mcode
-          install-directory: ${{ runner.temp }}/ghdl
+      - name: Install pinned GHDL 5.0.1 without release inventory
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$RUNNER_ARCH" = X64
+          . /etc/os-release
+          test "$ID" = ubuntu
+          test "$VERSION_ID" = 24.04
+          ghdl_install_dir="$RUNNER_TEMP/ghdl-5.0.1"
+          ghdl_archive="$RUNNER_TEMP/ghdl-mcode-5.0.1-ubuntu24.04-x86_64.tar.gz"
+          # Official v5.0.1 release asset 233696643, Ubuntu 24.04 / mcode.
+          # Pin bytes as well as version; no mutable inventory.json dependency.
+          ghdl_sha256=69ac3a830659c4feb3067b6279bc972d8e78f0fe9db2d77d112cceebc29afe64
+          ghdl_url=https://github.com/ghdl/ghdl/releases/download/v5.0.1/ghdl-mcode-5.0.1-ubuntu24.04-x86_64.tar.gz
+          if ! curl --fail --location --silent --show-error \
+              --retry 4 --retry-delay 2 --retry-max-time 90 \
+              --connect-timeout 15 --max-time 60 \
+              "$ghdl_url" -o "$ghdl_archive"; then
+            curl --fail --location --silent --show-error \
+              --retry 4 --retry-delay 2 --retry-max-time 90 \
+              --connect-timeout 15 --max-time 60 \
+              -H 'Accept: application/octet-stream' \
+              https://api.github.com/repos/ghdl/ghdl/releases/assets/233696643 \
+              -o "$ghdl_archive"
+          fi
+          printf '%s  %s\n' "$ghdl_sha256" "$ghdl_archive" | sha256sum --check --strict
+          mkdir -p "$ghdl_install_dir"
+          tar -xzf "$ghdl_archive" -C "$ghdl_install_dir" --strip-components=1
+          sudo apt-get install -y --no-install-recommends libgnat-13
+          "$ghdl_install_dir/bin/ghdl" --version | tee "$RUNNER_TEMP/ghdl-version.txt"
+          grep -Eq '^GHDL 5\.0\.1 ' "$RUNNER_TEMP/ghdl-version.txt"
+          grep -qi 'mcode' "$RUNNER_TEMP/ghdl-version.txt"
+          printf '%s\n' "$ghdl_install_dir/bin" >> "$GITHUB_PATH"
+          printf 'GHDL_PREFIX=%s\n' "$ghdl_install_dir/lib/ghdl" >> "$GITHUB_ENV"
       - name: Install reference dependencies
         run: python -m pip install -r tests/photonics/requirements.txt
       - name: Locate packaged VHDL libraries
