@@ -5,3 +5,8 @@ regularity_v0_2/results/*.csv -text whitespace=cr-at-eol
 model_contract_v0_1/*.pdf binary
 reports/CST_DUST_Model_Contract_v0_1.pdf binary
 model_contract_v0_1/results/*.csv -text whitespace=cr-at-eol
+current_calibration_v0_1/*.pdf binary
+reports/CST_DUST_Staubstrom_Kalibrierung_v0_1.pdf binary
+current_calibration_v0_1/results/*.csv -text whitespace=cr-at-eol
+# Preserve intentional Markdown line breaks in the original input snapshot.
+current_calibration_v0_1/inputs/previous_smoothed_README.md whitespace=-blank-at-eol

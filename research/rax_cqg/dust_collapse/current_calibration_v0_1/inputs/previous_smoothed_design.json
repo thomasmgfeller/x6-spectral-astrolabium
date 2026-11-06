@@ -1,0 +1,13 @@
+{
+  "model":"Rao-Blackwell conditional mean of independent Bernoulli thinning of every event, applied to the published local mass flux. The later endpoint is spatially marked, simultaneity labels and continuum density marks are known. Ts=6piG=c=M=1, comoving ball volume 1.",
+  "effective_density":600000, "scale_choice":"Fixed before new draws, using the effective density already tested in both finite time windows, with known mean biases below 10%. Physical smearing length in reference units mu^(-1/4); same for all geometries and input densities in this test.",
+  "s":0.47, "windows":[[0.11,0.24],[0.24,0.11]], "input_densities":[1200000,6000000],
+  "cap":{"seed":20261102751,"pairs":128,"height_in_input_lengths":1.5,"difference_thresholds":[0.02,0.05,0.1,0.2,0.5,1,2]},
+  "full":{"seed":20261102771,"density":1200000,"window_index":1,"reps":12,"box_side":1.6,"numerical_plan":"A nonadaptive sample size for full unit-ball confirmation, at the lower primary input density, short future; paired traditional and smoothed scores on each full order."},
+  "truncation":"Choose the smallest J above 3 with 16*Pr(Bin(J,p)<=3)<=1e-13. This decreases beyond J. Bound error deterministically by the realized endpoint count times earlier eligible count and maximum pair weight. Certified hits/misses use this error radius.",
+  "mean_gate":"Absolute relative error of analytically normalized ensemble mean <=10%, finite Poisson expectation from independent moment and lens quadratures (disagreement <=5e-5). No fitted means used for qualification.",
+  "single_gate":"At least 95% probability of a single corrected estimate in [0.9,1.1]. Rule for cap pairs: h<=sqrt(1-q_0.2); direct full sample: exact two-sided component limits. Classify FAIL if an upper bound <0.95, PASS only if lower bound >=0.95 and mean gate passes; otherwise HOLD.",
+  "family":"99% joint coverage using Bonferroni over 4x7 cap threshold lower bounds plus 2 one-sided full cohort binomial bounds. Each of 30 bounds uses alpha=0.01/30. Additional exploratory calculations identified separately.",
+  "baselines":"Unsmeared flux on the same fresh inputs, with its own predicted correction. An exact-reference normalization is a diagnostic only. No tuning after seeing the data.",
+  "budget":"Full 6-million-point single-order cohort is outside the main design. Primary cap comparisons at all four cells, independent parents across pairs. No stochastic approximation to the thinning mean in these calculations."
+}
