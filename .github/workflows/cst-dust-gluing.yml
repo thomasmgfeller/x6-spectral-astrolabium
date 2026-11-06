@@ -1,0 +1,39 @@
+name: CST-DUST exact gluing and scoped decisions
+on:
+  pull_request:
+    paths:
+      - 'research/rax_cqg/dust_collapse/gluing_v0_1/**'
+      - 'research/rax_cqg/dust_collapse/model_contract_v0_1/**'
+      - 'research/rax_cqg/dust_collapse/history_weighting_v0_1/**'
+      - 'research/rax_cqg/dust_collapse/boundary_completion_v0_1/**'
+      - 'research/rax_cqg/dust_collapse/reports/CST_DUST_Verklebungsregel_v0_1.pdf'
+      - 'research/rax_cqg/dust_collapse/packages/CST_DUST_Verklebungsregel_v0_1_Pruefpaket.zip'
+      - '.github/workflows/cst-dust-gluing.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'research/rax_cqg/dust_collapse/gluing_v0_1/**'
+      - 'research/rax_cqg/dust_collapse/model_contract_v0_1/**'
+      - 'research/rax_cqg/dust_collapse/history_weighting_v0_1/**'
+      - 'research/rax_cqg/dust_collapse/boundary_completion_v0_1/**'
+      - 'research/rax_cqg/dust_collapse/reports/CST_DUST_Verklebungsregel_v0_1.pdf'
+      - 'research/rax_cqg/dust_collapse/packages/CST_DUST_Verklebungsregel_v0_1_Pruefpaket.zip'
+      - '.github/workflows/cst-dust-gluing.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  exact-gluing-and-scope:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Check unchanged artifacts, provenance and separate physical decisions
+        run: python3 -O -B research/rax_cqg/dust_collapse/gluing_v0_1/publication_check.py
+      - name: Replay exact composition and independent enumeration in isolation
+        run: python3 -O -B research/rax_cqg/dust_collapse/gluing_v0_1/publication_check.py --replay
