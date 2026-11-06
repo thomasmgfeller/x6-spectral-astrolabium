@@ -1,0 +1,23 @@
+{
+  "id": "CST-DUST-CURRENT-CAL-001-P2",
+  "scope": "Reference calibration and unresolved CST assessment",
+  "parent_main_commit": "0e47038f15d93edef486fbb68da5dad6bf017221",
+  "plan_sha256": "af4548f9fc23461719cd7b1dd58135d71c17def19adbddeb56ac0b4cc8b15fb7",
+  "contract_sha256": "01a0c7820769995a09813e50f35085a74b0dab2318e05e1833f62bd4b26678bf",
+  "executed": [
+    "graph identities",
+    "finite-ball quadrature",
+    "Poisson-law evaluation",
+    "overlap covariance"
+  ],
+  "not_executed": [
+    "new stochastic sprinklings",
+    "coupled CST evolution",
+    "physical density/curvature operator construction"
+  ],
+  "versions": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0"
+  }
+}

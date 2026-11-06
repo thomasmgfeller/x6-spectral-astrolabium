@@ -1,0 +1,16 @@
+{
+  "scope": "REF-DUST-FB-01 plus supplied nonnegative conserved matter transfers and exactly calibrated exposures",
+  "current_kinematics": "PASS_CONDITIONAL_DEFINITION",
+  "mass_flux": "PASS_FINITE_REFERENCE_WITH_DETERMINISTIC_BOUNDS",
+  "volume_density": "PASS_CONDITIONAL_REFERENCE_DESIGN",
+  "metric_regularity": "PASS_FIXED_REFERENCE_WINDOW_ONLY",
+  "metric_bounds": {
+    "R_boundary_min": 6.299605249474366,
+    "rho_max": 0.003819718634205488,
+    "K_interior_max": 0.015359999999999995,
+    "K_exterior_max": 0.012287999999999995
+  },
+  "count_reciprocal_regularity": "FAIL_AS_AN_UNCONDITIONAL_FINITE_MOMENT_IF_N0_IS_INVERTED",
+  "inference_at_zero": "HOLD_WITH_UNBOUNDED_DENSITY_INTERVAL",
+  "not_implied": "dust dynamics, recovered backreaction, global completeness, or old BD-current qualification"
+}

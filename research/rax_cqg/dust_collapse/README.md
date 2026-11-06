@@ -1,5 +1,13 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Staubstrom und Messgrößen v0.1 · 6. November 2026
+
+Ein konservativer markierter Strom und seine Schnittmassen, Randflüsse, Volumen- und Dichteobservablen sind an der endlichen klassischen Staubball-Referenz kalibriert. 86 Stromkontrollen, 420 Massenfälle und 144 Flussfälle bestehen. Zeitfensterkorrektur, Materialmaske, leere Zählungen und Überlappungskovarianzen werden ausdrücklich behandelt. Bei der dritten Zähldichtestufe erreicht der bedingte Referenzplan eine gemeinsame Erfolgsuntergrenze von 98,1203 % für das ±5-%-Intervallziel in 315 Fällen.
+
+**Physikalischer CST-Strom und Regularität bleiben separat HOLD.** Bewegung, Geometrie, Uhren und Materiemarken sind Referenzeingaben; keine neuen Zufallsstichproben oder dynamischen CST-Ensembles. Ein endliches Volumenmittel ersetzt keine kontrollierten Dichte-/Krümmungsmomente. Der klassische Oberflächenvergleich ist kein dynamischer CST-Randnachweis.
+
+[Bericht (PDF, neun Seiten)](reports/CST_DUST_Staubstrom_Kalibrierung_v0_1.pdf) · [Unverändertes Prüfpaket (ZIP)](packages/CST_DUST_Staubstrom_Kalibrierung_v0_1_Pruefpaket.zip) · [Definition, Aussagegrenzen und Nachrechnung](current_calibration_v0_1/PUBLICATION.md)
+
 ## CST-DUST Model Contract v0.1 · 6. November 2026
 
 Der Prüfvertrag legt einen endlichen Staubball mit Außenraum, einen ersten Korrespondenztest vor der klassischen Singularität und acht getrennte Entscheidungen fest. Regularität wird an jedem Prüfpunkt eigenständig bewertet; ein Bounce-PASS verändert sie nicht. Der erste Test verwendet drei Massen bei identischem Anfangsradius und ein gemeinsames reguläres Zeitfenster. Numerische Auflösung, statistische Stichprobengröße und physikalische Diskretheit sind getrennt definiert.

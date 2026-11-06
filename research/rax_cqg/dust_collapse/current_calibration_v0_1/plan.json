@@ -1,0 +1,78 @@
+{
+  "id": "CST-DUST-CURRENT-CAL-001",
+  "version": "0.1.0",
+  "date": "2026-11-06",
+  "parent_contract": "CST-DUST-MC-001@0.1.0",
+  "parent_contract_sha256": "01a0c7820769995a09813e50f35085a74b0dab2318e05e1833f62bd4b26678bf",
+  "status": "FROZEN_BEFORE_NEW_LOCAL_CALCULATIONS_NOT_EXTERNAL_PREREGISTRATION",
+  "scope": "Kinematic marked-current definition and deterministic/analytic statistical calibration on REF-DUST-FB-01; no new dynamical causal-set ensemble",
+  "current": {
+    "variables": "nonnegative rest-mass transfer f_xy on declared future-oriented transport edges of a causal set, with known clock and detector marks",
+    "units": "f_xy is mass, not mass/time and not a universal weight on every causal relation",
+    "conservation": "outgoing minus incoming transfer equals declared source at each event",
+    "coarse_graining": "sum edge transfers between an acyclic compatible block partition; internal transfers cancel",
+    "not_claimed": "derived matter action, single-stream dust law, geometric reconstruction from bare order, quantum expectation or gravitational backreaction"
+  },
+  "reference": {
+    "id": "REF-DUST-FB-01",
+    "G": 1,
+    "R0": 10,
+    "masses": [0.25, 1, 4],
+    "common_end_time": "0.5*min(Ts(M)); Ts=(2/3)*sqrt(R0^3/(2GM))",
+    "time_fractions": [0, 0.25, 0.5, 0.75, 1],
+    "exterior_slicing": "marginally bound Painleve-Gullstrand continuation of the surface proper time; spatial slices flat on both sides",
+    "probes": ["whole", "core", "bulk", "rim", "fixed_R4", "surface_material", "surface_total"],
+    "core_chi": [0, 0.5],
+    "bulk_chi": [0.5, 0.8],
+    "rim_chi": [0.8, 1],
+    "surface_halfwidth_physical": 0.5,
+    "fixed_detector_radius": 4
+  },
+  "matter_quadrature": {
+    "particle_counts": [64, 256, 1024, 4096],
+    "nodes": "s_i=(i+1/2)/P, chi_i=s_i^(1/3), mass M/P",
+    "detector_mass_bound": "absolute error <= M/P for a radial interval; whole-ball mass exact",
+    "counting_calibration_particle_count": 4096,
+    "flux_worldtubes": ["material_surface", "fixed_R4", "shrinking_chi_0.8_to_0.6"],
+    "flux_convention": "positive outward; M(T2)-M(T1)+Phi_out=0"
+  },
+  "volume_windows": {
+    "base_halfwidth": "0.1*common_end_time",
+    "past_future_multipliers": [[1,1],[1,2],[2,1]],
+    "clipping": "clip to the declared common time interval; no samples beyond it",
+    "exposure": "Omega4=integral over the actual finite detector worldtube; A=Omega4/V3(T_center)",
+    "estimator": "Vhat=N/(lambda*A), with N~Poisson(lambda*Omega4)",
+    "calibration_limit": "A and lambda known in this reference; a new model needs independent calibration and its systematic uncertainty"
+  },
+  "counting_calibration": {
+    "minimum_expected_count_at_base_density": 5000,
+    "lambda0": "5000/min(Omega4 over all 315 base cells), determined from the fixed analytic design",
+    "density_ratios": [1,2,4,8],
+    "family_size": 1260,
+    "familywise_alpha": 0.05,
+    "interval": "central Garwood interval for Poisson mean; Bonferroni alpha=0.05/1260, no independence assumed",
+    "target": "both volume and density intervals wholly inside +/-5% of their declared reference, using deterministic mass bounds",
+    "qualification": "joint success probability lower bound >=0.95 for a density level, from exact Poisson tails and union bound; no Monte Carlo draws",
+    "raw_control": "use A_raw=window_duration; show uncorrected time-averaging bias",
+    "zero_count": "positive mass and N=0: volume lower limit zero, density upper limit infinity, HOLD; no pseudocount",
+    "numerical_status": "floating point evaluation of exact probability formulae, not certified interval arithmetic"
+  },
+  "numerical_controls": {
+    "midpoint_subintervals": [4,8,16,32,64],
+    "reference_quadrature_relative_tolerance": 1e-10,
+    "flow_balance_tolerance_relative_to_M": 1e-12,
+    "mass_bound_slack": 1e-12,
+    "probability_rounding_slack": 1e-11,
+    "covariance": "overlapping windows: Cov(N_A,N_B)=lambda*Vol4(A intersect B)"
+  },
+  "decisions": {
+    "reference_current_definition": "TO_BE_CHECKED",
+    "reference_mass_flux_calibration": "TO_BE_CHECKED",
+    "reference_volume_density_calibration": "TO_BE_CHECKED",
+    "CST_CURRENT": "HOLD",
+    "CST_REGULARITY": "HOLD",
+    "full_CST_correspondence": "HOLD",
+    "old_BD_pair_current": "PREVIOUS_DECISIONS_UNCHANGED",
+    "singularity_resolution": "HOLD"
+  }
+}

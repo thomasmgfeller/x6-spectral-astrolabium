@@ -1,0 +1,35 @@
+{
+  "scope": "Supplementary adapter check, not a change to the frozen reference-power plan",
+  "lambda_relative_bounds": [
+    -0.01,
+    0.01
+  ],
+  "A_relative_bounds": [
+    -0.02,
+    0.02
+  ],
+  "nominal": {
+    "volume": [
+      6530.570962620251,
+      6804.695907852783
+    ],
+    "density": [
+      0.0005878293540470932,
+      0.0006140351315302259
+    ],
+    "status": "CONDITIONAL_INTERVAL"
+  },
+  "with_deterministic_calibration_bounds": {
+    "volume": [
+      6339.129258998495,
+      7013.7042958697
+    ],
+    "density": [
+      0.0005703120392964898,
+      0.0006325789925024388
+    ],
+    "status": "CONDITIONAL_CALIBRATION_INTERVAL"
+  },
+  "qualification": "NO_NEW_5_PERCENT_QUALIFICATION_WITH_SYSTEMATICS",
+  "note": "Unknown detector/mask/clock bias must be bounded before a physical PASS."
+}
