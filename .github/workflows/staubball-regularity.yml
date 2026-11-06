@@ -30,6 +30,7 @@ jobs:
           cache: pip
           cache-dependency-path: research/rax_cqg/dust_collapse/regularity_v0_2/publication-requirements.txt
       - name: Install pinned numerical dependencies
-        run: python3 -m pip install --only-binary=:all: -r research/rax_cqg/dust_collapse/regularity_v0_2/publication-requirements.txt
+        run: |
+          python3 -m pip install --only-binary=:all: -r research/rax_cqg/dust_collapse/regularity_v0_2/publication-requirements.txt
       - name: Check original artifacts and replay the regularity reference
         run: python3 research/rax_cqg/dust_collapse/regularity_v0_2/publication_check.py --replay
