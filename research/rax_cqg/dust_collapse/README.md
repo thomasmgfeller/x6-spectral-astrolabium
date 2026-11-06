@@ -1,5 +1,15 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Gemeinsamer Variationskandidat v0.1 · 6. November 2026
+
+Die regulierte gemeinsame Geometrie-Materie-Amplitude ist mit expliziten Maß-, Regulator- und Zustandsraumannahmen definiert. Die endlichen Uhr-, Dichte- und Geometrievariationen sowie der Variationsstrom sind algebraisch geschlossen. Die vollständige endliche Amplitudenvariation enthält in ihrer zweiten Ableitung eine verbundene Zweipunktinsertion. Eine bedingte Außenfeldantwort eliminiert eine Hilfsuhr bei festgehaltener Geometrie und Dichte; sie liefert keine Vakuummetrik.
+
+4 473 Ordnungen, je 22 095 Produkt-, Uhr-, Dichte- und Verschiebungsprüfungen, je 130 116 Verklebungs- und Stromschnittprüfungen, 5 377 Labelprüfungen und 1 240 Geometriemoves stimmen exakt überein. Neun bedingte Außenfeldantworten und zehn strukturelle Kontrollen sind ausgeführt. Ein analytisches Gegenbeispiel zeigt: Der rohe Kern ist mit den deklarierten endlichen I₂-Skalarprodukten durch keinen einzigen konstanten Normierungsfaktor isometrisch zu machen. Der feste In-in-Normtest ergibt Z[π,π] ≈ 0,01763122254 statt 1.
+
+**MODEL=FAIL gilt nur für diese rohe Evolutionsinterpretation von CST-DUST-V1-RAW-K.** Andere physikalische Skalarprodukte, Constraint-/Rigging-Map-Deutungen und kontrollierte Grenzwerte sind nicht ausgeschlossen. **Physikalisches Junction-Gesetz: HOLD_NOT_DERIVED. Gemeinsame Außenraumgeometrie: HOLD_NOT_SOLVED. Regularität: separat HOLD. Globaler Bounce: HOLD_NOT_RUN.** Der neue P1-Datensatz hält sieben weitere Entscheidungen offen und verändert frühere Datensätze nicht. Keine neuen physikalischen 4D-Ensembles oder Singularitätsauflösung. Der analytische Ausfallmechanismus war vor der Rechnung bekannt; keine blinde Vorhersage.
+
+[Bericht (PDF, zehn Seiten)](reports/CST_DUST_Physikalische_Variation_v0_1.pdf) · [Unverändertes Prüfpaket (ZIP)](packages/CST_DUST_Physikalische_Variation_v0_1_Pruefpaket.zip) · [Definitionen, Aussagegrenzen und Nachrechnung](variation_v0_1/PUBLICATION.md)
+
 ## Exakte CST-Verklebungsregel v0.1 · 6. November 2026
 
 Die BDG-Wirkung wird für beliebige endliche Ordnungen vollständig in induzierte Teilordnungen und Kopplungsbeiträge zerlegt. Neben grenzüberschreitenden Paaren müssen Änderungen interner Intervallklassen berücksichtigt werden. Unter einem ausdrücklich angenommenen markierungstreuen Zählmaß sind Symmetriefaktoren und Amplitudenkomposition exakt geschlossen; die zugrunde liegende Biaktionsidee ist aus der CST-Literatur bekannt.
