@@ -1,0 +1,38 @@
+{
+  "scope": "Inserted classical ODE on fixed common physical time interval",
+  "levels": [
+    {
+      "steps": 128,
+      "comparisons": 60,
+      "passed_numerical_cap": 54,
+      "max_relative_enclosure_error": 0.010333452507704725,
+      "decision": "HOLD_NUMERICAL_CAP_NOT_MET"
+    },
+    {
+      "steps": 256,
+      "comparisons": 60,
+      "passed_numerical_cap": 58,
+      "max_relative_enclosure_error": 0.005199932707245858,
+      "decision": "HOLD_NUMERICAL_CAP_NOT_MET"
+    },
+    {
+      "steps": 512,
+      "comparisons": 60,
+      "passed_numerical_cap": 60,
+      "max_relative_enclosure_error": 0.002608346995188933,
+      "decision": "PASS_NUMERICAL_REFERENCE_ONLY"
+    },
+    {
+      "steps": 1024,
+      "comparisons": 60,
+      "passed_numerical_cap": 60,
+      "max_relative_enclosure_error": 0.0013062786442181642,
+      "decision": "PASS_NUMERICAL_REFERENCE_ONLY"
+    }
+  ],
+  "last_two_comparisons": 60,
+  "last_two_pass": true,
+  "exact_ODE_enclosed": true,
+  "roundoff_control": "outward Decimal arithmetic for rational operations and exact rational root bisection",
+  "no_physical_density_evolution": true
+}

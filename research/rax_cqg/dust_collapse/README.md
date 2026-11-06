@@ -1,5 +1,15 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Korrespondenz vor der Singularität v0.1 · 6. November 2026
+
+Vor der Rechnung fixiert sind 5 % Toleranz für Radius, Dichte, Hubble-Rate und Beschleunigung, 2 % für Masse und Fluss sowie 2,5 % für die letzten beiden physikalischen Stufen. Der Abgleich hält physikalische Zeiten, Messgebiete, Mittelungsskalen und Anfangsdaten fest; numerische Schrittweite und statistische Stichprobengröße werden getrennt behandelt. Der lokale Plan-Freeze ist keine externe Präregistrierung.
+
+26 Kontrollen und 240 eingeschlossene klassische Referenzvergleiche sind ausgeführt. Auf dem feinsten numerischen Gitter liegt die größte relative Fehlerhülle bei 0,130628 % und damit unter dem numerischen Budget von 0,5 %. Die konservative Ableitungsschranke bestätigt mit dem bisherigen Zählbudget noch keine ausreichende Präzision für Hubble-Rate und Beschleunigung; sie ist keine Unmöglichkeitsaussage für andere Schätzer.
+
+**Physikalische CST-Korrespondenz: HOLD_NOT_ELIGIBLE / NOT_RUN. Regularität: separat HOLD.** Der gekoppelte Kern und vollständige Messadapter fehlen. Alle 60 P3-Datensätze enthalten eigene Entscheidungen. Keine neuen dynamischen CST-Ensembles, keine Singularitätsauflösung oder Horizontbehauptung.
+
+[Bericht (PDF, acht Seiten)](reports/CST_DUST_Korrespondenz_v0_1.pdf) · [Unverändertes Prüfpaket (ZIP)](packages/CST_DUST_Korrespondenz_v0_1_Pruefpaket.zip) · [Prüfregeln, Aussagegrenzen und Nachrechnung](correspondence_v0_1/PUBLICATION.md)
+
 ## Staubstrom und Messgrößen v0.1 · 6. November 2026
 
 Ein konservativer markierter Strom und seine Schnittmassen, Randflüsse, Volumen- und Dichteobservablen sind an der endlichen klassischen Staubball-Referenz kalibriert. 86 Stromkontrollen, 420 Massenfälle und 144 Flussfälle bestehen. Zeitfensterkorrektur, Materialmaske, leere Zählungen und Überlappungskovarianzen werden ausdrücklich behandelt. Bei der dritten Zähldichtestufe erreicht der bedingte Referenzplan eine gemeinsame Erfolgsuntergrenze von 98,1203 % für das ±5-%-Intervallziel in 315 Fällen.

@@ -1,0 +1,113 @@
+{
+  "fixed_error_results": [
+    {
+      "epsilon": "1/100",
+      "epsilon_decimal": 0.01,
+      "max_H_bound": 0.6268939393939394,
+      "max_A_bound": 64.89016586317723,
+      "full_5_percent_sufficient": false,
+      "sampling_2_percent_sufficient": false
+    },
+    {
+      "epsilon": "1/1000",
+      "epsilon_decimal": 0.001,
+      "max_H_bound": 0.062124624624624626,
+      "max_A_bound": 6.2902126507137766,
+      "full_5_percent_sufficient": false,
+      "sampling_2_percent_sufficient": false
+    },
+    {
+      "epsilon": "1/10000",
+      "epsilon_decimal": 0.0001,
+      "max_H_bound": 0.006206870687068707,
+      "max_A_bound": 0.6270667922440308,
+      "full_5_percent_sufficient": false,
+      "sampling_2_percent_sufficient": false
+    },
+    {
+      "epsilon": "1/100000",
+      "epsilon_decimal": 1e-05,
+      "max_H_bound": 0.0006206312063120631,
+      "max_A_bound": 0.06268716758864555,
+      "full_5_percent_sufficient": false,
+      "sampling_2_percent_sufficient": false
+    },
+    {
+      "epsilon": "1/200000",
+      "epsilon_decimal": 5e-06,
+      "max_H_bound": 0.00031031405157025784,
+      "max_A_bound": 0.03134304189252597,
+      "full_5_percent_sufficient": true,
+      "sampling_2_percent_sufficient": false
+    },
+    {
+      "epsilon": "1/1000000",
+      "epsilon_decimal": 1e-06,
+      "max_H_bound": 6.206256206256206e-05,
+      "max_A_bound": 0.0062685216755527075,
+      "full_5_percent_sufficient": true,
+      "sampling_2_percent_sufficient": true
+    }
+  ],
+  "prior_density_diagnostic": [
+    {
+      "prior_density_ratio": 1,
+      "min_mu_whole_window": 40000.0,
+      "sufficient_common_epsilon": 0.019792135928486554,
+      "max_H_relative_bound": 1.2531519905986794,
+      "max_A_relative_bound": 132.8536966543079,
+      "certification": "HOLD_SUFFICIENT_BOUND_TOO_WIDE"
+    },
+    {
+      "prior_density_ratio": 2,
+      "min_mu_whole_window": 80000.0,
+      "sufficient_common_epsilon": 0.01398168284420427,
+      "max_H_relative_bound": 0.8800426690058342,
+      "max_A_relative_bound": 91.98486870585418,
+      "certification": "HOLD_SUFFICIENT_BOUND_TOO_WIDE"
+    },
+    {
+      "prior_density_ratio": 4,
+      "min_mu_whole_window": 160000.0,
+      "sufficient_common_epsilon": 0.00987981292971506,
+      "max_H_relative_bound": 0.6192843030145336,
+      "max_A_relative_bound": 64.08363774586462,
+      "certification": "HOLD_SUFFICIENT_BOUND_TOO_WIDE"
+    },
+    {
+      "prior_density_ratio": 8,
+      "min_mu_whole_window": 320000.0,
+      "sufficient_common_epsilon": 0.006982719760407751,
+      "max_H_relative_bound": 0.4364123905535109,
+      "max_A_relative_bound": 44.84079301085584,
+      "certification": "HOLD_SUFFICIENT_BOUND_TOO_WIDE"
+    }
+  ],
+  "resources": [
+    {
+      "epsilon": "1/200000",
+      "sufficient_min_mu": 622658959070.0851,
+      "sufficient_lambda": 1446042750.2729683,
+      "ratio_to_prior_lambda0": 15566473.976752128,
+      "expected_full_tube_min": 13168014240152.842,
+      "expected_full_tube_max": 19869592915944.91,
+      "run": "NOT_RUN_RESOURCE_FORECAST_ONLY"
+    },
+    {
+      "epsilon": "1/1000000",
+      "sufficient_min_mu": 15566453221488.086,
+      "sufficient_lambda": 36151020555.47954,
+      "ratio_to_prior_lambda0": 389161330.5372022,
+      "expected_full_tube_min": 329199917070744.6,
+      "expected_full_tube_max": 496739160579962.8,
+      "run": "NOT_RUN_RESOURCE_FORECAST_ONLY"
+    }
+  ],
+  "scope": "conditional whole-volume finite-difference adapter; exactly calibrated exposure, no other error sources",
+  "not_a_necessary_lower_bound": true,
+  "not_a_physical_correspondence_test": true,
+  "finite_difference_reference_bias": 0,
+  "why_zero": "reference volume is quadratic in the common proper time",
+  "general_CST_derivative_bias": "UNRESOLVED unless independent third/fourth time-derivative or direct-operator bounds are supplied",
+  "numerical_status": "fixed-epsilon sensitivity rational exact; logarithmic probability/resource evaluation floating point"
+}
