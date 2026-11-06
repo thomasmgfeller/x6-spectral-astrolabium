@@ -1,5 +1,15 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Exakte CST-Verklebungsregel v0.1 · 6. November 2026
+
+Die BDG-Wirkung wird für beliebige endliche Ordnungen vollständig in induzierte Teilordnungen und Kopplungsbeiträge zerlegt. Neben grenzüberschreitenden Paaren müssen Änderungen interner Intervallklassen berücksichtigt werden. Unter einem ausdrücklich angenommenen markierungstreuen Zählmaß sind Symmetriefaktoren und Amplitudenkomposition exakt geschlossen; die zugrunde liegende Biaktionsidee ist aus der CST-Literatur bekannt.
+
+130 116 Wirkungs- und Stromschnittprüfungen, 6 372 rationale verschmierte Kontrollen, 7 998 Assoziativitätsfälle und 1 549 markierte Bahnprüfungen bestehen. Vier vollständige 2+2-Kerne und 32 endliche Variationsidentitäten sind ausgewertet. Ein zweiter Generator mit unabhängiger Intervallarithmetik bestätigt alle 4 473 Ordnungen und 130 116 Kopplungskorrekturen. Ein explizites Gegenbeispiel zeigt: Gleiche Elementzahl, gleicher Wirkungswert und gleich viele Erweiterungen genügen nicht für gleiche Zukunftsamplituden.
+
+**Physikalisches CST-Staub-Anschlussgesetz: HOLD_NOT_DERIVED. Globaler Bounce: HOLD_NOT_RUN. Regularität und Fortsetzung: separat HOLD.** Die Prüfung ist keine vierdimensionale Staubball-Dynamik und keine physikalisch abgeglichene Verfeinerung. Ein neuer, abgegrenzter P5-Datensatz hält alle acht physikalischen Entscheidungen offen. Materiekopplung, Maß und Zustand sowie die kontrollierte erste Randvariation bleiben zu bestimmen. Keine neuen dynamischen CST-Ensembles und keine Singularitätsauflösung nachgewiesen.
+
+[Bericht (PDF, zehn Seiten)](reports/CST_DUST_Verklebungsregel_v0_1.pdf) · [Unverändertes Prüfpaket (ZIP)](packages/CST_DUST_Verklebungsregel_v0_1_Pruefpaket.zip) · [Beweise, Aussagegrenzen und Nachrechnung](gluing_v0_1/PUBLICATION.md)
+
 ## Innen-/Außenraum-Anschluss v0.1 · 6. November 2026
 
 Der endliche klassische Einstein-Staubball ist an den vollständigen Schwarzschild-Außenraum angeschlossen: erste und zweite Fundamentalform, Feldgleichungen, Massen- und Flussbilanz, distributionelle Erhaltung und regulärer Horizontdurchgang sind gemeinsam geprüft. 34 exakte Identitäten, 15 Randfälle, 75 Außenraumwerte und neun EF-Einbettungen bestätigen die Referenz. Ein Ereignishorizont wird nur unter einer zusätzlichen klassischen Zukunftswahl angegeben; diese Zukunft bleibt singulär.

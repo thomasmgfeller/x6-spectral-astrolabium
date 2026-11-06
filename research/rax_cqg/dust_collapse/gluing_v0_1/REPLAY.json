@@ -1,0 +1,27 @@
+{
+  "id": "CST-DUST-GLUING-001",
+  "isolated_replay": "PASS_BYTE_IDENTICAL_RESULTS",
+  "python": "3.12.14",
+  "result_files": 14,
+  "sha256": {
+    "action_vs_variation.csv": "708dfb1ad85357e6dd2153748734c28e15efd56600cb41737f362d866b8829b1",
+    "associativity.csv": "e6cdd52988f4a4146dd79283ed15bdedc2a84cd9468bfefc6c5a646ca9b69af4",
+    "checkpoint_P5_audit.json": "66b9428deba33ed7777906810af6377cb617988d7026557d9d58931376dc17b9",
+    "checkpoint_P5_record.json": "97c046d4ef097cc3dbecf7976d2043344aa488463d6473e5f4d3c0b12c9a1c49",
+    "coarse_state_counterexample.json": "80f524ae4738aaff73c8726af29967a80d08844bdcd37f03e8bfa1ff7fb30f78",
+    "controls.json": "201f80d97b38648315d11e010e017207d5a95c77ba4de8e6d55ff7c0cc35565a",
+    "exhaustive_partitions.csv": "a8cc016271c33950565471d7291bf4bba614ccf0b1fb4d989d5165e8d844020c",
+    "gate_negative_controls.json": "4354c69b248cf9615046ee2a7c73fabb8a9e5dd0486cb1552d064c2ad1a5c55a",
+    "gluing_kernels_2_plus_2.json": "326c4e016b37154298ea875aa4dfb1828051805a4734a2be925d05e32ce53904",
+    "independent_verification.json": "8ac56e44f1405e4264ef3a9c8cb95e24e87982dede7fe0330e71316506e2db49",
+    "marked_measure.csv": "7737c6394d1e05d23a4bc1d31b2fb7ecc8214bb82ee31c9565a7f6f787b3e57b",
+    "marked_partition_polynomials.json": "7d5baa59402daaa24d565724f8fc2b2308588c84a4640bafc15a8aee41ec5853",
+    "run_manifest.json": "38b3a45731e6714f47d1b217660f91f37536ba3e22baaca8d0e128af9e0567ae",
+    "verification.json": "07dde469845cb60d7be78f2d2c4a7c48e83f5568e68bed0ec9819cb67e4c5c7b"
+  },
+  "commands": [
+    "python3 -O -B analyze.py",
+    "python3 -O -B verify_independent.py"
+  ],
+  "new_physical_ensembles": 0
+}

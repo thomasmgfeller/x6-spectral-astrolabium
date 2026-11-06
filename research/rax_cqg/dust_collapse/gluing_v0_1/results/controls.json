@@ -1,0 +1,134 @@
+[
+  {
+    "control": "Directed two-cycle rejected",
+    "actual": false,
+    "expected": false,
+    "pass": true
+  },
+  {
+    "control": "Nontransitive union rejected",
+    "actual": false,
+    "expected": false,
+    "pass": true
+  },
+  {
+    "control": "Transitive completion can change fixed inner order",
+    "actual": false,
+    "expected": false,
+    "pass": true
+  },
+  {
+    "control": "Excised intermediate point changes internal action layer",
+    "actual": [
+      -2,
+      10
+    ],
+    "expected": [
+      -2,
+      10
+    ],
+    "pass": true
+  },
+  {
+    "control": "Cross-only reconstruction fails",
+    "actual": false,
+    "expected": false,
+    "pass": true
+  },
+  {
+    "control": "Two isolated chain pieces do not reconstruct full action",
+    "actual": [
+      3,
+      2
+    ],
+    "expected": [
+      3,
+      2
+    ],
+    "pass": true
+  },
+  {
+    "control": "Mark-preserving automorphism group required",
+    "actual": [
+      4,
+      24
+    ],
+    "expected": [
+      4,
+      24
+    ],
+    "pass": true
+  },
+  {
+    "control": "Equal extension counts do not determine phases",
+    "actual": true,
+    "expected": true,
+    "pass": true
+  },
+  {
+    "control": "Equal coarse data produce unequal amplitudes at i",
+    "actual": [
+      "1",
+      "0",
+      "1",
+      "2"
+    ],
+    "expected": [
+      "1",
+      "0",
+      "1",
+      "2"
+    ],
+    "pass": true
+  },
+  {
+    "control": "Smeared action at epsilon=1 recovers all BDG coefficients",
+    "actual": [
+      -1,
+      9,
+      -16,
+      8,
+      0,
+      0,
+      0,
+      0
+    ],
+    "expected": [
+      -1,
+      9,
+      -16,
+      8,
+      0,
+      0,
+      0,
+      0
+    ],
+    "pass": true
+  },
+  {
+    "control": "Full worldline has zero internal source",
+    "actual": [
+      1,
+      0,
+      -1
+    ],
+    "expected": [
+      1,
+      0,
+      -1
+    ],
+    "pass": true
+  },
+  {
+    "control": "Deleting cross edges loses the endpoint-source balance",
+    "actual": false,
+    "expected": false,
+    "pass": true
+  },
+  {
+    "control": "Action convergence cannot promote first-variation convergence",
+    "actual": false,
+    "expected": false,
+    "pass": true
+  }
+]

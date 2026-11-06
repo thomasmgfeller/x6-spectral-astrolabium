@@ -1,0 +1,326 @@
+{
+  "contract_id": "CST-DUST-MC-001",
+  "contract_sha256": "01a0c7820769995a09813e50f35085a74b0dab2318e05e1833f62bd4b26678bf",
+  "checkpoint_id": "P5",
+  "checkpoint_context": {
+    "substep": "EXACT_BDG_GLUING",
+    "carrier": "All finite orders N<=5 for algebraic controls; no dimension selection"
+  },
+  "execution": "NOT_RUN",
+  "run_manifest_sha256": "38b3a45731e6714f47d1b217660f91f37536ba3e22baaca8d0e128af9e0567ae",
+  "scope": {
+    "model_id": "CST-DUST-C1",
+    "domain": "Interior, material interface, exterior and computational boundary remain distinct",
+    "time_interval": "No physical dust-time evolution run",
+    "refinement": "No physical density family specified or run",
+    "claim_level": "Exact composition scaffolding; no physical junction, bounce or singularity-resolution qualification"
+  },
+  "gates": {
+    "MODEL": {
+      "carrier": {
+        "outcome": "UNRESOLVED",
+        "evidence_kind": "DEFINITION",
+        "evidence_refs": [
+          "DERIVATION.md",
+          "results/verification.json"
+        ],
+        "scope_checked": true,
+        "reviewed": true
+      },
+      "action_measure": {
+        "outcome": "UNRESOLVED",
+        "evidence_kind": "DEFINITION",
+        "evidence_refs": [
+          "DERIVATION.md",
+          "results/verification.json"
+        ],
+        "scope_checked": true,
+        "reviewed": true
+      },
+      "quantum_consistency": {
+        "outcome": "UNRESOLVED",
+        "evidence_kind": "DEFINITION",
+        "evidence_refs": [
+          "DERIVATION.md",
+          "results/verification.json"
+        ],
+        "scope_checked": true,
+        "reviewed": true
+      },
+      "coarse_map": {
+        "outcome": "UNRESOLVED",
+        "evidence_kind": "DEFINITION",
+        "evidence_refs": [
+          "DERIVATION.md",
+          "results/verification.json"
+        ],
+        "scope_checked": true,
+        "reviewed": true
+      }
+    },
+    "CURRENT": {
+      "definition": {
+        "outcome": "UNRESOLVED",
+        "evidence_kind": "DEFINITION",
+        "evidence_refs": [
+          "DERIVATION.md",
+          "results/verification.json"
+        ],
+        "scope_checked": true,
+        "reviewed": true
+      },
+      "conservation": {
+        "outcome": "UNRESOLVED",
+        "evidence_kind": "DEFINITION",
+        "evidence_refs": [
+          "DERIVATION.md",
+          "results/verification.json"
+        ],
+        "scope_checked": true,
+        "reviewed": true
+      },
+      "calibration": {
+        "outcome": "UNRESOLVED",
+        "evidence_kind": "DEFINITION",
+        "evidence_refs": [
+          "DERIVATION.md",
+          "results/verification.json"
+        ],
+        "scope_checked": true,
+        "reviewed": true
+      }
+    },
+    "CORRESPONDENCE": {
+      "eligibility": {
+        "outcome": "UNRESOLVED",
+        "evidence_kind": "DEFINITION",
+        "evidence_refs": [
+          "DERIVATION.md",
+          "results/verification.json"
+        ],
+        "scope_checked": true,
+        "reviewed": true
+      },
+      "dynamics": {
+        "outcome": "UNRESOLVED",
+        "evidence_kind": "DEFINITION",
+        "evidence_refs": [
+          "DERIVATION.md",
+          "results/verification.json"
+        ],
+        "scope_checked": true,
+        "reviewed": true
+      },
+      "mass_response": {
+        "outcome": "UNRESOLVED",
+        "evidence_kind": "DEFINITION",
+        "evidence_refs": [
+          "DERIVATION.md",
+          "results/verification.json"
+        ],
+        "scope_checked": true,
+        "reviewed": true
+      },
+      "refinement": {
+        "outcome": "UNRESOLVED",
+        "evidence_kind": "DEFINITION",
+        "evidence_refs": [
+          "DERIVATION.md",
+          "results/verification.json"
+        ],
+        "scope_checked": true,
+        "reviewed": true
+      }
+    },
+    "BOUNCE": {
+      "event": {
+        "outcome": "UNRESOLVED",
+        "evidence_kind": "DEFINITION",
+        "evidence_refs": [
+          "DERIVATION.md",
+          "results/verification.json"
+        ],
+        "scope_checked": true,
+        "reviewed": true
+      },
+      "probability": {
+        "outcome": "UNRESOLVED",
+        "evidence_kind": "DEFINITION",
+        "evidence_refs": [
+          "DERIVATION.md",
+          "results/verification.json"
+        ],
+        "scope_checked": true,
+        "reviewed": true
+      },
+      "prediction": {
+        "outcome": "UNRESOLVED",
+        "evidence_kind": "DEFINITION",
+        "evidence_refs": [
+          "DERIVATION.md",
+          "results/verification.json"
+        ],
+        "scope_checked": true,
+        "reviewed": true
+      }
+    },
+    "REGULARITY": {
+      "operators": {
+        "outcome": "UNRESOLVED",
+        "evidence_kind": "DEFINITION",
+        "evidence_refs": [
+          "DERIVATION.md",
+          "results/verification.json"
+        ],
+        "scope_checked": true,
+        "reviewed": true
+      },
+      "bounds": {
+        "outcome": "UNRESOLVED",
+        "evidence_kind": "DEFINITION",
+        "evidence_refs": [
+          "DERIVATION.md",
+          "results/verification.json"
+        ],
+        "scope_checked": true,
+        "reviewed": true
+      },
+      "tails": {
+        "outcome": "UNRESOLVED",
+        "evidence_kind": "DEFINITION",
+        "evidence_refs": [
+          "DERIVATION.md",
+          "results/verification.json"
+        ],
+        "scope_checked": true,
+        "reviewed": true
+      },
+      "refinement": {
+        "outcome": "UNRESOLVED",
+        "evidence_kind": "DEFINITION",
+        "evidence_refs": [
+          "DERIVATION.md",
+          "results/verification.json"
+        ],
+        "scope_checked": true,
+        "reviewed": true
+      },
+      "time_domain": {
+        "outcome": "UNRESOLVED",
+        "evidence_kind": "DEFINITION",
+        "evidence_refs": [
+          "DERIVATION.md",
+          "results/verification.json"
+        ],
+        "scope_checked": true,
+        "reviewed": true
+      }
+    },
+    "BOUNDARY": {
+      "domain": {
+        "outcome": "UNRESOLVED",
+        "evidence_kind": "DEFINITION",
+        "evidence_refs": [
+          "DERIVATION.md",
+          "results/verification.json"
+        ],
+        "scope_checked": true,
+        "reviewed": true
+      },
+      "cross_intervals": {
+        "outcome": "UNRESOLVED",
+        "evidence_kind": "DEFINITION",
+        "evidence_refs": [
+          "DERIVATION.md",
+          "results/verification.json"
+        ],
+        "scope_checked": true,
+        "reviewed": true
+      },
+      "junction": {
+        "outcome": "UNRESOLVED",
+        "evidence_kind": "DEFINITION",
+        "evidence_refs": [
+          "DERIVATION.md",
+          "results/verification.json"
+        ],
+        "scope_checked": true,
+        "reviewed": true
+      },
+      "balance": {
+        "outcome": "UNRESOLVED",
+        "evidence_kind": "DEFINITION",
+        "evidence_refs": [
+          "DERIVATION.md",
+          "results/verification.json"
+        ],
+        "scope_checked": true,
+        "reviewed": true
+      }
+    },
+    "TRAPPING": {
+      "definition": {
+        "outcome": "UNRESOLVED",
+        "evidence_kind": "DEFINITION",
+        "evidence_refs": [
+          "DERIVATION.md",
+          "results/verification.json"
+        ],
+        "scope_checked": true,
+        "reviewed": true
+      },
+      "calibration": {
+        "outcome": "UNRESOLVED",
+        "evidence_kind": "DEFINITION",
+        "evidence_refs": [
+          "DERIVATION.md",
+          "results/verification.json"
+        ],
+        "scope_checked": true,
+        "reviewed": true
+      },
+      "dynamical_evidence": {
+        "outcome": "UNRESOLVED",
+        "evidence_kind": "DEFINITION",
+        "evidence_refs": [
+          "DERIVATION.md",
+          "results/verification.json"
+        ],
+        "scope_checked": true,
+        "reviewed": true
+      }
+    },
+    "EXTENSION": {
+      "dictionary": {
+        "outcome": "UNRESOLVED",
+        "evidence_kind": "DEFINITION",
+        "evidence_refs": [
+          "DERIVATION.md",
+          "results/verification.json"
+        ],
+        "scope_checked": true,
+        "reviewed": true
+      },
+      "coverage": {
+        "outcome": "UNRESOLVED",
+        "evidence_kind": "DEFINITION",
+        "evidence_refs": [
+          "DERIVATION.md",
+          "results/verification.json"
+        ],
+        "scope_checked": true,
+        "reviewed": true
+      },
+      "proof": {
+        "outcome": "UNRESOLVED",
+        "evidence_kind": "DEFINITION",
+        "evidence_refs": [
+          "DERIVATION.md",
+          "results/verification.json"
+        ],
+        "scope_checked": true,
+        "reviewed": true
+      }
+    }
+  }
+}

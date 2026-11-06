@@ -1,0 +1,127 @@
+{
+  "N": 3,
+  "F4_both": 1,
+  "upper_V_relations": [
+    [
+      0,
+      2
+    ],
+    [
+      1,
+      2
+    ]
+  ],
+  "lower_V_relations": [
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      2
+    ]
+  ],
+  "upper_kernel": [
+    {
+      "power": -1,
+      "coefficient": "1"
+    },
+    {
+      "power": 0,
+      "coefficient": "2"
+    },
+    {
+      "power": 1,
+      "coefficient": "1"
+    },
+    {
+      "power": 18,
+      "coefficient": "1"
+    }
+  ],
+  "lower_kernel": [
+    {
+      "power": -17,
+      "coefficient": "1"
+    },
+    {
+      "power": 0,
+      "coefficient": "1"
+    },
+    {
+      "power": 1,
+      "coefficient": "1"
+    },
+    {
+      "power": 9,
+      "coefficient": "2"
+    }
+  ],
+  "upper_extensions": [
+    {
+      "past_mask": 0,
+      "delta_F4": 1,
+      "full_code": 68
+    },
+    {
+      "past_mask": 1,
+      "delta_F4": 0,
+      "full_code": 76
+    },
+    {
+      "past_mask": 2,
+      "delta_F4": 0,
+      "full_code": 196
+    },
+    {
+      "past_mask": 3,
+      "delta_F4": -1,
+      "full_code": 204
+    },
+    {
+      "past_mask": 7,
+      "delta_F4": 18,
+      "full_code": 2252
+    }
+  ],
+  "lower_extensions": [
+    {
+      "past_mask": 0,
+      "delta_F4": 1,
+      "full_code": 6
+    },
+    {
+      "past_mask": 1,
+      "delta_F4": 0,
+      "full_code": 14
+    },
+    {
+      "past_mask": 3,
+      "delta_F4": 9,
+      "full_code": 142
+    },
+    {
+      "past_mask": 5,
+      "delta_F4": 9,
+      "full_code": 2062
+    },
+    {
+      "past_mask": 7,
+      "delta_F4": -17,
+      "full_code": 2190
+    }
+  ],
+  "at_z_1_both": [
+    "5",
+    "0"
+  ],
+  "at_z_i_upper": [
+    "1",
+    "0"
+  ],
+  "at_z_i_lower": [
+    "1",
+    "2"
+  ],
+  "conclusion": "Same cardinality and BDG action do not determine the future gluing kernel; phase sums are not probabilities"
+}
