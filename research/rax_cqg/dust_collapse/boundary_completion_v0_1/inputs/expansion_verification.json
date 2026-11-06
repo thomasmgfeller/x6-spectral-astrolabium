@@ -1,0 +1,182 @@
+{
+  "id": "CST-DUST-EXPANSION-TRAPPING-001",
+  "plan_sha256": "19dd9611f324a6d91866c5b71dad495a3391ba497e5e9c87a107cd2e4bfedfbd",
+  "interior_comparisons": 420,
+  "exterior_slots": 420,
+  "numerical_levels": [
+    {
+      "N": 128,
+      "interior_spheres": 105,
+      "max_absolute_e_error": "0.01171054814164875592402733994275017816884121997074217561894",
+      "numerical_cap_pass": false
+    },
+    {
+      "N": 256,
+      "interior_spheres": 105,
+      "max_absolute_e_error": "0.00588586234634536756651068453288732605252462660593050518659",
+      "numerical_cap_pass": false
+    },
+    {
+      "N": 512,
+      "interior_spheres": 105,
+      "max_absolute_e_error": "0.00295063933450164556149281413223493281394057474925623999475",
+      "numerical_cap_pass": true
+    },
+    {
+      "N": 1024,
+      "interior_spheres": 105,
+      "max_absolute_e_error": "0.00147725441514498564150532097980645347008979393393333885235",
+      "numerical_cap_pass": true
+    }
+  ],
+  "area_calibration": [
+    {
+      "delta_x": "1/64",
+      "cases": 54,
+      "max_absolute_e_error": "0.000137040361735619509950845742805132885103743770503369713688",
+      "numerical_cap_pass": true
+    },
+    {
+      "delta_x": "1/128",
+      "cases": 54,
+      "max_absolute_e_error": "0.000034259686930782986069981022243850537528853895084175334690",
+      "numerical_cap_pass": true
+    },
+    {
+      "delta_x": "1/256",
+      "cases": 54,
+      "max_absolute_e_error": "0.000008564896514592818707442950981599066389498058959782989583",
+      "numerical_cap_pass": true
+    },
+    {
+      "delta_x": "1/512",
+      "cases": 54,
+      "max_absolute_e_error": "0.000002141222552529930331203717617254072704659489058965028628",
+      "numerical_cap_pass": true
+    }
+  ],
+  "surface_matching_cases": 15,
+  "analytic_crossing_candidates": 21,
+  "crossings_in_window": [
+    {
+      "M": "4",
+      "chi": "9/10",
+      "threshold_Rb": "162/25",
+      "x_lo": "0.956740124417698119243335933116512677398133699240457828967888",
+      "x_hi": "0.956740124417698119243335933117535041131300130540271429188498",
+      "T_lo": "3.56555992499929898803057889576805652246999319542815736705680",
+      "T_hi": "3.56555992499929898803057889577815610448355592991741593960012",
+      "status": "IN_FIXED_WINDOW",
+      "physical_CST": "HOLD_NOT_RUN"
+    },
+    {
+      "M": "4",
+      "chi": "19/20",
+      "threshold_Rb": "361/50",
+      "x_lo": "0.773024779386315397786358224492878895952858063459871939659526",
+      "x_hi": "0.773024779386315397786358224494018011099997204506886475707798",
+      "T_lo": "2.88089325833263232136391222909927534918875267447133392964286",
+      "T_hi": "2.88089325833263232136391222910860232258763201285341057871821",
+      "status": "IN_FIXED_WINDOW",
+      "physical_CST": "HOLD_NOT_RUN"
+    },
+    {
+      "M": "4",
+      "chi": "1",
+      "threshold_Rb": "8",
+      "x_lo": "0.568916494400134594298128852011536956138295001523287337374250",
+      "x_hi": "0.568916494400134594298128852012799133586648620411946103078706",
+      "T_lo": "2.12022659166596565469724556243471552870983060813486741772522",
+      "T_hi": "2.12022659166596565469724556244315935283987093513719730192320",
+      "status": "IN_FIXED_WINDOW",
+      "physical_CST": "HOLD_NOT_RUN"
+    }
+  ],
+  "numerical_event_brackets": 12,
+  "all_bracket_caps_pass": true,
+  "continuous_reference_decisions": [
+    {
+      "M": "1/4",
+      "R_b_end": [
+        "9.14826427505742879309518327529207147228393991114561865018398",
+        "9.14826427505742879309518327529996008133615002919973593583682"
+      ],
+      "surface_C_max": [
+        "0.0546551766506396886056890525585274084288752155117794058040320",
+        "0.0546551766506396886056890525585745379507509565508553776216375"
+      ],
+      "chi_inner_end": [
+        "4.27744416095813664406461132175211881200380660380783150857848",
+        "4.27744416095813664406461132177024069659139500962669141082976"
+      ],
+      "Theta_times_Tend_end": [
+        "-0.285714285714285714285714285714285714285714285714285714285715",
+        "-0.285714285714285714285714285714285714285714285714285714285714"
+      ],
+      "whole_window_round_trapping": "ABSENT_IN_REFERENCE_WINDOW",
+      "scope": "ALL_ROUND_SYMMETRY_SPHERES_ONLY; not arbitrary trapped surfaces or event horizons"
+    },
+    {
+      "M": "1",
+      "R_b_end": [
+        "8.25481812223656670968652488102076980973659689918305496056545",
+        "8.25481812223656670968652488102865841878880701723717224621829"
+      ],
+      "surface_C_max": [
+        "0.242282745710951954518828234176793548346076105358541198401968",
+        "0.242282745710951954518828234177025082685501611168149630151362"
+      ],
+      "chi_inner_end": [
+        "2.03160258444369068853438734684274060740503893531093724503796",
+        "2.03160258444369068853438734684793803351101363799019073624752"
+      ],
+      "Theta_times_Tend_end": [
+        "-0.666666666666666666666666666666666666666666666666666666666669",
+        "-0.666666666666666666666666666666666666666666666666666666666666"
+      ],
+      "whole_window_round_trapping": "ABSENT_IN_REFERENCE_WINDOW",
+      "scope": "ALL_ROUND_SYMMETRY_SPHERES_ONLY; not arbitrary trapped surfaces or event horizons"
+    },
+    {
+      "M": "4",
+      "R_b_end": [
+        "6.29960524947436582383605303638371050308162206387165847111270",
+        "6.29960524947436582383605303639159911213383218192577575676554"
+      ],
+      "surface_C_max": [
+        "1.26992084157455957980136451141775441045919772126580822778557",
+        "1.26992084157455957980136451141934465439508104482665939952738"
+      ],
+      "chi_inner_end": [
+        "0.887384164938892589420824583859379898504054018800609289962730",
+        "0.887384164938892589420824583860957620314496042411432747093296"
+      ],
+      "Theta_times_Tend_end": [
+        "-2.00000000000000000000000000000000000000000000000000000000001",
+        "-1.99999999999999999999999999999999999999999999999999999999999"
+      ],
+      "whole_window_round_trapping": "PRESENT_AFTER_SURFACE_CROSSING",
+      "scope": "ALL_ROUND_SYMMETRY_SPHERES_ONLY; not arbitrary trapped surfaces or event horizons"
+    }
+  ],
+  "marginal_tube_readouts": 4,
+  "controls": 25,
+  "finest_round_classifications": {
+    "FUTURE_TRAPPED_ROUND": 4,
+    "UNTRAPPED_ROUND": 101
+  },
+  "hypothetical_5_percent_box_classifications": {
+    "FUTURE_TRAPPED_ROUND": 1,
+    "HOLD_SIGN_UNRESOLVED": 9,
+    "UNTRAPPED_ROUND": 95
+  },
+  "P4_records": 72,
+  "classical_reference": "RUN_SEPARATE_SCOPE",
+  "physical_CST_trapping": "HOLD_NOT_ELIGIBLE",
+  "physical_CST_execution": "NOT_RUN",
+  "physical_CST_regularity": "HOLD",
+  "global_event_horizon": "NOT_DETERMINED",
+  "new_CST_ensembles": 0,
+  "new_random_draws": 0,
+  "paid_runs": false
+}

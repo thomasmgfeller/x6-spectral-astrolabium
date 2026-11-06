@@ -1,0 +1,116 @@
+[
+  {
+    "control": "Exact classical boundary",
+    "observed": "PASS_CLASSICAL",
+    "expected": "PASS_CLASSICAL",
+    "pass": true
+  },
+  {
+    "control": "Mass match at one instant does not fix acceleration",
+    "observed": "FAIL_CLASSICAL_JUNCTION",
+    "expected": "FAIL_CLASSICAL_JUNCTION",
+    "pass": true
+  },
+  {
+    "control": "Wrong exterior mass",
+    "observed": "FAIL_CLASSICAL_JUNCTION",
+    "expected": "FAIL_CLASSICAL_JUNCTION",
+    "pass": true
+  },
+  {
+    "control": "Bounce cannot be vacuum no-shell",
+    "observed": "FAIL_CLASSICAL_JUNCTION",
+    "expected": "FAIL_CLASSICAL_JUNCTION",
+    "pass": true
+  },
+  {
+    "control": "Opposite normal orientation cannot be compared as equal",
+    "observed": false,
+    "expected": false,
+    "pass": true
+  },
+  {
+    "control": "Schwarzschild bounce embedding R=1",
+    "observed": "NO_TIMELIKE_BOUNCE",
+    "expected": "NO_TIMELIKE_BOUNCE",
+    "pass": true
+  },
+  {
+    "control": "Schwarzschild bounce embedding R=2",
+    "observed": "NO_TIMELIKE_BOUNCE",
+    "expected": "NO_TIMELIKE_BOUNCE",
+    "pass": true
+  },
+  {
+    "control": "Schwarzschild bounce embedding R=3",
+    "observed": "REQUIRES_NONZERO_SHELL",
+    "expected": "REQUIRES_NONZERO_SHELL",
+    "pass": true
+  },
+  {
+    "control": "Vaidya varying mass violates zero flux",
+    "observed": false,
+    "expected": false,
+    "pass": true
+  },
+  {
+    "control": "Constant Vaidya mass is vacuum",
+    "observed": true,
+    "expected": true,
+    "pass": true
+  },
+  {
+    "control": "Conditional atmosphere is not vacuum",
+    "observed": true,
+    "expected": true,
+    "pass": true
+  },
+  {
+    "control": "Atmosphere violates dominant energy bound",
+    "observed": false,
+    "expected": false,
+    "pass": true
+  },
+  {
+    "control": "Cut four-chain changes action",
+    "observed": false,
+    "expected": false,
+    "pass": true
+  },
+  {
+    "control": "Classical completion cannot qualify CST",
+    "observed": "HOLD",
+    "expected": "HOLD",
+    "pass": true
+  },
+  {
+    "control": "Missing closure component 0",
+    "observed": "HOLD",
+    "expected": "HOLD",
+    "pass": true
+  },
+  {
+    "control": "Missing closure component 1",
+    "observed": "HOLD",
+    "expected": "HOLD",
+    "pass": true
+  },
+  {
+    "control": "Missing closure component 2",
+    "observed": "HOLD",
+    "expected": "HOLD",
+    "pass": true
+  },
+  {
+    "control": "Missing closure component 3",
+    "observed": "HOLD",
+    "expected": "HOLD",
+    "pass": true
+  },
+  {
+    "control": "Classical curvature grows sixteenfold when remaining proper time halves",
+    "observed": "16",
+    "expected": "16",
+    "pass": true
+  }
+]

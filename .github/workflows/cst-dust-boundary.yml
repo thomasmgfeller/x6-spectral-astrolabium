@@ -1,0 +1,44 @@
+name: CST-DUST interior and exterior junction
+on:
+  pull_request:
+    paths:
+      - 'research/rax_cqg/dust_collapse/boundary_completion_v0_1/**'
+      - 'research/rax_cqg/dust_collapse/model_contract_v0_1/**'
+      - 'research/rax_cqg/dust_collapse/expansion_trapping_v0_1/**'
+      - 'research/rax_cqg/dust_collapse/correspondence_v0_1/**'
+      - 'research/rax_cqg/dust_collapse/regularity_v0_2/**'
+      - 'research/rax_cqg/dust_collapse/reports/CST_DUST_Innen_Aussen_Anschluss_v0_1.pdf'
+      - 'research/rax_cqg/dust_collapse/packages/CST_DUST_Innen_Aussen_Anschluss_v0_1_Pruefpaket.zip'
+      - '.github/workflows/cst-dust-boundary.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'research/rax_cqg/dust_collapse/boundary_completion_v0_1/**'
+      - 'research/rax_cqg/dust_collapse/model_contract_v0_1/**'
+      - 'research/rax_cqg/dust_collapse/expansion_trapping_v0_1/**'
+      - 'research/rax_cqg/dust_collapse/correspondence_v0_1/**'
+      - 'research/rax_cqg/dust_collapse/regularity_v0_2/**'
+      - 'research/rax_cqg/dust_collapse/reports/CST_DUST_Innen_Aussen_Anschluss_v0_1.pdf'
+      - 'research/rax_cqg/dust_collapse/packages/CST_DUST_Innen_Aussen_Anschluss_v0_1_Pruefpaket.zip'
+      - '.github/workflows/cst-dust-boundary.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  junction-reference-and-scope:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Check original artifacts and all separate P5 decisions
+        run: python3 -O -B research/rax_cqg/dust_collapse/boundary_completion_v0_1/publication_check.py
+      - name: Install pinned symbolic replay dependencies
+        run: |
+          python3 -m pip install --only-binary=:all: -r research/rax_cqg/dust_collapse/boundary_completion_v0_1/requirements.txt
+      - name: Replay tensors, junctions, causal cuts and P5 decisions in isolation
+        run: python3 -O -B research/rax_cqg/dust_collapse/boundary_completion_v0_1/publication_check.py --replay

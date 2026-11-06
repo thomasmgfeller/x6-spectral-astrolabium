@@ -1,0 +1,114 @@
+{
+  "id": "CST-DUST-BOUNDARY-001",
+  "version": "0.1.0",
+  "date": "2026-11-06",
+  "freeze": "LOCAL_PRECALCULATION_FREEZE; known equations; not external preregistration",
+  "primary_scope": "Full classical finite-ball junction, distributional balance, regular boundary/horizon crossing and asymptotically flat exterior. Not a closed CST model.",
+  "reference": {
+    "G": 1,
+    "c": 1,
+    "R0": 10,
+    "masses": [
+      "1/4",
+      "1",
+      "4"
+    ],
+    "x_times": [
+      "0",
+      "1/4",
+      "1/2",
+      "3/4",
+      "1"
+    ],
+    "Tend": "5*sqrt(5)/3",
+    "exterior_radius_over_Rb": [
+      1,
+      2,
+      4,
+      8,
+      16
+    ],
+    "EF_radius_over_2GM": [
+      "2",
+      "1",
+      "1/2"
+    ],
+    "EF_scope": "Analytic classical solution tests; horizon/late cases may lie outside inherited numerical window"
+  },
+  "numerical": {
+    "decimal_precision": 60,
+    "root_bisections": 100,
+    "identity_residual_cap": "1e-20",
+    "not_physical_tolerance": true
+  },
+  "symbolic": {
+    "method": "Christoffel/Ricci/Einstein tensor from full 4D metric; exact SymPy simplification; junction, shell and mass identities separately",
+    "required_sympy": "1.14.0"
+  },
+  "future_completion": {
+    "status": "EXPLICIT_CLASSICAL_FUTURE_ASSUMPTION_ONLY",
+    "assumptions": [
+      "Einstein dust continues to Ts with no bounce",
+      "Vacuum Schwarzschild persists to future null infinity",
+      "No new shell or incoming radiation"
+    ],
+    "event_horizon": "backward outgoing null ray from surface Rb=2GM; separate from finite-window evidence",
+    "singularity_resolution": "FAIL_IN_CLASSICAL_COMPLETION"
+  },
+  "legacy_conditional_exterior": {
+    "status": "CONDITIONAL_GEOMETRIC_CONSTRUCTION_NOT_CST_NOT_REACTIVATION_OF_REJECTED_BOUNCE",
+    "M": 1,
+    "rmin_over_GM": [
+      "1/2",
+      "1",
+      "2",
+      "3"
+    ],
+    "y_times": [
+      "-3",
+      "-1",
+      "0",
+      "1",
+      "3"
+    ],
+    "Rb": "rmin*(1+y^2)^(1/3)",
+    "tau_scale": "sqrt(2*rmin^3/(9*G*M))",
+    "exterior": "static reciprocal metric f=1-2GM/R+2GM*rmin^3/R^4; effective nonvacuum stress",
+    "global_extension": "NOT_QUALIFIED; coordinate branches and any inner-horizon stability remain separate"
+  },
+  "causal_cut_controls": {
+    "N": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "splits": "all contiguous nonempty cuts plus four-chain nonconvex partition",
+    "functional": "F4=N-N0+9N1-16N2+8N3, N_k counts pairs with k intervening elements",
+    "scope": "exact combinatorial controls; chains are not a 4D dynamical ensemble"
+  },
+  "physical_CST": {
+    "execution": "NOT_RUN",
+    "all_gates": "HOLD",
+    "density_ratios_planned": [
+      1,
+      2,
+      4,
+      8
+    ],
+    "lambda0": null,
+    "Lk": null,
+    "Lcg": null,
+    "exterior_state": null,
+    "junction_action_and_measure": null,
+    "outer_domain_error_bound": null,
+    "regularity_separate": true
+  },
+  "budget": {
+    "new_CST_ensembles": 0,
+    "new_random_draws": 0,
+    "paid_runs": false
+  }
+}
