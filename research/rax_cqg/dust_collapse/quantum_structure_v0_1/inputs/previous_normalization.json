@@ -1,0 +1,63 @@
+{
+  "candidate": "CST-DUST-V1-RAW-K",
+  "boundary_inner_products": "I_2",
+  "gravity_common_phase_removed": true,
+  "kernel": [
+    [
+      {
+        "real": "0.83249832886801814364724112371382911",
+        "imag": "-0.30975426611076569663727004952191043"
+      },
+      {
+        "real": "0.95442584001555611115549463518659596",
+        "imag": "-0.17887408741745274245877416466661030"
+      }
+    ],
+    [
+      {
+        "real": "0.56939290764587849065028388588686915",
+        "imag": "-0.34987315975135700801757445264122063"
+      },
+      {
+        "real": "0.83249832886801814364724112371382911",
+        "imag": "-0.30975426611076569663727004952191043"
+      }
+    ]
+  ],
+  "gram": [
+    [
+      {
+        "real": "1.2356206841336884349711866617575673",
+        "imag": "0"
+      },
+      {
+        "real": "1.4323582764307628362147351560851979",
+        "imag": "0.26162203535060222910088144532065011"
+      }
+    ],
+    [
+      {
+        "real": "1.4323582764307628362147351560851979",
+        "imag": "-0.26162203535060222910088144532065011"
+      },
+      {
+        "real": "1.7319257961806883758392813448038458",
+        "imag": "0"
+      }
+    ]
+  ],
+  "gram_series_absolute_error_bound": "1.6216293726518022347628588103309635E-87",
+  "display_rounding_absolute_bound_per_complex_entry": "1e-33",
+  "gram_entry_absolute_error_bound": "1.0000000000000000000000000000000001E-33",
+  "Re_gram_01_lower": "1.4323582764307628362147351560851978",
+  "analytic_lower_bound": "strictly greater than 1/2",
+  "norm_plus": "2.9161315165879512416199691593659044",
+  "norm_minus": "0.051414963726425569190498847195508634",
+  "fixed_normalization_Z_pi_pi_interval": [
+    "0.017631222540533480523076038214892713",
+    "0.017631222540533480523076038214892714"
+  ],
+  "required_Z_J_J": "1 for all equal sources in the declared closed evolution interpretation",
+  "decision": "FAIL_RAW_KERNEL_AS_CLOSED_EVOLUTION",
+  "not_a_no_go": "Different physical Hilbert spaces, rigging maps, constraint kernels, carriers and limits are not excluded"
+}
