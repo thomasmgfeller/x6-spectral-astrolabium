@@ -1,0 +1,98 @@
+{
+  "id": "CST-DUST-CURRENT-CAL-001",
+  "plan_sha256": "af4548f9fc23461719cd7b1dd58135d71c17def19adbddeb56ac0b4cc8b15fb7",
+  "graph": {
+    "controls": 86,
+    "admissible_cuts": 8,
+    "subset_Gauss_checks": 64
+  },
+  "mass_flux": {
+    "mass_cases": 420,
+    "flux_cases": 144,
+    "finest_mass_max_abs_error_over_M": 0.00011868003488779699,
+    "finest_flux_max_abs_error_over_M": 0.00012515625000009134,
+    "max_balance_residual": 0.0,
+    "mass_guarantee_finest": 0.000244140625,
+    "flux_guarantee_finest": 0.00048828125
+  },
+  "exposure": {
+    "base_cells": 315,
+    "quadrature_checks": 1575,
+    "quadrature_relative_error": 5.329070518200751e-15,
+    "max_raw_volume_bias": 0.21333333333333315,
+    "surface_average_to_bulk_range": [
+      0.46039813241177774,
+      0.4750208159866782
+    ]
+  },
+  "poisson": {
+    "family_size": 1260,
+    "alpha_per_count": 3.968253968253968e-05,
+    "lambda0": 92.89468844598797,
+    "levels": [
+      {
+        "density_ratio": 1,
+        "lambda": 92.89468844598797,
+        "min_expected_count": 5000.0,
+        "joint_pass_probability_lower": 0.0,
+        "worst_single_pass_probability": 0.0,
+        "raw_joint_pass_probability_lower": 0.0,
+        "sum_failure_probabilities": 14.31106791348147,
+        "expected_full_tube_points_min": 845921.4501510564,
+        "expected_full_tube_points_max": 1276435.0453172189,
+        "decision": "HOLD_DESIGN_POWER_NOT_CERTIFIED"
+      },
+      {
+        "density_ratio": 2,
+        "lambda": 185.78937689197593,
+        "min_expected_count": 10000.0,
+        "joint_pass_probability_lower": 0.0,
+        "worst_single_pass_probability": 0.4958878854049973,
+        "raw_joint_pass_probability_lower": 0.0,
+        "sum_failure_probabilities": 1.3824434659174492,
+        "expected_full_tube_points_min": 1691842.9003021128,
+        "expected_full_tube_points_max": 2552870.0906344377,
+        "decision": "HOLD_DESIGN_POWER_NOT_CERTIFIED"
+      },
+      {
+        "density_ratio": 4,
+        "lambda": 371.57875378395187,
+        "min_expected_count": 20000.0,
+        "joint_pass_probability_lower": 0.9812029662701672,
+        "worst_single_pass_probability": 0.9906147145458907,
+        "raw_joint_pass_probability_lower": 0.0,
+        "sum_failure_probabilities": 0.018797033729832758,
+        "expected_full_tube_points_min": 3383685.8006042256,
+        "expected_full_tube_points_max": 5105740.1812688755,
+        "decision": "PASS_CONDITIONAL_REFERENCE_DESIGN"
+      },
+      {
+        "density_ratio": 8,
+        "lambda": 743.1575075679037,
+        "min_expected_count": 40000.0,
+        "joint_pass_probability_lower": 0.9999997228192546,
+        "worst_single_pass_probability": 0.9999998614096282,
+        "raw_joint_pass_probability_lower": 0.0,
+        "sum_failure_probabilities": 2.771807453498299e-07,
+        "expected_full_tube_points_min": 6767371.601208451,
+        "expected_full_tube_points_max": 10211480.362537751,
+        "decision": "PASS_CONDITIONAL_REFERENCE_DESIGN"
+      }
+    ],
+    "minimum_numerical_coverage": 0.999960320979583,
+    "new_random_draws": 0
+  },
+  "covariance": {
+    "matrices": 12,
+    "matrix_size": 6,
+    "independence_over_correct_range": [
+      1.4945075064079099,
+      1.4997778797885393
+    ]
+  },
+  "new_dynamical_CST_ensembles": 0,
+  "CST_CURRENT": "HOLD",
+  "CST_REGULARITY": "HOLD",
+  "singularity_resolution": "HOLD",
+  "numerical_class": "FLOATING_POINT_EVALUATION_OF_ANALYTIC_REFERENCE_NOT_INTERVAL_CERTIFICATE"
+}

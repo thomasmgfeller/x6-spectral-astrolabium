@@ -1,0 +1,33 @@
+{
+  "id": "CST-DUST-PRE-SINGULARITY-001",
+  "plan_sha256": "f3f77a306380b24bb761e0a2c2708833ea6d6c723b82467a08f725e9abd8cdb1",
+  "contract_sha256": "01a0c7820769995a09813e50f35085a74b0dab2318e05e1833f62bd4b26678bf",
+  "physical_execution": "NOT_RUN",
+  "classical_reference_execution": "RUN",
+  "new_random_draws": 0,
+  "new_CST_ensembles": 0,
+  "numerical_steps": [
+    128,
+    256,
+    512,
+    1024
+  ],
+  "physical_density_ratios_planned": [
+    1,
+    2,
+    4,
+    8
+  ],
+  "physical_absolute_densities": null,
+  "versions": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0"
+  },
+  "source_sha256": {
+    "run.py": "33a0f9ca7801badba14640ba66af1221ab79cfa0d869e8c309154ae4fae662bb",
+    "intervals.py": "4a9b21a219d15f7a5c5adef979b8ea1016bc9311fd5731d208d9d7d3edc7d7f7",
+    "acceptance.py": "59ff7d74fdb6a062f0c0f78e04d9abcec31c0e87b65e03f11cb9500b87c9f117"
+  },
+  "evidence_class": "CLASSICAL_REFERENCE_AND_PROTOCOL_CONTROLS"
+}
