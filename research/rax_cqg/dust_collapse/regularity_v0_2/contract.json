@@ -1,0 +1,40 @@
+{
+  "version": "0.2",
+  "date": "2026-11-06",
+  "study_kind": "analytic_reference_audit_not_external_preregistration",
+  "scope": "separate_inverse_moment_metric_and_finite_ball_regularity",
+  "quantum_reference": {
+    "q": "sqrt(V)",
+    "measure": "dq",
+    "hamiltonian": "+kappa*hbar^2*d2/dq2",
+    "domain": "Dirichlet_half_line",
+    "initial_state": "N*q^3*exp(-(alpha-i*beta)*q^2)",
+    "alpha": 1,
+    "beta": 0.5,
+    "kappa": 1,
+    "hbar": 1,
+    "time_grid": [0, 0.05, 0.125, "35/158", 0.35, 0.5],
+    "cutoff_exponents": [4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14],
+    "spectral_interior_nodes": [512, 1024, 2048, 4096, 8192],
+    "spectral_upper_q": 16
+  },
+  "finite_ball_assumptions": [
+    "flat_homogeneous_metric",
+    "comoving_timelike_surface",
+    "V_is_total_ball_proper_volume",
+    "V=b+6*pi*G*M*t^2_with_b_positive",
+    "constant_mass_Schwarzschild_exterior",
+    "continuity_of_induced_metric_and_extrinsic_curvature_without_surface_layer"
+  ],
+  "decisions": {
+    "first_inverse_moment": "BOUNDED_WITHIN_DIRICHLET_ENERGY_CLASS",
+    "second_inverse_moment_dynamic_protection": "COUNTEREXAMPLE_PROVED",
+    "effective_interior_at_fixed_nu": "REGULAR_CONDITIONALLY",
+    "nu_to_zero_uniform_curvature": "FAIL_FOR_STATED_SCALING",
+    "smooth_Schwarzschild_matching": "EXCLUDED_UNDER_STATED_ASSUMPTIONS",
+    "CST_singularity_resolution": "HOLD",
+    "CST_refinement_ensemble": "NOT_RUN",
+    "global_causal_extension": "HOLD",
+    "new_horizon_or_black_hole_claim": "NONE"
+  }
+}

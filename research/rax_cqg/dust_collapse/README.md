@@ -1,5 +1,15 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Singularitätsauflösung separat geprüft · Regularität v0.2 · 6. November 2026
+
+Ein neuer kontrahierender Dirichlet-Zustand besitzt anfangs ein endliches zweites inverses Volumenmoment. Dieses divergiert zu jedem späteren Zeitpunkt, obwohl das mittlere Volumen bei `t = 35/158` das positive Minimum `77/79` erreicht. Das erste inverse Moment bleibt bei endlicher Energie zeituniform beschränkt. Diese Volumenobservablen werden nicht mit einem bereits hergeleiteten Dichte- oder Krümmungsoperator gleichgesetzt.
+
+Die getrennt angenommene effektive Innenmetrik ist bei fester Skala regulär; für `ν → 0` wächst ihre maximale Krümmung jedoch wie `ν⁻⁴`. Der Übergang zum endlichen Ball wird ausdrücklich geprüft: Unter den üblichen Einstein-Anschlussbedingungen ohne Oberflächenschicht kann das flache homogene Bounce-Innere an einer mitbewegten Oberfläche nicht an einen Schwarzschild-Außenraum konstanter Masse angeschlossen werden. Die Aussage schließt andere Außenräume oder hergeleitete modifizierte Anschlussgesetze nicht aus.
+
+**CST-Singularitätsauflösung bleibt HOLD.** Ein hinreichendes Kriterium für uniforme inverse Momente ist formuliert, aber nicht für einen dynamischen CST-Staubball bewiesen. Es fehlen weiterhin geeignete physikalische Operatoren, ein konsistenter Innen-/Außenraum und globale kausale Fortsetzung. Sechs Momentkontrollen, elf Cutoffs, fünf Sinusentwicklungen, 19 rationale Randkontrollen und 24 Tail-Kontrollen sind reproduzierbar dokumentiert; keine neuen CST-Ensembles oder Horizontbehauptungen.
+
+[Bericht (PDF, acht Seiten)](reports/CST_Staubball_Regularitaet_Rand_Verfeinerung_v0_2.pdf) · [Unverändertes Prüfpaket (ZIP)](packages/CST_Staubball_Regularitaet_Rand_Verfeinerung_v0_2_Pruefpaket.zip) · [Beweise, Aussagegrenzen und Nachrechnung](regularity_v0_2/PUBLICATION.md)
+
 ## Vorabprüfung einer Bounce-Vorhersage v0.1 · 5. November 2026
 
 Zehn neue synthetische Anfangszustände bestehen die vorher festgelegte Prognoseprüfung für Umkehrzeit und Minimalwert des mittleren Volumens. Die frühe Prognose wurde vor einer getrennten numerischen Entwicklung fixiert. 30 Läufe auf drei Auflösungen liefern 7230 Ablesewerte; auf dem feinsten Gitter liegen alle Fälle innerhalb von 1 % Zeitfehler und 3 % Volumenfehler. Die Maximalfehler betragen rund 0,615 % und 1,324 %.
