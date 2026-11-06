@@ -1,0 +1,112 @@
+{
+  "id": "CST-DUST-VARIATION-001",
+  "version": "0.1.0",
+  "date": "2026-11-06",
+  "freeze": "LOCAL_PRECALCULATION_NOT_EXTERNAL_PREREGISTRATION; analytic failure mechanism identified before computation",
+  "candidate": "CST-DUST-V1-RAW-K",
+  "purpose": "Derive coupled finite variations and test the additional interpretation of a regulated kinematic kernel as closed-system evolution",
+  "carrier": "fixed N strict posets with fixed marked initial/final antichains; every free element lies between at least one initial/final element; no 4D selection",
+  "gravity": "full unsmeared BDG4 at fixed N; Lambda=0; S_outer=0 is a candidate choice, not a derived continuum boundary term",
+  "matter": "T on all elements; w=v4*rho>=0; Gamma=1/2*(B(T^2)-2T*BT+T^2*B1); S_d=-1/2 sum w*(Gamma+1)",
+  "measure": {
+    "geometry": "arbitrary labeled counting / allowed internal permutation group size",
+    "clock": "normalized uniform [-Tmax,Tmax] on free clocks",
+    "density": "nu(dw)=1/2 delta_0 + 1/(2*wmax) 1_(0,wmax)dw independently on free weights",
+    "sector_weights": "fixed N only; no variable-N law",
+    "physical_status": "model assumptions, not derived physical measure"
+  },
+  "variations": {
+    "geometry": "single relation toggle only if strict order and fixed boundary data are preserved; includes all affected BDG and matter intervals",
+    "T": "continuous free-clock variations, vanishing on fixed external data",
+    "w": "continuous variations in positive-density stratum; zero atom handled as distinct support stratum",
+    "support": "sum over density support patterns; no invented derivative of a binary mask",
+    "quantum": "finite-box integration-by-parts includes endpoint terms; geometry change-of-variables identity alone is not a field equation"
+  },
+  "algebra_tests": {
+    "N": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "T_i": "i^2/2",
+    "w_i": "i+1",
+    "clock_step": "1/3",
+    "weight_step": "1/3",
+    "all_two_block_partitions": true,
+    "permutation_max_N": 4,
+    "geometry_move_max_N": 4,
+    "dimensionless_B_prefactor": "1",
+    "carrier_note": "all posets for algebraic implementation checks, broader than the amplitude carrier"
+  },
+  "exterior_response": {
+    "C": "five-element chain",
+    "w": [
+      "0",
+      "0",
+      "1",
+      "1",
+      "0"
+    ],
+    "fixed_clock_nodes": [
+      0,
+      4
+    ],
+    "retained": [
+      2,
+      3
+    ],
+    "eliminated": [
+      1
+    ],
+    "T_fixed": [
+      "0",
+      "4"
+    ],
+    "scope": "conditional stationary auxiliary-clock response at fixed geometry/density; not a physical vacuum metric"
+  },
+  "normalization_test": {
+    "N": 2,
+    "C": "single causal pair",
+    "initial_clock_values": [
+      "0",
+      "1"
+    ],
+    "final_clock_values": [
+      "2",
+      "3"
+    ],
+    "initial_density_weight": "0",
+    "final_weight_measure": "1/2 delta_0 + 1/2 uniform(0,1)",
+    "Tmax": "4",
+    "hbar": "1",
+    "B_prefactor": "1",
+    "gravity_phase": "arbitrary common phase; cancels from K^dagger K",
+    "boundary_inner_products": "I_2 on both declared finite kinematic boundary spaces",
+    "initial_state": "rho0=|+><+|, |+>=(1,1)/sqrt(2)",
+    "source": "D(J)=diag(1,exp(iJ)) before K; J=0,pi",
+    "necessary_condition": "K^dagger K=c I with one state/source-independent c>0; closed-time-path Z[J,J]=1 after fixed normalization",
+    "not_claimed": "physical Hilbert space, complete continuum boundary basis, or a no-go for constrained amplitudes"
+  },
+  "precision": {
+    "integer_rational_residual": "EXACT_ZERO",
+    "amplitude_Taylor_degree": 80,
+    "remainder": "|a|^(p+1)/(2*(p+1)!*(p+2)) for G=1/2+1/2 integral_0^1 exp(-iam)dm",
+    "display_decimal_digits": 35,
+    "no_fitted_tolerance": true
+  },
+  "decision_rules": {
+    "nonisometric_kernel": "reject raw-kernel evolution prescription in declared finite boundary spaces; do not infer failure of CST or of a possible constraint/projector interpretation",
+    "effective_causal_junction": "HOLD unless quantum realization and classical first-variation/refinement bridge are qualified",
+    "regularity": "separate HOLD",
+    "global_bounce": "NOT_RUN_HOLD",
+    "no_new_fit_to_bounce": true
+  },
+  "budget": {
+    "new_physical_4D_ensembles": 0,
+    "new_sprinklings": 0,
+    "random_draws": 0,
+    "paid_runs": false
+  }
+}
