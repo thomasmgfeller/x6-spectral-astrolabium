@@ -1,5 +1,13 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## CST-DUST Model Contract v0.1 · 6. November 2026
+
+Der Prüfvertrag legt einen endlichen Staubball mit Außenraum, einen ersten Korrespondenztest vor der klassischen Singularität und acht getrennte Entscheidungen fest. Regularität wird an jedem Prüfpunkt eigenständig bewertet; ein Bounce-PASS verändert sie nicht. Der erste Test verwendet drei Massen bei identischem Anfangsradius und ein gemeinsames reguläres Zeitfenster. Numerische Auflösung, statistische Stichprobengröße und physikalische Diskretheit sind getrennt definiert.
+
+15 klassische Referenzfälle und 17 Kontrollen der Entscheidungslogik bestehen. Die sieben offenen Modellpflichten bleiben Zulassungsvoraussetzungen: Der vollständige CST-Dynamikkern und alle acht physikalischen CST-Entscheidungen stehen auf **HOLD**. Keine neuen CST-Ensembles und keine neue Singularitätsauflösung.
+
+[Vertrag (PDF, zehn Seiten)](reports/CST_DUST_Model_Contract_v0_1.pdf) · [Unverändertes Prüfpaket (ZIP)](packages/CST_DUST_Model_Contract_v0_1_Pruefpaket.zip) · [Modellvertrag, Entscheidungsregeln und Nachrechnung](model_contract_v0_1/PUBLICATION.md)
+
 ## Singularitätsauflösung separat geprüft · Regularität v0.2 · 6. November 2026
 
 Ein neuer kontrahierender Dirichlet-Zustand besitzt anfangs ein endliches zweites inverses Volumenmoment. Dieses divergiert zu jedem späteren Zeitpunkt, obwohl das mittlere Volumen bei `t = 35/158` das positive Minimum `77/79` erreicht. Das erste inverse Moment bleibt bei endlicher Energie zeituniform beschränkt. Diese Volumenobservablen werden nicht mit einem bereits hergeleiteten Dichte- oder Krümmungsoperator gleichgesetzt.
