@@ -1,0 +1,152 @@
+[
+  {
+    "control": "Minkowski",
+    "actual": "UNTRAPPED_ROUND",
+    "expected": "UNTRAPPED_ROUND",
+    "pass": true
+  },
+  {
+    "control": "Contracting small sphere",
+    "actual": "UNTRAPPED_ROUND",
+    "expected": "UNTRAPPED_ROUND",
+    "pass": true
+  },
+  {
+    "control": "Contracting trapped sphere",
+    "actual": "FUTURE_TRAPPED_ROUND",
+    "expected": "FUTURE_TRAPPED_ROUND",
+    "pass": true
+  },
+  {
+    "control": "Expanding C>1",
+    "actual": "PAST_TRAPPED_ROUND",
+    "expected": "PAST_TRAPPED_ROUND",
+    "pass": true
+  },
+  {
+    "control": "Zero interval is not marginal proof",
+    "actual": "HOLD_SIGN_UNRESOLVED",
+    "expected": "HOLD_SIGN_UNRESOLVED",
+    "pass": true
+  },
+  {
+    "control": "Exact zero alone needs marginal evidence",
+    "actual": "HOLD_SIGN_UNRESOLVED",
+    "expected": "HOLD_SIGN_UNRESOLVED",
+    "pass": true
+  },
+  {
+    "control": "Unknown error",
+    "actual": "HOLD_UNKNOWN_ERROR",
+    "expected": "HOLD_UNKNOWN_ERROR",
+    "pass": true
+  },
+  {
+    "control": "Reversed time orientation",
+    "actual": "HOLD_ORIENTATION",
+    "expected": "HOLD_ORIENTATION",
+    "pass": true
+  },
+  {
+    "control": "Positive reciprocal boost 1/10",
+    "actual": "FUTURE_TRAPPED_ROUND",
+    "expected": "FUTURE_TRAPPED_ROUND",
+    "pass": true
+  },
+  {
+    "control": "Boost product 1/10",
+    "actual": true,
+    "expected": true,
+    "pass": true
+  },
+  {
+    "control": "Positive reciprocal boost 1",
+    "actual": "FUTURE_TRAPPED_ROUND",
+    "expected": "FUTURE_TRAPPED_ROUND",
+    "pass": true
+  },
+  {
+    "control": "Boost product 1",
+    "actual": true,
+    "expected": true,
+    "pass": true
+  },
+  {
+    "control": "Positive reciprocal boost 10",
+    "actual": "FUTURE_TRAPPED_ROUND",
+    "expected": "FUTURE_TRAPPED_ROUND",
+    "pass": true
+  },
+  {
+    "control": "Boost product 10",
+    "actual": true,
+    "expected": true,
+    "pass": true
+  },
+  {
+    "control": "Degenerate center sphere excluded",
+    "actual": true,
+    "expected": true,
+    "pass": true
+  },
+  {
+    "control": "R=2M initially lies inside material",
+    "actual": true,
+    "expected": true,
+    "pass": true
+  },
+  {
+    "control": "Global exterior mass is invalid inside",
+    "actual": "UNTRAPPED_ROUND",
+    "expected": "UNTRAPPED_ROUND",
+    "pass": true
+  },
+  {
+    "control": "Inner horizon derivative sign",
+    "actual": true,
+    "expected": true,
+    "pass": true
+  },
+  {
+    "control": "Outer horizon derivative sign",
+    "actual": true,
+    "expected": true,
+    "pass": true
+  },
+  {
+    "control": "Mismatched exterior mass rejected",
+    "actual": false,
+    "expected": false,
+    "pass": true
+  },
+  {
+    "control": "sqrt rational enclosure",
+    "actual": true,
+    "expected": true,
+    "pass": true
+  },
+  {
+    "control": "round scope excludes arbitrary surfaces",
+    "actual": true,
+    "expected": true,
+    "pass": true
+  },
+  {
+    "control": "classical evidence cannot authorize CST",
+    "actual": "HOLD_NOT_ELIGIBLE",
+    "expected": "HOLD_NOT_ELIGIBLE",
+    "pass": true
+  },
+  {
+    "control": "CST data without closed model",
+    "actual": "HOLD_NOT_ELIGIBLE",
+    "expected": "HOLD_NOT_ELIGIBLE",
+    "pass": true
+  },
+  {
+    "control": "CST data with unknown error",
+    "actual": "HOLD_UNKNOWN_ERROR",
+    "expected": "HOLD_UNKNOWN_ERROR",
+    "pass": true
+  }
+]

@@ -1,0 +1,154 @@
+{
+  "id": "CST-DUST-EXPANSION-TRAPPING-001",
+  "version": "0.1.0",
+  "date": "2026-11-06",
+  "freeze_status": "LOCAL_PRECALCULATION_FREEZE_NOT_EXTERNAL_PREREGISTRATION",
+  "scope": "Inserted classical REF-DUST-FB-01 only. Physical CST correspondence, boundary, trapping and regularity remain separately HOLD; no future completion or event-horizon determination.",
+  "reference": {
+    "G": 1,
+    "c": 1,
+    "R0": 10,
+    "masses": [
+      "1/4",
+      "1",
+      "4"
+    ],
+    "Tend": "5*sqrt(5)/3",
+    "x_times": [
+      "0",
+      "1/4",
+      "1/2",
+      "3/4",
+      "1"
+    ],
+    "chi_shells": [
+      "1/4",
+      "1/2",
+      "3/4",
+      "17/20",
+      "9/10",
+      "19/20",
+      "1"
+    ],
+    "exterior_fixed_R": [
+      "6",
+      "7",
+      "8",
+      "10",
+      "12",
+      "16",
+      "20"
+    ],
+    "domain": "0<=x<=1, round symmetry spheres only; R=0 excluded as degenerate sphere; exterior R>=Rb(x) with explicit membership test",
+    "slicing": "Ingoing marginally-bound Painleve-Gullstrand T, dust proper time inside, exterior E=1 free-fall time; no periodic cell",
+    "metric": "ds^2=-dT^2+(dR+v*dT)^2+R^2*dOmega^2; v=-H R inside, sqrt(2GM/R) outside",
+    "null_vectors": "l=partial_T+(1-v)partial_R; n=partial_T-(1+v)partial_R; l.n=-2, future directed",
+    "observables": [
+      "Theta_dust=3H inside only",
+      "theta_l=2(1-v)/R",
+      "theta_n=-2(1+v)/R",
+      "e_l=R theta_l/2",
+      "e_n=R theta_n/2",
+      "C=2Gm/R"
+    ],
+    "boundary": "Comoving zero-pressure material surface; test h and K from both sides, density step without thin shell"
+  },
+  "numerical": {
+    "inherited_Euler_steps": [
+      128,
+      256,
+      512,
+      1024
+    ],
+    "decimal_precision": 60,
+    "root_bisections": 100,
+    "normalized_expansion_cap": "1/200",
+    "event_bracket_width_cap_x": "1/40",
+    "reuse_inherited_error_proof": true,
+    "physical_density_refinement": false
+  },
+  "area_calibration": {
+    "x_times": [
+      "1/4",
+      "1/2",
+      "3/4"
+    ],
+    "chi_shells": [
+      "1/4",
+      "1/2",
+      "3/4"
+    ],
+    "delta_x": [
+      "1/64",
+      "1/128",
+      "1/256",
+      "1/512"
+    ],
+    "directions": [
+      "outgoing",
+      "ingoing"
+    ],
+    "method": "Symmetric derivative of squared areal radius along exact interior radial null rays, in declared T normalization; reject paths crossing surface or center; compare using outward intervals",
+    "absolute_e_cap": "1/200"
+  },
+  "decision": {
+    "future_trapped": "upper(theta_l)<0 and upper(theta_n)<0",
+    "untrapped_round": "lower(theta_l)>0 and upper(theta_n)<0",
+    "past_trapped": "lower(theta_l)>0 and lower(theta_n)>0",
+    "zero_overlap": "HOLD_SIGN_UNRESOLVED; interval containing zero is not evidence of an exactly marginal surface",
+    "marginal": "Separate analytic equality/root existence with bounded location and negative other expansion",
+    "normalization": "positive reciprocal boosts preserve signs/product; magnitude tolerance requires fixed normalization",
+    "reference_e_absolute_tolerance": "1/20",
+    "physical_CST": "HOLD_NOT_ELIGIBLE_NOT_RUN; unknown uncertainty or missing surface/null reconstruction prevents qualification"
+  },
+  "hypothetical_tolerance_box": {
+    "H_relative": "1/20",
+    "R_relative": "1/20",
+    "scope": "Worst-case sign diagnostic only, not actual physical confidence intervals; no independence assumed and other error contributions absent"
+  },
+  "physical_refinement": {
+    "density_ratios": [
+      1,
+      2,
+      4,
+      8
+    ],
+    "inherit_matching_rules": true,
+    "actual_lambda0": null,
+    "actual_Lk": null,
+    "actual_Lcg": null,
+    "ensemble_size": null,
+    "seeds": null,
+    "null_surface_reconstruction": null,
+    "physical_execution": "NOT_RUN"
+  },
+  "regularity": {
+    "separate_at_all_P4_records": true,
+    "reference_bounds_from_parent": true,
+    "candidate_status": "HOLD",
+    "event_records": "All crossings in the fixed window for the predefined mass/shell grid, at each planned density ratio, plus every fixed mass/time/density checkpoint"
+  },
+  "controls": [
+    "Minkowski future orientation",
+    "contracting but untrapped small sphere",
+    "contracting future-trapped sphere",
+    "expanding C>1 is past-trapped",
+    "C>1 alone insufficient",
+    "boost invariance",
+    "marginal not inferred from zero-containing interval",
+    "reverse orientation rejected",
+    "unknown uncertainty HOLD",
+    "center excluded",
+    "exterior inside material excluded",
+    "wrong 2GM globally inside rejected",
+    "round-sphere absence not all-surface absence",
+    "classical PASS cannot qualify CST",
+    "junction density jump not thin shell",
+    "one-sided horizon types at corner"
+  ],
+  "budget": {
+    "new_random_draws": 0,
+    "new_CST_ensembles": 0,
+    "paid_runs": false
+  }
+}

@@ -1,5 +1,15 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Expansion und Trapping v0.1 · 6. November 2026
+
+Staubexpansion und beide zukünftigen Null-Expansionen werden auf der geprüften klassischen Referenz getrennt ausgewertet. Beim endlichen Ball mit R0 = 10 und M = 4 entsteht bei T/Tend = 0,5689164944 an Rb = 8 die erste marginale runde Fläche. Danach liegt der gefangene Bereich runder Sphären zwischen RA = 1/abs(H) und 2M. Der innere marginale Ast im Staub ist zeitartig, der äußere im Vakuum null; der Übergang am Rand wird einseitig klassifiziert. Für M = 1/4 und M = 1 fehlen gefangene runde Symmetrieflächen im gesamten festen Zeitfenster.
+
+420 innere Kugelfälle, 216 Flächenableitungen entlang Nullstrahlen, 12 Ereigniseinschließungen, 15 Randprüfungen und 25 Kontrollen sind ausgeführt. Die feinste numerische Fehlerhülle für e = R theta / 2 liegt unter dem vorab festgelegten absoluten Cap 0,005. Eine hypothetische ±5-%-Fehlerbox für H und R lässt mehrere Vorzeichen nahe der Grenze unentschieden.
+
+**Physikalisches CST-Trapping: HOLD_NOT_ELIGIBLE / NOT_RUN. Regularität: separat HOLD in allen 72 P4-Datensätzen.** Der klassische Randanschluss ist ohne dünne Schicht konsistent; ein CST-Randgesetz ist nicht abgeleitet. Keine Aussage über allgemeine deformierte Flächen, keinen globalen Ereignishorizont bestimmt und keine Singularitätsauflösung nachgewiesen.
+
+[Bericht (PDF, acht Seiten)](reports/CST_DUST_Expansion_Trapping_v0_1.pdf) · [Unverändertes Prüfpaket (ZIP)](packages/CST_DUST_Expansion_Trapping_v0_1_Pruefpaket.zip) · [Ergebnisse, Aussagegrenzen und Nachrechnung](expansion_trapping_v0_1/PUBLICATION.md)
+
 ## Korrespondenz vor der Singularität v0.1 · 6. November 2026
 
 Vor der Rechnung fixiert sind 5 % Toleranz für Radius, Dichte, Hubble-Rate und Beschleunigung, 2 % für Masse und Fluss sowie 2,5 % für die letzten beiden physikalischen Stufen. Der Abgleich hält physikalische Zeiten, Messgebiete, Mittelungsskalen und Anfangsdaten fest; numerische Schrittweite und statistische Stichprobengröße werden getrennt behandelt. Der lokale Plan-Freeze ist keine externe Präregistrierung.

@@ -1,0 +1,37 @@
+name: CST-DUST expansion and trapping
+on:
+  pull_request:
+    paths:
+      - 'research/rax_cqg/dust_collapse/expansion_trapping_v0_1/**'
+      - 'research/rax_cqg/dust_collapse/model_contract_v0_1/**'
+      - 'research/rax_cqg/dust_collapse/correspondence_v0_1/**'
+      - 'research/rax_cqg/dust_collapse/reports/CST_DUST_Expansion_Trapping_v0_1.pdf'
+      - 'research/rax_cqg/dust_collapse/packages/CST_DUST_Expansion_Trapping_v0_1_Pruefpaket.zip'
+      - '.github/workflows/cst-dust-expansion-trapping.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'research/rax_cqg/dust_collapse/expansion_trapping_v0_1/**'
+      - 'research/rax_cqg/dust_collapse/model_contract_v0_1/**'
+      - 'research/rax_cqg/dust_collapse/correspondence_v0_1/**'
+      - 'research/rax_cqg/dust_collapse/reports/CST_DUST_Expansion_Trapping_v0_1.pdf'
+      - 'research/rax_cqg/dust_collapse/packages/CST_DUST_Expansion_Trapping_v0_1_Pruefpaket.zip'
+      - '.github/workflows/cst-dust-expansion-trapping.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  expansion-reference-and-scope:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Check original artifacts, all P4 decisions and separate regularity
+        run: python3 -O -B research/rax_cqg/dust_collapse/expansion_trapping_v0_1/publication_check.py
+      - name: Replay expansion, boundary and event results in isolation
+        run: python3 -O -B research/rax_cqg/dust_collapse/expansion_trapping_v0_1/publication_check.py --replay
