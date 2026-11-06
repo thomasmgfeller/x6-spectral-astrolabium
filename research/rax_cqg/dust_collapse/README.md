@@ -1,5 +1,15 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Innen-/Außenraum-Anschluss v0.1 · 6. November 2026
+
+Der endliche klassische Einstein-Staubball ist an den vollständigen Schwarzschild-Außenraum angeschlossen: erste und zweite Fundamentalform, Feldgleichungen, Massen- und Flussbilanz, distributionelle Erhaltung und regulärer Horizontdurchgang sind gemeinsam geprüft. 34 exakte Identitäten, 15 Randfälle, 75 Außenraumwerte und neun EF-Einbettungen bestätigen die Referenz. Ein Ereignishorizont wird nur unter einer zusätzlichen klassischen Zukunftswahl angegeben; diese Zukunft bleibt singulär.
+
+Ein schichtfreier Bounce-Anschluss an Schwarzschild ist im untersuchten Sektor ausgeschlossen. Eine bedingte statische Nichtvakuum-Vergleichsgeometrie benötigt effektiven Stress und ist weder eine CST-Herleitung noch eine qualifizierte globale Fortsetzung. 27 Kettenschnitte und 24 Labelpermutationen zeigen konkret, weshalb das Abschneiden einer periodischen Zelle keinen materiellen Randanschluss ersetzt.
+
+**Physikalischer CST-Anschluss: HOLD_NOT_ELIGIBLE / NOT_RUN. Regularität und Fortsetzung: separat HOLD in allen 60 P5-Datensätzen.** Das gemeinsame endliche Wirkungs- und Maßproblem, der Außenraumzustand sowie kontrollierte Gebiets- und Verfeinerungsgrenzen bleiben offen. Keine neuen dynamischen CST-Ensembles und keine Singularitätsauflösung nachgewiesen.
+
+[Bericht (PDF, neun Seiten)](reports/CST_DUST_Innen_Aussen_Anschluss_v0_1.pdf) · [Unverändertes Prüfpaket (ZIP)](packages/CST_DUST_Innen_Aussen_Anschluss_v0_1_Pruefpaket.zip) · [Herleitung, Aussagegrenzen und Nachrechnung](boundary_completion_v0_1/PUBLICATION.md)
+
 ## Expansion und Trapping v0.1 · 6. November 2026
 
 Staubexpansion und beide zukünftigen Null-Expansionen werden auf der geprüften klassischen Referenz getrennt ausgewertet. Beim endlichen Ball mit R0 = 10 und M = 4 entsteht bei T/Tend = 0,5689164944 an Rb = 8 die erste marginale runde Fläche. Danach liegt der gefangene Bereich runder Sphären zwischen RA = 1/abs(H) und 2M. Der innere marginale Ast im Staub ist zeitartig, der äußere im Vakuum null; der Übergang am Rand wird einseitig klassifiziert. Für M = 1/4 und M = 1 fehlen gefangene runde Symmetrieflächen im gesamten festen Zeitfenster.

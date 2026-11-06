@@ -1,0 +1,52 @@
+{
+  "cases": 20,
+  "bounds": [
+    {
+      "rmin_over_GM": "1/2",
+      "K_interior_bound": "6912",
+      "K_exterior_bound": "92160",
+      "static_f_min_lo": "-0.88988157484230974715081591091747973364014965457773272702968",
+      "static_f_min_hi": "-0.88988157484230974715081591091511315092448661916149754133379",
+      "static_zeros": "TWO_SIMPLE_ZEROS",
+      "global_completion": "NOT_QUALIFIED",
+      "DEC_atmosphere": "FAIL_p_t_equals_2rho",
+      "rho_plus_p_interior_near_bounce": "NEGATIVE"
+    },
+    {
+      "rmin_over_GM": "1",
+      "K_interior_bound": "108",
+      "K_exterior_bound": "1440",
+      "static_f_min_lo": "0.055059212578845126424592044541260133179925172711133636485164",
+      "static_f_min_hi": "0.055059212578845126424592044542443424537756690419251229333098",
+      "static_zeros": "NO_ZEROS",
+      "global_completion": "NOT_QUALIFIED",
+      "DEC_atmosphere": "FAIL_p_t_equals_2rho",
+      "rho_plus_p_interior_near_bounce": "NEGATIVE"
+    },
+    {
+      "rmin_over_GM": "2",
+      "K_interior_bound": "27/16",
+      "K_exterior_bound": "45/2",
+      "static_f_min_lo": "0.527529606289422563212296022270630066589962586355566818242581",
+      "static_f_min_hi": "0.527529606289422563212296022271221712268878345209625614666549",
+      "static_zeros": "NO_ZEROS",
+      "global_completion": "NOT_QUALIFIED",
+      "DEC_atmosphere": "FAIL_p_t_equals_2rho",
+      "rho_plus_p_interior_near_bounce": "NEGATIVE"
+    },
+    {
+      "rmin_over_GM": "3",
+      "K_interior_bound": "4/27",
+      "K_exterior_bound": "160/81",
+      "static_f_min_lo": "0.685019737526281708808197348180420044393308390903711212161721",
+      "static_f_min_hi": "0.685019737526281708808197348180814474845918896806417076444367",
+      "static_zeros": "NO_ZEROS",
+      "global_completion": "NOT_QUALIFIED",
+      "DEC_atmosphere": "FAIL_p_t_equals_2rho",
+      "rho_plus_p_interior_near_bounce": "NEGATIVE"
+    }
+  ],
+  "proof_scope": "Fixed ansatz and scale only; not dynamical CST, no global uniqueness/stability/completeness claim",
+  "scale_limit": "bounds diverge as rmin^-6 at fixed M",
+  "rejected_bounce_candidate_status": "UNCHANGED"
+}
