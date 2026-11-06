@@ -1,0 +1,42 @@
+{
+  "status": "SCOPED_RESULTS_ONLY_CST_REGULARITY_HOLD",
+  "parameters": {
+    "alpha": 1.0,
+    "beta": 0.5,
+    "kappa": 1.0,
+    "hbar": 1.0
+  },
+  "exact": {
+    "T_b": "35/158",
+    "V_b": "77/79",
+    "A": "7/4",
+    "J": "7/2",
+    "E": "79/20",
+    "inverse_second_initial": "16/15",
+    "inverse_first_initial": "4/5"
+  },
+  "numeric": {
+    "moment_evaluations": 6,
+    "cutoff_values": 11,
+    "spectral_levels": 5,
+    "initial_energy_quadrature": 3.950000000000001,
+    "initial_current_quadrature": 3.5000000000000004,
+    "finite_ball_exact_checks": 19,
+    "tail_controls": 24,
+    "max_norm_error": 8.881784197001252e-16,
+    "max_spectral_l2": 9.420955517590684e-16,
+    "max_moment_volume_error": 8.881784197001252e-16,
+    "bounce_coefficient_squared": 9.578853010408496,
+    "finest_scaled_cutoff": 9.57704036601783
+  },
+  "limitations": [
+    "Floating-point checks are not interval certificates.",
+    "Analytic divergence proof is separate from numerical checks.",
+    "No new CST ensemble, density operator, exterior solution or horizon claim."
+  ],
+  "versions": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0"
+  }
+}

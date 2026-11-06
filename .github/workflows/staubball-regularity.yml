@@ -1,0 +1,35 @@
+name: Staubball Regularity Boundary and Refinement
+on:
+  pull_request:
+    paths:
+      - 'research/rax_cqg/dust_collapse/regularity_v0_2/**'
+      - 'research/rax_cqg/dust_collapse/reports/CST_Staubball_Regularitaet_Rand_Verfeinerung_v0_2.pdf'
+      - 'research/rax_cqg/dust_collapse/packages/CST_Staubball_Regularitaet_Rand_Verfeinerung_v0_2_Pruefpaket.zip'
+      - '.github/workflows/staubball-regularity.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'research/rax_cqg/dust_collapse/regularity_v0_2/**'
+      - 'research/rax_cqg/dust_collapse/reports/CST_Staubball_Regularitaet_Rand_Verfeinerung_v0_2.pdf'
+      - 'research/rax_cqg/dust_collapse/packages/CST_Staubball_Regularitaet_Rand_Verfeinerung_v0_2_Pruefpaket.zip'
+      - '.github/workflows/staubball-regularity.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  regularity-reference:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: research/rax_cqg/dust_collapse/regularity_v0_2/publication-requirements.txt
+      - name: Install pinned numerical dependencies
+        run: python3 -m pip install --only-binary=:all: -r research/rax_cqg/dust_collapse/regularity_v0_2/publication-requirements.txt
+      - name: Check original artifacts and replay the regularity reference
+        run: python3 research/rax_cqg/dust_collapse/regularity_v0_2/publication_check.py --replay
