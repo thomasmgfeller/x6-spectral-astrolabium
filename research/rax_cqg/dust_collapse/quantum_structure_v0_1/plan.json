@@ -1,0 +1,78 @@
+{
+  "id": "CST-DUST-QUANTUM-STRUCTURE-001",
+  "version": "0.1.0",
+  "date": "2026-11-06",
+  "candidate": "CST-DUST-QS1-RELABEL",
+  "freeze": "LOCAL_PRECALCULATION_NOT_EXTERNAL_PREREGISTRATION; structural obstructions anticipated before numerical certification",
+  "purpose": "Define positive label-reduced auxiliary history space, distinguish genuine relabel constraints from unqualified dynamical constraints, and test common-metric interpretation of previous raw K",
+  "auxiliary_space": {
+    "carrier": "joint finite interval patches with fixed initial/final labels and m internal elements; no physical 4D selection",
+    "clocks": "all clock variables continuous in [-4,4] before imposing boundary conditions",
+    "weights": "internal spike/slab weights from previous candidate with wmax=1; endpoint weights fixed zero for auxiliary control family",
+    "measure": "labeled counting / m! times product normalized clock and density measures",
+    "group": "S_m relabels complete geometry, material support and fields; endpoints fixed",
+    "interpretation": "auxiliary history space, not a proved complete Cauchy/boundary state space",
+    "physical_inner_product": "not yet derived; inherited quotient scalar product qualifies relabel reduction only"
+  },
+  "finite_group_checks": {
+    "m": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "support_masks": "all 2^m internal material/vacuum patterns",
+    "permutations": "all S_m",
+    "projection": "group average compared to orbit block 1/|orbit|; exact idempotence, adjointness, positivity, orbit/stabilizer normalization and invariant observables",
+    "fields_for_action": "T_i=i^2/2, positive w_i=i+1 on support, endpoints zero; relabel all fields",
+    "action_check_scope": "every orbit representative under every group element"
+  },
+  "dynamical_constraint_audit": {
+    "proposed_multipliers": "C_x(T)=Gamma_x(T)+1 on any nonempty positive-density stratum",
+    "test_space": "ordinary L2 over freely continuous clocks, before fixed-boundary conditioning",
+    "criterion": "nonzero real polynomial => zero level has Lebesgue measure zero; ordinary L2 kernel is trivial on nonempty dust strata",
+    "not_a_no_go": "distributional rigging maps and differently derived canonical constraints remain open"
+  },
+  "raw_kernel_metric_test": {
+    "K": "unchanged N=2 kernel from prior plan, hbar=Bprefactor=wmax=1",
+    "boundary_identification": "translate labels (0,1) to (2,3) and use one common positive Hermitian metric M; additional explicit interpretation",
+    "allowed_normalization": "one arbitrary nonzero complex scalar; equivalently Kdagger M K=cM with c>0",
+    "invariant": "R=(tr K)^2/det K must be real in [0,4] if common positive metric exists",
+    "certificate": "interval for det and Im((tr K)^2 conjugate(det K)); no eigenvalue square-root required",
+    "excluded_claims": "no no-go for different input/output metrics, constraint amplitudes, full boundary spaces or refinement"
+  },
+  "controls": {
+    "positive_metric_case": "rational similarity of diag(1,i) with exact positive M",
+    "no_constant_metric_case": "diag(1,2)",
+    "relational_reference": "C=p_tau+diag(1,-1), Schwartz test space on R tensor C^2; rigging by Fourier evaluation, U at tau multiples of pi/2",
+    "reference_times": [
+      "0",
+      "pi/2",
+      "pi",
+      "3pi/2"
+    ],
+    "scope": "mathematical positive control, not a CST-derived Hamiltonian",
+    "underdetermination": "H=0 and H=diag(1,-1) both self-adjoint on same physical control space but give different relational observables"
+  },
+  "precision": {
+    "arithmetic": "integer and Fraction exact",
+    "Taylor_degree": 80,
+    "G_remainder": "|a|^(p+1)/(2*(p+1)!*(p+2))",
+    "certificate": "rational rectangular complex intervals with outward-rounded 32-significant-digit displays",
+    "fitted_tolerances": false
+  },
+  "decisions": {
+    "label_reduction": "PASS only for auxiliary quotient construction",
+    "physical_quantum_definition": "HOLD until actual dynamical constraints/rigging or a derived relational Hamiltonian are qualified",
+    "previous_raw_kernel": "retain earlier FAIL; test stronger common-metric interpretation separately",
+    "regularity": "separate HOLD",
+    "global_bounce": "NOT_RUN_HOLD"
+  },
+  "budget": {
+    "new_physical_4D_ensembles": 0,
+    "new_sprinklings": 0,
+    "random_draws": 0,
+    "paid_runs": false
+  }
+}

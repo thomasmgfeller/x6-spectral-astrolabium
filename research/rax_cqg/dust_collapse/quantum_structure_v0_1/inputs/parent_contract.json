@@ -1,0 +1,318 @@
+{
+  "schema": "x6-cst-dust-model-contract/0.1",
+  "id": "CST-DUST-MC-001",
+  "version": "0.1.0",
+  "date": "2026-11-06",
+  "protocol_status": "SPECIFIED",
+  "physical_model_status": "HOLD_INCOMPLETE_CST_DYNAMICS",
+  "provenance_class": "LOCAL_PROSPECTIVE_PROTOCOL_WITH_EXPLICIT_RETROSPECTIVE_INPUTS",
+  "external_preregistration": false,
+  "new_cst_ensembles_run": false,
+  "scope": {
+    "target_id": "CST-DUST-C1",
+    "dimension_target": 4,
+    "signature": "-+++",
+    "c": 1,
+    "Lambda": 0,
+    "matter": "positive-density irrotational pressureless dust before caustics",
+    "geometry": "finite dust world tube plus exterior; spherical homogeneous macroscopic reference only",
+    "microscopic_exact_spherical_symmetry_required": false,
+    "clock": "future-oriented dust proper time inside dust; exterior slicing separately specified",
+    "claim": "candidate-specific classical correspondence and independent regularity; no universal CST theorem"
+  },
+  "reference": {
+    "id": "REF-DUST-FB-01",
+    "kind": "classical coupled Einstein dust, not a CST history ensemble",
+    "G": 1.0,
+    "R0": 10.0,
+    "masses": [
+      0.25,
+      1.0,
+      4.0
+    ],
+    "collapse_time": "Ts(M)=(2/3)*sqrt(R0^3/(2*G*M))",
+    "common_end_time": "0.5*min(Ts(M))",
+    "time_fractions": [
+      0,
+      0.25,
+      0.5,
+      0.75,
+      1
+    ],
+    "a": "(1-T/Ts)^(2/3)",
+    "R": "R0*a",
+    "V": "4*pi*R^3/3",
+    "rho": "M/V",
+    "H": "-2/(3*(Ts-T))",
+    "acceleration": "a_ddot/a=-2/(9*(Ts-T)^2)",
+    "Ricci": "8*pi*G*rho",
+    "K": "(320/3)*pi^2*G^2*rho^2",
+    "exterior": "Schwarzschild with mass M; regular coordinates if needed",
+    "surface": "comoving, zero pressure, no surface layer; [h_ab]=[K_ab]=0",
+    "initial_constraint": "Rdot0=-sqrt(2*G*M/R0); do not fix Rdot0 independently",
+    "scope_limit": "compact pre-singularity interval only; the reference later becomes singular"
+  },
+  "scales": {
+    "lambda": "CST counting density, length^-4; not dust density rho",
+    "ell": "lambda^(-1/4), discreteness length",
+    "Lk": "physical nonlocality scale; freeze before validation",
+    "Lcg": "physical averaging scale; freeze before validation",
+    "numerical": "mesh/time step/cutoff at fixed physical model",
+    "statistical": "independent realization count; not geometric refinement",
+    "continuum": "lambda increases at fixed physical region and stated matching of couplings/state",
+    "physical_scale": "varying ell or nu as a physical constant is a separate model-family question"
+  },
+  "candidate_closure": [
+    {
+      "id": "D1",
+      "status": "OPEN",
+      "item": "Complete finite/regulated marked poset carrier and 4D selection without selecting on bounce"
+    },
+    {
+      "id": "D2",
+      "status": "OPEN",
+      "item": "Explicit dust variables, discrete matter action/constraints and invariant matter measure"
+    },
+    {
+      "id": "D3",
+      "status": "OPEN",
+      "item": "BDG normalization, nonlocality choice, sector weights zeta_N and boundary/corner terms"
+    },
+    {
+      "id": "D4",
+      "status": "OPEN",
+      "item": "Initial state, physical inner product, normalizable amplitude/decoherence construction"
+    },
+    {
+      "id": "D5",
+      "status": "OPEN",
+      "item": "Relational current, density, spatial volume, curvature and coarse-fibre weights"
+    },
+    {
+      "id": "D6",
+      "status": "OPEN",
+      "item": "Full-region matching, exterior slicing, omitted exterior contributions and causal extension"
+    },
+    {
+      "id": "D7",
+      "status": "OPEN",
+      "item": "Run manifest: actual densities, sample size/power, uncertainty method, seeds and compute budget"
+    }
+  ],
+  "pilot_test": {
+    "id": "PST-FB-01",
+    "status": "SPECIFIED_NOT_ELIGIBLE_NOT_RUN",
+    "reference_id": "REF-DUST-FB-01",
+    "purpose": "first finite-sample correspondence screen, not a continuum-limit theorem",
+    "density_ratios": [
+      1,
+      2,
+      4,
+      8
+    ],
+    "absolute_density": null,
+    "ensemble_size": null,
+    "missing_run_parameters_decision": "HOLD; must freeze D7 before generating validation data",
+    "familywise_alpha": 0.05,
+    "multiplicity": "simultaneous interval over all preregistered primary mass/time/observable comparisons",
+    "primary_relative_tolerances": {
+      "R": 0.05,
+      "rho": 0.05,
+      "H": 0.05,
+      "a_ddot_over_a": 0.05
+    },
+    "mass_and_flux_tolerance_relative_to_M": 0.02,
+    "initial_Rdot_ratio_relative_tolerance": 0.05,
+    "last_two_levels_difference_relative_tolerance": 0.025,
+    "decision": "PASS only if full simultaneous uncertainty interval lies inside every tolerance band; disjoint interval FAIL; overlap HOLD",
+    "uncertainty": "include sampling, operator, coarse map, initial state, boundary and numerical terms; no undeclared independence",
+    "refinement_limit_claim": false,
+    "tolerance_status": "protocol design choices, not physical constants or post hoc fits"
+  },
+  "regularity": {
+    "mandatory_at_every_checkpoint": true,
+    "gate": "REGULARITY",
+    "default_claim": "bounded and convergent declared physical moments on a fixed interval/domain",
+    "rho_scale": "M/V0 for the declared mass, fixed across refinement",
+    "K_scale": "(G*M/R0^3)^2, fixed across refinement",
+    "localization": "relational detector cells xi at fixed physical Lcg; cover the entire declared domain including one-sided surface limits or justified resolved transition",
+    "moments": [
+      "E[(rho_n(T,xi;Lcg)/rho_scale)^2]",
+      "E[abs(K_n(T,xi;Lcg))/K_scale]"
+    ],
+    "requirement": "common finite bounds + uniform integrability + controlled convergence over n, T in I and relational cells xi in the claimed domain",
+    "constants": "derive bounds C_rho,C_K from candidate before validation; never use sample maxima as universal bounds",
+    "operator_assumptions": "positive physical measure / spectral distribution or specified measurement instrument; domains preserved",
+    "volume_tail_sufficient_only": {
+      "v0": null,
+      "C": null,
+      "delta": null,
+      "condition": "sup_n,T P(V_n(T)<=v)<=C*v^(2+delta), delta>0; constants common and dimensionally consistent",
+      "inverse_second_bound": "v0^(-2)+(2*C/delta)*v0^delta",
+      "physical_bridge_required": true
+    },
+    "stronger_claims_require": [
+      "control of relevant tidal components/physical frame",
+      "full boundary/exterior coverage",
+      "separate causal extension or completeness proof"
+    ],
+    "not_implied": [
+      "bounded support of every realization",
+      "geodesic completeness",
+      "global singularity resolution",
+      "bounded curvature from bounded mean volume"
+    ],
+    "failure_scope": "failed sufficient proxy alone does not refute physical regularity; validated physical counterexample does"
+  },
+  "checkpoint_schedule": [
+    {
+      "id": "P0",
+      "trigger": "contract and baseline",
+      "regularity_required": true
+    },
+    {
+      "id": "P1",
+      "trigger": "microscopic closure and preparation",
+      "regularity_required": true
+    },
+    {
+      "id": "P2",
+      "trigger": "current/geometry calibration",
+      "regularity_required": true
+    },
+    {
+      "id": "P3",
+      "trigger": "every correspondence level, time window and mass",
+      "regularity_required": true
+    },
+    {
+      "id": "P4",
+      "trigger": "any proposed bounce or trapping event",
+      "regularity_required": true
+    },
+    {
+      "id": "P5",
+      "trigger": "full interior/boundary/exterior extension",
+      "regularity_required": true
+    }
+  ],
+  "gates": {
+    "MODEL": {
+      "label": "Modellzulässigkeit",
+      "requirements": {
+        "carrier": "Historienträger und markenerhaltende Symmetriequotienten vollständig definiert",
+        "action_measure": "Gesamtwirkung, Materiemaß, Sektorengewichte und Randdaten fixiert",
+        "quantum_consistency": "Zustand, Normierung und Komposition bzw. Dekohärenzfunktional konsistent",
+        "coarse_map": "Relationale Observablen und physikalischer Abgleich definiert"
+      }
+    },
+    "CURRENT": {
+      "label": "Staubstrom",
+      "requirements": {
+        "definition": "Intrinsische Strom-/Flussdefinition mit Einheiten und Kontinuumsbezug",
+        "conservation": "Bilanz einschließlich zeitartiger Oberfläche und Unsicherheit",
+        "calibration": "Bias, Varianz, Auflösung und Gebietseinfluss kontrolliert"
+      }
+    },
+    "CORRESPONDENCE": {
+      "label": "Korrespondenz vor der Singularität",
+      "requirements": {
+        "eligibility": "Gekoppelter Kandidat, zulässige Präparation und unabhängiger Testplan fixiert",
+        "dynamics": "Radius, Dichte, Hubble-Rate und Beschleunigung im gemeinsamen Fehlerbudget",
+        "mass_response": "Massenerhaltung und Massenantwort bei erfüllten Anfangszwängen",
+        "refinement": "Physikalisch abgeglichene Auflösungen und Fehlerkontrolle"
+      }
+    },
+    "BOUNCE": {
+      "label": "Bounce",
+      "requirements": {
+        "event": "Mehrzeitiges Ereignis und Zeitfenster vorab eindeutig definiert",
+        "probability": "Zulässige Mehrzeitwahrscheinlichkeit mit Interferenzkontrolle",
+        "prediction": "Unabhängige Vorhersageprüfung und Verfeinerung bestanden"
+      }
+    },
+    "REGULARITY": {
+      "label": "Regularität der definierten Momente",
+      "requirements": {
+        "operators": "Physikalische Dichte-/Krümmungsobservablen, Domänen und Maße begründet",
+        "bounds": "Gemeinsame Schranken für Dichte- und Krümmungsmomente bewiesen",
+        "tails": "Unbeobachtete Tails und uniforme Integrierbarkeit kontrolliert",
+        "refinement": "Grenzprozess, physikalischer Abgleich und Konvergenz kontrolliert",
+        "time_domain": "Aussage über das gesamte deklarierte Zeitintervall und Raumgebiet"
+      }
+    },
+    "BOUNDARY": {
+      "label": "Innen-/Rand-/Außenraum",
+      "requirements": {
+        "domain": "Materieoberfläche, Außenraum und Rechengrenze getrennt definiert",
+        "cross_intervals": "Kausale Beziehungen und Wirkungsbeiträge über die Materieoberfläche erhalten",
+        "junction": "Anschlussgesetz und gegebenenfalls Oberflächenstress aus derselben Theorie",
+        "balance": "Massen-/Energiefluss und äußerer Gebietsfehler kontrolliert"
+      }
+    },
+    "TRAPPING": {
+      "label": "Lokales Trapping",
+      "requirements": {
+        "definition": "Fläche, Nullrichtungen, Orientierung und Expansionen definiert",
+        "calibration": "Referenz- und Negativkontrollen mit Fehlerbudget",
+        "dynamical_evidence": "Dynamisch erzeugte gefangene oder marginale Flächen nachgewiesen"
+      }
+    },
+    "EXTENSION": {
+      "label": "Kausale Fortsetzung",
+      "requirements": {
+        "dictionary": "Geometrischer bzw. operationaler Begriff der Fortsetzung festgelegt",
+        "coverage": "Geltungsbereich umfasst die behauptete Durchgangsregion einschließlich Rand/Außenraum",
+        "proof": "Fortsetzung, eventuell Vollständigkeit, separat nachgewiesen"
+      }
+    }
+  },
+  "decision_rules": {
+    "statuses": [
+      "PASS",
+      "FAIL",
+      "HOLD"
+    ],
+    "execution_separate": [
+      "NOT_RUN",
+      "RUN",
+      "INHERITED"
+    ],
+    "missing_or_unreviewed_evidence": "HOLD",
+    "validated_in_scope_violation": "FAIL",
+    "all_requirements_supported_for_exact_declared_scope": "PASS",
+    "bounce_does_not_promote_regularity": true,
+    "no_automatic_physical_claim": true,
+    "finite_observations_not_accepted_for": [
+      "REGULARITY.bounds",
+      "REGULARITY.tails",
+      "REGULARITY.refinement",
+      "REGULARITY.time_domain",
+      "EXTENSION.proof"
+    ],
+    "negative_scopes_not_transferable": true
+  },
+  "budget": {
+    "paid_runs": false,
+    "new_ensembles_this_step": false,
+    "allowed_now": "local deterministic protocol checks and analytic reference controls"
+  },
+  "change_control": {
+    "semantic_change": "new version before new validation data; rerun affected decisions",
+    "after_data_change": "label exploratory and use fresh validation data for confirmation",
+    "identity": "SHA-256 of contract bytes + run manifest + input hashes in every record",
+    "scope_change": "periodic cell to finite ball, new exterior, matter law or physical scale requires explicit new scope"
+  },
+  "current_cst_status": {
+    "MODEL": "HOLD",
+    "CURRENT": "HOLD",
+    "CORRESPONDENCE": "HOLD",
+    "BOUNCE": "HOLD",
+    "REGULARITY": "HOLD",
+    "BOUNDARY": "HOLD",
+    "TRAPPING": "HOLD",
+    "EXTENSION": "HOLD"
+  },
+  "singularity_resolution": "HOLD",
+  "sources_manifest": "inputs/provenance.json"
+}

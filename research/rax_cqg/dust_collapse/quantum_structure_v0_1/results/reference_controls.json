@@ -1,0 +1,104 @@
+{
+  "positive_common_metric": {
+    "K": [
+      "[1,-1+i]",
+      "[0,i]"
+    ],
+    "M": [
+      [
+        1,
+        -1
+      ],
+      [
+        -1,
+        2
+      ]
+    ],
+    "residual": "0",
+    "positive_principal_minors": [
+      1,
+      1
+    ]
+  },
+  "negative_common_metric": {
+    "K_diagonal": [
+      1,
+      2
+    ],
+    "trace_determinant_ratio": "9/2",
+    "decision": "FAIL"
+  },
+  "relational_reference": {
+    "constraint": "p_tau+diag(1,-1)",
+    "auxiliary": "L2(R,d tau) tensor C^2; Schwartz test domain",
+    "rigging": "Fourier evaluation at p=-E_a",
+    "physical": "C^2 with standard positive product",
+    "norm_checks": 4,
+    "composition_checks": 16,
+    "constraint_sample_checks": 4,
+    "samples": [
+      {
+        "a": 1,
+        "b": 0,
+        "physical_samples": [
+          "1",
+          "1"
+        ],
+        "norm": "2",
+        "constraint_samples": [
+          "0",
+          "0"
+        ]
+      },
+      {
+        "a": 0,
+        "b": 1,
+        "physical_samples": [
+          "-1",
+          "1"
+        ],
+        "norm": "2",
+        "constraint_samples": [
+          "0",
+          "0"
+        ]
+      },
+      {
+        "a": 1,
+        "b": 1,
+        "physical_samples": [
+          "0",
+          "2"
+        ],
+        "norm": "4",
+        "constraint_samples": [
+          "0",
+          "0"
+        ]
+      },
+      {
+        "a": 2,
+        "b": -1,
+        "physical_samples": [
+          "3",
+          "1"
+        ],
+        "norm": "10",
+        "constraint_samples": [
+          "0",
+          "0"
+        ]
+      }
+    ],
+    "status": "PASS_MATHEMATICAL_REFERENCE_NOT_CST_DERIVATION"
+  },
+  "underdetermination": {
+    "initial_state": "(1,1)/sqrt(2)",
+    "observable": "sigma_x",
+    "time": "pi/2",
+    "H_zero_expectation": "1",
+    "H_diag_1_minus1_expectation": "-1",
+    "same_Hilbert_structure": true,
+    "scope": "both are independent reference Hamiltonians, not both derived from or matched to the CST amplitude"
+  }
+}

@@ -1,5 +1,15 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Zustandsraum und Constraints v0.1 · 6. November 2026
+
+Ein positiver Hilfshistorienraum, sein Testbereich, die vollständige Umbenennungsdarstellung und die zugehörigen Constraints sind definiert. Gruppenmittelung und positives Quotientskalarprodukt entfernen interne Labels. 3 671 markierte Zustände, 85 035 Gruppenwirkungen, 234 Orbits und 4 817 gemeinsame Geometrie-/Feldumbenennungen bestätigen die endliche Konstruktion exakt. Sie liefert noch keinen vollständigen physikalischen Randzustandsraum oder gravitative dynamische Constraints.
+
+Für den unveränderten Zweistellen-Kern existiert unter der ausdrücklich festgelegten Translation der Randlabels **kein gemeinsames positives Hermitesches Skalarprodukt M**, das K†MK = cM mit c > 0 erfüllt. Die direkte Staub-Eulerbedingung als Multiplikationsconstraint hat im gewählten gewöhnlichen L²-Raum bei frei kontinuierlichen Uhren auf jedem nichtleeren Staubstratum nur den Nullzustand. Distributionelle Lösungen, anders hergeleitete Constraints, unabhängig begründete unterschiedliche Randprodukte und kontrollierte Verfeinerungen bleiben offen. Eine lösbare distributionelle Constraint-/Evolutionsreferenz besitzt ein positives physikalisches Produkt; ihr Hamiltonoperator ist ausdrücklich **nicht aus CST hergeleitet**.
+
+**Physikalischer CST-Zustandsraum und Dynamik: HOLD. Junction-Gesetz, gemeinsamer Außenraum, Regularität und globaler Bounce: separat offen.** Zwei neue P1-Datensätze trennen die Hilfskonstruktion (acht HOLD) von der gemeinsamen-M-Interpretation des rohen Kerns (MODEL=FAIL, sieben HOLD). Frühere Datensätze bleiben unverändert. Keine neuen physikalischen 4D-Ensembles oder Singularitätsauflösung. Alle 13 Ergebnisdateien sind isoliert reproduziert.
+
+[Bericht (PDF, neun Seiten)](reports/CST_DUST_Zustandsraum_Constraints_v0_1.pdf) · [Unverändertes Prüfpaket (ZIP)](packages/CST_DUST_Zustandsraum_Constraints_v0_1_Pruefpaket.zip) · [Definitionen, Aussagegrenzen und Nachrechnung](quantum_structure_v0_1/PUBLICATION.md)
+
 ## Gemeinsamer Variationskandidat v0.1 · 6. November 2026
 
 Die regulierte gemeinsame Geometrie-Materie-Amplitude ist mit expliziten Maß-, Regulator- und Zustandsraumannahmen definiert. Die endlichen Uhr-, Dichte- und Geometrievariationen sowie der Variationsstrom sind algebraisch geschlossen. Die vollständige endliche Amplitudenvariation enthält in ihrer zweiten Ableitung eine verbundene Zweipunktinsertion. Eine bedingte Außenfeldantwort eliminiert eine Hilfsuhr bei festgehaltener Geometrie und Dichte; sie liefert keine Vakuummetrik.
