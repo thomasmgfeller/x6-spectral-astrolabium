@@ -1,0 +1,427 @@
+{
+  "bound": "For bounded V and the stated common apparatus, gamma=integral ||V(t)||dt/hbar gives tau >= max(0,1/2-gamma). Necessary, not sufficient or an optimized speed limit.",
+  "diagnostic_mixing_budgets": [
+    {
+      "gamma": "0",
+      "necessary_tau_lower": "1/2"
+    },
+    {
+      "gamma": "1/8",
+      "necessary_tau_lower": "3/8"
+    },
+    {
+      "gamma": "1/4",
+      "necessary_tau_lower": "1/4"
+    },
+    {
+      "gamma": "1/2",
+      "necessary_tau_lower": "0"
+    }
+  ],
+  "diagonal_grid": [
+    {
+      "diagonal": [
+        "0",
+        "0"
+      ],
+      "operator_norm_interval": [
+        "1",
+        "1"
+      ],
+      "witness_lower_bound": "1"
+    },
+    {
+      "diagonal": [
+        "0",
+        "1/4"
+      ],
+      "operator_norm_interval": [
+        "445194101601/500000000000",
+        "890388203203/1000000000000"
+      ],
+      "witness_lower_bound": "7/8"
+    },
+    {
+      "diagonal": [
+        "0",
+        "1/2"
+      ],
+      "operator_norm_interval": [
+        "404508497187/500000000000",
+        "1294427191/1600000000"
+      ],
+      "witness_lower_bound": "3/4"
+    },
+    {
+      "diagonal": [
+        "0",
+        "3/4"
+      ],
+      "operator_norm_interval": [
+        "3/4",
+        "3/4"
+      ],
+      "witness_lower_bound": "5/8"
+    },
+    {
+      "diagonal": [
+        "0",
+        "1"
+      ],
+      "operator_norm_interval": [
+        "353553390593/500000000000",
+        "707106781187/1000000000000"
+      ],
+      "witness_lower_bound": "1/2"
+    },
+    {
+      "diagonal": [
+        "1/4",
+        "0"
+      ],
+      "operator_norm_interval": [
+        "445194101601/500000000000",
+        "890388203203/1000000000000"
+      ],
+      "witness_lower_bound": "7/8"
+    },
+    {
+      "diagonal": [
+        "1/4",
+        "1/4"
+      ],
+      "operator_norm_interval": [
+        "3/4",
+        "3/4"
+      ],
+      "witness_lower_bound": "3/4"
+    },
+    {
+      "diagonal": [
+        "1/4",
+        "1/2"
+      ],
+      "operator_norm_interval": [
+        "320194101601/500000000000",
+        "640388203203/1000000000000"
+      ],
+      "witness_lower_bound": "5/8"
+    },
+    {
+      "diagonal": [
+        "1/4",
+        "3/4"
+      ],
+      "operator_norm_interval": [
+        "279508497187/500000000000",
+        "894427191/1600000000"
+      ],
+      "witness_lower_bound": "1/2"
+    },
+    {
+      "diagonal": [
+        "1/4",
+        "1"
+      ],
+      "operator_norm_interval": [
+        "3/4",
+        "3/4"
+      ],
+      "witness_lower_bound": "5/8"
+    },
+    {
+      "diagonal": [
+        "1/2",
+        "0"
+      ],
+      "operator_norm_interval": [
+        "404508497187/500000000000",
+        "1294427191/1600000000"
+      ],
+      "witness_lower_bound": "3/4"
+    },
+    {
+      "diagonal": [
+        "1/2",
+        "1/4"
+      ],
+      "operator_norm_interval": [
+        "320194101601/500000000000",
+        "640388203203/1000000000000"
+      ],
+      "witness_lower_bound": "5/8"
+    },
+    {
+      "diagonal": [
+        "1/2",
+        "1/2"
+      ],
+      "operator_norm_interval": [
+        "1/2",
+        "1/2"
+      ],
+      "witness_lower_bound": "1/2"
+    },
+    {
+      "diagonal": [
+        "1/2",
+        "3/4"
+      ],
+      "operator_norm_interval": [
+        "320194101601/500000000000",
+        "640388203203/1000000000000"
+      ],
+      "witness_lower_bound": "5/8"
+    },
+    {
+      "diagonal": [
+        "1/2",
+        "1"
+      ],
+      "operator_norm_interval": [
+        "404508497187/500000000000",
+        "1294427191/1600000000"
+      ],
+      "witness_lower_bound": "3/4"
+    },
+    {
+      "diagonal": [
+        "3/4",
+        "0"
+      ],
+      "operator_norm_interval": [
+        "3/4",
+        "3/4"
+      ],
+      "witness_lower_bound": "5/8"
+    },
+    {
+      "diagonal": [
+        "3/4",
+        "1/4"
+      ],
+      "operator_norm_interval": [
+        "279508497187/500000000000",
+        "894427191/1600000000"
+      ],
+      "witness_lower_bound": "1/2"
+    },
+    {
+      "diagonal": [
+        "3/4",
+        "1/2"
+      ],
+      "operator_norm_interval": [
+        "320194101601/500000000000",
+        "640388203203/1000000000000"
+      ],
+      "witness_lower_bound": "5/8"
+    },
+    {
+      "diagonal": [
+        "3/4",
+        "3/4"
+      ],
+      "operator_norm_interval": [
+        "3/4",
+        "3/4"
+      ],
+      "witness_lower_bound": "3/4"
+    },
+    {
+      "diagonal": [
+        "3/4",
+        "1"
+      ],
+      "operator_norm_interval": [
+        "445194101601/500000000000",
+        "890388203203/1000000000000"
+      ],
+      "witness_lower_bound": "7/8"
+    },
+    {
+      "diagonal": [
+        "1",
+        "0"
+      ],
+      "operator_norm_interval": [
+        "353553390593/500000000000",
+        "707106781187/1000000000000"
+      ],
+      "witness_lower_bound": "1/2"
+    },
+    {
+      "diagonal": [
+        "1",
+        "1/4"
+      ],
+      "operator_norm_interval": [
+        "3/4",
+        "3/4"
+      ],
+      "witness_lower_bound": "5/8"
+    },
+    {
+      "diagonal": [
+        "1",
+        "1/2"
+      ],
+      "operator_norm_interval": [
+        "404508497187/500000000000",
+        "1294427191/1600000000"
+      ],
+      "witness_lower_bound": "3/4"
+    },
+    {
+      "diagonal": [
+        "1",
+        "3/4"
+      ],
+      "operator_norm_interval": [
+        "445194101601/500000000000",
+        "890388203203/1000000000000"
+      ],
+      "witness_lower_bound": "7/8"
+    },
+    {
+      "diagonal": [
+        "1",
+        "1"
+      ],
+      "operator_norm_interval": [
+        "1",
+        "1"
+      ],
+      "witness_lower_bound": "1"
+    }
+  ],
+  "ideal_2d_mixing": {
+    "effect": "P_plus",
+    "integrated_generator_norm": "pi/4",
+    "status": "ALGEBRAIC_CONTROL_NOT_CST_COUPLING"
+  },
+  "leakage_counterexample": {
+    "compressed_error": "0",
+    "full_space_error": "1"
+  },
+  "mixing_cases": [
+    {
+      "cos": "1",
+      "effect_change_from_diagonal": "0",
+      "sin": "0",
+      "success_minus": "1/2",
+      "success_plus": "1/2",
+      "target_error_interval": [
+        "353553390593/500000000000",
+        "707106781187/1000000000000"
+      ],
+      "target_error_squared": "1/2"
+    },
+    {
+      "cos": "99/101",
+      "effect_change_from_diagonal": "20/101",
+      "sin": "20/101",
+      "success_minus": "6241/20402",
+      "success_plus": "14161/20402",
+      "target_error_interval": [
+        "276541760959/500000000000",
+        "553083521919/1000000000000"
+      ],
+      "target_error_squared": "6241/20402"
+    },
+    {
+      "cos": "24/25",
+      "effect_change_from_diagonal": "7/25",
+      "sin": "7/25",
+      "success_minus": "289/1250",
+      "success_plus": "961/1250",
+      "target_error_interval": [
+        "240416305603/500000000000",
+        "480832611207/1000000000000"
+      ],
+      "target_error_squared": "289/1250"
+    },
+    {
+      "cos": "4/5",
+      "effect_change_from_diagonal": "3/5",
+      "sin": "3/5",
+      "success_minus": "1/50",
+      "success_plus": "49/50",
+      "target_error_interval": [
+        "141421356237/1000000000000",
+        "70710678119/500000000000"
+      ],
+      "target_error_squared": "1/50"
+    },
+    {
+      "cos": "3/5",
+      "effect_change_from_diagonal": "4/5",
+      "sin": "4/5",
+      "success_minus": "1/50",
+      "success_plus": "49/50",
+      "target_error_interval": [
+        "141421356237/1000000000000",
+        "70710678119/500000000000"
+      ],
+      "target_error_squared": "1/50"
+    },
+    {
+      "cos": "0",
+      "effect_change_from_diagonal": "1",
+      "sin": "1",
+      "success_minus": "1/2",
+      "success_plus": "1/2",
+      "target_error_interval": [
+        "353553390593/500000000000",
+        "707106781187/1000000000000"
+      ],
+      "target_error_squared": "1/2"
+    }
+  ],
+  "necessary_resources": [
+    {
+      "necessary_gamma_lower": "1/2",
+      "tau": "0"
+    },
+    {
+      "necessary_gamma_lower": "49/100",
+      "tau": "1/100"
+    },
+    {
+      "necessary_gamma_lower": "2/5",
+      "tau": "1/10"
+    },
+    {
+      "necessary_gamma_lower": "1/4",
+      "tau": "1/4"
+    },
+    {
+      "necessary_gamma_lower": "0",
+      "tau": "1/2"
+    }
+  ],
+  "optimal_diagonal_error": "1/2",
+  "weighted_controls": [
+    {
+      "optimal_error": "1/2",
+      "scales": [
+        "1",
+        "1"
+      ]
+    },
+    {
+      "optimal_error": "1/2",
+      "scales": [
+        "1/2",
+        "3/2"
+      ]
+    },
+    {
+      "optimal_error": "1/2",
+      "scales": [
+        "2",
+        "1/3"
+      ]
+    }
+  ]
+}

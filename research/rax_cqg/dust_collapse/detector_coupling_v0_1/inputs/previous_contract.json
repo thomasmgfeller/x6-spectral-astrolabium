@@ -1,0 +1,79 @@
+{
+  "schema": "cst-dust-operational-contract-v0.1",
+  "status": "CONDITIONAL_REFERENCE_ONLY",
+  "reference_commit": "c04214b9b6397abe9384bbcd728998b5c6b75173",
+  "mathematical_inputs": {
+    "hilbert_space": "Declared history L2 space at fixed terminal clock; sectorwise or full direct sum must be specified.",
+    "state": "Positive trace-class rho with trace 1.",
+    "phase": "Declared multiplication D=exp(iS); no dynamics derivation implied.",
+    "target_effect": "Known rank-one projector E=|phi><phi|; failure effect I-E retained.",
+    "classical_law": "Full joint lambda_phi=|phi|^2 nu; baseline lambda_ref fixed independently.",
+    "instrument": "Luders E and I-E only as explicit reference; another update is a different instrument."
+  },
+  "representation_rule": {
+    "map": "Unitary U:H_theta->H_0 from the equivalent measures",
+    "state": "rho_theta=U^dagger rho_0 U",
+    "effect": "E_theta=U^dagger E_0 U",
+    "kraus": "K_theta=U^dagger K_0 U",
+    "phase": "D_theta=U^dagger D_0 U",
+    "probabilities": "Invariant when all objects are transported",
+    "physical_gauge_law": "NOT_DERIVED"
+  },
+  "calibration": {
+    "epsilon": "Upper bound on 1-Tr(E_actual rho), not supplied by the algebra.",
+    "tau": "Independent bound ||E_actual-E_rank1||.",
+    "delta": "Total variation of complete joint record law versus declared reference.",
+    "bound": "min(1,tau+sqrt(min(1,epsilon+tau))+4*delta)",
+    "data_status": "NO_EXPERIMENTAL_CALIBRATION_DATA"
+  },
+  "physical_evidence_required": [
+    {
+      "id": "state_space_constraints",
+      "evidence": "CST physical state space, inner product and applicable constraints/symmetries supporting the declared states.",
+      "status": "NOT_ESTABLISHED_HERE"
+    },
+    {
+      "id": "state_source",
+      "evidence": "Physical preparation or cosmological boundary law producing rho without outcome-dependent fitting.",
+      "status": "NOT_ESTABLISHED_HERE"
+    },
+    {
+      "id": "joint_record_law",
+      "evidence": "Derivation or operational determination of the complete joint law, including number weights if used.",
+      "status": "NOT_ESTABLISHED_HERE"
+    },
+    {
+      "id": "detector_coupling",
+      "evidence": "Specified allowed matter/geometry/pointer coupling, causal support and physical derivation of its rank-one effect or bounded approximation.",
+      "status": "NOT_ESTABLISHED_HERE"
+    },
+    {
+      "id": "state_update",
+      "evidence": "Justification of the full instrument for any sequential claim, including success/failure records.",
+      "status": "NOT_ESTABLISHED_HERE"
+    },
+    {
+      "id": "calibration",
+      "evidence": "Independent bounds epsilon, tau and delta with their actual confidence/coverage conditions.",
+      "status": "NOT_MEASURED"
+    },
+    {
+      "id": "backreaction",
+      "evidence": "Consistent detector/preparation backreaction when claiming gravitational dynamics.",
+      "status": "NOT_DERIVED"
+    }
+  ],
+  "decision": "Until these physical requirements are met, report only conditional reference predictions; improving n=5 quadrature cannot establish the selection law.",
+  "no_paid_compute": true,
+  "n5_production": false,
+  "physical_gates": {
+    "MODEL": "HOLD",
+    "CURRENT": "HOLD",
+    "CORRESPONDENCE": "HOLD",
+    "BOUNCE": "HOLD",
+    "REGULARITY": "HOLD",
+    "BOUNDARY": "HOLD",
+    "TRAPPING": "HOLD",
+    "EXTENSION": "HOLD"
+  }
+}
