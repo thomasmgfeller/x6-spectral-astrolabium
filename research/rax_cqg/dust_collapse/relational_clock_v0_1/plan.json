@@ -1,0 +1,79 @@
+{
+  "id": "CST-DUST-RELATIONAL-CLOCK-001",
+  "date": "2026-11-07",
+  "source_commit": "5e08cef8dcac5c7d1214dd2beff1b1533427e856",
+  "timing": "Frozen locally before implementation and finite enumeration. Analytic mechanisms reasoned beforehand; not blind or externally preregistered.",
+  "candidate": "Ordered matter-clock sector, chronological labels, local reference product and sharp current-clock predicates; test a fixed-one-birth closed isometry on full stage spaces.",
+  "assumptions": [
+    "Retain inherited real action and normalized compact field measures",
+    "Select strict causal clock order and distinct continuous clocks",
+    "Chronological labeling replaces natural-label multiplicity; recompute its coefficient",
+    "Full continuous-field stage spaces; metrics bounded and coercive relative to the declared L2 product",
+    "All ideal extensions allowed; new clock greater than every old clock"
+  ],
+  "controls": {
+    "clock_grids": [
+      5,
+      6
+    ],
+    "max_internal_elements": 4,
+    "clock_L": "1",
+    "binary_density_marks": [
+      "0",
+      "1/2"
+    ],
+    "density_probabilities": [
+      "1/2",
+      "1/2"
+    ],
+    "initial_anchor_T": "-2",
+    "final_anchor_T": "2",
+    "cut_values": [
+      "-1",
+      "-1/2",
+      "0",
+      "1/2",
+      "1"
+    ],
+    "wavepacket_windows": [
+      [
+        "-1/2",
+        "0"
+      ],
+      [
+        "0",
+        "1/2"
+      ]
+    ],
+    "tail_widths": [
+      "1/2",
+      "1/4",
+      "1/8",
+      "1/16",
+      "1/32"
+    ],
+    "completion_scales": [
+      "1/4",
+      "1/2"
+    ]
+  },
+  "checks": [
+    "Causal clock sectors and ideal threshold cuts",
+    "Original coherent sum in ordered sector versus exact chronological relabeling, state by state",
+    "Wrong retained 1/e factor as negative control; distinct-clock grid is standalone reference",
+    "Geometry clock-domain volume e(P)/m! and sector-selection bias",
+    "Exact birth norm multiplier and localized endpoint packets",
+    "Analytic obstruction to bounded-coercive isometry, including non-diagonal metrics",
+    "Two-outcome completion and its unfixed scale; no physical waiting law inferred",
+    "Exact positive new-density constraint and nonpreservation of earlier clock stationarity",
+    "All eight physical gates HOLD; fixed-birth closed-clock candidate FAIL"
+  ],
+  "not_claimed": [
+    "Full physical Hilbert-space selection",
+    "Chronological restriction is a pure gauge transformation",
+    "Dust time is physical in the vacuum exterior",
+    "One birth is a fixed physical time step",
+    "Finite grid approximates the continuous path integral",
+    "Canonical Hamiltonian, junction law, global bounce or singularity resolution"
+  ]
+}
