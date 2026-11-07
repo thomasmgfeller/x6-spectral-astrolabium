@@ -1,0 +1,64 @@
+{
+  "boundary_perturbation_cases": 2187,
+  "chain_cases": 216,
+  "external_replication": false,
+  "joint_stationary_cases": 135,
+  "moment_orders_per_packet": 5,
+  "n5_production": false,
+  "negative_controls": [
+    {
+      "case": "old norm-only collar is a joint saddle",
+      "status": "REJECTED"
+    },
+    {
+      "case": "stationarity fixes a unique free time and weight",
+      "status": "REJECTED"
+    },
+    {
+      "case": "zero mean residuals imply a physical constraint state",
+      "status": "REJECTED"
+    },
+    {
+      "case": "adjusting the free clock repairs arbitrary boundary errors",
+      "status": "REJECTED"
+    },
+    {
+      "case": "fixed boundary clock reactions may be ignored",
+      "status": "REJECTED"
+    },
+    {
+      "case": "sharp collar is a normalized L2 packet limit",
+      "status": "REJECTED"
+    },
+    {
+      "case": "atom limit applies unchanged after exact collar tuning",
+      "status": "REJECTED"
+    },
+    {
+      "case": "physical boundary state already derived",
+      "status": "REJECTED"
+    },
+    {
+      "case": "changed pinned source accepted",
+      "status": "REJECTED"
+    }
+  ],
+  "packet_cases": 3,
+  "paid_compute": false,
+  "physical_boundary_state_derived": false,
+  "physical_constraint_quantization_derived": false,
+  "physical_gates": {
+    "BOUNCE": "HOLD",
+    "BOUNDARY": "HOLD",
+    "CORRESPONDENCE": "HOLD",
+    "CURRENT": "HOLD",
+    "EXTENSION": "HOLD",
+    "MODEL": "HOLD",
+    "REGULARITY": "HOLD",
+    "TRAPPING": "HOLD"
+  },
+  "plan_sha256": "682435483bb05733b6a60591bcd1d0d19e869e303f5c6ccddc4893647e698b27",
+  "return_amplitude_bounds": 12,
+  "short_chain_nonstationary_cases": 81,
+  "status": "PASS_CONDITIONAL_COLLAR_STATIONARITY_AUDIT"
+}

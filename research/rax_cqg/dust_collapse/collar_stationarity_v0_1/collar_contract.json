@@ -1,0 +1,86 @@
+{
+  "external_replication": false,
+  "finite_width_state": {
+    "boundary_measure": "Lebesgue d^4 delta",
+    "clock_interval": [
+      "1/4",
+      "1"
+    ],
+    "density_measure": "half atom at zero, half uniform on (0,1)",
+    "exact_constraint_support_has_measure_zero": true,
+    "independent_uniform_boundary_errors": true,
+    "physical_preparation_derived": false,
+    "sharp_limit_is_normalized_L2_state": false,
+    "widths": [
+      "1/64",
+      "1/128",
+      "1/256"
+    ]
+  },
+  "n5_production": false,
+  "paid_compute": false,
+  "physical_boundary_state_derived": false,
+  "physical_constraint_quantization_derived": false,
+  "physical_gates": {
+    "BOUNCE": "HOLD",
+    "BOUNDARY": "HOLD",
+    "CORRESPONDENCE": "HOLD",
+    "CURRENT": "HOLD",
+    "EXTENSION": "HOLD",
+    "MODEL": "HOLD",
+    "REGULARITY": "HOLD",
+    "TRAPPING": "HOLD"
+  },
+  "return_contract": {
+    "definition": "normalized matched return <psi, exp(-i mu w C/2) psi>",
+    "finite_width_strong_phase_limit": "1/2",
+    "full_geometric_or_semiclassical_limit_derived": false,
+    "iterated_limits_commute": false,
+    "physical_detector_derived": false,
+    "sharp_collar_amplitude": 1
+  },
+  "schema": "cst-dust-collar-stationarity-contract-v0.1",
+  "scope": {
+    "extra_boundary_action": false,
+    "free_elements": 1,
+    "free_variations": [
+      "t",
+      "w in (0,1)"
+    ],
+    "future_elements": 0,
+    "geometry": "fixed chain",
+    "normalization": "inherited A=1; reduced clock units",
+    "past_clocks": "fixed external data or declared kinematic L2 packet",
+    "past_densities": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "source_main": "2b422800dcc0bd79643e1c946069acf8875a5291",
+  "stationary_witness": {
+    "boundary_reactions_required": true,
+    "coefficients": [
+      -8,
+      16,
+      -9,
+      1
+    ],
+    "free_density": "any 0<w<1",
+    "free_time": "any t>0",
+    "isolated_saddle": false,
+    "minimality": "only chain past, one final free element, no added boundary action",
+    "moments": [
+      0,
+      0,
+      -2
+    ],
+    "past_clocks": [
+      "-5/2",
+      "-2",
+      "-4/3",
+      "0"
+    ]
+  }
+}
