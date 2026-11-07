@@ -1,0 +1,61 @@
+{
+  "id": "CST-DUST-OPERATIONAL-MATTER-001",
+  "version": "0.1",
+  "date": "2026-11-07",
+  "source_commit": "35a0d886c4a7ca1d639f09b2933ffeb6c255ad9e",
+  "status": "PASS_CONDITIONAL_INSTRUMENT_AND_CERTIFIED_LOW_NUMBER_CONTINUUM",
+  "physical_gates": {
+    "MODEL": "HOLD",
+    "CURRENT": "HOLD",
+    "CORRESPONDENCE": "HOLD",
+    "BOUNCE": "HOLD",
+    "REGULARITY": "HOLD",
+    "BOUNDARY": "HOLD",
+    "TRAPPING": "HOLD",
+    "EXTENSION": "HOLD"
+  },
+  "instrument": {
+    "effects": "E_n=|b_n><b_n| and F_n=Pi_n-E_n",
+    "update": "Projective Kraus realization E_n,F_n; effects alone do not fix update",
+    "pointer_dilation": "U=sum_j P_j tensor S_j, orthogonal P_j and unitary shifts S_j",
+    "coherent_access_to_full_histories": "ASSUMED_NOT_PHYSICALLY_DERIVED",
+    "count_meter_alone": "PHASE_BLIND",
+    "fixed_number_alpha_dependence": "NONE",
+    "alpha_dependence": "Preparation across number sectors",
+    "nonselective_state_channel": "Generally disturbing within number sectors; number distribution preserved"
+  },
+  "continuous_integration": {
+    "count_cap": 2,
+    "clock_h": [
+      "1/4",
+      "1/2"
+    ],
+    "density_measure": "1/2 delta_0 + 1/2 uniform(0,1)",
+    "taylor_order": 48,
+    "arithmetic": "Exact rational moments and rational-complex amplitude centers",
+    "maximum_amplitude_error": "10^49/49! < 1.65e-14",
+    "independent_low_order_moment_checks": 16,
+    "action_polynomial_checks": 390,
+    "cases": 36
+  },
+  "infinite_number_enclosures": {
+    "normalization_enumerated_through": 6,
+    "n_ge_3_field_phases": "NOT_EVALUATED",
+    "method": "Bound each missing number-sector visibility in [0,1] using exact masses through n=6 and analytic tail",
+    "normalization_tail": "h^7/7! / (1-h/8)",
+    "infinite_time_limit": "NOT_CLAIMED"
+  },
+  "physical_detector_selected": false,
+  "cosmological_boundary_selected": false,
+  "physical_4d_dynamics_derived": false,
+  "new_physical_ensembles": false,
+  "not_claimed": [
+    "Physical selection of a detector or cosmological final boundary",
+    "A count meter alone implements coherent filtering",
+    "Continuous matter integrals for n>=3 have been computed",
+    "A finite history basis is physical hardware or a 4D ensemble",
+    "Quantum gravity, a bounce, an exterior junction or singularity resolution is derived"
+  ],
+  "next_quantitative_step": "Extend certified continuous matter integration to n>=3",
+  "next_physical_decision": "Justify coherent history access, density prior and boundary selection"
+}

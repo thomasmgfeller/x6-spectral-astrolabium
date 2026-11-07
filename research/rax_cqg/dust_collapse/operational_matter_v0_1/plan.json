@@ -1,0 +1,54 @@
+{
+  "id": "CST-DUST-OPERATIONAL-MATTER-001",
+  "version": "0.1",
+  "date": "2026-11-07",
+  "source_commit": "35a0d886c4a7ca1d639f09b2933ffeb6c255ad9e",
+  "timing": "Frozen locally after analytic design and before implementation; not blind prediction or external preregistration.",
+  "scope": "Operational count-plus-coherent-filter instrument and certified continuous matter-phase integration through two elements, with separate unresolved higher-number bounds",
+  "controls": {
+    "clock_h": [
+      "1/4",
+      "1/2"
+    ],
+    "alpha_values": [
+      1,
+      2
+    ],
+    "matter_couplings": [
+      "0",
+      "1/4",
+      "1"
+    ],
+    "gravity_g_over_pi": [
+      "0",
+      "1/18",
+      "1/9"
+    ],
+    "taylor_order": 48,
+    "amplitude_error_target": "1/1000000000000",
+    "integrated_count_cap": 2,
+    "normalization_count_cap": 6,
+    "mixture_density_measure": "1/2 delta_0 + 1/2 uniform(0,1)",
+    "clock_measure": "Ordered continuous s in (0,h), original T=-2+4s",
+    "finite_instrument": "Four orthogonal basis records, number sectors of dimension 1,1,2; exact projectors and pointer swap dilation",
+    "nonselective_channel": "Count-plus-filter measurement; output ignored dephases success/failure and need not preserve the entire state"
+  },
+  "checks": [
+    "Exact auxiliary-pointer unitarity and full Kraus completeness",
+    "Pure counting is phase-blind; coherent filter requires an additional assumption",
+    "Fixed-number normalized b_n is independent of alpha; preparation probabilities are not",
+    "Continuous density characteristic factor and exact first 48 matter moments for n=0,1,2",
+    "Independent action identities and selected low-order integration cross-checks",
+    "Uniform Taylor remainder and visibility enclosures; no floating-point input to certificates",
+    "36 count/horizon/coupling cases with separate n>=3 and normalization-tail bounds",
+    "Negatives: omitted density atom, wrong ordered-clock normalization, renormalized success filter",
+    "Byte-identical isolated replay and all eight physical gates HOLD"
+  ],
+  "not_claimed": [
+    "Physical selection of a detector or cosmological final boundary",
+    "A count meter alone implements coherent filtering",
+    "Continuous matter integrals for n>=3 have been computed",
+    "A finite history basis is physical hardware or a 4D ensemble",
+    "Quantum gravity, a bounce, an exterior junction or singularity resolution is derived"
+  ]
+}
