@@ -1,0 +1,48 @@
+name: CST-DUST continuous three-element matter
+on:
+  pull_request:
+    paths:
+      - 'research/rax_cqg/dust_collapse/three_element_matter_v0_1/**'
+      - 'research/rax_cqg/dust_collapse/operational_matter_v0_1/**'
+      - 'research/rax_cqg/dust_collapse/boundary_readout_v0_1/**'
+      - 'research/rax_cqg/dust_collapse/clock_intervals_v0_1/**'
+      - 'research/rax_cqg/dust_collapse/relational_clock_v0_1/**'
+      - 'research/rax_cqg/dust_collapse/marked_events_v0_1/**'
+      - 'research/rax_cqg/dust_collapse/boundary_memory_v0_1/**'
+      - 'research/rax_cqg/dust_collapse/quantum_structure_v0_1/**'
+      - 'research/rax_cqg/dust_collapse/reports/CST_DUST_Drei_Elemente_Kontinuierliche_Materiephase_v0_1.pdf'
+      - 'research/rax_cqg/dust_collapse/packages/CST_DUST_Drei_Elemente_Kontinuierliche_Materiephase_v0_1_Pruefpaket.zip'
+      - '.github/workflows/cst-dust-three-element-matter.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'research/rax_cqg/dust_collapse/three_element_matter_v0_1/**'
+      - 'research/rax_cqg/dust_collapse/operational_matter_v0_1/**'
+      - 'research/rax_cqg/dust_collapse/boundary_readout_v0_1/**'
+      - 'research/rax_cqg/dust_collapse/clock_intervals_v0_1/**'
+      - 'research/rax_cqg/dust_collapse/relational_clock_v0_1/**'
+      - 'research/rax_cqg/dust_collapse/marked_events_v0_1/**'
+      - 'research/rax_cqg/dust_collapse/boundary_memory_v0_1/**'
+      - 'research/rax_cqg/dust_collapse/quantum_structure_v0_1/**'
+      - 'research/rax_cqg/dust_collapse/reports/CST_DUST_Drei_Elemente_Kontinuierliche_Materiephase_v0_1.pdf'
+      - 'research/rax_cqg/dust_collapse/packages/CST_DUST_Drei_Elemente_Kontinuierliche_Materiephase_v0_1_Pruefpaket.zip'
+      - '.github/workflows/cst-dust-three-element-matter.yml'
+
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  three-element-matter-integrity-and-replay:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Verify original artifacts, eight sources and conditional result scope
+        run: python3 -O -B research/rax_cqg/dust_collapse/three_element_matter_v0_1/publication_check.py
+      - name: Replay six exact results in isolation
+        run: python3 -O -B research/rax_cqg/dust_collapse/three_element_matter_v0_1/publication_check.py --replay

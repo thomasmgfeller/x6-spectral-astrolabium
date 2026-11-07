@@ -1,0 +1,78 @@
+{
+  "id": "CST-DUST-THREE-ELEMENT-CONTINUUM-001",
+  "version": "0.1",
+  "date": "2026-11-07",
+  "source_commit": "9869528d008966a88052b65216da14eafce8db6f",
+  "timing": "Frozen after analytic method design and preliminary derivative-bound cost estimates, before implementation and new integral evaluation; not blind prediction or external preregistration.",
+  "scope": "Complete continuous three-element sector in the inherited reference measure; certified quadrature and arithmetic, with a separate n>=4 phase tail",
+  "controls": {
+    "clock_h": [
+      "1/4",
+      "1/2"
+    ],
+    "alpha_values": [
+      1,
+      2
+    ],
+    "matter_couplings": [
+      "0",
+      "1/4",
+      "1"
+    ],
+    "gravity_g_over_pi": [
+      "0",
+      "1/18",
+      "1/9"
+    ],
+    "natural_orders": 7,
+    "integrated_count_cap": 3,
+    "normalization_count_cap": 6,
+    "per_geometry_amplitude_error_target": "1/10000000000",
+    "quadrature_budget_fraction": "1/2",
+    "arithmetic_error_target": "1/100000000000000000000",
+    "gauss_even_order_candidates": {
+      "first": 8,
+      "last": 64,
+      "step": 2
+    },
+    "node_selection": "For each h,mu and cube coordinate use the smallest even q whose worst geometry derivative remainder is <= amplitude target/6; tensor nodes on [0,1], no result-dependent adaptivity",
+    "fixed_point_bits": 160,
+    "root_seed": "Floating point proposals only; exact rational sign brackets certify every Legendre root",
+    "trigonometric_reduction": "Machin pi enclosure, reduction to absolute argument <=1, degree-32 cosine and degree-33 sine with analytic remainders",
+    "small_density_argument": "Taylor through degree 36 when |t|<=1, with remainder <=1/(2*38!)",
+    "clock_cube_map": "x1=u1*u2*u3, x2=u2*u3, x3=u3; normalized Jacobian 6*u2*u3^2",
+    "coefficient_bounds": "Exact tensor Bernstein convex-hull bounds for first and second phase derivatives",
+    "density_measure": "1/2 delta_0 + 1/2 uniform(0,1)",
+    "action_control_grid": [
+      "0",
+      "1/4",
+      "1/2",
+      "3/4",
+      "1"
+    ],
+    "density_controls": [
+      "0",
+      "1/2",
+      "1"
+    ]
+  },
+  "checks": [
+    "Eight byte-identical pinned sources and frozen plan",
+    "Seven clock-compatible natural orders and inherited full action",
+    "3780 rational three-element action and increment controls",
+    "Legendre root signs, positive weights and moment exactness through degree 2q-1",
+    "Exact Jacobian moments and low-order continuous matter moments",
+    "Bridge of certified quadrature to the previous exact n=1,2 moment calculation",
+    "36 cases with strictly separate quadrature, arithmetic, n=4..6 and n>6 uncertainty",
+    "New count-success intervals contained in the previous intervals; report actual reduction",
+    "Negative controls for omitted Jacobian, missing ordering factor and omitted natural order",
+    "Six result files and byte-identical isolated replay"
+  ],
+  "not_claimed": [
+    "Physical boundary or detector selection",
+    "Field-phase integration for n>=4",
+    "A global infinite-time quantum measure",
+    "Four-dimensional CST dynamics, a bounce, or a junction law",
+    "External scientific replication or formal proof-assistant certification"
+  ]
+}
