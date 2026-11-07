@@ -1,0 +1,36 @@
+{
+  "audit": "CST-DUST-HISTORIES-CONSISTENCY-001",
+  "source_commit": "d9622fb0423725026fab73d6884a499322cb014f",
+  "plan_sha256": "1156cb82360481f8d3de1d4ba316e725157689babf9b578f8a689103c4538e55",
+  "source_files_byte_verified": 5,
+  "polynomial_evaluation_checks": 25,
+  "exact_event_checks": {
+    "hermiticity": 64,
+    "biadditivity": 432,
+    "normalization": 1,
+    "grade_two": 64,
+    "positive_quadratic_probes": 64
+  },
+  "scoped_decisions": {
+    "FINITE_AUXILIARY_STRONGLY_POSITIVE_D": "PASS_CONDITIONAL_ON_DECLARED_BOUNDARY_PRODUCT",
+    "SINGLE_CONSTANT_NORMALIZATION_ALL_CONTINUUM_STATES": "FAIL_FOR_RAW_COMPACT_KERNEL_FAMILY",
+    "NORMALIZED_D_IS_AUTOMATIC_PROBABILITY": "FAIL_FOR_INTERFERING_PARTITION",
+    "MARKOV_CUT_MAP_FOR_FULL_CST": "NOT_DERIVED",
+    "PHYSICAL_DECOHERENCE_FUNCTIONAL": "HOLD",
+    "INFINITE_HISTORY_EXTENSION": "NOT_EXECUTED"
+  },
+  "physical_decisions": {
+    "MODEL": "HOLD",
+    "CURRENT": "HOLD",
+    "CORRESPONDENCE": "HOLD",
+    "BOUNCE": "HOLD",
+    "REGULARITY": "HOLD",
+    "BOUNDARY": "HOLD",
+    "TRAPPING": "HOLD",
+    "EXTENSION": "HOLD"
+  },
+  "formal_proof_checker": false,
+  "new_dynamical_CST_ensembles": false,
+  "reference_tests_are_physical_measurements": false,
+  "supplement_01_sha256": "3dca3743c3d3900ff6f97a466d4bdc875a5c94d90f2468e2dddac2443c054ca9"
+}

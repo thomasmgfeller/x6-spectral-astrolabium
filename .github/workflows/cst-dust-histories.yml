@@ -1,0 +1,41 @@
+name: CST-DUST positive histories and cut consistency
+on:
+  pull_request:
+    paths:
+      - 'research/rax_cqg/dust_collapse/histories_v0_1/**'
+      - 'research/rax_cqg/dust_collapse/gauge_boundary_v0_1/**'
+      - 'research/rax_cqg/dust_collapse/quantum_structure_v0_1/**'
+      - 'research/rax_cqg/dust_collapse/variation_v0_1/**'
+      - 'research/rax_cqg/dust_collapse/gluing_v0_1/**'
+      - 'research/rax_cqg/dust_collapse/reports/CST_DUST_Positive_Historien_Schnittkonsistenz_v0_1.pdf'
+      - 'research/rax_cqg/dust_collapse/packages/CST_DUST_Positive_Historien_Schnittkonsistenz_v0_1_Pruefpaket.zip'
+      - '.github/workflows/cst-dust-histories.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'research/rax_cqg/dust_collapse/histories_v0_1/**'
+      - 'research/rax_cqg/dust_collapse/gauge_boundary_v0_1/**'
+      - 'research/rax_cqg/dust_collapse/quantum_structure_v0_1/**'
+      - 'research/rax_cqg/dust_collapse/variation_v0_1/**'
+      - 'research/rax_cqg/dust_collapse/gluing_v0_1/**'
+      - 'research/rax_cqg/dust_collapse/reports/CST_DUST_Positive_Historien_Schnittkonsistenz_v0_1.pdf'
+      - 'research/rax_cqg/dust_collapse/packages/CST_DUST_Positive_Historien_Schnittkonsistenz_v0_1_Pruefpaket.zip'
+      - '.github/workflows/cst-dust-histories.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  histories-integrity-and-replay:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Check original artifacts, source inputs and claim scope
+        run: python3 -O -B research/rax_cqg/dust_collapse/histories_v0_1/publication_check.py
+      - name: Replay five exact results in isolation
+        run: python3 -O -B research/rax_cqg/dust_collapse/histories_v0_1/publication_check.py --replay
