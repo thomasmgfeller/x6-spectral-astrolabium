@@ -1,0 +1,102 @@
+{
+  "id": "CST-DUST-COHERENT-BOUNDARY-001",
+  "date": "2026-11-07",
+  "source_commit": "36afc462dc5a9503616e9b016481e3b441b7c123",
+  "timing": "Frozen locally after analytic design and before new enumeration; not blind prediction or external preregistration.",
+  "candidate": "Fixed bounded coherent terminal effect and number-resolving coherent channels, transported through the common-horizon reference isometries",
+  "assumptions": [
+    "Retain full histories, local reference product, selected monotone clock sector and the explicitly chosen f_alpha weights",
+    "Terminal boundary reference is the phase-free evolved vacuum; it stays fixed while action phases are varied",
+    "Compare coherent all-number rank-one effect with an orthogonal family of coherent fixed-number effects",
+    "Use the same fixed terminal clock and pull effects back without renormalizing them",
+    "Separate actual readout probabilities from normalized decoherence-functional diagonals"
+  ],
+  "controls": {
+    "alpha_values": [
+      1,
+      2
+    ],
+    "q": "1",
+    "continuous_clock_h": "1/2",
+    "continuous_count_cap": 6,
+    "gravity_quarter_turns": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "grid_clock_values": [
+      "-1",
+      "-1/2",
+      "0",
+      "1/2"
+    ],
+    "grid_clock_atom_weight": "1/4",
+    "grid_density_values": [
+      "0",
+      "1/2"
+    ],
+    "grid_density_atom_weight": "1/2",
+    "grid_count_cap": 4,
+    "grid_cuts": [
+      "-3/2",
+      "-3/4",
+      "-1/4",
+      "1/4",
+      "3/4"
+    ],
+    "past_event_cut": "-1/4",
+    "phase_indices": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "phase_definition": "exp(i*pi/2*(kg*(Sg-Sg_empty)+kd*32*Sd)); this evaluates the inherited action at declared diagnostic couplings, not physical ones",
+    "three_history_events": "0,1,2 elements at the past event cut",
+    "negative_controls": [
+      "Unbounded flat all-history terminal row",
+      "Overscaled effect gives probability 2",
+      "Balanced two-geometry destructive readout has zero success and cannot be normalized",
+      "Unequal two-geometry preparation gives quantum-measure atom 4, not a classical probability",
+      "Renormalizing transported terminal vectors changes probabilities",
+      "Rank-one final effect cannot medium-decohere multiple nonzero atoms"
+    ]
+  },
+  "checks": [
+    "Exact continuous gravity-phase readout sums through six elements",
+    "Certified uncapped amplitude and probability bounds using count-weight tails",
+    "Full gravity and matter phase controls on an explicitly separate finite atomic measure",
+    "Effect pullback transitivity, contraction and fixed past-cylinder functional agreement",
+    "Strong positivity, hermiticity, finite additivity and grade-2 sum rule",
+    "Complete success/complement instrument and count-resolved decoherence",
+    "Six result files and byte-identical isolated replay; eight physical gates HOLD"
+  ],
+  "not_claimed": [
+    "Physical boundary-state or quantum-law selection",
+    "Finite atomic controls are a quadrature of the continuous matter phase",
+    "Unconditional gravitational selection in the record distribution",
+    "All past event algebras decohere",
+    "Infinite-time quantum measure, global exterior clock, junction law or bounce"
+  ]
+}

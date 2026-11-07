@@ -1,0 +1,107 @@
+{
+  "unequal_preparation": {
+    "initial_geometry_amplitudes": "(2,1)/sqrt(5)",
+    "relative_gravity_phase": "pi (G_chain-G_antichain=9, g=pi/9)",
+    "terminal_vector": "(1,1)/sqrt(2)",
+    "success": {
+      "total_mass": "1/10",
+      "psd_pivots": [
+        "2/5",
+        "0"
+      ],
+      "additivity_checks": 36,
+      "grade_two_checks": 16,
+      "normalized_atoms": [
+        [
+          {
+            "re": "4",
+            "im": "0"
+          },
+          {
+            "re": "-2",
+            "im": "0"
+          }
+        ],
+        [
+          {
+            "re": "-2",
+            "im": "0"
+          },
+          {
+            "re": "1",
+            "im": "0"
+          }
+        ]
+      ],
+      "medium_decoherent": false
+    },
+    "complement": {
+      "total_mass": "9/10",
+      "psd_pivots": [
+        "2/5",
+        "0"
+      ],
+      "additivity_checks": 36,
+      "grade_two_checks": 16,
+      "normalized_atoms": [
+        [
+          {
+            "re": "4/9",
+            "im": "0"
+          },
+          {
+            "re": "2/9",
+            "im": "0"
+          }
+        ],
+        [
+          {
+            "re": "2/9",
+            "im": "0"
+          },
+          {
+            "re": "1/9",
+            "im": "0"
+          }
+        ]
+      ],
+      "medium_decoherent": false
+    },
+    "unobserved_readout_record_probabilities": [
+      "4/5",
+      "1/5"
+    ]
+  },
+  "balanced_dark_control": {
+    "total_mass": "0",
+    "psd_pivots": [
+      "1/4",
+      "0"
+    ],
+    "additivity_checks": 36,
+    "grade_two_checks": 16,
+    "normalized_atoms": null,
+    "medium_decoherent": false
+  },
+  "overscaled_effect": {
+    "effect": "2 |b><b|",
+    "witness": "psi=b",
+    "putative_probability": "2",
+    "complement_positivity_rejected": true,
+    "status": "REJECTED"
+  },
+  "flat_terminal_row_norm_squared_through_cap_6": [
+    "1",
+    "3/2",
+    "7/4",
+    "91/48",
+    "2",
+    "2679/1280",
+    "2813/1280"
+  ],
+  "flat_row_unbounded": "Analytic: the two-layer lower bound makes the base history volume divergent",
+  "renormalized_initial_pullback": "If 0<p_success<1, normalizing the pulled vector changes predicted success to 1",
+  "rank_obstruction": "rank(D)<=rank(E); exact medium decoherence with k nonzero atoms requires rank(E)>=k",
+  "rank_one_multiple_positive_decoherent_atoms": "FAIL_ANALYTIC",
+  "finite_horizon_scope_only": true
+}
