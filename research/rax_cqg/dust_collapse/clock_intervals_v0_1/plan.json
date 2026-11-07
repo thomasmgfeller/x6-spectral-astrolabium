@@ -1,0 +1,107 @@
+{
+  "id": "CST-DUST-CLOCK-INTERVAL-001",
+  "date": "2026-11-07",
+  "source_commit": "3a26651cb1476b5e3b5d89c343e11487a012e432",
+  "timing": "Frozen locally after analytic reasoning and before implementing the new enumeration. Not a blind prediction or external preregistration.",
+  "candidate": "Full-past variable-number interval amplitudes; global count cap, entropy obstruction, endpoint count weights and common-terminal-horizon norm-preserving completion.",
+  "assumptions": [
+    "Keep the ordered matter-clock sector and complete inherited past",
+    "Chronological coefficient one and real inherited gravitational/matter action",
+    "Local direct-sum L2 history product; normalized clock coordinate s=(T+L)/(2L)",
+    "Count-only weights f_alpha(n)=2^(-alpha*n*(n-1)/4), alpha=0,1,2, are explicit additional choices",
+    "A single terminal clock and global total count cap are shared across all cuts"
+  ],
+  "controls": {
+    "max_total_elements": 6,
+    "max_parent_elements": 3,
+    "marked_max_elements": 4,
+    "clock_grid": [
+      "-3/4",
+      "-1/2",
+      "-1/4",
+      "1/4",
+      "1/2",
+      "3/4"
+    ],
+    "clock_cuts": [
+      [
+        "-1",
+        "0",
+        "1"
+      ],
+      [
+        "-1/2",
+        "0",
+        "1/2"
+      ],
+      [
+        "-3/4",
+        "1/4",
+        "3/4"
+      ]
+    ],
+    "binary_density_marks": [
+      "0",
+      "1/2"
+    ],
+    "alpha_values": [
+      0,
+      1,
+      2
+    ],
+    "amplitude_fugacities": [
+      "1/2",
+      "1",
+      "2"
+    ],
+    "normalized_interval_lengths": [
+      "1/8",
+      "1/4",
+      "1/2"
+    ],
+    "sewing_intervals": [
+      [
+        "1/8",
+        "1/4"
+      ],
+      [
+        "1/4",
+        "1/4"
+      ]
+    ],
+    "entropy_even_orders": [
+      4,
+      8,
+      16,
+      24,
+      32,
+      40
+    ],
+    "entropy_ratio_r_max": 24,
+    "tail_orders": [
+      4,
+      6,
+      8
+    ],
+    "terminal_demo_cap": 2,
+    "terminal_demo_horizon": "1/2",
+    "terminal_demo_cut": "1/4"
+  },
+  "checks": [
+    "Independent natural-order and ideal-extension census",
+    "Exact inherited action sewing and full-past negative control",
+    "Coefficient sewing, time-ordering factorial and per-interval-cap negative controls",
+    "Exact finite-cap norm polynomials and two-layer entropy lower bound",
+    "Uniform boundedness for alpha>=1 with explicit exponential-series remainder",
+    "Failure of separate endpoint normalization",
+    "Common-horizon partition identity, derivative/hazard identity, norm conservation and cut composition",
+    "Two explicit number weights give different terminal count probabilities",
+    "Six exact result files and isolated byte-identical replay; physical gates HOLD"
+  ],
+  "not_claimed": [
+    "Physical selection of f, fugacity, endpoint or Hilbert product",
+    "General no-go for CST or oscillatory quantum amplitudes",
+    "Four-dimensional continuum, measured dust dynamics or physical waiting time",
+    "Global exterior clock, physical constraint reduction, junction law or bounce"
+  ]
+}
