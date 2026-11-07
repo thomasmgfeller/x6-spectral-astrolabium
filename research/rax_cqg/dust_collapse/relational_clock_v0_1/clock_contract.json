@@ -1,0 +1,44 @@
+{
+  "id": "CST-DUST-RELATIONAL-CLOCK-CONTRACT-001",
+  "version": "0.1",
+  "basis_commit": "5e08cef8dcac5c7d1214dd2beff1b1533427e856",
+  "candidate": "Causally monotone matter-clock sector with chronological labels, explicit positive-density preparation, local L2 product and current-configuration projectors",
+  "clock_sector": {
+    "threshold_cut": "J_tau = {x: T_x <= tau}; an ideal on the selected monotone sector",
+    "selection_is_pure_gauge": false,
+    "continuous_domain_mass": "e(P)/m! under the normalized independent clock product measure",
+    "chronological_coefficient": "one, after the exact natural-label multiplicity cancellation",
+    "fixed_m_sum_equivalence": "PASS_WITHIN_SELECTED_SECTOR",
+    "operator_conjugacy_to_old_arbitrary_prefix_evolution": "NOT_CLAIMED",
+    "vacuum_clock_physical_status": "OPEN"
+  },
+  "explicit_preparation": {
+    "stage": 1,
+    "clock_L": "1",
+    "states": "psi_I=sqrt(4/|I|) 1_I(T) 1_(w>0)",
+    "windows": [["-1/2","0"],["0","1/2"]],
+    "reference_norm": "one for each state",
+    "physical_constraints_satisfied": "NOT_ASSUMED"
+  },
+  "fixed_birth_continuation": {
+    "definition": "All ideal extensions, new clock t>T_max_old, inherited action phase, chronological coefficient one",
+    "reference_norm_multiplier": "r(P,T_max)=|Ideals(P)| (L-T_max)/(2L)",
+    "reference_preparation_output_norms": ["5/4","3/4"],
+    "bounded_coercive_metric_isometry": "FAIL_ANALYTIC_ON_FULL_STAGE_SPACES_FOR_M_GE_1",
+    "no_go_scope": "No bounded positive child product and coercive positive parent product, including non-diagonal ones; restricted spaces and singular products are not excluded"
+  },
+  "readout": {
+    "current_configuration_predicates": "Orthogonal projectors in the selected reference product",
+    "finite_terminal_dual_norm_squared": "number_of_natural_orders(m)/m!",
+    "two_outcome_completion": "Possible for 0<=alpha<=2^-m; birth and no-birth effects sum to identity",
+    "physical_scale_or_waiting_law": "NOT_DERIVED",
+    "same_clock_interval_evolution": "NOT_CONSTRUCTED"
+  },
+  "stationarity": {
+    "prefix_saddle_preserved_by_future_birth": "FAIL_COUNTEREXAMPLE",
+    "canonical_quantum_constraint_interpretation": "NOT_ASSUMED"
+  },
+  "physical_selection": "OPEN",
+  "all_eight_physical_gates": "HOLD",
+  "not_claimed": ["General no-go for CST or dust clocks", "Physical singularity at a clock regulator endpoint", "Infinite-history quantum measure", "Physical 4D ensemble", "Junction law", "Global bounce", "Singularity resolution"]
+}
