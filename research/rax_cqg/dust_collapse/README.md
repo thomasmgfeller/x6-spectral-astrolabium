@@ -1,5 +1,11 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Randgedächtnis und exakte Fortsetzung · 7. November 2026
+
+Die vollständige Vergangenheit erlaubt eine exakte Fortsetzung der geerbten endlichen Amplitude. Wirkungszuwächse und natürliche Labelgewichte sind hergeleitet; 2.442 rationale Wirkungsvergleiche bestehen, fünf Ergebnisdateien werden isoliert bytegleich reproduziert. Ein fester oberer Ordnungskragen genügt nicht für alle zulässigen zukünftigen Ideale. Der Operator erhält alte Felder und liegt außerhalb der früheren beschränkten integrierten Kernklasse. Das physikalische Skalarprodukt, der Quotient redundanter Geburtslabels und die unendliche Fortsetzung bleiben offen; lokale Normierung verändert die ursprünglichen Amplituden. **Alle acht physikalischen Gates bleiben HOLD.**
+
+[Herleitung, Grenzen und Nachrechnung](boundary_memory_v0_1/PUBLICATION.md) · [Bericht (PDF)](reports/CST_DUST_Randgedaechtnis_Fortsetzung_v0_1.pdf) · [Originales Prüfpaket (ZIP)](packages/CST_DUST_Randgedaechtnis_Fortsetzung_v0_1_Pruefpaket.zip)
+
 ## Positive Historien und Schnittkonsistenz v0.1 · 7. November 2026
 
 Ein stark positives **Hilfs-Dekohärenzfunktional**, das gemeinsame relative Bra-/Ket-Uhrmaß und ein präzises Schnittkriterium auf dem erreichbaren Ereignisraum sind konstruiert. Das positive Randprodukt und die physikalische Fortsetzung bleiben zu begründen.
