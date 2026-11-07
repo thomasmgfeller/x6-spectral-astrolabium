@@ -1,0 +1,66 @@
+{
+  "id": "CST-DUST-COHERENT-BOUNDARY-001",
+  "version": "0.1",
+  "date": "2026-11-07",
+  "source_commit": "36afc462dc5a9503616e9b016481e3b441b7c123",
+  "status": "CONDITIONAL_REFERENCE_INSTRUMENTS_VALIDATED",
+  "physical_gates": {
+    "MODEL": "HOLD",
+    "CURRENT": "HOLD",
+    "CORRESPONDENCE": "HOLD",
+    "BOUNCE": "HOLD",
+    "REGULARITY": "HOLD",
+    "BOUNDARY": "HOLD",
+    "TRAPPING": "HOLD",
+    "EXTENSION": "HOLD"
+  },
+  "instruments": {
+    "all_numbers": "E=|b><b|; normalized phase-free evolved vacuum b held fixed across action phases",
+    "number_channels": "E_n=|b_n><b_n|; b_n=Pi_n b/sqrt(p_n); complete complement I-sum_n E_n",
+    "pullback": "E_a=K_terminal,a^dagger E K_terminal,a; never renormalize pulled vectors"
+  },
+  "assumptions": [
+    "Retain full histories, local reference product, selected monotone clock sector and the explicitly chosen f_alpha weights",
+    "Terminal boundary reference is the phase-free evolved vacuum; it stays fixed while action phases are varied",
+    "Compare coherent all-number rank-one effect with an orthogonal family of coherent fixed-number effects",
+    "Use the same fixed terminal clock and pull effects back without renormalizing them",
+    "Separate actual readout probabilities from normalized decoherence-functional diagonals"
+  ],
+  "rank_obstruction": {
+    "initial_state": "pure",
+    "decoherence": "exact medium",
+    "necessary_condition": "number of positive decoherent atoms <= rank(E)",
+    "scope": "No general CST no-go"
+  },
+  "validated": {
+    "continuous_gravity": "Exact sums through n=6 at h=1/2, alpha=1,2, g=k*pi/2; matter coupling zero",
+    "number_tail_upper": "1/604800",
+    "atomic_control": "921 distinct-clock terminal records, two density atoms; standalone measure",
+    "pullback_component_equalities": 6240,
+    "fixed_past_functional_cut_checks": 72,
+    "terminal_number_partition": "exactly medium decoherent for number channels",
+    "earlier_three_event_partition": "not medium decoherent in any of the 12 tested cases for either instrument",
+    "replay": "byte-identical six-result replay required"
+  },
+  "continuous_nonzero_matter_phase_integral": "NOT_EVALUATED",
+  "physical_boundary_selected": false,
+  "physical_4d_law_derived": false,
+  "infinite_time_quantum_measure": "NOT_CLAIMED",
+  "new_or_restarted_physical_ensembles": false,
+  "negative_controls": [
+    "Unbounded flat all-history terminal row",
+    "Overscaled effect gives probability 2",
+    "Balanced two-geometry destructive readout has zero success and cannot be normalized",
+    "Unequal two-geometry preparation gives quantum-measure atom 4, not a classical probability",
+    "Renormalizing transported terminal vectors changes probabilities",
+    "Rank-one final effect cannot medium-decohere multiple nonzero atoms"
+  ],
+  "not_claimed": [
+    "Physical boundary-state or quantum-law selection",
+    "Finite atomic controls are a quadrature of the continuous matter phase",
+    "Unconditional gravitational selection in the record distribution",
+    "All past event algebras decohere",
+    "Infinite-time quantum measure, global exterior clock, junction law or bounce"
+  ],
+  "next_decision": "Operational or dynamical boundary-instrument selection; then controlled continuous matter-phase integration and weight/horizon robustness"
+}

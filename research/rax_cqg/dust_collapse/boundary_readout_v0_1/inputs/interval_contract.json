@@ -1,0 +1,49 @@
+{
+  "id": "CST-DUST-CLOCK-INTERVAL-CONTRACT-001",
+  "version": "0.1",
+  "basis_commit": "3a26651cb1476b5e3b5d89c343e11487a012e432",
+  "state": "Full past, all ordered T and w marks, orthogonal local L2 history direct sum",
+  "clock": "s=(T+L)/(2L); selected causally monotone sector; no global vacuum clock derived",
+  "unmodified_candidate": {
+    "coefficient": "z^(n-m) exp(i(S_Y-S_X)/hbar)",
+    "shared_global_cap_composition": "PASS",
+    "reference_isometry": "FAIL_IF_BIRTHS_ALLOWED",
+    "uncapped_reference_norm": "FAIL_ANALYTIC_FOR_EVERY_ABS_Z_SQUARED_TIMES_H_GT_0",
+    "scope": "Not a general no-go for oscillatory amplitudes, different products, physical constraints or CST"
+  },
+  "weighted_candidate": {
+    "count_profile": "f_alpha(n)=2^(-alpha*n*(n-1)/4), alpha=1 or 2",
+    "coefficient_change": "Multiply by f_alpha(n)/f_alpha(m); explicitly chosen number weights",
+    "composition": "PASS_BY_ENDPOINT_COCYCLE",
+    "uniform_raw_operator_norm_squared_bound": "exp(|z|^2*h)",
+    "tail_bound": "x^(K+1)/(K+1)!/(1-x/(K+2)), x=|z|^2*h < K+2",
+    "physical_weight_selection": "OPEN"
+  },
+  "common_horizon_completion": {
+    "formula": "K_(b,a)^t*=sqrt(Z(Y_b,t*-b)/Z(Y_a,t*-a)) U_(b,a)",
+    "norm": "ISOMETRY_IN_DECLARED_REFERENCE_PRODUCT",
+    "composition": "PASS_WITH_SAME_ENDPOINT_AND_SAME_GLOBAL_CAP_OR_CONTROLLED_UNCAPPED_LIMIT",
+    "surjectivity": "NOT_CLAIMED",
+    "rate_bound_for_alpha_ge_1": "|z|^2*exp(|z|^2*H)",
+    "finite_horizon_nonexplosion": "PASS_CONDITIONAL_REFERENCE",
+    "endpoint_selection": "OPEN",
+    "physical_waiting_law": "NOT_DERIVED",
+    "infinite_time_quantum_measure": "NOT_CONSTRUCTED"
+  },
+  "nonuniqueness": {
+    "two_alpha_choices": "Different terminal count probabilities, including disjoint certified uncapped intervals",
+    "diagonal_record_probabilities": "Independent of the real action phase; no dynamical gravitational selection established",
+    "coherent_boundary_or_decoherence_functional": "NOT_SELECTED"
+  },
+  "physical_gates": {
+    "MODEL": "HOLD",
+    "CURRENT": "HOLD",
+    "CORRESPONDENCE": "HOLD",
+    "BOUNCE": "HOLD",
+    "REGULARITY": "HOLD",
+    "BOUNDARY": "HOLD",
+    "TRAPPING": "HOLD",
+    "EXTENSION": "HOLD"
+  },
+  "physical_quantum_definition_selected": false
+}
