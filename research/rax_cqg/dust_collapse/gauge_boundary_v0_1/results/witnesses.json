@@ -1,0 +1,78 @@
+{
+  "vacuum": {
+    "order": "chain 0<1<2<3",
+    "w": [
+      "0",
+      "0",
+      "1",
+      "0"
+    ],
+    "T": [
+      "0",
+      "1/4",
+      "1",
+      "2"
+    ],
+    "T_after": [
+      "0",
+      "3/4",
+      "1",
+      "2"
+    ],
+    "S_before": "103/64",
+    "S_after": "111/64",
+    "delta_S": "1/8",
+    "L": [
+      [
+        "-9/2",
+        "0",
+        "9/2",
+        "0"
+      ],
+      [
+        "0",
+        "1/2",
+        "-1/2",
+        "0"
+      ],
+      [
+        "9/2",
+        "-1/2",
+        "-4",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    ],
+    "column_1_coupled": true,
+    "column_3_flat": true,
+    "interior_density_w2": "1/2",
+    "interior_density_delta_S": "1/16",
+    "scope": "off-shell finite action witness, not a physical dust solution"
+  },
+  "geometry": {
+    "chain_F4": 3,
+    "diamond_F4": -16,
+    "relative_clock_scaling": "4"
+  },
+  "states": {
+    "norm_original": "1",
+    "norm_cotransformed": "1",
+    "norm_fixed_box": "1/2",
+    "relational_clock_variance": "1/12",
+    "physical_norm_claim": false
+  },
+  "relational_observable": {
+    "type": "weighted count below shifted threshold; auxiliary only",
+    "check": "PASS"
+  },
+  "boundary": {
+    "general_identity": "Delta S = delta sum_B q - delta^2/2 chi_B^T L chi_B",
+    "symmetry_for_all_T": "L chi_B=0",
+    "independent_origin_reset": "not licensed when relative mode couples"
+  }
+}

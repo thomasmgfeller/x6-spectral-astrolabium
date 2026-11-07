@@ -1,0 +1,120 @@
+{
+  "id": "CST-DUST-GAUGE-BOUNDARY-001",
+  "version": "0.1",
+  "date": "2026-11-07",
+  "source_commit": "374acc67cb0e6cc510ec3852fd9fe9ef2b5ed20a",
+  "scope": "Exact algebra and regulated amplitude audit of inherited finite action; not a physical CST gauge quantization.",
+  "prospective_status": "Local plan written before computations; qualitative counterexamples and intended analytic results known before certification. Not external preregistration or blind prediction.",
+  "conventions": {
+    "hbar": 1,
+    "B_prefactor": 1,
+    "w_values": [
+      0,
+      1
+    ],
+    "clock_box": "[-L,L], L>0",
+    "transform": "all fields/marks and fixed data transform together where declared"
+  },
+  "tests": {
+    "finite_actions": {
+      "N": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "all_labeled_posets": true,
+      "all_binary_density_masks": true,
+      "T": "i*i/3",
+      "shift": "7/5",
+      "relative_shift": "2/3",
+      "all_nontrivial_bipartitions": true
+    },
+    "relative_measure": {
+      "N": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "L": [
+        "1/2",
+        "1",
+        "2"
+      ],
+      "moments": "normalization, r_i^2 and r_i*r_j; exact independent uniform moment expansion",
+      "negative_control": "set T0=0 and keep independent [-L,L] boxes"
+    },
+    "amplitude_witness": {
+      "N": 2,
+      "L": 1,
+      "w1": 1,
+      "kernel": "exp(-i/2) times average exp(-i*(T-b)^2/4)",
+      "b_values": [
+        "0",
+        "1/2",
+        "1"
+      ],
+      "c_values": [
+        "-1/2",
+        "1/3",
+        "1"
+      ],
+      "terms": 60,
+      "tolerance": "rigorous rational Taylor remainder; no empirical tolerance"
+    },
+    "vacuum_witness": {
+      "order": "chain4",
+      "w": [
+        "0",
+        "0",
+        "1",
+        "0"
+      ],
+      "T0": 0,
+      "T2": 1,
+      "T3": 2,
+      "T1": [
+        "1/4",
+        "3/4"
+      ],
+      "criterion": "local translation symmetry iff L v=0; for all T at fixed C,w"
+    },
+    "boundary_witness": {
+      "formula": "Delta S = delta*sum_B q - delta^2/2 chi_B^T L chi_B",
+      "nonzero_cross_coupling": "retain relative clock origin; independent reset is changed model"
+    },
+    "state_controls": {
+      "wavepacket": "normalized compact indicator, translated together with domain and readout; auxiliary positive norm only",
+      "relabel": "commutation with common clock shift, all permutations N<=4"
+    },
+    "physical_controls": {
+      "clock_affine": "Gamma[aT+b]=a^2 Gamma[T]; future proper time a=1",
+      "geometry": "two non-isomorphic orders with fixed fields must remain distinguishable"
+    }
+  },
+  "claims_not_tested": [
+    "gravitational constraint algebra",
+    "Hamiltonian or physical rigging map",
+    "physical decoherence functional",
+    "diffeomorphism anomaly freedom",
+    "CST boundary charges or edge modes",
+    "regulator removal",
+    "4D emergence",
+    "physical dynamics",
+    "bounce",
+    "regularity",
+    "global extension"
+  ],
+  "physical_decisions": {
+    "MODEL": "HOLD",
+    "CURRENT": "HOLD",
+    "CORRESPONDENCE": "HOLD",
+    "BOUNCE": "HOLD",
+    "REGULARITY": "HOLD",
+    "BOUNDARY": "HOLD",
+    "TRAPPING": "HOLD",
+    "EXTENSION": "HOLD"
+  }
+}
+

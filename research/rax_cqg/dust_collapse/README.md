@@ -1,5 +1,16 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Eichstruktur und Randkonsistenz v0.1 · 7. November 2026
+
+Gemeinsame Umbenennungen und Uhrverschiebungen sind im geprüften endlichen Ansatz exakt konsistent, wenn Zustände, Randdaten und Regulator mittransformiert werden. Relative Uhren besitzen ein korreliertes induziertes Maß. Naives Zurücksetzen bei unveränderter Box, beliebige lokale Vakuumuhrverschiebungen und getrennte Ursprungsverschiebungen gekoppelter Teilgebiete ohne relative Randdaten werden durch konkrete Gegenbeispiele zurückgewiesen.
+
+3 670 markierte Fälle, 85 034 Umbenennungen, 49 992 geordnete Gebietsteilungen und 2 508 exakte Maßkontrollen sind ausgeführt. Je 24 zertifizierte Amplituden-/Ward-Kontrollen bei w=1 und w=1/2 sowie 66 zusätzliche numerische Integrationen ergänzen die Beweise. Sieben exakte Ergebnisdateien werden isoliert bytegleich reproduziert. **Alle acht physikalischen Audit-Entscheidungen bleiben HOLD.** Physikalische Eichquantisierung, gravitative Constraints, Junction-Gesetz, gemeinsamer Außenraum, Regularität und globaler Bounce sind weiterhin offen; eine gravitative Anomalie ist nicht nachgewiesen.
+
+PDF und ZIP bleiben bytegleich zum abgeschlossenen Arbeitspaket. Die Veröffentlichungsübersicht präzisiert den jeweils einen zusätzlichen abschließenden Zeilenumbruch in sieben geerbten Eingabekopien. Die frühere Zurückweisung der geprüften rohen Evolutionsinterpretation bleibt unverändert.
+
+[Bericht (PDF, sieben Seiten)](reports/CST_DUST_Eichstruktur_Randkonsistenz_v0_1.pdf) · [Originales Prüfpaket (ZIP)](packages/CST_DUST_Eichstruktur_Randkonsistenz_v0_1_Pruefpaket.zip) · [Beweise, Aussagegrenzen, Provenienz und Nachrechnung](gauge_boundary_v0_1/PUBLICATION.md)
+
+
 ## Zustandsraum und Constraints v0.1 · 6. November 2026
 
 Ein positiver Hilfshistorienraum, sein Testbereich, die vollständige Umbenennungsdarstellung und die zugehörigen Constraints sind definiert. Gruppenmittelung und positives Quotientskalarprodukt entfernen interne Labels. 3 671 markierte Zustände, 85 035 Gruppenwirkungen, 234 Orbits und 4 817 gemeinsame Geometrie-/Feldumbenennungen bestätigen die endliche Konstruktion exakt. Sie liefert noch keinen vollständigen physikalischen Randzustandsraum oder gravitative dynamische Constraints.
