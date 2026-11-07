@@ -1,0 +1,75 @@
+{
+  "approximate_zero_eps": [
+    "1/2",
+    "1/4",
+    "1/8",
+    "1/16"
+  ],
+  "boundary_L": [
+    "1/2",
+    "1",
+    "2"
+  ],
+  "boundary_b": [
+    "0",
+    "1/2",
+    "-1/2"
+  ],
+  "characteristic_degree": 48,
+  "characteristic_u": [
+    "0",
+    "1/8",
+    "1/2",
+    "1",
+    "2",
+    "4",
+    "-1",
+    "-4",
+    "16",
+    "64"
+  ],
+  "clock_profiles": [
+    "linear",
+    "quadratic",
+    "late"
+  ],
+  "density_profiles": [
+    "zero",
+    "uniform_half",
+    "ramp"
+  ],
+  "h": [
+    "1/4",
+    "1/2",
+    "1"
+  ],
+  "high_phase_values": [
+    "4",
+    "16",
+    "64",
+    "256"
+  ],
+  "max_new_elements": 3,
+  "n5_production": false,
+  "paid_compute": false,
+  "physical_constraint_quantization_derived": false,
+  "physical_gates": {
+    "BOUNCE": "HOLD",
+    "BOUNDARY": "HOLD",
+    "CORRESPONDENCE": "HOLD",
+    "CURRENT": "HOLD",
+    "EXTENSION": "HOLD",
+    "MODEL": "HOLD",
+    "REGULARITY": "HOLD",
+    "TRAPPING": "HOLD"
+  },
+  "physical_sector_charge_derived": false,
+  "schema": "cst-dust-clock-ward-constraints-plan-v0.1",
+  "shift_values": [
+    "-2",
+    "1/3",
+    "3"
+  ],
+  "timing": "Frozen after analytical design and source check, before finite controls; not external preregistration",
+  "ward_max_order": 12
+}
