@@ -1,5 +1,11 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Maßabhängigkeit und Zustandstransport · 7. November 2026
+
+Gleicher Nullanteil, Mittelwert und gleiche Varianz des Materiemaßes legen die kohärente Referenzauslese mit jeweils konstanten Randvektoren nicht eindeutig fest. Acht vorher festgelegte Gegenvergleiche im bedingten Ein-Element-Kanal sind durch exakte rationale Intervalle von null getrennt. Bei korrekt mittransportierten Präparations- und Auslesevektoren bleiben die betrachteten Matrixelemente dagegen exakt gleich: Der Referenzunterschied belegt keine physikalische Ungleichwertigkeit nach Darstellungstransport. Die Auswahl von Maß, Zustand und Messauslese muss gemeinsam physikalisch begründet werden. Sechs Ergebnisdateien wurden bytegleich nachgerechnet; der ursprüngliche Prüfplan und die spätere Interpretationsergänzung sind getrennt dokumentiert. **Alle acht physikalischen Gates bleiben HOLD.** Kein n=5-Produktionslauf und keine kostenpflichtige Rechenleistung wurden beauftragt.
+
+[Herleitung, Grenzen und Nachrechnung](measure_audit_v0_1/README.md) · [Vollständige Beweise](measure_audit_v0_1/DERIVATION.md) · [Bericht (PDF)](measure_audit_v0_1/CST_DUST_Massabhaengigkeit_Zustandstransport_v0_1.pdf) · [Originales Prüfpaket (ZIP)](measure_audit_v0_1/CST_DUST_Massabhaengigkeit_Zustandstransport_v0_1_Pruefpaket.zip) · [Kostenneutrale Community-Rechenhilfe](https://github.com/thomasmgfeller/x6-spectral-astrolabium/issues/259)
+
 ## α-abhängige Normrestschranke · 7. November 2026
 
 Eine kombinatorisch hergeleitete Schranke nutzt α und die 4824 exakt bekannten Sechs-Element-Ordnungen. Die obere Gewichtsschranke für alle unbekannten Phasensektoren sinkt um weitere 81,85–94,91 % bei α=2 beziehungsweise 0,37–1,47 % bei α=1. Alle Feldamplituden bleiben unverändert; neue Feldintegrale wurden nicht berechnet. Alle 36 Zahlkanal- und kohärenten Erfolgsintervalle liegen innerhalb ihrer Vorgänger, fünf neue Ergebnisdateien sind bytegleich reproduziert. Der n=5-Sektor macht jetzt 96,35–99,95 % der oberen Restmasse aus. Die Enumeration bis n=7 dient nur der Validierung; die Normierung bleibt bei n≤6, die Feldintegration bei n≤4. **Alle acht physikalischen Gates bleiben HOLD.** Maß, Historienzugriff und Randwahl bleiben offen; keine vollständige CST-Dynamik, Rückwirkung, Bounce oder Junction werden hergeleitet.

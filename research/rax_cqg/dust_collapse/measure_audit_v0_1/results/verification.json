@@ -1,0 +1,51 @@
+{
+  "action_checks": 100,
+  "bernstein_geometry_budgets": 100,
+  "constant_boundary_reference_invariance": "REFUTED_BY_CONDITIONAL_N1_WITNESS",
+  "does_not_establish": "Physical admissibility of the family, physical inequivalence after covariant state/readout transport, identical classical dynamics, an infinite-channel measured shift, or a bounce.",
+  "fixed_visibility_cases": 12,
+  "geometry_moment_rows": 100,
+  "interpretation_supplement": "supplement.json and results/transport_controls.json distinguish state changes from representation changes.",
+  "moment_formula_checks": 33,
+  "n5_production_run": false,
+  "negative_controls": [
+    {
+      "case": "wrong perturbation sign",
+      "status": "REJECTED"
+    },
+    {
+      "case": "missing half-density factor",
+      "status": "REJECTED"
+    },
+    {
+      "case": "non-normalized trial law",
+      "status": "REJECTED"
+    },
+    {
+      "case": "theta outside positivity domain",
+      "status": "REJECTED"
+    },
+    {
+      "case": "false zero visibility gap",
+      "status": "REJECTED"
+    },
+    {
+      "case": "changed source byte",
+      "status": "REJECTED"
+    }
+  ],
+  "physical_gates": {
+    "BOUNCE": "HOLD",
+    "BOUNDARY": "HOLD",
+    "CORRESPONDENCE": "HOLD",
+    "CURRENT": "HOLD",
+    "EXTENSION": "HOLD",
+    "MODEL": "HOLD",
+    "REGULARITY": "HOLD",
+    "TRAPPING": "HOLD"
+  },
+  "plan_sha256": "fd9d00d4ce6ae7abd4d4b5b5588734e7220333a2ed1a26300688ad4f96411c15",
+  "separated_counterexamples": 8,
+  "status": "PASS_EXACT_ANALYTICAL_AUDIT",
+  "uniform_parameter_bounds": 8
+}

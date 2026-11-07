@@ -1,0 +1,63 @@
+{
+  "acceptance": "Report a fixed-grid counterexample only if its exact rational visibility-difference interval excludes zero. Do not change the grid or polynomial degree based on outcomes.",
+  "amplitude_taylor_degree": 24,
+  "comparison_conditions": [
+    "probability measure on [0,1]",
+    "atom of mass 1/2 at zero",
+    "iid identical density law at every new element",
+    "m1=1/4",
+    "m2=1/6",
+    "same clock law, action, alpha weights and readout"
+  ],
+  "cost_policy": "No paid compute; no n=5 production integration",
+  "diagnostic_theta": [
+    "-1",
+    "0",
+    "1"
+  ],
+  "family": "nu_theta=1/2 delta_0 + 1/2 (1+theta*(20w^3-30w^2+12w-1)) dw on (0,1)",
+  "geometric_robustness_n_max": 4,
+  "geometry_controls_n": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "h": [
+    "1/4",
+    "1/2"
+  ],
+  "infinite_tail_norm_cutoff": 6,
+  "moment_identity_check_k_max": 32,
+  "mu": [
+    "1/4",
+    "1"
+  ],
+  "negative_controls": [
+    "wrong sign of moment perturbation",
+    "missing 1/2 density factor",
+    "non-normalized trial law",
+    "theta outside positive family",
+    "false zero visibility difference",
+    "changed source byte"
+  ],
+  "not_assumed": "Matching two moments is not a proof of identical classical dynamics or physical admissibility.",
+  "physical_gates": {
+    "BOUNCE": "HOLD",
+    "BOUNDARY": "HOLD",
+    "CORRESPONDENCE": "HOLD",
+    "CURRENT": "HOLD",
+    "EXTENSION": "HOLD",
+    "MODEL": "HOLD",
+    "REGULARITY": "HOLD",
+    "TRAPPING": "HOLD"
+  },
+  "planning_disclosure": "Family and leading-order counterexample derived algebraically before freezing this plan; fixed finite-parameter numerical enclosures are computed afterwards. Not external preregistration.",
+  "schema": "cst-dust-matter-measure-audit-v0.1",
+  "source_main": "3177458a7f8545f845054e235cd3dcd7e829eff3",
+  "theta_domain": [
+    "-1",
+    "1"
+  ],
+  "visibility_cosine_degree": 24
+}
