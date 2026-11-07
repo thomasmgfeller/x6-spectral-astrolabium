@@ -1,0 +1,2109 @@
+{
+  "bound": "min(1, tau + sqrt(min(1, epsilon+tau)) + 4*delta)",
+  "delta_scope": "Total variation of the full joint classical record law, not merely a finite set of moments or marginals.",
+  "diagnostic_budgets": [
+    {
+      "delta": "0",
+      "epsilon": "0",
+      "experimental_status": "NOT_MEASURED_DIAGNOSTIC_BUDGET",
+      "probability_error_upper": "0",
+      "tau": "0"
+    },
+    {
+      "delta": "0",
+      "epsilon": "1/10000",
+      "experimental_status": "NOT_MEASURED_DIAGNOSTIC_BUDGET",
+      "probability_error_upper": "1/100",
+      "tau": "0"
+    },
+    {
+      "delta": "1/100000",
+      "epsilon": "9/1000000",
+      "experimental_status": "NOT_MEASURED_DIAGNOSTIC_BUDGET",
+      "probability_error_upper": "3203277661/1000000000000",
+      "tau": "1/1000000"
+    }
+  ],
+  "exact_matrix_controls": [
+    {
+      "epsilon": "0",
+      "phase": "1",
+      "probability_gap": "0",
+      "state_index": 0,
+      "target": [
+        "1",
+        "0"
+      ]
+    },
+    {
+      "epsilon": "0",
+      "phase": "-1",
+      "probability_gap": "0",
+      "state_index": 0,
+      "target": [
+        "1",
+        "0"
+      ]
+    },
+    {
+      "epsilon": "0",
+      "phase": "i",
+      "probability_gap": "0",
+      "state_index": 0,
+      "target": [
+        "1",
+        "0"
+      ]
+    },
+    {
+      "epsilon": "0",
+      "phase": "-i",
+      "probability_gap": "0",
+      "state_index": 0,
+      "target": [
+        "1",
+        "0"
+      ]
+    },
+    {
+      "epsilon": "0",
+      "phase": "1",
+      "probability_gap": "0",
+      "state_index": 1,
+      "target": [
+        "1",
+        "0"
+      ]
+    },
+    {
+      "epsilon": "0",
+      "phase": "-1",
+      "probability_gap": "0",
+      "state_index": 1,
+      "target": [
+        "1",
+        "0"
+      ]
+    },
+    {
+      "epsilon": "0",
+      "phase": "i",
+      "probability_gap": "0",
+      "state_index": 1,
+      "target": [
+        "1",
+        "0"
+      ]
+    },
+    {
+      "epsilon": "0",
+      "phase": "-i",
+      "probability_gap": "0",
+      "state_index": 1,
+      "target": [
+        "1",
+        "0"
+      ]
+    },
+    {
+      "epsilon": "16/25",
+      "phase": "1",
+      "probability_gap": "16/25",
+      "state_index": 2,
+      "target": [
+        "1",
+        "0"
+      ]
+    },
+    {
+      "epsilon": "16/25",
+      "phase": "-1",
+      "probability_gap": "16/25",
+      "state_index": 2,
+      "target": [
+        "1",
+        "0"
+      ]
+    },
+    {
+      "epsilon": "16/25",
+      "phase": "i",
+      "probability_gap": "16/25",
+      "state_index": 2,
+      "target": [
+        "1",
+        "0"
+      ]
+    },
+    {
+      "epsilon": "16/25",
+      "phase": "-i",
+      "probability_gap": "16/25",
+      "state_index": 2,
+      "target": [
+        "1",
+        "0"
+      ]
+    },
+    {
+      "epsilon": "16/25",
+      "phase": "1",
+      "probability_gap": "16/25",
+      "state_index": 3,
+      "target": [
+        "1",
+        "0"
+      ]
+    },
+    {
+      "epsilon": "16/25",
+      "phase": "-1",
+      "probability_gap": "16/25",
+      "state_index": 3,
+      "target": [
+        "1",
+        "0"
+      ]
+    },
+    {
+      "epsilon": "16/25",
+      "phase": "i",
+      "probability_gap": "16/25",
+      "state_index": 3,
+      "target": [
+        "1",
+        "0"
+      ]
+    },
+    {
+      "epsilon": "16/25",
+      "phase": "-i",
+      "probability_gap": "16/25",
+      "state_index": 3,
+      "target": [
+        "1",
+        "0"
+      ]
+    },
+    {
+      "epsilon": "144/169",
+      "phase": "1",
+      "probability_gap": "144/169",
+      "state_index": 4,
+      "target": [
+        "1",
+        "0"
+      ]
+    },
+    {
+      "epsilon": "144/169",
+      "phase": "-1",
+      "probability_gap": "144/169",
+      "state_index": 4,
+      "target": [
+        "1",
+        "0"
+      ]
+    },
+    {
+      "epsilon": "144/169",
+      "phase": "i",
+      "probability_gap": "144/169",
+      "state_index": 4,
+      "target": [
+        "1",
+        "0"
+      ]
+    },
+    {
+      "epsilon": "144/169",
+      "phase": "-i",
+      "probability_gap": "144/169",
+      "state_index": 4,
+      "target": [
+        "1",
+        "0"
+      ]
+    },
+    {
+      "epsilon": "144/169",
+      "phase": "1",
+      "probability_gap": "144/169",
+      "state_index": 5,
+      "target": [
+        "1",
+        "0"
+      ]
+    },
+    {
+      "epsilon": "144/169",
+      "phase": "-1",
+      "probability_gap": "144/169",
+      "state_index": 5,
+      "target": [
+        "1",
+        "0"
+      ]
+    },
+    {
+      "epsilon": "144/169",
+      "phase": "i",
+      "probability_gap": "144/169",
+      "state_index": 5,
+      "target": [
+        "1",
+        "0"
+      ]
+    },
+    {
+      "epsilon": "144/169",
+      "phase": "-i",
+      "probability_gap": "144/169",
+      "state_index": 5,
+      "target": [
+        "1",
+        "0"
+      ]
+    },
+    {
+      "epsilon": "225/289",
+      "phase": "1",
+      "probability_gap": "225/289",
+      "state_index": 6,
+      "target": [
+        "1",
+        "0"
+      ]
+    },
+    {
+      "epsilon": "225/289",
+      "phase": "-1",
+      "probability_gap": "225/289",
+      "state_index": 6,
+      "target": [
+        "1",
+        "0"
+      ]
+    },
+    {
+      "epsilon": "225/289",
+      "phase": "i",
+      "probability_gap": "225/289",
+      "state_index": 6,
+      "target": [
+        "1",
+        "0"
+      ]
+    },
+    {
+      "epsilon": "225/289",
+      "phase": "-i",
+      "probability_gap": "225/289",
+      "state_index": 6,
+      "target": [
+        "1",
+        "0"
+      ]
+    },
+    {
+      "epsilon": "225/289",
+      "phase": "1",
+      "probability_gap": "225/289",
+      "state_index": 7,
+      "target": [
+        "1",
+        "0"
+      ]
+    },
+    {
+      "epsilon": "225/289",
+      "phase": "-1",
+      "probability_gap": "225/289",
+      "state_index": 7,
+      "target": [
+        "1",
+        "0"
+      ]
+    },
+    {
+      "epsilon": "225/289",
+      "phase": "i",
+      "probability_gap": "225/289",
+      "state_index": 7,
+      "target": [
+        "1",
+        "0"
+      ]
+    },
+    {
+      "epsilon": "225/289",
+      "phase": "-i",
+      "probability_gap": "225/289",
+      "state_index": 7,
+      "target": [
+        "1",
+        "0"
+      ]
+    },
+    {
+      "epsilon": "1/2",
+      "phase": "1",
+      "probability_gap": "1/2",
+      "state_index": 8,
+      "target": [
+        "1",
+        "0"
+      ]
+    },
+    {
+      "epsilon": "1/2",
+      "phase": "-1",
+      "probability_gap": "1/2",
+      "state_index": 8,
+      "target": [
+        "1",
+        "0"
+      ]
+    },
+    {
+      "epsilon": "1/2",
+      "phase": "i",
+      "probability_gap": "1/2",
+      "state_index": 8,
+      "target": [
+        "1",
+        "0"
+      ]
+    },
+    {
+      "epsilon": "1/2",
+      "phase": "-i",
+      "probability_gap": "1/2",
+      "state_index": 8,
+      "target": [
+        "1",
+        "0"
+      ]
+    },
+    {
+      "epsilon": "1/2",
+      "phase": "1",
+      "probability_gap": "1/2",
+      "state_index": 9,
+      "target": [
+        "1",
+        "0"
+      ]
+    },
+    {
+      "epsilon": "1/2",
+      "phase": "-1",
+      "probability_gap": "1/2",
+      "state_index": 9,
+      "target": [
+        "1",
+        "0"
+      ]
+    },
+    {
+      "epsilon": "1/2",
+      "phase": "i",
+      "probability_gap": "1/2",
+      "state_index": 9,
+      "target": [
+        "1",
+        "0"
+      ]
+    },
+    {
+      "epsilon": "1/2",
+      "phase": "-i",
+      "probability_gap": "1/2",
+      "state_index": 9,
+      "target": [
+        "1",
+        "0"
+      ]
+    },
+    {
+      "epsilon": "1/2",
+      "phase": "1",
+      "probability_gap": "1/2",
+      "state_index": 10,
+      "target": [
+        "1",
+        "0"
+      ]
+    },
+    {
+      "epsilon": "1/2",
+      "phase": "-1",
+      "probability_gap": "1/2",
+      "state_index": 10,
+      "target": [
+        "1",
+        "0"
+      ]
+    },
+    {
+      "epsilon": "1/2",
+      "phase": "i",
+      "probability_gap": "1/2",
+      "state_index": 10,
+      "target": [
+        "1",
+        "0"
+      ]
+    },
+    {
+      "epsilon": "1/2",
+      "phase": "-i",
+      "probability_gap": "1/2",
+      "state_index": 10,
+      "target": [
+        "1",
+        "0"
+      ]
+    },
+    {
+      "epsilon": "1/2",
+      "phase": "1",
+      "probability_gap": "1/2",
+      "state_index": 11,
+      "target": [
+        "1",
+        "0"
+      ]
+    },
+    {
+      "epsilon": "1/2",
+      "phase": "-1",
+      "probability_gap": "1/2",
+      "state_index": 11,
+      "target": [
+        "1",
+        "0"
+      ]
+    },
+    {
+      "epsilon": "1/2",
+      "phase": "i",
+      "probability_gap": "1/2",
+      "state_index": 11,
+      "target": [
+        "1",
+        "0"
+      ]
+    },
+    {
+      "epsilon": "1/2",
+      "phase": "-i",
+      "probability_gap": "1/2",
+      "state_index": 11,
+      "target": [
+        "1",
+        "0"
+      ]
+    },
+    {
+      "epsilon": "1/2",
+      "phase": "1",
+      "probability_gap": "1/2",
+      "state_index": 12,
+      "target": [
+        "1",
+        "0"
+      ]
+    },
+    {
+      "epsilon": "1/2",
+      "phase": "-1",
+      "probability_gap": "1/2",
+      "state_index": 12,
+      "target": [
+        "1",
+        "0"
+      ]
+    },
+    {
+      "epsilon": "1/2",
+      "phase": "i",
+      "probability_gap": "1/2",
+      "state_index": 12,
+      "target": [
+        "1",
+        "0"
+      ]
+    },
+    {
+      "epsilon": "1/2",
+      "phase": "-i",
+      "probability_gap": "1/2",
+      "state_index": 12,
+      "target": [
+        "1",
+        "0"
+      ]
+    },
+    {
+      "epsilon": "16/25",
+      "phase": "1",
+      "probability_gap": "16/25",
+      "state_index": 0,
+      "target": [
+        "3/5",
+        "4/5"
+      ]
+    },
+    {
+      "epsilon": "16/25",
+      "phase": "-1",
+      "probability_gap": "176/625",
+      "state_index": 0,
+      "target": [
+        "3/5",
+        "4/5"
+      ]
+    },
+    {
+      "epsilon": "16/25",
+      "phase": "i",
+      "probability_gap": "112/625",
+      "state_index": 0,
+      "target": [
+        "3/5",
+        "4/5"
+      ]
+    },
+    {
+      "epsilon": "16/25",
+      "phase": "-i",
+      "probability_gap": "112/625",
+      "state_index": 0,
+      "target": [
+        "3/5",
+        "4/5"
+      ]
+    },
+    {
+      "epsilon": "16/25",
+      "phase": "1",
+      "probability_gap": "16/25",
+      "state_index": 1,
+      "target": [
+        "3/5",
+        "4/5"
+      ]
+    },
+    {
+      "epsilon": "16/25",
+      "phase": "-1",
+      "probability_gap": "176/625",
+      "state_index": 1,
+      "target": [
+        "3/5",
+        "4/5"
+      ]
+    },
+    {
+      "epsilon": "16/25",
+      "phase": "i",
+      "probability_gap": "112/625",
+      "state_index": 1,
+      "target": [
+        "3/5",
+        "4/5"
+      ]
+    },
+    {
+      "epsilon": "16/25",
+      "phase": "-i",
+      "probability_gap": "112/625",
+      "state_index": 1,
+      "target": [
+        "3/5",
+        "4/5"
+      ]
+    },
+    {
+      "epsilon": "0",
+      "phase": "1",
+      "probability_gap": "0",
+      "state_index": 2,
+      "target": [
+        "3/5",
+        "4/5"
+      ]
+    },
+    {
+      "epsilon": "0",
+      "phase": "-1",
+      "probability_gap": "0",
+      "state_index": 2,
+      "target": [
+        "3/5",
+        "4/5"
+      ]
+    },
+    {
+      "epsilon": "0",
+      "phase": "i",
+      "probability_gap": "0",
+      "state_index": 2,
+      "target": [
+        "3/5",
+        "4/5"
+      ]
+    },
+    {
+      "epsilon": "0",
+      "phase": "-i",
+      "probability_gap": "0",
+      "state_index": 2,
+      "target": [
+        "3/5",
+        "4/5"
+      ]
+    },
+    {
+      "epsilon": "576/625",
+      "phase": "1",
+      "probability_gap": "576/625",
+      "state_index": 3,
+      "target": [
+        "3/5",
+        "4/5"
+      ]
+    },
+    {
+      "epsilon": "576/625",
+      "phase": "-1",
+      "probability_gap": "576/625",
+      "state_index": 3,
+      "target": [
+        "3/5",
+        "4/5"
+      ]
+    },
+    {
+      "epsilon": "576/625",
+      "phase": "i",
+      "probability_gap": "0",
+      "state_index": 3,
+      "target": [
+        "3/5",
+        "4/5"
+      ]
+    },
+    {
+      "epsilon": "576/625",
+      "phase": "-i",
+      "probability_gap": "0",
+      "state_index": 3,
+      "target": [
+        "3/5",
+        "4/5"
+      ]
+    },
+    {
+      "epsilon": "256/4225",
+      "phase": "1",
+      "probability_gap": "256/4225",
+      "state_index": 4,
+      "target": [
+        "3/5",
+        "4/5"
+      ]
+    },
+    {
+      "epsilon": "256/4225",
+      "phase": "-1",
+      "probability_gap": "18944/105625",
+      "state_index": 4,
+      "target": [
+        "3/5",
+        "4/5"
+      ]
+    },
+    {
+      "epsilon": "256/4225",
+      "phase": "i",
+      "probability_gap": "6272/105625",
+      "state_index": 4,
+      "target": [
+        "3/5",
+        "4/5"
+      ]
+    },
+    {
+      "epsilon": "256/4225",
+      "phase": "-i",
+      "probability_gap": "6272/105625",
+      "state_index": 4,
+      "target": [
+        "3/5",
+        "4/5"
+      ]
+    },
+    {
+      "epsilon": "3136/4225",
+      "phase": "1",
+      "probability_gap": "3136/4225",
+      "state_index": 5,
+      "target": [
+        "3/5",
+        "4/5"
+      ]
+    },
+    {
+      "epsilon": "3136/4225",
+      "phase": "-1",
+      "probability_gap": "90944/105625",
+      "state_index": 5,
+      "target": [
+        "3/5",
+        "4/5"
+      ]
+    },
+    {
+      "epsilon": "3136/4225",
+      "phase": "i",
+      "probability_gap": "6272/105625",
+      "state_index": 5,
+      "target": [
+        "3/5",
+        "4/5"
+      ]
+    },
+    {
+      "epsilon": "3136/4225",
+      "phase": "-i",
+      "probability_gap": "6272/105625",
+      "state_index": 5,
+      "target": [
+        "3/5",
+        "4/5"
+      ]
+    },
+    {
+      "epsilon": "169/7225",
+      "phase": "1",
+      "probability_gap": "169/7225",
+      "state_index": 6,
+      "target": [
+        "3/5",
+        "4/5"
+      ]
+    },
+    {
+      "epsilon": "169/7225",
+      "phase": "-1",
+      "probability_gap": "18239/180625",
+      "state_index": 6,
+      "target": [
+        "3/5",
+        "4/5"
+      ]
+    },
+    {
+      "epsilon": "169/7225",
+      "phase": "i",
+      "probability_gap": "7007/180625",
+      "state_index": 6,
+      "target": [
+        "3/5",
+        "4/5"
+      ]
+    },
+    {
+      "epsilon": "169/7225",
+      "phase": "-i",
+      "probability_gap": "7007/180625",
+      "state_index": 6,
+      "target": [
+        "3/5",
+        "4/5"
+      ]
+    },
+    {
+      "epsilon": "5929/7225",
+      "phase": "1",
+      "probability_gap": "5929/7225",
+      "state_index": 7,
+      "target": [
+        "3/5",
+        "4/5"
+      ]
+    },
+    {
+      "epsilon": "5929/7225",
+      "phase": "-1",
+      "probability_gap": "162239/180625",
+      "state_index": 7,
+      "target": [
+        "3/5",
+        "4/5"
+      ]
+    },
+    {
+      "epsilon": "5929/7225",
+      "phase": "i",
+      "probability_gap": "7007/180625",
+      "state_index": 7,
+      "target": [
+        "3/5",
+        "4/5"
+      ]
+    },
+    {
+      "epsilon": "5929/7225",
+      "phase": "-i",
+      "probability_gap": "7007/180625",
+      "state_index": 7,
+      "target": [
+        "3/5",
+        "4/5"
+      ]
+    },
+    {
+      "epsilon": "49/50",
+      "phase": "1",
+      "probability_gap": "49/50",
+      "state_index": 8,
+      "target": [
+        "3/5",
+        "4/5"
+      ]
+    },
+    {
+      "epsilon": "49/50",
+      "phase": "-1",
+      "probability_gap": "1127/1250",
+      "state_index": 8,
+      "target": [
+        "3/5",
+        "4/5"
+      ]
+    },
+    {
+      "epsilon": "49/50",
+      "phase": "i",
+      "probability_gap": "49/1250",
+      "state_index": 8,
+      "target": [
+        "3/5",
+        "4/5"
+      ]
+    },
+    {
+      "epsilon": "49/50",
+      "phase": "-i",
+      "probability_gap": "49/1250",
+      "state_index": 8,
+      "target": [
+        "3/5",
+        "4/5"
+      ]
+    },
+    {
+      "epsilon": "37/50",
+      "phase": "1",
+      "probability_gap": "37/50",
+      "state_index": 9,
+      "target": [
+        "3/5",
+        "4/5"
+      ]
+    },
+    {
+      "epsilon": "37/50",
+      "phase": "-1",
+      "probability_gap": "827/1250",
+      "state_index": 9,
+      "target": [
+        "3/5",
+        "4/5"
+      ]
+    },
+    {
+      "epsilon": "37/50",
+      "phase": "i",
+      "probability_gap": "49/1250",
+      "state_index": 9,
+      "target": [
+        "3/5",
+        "4/5"
+      ]
+    },
+    {
+      "epsilon": "37/50",
+      "phase": "-i",
+      "probability_gap": "49/1250",
+      "state_index": 9,
+      "target": [
+        "3/5",
+        "4/5"
+      ]
+    },
+    {
+      "epsilon": "1/2",
+      "phase": "1",
+      "probability_gap": "1/2",
+      "state_index": 10,
+      "target": [
+        "3/5",
+        "4/5"
+      ]
+    },
+    {
+      "epsilon": "1/2",
+      "phase": "-1",
+      "probability_gap": "527/1250",
+      "state_index": 10,
+      "target": [
+        "3/5",
+        "4/5"
+      ]
+    },
+    {
+      "epsilon": "1/2",
+      "phase": "i",
+      "probability_gap": "49/1250",
+      "state_index": 10,
+      "target": [
+        "3/5",
+        "4/5"
+      ]
+    },
+    {
+      "epsilon": "1/2",
+      "phase": "-i",
+      "probability_gap": "49/1250",
+      "state_index": 10,
+      "target": [
+        "3/5",
+        "4/5"
+      ]
+    },
+    {
+      "epsilon": "13/50",
+      "phase": "1",
+      "probability_gap": "13/50",
+      "state_index": 11,
+      "target": [
+        "3/5",
+        "4/5"
+      ]
+    },
+    {
+      "epsilon": "13/50",
+      "phase": "-1",
+      "probability_gap": "227/1250",
+      "state_index": 11,
+      "target": [
+        "3/5",
+        "4/5"
+      ]
+    },
+    {
+      "epsilon": "13/50",
+      "phase": "i",
+      "probability_gap": "49/1250",
+      "state_index": 11,
+      "target": [
+        "3/5",
+        "4/5"
+      ]
+    },
+    {
+      "epsilon": "13/50",
+      "phase": "-i",
+      "probability_gap": "49/1250",
+      "state_index": 11,
+      "target": [
+        "3/5",
+        "4/5"
+      ]
+    },
+    {
+      "epsilon": "1/50",
+      "phase": "1",
+      "probability_gap": "1/50",
+      "state_index": 12,
+      "target": [
+        "3/5",
+        "4/5"
+      ]
+    },
+    {
+      "epsilon": "1/50",
+      "phase": "-1",
+      "probability_gap": "73/1250",
+      "state_index": 12,
+      "target": [
+        "3/5",
+        "4/5"
+      ]
+    },
+    {
+      "epsilon": "1/50",
+      "phase": "i",
+      "probability_gap": "49/1250",
+      "state_index": 12,
+      "target": [
+        "3/5",
+        "4/5"
+      ]
+    },
+    {
+      "epsilon": "1/50",
+      "phase": "-i",
+      "probability_gap": "49/1250",
+      "state_index": 12,
+      "target": [
+        "3/5",
+        "4/5"
+      ]
+    },
+    {
+      "epsilon": "144/169",
+      "phase": "1",
+      "probability_gap": "144/169",
+      "state_index": 0,
+      "target": [
+        "5/13",
+        "12/13"
+      ]
+    },
+    {
+      "epsilon": "144/169",
+      "phase": "-1",
+      "probability_gap": "9936/28561",
+      "state_index": 0,
+      "target": [
+        "5/13",
+        "12/13"
+      ]
+    },
+    {
+      "epsilon": "144/169",
+      "phase": "i",
+      "probability_gap": "17136/28561",
+      "state_index": 0,
+      "target": [
+        "5/13",
+        "12/13"
+      ]
+    },
+    {
+      "epsilon": "144/169",
+      "phase": "-i",
+      "probability_gap": "17136/28561",
+      "state_index": 0,
+      "target": [
+        "5/13",
+        "12/13"
+      ]
+    },
+    {
+      "epsilon": "144/169",
+      "phase": "1",
+      "probability_gap": "144/169",
+      "state_index": 1,
+      "target": [
+        "5/13",
+        "12/13"
+      ]
+    },
+    {
+      "epsilon": "144/169",
+      "phase": "-1",
+      "probability_gap": "9936/28561",
+      "state_index": 1,
+      "target": [
+        "5/13",
+        "12/13"
+      ]
+    },
+    {
+      "epsilon": "144/169",
+      "phase": "i",
+      "probability_gap": "17136/28561",
+      "state_index": 1,
+      "target": [
+        "5/13",
+        "12/13"
+      ]
+    },
+    {
+      "epsilon": "144/169",
+      "phase": "-i",
+      "probability_gap": "17136/28561",
+      "state_index": 1,
+      "target": [
+        "5/13",
+        "12/13"
+      ]
+    },
+    {
+      "epsilon": "256/4225",
+      "phase": "1",
+      "probability_gap": "256/4225",
+      "state_index": 2,
+      "target": [
+        "5/13",
+        "12/13"
+      ]
+    },
+    {
+      "epsilon": "256/4225",
+      "phase": "-1",
+      "probability_gap": "169984/714025",
+      "state_index": 2,
+      "target": [
+        "5/13",
+        "12/13"
+      ]
+    },
+    {
+      "epsilon": "256/4225",
+      "phase": "i",
+      "probability_gap": "106624/714025",
+      "state_index": 2,
+      "target": [
+        "5/13",
+        "12/13"
+      ]
+    },
+    {
+      "epsilon": "256/4225",
+      "phase": "-i",
+      "probability_gap": "106624/714025",
+      "state_index": 2,
+      "target": [
+        "5/13",
+        "12/13"
+      ]
+    },
+    {
+      "epsilon": "3136/4225",
+      "phase": "1",
+      "probability_gap": "3136/4225",
+      "state_index": 3,
+      "target": [
+        "5/13",
+        "12/13"
+      ]
+    },
+    {
+      "epsilon": "3136/4225",
+      "phase": "-1",
+      "probability_gap": "316736/714025",
+      "state_index": 3,
+      "target": [
+        "5/13",
+        "12/13"
+      ]
+    },
+    {
+      "epsilon": "3136/4225",
+      "phase": "i",
+      "probability_gap": "106624/714025",
+      "state_index": 3,
+      "target": [
+        "5/13",
+        "12/13"
+      ]
+    },
+    {
+      "epsilon": "3136/4225",
+      "phase": "-i",
+      "probability_gap": "106624/714025",
+      "state_index": 3,
+      "target": [
+        "5/13",
+        "12/13"
+      ]
+    },
+    {
+      "epsilon": "0",
+      "phase": "1",
+      "probability_gap": "0",
+      "state_index": 4,
+      "target": [
+        "5/13",
+        "12/13"
+      ]
+    },
+    {
+      "epsilon": "0",
+      "phase": "-1",
+      "probability_gap": "0",
+      "state_index": 4,
+      "target": [
+        "5/13",
+        "12/13"
+      ]
+    },
+    {
+      "epsilon": "0",
+      "phase": "i",
+      "probability_gap": "0",
+      "state_index": 4,
+      "target": [
+        "5/13",
+        "12/13"
+      ]
+    },
+    {
+      "epsilon": "0",
+      "phase": "-i",
+      "probability_gap": "0",
+      "state_index": 4,
+      "target": [
+        "5/13",
+        "12/13"
+      ]
+    },
+    {
+      "epsilon": "14400/28561",
+      "phase": "1",
+      "probability_gap": "14400/28561",
+      "state_index": 5,
+      "target": [
+        "5/13",
+        "12/13"
+      ]
+    },
+    {
+      "epsilon": "14400/28561",
+      "phase": "-1",
+      "probability_gap": "14400/28561",
+      "state_index": 5,
+      "target": [
+        "5/13",
+        "12/13"
+      ]
+    },
+    {
+      "epsilon": "14400/28561",
+      "phase": "i",
+      "probability_gap": "0",
+      "state_index": 5,
+      "target": [
+        "5/13",
+        "12/13"
+      ]
+    },
+    {
+      "epsilon": "14400/28561",
+      "phase": "-i",
+      "probability_gap": "0",
+      "state_index": 5,
+      "target": [
+        "5/13",
+        "12/13"
+      ]
+    },
+    {
+      "epsilon": "441/48841",
+      "phase": "1",
+      "probability_gap": "441/48841",
+      "state_index": 6,
+      "target": [
+        "5/13",
+        "12/13"
+      ]
+    },
+    {
+      "epsilon": "441/48841",
+      "phase": "-1",
+      "probability_gap": "780129/8254129",
+      "state_index": 6,
+      "target": [
+        "5/13",
+        "12/13"
+      ]
+    },
+    {
+      "epsilon": "441/48841",
+      "phase": "i",
+      "probability_gap": "25137/485537",
+      "state_index": 6,
+      "target": [
+        "5/13",
+        "12/13"
+      ]
+    },
+    {
+      "epsilon": "441/48841",
+      "phase": "-i",
+      "probability_gap": "25137/485537",
+      "state_index": 6,
+      "target": [
+        "5/13",
+        "12/13"
+      ]
+    },
+    {
+      "epsilon": "29241/48841",
+      "phase": "1",
+      "probability_gap": "29241/48841",
+      "state_index": 7,
+      "target": [
+        "5/13",
+        "12/13"
+      ]
+    },
+    {
+      "epsilon": "29241/48841",
+      "phase": "-1",
+      "probability_gap": "4087071/8254129",
+      "state_index": 7,
+      "target": [
+        "5/13",
+        "12/13"
+      ]
+    },
+    {
+      "epsilon": "29241/48841",
+      "phase": "i",
+      "probability_gap": "25137/485537",
+      "state_index": 7,
+      "target": [
+        "5/13",
+        "12/13"
+      ]
+    },
+    {
+      "epsilon": "29241/48841",
+      "phase": "-i",
+      "probability_gap": "25137/485537",
+      "state_index": 7,
+      "target": [
+        "5/13",
+        "12/13"
+      ]
+    },
+    {
+      "epsilon": "289/338",
+      "phase": "1",
+      "probability_gap": "289/338",
+      "state_index": 8,
+      "target": [
+        "5/13",
+        "12/13"
+      ]
+    },
+    {
+      "epsilon": "289/338",
+      "phase": "-1",
+      "probability_gap": "20519/57122",
+      "state_index": 8,
+      "target": [
+        "5/13",
+        "12/13"
+      ]
+    },
+    {
+      "epsilon": "289/338",
+      "phase": "i",
+      "probability_gap": "14161/57122",
+      "state_index": 8,
+      "target": [
+        "5/13",
+        "12/13"
+      ]
+    },
+    {
+      "epsilon": "289/338",
+      "phase": "-i",
+      "probability_gap": "14161/57122",
+      "state_index": 8,
+      "target": [
+        "5/13",
+        "12/13"
+      ]
+    },
+    {
+      "epsilon": "229/338",
+      "phase": "1",
+      "probability_gap": "229/338",
+      "state_index": 9,
+      "target": [
+        "5/13",
+        "12/13"
+      ]
+    },
+    {
+      "epsilon": "229/338",
+      "phase": "-1",
+      "probability_gap": "10379/57122",
+      "state_index": 9,
+      "target": [
+        "5/13",
+        "12/13"
+      ]
+    },
+    {
+      "epsilon": "229/338",
+      "phase": "i",
+      "probability_gap": "14161/57122",
+      "state_index": 9,
+      "target": [
+        "5/13",
+        "12/13"
+      ]
+    },
+    {
+      "epsilon": "229/338",
+      "phase": "-i",
+      "probability_gap": "14161/57122",
+      "state_index": 9,
+      "target": [
+        "5/13",
+        "12/13"
+      ]
+    },
+    {
+      "epsilon": "1/2",
+      "phase": "1",
+      "probability_gap": "1/2",
+      "state_index": 10,
+      "target": [
+        "5/13",
+        "12/13"
+      ]
+    },
+    {
+      "epsilon": "1/2",
+      "phase": "-1",
+      "probability_gap": "239/57122",
+      "state_index": 10,
+      "target": [
+        "5/13",
+        "12/13"
+      ]
+    },
+    {
+      "epsilon": "1/2",
+      "phase": "i",
+      "probability_gap": "14161/57122",
+      "state_index": 10,
+      "target": [
+        "5/13",
+        "12/13"
+      ]
+    },
+    {
+      "epsilon": "1/2",
+      "phase": "-i",
+      "probability_gap": "14161/57122",
+      "state_index": 10,
+      "target": [
+        "5/13",
+        "12/13"
+      ]
+    },
+    {
+      "epsilon": "109/338",
+      "phase": "1",
+      "probability_gap": "109/338",
+      "state_index": 11,
+      "target": [
+        "5/13",
+        "12/13"
+      ]
+    },
+    {
+      "epsilon": "109/338",
+      "phase": "-1",
+      "probability_gap": "9901/57122",
+      "state_index": 11,
+      "target": [
+        "5/13",
+        "12/13"
+      ]
+    },
+    {
+      "epsilon": "109/338",
+      "phase": "i",
+      "probability_gap": "14161/57122",
+      "state_index": 11,
+      "target": [
+        "5/13",
+        "12/13"
+      ]
+    },
+    {
+      "epsilon": "109/338",
+      "phase": "-i",
+      "probability_gap": "14161/57122",
+      "state_index": 11,
+      "target": [
+        "5/13",
+        "12/13"
+      ]
+    },
+    {
+      "epsilon": "49/338",
+      "phase": "1",
+      "probability_gap": "49/338",
+      "state_index": 12,
+      "target": [
+        "5/13",
+        "12/13"
+      ]
+    },
+    {
+      "epsilon": "49/338",
+      "phase": "-1",
+      "probability_gap": "20041/57122",
+      "state_index": 12,
+      "target": [
+        "5/13",
+        "12/13"
+      ]
+    },
+    {
+      "epsilon": "49/338",
+      "phase": "i",
+      "probability_gap": "14161/57122",
+      "state_index": 12,
+      "target": [
+        "5/13",
+        "12/13"
+      ]
+    },
+    {
+      "epsilon": "49/338",
+      "phase": "-i",
+      "probability_gap": "14161/57122",
+      "state_index": 12,
+      "target": [
+        "5/13",
+        "12/13"
+      ]
+    },
+    {
+      "epsilon": "225/289",
+      "phase": "1",
+      "probability_gap": "225/289",
+      "state_index": 0,
+      "target": [
+        "8/17",
+        "15/17"
+      ]
+    },
+    {
+      "epsilon": "225/289",
+      "phase": "-1",
+      "probability_gap": "7425/83521",
+      "state_index": 0,
+      "target": [
+        "8/17",
+        "15/17"
+      ]
+    },
+    {
+      "epsilon": "225/289",
+      "phase": "i",
+      "probability_gap": "36225/83521",
+      "state_index": 0,
+      "target": [
+        "8/17",
+        "15/17"
+      ]
+    },
+    {
+      "epsilon": "225/289",
+      "phase": "-i",
+      "probability_gap": "36225/83521",
+      "state_index": 0,
+      "target": [
+        "8/17",
+        "15/17"
+      ]
+    },
+    {
+      "epsilon": "225/289",
+      "phase": "1",
+      "probability_gap": "225/289",
+      "state_index": 1,
+      "target": [
+        "8/17",
+        "15/17"
+      ]
+    },
+    {
+      "epsilon": "225/289",
+      "phase": "-1",
+      "probability_gap": "7425/83521",
+      "state_index": 1,
+      "target": [
+        "8/17",
+        "15/17"
+      ]
+    },
+    {
+      "epsilon": "225/289",
+      "phase": "i",
+      "probability_gap": "36225/83521",
+      "state_index": 1,
+      "target": [
+        "8/17",
+        "15/17"
+      ]
+    },
+    {
+      "epsilon": "225/289",
+      "phase": "-i",
+      "probability_gap": "36225/83521",
+      "state_index": 1,
+      "target": [
+        "8/17",
+        "15/17"
+      ]
+    },
+    {
+      "epsilon": "169/7225",
+      "phase": "1",
+      "probability_gap": "169/7225",
+      "state_index": 2,
+      "target": [
+        "8/17",
+        "15/17"
+      ]
+    },
+    {
+      "epsilon": "169/7225",
+      "phase": "-1",
+      "probability_gap": "273481/2088025",
+      "state_index": 2,
+      "target": [
+        "8/17",
+        "15/17"
+      ]
+    },
+    {
+      "epsilon": "169/7225",
+      "phase": "i",
+      "probability_gap": "161161/2088025",
+      "state_index": 2,
+      "target": [
+        "8/17",
+        "15/17"
+      ]
+    },
+    {
+      "epsilon": "169/7225",
+      "phase": "-i",
+      "probability_gap": "161161/2088025",
+      "state_index": 2,
+      "target": [
+        "8/17",
+        "15/17"
+      ]
+    },
+    {
+      "epsilon": "5929/7225",
+      "phase": "1",
+      "probability_gap": "5929/7225",
+      "state_index": 3,
+      "target": [
+        "8/17",
+        "15/17"
+      ]
+    },
+    {
+      "epsilon": "5929/7225",
+      "phase": "-1",
+      "probability_gap": "1391159/2088025",
+      "state_index": 3,
+      "target": [
+        "8/17",
+        "15/17"
+      ]
+    },
+    {
+      "epsilon": "5929/7225",
+      "phase": "i",
+      "probability_gap": "161161/2088025",
+      "state_index": 3,
+      "target": [
+        "8/17",
+        "15/17"
+      ]
+    },
+    {
+      "epsilon": "5929/7225",
+      "phase": "-i",
+      "probability_gap": "161161/2088025",
+      "state_index": 3,
+      "target": [
+        "8/17",
+        "15/17"
+      ]
+    },
+    {
+      "epsilon": "441/48841",
+      "phase": "1",
+      "probability_gap": "441/48841",
+      "state_index": 4,
+      "target": [
+        "8/17",
+        "15/17"
+      ]
+    },
+    {
+      "epsilon": "441/48841",
+      "phase": "-1",
+      "probability_gap": "1283751/14115049",
+      "state_index": 4,
+      "target": [
+        "8/17",
+        "15/17"
+      ]
+    },
+    {
+      "epsilon": "441/48841",
+      "phase": "i",
+      "probability_gap": "578151/14115049",
+      "state_index": 4,
+      "target": [
+        "8/17",
+        "15/17"
+      ]
+    },
+    {
+      "epsilon": "441/48841",
+      "phase": "-i",
+      "probability_gap": "578151/14115049",
+      "state_index": 4,
+      "target": [
+        "8/17",
+        "15/17"
+      ]
+    },
+    {
+      "epsilon": "29241/48841",
+      "phase": "1",
+      "probability_gap": "29241/48841",
+      "state_index": 5,
+      "target": [
+        "8/17",
+        "15/17"
+      ]
+    },
+    {
+      "epsilon": "29241/48841",
+      "phase": "-1",
+      "probability_gap": "9606951/14115049",
+      "state_index": 5,
+      "target": [
+        "8/17",
+        "15/17"
+      ]
+    },
+    {
+      "epsilon": "29241/48841",
+      "phase": "i",
+      "probability_gap": "578151/14115049",
+      "state_index": 5,
+      "target": [
+        "8/17",
+        "15/17"
+      ]
+    },
+    {
+      "epsilon": "29241/48841",
+      "phase": "-i",
+      "probability_gap": "578151/14115049",
+      "state_index": 5,
+      "target": [
+        "8/17",
+        "15/17"
+      ]
+    },
+    {
+      "epsilon": "0",
+      "phase": "1",
+      "probability_gap": "0",
+      "state_index": 6,
+      "target": [
+        "8/17",
+        "15/17"
+      ]
+    },
+    {
+      "epsilon": "0",
+      "phase": "-1",
+      "probability_gap": "0",
+      "state_index": 6,
+      "target": [
+        "8/17",
+        "15/17"
+      ]
+    },
+    {
+      "epsilon": "0",
+      "phase": "i",
+      "probability_gap": "0",
+      "state_index": 6,
+      "target": [
+        "8/17",
+        "15/17"
+      ]
+    },
+    {
+      "epsilon": "0",
+      "phase": "-i",
+      "probability_gap": "0",
+      "state_index": 6,
+      "target": [
+        "8/17",
+        "15/17"
+      ]
+    },
+    {
+      "epsilon": "57600/83521",
+      "phase": "1",
+      "probability_gap": "57600/83521",
+      "state_index": 7,
+      "target": [
+        "8/17",
+        "15/17"
+      ]
+    },
+    {
+      "epsilon": "57600/83521",
+      "phase": "-1",
+      "probability_gap": "57600/83521",
+      "state_index": 7,
+      "target": [
+        "8/17",
+        "15/17"
+      ]
+    },
+    {
+      "epsilon": "57600/83521",
+      "phase": "i",
+      "probability_gap": "0",
+      "state_index": 7,
+      "target": [
+        "8/17",
+        "15/17"
+      ]
+    },
+    {
+      "epsilon": "57600/83521",
+      "phase": "-i",
+      "probability_gap": "0",
+      "state_index": 7,
+      "target": [
+        "8/17",
+        "15/17"
+      ]
+    },
+    {
+      "epsilon": "529/578",
+      "phase": "1",
+      "probability_gap": "529/578",
+      "state_index": 8,
+      "target": [
+        "8/17",
+        "15/17"
+      ]
+    },
+    {
+      "epsilon": "529/578",
+      "phase": "-1",
+      "probability_gap": "101039/167042",
+      "state_index": 8,
+      "target": [
+        "8/17",
+        "15/17"
+      ]
+    },
+    {
+      "epsilon": "529/578",
+      "phase": "i",
+      "probability_gap": "25921/167042",
+      "state_index": 8,
+      "target": [
+        "8/17",
+        "15/17"
+      ]
+    },
+    {
+      "epsilon": "529/578",
+      "phase": "-i",
+      "probability_gap": "25921/167042",
+      "state_index": 8,
+      "target": [
+        "8/17",
+        "15/17"
+      ]
+    },
+    {
+      "epsilon": "409/578",
+      "phase": "1",
+      "probability_gap": "409/578",
+      "state_index": 9,
+      "target": [
+        "8/17",
+        "15/17"
+      ]
+    },
+    {
+      "epsilon": "409/578",
+      "phase": "-1",
+      "probability_gap": "66359/167042",
+      "state_index": 9,
+      "target": [
+        "8/17",
+        "15/17"
+      ]
+    },
+    {
+      "epsilon": "409/578",
+      "phase": "i",
+      "probability_gap": "25921/167042",
+      "state_index": 9,
+      "target": [
+        "8/17",
+        "15/17"
+      ]
+    },
+    {
+      "epsilon": "409/578",
+      "phase": "-i",
+      "probability_gap": "25921/167042",
+      "state_index": 9,
+      "target": [
+        "8/17",
+        "15/17"
+      ]
+    },
+    {
+      "epsilon": "1/2",
+      "phase": "1",
+      "probability_gap": "1/2",
+      "state_index": 10,
+      "target": [
+        "8/17",
+        "15/17"
+      ]
+    },
+    {
+      "epsilon": "1/2",
+      "phase": "-1",
+      "probability_gap": "31679/167042",
+      "state_index": 10,
+      "target": [
+        "8/17",
+        "15/17"
+      ]
+    },
+    {
+      "epsilon": "1/2",
+      "phase": "i",
+      "probability_gap": "25921/167042",
+      "state_index": 10,
+      "target": [
+        "8/17",
+        "15/17"
+      ]
+    },
+    {
+      "epsilon": "1/2",
+      "phase": "-i",
+      "probability_gap": "25921/167042",
+      "state_index": 10,
+      "target": [
+        "8/17",
+        "15/17"
+      ]
+    },
+    {
+      "epsilon": "169/578",
+      "phase": "1",
+      "probability_gap": "169/578",
+      "state_index": 11,
+      "target": [
+        "8/17",
+        "15/17"
+      ]
+    },
+    {
+      "epsilon": "169/578",
+      "phase": "-1",
+      "probability_gap": "3001/167042",
+      "state_index": 11,
+      "target": [
+        "8/17",
+        "15/17"
+      ]
+    },
+    {
+      "epsilon": "169/578",
+      "phase": "i",
+      "probability_gap": "25921/167042",
+      "state_index": 11,
+      "target": [
+        "8/17",
+        "15/17"
+      ]
+    },
+    {
+      "epsilon": "169/578",
+      "phase": "-i",
+      "probability_gap": "25921/167042",
+      "state_index": 11,
+      "target": [
+        "8/17",
+        "15/17"
+      ]
+    },
+    {
+      "epsilon": "49/578",
+      "phase": "1",
+      "probability_gap": "49/578",
+      "state_index": 12,
+      "target": [
+        "8/17",
+        "15/17"
+      ]
+    },
+    {
+      "epsilon": "49/578",
+      "phase": "-1",
+      "probability_gap": "37681/167042",
+      "state_index": 12,
+      "target": [
+        "8/17",
+        "15/17"
+      ]
+    },
+    {
+      "epsilon": "49/578",
+      "phase": "i",
+      "probability_gap": "25921/167042",
+      "state_index": 12,
+      "target": [
+        "8/17",
+        "15/17"
+      ]
+    },
+    {
+      "epsilon": "49/578",
+      "phase": "-i",
+      "probability_gap": "25921/167042",
+      "state_index": 12,
+      "target": [
+        "8/17",
+        "15/17"
+      ]
+    }
+  ]
+}
