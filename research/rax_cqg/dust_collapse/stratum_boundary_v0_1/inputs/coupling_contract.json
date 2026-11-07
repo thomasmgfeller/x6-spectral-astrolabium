@@ -1,0 +1,59 @@
+{
+  "schema": "cst-dust-detector-coupling-contract-v0.1",
+  "source_main": "7398a19f90e0c3736e2041b7f1480fc9223bbf9e",
+  "candidate": {
+    "name": "Record-preserving controlled-pointer coupling",
+    "unitary": "(W Psi)(Y)=U(Y)Psi(Y)",
+    "initial_state": "rho tensor sigma, with fixed input-independent sigma",
+    "readout": "fixed pointer-only effect F",
+    "allowed": "Finite sequences, pointer-only controls, classical feedback and postselection within the same record-preserving class",
+    "not_assumed": "Physical spacetime locality is not identified with record diagonality"
+  },
+  "target": {
+    "effect": "P_plus on balanced atom/continuous modes in the declared reference Hilbert space",
+    "comparison": "Universal operator norm, including the orthogonal complement",
+    "domain": "Both coherent sign states must belong to the comparison domain; physical CST constraints are not derived"
+  },
+  "verdict": {
+    "record_preserving": "EXCLUDED_FOR_TARGET_ERROR_BELOW_ONE_HALF",
+    "optimal_norm_error": "1/2",
+    "preparation_from_block_diagonal_input": "Cannot create atom/continuous cross coherence; target fidelity at most 1/2 on any nonzero conditioned branch",
+    "scope": "Restricted-class result, not a no-go for all detectors, local quantum field couplings or CST"
+  },
+  "necessary_mixing": {
+    "assumptions": "Bounded selfadjoint piecewise norm-continuous generators H_d,V, common input-independent apparatus and readout",
+    "gamma": "integral_0^T ||V(t)||dt / hbar",
+    "necessary": "tau >= max(0,1/2-gamma)",
+    "sufficient": false,
+    "optimal_speed_limit_claim": false
+  },
+  "finite_witness": {
+    "rotation": "pi/4 between the two record modes",
+    "status": "ALGEBRAIC_CONTROL_ONLY",
+    "physical_cst_derivation": false,
+    "full_hilbert_space_certified": false,
+    "leakage_counterexample": {
+      "compressed_error": "0",
+      "full_space_error": "1"
+    }
+  },
+  "next_candidate_required": [
+    "Derive a history-mixing operator from the matter/boundary dynamics instead of defining the desired projector by hand.",
+    "Specify physical state domain, symmetry behavior, causal support and generator domains.",
+    "Determine the full-space effect including leakage and failure outputs; test the operator norm, not only a selected block.",
+    "Qualify preparation and the full instrument, then account for backreaction before gravitational claims."
+  ],
+  "physical_gates": {
+    "MODEL": "HOLD",
+    "CURRENT": "HOLD",
+    "CORRESPONDENCE": "HOLD",
+    "BOUNCE": "HOLD",
+    "REGULARITY": "HOLD",
+    "BOUNDARY": "HOLD",
+    "TRAPPING": "HOLD",
+    "EXTENSION": "HOLD"
+  },
+  "n5_production": false,
+  "paid_compute": false,
+  "physical_detector_derived": false
+}
