@@ -1,0 +1,58 @@
+{
+  "id": "CST-DUST-ALPHA-NORMTAIL-001",
+  "version": "0.1",
+  "date": "2026-11-07",
+  "source_commit": "0067da907da4ea8df5b625ea9f8f99ce1527e9ed",
+  "status": "PASS_ALPHA_DEPENDENT_ANCHORED_NORMTAIL_REFERENCE_MODEL",
+  "physical_gates": {
+    "MODEL": "HOLD",
+    "CURRENT": "HOLD",
+    "CORRESPONDENCE": "HOLD",
+    "BOUNCE": "HOLD",
+    "REGULARITY": "HOLD",
+    "BOUNDARY": "HOLD",
+    "TRAPPING": "HOLD",
+    "EXTENSION": "HOLD"
+  },
+  "theorem": {
+    "alpha_domain": "real alpha >= 1",
+    "clock_domain": "finite h >= 0",
+    "cutoff": "integer K >= 0",
+    "ratio_condition": "q_K = h*2^(-(alpha-1)*(K+1))/(K+2) < 1",
+    "formula": "Delta_K <= (N_K/2^(K*(K-1)/2)) * h^(K+1)*2^(-(alpha-1)*K*(K+1)/2) / ((K+1)!*(1-q_K))",
+    "combinatorial_basis": "N_(n+1) <= 2^n N_n by unique prefix and ideal continuation"
+  },
+  "implementation": {
+    "alpha_domain": "integers >= 1, exact rational arithmetic",
+    "new_field_integrals": 0,
+    "new_paid_compute": false,
+    "production_normalization_cap": 6,
+    "inherited_field_integration_cap": 4,
+    "validation_enumeration_cap": 7,
+    "n7_count_used_in_production_bound": false,
+    "source_files": 8,
+    "inherited_amplitudes_and_errors_unchanged": true
+  },
+  "validation": {
+    "proof_grid_valid_cases": 157,
+    "proof_grid_rejected_ratio_cases": 11,
+    "majorant_recurrence_checks": 7536,
+    "count_interval_containment_checks": 36,
+    "coherent_interval_containment_checks": 36,
+    "accepted_count_interval_containment_checks": 180
+  },
+  "field_phases_n_ge_5": "NOT_INTEGRATED",
+  "physical_density_boundary_or_detector_selected": false,
+  "physical_4d_dynamics_derived": false,
+  "external_replication": false,
+  "formal_proof_checker": false,
+  "not_claimed": [
+    "Actual measured higher-number probability distribution",
+    "Physical alpha selection",
+    "Infinite time limit",
+    "General conclusion for alpha < 1",
+    "Full CST dynamics, backreaction, bounce or junction"
+  ],
+  "next_quantitative_candidate": "Cost and error gate for n=5 field integration; n=5 now dominates the upper residual mass",
+  "next_physical_decision": "Justify density measure, coherent history access and boundary from a physical CST amplitude"
+}

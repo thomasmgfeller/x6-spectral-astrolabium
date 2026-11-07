@@ -1,5 +1,11 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## α-abhängige Normrestschranke · 7. November 2026
+
+Eine kombinatorisch hergeleitete Schranke nutzt α und die 4824 exakt bekannten Sechs-Element-Ordnungen. Die obere Gewichtsschranke für alle unbekannten Phasensektoren sinkt um weitere 81,85–94,91 % bei α=2 beziehungsweise 0,37–1,47 % bei α=1. Alle Feldamplituden bleiben unverändert; neue Feldintegrale wurden nicht berechnet. Alle 36 Zahlkanal- und kohärenten Erfolgsintervalle liegen innerhalb ihrer Vorgänger, fünf neue Ergebnisdateien sind bytegleich reproduziert. Der n=5-Sektor macht jetzt 96,35–99,95 % der oberen Restmasse aus. Die Enumeration bis n=7 dient nur der Validierung; die Normierung bleibt bei n≤6, die Feldintegration bei n≤4. **Alle acht physikalischen Gates bleiben HOLD.** Maß, Historienzugriff und Randwahl bleiben offen; keine vollständige CST-Dynamik, Rückwirkung, Bounce oder Junction werden hergeleitet.
+
+[Beweis, Grenzen und Nachrechnung](alpha_normtail_v0_1/PUBLICATION.md) · [Bericht (PDF)](reports/CST_DUST_Alpha_Abhaengige_Normrestschranke_v0_1.pdf) · [Originales Prüfpaket (ZIP)](packages/CST_DUST_Alpha_Abhaengige_Normrestschranke_v0_1_Pruefpaket.zip)
+
 ## Kontinuierlicher Vier-Element-Sektor · 7. November 2026
 
 Alle 40 natürlichen Vier-Element-Ordnungen sind nach einer vorab eingefrorenen Kostenentscheidung im geerbten Referenzmaß integriert. Der neue geprüfte Ganzzahl-Intervallkern trennt Quadratur- und Arithmetikfehler; 240 Amplituden und 36 Parameterfälle bestehen die Prüfungen. Die obere Schranke für das Gewicht der unbekannten Phasensektoren sinkt um weitere 93,59–99,05 %. Feldphasen ab n=5 bleiben offen und werden getrennt begrenzt. Sechs Ergebnisdateien sind bei isolierter Nachrechnung bytegleich reproduziert. Bei α=2 dominiert nun die konservative analytische Normrestschranke; deren α-abhängige Verbesserung ist der nächste quantitative Kandidat. Maß, kohärenter Historienzugriff und Randwahl bleiben physikalisch unbegründet. **Alle acht physikalischen Gates bleiben HOLD.** Eine vollständige CST-Dynamik, Rückwirkung, Bounce oder Junction werden nicht hergeleitet.

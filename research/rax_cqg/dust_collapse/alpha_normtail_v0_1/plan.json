@@ -1,0 +1,81 @@
+{
+  "id": "CST-DUST-ALPHA-NORMTAIL-001",
+  "date": "2026-11-07",
+  "source_commit": "0067da907da4ea8df5b625ea9f8f99ce1527e9ed",
+  "scope": "Analytic alpha-dependent, count-anchored norm tail; no new field integrals",
+  "timing": "Local plan frozen after symbolic proof design and before new numerical tail values or implementation; not external preregistration or blind prediction",
+  "controls": {
+    "clock_h": [
+      "1/4",
+      "1/2"
+    ],
+    "alpha": [
+      1,
+      2
+    ],
+    "gravity_over_pi": [
+      "0",
+      "1/18",
+      "1/9"
+    ],
+    "matter_couplings": [
+      "0",
+      "1/4",
+      "1"
+    ],
+    "integrated_count_cap": 4,
+    "normalization_count_cap": 6,
+    "enumeration_validation_through": 7,
+    "tail_proof_grid_alpha": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "tail_proof_grid_h": [
+      "0",
+      "1/4",
+      "1/2",
+      "1",
+      "4",
+      "7"
+    ],
+    "tail_proof_grid_cap": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "majorant_terms_checked": 48,
+    "rational_arithmetic_only": true
+  },
+  "acceptance": [
+    "Two enumerations agree through n=7",
+    "Anchored tail never exceeds universal alpha bound or inherited alpha-blind bound on test grid",
+    "Enumerated positive next-sector mass lies below analytic tail",
+    "36 count and coherent all-number intervals contained in predecessor",
+    "All inherited amplitudes and error budgets unchanged",
+    "Negative controls reject wrong exponent, dropped multiplicity and invalid domains",
+    "Isolated replay byte-identical"
+  ],
+  "cost_gate": {
+    "max_upper_triangle_candidates": 2097152,
+    "max_seconds_per_analysis": 180,
+    "new_field_integrals": 0,
+    "paid_compute": false
+  },
+  "claim_boundary": "Theorem for declared reference weights and alpha>=1; no physical density prior, detector, boundary, four-dimensional dynamics, backreaction, bounce or junction selected",
+  "physical_gates": {
+    "MODEL": "HOLD",
+    "CURRENT": "HOLD",
+    "CORRESPONDENCE": "HOLD",
+    "BOUNCE": "HOLD",
+    "REGULARITY": "HOLD",
+    "BOUNDARY": "HOLD",
+    "TRAPPING": "HOLD",
+    "EXTENSION": "HOLD"
+  }
+}
