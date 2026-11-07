@@ -1,0 +1,48 @@
+{
+  "plan_sha256": "6eea1d379814c77dfe50e02ae6946da030dfea3eb1074ad181447abe27c8a0c2",
+  "source_commit": "57aea796ac1f35c31ca3fabce45e0a27c518a5bf",
+  "provenance_files_checked": 7,
+  "status": "PASS_WITH_SCOPED_NEGATIVE_CONTROLS",
+  "physical_gates": {
+    "MODEL": "HOLD",
+    "CURRENT": "HOLD",
+    "CORRESPONDENCE": "HOLD",
+    "BOUNCE": "HOLD",
+    "REGULARITY": "HOLD",
+    "BOUNDARY": "HOLD",
+    "TRAPPING": "HOLD",
+    "EXTENSION": "HOLD"
+  },
+  "formal_proof_checker": false,
+  "scope": "Full continuous marked quotient at each fixed finite regulator; conditional positive metrics, transported preparation records, current-state event and terminal-readout compatibility.",
+  "finite_reference": {
+    "kind": "Independent binary-mark replacement measure; not a controlled quadrature of the continuous field integral",
+    "marks": [
+      {
+        "T": "-1",
+        "w": "0",
+        "q": "1/2"
+      },
+      {
+        "T": "1",
+        "w": "1/2",
+        "q": "1/2"
+      }
+    ],
+    "initial_anchor": {
+      "T": "-2",
+      "w": "0"
+    },
+    "final_anchor": {
+      "T": "2",
+      "w": "0"
+    },
+    "max_m_quotient": 4,
+    "max_m_metric": 3,
+    "complement_weights": [
+      "1",
+      "2"
+    ],
+    "cone_mark": 0
+  }
+}

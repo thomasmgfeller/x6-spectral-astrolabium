@@ -1,5 +1,11 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Markierte Zustände, Ereignisse und Endauslese · 7. November 2026
+
+Der kohärente Quotient ist bei festem endlichem Regulator auf alle kontinuierlichen Uhr- und Materiefelder erweitert. Positive koerzive Produkte und transportierte Präparationsprojektoren sind konstruiert. Die physikalische Auswahl bleibt offen. Eine naive aktuelle Staubaussage liefert im binären Hilfsbeispiel den unzulässigen Wert −1/149; die ursprüngliche phasenfreie Endsumme hat beim zusätzlichen Fortsetzungsschritt unterschiedliche Faktoren 8/3 und 11/6. Eine kompatible transportierte Auslese verändert das ursprüngliche Funktional. 707 markierte Zustände, 6.384 unabhängige Quotienten-Matrixeinträge, 15.715 Wirkungs-Permutationsprüfungen und sechs bytegleich reproduzierte Ergebnisdateien sind dokumentiert. Das binäre Maß ist keine kontrollierte Quadratur oder Staubballsimulation. **Alle acht physikalischen Gates bleiben HOLD.** Kein physikalischer Hilbertraum und kein Bounce sind ausgewählt beziehungsweise nachgewiesen.
+
+[Herleitung, Grenzen und Nachrechnung](marked_events_v0_1/PUBLICATION.md) · [Bericht (PDF)](reports/CST_DUST_Markierte_Zustaende_Ereignisse_v0_1.pdf) · [Originales Prüfpaket (ZIP)](packages/CST_DUST_Markierte_Zustaende_Ereignisse_v0_1_Pruefpaket.zip)
+
 ## Normpfad und kohärenter Quotient · 7. November 2026
 
 Positive diagonale, feldunabhängige Hilfsnormpfade sind klassifiziert und für beliebig viele Wachstumsschritte konstruiert. Die ursprüngliche kohärente Endsumme besitzt auf den vollständigen Räumen dieser normalisierten diagonalen Klasse keine gemeinsame Operatornormschranke. Im unmarkierten kohärenten Quotienten scheitert diagonale Isometrie bereits beim Schritt zwei nach drei Elemente. Nichtdiagonale positive Produkte sind konstruierbar; die physikalische Auswahl, markierte Ereignisse und die Fortsetzung des Quantenmaßes bleiben offen. 15.696 rationale Vergleiche, 17.118 Horizontkontrollen und fünf bytegleich reproduzierte Ergebnisdateien sind dokumentiert. **Alle acht physikalischen Gates bleiben HOLD.** Kein allgemeines No-go für CST und kein Bounce-Nachweis.
