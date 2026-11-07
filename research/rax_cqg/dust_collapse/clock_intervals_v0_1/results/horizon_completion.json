@@ -1,0 +1,61 @@
+{
+  "partition_norm_identities": 198,
+  "hazard_identities": 198,
+  "horizon_coefficient_cocycles": 108441,
+  "terminal_demos": [
+    {
+      "alpha": 0,
+      "cap": 2,
+      "horizon": "1/2",
+      "cut": "1/4",
+      "Z": "7/4",
+      "terminal_birth_count_probabilities": [
+        "4/7",
+        "2/7",
+        "1/7"
+      ],
+      "no_birth_first_interval": "3/4",
+      "no_birth_second_given_none": "16/21",
+      "initial_total_hazard": "8/7"
+    },
+    {
+      "alpha": 1,
+      "cap": 2,
+      "horizon": "1/2",
+      "cut": "1/4",
+      "Z": "13/8",
+      "terminal_birth_count_probabilities": [
+        "8/13",
+        "4/13",
+        "1/13"
+      ],
+      "no_birth_first_interval": "41/52",
+      "no_birth_second_given_none": "32/41",
+      "initial_total_hazard": "12/13"
+    },
+    {
+      "alpha": 2,
+      "cap": 2,
+      "horizon": "1/2",
+      "cut": "1/4",
+      "Z": "25/16",
+      "terminal_birth_count_probabilities": [
+        "16/25",
+        "8/25",
+        "1/25"
+      ],
+      "no_birth_first_interval": "81/100",
+      "no_birth_second_given_none": "64/81",
+      "initial_total_hazard": "4/5"
+    }
+  ],
+  "separate_endpoint_normalization_negative_control": {
+    "cap": 2,
+    "alpha": 0,
+    "half_interval_Z_product": "441/256",
+    "full_interval_Z": "7/4"
+  },
+  "status": "PASS conditional on a declared common endpoint, count weights and local reference product",
+  "unitary_surjectivity": "NOT_CLAIMED",
+  "physical_waiting_law": "NOT_DERIVED"
+}

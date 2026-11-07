@@ -1,0 +1,38 @@
+{
+  "marked_records": 10853,
+  "full_action_cut_checks": 32559,
+  "count_cocycle_checks": 97677,
+  "extra_factorial_negative_controls": 27,
+  "missing_past_example": {
+    "state": [
+      [
+        0,
+        1
+      ],
+      [
+        "0",
+        "1/2"
+      ],
+      [
+        "0",
+        "1/2"
+      ]
+    ],
+    "correct_increment": [
+      "9",
+      "27/4"
+    ],
+    "incorrect_isolated_increment": [
+      "0",
+      "-33/32"
+    ]
+  },
+  "per_interval_cap_negative_control": {
+    "cap_per_interval": 1,
+    "births_first": 1,
+    "births_second": 1,
+    "direct_two_birth_amplitude": 0,
+    "sewn_two_birth_coefficient_at_z_1": 1
+  },
+  "composition": "PASS with one global cap and complete past; the unique clock cut is not an extra history sum"
+}

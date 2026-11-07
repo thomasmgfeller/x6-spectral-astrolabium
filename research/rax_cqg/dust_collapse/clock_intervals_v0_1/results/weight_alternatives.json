@@ -1,0 +1,179 @@
+{
+  "weighted_extension_bound_checks": 102,
+  "weights": "f_alpha(n)=2^(-alpha*n*(n-1)/4), alpha=1,2 are explicit model choices",
+  "raw_bounded_operator_norm_squared_bound": "exp(|z|^2*h), uniformly over all parent sizes and geometries",
+  "conditional_completion_total_hazard_bound": "|z|^2 * exp(|z|^2*H), H the fixed total normalized horizon",
+  "no_finite_interval_explosion": "PASS for this bounded-rate completed reference construction",
+  "tail_controls": [
+    {
+      "alpha": 1,
+      "x": "1/8",
+      "K": 4,
+      "uniform_partition_remainder_bound": "1/3850240"
+    },
+    {
+      "alpha": 1,
+      "x": "1/8",
+      "K": 6,
+      "uniform_partition_remainder_bound": "1/10404495360"
+    },
+    {
+      "alpha": 1,
+      "x": "1/8",
+      "K": 8,
+      "uniform_partition_remainder_bound": "1/48096117522432"
+    },
+    {
+      "alpha": 1,
+      "x": "1/4",
+      "K": 4,
+      "uniform_partition_remainder_bound": "1/117760"
+    },
+    {
+      "alpha": 1,
+      "x": "1/4",
+      "K": 6,
+      "uniform_partition_remainder_bound": "1/79994880"
+    },
+    {
+      "alpha": 1,
+      "x": "1/4",
+      "K": 8,
+      "uniform_partition_remainder_bound": "1/92748644352"
+    },
+    {
+      "alpha": 1,
+      "x": "1/2",
+      "K": 4,
+      "uniform_partition_remainder_bound": "1/3520"
+    },
+    {
+      "alpha": 1,
+      "x": "1/2",
+      "K": 6,
+      "uniform_partition_remainder_bound": "1/604800"
+    },
+    {
+      "alpha": 1,
+      "x": "1/2",
+      "K": 8,
+      "uniform_partition_remainder_bound": "1/176504832"
+    },
+    {
+      "alpha": 1,
+      "x": "1",
+      "K": 4,
+      "uniform_partition_remainder_bound": "1/100"
+    },
+    {
+      "alpha": 1,
+      "x": "1",
+      "K": 6,
+      "uniform_partition_remainder_bound": "1/4410"
+    },
+    {
+      "alpha": 1,
+      "x": "1",
+      "K": 8,
+      "uniform_partition_remainder_bound": "1/326592"
+    },
+    {
+      "alpha": 2,
+      "x": "1/8",
+      "K": 4,
+      "uniform_partition_remainder_bound": "1/3850240"
+    },
+    {
+      "alpha": 2,
+      "x": "1/8",
+      "K": 6,
+      "uniform_partition_remainder_bound": "1/10404495360"
+    },
+    {
+      "alpha": 2,
+      "x": "1/8",
+      "K": 8,
+      "uniform_partition_remainder_bound": "1/48096117522432"
+    },
+    {
+      "alpha": 2,
+      "x": "1/4",
+      "K": 4,
+      "uniform_partition_remainder_bound": "1/117760"
+    },
+    {
+      "alpha": 2,
+      "x": "1/4",
+      "K": 6,
+      "uniform_partition_remainder_bound": "1/79994880"
+    },
+    {
+      "alpha": 2,
+      "x": "1/4",
+      "K": 8,
+      "uniform_partition_remainder_bound": "1/92748644352"
+    },
+    {
+      "alpha": 2,
+      "x": "1/2",
+      "K": 4,
+      "uniform_partition_remainder_bound": "1/3520"
+    },
+    {
+      "alpha": 2,
+      "x": "1/2",
+      "K": 6,
+      "uniform_partition_remainder_bound": "1/604800"
+    },
+    {
+      "alpha": 2,
+      "x": "1/2",
+      "K": 8,
+      "uniform_partition_remainder_bound": "1/176504832"
+    },
+    {
+      "alpha": 2,
+      "x": "1",
+      "K": 4,
+      "uniform_partition_remainder_bound": "1/100"
+    },
+    {
+      "alpha": 2,
+      "x": "1",
+      "K": 6,
+      "uniform_partition_remainder_bound": "1/4410"
+    },
+    {
+      "alpha": 2,
+      "x": "1",
+      "K": 8,
+      "uniform_partition_remainder_bound": "1/326592"
+    }
+  ],
+  "distinct_uncapped_predictions": [
+    {
+      "alpha": 1,
+      "cap_used_for_Z": 6,
+      "horizon": "1/2",
+      "Z_partial": "103491353/62914560",
+      "Z_remainder_upper": "1/604800",
+      "infinite_no_birth_probability_interval": [
+        "19818086400/32599808963",
+        "62914560/103491353"
+      ]
+    },
+    {
+      "alpha": 2,
+      "cap_used_for_Z": 6,
+      "horizon": "1/2",
+      "Z_partial": "215065046951/137438953472",
+      "Z_remainder_upper": "1/604800",
+      "infinite_no_birth_probability_interval": [
+        "649399055155200/1016183420585299",
+        "137438953472/215065046951"
+      ]
+    }
+  ],
+  "physical_weight_or_endpoint_selected": false,
+  "fixed_final_size_relative_geometry_amplitudes": "unchanged by f; relative weights between sizes and intermediate norm factors are changed"
+}
