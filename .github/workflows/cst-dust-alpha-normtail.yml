@@ -1,0 +1,36 @@
+name: CST-DUST alpha-dependent norm tail
+on:
+  pull_request:
+    paths:
+      - 'research/rax_cqg/dust_collapse/alpha_normtail_v0_1/**'
+      - 'research/rax_cqg/dust_collapse/four_element_matter_v0_1/**'
+      - 'research/rax_cqg/dust_collapse/reports/CST_DUST_Alpha_Abhaengige_Normrestschranke_v0_1.pdf'
+      - 'research/rax_cqg/dust_collapse/packages/CST_DUST_Alpha_Abhaengige_Normrestschranke_v0_1_Pruefpaket.zip'
+      - '.github/workflows/cst-dust-alpha-normtail.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'research/rax_cqg/dust_collapse/alpha_normtail_v0_1/**'
+      - 'research/rax_cqg/dust_collapse/four_element_matter_v0_1/**'
+      - 'research/rax_cqg/dust_collapse/reports/CST_DUST_Alpha_Abhaengige_Normrestschranke_v0_1.pdf'
+      - 'research/rax_cqg/dust_collapse/packages/CST_DUST_Alpha_Abhaengige_Normrestschranke_v0_1_Pruefpaket.zip'
+      - '.github/workflows/cst-dust-alpha-normtail.yml'
+
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  alpha-normtail-integrity-and-replay:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Verify original artifacts, eight sources and conditional result scope
+        run: python3 -B research/rax_cqg/dust_collapse/alpha_normtail_v0_1/publication_check.py
+      - name: Replay five exact results in isolation
+        run: python3 -B research/rax_cqg/dust_collapse/alpha_normtail_v0_1/publication_check.py --replay

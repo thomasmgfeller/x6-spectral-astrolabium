@@ -1,0 +1,64 @@
+{
+  "id": "CST-DUST-FOUR-ELEMENT-CONTINUUM-001",
+  "version": "0.1",
+  "date": "2026-11-07",
+  "source_commit": "e4787d04c78a1da43825dbbac670a0e3dfacee51",
+  "status": "PASS_CERTIFIED_CONTINUOUS_FOUR_ELEMENT_REFERENCE_SECTOR",
+  "physical_gates": {
+    "MODEL": "HOLD",
+    "CURRENT": "HOLD",
+    "CORRESPONDENCE": "HOLD",
+    "BOUNCE": "HOLD",
+    "REGULARITY": "HOLD",
+    "BOUNDARY": "HOLD",
+    "TRAPPING": "HOLD",
+    "EXTENSION": "HOLD"
+  },
+  "continuous_integration": {
+    "count_cap": 4,
+    "natural_orders": 40,
+    "geometry_amplitudes": 240,
+    "cases": 36,
+    "density_measure": "1/2 delta_0 + 1/2 uniform(0,1)",
+    "total_amplitude_error_target": "1e-8",
+    "native_fraction_bits": 60,
+    "reference_fraction_bits": 160,
+    "max_arithmetic_error": "4244299/2305843009213693952",
+    "max_quadrature_error": "756434031235645665467550858070162752468866859336793904037060564688225608968859486636778688366494319702024223458772882337758484861910318506231153016393132689/726932402576985028352440423914938336951963021317953859063076983509619131773204093010844628678651779128717534232610389757835670302221755492176000000000000000000000000"
+  },
+  "cost_gate": {
+    "max_tensor_nodes_per_configuration": 1200000,
+    "max_total_density_characteristic_calls": 35000000,
+    "max_native_seconds_per_configuration": 600,
+    "paid_compute": false,
+    "policy": "Use common derivative-selected quadrature orders across all 40 geometries, share identical density polynomials; stop and report unevaluated scope if an operation, runtime or error budget fails."
+  },
+  "native_kernel": {
+    "integer_type": "signed __int128 with checked add/subtract/multiply; all divisions outward rounded",
+    "pi_nodes_weights": "Outward conversion of inherited rationally enclosed 160-bit values",
+    "transcendentals": "Inherited range reduction and Taylor degrees with explicit remainder; no libm in certified integral",
+    "compilation": "g++ -std=c++17 -O2; compiler required, no third-party C++ libraries",
+    "acceptance": "Exact rational arithmetic controls, intentional overflow rejection, pointwise inclusion of 160-bit reference intervals, and bridges to all 28 nonzero-matter n3 geometry amplitudes"
+  },
+  "infinite_number_enclosures": {
+    "normalization_enumerated_through": 6,
+    "n_ge_5_field_phases": "NOT_INTEGRATED",
+    "n5_to_6_norm_mass": "EXACT",
+    "n_gt_6_norm_mass": "INHERITED_ALPHA_INDEPENDENT_ANALYTIC_BOUND",
+    "all_number_interval_intersection_with_previous": true,
+    "infinite_time_limit": "NOT_CLAIMED"
+  },
+  "physical_boundary_or_detector_selected": false,
+  "physical_4d_dynamics_derived": false,
+  "formal_proof_checker": false,
+  "external_replication": false,
+  "not_claimed": [
+    "Physical density prior or coherent detector selection",
+    "Field-phase integration for n>=5",
+    "Infinite-time measure",
+    "Four-dimensional CST dynamics, backreaction, bounce or junction law",
+    "External replication or formal proof-assistant certification"
+  ],
+  "next_quantitative_candidate": "Sharpen the conservative number tail using alpha before further field integration",
+  "next_physical_decision": "Derive or justify density measure, coherent full-history access and boundary selection"
+}
