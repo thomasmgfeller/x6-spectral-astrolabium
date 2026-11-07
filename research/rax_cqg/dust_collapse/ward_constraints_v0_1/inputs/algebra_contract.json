@@ -1,0 +1,48 @@
+{
+  "charge_is_dust_mass": false,
+  "conditional_model": {
+    "attainment_assumes": "arbitrary invariant effects with supplied intra-stratum mode filters and zero effect on complete orthogonal complement",
+    "finite_support_optimum": "(1-cos(pi/(L+2)))/2",
+    "fixed_reference_optimum": "(1-sum_n abs(sigma[n,n+1]))/2",
+    "input": "fixed sigma independent of unknown rho, or declared globally twirled relational encoding",
+    "joint_effect": "0<=F<=I and [F,Q_S+Q_R]=0; both outcomes retained",
+    "metric": "universal full-space operator norm ||E-P_plus||",
+    "reference": "nondegenerate charges 0,...,L",
+    "system": "H_a direct_sum H_c including all clock modes",
+    "system_charge": "Q_S=Pi_c, dimensionless sector label"
+  },
+  "does_not_prove": [
+    "physical CST superselection",
+    "physical charge conservation",
+    "detector construction",
+    "continuum dynamics",
+    "global dust bounce"
+  ],
+  "n5_production": false,
+  "open": [
+    "physical observable and operation algebra",
+    "physical state and constraint domain",
+    "physical conserved generator if any",
+    "allowed reference states and relational preparation",
+    "full mode filters and instrument coupling",
+    "reference degradation and repeated use"
+  ],
+  "paid_compute": false,
+  "physical_algebra_selected": false,
+  "physical_charge_derived": false,
+  "physical_detector_derived": false,
+  "physical_gates": {
+    "BOUNCE": "HOLD",
+    "BOUNDARY": "HOLD",
+    "CORRESPONDENCE": "HOLD",
+    "CURRENT": "HOLD",
+    "EXTENSION": "HOLD",
+    "MODEL": "HOLD",
+    "REGULARITY": "HOLD",
+    "TRAPPING": "HOLD"
+  },
+  "physical_reference_prepared": false,
+  "schema": "cst-dust-reference-algebra-contract-v0.1",
+  "single_use_only": true,
+  "source_main": "c77cb607db23a043cd4965ee4efeb206eda22f8e"
+}
