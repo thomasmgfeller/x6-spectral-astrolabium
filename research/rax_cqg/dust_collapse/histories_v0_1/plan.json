@@ -1,0 +1,48 @@
+{
+  "id": "CST-DUST-HISTORIES-CONSISTENCY-001",
+  "date": "2026-11-07",
+  "source_commit": "d9622fb0423725026fab73d6884a499322cb014f",
+  "scope": "Conditional auxiliary positive histories construction; physical qualification remains open.",
+  "pre_registration": "Local plan before calculations; structural mechanisms anticipated; not blind or external.",
+  "definitions": {
+    "boundary_family": "L2([-L,L], da/(2L)), L>0; raw fixed-N finite amplitude; bounded real action phase; finite positive measures",
+    "two_site_kernel": "K(b,a)=1/2+1/2 integral_0^1 exp(-i w*(1/2+(b-a)^2/4)) dw",
+    "certified_fixture_L": "1",
+    "fixture_L_note": "Explicit member of regulator family; earlier L=4 auxiliary box is not overwritten.",
+    "input_modes": [
+      "1",
+      "sqrt(3)*a"
+    ],
+    "events": [
+      "[-1,-1/3)",
+      "[-1/3,1/3)",
+      "[1/3,1]"
+    ],
+    "taylor_degree": 40
+  },
+  "hard_tests": [
+    "Exact finite Gram identities for all events in 3-atom partition",
+    "Rational enclosure for continuum-mode norms and event Gram matrix",
+    "Distinct input normalization factors with disjoint intervals",
+    "Nonzero interference in time-bin histories",
+    "Universal finite Gram cut consistency iff reachable-subspace isometry, with exact positive and negative controls",
+    "Preserve source bytes and replay result bytes"
+  ],
+  "not_executed": [
+    "Physical four-dimensional ensembles",
+    "Infinite-regulator removal",
+    "Physical CST boundary state or trace selection",
+    "Gravitational constraint derivation",
+    "Global bounce or singularity resolution"
+  ],
+  "physical_decisions": {
+    "MODEL": "HOLD",
+    "CURRENT": "HOLD",
+    "CORRESPONDENCE": "HOLD",
+    "BOUNCE": "HOLD",
+    "REGULARITY": "HOLD",
+    "BOUNDARY": "HOLD",
+    "TRAPPING": "HOLD",
+    "EXTENSION": "HOLD"
+  }
+}

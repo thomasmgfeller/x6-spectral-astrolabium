@@ -1,5 +1,15 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Positive Historien und Schnittkonsistenz v0.1 · 7. November 2026
+
+Ein stark positives **Hilfs-Dekohärenzfunktional**, das gemeinsame relative Bra-/Ket-Uhrmaß und ein präzises Schnittkriterium auf dem erreichbaren Ereignisraum sind konstruiert. Das positive Randprodukt und die physikalische Fortsetzung bleiben zu begründen.
+
+Ein beschränkter roher Kern bei endlichem N, endlichen Regulatoren und endlichen positiven Maßen ist auf den deklarierten kontinuierlichen Randräumen kompakt. Auf dem vollen unendlichdimensionalen L²-Eingangsraum kann ihn daher keine einzige skalare Normierung isometrisch machen; beschränkt äquivalente positive Randnormen ändern das nicht. Das ist kein allgemeines No-go für CST, eingeschränkte physikalische Sektoren oder kontrollierte singuläre Grenzprozesse. Eine Markov-Fortsetzung auf bloßen CST-Randuhren wurde nicht hergeleitet.
+
+75 exakte gemeinsame Maßmomente, 25 rationale Polynomvergleiche, 21 Schnittkontrollen und die vollständigen endlichen Ereignisidentitäten ergänzen die Beweise. Ein kontinuierlicher Zweistellenzeuge bei ausdrücklich L=1 besitzt verschiedene Normfaktoren für zwei normierte Randfunktionen. Die geprüfte Historienpartition interferiert; ihre Diagonalen sind keine klassischen Bounce-Wahrscheinlichkeiten. Fünf exakte Ergebnisdateien werden isoliert bytegleich reproduziert. **Alle acht physikalischen Audit-Gates bleiben HOLD.** Frühere Kandidaten-FAILs bleiben bestehen.
+
+[Bericht (PDF, sechs Seiten)](reports/CST_DUST_Positive_Historien_Schnittkonsistenz_v0_1.pdf) · [Originales Prüfpaket (ZIP)](packages/CST_DUST_Positive_Historien_Schnittkonsistenz_v0_1_Pruefpaket.zip) · [Definitionen, Aussagegrenzen und Nachrechnung](histories_v0_1/PUBLICATION.md)
+
 ## Eichstruktur und Randkonsistenz v0.1 · 7. November 2026
 
 Gemeinsame Umbenennungen und Uhrverschiebungen sind im geprüften endlichen Ansatz exakt konsistent, wenn Zustände, Randdaten und Regulator mittransformiert werden. Relative Uhren besitzen ein korreliertes induziertes Maß. Naives Zurücksetzen bei unveränderter Box, beliebige lokale Vakuumuhrverschiebungen und getrennte Ursprungsverschiebungen gekoppelter Teilgebiete ohne relative Randdaten werden durch konkrete Gegenbeispiele zurückgewiesen.
