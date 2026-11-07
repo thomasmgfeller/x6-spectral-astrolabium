@@ -1,0 +1,57 @@
+{
+  "adaptive_branches": 100,
+  "adaptive_instruments": 25,
+  "candidate_record_preserving_return_detector": "RULED_OUT_AS_UNIVERSAL_TARGET_WITH_ERROR_BELOW_1_2",
+  "controlled_pointer_cases": 900,
+  "diagonal_grid_cases": 25,
+  "direct_joint_controls": 900,
+  "external_replication": false,
+  "joint_unitaries": 75,
+  "n5_production_run": false,
+  "negative_controls": [
+    {
+      "case": "record-diagonal effect equals coherent target",
+      "status": "REJECTED"
+    },
+    {
+      "case": "noncommuting pointer controls create history mixing",
+      "status": "REJECTED"
+    },
+    {
+      "case": "postselection creates coherence from block-diagonal state",
+      "status": "REJECTED"
+    },
+    {
+      "case": "compressed success certifies full-space rank-one effect",
+      "status": "REJECTED"
+    },
+    {
+      "case": "missing normalization in ideal rotation",
+      "status": "REJECTED"
+    },
+    {
+      "case": "extend the diagonal obstruction to all quantum couplings",
+      "status": "REJECTED"
+    },
+    {
+      "case": "changed source byte",
+      "status": "REJECTED"
+    }
+  ],
+  "nonzero_conditioned_branches": 81,
+  "physical_gates": {
+    "BOUNCE": "HOLD",
+    "BOUNDARY": "HOLD",
+    "CORRESPONDENCE": "HOLD",
+    "CURRENT": "HOLD",
+    "EXTENSION": "HOLD",
+    "MODEL": "HOLD",
+    "REGULARITY": "HOLD",
+    "TRAPPING": "HOLD"
+  },
+  "physical_mixing_coupling": "NOT_DERIVED",
+  "plan_sha256": "03319eb1a504c3a8c619030a35bb1fd2ae48b673b30d5ba3919d7a77753d3281",
+  "rational_mixing_controls": 6,
+  "status": "PASS_RESTRICTED_COUPLING_AUDIT",
+  "weighted_obstruction_controls": 3
+}
