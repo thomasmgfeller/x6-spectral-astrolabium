@@ -1,0 +1,58 @@
+{
+  "action_point_controls": 45,
+  "action_potential_controls": 9,
+  "block_effect_controls": 36,
+  "boundary_family": "ADDITIONAL_DIAGNOSTIC_MODEL",
+  "boundary_graph_controls": 72,
+  "clock_controls": 6,
+  "continuum_convergence_certified": false,
+  "exact_cayley_unitarities": 72,
+  "finite_mixing_cases": 54,
+  "flux_balances": 72,
+  "green_identity_controls": 216,
+  "n5_production": false,
+  "negative_controls": [
+    {
+      "case": "block preservation is enough to implement the coherent target",
+      "status": "REJECTED"
+    },
+    {
+      "case": "no boundary coupling gives a unique coherent ground mode",
+      "status": "REJECTED"
+    },
+    {
+      "case": "boundary sign has no effect relative to a fixed target",
+      "status": "REJECTED"
+    },
+    {
+      "case": "density ground filter certifies the full clock space",
+      "status": "REJECTED"
+    },
+    {
+      "case": "adding the nonconstant action potential preserves the target eigenstate",
+      "status": "REJECTED"
+    },
+    {
+      "case": "normalizing finite cell weights is optional",
+      "status": "REJECTED"
+    },
+    {
+      "case": "changing a source byte preserves provenance",
+      "status": "REJECTED"
+    }
+  ],
+  "paid_compute": false,
+  "physical_cst_coupling": "NOT_DERIVED",
+  "physical_gates": {
+    "BOUNCE": "HOLD",
+    "BOUNDARY": "HOLD",
+    "CORRESPONDENCE": "HOLD",
+    "CURRENT": "HOLD",
+    "EXTENSION": "HOLD",
+    "MODEL": "HOLD",
+    "REGULARITY": "HOLD",
+    "TRAPPING": "HOLD"
+  },
+  "plan_sha256": "723af1a22163c6f89426a59ccf999e82b2b44b74b4d15b9c842855ffaa56cf2d",
+  "status": "PASS_CONDITIONAL_STRATUM_BOUNDARY_AUDIT"
+}
