@@ -1,0 +1,38 @@
+{
+  "id": "CST-DUST-BOUNDARY-CONTRACT-001",
+  "version": "0.1",
+  "status": "EXACT_REPRESENTATION_PHYSICAL_SELECTION_OPEN",
+  "state_data": [
+    "Full past strict order",
+    "All old clock values including vacuum sites",
+    "All density weights and matter/vacuum marks",
+    "Fixed external labels/data",
+    "Natural birth labeling as computational representation only"
+  ],
+  "extension": "Add maximal inner element above anchor and an arbitrary internal order ideal; append common final anchor only at closure.",
+  "action": "Inherited BDG plus dust; exact interval-count and degree-2 clock-moment increment.",
+  "measure": "Preserve inherited fixed-m covariant measure using step ratio e(parent)/e(child); do not multiply another automorphism factor.",
+  "auxiliary_inner_product": "Natural-label counting direct sum with normalized original field product measures; not physical quotient.",
+  "physical_inner_product": {
+    "status": "NOT_SELECTED",
+    "conditions": [
+      "Consistent Gram forms on admissible events",
+      "Compatible treatment of redundant birth labels",
+      "Controlled horizon and regulator dependence",
+      "Independent classical correspondence"
+    ]
+  },
+  "forbidden_shortcuts": [
+    "Discard old vacuum clocks based only on local zero density",
+    "Replace the complete past by a fixed top-layer collar without a closure theorem",
+    "Set all natural-label weights to one",
+    "Normalize each growth row and claim original amplitudes are unchanged"
+  ],
+  "not_claimed": [
+    "Minimal finite boundary memory",
+    "Physical dust-time Hamiltonian",
+    "Infinite growth measure",
+    "Physical junction law",
+    "Bounce or singularity resolution"
+  ]
+}
