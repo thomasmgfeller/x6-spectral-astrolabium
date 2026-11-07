@@ -1,0 +1,41 @@
+name: CST-DUST boundary memory and exact continuation
+on:
+  pull_request:
+    paths:
+      - 'research/rax_cqg/dust_collapse/boundary_memory_v0_1/**'
+      - 'research/rax_cqg/dust_collapse/histories_v0_1/**'
+      - 'research/rax_cqg/dust_collapse/gauge_boundary_v0_1/**'
+      - 'research/rax_cqg/dust_collapse/gluing_v0_1/**'
+      - 'research/rax_cqg/dust_collapse/variation_v0_1/**'
+      - 'research/rax_cqg/dust_collapse/reports/CST_DUST_Randgedaechtnis_Fortsetzung_v0_1.pdf'
+      - 'research/rax_cqg/dust_collapse/packages/CST_DUST_Randgedaechtnis_Fortsetzung_v0_1_Pruefpaket.zip'
+      - '.github/workflows/cst-dust-boundary-memory.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'research/rax_cqg/dust_collapse/boundary_memory_v0_1/**'
+      - 'research/rax_cqg/dust_collapse/histories_v0_1/**'
+      - 'research/rax_cqg/dust_collapse/gauge_boundary_v0_1/**'
+      - 'research/rax_cqg/dust_collapse/gluing_v0_1/**'
+      - 'research/rax_cqg/dust_collapse/variation_v0_1/**'
+      - 'research/rax_cqg/dust_collapse/reports/CST_DUST_Randgedaechtnis_Fortsetzung_v0_1.pdf'
+      - 'research/rax_cqg/dust_collapse/packages/CST_DUST_Randgedaechtnis_Fortsetzung_v0_1_Pruefpaket.zip'
+      - '.github/workflows/cst-dust-boundary-memory.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  boundary-memory-integrity-and-replay:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Verify original artifacts, source inputs and claim scope
+        run: python3 -O -B research/rax_cqg/dust_collapse/boundary_memory_v0_1/publication_check.py
+      - name: Replay five exact results in isolation
+        run: python3 -O -B research/rax_cqg/dust_collapse/boundary_memory_v0_1/publication_check.py --replay
