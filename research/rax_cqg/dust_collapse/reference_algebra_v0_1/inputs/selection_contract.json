@@ -1,0 +1,65 @@
+{
+  "schema": "cst-dust-stratum-selection-contract-v0.1",
+  "source_main": "4ed1a338f875172f8eb92798e8a8e9046a126f5f",
+  "status": "CONDITIONAL_MATHEMATICAL_COMPLETION_ONLY",
+  "inherited_action_quantization": "NOT_DERIVED",
+  "block_preserving_effects": {
+    "sharp_error": "1/2",
+    "comparison": "Universal operator norm on the declared space admitting both coherent sign states",
+    "scope": "Atom/continuous stratum preservation, not full record diagonality; not general phase blindness"
+  },
+  "boundary_family": {
+    "form": "kappa*integral |f_prime|^2 + lambda*|a-s*f(0)|^2",
+    "hilbert_space": "C plus L2(0,1), with the stated unitary change from the weighted density measure",
+    "form_domain": "C plus H1(0,1)",
+    "parameters": "kappa>0, lambda>=0, s=+1 or -1; additional model choices",
+    "operator": "(lambda*(a-s*f(0)), -kappa*f_second)",
+    "operator_domain": "f in H2; f_prime(1)=0; kappa*f_prime(0)=lambda*(f(0)-s*a)",
+    "selfadjoint": "PROVED_FOR_DECLARED_FORM",
+    "probability_flux": "PROVED_WITH_REGULARITY; not a spacetime dust mass current",
+    "ground_dimension": "1 for lambda>0, 2 for lambda=0",
+    "gap_lower_bound_lambda_positive": "min(lambda,2*kappa)",
+    "physical_selection": "NOT_DERIVED",
+    "spacetime_locality": "NOT_DERIVED",
+    "old_bounded_V_budget_applicable": false
+  },
+  "clock_completion": {
+    "density_only_ground_space": "L2(clock) tensor span(psi_s)",
+    "density_only_effect_error": "1",
+    "extra_clock_kinetic_term": "ADDITIONAL_ASSUMPTION",
+    "full_gap_lower_bound": "min(pi^2*kappa_x,lambda,2*kappa) for positive parameters",
+    "error_comparison": "Operator norm against the full rank-one target"
+  },
+  "action_potential_test": {
+    "status": "ADDITIONAL_HAMILTONIAN_ANSATZ_ONLY",
+    "formula": "H_eta=A_full+eta*M_Sd",
+    "variance": "5/192+5*h^2/36+19*h^4/45",
+    "target_eigen_residual_squared": "eta^2*variance",
+    "constant_target_eigenstate_for_eta_nonzero": false
+  },
+  "finite_controls": {
+    "scope": "Finite analogues; not a certified continuum discretization",
+    "cayley": "Exact rational unitary, not exact time exponential",
+    "boundary_perturbation_norm": "lambda*(m+1)",
+    "off_block_norm_squared": "lambda^2*m"
+  },
+  "required_physical_decisions": [
+    "Admissible physical state space and whether atom/positive-density coherence is allowed or superselected.",
+    "Matter/geometry quantum algebra and a justified mapping to the history representation.",
+    "Derivation of transitions, domains, regulator boundary conditions and causal support.",
+    "Full preparation and measurement instrument, calibration and gravitational backreaction."
+  ],
+  "physical_gates": {
+    "BOUNCE": "HOLD",
+    "BOUNDARY": "HOLD",
+    "CORRESPONDENCE": "HOLD",
+    "CURRENT": "HOLD",
+    "EXTENSION": "HOLD",
+    "MODEL": "HOLD",
+    "REGULARITY": "HOLD",
+    "TRAPPING": "HOLD"
+  },
+  "physical_detector_derived": false,
+  "paid_compute": false,
+  "n5_production": false
+}
