@@ -1,5 +1,11 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Normpfad und kohärenter Quotient · 7. November 2026
+
+Positive diagonale, feldunabhängige Hilfsnormpfade sind klassifiziert und für beliebig viele Wachstumsschritte konstruiert. Die ursprüngliche kohärente Endsumme besitzt auf den vollständigen Räumen dieser normalisierten diagonalen Klasse keine gemeinsame Operatornormschranke. Im unmarkierten kohärenten Quotienten scheitert diagonale Isometrie bereits beim Schritt zwei nach drei Elemente. Nichtdiagonale positive Produkte sind konstruierbar; die physikalische Auswahl, markierte Ereignisse und die Fortsetzung des Quantenmaßes bleiben offen. 15.696 rationale Vergleiche, 17.118 Horizontkontrollen und fünf bytegleich reproduzierte Ergebnisdateien sind dokumentiert. **Alle acht physikalischen Gates bleiben HOLD.** Kein allgemeines No-go für CST und kein Bounce-Nachweis.
+
+[Herleitung, Grenzen und Nachrechnung](normpath_v0_1/PUBLICATION.md) · [Bericht (PDF)](reports/CST_DUST_Normpfad_Kohaerenter_Quotient_v0_1.pdf) · [Originales Prüfpaket (ZIP)](packages/CST_DUST_Normpfad_Kohaerenter_Quotient_v0_1_Pruefpaket.zip)
+
 ## Randgedächtnis und exakte Fortsetzung · 7. November 2026
 
 Die vollständige Vergangenheit erlaubt eine exakte Fortsetzung der geerbten endlichen Amplitude. Wirkungszuwächse und natürliche Labelgewichte sind hergeleitet; 2.442 rationale Wirkungsvergleiche bestehen, fünf Ergebnisdateien werden isoliert bytegleich reproduziert. Ein fester oberer Ordnungskragen genügt nicht für alle zulässigen zukünftigen Ideale. Der Operator erhält alte Felder und liegt außerhalb der früheren beschränkten integrierten Kernklasse. Das physikalische Skalarprodukt, der Quotient redundanter Geburtslabels und die unendliche Fortsetzung bleiben offen; lokale Normierung verändert die ursprünglichen Amplituden. **Alle acht physikalischen Gates bleiben HOLD.**
