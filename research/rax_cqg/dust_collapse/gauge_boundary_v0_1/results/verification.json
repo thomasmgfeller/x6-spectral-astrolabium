@@ -1,0 +1,69 @@
+{
+  "id": "CST-DUST-GAUGE-BOUNDARY-001",
+  "source_commit": "374acc67cb0e6cc510ec3852fd9fe9ef2b5ed20a",
+  "plan_sha256": "f1075751c5a170bfb9d531a431c6e094214ab4bd2b2781f3eca32c09afa751c5",
+  "finite": {
+    "checks": {
+      "marked_cases": 3670,
+      "independent_action_checks": 3670,
+      "common_shift_checks": 3670,
+      "gradient_sum_checks": 3670,
+      "vacuum_polynomial_checks": 35990,
+      "relabel_checks": 85034,
+      "commuting_representation_checks": 85034
+    },
+    "vacuum_columns": {
+      "sites": 7249,
+      "flat_columns": 4708,
+      "coupled_columns": 2541
+    },
+    "boundary_splits": {
+      "cuts": 49992,
+      "flat_for_all_T": 19172,
+      "relative_mode_coupled": 30820
+    }
+  },
+  "relative_measure": {
+    "exact_checks": 2508,
+    "density": "[2L-(max(0,r)-min(0,r))]_+/(2L)^N",
+    "counterexample": "At L=1: E[r^2]=2/3 versus 1/3 after naive resetting; different regulated models.",
+    "classification": "Pushforward of a finite auxiliary clock measure, not an established physical gauge quotient."
+  },
+  "amplitudes": {
+    "certified_checks": 24,
+    "fixed_box_counterexamples": 9,
+    "relative_measure_counterexamples": 3,
+    "all_intervals_outward_rounded": true,
+    "precision_role": "mathematical enclosure, not physical precision"
+  },
+  "interior_density_amplitudes": {
+    "certified_checks": 24,
+    "fixed_box_counterexamples": 9,
+    "relative_measure_counterexamples": 3,
+    "all_intervals_outward_rounded": true,
+    "precision_role": "mathematical enclosure, not physical precision"
+  },
+  "supplement_01_sha256": "9a99c6bae64391b736c7db40ddde2d2f50084331681582f5b52f60b3d2a32587",
+  "new_dynamical_CST_ensembles": false,
+  "formal_proof_checker": false,
+  "scoped_decisions": {
+    "LABEL_AND_SHIFT_ALGEBRA": "PASS_EXACT_FINITE",
+    "COTRANSFORMED_REGULATOR_COVARIANCE": "PASS_ANALYTIC_AND_CERTIFIED_WITNESS",
+    "RELATIVE_CLOCK_PUSHFORWARD": "PASS_ANALYTIC_AND_EXACT_CONTROLS",
+    "NAIVE_RESET_KEEPING_BOX": "FAIL_AS_EQUIVALENT_REWRITE",
+    "ALL_VACUUM_CLOCKS_ARE_FREE_GAUGE": "FAIL_FOR_INHERITED_ACTION",
+    "INDEPENDENT_BLOCK_ORIGIN_RESET": "FAIL_WITHOUT_RELATIVE_DATA",
+    "PHYSICAL_GAUGE_QUANTIZATION": "HOLD",
+    "GRAVITATIONAL_ANOMALY": "NOT_ESTABLISHED"
+  },
+  "physical_decisions": {
+    "MODEL": "HOLD",
+    "CURRENT": "HOLD",
+    "CORRESPONDENCE": "HOLD",
+    "BOUNCE": "HOLD",
+    "REGULARITY": "HOLD",
+    "BOUNDARY": "HOLD",
+    "TRAPPING": "HOLD",
+    "EXTENSION": "HOLD"
+  }
+}
