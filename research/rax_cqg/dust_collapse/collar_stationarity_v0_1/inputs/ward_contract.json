@@ -1,0 +1,55 @@
+{
+  "clock_symmetry": {
+    "derived": "rigid common clock shift and variational cut balance",
+    "not_derived": "binary density-sector charge, positive rest mass, or physical gauge/Dirac algebra"
+  },
+  "first_layer": {
+    "bound": "C1=1+8 h^2 x1^2 >= 1",
+    "classical_positive_interior_saddle": "ABSENT",
+    "model": "one fixed zero-density predecessor anchor; natural order; first free density may be varied",
+    "operator_constraints": "additional candidates only; not derived from amplitude",
+    "weighted_residual_warning": "small w*C1 residual does not imply proximity to its atom kernel"
+  },
+  "n5_production": false,
+  "new_density_integration_saving": false,
+  "next_physical_requirements": [
+    "past collar and boundary state",
+    "allowed density variations",
+    "quantization or constraint rule",
+    "physical observable algebra and inner product"
+  ],
+  "paid_compute": false,
+  "physical_constraint_quantization_derived": false,
+  "physical_gates": {
+    "BOUNCE": "HOLD",
+    "BOUNDARY": "HOLD",
+    "CORRESPONDENCE": "HOLD",
+    "CURRENT": "HOLD",
+    "EXTENSION": "HOLD",
+    "MODEL": "HOLD",
+    "REGULARITY": "HOLD",
+    "TRAPPING": "HOLD"
+  },
+  "physical_sector_charge_derived": false,
+  "schema": "cst-dust-clock-ward-constraint-contract-v0.1",
+  "source_main": "0ee861d67f7d28e2c2762ef01e70f428796f1f53",
+  "strong_phase_limit": {
+    "fixed_finite_n_only": true,
+    "infinite_n_sum_interchanged": false,
+    "measure": "independent half atom + half uniform density, normalized ordered-clock simplex",
+    "physical_semiclassical_limit_derived": false,
+    "quantity": "matter amplitude with gravitational phase factored out",
+    "uniform_rate_in_n_proved": false,
+    "value": "2^(-n)"
+  },
+  "supplemental_witness": {
+    "clock_equation_satisfied": false,
+    "norm_equation_satisfied": true,
+    "outside_frozen_grid": true,
+    "validated_boundary_repair": false
+  },
+  "ward_domains": {
+    "absolute_fixed_boxes": "retain endpoint terms",
+    "jointly_translated_relative_clock_windows": "common shift invariance preserved"
+  }
+}
