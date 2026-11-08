@@ -1,0 +1,70 @@
+{
+  "schema": "cst-dust-asymmetric-endpoint-plan-v0.1",
+  "id": "CST-DUST-ASYM-ENDPOINT-001",
+  "date_zurich": "2026-11-08",
+  "source_main": "5b5907de8ab087183e9a6a0072336226ae0fa771",
+  "status": "analytical model and certificates fixed before finite controls; not external preregistration",
+  "geometry": {
+    "collar": "four fixed ordered predecessors a<b<c<d with zero density rows",
+    "arms": "two disjoint chains of p,q positive free vertices above d, followed by a common positive free endpoint j",
+    "primary_case": [
+      2,
+      1
+    ],
+    "endpoint": "clock freely varied; density r in (0,1); no outgoing relations"
+  },
+  "weights": [
+    1,
+    -9,
+    16,
+    -8
+  ],
+  "tasks": [
+    "global interval recount for primary asymmetry",
+    "strict sign certificate and sharp normalized endpoint bound",
+    "terminal-clock screen for p,q in 1..4, with class >=4 justified analytically",
+    "rational clock-only feasible witnesses where sign screen permits",
+    "separate clock feasibility from full norm and dynamical claims"
+  ],
+  "controls": {
+    "arm_lengths": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "normalized_duration": "1",
+    "edge_gap_floor": "1/100",
+    "gap_profiles": "one gap 1-length/100; all other gaps 1/100; include every peak on each arm",
+    "collar_c": [
+      "-1/10",
+      "-1",
+      "-2"
+    ],
+    "collar_b": "c-1",
+    "collar_a": "c-2",
+    "density_values": [
+      "1/4",
+      "1/2",
+      "3/4"
+    ],
+    "sharp_bound_epsilons": [
+      "1/10",
+      "1/100",
+      "1/1000"
+    ],
+    "common_shifts": [
+      "-1/3",
+      "0",
+      "2/5"
+    ]
+  },
+  "claims": {
+    "physical_exterior": false,
+    "bounce": false,
+    "general_asymmetric_no_go": false,
+    "clock_feasibility_is_full_stationarity": false
+  },
+  "paid_compute": false,
+  "n5_production": false
+}
