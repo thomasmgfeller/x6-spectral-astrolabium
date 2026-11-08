@@ -1,0 +1,85 @@
+{
+  "boundary_conditions": "exclusions require a free positive terminal endpoint with no outgoing contribution",
+  "clock_only_witness_norms": [
+    {
+      "C_endpoint": "-408997/40000",
+      "p": 1,
+      "q": 1
+    },
+    {
+      "C_endpoint": "11413/20000",
+      "p": 1,
+      "q": 4
+    },
+    {
+      "C_endpoint": "2507/2500",
+      "p": 2,
+      "q": 3
+    },
+    {
+      "C_endpoint": "2124048983/737280000",
+      "p": 2,
+      "q": 4
+    },
+    {
+      "C_endpoint": "5011/5000",
+      "p": 3,
+      "q": 2
+    },
+    {
+      "C_endpoint": "73662179/114490000",
+      "p": 3,
+      "q": 4
+    },
+    {
+      "C_endpoint": "142296677/186245000",
+      "p": 4,
+      "q": 1
+    },
+    {
+      "C_endpoint": "2124048983/737280000",
+      "p": 4,
+      "q": 2
+    },
+    {
+      "C_endpoint": "54075148/93096125",
+      "p": 4,
+      "q": 3
+    },
+    {
+      "C_endpoint": "1997/2000",
+      "p": 4,
+      "q": 4
+    }
+  ],
+  "negative_controls": [
+    {
+      "incorrect_assumption": "inserted arm event leaves endpoint coefficients unchanged",
+      "rejected": true
+    },
+    {
+      "incorrect_assumption": "every asymmetric arm pair is excluded",
+      "rejected": true
+    },
+    {
+      "incorrect_assumption": "only asymmetric pairs are excluded",
+      "rejected": true
+    },
+    {
+      "incorrect_assumption": "zero endpoint clock derivative proves full stationarity",
+      "rejected": true
+    },
+    {
+      "incorrect_assumption": "zero density removes an inserted event from causal intervals",
+      "rejected": true
+    },
+    {
+      "incorrect_assumption": "small absolute residual removes the normalized obstruction",
+      "rejected": true
+    },
+    {
+      "incorrect_assumption": "positive density is unnecessary for the strict bound",
+      "rejected": true
+    }
+  ]
+}

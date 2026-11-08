@@ -1,0 +1,80 @@
+{
+  "schema": "cst-dust-asymmetric-endpoint-v0.1",
+  "source_main": "5b5907de8ab087183e9a6a0072336226ae0fa771",
+  "scope": {
+    "primary_arm_lengths": [
+      2,
+      1
+    ],
+    "fixed_collar": "four ordered clocks, zero outer density rows",
+    "arms": "two chains without cross relations",
+    "endpoint": "positive density r in (0,1), freely varied clock U, no successors",
+    "clock_order": "strict along causal relations only",
+    "original_action_unchanged": true
+  },
+  "results": {
+    "primary_class": "no full stationary solution because endpoint clock derivative strictly positive",
+    "normalized_endpoint_reaction": "7 < 2*q_j/(r*(U-d)) < 17; bounds sharp but unattained",
+    "arm_length_classes": [
+      1,
+      2,
+      3,
+      "at least 4"
+    ],
+    "excluded_clock_classes": [
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        3,
+        1
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        3,
+        3
+      ]
+    ],
+    "remaining_classes": "terminal clock equation feasible; full stationarity not established",
+    "exact_clock_witnesses": 10,
+    "example_2_3_endpoint_norm": "2507/2500"
+  },
+  "claims": {
+    "physical_preparation_derived": false,
+    "physical_vacuum_exterior_derived": false,
+    "full_geometry_backreaction_derived": false,
+    "physical_junction_law_derived": false,
+    "bounce_derived": false,
+    "general_CST_no_go": false,
+    "general_asymmetric_no_go": false,
+    "dynamical_stability_proved": false,
+    "full_asymmetric_stationary_solution_derived": false,
+    "clock_feasibility_is_full_stationarity": false,
+    "exclusion_applies_to_fixed_future_clock": false
+  },
+  "physical_gates": {
+    "MODEL": "HOLD",
+    "BOUNDARY": "HOLD",
+    "CURRENT": "HOLD",
+    "CORRESPONDENCE": "HOLD",
+    "EXTENSION": "HOLD",
+    "TRAPPING": "HOLD",
+    "REGULARITY": "HOLD",
+    "BOUNCE": "HOLD"
+  },
+  "paid_compute": false,
+  "n5_production": false,
+  "external_replication": false
+}
