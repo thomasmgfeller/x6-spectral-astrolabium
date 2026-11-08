@@ -1,0 +1,35 @@
+{
+  "schema": "cst-dust-boundary-preparation-v0.1",
+  "source_main": "8d1a3e0906611ec23fdee3088a6bf864d0bd9edc",
+  "scope": {
+    "fixed_geometry": true,
+    "past_densities_zero": true,
+    "positive_free_w": "0<w<1",
+    "packet_domain": "L2 of four-dimensional cube; H0^1 amplitude; t,w fixed only in packet diagnostic",
+    "boundary_operator": "P_y+partial_Ty S; additional diagnostic, not a derived Dirac constraint"
+  },
+  "results": {
+    "classical_reaction_matching": "conditional on independent momentum data",
+    "state_independent_phase_supports_whole_flat_family": false,
+    "finite_width_packet_matches_mean_reaction": true,
+    "exact_joint_bulk_and_boundary_constraints_on_declared_space": false,
+    "physical_preparation_derived": false,
+    "physical_inner_product_derived": false,
+    "physical_constraint_algebra_derived": false,
+    "physical_boundary_action_derived": false,
+    "bounce_derived": false
+  },
+  "physical_gates": {
+    "MODEL": "HOLD",
+    "CURRENT": "HOLD",
+    "CORRESPONDENCE": "HOLD",
+    "BOUNCE": "HOLD",
+    "REGULARITY": "HOLD",
+    "BOUNDARY": "HOLD",
+    "TRAPPING": "HOLD",
+    "EXTENSION": "HOLD"
+  },
+  "paid_compute": false,
+  "n5_production": false,
+  "external_replication": false
+}

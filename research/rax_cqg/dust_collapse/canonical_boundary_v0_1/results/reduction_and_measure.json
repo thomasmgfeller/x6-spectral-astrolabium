@@ -1,0 +1,240 @@
+{
+  "Delta": [
+    [
+      "0",
+      "0",
+      "1",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "1"
+    ],
+    [
+      "-1",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "-1",
+      "0",
+      "0"
+    ]
+  ],
+  "Delta_inverse": [
+    [
+      "0",
+      "0",
+      "-1",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "-1"
+    ],
+    [
+      "1",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "1",
+      "0",
+      "0"
+    ]
+  ],
+  "Dirac_Poisson_matrix": [
+    [
+      "0",
+      "0",
+      "0",
+      "0",
+      "1",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "1",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "-1",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "-1",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ]
+  ],
+  "constraint_rescalings": [
+    {
+      "det_Delta": "1",
+      "scales": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "sqrt_det_over_delta_jacobian": "1"
+    },
+    {
+      "det_Delta": "44100",
+      "scales": [
+        2,
+        3,
+        5,
+        7
+      ],
+      "sqrt_det_over_delta_jacobian": "1"
+    },
+    {
+      "det_Delta": "44100",
+      "scales": [
+        -2,
+        3,
+        -5,
+        7
+      ],
+      "sqrt_det_over_delta_jacobian": "1"
+    },
+    {
+      "det_Delta": "1/25",
+      "scales": [
+        "1/2",
+        "2/3",
+        "3/4",
+        "4/5"
+      ],
+      "sqrt_det_over_delta_jacobian": "1"
+    }
+  ],
+  "density_moments": [
+    {
+      "continuous_original": "1/2",
+      "continuous_transformed": "1/2",
+      "power": 0
+    },
+    {
+      "continuous_original": "1/4",
+      "continuous_transformed": "1/4",
+      "power": 1
+    },
+    {
+      "continuous_original": "1/6",
+      "continuous_transformed": "1/6",
+      "power": 2
+    },
+    {
+      "continuous_original": "1/8",
+      "continuous_transformed": "1/8",
+      "power": 3
+    },
+    {
+      "continuous_original": "1/10",
+      "continuous_transformed": "1/10",
+      "power": 4
+    }
+  ],
+  "negative_controls": [
+    {
+      "incorrect_assumption": "naive interior and boundary operators commute",
+      "rejected": true
+    },
+    {
+      "incorrect_assumption": "full gradient graph retains that uncancelled bracket",
+      "rejected": true
+    },
+    {
+      "incorrect_assumption": "normal conditions are first class",
+      "rejected": true
+    },
+    {
+      "incorrect_assumption": "Dirac normal bracket still equals one",
+      "rejected": true
+    },
+    {
+      "incorrect_assumption": "flat transformed measure is repaired by normalization",
+      "rejected": true
+    },
+    {
+      "incorrect_assumption": "off-surface density integral vanishes",
+      "rejected": true
+    },
+    {
+      "incorrect_assumption": "null atom must satisfy both positive-stratum moment equations",
+      "rejected": true
+    },
+    {
+      "incorrect_assumption": "configuration coarea density is always one",
+      "rejected": true
+    }
+  ],
+  "off_surface_amplitude_real_lower_bound": "191/192"
+}
