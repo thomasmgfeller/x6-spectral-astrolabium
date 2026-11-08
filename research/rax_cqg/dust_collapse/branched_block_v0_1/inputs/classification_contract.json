@@ -1,0 +1,51 @@
+{
+  "schema": "cst-dust-collar-classification-v0.1",
+  "source_main": "adb6ea2de0dc56417da3493e8aabf8903981090f",
+  "scope": {
+    "geometry": "fixed six-element chain; ordered four-clock collar and two positive freely varied interior rows",
+    "outer_density_rows": "zero; additional past action would contribute additional outer reactions",
+    "density_range": "0<w,v<1",
+    "original_action_unchanged": true,
+    "physical_exterior": false
+  },
+  "results": {
+    "complete_in_declared_class": true,
+    "necessary_and_sufficient": [
+      "E=0",
+      "F=0",
+      "t_star>d",
+      "P<0"
+    ],
+    "collar_manifold_dimension": 2,
+    "collar_constraints_rank": 2,
+    "free_density_parameters": 2,
+    "outer_reaction": "-(w grad F + v grad E)/2",
+    "oldest_outer_reaction_strictly_negative": true,
+    "open_robustness_to_independent_collar_perturbations": false,
+    "tangential_family_persists": true,
+    "finite_residual_bounds": "necessary only; require positive density floor and finite future-gap cap"
+  },
+  "claims": {
+    "physical_preparation_derived": false,
+    "physical_vacuum_exterior_derived": false,
+    "full_geometry_backreaction_derived": false,
+    "physical_junction_law_derived": false,
+    "bounce_derived": false,
+    "general_CST_no_go": false,
+    "external_boundary_reactions_vanish": false,
+    "dynamical_stability_proved": false
+  },
+  "physical_gates": {
+    "MODEL": "HOLD",
+    "BOUNDARY": "HOLD",
+    "CURRENT": "HOLD",
+    "CORRESPONDENCE": "HOLD",
+    "EXTENSION": "HOLD",
+    "TRAPPING": "HOLD",
+    "REGULARITY": "HOLD",
+    "BOUNCE": "HOLD"
+  },
+  "paid_compute": false,
+  "n5_production": false,
+  "external_replication": false
+}
