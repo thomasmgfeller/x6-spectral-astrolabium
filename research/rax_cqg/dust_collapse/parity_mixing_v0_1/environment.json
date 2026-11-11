@@ -1,0 +1,14 @@
+{
+  "python": ">=3.10; executed on CPython 3.12",
+  "python_flint": "0.9.0",
+  "numpy": "2.3.5",
+  "primary_precision_bits": 128,
+  "crosscheck_precision_bits": 192,
+  "primary_Gauss_order": 40,
+  "crosscheck_Gauss_order": 48,
+  "independent_float64_order": 8,
+  "pdf_build": {"reportlab": "4.4.9", "matplotlib": "3.10.8", "Pillow": "installed"},
+  "network_required_for_replay": false,
+  "verification": "python verify.py",
+  "extended_verification": "python verify.py --extended"
+}

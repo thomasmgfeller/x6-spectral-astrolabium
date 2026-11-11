@@ -1,5 +1,17 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Paritätserlaubter Mischblock A → A v0.1 · 11. November 2026
+
+[Schritt 4](parity_mixing_v0_1/README.md) berechnet den Übergang Atom → Positiv mit Materiepaket 0→0 auf der Basis von [Schritt 2](boundary_state_space_v0_1/README.md) und [Schritt 3](amplitude_existence_v0_1/README.md). Alle 33 deklarierten AA-Historien gehen mit Gewicht 1/33 und voller Gravitationsphase exp(i F₄) ein; κ=1, μ=0 und die normierten Randpakete bleiben fest. Diese Gewichte und Parameter sind ausdrückliche Kontrollentscheidungen, keine hergeleiteten physikalischen Historiengewichte.
+
+**Ein zertifizierter Nichtnullbefund mit getrenntem Wirkungsvergleich:** Die ursprüngliche Wirkung ergibt M₁=−0.155730245646+0.132674294297 i, die entkoppelte Referenz M₀=+0.021300694129−0.066660937892 i. Die gepaarte Differenz beträgt Δ=−0.177030939775+0.199335232189 i. Der Fehler ist einschließlich Darstellungsrundung höchstens 10⁻¹² je Real- und Imaginärteil. Normierungen, Atom-/Positivmasken, Gaußzweige, sämtliche Historienphasen und analytische Quadraturfehler sind explizit bilanziert.
+
+Die Entkopplung wird durch Sφ,λ(C)=½ Φᵀ[H̄+λ(H_C−H̄)]Φ definiert, mit der vorab festgelegten Referenz H̄=Σ_C H_C/33. Bei λ=0 bleibt eine nichttriviale, geometrieunabhängige Skalarwirkung erhalten; die ursprüngliche Wirkung liegt bei λ=1. **Die untersuchte Geometrieabhängigkeit des zusätzlichen Skalarfelds ist für diesen Mischblock nicht notwendig, verändert ihn aber nachweislich.** Ein separater zusammenhängender Amplitudenrest ist ebenfalls nicht null. Die direkte Staub-Skalar-Wechselwirkung fehlt an beiden Endpunkten und wird nicht als Ursache identifiziert.
+
+**27 Prüfungen bestanden:** analytische Fehlergrenzen, eingeschlossene Arb/Acb-Rechnung mit 40 Knoten und 128 Bit, Kontrolle mit 48 Knoten und 192 Bit, unabhängige direkte 5D-Rechnung, Paritäts-Nullkontrolle und exakter Ergebnis-Replay. Die Zahlen gelten für das deklarierte endliche Kontrollmodell und sind keine Übergangswahrscheinlichkeiten oder ein Nachweis physikalischer Stauberzeugung. **Physikalischer CST-Kern weiterhin NOT_CONSTRUCTED; alle acht physikalischen Gates HOLD.**
+
+[Bericht (PDF)](parity_mixing_v0_1/CST_DUST_Mischblock_v0_1.pdf) · [Prüfpaket (ZIP)](packages/CST_DUST_Mischblock_v0_1_Pruefpaket.zip) · [Vollständige Herleitung](parity_mixing_v0_1/DERIVATION.md) · [Versuchsvertrag](parity_mixing_v0_1/experiment_contract.json) · [Zertifizierte Amplituden](parity_mixing_v0_1/results/certified_mixing.json) · [Ursachendiagnostik](parity_mixing_v0_1/results/causation_diagnostics.json) · [Code und Reproduktion](parity_mixing_v0_1/README.md)
+
 ## Existenz der endlichen AA-Amplitude v0.1 · 11. November 2026
 
 [Schritt 3](amplitude_existence_v0_1/README.md) führt den Wirkungsansatz und die normierten Randzustände aus [PR #279](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/279) und [PR #280](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/280) zusammen. Für die 33 festgelegten AA-Kontrollhistorien existiert die projizierte Kandidatenamplitude im erklärten **Abel-Sinn**, einschließlich aller Staubintegrale, Nulldichte-Atome und beliebig kleiner positiver Dichten. Die Uhr- und Dichteboxen bleiben fest; Historienkoeffizienten sind feste endliche komplexe Zahlen.

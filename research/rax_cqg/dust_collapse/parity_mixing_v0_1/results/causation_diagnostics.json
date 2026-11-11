@@ -1,0 +1,49 @@
+{
+  "definition": "p_C=exp(i F4(C))/33; Z=sum p_C; Atilde=sum p_C A_C/Z",
+  "diagnostics": {
+    "connected_remainder": {
+      "absolute_value": "[0.08043357078190098283969681 +/- 7.17e-13]",
+      "absolute_value_lower_bound": "[0.08043357078118467246783893 +/- 4.14e-27]",
+      "analytic_quadrature_error_bound": "[6.918970965193123800306721e-13 +/- 1.25e-37]",
+      "arithmetic_complex_radius_bound": "[2.984506407877604957724665e-30 +/- 3.06e-55]",
+      "certified_ball": {
+        "imag": "[0.00288999797079334366587982035713 +/- 6.92e-13]",
+        "real": "[-0.0803816348456280518319155169270 +/- 6.92e-13]"
+      },
+      "classification": "NONZERO",
+      "phase_radians": "[3.105654672383108508921303 +/- 8.91e-12]",
+      "quadrature_ball": {
+        "imag": "[0.00288999797079334366587982035713 +/- 2.14e-30]",
+        "real": "[-0.0803816348456280518319155169270 +/- 2.12e-30]"
+      }
+    },
+    "scalar_mean_shift": {
+      "absolute_value": "[0.2189333647262354001231598 +/- 1.20e-12]",
+      "absolute_value_lower_bound": "[0.2189333647250375421759633 +/- 8.46e-27]",
+      "analytic_quadrature_error_bound": "[8.947661455199948459317656e-13 +/- 1.68e-37]",
+      "arithmetic_complex_radius_bound": "[3.003857410990544776468398e-30 +/- 4.71e-55]",
+      "certified_ball": {
+        "imag": "[0.196445234218224156377788157683 +/- 8.95e-13]",
+        "real": "[-0.0966493049292019893846991098187 +/- 8.95e-13]"
+      },
+      "classification": "NONZERO",
+      "phase_radians": "[2.028016304789558213122152 +/- 5.48e-12]",
+      "quadrature_ball": {
+        "imag": "[0.196445234218224156377788157683 +/- 2.53e-30]",
+        "real": "[-0.0966493049292019893846991098187 +/- 1.93e-30]"
+      }
+    }
+  },
+  "difference_decomposition_overlap": true,
+  "gravity_sum_Z": {
+    "imag": "[-0.343279080577221531748197607875 +/- 8.80e-32]",
+    "real": "[-0.0721017810329974629892067210687 +/- 3.04e-32]"
+  },
+  "interpretation": "Delta = connected finite amplitude remainder + change in scalar mean. Neither term is a proof of physical entanglement or causal dust creation.",
+  "not_a_probability_average": true,
+  "primary_amplitudes_not_divided_by_Z": true,
+  "scalar_average_Atilde": {
+    "imag": "[-3.76092554644070945900718567183 +/- 1.21e-29]",
+    "real": "[-0.285951839768355713307661623146 +/- 7.06e-30]"
+  }
+}
