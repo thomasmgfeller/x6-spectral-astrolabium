@@ -1,0 +1,87 @@
+{
+  "candidate": "CST-DUST-V1-RAW-K",
+  "unchanged_kernel": [
+    [
+      {
+        "real_interval": [
+          "0.83249832886801814364724112371382",
+          "0.83249832886801814364724112371383"
+        ],
+        "imag_interval": [
+          "-0.30975426611076569663727004952192",
+          "-0.30975426611076569663727004952191"
+        ]
+      },
+      {
+        "real_interval": [
+          "0.95442584001555611115549463518659",
+          "0.95442584001555611115549463518660"
+        ],
+        "imag_interval": [
+          "-0.17887408741745274245877416466662",
+          "-0.17887408741745274245877416466661"
+        ]
+      }
+    ],
+    [
+      {
+        "real_interval": [
+          "0.56939290764587849065028388588686",
+          "0.56939290764587849065028388588687"
+        ],
+        "imag_interval": [
+          "-0.34987315975135700801757445264123",
+          "-0.34987315975135700801757445264122"
+        ]
+      },
+      {
+        "real_interval": [
+          "0.83249832886801814364724112371382",
+          "0.83249832886801814364724112371383"
+        ],
+        "imag_interval": [
+          "-0.30975426611076569663727004952192",
+          "-0.30975426611076569663727004952191"
+        ]
+      }
+    ]
+  ],
+  "identification": "(0,1) -> (2,3) by translation; one common positive definite Hermitian M",
+  "condition": "Kdagger M K=c M for some c>0",
+  "necessary_spectral_invariant": "(tr K)^2/det K is real in [0,4]",
+  "determinant": {
+    "real_interval": [
+      "0.11624570017779094267325524491301",
+      "0.11624570017779094267325524491302"
+    ],
+    "imag_interval": [
+      "-0.079962196662191422171294284623630",
+      "-0.079962196662191422171294284623629"
+    ]
+  },
+  "determinant_norm_squared": [
+    "0.019907015704867842217891511662565",
+    "0.019907015704867842217891511662566"
+  ],
+  "imaginary_witness": [
+    "-0.048826591377265695871878427302002",
+    "-0.048826591377265695871878427302001"
+  ],
+  "trace_determinant_ratio": {
+    "real_interval": [
+      "22.233501552191508753372282349115",
+      "22.233501552191508753372282349116"
+    ],
+    "imag_interval": [
+      "-2.4527328506264341446412621423239",
+      "-2.4527328506264341446412621423238"
+    ]
+  },
+  "decision": "FAIL_EVERY_COMMON_POSITIVE_METRIC",
+  "scope_exclusions": [
+    "different independently justified input/output metrics",
+    "constraint or rigging-map interpretation",
+    "complete boundary spaces",
+    "other regulators or controlled physical refinement"
+  ]
+}

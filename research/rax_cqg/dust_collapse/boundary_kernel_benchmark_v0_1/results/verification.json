@@ -1,0 +1,229 @@
+{
+  "K_0plus": "NOT_COMPUTED",
+  "K_Schur_0": "NOT_COMPUTED",
+  "K_Schur_plus": "NOT_COMPUTED",
+  "control_count": 41,
+  "controls": [
+    {
+      "id": "SOURCE:inputs/gluing.py",
+      "result": "PASS",
+      "scope": "exact_upstream_blob_identity"
+    },
+    {
+      "id": "SOURCE:inputs/variation.py",
+      "result": "PASS",
+      "scope": "exact_upstream_blob_identity"
+    },
+    {
+      "id": "SOURCE:inputs/quantum_structure.py",
+      "result": "PASS",
+      "scope": "exact_upstream_blob_identity"
+    },
+    {
+      "id": "SOURCE:inputs/gluing_kernels_2_plus_2.json",
+      "result": "PASS",
+      "scope": "exact_upstream_blob_identity"
+    },
+    {
+      "id": "SOURCE:inputs/common_metric_certificate.json",
+      "result": "PASS",
+      "scope": "exact_upstream_blob_identity"
+    },
+    {
+      "id": "GEOM:219-orders",
+      "result": "PASS",
+      "scope": "finite_order_enumeration"
+    },
+    {
+      "id": "GEOM:fiber:antichain:antichain",
+      "result": "PASS",
+      "scope": "full_polynomial_and_readouts_against_archived_result"
+    },
+    {
+      "id": "GEOM:fiber:antichain:chain",
+      "result": "PASS",
+      "scope": "full_polynomial_and_readouts_against_archived_result"
+    },
+    {
+      "id": "GEOM:fiber:chain:antichain",
+      "result": "PASS",
+      "scope": "full_polynomial_and_readouts_against_archived_result"
+    },
+    {
+      "id": "GEOM:fiber:chain:chain",
+      "result": "PASS",
+      "scope": "full_polynomial_and_readouts_against_archived_result"
+    },
+    {
+      "id": "GEOM:weighted-composition",
+      "result": "PASS",
+      "scope": "fixed_marked_counting_measure_only"
+    },
+    {
+      "id": "GEOM:raw-I2-diagnostic",
+      "result": "PASS",
+      "scope": "diagnostic_with_declared_I2_not_physical_metric"
+    },
+    {
+      "id": "GEOM:single-phase-zero",
+      "result": "PASS",
+      "scope": "geometric_cancellation_not_stratum_superselection"
+    },
+    {
+      "id": "LABEL:m0:projector",
+      "result": "PASS",
+      "scope": "finite_label_constraints_only"
+    },
+    {
+      "id": "LABEL:m0:orbit0",
+      "result": "PASS",
+      "scope": "orbit_stabilizer_measure_identity"
+    },
+    {
+      "id": "LABEL:m0:Gram",
+      "result": "PASS",
+      "scope": "orbit_indicators_in_auxiliary_history_space"
+    },
+    {
+      "id": "LABEL:m0:support-preserved",
+      "result": "PASS",
+      "scope": "label_average_does_not_mix_support_counts"
+    },
+    {
+      "id": "LABEL:m1:projector",
+      "result": "PASS",
+      "scope": "finite_label_constraints_only"
+    },
+    {
+      "id": "LABEL:m1:orbit0",
+      "result": "PASS",
+      "scope": "orbit_stabilizer_measure_identity"
+    },
+    {
+      "id": "LABEL:m1:orbit1",
+      "result": "PASS",
+      "scope": "orbit_stabilizer_measure_identity"
+    },
+    {
+      "id": "LABEL:m1:Gram",
+      "result": "PASS",
+      "scope": "orbit_indicators_in_auxiliary_history_space"
+    },
+    {
+      "id": "LABEL:m1:support-preserved",
+      "result": "PASS",
+      "scope": "label_average_does_not_mix_support_counts"
+    },
+    {
+      "id": "LABEL:m2:projector",
+      "result": "PASS",
+      "scope": "finite_label_constraints_only"
+    },
+    {
+      "id": "LABEL:m2:orbit0",
+      "result": "PASS",
+      "scope": "orbit_stabilizer_measure_identity"
+    },
+    {
+      "id": "LABEL:m2:orbit1",
+      "result": "PASS",
+      "scope": "orbit_stabilizer_measure_identity"
+    },
+    {
+      "id": "LABEL:m2:orbit3",
+      "result": "PASS",
+      "scope": "orbit_stabilizer_measure_identity"
+    },
+    {
+      "id": "LABEL:m2:orbit4",
+      "result": "PASS",
+      "scope": "orbit_stabilizer_measure_identity"
+    },
+    {
+      "id": "LABEL:m2:orbit5",
+      "result": "PASS",
+      "scope": "orbit_stabilizer_measure_identity"
+    },
+    {
+      "id": "LABEL:m2:orbit6",
+      "result": "PASS",
+      "scope": "orbit_stabilizer_measure_identity"
+    },
+    {
+      "id": "LABEL:m2:orbit7",
+      "result": "PASS",
+      "scope": "orbit_stabilizer_measure_identity"
+    },
+    {
+      "id": "LABEL:m2:Gram",
+      "result": "PASS",
+      "scope": "orbit_indicators_in_auxiliary_history_space"
+    },
+    {
+      "id": "LABEL:m2:support-preserved",
+      "result": "PASS",
+      "scope": "label_average_does_not_mix_support_counts"
+    },
+    {
+      "id": "CLOCK:interval-certificate",
+      "result": "PASS",
+      "scope": "same_kernel_same_identification_same_Taylor_bound"
+    },
+    {
+      "id": "CLOCK:no-common-positive-metric",
+      "result": "PASS",
+      "scope": "necessary_spectral_condition_violated"
+    },
+    {
+      "id": "CLOCK:original-I2-failure",
+      "result": "PASS",
+      "scope": "raw_clock_kernel_only"
+    },
+    {
+      "id": "CLOCK:positive-control",
+      "result": "PASS",
+      "scope": "synthetic_nontrivial_metric_control"
+    },
+    {
+      "id": "CLOCK:negative-control",
+      "result": "PASS",
+      "scope": "synthetic_diag_1_2_spectral_obstruction"
+    },
+    {
+      "id": "SCHUR:matrix",
+      "result": "PASS",
+      "scope": "fixed_geometry_density_stationary_response"
+    },
+    {
+      "id": "SCHUR:nine-substitutions",
+      "result": "PASS",
+      "scope": "new_exact_replay_samples_not_physical_solutions"
+    },
+    {
+      "id": "SCHUR:full-zero-density",
+      "result": "PASS",
+      "scope": "all_weights_zero_not_merely_one_boundary_atom"
+    },
+    {
+      "id": "SCHUR:local-atom-still-couples",
+      "result": "PASS",
+      "scope": "zero_local_density_does_not_remove_positive_neighbor_coupling"
+    }
+  ],
+  "dataset_id": "CST-DUST-RKB1",
+  "eight_state_matter_matrix": "NOT_CONSTRUCTED",
+  "evidence": "exact rational and certified rational interval calculations",
+  "external_replication": "NOT_EXECUTED",
+  "paid_compute": false,
+  "parent_raw_kernel_decision": "FAIL_EVERY_COMMON_POSITIVE_METRIC",
+  "physical_gates": {
+    "BOUNCE": "HOLD",
+    "BOUNDARY": "HOLD",
+    "CORRESPONDENCE": "HOLD",
+    "CURRENT": "HOLD",
+    "EXTENSION": "HOLD",
+    "MODEL": "HOLD",
+    "REGULARITY": "HOLD",
+    "TRAPPING": "HOLD"
+  }
+}
