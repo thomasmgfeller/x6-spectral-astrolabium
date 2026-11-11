@@ -1,5 +1,13 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## 8×8-Geometriekontrollkern v0.2 · 11. November 2026
+
+Die [korrigierte formale 8×8-Erweiterung](geometry_control_8x8_v0_2/README.md) liefert drei reproduzierbare NPZ/JSON-Paare für z=1,−1,i. Sie ordnet die Basis stratumweise, trennt tatsächliche Labelmischung vom Tensorrest und bricht bei nichtendlichen Eingaben oder fehlgeschlagenen Pflichtkontrollen ab. **19 Regressionstests bestehen.** Die Kontrollwerte, Determinanten und Normquadrate werden an den drei Quellenphasen zusätzlich mit Gaußscher Ganzzahlarithmetik bestimmt.
+
+Die Identität auf den Zusatzlabels ist ausdrücklich eine Testannahme. I8 ist nur das deklarierte diagnostische Produkt; eine physikalische Orbit-Gramzuordnung und Uhr bleiben offen. Die physikalische 8×8-Materiematrix bleibt NOT_CONSTRUCTED, alle acht physikalischen Gates bleiben HOLD.
+
+[Generator und Daten](geometry_control_8x8_v0_2/README.md) · [Korrekturen](geometry_control_8x8_v0_2/CORRECTIONS.md) · [Exakte Diagnostik](geometry_control_8x8_v0_2/DIAGNOSTICS.md) · [Prüfpaket (ZIP)](geometry_control_8x8_v0_2/CST_DUST_Geometriekontrollkern_8x8_v0_2_Pruefpaket.zip)
+
 ## CST-DUST Randkern-Benchmark v0.1 · 11. November 2026
 
 Der [Randkern-Benchmark](boundary_kernel_benchmark_v0_1/README.md) reproduziert getrennt die vier geometrischen Verklebungskerne, den positiven Labelquotienten für m=0,1,2, die ursprüngliche Zweistellen-Uhrkern-Negativkontrolle und die stationäre Schurantwort. **41 eng begrenzte Kontrollen bestehen; alle acht physikalischen Gates bleiben HOLD.** Die vorgeschlagene 8×8-Materiematrix ist NOT_CONSTRUCTED. Das ältere scoped FAIL für den unveränderten Uhrkern wird separat erhalten; es wird weder auf den geometrischen Kern übertragen noch durch angepasste Produkte aufgehoben.
