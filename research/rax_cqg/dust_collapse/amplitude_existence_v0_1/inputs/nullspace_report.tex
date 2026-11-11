@@ -1,0 +1,647 @@
+\documentclass[10pt,a4paper]{article}
+\pdfmapfile{+lm.map}
+\pdfmapfile{+cm.map}
+\pdfmapfile{+symbols.map}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman,provide=*]{babel}
+\usepackage{lmodern,amsmath,amssymb,amsthm,booktabs,array,geometry,xcolor,hyperref,fancyhdr,microtype}
+\geometry{left=23mm,right=23mm,top=24mm,bottom=24mm}
+\definecolor{navy}{HTML}{17334B}
+\definecolor{teal}{HTML}{087E8B}
+\hypersetup{colorlinks=true,urlcolor=teal,linkcolor=navy,pdftitle={CST-DUST: Gerichteter Randvertrag und bedingte Gaussprojektion v0.1},pdfauthor={X6 Forschungsprogramm / Arbeitsausarbeitung}}
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\small\sffamily\color{navy}CST-DUST / Randvertrag und Gaußprojektion}
+\fancyhead[R]{\small\sffamily v0.1}
+\fancyfoot[L]{\footnotesize 11. November 2026 / Physikalische Qualifikation: HOLD}
+\fancyfoot[R]{\thepage}
+\setlength{\headheight}{14pt}
+\setlength{\parindent}{0pt}\setlength{\parskip}{6pt}
+\setlength{\emergencystretch}{2em}
+\newcommand{\R}{\mathbb R}
+\newcommand{\dd}{\mathrm d}
+\newcommand{\ii}{\mathrm i}
+\newcommand{\sgn}{\operatorname{sgn}}
+\newcommand{\sdet}{\operatorname{sqrt}_{\!c}\det}
+\newcommand{\status}[1]{\textsf{\textbf{#1}}}
+\newcommand{\sect}[1]{\section*{\color{navy}#1}}
+\newcommand{\smallurl}[1]{{\footnotesize\url{#1}}}
+\begin{document}
+{\sffamily\small\color{teal}FORTSETZUNG DER MATERIEBLOCK-VORPRÜFUNG}
+\vspace{5mm}
+
+{\sffamily\bfseries\color{navy}\LARGE Gerichteter Randvertrag\par und bedingte Gaußprojektion\par}
+\vspace{3mm}
+{\large Ein endlicher Rechenweg mit expliziten Voraussetzungen\par}
+
+\sect{Was dieser Schritt schließt}
+Die Vorprüfung nach PR~277 identifizierte drei Hindernisse: Die vorhandenen
+Geometriepolynome zählen Verklebungen, der vollständig belegte Viererrand hat
+keine inneren Feldwerte, und ein Vakuum-Einteilchen-Zeuge verschwindet bei
+Gesamtfeldparität. Hier werden eine gerichtete Kontrollfamilie mit einem
+inneren Element und die exakte Projektion einer \emph{vorgegebenen}
+quadratischen Feldwirkung auf normierte Gauß-/Hermitepakete ausgearbeitet.
+
+Die zentrale neue Aussage betrifft singuläre Innenblöcke. Mit der
+Wirkungszerlegung $H=\bigl(\begin{smallmatrix}B&J^T\\J&A\end{smallmatrix}\bigr)$
+und positivem Randpaket $\Omega$ ist die vollständig projizierte,
+Abel-regulierte Nullanregungsamplitude genau dann endlich im hier untersuchten
+zentrierten Gaußfall, wenn
+\[
+\boxed{\ker A\cap\ker J^T=\{0\}.}
+\]
+Damit kann ein singulärer innerer Hessian trotz fehlender gewöhnlicher
+Schurinverse eine endliche projizierte Amplitude besitzen. Der Beweis und eine
+unabhängige Deltafunktionskontrolle stehen auf Seite~4.
+
+\begin{center}
+\begin{tabular}{p{.49\linewidth}p{.40\linewidth}}
+\toprule
+Ergebnis & Status / Bedeutung\\\midrule
+Gerichtete Fünferelement-Kontrollfamilie & vollständig ausgezählt\\
+Gaußprojektion und Nullraumkriterium & bedingt analytisch hergeleitet\\
+Automatisierte Kontrollen & 27 Tests bestanden\\
+Zusätzliche physikalische Materiewirkung & weiterhin offene Eingabe\\
+Physikalische $8\times8$-Matrix & \texttt{NOT\_CONSTRUCTED}\\
+Physikalischer Stratum-Mischblock & \texttt{NOT\_COMPUTED}\\
+Alle acht physikalischen Gates & \status{HOLD}\\\bottomrule
+\end{tabular}
+\end{center}
+
+\sect{Welche Entscheidungen getroffen werden}
+Die gerichtete Familie ist eine \emph{ausdrücklich gewählte endliche
+Kontrollfamilie}, keine Herleitung des physikalischen Historienträgers.
+Gaußbreiten und Feld-Hessian werden symbolisch belassen. Die bisherigen
+Uhr- und Dichteintegrale werden nicht durch unbeschränkte Feldintegrale
+ersetzt. Es wird kein Übergangsterm zur Erzeugung eines gewünschten
+Mischblocks hinzugefügt.
+
+Das Ergebnis ist ein prüfbarer analytischer Anschluss, kein CST-Hamiltonian,
+kein dynamischer Abschluss der acht Planungslabels und kein Bounce-Nachweis.
+Die kleinen numerischen Matrizen in den Tests prüfen ausschließlich Algebra
+und Integrationsformeln. Es wurden keine Produktionsläufe oder bezahlten
+Rechenressourcen gestartet.
+
+\newpage
+\sect{1. Ein gerichteter Träger mit echtem Innenraum}
+Es seien $L=\{0,1\}$, $I=\{2\}$, $R=\{3,4\}$. Die induzierten Ordnungen
+auf $L$ und $R$ sind $X,Y\in\{A,K\}$: $A$ ist die Zweierantikette, $K$ die
+fest orientierte Zweierkette. Erlaubt sind nur Relationen innerhalb der
+fixierten Ränder sowie $L\to I$, $I\to R$ und $L\to R$. Die gesamte Relation
+muss bereits transitiv sein; ein nachträglicher Abschluss darf die
+Randordnung nicht verändern. Das innere Element muss mindestens einen
+Vorgänger in $L$ und einen Nachfolger in $R$ besitzen.
+
+Dies definiert die schwache Familie $\mathcal C^{\rm weak}_{XY}$.
+Für $\mathcal C^{\rm cov}_{XY}$ kommt hinzu:
+\[
+\forall l\in L\ \exists r\in R:l\prec r,
+\qquad \forall r\in R\ \exists l\in L:l\prec r.
+\]
+Jedes Randelement ist dann an die Gegenseite angeschlossen; die Verbindung
+muss nicht durch Element~2 laufen. $L$ ist ein Ordnungsideal, $R$ ein Filter;
+beide sind kausal konvex. Bei $AA$ in der angeschlossenen Familie sind $L$
+exakt die minimalen und $R$ exakt die maximalen Elemente. Bei $K$ ist der
+jeweilige Rand ein \emph{Kragen}, keine raumartige Antikette. Seine Eignung
+als vollständige Randinformation bleibt zu beweisen.
+
+\begin{center}
+\begin{tabular}{lrrrr}
+\toprule
+$XY$ (Eingang, Ausgang) & schwach & angeschlossen & Orbits angeschl. & $\sum1/|\mathrm{Stab}|$\\\midrule
+$AA$ &49&33&10&$33/4$\\
+$AK$ &23&14&8&$7$\\
+$KA$ &23&14&8&$7$\\
+$KK$ &12&7&7&$7$\\\bottomrule
+\end{tabular}
+\end{center}
+Die 107 schwachen bzw.~68 angeschlossenen Fälle wurden auch durch Filterung
+aller 4231 gelabelten Fünferordnungen gefunden. Für $AA$ liefert eine separate
+Zählung mit nichtleeren Vorgänger-/Nachfolgermengen $P,Q$:
+\[
+|\mathcal C^{\rm weak}_{AA}|=
+\sum_{p,q=1}^2\binom2p\binom2q2^{4-pq}=49.
+\]
+Unter der Anschlussbedingung ergeben die Fälle $(p,q)=(1,1),(1,2),(2,1),(2,2)$
+die Beiträge $20,6,6,1$, insgesamt 33. Im ersten Fall gibt es bei festem
+$P,Q$ fünf zulässige Kreuzmuster, in den beiden mittleren je drei.
+
+\textbf{Gruppenmaß.} Für austauschbare Randlabels ist
+$G_{XY}=\mathrm{Aut}(X)\times\mathrm{Aut}(Y)$, mit Größen $4,2,2,1$.
+Die gelabelte Summe geteilt durch $|G_{XY}|$ entspricht genau der Summe
+mit Gewichten $1/|\mathrm{Stab}(C)|$. Das gilt für die Geometriesumme und
+für vollständige Feldintegrale nur bei gemeinsam mittransformierten,
+invarianten Randdaten und Maßen. Zusätzliche feste Marken können die Gruppe
+verkleinern. Dichte-Stratumfaktoren sind hier noch nicht enthalten.
+
+\textbf{Wirkungskontrolle.} Gespeichert sind sämtliche Ordnungs-IDs,
+Stabilisatoren und die Polynome $\sum_Cz^{F_4(C)}$ mit
+$F_4=N-N_0+9N_1-16N_2+8N_3$. Dies sind rohe ganzzahlige Zählsummen ohne
+Staub-, Feld- und äußere Randwirkung. Sie werden nicht als neue physikalische
+Übergangsmatrizen ausgegeben. Die Orientierungsumkehr ergibt eine Bijektion
+$AK\leftrightarrow KA$, aber noch keine Adjungiertenrelation der Amplituden.
+
+\newpage
+\sect{2. Bedingter Wirkungs- und Zustandsvertrag}
+Fixiere $C,T,w$ und die äußeren Geometriedaten. Vorausgesetzt wird eine
+reell-symmetrische Feldwirkung einschließlich aller \emph{quadratischen}
+Feldrandterme, ohne lineare Quelle:
+\[
+S_\Phi(b,q)=\frac12
+\begin{pmatrix}b\\q\end{pmatrix}^{\!T}
+\underbrace{\begin{pmatrix}B&J^T\\J&A\end{pmatrix}}_{H_C(T,w)}
+\begin{pmatrix}b\\q\end{pmatrix},
+\quad b=(u_i,u_f),\quad q\in\R^r.
+\]
+$u_i\in\R^{d_i}$ und $u_f\in\R^{d_f}$ sind die Randfeldkonfigurationen.
+Im Fünferträger sind $d_i=d_f=2$, $r=1$. Die Formeln gelten allgemeiner.
+$H$ muss aus einer vorgegebenen gemeinsamen Wirkung stammen; dieses Paket
+erzeugt keine solche physikalische Wirkung. Die vorhandene Staubuhr-Hesse-Matrix
+wird nicht zum zusätzlichen Materie-Hessian umbenannt.
+
+Bei Lebesgue-Feldmaß und $\hbar>0$ wähle reelle symmetrische
+$\Omega_i,\Omega_f>0$ und die \emph{normierten} Pakete
+\[
+\psi_{0,a}(u)=N_a\exp[-u^T\Omega_au/(2\hbar)],
+\qquad N_a=\frac{(\det\Omega_a)^{1/4}}{(\pi\hbar)^{d_a/4}},
+\quad a\in\{i,f\}.
+\]
+Die Breiten sind vorgegebene Zustandsdaten, keine Eigenwerte einer indefiniten
+Raumzeit-Hesse-Matrix. Sie dürfen nicht von unbeobachteten inneren Historien
+abhängig angepasst werden, wenn derselbe präparierte Randzustand gemeint ist.
+Mit anderen Feldmaßen ändern sich Normierungen und Integrale entsprechend.
+
+\textbf{Einheiten.} $H$, $\Omega$ und der nachfolgende Regulator besitzen bei
+gleich skalierten Feldkoordinaten die Dimension Wirkung/Feld$^2$. Alle
+Exponenten sind dimensionslos. Die Kontrollzahlen verwenden $\hbar=1$;
+damit wird keine physikalische Skala festgelegt.
+
+\sect{3. Schurformel bei invertierbarem Innenblock}
+Bei invertierbarem $A$ sind
+\[
+E=B-J^TA^{-1}J,\qquad q_*=-A^{-1}Jb,
+\qquad \Omega=\operatorname{diag}(\Omega_i,\Omega_f).
+\]
+Die volle reelle Innenintegration ist als Abel-/Fresnelgrenzwert definiert:
+\[
+\mathcal N_I=(2\pi\hbar)^{r/2}
+\frac{\exp[\ii\pi\sgn(A)/4]}{\sqrt{|\det A|}}.
+\]
+Anschließende Gaußprojektion liefert
+\[
+\boxed{\mathcal A_{00}=
+N_iN_f\,\mathcal N_I\,
+\frac{(2\pi\hbar)^{(d_i+d_f)/2}}{\sdet(\Omega-\ii E)}.}
+\]
+Hier bezeichnet $\sdet$ die kontinuierlich festgelegte Wurzel auf Seite~5.
+Der Faktor $\mathcal N_I$ enthält bereits die Signaturphase; sie wird nicht
+nochmals als Morse-/Maslov-Faktor eingesetzt. Bei leerem Innenraum ist
+$\mathcal N_I=1$ und $E=B$.
+
+Diese Formel gilt für volle reelle Feldachsen. Ein kompaktes Innenintegral
+hat nach der Verschiebung um $q_*$ ein randabhängig verschobenes Gebiet und
+bedarf einer anderen Rechnung. Die kompakten Staubuhrintegrale bleiben in
+jedem Fall unverändert außerhalb dieses Feldschritts.
+
+\newpage
+\sect{4. Singulärer Schurblock: das vollständige Kriterium}
+Statt $A^{-1}$ einzusetzen, reguliere die inneren \emph{Feldwerte} mit
+$\exp[-\epsilon q^Tq/(2\hbar)]$, $\epsilon>0$, und setze
+\[
+Q_\epsilon=
+\begin{pmatrix}\Omega&0\\0&\epsilon I_r\end{pmatrix}-\ii H.
+\]
+Da der hermitesche Realteil strikt positiv ist, existiert das gemeinsame
+absolut konvergente Gaußintegral. Mit $d_b=d_i+d_f$ gilt
+\[
+\boxed{\mathcal A_{00}(\epsilon)=
+N_iN_f\frac{(2\pi\hbar)^{(d_b+r)/2}}{\sdet Q_\epsilon}.}
+\]
+Die Determinantenwurzel wird bei festem $\epsilon>0$ von $H=0$ stetig
+fortgesetzt. Für invertierbares $A$ reproduziert der Grenzwert die
+Schur-/Fresnelformel. Für singuläres $A$ kann er trotzdem existieren.
+
+\textbf{Satz (fester, zentrierter Gaußfall).}
+Unter den Voraussetzungen von Seite~3 ist
+\[
+Q_0\text{ invertierbar}
+\quad\Longleftrightarrow\quad
+\ker A\cap\ker J^T=\{0\}.
+\]
+Im invertierbaren Fall besitzt $\mathcal A_{00}(\epsilon)$ einen endlichen,
+von null verschiedenen Grenzwert. Besitzt der gemeinsame Kern Dimension
+$k>0$, enthält die Amplitude den divergenten Faktor
+$(2\pi\hbar/\epsilon)^{k/2}$.
+
+\textbf{Beweis.}
+Für $z=(b,q)$ mit $Q_0z=0$ gilt
+$0=\operatorname{Re}(z^\dagger Q_0z)=b^\dagger\Omega b$.
+Aus $\Omega>0$ folgt $b=0$. Die beiden verbliebenen Gleichungen sind
+$J^Tq=0$ und $Aq=0$. Umgekehrt ist jedes solche $q$ ein Nullvektor von
+$Q_0$. Bei trivialem Kern ist $\det Q_0\ne0$; die fortgesetzte Wurzel
+besitzt nahe $\epsilon=0$ einen endlichen, von null verschiedenen Grenzwert.
+Bei nichttrivialem Kern entkoppeln die entsprechenden $k$ inneren Achsen
+wegen der Symmetrie von $H$ von allen übrigen Variablen. Jede liefert
+$\int\dd q\,e^{-\epsilon q^2/(2\hbar)}=\sqrt{2\pi\hbar/\epsilon}$.
+Auf dem orthogonalen Rest ist das gemeinsame Kernkriterium wieder erfüllt.
+Damit ist die Divergenzaussage gezeigt.\hfill$\square$
+
+\textbf{Exakte Kontrolle.}
+Für $b=(x,y)$, $q\in\R$, $\Omega=I_2$, $\hbar=1$ und $S_\Phi=qx$
+ist $A=0$, aber $J=(1,0)$. Es gilt $\det Q_\epsilon=1+\epsilon$ und
+\[
+\mathcal A_{00}(\epsilon)=\frac{2\sqrt2\,\pi}{\sqrt{1+\epsilon}}
+\ \longrightarrow\ 2\sqrt2\,\pi.
+\]
+Unabhängig liefert $\int\dd q\,e^{\ii qx}=2\pi\delta(x)$ genau denselben
+projizierten Wert. Mit $J=0$ wäre das innere Nullvolumen divergent.
+Das ist eine algebraische Referenz, kein gewähltes CST-Materiemodell.
+
+\textbf{Reichweite.} Der Satz gilt punktweise bei festen $C,T,w$ und festen
+positiven Paketen. Er erlaubt keinen ungeprüften Grenzwerttausch mit den
+Staubintegralen. Gemeinsame Nullrichtungen sind ohne Symmetrie- und
+Maßnachweis keine Eichrichtungen. Bei Quellen, nichtgaußschen Zuständen oder
+kompakten Feldgebieten ist die Aussage neu zu prüfen.
+
+\newpage
+\sect{5. Phase und paritätserlaubte Randanregungen}
+Für $M=\Omega-\ii E$, $\Omega>0$, $E=E^T\in\R^{d_b\times d_b}$, seien
+$\lambda_j$ die Eigenwerte von $\Omega^{-1/2}E\Omega^{-1/2}$. Definiere
+\[
+\sdet M=(\det\Omega)^{1/2}
+\exp\!\left[\frac12\sum_j\log(1-\ii\lambda_j)\right].
+\]
+Jeder einzelne Logarithmus ist auf der rechten Halbebene eindeutig
+festgelegt. Das Produkt ist jedoch nicht allgemein die Hauptwurzel der
+bereits multiplizierten Determinante.
+
+\textbf{Vorzeichen-Gegenbeispiel.} Für $\Omega=I_4$, $E=2I_4$ ist
+\[
+\sdet(I_4-2\ii I_4)=(1-2\ii)^2=-3-4\ii,
+\quad \sqrt{\det(I_4-2\ii I_4)}_{\rm Haupt}=3+4\ii.
+\]
+Eine naive Hauptwurzel würde das Vorzeichen der Amplitude umkehren.
+Die gleiche Fortsetzungsregel gilt für $Q_\epsilon$, mit
+$\operatorname{diag}(\Omega,\epsilon I)$ als positivem Referenzteil.
+
+\textbf{Randwellenfunktionen.} Für einen reellen Einheitsvektor $v_a$ im
+jeweiligen Randkonfigurationsraum setze
+\[
+\psi_{1,a}^{v_a}(u)=\sqrt{2/\hbar}\,
+v_a^T\Omega_a^{1/2}u\,\psi_{0,a}(u),
+\]
+\[
+\psi_{2,a}^{v_a}(u)=\frac{2(v_a^T\Omega_a^{1/2}u)^2/\hbar-1}{\sqrt2}
+\,\psi_{0,a}(u).
+\]
+Dies sind normierte Hermiteanregungen der \emph{gewählten} Gaußpakete. Die
+Bezeichnung physikalisches Vakuum oder Teilchen benötigt zusätzlich eine
+begründete Zustands-/Modenwahl. Ein Modenprofil ist nicht selbst diese
+Wellenfunktion.
+
+Mit $a_i=(\Omega_i^{1/2}v_i,0)$,
+$a_f=(0,\Omega_f^{1/2}v_f)$ und $C_b=M^{-1}$ ergeben die Gaußmomente
+$\langle bb^T\rangle=\hbar C_b$ die exakten Verhältnisse
+\begin{align*}
+\mathcal A_{10}&=\mathcal A_{01}=0,\\
+\frac{\mathcal A_{11}}{\mathcal A_{00}}&=2a_f^TC_ba_i,\\
+\frac{\mathcal A_{20}}{\mathcal A_{00}}&=
+\frac{2a_f^TC_ba_f-1}{\sqrt2}.
+\end{align*}
+Der erste Index bezeichnet den Ausgang. Für die gemeinsame regulierte
+Integration ersetzt man $C_b$ durch den Randblock $(Q_\epsilon^{-1})_{bb}$.
+Bei erfülltem Kriterium von Seite~4 ist auch dessen Grenzwert wohldefiniert.
+
+Die Nullresultate folgen aus \emph{gleichzeitiger} Feldspiegelung, nicht
+aus Stratum-Superselektion. Sie setzen symmetrische Wirkung, Gebiete, Maße
+und geeignete Präparation voraus. Die geraden Kandidaten $00$ und $11$
+sind erlaubt, aber nach Summe über Historien und Staubintegrale nicht
+garantiert ungleich null. Die Erweiterung um $20$ vergrößert ausdrücklich
+den Kontrollraum über die bisherigen zwei Materielabels hinaus.
+
+\newpage
+\sect{6. Stratumwechsel benötigt definierte Atomdaten}
+Der Unterschied zwischen einem Dichte-Nullatom und einem Materievakuum
+bleibt wesentlich. Für eine einzelne Dichtekoordinate ist das geerbte Maß
+\[
+\dd\nu(w)=\tfrac12\delta_0(\dd w)+\tfrac12\mathbf1_{(0,1)}(w)\dd w.
+\]
+Die normierten konstanten Stratumfunktionen sind
+$e_0=\sqrt2\,\mathbf1_{\{0\}}$ und
+$e_+=\sqrt2\,\mathbf1_{(0,1)}$. Für einen bezüglich $\nu$ definierten
+Integralkern $K(w_f,w_i)$ folgt daher
+\[
+\langle e_0,Ke_+\rangle_\nu=
+\frac12\int_0^1 K(0,w_i)\dd w_i,
+\qquad
+\langle e_+,Ke_0\rangle_\nu=
+\frac12\int_0^1 K(w_f,0)\dd w_f.
+\]
+Die beiden Ausdrücke brauchen nicht gleich oder komplex konjugiert zu
+sein. Dafür wäre eine Adjungierten- bzw.~Orientierungsrelation des
+\emph{vollständigen} Kerns nachzuweisen.
+
+\textbf{Bedingte Unterbestimmtheit.}
+Kennt man $K$ nur fast überall auf $(0,1)^2$ bezüglich Lebesgue-Maß,
+sind die Atomzeile und Atomspalte nicht festgelegt. Die Ergänzung
+\[
+K_c=K+c\,\mathbf1_{\{0\}}(w_f)\mathbf1_{(0,1)}(w_i)
++\overline c\,\mathbf1_{(0,1)}(w_f)\mathbf1_{\{0\}}(w_i)
+\]
+ändert den positiven Bulk nicht, aber die normierten Mischblöcke um
+$c/2$ bzw.~$\overline c/2$. Sie bewahrt die Hermitizität, falls diese
+vorher vorlag. Bulkwerte und Hermitizität bestimmen diese Kopplung also
+nicht allein. Stetigkeit bis zum Atom oder eine auf sämtlichen Strata
+definierte gemeinsame Wirkung könnten die Mehrdeutigkeit beseitigen;
+diese zusätzlichen Voraussetzungen müssen ausdrücklich vorliegen.
+
+Dies ist \emph{kein Vorschlag}, $c$ frei einzusetzen. Es erklärt, warum
+eine tatsächliche atomare Randamplitude aus der vollständigen
+Wirkungs-/Maßdefinition gewonnen werden muss. Die Hilfsrelation $wf=0$
+am Atom beseitigt nur Terme mit genau diesem Faktor. Kopplungen an
+positive Gewichte anderer Elemente verschwinden dadurch nicht automatisch.
+
+\textbf{Mehrere Randdichten.} Im Zweierkragen gibt es bereits die vier
+Masken $00,0+,+0,++$. Das Label ``$+$'' ist ohne Auswahl oder Summe dieser
+Masken nicht eindeutig. Es wird hier nicht stillschweigend mit ``beide
+positiv'' gleichgesetzt. Die acht bisherigen Planungslabels bleiben in
+ihrer Reihenfolge erhalten, sind aber noch keine aus dieser neuen
+Randfamilie abgeleitete physikalische Basis.
+
+\textbf{Was ein gemischter Block schließlich enthalten muss.}
+Unter einem vollständig festgelegten Vertrag lautet der Zieltyp
+\[
+B_{\beta\alpha}(\epsilon)=\frac1{|G_{\rm fix}|}
+\sum_C\int\dd\mu_d(T,w)\,
+\overline{f_\beta(T_R,w_R)}f_\alpha(T_L,w_L)
+e^{\ii(S_g+S_d+S_{\partial,0})/\hbar}
+\mathcal A_{n_fn_i}(C,T,w;\epsilon).
+\]
+Quadratische Feldrandterme stecken bereits in $H$; $S_{\partial,0}$ umfasst
+hier nur feldunabhängige äußere Randterme. Diese Zerlegung verhindert
+Doppelzählung. Der globale $\epsilon\downarrow0$-Grenzwert, Gramstruktur
+und Trunkierungsfehler bleiben gesondert zu kontrollieren.
+
+\newpage
+\sect{7. Prüfung, offene Eingaben und nächster Engpass}
+Die neue Rechnung schließt die gerichtete \emph{Kontrollzählung}, die
+bedingte Gaußprojektion, die Phasenwahl und das gemeinsame Nullraumkriterium.
+Die 27 automatisierten Tests decken unter anderem ab:
+\begin{itemize}
+\setlength\itemsep{1pt}
+\item vollständigen Abgleich mit allen 4231 gelabelten Fünferordnungen,
+      Randextrema, Gruppenorbits, Wirkungsinvarianz und Orientierungsumkehr;
+\item exakte stationäre Schuridentität, Quellenableitungen der Gaußmomente
+      und neun Orthogonalitäts-/Normierungsintegrale der Hermitepakete;
+\item unabhängige Gauß-Hermite-Quadratur im Rand- und vollständigen
+      regulierten Feldraum mit absoluter Abweichung unter $10^{-11}$;
+\item singulär gekoppelten endlichen Fall, entkoppeltes divergentes
+      Nullvolumen und das Vorzeichen-Gegenbeispiel der Determinantenwurzel;
+\item Eingabenkontrollen, Basispermutation, Paritätsblöcke und einen
+      Gegenfall zum Abschluss der Besetzungen $0,1$; physikalische Werte bleiben offen.
+\end{itemize}
+Die Quadraturkontrollen sind numerische Implementierungstests, keine
+zertifizierten Fehlerintervalle einer physikalischen Amplitude. Die
+allgemeinen Aussagen werden durch die Beweise im Text getragen.
+
+\textbf{Reproduktion.} Im entpackten Verzeichnis ausführen:
+\begin{verbatim}
+python analyze.py
+python -m unittest discover -s . -p 'test_*.py' -v
+python verify.py
+\end{verbatim}
+\texttt{verify.py} prüft die gespeicherten SHA-256-Hashes und reproduziert
+beide JSON-Ergebnisdateien in einem frischen Verzeichnis bytegleich.
+\texttt{gaussian.py} enthält nur bedingte Projektionsroutinen und keine
+Erzeugung physikalischer CST-Materieblöcke. \texttt{physical\_inputs.json}
+hält die fehlenden Daten als \texttt{null}; sie werden nicht mit Nullen
+oder Testwerten gefüllt.
+
+\textbf{Nächster wissenschaftlicher Engpass.}
+Jetzt wird eine unabhängig begründete zusätzliche Feldwirkung samt
+Randfunktional und Zustandswahl benötigt. Sie muss auf \emph{derselben}
+markierten Geometrie und auf allen benutzten Dichtestrata definiert sein.
+Erst daraus werden $H_C(T,w)$, Randbreiten bzw.~komplexe Struktur und
+die Masken des Labels ``$+$'' gewonnen. Danach folgt ein gemeinsamer,
+regulierter gerader Mischblock mit Fehlerbudget und identischem
+Entkopplungsvergleich. Ein frei ergänztes $q_{0+}$ wäre keine Lösung
+dieses Herleitungsproblems.
+
+\sect{Herkunft und Literaturabgleich}
+Projektbasis: PR~277 wurde auf \texttt{main} zusammengeführt. Gepinnter Anschluss:
+\par{\footnotesize\texttt{fdf1deb6ac071056d533a0937e21c238f42b2974}}.
+\par Der unveränderte Enumerationsbaustein \texttt{gluing.py} wurde gegen diesen Git-Blob abgeglichen:
+\par{\footnotesize\texttt{d4c9ebdf640040a5fa1f00042d709c7b572aac5e}}.
+\par Die lokale Vorprüfung ist als \path{inputs/SOURCE_PREFLIGHT.md} beigefügt.
+
+{\small
+\begin{enumerate}
+\setlength\itemsep{1pt}
+\item S. Aslanbeigi, M. Saravani, R. D. Sorkin, \emph{Generalized Causal Set
+d'Alembertians} (2014). Retardierte, nichtlokale Operatoren; kein Ersatz
+für die hier fehlende symmetrische Feldwirkungsdefinition.
+\smallurl{https://arxiv.org/abs/1403.1622}
+\item R. D. Sorkin, \emph{Scalar Field Theory on a Causal Set in Histories Form}
+(2011/2017); Nomaan X, \emph{Quantum Field Theory On Causal Sets} (2023).
+Historien- und Zustandskonstruktionen als getrennte physikalische Eingaben.
+\smallurl{https://arxiv.org/abs/1107.0698}\quad
+\smallurl{https://arxiv.org/abs/2306.04800}
+\item M. Buck et al., \emph{Boundary Terms for Causal Sets} (2015);
+F. Dowker, R. Liu, D. Lloyd-Jones, \emph{Timelike boundary and corner terms
+in the causal set action} (2025). Unterschiedliche Randprobleme; daraus
+folgt kein bereits qualifiziertes Randgesetz für diesen Kontrollträger.
+\smallurl{https://arxiv.org/abs/1502.05388}\quad
+\smallurl{https://arxiv.org/abs/2501.00139}
+\end{enumerate}}
+\newpage
+\sect{8. Abgleich der nachgereichten Formeln}
+Die zusätzlichen Bilder 081--099 wurden in dieser Fortsetzung geprüft.
+Sie enthalten $L_C=B_C+m_\Phi^2W_C$, die Rand-/Innenzerlegung,
+das verallgemeinerte Eigenwertproblem und den Ausdruck
+$M_C^{nm}=e_n^\dagger L^{\rm eff}_{\partial,C}e_m$.
+Ihre Einordnung ist wie folgt.
+
+\textbf{1. Operator und Wirkungs-Hessian nicht vermischen.}
+Ist $L_C$ bereits die reell-symmetrische Matrix der Bilinearform
+$S=\frac12\Phi^TL_C\Phi$, kann sie als $H$ in diesem Bericht dienen.
+Ist $B_C$ dagegen ein retardierter, nicht symmetrischer Operator, wird
+$B_C+m_\Phi^2W_C$ durch den Massenterm nicht automatisch symmetrisch.
+Es gilt
+\[
+\nabla_\Phi\bigl(\tfrac12\Phi^TL_C\Phi\bigr)
+=\tfrac12(L_C+L_C^T)\Phi.
+\]
+Soll $L_C$ ein bezüglich $W_C$ selbstadjungierter \emph{Operator} sein,
+wäre etwa $H=W_CL_C$ die zugehörige Bilinearform. Das ist eine andere
+Konvention. Vorzeichen, Einheiten und Randterme bleiben zu definieren;
+eine Symmetrisierung wird hier nicht als physikalische Herleitung ausgegeben.
+
+\textbf{2. Die Schurformeln sind bedingt korrekt.}
+$\Phi_I^*=-L_{II}^{-1}L_{I\partial}\Phi_\partial$ und
+$L^{\rm eff}_\partial=L_{\partial\partial}
+-L_{\partial I}L_{II}^{-1}L_{I\partial}$ gelten für die stationäre
+Elimination eines invertierbaren, korrekt definierten Wirkungsblocks.
+Das vollständige Quantenintegral braucht zusätzlich Phase, Determinante,
+Maß und Integrationsvorschrift. Seite~4 behandelt die singuläre Erweiterung.
+
+\textbf{3. Im eigenen Eigenprofilraum ist die Projektion diagonal.}
+Falls $L^{\rm eff}_\partial e_m=\lambda_mW_\partial e_m$ und
+$e_n^\dagger W_\partial e_m=\delta_{nm}$, folgt unmittelbar
+\[
+\boxed{M_C^{nm}=\lambda_m\delta_{nm}.}
+\]
+Das Verschwinden der Nebendiagonalen ist hier eine Folge der Basiswahl,
+kein Nachweis fehlender quantisierter Materieübergänge. In einer festen
+Referenzprofilbasis können Nebendiagonalen auftreten; auch diese sind
+zunächst Koeffizienten einer Feld-Bilinearform. Sie werden erst durch
+definierte Wellenfunktionen und die gemeinsame Amplitude zu den auf
+Seite~5 berechneten Übergangsmatrixelementen. Modenindex $k$ und
+Besetzungszahl $n$ müssen verschieden bezeichnet werden.
+
+Falls $W_\partial$ direkt aus Dichtegewichten gebildet wird, kann es am
+Nullatom singulär werden. Dann ist eine vollständige Normierung
+$e_n^\dagger W_\partial e_m=\delta_{nm}$ auf diesem Feldraum unmöglich.
+Ein Quotient oder ein anderes positives Randprodukt braucht eine eigene
+Begründung. $W_\partial$ als Profilmetrik ist zudem nicht automatisch das
+Integrationsmaß für Randwellenfunktionen.
+
+\textbf{4. Die Summe der stationären Wirkungen ist noch keine volle
+Quanten-Randwirkung.}
+Schreibt man den eingesandten Ausdruck als
+$\mathcal W_{C,s}=S_{\rm BDG}+S_d+\frac12b^TEb$, so fehlt im unbeschränkten,
+invertierbaren Gaußfall gegenüber $-\ii\hbar\log K_C(b)$ insbesondere
+\[
+-\ii\hbar\log\mathcal N_I(C,T,w).
+\]
+Eine Logarithmusbranche ist festzulegen. Der Zusatz kann von Geometrie
+und Staubdaten abhängen und ist daher innerhalb der gemeinsamen Summe
+nicht ohne Nachweis eine irrelevante Konstante. Bei kompakten Feldgebieten
+kommen randabhängige Integralfaktoren hinzu. Für den vollständigen
+Historienkern ist außerdem der Logarithmus \emph{nach} der gemeinsamen
+Summe und Integration zu bilden, sofern der Kern dort nicht null ist.
+\newpage
+\sect{9. Acht Zustände: Indizes und Blockanordnung}
+Die ergänzten Bilder 071--080 geben die Labels $|G,s,n\rangle$ und eine
+$8\times8$-Anordnung vor. Diese Größe passt zu zwei Geometrien, zwei
+\emph{ausgewählten} Stratumzuständen und zwei \emph{ausgewählten}
+Materiewellenfunktionen. Sie ist keine Dimensionsaussage über den
+vollständigen physikalischen Zustandsraum. Insbesondere besitzt schon
+$L^2((0,1),\dd w)$ mehr Zustände als das konstante Paket $e_+$.
+
+Für die Blockmatrix
+\[
+K^{\rm geom}=\begin{pmatrix}K_{AA}&K_{AK}\\K_{KA}&K_{KK}\end{pmatrix}
+\]
+gilt hier ausdrücklich: \textbf{Zeile = Ausgang, Spalte = Eingang}.
+Innerhalb jedes Geometrieblocks lautet die Reihenfolge
+$(s,n)=(0,0),(0,1),(+,0),(+,1)$. Damit ist das eingesandte Schema
+\[
+K_{XY}=\left(\begin{array}{cccc}
+K_{00}^{00}&K_{00}^{01}&K_{0+}^{00}&K_{0+}^{01}\\
+K_{00}^{10}&K_{00}^{11}&K_{0+}^{10}&K_{0+}^{11}\\
+K_{+0}^{00}&K_{+0}^{01}&K_{++}^{00}&K_{++}^{01}\\
+K_{+0}^{10}&K_{+0}^{11}&K_{++}^{10}&K_{++}^{11}
+\end{array}\right)_{XY}
+\]
+ein konsistentes \emph{Indexschema}. Beide Indexpaare laufen jeweils als
+Ausgang--Eingang. Unbekannte Einträge bleiben unbekannt.
+
+\begin{center}
+\begin{tabular}{cll}
+\toprule
+Position & Geometrie zuerst (Bilder) & bisheriger Planungsvertrag\\\midrule
+1 &$|A,0,0\rangle$ &$|A,0,0\rangle$\\
+2 &$|A,0,1\rangle$ &$|A,0,1\rangle$\\
+3 &$|A,+,0\rangle$ &$|K,0,0\rangle$\\
+4 &$|A,+,1\rangle$ &$|K,0,1\rangle$\\
+5 &$|K,0,0\rangle$ &$|A,+,0\rangle$\\
+6 &$|K,0,1\rangle$ &$|A,+,1\rangle$\\
+7 &$|K,+,0\rangle$ &$|K,+,0\rangle$\\
+8 &$|K,+,1\rangle$ &$|K,+,1\rangle$\\\bottomrule
+\end{tabular}
+\end{center}
+Mit $p=(1,2,5,6,3,4,7,8)$ und $P_{r,p_r}=1$ gilt
+\[
+K^{\rm plan}=P K^{\rm geom}P^T.
+\]
+Gram-Matrizen und weitere Zustandsoperatoren sind ebenso umzuschreiben.
+Das ändert keine Amplitude und überschreibt die bisherige Reihenfolge nicht.
+
+\textbf{Orientierung der Träger.} Abschnitt~1 und die Zähldatei verwenden
+$XY$ als \emph{Eingang--Ausgang}. Somit gehört ein Matrixblock $K_{XY}$ zur
+dortigen Trägerfamilie $\mathcal C_{YX}$. Die gleichen Zählwerte für $AK$
+und $KA$ würden eine Verwechslung verdecken. Sie liefern insbesondere
+keinen Beweis für $K_{AK}=K_{KA}^\dagger$.
+
+\textbf{Moden sind keine Besetzungen.} Die Größe acht setzt hier genau
+zwei Wellenfunktionen pro $(G,s)$ voraus, etwa $n=0,1$ für eine gewählte
+Anregungsrichtung. Zwei unabhängige Moden mit jeweils Besetzungen $0,1$
+ergäben vier Materiezustände und insgesamt 16 Labels. Beschränkt man
+diese beiden Moden dagegen auf höchstens eine Anregung insgesamt,
+sind es drei Materiezustände und 12 Labels.
+
+\newpage
+\sect{10. Projektion, Parität und fehlender dynamischer Abschluss}
+Unter der Gesamtfeldparität von Abschnitt~5 hat das Paket $n$ die Parität
+$(-1)^n$. Deshalb verschwinden die Einträge $K_{ab}^{01}$ und
+$K_{ab}^{10}$ für alle Geometrien und Strata, \emph{falls} Wirkung, Maß,
+Integrationsgebiet und Regulator diese Symmetrie besitzen. Sortiert nach
+Parität zerfällt das Achtzustandsschema dann in zwei $4\times4$-Blöcke.
+Stratumwechsel innerhalb eines solchen Blocks bleiben erlaubt.
+
+Die Gleichsetzung $K_{XY}=K^{\rm grav}_{XY}I_4$ wäre eine wesentlich stärkere
+Zusatzannahme: keine Stratum- oder Materieübergänge und derselbe Faktor für
+alle vier ausgewählten Zustände. Gesamtfeldparität begründet diese
+Faktorisierung nicht. Auch eine rein quadratische Feldwirkung garantiert
+keine Erhaltung der Besetzungszahl einer gewählten Referenzbasis.
+Der auf Seite~5 bereits berechnete Ausdruck $\mathcal A_{20}$ kann ungleich
+null sein. \textbf{Parität schließt den Raum $n=0,1$ daher nicht ab.}
+
+\textbf{Präziser bedingter Projektionsvertrag.} Falls ein physikalischer
+Hilbertraum und ein Übergangsoperator $U:\mathcal H_i\to\mathcal H_f$
+begründet sind, seien $V_a:\mathbb C^8\to\mathcal H_a$ isometrische
+Einbettungen der ausgewählten Zustände und $P_a=V_aV_a^\dagger$.
+Die projizierte Matrix und der ausgehende Rest sind
+\[
+K_8=V_f^\dagger U V_i,
+\qquad R=(I-P_f)UV_i.
+\]
+Ein dynamischer Abschluss verlangt $R=0$ bzw.~eine begründete kleine
+Fehlerschranke. Unter der \emph{zusätzlichen} Annahme $U^\dagger U=I$ gilt
+\[
+\boxed{I_8-K_8^\dagger K_8=R^\dagger R,}
+\qquad
+1-\|K_8x\|^2=\|Rx\|^2\quad(\|x\|=1).
+\]
+Dies folgt direkt aus $P_f+(I-P_f)=I$. Der Satz ist ein Prüfwerkzeug,
+keine Behauptung einer bereits vorhandenen unitären CST-Zeitentwicklung.
+Bei einer Constraint-/Projektoramplitude ist stattdessen deren eigenes
+Skalarprodukt und Verklebungsgesetz zu prüfen.
+
+Sind die ausgewählten Zustände zunächst nicht orthonormal, bezeichnet
+$B_{\beta\alpha}=\langle v_{f,\beta},Uv_{i,\alpha}\rangle$ nur ihre
+Matrixelemente. Bei positiven Gram-Matrizen $G_i,G_f$ lautet die orthonormale
+Darstellung $\widehat B=G_f^{-1/2}BG_i^{-1/2}$. Eine singuläre Gram-Matrix
+benötigt zuerst eine begründete Reduktion; bloßes Umsortieren genügt nicht.
+
+\textbf{Vervollständigung des eingesandten Rechenwegs.}
+Für invertierbaren Innenblock ist der bedingte Weg
+\[
+(C,T,w;\text{Wirkung und Maß})\longrightarrow H_C
+\longrightarrow(E_C,\mathcal N_{I,C})
+\longrightarrow\mathcal A_C^{n_fn_i}
+\longrightarrow K_8.
+\]
+Die Randwellenfunktionen einschließlich Breiten und Modenrichtung sind vor
+der Projektion zusätzliche Eingaben. Der letzte Pfeil enthält die gemeinsame
+Historien-/Staubsumme, Atomdaten und Normierung aus Abschnitt~6.
+Für singuläre Innenblöcke ersetzt $Q_\epsilon$ den gewöhnlichen Schurschritt.
+Ein Schurmatrix-Eigenprofil allein liefert noch keinen quantisierten
+Randzustand; der Determinantenfaktor darf nicht verloren gehen.
+
+\textbf{Prüfnachweis.} Drei zusätzliche exakte Kontrollen prüfen alle
+64 Indexzuordnungen, die Paritätsblockstruktur und einen paritätserhaltenden
+unitären Dreizustands-Gegenfall mit Übergang $0\to2$.
+\path{basis_contract.json} dokumentiert Konventionen und offene Eingaben.
+Alle acht physikalischen Gates bleiben \status{HOLD}.
+\end{document}

@@ -1,5 +1,17 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Existenz der endlichen AA-Amplitude v0.1 · 11. November 2026
+
+[Schritt 3](amplitude_existence_v0_1/README.md) führt den Wirkungsansatz und die normierten Randzustände aus [PR #279](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/279) und [PR #280](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/280) zusammen. Für die 33 festgelegten AA-Kontrollhistorien existiert die projizierte Kandidatenamplitude im erklärten **Abel-Sinn**, einschließlich aller Staubintegrale, Nulldichte-Atome und beliebig kleiner positiver Dichten. Die Uhr- und Dichteboxen bleiben fest; Historienkoeffizienten sind feste endliche komplexe Zahlen.
+
+**Eine explizite integrierbare Majorante und eine lineare Regulatorfehlerschranke sind hergeleitet.** Bei Einheitsbreiten gilt für jeden der 16 primären Matrixeinträge |M_ij(ε)| ≤ 11.770 Cν und |M_ij(ε)−M_ij(0)| ≤ 9.489 ε Cν, mit Cν=Σ_C|c_C|. Alle fünf Dichteintegrale werden analytisch ausgeführt. Der innere Skalarblock bleibt im gewählten volumen­gewichteten Modell unabhängig von den Staubdichten gleichmäßig invertierbar. Für spätere singuläre Innenblöcke wird das Nullraumkriterium um eine Bedingung auf dem gesamten abgeschlossenen Staubträger ergänzt.
+
+**Das punktweise Nullraumkriterium allein genügt nicht:** Ein separates exaktes Gegenbeispiel ist bei jeder positiven Dichte zulässig, divergiert nach deren Integration aber logarithmisch. Ein Dichteatom erzeugt dort zusätzlich eine ε^(−1/2)-Divergenz. Das ursprüngliche unregulierte Integral über sämtliche Skalarvariablen ist nicht absolut konvergent; bewiesen ist der Abel-Grenzwert und die absolute Integrabilität nach innerer Gaußintegration.
+
+**22 Prüfungen bestanden**, einschließlich unabhängiger Rekonstruktion der 33 Hessians, Dichtemasken, Majorante, Fehlerrate und Divergenzgegenproben. Herkunfts-Blobs, vollständige Paket-Hashes und bytegleicher Ergebnis-Replay sind geprüft. Die Entfernung der Staubstützen, eine unendliche Historiensumme und der Kontinuumsgrenzwert bei festen physikalischen Zuständen bleiben offen. **Physikalische Übergangsmatrix NOT_CONSTRUCTED, K_0plus NOT_COMPUTED; alle acht physikalischen Gates HOLD.** Keine neue Bounce-Aussage und kein Produktionslauf.
+
+[Bericht (PDF)](amplitude_existence_v0_1/CST_DUST_Amplitudenexistenz_v0_1.pdf) · [Prüfpaket (ZIP)](packages/CST_DUST_Amplitudenexistenz_v0_1_Pruefpaket.zip) · [Vollständige Herleitung](amplitude_existence_v0_1/DERIVATION.md) · [Existenzvertrag](amplitude_existence_v0_1/existence_contract.json) · [Zertifikate und Schranken](amplitude_existence_v0_1/results/existence_certificate.json) · [Code und Reproduktion](amplitude_existence_v0_1/README.md)
+
 ## Kleiner Randzustandsraum A → A v0.1 · 11. November 2026
 
 [Schritt 2](boundary_state_space_v0_1/README.md) schließt an den gemeinsamen Skalarwirkungsansatz aus [PR #279](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/279) an. Für zwei unmarkierte Antichainpunkte je Rand und ein inneres Element sind Atom-/Positivmaß, Uhr- und Skalarpakete, Vertauschungsprojektor und kinematisches Skalarprodukt gemeinsam festgelegt. Ein- und Ausgang verwenden dieselben Skalen und Paketdefinitionen. Der Nullatomsektor bedeutet keine Abwesenheit des zusätzlichen Skalarfelds.

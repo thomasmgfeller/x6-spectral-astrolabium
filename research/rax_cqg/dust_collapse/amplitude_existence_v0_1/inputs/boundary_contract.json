@@ -1,0 +1,128 @@
+{
+  "artifact": "CST-DUST-RAND-A-A-v0.1",
+  "date": "2026-11-11",
+  "parent_model": "CST-DUST-KG-MIN-v0.1",
+  "parent_commit": "91f46fe5f827f823c1c2a9e967c8bd031afb7f0d",
+  "status": "CONSTRUCTED_DECLARED_KINEMATIC_CANDIDATE",
+  "labels": {
+    "input": [
+      0,
+      1
+    ],
+    "interior": [
+      2
+    ],
+    "output": [
+      3,
+      4
+    ]
+  },
+  "history_reference": "33 covered AA control histories, physical history weights not chosen",
+  "boundary_geometry": "unmarked two-element antichain A",
+  "boundary_group": "S2 acting jointly on T,w,Phi",
+  "scales": {
+    "T_b": "ell",
+    "W": "hbar",
+    "F": "sqrt(hbar)/ell",
+    "assumptions": "ell>0, hbar>0; matched at input and output"
+  },
+  "dimensionless_coordinates": {
+    "t": "T/T_b",
+    "r": "w/W",
+    "q": "Phi/F"
+  },
+  "measure": {
+    "clock": "1/2 * indicator[-1,1](t) dt",
+    "density": "1/2 delta_0(dr) + 1/2 indicator(0,1)(r) dr",
+    "scalar": "Lebesgue dq",
+    "boundary": "product of 2 single-point measures / 2"
+  },
+  "clock_packet": "chi=1",
+  "scalar_packets": {
+    "coordinates": "q_s=(q1+q2)/sqrt(2), q_a=(q1-q2)/sqrt(2)",
+    "reference_widths": {
+      "sigma_s": 1,
+      "sigma_a": 1
+    },
+    "ground": "exp[-(q_s^2/sigma_s^2+q_a^2/sigma_a^2)/2] / sqrt(pi*sigma_s*sigma_a)",
+    "excited": "sqrt(2)*q_s/sigma_s*ground",
+    "physical_vacuum_claim": false
+  },
+  "density_masks": {
+    "zero": [
+      "00"
+    ],
+    "mixed": [
+      "10",
+      "01"
+    ],
+    "double": [
+      "11"
+    ],
+    "plus": [
+      "10",
+      "01",
+      "11"
+    ]
+  },
+  "density_packet_labeled": {
+    "zero": "2 indicator00",
+    "mixed": "sqrt(2)*(indicator10+indicator01)",
+    "double": "2 indicator11",
+    "plus": "2/sqrt(3)*(indicator10+indicator01+indicator11)"
+  },
+  "plus_state": "pure coherent, equal positive mask amplitudes, relative phase zero",
+  "plus_orbit_probabilities": {
+    "mixed": "2/3",
+    "double": "1/3"
+  },
+  "normalized_boundary_packet": "sqrt(2)*chi*density_packet_labeled*scalar_packet",
+  "primary_order": [
+    "A|0|0m",
+    "A|0|1m",
+    "A|+|0m",
+    "A|+|1m"
+  ],
+  "primary_gram": "I4",
+  "primary_rank": 4,
+  "resolved_order": [
+    "A|0|0m",
+    "A|0|1m",
+    "A|M|0m",
+    "A|M|1m",
+    "A|D|0m",
+    "A|D|1m"
+  ],
+  "resolved_gram": "I6",
+  "resolved_rank": 6,
+  "redundant_rank": 6,
+  "redundant_eigenvalues": [
+    0,
+    0,
+    1,
+    1,
+    1,
+    1,
+    2,
+    2
+  ],
+  "full_Hilbert_dimension": "infinite",
+  "inner_measure": "d_lambda(t2)*d_nu(r2)*dq2*exp(-epsilon*q2^2/2), epsilon>0; regulator not probability-normalized",
+  "row_role": "outgoing",
+  "column_role": "incoming",
+  "matrix_element": "integral dmu_out dmu_in conj(Psi_out)*K*Psi_in",
+  "physical_inner_product": "NOT_DERIVED",
+  "physical_kernel": "NOT_CONSTRUCTED",
+  "physical_K_0plus": "NOT_COMPUTED",
+  "closed_truncation": "NOT_PROVED",
+  "physical_gates": {
+    "MODEL": "HOLD",
+    "CURRENT": "HOLD",
+    "CORRESPONDENCE": "HOLD",
+    "BOUNCE": "HOLD",
+    "REGULARITY": "HOLD",
+    "BOUNDARY": "HOLD",
+    "TRAPPING": "HOLD",
+    "EXTENSION": "HOLD"
+  }
+}
