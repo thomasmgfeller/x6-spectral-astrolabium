@@ -1,0 +1,449 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,amsmath,amssymb,booktabs,array,microtype}
+\pdfmapfile{+lm.map}
+\pdfmapfile{+cm.map}
+\pdfmapfile{+cmextra.map}
+\pdfmapfile{+symbols.map}
+\pdfinfoomitdate=1
+\pdftrailerid{}
+\usepackage[a4paper,margin=23mm]{geometry}
+\usepackage{xcolor,hyperref,fancyhdr}
+\definecolor{ink}{HTML}{183A4A}
+\hypersetup{colorlinks=true,linkcolor=ink,urlcolor=ink,pdftitle={CST-DUST: Definitionsbereich des gekoppelten Kerns v0.1}}
+\pagestyle{fancy}\fancyhf{}\fancyhead[L]{\small CST-DUST | Gekoppelter Kern}\fancyhead[R]{\small v0.1 | 11.11.2026}\fancyfoot[C]{\thepage}
+\setlength{\headheight}{14pt}\setlength{\parindent}{0pt}\setlength{\parskip}{5pt}
+\newcommand{\HH}{\mathcal H_A}\newcommand{\VV}{\mathcal V}
+\newcommand{\dd}{\,\mathrm d}\newcommand{\ii}{\mathrm i}
+\newcommand{\R}{\mathbb R}\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newcommand{\abs}[1]{\left|#1\right|}
+\newcommand{\one}{\mathbf1}\newcommand{\Ccal}{\mathcal C_{33}}
+\begin{document}
+{\color{ink}\LARGE\bfseries Definitionsbereich des gekoppelten Kerns}\par
+{\large Exaktes Gegenbeispiel zur $L^2$-Evolution und kontrollierte Testzustandspaarungen}\par
+\textbf{Version 0.1, 11. November 2026.} Anschluss an PR \#279--283.\\
+Projekt: \texttt{thomasmgfeller/x6-spectral-astrolabium}.\\
+Geprüfte Basis:
+\texttt{cfd4413c8e9d2338f41567aac249e9ac54a295d8}.
+
+\section*{Ergebnis}
+Die \emph{ursprüngliche gekoppelte} AA-Kontrollamplitude bildet den bereits
+verwendeten normierten Zustand $\psi=\Psi_{0,00}$ nicht in den gewählten
+Rand-Hilbertraum ab:
+\[
+ \norm{\psi}_{\HH}=1,\qquad K_0\psi\notin\HH.
+\]
+Der Beweis berücksichtigt alle 33 Historien, ihre unveränderten komplexen
+Gravitationsphasen, die Randquotienten und beide inneren Dichtestrata.
+Er benutzt weder die entkoppelte Referenz noch die Divergenz eines isolierten
+Historienbeitrags. Auf dem ausgehenden Atomsektor verbleiben zwei unterschiedliche
+quadratische Feldphasen. Ihr Kreuzterm kann das positive, linear wachsende
+Normquadrat nicht auslöschen.
+
+Gleichzeitig ist derselbe Kern ohne Änderung von Wirkung oder Maß als beschränkte
+Abbildung $K_0:\VV\to\VV'$ wohldefiniert. Dabei
+\[
+ \VV=L^2_{\rm inv}\bigl((1+|q|^2)^4\dd\mu_A\bigr)
+ \subset\HH\subset
+ \VV'=L^2_{\rm inv}\bigl((1+|q|^2)^{-4}\dd\mu_A\bigr).
+\]
+Das Strichsymbol bezeichnet den Antidualraum bezüglich der unveränderten
+sesquilinearen Randpaarung. $\VV'$ ist ein Raum verallgemeinerter Antworten,
+\emph{kein neu postuliertes physikalisches Skalarprodukt}.
+
+\begin{center}\begin{tabular}{p{.40\linewidth}p{.51\linewidth}}\toprule
+Frage & Ergebnis im deklarierten endlichen Modell\\\midrule
+Normierter Eingang ergibt $L^2$-Ausgang? & Gegenbeispiel $\Psi_{0,00}$; Antwortnorm unendlich.\\
+Können sich alle problematischen Beiträge auslöschen? & Für diesen Eingang nein; vollständige 33er-Summe geprüft.\\
+Sind die bisherigen Paketpaarungen gültig? & Ja, als Paarungen $\VV\times\VV$ mit $K_0:\VV\to\VV'$.\\
+Ist der Abel-Grenzwert kontrolliert? & Ja, Konvergenz sogar in $\VV\to\VV'$-Operatornorm, Fehler $<1.342\epsilon$.\\
+Physikalischer CST-Evolutionskern? & Weiter \texttt{NOT\_CONSTRUCTED}; alle acht Gates \texttt{HOLD}.\\\bottomrule
+\end{tabular}\end{center}
+
+\textbf{Geltungsbereich.} Vollständig ist hier die bereits deklarierte endliche
+Historienfamilie. Eine unendliche oder vierdimensionale physikalische CST-Summe
+ist damit weder definiert noch ausgewertet. Der Satz widerlegt die Evolutionsdeutung
+dieses Kontrollkerns im bisherigen Hilbertraum; er ist kein allgemeiner
+Ausschlusssatz für CST.
+\newpage
+
+\section{Unveränderter Kern, Zustände und Maße}
+Es gelten $L=\{0,1\}$, $I=\{2\}$, $R=\{3,4\}$, die 33 abgedeckten AA-Ordnungen
+und die Kontrollwerte $\kappa=1$, $\mu=0$, $\lambda_{\rm Kopplung}=1$.
+Mit den bisherigen dimensionslosen Variablen und $\beta=4/\sqrt6$:
+\[
+ \dd\lambda(t)=\tfrac12\one_{[-1,1]}\dd t,\qquad
+ \dd\nu(r)=\tfrac12\delta_0(\dd r)+\tfrac12\one_{(0,1)}\dd r,
+ \qquad
+ \dd\mu_A=\tfrac12\prod_{j\in A}\dd\lambda(t_j)\dd\nu(r_j)\dd q_j.
+\]
+Die zwei Randpunkte werden mit ihrer gesamten Ausstattung gemeinsam vertauscht;
+$\HH$ ist der invariante Unterraum von $L^2(\dd\mu_A)$.
+Die zeit- und dichteabhängige Maßkomponente $\dd\eta_A$ hat Gesamtmasse $1/2$;
+die Feldkomponente ist das ungegewichtete Lebesgue-Maß auf $\R^2$.
+
+Für jede Ordnung sei $c_{ij}\in\{1,-9,16,-8\}$ der unveränderte
+Intervallkoeffizient und
+\[
+ \frac{S_d}{\hbar}=-\sum_{j=0}^4 r_j k_j(t),\quad
+ k_j(t)=\frac12+\frac\beta4\sum_{i\prec j}c_{ij}(t_j-t_i)^2,
+ \qquad F_4(C)=5-\sum_{i\prec j}c_{ij}.
+\]
+Die skalare Hesse-Matrix ist $M_C=\beta H_C^{(0)}$, wobei jedes Paar $(i,j)$
+die Matrixeinträge $H_{ii},H_{jj}\mathrel{-}=c_{ij}/2$ und
+$H_{ij},H_{ji}\mathrel{+}=c_{ij}/2$ beiträgt. In der Reihenfolge
+$b=(q_0,q_1,q_3,q_4)$, $q_2$ schreiben wir
+\[
+ M_C=\begin{pmatrix}B_C&J_C^T\\J_C&-\alpha_C\end{pmatrix},\quad
+ \beta\le\alpha_C\le2\beta,\quad \norm{J_C}^2\le\beta^2.
+\]
+Die Lücken und Normschranken werden für alle 33 Matrizen exakt geprüft.
+Die innere Feldintegration mit $\epsilon\ge0$ lautet
+\[
+ G_{C,\epsilon}(b)=\frac{\sqrt{2\pi}}{\sqrt{\epsilon+\ii\alpha_C}}
+ \exp\left(\frac\ii2b^TB_Cb-
+          \frac{(J_Cb)^2}{2(\epsilon+\ii\alpha_C)}\right).
+\]
+Die Wurzel wird aus der rechten Halbebene fortgesetzt; bei null entsteht die
+Fresnelphase $e^{-\ii\pi/4}$. Mit $z_L=(t_0,r_0,t_1,r_1)$ und entsprechend $z_R$:
+\[
+ K_\epsilon(z_R,q_R;z_L,q_L)=\frac1{33}\sum_{C\in\Ccal}e^{\ii F_4(C)}
+ \int\dd\lambda(t_2)\dd\nu(r_2)\,
+ e^{-\ii\sum_j r_jk_j(t)}G_{C,\epsilon}(b).
+ \tag{1}
+\]
+Es wird weder durch eine komplexe Zustandssumme geteilt noch ein weiterer
+Orbit- oder Automorphismusfaktor eingeführt. Der Kern ist invariant unter beiden
+Randvertauschungen, da diese die 33 Summanden nur permutieren.
+
+Die innere Integration ist ein Abel/Fresnel-Integral, kein absolut konvergentes
+unreguliertes Feldintegral. Für reelle Randfelder ist aber
+\[
+ |K_\epsilon|\le C_0:=\sqrt{2\pi/\beta}<1.962,
+ \qquad \epsilon\ge0. \tag{2}
+\]
+Dies folgt aus $|G_{C,\epsilon}|\le\sqrt{2\pi/\alpha_C}$ und der normierten
+inneren Staubmaßkomponente. Damit ist $K_0$ eine konkret definierte beschränkte
+Kernfunktion; daraus folgt noch keine Beschränktheit als $L^2$-Operator.
+\newpage
+
+\section{Testraum, Definitionsbereich und Fehlerbegriff}
+Für $f\in\VV$ sei
+\[
+ \norm f_\VV^2=\int(1+|q|^2)^4|f(z,q)|^2\dd\mu_A.
+\]
+Dieser Raum ist dicht in $\HH$: Feldabschneidungen und symmetrisierte kompakt
+getragene einfache Funktionen approximieren jedes $L^2$-Element. Für alle
+$f,g\in\VV$ existiert die Paarung
+\[
+ \mathcal B_\epsilon(g,f)=\iint\overline{g(y)}K_\epsilon(y,x)f(x)
+ \dd\mu_A(y)\dd\mu_A(x).
+ \tag{3}
+\]
+Nach der inneren Abel-Integration ist dieses Randintegral absolut konvergent.
+In zwei Felddimensionen gelten exakt
+\[
+ \int\frac{\dd\mu_A}{(1+|q|^2)^4}=\frac\pi6,
+ \qquad
+ \int\frac{|q|^4\dd\mu_A}{(1+|q|^2)^4}=\frac\pi6.
+ \tag{4}
+\]
+Cauchy--Schwarz liefert $\norm f_{L^1}\le\sqrt{\pi/6}\norm f_\VV$ sowie
+$\norm{|q|^2f}_{L^1}\le\sqrt{\pi/6}\norm f_\VV$. Deshalb
+\[
+ |\mathcal B_\epsilon(g,f)|\le C_4\norm g_\VV\norm f_\VV,
+ \quad \norm{K_\epsilon}_{\VV\to\VV'}\le C_4=\frac\pi6C_0<1.028.
+ \tag{5}
+\]
+Dies legt die zulässige Interpretation als kontinuierliche sesquilineare
+Amplitude fest. Hermite-Gaußpakete mit endlichem Polynomgrad sowie die bisherigen
+Box-Uhr- und Maskenpakete gehören zu $\VV$; für $\psi=\Psi_{0,00}$ gilt
+$\norm\psi_\VV^2=65$, während $\norm\psi_{\HH}=1$ bleibt.
+
+\textbf{Abel-Fehler.} Differenzieren des exakt integrierten $G$ ergibt
+\[
+ |\partial_\epsilon G_{C,\epsilon}(b)|
+ \le C_0\left(\frac1{2\beta}+\frac{|b|^2}{2}\right).
+\]
+Wegen (4), $|b|^2=|q_L|^2+|q_R|^2$ und des positiven normierten inneren Maßes:
+\[
+ \norm{K_\epsilon-K_0}_{\VV\to\VV'}
+ \le \epsilon C_4\left(1+\frac1{2\beta}\right)
+ <1.342\epsilon. \tag{6}
+\]
+Es handelt sich um eine gleichmäßige Normschranke, nicht nur um Konvergenz
+endlich vieler Matrixeinträge. Spezifische frühere Paketfehler können enger sein.
+
+\textbf{Feldabschneidung.} Wird (3) auf $|q_L|\le R_L$, $|q_R|\le R_R$
+beschränkt, ist der Fehler höchstens
+\[
+ C_4\big[(1+R_L^2)^{-3/2}+(1+R_R^2)^{-3/2}\big]
+ \norm g_\VV\norm f_\VV. \tag{7}
+\]
+Denn das gewichtete äußere Maß ist $\pi(1+R^2)^{-3}/6$.
+Ein Fehler $|\widetilde K-K|\le\delta$ auf einem Integrationsbereich ergibt
+dort zusätzlich $\delta\pi\norm g_\VV\norm f_\VV/6$.
+Paketapproximationen erfüllen
+\[
+ |\mathcal B(g,f)-\mathcal B(g_N,f_N)|\le C_4\left[
+ \norm{g-g_N}_\VV\norm f_\VV+
+ \norm{g_N}_\VV\norm{f-f_N}_\VV\right]. \tag{8}
+\]
+Konvergenz nur in der ungegewichteten Hilbertnorm genügt dafür nicht.
+Numerische Quadratur- und Rundungsfehler sind zusätzlich zu zertifizieren.
+\newpage
+
+\textbf{Exakter Hilbert-Definitionsbereich innerhalb des Testraums.}
+Ohne Erweiterungsannahme ist
+\[
+ D_{\HH}(K_0)=\{f\in\VV:K_0f\in\HH\},\qquad
+ K_{\HH}=K_0|_{D_{\HH}(K_0)}. \tag{9}
+\]
+Äquivalent, für eine orthonormale Basis $(e_j)$ von $\HH$, deren endlicher
+linearer Spann dicht in $\VV$ ist:
+\[
+ f\in D_{\HH}(K_0)\quad\Longleftrightarrow\quad
+ \sup_N\sum_{j=1}^N|\mathcal B_0(e_j,f)|^2<\infty. \tag{10}
+\]
+Eine solche Basis entsteht durch Gram--Schmidt bezüglich $\HH$ aus einer
+abzählbaren in $\VV$ dichten Testfamilie. Der Raum $\VV$ ist separabel;
+das Weglassen endlicher linearer Abhängigkeiten verändert den linearen Spann
+nicht. Weil $\VV$ dicht in $\HH$ ist, ist diese Basis auch dort vollständig.
+Die Notwendigkeit von (10) folgt aus Parseval. Für die Umkehr definieren die
+quadratsummierbaren
+Koeffizienten definieren dann einen $\HH$-Vektor, der auf einer $\VV$-dichten
+Familie mit dem stetigen Funktional übereinstimmt und somit überall.
+\emph{Die Totalität in $\VV$ ist Teil dieser Basiswahl; beliebige nur in $\HH$
+vollständige Tests reichen für diesen Umkehrschluss nicht aus.}
+
+(9)--(10) sind eine präzise Charakterisierung des maximalen $\HH$-wertigen
+Bereichs \emph{innerhalb von $\VV$}. Eine vollständige Klassifikation aller
+Elemente dieses Bereichs, seine Dichtheit in $\HH$, Abgeschlossenheit oder
+Erweiterung auf Eingänge außerhalb von $\VV$ wird nicht behauptet.
+Für die angefragte Evolutionsdeutung reicht das folgende konkrete Gegenbeispiel.
+
+\section{Normierter Zeuge und vollständige Historienklassifikation}
+Wir verwenden unverändert
+\[
+ \psi(z_L,x)=2\sqrt2\one_{r_0=r_1=0}\,h_0(x),\qquad
+ h_0(x)=\pi^{-1/2}e^{-|x|^2/2}.
+ \tag{11}
+\]
+Die Eingangsuhrfunktion ist eins. Das Dichteatom und der Randquotient geben
+$\norm\psi_{\HH}^2=(1/2)(1/4)(2\sqrt2)^2=1$.
+Untersucht wird die \emph{gesamte Ausgangsantwort} auf dem Atomsektor
+$r_3=r_4=0$. Dieser ist keine Nullmenge: seine Randmaßkomponente hat Masse $1/8$.
+Andere ausgehende Dichtestrata können Beiträge an diesen Punkten nicht auslöschen.
+
+Sei $\widehat K_C=H_{BB}^{(0)}-H_{B2}^{(0)}(H_{22}^{(0)})^{-1}H_{2B}^{(0)}$
+das rationale Schur-Komplement, mit Eingangsblock $L_C$, Kreuzblock $X_C$
+und Ausgangsblock $R_C$. Die Feldantwort nach Eingangsintegration hat Form
+\[
+ I_C(y)=\frac{\sqrt{2\pi/\alpha_C}\,e^{-\ii\pi/4}\,2\sqrt\pi}
+                 {\sqrt{\det_{\rm cont}(I-\ii\beta L_C)}}
+ \exp\left[\frac{\ii\beta}2y^TR_Cy-
+ \frac{\beta^2}2y^TX_C^T(I-\ii\beta L_C)^{-1}X_Cy\right]. \tag{12}
+\]
+Die kontinuierliche Determinantenwurzel ist das Produkt der Hauptwurzeln
+$\sqrt{1-\ii\beta\ell_j}$ der reellen Eigenwerte $\ell_j$ von $L_C$.
+Es wird keine unkontrollierte Hauptwurzel des Gesamtprodukts verwendet.
+Der reelle Dämpfungsblock ist
+\[
+ Q_C=\beta^2 X_C^T(I+\beta^2L_C^2)^{-1}X_C\succeq0,
+ \qquad\ker Q_C=\ker X_C. \tag{13}
+\]
+\newpage
+
+Alle 33 Kreuzblöcke werden exakt, vor einer numerischen Näherung, klassifiziert:
+\begin{center}\begin{tabular}{llll}\toprule
+Historien & Anzahl & Rang $X_C$ & Ausgehende Nullrichtung in $(q_3,q_4)$\\\midrule
+Alle übrigen & 28 & 2 & keine\\
+9116 & 1 & 1 & $(3/26,1)$\\
+17308 & 1 & 1 & $(26/3,1)$\\
+25372, 25496 & 2 & 1 & $(-1,1)$\\
+25500 & 1 & 1 & $(-1,1)$\\\bottomrule
+\end{tabular}\end{center}
+Für $s=(q_3+q_4)/\sqrt2$, $a=(q_3-q_4)/\sqrt2$ und beschränktes $s$ zerfallen
+somit 30 Beiträge gaußförmig für $|a|\to\infty$. Die beiden schiefen Nullrichtungen
+liegen nicht entlang der betrachteten $a$-Achse. Nur die letzten drei Beiträge
+bleiben auf diesem Streifen ungedämpft.
+
+\section{Staubsumme und die zwei verbleibenden Phasen}
+Auf dem ausgehenden Atomsektor und für (11) liegen alle äußeren Dichten auf null.
+Das bedeutet \emph{nicht}, dass die innere Dichte auf null gesetzt wird. Es bleibt
+der vollständige Faktor
+\[
+ D_p=\int\dd\lambda(t_0)\dd\lambda(t_1)\dd\lambda(t_2)\,
+ \frac{1+E(k_2)}2,\quad
+ E(k)=\int_0^1e^{-\ii kr}\dd r,
+ \quad k_2=\frac12+\frac\beta4\sum_{i\prec2}(t_2-t_i)^2. \tag{14}
+\]
+Dabei ist $p\in\{1,2\}$ die Vorgängerzahl von Punkt 2; die unbenutzte
+Eingangsuhr integriert zu eins. Die Vorgänger sind stets direkte Nachbarn.
+Für beide Fälle gilt $0<k_2\le1/2+2\beta<4$. Auf $0\le r\le1/4$ ist daher
+$\cos(k_2r)\ge1-(k_2r)^2/2\ge1/2$, und auf dem Rest ist $1+\cos(k_2r)\ge0$.
+Somit, ohne Quadratur oder Annahme über kleine Phasen:
+\[
+ \Re D_p\ge\frac12\int_0^{1/4}\frac32\dd r=\frac3{16}>0,
+ \qquad |D_p|\le1. \tag{15}
+\]
+Beide inneren Masken und alle Eingangs-/Innenuhren sind also berücksichtigt.
+
+Für 25372 gilt
+\[
+ L_1=\begin{pmatrix}26/3&0\\0&-1\end{pmatrix},\quad
+ X_1=\begin{pmatrix}-13/3&-13/3\\1/2&1/2\end{pmatrix},\quad
+ R_1=\begin{pmatrix}11/3&1/6\\1/6&11/3\end{pmatrix},\quad\alpha_1=3\beta/2.
+\]
+25496 ist die Eingangsvertauschung davon. Bei symmetrischem Eingang und (14)
+sind beide Antworten exakt gleich, einschließlich $D_1$ und $e^{18\ii}$.
+Für 25500 gilt
+\[
+ L_2=R_2=\begin{pmatrix}69/8&1/8\\1/8&69/8\end{pmatrix},\quad
+ X_2=-\frac{35}8\begin{pmatrix}1&1\\1&1\end{pmatrix},\quad\alpha_2=2\beta.
+\]
+Seine Gravitationsphase ist $e^{37\ii}$, sein Staubfaktor $D_2$.
+Definiere $f_j(s)$ als (12) für $y=(s,s)/\sqrt2$ der jeweiligen Matrix.
+Dann ist die vollständige Antwort auf diesem ausgehenden Atomsektor
+\[
+ g(s,a)=L_*\left[2e^{18\ii}D_1f_1(s)e^{\ii\omega_1 a^2}
+                  +e^{37\ii}D_2f_2(s)e^{\ii\omega_2 a^2}\right]
+                  +\mathcal R(s,a),\quad
+ L_*=\frac{\sqrt2}{132},\quad
+ (\omega_1,\omega_2)=\frac\beta4(7,17). \tag{16}
+\]
+$L_*$ enthält den Eingangsquotienten, die Eingangsatommasse, die normierte
+Paketamplitude und $1/33$. Die restlichen 30 Historien bilden $\mathcal R$;
+sie wurden nicht aus der Summe entfernt.
+\newpage
+
+\section{Keine Auslöschung: positiver Grenzwert der Normdichte}
+Auf $|s|\le1$ gilt für hinreichend großes $|a|$ gleichmäßig
+$|\mathcal R(s,a)|\le A e^{-c a^2}$ mit gewissen $A,c>0$.
+Dies folgt für jeden der 30 Summanden aus (13), $X_C(1,-1)^T\ne0$
+und der Endlichkeit der Familie. Ihre Beiträge sowie ihre Kreuzterme mit den
+beschränkten persistierenden Summanden integrieren sich zu $O(1)$.
+
+Auch der Kreuzterm zwischen den beiden persistierenden Frequenzen ist nur
+$O(1)$: $\omega_2-\omega_1=5\beta/2\ne0$ und
+$\int_{-R}^R e^{\ii(\omega_2-\omega_1)a^2}\dd a$ ist gleichmäßig beschränkt.
+Zum Beispiel liefert partielle Integration außerhalb $|a|\le1$ eine konstante
+Schranke; die Ableitung der Phase ist dort von null getrennt.
+Die beiden komplexen Koeffizienten und ihre Gravitationsphasen ändern daran nichts.
+
+Sei $\Omega_R$ der Ausgangsbereich $r_3=r_4=0$, $|s|\le1$, $|a|\le R$
+mit allen Ausgangsuhren. Dann folgt exakt aus (16):
+\[
+ \lim_{R\to\infty}\frac{\norm{\one_{\Omega_R}g}_{\HH}^2}{2R}
+ =\frac{L_*^2}{8}\int_{-1}^{1}
+       \left(4|D_1f_1(s)|^2+|D_2f_2(s)|^2\right)\dd s>0. \tag{17}
+\]
+Der Faktor $1/8$ ist die ausgehende Atommaßkomponente einschließlich Quotient.
+Die Feldtransformation hat Jacobi-Betrag eins; die Ausgangsuhren haben Maß eins.
+Es gibt keinen negativen Normbeitrag aus den anderen Dichtestrata.
+
+\textbf{Explizite untere Schranke.} Exakte Gaußalgebra ergibt
+\[
+ |f_2(s)|^2=P_2\,e^{-c_2s^2},\quad
+ P_2=\frac{8\pi^2}{2\beta\sqrt{(1231/6)(581/3)}},\quad
+ c_2=\frac{1225}{1231}<1. \tag{18}
+\]
+Die entsprechende Dämpfung von $|f_1|^2$ ist $51484/59785<1$.
+Schon das Weglassen des positiven ersten Diagonalterms in (17) liefert
+\[
+ \lim_{R\to\infty}\frac{\norm{\one_{\Omega_R}g}_{\HH}^2}{2R}
+ \ge\frac1{8712\cdot8}\left(\frac3{16}\right)^2\frac{2P_2}{e}
+ =\frac{3\sqrt{2145633}\,\pi^2}{354470014976\,e}
+ >4.5\cdot10^{-8}. \tag{19}
+\]
+Der Wert der ausgewerteten unteren Schranke ist
+$4.5011629414369758512\ldots\cdot10^{-8}$; die letzte strikte Ungleichung
+wird zusätzlich mit 192-Bit-Ballarithmetik eingeschlossen.
+Die Zahl ist eine \emph{asymptotische untere Steigung}, kein bereits für jedes
+endliche $R$ behaupteter Schnittfehler oder physikalischer Messwert.
+
+(17)--(19) beweisen $\norm g_{\HH}=\infty$ und damit
+\[
+ \boxed{\Psi_{0,00}\notin D_{\HH}(K_0),\qquad K_0\Psi_{0,00}\in\VV'\setminus\HH.}
+\]
+Das ist der verlangte Gegenbeleg für die ursprüngliche gekoppelte Amplitude.
+Für jeden endlichdimensionalen Hilbertvektor $g_N$ gilt außerdem
+$g-g_N\notin\HH$; andernfalls wäre auch $g$ als Summe zweier Hilbertvektoren
+quadratintegrierbar. Ein endlicher Satz genauer Matrixelemente kann diesen
+Definitionsbereichsfehler daher nicht durch eine globale $L^2$-Restschranke beheben.
+\newpage
+
+\section{Nachrechnung, zulässige Aussagen und offener Anschluss}
+Das Prüfpaket enthält die unveränderten Vorgängerdateien mit ihren Git-Blob-
+Identitäten, die exakten Schurblöcke aller 33 Historien, Nullrichtungen,
+Ränge, Phasen und Konstanteneinschließungen. Die mathematische Aussage stützt
+sich auf den analytischen Beweis; Softwarekontrollen allein wären kein Ersatz.
+
+\textbf{Ausgeführte Kontrollen: 11 Testgruppen.}
+Die Enumeration, Hesse-Matrizen und $F_4$-Werte werden gegen die getrennt
+eingefrorenen 33 Hesse-Zertifikate geprüft. Weitere Gruppen kontrollieren alle
+Innenlücken, Regulatorableitungsmajoranten, Kreuzränge, die beiden schiefen
+Nullrichtungen, die drei persistierenden Historien, deren Labelmultiplizität,
+beide Frequenzen, Gaußdämpfungen, den Staub-Nichtnullbeweis sowie Paket- und
+Maßfaktoren. Symbolische Integrale prüfen die gewichteten Cauchy--Schwarz-
+Konstanten. Ballarithmetik bestätigt (19) und die Normschranken.
+
+Zusätzlich vergleicht eine unabhängige direkte dreidimensionale komplexe
+Gaußintegration mit der gestuften Schur-Elimination für jede der 33 Historien,
+zwei positive Regulatorwerte und zwei Ausgangspunkte: 132 Vergleiche.
+Verwendet werden Eigenwertwurzeln statt derselben Pivotimplementierung.
+Dies ist ein Float64-Strukturtest mit relativer/absoluter Toleranz
+$2\cdot10^{-12}\max(1,|\text{Referenz}|)$, kein Zertifikat für einen
+unendlichen Integrationsbereich. Der Nicht-$L^2$-Beweis bleibt rein analytisch.
+
+\textbf{Reproduktion.} Python mit \texttt{sympy}, \texttt{numpy} und
+\texttt{python-flint}; die konkret verwendeten Versionen stehen in
+\texttt{environment.json}. Im entpackten Verzeichnis:
+\begin{verbatim}
+python -B test_domain.py
+python -B verify.py
+\end{verbatim}
+Der Verifier kontrolliert alle Paketprüfsummen, neun Herkunfts-Blobs und einen
+bytegleichen Ergebnis-Replay in einem temporären Verzeichnis. Das PDF wird aus
+dieser vollständigen \LaTeX-Herleitung erzeugt. Ein fehlgeschlagener Kontrolllauf
+ist ein Fehler und darf nicht als bestandene Reproduktion ausgewiesen werden.
+
+\textbf{Interpretation bisheriger Resultate.} Die endlichen Matrixpaarungen aus
+PR \#282--283 bleiben unverändert. Ihre Verwendung als Tests der Amplitude ist
+durch (3)--(6) gerechtfertigt. Eine Interpretation als Spalte eines auf dem
+bisherigen Randraum definierten Evolutionsoperators scheitert bereits für (11).
+Die zuvor bedingte Bessel-Deutung einer endlichen ausgelassenen Norm ist für
+diesen Eingang keine endliche globale Fehlerbilanz; die vollständige Antwort
+liegt außerhalb $\HH$. Die Fehlergrößen (6)--(8) gelten stattdessen für die
+kontrollierten Paarungen bzw. die $\VV'$-Antwort.
+
+\textbf{Nächster sachlicher Anschluss.} Ein Verklebungsgesetz für solche
+Amplituden benötigt passende Zwischenräume und Konvergenzbedingungen.
+$K:\VV\to\VV'$ kann nicht automatisch mit sich selbst komponiert werden,
+weil $\VV'$ nicht im Eingangsbereich $\VV$ liegt. Zusätzlich bleiben die bereits
+gezeigten schnittübergreifenden Wirkungsterme erforderlich. Eine physikalische
+Norm, ein Constraint-/Rigging-Verfahren oder zusätzliche Randdaten müssen aus
+weiteren Modellannahmen begründet werden. Eine ausgehende Gaußdämpfung würde
+den Operator ändern und ist keine Reparatur derselben Rechnung.
+
+\textbf{Unverändert offen.} Physikalisches Historienmaß, vollständige
+Gravitationsrandwirkung, vierdimensionale bzw. unendliche Historiengrenzen,
+physikalisches Skalarprodukt, Unitarität, klassischer Grenzfall, Rückwirkung,
+Horizonte, globaler Außenraum und Singularitätsauflösung. Alle acht Gates
+\texttt{MODEL, CURRENT, CORRESPONDENCE, BOUNCE, REGULARITY, BOUNDARY, TRAPPING,
+EXTENSION} bleiben \texttt{HOLD}. Keine Produktionssimulation, kostenpflichtige
+Rechnung oder neue Messreihe wurde ausgeführt.
+
+\section*{Quellen und Herkunft}
+Die neue Definitionsbereichsanalyse und ihr Gegenbeispiel sind eigene
+Ableitungen aus den hier eingefrorenen Modellformeln. Es wird keine externe
+Publikation als Beleg für diesen neuen Satz ausgegeben.
+\begin{itemize}
+\item \href{https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/279}{PR \#279}: minimale gemeinsame Skalarwirkung.
+\item \href{https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/280}{PR \#280}: Randmaß, normierte Pakete und kinematischer Hilbertraum.
+\item \href{https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/281}{PR \#281}: endliche Amplitudenexistenz und Innenlücke.
+\item \href{https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/282}{PR \#282}: genaue 33er-Gewichtung, gekoppelte Wirkung und Phasenkonvention.
+\item \href{https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/283}{PR \#283}: Zustandsreduktion, Verklebung und bisher nur entkoppelte $L^2$-Obstruktion.
+\end{itemize}
+\end{document}

@@ -176,6 +176,7 @@ def home(path, data, content, lang):
         + E(dust['scope']) + '</p></div><div class="feature-links">'
         + link(rel(path, dust_app), dust['launch'], **{'class': 'button'})
         + link(dust_guide, dust['dossier'], **{'class': 'feature-link'})
+        + link(REPO + '/blob/main/' + dust_path + 'reduction_bound_v0_1/README.md', 'Reduktionsfehler: obere Schranke; kompakte Basis weiterhin HOLD (DE) →' if lang == 'de' else 'Reduction error: upper bound; compact basis remains HOLD (DE) →', **{'class': 'feature-link'})
         + link(REPO + '/blob/main/' + dust_path + 'extended_sewing_v0_1/README.md', 'Erweiterter Randvertrag: 1.089 Verklebungen exakt rekonstruiert (DE) →' if lang == 'de' else 'Extended boundary contract: 1,089 sewings reconstructed exactly (DE) →', **{'class': 'feature-link'})
         + link(REPO + '/blob/main/' + dust_path + 'coupled_kernel_domain_v0_1/README.md', 'Gekoppelter Kern: Gegenbeispiel zur L²-Evolution und kontrollierte Testpaarungen (DE) →' if lang == 'de' else 'Coupled kernel: counterexample to L² evolution and controlled test pairings (DE) →', **{'class': 'feature-link'})
         + link(REPO + '/blob/main/' + dust_path + 'reduction_gluing_v0_1/README.md', 'Zustandsbeschränkung und Verklebung: fehlende Moden und Intervallterme (DE) →' if lang == 'de' else 'State reduction and gluing: missing modes and interval terms (DE) →', **{'class': 'feature-link'})

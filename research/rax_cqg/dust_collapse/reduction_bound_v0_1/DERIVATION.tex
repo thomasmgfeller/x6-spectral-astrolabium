@@ -1,0 +1,616 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[T1]{fontenc}\usepackage[utf8]{inputenc}
+\usepackage{lmodern,amsmath,amssymb,booktabs,array,microtype}
+\pdfmapfile{+lm.map}\pdfmapfile{+cm.map}\pdfmapfile{+cmextra.map}\pdfmapfile{+symbols.map}
+\pdfinfoomitdate=1\pdftrailerid{}
+\usepackage[a4paper,margin=23mm]{geometry}
+\usepackage{xcolor,hyperref,fancyhdr}
+\definecolor{ink}{HTML}{183A4A}
+\hypersetup{colorlinks=true,linkcolor=ink,urlcolor=ink,pdftitle={CST-DUST: Obere Reduktionsfehlergrenze v0.1}}
+\pagestyle{fancy}\fancyhf{}\fancyhead[L]{\small CST-DUST | Obere Reduktionsfehlergrenze}
+\fancyhead[R]{\small v0.1 | 11.11.2026}\fancyfoot[C]{\thepage}
+\setlength{\headheight}{14pt}\setlength{\parindent}{0pt}\setlength{\parskip}{5pt}
+\setlength{\emergencystretch}{2em}
+\newcommand{\dd}{\,\mathrm d}\newcommand{\ii}{\mathrm i}\newcommand{\R}{\mathbb R}
+\newcommand{\one}{\mathbf1}\newcommand{\norm}[1]{\lVert#1\rVert}
+\newcommand{\TT}{\mathcal T}\newcommand{\EE}{\mathbb E}\newcommand{\HS}{\mathrm{HS}}
+\begin{document}
+{\color{ink}\LARGE\bfseries Eine obere Reduktionsfehlergrenze}\par
+{\large Alle vier Eingänge, vollständige Modenreste und bedingte Verklebung}\par
+\textbf{Version 0.1, 11. November 2026.}\\
+Projekt: \texttt{thomasmgfeller/x6-spectral-astrolabium}.\\
+Eingefrorener Quellstand: \texttt{3b6a186749b313ea59f43292e43052451dc4941c}.
+
+\section*{Ergebnis und Reichweite}
+Für die ursprüngliche Familie von 33 Historien gibt es jetzt eine analytische
+\emph{obere} Restschranke in der Testtopologie aus Schritt 1. Sie umfasst alle
+vier Eingänge, ihre kohärenten Überlagerungen und eine größere, unten definierte
+unendliche Zustandsklasse. Feld-, Dichte- und Uhrmoden werden vollständig
+kontrolliert. Die rückwärts gerichteten Paarungen erhalten eigene Konstanten.
+
+Für die Verklebung gilt eine zweite Schranke: Sie kontrolliert die gemeinsame
+Summe über alle $33^2=1089$ minimal verklebten Historien auf dem vierdimensionalen
+äußeren Prüfraum. Dazu bleiben die bedingten Schnittdaten aus dem erweiterten
+Randvertrag erhalten. Zwei bereits integrierte Randkerne werden nicht als
+gewöhnliche Hilbert-Operatoren multipliziert.
+
+\begin{center}\begin{tabular}{p{.43\linewidth}p{.48\linewidth}}\toprule
+Gegenstand & Zertifiziertes Beispiel bei Toleranz $\tau=0{,}01$\\\midrule
+Einzelkern: vollständiger Rest auf $\mathcal C_{\sqrt{261}}$ &
+$E_{\rm single}<0{,}009004$ in $V'$, in beiden Richtungen.\\
+Verklebung: beide äußeren Zustände in $E_4$ &
+$E_{\rm sewn}<0{,}000970$ als absoluter Amplitudenfehler, vor numerischer Koeffizientenauswertung.\\
+Hinreichende Basisgrößen dieser Abschätzung &
+$3{,}385\cdot10^{18}$ beim Einzelkern; $3{,}503\cdot10^{34}$ bedingte Schnittmoden.\\
+Praktische Entscheidung bei $10^6$ Moden &
+\textbf{HOLD}: Die Abschätzung zertifiziert hier keine kompakte Rechnung mit dieser Toleranz.\\\bottomrule
+\end{tabular}\end{center}
+
+\textbf{Was gerechnet wurde.} Exakte algebraische Momente aller 33 Historien,
+1089 Gaußpaarungen samt Abelvergleich, zehn unabhängige Testgruppen und eine
+explizite Liste von 516 Startmoden. Die sehr großen Projektionsmatrizen wurden
+\emph{nicht} aufgebaut. Die genannten Größen sind hinreichende, konservative
+Zertifikate; sie sind weder Minimalgrößen noch Untergrenzen des tatsächlichen
+Reduktionsfehlers.
+
+\textbf{Abbruchregel.} Erfolg nur bei analytischem Rest plus zertifiziertem
+numerischem Fehler unter $\tau$. Bei Überschreiten des Modenbudgets lautet das
+Ergebnis \texttt{HOLD\_RESOURCE\_CAP}. Kleine neu beobachtete Matrixelemente
+ersetzen die Restschranke nicht.
+
+\textbf{Physikalische Grenze.} Das Ergebnis betrifft das deklarierte endliche
+Kontrollmodell. Es konstruiert weder eine $L^2$-Evolution noch die vollständige
+vierdimensionale CST-Summe und beweist keine Singularitätsauflösung.
+\newpage
+
+\section{Unveränderter Kern, Zustandsklasse und Fehlerbegriff}
+Es gelten $\beta=4/\sqrt6$, $\kappa=1$, Skalarmasse null und ursprüngliche
+Geometriekopplung eins. Die lokalen Kausalsets besitzen Anfang $\{0,1\}$,
+Inneres $\{2\}$ und Ende $\{3,4\}$. Die in \texttt{prior\_core.py} exakt
+aufgezählten 33 Ordnungen und ihr Gewicht $1/33$ bleiben unverändert.
+\begin{align}
+ c(n)&=(1,-9,16,-8)_n\ (0\le n\le3),\qquad c(n)=0\ (n\ge4),\notag\\
+ F_4(C)&=|C|-\sum_{i\prec j}c(|I(i,j)|),\notag\\
+ S_C/\hbar&=F_4(C)-\tfrac12\sum_j r_j
+ -\tfrac\beta4\sum_{i\prec j}c_{ij}
+ \bigl[r_j(t_j-t_i)^2+(q_j-q_i)^2\bigr].                 \tag{1}
+\end{align}
+Die Maße sind $\dd\lambda(t)=\dd t/2$ auf $[-1,1]$,
+$\dd\nu(r)=\tfrac12\delta_0+\tfrac12\one_{(0,1)}\dd r$ und
+$\dd\mu_A=\tfrac12\prod_{j=1}^2\dd\lambda(t_j)\dd\nu(r_j)\dd q_j$.
+Randfunktionen sind unter gleichzeitiger Vertauschung der beiden vollständigen
+Punktdatensätze invariant. Das ursprüngliche $H=L^2_{\rm inv}(\mu_A)$ bleibt
+als Norm der vier Eingänge bestehen. Schritt 1 legt zusätzlich fest:
+\[
+ w(q)=(1+|q|^2)^4,\qquad V=L^2_{\rm inv}(w\dd\mu_A),\qquad
+ V'=L^2_{\rm inv}(w^{-1}\dd\mu_A).                         \tag{2}
+\]
+Die Anti-Dualpaarung ist $\langle g,h\rangle=\int\bar g h\dd\mu_A$.
+Es gilt $\norm{h}_{V'}=\sup_{\norm{g}_V\le1}|\langle g,h\rangle|$.
+Der Abel-definierte ursprüngliche Kern $K:V\to V'$ ist beschränkt; eine
+Abbildung aller normierten $H$-Zustände nach $H$ ist bereits widerlegt.
+
+Mit $q_s=(q_1+q_2)/\sqrt2$, $q_a=(q_1-q_2)/\sqrt2$ lauten die Eingänge
+\[
+ h_0=\pi^{-1/2}e^{-(q_s^2+q_a^2)/2},\quad h_1=\sqrt2q_s h_0,
+ \quad d_0=2\one_{00},\quad
+ d_+=\frac2{\sqrt3}(\one_{10}+\one_{01}+\one_{11}),\quad
+ \psi_{s,n}=\sqrt2\,d_s h_n.                              \tag{3}
+\]
+Die Uhrfunktion ist eins. Reihenfolge: $(0,0),(0,1),(+,0),(+,1)$.
+Sie sind $H$-orthonormal; ihre $V$-Grammatrix ist
+$\operatorname{diag}(65,261,65,261)$. Definiere
+\[
+ \begin{aligned}
+ E_4&=\operatorname{span}\{\psi_{0,0},\psi_{0,1},\psi_{+,0},\psi_{+,1}\},\qquad
+ \mathcal E_4=\{f\in E_4:\norm f_H\le1\},\\
+ \mathcal C_M&=\{f\in V:\norm f_H\le1,\ \norm f_V\le M\},\qquad M=\sqrt{261}.
+ \end{aligned}
+                                                                  \tag{4}
+\]
+Damit ist $\mathcal E_4\subset\mathcal C_M$. Einzelantworten werden im gesamten
+$V'$ geprüft, nicht nur an vier Matrixzeilen. Bei der Verklebung wird
+$\sup_{f,g\in\mathcal E_4}|\langle g,(K_{\rm joint}-K_{\rm approx})f\rangle|$
+kontrolliert. Diese zweite Aussage ist \emph{keine} Behauptung über die
+$V\to V'$-Norm des gemeinsamen Kerns auf allen Zuständen.
+
+\textbf{Rückwärts} bezeichnet die Anti-Dualadjungierte: die zum vertauschten,
+komplex konjugierten Kern gehörende Testpaarung. Gemeint ist weder eine
+inverse Dynamik noch unitarisierte Zeitumkehr.
+\newpage
+
+\section{Vollständige, verschachtelte Moden und richtige Projektion}
+Setze $a=w^{-1/2}=(1+|q|^2)^{-2}$ und $Uf=a^{-1}f$. Dann ist $U:V\to H$
+eine Isometrie. Der transformierte Kern
+\[
+ \TT=aKa:H\to H,\qquad
+ \norm\TT_{\HS}\le C_*:=\frac\pi6\sqrt{\frac{2\pi}{\beta}}
+ <1{,}027062                                                     \tag{5}
+\]
+ist Hilbert--Schmidt: $|K|\le\sqrt{2\pi/\beta}$ und
+$\int_{\R^2}a(q)^2\dd q=\pi/3$. Der Faktor $1/2$ je Randmaß ergibt $\pi/6$.
+Die endgültige Historieninterferenz bleibt in $K$ enthalten; nur die
+\emph{obere Abschätzung} verwendet die Dreiecksungleichung.
+
+Verwendet werden normierte zweidimensionale Hermitefunktionen
+$h_{n_s,n_a}$ mit $n_s+n_a\le N$, sowie an jedem Punkt
+\[
+ \rho_{-1}=\sqrt2\,\one_{\{0\}},\quad
+ \rho_k=\sqrt{2(2k+1)}P_k(2r-1)\one_{(0,1)}\ (0\le k\le D),\qquad
+ \chi_k=\sqrt{2k+1}P_k(t)\ (0\le k\le L).                 \tag{6}
+\]
+Das Dichteatom bleibt ein eigener Modus. Aus den Produkten, mit Faktor $\sqrt2$
+für das Randmaß, entstehen durch Punktvertauschung invariant symmetrisierte
+Moden $e_\alpha$. Die relative Partnerphase ist $(-1)^{n_a}$; bei identischen
+Punktindizes ist nur gerades $n_a$ erlaubt. Die Testmoden und Antwortmoden sind
+\[
+ v_\alpha=a e_\alpha\in V,\qquad
+ \widetilde v_\alpha=w v_\alpha=a^{-1}e_\alpha\in V'.       \tag{7}
+\]
+Sie sind bezüglich der Paarung biorthogonal. Mit $P$ als orthogonalem
+Projektor in $H$ und $P_V=U^{-1}PU$ ergibt sich
+\[
+ \TT_{N D L}=P\TT P,\qquad
+ K_{N D L}f=\sum_{\alpha,\gamma}
+ \widetilde v_\alpha\langle v_\alpha,Kv_\gamma\rangle
+                  (v_\gamma,f)_V.                       \tag{8}
+\]
+Eine Expansion der Antwort in denselben $v_\alpha$ wäre im Allgemeinen falsch.
+Alle Paarungen zwischen im Testspan enthaltenen Zuständen bleiben durch (8)
+exakt erhalten. Das ist eine neue, der Testtopologie angepasste Reduktion;
+sie wird nicht mit dem früheren $H$-Projektor gleichgesetzt.
+
+Für $F=(N+1)(N+2)/2$ und $J=(D+2)(L+1)$ gilt
+\[
+ d_{\rm inv}=\tfrac12\bigl[FJ^2+(\lfloor N/2\rfloor+1)J\bigr].       \tag{9}
+\]
+$U\psi_{s,n}$ ist ein Gaußpaket mal Polynom vom Grad $4+n$.
+Daher sind alle vier Eingänge ab $N\ge5,D\ge0,L\ge0$ exakt enthalten.
+Die früheren 15 Testzustände, einschließlich Feldgrad zwei, Dichtemasken und
+quadratischer Uhrmode, sind ab $(6,0,2)$ enthalten: 516 invariante Moden.
+\texttt{basis.py} liefert deren vollständige Labels sowie die exakte Einbettung
+der vier Eingänge. Jede Erhöhung von $N,D,L$ ergänzt einen ganzen Sektor;
+es werden keine unbekannten Restmoden stillschweigend weggelassen.
+\newpage
+
+\section{Satz über den vollständigen Einzelkernrest}
+Auf den jeweiligen Variablen wirken die positiven selbstadjungierten
+Standardoperatoren mit Hermite- beziehungsweise Legendre-Spektrum:
+\[
+ H_q=-\Delta_q+|q|^2,\quad
+ A_r=-\partial_r[r(1-r)\partial_r],\quad
+ A_t=-\partial_t[(1-t^2)\partial_t].                       \tag{10}
+\]
+$A_r$ wirkt auf dem Atom als null und auf dem offenen Stratum mit der
+natürlichen Legendre-Realisierung. Die verschwindenden Endpunktfaktoren
+entfernen die Randterme. Die ersten ausgelassenen Eigenwerte sind
+\[
+ \lambda_q=2N+4,\qquad\lambda_r=(D+1)(D+2),\qquad
+ \lambda_t=(L+1)(L+2).                                   \tag{11}
+\]
+Für die Ausgangs- und Eingangsvariablen seien
+$C_{q,\pm}\ge\norm{H_{q,\pm}\TT}_{\HS}$ und entsprechend
+$C_{r,j,\pm},C_{t,j,\pm}$ zertifiziert. Setze
+\[
+ A_\pm^2=\frac{C_{q,\pm}^2}{\lambda_q^2}
+       +\sum_{j=1}^2\frac{C_{r,j,\pm}^2}{\lambda_r^2}
+       +\sum_{j=1}^2\frac{C_{t,j,\pm}^2}{\lambda_t^2}.
+                                                                  \tag{12}
+\]
+Dann gelten für den \emph{gesamten} ausgelassenen Rest:
+\begin{align}
+ \norm{(1-P)\TT}_{\HS}&\le A_+, &
+ \norm{\TT(1-P)}_{\HS}&\le A_-,\notag\\
+ \norm{K-K_{N D L}}_{V\to V'}&\le
+ B:=\min\{C_*,\sqrt{A_+^2+A_-^2}\},                       \tag{13}\\
+ \sup_{f\in\mathcal C_M}\norm{(K-K_{N D L})f}_{V'}&\le MB.
+                                                                  \tag{14}
+\end{align}
+Dieselbe Schranke (14) gilt für den adjungierten Reduktionsfehler.
+Für $f\in\mathcal E_4$ im Projektionsraum verbessert sich die Vorwärtsschranke
+zu $\norm f_V A_+$, die rückwärts gerichtete zu $\norm f_V A_-$.
+
+\textbf{Beweis.} Der spektrale Satz gibt für jeden Sektor
+$\norm{(1-P_q)u}^2\le\lambda_q^{-2}\norm{H_qu}^2$ und analog für die
+vier kompakten Faktoren. Für die kommutierenden Tensorprojektoren gilt
+$1-P\le\sum_j(1-P_j)$. Integration über den anderen Rand liefert (12).
+Die Hilbert--Schmidt-orthogonale Zerlegung
+\[
+ \TT-P\TT P=(1-P)\TT+P\TT(1-P)
+\]
+ergibt (13); $P\TT P$ ist zudem die orthogonale Projektion im Kernraum,
+also ist ihr Rest höchstens $\norm\TT_{\HS}$. Die Isometrien zwischen
+$V,V'$ und $H$ geben (14). Alle verwendeten Differentialnormen sind endlich,
+wie die exakten Momente auf der folgenden Seite zeigen. Damit handelt es
+sich um eine Restschranke über unendlich viele Moden, nicht um eine endliche
+Summe zusätzlich beobachteter Koeffizienten. \hfill$\square$
+
+Der Beweis benutzt keine positive Historieninterferenz und keine
+Hermitizität von $K$. Besonders die Dichtekonstanten unterscheiden sich
+zwischen beiden Richtungen deutlich.
+\newpage
+
+\section{Exakte Momente und zertifizierte Konstanten}
+Für jede Historie sei $H^{(0)}$ die rationale Skalarhessian aus (1),
+$B=\{0,1,3,4\}$ und
+\[
+ Q_C=H^{(0)}_{BB}-H^{(0)}_{B2}(H^{(0)}_{22})^{-1}H^{(0)}_{2B},
+ \quad \alpha_C=-\beta H^{(0)}_{22}\ge\beta.
+\]
+Nach der inneren Skalarintegration hat jeder Term den Betrag höchstens
+$\sqrt{2\pi/\alpha_C}$. Für eine Feldrichtung schreibe den Phasengradienten
+als $Dy+Ex$, mit den entsprechenden Blöcken aus $\beta Q_C$, und $G=EE^T$.
+Das normierte Feldmoment ist exakt
+\begin{align}
+ J_q={}&\frac{583}{35}+\frac{11}{5}\operatorname{tr}D^2
+ -\frac15(\operatorname{tr}D)^2+\frac{53}{20}\operatorname{tr}G\notag\\
+ &+\frac18\left[(\operatorname{tr}D^2)^2+2\operatorname{tr}D^4
+ +\operatorname{tr}G\operatorname{tr}D^2+2\operatorname{tr}(DGD)
+ +(\operatorname{tr}G)^2+2\operatorname{tr}G^2\right].       \tag{15}
+\end{align}
+Unter der normierten Dichte $(3/\pi)(1+|y|^2)^{-4}$ gilt
+\[
+ \EE\frac{|y|^{2m}}{(1+|y|^2)^k}
+ =\frac{3m!\,\Gamma(3+k-m)}{\Gamma(4+k)},\qquad m<3+k.    \tag{16}
+\]
+Insbesondere sind $\EE|y|^2=1/2$ und $\EE|y|^4=1$.
+Zur Kontrolle erhält man vor der Integration, nach Division durch den
+Kernfaktor, für $H_y$ den Realteil
+$|y|^2+|Dy+Ex|^2+(8-16|y|^2)/(1+|y|^2)^2$ und den Imaginärteil
+$-\operatorname{tr}D+8y\cdot(Dy+Ex)/(1+|y|^2)$. Quadrieren und (16)
+ergeben (15); im Test wird dieselbe Integration unabhängig kartesisch ausgeführt.
+
+Für $\kappa_j=\tfrac12+\tfrac\beta4\sum_{i\prec j}c_{ij}(t_j-t_i)^2$
+und $s_j=\partial_{t_j}(S_{\rm dust}/\hbar)$,
+$s_{jj}=\partial_{t_j}^2(S_{\rm dust}/\hbar)$ sind die kompakten Momente
+\[
+ J_{r,j}=\EE_t\left[\frac{\kappa_j^2}{6}+\frac{\kappa_j^4}{60}\right],\quad
+ J_{t,j}=\EE_{t,r}\left[(1-t_j^2)^2s_j^4+
+ \{2t_js_j-(1-t_j^2)s_{jj}\}^2\right].                    \tag{17}
+\]
+Alle Erwartungswerte sind exakte Polynommomente der deklarierten Maße,
+einschließlich sämtlicher Dichtestrata. Jensen kontrolliert die innere
+kompakte Integration. Für jeden der fünf Differentialoperatoren gilt
+\[
+ C_{\bullet,\pm}=\frac\pi6\,\frac1{33}
+ \sum_C\sqrt{\frac{2\pi}{\alpha_C}}\sqrt{J_{\bullet,C,\pm}}.        \tag{18}
+\]
+Die folgenden Dezimalzahlen dienen der Lesbarkeit; die Dateien enthalten
+192-Bit-Arb-Einschließungen, die für alle Entscheidungen verwendet werden.
+\begin{center}\begin{tabular}{lrr}\toprule
+Konstante & vorwärts & rückwärts\\\midrule
+$C_q$ &76,470398552781&76,470398552781\\
+$C_{r,1}=C_{r,2}$ &2,776486574555&0,196205289258\\
+$C_{t,1}=C_{t,2}$ &6,685137856442&6,301860085436\\\bottomrule
+\end{tabular}\end{center}
+\newpage
+
+\section{Alle vier Eingänge und ihr Reduktionsfehler}
+Die Anfangspunkte haben in jeder Historie keine Vorgänger. Ihre Dichtephase
+ist stets $e^{-\ii r/2}$. Mit
+\[
+ E=\int_0^1e^{-\ii r/2}\dd r=e^{-\ii/4}\operatorname{sinc}(1/4),\qquad
+ \zeta=\frac{2E+E^2}{\sqrt3}
+ =1{,}6033902781-0{,}5537886752\ii                         \tag{19}
+\]
+gilt \emph{für die volle Summe}, und sogar für jede einzelne Historie,
+\[
+ K\psi_{+,n}=\zeta K\psi_{0,n},\qquad
+ K\frac{\zeta\psi_{0,n}-\psi_{+,n}}{\sqrt{1+|\zeta|^2}}=0,
+ \quad n=0,1.                                           \tag{20}
+\]
+Die beiden Nullzustände sind $H$-normiert. Eine einheitliche relative
+Fehlertoleranz mit Nenner $\norm{Kf}$ ist daher auf $\mathcal E_4$ nicht
+sinnvoll. Der absolute Fehler aus (2) bleibt wohldefiniert. Die Beziehung
+(20) darf nicht auf die rückwärts gerichteten Antworten übertragen werden.
+Globale Feldparität trennt $n=0$ und $n=1$ orthogonal; gemischte Paarungen
+verschwinden exakt, auch unter den verwendeten Projektionen.
+
+Ein hinreichendes analytisches Zertifikat für $\tau=1/100$ ist
+\[
+ (N,D,L)=(151306,124,192),\qquad
+ d_{\rm inv}=3384672308841108222.                         \tag{21}
+\]
+Die Zahlen in der folgenden Tabelle sind \emph{nach oben gerundet}:
+\begin{center}\begin{tabular}{lrr}\toprule
+Eingang & Vorwärtsrest in $V'$ & Rückwärtsrest in $V'$\\\midrule
+$\psi_{0,0}$ &0,003512098&0,002802409\\
+$\psi_{0,1}$ &0,007037690&0,005615587\\
+$\psi_{+,0}$ &0,003512098&0,002802409\\
+$\psi_{+,1}$ &0,007037690&0,005615587\\\midrule
+$\sup_{f\in\mathcal E_4}$ &0,007037690&0,005615587\\
+$\sup_{f\in\mathcal C_{\sqrt{261}}}$, vollständiger Projektionsfehler
+ &\multicolumn{2}{c}{$<0{,}009003549$}\\\bottomrule
+\end{tabular}\end{center}
+Gleiche Zeilengrenzen bedeuten keine Gleichheit der Antworten. Die Grenzen
+sind obere Hüllen; positive Eingänge können zusätzlich mit $|\zeta|$ aus den
+Atomeingängen abgeschätzt werden. Für kleine Basen nutzt der Code außerdem
+die triviale $L^1$-Eingangsschranke und wählt das kleinere zertifizierte Ergebnis.
+
+Die systematische Erweiterungsfolge wird rein auf Konstantenebene geprüft:
+\begin{center}\begin{tabular}{rrrrl}\toprule
+$N$&$D$&$L$&$d_{\rm inv}$&Status bei $10^6$ Moden, $\tau=0{,}01$\\\midrule
+6&0&2&516&weiter ergänzen\\
+12&1&4&10290&weiter ergänzen\\
+24&3&8&329355&weiter ergänzen\\
+48&7&16&14339925&\texttt{HOLD\_RESOURCE\_CAP}\\\bottomrule
+\end{tabular}\end{center}
+Die Formel kann auch über das Ressourcenlimit hinaus ausgewertet werden;
+eine entsprechende Basisrechnung wurde damit nicht ausgeführt. Bereits
+enthaltene vier oder 15 Matrixelemente allein begrenzen keine vollständige
+Antwortnorm.
+\newpage
+
+\section{Verklebung: bedingte Paarung und Schnittgedächtnis}
+Es gelten $L=\{0,1,2,3,4\}$, $R=\{3,4,5,6,7\}$ und $S=\{3,4\}$.
+Der gemeinsame Vertrag aus Schritt 2 rekonstruiert aus Schnittinzidenzen,
+Intervallprofilen und den benötigten früheren Feldern exakt
+\[
+ S_C=S_L+S_R-S_S+\Delta S.                                 \tag{22}
+\]
+Die fünf im vollständig geschichteten Beispiel fehlenden Terme und alle
+anderen Kreuzterme in den 1089 minimalen Verklebungen bleiben enthalten.
+$\Delta S$ hängt bei diesen minimalen Verklebungen nur von Endpunkten
+\emph{außerhalb} des Schnitts ab. Der gesamte nicht am Schnitt liegende
+Datensatz, einschließlich $q_2,q_5$, sei $\xi$. Für $\epsilon>0$ setze
+\[
+ A_\epsilon(s;\xi)=e^{-\epsilon|q_S|^2/4}
+                    e^{\ii(S_L-S_S)/\hbar},\qquad
+ B_\epsilon(s;\xi)=e^{-\epsilon|q_S|^2/4}
+                    e^{-\ii S_R/\hbar}.                       \tag{23}
+\]
+Dann ist die Schnittintegration genau
+\[
+ 2e^{\ii\Delta S/\hbar}\langle B_\epsilon,A_\epsilon\rangle_{H_S^{\rm lab}},
+ \qquad H_S^{\rm lab}=L^2(\dd\mu_S),                        \tag{24}
+\]
+zusammen mit $e^{-\epsilon(q_2^2+q_5^2)/2}$ außerhalb des Schnitts.
+Der Faktor zwei korrigiert das doppelte Schnittquotientenmaß, $S_S$ wird
+einmal subtrahiert und der gemeinsame Regulator trifft jeden inneren Punkt
+einmal. Das ursprüngliche Maß wird nicht durch $w^{-1}\dd\mu_S$ ersetzt.
+
+\textbf{Warum eine gelabelte Schnittbasis?} Bei festgehaltenem $\xi$ und
+festgehaltenen Historien sind $A_\epsilon,B_\epsilon$ unter Vertauschung
+nur der Schnittpunkte im Allgemeinen \emph{nicht} invariant. Eine vorzeitige
+Invarianzprojektion würde Information verwerfen. Hier wird daher die volle
+Produktbasis (6) ohne Symmetrieeinschränkung verwendet:
+\[
+ d_{\rm lab}=FJ^2,\qquad \Pi=\Pi_{N D L}^{\rm lab}.
+\]
+Der Projektor kommutiert mit Relabeln; nach der gemeinsamen Historien- und
+Datenintegration ist die äußere Paarung invariant. $\Pi$ ersetzt die
+Schnittpaarung, während sämtliche Daten $\xi$ und $e^{\ii\Delta S/\hbar}$
+erhalten bleiben.
+
+Beide bedingten Funktionen sind für $\epsilon>0$ quadratintegrabel, mit
+$\norm{A_\epsilon}^2=\norm{B_\epsilon}^2=\pi/\epsilon$. Die exakte Identität
+\[
+ \langle B,A\rangle-\langle\Pi B,\Pi A\rangle
+   =\langle(1-\Pi)B,(1-\Pi)A\rangle                       \tag{25}
+\]
+zeigt, warum sowohl vorwärts als auch rückwärts gerichtete \emph{vollständige}
+Modenreste gebraucht werden. Dies ist eine Hilfsrechnung mit bedingten,
+regulierten Integranden. Sie setzt nicht voraus, dass $Kf\in H$ ist, und
+liefert am Ende einen absoluten Fehler der zugelassenen Testpaarung.
+\newpage
+
+\section{Analytische obere Grenze beider bedingter Modenreste}
+Am Schnitt sei die skalare Phase einer Seite $q^TDq/2+\ell^Tq$,
+$\ell=\beta H^{(0)}_{S,\mathrm{rest}}q_{\rm rest}$. Setze
+$d^2=\norm D_F^2$, $b^2=\norm{\beta H^{(0)}_{S,\mathrm{rest}}}_F^2$.
+Unter der normierten Gaußdichte mit Kovarianz $\epsilon^{-1}I_2$ gilt
+$\norm{|q|^2}_{L^2}=\sqrt8/\epsilon$. Direkte Differentiation von
+$e^{-\epsilon|q|^2/4+\ii(q^TDq/2+\ell^Tq)}$, Dreiecksungleichung und
+$\sqrt\epsilon|\ell|\le(\epsilon+|\ell|^2)/2$ ergeben
+\begin{align}
+ \frac{\norm{H_q A_\epsilon}}{\norm{A_\epsilon}}
+ &\le c+3b^2|q_{\rm rest}|^2,\notag\\
+ c&=\frac{3\epsilon}{2}+\frac{\sqrt8}{\epsilon}|1-\epsilon^2/4|
+ +\frac{2\sqrt8}{\epsilon}d^2+\sqrt8 d+|\operatorname{tr}D|. \tag{26}
+\end{align}
+Dasselbe gilt für $B_\epsilon$. Eine Herleitung der Konstante: Der Realteil
+von $H_qA/A$ ist $\epsilon+(1-\epsilon^2/4)|q|^2+|Dq+\ell|^2$;
+der Imaginärteil ist $\epsilon q\cdot(Dq+\ell)-\operatorname{tr}D$.
+Benutze $|Dq+\ell|^2\le2d^2|q|^2+2|\ell|^2$ sowie
+$\sqrt\epsilon|\ell|\le\epsilon/2+|\ell|^2/2$. Die leicht vergrößerte
+Konstante (26) folgt unmittelbar.
+
+Die äußere Feldmaßhülle $|h_n|/\norm{h_n}_{L^1}$ hat Radialmomente
+$n+2$ und $(n+2)(n+4)$. Der eine lokale innere Feldwert hat Gaußvarianz
+$1/\epsilon$. Damit
+\[
+ m_2=n+2+\epsilon^{-1},\quad
+ m_4=(n+2)(n+4)+2(n+2)\epsilon^{-1}+3\epsilon^{-2},\quad
+ U_C=c^2+6cb^2m_2+9b^4m_4.                               \tag{27}
+\]
+Die Dichte- und Uhrenergien $R_C,T_C$ werden wie (17) exakt integriert.
+Links wird wegen $S_L-S_S$ der konstante Anteil $1/2$ in $\kappa_j$
+entfernt. Rechts ist $R_C=41/480$. Die rechten Uhrenergien werden für den
+äußeren Dichtesektor $s=0,+$ getrennt berechnet: $00$ beziehungsweise das
+gleichgewichtete Maß der Masken $10,01,11$. Definiere
+\[
+ L_C(n)=\sqrt{U_C/\lambda_q^2+R_C/\lambda_r^2+T_C/\lambda_t^2},
+ \qquad R_C(s,n)\text{ analog für die rechte Seite}.        \tag{28}
+\]
+Die über die äußeren und lokalen inneren Daten gemittelte quadrierte
+Schnittrestnorm ist höchstens $(\pi/\epsilon)L_C(n)^2$ beziehungsweise
+$(\pi/\epsilon)R_C(s,n)^2$.
+
+Seien $\bar L_n,\bar R_{s,n}$ die Mittelwerte von (28) über je 33 Historien,
+$D_0=1/(2\sqrt2)$, $D_+=\sqrt3/(2\sqrt2)$ sowie
+$\ell_0=\norm{h_0}_{L^1}=2\sqrt\pi$, $\ell_1=4$. Dann gilt
+\[
+ E^{\rm cut}_{s n,0 n}\le
+ \frac{4\pi^2}{\epsilon^2}\ell_n^2 D_0D_s\,\bar L_n\bar R_{s,n}.       \tag{29}
+\]
+Beweis: (25), Cauchy--Schwarz, Jensen über die verbleibenden Daten und
+$|e^{\ii\Delta S/\hbar}|=1$. Die äußeren Seitenmaße faktorisieren nach dem
+Betragsübergang. Die zwei inneren Feldintegrale geben $2\pi/\epsilon$,
+die Schnittnormen $\pi/\epsilon$, die Maßkorrektur zwei. Das erklärt
+sämtliche Faktoren in (29), ohne einen Kreuzterm aus der Amplitude zu löschen.
+\newpage
+
+\section{Gemeinsamer Abelrest ohne Differenzheuristik}
+In (29) sind positive Eingangsspalten exakt $\zeta$ mal die Atomspalten;
+die globale Parität löscht die gemischten $n$-Blöcke. Somit ist auf
+$\mathcal E_4\times\mathcal E_4$
+\[
+ E_{\rm cut}\le\max_{n=0,1}\sqrt{1+|\zeta|^2}
+ \sqrt{(E^{\rm cut}_{0n,0n})^2+(E^{\rm cut}_{+n,0n})^2}.    \tag{30}
+\]
+Der äußere Zustandsraum ist damit vollständig abgedeckt, einschließlich
+kohärenter Überlagerungen und Rückwärtspaarungen.
+
+Es verbleibt $\epsilon\downarrow0$. Für jede gemeinsame Historie sei
+$H^{(0)}_C$ die vollständige rationale $8\times8$-Hessian und
+\[
+ Q_\epsilon=\operatorname{diag}(1_{\rm außen},\epsilon_{\rm innen})
+              -\ii\beta H_C^{(0)},\qquad
+ F_{00}(\epsilon)=\frac{16\pi^3}{\prod_{k=1}^8\sqrt{p_k(\epsilon)}},\quad
+ F_{11}(\epsilon)=F_{00}(\epsilon)e_{\rm in}^TQ_\epsilon^{-1}e_{\rm out}.
+                                                                  \tag{31}
+\]
+Die Gaußelimination erfolgt mit den äußeren Indizes $(0,1,6,7)$ zuerst,
+dann $(2,3,4,5)$. $p_k$ sind ihre Schurpivots. $e_{\rm in}$ hat Einsen
+bei $0,1$, $e_{\rm out}$ bei $6,7$. Der Faktor $16\pi^3$ enthält die
+Normierung $h_0h_0=\pi^{-1}$ und das achtdimensionale Gaußintegral.
+Die Momente von $h_1h_1$ ergeben gerade die Inversenmatrix in (31).
+
+Für $\epsilon>0$ sind alle Pivots akkretiv. Bei $\epsilon=0$ werden für
+alle 1089 Fälle Nichtverschwindung und Abstand vom negativen reellen
+Verzweigungsschnitt mit Arb eingeschlossen. Die Wurzeln sind also die
+stetig fortgesetzten Abelzweige. Obwohl 32 rein innere Skalarblöcke singulär
+sind, sind alle mit den äußeren Gaußpaketen versehenen $Q_0$ invertierbar.
+Die endlichen Gaußpaarungen existieren damit analytisch; es wird keine
+unkontrollierte punktweise Grenzwertannahme verwendet.
+
+Setze $\delta_n(\epsilon)=1089^{-1}\sum_C|F_{nn,C}(\epsilon)-F_{nn,C}(0)|$.
+Die verbleibende Staubphase wird im Betrag durch eins beschränkt, alle
+Dichtestrata sind im Maß enthalten. Aus $D_0^2=1/8$ und
+$D_0D_+=\sqrt3/8$ folgt
+\[
+ E_{\rm Abel}\le\frac{\sqrt{1+|\zeta|^2}}4
+                         \max\{\delta_0,\delta_1\}.       \tag{32}
+\]
+Dies ist eine eingeschlossene Differenz zum \emph{analytisch definierten}
+Abelwert (31), keine Differenz zweier Quadraturregeln als Fehlerersatz.
+Die Gravitationsphase hat Betrag eins und ist für beide Regulatorwerte gleich.
+
+\begin{center}\begin{tabular}{rrrr}\toprule
+$\epsilon$&$\delta_0$ kleiner als&$\delta_1$ kleiner als&$E_{\rm Abel}$ kleiner als\\\midrule
+$1/7$&0,023788252&0,041998890&0,020675504\\
+$1/49$&0,003915235&0,007374456&0,003630348\\
+$1/343$&0,000572131&0,001089731&0,000536461\\\bottomrule
+\end{tabular}\end{center}
+Zusätzlich reproduziert die neue Gaußauswertung die eingefrorene komplexe
+1089-Historien-Summe im vollständigen Atomsektor. Das prüft Phase, Maß und
+Wurzelzweig unabhängig von den neuen Restgrenzen.
+\newpage
+
+\section{Verklebungszertifikat und ausführbare Abbruchregel}
+Bei $\epsilon=1/343$ liefert die explizite, konservative Budgetzuweisung
+\[
+ (N,D,L)=(76474292424,1510,2288),\qquad
+ d_{\rm lab}=35026448697292180628528179868001600.            \tag{33}
+\]
+Die eingeschlossenen Obergrenzen aus (30) und (32) erfüllen
+\[
+ E_{\rm cut}<0{,}000432938,\qquad
+ E_{\rm Abel}<0{,}000536461,\qquad
+ E_{\rm total}<0{,}000969398+E_{\rm num}.                  \tag{34}
+\]
+Für $\tau=0{,}01$ bleibt also ein numerisches Budget größer als
+$0{,}009030602$. $E_{\rm num}$ muss aus einer separat zertifizierten
+Auswertung der tatsächlich implementierten Koeffizienten und verbleibenden
+Integrale stammen. Ein solches riesiges Matrixverfahren wurde nicht
+berechnet. (34) ist die Schranke für die mathematisch exakt projizierte
+Verklebung. Der Code gibt diese Unterscheidung ausdrücklich aus.
+
+\textbf{Algorithmus.} Beginne mit $(6,0,2)$ und einem erklärten Modenlimit,
+hier $10^6$. Berechne aus exakten Momenten und eingeschlossenen Konstanten:
+\begin{enumerate}
+ \item Einzelkern: $E_{\rm an}=\sqrt{261}\min(C_*,\sqrt{A_+^2+A_-^2})$.
+ \item Verklebung: zuerst $E_{\rm Abel}(\epsilon)\le\tau/4$
+ nach (31)--(32) sicherstellen; dann $E_{\rm an}=E_{\rm cut}+E_{\rm Abel}$.
+ Die im Prüfpaket dokumentierte Suche verwendet $\epsilon=7^{-k}$,
+ höchstens elf Kandidaten; fehlende Zertifizierung führt zum Abbruch.
+ \item Wenn Modenzahl größer als Limit: \texttt{HOLD\_RESOURCE\_CAP}.
+ Sonst bei $E_{\rm an}+E_{\rm num}<\tau$: \texttt{TOLERANCE\_PASS}.
+ Bei Gleichheit oder unentschiedener Einschließung wird weiter ergänzt.
+ \item Andernfalls: \texttt{EXTEND\_BASIS}. Die dokumentierte verschachtelte
+ Folge verdoppelt Feldgrad, erweitert die positiven Dichtegrade und
+ die Uhrgrade gemeinsam. Alternativ können die größten Beiträge in
+ (12) beziehungsweise (28) zuerst verringert werden.
+\end{enumerate}
+Die Ressourcenentscheidung hat Vorrang vor einem rein analytisch möglichen
+Erfolg bei enormen Basisgrößen. Bei der Verklebung müssen Regulator und
+Basis gekoppelt verfeinert werden: $\epsilon\to0$ bei festem Schnittprojektor
+ist durch diese Abschätzung nicht kontrolliert.
+
+\textbf{Bedeutung von HOLD.} Die vorliegende Hülle ist zu grob, um auf der
+dokumentierten kleinen Erweiterungsfolge einen Fehler von $0{,}01$ zu
+zertifizieren. Das beweist nicht, dass der tatsächliche Fehler groß ist,
+oder dass keine effizientere Basis beziehungsweise schärfere Schranke
+existiert. Die stärkste neue Aussage ist die explizite Kontrolle aller
+bisher ausgelassenen Moden in einer festgelegten Topologie.
+
+\textbf{Außerhalb des Vertrags.} Nicht erfasst sind zusätzliche globale
+Historien, Schnittumgehungen, geänderte Maßfaktoren, andere Kopplungen,
+unbegrenzte Dichte- oder Uhrintervalle und ein unendlicher Volumengrenzwert.
+Die Verklebungsaussage ist auf $\mathcal E_4$ an beiden äußeren Rändern
+beschränkt. Ein allgemeiner gemeinsamer Operatornormsatz bleibt offen.
+\newpage
+
+\section{Reproduktion, Quellen und unabhängige Prüfungen}
+Das ZIP enthält Herleitung, PDF, ausführbaren Zertifikatsgenerator,
+Modenkonstruktor, Budgetprüfer, sämtliche Resultate und acht bytegenau
+übernommene Quelldateien. \texttt{provenance.json} fixiert deren Git-Blobs
+auf dem eingangs genannten Main-Stand. \texttt{SHA256SUMS.json} schützt
+alle mitgelieferten Dateien gegen versehentliche Änderungen.
+
+Benötigt werden Python 3.12 und die im Paket fixierten Versionen von
+SymPy, python-flint und NumPy. Die Zertifikate verwenden Arb mit 192 Bit;
+NumPy dient nur unabhängigen Regressionskontrollen, nicht den beweisenden
+Fehlerschranken. Aus einem entpackten Verzeichnis:
+\begin{verbatim}
+python -m pip install -r requirements.txt
+python -B verify.py
+python -B check_budget.py --field 24 --density 3 --clock 8
+python -B check_budget.py --field 24 --density 3 --clock 8 \
+    --composition
+\end{verbatim}
+\texttt{verify.py} prüft Quelldateien und Manifest, führt alle zehn Testgruppen
+aus und erzeugt sämtliche sechs Resultatdateien in einer temporären Kopie
+neu; anschließend vergleicht es sie bytegenau. Kein großes Modenarray und
+keine große Galerkinmatrix werden dabei aufgebaut. Für ein selbst gewähltes
+Numerikbudget gibt es \texttt{--numerical-error}; null bezeichnet ausschließlich
+die mathematisch exakte Projektion.
+
+\begin{center}\begin{tabular}{p{.09\linewidth}p{.81\linewidth}}\toprule
+Test & Unabhängige Kontrolle\\\midrule
+1 & Alle 66 Feldmomente durch kartesische Monomintegration statt Spurformel.\\
+2 & Alle 132 Uhrmomente durch gradgenaue Tensor-Gaußregeln; reiner Regressionstest.\\
+3 & Dichteableitungsnorm durch direkte Integration, Atom separat.\\
+4 & Exakte Vierzustandseinbettung, vorherige Feld-/Uhrgrade, 516 Labels und Symmetrie.\\
+5 & Fehlende Anfangsvorgänger in allen 33 und 1089 Historien; Dichtefaktor.\\
+6 & Monotone Resthüllen, zertifizierte Gesamtbudgets und Ressourcenstatus.\\
+7 & Gaußphase und ungerade Momente gegen unabhängige Eigenwert-/Inversenauswertung.\\
+8 & Beide bedingten Restfaktoren und gelabelte statt vorzeitig symmetrisierter Schnittbasis.\\
+9 & Abbruchentscheidungen einschließlich zusätzlichem numerischem Fehler.\\
+10 & Gewichtete Grammnormen 65 und 261 durch unabhängige Radialintegration.\\\bottomrule
+\end{tabular}\end{center}
+
+\textbf{Primärquellen der Ausgangsdefinitionen.}
+Die Dateien \texttt{inputs/prior\_domain\_DERIVATION.tex} und
+\texttt{inputs/prior\_sewing.py} fixieren den Kernbereich und die exakte
+Rekonstruktion der gemeinsamen Wirkung. Die früheren vier und 15 Testzustände
+sind in den eingefrorenen Rand- und Reduktionsherleitungen dokumentiert.
+Die Mathematik der orthogonalen Basisfunktionen folgt den Standarddefinitionen
+im NIST Digital Library of Mathematical Functions,
+\href{https://dlmf.nist.gov/18.3}{§18.3 (Orthogonalität)} und
+\href{https://dlmf.nist.gov/18.8}{§18.8 (Differentialgleichungen)}.
+Die konkreten Fehlerformeln, Konstanten und Prüfungen dieses Pakets werden
+hier hergeleitet; sie werden nicht als Resultat dieser Referenz ausgegeben.
+
+Lizenz des Prüfpakets: Apache-2.0, entsprechend dem Repository.
+\end{document}
