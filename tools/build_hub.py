@@ -176,6 +176,7 @@ def home(path, data, content, lang):
         + E(dust['scope']) + '</p></div><div class="feature-links">'
         + link(rel(path, dust_app), dust['launch'], **{'class': 'button'})
         + link(dust_guide, dust['dossier'], **{'class': 'feature-link'})
+        + link(REPO + '/blob/main/' + dust_path + 'parity_mixing_v0_1/README.md', 'Paritätserlaubter AA-Mischblock: Nichtnullbefund und Wirkungsvergleich (DE) →' if lang == 'de' else 'Parity-allowed AA mixing: certified nonzero result and action control (DE) →', **{'class': 'feature-link'})
         + link(REPO + '/blob/main/' + dust_path + 'amplitude_existence_v0_1/README.md', 'Endliche AA-Amplitude: Staubintegrale und Abel-Grenzwert abgesichert (DE) →' if lang == 'de' else 'Finite AA amplitude: dust integrability and controlled Abel limit (DE) →', **{'class': 'feature-link'})
         + link(REPO + '/blob/main/' + dust_path + 'boundary_state_space_v0_1/README.md', 'Randzustandsraum A → A: vier normierte Pakete, Gram-Rang geprüft (DE) →' if lang == 'de' else 'A → A boundary state space: four normalized packets, checked Gram rank (DE) →', **{'class': 'feature-link'})
         + link(REPO + '/blob/main/' + dust_path + 'minimal_scalar_action_v0_1/README.md', 'Gemeinsamer Skalarwirkungsansatz: 25 Kontrollen; physikalische Qualifikation offen (DE) →' if lang == 'de' else 'Joint scalar-action candidate: 25 checks; physical qualification open (DE) →', **{'class': 'feature-link'})
