@@ -1,0 +1,42 @@
+{
+  "model_id": "CST-DUST-KG-MIN-v0.1",
+  "status": "EXPLICIT_CANDIDATE_WITH_CONDITIONAL_CONTINUUM_MATCH",
+  "step_1_scope": "field content, finite joint action, exact variations, scalar boundary response and limiting target",
+  "unique_physical_CST_derivation": false,
+  "field_content": {
+    "T": "inherited irrotational dust potential, dimension length",
+    "w": "inherited integrated dust density, dimension action; atom plus positive sector",
+    "Phi": "additional real scalar field, dimension sqrt(action)/length; not T and not an unconstrained dust fluctuation"
+  },
+  "parameters": {
+    "ell": "positive discreteness length, not numerically fixed",
+    "v": "ell^4, geometric volume weight independent of w",
+    "a": "4/(sqrt(6)*ell^2)",
+    "mu2": "nonnegative inverse Compton length squared, not numerically fitted",
+    "xi": 0,
+    "direct_dust_scalar_coupling": 0,
+    "scalar_self_interaction": 0,
+    "cosmological_constant": 0
+  },
+  "action": {
+    "gravity": "hbar*kappa*F4(C), inherited normalization; kappa=(4/sqrt(6))*ell^2/(8*pi*G*hbar)",
+    "dust": "-sum_x w_x*(Gamma_x[T]+1)/2, unchanged",
+    "scalar": "-sum_x v*(Gamma_x[Phi]+mu2*Phi_x^2)/2",
+    "Gamma": "(B(f^2)-2*f*(Bf)+f^2*(B1))/2",
+    "B": "unmodified unsmoothed 4D BD operator, declared finite candidate; no stability or continuum theorem for this joint model",
+    "scalar_Hessian": "-D_inc^T diag(v_x*B_xy) D_inc/2 - mu2*diag(v_x)",
+    "dependence": "H_C depends on C, ell, mu; not directly on T or w",
+    "extra_scalar_boundary_action": "none for the chosen pair action with fixed external scalar values; its full boundary reaction is retained",
+    "gravity_outer_boundary_control_value": 0,
+    "gravity_outer_boundary_physical_status": "NOT_DERIVED"
+  },
+  "boundary_condition_for_variation": "fixed values on an explicitly chosen exterior set; adequacy as physical Cauchy collar and wavefunction projection deferred to step 2",
+  "atom_extension": "same scalar action at w=0 and w>0; this does not select stratum wavefunctions or a physical quantum measure",
+  "decoupling_note": "no direct coupling parameter exists in this minimal candidate; multiplying the entire scalar action by zero is not a qualified matched reference",
+  "scalar_action_matrix_status": "CONSTRUCTED_FOR_DECLARED_CANDIDATE",
+  "physical_matrix_status": "NOT_CONSTRUCTED",
+  "physical_K_0plus": "NOT_COMPUTED",
+  "numerical_physical_entries": null,
+  "remaining_inputs": ["physical_history_family_and_weight", "gravity_boundary_law", "physical_boundary_states_and_products", "field_measure_and_normalization", "density_stratum_masks", "joint_regulator_limit", "CST_continuum_and_variational_convergence", "stability", "renormalized_scalar_parameters", "controlled_geometry_mediation_reference", "truncation_and_total_error_budget"],
+  "physical_gates": {"MODEL":"HOLD", "CURRENT":"HOLD", "CORRESPONDENCE":"HOLD", "BOUNCE":"HOLD", "REGULARITY":"HOLD", "BOUNDARY":"HOLD", "TRAPPING":"HOLD", "EXTENSION":"HOLD"}
+}

@@ -1,0 +1,30 @@
+{
+  "id": "CST-DUST-AA-REDUCTION-GLUING-v0.1",
+  "specification_status": "FROZEN_AFTER_STRUCTURAL_INSPECTION_BEFORE_PRIMARY_NUMERICAL_EVALUATION; not an externally preregistered study",
+  "base_main": "d4cac775a044177e9d66d517c11c941cb812f0a6",
+  "single_region": {
+    "histories": "same 33 labeled covered AA histories, c_C=1/33, kappa=1, mu=0, lambda=1",
+    "input": "normalized atom-density scalar-ground state |0,00>",
+    "original_subspace": ["0:00", "0:10", "+:00", "+:10"],
+    "extended_subspace": "14 orthonormal S2-invariant states: density 0,+,Delta times scalar 00,10,20,02; antisymmetric density A times scalar 01,11. Add |+,00> times normalized symmetric clock mode sqrt(5/2)(P2(t1)+P2(t2)); total rank 15",
+    "matrix_scope": "one input column and its unchanged original entries, not a computed full 15x15 matrix",
+    "projection_error": "norm of the omitted components inside the tested 15-dimensional output space; no full-Hilbert-space upper bound asserted",
+    "width_controls": "outgoing plus ground packet sigma_s=1/2 and 2, sigma_a=1; original input fixed; different states, not truncation errors",
+    "quadrature": {"nodes_per_axis": 48, "precision_bits": 192, "rho": 2},
+    "error_method": "analytic tensor Gauss-Legendre tail plus outward Arb/Acb arithmetic; polynomial scalar moments integrated exactly"
+  },
+  "gluing": {
+    "history": "complete layered order (2,1,2,1,2), 8 points; left and right restrictions each equal AA history 25500",
+    "seam": [3,4],
+    "left": [0,1,2,3,4],
+    "right": [3,4,5,6,7],
+    "comparison": "global interval action versus S_left+S_right-S_seam; shared node terms and quotient measure corrected before comparison",
+    "density_scope": "exact action identity for all densities; numerical kernel comparison restricted to the all-zero density atom stratum, with all clocks integrated and normalized outer atom/ground packets",
+    "seam_measure_correction": "factor 2 converts the seam quotient measure to the labeled interior product measure used in the joint integral",
+    "regulator": "joint Abel limit computed analytically from nonsingular interior blocks; finite positive regulator checks use one regulator for each interior variable",
+    "not_computed": "full 1089 history-pair sum and all positive-density strata of the 8-point example"
+  },
+  "operator_domain_control": "the prior action-decoupled reference has an undamped outgoing antisymmetric scalar chirp, so its nonzero ground-input response is not in the unweighted boundary L2 space; distinguish finite packet matrix elements from bounded evolution",
+  "decision": "NONZERO only if a certified enclosure excludes zero; exact structural identities are checked symbolically",
+  "physical_gates": {"MODEL":"HOLD","CURRENT":"HOLD","CORRESPONDENCE":"HOLD","BOUNCE":"HOLD","REGULARITY":"HOLD","BOUNDARY":"HOLD","TRAPPING":"HOLD","EXTENSION":"HOLD"}
+}
