@@ -1,0 +1,23 @@
+{
+  "scope": "CONDITIONAL_EIGHT_STATE_PROJECTION_NOT_PHYSICAL_DYNAMICS",
+  "row_role": "outgoing",
+  "column_role": "incoming",
+  "geometry_major_order": ["A|0|0m", "A|0|1m", "A|+|0m", "A|+|1m", "K|0|0m", "K|0|1m", "K|+|0m", "K|+|1m"],
+  "preserved_order": ["A|0|0m", "A|0|1m", "K|0|0m", "K|0|1m", "A|+|0m", "A|+|1m", "K|+|0m", "K|+|1m"],
+  "preserved_order_indices_in_geometry_major_zero_based": [0, 1, 4, 5, 2, 3, 6, 7],
+  "matrix_geometry_pair_role": "outgoing_incoming",
+  "carrier_geometry_pair_role": "incoming_outgoing",
+  "matrix_block_to_carrier_label": {"AA":"AA", "AK":"KA", "KA":"AK", "KK":"KK"},
+  "within_geometry_order": [["0",0], ["0",1], ["+",0], ["+",1]],
+  "occupation_index_interpretation": "two chosen wavefunctions with occupations 0 and 1 in one selected excitation direction per boundary sector; not two mode profiles",
+  "parity_selection_rule": {
+    "assumptions": "joint action, measure, regulator and domain invariant under simultaneous real-field sign reversal; packets have parity (-1)^n",
+    "forbidden_if_assumptions_hold": "different incoming and outgoing occupation parity",
+    "does_not_forbid": "stratum mixing or transitions from occupation 0 to excluded occupation 2"
+  },
+  "scalar_gravity_times_identity_4_status": "EXTRA_FACTORISATION_ASSUMPTION_NOT_DERIVED",
+  "physical_gram_matrix": null,
+  "physical_embedding_and_projection": null,
+  "closed_eight_state_dynamics": null,
+  "physical_matrix_entries": null
+}

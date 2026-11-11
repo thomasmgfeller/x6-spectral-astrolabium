@@ -176,6 +176,7 @@ def home(path, data, content, lang):
         + E(dust['scope']) + '</p></div><div class="feature-links">'
         + link(rel(path, dust_app), dust['launch'], **{'class': 'button'})
         + link(dust_guide, dust['dossier'], **{'class': 'feature-link'})
+        + link(REPO + '/blob/main/' + dust_path + 'minimal_scalar_action_v0_1/README.md', 'Gemeinsamer Skalarwirkungsansatz: 25 Kontrollen; physikalische Qualifikation offen (DE) →' if lang == 'de' else 'Joint scalar-action candidate: 25 checks; physical qualification open (DE) →', **{'class': 'feature-link'})
         + link(REPO + '/blob/main/' + dust_path + 'directed_boundary_v0_1/README.md', 'Gerichteter Randvertrag und Gaußprojektion: korrigierte Achtzustandsprüfung (DE) →' if lang == 'de' else 'Directed boundary and Gaussian projection: corrected eight-state audit (DE) →', **{'class': 'feature-link'})
         + link(rel(path, dust_coupling_report), dust['coupling_report'], **{'class': 'feature-link'})
         + link(rel(path, dust_coupling_package), dust['coupling_package'], **{'class': 'feature-link'})
