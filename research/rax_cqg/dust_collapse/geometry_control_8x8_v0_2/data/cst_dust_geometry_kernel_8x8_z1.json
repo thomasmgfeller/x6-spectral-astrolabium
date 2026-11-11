@@ -1,0 +1,159 @@
+{
+  "K_geom": [
+    [
+      [
+        35.0,
+        0.0
+      ],
+      [
+        26.0,
+        0.0
+      ]
+    ],
+    [
+      [
+        26.0,
+        0.0
+      ],
+      [
+        20.0,
+        0.0
+      ]
+    ]
+  ],
+  "basis": [
+    "A|0|0m",
+    "A|0|1m",
+    "K|0|0m",
+    "K|0|1m",
+    "A|+|0m",
+    "A|+|1m",
+    "K|+|0m",
+    "K|+|1m"
+  ],
+  "basis_layout": "stratum_geometry_matter",
+  "dataset_role": "GEOMETRY_SPECTATOR_CONTROL",
+  "delta_chi": null,
+  "diagnostic_gram_origin": "chosen orthonormal formal test basis; not an orbit-derived physical product",
+  "diagnostic_operator_convention": "coefficient_map",
+  "diagnostics": {
+    "either_label_mixing_fro": 0.0,
+    "matter_mixing_fro": 0.0,
+    "stratum_mixing_fro": 0.0,
+    "tensor_residual_fro": 0.0,
+    "unitarity_defect_diagnostic_I8_fro": 5951.613226680645
+  },
+  "exact_source_phase_data": {
+    "K_geom": [
+      [
+        [
+          35,
+          0
+        ],
+        [
+          26,
+          0
+        ]
+      ],
+      [
+        [
+          26,
+          0
+        ],
+        [
+          20,
+          0
+        ]
+      ]
+    ],
+    "arithmetic": "Gaussian integers",
+    "defect_8x8_I8_fro_squared": 35421700,
+    "defect_geom_I2": [
+      [
+        [
+          1900,
+          0
+        ],
+        [
+          1430,
+          0
+        ]
+      ],
+      [
+        [
+          1430,
+          0
+        ],
+        [
+          1075,
+          0
+        ]
+      ]
+    ],
+    "det_K_geom": [
+      24,
+      0
+    ],
+    "det_K_geom_abs_squared": 576
+  },
+  "floating_point_policy": "complex128 for general z; exact Gaussian-integer controls at 1,-1,i; no physical tolerance inferred",
+  "generator_sha256": "d7b83c4d98b38b5439d1a62aefdf1aab76eef359b9fc53c1399a9a66dbfa8e52",
+  "identity_on_extra_labels": "explicit additional test assumption, not determined by gravitational polynomials",
+  "invocation": {
+    "phase": "1"
+  },
+  "n_channels": 2,
+  "n_geometry_states": 2,
+  "n_matter_labels": 2,
+  "npz_sha256": "79751f9ef5cd4ace77f1e11731f5144dab9ebad6d3c5f84566b2cda04d448c75",
+  "original_basis": [
+    "A|0|0m",
+    "A|0|1m",
+    "A|+|0m",
+    "A|+|1m",
+    "K|0|0m",
+    "K|0|1m",
+    "K|+|0m",
+    "K|+|1m"
+  ],
+  "original_to_output_indices": [
+    0,
+    1,
+    4,
+    5,
+    2,
+    3,
+    6,
+    7
+  ],
+  "phase_exact": "1",
+  "physical_8x8_matter_matrix": "NOT_CONSTRUCTED",
+  "physical_K_0plus": "NOT_COMPUTED",
+  "physical_clock": null,
+  "physical_gates": {
+    "BOUNCE": "HOLD",
+    "BOUNDARY": "HOLD",
+    "CORRESPONDENCE": "HOLD",
+    "CURRENT": "HOLD",
+    "EXTENSION": "HOLD",
+    "MODEL": "HOLD",
+    "REGULARITY": "HOLD",
+    "TRAPPING": "HOLD"
+  },
+  "physical_gram": null,
+  "physical_kernel": false,
+  "physical_kernel_convention": null,
+  "source_commit": "fb8481203aaf37d73ba5e66d3325cd062d9ea17b",
+  "source_controls": {
+    "-1": "PASS_EXACT_GAUSSIAN_INTEGER_EVALUATION",
+    "1": "PASS_EXACT_GAUSSIAN_INTEGER_EVALUATION",
+    "i": "PASS_EXACT_GAUSSIAN_INTEGER_EVALUATION"
+  },
+  "source_sha256": "326c4e016b37154298ea875aa4dfb1828051805a4734a2be925d05e32ce53904",
+  "states_per_channel": 4,
+  "version": "0.2",
+  "z": {
+    "imag": 0.0,
+    "real": 1.0
+  }
+}
