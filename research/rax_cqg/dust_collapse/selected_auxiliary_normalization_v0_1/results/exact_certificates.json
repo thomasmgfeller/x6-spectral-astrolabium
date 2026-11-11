@@ -1,0 +1,65 @@
+{
+  "arithmetic": "fractions.Fraction",
+  "controls": {
+    "assign_coefficients": {
+      "a_b_c_d_r_exact": [
+        "35",
+        "13",
+        "26",
+        "20",
+        "2"
+      ],
+      "block_form": "[[a,b*sqrt(r)],[c*sqrt(r),d]]",
+      "defect_8x8_fro_squared_exact": "43925780",
+      "det_UstarU_exact": "576",
+      "each_singular_value_multiplicity": 4,
+      "scalar_normalization_can_make_isometric": false,
+      "squared_singular_polynomial": "x^2 - 3315*x + 576",
+      "trace_UstarU_exact": "3315"
+    },
+    "assign_covariant": {
+      "a_b_c_d_r_exact": [
+        "280",
+        "104",
+        "104",
+        "80",
+        "2"
+      ],
+      "block_form": "[[a,b*sqrt(r)],[c*sqrt(r),d]]",
+      "defect_8x8_fro_squared_exact": "65595809288",
+      "det_UstarU_exact": "589824",
+      "each_singular_value_multiplicity": 4,
+      "scalar_normalization_can_make_isometric": false,
+      "squared_singular_polynomial": "x^2 - 128064*x + 589824",
+      "trace_UstarU_exact": "128064"
+    },
+    "transport": {
+      "a_b_c_d_r_exact": [
+        "35",
+        "26",
+        "26",
+        "20",
+        "1"
+      ],
+      "block_form": "[[a,b*sqrt(r)],[c*sqrt(r),d]]",
+      "defect_8x8_fro_squared_exact": "35421700",
+      "det_UstarU_exact": "576",
+      "each_singular_value_multiplicity": 4,
+      "scalar_normalization_can_make_isometric": false,
+      "squared_singular_polynomial": "x^2 - 2977*x + 576",
+      "trace_UstarU_exact": "2977"
+    }
+  },
+  "diagonal_product_obstruction": {
+    "assumptions": "u>0,v>0; Gin diagonal; Gout=diag(u,v); aligned selected indicator basis; z=1",
+    "claim": "No positive diagonal input/output products yield isometry for these assignments.",
+    "coefficient_assignment_offdiagonal": "910*u + 520*v",
+    "covariant_assignment_offdiagonal": "910/u + 520/v",
+    "excluded_claims": [
+      "arbitrary nondiagonal metrics",
+      "other phases",
+      "full CST no-go"
+    ]
+  },
+  "z_exact": "1"
+}

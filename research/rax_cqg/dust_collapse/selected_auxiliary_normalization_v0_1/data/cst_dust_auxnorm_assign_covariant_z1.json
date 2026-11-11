@@ -1,0 +1,144 @@
+{
+  "additional_assignment": "chosen identification of normalized orbit indicators with formal source basis",
+  "algebra_checks": "PASS",
+  "basis": [
+    "A|0|0m",
+    "A|0|1m",
+    "K|0|0m",
+    "K|0|1m",
+    "A|+|0m",
+    "A|+|1m",
+    "K|+|0m",
+    "K|+|1m"
+  ],
+  "basis_transport_only": false,
+  "dataset_role": "SELECTED_AUXILIARY_NORM_CONTROL",
+  "delta_chi": null,
+  "diagnostics": {
+    "either_label_mixing_fro": 0.0,
+    "singular_values": [
+      357.8538726033257,
+      357.8538726033257,
+      357.85387260332567,
+      357.85387260332567,
+      2.1461273966743173,
+      2.1461273966743173,
+      2.146127396674304,
+      2.146127396674304
+    ],
+    "stratum_mixing_fro": 0.0,
+    "test_label_mixing_fro": 0.0,
+    "unitarity_defect_2": 128058.39413719725,
+    "unitarity_defect_fro": 256116.7883759282
+  },
+  "gram_diagnostics": {
+    "condition_number": 2.0,
+    "hermiticity_defect_2": 0.0,
+    "maximum_eigenvalue": 0.25,
+    "minimum_eigenvalue": 0.125
+  },
+  "identities": {
+    "convention_agreement_relative_fro": 1.7759129166544956e-16,
+    "covariant_relation_relative_fro": 0.0,
+    "normalized_embedding_fro": 4.440892098500626e-16,
+    "pullback_gram_fro": 0.0
+  },
+  "isometry_of_declared_test_map": "FAIL",
+  "mode": "assign_covariant",
+  "npz_sha256": "72ef0f1c3dc44f19864f9371197fd3b9407328971ff91975800696e3d52d4d3b",
+  "numerical_policy": {
+    "dtype": "complex128",
+    "gram_eigenvalue_floor": "1e-12 * max(1, largest_eigenvalue)",
+    "gram_hermiticity_relative_tolerance": 1e-12,
+    "identity_tolerance": 1e-12,
+    "physical_tolerance": null
+  },
+  "physical_8x8_matter_matrix": "NOT_CONSTRUCTED",
+  "physical_K_0plus": "NOT_COMPUTED",
+  "physical_clock": null,
+  "physical_gates": {
+    "BOUNCE": "HOLD",
+    "BOUNDARY": "HOLD",
+    "CORRESPONDENCE": "HOLD",
+    "CURRENT": "HOLD",
+    "EXTENSION": "HOLD",
+    "MODEL": "HOLD",
+    "REGULARITY": "HOLD",
+    "TRAPPING": "HOLD"
+  },
+  "physical_gram": "NOT_DERIVED",
+  "physical_kernel": false,
+  "producer_sha256": "ed0dd4ee28352fcb92d564547d6b395d68b96b78ca83c3ee7573c7b7d8c703b7",
+  "selection": {
+    "basis": [
+      "A|0|0m",
+      "A|0|1m",
+      "K|0|0m",
+      "K|0|1m",
+      "A|+|0m",
+      "A|+|1m",
+      "K|+|0m",
+      "K|+|1m"
+    ],
+    "dynamical_closure_of_selection": "NOT_ESTABLISHED",
+    "excluded_source_orbit_indices": [
+      1,
+      4,
+      5
+    ],
+    "external_test_factor_dimension": 2,
+    "external_test_factor_is_derived_matter_space": false,
+    "parent_gram7_diagonal_exact": [
+      "1/8",
+      "1/4",
+      "1/8",
+      "1/4",
+      "1/4",
+      "1/4",
+      "1/4"
+    ],
+    "parent_orbits": 7,
+    "selected_gram8_diagonal_exact": [
+      "1/8",
+      "1/8",
+      "1/4",
+      "1/4",
+      "1/8",
+      "1/8",
+      "1/4",
+      "1/4"
+    ],
+    "selected_representatives": [
+      [
+        2190,
+        0
+      ],
+      [
+        2254,
+        0
+      ],
+      [
+        2190,
+        3
+      ],
+      [
+        2254,
+        3
+      ]
+    ],
+    "selected_source_orbit_indices": [
+      0,
+      3,
+      2,
+      6
+    ],
+    "source_N": 4,
+    "source_m": 2
+  },
+  "source_sha256": {
+    "geometry_json": "345a7c8e440e173d1350582dbf4c464fbaf322a58fa49d9127b8e98f06c91ae1",
+    "geometry_npz": "79751f9ef5cd4ace77f1e11731f5144dab9ebad6d3c5f84566b2cda04d448c75",
+    "label_quotient_json": "abd9003202f1e53c9db9ba02f55e7266e2ac6739dea6f9d6a8d7f350c9b5ad8d"
+  },
+  "version": "0.1"
+}

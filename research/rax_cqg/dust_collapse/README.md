@@ -1,5 +1,13 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Normierungsprüfung einer ausgewählten Hilfsbasis v0.1 · 11. November 2026
+
+Die [korrigierte Hilfsbasisprüfung](selected_auxiliary_normalization_v0_1/README.md) wählt vier von sieben dokumentierten m=2-Orbits und ergänzt ein externes zweidimensionales Testlabel. Die positive Gramstruktur und ihre Einbettung sind explizit geprüft. Ein reiner Darstellungstransport erhält den veröffentlichten formalen Kontrolloperator; zwei zusätzliche Zuordnungen derselben Kernzahlen werden getrennt ausgewiesen. Der frühere große Normierungsdefekt gehört zum kovarianten Zuordnungsvergleich. Ein durch falsche Basisindizes erzeugter „Mischungsrest“ wird als Fehler reproduziert und korrigiert.
+
+**21 Regressionstests bestehen; neun Ergebnisdateien sind isoliert bytegleich reproduziert.** Alle drei deklarierten Testabbildungen sind nicht isometrisch, tatsächliche Stratum-/Testlabel-Mischblöcke verschwinden. Das ist keine physikalische Superselektionsaussage. Die Auswahl ist nicht als dynamisch abgeschlossen nachgewiesen; physikalischer Randraum, Uhr und Materieblöcke bleiben offen. **Alle acht physikalischen Gates bleiben HOLD.** Für positive diagonale Ein-/Ausgangsprodukte wird bei z=1 zusätzlich eine eng begrenzte Isometrieobstruktion bewiesen.
+
+[Herleitung](selected_auxiliary_normalization_v0_1/DERIVATION.md) · [Korrekturen](selected_auxiliary_normalization_v0_1/CORRECTIONS.md) · [Daten und Reproduktion](selected_auxiliary_normalization_v0_1/README.md) · [Prüfpaket (ZIP)](selected_auxiliary_normalization_v0_1/CST_DUST_Ausgewaehlte_Hilfsbasis_Normierungspruefung_v0_1_Pruefpaket.zip)
+
 ## 8×8-Geometriekontrollkern v0.2 · 11. November 2026
 
 Die [korrigierte formale 8×8-Erweiterung](geometry_control_8x8_v0_2/README.md) liefert drei reproduzierbare NPZ/JSON-Paare für z=1,−1,i. Sie ordnet die Basis stratumweise, trennt tatsächliche Labelmischung vom Tensorrest und bricht bei nichtendlichen Eingaben oder fehlgeschlagenen Pflichtkontrollen ab. **19 Regressionstests bestehen.** Die Kontrollwerte, Determinanten und Normquadrate werden an den drei Quellenphasen zusätzlich mit Gaußscher Ganzzahlarithmetik bestimmt.
