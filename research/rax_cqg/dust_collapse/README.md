@@ -1,5 +1,13 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## CST-DUST Randkern-Benchmark v0.1 · 11. November 2026
+
+Der [Randkern-Benchmark](boundary_kernel_benchmark_v0_1/README.md) reproduziert getrennt die vier geometrischen Verklebungskerne, den positiven Labelquotienten für m=0,1,2, die ursprüngliche Zweistellen-Uhrkern-Negativkontrolle und die stationäre Schurantwort. **41 eng begrenzte Kontrollen bestehen; alle acht physikalischen Gates bleiben HOLD.** Die vorgeschlagene 8×8-Materiematrix ist NOT_CONSTRUCTED. Das ältere scoped FAIL für den unveränderten Uhrkern wird separat erhalten; es wird weder auf den geometrischen Kern übertragen noch durch angepasste Produkte aufgehoben.
+
+Fünf Ergebnisdateien lassen sich mit der Python-Standardbibliothek isoliert bytegleich reproduzieren. Die Dokumentation erklärt Basisnormierung, Nullatom, kompakte Feldintegration und die Grenzen von Null-/Nichtnull-Mischblöcken. Der Benchmark konkretisiert den offenen Datenanschluss von N0B-2C-MF v0.2.
+
+[Lesefassung (PDF)](boundary_kernel_benchmark_v0_1/CST_DUST_Randkern_Benchmark_v0_1.pdf) · [Prüfpaket (ZIP)](boundary_kernel_benchmark_v0_1/CST_DUST_Randkern_Benchmark_v0_1_Pruefpaket.zip) · [Herleitung](boundary_kernel_benchmark_v0_1/DERIVATION.md) · [Offene Randbasis](boundary_kernel_benchmark_v0_1/OFFENE_RANDBASIS.json)
+
 ## N0B-2C-MF v0.2 · korrigiertes Referenzmodell · 11. November 2026
 
 Das [neue Modell- und Prüfpaket](n0b_2c_mf_v0_2/README.md) verbindet die korrigierten Zweikanal-/Materie-Entwürfe mit der bestehenden Staubball-Reihe. Dokumentiert sind die Modellannahmen, Norm-/Energie-/Impulsbilanzen einschließlich Wandkraft, 29 Korrekturen und fünf offene Herleitungsbrücken zur gemeinsamen CST-Amplitude. Die Zuordnung zum geerbten Nullatom-Zweig und zur Materiewirkung ist ausdrücklich noch zu begründen.

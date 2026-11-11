@@ -1,0 +1,19 @@
+{
+  "plan_id": "CST-DUST-RANDKERN-BENCHMARK-001",
+  "version": "0.1",
+  "mode": "reproduction_of_known_results_and_explicit_small_controls",
+  "blind_prediction": false,
+  "external_preregistration": false,
+  "geometry": {"N": 4, "partition": [2, 2], "phases": ["1", "-1", "i"], "include_all_interval_corrections": true},
+  "label_quotient": {"internal_element_counts": [0, 1, 2], "fixed_endpoint_labels": true, "all_support_masks": true, "field_functions": "constant_within_each_stratum"},
+  "clock_kernel": {"parent": "CST-DUST-V1-RAW-K", "input_labels": [0, 1], "output_labels": [2, 3], "identification": "translation_by_2", "Taylor_degree": 80},
+  "schur": {"geometry": "five_element_chain", "w": [0, 0, 1, 1, 0], "X": [2, 3], "E": [1], "T0": 0, "T4": 4, "held_clock_samples": [-1, 0, 1]},
+  "exact_algebra_tolerance": "0",
+  "interval_decision": "zero_exclusion_by_rational_enclosure",
+  "kernel_family_identification": "NOT_CONSTRUCTED",
+  "physical_clock": null,
+  "eight_state_basis": null,
+  "physical_evolution_tolerances": null,
+  "production_runs": false,
+  "paid_compute": false
+}
