@@ -1,0 +1,64 @@
+{
+  "Abel_error": "enclosed Gaussian difference to the analytic Abel value for all 1089 histories, followed by analytic absolute dust bound",
+  "all_previous_15_test_states_included": true,
+  "boundary_measure": "one half times the two labelled point measures, each with Lebesgue dq",
+  "clock_measure": "dt/2 on [-1,1]",
+  "composition_basis": "unweighted labelled Hermite/Legendre product basis for conditional regulated seam functions; no premature seam-only invariant projection",
+  "composition_error": "absolute sesquilinear amplitude error, including all coherent combinations",
+  "composition_state_class": "both outer inputs in the H-unit ball of the original four-state span E4",
+  "density_measure": "(delta_0 + 1_(0,1) dr)/2",
+  "error_bounds": "spectral differential whole-tail bounds, exact polynomial moments, triangle/Jensen estimates over full finite history sums",
+  "excluded_claims": [
+    "compact reduction certified at tolerance 0.01 within 1e6 modes",
+    "minimum required basis size",
+    "general joint V-to-Vprime operator bound",
+    "all CST histories",
+    "Hilbert-space evolution",
+    "unitarity",
+    "bounce or singularity resolution"
+  ],
+  "four_inputs": [
+    "psi_0,0",
+    "psi_0,1",
+    "psi_+,0",
+    "psi_+,1"
+  ],
+  "input_H_Gram": "identity",
+  "input_V_Gram_diagonal": [
+    65,
+    261,
+    65,
+    261
+  ],
+  "mode_cap": 1000000,
+  "model": "original 33 labelled AA histories; their 1089 minimal transitive sewings",
+  "parameters": {
+    "beta": "4/sqrt(6)",
+    "geometry_coupling": 1,
+    "gravity_kappa": 1,
+    "local_history_weight": "1/33",
+    "scalar_mass": 0
+  },
+  "projection_matrices_computed": false,
+  "relative_error": "not uniform: two exact H-normalized null combinations exist",
+  "retained_cut_memory": "all data required by prior_sewing_contract.json, including earlier fields; cross influence retained before integration",
+  "single_basis": "weighted Hermite total degree N, separate atom plus positive-density Legendre degree D, clock Legendre degree L; invariant simultaneous point swap",
+  "single_kernel_error": "absolute Vprime response error, equivalently supremum over the entire V test unit ball; both pairing directions",
+  "single_kernel_response_space": "Vprime=L2_inv((1+|q|^2)^-4 dmu)",
+  "single_kernel_state_class": "C_M={f in V: norm_H(f)<=1, norm_V(f)<=sqrt(261)}, with individual bounds for all four inputs and their coherent H-unit ball",
+  "single_kernel_test_space": "V=L2_inv((1+|q|^2)^4 dmu)",
+  "single_response_basis": "weighted dual modes; not the test modes themselves",
+  "small_start_cutoffs_N_D_L": [
+    6,
+    0,
+    2
+  ],
+  "start_invariant_modes": 516,
+  "stopping_rule": [
+    "HOLD_RESOURCE_CAP if mode count exceeds cap",
+    "otherwise TOLERANCE_PASS only if analytic + certified numerical error < tolerance",
+    "otherwise EXTEND_BASIS"
+  ],
+  "tolerance": "1/100",
+  "version": "0.1"
+}

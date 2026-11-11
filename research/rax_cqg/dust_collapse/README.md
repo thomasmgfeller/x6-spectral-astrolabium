@@ -1,5 +1,17 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Obere Reduktionsfehlergrenze v0.1 · 11. November 2026
+
+Die [neue Restabschätzung](reduction_bound_v0_1/README.md) kontrolliert sämtliche ausgelassenen Feld-, Dichte- und Uhrmoden der ursprünglichen 33-Historien-Familie in der Testtopologie aus der [Definitionsbereichsanalyse](coupled_kernel_domain_v0_1/README.md). Alle vier bisherigen Eingangszustände, ihre kohärenten Überlagerungen und beim Einzelkern eine ausdrücklich definierte größere Zustandsklasse sind erfasst. Vorwärts- und Rückwärtspaarungen erhalten eigene Konstanten. Eine gewichtete Hermite-/Legendrebasis beginnt mit 516 Moden und enthält die vorherigen 15 Testzustände exakt.
+
+**Analytische obere Grenzen statt endlicher Zusatzkoeffizienten:** Spektrale Differentialabschätzungen und exakte Momente begrenzen die vollständigen Modenreste. Für alle 1.089 minimalen Verklebungen wird zusätzlich eine absolute Amplitudenfehlergrenze auf dem äußeren Vierzustandsraum hergeleitet. Der [erweiterte Randvertrag](extended_sewing_v0_1/README.md), die gemeinsame Kreuzwirkung und die bedingten früheren Felder bleiben erhalten. Beide gerichteten Schnittreste und der gemeinsame Abelrest sind eingeschlossen. Exakte Nullkombinationen schließen eine einheitliche relative Fehlerdefinition aus.
+
+**Die konservativen Zertifikate ergeben Fehler < 0,009004 beim Einzelkern und < 0,000970 bei der Verklebung, vor zusätzlichem numerischem Auswertungsfehler.** Die dafür hinreichenden Basisgrößen sind allerdings etwa 3,385 × 10¹⁸ beziehungsweise 3,503 × 10³⁴. Diese Matrizen wurden nicht aufgebaut; die Größen sind keine Minimalgrößen und keine Untergrenzen des tatsächlichen Fehlers. Beim dokumentierten Limit von 10⁶ Moden bleibt die praktische Entscheidung **HOLD**. Die ausführbare Abbruchregel verlangt analytischen Rest plus zertifizierten numerischen Fehler unter der Toleranz; ein überschrittenes Modenlimit führt zu `HOLD_RESOURCE_CAP`.
+
+Zehn unabhängige Testgruppen bestanden, alle sechs Ergebnisdateien wurden bytegleich reproduziert. Eingefrorene Quellen, 33 lokale und 1.089 gemeinsame Historien sowie die ZIP-/Quellgleichheit sind prüfbar. **ANALYTIC_UPPER_BOUNDS_PROVED; kompakte Reduktion bei Toleranz 0,01 weiterhin HOLD; physikalische CST-Evolution NOT_CONSTRUCTED.**
+
+[Bericht (PDF)](reduction_bound_v0_1/CST_DUST_Obere_Reduktionsfehlergrenze_v0_1.pdf) · [Prüfpaket (ZIP)](packages/CST_DUST_Obere_Reduktionsfehlergrenze_v0_1_Pruefpaket.zip) · [Herleitung (LaTeX)](reduction_bound_v0_1/DERIVATION.tex) · [Vertrag](reduction_bound_v0_1/contract.json) · [Zertifikate](reduction_bound_v0_1/results/reduction_certificate.json) · [Reproduktion und Abbruchregel](reduction_bound_v0_1/README.md)
+
 ## Erweiterter Randvertrag und ausführbare Verklebung v0.1 · 11. November 2026
 
 Die [erweiterte Verklebungsregel](extended_sewing_v0_1/README.md) schließt die fünf fehlenden Schnittkopplungen aus [Schritt 5](reduction_gluing_v0_1/README.md) für eine explizit deklarierte endliche Kontrollfamilie. Aus Schnittfußabdrücken, gruppierten Intervallzählungen und erhaltenen Uhr-/Feldvariablen wird die gemeinsame Gravitation-, Staub- und Skalarwirkung rekonstruiert. Frühere Variablen bleiben Teil einer gemeinsamen bedingten Amplitude, bis die Kreuzwirkung eingefügt ist. Die reine Zweipunktkonfiguration am Schnitt genügt nicht.

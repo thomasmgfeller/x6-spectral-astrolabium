@@ -1,0 +1,94 @@
+{
+  "all_four_inputs_covered": true,
+  "composition": {
+    "Abel_class_bound": "[0.000536460261493462047358851024915 +/- 8.43e-35]",
+    "conditional_energy_maxima": {
+      "clock_energy": "[1230.99338271604938271604938272 +/- 3.96e-27]",
+      "density_energy": "[234.018389182833627278071722516 +/- 1.67e-28]",
+      "field_energy": "[1049304926607.47008078284085276 +/- 1.33e-18]"
+    },
+    "cut_class_bound": "[0.000432937537019303582770697127889 +/- 9.29e-35]",
+    "cutoffs": [
+      76474292424,
+      1510,
+      2288
+    ],
+    "decision": "ANALYTIC_TOLERANCE_PASS_NOT_MATRIX_COMPUTED",
+    "epsilon": "1/343",
+    "labelled_cut_dimension": 35026448697292180628528179868001600,
+    "matrix_entry_cut_bounds": [
+      [
+        "[5.25591203207228146775660270859e-5 +/- 8.26e-36]",
+        "0",
+        "[8.91577181022501195335171033724e-5 +/- 2.39e-35]",
+        "0"
+      ],
+      [
+        "0",
+        "[6.69824494125428352205936348832e-5 +/- 3.64e-35]",
+        "0",
+        "[0.000113624472899846162947647111341 +/- 1.28e-34]"
+      ],
+      [
+        "[0.000164404194983550714135221391085 +/- 1.72e-34]",
+        "0",
+        "[0.000278884098168429853183480568523 +/- 7.26e-35]",
+        "0"
+      ],
+      [
+        "0",
+        "[0.000209408541992004347084919887501 +/- 7.61e-35]",
+        "0",
+        "[0.000355226412489347527523211130396 +/- 1.41e-34]"
+      ]
+    ],
+    "numerical_budget_remaining": "[0.00903060220148723436987045184720 +/- 4.18e-33]",
+    "tolerance": "1/100",
+    "total_class_bound_before_numerics": "[0.000969397798512765630129548152804 +/- 1.78e-34]"
+  },
+  "composition_resource_decision": "HOLD",
+  "error_metric": "V-prime response norm in either single-step direction; absolute sesquilinear-amplitude error for memory-preserving composition",
+  "forward_positive_input_factor": {
+    "absolute": "[1.69633200780754592850553935452 +/- 2.90e-30]",
+    "imag": "[-0.553788675164139863708768121468 +/- 4.57e-31]",
+    "real": "[1.60339027812080950032666818890 +/- 7.01e-32]"
+  },
+  "large_projection_matrices_computed": false,
+  "original_V_Gram_diagonal": [
+    65,
+    261,
+    65,
+    261
+  ],
+  "physical_CST_evolution": "NOT_CONSTRUCTED",
+  "resource_cap_basis_modes": 1000000,
+  "single_step": {
+    "backward_class_bound": "[0.00561558611601988732349098921507 +/- 2.35e-33]",
+    "backward_columns": [
+      "[0.00280240898199548137882396482994 +/- 4.65e-33]",
+      "[0.00561558611601988732349098921507 +/- 2.35e-33]",
+      "[0.00280240898199548137882396482994 +/- 4.65e-33]",
+      "[0.00561558611601988732349098921507 +/- 2.35e-33]"
+    ],
+    "cutoffs": [
+      151306,
+      124,
+      192
+    ],
+    "decision": "ANALYTIC_TOLERANCE_PASS_NOT_MATRIX_COMPUTED",
+    "forward_class_bound": "[0.00703768989823321788802721870324 +/- 3.59e-34]",
+    "forward_columns": [
+      "[0.00351209739746386054147919284001 +/- 9.80e-34]",
+      "[0.00703768989823321788802721870324 +/- 3.59e-34]",
+      "[0.00351209739746386054147919284001 +/- 9.80e-34]",
+      "[0.00703768989823321788802721870324 +/- 3.59e-34]"
+    ],
+    "full_C_M_class_error": "[0.00900354855210595308336426150042 +/- 3.33e-33]",
+    "full_V_to_Vprime_error": "[0.000557305664392273538569495477075 +/- 2.42e-34]",
+    "invariant_dimension": 3384672308841108222,
+    "tolerance": "1/100"
+  },
+  "single_step_resource_decision": "HOLD",
+  "state_class": "Single step: C_M={f in V: ||f||_H<=1, ||f||_V<=sqrt(261)}, including all coherent H-unit combinations of the four original states, tested against the entire V unit ball in both directions. Composition: both outer states in the H-unit ball of the original four-state span.",
+  "status": "ANALYTIC_UPPER_BOUNDS_PROVED"
+}
