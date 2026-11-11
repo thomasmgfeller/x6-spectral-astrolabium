@@ -1,0 +1,216 @@
+{
+  "controls": [
+    {
+      "detail": "Scalar product-rule identity; Hermitian matrix terms cancel by the same inner-product identity.",
+      "id": "BAL-ENERGY",
+      "result": "PASS",
+      "scope": "algebraic_or_finite_control"
+    },
+    {
+      "detail": "Local bulk identity with the declared stress; boundary integration is a separate operation.",
+      "id": "BAL-MOMENTUM",
+      "result": "PASS",
+      "scope": "algebraic_or_finite_control"
+    },
+    {
+      "detail": "Positive source in channel 0, negative source in channel + for real local G.",
+      "id": "BAL-TRANSFER",
+      "result": "PASS",
+      "scope": "algebraic_or_finite_control"
+    },
+    {
+      "detail": "The two mixing sources cancel.",
+      "id": "BAL-SOURCE-CANCEL",
+      "result": "PASS",
+      "scope": "algebraic_or_finite_control"
+    },
+    {
+      "detail": "Normalized half-line packet, hbar=M=1.",
+      "id": "WALL-NORM",
+      "result": "PASS",
+      "scope": "algebraic_or_finite_control"
+    },
+    {
+      "detail": "Bulk potential force zero; dP/dt=2/sqrt(pi) from the wall.",
+      "id": "WALL-IMPULSE",
+      "result": "PASS",
+      "scope": "algebraic_or_finite_control"
+    },
+    {
+      "detail": "Norm flux and instantaneous energy flux vanish at the wall for this regular free packet.",
+      "id": "WALL-ZERO-FLUX",
+      "result": "PASS",
+      "scope": "algebraic_or_finite_control"
+    },
+    {
+      "detail": "Pure matter reflection forbids this term if it is an unbroken channel-neutral symmetry.",
+      "id": "SYM-MATTER-ODD",
+      "result": "PASS",
+      "scope": "algebraic_or_finite_control"
+    },
+    {
+      "detail": "Combined parity permits the odd matter/channel-flip term.",
+      "id": "SYM-COMBINED",
+      "result": "PASS",
+      "scope": "algebraic_or_finite_control"
+    },
+    {
+      "detail": "Synthetic state lies in one combined parity sector.",
+      "id": "QS-PARITY",
+      "result": "PASS",
+      "scope": "algebraic_or_finite_control"
+    },
+    {
+      "detail": "N0=1/4 despite exactly zero reduced channel coherence.",
+      "id": "QS-ZERO-COHERENCE",
+      "result": "PASS",
+      "scope": "algebraic_or_finite_control"
+    },
+    {
+      "detail": "Pure global state, channel purity 5/8: entanglement with matter in this Q-free toy.",
+      "id": "QS-ENTANGLE",
+      "result": "PASS",
+      "scope": "algebraic_or_finite_control"
+    },
+    {
+      "detail": "Under H=sigma_x tensor sigma_x, reduced coherence stays zero while dN0/dt=1/2 at t=pi/4; joint coherence survives.",
+      "id": "QS-WEIGHTED-COHERENCE",
+      "result": "PASS",
+      "scope": "algebraic_or_finite_control"
+    },
+    {
+      "detail": "Conditional matter states are orthogonal |1> and |0>; fidelity zero, same reference frequency.",
+      "id": "QS-RECORD",
+      "result": "PASS",
+      "scope": "algebraic_or_finite_control"
+    },
+    {
+      "detail": "Both bands in the SAME block distinguish coordinate and momentum terms.",
+      "id": "OP-UP-DOWN-0",
+      "result": "PASS",
+      "scope": "algebraic_or_finite_control"
+    },
+    {
+      "detail": "Both bands in the SAME block distinguish coordinate and momentum terms.",
+      "id": "OP-UP-DOWN-1",
+      "result": "PASS",
+      "scope": "algebraic_or_finite_control"
+    },
+    {
+      "detail": "Real constant upper-band coefficient and full Hermiticity alone do not prove G=g phi.",
+      "id": "OP-HERMITIAN-TRAP",
+      "result": "PASS",
+      "scope": "algebraic_or_finite_control"
+    },
+    {
+      "detail": "Strict common-vacuum projection removes the direct linear coupling.",
+      "id": "OP-VACUUM",
+      "result": "PASS",
+      "scope": "algebraic_or_finite_control"
+    },
+    {
+      "detail": "Exact lowest spectral projector of A0+delta A, A0=diag(1,2).",
+      "id": "MODE-EXACT-PROJECTOR",
+      "result": "PASS",
+      "scope": "algebraic_or_finite_control"
+    },
+    {
+      "detail": "First-order estimate 1/101; actual discarded weight (1-1/sqrt(5))/2. Not a CST result.",
+      "id": "MODE-FALSE-PASS",
+      "result": "PASS",
+      "scope": "algebraic_or_finite_control"
+    },
+    {
+      "detail": "A retarded triangular matrix does not equal the variation of its real quadratic form.",
+      "id": "ACTION-SYMMETRIZATION",
+      "result": "PASS",
+      "scope": "algebraic_or_finite_control"
+    },
+    {
+      "detail": "Symmetric, invertible interior block: exact stationary elimination.",
+      "id": "SCHUR-STATIONARY",
+      "result": "PASS",
+      "scope": "algebraic_or_finite_control"
+    },
+    {
+      "detail": "Changing interior eigenvalue 5 to 20 changes Gaussian magnitude by 1/2 even at identical effective boundary action.",
+      "id": "GAUSSIAN-FACTOR",
+      "result": "PASS",
+      "scope": "algebraic_or_finite_control"
+    },
+    {
+      "detail": "Stable oscillator boundary Hessian at quarter period has both signs; its eigenvalues are not potential stiffnesses.",
+      "id": "MODE-FREQUENCY-TRAP",
+      "result": "PASS",
+      "scope": "algebraic_or_finite_control"
+    },
+    {
+      "detail": "K0+=0 at t=pi for H=sigma_x although H0+=1.",
+      "id": "KERNEL-REVIVAL",
+      "result": "PASS",
+      "scope": "algebraic_or_finite_control"
+    },
+    {
+      "detail": "Energy shift 8*pi*hbar/delta is invisible at delta, delta/2, delta/4.",
+      "id": "BRANCH-ALIAS",
+      "result": "PASS",
+      "scope": "algebraic_or_finite_control"
+    },
+    {
+      "detail": "Vanishing step defect can hide finite dissipation per unit clock.",
+      "id": "UNITARITY-RATE",
+      "result": "PASS",
+      "scope": "algebraic_or_finite_control"
+    },
+    {
+      "detail": "Quadratic constraint has the same selected root as a linear constraint, with a distinct delta weight.",
+      "id": "CLOCK-SUPPORT",
+      "result": "PASS",
+      "scope": "algebraic_or_finite_control"
+    },
+    {
+      "detail": "Variable matter mass adds a kinetic geometric-force contribution.",
+      "id": "MASS-BACKREACTION",
+      "result": "PASS",
+      "scope": "algebraic_or_finite_control"
+    },
+    {
+      "detail": "Small coordinate-coupling amplitude alone does not control its geometric derivative.",
+      "id": "FORCE-REST",
+      "result": "PASS",
+      "scope": "algebraic_or_finite_control"
+    },
+    {
+      "detail": "For scalar compression cos(theta), leakage sin^2(theta)<=2|1-cos(theta)|; general proof in the contract.",
+      "id": "REFINE-LEAKAGE",
+      "result": "PASS",
+      "scope": "algebraic_or_finite_control"
+    },
+    {
+      "detail": "G2/G1 interval ratios differ across the proposed axes.",
+      "id": "GRID-NONHOMOTHETIC",
+      "result": "PASS",
+      "scope": "algebraic_or_finite_control"
+    }
+  ],
+  "count": 32,
+  "cst_kernel_extraction": "NOT_RUN",
+  "grid_study": "NOT_RUN",
+  "mode_counterexample": {
+    "discarded_weight_exact": "(1-1/sqrt(5))/2",
+    "estimate_exact": "1/101"
+  },
+  "package": "N0B-2C-MF v0.2",
+  "physical_gates": {
+    "BOUNCE": "HOLD",
+    "BOUNDARY": "HOLD",
+    "CORRESPONDENCE": "HOLD",
+    "CURRENT": "HOLD",
+    "EXTENSION": "HOLD",
+    "MODEL": "HOLD",
+    "REGULARITY": "HOLD",
+    "TRAPPING": "HOLD"
+  },
+  "schema_version": "1.0",
+  "scope": "algebraic identities and finite synthetic controls only"
+}

@@ -1,5 +1,13 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## N0B-2C-MF v0.2 · korrigiertes Referenzmodell · 11. November 2026
+
+Das [neue Modell- und Prüfpaket](n0b_2c_mf_v0_2/README.md) verbindet die korrigierten Zweikanal-/Materie-Entwürfe mit der bestehenden Staubball-Reihe. Dokumentiert sind die Modellannahmen, Norm-/Energie-/Impulsbilanzen einschließlich Wandkraft, 29 Korrekturen und fünf offene Herleitungsbrücken zur gemeinsamen CST-Amplitude. Die Zuordnung zum geerbten Nullatom-Zweig und zur Materiewirkung ist ausdrücklich noch zu begründen.
+
+**32 kleine algebraische und synthetische Kontrollen sind bestanden; alle acht physikalischen Gates bleiben HOLD.** Die Vier-Gitter-Studie und die A–F-Läufe sind nicht ausgeführt. Historischer Solver und behauptete Original-Extraktoren sind nicht als verifizierter Quellcode wiederhergestellt. Die endlichen Stationaritätsresultate und die offene Klasse (1,4) behalten ihre bisherige Reichweite.
+
+[Lesefassung (PDF)](n0b_2c_mf_v0_2/N0B_2C_MF_v0_2_Bericht.pdf) · [Prüfpaket (ZIP)](n0b_2c_mf_v0_2/N0B_2C_MF_v0_2_Pruefpaket.zip) · [Korrekturen](n0b_2c_mf_v0_2/CORRECTIONS.md) · [Maschinenlesbarer Status](n0b_2c_mf_v0_2/status.json)
+
 ## Vollständige Asymmetrieprüfung (2,3) · 8. November 2026
 
 Die nach PR 272 offene Klasse `(2,3)` ist für die unveränderte Materiewirkung **innerhalb des festgelegten endlichen Variationsmodells ausgeschlossen**, ebenso `(3,2)` durch Asttausch. Vier feste geordnete Vorgänger tragen Dichte-Nullzeilen; alle sechs inneren Uhren und Dichten sowie der positive Endpunkt sind frei, ohne zusätzliche Nachfolger. Alle sechs Norm- und sechs Uhrgleichungen sind hergeleitet. Der Beweis behandelt sowohl `P≠0` als auch den besonderen Kragenfall `P=0`: Schon eine notwendige Teilmenge der Gleichungen erzwingt `C_j > 1 + 87(h-g)²/32 > 1`, während freie Endpunkt-Dichtevariation `C_j=0` verlangt.
@@ -649,3 +657,4 @@ python3 evaluate.py
 ```
 
 Erwartet werden sechs bestandene Vergleiche je höherer Dichtestufe und fünf von sechs im Belastungstest. Die vier ursprünglichen ZIP-Pakete der Reihe und der ergänzenden Pulsstudie enthalten eigene Prüfsummen. Wer Ergebnisse zitiert, kann Berichtstitel, Datum und den verwendeten Git-Commit angeben. [Zitationsmetadaten](../../../CITATION.cff) · [Lizenzumfang](../../../LICENSE_SCOPE.md)
+
