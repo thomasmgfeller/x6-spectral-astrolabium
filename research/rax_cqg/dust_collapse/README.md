@@ -1,5 +1,15 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Gemeinsamer minimaler Skalarwirkungsansatz v0.1 · 11. November 2026
+
+[Schritt 1](minimal_scalar_action_v0_1/README.md) setzt die Materieblock-Vorprüfung und gerichtete Gaußprojektion aus [PR #278](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/278) fort. Der ausdrücklich deklarierte Kandidat **CST-DUST-KG-MIN-v0.1** verbindet die geerbte Geometrie-/Staubwirkung mit einem zusätzlichen reellen Skalarfeld. Dieses Feld ist weder die Staubuhr noch eine bereits hergeleitete freie Staubuhrstörung. Die minimale Kopplungswahl erfolgt über die gemeinsame Geometrie; eine direkte Staub-Skalar-Kopplung wird auf null gesetzt.
+
+Feldinhalt, Einheiten, symmetrische Feld-Hesse-Matrix, exakter Summationsdefekt und skalare Randreaktion sind ausgearbeitet. Für die 33 abgedeckten AA-Kontrollhistorien ist der innere Feldblock bei fester Diskretisierung und nichtnegativem Massequadrat invertierbar. Die Schranke ist nicht gleichmäßig im Kontinuumsgrenzwert; eine Fünferkette zeigt außerdem eine mögliche Singularität bei Kettenrändern. Die klassischen Klein-Gordon-, Staub- und Stresstensor-Zielidentitäten sind analytisch geprüft. Die Konvergenz der gemeinsamen diskreten Wirkung und ihrer Variationen ist weiterhin offen.
+
+**25 exakte Tests bestehen; beide Ergebnisdateien sind aus dem entpackten Prüfpaket bytegleich reproduziert.** Alle 33 Kandidatenmatrizen sind mit ihrer Skalierung exportiert. Die Wirkung ist physikalisch motiviert, aber nicht eindeutig aus CST hergeleitet. Physikalische Randzustände, Quantenmaß, gravitative Randwirkung, Stabilität und Gesamtfehlerbudget fehlen weiterhin. **Physikalische Materiematrix NOT_CONSTRUCTED, K_0plus NOT_COMPUTED; alle acht physikalischen Gates HOLD.** Keine neue Bounce-Aussage und kein Produktionslauf. Nächster Anschluss ist der physikalische Rand- und Zustandsvertrag für diesen benannten Kandidaten.
+
+[Herleitung und Ergebnisse (PDF)](minimal_scalar_action_v0_1/CST_DUST_Gemeinsamer_Skalarwirkungsansatz_v0_1.pdf) · [Reproduzierbares Prüfpaket (ZIP)](minimal_scalar_action_v0_1/CST_DUST_Gemeinsamer_Skalarwirkungsansatz_v0_1_Pruefpaket.zip) · [Wirkungsvertrag](minimal_scalar_action_v0_1/action_contract.json) · [33 Kandidatenmatrizen](minimal_scalar_action_v0_1/results/aa_hessians.json) · [Code und Reproduktion](minimal_scalar_action_v0_1/README.md)
+
 ## Materieblock-Vorprüfung und gerichtete Gaußprojektion v0.1 · 11. November 2026
 
 Die [korrigierte Fortsetzung](directed_boundary_v0_1/README.md) schließt an die Hilfsbasisprüfung aus PR #277 an. Die [Materieblock-Vorprüfung](matter_preflight_v0_1/README.md) trennt geometrische Verklebung, Staubuhr, zusätzliches Skalarfeld und tatsächliche Randwellenfunktionen. Ihre 25 exakten Kontrollen erklären unter anderem, warum ein Vakuum-Einteilchen-Zeuge bei Gesamtfeldparität verschwindet.

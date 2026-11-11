@@ -1,0 +1,527 @@
+\documentclass[10pt,a4paper]{article}
+\pdfmapfile{+lm.map}
+\pdfmapfile{+cm.map}
+\pdfmapfile{+symbols.map}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman,provide=*]{babel}
+\usepackage{lmodern,amsmath,amssymb,amsthm,booktabs,array,geometry,xcolor,hyperref,fancyhdr,microtype}
+\geometry{left=23mm,right=23mm,top=24mm,bottom=24mm}
+\definecolor{navy}{HTML}{17334B}
+\definecolor{teal}{HTML}{087E8B}
+\hypersetup{colorlinks=true,urlcolor=teal,linkcolor=navy,pdftitle={CST-DUST: Gemeinsamer minimaler Skalarwirkungsansatz v0.1},pdfauthor={X6 Forschungsprogramm / Arbeitsausarbeitung}}
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\small\sffamily\color{navy}CST-DUST / Gemeinsamer Skalarwirkungsansatz}
+\fancyhead[R]{\small\sffamily v0.1}
+\fancyfoot[L]{\footnotesize 11. November 2026 / Physikalische Qualifikation: HOLD}
+\fancyfoot[R]{\thepage}
+\setlength{\headheight}{14pt}
+\setlength{\parindent}{0pt}\setlength{\parskip}{6pt}
+\setlength{\emergencystretch}{2em}
+\newcommand{\R}{\mathbb R}
+\newcommand{\dd}{\mathrm d}
+\newcommand{\ii}{\mathrm i}
+\newcommand{\sgn}{\operatorname{sgn}}
+\newcommand{\sdet}{\operatorname{sqrt}_{\!c}\det}
+\newcommand{\status}[1]{\textsf{\textbf{#1}}}
+\newcommand{\sect}[1]{\section*{\color{navy}#1}}
+\newcommand{\smallurl}[1]{{\footnotesize\url{#1}}}
+\begin{document}
+{\sffamily\small\color{teal}SCHRITT 1 / ANSCHLUSS AN PR 278}
+\vspace{5mm}
+
+{\sffamily\bfseries\color{navy}\LARGE Gemeinsamer minimaler\par Skalarwirkungsansatz\par}
+\vspace{3mm}
+{\large CST-DUST-KG-MIN-v0.1: definierter Kandidat, bedingter Grenzfall\par}
+
+\sect{Ergebnis und physikalische Rolle}
+Schritt~1 legt einen konkreten gemeinsamen \emph{Wirkungskandidaten} für
+Geometrie, wirbelfreien Staub und ein zusätzliches reelles Skalarfeld fest.
+Das Feld $\Phi$ beschreibt eigenständige Materie. Es ist weder die Staubuhr
+$T$ noch eine bereits hergeleitete freie Anregung dieser Uhr.
+Die Motivation ist das bekannte klassische Modell aus Einstein-Gravitation,
+wirbelfreiem Staub und einem minimal gekoppelten Klein-Gordon-Feld.
+
+Für $v=\ell^4>0$, $\mu=m/\hbar\geq0$ bei $c=1$ und die unten definierte
+diskrete Produktform $\Gamma$ lautet der Kandidat
+\[
+\boxed{\begin{aligned}
+S_{\rm tot}={}&S_g(C)+S_d(C,T,w)+S_\Phi(C,\Phi)+S^g_{\rm outer},\\
+S_d={}&-\frac12\sum_xw_x\bigl(\Gamma_x[T]+1\bigr),\\
+S_\Phi={}&-\frac12\sum_xv\bigl(\Gamma_x[\Phi]+\mu^2\Phi_x^2\bigr).
+\end{aligned}}
+\]
+Die zusätzliche Materie koppelt an dieselbe Geometrie. Eine direkte
+$T,w,\Phi$-Wechselwirkung wird in diesem minimalen Kandidaten auf null
+gesetzt; dies ist eine Modellwahl. Die physikalische äußere
+Gravitationsrandwirkung bleibt offen. Ihr bisheriger Kontrollwert null
+wird nicht als hergeleitetes Randgesetz ausgegeben.
+
+\begin{center}
+\begin{tabular}{p{.51\linewidth}p{.38\linewidth}}
+\toprule
+Ergebnis & Status\\\midrule
+Endliche gemeinsame Wirkungsform & ausdrücklich definiert\\
+Symmetrische Feld-Hesse-Matrix & aus der Wirkung hergeleitet\\
+Skalare Randreaktion / Summationsdefekt & exakt bestimmt\\
+Klassische Zielgleichungen & analytisch geprüft\\
+33 angeschlossene $AA$-Kontrollhistorien & Feldmatrizen exakt exportiert\\
+Automatisierte Kontrollen & 25 Tests bestanden\\
+Physikalische $8\times8$-Materiematrix & \texttt{NOT\_CONSTRUCTED}\\
+Alle acht physikalischen Gates & \status{HOLD}\\\bottomrule
+\end{tabular}
+\end{center}
+
+\textbf{Was nicht behauptet wird.} Dieser Ansatz ist durch Feldinhalt,
+Symmetrien und einen klassischen Zielgrenzfall motiviert, aber nicht
+eindeutig aus CST abgeleitet. Konvergenz der gemeinsamen Wirkung und ihrer
+Variationen, physikalische Zustände, Quantenmaß, Stabilität und äußere
+Gravitationsrandphysik sind nicht bewiesen. Eine zusätzliche Materiespezies
+ist eine Erweiterung des Staubmodells und keine Erklärung des Staubs selbst.
+
+Das Paket berechnet keine neue physikalische Übergangsamplitude. Es ersetzt
+die bislang beliebige symbolische Eingabe $H_C(T,w)$ durch eine überprüfbare,
+explizit deklarierte Kandidatenmatrix $H_C$.
+
+\newpage
+\sect{1. Feldinhalt, Einheiten und bewusst gewählte Annahmen}
+Wir verwenden die Signatur $(-+++)$ und $c=1$. Mit $[S]$ als
+Wirkungsdimension gelten
+\[
+[T]=L,\quad [w]=[S],\quad [v]=L^4,\quad [B]=L^{-2},
+\quad [\Phi]=[S]^{1/2}L^{-1},\quad[\mu]=L^{-1}.
+\]
+$w=v\rho$ ist das geerbte integrierte Staubdichtegewicht. $v$ ist ein
+geometrisches Volumengewicht und bleibt auch bei $w=0$ positiv.
+Jeder Term in $S_d$ und $S_\Phi$ besitzt die Dimension Wirkung.
+Insbesondere wird die Skalarwirkung nicht mit $w$ anstelle von $v$ gewichtet.
+Der Dichte-Nullzweig bezeichnet Abwesenheit von Staub; er bedeutet nicht
+Abwesenheit des zusätzlichen Skalarfelds oder dessen Vakuumzustand.
+
+\textbf{Warum eine Staubuhrstörung kein freies KG-Feld ist.}
+Betrachte allein die geerbte \emph{klassische Kontinuumswirkung} auf festem
+Minkowski-Hintergrund. Setze $T=t+\varepsilon\pi$ und
+$\rho=\rho_0+\varepsilon\sigma$, mit konstanter $\rho_0>0$. Bis zur
+zweiten Ordnung ist die Lagrangedichte
+\[
+\mathcal L_d=
+\varepsilon\rho_0\dot\pi+
+\varepsilon^2\left[\frac{\rho_0}{2}
+\bigl(\dot\pi^2-|\nabla\pi|^2\bigr)+\sigma\dot\pi\right]
++O(\varepsilon^3).
+\]
+Die erste Ordnung ist unter den genannten Voraussetzungen eine totale
+Zeitableitung. Die Variation des quadratischen Anteils nach $\sigma$
+erzwingt $\dot\pi=0$. Die scheinbar freie Wellengleichung nach Einfrieren
+von $\sigma$ wäre daher nicht die gemeinsame Staubvariation.
+Diese einfache Kontrolle begründet die Trennung von $\Phi$ und $T$;
+sie ist kein vollständiger Staub-Störungsformalismus mit dynamischer Metrik.
+
+\textbf{Minimaler Kandidat.} Gewählt werden ein reelles Feld, eine
+quadratische Wirkung, $\mu^2\geq0$, minimale Krümmungskopplung $\xi=0$,
+keine direkte Staub-Skalar-Kopplung und keine Skalar-Selbstwechselwirkung.
+Damit bleiben Gesamtfeldparität $\Phi\mapsto-\Phi$ und die geerbte
+Uhrverschiebung $T\mapsto T+c$ auf Wirkungsebene erhalten. Bei $\mu=0$
+ist zusätzlich $\Phi\mapsto\Phi+c_\Phi$ eine exakte Wirkungssymmetrie.
+Randzustände und Regulatoren müssen diese Symmetrien gegebenenfalls separat
+respektieren. Weder Parität noch Kovarianz erzwingen $\xi=0$ oder das
+Fehlen von Selbstwechselwirkungen.
+
+Ein beispielsweise hinzugefügter Term
+$-\frac g{2F^2}\sum_xw_x\Phi_x^2$, mit $[F]=[\Phi]$, würde die positive
+Dichtevariation zu
+\[
+\frac{\partial S}{\partial w_x}
+=-\frac12\left(\Gamma_x[T]+1+\frac{g\Phi_x^2}{F^2}\right)
+\]
+ändern. Das wäre ein anderes Modell mit veränderter Staubbedingung.
+Ein solcher Term wird nicht zur Erzeugung eines gewünschten Mischblocks
+eingeführt. Auch die Werte von $\ell$ und $\mu$ werden hier nicht angepasst.
+
+Die getrennte Verwendung von wirbelfreiem Staub und zusätzlicher Materie
+besitzt einen bekannten Kontinuumsrahmen [L1]. Dessen kanonische oder
+LQG-Quantisierung wird dadurch nicht auf unser CST-Paket übertragen.
+
+\newpage
+\sect{2. Diskrete gemeinsame Wirkung und exakter Feld-Hessian}
+Auf derselben endlichen strikten Ordnung $C$ wie bisher definiere
+\[
+a=\frac4{\sqrt6\ell^2},\quad B_{xx}=-a,\quad
+B_{xy}=a\,b\bigl(k_C(y,x)\bigr)\ (y\prec x),
+\quad b=(1,-9,16,-8,0,\ldots).
+\]
+Es wird der geerbte unverschmierte 4D-BD-Kandidat benutzt. Diese
+endliche Festlegung belegt für sich keine 4D-Manifoldlikeness der kleinen
+Kontrollordnungen. Für Felder $f,h$ setze die polarisierte Produktform
+\[
+\Gamma_x[f,h]=\frac12\left[B(fh)_x-f_x(Bh)_x-h_x(Bf)_x
++f_xh_x(B1)_x\right].
+\]
+Alle Produkte in dieser Zeile sind punktweise. Direktes Ausmultiplizieren
+liefert die exakte, diagonalenunabhängige Identität
+\[
+\boxed{\Gamma_x[f,h]=\frac12\sum_{y\prec x}
+B_{xy}(f_x-f_y)(h_x-h_y).}
+\]
+Wir schreiben $\Gamma[f]=\Gamma[f,f]$. Daraus folgt
+\[
+S_\Phi=-\frac14\sum_{y\prec x}v_xB_{xy}(\Phi_x-\Phi_y)^2
+-\frac{\mu^2}{2}\sum_xv_x\Phi_x^2.
+\]
+Die algebraischen Formeln gelten auch für vorgegebene positive $v_x$;
+das konkrete Modell verwendet durchgängig $v_x=v=\ell^4$.
+
+Sei $D_{\rm inc}$ die Inzidenzmatrix \emph{aller berücksichtigten kausalen
+Paare}, mit $-1$ am Vorgänger und $+1$ am Nachfolger, und
+$W_E=\operatorname{diag}(v_xB_{xy})$, $V=\operatorname{diag}(v_x)$.
+Dann gilt exakt
+\[
+\boxed{S_\Phi=\frac12\Phi^TH_C\Phi,
+\qquad H_C=-\frac12D_{\rm inc}^TW_ED_{\rm inc}-\mu^2V.}
+\]
+$H_C$ ist reell-symmetrisch, obwohl $B$ retardiert ist. Das folgt aus
+der Variation der definierten Wirkung und nicht aus einer nachträglich
+auferlegten Symmetrisierung einer Bewegungsgleichung.
+$\nabla_\Phi S_\Phi=H_C\Phi$ und $H_C1=-\mu^2v$ folgen unmittelbar.
+Die wechselnden BD-Gewichte machen diese Raumzeitmatrix im Allgemeinen
+indefinit; sie ist kein positiver räumlicher Energieoperator.
+
+\textbf{Gemeinsame Gravitation.} Bei konstantem $v$ gilt
+$\sum_x(B1)_x=-aF_4(C)$. Mit $\widehat R_x=-2(B1)_x$ ist daher
+\[
+\frac1{16\pi G}\sum_xv\widehat R_x
+=\frac{\ell^2}{2\pi G\sqrt6}F_4(C)=\hbar\kappa F_4(C)=S_g(C),
+\]
+mit der geerbten Konvention $\ell_P^2=8\pi G\hbar$.
+Das ist eine endliche Normierungsidentität, kein Nachweis des vollständigen
+Einstein-Hilbert-Grenzwerts samt äußerem Rand. Die korrigierte Produktform
+verhindert zugleich eine unbeabsichtigte $R\Phi^2$-Kopplung im Zielgrenzfall.
+
+\newpage
+\sect{3. Randkorrektur und das Variationsproblem}
+Die bekannte Behauptung $S_\Phi=\frac12\Phi^TVB\Phi$ würde sowohl
+Nullordnungsterm als auch Randsummation ungeprüft übernehmen. Die genaue
+Beziehung folgt aus
+\[
+r=B1,\qquad D_C=B-\operatorname{diag}(r),\qquad
+\tau=B^Tv-Vr=D_C^Tv.
+\]
+Insbesondere gilt $D_C1=0$ und für jede Testfunktion $f$
+$\sum_xv_x(D_Cf)_x=\tau^Tf$. Durch Einsetzen in die Produktform erhält man
+\[
+\sum_xv_x\Gamma_x[\Phi]=
+\frac12\tau^T\Phi^{\circ2}-\Phi^TVD_C\Phi,
+\]
+also
+\[
+\boxed{S_\Phi=
+\frac12\Phi^TV(D_C-\mu^2I)\Phi
+-\frac14\tau^T\Phi^{\circ2}.}
+\]
+Dabei bezeichnet $\Phi^{\circ2}$ das komponentenweise Quadrat.
+Der zugehörige Hessian lautet äquivalent
+\[
+H_C=\frac12(VD_C+D_C^TV)
+-\frac12\operatorname{diag}(\tau)-\mu^2V.
+\]
+Der Summationsdefekt $\tau$ ist exakt bestimmt. Bei endlicher nichtlokaler
+Ordnung kann er über viele Elemente verteilt sein. Er wird nicht ohne
+Grenzwertnachweis als lokaler GHY-Term oder als ausschließlich auf dem
+äußeren Rand getragener Vektor bezeichnet.
+
+\textbf{Kontinuumsvergleich des Terms.} Falls der integrierte Operator
+$D_C$ zu $\Box$ konvergiert und die Randintegration kontrolliert ist,
+entspricht $-\tau^T\Phi^{\circ2}/4$ dem Ausdruck
+\[
+-\frac14\int_{\partial M}\dd\Sigma_a\,\nabla^a(\Phi^2)
+=-\frac12\int_{\partial M}\dd\Sigma_a\,\Phi\nabla^a\Phi.
+\]
+Damit ergibt sich die gewöhnliche partielle Integration der skalaren
+Gradientenwirkung. $\dd\Sigma_a$ bezeichnet das orientierte Flächenelement;
+für nullartige Ränder wird keine Einheitsnormalen-Konvention unterstellt.
+
+\textbf{Endliche Randvariation.} Für eine ausdrücklich festgelegte Zerlegung
+$(b,q)$ in äußere und innere Feldwerte schreibe
+$H=\bigl(\begin{smallmatrix}B_\partial&J^T\\J&A\end{smallmatrix}\bigr)$.
+Dann ist
+\[
+\delta S_\Phi=(B_\partial b+J^Tq)^T\delta b+(Jb+Aq)^T\delta q.
+\]
+Bei festen äußeren Werten gilt $\delta b=0$; innere Stationarität verlangt
+$Aq+Jb=0$. Die äußere Reaktion $p_b=B_\partial b+J^Tq$ wird beibehalten.
+Es ist für diese skalare Dirichlet-Variation kein weiterer Randterm nötig.
+Bei Neumann-Daten, Paketprojektion oder einer anderen Randdefinition ist
+ein eigener Vertrag erforderlich. Die Eignung des äußeren Kragens als
+vollständige physikalische Randinformation gehört zu Schritt~2.
+
+Die offene \emph{Gravitations}randwirkung $S^g_{\rm outer}$ wird durch
+diese skalare Rechnung nicht bestimmt. Ein zusätzlicher skalarer Term
+$-\tau^T\Phi^{\circ2}/4$ darf zur bereits vollständigen Paarwirkung nicht
+nochmals addiert werden.
+
+\newpage
+\sect{4. Klassischer Zielgrenzfall und seine Voraussetzungen}
+Der Zielgrenzfall ist die gemeinsame Kontinuumswirkung
+\[
+S_{\rm cl}=\frac1{16\pi G}\int_M\sqrt{-g}\,R\,\dd^4x
+-\frac12\int_M\sqrt{-g}\,
+\left\{\rho\bigl[(\nabla T)^2+1\bigr]
++(\nabla\Phi)^2+\mu^2\Phi^2\right\}\dd^4x+S^g_{\partial M}.
+\]
+Der wirbelfreie Staubterm und unabhängige zusätzliche Materie sind ein
+bekannter klassischer Ausgangspunkt [3]. Der vorliegende diskrete Ansatz
+ist dadurch motiviert; seine gemeinsame CST-Konvergenz folgt daraus nicht.
+
+\textbf{Produktform.} Angenommen, $B$ hat für die benötigten glatten
+Testfelder den Grenzoperator $\Box-R/2$. Dann ergibt Einsetzen in die
+\emph{polarisierte} Definition von $\Gamma$
+\[
+\Gamma[f,h]\longrightarrow\tfrac12\{
+(\Box-R/2)(fh)-f(\Box-R/2)h
+-h(\Box-R/2)f+fh(-R/2)\}
+=\nabla_af\nabla^ah.
+\]
+Die Krümmungsanteile heben sich auf. Insbesondere entsteht hieraus keine
+vorgegebene nichtminimale $R\Phi^2$-Kopplung.
+Die Literatur beschreibt den entsprechenden \emph{mittleren}
+Operatorgrenzfall unter ihren Voraussetzungen [1,2]. Das ist allein kein
+Satz über die gemeinsame Zufallswirkung oder deren erste Variation.
+
+\textbf{Schwache skalare Variation.} Für eine Testvariation $\eta$ gilt exakt
+\[
+\delta_\eta S_\Phi=-\sum_xv\,\Gamma_x[\Phi,\eta]
+-\mu^2\sum_xv\Phi_x\eta_x.
+\]
+Erforderlich sind Konvergenz dieser integrierten polarisierten Form,
+Volumenquadratur und eine kontrollierte Randbehandlung. Erst dann folgt
+für kompakt getragene $\eta$ die schwache Zielgleichung
+\[
+\boxed{(\Box-\mu^2)\Phi=0.}
+\]
+Eine bloße punktweise Mittelwertübereinstimmung ersetzt diese Annahmen
+nicht. Auch Varianz- und Fluktuationskontrolle sind noch ausstehend.
+
+\textbf{Staub und Rückwirkung im Zielmodell.} Unabhängige Variation nach
+$\rho$ und $T$ liefert
+\[
+(\nabla T)^2=-1,\qquad \nabla_a(\rho\nabla^aT)=0.
+\]
+Mit $u_a=-\nabla_aT$ folgt geodätische Staubbewegung, solange das glatte
+wirbelfreie Staubmodell gilt, insbesondere vor seinen Kaustiken.
+Für zusätzlich kontrollierte Geometrievariationen lautet das Ziel
+\[
+G_{ab}=8\pi G\left[\rho T_aT_b+\Phi_a\Phi_b
+-\tfrac12g_{ab}\bigl((\nabla\Phi)^2+\mu^2\Phi^2\bigr)\right].
+\]
+Hier werden die Kontinuums-Materiefelder bei der Metrikvariation festgehalten;
+die Staubnorm wird danach eingesetzt. Das ist nicht dieselbe Operation wie
+eine diskrete Variation bei festem $w=v\rho$ und veränderlichem $v$.
+Die Formel ist ein analytisch geprüfter Ziel-Stresstensor, kein Nachweis
+diskreter gravitativer Rückwirkung.
+
+Auf festem Minkowski-Hintergrund sind
+$\omega^2=|\boldsymbol{k}|^2+\mu^2$ und
+$\mathcal E_\Phi=(\dot\Phi^2+|\nabla\Phi|^2+\mu^2\Phi^2)/2\geq0$
+geprüfte klassische Zielidentitäten. Sie beweisen keine Stabilität des
+endlichen CST-Operators. Der diskutierte ursprüngliche retardierte
+Vierdimensional-Operator besitzt zudem bekannte Stabilitätsprobleme [4];
+der hier variierte symmetrische Operator benötigt eine eigene Prüfung.
+
+\newpage
+\sect{5. Kopplung über Geometrie und Anschluss an die Historien}
+Bei festem $C$ separieren Staub und zusätzliches Skalarfeld in der Wirkung.
+Unter \emph{zusätzlich separierbaren} Integrationsmaßen und Randpaketen
+hat der Beitrag einer Historie deshalb die Form
+\[
+e^{\ii S_g(C)/\hbar}\,D_C^{\rm dust}\,A_C^\Phi.
+\]
+Die gemeinsame Summe über Geometrien separiert im Allgemeinen nicht:
+\[
+\sum_C\nu_Ce^{\ii S_g(C)/\hbar}D_C^{\rm dust}A_C^\Phi
+\ne
+\left(\sum_C\nu_Ce^{\ii S_g(C)/\hbar}D_C^{\rm dust}\right)
+\left(\sum_C\nu_Ce^{\ii S_g(C)/\hbar}A_C^\Phi\right).
+\]
+Normierungen sind dabei separat festzulegen. Bereits für eine normalisierte
+Zwei-Geometrien-Summe mit Gewichten $p,1-p$ ist die Differenz
+$p(1-p)(D_1-D_2)(A_1-A_2)$. Diese algebraische Aussage beschreibt die
+Möglichkeit geometrisch vermittelter Korrelation; sie ist noch kein
+Nachweis eines physikalischen Übergangs oder einer eindeutigen Ursache.
+
+\textbf{Kein künstlicher Entkopplungsparameter.}
+Der Kandidat besitzt keine direkte Staub-Skalar-Kopplung. Eine Skalierung
+$\alpha S_\Phi$ mit anschließendem $\alpha\to0$ ist kein bereits
+qualifizierter Entkopplungsvergleich: Bei unbeschränkten reellen inneren
+Feldachsen verschwindet dann die feldabhängige Wirkung und unkontrollierte
+Integrationsvolumina bleiben zurück. Auch ein willkürlich gesetzter
+$q_{0+}$-Eintrag ist ausgeschlossen. Ein späterer Referenzvertrag muss
+etwa die Geometrie festhalten oder einen ausdrücklich statistischen
+Vergleich mit unabhängigen Geometrieziehungen definieren; seine
+physikalische Interpretation bleibt zu begründen.
+
+\textbf{Gemeinsame endliche Geometrievariation.}
+Bei einem zulässigen Ordnungswechsel $C\to C'$ auf derselben Elementmenge,
+festem $\ell,v,T,w,\Phi$ und demselben Operatorvertrag ist
+\[
+\begin{aligned}
+\Delta S_{\rm tot}={}&\hbar\kappa\Delta F_4+\Delta S^g_{\rm outer}\\
+&-\frac14\sum_{x\ne y}
+\left[w_x(T_x-T_y)^2+v(\Phi_x-\Phi_y)^2\right]\Delta B_{xy}.
+\end{aligned}
+\]
+Die Summe verwendet die gemeinsame Matrixindizierung; nicht vorhandene
+Relationen haben Gewicht null. Der Massenterm bleibt bei dieser
+festen Volumen- und Elementzahlvariation unverändert.
+Alle durch den Ordnungswechsel geänderten Intervallgrößen müssen in
+$\Delta B$ eingehen, auch für zuvor vorhandene Relationen.
+Ein physikalisches Quantengesetz wird nicht durch die Forderung
+$\Delta S=0$ für jeden einzelnen diskreten Zug ersetzt.
+
+\textbf{Schnitt und Verklebung.}
+Beim Vergleich von $S_\Phi[C]$ mit den Wirkungen zweier induzierter
+Teilordnungen entstehen sowohl Paare über den Schnitt als auch Änderungen
+der Intervallgewichte innerhalb der Teile. Beide Beiträge werden bereits
+von der Paarwirkung erfasst. Eine zusätzliche frei gewählte skalare
+Schnittwirkung würde diese Beiträge ohne neuen Vertrag doppelt zählen.
+Das ersetzt keine Herleitung des gravitativen Junction-Gesetzes.
+
+Der bereits publizierte Basisvertrag bleibt unverändert:
+Strata zuerst, Zeilen ausgehend, Spalten eingehend; die Carrier-Bezeichnung
+nennt dagegen zuerst den Eingang. Die skalare Wirkung gilt sowohl im
+$w=0$- als auch im $w>0$-Zweig. Sie bestimmt weder deren physikalisches
+Maß noch Projektoren, Pakete oder die Mischungsamplitude $K_{0+}$.
+
+\newpage
+\sect{6. Ein überprüfbares Resultat für die 33 AA-Kontrollen}
+Verwendet wird ausschließlich die bereits deklarierte kleine
+Kontrollfamilie mit Eingang $L=\{0,1\}$, Innerem $I=\{2\}$ und Ausgang
+$R=\{3,4\}$. Beide äußeren Träger sind Antiketten ($A\to A$).
+In der abgedeckten Familie besitzt das innere Element mindestens einen
+Vorgänger aus $L$ und einen Nachfolger aus $R$. Setze ihre Anzahlen
+$p,q\in\{1,2\}$. Alle an $2$ anliegenden Intervalle sind leer, also
+$B_{2y}=a$ beziehungsweise $B_{x2}=a$. Daher folgt direkt aus der Hesse-Matrix
+\[
+\boxed{H_{II}=-v\left[\frac a2(p+q)+\mu^2\right],\qquad
+|H_{II}|\geq v(a+\mu^2)>0.}
+\]
+Für jedes feste $\ell>0$ und $\mu^2\geq0$ ist der innere Block damit
+invertierbar. Ein stationärer innerer Feldwert und der formale Schurblock
+sind für diese Kontrollen eindeutig:
+\[
+q_*=-H_{II}^{-1}Jb,\qquad
+H_\partial^{\rm eff}=B_\partial-J^TH_{II}^{-1}J.
+\]
+Das ist kein bereits normalisierter Quantenkern. Insbesondere sind
+Randzustände, Maß und Regulatorgrenzwert dadurch nicht bestimmt.
+
+\begin{center}
+\begin{tabular}{lrr}
+\toprule
+$H_{II}/(va)$, mit $u=\mu^2/a$ & abgedeckte AA & schwache AA\\\midrule
+$-1-u$ & 20 & 32\\
+$-3/2-u$ & 12 & 16\\
+$-2-u$ & 1 & 1\\\midrule
+Gesamt & 33 & 49\\\bottomrule
+\end{tabular}
+\end{center}
+Alle 33 Hesse-Matrizen sind exakt rational für $\mu=0$ exportiert;
+beliebige nichtnegative Masse wird durch
+$H=va(H_0-u\mathbf1_5)$ ergänzt. Die natürliche Elementreihenfolge ist
+$(0,1,2,3,4)$; der Gaußadapter verwendet $(0,1,3,4,2)$, also äußere Werte
+vor dem inneren Wert. Das ist keine Änderung der achtdimensionalen
+Strata-/Randzustandsbasis.
+
+\textbf{Grenzen des Resultats.}
+Die Schranke ist nicht gleichmäßig für $\ell\to0$, denn
+$va=4\ell^2/\sqrt6\to0$. Sie beweist keine Stabilität bei Verfeinerung.
+Außerdem gilt sie nicht für beliebige Kettenränder: Die Fünferkette hat
+$H_{II}/(va)=8-u$, also bei $u=8$ einen singulären inneren Block und
+gleichzeitig $J\ne0$. Ein einfacher Schur-Inversenansatz ist dort
+unzulässig. Dies allein beweist keine Divergenz eines regulierten,
+projizierten Gesamtkerns; dafür ist der vorhandene gemeinsame
+Nullraumtest mit dem konkreten Projektionsvertrag maßgeblich.
+
+\textbf{Keine Eindeutigkeit der Wirkung.}
+Auch bei denselben führenden glatten Zielgleichungen sind Zusatzterme
+möglich. Beispielsweise respektiert
+\[
+\delta S=-\frac{\zeta\ell^2}{2}\sum_xv(D_C\Phi)_x^2,
+\qquad
+\delta H=-\zeta\ell^2D_C^TVD_C
+\]
+Umbenennung, Feldparität und die masselose konstante Verschiebung.
+Unter ausreichender glatter Kontrolle ist er im führenden Grenzfall
+unterdrückt, verändert aber die endlichen Matrizen. Hier wird ausdrücklich
+$\zeta=0$ gewählt. Eine eindeutige mikroskopische Wirkung oder eine unter
+Quantenkorrekturen geschlossene Kopplungsfamilie ist damit nicht bewiesen.
+
+\newpage
+\sect{7. Evidenz, Abbruchgrenzen und nächster Anschluss}
+\textbf{25 automatisierte Kontrollen.}
+Die Prüfungen verwenden exakte rationale beziehungsweise symbolische
+Algebra. Sie decken Produkt- und Paarform, Hesse-Matrix und erste
+Variation, Symmetrien, Einheiten-relevante Normierung, Randreaktion,
+Summationsidentität, gemeinsame Ordnungsvariation, Schnittbeiträge,
+klassische Zielidentitäten und die kleinen Kontrollfamilien ab.
+Über alle 107 deklarierten gerichteten Carrier werden die Symmetrie,
+Konstantenreaktion, Green-Identität und Adapterreihenfolge kontrolliert.
+Die Anzahl bestandener Tests ist kein physikalischer Konvergenznachweis.
+
+Das Paket enthält den exakten Kandidaten in \texttt{model.py},
+\texttt{action\_contract.json}, die Tests, maschinenlesbare Ergebnisse,
+eine reproduzierbare Archivprüfung sowie unveränderte, gehashte Eingaben
+des bisherigen roten Fadens. Grundlage ist der zusammengeführte Stand
+\href{https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/278}{PR 278},
+Commit\\{\small\texttt{4fed3a2fd0c5050af8e5b6dab6e6311fe7f4fd83}}.
+Diese neue Ausarbeitung ändert diesen Commit nicht.
+
+\textbf{Was Schritt 1 abschließt.}
+Feldinhalt, minimale Kopplungswahl, Einheiten, endliche gemeinsame Wirkung,
+skalare Randvariation und klassische Zielgleichungen sind jetzt explizit.
+Für den gewählten Kandidaten existiert eine aus der Wirkung berechnete
+Feldmatrix; ihre Nichtsingularität im Inneren der 33 AA-Kontrollen ist
+bewiesen. Es wurden keine kostenpflichtigen oder großen Produktionsläufe
+ausgeführt und keine Zahlen für physikalische Übergangseinträge eingesetzt.
+
+\textbf{Was offen bleibt.}
+Der Kandidat besitzt noch kein hergeleitetes physikalisches Historiemaß,
+keine vollständige gravitative Randwirkung, keine qualifizierten
+Randzustände und kein normiertes gemeinsames Quantenmaß. Insbesondere
+fehlen die gemeinsame Kontinuums- und Variationskonvergenz,
+Stabilitätskontrolle, Renormierungsfestlegung und Gesamtfehlerbilanz.
+Deshalb bleiben \texttt{MODEL}, \texttt{CURRENT}, \texttt{CORRESPONDENCE},
+\texttt{BOUNCE}, \texttt{REGULARITY}, \texttt{BOUNDARY}, \texttt{TRAPPING}
+und \texttt{EXTENSION} sämtlich auf \status{HOLD}.
+
+\textbf{Unmittelbarer Anschluss an Schritt 2.}
+Jetzt können physikalische Randinformation und Zustände für diesen
+\emph{benannten Kandidaten} spezifiziert werden: äußere Kragen,
+Strata-Projektoren, Feldpakete und Skalarprodukte einschließlich ihrer
+Maß- und Einheitenkonventionen. Bis dahin bleiben die physikalische
+$8\times8$-Matrix und insbesondere $K_{0+}$ nicht konstruiert.
+Die Wahl zusätzlicher Materie muss dabei sichtbar bleiben; sie ist keine
+nachträgliche Umdeutung des bisherigen reinen Staubmodells.
+
+\sect{Primärquellen und Reichweite ihrer Verwendung}
+\small
+[1] D. M. T. Benincasa, F. Dowker: \emph{The Scalar Curvature of a
+Causal Set}, Phys. Rev. Lett. 104, 181301 (2010), korrigierte Fassung v4.
+Verwendung: BD-Operator und Krümmungsbezug, kein Beweis dieses Gesamtmodells.\\
+\smallurl{https://arxiv.org/abs/1001.2725}
+
+[2] A. Belenchia, D. M. T. Benincasa, F. Dowker: \emph{The continuum
+limit of a 4-dimensional causal set scalar d'Alembertian},
+Class. Quantum Grav. 33, 245018 (2016).
+Verwendung: mittlerer Operatorgrenzfall und dessen Voraussetzungen.\\
+\smallurl{https://arxiv.org/abs/1510.04656}
+
+[3] V. Husain, T. Pawłowski: \emph{Time and a physical Hamiltonian
+for quantum gravity}, Phys. Rev. Lett. 108, 141301 (2012), Gleichung (1).
+Verwendung: klassischer wirbelfreier Staub plus unabhängige Materie.\\
+\smallurl{https://arxiv.org/abs/1108.1145}
+
+[4] S. Aslanbeigi, M. Saravani, R. D. Sorkin: \emph{Generalized causal
+set d'Alembertians}, JHEP 06 (2014) 024.
+Verwendung: Operatorfamilien und Grenzen der Stabilitätsannahme.\\
+\smallurl{https://arxiv.org/abs/1403.1622}
+\end{document}
