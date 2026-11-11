@@ -1,0 +1,509 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,amsmath,amssymb,booktabs,array,microtype}
+\pdfmapfile{+lm.map}\pdfmapfile{+cm.map}\pdfmapfile{+cmextra.map}\pdfmapfile{+symbols.map}
+\pdfinfoomitdate=1\pdftrailerid{}
+\usepackage[a4paper,margin=23mm]{geometry}
+\usepackage{xcolor,hyperref,fancyhdr}
+\definecolor{ink}{HTML}{183A4A}
+\hypersetup{colorlinks=true,linkcolor=ink,urlcolor=ink,pdftitle={CST-DUST: Erweiterte Verklebungsregel v0.1}}
+\pagestyle{fancy}\fancyhf{}\fancyhead[L]{\small CST-DUST | Erweiterter Randvertrag}
+\fancyhead[R]{\small v0.1 | 11.11.2026}\fancyfoot[C]{\thepage}
+\setlength{\headheight}{14pt}\setlength{\parindent}{0pt}\setlength{\parskip}{5pt}
+\setlength{\emergencystretch}{2em}
+\newcommand{\dd}{\,\mathrm d}\newcommand{\ii}{\mathrm i}
+\newcommand{\R}{\mathbb R}\newcommand{\one}{\mathbf1}
+\newcommand{\Sc}{\mathcal S}\newcommand{\norm}[1]{\lVert#1\rVert}
+\begin{document}
+{\color{ink}\LARGE\bfseries Die Schnittkopplungen rekonstruieren}\par
+{\large Ausführbare Verklebung von Gravitation, Staub und Skalarfeld}\par
+\textbf{Version 0.1, 11. November 2026.}\\
+Projekt: \texttt{thomasmgfeller/x6-spectral-astrolabium}.\\
+Quellstand: \texttt{efe19fca88a49d3d59de041652a60c26c180b8eb}.
+
+\section*{Ergebnis}
+Für die deklarierte endliche Kontrollfamilie liegt ein ausführbarer erweiterter
+Randvertrag vor. Er behält die Schnittinzidenzen, passende Intervallzählungen
+und die noch benötigten Uhr- und Feldvariablen als gemeinsame bedingte Daten.
+Daraus rekonstruiert er die gemeinsame Wirkung exakt:
+\[
+ S_C=S_L+S_R-S_S+\Delta S.
+\]
+Das gemeinsame Einflussfunktional ergänzt die fünf zuvor nachgewiesenen Terme
+und enthält außerdem die Maßkorrektur und einen einmaligen Schnittregulator:
+\[
+ \boxed{\ \mathcal I_\epsilon
+ =2\exp\!\left[\frac{\ii}{\hbar}(\Delta S-S_S)\right]
+       \exp\!\left[-\frac{\epsilon}{2}(q_3^2+q_4^2)\right].\ }
+\]
+Es multipliziert die \emph{bedingten lokalen Integranden}, bevor frühere
+gekoppelte Variablen integriert werden. Bereits auf zwei Schnittpunkte
+reduzierte Hilbert-Kerne enthalten die dafür nötigen Informationen nicht.
+
+\begin{center}\begin{tabular}{p{.48\linewidth}p{.43\linewidth}}\toprule
+Prüfung & Ergebnis\\\midrule
+Gemeinsame Wirkung aus gespeicherten Daten & Exakte Übereinstimmung für alle $33^2=1089$ Paare.\\
+Staub und Dichtebelegungen & Identität aller Wirkungskoeffizienten; gilt für alle Strata und Feldwerte.\\
+Skalare Integrationsreihenfolge bei $\epsilon>0$ & 2178 zertifizierte Kontrollen bestanden.\\
+Singuläre innere Skalarblöcke & 32 von 1089; als Distributionen in den Randfeldern definiert.\\
+Reine Zweipunktinformation am Schnitt & Unzureichend; frühere Uhr- und Feldinformation ist nötig.\\
+Beliebige globale CST-Historien & Nicht erfasst: zusätzliche Schnittumgehungen benötigen eigene Daten.\\\bottomrule
+\end{tabular}\end{center}
+
+\textbf{Interpretation.} Ein exakter endlicher Verklebungsvertrag ist erreicht.
+Die bisher widerlegte Deutung als $L^2$-Evolution wird dadurch nicht wiederhergestellt.
+Die neue gemeinsame Amplitude wird über Testzustandspaarungen definiert.
+Weder eine physikalische vierdimensionale CST-Summe noch ein Bounce-Gesetz
+wird damit konstruiert.
+
+\textbf{Lieferumfang.} Python-Rekonstruktor ohne numerische Zusatzabhängigkeiten,
+serialisierte Beispielpakete, unabhängige globale Kontrollrechnung, Arb-Zertifikate,
+zehn Testgruppen, eingefrorene Quellen und Hashmanifest.
+\newpage
+
+\section{Unveränderte Wirkung und die fünf fehlenden Terme}
+Wir verwenden die dimensionslosen Größen der bisherigen Kontrollen:
+$\beta=4/\sqrt6$, $\kappa=1$, Skalarmasse null und ursprüngliche
+Geometriekopplung eins. Für ein offenes Intervall $I(i,j)$ gilt
+\[
+ c(n)=
+ \begin{cases}
+ 1&n=0,\\-9&n=1,\\16&n=2,\\-8&n=3,\\0&n\ge4,
+ \end{cases}
+ \qquad
+ F_4(C)=|C|-\sum_{i\prec j}c(|I(i,j)|).
+\]
+Mit $c_{ij}=c(|I(i,j)|)$ lautet die vollständige Kontrollwirkung
+\[
+ \frac{S_C}{\hbar}
+ =\kappa F_4(C)-\frac12\sum_{j\in C}r_j
+ -\frac{\beta}{4}\sum_{i\prec j}c_{ij}
+       \bigl[r_j(t_j-t_i)^2+(q_j-q_i)^2\bigr].                 \tag{1}
+\]
+Die Dichte sitzt am späteren Endpunkt. Der Skalarteil ist
+$\beta q^TH^{(0)}q/2$; jedes Paar trägt
+$H_{ii},H_{jj}\mathrel{-}=c_{ij}/2$ und
+$H_{ij},H_{ji}\mathrel{+}=c_{ij}/2$ bei.
+
+Die beiden Teilgebiete sind
+\[
+ L=\{0,1,2,3,4\},\quad R=\{3,4,5,6,7\},\quad S=L\cap R=\{3,4\}.
+\]
+Der Schnitt $S$ ist eine Antikette, in $L$ maximal und in $R$ minimal.
+Die gemeinsame Ordnung ist ausdrücklich die \emph{minimale transitive Hülle}
+der beiden lokalen Ordnungen. Zusätzliche Beziehungen, die nicht durch
+$S$ vermittelt werden, sind in diesem Vertrag ausgeschlossen.
+
+Für die vollständig geschichtete Ordnung mit Schichten
+$(0,0,1,2,2,3,4,4)$ ergeben sich exakt:
+\begin{center}\begin{tabular}{cccc}\toprule
+Paar $(a,b)$ & $|I(a,b)|$ & $c_{ab}$ & Beitrag zu $\Delta F_4$\\\midrule
+$(0,5)$ & 3 & $-8$ & $8$\\
+$(1,5)$ & 3 & $-8$ & $8$\\
+$(2,5)$ & 2 & $16$ & $-16$\\
+$(2,6)$ & 3 & $-8$ & $8$\\
+$(2,7)$ & 3 & $-8$ & $8$\\\bottomrule
+\end{tabular}\end{center}
+Die vier Paare $(0,6),(0,7),(1,6),(1,7)$ haben Intervallgröße vier
+und Koeffizient null. Ihre Ordnungsrelation bleibt dennoch relevant.
+
+Schreibt man $X$ für alle schnittübergreifenden Paare, ist
+\[
+ \Delta F_4=-\sum_{(a,b)\in X}c_{ab},\qquad
+ \frac{\Delta S}{\hbar}
+ =\kappa\Delta F_4-\frac{\beta}{4}
+ \sum_{(a,b)\in X}c_{ab}
+ \bigl[r_b(t_b-t_a)^2+(q_b-q_a)^2\bigr].                      \tag{2}
+\]
+Im konkreten Fall: $F_L=F_R=37$, $F_S=2$, $\Delta F_4=16$ und
+$F_C=88$. Ohne die fünf Terme erhält man fälschlich $72$.
+Die gemischte Ableitung
+$\partial_{q_0}\partial_{q_5}(\Delta S/\hbar)=-4\beta$
+zeigt direkt, weshalb ein Gegenterm nur in $q_3,q_4$ nicht genügt.
+\newpage
+
+\section{Rekonstruktion der Intervalle aus Randgedächtnis}
+Setze $A=L\setminus S$ und $B=R\setminus S$. Jeder alte Endpunkt $a\in A$
+speichert seinen Schnittfußabdruck, jeder neue Endpunkt $b\in B$ den
+entsprechenden Eingangsfußabdruck:
+\[
+ U_a=\{s\in S:a\prec_L s\},\qquad
+ V_b=\{s\in S:s\prec_R b\}.
+\]
+Zusätzlich werden für nichtleere Teilmengen $U,V\subseteq S$ gespeichert:
+\begin{align*}
+ H_L(a,U)&=\#\{z\in A:a\prec_L z,\ U_z=U\},\\
+ H_R(b,V)&=\#\{z\in B:z\prec_R b,\ V_z=V\}.
+\end{align*}
+Jeder dieser Zähler darf separat bei vier abgeschnitten werden.
+Die leere Teilmenge trägt niemals zu einem Kreuzintervall bei.
+
+\textbf{Rekonstruktionssatz.}
+Für die minimale transitive Verklebung gilt
+\[
+ a\prec_C b\quad\Longleftrightarrow\quad U_a\cap V_b\ne\varnothing .
+\]
+Wenn diese Bedingung erfüllt ist, berechnet man
+\[
+ \boxed{
+ \begin{aligned}
+ n_{ab}=\;&
+ \sum_{U:\,U\cap V_b\ne\varnothing} H_L(a,U)
+ +|U_a\cap V_b|\\
+ &+\sum_{V:\,U_a\cap V\ne\varnothing} H_R(b,V).
+ \end{aligned}}                                                 \tag{3}
+\]
+Für die Wirkung genügt $\widehat n_{ab}=\min(4,n_{ab})$ und
+$c_{ab}=c(\widehat n_{ab})$.
+
+\textbf{Beweis.}
+Jeder Weg von $A$ nach $B$ muss den Schnitt durchlaufen. Wegen der
+Antiketten- und Orientierungsbedingung kann er nicht wieder in $A$
+zurückkehren. Dies beweist die Fußabdruckbedingung. Die Punkte eines offenen
+Kreuzintervalls liegen disjunkt in $A$, $S$ oder $B$.
+Ein $z\in A$ gehört genau dann dazu, wenn $a\prec_L z$ und
+$U_z\cap V_b\ne\varnothing$; die erste Summe zählt genau diese Punkte.
+Die Schnittpunkte sind exakt $U_a\cap V_b$. Die dritte Summe folgt analog
+für $B$. Die lokalen Intervalle innerhalb $L$ und $R$ ändern sich nicht.
+Da alle Zähler nichtnegativ sind,
+$\min(4,\sum_j\min(4,h_j))=\min(4,\sum_j h_j)$.
+Damit bewahrt die Abschneidung alle Wirkungskoeffizienten. \hfill$\square$
+
+Im geschichteten Beispiel besitzen alle sechs Endpunkte den Fußabdruck
+$S$. Die einzigen nichtverschwindenden Zähler sind
+\[
+ H_L(0,S)=H_L(1,S)=1,\qquad H_R(6,S)=H_R(7,S)=1.
+\]
+Alle übrigen sind null. Formel (3) ergibt etwa
+$n_{05}=1+2+0=3$, $n_{25}=0+2+0=2$ und $n_{06}=1+2+1=4$.
+So entstehen genau die fünf fehlenden Terme und die vier Nullkoeffizienten.
+
+\textbf{Ausführbare Repräsentation.}
+Die Schnittpunkte werden geordnet identifiziert. Teilmengen von $S=\{3,4\}$
+werden als Bitmasken $1,2,3$ kodiert. \texttt{sewing.py} berechnet
+Kreuzrelationen und Intervalle ausschließlich aus den Profilen.
+Die Pakete enthalten zusätzlich die lokalen Relationstabellen samt
+Wirkungskoeffizienten, einschließlich Nullkoeffizienten. Damit prüft die
+Validierung jeden gespeicherten lokalen Zähler ohne globale Ordnungsabfrage.
+\newpage
+
+\section{Konkreter erweiterter Randvertrag}
+Ein Paket ist weder eine neue Wellenfunktion auf zwei Punkten noch eine
+gemittelte Geometrie. Es beschreibt eine bedingte lokale Amplitude mit explizit
+gebundenen Gedächtnisvariablen. Historienlabels und Korrelationen bleiben erhalten.
+
+\begin{center}\begin{tabular}{p{.29\linewidth}p{.62\linewidth}}\toprule
+Gespeicherte Daten & Zweck und Bindung\\\midrule
+Schnitt-IDs, Orientierung, äußere Rand-IDs & Eindeutige Identifikation beider Schnittpunkte; nur dort dürfen sich die Teilgebiete überlappen.\\
+Lokale Wirkung und Historiengewicht & Unveränderte Gravitation, Staub- und Skalarphasen; kein vorheriges Mitteln der Hesse-Matrizen.\\
+Fußabdrücke und Intervallhistogramme & Rekonstruktion aller Kreuzkoeffizienten durch (3).\\
+Links: $t_a,q_a$ für $a\in A$ & Frühere Uhr- und Feldwerte für $(t_b-t_a)^2,(q_b-q_a)^2$.\\
+Rechts: $t_b,r_b,q_b$ für $b\in B$ & Spätere Felder und die spätere Dichte im Kreuzterm.\\
+Am Schnitt: $t_s,r_s,q_s$ & Gemeinsame Variablen, Schnittwirkung und Maß.\\
+Maß, Kopplungswerte, Regulatorbesitz & Fixiert Quotienten, Dichtestrata und einmalige Dämpfung jedes inneren Feldes.\\
+Abschlussregel und Integrität & Minimale transitive Hülle ohne Umgehungen; Schema und SHA-256 gegen unbemerkte Änderungen.\\\bottomrule
+\end{tabular}\end{center}
+
+\textbf{Wann darf eine alte Variable verschwinden?}
+Die Kreuzwirkung benötigt keine frühere Dichte $r_a$. Sie darf bedingt auf
+den erhaltenen Variablen integriert werden, sofern lokale Wirkung und
+Randpräparation entsprechend mitgeführt werden. Für $t_a$ und $q_a$ ist
+eine unabhängige Mittelung im Allgemeinen unzulässig. Insbesondere dürfen
+$t_2,q_2$ vor dem Einfügen des Einflussfunktionals nicht verloren gehen.
+Gleiches gilt rechts für die vom Kreuzterm benötigten Größen.
+
+Für \emph{die eine vollständig geschichtete Ordnung} lässt sich der alte
+Feldbedarf in den sechs Größen
+\[
+ t_0+t_1,\quad t_0^2+t_1^2,\quad t_2,\qquad
+ q_0+q_1,\quad q_0^2+q_1^2,\quad q_2
+\]
+ausdrücken. Dabei müsste die gemeinsame bedingte Amplitude auf diesen Größen
+korrekt mittransportiert werden; sechs getrennte Erwartungswerte reichen nicht.
+Der ausführbare Vertrag verwendet deshalb die einfachere Speicherung pro
+Endpunkt. Ein für beliebig viele Verklebungen konstantes oder minimales
+Gedächtnis wird nicht behauptet.
+
+\textbf{Fehlende globale Information ist sichtbar.}
+Die lokalen Historien mit Codes $(8476,8592)$ besitzen eine minimale
+Verklebung mit $F_4=14$. Fügt man global die Beziehung $1\prec5$ hinzu und
+schließt transitiv ab, bleiben beide lokalen Einschränkungen unverändert,
+aber $F_4=22$. Kein Verfahren kann diese Wahl aus denselben lokalen Paketen
+ableiten. Für solche Modelle muss ein Vertrag zusätzliche globale
+Kreuzrelationen und gegebenenfalls deren Gewichte als Eingabe verlangen.
+
+Die Prüfsummen belegen Integrität, keine physikalische Richtigkeit.
+Der aktuelle Rekonstruktor verwirft unbekannte Maß- oder Skalarparameter,
+fehlende Feldbindungen, falsche Orientierung und inkonsistente Intervallprofile.
+\newpage
+
+\section{Einflussfunktional, Maß und gemeinsame Rechnung}
+Die elementaren Maße lauten unverändert
+\[
+ \dd\lambda(t)=\tfrac12\one_{[-1,1]}\dd t,\qquad
+ \dd\nu(r)=\tfrac12\delta_0(\dd r)+\tfrac12\one_{(0,1)}\dd r,
+ \qquad \dd m_j=\dd\lambda(t_j)\dd\nu(r_j)\dd q_j.
+\]
+Ein zweipunktiger Rand besitzt
+$\dd\mu_A=\tfrac12\prod_{j\in A}\dd m_j$;
+ein innerer gelabelter Punkt besitzt $\dd m_j$.
+Daher $\dd m_3\dd m_4=2\dd\mu_S$.
+Es gibt keine weitere Summe über Schnittpermutationen:
+die gemeinsamen IDs sind bereits fest identifiziert.
+
+Mit $W_L=\exp(\ii S_L/\hbar)$, $W_R=\exp(\ii S_R/\hbar)$ gilt punktweise
+\[
+ W_LW_R\exp[\ii(\Delta S-S_S)/\hbar]=\exp(\ii S_C/\hbar).
+                                                               \tag{4}
+\]
+Der Schnitt ist eine masslose Antikette, also
+\[
+ S_S/\hbar=2\kappa-\tfrac12(r_3+r_4).
+\]
+Der positive Regulator gehört einmal zu jedem gemeinsamen inneren Punkt
+$I=\{2,3,4,5\}$. Lokal besitzen $L$ und $R$ bereits die Faktoren
+$e^{-\epsilon q_2^2/2}$ bzw.\ $e^{-\epsilon q_5^2/2}$.
+Für den konkreten Fünftermfall lautet der zusätzlich nötige Faktor somit
+\[
+ \mathcal I_\epsilon
+ =2e^{-\epsilon(q_3^2+q_4^2)/2}
+ \exp\!\left\{\ii\left[
+ 14\kappa+\tfrac12(r_3+r_4)
+ -\tfrac\beta4\sum_{(a,b)\in X}c_{ab}
+ \{r_b(t_b-t_a)^2+(q_b-q_a)^2\}\right]\right\}.                \tag{5}
+\]
+Die Zahl $14$ ist $16-2$: Kreuzgravitation minus doppelt gezählte Schnittgravitation.
+
+Für beliebige Testpräparationen $f$ am Rand $\{0,1\}$ und $g$ am Rand
+$\{6,7\}$ definieren wir für $\epsilon>0$
+\[
+ \mathcal B_\epsilon(g,f)=
+ \frac1{1089}\sum_{\ell,r=1}^{33}
+ \int \overline{g}\,f\,e^{\ii S_{C(\ell,r)}/\hbar}
+ e^{-\epsilon\sum_{j\in I}q_j^2/2}
+ \dd\mu_{01}\dd\mu_{67}\prod_{j\in I}\dd m_j.                 \tag{6}
+\]
+Ersetzt man im Integral den gemeinsamen Integranden durch
+$W_{L,\epsilon}W_{R,\epsilon}\mathcal I_\epsilon$ und
+$\prod_{I}\dd m_j$ durch $\dd m_2\,\dd\mu_S\,\dd m_5$,
+bleibt (6) exakt gleich. Das ist die ausführbare Verklebungsregel.
+
+\textbf{Beweis der gemeinsamen Rechnung.}
+Die lokalen Intervalle bleiben gleich; die zusätzlichen Paare sind genau (3).
+Vertexterme auf $S$ werden zweimal gezählt und einmal abgezogen.
+Dies beweist (4) in allen drei Sektoren für beliebige reelle Feldwerte.
+Der Faktor zwei korrigiert das Maß, die Regulatoren ergeben gemeinsam
+die vier inneren Dämpfungen. Für Schwartz-Randfelder und integrable
+Staubpräparationen ist bei $\epsilon>0$ absolute Konvergenz gegeben.
+Fubini erlaubt daher jede Integrationsreihenfolge. Die endliche Summe
+ändert daran nichts. Insbesondere umfasst die Identität alle $2^8$
+Atom-/Positivdichtestrata einschließlich ihrer ursprünglichen Gewichte.
+\hfill$\square$
+
+Die Produktgewichte $1/33^2$ definieren hier eine explizite neue
+Kontrollfamilie aus den bisherigen lokalen Familien. Sie sind kein
+hergeleitetes physikalisches Maß auf sämtlichen achtpunktigen Ordnungen.
+\newpage
+
+\section{Nullmoden, zulässige Paarungen und Fehlerbegriff}
+Die gemeinsame skalare Matrix $H^{(0)}$ hat für 1057 Paare einen invertierbaren
+inneren Block $H_{II}$. Bei 32 Paaren gilt exakt
+\[
+ \operatorname{rank}H_{II}=3,\qquad
+ \operatorname{rank}\begin{pmatrix}H_{II}\\H_{BI}\end{pmatrix}=4.
+                                                               \tag{7}
+\]
+Jede innere Nullmode koppelt also an die äußeren Felder
+$b=(q_0,q_1,q_6,q_7)$. Ein überall gewöhnlicher punktweiser Fresnelkern
+darf für diese 32 Summanden nicht unterstellt werden.
+
+\textbf{Distributioneller Abel-Grenzwert.}
+Schreibe $M=\beta H^{(0)}$ und zerlege die inneren Variablen orthogonal
+in $x$ auf den nichtentarteten Eigenraum und $y$ auf den Nullraum.
+Seien $\Lambda$ der invertierbare Block, $J_x$ und $J_0$ die Kopplungen
+dieser Räume an $b$. Dann ergibt die skalare Integration im Distributionssinn
+\[
+ \begin{split}
+ G_0(b)={}&
+ \frac{(2\pi)^{(4-k)/2}}{\sqrt{|\det\Lambda|}}\,
+ e^{\ii\pi\,\operatorname{sgn}(\Lambda)/4}
+ e^{\frac{\ii}{2}b^T(M_{BB}-J_x^T\Lambda^{-1}J_x)b}\\
+ &{}\times (2\pi)^k\,\delta^{(k)}(J_0b).
+ \end{split}                                                \tag{8}
+\]
+mit $k=\dim\ker H_{II}$; hier $k=0$ oder $1$.
+Die Zeilen von $J_0$ sind bei $k=1$ unabhängig nach (7).
+Die Delta-Distribution ist deshalb ein wohldefinierter Rückzug unter
+einer surjektiven linearen Abbildung. Orthogonale Nullraumkoordinaten fixieren
+die Normierung; ein unnormierter Nullvektor darf nicht unverändert
+für den Delta-Vorfaktor eingesetzt werden.
+
+Die nichtentarteten Gaußintegrale konvergieren zu den Fresnel-Faktoren.
+Für die Nullrichtungen gilt
+$\int e^{-\epsilon |y|^2/2+\ii y^TJ_0b}\dd y
+\to(2\pi)^k\delta^{(k)}(J_0b)$ in $\Sc'(\R^4)$.
+Die verbleibende quadratische Phase erhält den Schwartz-Testraum.
+Damit existiert für jede der 1089 Historien der gepaarte Abel-Grenzwert.
+
+Beispiel $(8592,8716)$: In der Reihenfolge $(2,3,4,5)$ ist
+$(-1,0,0,1)^T$ eine Nullrichtung.
+Ihr Produkt mit $H_{IB}$ ist $(0,15/2,-15/2,0)$.
+Die entstehende Randbedingung lautet also $q_1=q_6$.
+Sie ist eine verallgemeinerte Amplitude, keine gewöhnliche Dichtefunktion.
+
+\textbf{Zustandsraum.}
+Mit dem bisherigen kompakten Uhr-/Dichtemaß $\eta_A$ wählen wir
+\[
+ \Phi_A=
+ \bigl(L^2(\eta_A)\otimes_{\rm alg}\Sc(\R^2)\bigr)_{\rm inv}.
+\]
+Die Invarianz vertauscht beide Punkte samt Uhr, Dichte und Feld gemeinsam.
+Die Topologie ist die induzierte projektive Tensorprodukttopologie
+aus $L^2$-Norm und Schwartz-Seminormen.
+Dieser Testraum ist dicht im bisherigen Rand-Hilbertraum.
+Die Amplitude ist eine kontinuierliche sesquilineare Paarung
+$\Phi_{\rm out}\times\Phi_{\rm in}$, entsprechend $\Phi_{\rm in}\to\Phi_{\rm out}'$.
+Die endliche Staubintegration ist beschränkt; ihre Phasen hängen nicht von den
+Skalarfeldern ab. Die 32 Nullmoden erfordern daher keine neue Staubmaßannahme.
+
+\textbf{Fehlerbegriff.}
+Für feste Testzustände ist
+$E_\epsilon(g,f)=|\mathcal B_\epsilon(g,f)-\mathcal B_0(g,f)|$.
+Für direkte und rekonstruierte Rechnung ist die Differenz exakt null,
+sowohl bei jedem $\epsilon>0$ als auch im gepaarten Grenzwert.
+Eine uniforme Operatornormrate im früheren gewichteten Raum wird hier
+nicht behauptet. Fehler durch ausgelassene globale Historien sind unbestimmt.
+\newpage
+
+\section{Zertifizierte Zahlenkontrollen und Grenzen}
+Zusätzlich zur exakten Wirkungsidentität wird die vollständige Skalarintegration
+für alle 1089 Paare mit Arb bei 192 Bit gerechnet.
+Der numerische Kontrollsektor setzt \emph{alle acht Dichten auf ihre Atome}.
+Die äußeren Präparationen sind die normierten bisherigen Atom-/Grundpakete
+\[
+ \Psi(q,r)=2\sqrt2\,\one_{\{r_1=r_2=0\}}\,
+ \pi^{-1/2}e^{-(q_1^2+q_2^2)/2}.
+\]
+Dies wählt auch im Inneren nur den Atomanteil; es ist ausdrücklich
+\emph{nicht} die numerische Integration der Positivdichtesektoren.
+
+Die Randquotienten, Paketfaktoren und acht Atomgewichte ergeben gemeinsam
+$(1/2)^2(2\sqrt2)^2(1/2)^8=1/128$. Mit
+\[
+ Q_\epsilon=\operatorname{diag}(1,1,\epsilon,\epsilon,\epsilon,
+ \epsilon,1,1)-\ii\beta H^{(0)}
+\]
+ist der historische Beitrag
+\[
+ A_{\epsilon,C}=\frac{e^{\ii F_4(C)}}{128}\,
+ \frac{16\pi^3}{\prod_{k=1}^{8}\sqrt{p_k(Q_\epsilon)}}.       \tag{9}
+\]
+Die $p_k$ sind Gauß-Eliminationspivots. Bei positivem Regulator liegt ihr
+Realteil strikt rechts von null. Für den Grenzwert wird zuerst in der
+Reihenfolge $(0,1,6,7,2,3,4,5)$ eliminiert; jeder Grenzpivot liegt
+zertifiziert außerhalb von null und des Wurzelschnitts.
+Das Produkt der fortgesetzten Einzelwurzeln bewahrt die Fresnelphase.
+Eine unkontrollierte Hauptwurzel der Gesamtdeterminante wird nicht verwendet.
+
+\begin{center}\begin{tabular}{p{.43\linewidth}rr}\toprule
+Kontrolle & Realteil & Imaginärteil\\\midrule
+Festes Paar $(25500,25500)$, gemeinsam
+ & $-0.000076122522$ & $-0.000071394860$\\
+Dasselbe, nur lokale Wirkungen
+ & $ 0.000327584152$ & $-0.000729801282$\\
+1089er-Summe, Abel-Grenzwert
+ & $-0.000069112936$ & $ 0.000167149114$\\
+1089er-Summe, $\epsilon=1$
+ & $ 0.000002097094$ & $ 0.000052809063$\\
+1089er-Summe, $\epsilon=1/7$
+ & $-0.000047106955$ & $ 0.000135871965$\\\bottomrule
+\end{tabular}\end{center}
+Jede angezeigte Komponente hat absolute Rundungs- und Einschließungsunsicherheit
+kleiner als $10^{-12}$. Die vollständigen Arb-Intervalle stehen in den JSON-Daten.
+Die Regulatordifferenzen der 1089er-Atomkontrolle zum Abel-Wert betragen
+zertifiziert ungefähr $1.3470158\,10^{-4}$ bzw.\ $3.8242951\,10^{-5}$.
+Sie werden nicht als Fehlergrenzen für beliebige Zustände ausgegeben.
+
+Für $\epsilon=1,1/7$ wird zusätzlich die Reihenfolge
+$(2,5,3,4,0,1,6,7)$ geprüft: alle 2178 Ergebnisse überlappen ihre
+unabhängig berechneten Arb-Intervalle. In diesem Schritt bleiben
+die Kreuzkopplungen Teil der gemeinsamen Matrix.
+
+\textbf{Was ist abgesichert?}
+Die exakte Koeffizientenidentität erfasst auch sämtliche Positivdichtesektoren,
+ohne hochdimensionale Quadratur zu benötigen. Die Zahlenkontrolle prüft
+zusätzlich Phase, Maß und Integrationsreihenfolge in einem klar begrenzten
+Sektor. Die fünf Einzelterme, Schnittphase und Maßfaktor besitzen
+negative Kontrollen. Hundert größere künstliche Ordnungen prüfen ferner,
+dass das Abschneiden der Zähler bei vier die Rekonstruktion erhält.
+
+\textbf{Offen bleibt:} physikalische Historiengewichte, zusätzliche globale
+Kreuzrelationen, ein kontrollierter Grenzübergang zu größeren Familien,
+Fehler einer weiteren Gedächtnisreduktion und beliebig oft iterierbare
+Komposition als physikalischer Evolutionsoperator.
+\newpage
+
+\section{Reproduktion und Quellenvertrag}
+Die Datei \texttt{sewing.py} benötigt nur die Python-Standardbibliothek.
+Die beigelegten JSON-Pakete enthalten tatsächlich alle für den Beispiel-Join
+benötigten lokalen Daten. Die direkte globale Ordnung wird nur in der
+unabhängigen Prüfrechnung verwendet.
+
+\begin{verbatim}
+python sewing.py examples/left.json examples/right.json \
+  --fields examples/fields.json --output /tmp/joined.json
+python analysis.py
+python -m unittest discover -s . -p 'test_*.py' -v
+python verify.py
+python build_pdf.py
+\end{verbatim}
+Die Ausgabedatei enthält die rekonstruierte gemeinsame Wirkung,
+alle neun Kreuzintervalle samt Nullkoeffizienten, den Maßfaktor,
+die Regulatorzuständigkeit und bei Feldbindung die exakten rationalen
+Koeffizienten der gemeinsamen Wirkung sowie der zusätzlichen Schnittphase.
+Die Beispielpakete tragen je Gewicht $1/33$; der Join ergibt $1/1089$.
+Mit \texttt{--epsilon 1/7} wird außerdem das Einflussfunktional an den
+gebundenen Feldern ausgewertet; diese optionale Gleitkommaausgabe ist
+kein Arb-Zertifikat. Frühere Dichten sind im Beispiel als lokale
+Hilfsvariablen explizit gebunden.
+
+\begin{center}\begin{tabular}{p{.39\linewidth}p{.52\linewidth}}\toprule
+Datei & Inhalt\\\midrule
+\texttt{contract.json} & Zustandsraum, Maße, Abschlussregel, Anspruch und Ausschlüsse.\\
+\texttt{sewing.py} & Paketprüfung, Profilrekonstruktion, Wirkung und Schnittphase.\\
+\texttt{analysis.py} & Globale Ordnungsreferenz, 1089er-Prüfung, Nullmoden und Arb-Kontrollen.\\
+\texttt{examples/*.json} & Vollständige linke/rechte Pakete und rationale Feldwerte.\\
+\texttt{results/verification.json} & Ergebnisübersicht und vollständige Zahlenintervalle.\\
+\texttt{results/history\_pairs.json} & Exakte Kennzahlen jedes Historienpaars.\\
+\texttt{results/singular\_pairs.json} & Alle 32 singulären Paare und ihre Nullrichtungen.\\
+\texttt{test\_sewing.py} & Zehn Gruppen positiver und negativer Kontrollen.\\
+\texttt{inputs/}, \texttt{provenance.json} & Sechs unveränderte Quellartefakte mit Git-Blob-Identitäten.\\
+\texttt{MANIFEST.sha256.json} & Vollständige Dateiintegrität des Prüfpakets.\\\bottomrule
+\end{tabular}\end{center}
+
+\textbf{Anschluss an den bisherigen roten Faden.}
+Die Quelle \texttt{reduction\_gluing\_v0\_1} liefert die fünf Intervallterme
+und das frühere feste Achtpunkt-Gegenbeispiel zur lokalen Verklebung.
+\texttt{coupled\_kernel\_domain\_v0\_1} klärt den Definitionsbereich der
+ursprünglichen 33er-Amplitude. Der vorliegende Vertrag ergänzt jetzt
+die fehlende Gedächtnisstruktur und rekonstruiert die gemeinsame Wirkung.
+
+Die eingefrorenen Dateien sind Referenzdaten; insbesondere ist
+\texttt{inputs/prior\_gluing.py} ohne sein ursprüngliches Nachbarpaket
+kein eigenständiges Programm. Die ausführbaren Einstiege dieses Pakets
+sind oben aufgeführt. \texttt{verify.py} kontrolliert alle sechs
+Git-Blob-Identitäten, Dateihashes, Tests und eine byteidentische
+Neuberechnung der JSON-Ergebnisse in einem temporären Verzeichnis.
+
+\textbf{Statusentscheidung.}
+\texttt{FINITE\_EXTENDED\_SEWING\_PASS}: Der endliche erweiterte Randvertrag
+reproduziert die gemeinsame Rechnung in der deklarierten Interpretation.\\
+\texttt{PHYSICAL\_CST\_EVOLUTION\_NOT\_CONSTRUCTED}: Physikalische
+Evolution, Unitarität, allgemeine Junction-Dynamik und Singularitätsauflösung
+bleiben unbewiesen. Bestehende physikalische Gates werden nicht freigegeben.
+
+\textbf{Lizenz.} Apache-2.0; unveränderte Quellartefakte gemäß dem
+angegebenen Projektstand. Keine fremden Messdaten und keine kostenpflichtigen
+Rechenläufe wurden benötigt.
+\end{document}

@@ -1,0 +1,72 @@
+{
+  "id": "CST_DUST_EXTENDED_SEWING_v0.1",
+  "status": "FINITE_EXTENDED_SEWING_PASS",
+  "source_commit": "efe19fca88a49d3d59de041652a60c26c180b8eb",
+  "physical_evolution": "NOT_CONSTRUCTED",
+  "existing_physical_gates": "UNCHANGED_HOLD",
+  "geometry": {
+    "left": [0,1,2,3,4], "right": [3,4,5,6,7], "seam": [3,4],
+    "outer": [0,1,6,7], "inner": [2,3,4,5],
+    "family": "33 original AA local histories per side, explicitly identified labelled seam",
+    "joint_history_count": 1089,
+    "completion": "minimal transitive union; no additional bypass relations",
+    "joint_weight": "1/1089",
+    "physical_weight_derived": false,
+    "coefficient_by_open_interval_size": {"0":1,"1":-9,"2":16,"3":-8,"4_or_more":0}
+  },
+  "parameters": {"kappa":1,"beta":"4/sqrt(6)","scalar_mass":0,"scalar_geometry_coupling":1},
+  "measures": {
+    "clock": "dT/2 on [-1,1]",
+    "density": "(delta_0 + dr on (0,1))/2",
+    "scalar": "Lebesgue dq on R",
+    "two_point_boundary": "1/2 times product of labelled point measures",
+    "internal_vertices": "labelled product measure, no additional quotient",
+    "sewing_measure_factor": 2,
+    "extra_seam_permutation_sum": false
+  },
+  "memory": {
+    "geometry": "oriented seam IDs, footprint subsets and interval histograms capped at four per mask",
+    "left_endpoint_fields": ["clock t_a","scalar q_a"],
+    "right_endpoint_fields": ["clock t_b","later density r_b","scalar q_b"],
+    "seam_fields": ["clock","density","scalar"],
+    "local_data": "local pair coefficients including zero-relation rows, vertex terms, history weights, preparation and joint conditional amplitude",
+    "may_integrate_conditionally": "past density when all local action and preparation factors are retained",
+    "forbidden_loss": "independent averaging of retained clocks or fields, or elimination before adding cross influence",
+    "minimal_or_constant_memory_dimension_proved": false
+  },
+  "influence_functional": {
+    "delta_F4": "-sum_cross c_ab",
+    "delta_S_over_hbar": "kappa*delta_F4 - beta/4*sum_cross c_ab*(r_b*(t_b-t_a)^2+(q_b-q_a)^2)",
+    "seam_S_over_hbar": "2*kappa - (r3+r4)/2",
+    "multiplier": "2*exp(i*(delta_S-S_seam)/hbar)*exp(-epsilon*(q3^2+q4^2)/2)",
+    "application": "to joint conditional local integrands before eliminating retained variables"
+  },
+  "domain": {
+    "test_space": "Phi_A=(L2(eta_A) algebraic_tensor Schwartz(R^2)) invariant under simultaneous point exchange, with projective tensor topology",
+    "interpretation": "continuous sesquilinear test-state pairing; Phi_in to anti-dual Phi_out_prime",
+    "prescription": "common positive Abel regulator on each of the four joint interior fields, then epsilon down to zero in test pairings",
+    "singular_inner_blocks": 32,
+    "singular_rank": 3,
+    "null_mode_boundary_coupling_full_rank": true,
+    "pointwise_kernel_for_every_history_claimed": false,
+    "bounded_original_L2_evolution_claimed": false,
+    "previous_weighted_space_operator_rate_transferred": false
+  },
+  "error_contract": {
+    "action_reconstruction_error": "exactly zero on all 1089 pairs for all real fields and all density strata",
+    "sewing_pairing_error": "exactly zero at every common epsilon>0 and in the test-paired Abel limit",
+    "regulator_error": "E_epsilon(g,f)=abs(B_epsilon(g,f)-B_0(g,f)); no uniform rate asserted for all test states",
+    "printed_gaussian_component_error_bound": "1e-12",
+    "positive_density_numerical_quadrature": "not performed; covered by the exact identity",
+    "history_truncation_error": "not bounded outside the declared finite family"
+  },
+  "tests": {
+    "exact_history_pairs":1089,
+    "positive_regulator_order_checks":2178,
+    "all_density_masks_sample_control":256,
+    "larger_synthetic_order_controls":100,
+    "unit_test_groups":10,
+    "negative_controls":["drop each cross term","omit seam phase","omit measure factor two","inconsistent profiles","missing field memory","unsupported measure or scalar action","bypass ambiguity"]
+  },
+  "exclusions":["all global causal orders","infinite-history CST limit","physical history measure","automatic arbitrary repeated composition","unitarity","physical junction law","singularity resolution"]
+}

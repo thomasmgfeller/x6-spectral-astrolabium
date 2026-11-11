@@ -1,5 +1,17 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Erweiterter Randvertrag und ausführbare Verklebung v0.1 · 11. November 2026
+
+Die [erweiterte Verklebungsregel](extended_sewing_v0_1/README.md) schließt die fünf fehlenden Schnittkopplungen aus [Schritt 5](reduction_gluing_v0_1/README.md) für eine explizit deklarierte endliche Kontrollfamilie. Aus Schnittfußabdrücken, gruppierten Intervallzählungen und erhaltenen Uhr-/Feldvariablen wird die gemeinsame Gravitation-, Staub- und Skalarwirkung rekonstruiert. Frühere Variablen bleiben Teil einer gemeinsamen bedingten Amplitude, bis die Kreuzwirkung eingefügt ist. Die reine Zweipunktkonfiguration am Schnitt genügt nicht.
+
+**Alle 1.089 minimalen transitiven Verklebungen der bisherigen 33 × 33 AA-Historien stimmen exakt mit der gemeinsamen Wirkung überein.** Diese Koeffizientenidentität gilt für sämtliche Feldwerte und Atom-/Positivdichtestrata. Der ausführbare Faktor ergänzt die Kreuzwirkung, subtrahiert die doppelt gezählte Schnittwirkung, korrigiert das quotientierte Schnittmaß mit Faktor zwei und dämpft jedes gemeinsame innere Feld genau einmal. Im bekannten Fünftermfall erhält man ΔF₄=16 und F₄=88. Die Produktgewichte 1/1089 sind eine ausdrückliche Kontrollentscheidung.
+
+**32 innere Skalarblöcke sind singulär.** Ihre Nullrichtungen koppeln sämtlich an die Randfelder; der gemeinsame Abel-Grenzwert wird deshalb als Distribution auf einem festgelegten Schwartz-Testraum definiert. Die [Definitionsbereichsanalyse](coupled_kernel_domain_v0_1/README.md) wird nicht durch eine neue L²-Evolutionsbehauptung ersetzt. Zusätzliche globale Beziehungen, die den Schnitt umgehen, sind aus lokalen Daten nicht eindeutig rekonstruierbar und würden einen erweiterten Eingabevertrag benötigen.
+
+**Zehn Testgruppen und 2.178 zertifizierte Integrationsreihenfolge-Kontrollen bestanden.** Die vollständige 1.089er-Summe wurde zusätzlich im klar ausgewiesenen Acht-Atom-/Gauß-Kontrollsektor berechnet: −0.000069112936 + 0.000167149114 i, Fehler kleiner als 10⁻¹² je angezeigter Komponente. Positive Dichtesektoren sind durch die exakte Wirkungsidentität erfasst, aber nicht separat numerisch integriert. Paketquellen, sechs Herkunfts-Blobs, Ergebnis-Replay und CLI-Ausgabe sind geprüft. **FINITE_EXTENDED_SEWING_PASS; physikalische CST-Evolution weiterhin NOT_CONSTRUCTED; alle bisherigen physikalischen Gates HOLD.**
+
+[Bericht (PDF)](extended_sewing_v0_1/CST_DUST_Erweiterte_Verklebungsregel_v0_1.pdf) · [Prüfpaket (ZIP)](packages/CST_DUST_Erweiterte_Verklebungsregel_v0_1_Pruefpaket.zip) · [Herleitung (LaTeX)](extended_sewing_v0_1/DERIVATION.tex) · [Randvertrag](extended_sewing_v0_1/contract.json) · [Zertifikate](extended_sewing_v0_1/results/verification.json) · [Ausführbare Rekonstruktion und Reproduktion](extended_sewing_v0_1/README.md)
+
 ## Definitionsbereich des gekoppelten Kerns v0.1 · 11. November 2026
 
 Die [Definitionsbereichsanalyse](coupled_kernel_domain_v0_1/README.md) beantwortet die in [Schritt 5](reduction_gluing_v0_1/README.md) noch offene L²-Frage für die **ursprüngliche gekoppelte** AA-Kontrollamplitude: Der bereits verwendete normierte Atom-/Skalargrundzustand wird nicht in den bisherigen ungegewichteten Rand-Hilbertraum abgebildet. Damit liegt ein konkretes Gegenbeispiel zur angenommenen Evolution in diesem Raum vor.
