@@ -1,0 +1,122 @@
+{
+  "arithmetic": "integers, fractions, sympy exact expressions",
+  "checks": [
+    {
+      "name": "source_enumeration_219_orders",
+      "status": "PASS"
+    },
+    {
+      "name": "original_fibers_35_26_26_20",
+      "status": "PASS"
+    },
+    {
+      "name": "oriented_subsets_16_9_9_6",
+      "status": "PASS"
+    },
+    {
+      "name": "independent_oriented_count_formula",
+      "status": "PASS"
+    },
+    {
+      "name": "each_oriented_set_is_proper_subset",
+      "status": "PASS"
+    },
+    {
+      "name": "four_node_two_plus_two_has_no_interior",
+      "status": "PASS"
+    },
+    {
+      "name": "quadratic_action_uses_symmetric_part",
+      "status": "PASS"
+    },
+    {
+      "name": "retarded_operator_is_not_action_hessian",
+      "status": "PASS"
+    },
+    {
+      "name": "asymmetric_hessian_rejected",
+      "status": "PASS"
+    },
+    {
+      "name": "stationary_schur_substitution",
+      "status": "PASS"
+    },
+    {
+      "name": "determinant_schur_identity",
+      "status": "PASS"
+    },
+    {
+      "name": "signature_schur_identity",
+      "status": "PASS"
+    },
+    {
+      "name": "empty_interior_schur_is_original",
+      "status": "PASS"
+    },
+    {
+      "name": "singular_source_constraint_retained",
+      "status": "PASS"
+    },
+    {
+      "name": "compatible_zero_mode_not_silently_quotiented",
+      "status": "PASS"
+    },
+    {
+      "name": "singular_fresnel_determinant_rejected",
+      "status": "PASS"
+    },
+    {
+      "name": "negative_fresnel_phase_conjugates_positive",
+      "status": "PASS"
+    },
+    {
+      "name": "mixed_signature_fresnel_no_extra_morse_phase",
+      "status": "PASS"
+    },
+    {
+      "name": "quadratic_action_even_under_joint_field_flip",
+      "status": "PASS"
+    },
+    {
+      "name": "vacuum_one_quantum_integrand_odd",
+      "status": "PASS"
+    },
+    {
+      "name": "even_sector_mixing_can_commute_with_parity",
+      "status": "PASS"
+    },
+    {
+      "name": "odd_zero_does_not_imply_stratum_zero",
+      "status": "PASS"
+    },
+    {
+      "name": "equal_half_mass_is_special_to_unit_stratum_function",
+      "status": "PASS"
+    },
+    {
+      "name": "nonconstant_density_packet_has_different_norm",
+      "status": "PASS"
+    },
+    {
+      "name": "three_phases_require_192_entries",
+      "status": "PASS"
+    }
+  ],
+  "conditional_selection_rule": "If measure, domain and kernel are invariant under simultaneous Phi -> -Phi and boundary packets have parities p_out,p_in, then B=p_out*p_in*B.",
+  "conditional_zero_requires_opposite_parities": true,
+  "fixtures_are_synthetic": true,
+  "physical_gates": {
+    "BOUNCE": "HOLD",
+    "BOUNDARY": "HOLD",
+    "CORRESPONDENCE": "HOLD",
+    "CURRENT": "HOLD",
+    "EXTENSION": "HOLD",
+    "MODEL": "HOLD",
+    "REGULARITY": "HOLD",
+    "TRAPPING": "HOLD"
+  },
+  "physical_mixed_block_status": "NOT_COMPUTED",
+  "role": "EXACT_ALGEBRA_CONTROLS_NOT_PHYSICAL_MATTER_DATA",
+  "source_enumeration_is_project_based": true,
+  "test_count": 25
+}

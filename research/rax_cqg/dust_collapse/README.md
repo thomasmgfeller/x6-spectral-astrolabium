@@ -1,5 +1,15 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Materieblock-Vorprüfung und gerichtete Gaußprojektion v0.1 · 11. November 2026
+
+Die [korrigierte Fortsetzung](directed_boundary_v0_1/README.md) schließt an die Hilfsbasisprüfung aus PR #277 an. Die [Materieblock-Vorprüfung](matter_preflight_v0_1/README.md) trennt geometrische Verklebung, Staubuhr, zusätzliches Skalarfeld und tatsächliche Randwellenfunktionen. Ihre 25 exakten Kontrollen erklären unter anderem, warum ein Vakuum-Einteilchen-Zeuge bei Gesamtfeldparität verschwindet.
+
+Die anschließende Ausarbeitung konstruiert eine ausdrücklich gewählte gerichtete Fünfer-Kontrollfamilie mit innerem Element: 49/23/23/12 Fälle, mit Anschluss aller Randelemente 33/14/14/7. Für einen vorgegebenen reell-symmetrischen Feld-Hessian werden normierte Gauß-/Hermiteprojektionen einschließlich Determinantenphase hergeleitet. Im festen zentrierten Gaußfall ist der Abel-Grenzwert genau dann endlich, wenn der innere Block und seine Randkopplung keinen gemeinsamen unsichtbaren Nullvektor besitzen. Singuläre Innenblöcke sind damit nicht pauschal ausgeschlossen.
+
+**27 zusätzliche Tests bestehen; beide Pakete reproduzieren jeweils zwei JSON-Ergebnisdateien isoliert bytegleich.** Das aktualisierte Achtzustandsschema enthält die explizite Basispermutation, Ausgang/Eingang-Konvention und bedingte Paritätsblöcke. Parität allein schließt die Auswahl n=0,1 nicht dynamisch ab; Übergänge nach n=2 bleiben möglich. Atomdaten, gemeinsame Materiewirkung, physikalische Randzustände und Trunkierungsfehler bleiben offene Eingaben. **Physikalische Materiematrix NOT_CONSTRUCTED, physikalischer Mischblock NOT_COMPUTED; alle acht physikalischen Gates HOLD.** Die neue Kontrollfamilie ersetzt keine frühere Zählung und begründet keinen Bounce.
+
+[Aktualisierter Bericht (PDF)](directed_boundary_v0_1/CST_DUST_Randvertrag_Gaussprojektion_v0_1.pdf) · [Aktuelles Prüfpaket (ZIP)](directed_boundary_v0_1/CST_DUST_Randvertrag_Gaussprojektion_v0_1_Pruefpaket.zip) · [Basisvertrag](directed_boundary_v0_1/basis_contract.json) · [Vorprüfung: Herleitung](matter_preflight_v0_1/DERIVATION.md) · [Vorprüfung: Prüfpaket (ZIP)](matter_preflight_v0_1/CST_DUST_Materieblock_Vorpruefung_v0_1_Pruefpaket.zip)
+
 ## Normierungsprüfung einer ausgewählten Hilfsbasis v0.1 · 11. November 2026
 
 Die [korrigierte Hilfsbasisprüfung](selected_auxiliary_normalization_v0_1/README.md) wählt vier von sieben dokumentierten m=2-Orbits und ergänzt ein externes zweidimensionales Testlabel. Die positive Gramstruktur und ihre Einbettung sind explizit geprüft. Ein reiner Darstellungstransport erhält den veröffentlichten formalen Kontrolloperator; zwei zusätzliche Zuordnungen derselben Kernzahlen werden getrennt ausgewiesen. Der frühere große Normierungsdefekt gehört zum kovarianten Zuordnungsvergleich. Ein durch falsche Basisindizes erzeugter „Mischungsrest“ wird als Fehler reproduziert und korrigiert.

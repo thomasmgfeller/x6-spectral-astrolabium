@@ -1,0 +1,100 @@
+{
+  "artifact": "CST-DUST Materieblöcke: Randvertrag, Schur- und Paritätsprüfung v0.1",
+  "basis_is_derived_physical_basis": false,
+  "canonical_basis_order": "stratum_geometry_state",
+  "entries_across_three_phases": 192,
+  "entries_per_phase": 64,
+  "even_witnesses_status": "NOT_COMPUTED",
+  "first_odd_witness": "CONDITIONALLY_FORBIDDEN_BY_PARITY; NOT_A_GENERAL_MIXING_TEST",
+  "numerical_physical_entries": null,
+  "physical_K_0plus": "NOT_COMPUTED",
+  "physical_gates": {
+    "BOUNCE": "HOLD",
+    "BOUNDARY": "HOLD",
+    "CORRESPONDENCE": "HOLD",
+    "CURRENT": "HOLD",
+    "EXTENSION": "HOLD",
+    "MODEL": "HOLD",
+    "REGULARITY": "HOLD",
+    "TRAPPING": "HOLD"
+  },
+  "physical_matrix_status": "NOT_CONSTRUCTED",
+  "planned_phases": [
+    "1",
+    "-1",
+    "i"
+  ],
+  "planning_basis": [
+    "A|0|0m",
+    "A|0|1m",
+    "K|0|0m",
+    "K|0|1m",
+    "A|+|0m",
+    "A|+|1m",
+    "K|+|0m",
+    "K|+|1m"
+  ],
+  "preferred_even_witnesses": [
+    "B_(A,0,vacuum);(A,+,vacuum)",
+    "B_(A,0,one);(A,+,one)",
+    "B_(A,0,two);(A,+,vacuum) only after controlled basis enlargement"
+  ],
+  "required_inputs": [
+    {
+      "id": "history_carrier",
+      "requirement": "Gemeinsame gelabelte Ordnungsfamilie, echte Randabbildungen, Orientierung, zulässige Stratumkombinationen; Kettenlabel ist kein Antichainrand.",
+      "status": "MISSING_OR_NOT_QUALIFIED"
+    },
+    {
+      "id": "field_content",
+      "requirement": "Ist Phi ein zusätzliches skalares Feld oder eine nachgewiesene Reduktion der vorhandenen T,w-Freiheitsgrade?",
+      "status": "MISSING_OR_NOT_QUALIFIED"
+    },
+    {
+      "id": "action_hessian",
+      "requirement": "Reell-symmetrische Hesse-Matrix H_C(T,w), Einheiten, kinetisches Vorzeichen, Masse, Randterme und Kopplungen; Retardiertheit allein genügt nicht.",
+      "status": "MISSING_OR_NOT_QUALIFIED"
+    },
+    {
+      "id": "boundary_quantum_state",
+      "requirement": "Randfunktionsraum und positive Zustandswahl bzw. Polarisation; räumliche Moden k und Besetzungszahlen n getrennt definieren.",
+      "status": "MISSING_OR_NOT_QUALIFIED"
+    },
+    {
+      "id": "boundary_packets_and_measures",
+      "requirement": "Normierte Uhr-, Dichte- und Feldpakete, Gruppenwirkung, gemeinsame Randidentifikation; Atomanteil nicht doppelt zählen.",
+      "status": "MISSING_OR_NOT_QUALIFIED"
+    },
+    {
+      "id": "integration_prescription",
+      "requirement": "Kompakte Integrationsgebiete oder volle reelle Achse mit expliziter Abel/i0-Vorschrift; innere Nullräume, Verträglichkeitsbedingungen, Maß und Phase.",
+      "status": "MISSING_OR_NOT_QUALIFIED"
+    },
+    {
+      "id": "relabelling_weight",
+      "requirement": "Exakte labelerhaltende Gruppe und markierte Stabilisatoren; Hilfsraum-Normgewicht nicht ungeprüft als Amplitudengewicht einsetzen.",
+      "status": "MISSING_OR_NOT_QUALIFIED"
+    },
+    {
+      "id": "kernel_convention",
+      "requirement": "Kovariante Matrixelemente B oder Koeffizientenabbildung A; Verklebungsmaß und G-Matrix angeben.",
+      "status": "MISSING_OR_NOT_QUALIFIED"
+    },
+    {
+      "id": "parity_contract",
+      "requirement": "Invarianz von Gesamtwirkung, Domäne, Maß und Präparation unter gemeinsamer Feldspiegelung prüfen; sonst kein Paritätsnull behaupten.",
+      "status": "MISSING_OR_NOT_QUALIFIED"
+    },
+    {
+      "id": "error_budget",
+      "requirement": "Quadratur- und Trunkierungsfehler, Auswahl zulässiger Parameter und Ausschluss von Intervall-Null für Nichtnull-Zeugen.",
+      "status": "MISSING_OR_NOT_QUALIFIED"
+    },
+    {
+      "id": "coupling_attribution",
+      "requirement": "Für Materievermittlung einen aus derselben Wirkung definierten Entkopplungsvergleich bei unveränderten Präparationen und Maßen festlegen.",
+      "status": "MISSING_OR_NOT_QUALIFIED"
+    }
+  ],
+  "status": "PREPARATION_ONLY"
+}
