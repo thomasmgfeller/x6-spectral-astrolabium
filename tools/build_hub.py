@@ -176,8 +176,15 @@ def home(path, data, content, lang):
         + E(dust['scope']) + '</p></div><div class="feature-links">'
         + link(rel(path, dust_app), dust['launch'], **{'class': 'button'})
         + link(dust_guide, dust['dossier'], **{'class': 'feature-link'})
+        + link(REPO + '/blob/main/' + dust_path + 'boundary_state_space_v0_1/README.md', 'Randzustandsraum A → A: vier normierte Pakete, Gram-Rang geprüft (DE) →' if lang == 'de' else 'A → A boundary state space: four normalized packets, checked Gram rank (DE) →', **{'class': 'feature-link'})
         + link(REPO + '/blob/main/' + dust_path + 'minimal_scalar_action_v0_1/README.md', 'Gemeinsamer Skalarwirkungsansatz: 25 Kontrollen; physikalische Qualifikation offen (DE) →' if lang == 'de' else 'Joint scalar-action candidate: 25 checks; physical qualification open (DE) →', **{'class': 'feature-link'})
         + link(REPO + '/blob/main/' + dust_path + 'directed_boundary_v0_1/README.md', 'Gerichteter Randvertrag und Gaußprojektion: korrigierte Achtzustandsprüfung (DE) →' if lang == 'de' else 'Directed boundary and Gaussian projection: corrected eight-state audit (DE) →', **{'class': 'feature-link'})
+        + (''.join(link(REPO + '/blob/main/' + dust_path + target, label, **{'class': 'feature-link'}) for target, label in [
+            ('selected_auxiliary_normalization_v0_1/README.md', 'Selected auxiliary basis: corrected normalization; physical boundary space open (DE) →'),
+            ('geometry_control_8x8_v0_2/README.md', '8×8 geometry control: corrected basis and reproducible data (DE) →'),
+            ('boundary_kernel_benchmark_v0_1/README.md', 'CST-DUST boundary-kernel benchmark: exact controls, physical derivation open (DE) →'),
+            ('n0b_2c_mf_v0_2/README.md', 'N0B-2C-MF: corrected reference model; CST derivation open (DE) →'),
+        ]) if lang == 'en' else '')
         + link(rel(path, dust_coupling_report), dust['coupling_report'], **{'class': 'feature-link'})
         + link(rel(path, dust_coupling_package), dust['coupling_package'], **{'class': 'feature-link'})
         + link(rel(path, dust_massflow_report), dust['massflow_report'], **{'class': 'feature-link'})

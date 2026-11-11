@@ -1,5 +1,15 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Kleiner Randzustandsraum A → A v0.1 · 11. November 2026
+
+[Schritt 2](boundary_state_space_v0_1/README.md) schließt an den gemeinsamen Skalarwirkungsansatz aus [PR #279](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/279) an. Für zwei unmarkierte Antichainpunkte je Rand und ein inneres Element sind Atom-/Positivmaß, Uhr- und Skalarpakete, Vertauschungsprojektor und kinematisches Skalarprodukt gemeinsam festgelegt. Ein- und Ausgang verwenden dieselben Skalen und Paketdefinitionen. Der Nullatomsektor bedeutet keine Abwesenheit des zusätzlichen Skalarfelds.
+
+**Vier normierte Zustände pro Rand; exakte Gram-Matrix I₄ und Rang 4.** „+“ umfasst ausdrücklich 10, 01 und 11, also mindestens eine positive Randdichte, als reine kohärente Überlagerung mit relativer Phase null. Die nach genau einer beziehungsweise zwei positiven Dichten aufgelöste Produktfamilie hat Gram-Matrix I₆ und Rang 6. Wird das zusammengefasste „+“ zusätzlich aufgenommen, bleiben acht benannte Vektoren vom Rang 6; die beiden Nullrelationen sind exakt ausgewiesen. Die zwei vom Viererraum ausgelassenen Dichterichtungen sind ebenfalls konstruiert. Der vollständige kinematische Hilbertraum ist unendlichdimensional.
+
+**20 Prüfungen bestanden:** direkte Gaußintegrale, Atom- und Orbitgewichte, Vertauschung, Labelduplikate, exakte Ränge, Nullrelationen, kohärenter Zustand gegen Mischung, Parität und Breitenvergleich. Herkunfts-Blobs, Paket-Hashes und Ergebnis-Replay werden offline geprüft. Die Randkonstruktion ist ein expliziter kinematischer Kandidat; physikalische Präparation, physikalisches Skalarprodukt, Historiengewichte und dynamische Geschlossenheit bleiben offen. **Physikalischer Kern NOT_CONSTRUCTED, K_0plus NOT_COMPUTED; alle acht physikalischen Gates HOLD.** Keine Produktionssimulation und keine neue Bounce-Aussage.
+
+[Bericht (PDF)](boundary_state_space_v0_1/CST_DUST_Randzustandsraum_v0_1.pdf) · [Prüfpaket (ZIP)](packages/CST_DUST_Randzustandsraum_v0_1_Pruefpaket.zip) · [Vollständige Herleitung](boundary_state_space_v0_1/DERIVATION.md) · [Randzustandsvertrag](boundary_state_space_v0_1/boundary_contract.json) · [Exakte Gram-Matrizen](boundary_state_space_v0_1/results/gram_matrices.json) · [Code und Reproduktion](boundary_state_space_v0_1/README.md)
+
 ## Gemeinsamer minimaler Skalarwirkungsansatz v0.1 · 11. November 2026
 
 [Schritt 1](minimal_scalar_action_v0_1/README.md) setzt die Materieblock-Vorprüfung und gerichtete Gaußprojektion aus [PR #278](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/278) fort. Der ausdrücklich deklarierte Kandidat **CST-DUST-KG-MIN-v0.1** verbindet die geerbte Geometrie-/Staubwirkung mit einem zusätzlichen reellen Skalarfeld. Dieses Feld ist weder die Staubuhr noch eine bereits hergeleitete freie Staubuhrstörung. Die minimale Kopplungswahl erfolgt über die gemeinsame Geometrie; eine direkte Staub-Skalar-Kopplung wird auf null gesetzt.
