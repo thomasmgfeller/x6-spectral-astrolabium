@@ -1,0 +1,9 @@
+{
+  "verification": {"python": ">=3.10", "sympy": "1.14.0"},
+  "pdf_build": {"reportlab": "4.4.9", "matplotlib": "3.10.8", "Pillow": "installed; used for formula raster dimensions"},
+  "network_required": false,
+  "test_command": "python verify.py",
+  "evidence_command": "python existence.py",
+  "pdf_command": "python make_report.py",
+  "release_command": "python package.py"
+}
