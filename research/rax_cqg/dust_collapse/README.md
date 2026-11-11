@@ -1,5 +1,19 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Zustandsbeschränkung und Verklebung v0.1 · 11. November 2026
+
+[Schritt 5](reduction_gluing_v0_1/README.md) prüft den Vierzustandsraum und den Mischblock aus [Schritt 2](boundary_state_space_v0_1/README.md) und [Schritt 4](parity_mixing_v0_1/README.md). Der normierte Atom-/Grundpaketeingang wird auf 15 exakt orthonormale Ausgangszustände projiziert: zusätzliche n=2-Anregungen beider Feldrichtungen, die aufgelöste Dichterichtung Δ, zulässige Dichte-/Feldkorrelationen und ein nichtkonstantes Uhrpaket sind eingeschlossen. Gewichte 1/33, κ=1, μ=0, Maße und ursprüngliche Wirkung bleiben fest.
+
+**Der Vierzustandsraum ist für diesen Eingang nicht geschlossen.** Die Norm der zusätzlich sichtbaren Komponenten beträgt r=0.102348630703 ± 10⁻¹², entsprechend 36.7087702939 % der Amplitudennorm innerhalb der getesteten 15er-Ausgangsspalte. Neun zusätzliche Komponenten sind zertifiziert nicht null. Der bisherige Mischblock bleibt bei unveränderten Zuständen und unverändertem Kern exakt gleich. Der relative Anteil ist keine Wahrscheinlichkeit und keine obere Restschranke für den gesamten unendlichen Hilbertraum. Es wurde eine Eingangsspalte berechnet, keine vollständige 15×15-Matrix.
+
+**Ein präziser Verklebungsfehler:** Für die Achtpunktordnung (2,1,2,1,2), deren Teilordnungen beide zur bisherigen AA-Familie gehören, fehlen der lokalen Teilwirkungssumme fünf schnittübergreifende Intervallterme. Das bleibt nach Entfernung der doppelten Schnittterme und Korrektur des Quotientmaßes bestehen. Der normiert projizierte Nullatombeitrag unterscheidet sich von der gemeinsamen Rechnung. Bei Verwendung derselben gemeinsamen Wirkung stimmen direkte und gestufte Gaußintegration dagegen exakt überein. Eine vollständige Summe über 1089 Historienpaare und alle positiven Achtpunkt-Dichtestrata wurde nicht berechnet.
+
+**Eine getrennte Definitionsbereichslücke:** Die entkoppelte Referenz aus Schritt 4 besitzt eine ungedämpfte ausgehende Feldrichtung und bildet den untersuchten Eingang nicht in das ungegewichtete Rand-L² ab. Endliche Gaußpaket-Matrixelemente liefern daher noch keinen beschränkten Evolutionsoperator oder eine globale obere Abschneidefehlergrenze. Für die gekoppelte Hauptwirkung bleibt diese vollständige L²-Frage offen.
+
+**32 Prüfungen bestanden:** exakte Gram-Matrix I₁₅, phasenrichtige Gaußmomente, zertifizierte 48-Knoten-/192-Bit-Rechnung, 56-Knoten-/224-Bit-Kontrolle, unabhängige direkte 5D-Rechnung, Wirkungsterme, Schnittnormierung und vier bytegleiche Ergebnis-Replays. Die numerischen Fehler sind von Zustands- und Modellfehlern getrennt. **Physikalischer CST-Kern weiterhin NOT_CONSTRUCTED; alle acht physikalischen Gates HOLD.**
+
+[Bericht (PDF)](reduction_gluing_v0_1/CST_DUST_Reduktion_Verklebung_v0_1.pdf) · [Prüfpaket (ZIP)](packages/CST_DUST_Reduktion_Verklebung_v0_1_Pruefpaket.zip) · [Vollständige Herleitung](reduction_gluing_v0_1/DERIVATION.md) · [Versuchsvertrag](reduction_gluing_v0_1/experiment_contract.json) · [Zertifizierte Testspalte](reduction_gluing_v0_1/results/reduction.json) · [Verklebungsbefund](reduction_gluing_v0_1/results/gluing.json) · [Code und Reproduktion](reduction_gluing_v0_1/README.md)
+
 ## Paritätserlaubter Mischblock A → A v0.1 · 11. November 2026
 
 [Schritt 4](parity_mixing_v0_1/README.md) berechnet den Übergang Atom → Positiv mit Materiepaket 0→0 auf der Basis von [Schritt 2](boundary_state_space_v0_1/README.md) und [Schritt 3](amplitude_existence_v0_1/README.md). Alle 33 deklarierten AA-Historien gehen mit Gewicht 1/33 und voller Gravitationsphase exp(i F₄) ein; κ=1, μ=0 und die normierten Randpakete bleiben fest. Diese Gewichte und Parameter sind ausdrückliche Kontrollentscheidungen, keine hergeleiteten physikalischen Historiengewichte.

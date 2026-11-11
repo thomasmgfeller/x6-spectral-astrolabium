@@ -1,0 +1,48 @@
+name: CST-DUST state reduction and gluing
+on:
+  pull_request:
+    paths:
+      - 'research/rax_cqg/dust_collapse/reduction_gluing_v0_1/**'
+      - 'research/rax_cqg/dust_collapse/packages/CST_DUST_Reduktion_Verklebung_v0_1_Pruefpaket.zip'
+      - '.github/workflows/cst-dust-reduction-gluing.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'research/rax_cqg/dust_collapse/reduction_gluing_v0_1/**'
+      - 'research/rax_cqg/dust_collapse/packages/CST_DUST_Reduktion_Verklebung_v0_1_Pruefpaket.zip'
+      - '.github/workflows/cst-dust-reduction-gluing.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  reduction-gluing:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Install pinned certified arithmetic and independent oracle
+        run: python -m pip install -r research/rax_cqg/dust_collapse/reduction_gluing_v0_1/requirements.txt
+      - name: Verify 32 controls, certified replays and independent gluing checks
+        run: python research/rax_cqg/dust_collapse/reduction_gluing_v0_1/verify.py --extended
+      - name: Check downloadable package matches the published sources
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import json, zipfile
+          root = Path('research/rax_cqg/dust_collapse/reduction_gluing_v0_1')
+          archive = root.parent / 'packages/CST_DUST_Reduktion_Verklebung_v0_1_Pruefpaket.zip'
+          prefix = 'CST_DUST_Reduktion_Verklebung_v0_1/'
+          manifest = json.loads((root / 'MANIFEST.sha256.json').read_text())
+          paths = set(manifest) | {'MANIFEST.sha256.json'}
+          with zipfile.ZipFile(archive) as z:
+              assert z.testzip() is None, 'ZIP CRC failure'
+              assert set(z.namelist()) == {prefix + p for p in paths}, 'ZIP inventory mismatch'
+              for p in paths:
+                  assert z.read(prefix + p) == (root / p).read_bytes(), 'ZIP/source mismatch: ' + p
+          print('PASS: downloadable ZIP matches all published package files.')
+          PY
