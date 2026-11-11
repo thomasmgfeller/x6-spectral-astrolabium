@@ -1,0 +1,144 @@
+{
+  "completion": "minimal_transitive_union_no_bypass_relations",
+  "count_cap": 4,
+  "field_memory": {
+    "5": {
+      "clock": "t5",
+      "density": "r5",
+      "scalar": "q5"
+    },
+    "6": {
+      "clock": "t6",
+      "density": "r6",
+      "scalar": "q6"
+    },
+    "7": {
+      "clock": "t7",
+      "density": "r7",
+      "scalar": "q7"
+    }
+  },
+  "history_weight": "1/33",
+  "local_action": {
+    "F4": 37,
+    "pair_terms": [
+      [
+        3,
+        5,
+        1
+      ],
+      [
+        3,
+        6,
+        -9
+      ],
+      [
+        3,
+        7,
+        -9
+      ],
+      [
+        4,
+        5,
+        1
+      ],
+      [
+        4,
+        6,
+        -9
+      ],
+      [
+        4,
+        7,
+        -9
+      ],
+      [
+        5,
+        6,
+        1
+      ],
+      [
+        5,
+        7,
+        1
+      ]
+    ],
+    "vertices": [
+      3,
+      4,
+      5,
+      6,
+      7
+    ]
+  },
+  "local_auxiliary_fields": {},
+  "measure_id": "boundary_state_space_v0_1: quotient=1/2; clocks=dT/2 on [-1,1]; density=(delta0+dr)/2; scalar=dq",
+  "outer_boundary": [
+    6,
+    7
+  ],
+  "owned_regulator_vertices": [
+    5
+  ],
+  "payload_sha256": "0a4c02486f92186b99bb90ea4525a9ba9b9dda1e5a128924ba7b830b3019ae7a",
+  "profiles": [
+    {
+      "footprint": 3,
+      "interval_histogram": {
+        "1": 0,
+        "2": 0,
+        "3": 0
+      },
+      "vertex": 5
+    },
+    {
+      "footprint": 3,
+      "interval_histogram": {
+        "1": 0,
+        "2": 0,
+        "3": 1
+      },
+      "vertex": 6
+    },
+    {
+      "footprint": 3,
+      "interval_histogram": {
+        "1": 0,
+        "2": 0,
+        "3": 1
+      },
+      "vertex": 7
+    }
+  ],
+  "scalar_parameters": {
+    "beta": "4/sqrt(6)",
+    "geometry_coupling": 1,
+    "mass": 0
+  },
+  "schema": "cst-dust.extended-cut/0.1",
+  "seam": [
+    3,
+    4
+  ],
+  "seam_fields": {
+    "3": {
+      "clock": "t3",
+      "density": "r3",
+      "scalar": "q3"
+    },
+    "4": {
+      "clock": "t4",
+      "density": "r4",
+      "scalar": "q4"
+    }
+  },
+  "semantics": "joint conditional amplitude; retained variables are not independently averaged",
+  "side": "right",
+  "vertices": [
+    3,
+    4,
+    5,
+    6,
+    7
+  ]
+}
