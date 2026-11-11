@@ -1,0 +1,296 @@
+{
+  "all_labeled_four_element_orders": 219,
+  "caveat": "K is a chain, hence not an antichain Cauchy boundary. Counts are not temporal transition amplitudes.",
+  "restriction": "Remove every relation from right block {2,3} to left block {0,1}; permit absent cross relations.",
+  "restriction_is_a_physical_boundary_law": false,
+  "role": "PROJECT_SOURCE_REENUMERATION_AND_DIAGNOSTIC_RESTRICTION",
+  "transitions": [
+    {
+      "boundary_nodes_if_both_blocks_are_boundaries": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "interior_nodes_under_that_assignment": [],
+      "left": "A",
+      "original_count": 35,
+      "original_order_ids": [
+        0,
+        4,
+        8,
+        12,
+        64,
+        68,
+        72,
+        76,
+        128,
+        132,
+        136,
+        140,
+        192,
+        196,
+        200,
+        204,
+        256,
+        384,
+        512,
+        520,
+        768,
+        4096,
+        4160,
+        4352,
+        4608,
+        4864,
+        8192,
+        8196,
+        8448,
+        8704,
+        8960,
+        12288,
+        12544,
+        12800,
+        13056
+      ],
+      "polynomials": {
+        "no_right_to_left_relations": {
+          "-1": "4",
+          "-2": "6",
+          "-3": "4",
+          "-4": "1",
+          "0": "1"
+        },
+        "original": {
+          "-1": "8",
+          "-2": "16",
+          "-3": "8",
+          "-4": "2",
+          "0": "1"
+        }
+      },
+      "restricted_count": 16,
+      "restricted_order_ids": [
+        0,
+        4,
+        8,
+        12,
+        64,
+        68,
+        72,
+        76,
+        128,
+        132,
+        136,
+        140,
+        192,
+        196,
+        200,
+        204
+      ],
+      "right": "A"
+    },
+    {
+      "boundary_nodes_if_both_blocks_are_boundaries": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "interior_nodes_under_that_assignment": [],
+      "left": "A",
+      "original_count": 26,
+      "original_order_ids": [
+        2048,
+        2056,
+        2060,
+        2176,
+        2184,
+        2188,
+        2240,
+        2248,
+        2252,
+        2304,
+        2312,
+        2432,
+        2440,
+        2560,
+        2568,
+        2688,
+        2696,
+        2816,
+        2824,
+        2944,
+        2952,
+        6400,
+        6912,
+        10752,
+        11008,
+        15104
+      ],
+      "polynomials": {
+        "no_right_to_left_relations": {
+          "-1": "2",
+          "-2": "1",
+          "0": "1",
+          "16": "1",
+          "7": "2",
+          "8": "2"
+        },
+        "original": {
+          "-1": "4",
+          "-19": "1",
+          "-2": "4",
+          "0": "1",
+          "16": "2",
+          "7": "8",
+          "8": "6"
+        }
+      },
+      "restricted_count": 9,
+      "restricted_order_ids": [
+        2048,
+        2056,
+        2060,
+        2176,
+        2184,
+        2188,
+        2240,
+        2248,
+        2252
+      ],
+      "right": "K"
+    },
+    {
+      "boundary_nodes_if_both_blocks_are_boundaries": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "interior_nodes_under_that_assignment": [],
+      "left": "K",
+      "original_count": 26,
+      "original_order_ids": [
+        2,
+        6,
+        10,
+        14,
+        70,
+        78,
+        138,
+        142,
+        206,
+        514,
+        518,
+        522,
+        526,
+        770,
+        8194,
+        8198,
+        8202,
+        8206,
+        8706,
+        8710,
+        8714,
+        8718,
+        8962,
+        12290,
+        12802,
+        13058
+      ],
+      "polynomials": {
+        "no_right_to_left_relations": {
+          "-1": "2",
+          "-2": "1",
+          "0": "1",
+          "16": "1",
+          "7": "2",
+          "8": "2"
+        },
+        "original": {
+          "-1": "4",
+          "-19": "1",
+          "-2": "4",
+          "0": "1",
+          "16": "2",
+          "7": "8",
+          "8": "6"
+        }
+      },
+      "restricted_count": 9,
+      "restricted_order_ids": [
+        2,
+        6,
+        10,
+        14,
+        70,
+        78,
+        138,
+        142,
+        206
+      ],
+      "right": "A"
+    },
+    {
+      "boundary_nodes_if_both_blocks_are_boundaries": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "interior_nodes_under_that_assignment": [],
+      "left": "K",
+      "original_count": 20,
+      "original_order_ids": [
+        2050,
+        2058,
+        2062,
+        2186,
+        2190,
+        2254,
+        2562,
+        2570,
+        2574,
+        2698,
+        2702,
+        2818,
+        2826,
+        2954,
+        10754,
+        10762,
+        10766,
+        11010,
+        11018,
+        15106
+      ],
+      "polynomials": {
+        "no_right_to_left_relations": {
+          "-1": "1",
+          "-18": "1",
+          "0": "1",
+          "1": "1",
+          "8": "2"
+        },
+        "original": {
+          "-1": "2",
+          "-18": "2",
+          "-2": "1",
+          "0": "1",
+          "1": "6",
+          "17": "4",
+          "8": "4"
+        }
+      },
+      "restricted_count": 6,
+      "restricted_order_ids": [
+        2050,
+        2058,
+        2062,
+        2186,
+        2190,
+        2254
+      ],
+      "right": "K"
+    }
+  ]
+}
