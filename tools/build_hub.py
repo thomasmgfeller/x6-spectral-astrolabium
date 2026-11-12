@@ -176,6 +176,7 @@ def home(path, data, content, lang):
         + E(dust['scope']) + '</p></div><div class="feature-links">'
         + link(rel(path, dust_app), dust['launch'], **{'class': 'button'})
         + link(dust_guide, dust['dossier'], **{'class': 'feature-link'})
+        + link(REPO + '/blob/main/' + dust_path + 'weight_robustness_v0_1/README.md', 'Gewichtsrobustheit: positive globale Untergrenze des vollständigen Blocks (DE) →' if lang == 'de' else 'Weight robustness: positive global lower bound for the complete block (DE) →', **{'class': 'feature-link'})
         + link(REPO + '/blob/main/' + dust_path + 'basis_invariant_coupling_v0_1/README.md', 'Basisunabhängiger Kopplungsbefund: vollständiger Block und zertifizierte Singularzahl (DE) →' if lang == 'de' else 'Basis-independent coupling: complete block and certified singular value (DE) →', **{'class': 'feature-link'})
         + link(REPO + '/blob/main/' + dust_path + 'reduction_bound_v0_1/README.md', 'Reduktionsfehler: obere Schranke; kompakte Basis weiterhin HOLD (DE) →' if lang == 'de' else 'Reduction error: upper bound; compact basis remains HOLD (DE) →', **{'class': 'feature-link'})
         + link(REPO + '/blob/main/' + dust_path + 'extended_sewing_v0_1/README.md', 'Erweiterter Randvertrag: 1.089 Verklebungen exakt rekonstruiert (DE) →' if lang == 'de' else 'Extended boundary contract: 1,089 sewings reconstructed exactly (DE) →', **{'class': 'feature-link'})

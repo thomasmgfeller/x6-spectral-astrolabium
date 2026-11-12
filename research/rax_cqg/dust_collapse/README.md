@@ -1,5 +1,19 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Gewichtsrobustheit des vollständigen Blocks v0.1 · 12. November 2026
+
+Die [globale Gewichtsprüfung](weight_robustness_v0_1/README.md) minimiert die V-normierte Größe des gesamten Differenzblocks über **alle bisher zugelassenen nichtnegativen, normierten und randinvarianten Historiengewichte**. Die 33 ursprünglichen AA-Historien, sechs Eingangs- und sechs Ausgangstestzustände, vollständige Gram-Normierung, Gravitationsphasen und feste entkoppelte Referenz bleiben unverändert. Die zehn Orbitmassen sind frei; es werden keine Mindestgewichte oder weiteren Maßbedingungen hinzugefügt.
+
+**Das globale Minimum des 6×6-Blocks liegt in [0,0022939794998; 0,0022939795002].** Für den separat minimierten gesamten 4×2-Atom→Positiv-Block liegt es in [0,0003502439596; 0,0003502439599]. Dieselben Einschließungen gelten für das Infimum über strikt positive Gewichte. Eine vollständige Auslöschung dieser Blöcke ist in der deklarierten Klasse ausgeschlossen. Die Zahlen sind deterministisch eingeschlossene Amplitudennormen, keine Wahrscheinlichkeiten.
+
+**Der Beweis erfasst das gesamte Gewichtssimplex:** Zehn eingeschlossene Orbit-Ungleichungen für feste Test- und Eingangsvektoren liefern die globale untere Schranke. Explizite rationale Gewichte und die analytisch eingeschlossene Singularzahl bezeugen die obere Schranke. Der Optimierer dient nur der Kandidatensuche; sein Erfolgsstatus ist keine Beweisannahme. Das Prüfpaket enthält auch strikt positive Zeugen auf sämtlichen 33 Historien.
+
+**Der zusammenhängende Historienanteil bleibt getrennt:** An jedem Orbitvertex verschwindet er exakt, während der vollständige Differenzblock nicht null ist. Bei strikt positiven Gewichten ist sein Infimum ebenfalls null. Der robuste Gesamtbefund begründet deshalb keine positive uniforme Untergrenze des zusammenhängenden Anteils. Die Zerlegung in diesen Anteil und die Änderung der mittleren Skalarantwort wird dort ausgewiesen, wo ihre komplexe Normierung definiert ist; die Blockminimierung enthält keine entsprechende Gewichtseinschränkung.
+
+Neun Kontrollgruppen einschließlich fünf Negativkontrollen und eine vollständige 40-Knoten-/192-Bit-Neuberechnung bestanden; alle fünf Ergebnisdateien wurden bytegleich reproduziert. **FINITE_WEIGHT_ROBUST_BLOCK_CERTIFIED; endlicher Test-/Antidualbereich, keine neue physikalische Maßwahl; kompakte Reduktion weiterhin HOLD; physikalische CST-Evolution NOT_CONSTRUCTED.**
+
+[Bericht (PDF)](weight_robustness_v0_1/CST_DUST_Gewichtsrobustheit_Gesamtblock_v0_1.pdf) · [Prüfpaket (ZIP)](packages/CST_DUST_Gewichtsrobustheit_Gesamtblock_v0_1_Pruefpaket.zip) · [Herleitung (LaTeX)](weight_robustness_v0_1/DERIVATION.tex) · [Prüfvertrag](weight_robustness_v0_1/contract.json) · [Globales Zertifikat](weight_robustness_v0_1/results/full6_certificate.json) · [Ursachenzerlegung](weight_robustness_v0_1/results/diagnostics.json) · [Code und Reproduktion](weight_robustness_v0_1/README.md)
+
 ## Basisunabhängiger Kopplungsbefund v0.1 · 12. November 2026
 
 Der [vollständige Differenzblock](basis_invariant_coupling_v0_1/README.md) umfasst sechs Eingangs- und sechs Ausgangstestzustände: Atom-, Positiv- und Kontrastdichtepaket, jeweils mit Feldgrundpaket und gerader radialer Anregung. Alle 33 ursprünglichen AA-Historien, das Gewicht 1/33, die Gravitationsphasen und die bisherige Entkopplung auf Wirkungsebene bleiben fest. Die Normierung berücksichtigt die vollständige Gram-Matrix in V, einschließlich des Überlapps 196 zwischen beiden Feldpaketen.
