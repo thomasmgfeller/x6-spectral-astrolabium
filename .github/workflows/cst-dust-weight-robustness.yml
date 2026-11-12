@@ -1,0 +1,50 @@
+name: CST-DUST full-block weight robustness
+on:
+  pull_request:
+    paths:
+      - 'research/rax_cqg/dust_collapse/weight_robustness_v0_1/**'
+      - 'research/rax_cqg/dust_collapse/packages/CST_DUST_Gewichtsrobustheit_Gesamtblock_v0_1_Pruefpaket.zip'
+      - '.github/workflows/cst-dust-weight-robustness.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'research/rax_cqg/dust_collapse/weight_robustness_v0_1/**'
+      - 'research/rax_cqg/dust_collapse/packages/CST_DUST_Gewichtsrobustheit_Gesamtblock_v0_1_Pruefpaket.zip'
+      - '.github/workflows/cst-dust-weight-robustness.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  weight-robustness:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Install pinned algebra, interval arithmetic and independent numeric oracle
+        run: python -m pip install -r research/rax_cqg/dust_collapse/weight_robustness_v0_1/requirements.txt
+      - name: Replay all orbit integrals, global certificates and negative controls
+        run: python -B research/rax_cqg/dust_collapse/weight_robustness_v0_1/verify.py
+      - name: Check downloadable package matches the published sources
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import json, zipfile
+          root = Path('research/rax_cqg/dust_collapse/weight_robustness_v0_1')
+          archive = root.parent / 'packages/CST_DUST_Gewichtsrobustheit_Gesamtblock_v0_1_Pruefpaket.zip'
+          prefix = 'weight_robustness_v0_1/'
+          paths = set(json.loads((root / 'SHA256SUMS.json').read_text())) | {'SHA256SUMS.json'}
+          with zipfile.ZipFile(archive) as z:
+              if z.testzip() is not None:
+                  raise SystemExit('ZIP CRC failure')
+              if len(z.namelist()) != len(paths) or set(z.namelist()) != {prefix + p for p in paths}:
+                  raise SystemExit('ZIP inventory mismatch')
+              for p in paths:
+                  if z.read(prefix + p) != (root / p).read_bytes():
+                      raise SystemExit('ZIP/source mismatch: ' + p)
+          print('PASS: downloadable ZIP matches all 32 published package files.')
+          PY

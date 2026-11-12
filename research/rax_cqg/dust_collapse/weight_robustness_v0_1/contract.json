@@ -1,0 +1,32 @@
+{
+  "id": "CST-DUST-WEIGHT-ROBUSTNESS-0.1",
+  "date_Europe_Zurich": "2026-11-12",
+  "status_at_creation": "FIXED_BEFORE_WEIGHT_OPTIMIZATION; no external timestamp",
+  "source_main": "558339f0c40a3309d108674d411f548d2061dd57",
+  "history_family": "original 33 labelled AA histories, 10 boundary orbits",
+  "weight_class": "w_o >= 0, sum w_o=1; labelled weights w_o/m_o; invariant under S2(input) x S2(output), independent of lambda and integration variables",
+  "strict_positive_class": "all w_o>0; infimum equals the closed-simplex minimum by continuity; no positive floor imposed",
+  "fixed": "all prior E6,F6 states, V Grams, phases, lambda endpoints and uniform-labelled reference Hessian; no moving reference or complex gravity normalization",
+  "primary_objective": "min_w || R_F6 (K1(w)-K0(w)) |_E6 ||_V",
+  "secondary_objective": "separate min_w of the entire atom-to-positive 4x2 block",
+  "proof_strategy": "exact incoming-density factorization; convex spectral norm; rational primal weights for upper bound and normalized rational left/right trial vectors for global separating lower bound, all evaluated with Arb and inherited quadrature tails",
+  "optimization_role": "candidate discovery only, never a certificate",
+  "connected_mean": "keep original decomposition where Z(w)!=0; do not infer a connected lower bound from a difference-block lower bound; include vertex controls",
+  "extra_weight_restrictions": "NONE; no gluing or counting law beyond inherited boundary symmetry is imposed",
+  "quadrature": {
+    "nodes": 40,
+    "bits": 192,
+    "tails": "inherited analytic Bernstein-ellipse bounds, checked by replay"
+  },
+  "targets": {
+    "positive_lower_bound": "certify if possible, otherwise construct exact full-block cancellation or state unresolved",
+    "enclosure_width_goal": "1e-10 absolute"
+  },
+  "excluded": [
+    "physical preferred history measure",
+    "full V operator norm",
+    "uniform response for every input",
+    "new histories or enlarged test spaces",
+    "physical evolution or bounce"
+  ]
+}

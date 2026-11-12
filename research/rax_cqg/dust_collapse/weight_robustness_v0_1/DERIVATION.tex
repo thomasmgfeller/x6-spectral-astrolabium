@@ -1,0 +1,305 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[T1]{fontenc}\usepackage[utf8]{inputenc}
+\usepackage{lmodern,amsmath,amssymb,booktabs,array,microtype}
+\pdfmapfile{+lm.map}\pdfmapfile{+cm.map}\pdfmapfile{+cmextra.map}\pdfmapfile{+symbols.map}
+\pdfinfoomitdate=1\pdftrailerid{}
+\usepackage[a4paper,margin=22mm]{geometry}
+\usepackage{xcolor,hyperref,fancyhdr}
+\definecolor{ink}{HTML}{183A4A}
+\hypersetup{colorlinks=true,linkcolor=ink,urlcolor=ink,pdftitle={CST-DUST: Gewichtsrobustheit des vollstaendigen Blocks v0.1}}
+\pagestyle{fancy}\fancyhf{}\fancyhead[L]{\small X6 | CST-DUST Gewichtsrobustheit}
+\fancyhead[R]{\small v0.1 | 12.11.2026}\fancyfoot[C]{\thepage}
+\setlength{\headheight}{14pt}\setlength{\parindent}{0pt}\setlength{\parskip}{5pt}
+\setlength{\emergencystretch}{2em}\renewcommand{\arraystretch}{1.15}
+\newcommand{\A}{\mathcal A}\newcommand{\D}{\mathcal D}\newcommand{\one}{\mathbf1}
+\newcommand{\W}{\mathcal W}\newcommand{\dd}{\mathrm d}
+\begin{document}
+{\color{ink}\LARGE\bfseries Gewichtsrobustheit des vollständigen Blocks}\par
+{\large Globales Minimum über die bisher zugelassene Historiengewichtsklasse}\par
+\textbf{Ergebnis: Eine vollständige Auslöschung ist in dieser Klasse ausgeschlossen.}
+
+Für dieselben 33 AA-Historien, dieselben sechs Ein- und Ausgangstestzustände,
+dieselbe $V$-Norm und dieselbe feste Entkopplung wie im vorigen Schritt sei
+\[
+ \Delta_6(w)=R_{F_6}\bigl(K_1(w)-K_0(w)\bigr)|_{E_6},\qquad
+ m_6=\min_{w\in\W}\|\Delta_6(w)\|_{V\to F_6'}.
+\]
+$\W$ enthält \emph{alle} nichtnegativen, normierten, randinvarianten Gewichte.
+Die globale Einschließung lautet
+\[
+ \boxed{0{,}0022939794998\ \leq\ m_6\ \leq\ 0{,}0022939795002.}
+\]
+Die linke Schranke gilt für jedes zulässige Gewicht. Die rechte Schranke
+wird durch ein explizites rationales Gewicht bezeugt. Beide Schranken
+enthalten Quadraturrest, Rundung und Zertifikatsfehler; sie sind keine
+statistischen Konfidenzintervalle.
+
+Auch der gesamte $4\times2$-Atom$\to$Positiv-Block besitzt eine positive
+Untergrenze. Seine \emph{separate} Minimierung ergibt
+\[
+ \boxed{0{,}0003502439596\ \leq\ m_{0\to+}\ \leq\ 0{,}0003502439599.}
+\]
+Die beiden beinahe minimierenden Gewichte sind verschieden. Es wird kein
+gemeinsames Minimum beider Ziele behauptet.
+
+\begin{center}\begin{tabular}{lrr}\toprule
+Norm des Differenzblocks & $6\times6$ & Atom$\to$Positiv\\\midrule
+Gleichmäßige gelabelte Gewichte & 0,032602301976 & 0,012323446639\\
+Bisherige Einzelkanal-Auslöschung & 0,008446681427 & 0,001702265450\\
+Globales Minimum, näherungsweise & 0,002293979500 & 0,000350243960\\\bottomrule
+\end{tabular}\end{center}
+Die ersten beiden Zeilen reproduzieren den vorigen Befund; die letzte
+Zeile fasst die obigen Intervalle zusammen. Die Werte sind normierte
+Amplituden, keine Wahrscheinlichkeiten. Das Maß beeinflusst ihre Größe
+deutlich, kann aber den hier geprüften Gesamtbefund nicht auf null drücken.
+
+\textbf{Der zusammenhängende Historienanteil bleibt gesondert.}
+Für ihn existiert keine positive uniforme Untergrenze: Bei Konzentration
+auf einen einzelnen Randorbit verschwindet er exakt. Bei strikt positiven
+Gewichten auf allen Historien kann er beliebig klein werden. Der robuste
+Differenzbefund darf deshalb nicht als gewichtsrobuster Nachweis eines
+zusammenhängenden Historiensignals umgedeutet werden.
+
+\textbf{Geltungsbereich.} Zertifiziert ist ein endlicher Test-/Antidualblock.
+Ein physikalisch ausgezeichnetes CST-Historienmaß, eine volle
+$V$-Operatornorm, physikalische Evolution und ein Bounce folgen daraus nicht.
+
+\newpage
+\section{Unveränderte Klasse, Zustände und Normierung}
+Die zuvor deklarierte Klasse lautet ausdrücklich: nichtnegative, normierte
+Gewichte, invariant unter unabhängigen Vertauschungen der zwei Eingangs-
+und Ausgangslabels, unabhängig von $\lambda$ und Integrationsvariablen.
+Der eingefrorene Vertrag steht in \texttt{inputs/weight\_class\_contract.json}.
+
+Seien $o=1,\ldots,10$ die Orbits von $S_2(L)\times S_2(R)$ mit Größen $n_o$.
+Die gesamte Klasse wird exakt parametrisiert durch
+\[
+ \W=\{w\in\mathbb R^{10}:w_o\geq0,\ \sum_o w_o=1\},\qquad
+ c_C=w_o/n_o\quad(C\in o).
+\]
+Es gibt \textbf{keine} zusätzliche Untergrenze für $w_o$, keine Bindung an
+gleichmäßige Gewichte, keine Entropieauflage und keine aus dem Ergebnis
+abgeleitete Verklebungsbedingung. Die Orbitreduktion folgt aus der schon
+festgelegten Randsymmetrie. Sie fügt keine neue physikalische Maßannahme hinzu.
+
+Die sechs Zustände sind $\Psi_{ab}=\sqrt2\,d_a h_b$ mit konstantem Uhrpaket,
+\[
+ d_0=2\one_{00},\quad d_+=2(\one_{10}+\one_{01}+\one_{11})/\sqrt3,\quad
+ d_c=2(\one_{10}+\one_{01}-2\one_{11})/\sqrt6,
+\]
+\[
+ h_0=\pi^{-1/2}e^{-|q|^2/2},\qquad h_R=(|q|^2-1)h_0.
+\]
+$E_6=F_6$ ist ihr Spann; die Reihenfolge ist $(0,0),(0,R),(+,0),(+,R),(c,0),(c,R)$.
+Für den Teilblock sind $E_2=\operatorname{span}(\Psi_{0,0},\Psi_{0,R})$
+und $F_4=\operatorname{span}(\Psi_{+,0},\Psi_{+,R},\Psi_{c,0},\Psi_{c,R})$.
+
+Die Norm ist unverändert $V=L^2_{\rm inv}((1+|q|^2)^4\dd\mu_A)$ mit dem
+zuvor festgelegten Randmaß. Die Dichte-/Uhrfaktoren sind orthonormal; je
+Feldpaar gilt exakt
+\[
+ G=\begin{pmatrix}65&196\\196&913\end{pmatrix},\quad \det G=20929,\qquad
+ T=\begin{pmatrix}1/\sqrt{65}&-196/\sqrt{65\cdot20929}\\
+ 0&\sqrt{65/20929}\end{pmatrix},\quad T^*GT=I.
+\]
+Alle folgenden Matrizen werden mit dieser \emph{vollen} Gram-Matrix normiert.
+Ein Basiswechsel ändert ihre Operatornorm nicht, wenn die Grams mitwechseln.
+
+Die Intervention bleibt $M_{C,\lambda}=\overline M+\lambda(M_C-\overline M)$,
+$\lambda=0,1$, mit $\overline M=(1/33)\sum_C M_C$. Diese Referenz wird bei
+Gewichtsänderungen nicht neu gemittelt. Gravitation, Staub und Randpakete
+bleiben an beiden Endpunkten gleich. Insbesondere werden die Amplituden
+nicht durch die komplexe Gravitationssumme dividiert.
+
+\section{Lineare Blockdarstellung und exakte Kompression}
+Seien $\A_o$ und $\A_{\rm ref}$ die analytischen $2\times2$-Feldantworten,
+$d_o\in\mathbb C^3$ die eingeschlossenen Dichteintegrale und
+$p_o=e^{iF_4(o)}$. Definiere den $6\times2$-Block $B_o$ durch
+\[
+ (B_o)_{2a:2a+2,:}=p_o(d_o)_a\,T^*(\A_o-\A_{\rm ref})T,\qquad a=0,1,2.
+\]
+Diese Beiträge enthalten alle inneren Dichtemasken und die vollständigen
+Gravitationsphasen. Sie werden genau einmal berechnet; $w_o$ bleibt außen.
+
+\newpage
+\section{Ein globales Zertifikat statt eines lokalen Optimierergebnisses}
+Mit $e=\int_0^1e^{-i\rho/2}\dd\rho$ lautet die feste Eingangsdichtezeile
+\[
+ r=(1,(2e+e^2)/\sqrt3,(2e-2e^2)/\sqrt6),\quad
+ R=(r_0 I_2\;r_+ I_2\;r_c I_2),\quad J=R^*/\|r\|_2.
+\]
+Dann ist $J^*J=I_2$ und der vollständige normierte Block erfüllt
+\[
+ \widehat\Delta_6(w)=\Bigl(\sum_o w_oB_o\Bigr)R
+ =C(w)J^*,\qquad C(w)=\sum_o w_oC_o,\quad C_o=\|r\|_2B_o.
+\]
+Also gilt \emph{exakt} $\|\widehat\Delta_6(w)\|_2=\|C(w)\|_2$.
+Die Kompression entfernt keine empfindliche Eingangsrichtung. Vier
+Dichte-Nullrichtungen bleiben für jedes Gewicht bestehen. Für den
+Atom$\to$Positiv-Block werden stattdessen nur die unteren vier Zeilen von
+$B_o$ verwendet; dort kommt der Faktor $\|r\|_2$ nicht hinzu.
+
+Das Problem $\min_{w\in\W}\|\sum_o w_oC_o\|_2$ ist konvex [2]. Zur
+Zertifizierung genügt hier sogar ein einziger fester Test- und Eingangsvektor.
+Seien $u\ne0$, $v\ne0$ die gespeicherten \emph{rational komplexen}
+Kandidaten. Für jeden Orbit wird mit Ballarithmetik eingeschlossen:
+\[
+ q_o=\frac{\operatorname{Re}(u^*C_ov)}{\|u\|_2\|v\|_2}.
+\]
+Für \textbf{jedes} zulässige $w$ folgt direkt aus Cauchy--Schwarz
+\[
+ \left\|\sum_o w_oC_o\right\|_2
+ \geq\frac{\operatorname{Re}\bigl(u^*(\sum_o w_oC_o)v\bigr)}{\|u\|_2\|v\|_2}
+ =\sum_o w_oq_o\geq\min_o q_o.
+\]
+Die Rechnung beweist $\min_o q_o>0{,}0022939794998680$ für den Gesamtblock.
+Die publizierte untere Endstelle $0{,}0022939794998$ liegt sicher darunter.
+Für den Teilblock gilt analog $\min_o q_o>0{,}0003502439596714$.
+Der volle Zeuge hat Eingang $Jv/\|v\|_2$ und Test $u/\|u\|_2$. Somit
+existiert sogar \emph{ein festes Paar von $V$-Einheitszuständen}, dessen
+Realteil für alle Gewichte positiv bleibt. Seine Koeffizienten stehen im Zertifikat.
+
+Für einen rational zulässigen Kandidaten $w^{\rm rat}$ wird die obere
+Schranke unabhängig berechnet. Ist $H=C(w^{\rm rat})^*C(w^{\rm rat})$
+und $H=\left(\begin{smallmatrix}a&z\\\bar z&d\end{smallmatrix}\right)$, so gilt
+\[
+ \sigma_{\max}(C)=\left[\frac{a+d+\sqrt{(a-d)^2+4|z|^2}}2\right]^{1/2}.
+\]
+Alle Ausdrücke werden nach außen eingeschlossen. Es ergibt sich
+$\sigma_{\max}(C)<0{,}0022939795000484$ und für den Teilblock
+$\sigma_{\max}<0{,}0003502439598197$.
+
+Ein numerischer Optimierer liefert lediglich die Kandidaten. Weder sein
+Abbruchkriterium noch seine Zielfunktionswerte gehen als Annahme in den
+Beweis ein. Die zehn separierenden Ungleichungen und ein zulässiges
+rationales Gewicht reichen aus, um das \emph{globale} Minimum einzuschließen.
+
+\newpage
+\section{Explizite Gewichte und strikt positiver Vollsupport}
+Die folgenden Zahlen sind exakte endliche Dezimalzahlen, keine gerundete
+Definition. Alle nicht aufgeführten Orbitmassen sind null. Das gelabelte
+Gewicht ist jeweils $c_C=w_o/n_o$.
+\begin{center}\begin{tabular}{rrrr}\toprule
+Orbitcode & $n_o$ & $w^{\rm rat}_6$ & $w^{\rm rat}_{0\to+}$\\\midrule
+8476 & 4 & 0 & 0,0126227577805495\\
+8592 & 4 & 0,2084830921717939 & 0,2174457610437640\\
+8604 & 4 & 0,3092377970167804 & 0\\
+8988 & 4 & 0,2704525417920602 & 0,2443946647275104\\
+24860 & 4 & 0,2118265690193655 & 0,5255368164481761\\\bottomrule
+\end{tabular}\end{center}
+Beide Spalten summieren sich exakt zu eins. Sie bezeugen die oberen
+Schranken; sie werden nicht als exakt bestimmte Minimierer ausgegeben.
+
+Die Klasse strikt positiver Gewichte ist im Simplex relativ offen. Für sie ist zunächst ein
+\emph{Infimum}, nicht zwingend ein angenommenes Minimum, zu untersuchen.
+Da die Norm stetig ist und jede Randgewichtung durch
+\[
+ w_o^{(\varepsilon)}=(1-\varepsilon)w_o^{\rm rat}
+                       +\varepsilon\frac{n_o}{33},\qquad 0<\varepsilon<1,
+\]
+mit strikt positiven Gewichten approximiert werden kann, gilt allgemein
+\[
+ \inf_{w_o>0,\,\sum w_o=1}\|\Delta(w)\|
+ =\min_{w_o\geq0,\,\sum w_o=1}\|\Delta(w)\|.
+\]
+Für die konkrete Wahl $\varepsilon=10^{-12}$ sind schon alle 33 gelabelten
+Gewichte positiv. Die verifizierten oberen Schranken sind
+\[
+ \|\Delta_6(w^{(\varepsilon)})\|<0{,}0022939795000504,\qquad
+ \|\Delta_{0\to+}(w^{(\varepsilon)})\|<0{,}0003502439598199.
+\]
+Auch diese Werte liegen innerhalb der auf Seite 1 angegebenen Intervalle.
+$\varepsilon$ ist ein \emph{Zeugenparameter}; er ist keine neue zulässige
+Mindestgewichtung und wird der Klasse nicht als Bedingung auferlegt.
+
+\section{Was das Minimum über das Historienmaß aussagt}
+Die gleichmäßige gelabelte Gewichtung liegt deutlich über dem globalen
+Minimum. Die Stärke des endlichen Befundes ist deshalb maßabhängig.
+Seine Nichtnull-Eigenschaft ist über die \emph{gesamte erklärte Klasse}
+robust. Insbesondere können auch die zuvor gefundenen positiven
+Einzelkanal-Auslöschungsgewichte den gesamten Block nicht auslöschen.
+
+Dies unterscheidet drei Aussagen: Ein einzelner Eintrag kann null sein;
+der vollständige Block kann zugleich ungleich null sein; und der neue
+Beweis liefert eine positive Untergrenze für die Blocknorm über alle
+zulässigen Gewichte. Er liefert keine positive Antwort für \emph{jeden}
+Eingangszustand. Die vier festen Nullrichtungen des Gesamtblocks bleiben bestehen.
+
+Für ein anderes Historienuniversum, andere Randzustände, eine andere
+$V$-Norm oder eine mit $w$ veränderte Referenzwirkung müsste die Rechnung
+neu durchgeführt werden. Ein physikalisches Zähl- oder Verklebungsgesetz
+für die Gewichte wurde hier weder benötigt noch hergeleitet.
+
+\newpage
+\section{Zusammenhängender Anteil und mittlere Skalarantwort}
+Die aus dem vorigen Schritt übernommene Diagnose verwendet
+\[
+ p_o(w)=w_oe^{iF_4(o)},\quad Z(w)=\sum_o p_o(w),\qquad
+ \widetilde\A(w)=\frac{\sum_o p_o(w)\A_o}{Z(w)}.
+\]
+Nur wo $Z(w)\ne0$ ist diese Zerlegung definiert. Dann gilt, vor identischer
+$V$-Normierung beider Seiten,
+\begin{align*}
+ \Delta(w)&=R_{\rm conn}(w)+R_{\rm mean}(w),\\
+ R_{\rm conn}(w)&=\sum_o p_o(w)(d_or)\otimes(\A_o-\widetilde\A(w)),\\
+ R_{\rm mean}(w)&=\left(\sum_o p_o(w)d_or\right)
+                        \otimes(\widetilde\A(w)-\A_{\rm ref}).
+\end{align*}
+Die Gewichte $p_o/Z$ sind komplex und keine Wahrscheinlichkeiten.
+Der primäre Differenzblock bleibt auch ohne diese Diagnose definiert;
+Gewichte werden in der Minimierung \emph{nicht} wegen $Z=0$ ausgeschlossen.
+
+\begin{center}\begin{tabular}{lrrr}\toprule
+Gewicht, gesamter $6\times6$-Bereich & $\|\Delta\|$ & $\|R_{\rm conn}\|$ & $\|R_{\rm mean}\|$\\\midrule
+Gleichmäßig gelabelt & 0,032602301976 & 0,007251598185 & 0,030294483160\\
+$w^{\rm rat}_6$ & 0,002293979500 & 0,002251686356 & 0,001730771896\\
+$w^{\rm rat}_{0\to+}$ & 0,003218220579 & 0,002447005160 & 0,003959407301\\\bottomrule
+\end{tabular}\end{center}
+Jede Tabellenzahl hat einschließlich Rundung absoluten Fehler $<10^{-12}$.
+Die Matrizen addieren sich exakt; ihre Normen sind nicht additiv.
+
+\textbf{Exakter Gegenbefund für den zusammenhängenden Anteil.}
+Für ein Orbitvertex $w=e_o$ ist $Z=e^{iF_4(o)}\ne0$ und
+$\widetilde\A=\A_o$. Daher gilt exakt
+\[
+ R_{\rm conn}(e_o)=0,\qquad R_{\rm mean}(e_o)=\Delta(e_o)\ne0.
+\]
+Das Gewicht ist randinvariant und gehört zur ursprünglichen Klasse.
+Die skalare Antwort ist innerhalb des Orbits konstant, auch wenn mehrere
+Labels enthalten sind. Für $w^{(\varepsilon)}=(1-\varepsilon)e_o+
+\varepsilon(n_1,\ldots,n_{10})/33$ bleiben alle Gewichte positiv und
+$Z$ ist nahe $\varepsilon=0$ von null getrennt. Stetigkeit liefert
+$R_{\rm conn}(w^{(\varepsilon)})\to0$. Also ist auch über strikt positiven
+Gewichten das Infimum des zusammenhängenden Anteils null.
+
+\section{Fehlerbilanz, Reproduktion und Quellen}
+Die zehn Orbitintegrale werden aus dem vorigen Paket unverändert übernommen
+und mit 40 Gauß--Legendre-Knoten pro Uhrdimension und 192 Bit vollständig
+neu reproduziert. Die positiven Dichten sind analytisch integriert;
+Bernstein-Ellipsenreste schließen die Uhrquadratur ein. Die Feldintegration
+verwendet den analytischen Abel-Grenzwert mit kontrollierten Gaußphasen.
+Arb/Acb propagiert Rest- und Rundungsintervalle bis zu jeder Dualungleichung
+und zur oberen Singularzahlschranke. Das gesamte Gewichts-Simplex wird
+durch zehn Ungleichungen erfasst; ein Gewichts-Rasterfehler existiert nicht.
+
+\texttt{python -B verify.py} prüft die Hashes, rechnet in einer temporären
+Kopie alle Orbitintegrale und Ergebnisdateien neu und verlangt identische
+numerische Ergebnisse. Neun Kontrollgruppen enthalten fünf gezielte
+Negativkontrollen. Kandidatensuche: \texttt{discover.py}; sie ist kein Teil
+des Zertifikatsvertrauens. Python-Versionen stehen in \texttt{environment.json}.
+
+\small
+[1] CST-DUST, Basisunabhängiger Kopplungsbefund v0.1, Main-Commit\\
+\texttt{558339f0c40a3309d108674d411f548d2061dd57},
+\href{https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/287}{PR 287}.
+Gewichtsklasse: Mischungsqualifikation v0.1, eingefrorener Vertrag im Paket.
+
+[2] S. Boyd, L. Vandenberghe, \emph{Convex Optimization}, Cambridge University
+Press, 2004, Beispiel 3.11 (Konvexität der Spektralnorm),
+\href{https://web.stanford.edu/~boyd/cvxbook/}{offizielle Buchseite}.
+Der hier verwendete Separationsbeweis ist oben vollständig angegeben.
+
+Neue Arbeit: Apache-2.0. Kein physikalisch ausgezeichnetes Maß, keine externe
+Begutachtung, kein neuer 1089-Historienlauf. Kompakte Reduktion bleibt HOLD;
+physikalische CST-Evolution bleibt NOT\_CONSTRUCTED.
+\end{document}
