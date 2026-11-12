@@ -1,5 +1,17 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Basisunabhängiger Kopplungsbefund v0.1 · 12. November 2026
+
+Der [vollständige Differenzblock](basis_invariant_coupling_v0_1/README.md) umfasst sechs Eingangs- und sechs Ausgangstestzustände: Atom-, Positiv- und Kontrastdichtepaket, jeweils mit Feldgrundpaket und gerader radialer Anregung. Alle 33 ursprünglichen AA-Historien, das Gewicht 1/33, die Gravitationsphasen und die bisherige Entkopplung auf Wirkungsebene bleiben fest. Die Normierung berücksichtigt die vollständige Gram-Matrix in V, einschließlich des Überlapps 196 zwischen beiden Feldpaketen.
+
+**Die größte Singularzahl des V-normierten Differenzblocks beträgt 0,032602301976 ± 10⁻¹²; im vollständigen 4×2-Atom→Positiv-Teilblock 0,012323446639 ± 10⁻¹².** Der zusammenhängende Historienanteil und die Änderung der mittleren Skalarantwort werden als getrennte Matrizen ausgewiesen und sind ebenfalls nicht null. Die Zahlen sind absolute Amplitudenantworten, keine Wahrscheinlichkeiten. Sie sind unter beliebigen invertierbaren Basiswechseln mit entsprechend transformierten Gram-Matrizen invariant.
+
+**Ein ausgelöschter Eintrag hebt den Blockbefund nicht auf:** Die zuvor konstruierten strikt positiven Gewichte löschen den ursprünglichen Grundpaketkanal aus, lassen jedoch eine größte Singularzahl von 0,008446681427 ± 2×10⁻¹² im Gesamtblock bestehen. Der Differenzblock hat exakt Rang zwei und vier unempfindliche Eingangsrichtungen. Zertifiziert ist die maximal erreichbare Antwort in den festgelegten Unterräumen E→F′, keine positive Untergrenze für jeden Zustand und keine volle V→V′-Operatornorm.
+
+13 Kontrollgruppen und der bytegleiche Replay der drei numerischen Ergebnisdateien bestanden. Die Singularwerte werden sowohl durch eine exakte Rangfaktorisierung mit eingeschlossenen 2×2-Eigenwerten als auch durch unabhängige Rayleigh-/Sylvester-Zertifikate geprüft. **FINITE_BASIS_INVARIANT_COUPLING_CERTIFIED; kompakte Gesamtreduktion weiterhin HOLD; physikalische CST-Evolution NOT_CONSTRUCTED.**
+
+[Bericht (PDF)](basis_invariant_coupling_v0_1/CST_DUST_Basisunabhaengiger_Kopplungsbefund_v0_1.pdf) · [Prüfpaket (ZIP)](packages/CST_DUST_Basisunabhaengiger_Kopplungsbefund_v0_1_Pruefpaket.zip) · [Herleitung (LaTeX)](basis_invariant_coupling_v0_1/DERIVATION.tex) · [Versuchsvertrag](basis_invariant_coupling_v0_1/contract.json) · [Vollständige Matrizen und Zertifikate](basis_invariant_coupling_v0_1/results/uniform.json) · [Code und Reproduktion](basis_invariant_coupling_v0_1/README.md)
+
 ## Obere Reduktionsfehlergrenze v0.1 · 11. November 2026
 
 Die [neue Restabschätzung](reduction_bound_v0_1/README.md) kontrolliert sämtliche ausgelassenen Feld-, Dichte- und Uhrmoden der ursprünglichen 33-Historien-Familie in der Testtopologie aus der [Definitionsbereichsanalyse](coupled_kernel_domain_v0_1/README.md). Alle vier bisherigen Eingangszustände, ihre kohärenten Überlagerungen und beim Einzelkern eine ausdrücklich definierte größere Zustandsklasse sind erfasst. Vorwärts- und Rückwärtspaarungen erhalten eigene Konstanten. Eine gewichtete Hermite-/Legendrebasis beginnt mit 516 Moden und enthält die vorherigen 15 Testzustände exakt.

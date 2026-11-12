@@ -1,0 +1,347 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[T1]{fontenc}\usepackage[utf8]{inputenc}
+\usepackage{lmodern,amsmath,amssymb,booktabs,array,microtype}
+\pdfmapfile{+lm.map}\pdfmapfile{+cm.map}\pdfmapfile{+cmextra.map}\pdfmapfile{+symbols.map}
+\pdfinfoomitdate=1\pdftrailerid{}
+\usepackage[a4paper,margin=22mm]{geometry}
+\usepackage{xcolor,hyperref,fancyhdr}
+\definecolor{ink}{HTML}{183A4A}
+\hypersetup{colorlinks=true,linkcolor=ink,urlcolor=ink,pdftitle={CST-DUST: Basisunabhaengiger Kopplungsbefund v0.1}}
+\pagestyle{fancy}\fancyhf{}\fancyhead[L]{\small X6 | CST-DUST Kopplungsbefund}
+\fancyhead[R]{\small v0.1 | 12.11.2026}\fancyfoot[C]{\thepage}
+\setlength{\headheight}{14pt}\setlength{\parindent}{0pt}\setlength{\parskip}{5pt}
+\setlength{\emergencystretch}{2em}\renewcommand{\arraystretch}{1.15}
+\newcommand{\dd}{\mathrm d}\newcommand{\one}{\mathbf1}\newcommand{\D}{\mathcal D}
+\newcommand{\A}{\mathcal A}\newcommand{\B}{\mathsf B}
+\begin{document}
+{\color{ink}\LARGE\bfseries Ein basisunabhängiger Kopplungsbefund}\par
+{\large Vollständiger Differenzblock in einem festgelegten Zustandsbereich}\par
+\textbf{Ergebnis: Der gewichtete $6\times6$-Differenzblock ist zertifiziert ungleich null.}
+
+Die Aussage gilt für die ursprüngliche endliche Familie aus 33 AA-Historien,
+dieselbe Entkopplung auf Wirkungsebene und explizit festgelegte Eingangs- und
+Ausgangstesträume. Alle komplexen Matrixelemente werden eingeschlossen.
+Die größte Singularzahl misst die maximal erreichbare absolute Testantwort
+bei Einheitsnorm in $V$. Ihre Definition hängt nicht von der gewählten Basis ab.
+
+\section*{Die drei getrennten Ergebnisse}
+\begin{center}\begin{tabular}{lrr}\toprule
+$V$-normierte Blockgröße & Gesamter $6\times6$-Block & Atom$\to$Positiv, $4\times2$\\\midrule
+$\sigma_{\max}(K_1-K_0)$ & $0{,}032602301976$ & $0{,}012323446639$\\
+$\sigma_{\max}(R_{\rm conn})$ & $0{,}007251598185$ & $0{,}003652388389$\\
+$\sigma_{\max}(R_{\rm mean})$ & $0{,}030294483160$ & $0{,}010489512041$\\\bottomrule
+\end{tabular}\end{center}
+\textbf{Jede Tabellenzahl besitzt eine deterministische Einschließung
+$\boldsymbol{\pm10^{-12}}$, einschließlich der Dezimalrundung.}
+Es handelt sich weder um statistische Konfidenzintervalle noch um
+Wahrscheinlichkeiten. Die Identität $K_1-K_0=R_{\rm conn}+R_{\rm mean}$ gilt auf
+Blockebene. Die drei Singularzahlen werden nicht addiert.
+
+Der zusammenhängende Historienanteil ist ebenfalls von null getrennt.
+Eine Änderung nur der mittleren Skalarantwort erklärt den gesamten
+Differenzblock deshalb nicht.
+
+\section*{Ein einzelner Nulleintrag entscheidet nicht mehr}
+Als zusätzliche, vorher festgelegte Kontrolle werden die bereits konstruierten
+strikt positiven Historiengewichte verwendet, die den alten Grundpaketkanal
+exakt auslöschen. Mit diesen Gewichten ergibt sich dennoch
+\[
+ \sigma_{\max}(\Delta_6)=0{,}008446681427\pm2\cdot10^{-12},\qquad
+ \sigma_{\max}(\Delta_{+\leftarrow0})=0{,}001702265450\pm2\cdot10^{-12}.
+\]
+Diese Kontrolle ist ein Befund für genau diese Gewichte, keine uniforme
+Untergrenze über alle zulässigen Historienmaße.
+
+\section*{Präziser Geltungsbereich}
+Berechnet wird $R_F(K_1-K_0)|_E:E\to F'$, also die auf $F$ eingeschränkte
+Antidualantwort. Es ist nicht die Norm einer $H\to H$-Evolution und nicht die
+volle Operatornorm auf $V\to V'$. Der Differenzblock hat \textbf{exakt Rang zwei};
+vier unabhängige Eingangskombinationen bleiben unempfindlich.
+Die Aussage lautet somit: Es existieren nachweislich empfindliche Zustände
+innerhalb des deklarierten Bereichs. Sie lautet nicht: Jeder Zustand reagiert.
+
+Physikalische CST-Evolution, ein ausgezeichnetes Historienmaß, Unitarität
+und Singularitätsauflösung bleiben offen. Die frühere Entscheidung zur
+praktischen kompakten Reduktion bleibt HOLD.
+
+\newpage
+\section{Räume, Normen und vollständige Gram-Matrizen}
+Die Maße und Skalen des Vorgängers bleiben unverändert. In dimensionslosen
+Variablen gelten
+\[
+ \dd\lambda(t)=\tfrac12\one_{[-1,1]}\dd t,\quad
+ \dd\nu(r)=\tfrac12\delta_0(\dd r)+\tfrac12\one_{(0,1)}\dd r,\quad
+ \dd\mu_A=\tfrac12\prod_{j\in A}\dd\lambda(t_j)\dd\nu(r_j)\dd q_j.
+\]
+Mit $u=q_1^2+q_2^2$ sind $h_0=\pi^{-1/2}e^{-u/2}$ und
+$h_R=(u-1)h_0$. Beide sind in der ungewichteten Feldnorm orthonormal,
+gerade und unter Randvertauschung invariant. Die Dichtepakete lauten
+\[
+ d_0=2\one_{00},\qquad
+ d_+=\frac2{\sqrt3}(\one_{10}+\one_{01}+\one_{11}),\qquad
+ d_c=\frac2{\sqrt6}(\one_{10}+\one_{01}-2\one_{11}).
+\]
+Die vollständigen Zustände $\Psi_{a,b}=\sqrt2\,d_a h_b$ enthalten konstante
+Uhrpakete. Das kohärente Vorzeichen in $d_c$ ist Teil der Präparation.
+Alle sechs Zustände sind in $H=L^2_{\rm inv}(\dd\mu_A)$ orthonormal.
+
+Die vor der neuen Auswertung festgelegten Räume sind
+\[
+ E_6=F_6=\operatorname{span}\{\Psi_{a,b}:a\in\{0,+,c\},\ b\in\{0,R\}\}.
+\]
+Für den separat berichteten Mischblock gelten
+$E_2=\operatorname{span}\{\Psi_{0,0},\Psi_{0,R}\}$ und
+$F_4=\operatorname{span}\{\Psi_{+,0},\Psi_{+,R},\Psi_{c,0},\Psi_{c,R}\}$.
+
+Die geprüfte Topologie ist
+\[
+ V=L^2_{\rm inv}((1+u)^4\dd\mu_A)\subset H\subset
+ V'=L^2_{\rm inv}((1+u)^{-4}\dd\mu_A).
+\]
+Da $u$ im Grundpaket radial das Maß $e^{-u}\dd u$ trägt, ergibt sich exakt
+\[
+ G=\begin{pmatrix}65&196\\196&913\end{pmatrix},\quad
+ G_{ij}=\int_0^\infty e^{-u}(1+u)^4 f_i(u)f_j(u)\dd u,
+ \quad (f_0,f_R)=(1,u-1).
+\]
+Es gilt $\det G=20929>0$. Die volle Gram-Matrix ist $G_6=I_3\otimes G$.
+\textbf{Die Normierung nur der Diagonale wäre falsch:} Der Überlapp $196$
+bleibt sonst unbeachtet. Ein exakter Basiswechsel zur $V$-Orthonormalbasis ist
+\[
+ T=\begin{pmatrix}
+ 1/\sqrt{65}&-196/\sqrt{65\cdot20929}\\
+ 0&\sqrt{65/20929}
+ \end{pmatrix},\qquad T^*GT=I_2.
+\]
+Schreibe $U_6=I_3\otimes T$. Für Rohpaarungen
+$\B_{ij}=\langle\Psi_i,K\Psi_j\rangle$ ist die auszuwertende Matrix
+$\widehat\B=U_F^*\B U_E$. Ihre Spektralnorm ist
+\[
+ \|R_FK|_E\|=\sup_{\substack{f\in E,\,g\in F\\\|f\|_V=\|g\|_V=1}}
+ |\langle g,Kf\rangle|=\sigma_{\max}(\widehat\B).
+\]
+$F'$ wird mit der von $V$ induzierten Dualnorm versehen. In der
+gewichteten Funktionsdarstellung entspricht es dem Antidual-Unterraum
+$(1+u)^4F$. Es wird kein neues physikalisches Skalarprodukt postuliert.
+
+\newpage
+\section{Wirkung, Historiensumme und analytische Feldmomente}
+Es gelten $L=\{0,1\}$, $I=\{2\}$, $R=\{3,4\}$. Alle 33 abgedeckten,
+transitiv geschlossenen AA-Ordnungen werden mit $1/33$ summiert.
+Unter $S_2(L)\times S_2(R)$ entstehen zehn Orbits; ihre Multiplizitäten sind
+$4,4,4,4,4,4,2,4,2,1$. Der Code enumeriert die gelabelte Familie vollständig.
+
+Mit $\beta=4/\sqrt6$, $c_{ij}=(1,-9,16,-8)_{|I(i,j)|}$ gilt
+\[
+ H_C^{(0)}=-\tfrac12D^T\operatorname{diag}(c_{ij})D,\quad
+ M_C=\beta H_C^{(0)},\quad F_4(C)=5-\sum_{i\prec j}c_{ij}.
+\]
+Die Intervention wird vor jeder Integration definiert:
+\[
+ \overline M=\tfrac1{33}\sum_CM_C,\quad
+ M_{C,\lambda}=\overline M+\lambda(M_C-\overline M),\quad\lambda\in\{0,1\}.
+\]
+Gravitation, Staub, Maße, Zustände und Gewichte sind für beide Endpunkte
+identisch. Die Referenz $\overline M$ wird auch bei der zusätzlichen
+Gewichtskontrolle nicht verändert. Die primären Amplituden werden nicht
+durch die komplexe Gravitationssumme geteilt.
+
+Ordne die Feldkoordinaten als $(q_0,q_1,q_3,q_4,q_2)$ und setze
+$Q_\epsilon=\operatorname{diag}(1,1,1,1,\epsilon)-iM_{C,\lambda}$.
+Der gemeinsame Abel-Grenzwert wird analytisch genommen.
+Die innere Lücke ist $\alpha\geq\beta>0$. Vier Rand-Gaußpivots und der
+anschließende innere Pivot fixieren die Fresnelphase. Die numerische
+Berechnung verifiziert die jeweilige Halbebene, bevor sie die Wurzel nimmt.
+Eine Hauptwurzel der gesamten Determinante ohne Phasenverfolgung wird vermieden.
+
+Sei $W=Q_0^{-1}$, seien $d_j$ die fünf Eliminationspivots und
+\[
+ a=\frac{4\pi\sqrt{2\pi}}{\prod_{j=1}^5\sqrt{d_j}},\quad
+ x=W_{00}+W_{11}-1,\quad y=W_{22}+W_{33}-1.
+\]
+Alle vier Feldübergänge sind dann exakt durch Wick-Momente gegeben:
+\[
+ \A_C=a\begin{pmatrix}
+ 1&x\\y&xy+2\sum_{i=0}^1\sum_{j=2}^3W_{ij}^{\,2}
+ \end{pmatrix}.
+\]
+Zeilen bezeichnen ausgehende, Spalten eingehende Feldpakete. Die Quadrate
+sind komplexe Quadrate, keine Betragsquadrate. Die entkoppelte Antwort
+$\A_{\rm ref}$ folgt aus derselben Rechnung mit $\overline M$.
+
+\section{Dichteintegration und vollständiger Block}
+Für $\kappa_j=\tfrac12+\tfrac\beta4\sum_{i\prec j}c_{ij}(t_j-t_i)^2$ gilt
+$E(k)=\int_0^1e^{-ikr}\dd r=e^{-ik/2}\operatorname{sinc}(k/2)$.
+Schreibe $E_j=E(\kappa_j)$. Die vier ausgehenden Maskenintegrale sind
+\[
+ (d_{00},d_{10},d_{01},d_{11})_C=
+ \frac1{16}\int\dd\lambda^5(t)\,(1+E_2)(1,E_3,E_4,E_3E_4).
+\]
+Der Faktor $1/16=(1/4)\cdot2\cdot4\cdot(1/32)$ enthält beide
+Randquotienten, beide $\sqrt2$-Faktoren, beide Dichtepakete und alle fünf
+Atom-/Positivgewichte. Kein inneres Dichtestratum wird ausgelassen.
+
+\newpage
+Die symmetrischen ausgehenden Dichteantworten sind
+\[
+ d_C=\left(d_{00},\frac{d_{10}+d_{01}+d_{11}}{\sqrt3},
+                    \frac{d_{10}+d_{01}-2d_{11}}{\sqrt6}\right)^T.
+\]
+Die beiden Eingangspunkte sind minimal: $\kappa_0=\kappa_1=1/2$.
+Deshalb ist ihr vollständiger Dichtefaktor die feste Zeile
+\[
+ r=\left(1,\frac{2e+e^2}{\sqrt3},\frac{2e-2e^2}{\sqrt6}\right),
+ \qquad e=E(1/2).
+\]
+Für $p_C=e^{iF_4(C)}/33$ lautet somit der gesamte $6\times6$-Block
+\[
+ \B_1=\sum_Cp_C(d_Cr)\otimes\A_C,\qquad
+ \B_0=\sum_Cp_C(d_Cr)\otimes\A_{\rm ref}.
+\]
+Diese Formel berechnet alle 36 Einträge. Die Reduktion auf zwei
+Eingangsfeldrichtungen ist eine exakte Faktorisierung, keine
+Zustandsabschneidung. Bei der zusätzlichen Kontrolle ersetzt das vorher
+festgelegte Orbitgewicht die jeweilige Multiplizität geteilt durch 33.
+
+\section{Der vollständige normierte Differenzblock}
+Die Reihenfolge ist $(0,0),(0,R),(+,0),(+,R),(c,0),(c,R)$, wobei die
+Feldbasis durch $T$ orthonormiert ist. Die folgenden Tabellen zeigen
+Real- und Imaginärteil von $\widehat\Delta_6$; jede angezeigte Komponente
+besitzt einschließlich Tabellenrundung Fehler kleiner als $10^{-9}$.
+Die Zertifikate verwenden die viel engeren Rohintervalle in JSON.
+\input{matrix_tables.tex}
+Die zweite Singularzahl des Differenzblocks ist
+$0{,}000221198937\pm10^{-11}>0$. Die übrigen vier sind exakt null:
+Für beide Feldzustände liegen die Dichtekombinationen
+$(-r_+,1,0)^T$ und $(-r_c,0,1)^T$ im Eingangskern.
+
+Der $4\times2$-Atom$\to$Positiv-Block besteht aus Zeilen 3 bis 6 und
+Spalten 1 bis 2. Seine vollständigen komplexen Einträge sind damit ebenfalls
+explizit vorhanden. Die JSON-Dateien enthalten zusätzlich $K_1$, $K_0$,
+$R_{\rm conn}$ und $R_{\rm mean}$, jeweils unnormiert und $V$-normiert.
+
+\newpage
+\section{Zwei getrennte Ursachenblöcke}
+Setze $Z=\sum_Cp_C$, $\D=\sum_Cp_Cd_Cr$ und
+$\widetilde\A=\sum_Cp_C\A_C/Z$. $Z$ ist bei beiden getesteten
+Gewichtungen zertifiziert von null getrennt. Dann gilt exakt
+\begin{align*}
+ \B_1-\B_0&=R_{\rm conn}+R_{\rm mean},\\
+ R_{\rm conn}&=\sum_Cp_C(d_Cr)\otimes(\A_C-\widetilde\A),\\
+ R_{\rm mean}&=\D\otimes(\widetilde\A-\A_{\rm ref}).
+\end{align*}
+Dies erweitert die frühere skalare Diagnose auf den vollständigen Block.
+Die komplexen Gewichte $p_C/Z$ sind keine Wahrscheinlichkeiten.
+Der zusammenhängende Rest ist eine Amplitudendiagnose des festgelegten
+Ensembles, kein allgemeiner Verschränkungs- oder Kausalitätsnachweis.
+Beide Beiträge sind im neuen Zustandsbereich nachweislich ungleich null.
+
+\section{Zertifizierte Singularzahlen statt einer Float-SVD}
+Nach $V$-Normierung besitzt jeder Block die Form
+$[r_0C\ \ r_+C\ \ r_cC]$, $C\in\mathbb C^{6\times2}$.
+Seine beiden nichtverschwindenden Singularzahlen sind exakt diejenigen
+von $\|r\|_2C$. Im Atom$\to$Positiv-Block werden nur die vier positiven
+Ausgangszeilen von $C$ verwendet; hier ist $r_0=1$.
+
+Für $H=C^*C=\left(\begin{smallmatrix}a&z\\\bar z&d\end{smallmatrix}\right)$
+lauten die Eigenwerte
+\[
+ \lambda_\pm=\frac{a+d\pm\sqrt{(a-d)^2+4|z|^2}}2.
+\]
+Alle Operationen werden in 192-Bit-Arb/Acb mit nach außen gerundeten
+Intervallen ausgeführt. Beide Eigenwerte sind für alle berichteten
+Blöcke positiv eingeschlossen; $\sigma_{\max}=\sqrt{\lambda_+}$.
+Die Fehlerradien der Integrale werden bereits vor dieser Rechnung
+eintragsweise berücksichtigt.
+
+Eine zusätzliche Zertifizierung arbeitet unabhängig von der Rangfaktorisierung
+auf den ursprünglichen Gram-Matrizen:
+\[
+ H_{\rm gen}=\B^*G_F^{-1}\B,\quad
+ \frac{v^*H_{\rm gen}v}{v^*G_Ev}>l^2,
+ \qquad u^2G_E-H_{\rm gen}>0.
+\]
+Ein rationaler komplexer Testvektor beweist die untere Grenze $l$.
+Positive führende Hauptminoren in Ballarithmetik beweisen die obere
+Grenze $u$ per Sylvester-Kriterium. Float64 bestimmt nur Kandidaten,
+nicht die Gültigkeit der Ungleichungen. Alle 20 Blockzertifikate bestehen
+diese zweite Prüfung.
+
+\section{Warum der Befund basisunabhängig ist}
+Für beliebige invertierbare Basiswechsel $P$ am Eingang und $Q$ am
+Ausgang gelten
+\[
+ \B'=Q^*\B P,\qquad G_E'=P^*G_EP,\qquad G_F'=Q^*G_FQ.
+\]
+Der Quotient in der Supremumsdefinition bleibt durch die bijektive
+Umparametrisierung unverändert. Äquivalent unterscheiden sich die
+orthonormierten Matrizen nur durch unitäre Faktoren. Ein komplexer,
+nichtunitärer Scher-/Skalierungswechsel wird zusätzlich numerisch
+mit den transformierten Gram-Matrizen zertifiziert. Eine naive SVD
+der Rohmatrix würde dabei von etwa $0{,}7201$ auf $3{,}6290$ wechseln;
+der korrekte Wert bleibt $0{,}032602301976\pm10^{-12}$.
+
+\newpage
+\section{Vollständiges Fehlerbudget im deklarierten Bereich}
+Feld- und Dichteintegrale sind analytisch. Die fünf Uhrintegrale werden
+mit einer positiven, normierten 40-Punkt-Gauß-Legendre-Regel je Achse
+ausgewertet. Die Ausgangsuhren werden als exakte Umordnung endlicher
+Summen kontrahiert. Der Fehler wird nicht aus der Differenz zweier
+Quadraturordnungen abgeleitet.
+
+Für eine Achse in der Bernsteinellipse $\mathcal E_\rho$, $\rho=2$,
+gelten $a=(\rho+\rho^{-1})/2$, $b=(\rho-\rho^{-1})/2$.
+Mit inzidentem Absolutgrad $W_j$ ist die Majorante einer einzelnen
+Maskenpaarung $M_j\leq\tfrac18\exp[\tfrac\beta2b(a+1)W_j]$.
+Aus den Chebyshevkoeffizienten und der Exaktheit bis Grad $2n-1$ folgt
+\[
+ e_C\leq\frac12\frac{\rho^{-2n}}{1-\rho^{-1}}
+       \sum_{j=0}^4\exp\!\left[\tfrac\beta2b(a+1)W_j\right].
+\]
+Für die Ausgangsatommaske sind nur die Paare zu Punkt 2 erforderlich;
+die entsprechende engere Majorante wird separat berechnet.
+Linearkombinationen der Masken erhalten die Summe der absoluten
+Koeffizienten mal Maskenfehler. Für einen skalaren Matrixfaktor $A_C$
+gilt eintragsweise $e\leq\sum_C|p_C||A_C|e_C$.
+Beim Differenzblock wird direkt $A_C-A_{\rm ref}$ eingesetzt.
+Danach werden die vollständigen Gram-Transformationen und die
+Singularwertformeln auf die eingeschlossenen Einträge angewendet.
+
+\begin{center}\begin{tabular}{p{66mm}p{82mm}}\toprule
+Fehleranteil & Behandlung\\\midrule
+Uhrquadratur & Analytische Ellipsenschranke pro Historie und Maske\\
+Rundung, Gaußphasen, Normierung & Arb/Acb, 192 Bit; Dezimalexporte nach außen\\
+Abel-Extrapolation & Null: analytischer Grenzwert\\
+Dichte- und Feldquadratur & Null: analytische Integration und Gaußmomente\\
+Historienauslassung & Null innerhalb der festgelegten 33er-Familie\\
+Zustandsprojektion & Null für die definierten endlichen Paarungsblöcke\\
+Antworten außerhalb von $F$ & Nicht durch dieses endliche Blockzertifikat begrenzt\\\bottomrule
+\end{tabular}\end{center}
+
+\section{Prüfungen, Reproduktion und Quellen}
+\textbf{13 Kontrollgruppen bestanden.} Dazu gehören die unabhängige direkte
+fünfdimensionale 6er-Quadratur aller 33 gelabelten Historien, reelle
+Schur-Eigenphasen, kartesische Gram-Momente, Wiedergewinnung alter
+Matrixelemente, die beiden Blockzerlegungen, nichtunitäre Basiswechsel,
+vier exakte Eingangsnulrichtungen und die frühere Auslöschungskontrolle.
+Die kleinen Floatkontrollen testen die Implementierung; die
+Genauigkeitszusage stammt aus den analytischen Grenzen und Ballrechnungen.
+
+\texttt{python -B verify.py} prüft Hashes und führt die vollständige Rechnung
+in einer temporären Kopie erneut aus. Die drei numerischen Ergebnisdateien
+müssen bytegleich sein. Der Vertrag wurde vor der neuen Blockauswertung
+fixiert und mit SHA-256 gebunden; das ist kein externer Zeitstempel.
+
+Quellbasis: \href{https://github.com/thomasmgfeller/x6-spectral-astrolabium/tree/d7acdb6a2558bbec0b6c2c208742debc55479e75}{X6-Repository, Main d7acdb6a2558},
+insbesondere Randzustände, Mischblock, Definitionsbereich und Reduktionsgrenze;
+außerdem das aktuelle Prüfpaket Mischungsqualifikation v0.1.
+Exakte Dateiherkunft und Hashes: \texttt{provenance.json}.
+Arithmetik: \href{https://python-flint.readthedocs.io/en/latest/arb.html}{Python-FLINT 0.9.0, Arb}
+und \href{https://python-flint.readthedocs.io/en/latest/acb_mat.html}{Acb-Matrizen}.
+Die hier benötigten Norm-, Moment- und Fehlerformeln sind oben hergeleitet.
+
+\textbf{Grenze des Ergebnisses:} Basisunabhängigkeit gilt innerhalb derselben
+Räume und derselben Norm. Raumwechsel, Gewichtswechsel, andere Wirkungen,
+unendliche CST-Summen und physikalische Übergangswahrscheinlichkeiten
+erfordern eigene Nachweise.
+\end{document}

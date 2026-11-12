@@ -1,0 +1,75 @@
+{
+  "determinant_enclosure": "[0.792208524321733907926261676578 +/- 1.15e-12]",
+  "exact_difference": "0 by the two-dimensional barycentric identity",
+  "exact_weight_definition": "w1=cross(v2,v3)/D; w2=cross(v3,v1)/D; w3=cross(v1,v2)/D; D=sum numerators; v are the exact complex orbit differences",
+  "full_support": {
+    "all_33_labelled_weights_strictly_positive": true,
+    "both_transitions_certified_nonzero": true,
+    "coupled_enclosure": {
+      "imag": "[0.10970488496774135711365883305968 +/- 2.37e-12]",
+      "real": "[0.023515458840825383063582251320862 +/- 2.41e-12]"
+    },
+    "decoupled_enclosure": {
+      "imag": "[0.10970488496774135711466738840395 +/- 1.65e-12]",
+      "real": "[0.023515458840825383062305171885720 +/- 1.48e-12]"
+    },
+    "eta_per_unselected_orbit": "1/1000",
+    "exact_difference": "0 by the affine barycentric identity",
+    "strictly_positive_orbit_weight_enclosures": {
+      "24860": "[0.797191282414191493772433172969 +/- 2.26e-12]",
+      "25372": "[0.00100000000000000000000000000000 +/- 3e-37]",
+      "25500": "[0.00100000000000000000000000000000 +/- 3e-37]",
+      "8476": "[0.168861145999998119736332691417 +/- 1.13e-12]",
+      "8592": "[0.0269475715858103864912341356141 +/- 1.14e-12]",
+      "8600": "[0.00100000000000000000000000000000 +/- 3e-37]",
+      "8604": "[0.00100000000000000000000000000000 +/- 3e-37]",
+      "8732": "[0.00100000000000000000000000000000 +/- 3e-37]",
+      "8988": "[0.00100000000000000000000000000000 +/- 3e-37]",
+      "9116": "[0.00100000000000000000000000000000 +/- 3e-37]"
+    },
+    "weight_definition": "For selected vectors v1,v2,v3 set m=1-7*eta, t=-eta*sum(other v), u=v1-v3, v=v2-v3, r=t-m*v3. w1=cross(r,v)/cross(u,v), w2=cross(u,r)/cross(u,v), w3=m-w1-w2. All other orbit masses eta."
+  },
+  "interpretation": "Adversarial existence certificate over a declared admissible class; not a physically derived or independently preselected measure.",
+  "labelled_weights": "each selected orbit mass divided equally among its members; all other labelled weights zero",
+  "orbit_codes": [
+    8476,
+    8592,
+    24860
+  ],
+  "orbit_multiplicities": [
+    4,
+    4,
+    4
+  ],
+  "rational_orbit_weights": [
+    "85729490681/500000000000",
+    "26853217717/1000000000000",
+    "801687800921/1000000000000"
+  ],
+  "rational_witness_absolute_upper": "[1.12777280864586500794996763008e-12 +/- 3.40e-42]",
+  "rational_witness_difference_enclosure": {
+    "imag": "[-3.6389550018442546589263699277979e-13 +/- 4.27e-13]",
+    "real": "[3.7818327331000227643602315473561e-13 +/- 4.27e-13]"
+  },
+  "response_enclosures": [
+    {
+      "imag": "[0.67509383256339845849905430996225 +/- 6.00e-17]",
+      "real": "[-0.43940118612308215223007438059736 +/- 6.00e-17]"
+    },
+    {
+      "imag": "[-0.28734496624131749049450867727755 +/- 1.52e-17]",
+      "real": "[-0.75373846744950861953340104874776 +/- 1.52e-17]"
+    },
+    {
+      "imag": "[-0.13475914663161581440863391499547 +/- 5.32e-13]",
+      "real": "[0.11922294793633089672333663262489 +/- 5.32e-13]"
+    }
+  ],
+  "status": "EXACT_CANCELLATION_EXISTS",
+  "strictly_positive_weight_enclosures": [
+    "[0.171458981362473829962469432271 +/- 9.48e-13]",
+    "[0.0268532177171300062272382659298 +/- 7.88e-13]",
+    "[0.801687800920396163808598235904 +/- 1.17e-12]"
+  ],
+  "target": "paired scalar-geometry difference, original ground/plus packet"
+}
