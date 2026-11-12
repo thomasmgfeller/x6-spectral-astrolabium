@@ -5,12 +5,16 @@ on:
       - 'research/rax_cqg/dust_collapse/basis_invariant_coupling_v0_1/**'
       - 'research/rax_cqg/dust_collapse/packages/CST_DUST_Basisunabhaengiger_Kopplungsbefund_v0_1_Pruefpaket.zip'
       - '.github/workflows/cst-dust-basis-invariant-coupling.yml'
+      - 'research/rax_cqg/dust_collapse/verify_basis_invariant_publication.py'
+      - 'research/rax_cqg/dust_collapse/BASIS_INVARIANT_PUBLICATION.md'
   push:
     branches: [main]
     paths:
       - 'research/rax_cqg/dust_collapse/basis_invariant_coupling_v0_1/**'
       - 'research/rax_cqg/dust_collapse/packages/CST_DUST_Basisunabhaengiger_Kopplungsbefund_v0_1_Pruefpaket.zip'
       - '.github/workflows/cst-dust-basis-invariant-coupling.yml'
+      - 'research/rax_cqg/dust_collapse/verify_basis_invariant_publication.py'
+      - 'research/rax_cqg/dust_collapse/BASIS_INVARIANT_PUBLICATION.md'
   workflow_dispatch:
 permissions:
   contents: read
@@ -27,8 +31,8 @@ jobs:
           python-version: '3.12'
       - name: Install pinned algebra, interval arithmetic and independent numeric oracle
         run: python -m pip install -r research/rax_cqg/dust_collapse/basis_invariant_coupling_v0_1/requirements.txt
-      - name: Verify 13 control groups and byte-identical block certificates
-        run: python -B research/rax_cqg/dust_collapse/basis_invariant_coupling_v0_1/verify.py
+      - name: Verify exact scientific replay and portable trial certificates
+        run: python -B research/rax_cqg/dust_collapse/verify_basis_invariant_publication.py
       - name: Check downloadable package matches the published sources
         run: |
           python - <<'PY'

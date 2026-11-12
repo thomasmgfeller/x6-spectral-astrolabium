@@ -10,6 +10,8 @@ Der [vollständige Differenzblock](basis_invariant_coupling_v0_1/README.md) umfa
 
 13 Kontrollgruppen und der bytegleiche Replay der drei numerischen Ergebnisdateien bestanden. Die Singularwerte werden sowohl durch eine exakte Rangfaktorisierung mit eingeschlossenen 2×2-Eigenwerten als auch durch unabhängige Rayleigh-/Sylvester-Zertifikate geprüft. **FINITE_BASIS_INVARIANT_COUPLING_CERTIFIED; kompakte Gesamtreduktion weiterhin HOLD; physikalische CST-Evolution NOT_CONSTRUCTED.**
 
+Die [portable Veröffentlichungsprüfung](BASIS_INVARIANT_PUBLICATION.md) verlangt exakte wissenschaftliche Daten und prüft zusätzlich ursprüngliche und neu berechnete Rayleigh-Zeugen; nur die rechnerabhängigen Vorschlagsvektoren dürfen variieren. Bericht und Download-Paket bleiben unverändert.
+
 [Bericht (PDF)](basis_invariant_coupling_v0_1/CST_DUST_Basisunabhaengiger_Kopplungsbefund_v0_1.pdf) · [Prüfpaket (ZIP)](packages/CST_DUST_Basisunabhaengiger_Kopplungsbefund_v0_1_Pruefpaket.zip) · [Herleitung (LaTeX)](basis_invariant_coupling_v0_1/DERIVATION.tex) · [Versuchsvertrag](basis_invariant_coupling_v0_1/contract.json) · [Vollständige Matrizen und Zertifikate](basis_invariant_coupling_v0_1/results/uniform.json) · [Code und Reproduktion](basis_invariant_coupling_v0_1/README.md)
 
 ## Obere Reduktionsfehlergrenze v0.1 · 11. November 2026

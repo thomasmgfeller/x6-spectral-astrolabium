@@ -11,7 +11,7 @@
     ".github/workflows/cspp-stability-path.yml": "6c16b2d6914726f04f49f49112d4229f35101ba42d539d0eec967642cfd6adba",
     ".github/workflows/cst-dust-alpha-normtail.yml": "71fed0065b45ef2090ce90d9fd2fae16ca5a866818f77429ad7d1a815f4d251a",
     ".github/workflows/cst-dust-amplitude-existence.yml": "093b4f99c1a6d9203bf9c1c9d28df32bf7321c837b1fbde5f0a853b9d46da755",
-    ".github/workflows/cst-dust-basis-invariant-coupling.yml": "a528a6da9b8297bff0dfb9b41ac9b725ad8ec117888c85537062237817e9704e",
+    ".github/workflows/cst-dust-basis-invariant-coupling.yml": "0f423132dc5c17b48cda8d08402bcc8b5fc059a62e16ebd6f87f47aac5073a16",
     ".github/workflows/cst-dust-boundary-memory.yml": "a41dd417abcf4aa3e06d7082bf08c0bf5cd1df76e314fc209f29d17d26208e99",
     ".github/workflows/cst-dust-boundary-readout.yml": "10d7195540b763997f9025956ac0238e835115da89a301075b15be54bb59becb",
     ".github/workflows/cst-dust-boundary.yml": "d63602e5ba4e9f65cc39b71a3224baf1c1548a272f1ce17aa9b5d2d8470885cd",
@@ -3173,7 +3173,8 @@
     "research/rax_cqg/benchmark-v0.2.0/web/lab_ui.js": "64ae178d14e4845218a4ae4b2166cbe2574724e76c48d2ede031d29d70231fc3",
     "research/rax_cqg/benchmark-v0.2.0/web/rax_core.js": "05c28eac63f9c7af7f4f1753f09b17098ce7a1114386fce9a67e6f25e8982651",
     "research/rax_cqg/dust_collapse/.gitattributes": "6c39beeba3cfad03e4b9f6bfbd5a98c0b8be706901eaad404ee75e87db1a06a7",
-    "research/rax_cqg/dust_collapse/README.md": "f590fe8b17b5c482e27db4203d4d7e4eee7c09993bbc1afb2ef16122725e2bb5",
+    "research/rax_cqg/dust_collapse/BASIS_INVARIANT_PUBLICATION.md": "222dab1a35a426d67a916e5c61bbd0225f3712c5a7ee446f96e79198d2797a4a",
+    "research/rax_cqg/dust_collapse/README.md": "755feed7af20df1abcde2d64ebcfcde9e17cab8dfc453924f346fbe61bb84381",
     "research/rax_cqg/dust_collapse/additional_windows/results.csv": "2d7c141381e91bea341c464c0475368910f152b03170482d1a58bd4bf16e5435",
     "research/rax_cqg/dust_collapse/alpha_normtail_v0_1/CST_DUST_Alpha_Abhaengige_Normrestschranke_v0_1.pdf": "b18c24053a8a0eefe7b4f3cd4310c6c89a37360dd276c73296b9b83ac2f5f1ef",
     "research/rax_cqg/dust_collapse/alpha_normtail_v0_1/DERIVATION.md": "3cbe25aa23440c1db48d53db6a4cc8945425ceea5bd53fa592ef53de2c13fc5a",
@@ -4847,6 +4848,7 @@
     "research/rax_cqg/dust_collapse/variation_v0_1/results/schur_response.json": "5b44bb9bb7ed411c8f9d7f45bd28a0f6dcb041544de41a1891904d7e6cbdd3be",
     "research/rax_cqg/dust_collapse/variation_v0_1/results/verification.json": "d03c42e5315ed71470ac7554255698766215b0ae1050c19035c7516474fce025",
     "research/rax_cqg/dust_collapse/variation_v0_1/variation.py": "7a4803c1f8a0f3984c34f4a0689c06de0010a868f2423e02d49040ba233add2c",
+    "research/rax_cqg/dust_collapse/verify_basis_invariant_publication.py": "2e6cfaae480a6bbb077eeaa602beef950a63266a91063fb8bfbb7cbf062fe41c",
     "research/rax_cqg/dust_collapse/ward_constraints_v0_1/CST_DUST_Uhrsymmetrie_Constraints_Atomgrenze_v0_1.pdf": "218be2f8d9ca53afc5439fe5f4da4fb97d439a786fb322da3f69fe2af19694ab",
     "research/rax_cqg/dust_collapse/ward_constraints_v0_1/CST_DUST_Uhrsymmetrie_Constraints_Atomgrenze_v0_1_Pruefpaket.zip": "685d5be75a5e74b0c08a026df823297815766e6c27af54addb60b652cce76faf",
     "research/rax_cqg/dust_collapse/ward_constraints_v0_1/DERIVATION.md": "da9de1b8eabd934c7bada49268e23dd9f12ef4eaa30bdd9e53c8f8484e6f081f",
@@ -8564,6 +8566,22 @@
           "sha256": "90e17b1a433f6f986b0732d7f56d4120d72242d61fea85691bd2ad5e90053708"
         }
       ]
+    },
+    {
+      "date": "2026-11-12",
+      "scope": "Add portable publication replay: preserve original report and package, require exact scientific fields, revalidate original and regenerated interval certificates, and reject altered amplitudes, zero trial vectors and invalid upper bounds.",
+      "files": [
+        {
+          "path": ".github/workflows/cst-dust-basis-invariant-coupling.yml",
+          "previous_sha256": "a528a6da9b8297bff0dfb9b41ac9b725ad8ec117888c85537062237817e9704e",
+          "sha256": "0f423132dc5c17b48cda8d08402bcc8b5fc059a62e16ebd6f87f47aac5073a16"
+        },
+        {
+          "path": "research/rax_cqg/dust_collapse/README.md",
+          "previous_sha256": "f590fe8b17b5c482e27db4203d4d7e4eee7c09993bbc1afb2ef16122725e2bb5",
+          "sha256": "755feed7af20df1abcde2d64ebcfcde9e17cab8dfc453924f346fbe61bb84381"
+        }
+      ]
     }
   ],
   "publication_additions": [
@@ -10760,6 +10778,14 @@
         "research/rax_cqg/dust_collapse/basis_invariant_coupling_v0_1/tests.py",
         "research/rax_cqg/dust_collapse/basis_invariant_coupling_v0_1/verify.py",
         "research/rax_cqg/dust_collapse/packages/CST_DUST_Basisunabhaengiger_Kopplungsbefund_v0_1_Pruefpaket.zip"
+      ]
+    },
+    {
+      "date": "2026-11-12",
+      "scope": "Add portable publication replay: preserve original report and package, require exact scientific fields, revalidate original and regenerated interval certificates, and reject altered amplitudes, zero trial vectors and invalid upper bounds.",
+      "files": [
+        "research/rax_cqg/dust_collapse/BASIS_INVARIANT_PUBLICATION.md",
+        "research/rax_cqg/dust_collapse/verify_basis_invariant_publication.py"
       ]
     }
   ]
