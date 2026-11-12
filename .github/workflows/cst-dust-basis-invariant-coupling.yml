@@ -1,0 +1,54 @@
+name: CST-DUST basis-independent coupling
+on:
+  pull_request:
+    paths:
+      - 'research/rax_cqg/dust_collapse/basis_invariant_coupling_v0_1/**'
+      - 'research/rax_cqg/dust_collapse/packages/CST_DUST_Basisunabhaengiger_Kopplungsbefund_v0_1_Pruefpaket.zip'
+      - '.github/workflows/cst-dust-basis-invariant-coupling.yml'
+      - 'research/rax_cqg/dust_collapse/verify_basis_invariant_publication.py'
+      - 'research/rax_cqg/dust_collapse/BASIS_INVARIANT_PUBLICATION.md'
+  push:
+    branches: [main]
+    paths:
+      - 'research/rax_cqg/dust_collapse/basis_invariant_coupling_v0_1/**'
+      - 'research/rax_cqg/dust_collapse/packages/CST_DUST_Basisunabhaengiger_Kopplungsbefund_v0_1_Pruefpaket.zip'
+      - '.github/workflows/cst-dust-basis-invariant-coupling.yml'
+      - 'research/rax_cqg/dust_collapse/verify_basis_invariant_publication.py'
+      - 'research/rax_cqg/dust_collapse/BASIS_INVARIANT_PUBLICATION.md'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  basis-invariant-coupling:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Install pinned algebra, interval arithmetic and independent numeric oracle
+        run: python -m pip install -r research/rax_cqg/dust_collapse/basis_invariant_coupling_v0_1/requirements.txt
+      - name: Verify exact scientific replay and portable trial certificates
+        run: python -B research/rax_cqg/dust_collapse/verify_basis_invariant_publication.py
+      - name: Check downloadable package matches the published sources
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import json, zipfile
+          root = Path('research/rax_cqg/dust_collapse/basis_invariant_coupling_v0_1')
+          archive = root.parent / 'packages/CST_DUST_Basisunabhaengiger_Kopplungsbefund_v0_1_Pruefpaket.zip'
+          prefix = 'basis_invariant_coupling_v0_1/'
+          paths = set(json.loads((root / 'SHA256SUMS.json').read_text())) | {'SHA256SUMS.json'}
+          with zipfile.ZipFile(archive) as z:
+              if z.testzip() is not None:
+                  raise SystemExit('ZIP CRC failure')
+              if len(z.namelist()) != len(paths) or set(z.namelist()) != {prefix + p for p in paths}:
+                  raise SystemExit('ZIP inventory mismatch')
+              for p in paths:
+                  if z.read(prefix + p) != (root / p).read_bytes():
+                      raise SystemExit('ZIP/source mismatch: ' + p)
+          print('PASS: downloadable ZIP matches all 28 published package files.')
+          PY

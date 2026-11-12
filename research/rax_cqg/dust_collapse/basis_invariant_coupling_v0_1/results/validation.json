@@ -1,0 +1,85 @@
+{
+  "checks": {
+    "complete_history_enumeration": "33 histories, 10 orbits",
+    "direct_5D_33_labels_vs_contraction": {
+      "max_abs": 2.6370079266951707e-16,
+      "nodes": 6,
+      "orbit_max_abs": 4.163336342344337e-17
+    },
+    "endpoint_and_connected_decomposition": "PASS",
+    "fixed_contract": "PASS",
+    "four_structural_null_input_directions": "PASS",
+    "independent_Sylvester_and_Rayleigh_certificates": "PASS for 20 blocks",
+    "independent_cartesian_V_Gram_and_whitening": "PASS",
+    "independent_schur_eigenphases_and_Wick_moments": {
+      "max_abs": 5.1034043367087296e-15
+    },
+    "nonunitary_complex_basis_invariance": {
+      "certified": {
+        "Rayleigh_lower": "[0.0326023019759780870829751525837 +/- 2.59e-33]",
+        "Sylvester_determinants": [
+          "[1.03370548535082776738688004921 +/- 8.37e-14]",
+          "[4.77323994955711120209127851459 +/- 8.07e-13]",
+          "[2.24548085152709579202703263836 +/- 1.41e-11]",
+          "[4.23750276848368121005118602816 +/- 2.25e-10]",
+          "[2.54283904200918142129987871154 +/- 2.42e-10]",
+          "[9.39852605912027444096172200115e-8 +/- 2.34e-10]"
+        ],
+        "lower": "[0.0326023017000000000000000000000 +/- 3e-36]",
+        "trial_vector": [
+          [
+            {
+              "imag": "[-0.0055025993086243417000000000000000 +/- 3e-39]",
+              "real": "[-0.11753143850281561000000000000000 +/- 3e-37]"
+            }
+          ],
+          [
+            {
+              "imag": "[-0.00067367359160218278000000000000000 +/- 1e-40]",
+              "real": "[0.011509681949319372000000000000000 +/- 3e-38]"
+            }
+          ],
+          [
+            {
+              "imag": "[-0.013456977373594751000000000000000 +/- 3e-38]",
+              "real": "[-0.056981468064164001000000000000000 +/- 1e-38]"
+            }
+          ],
+          [
+            {
+              "imag": "[0.0026468849154362450000000000000000 +/- 3e-39]",
+              "real": "[0.0094137924737937827000000000000000 +/- 1e-38]"
+            }
+          ],
+          [
+            {
+              "imag": "[0.0039518966578185833000000000000000 +/- 1e-39]",
+              "real": "[-0.0015143136395703808000000000000000 +/- 3e-39]"
+            }
+          ],
+          [
+            {
+              "imag": "[0.00019503886524805240000000000000000 +/- 3e-40]",
+              "real": "[0.019858750568021701000000000000000 +/- 3e-38]"
+            }
+          ]
+        ],
+        "upper": "[0.0326023022000000000000000000000 +/- 3e-36]"
+      },
+      "unweighted_svd_after": 3.6290227439984517,
+      "unweighted_svd_before": 0.7201161899003476
+    },
+    "prior_40_node_quadrature_reproduced": "PASS",
+    "prior_pairings_in_complete_block": "PASS",
+    "single_coordinate_cancellation_in_fixed_space": "exact algebraic identity; nonzero norm preserved",
+    "single_element_cancellation_preserves_nonzero_block": {
+      "entry_enclosure": {
+        "imag": "[-2.3804996558892945345051793e-21 +/- 4.04e-12]",
+        "real": "[2.2234255285008229912084776e-21 +/- 3.86e-12]"
+      },
+      "positive_block_lower": "0.0017"
+    }
+  },
+  "control_groups": 13,
+  "status": "PASS"
+}
