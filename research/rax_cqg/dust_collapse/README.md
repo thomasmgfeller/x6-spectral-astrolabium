@@ -1,5 +1,13 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Konsolidierter Forschungsstand · 13. November 2026
+
+Die [neue Übersicht](research_update_2026_11_13/README.md) verbindet die nachfolgenden Arbeiten zur positiven 1.089er-Amplitude, Reduktion, Constraint-Prüfung und den beiden Quellen-/Ordnungsversuchen. Elf Berichte und elf ursprüngliche Prüfpakete sind über ein [gemeinsames Artefaktverzeichnis](research_update_2026_11_13/ARTIFACTS.md) zugänglich.
+
+**Im neuen endlichen Hilfsinstrument sind zwei Präparationen an ihren bedingten Records unterscheidbar; physikalische CST-Evolution, gravitative Rückwirkung und Singularitätsauflösung bleiben offen.** Die [Befundtabelle](research_update_2026_11_13/FINDINGS.md) trennt statistische Einschließung, deterministische Grenzen, konkrete Kandidatenausschlüsse und historische KI-Prüfungen. Die Gravitationsphasen dieses Piloten bleiben für seine Klassenrecords unsichtbar. Originalartefakte und bisherige physikalische HOLD-Entscheidungen bleiben erhalten; diese Archivveröffentlichung startet keine wissenschaftlichen Vollrechnungen.
+
+English: [Consolidated research status](research_update_2026_11_13/README.md#english-summary), preserved reports and reproducibility archives; auxiliary response established, physical collapse and singularity resolution unestablished.
+
 ## Gewichtsrobustheit des vollständigen Blocks v0.1 · 12. November 2026
 
 Die [globale Gewichtsprüfung](weight_robustness_v0_1/README.md) minimiert die V-normierte Größe des gesamten Differenzblocks über **alle bisher zugelassenen nichtnegativen, normierten und randinvarianten Historiengewichte**. Die 33 ursprünglichen AA-Historien, sechs Eingangs- und sechs Ausgangstestzustände, vollständige Gram-Normierung, Gravitationsphasen und feste entkoppelte Referenz bleiben unverändert. Die zehn Orbitmassen sind frei; es werden keine Mindestgewichte oder weiteren Maßbedingungen hinzugefügt.

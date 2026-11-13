@@ -1,0 +1,421 @@
+{
+  "schema": "cst-dust.research-publication/1",
+  "publication_date": "2026-11-13",
+  "title": "CST-DUST: geprüfte Hilfsamplituden, physikalische Hindernisse und neue Kausalordnungsantwort",
+  "base_commit": "338a3ebb28507790fe916ae577920d0c264acab9",
+  "release_tag": "cst-dust-research-2026-11-13-v0.1",
+  "release_url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/releases/tag/cst-dust-research-2026-11-13-v0.1",
+  "publication_type": "ARCHIVE_AND_DOCUMENTATION_NO_NEW_SCIENTIFIC_RUN",
+  "scientific_replay_this_publication": false,
+  "original_artifacts_modified": false,
+  "standalone_reports_and_embedded_reports": "Separately preserved originals; PDF bytes can differ, normalized extracted text checked equal.",
+  "packages": [
+    {
+      "id": "P01",
+      "title": "Positive 1.089er-Verklebung",
+      "artifact_date": "2026-11-12",
+      "version": "v0.1",
+      "base_commit": "338a3ebb28507790fe916ae577920d0c264acab9",
+      "status": "STATISTICAL_FINITE_AMPLITUDE",
+      "note": "Originale statistische Einschließung unter dem erklärten IID-Modell; keine deterministische Uhrquadratur.",
+      "artifacts": [
+        {
+          "filename": "CST_DUST_Positive_1089_Verklebungsamplitude_v0_1.pdf",
+          "kind": "report",
+          "bytes": 403747,
+          "sha256": "5bcbcbcb1efbfc803b7699480dfd0bf642fbb39378b1f112b39fcb86862d0cf3",
+          "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/releases/download/cst-dust-research-2026-11-13-v0.1/CST_DUST_Positive_1089_Verklebungsamplitude_v0_1.pdf"
+        },
+        {
+          "filename": "CST_DUST_Positive_1089_Verklebungsamplitude_v0_1_Pruefpaket.zip",
+          "kind": "reproduction_archive",
+          "bytes": 17470026,
+          "sha256": "38178547f5a18375c70b9ad1903ed700d6adfe353e72e46d107b179e64576cf1",
+          "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/releases/download/cst-dust-research-2026-11-13-v0.1/CST_DUST_Positive_1089_Verklebungsamplitude_v0_1_Pruefpaket.zip"
+        }
+      ],
+      "archive_integrity": {
+        "package": "P01",
+        "zip_crc": "PASS",
+        "original_inventory": "positive_sewing_v0_1/SHA256SUMS.json",
+        "inventory_prefix": "positive_sewing_v0_1/",
+        "verified_original_entries": 33,
+        "standalone_pdf_pages": 5,
+        "embedded_pdf_path": "positive_sewing_v0_1/CST_DUST_Positive_1089_Verklebungsamplitude_v0_1.pdf",
+        "embedded_pdf_sha256": "f8997ca18df869d3257a0b0e96a18179b766247e5762684571e21f5a73ab00b9",
+        "standalone_embedded_pdf_bytes_equal": false,
+        "normalized_extracted_pdf_text_equal": true
+      }
+    },
+    {
+      "id": "P02",
+      "title": "Analytische Reduktion",
+      "artifact_date": "2026-11-12",
+      "version": "v0.1",
+      "base_commit": "338a3ebb28507790fe916ae577920d0c264acab9",
+      "status": "HOLD_TARGET_TOLERANCE",
+      "note": "Deterministischer Budgetversuch; Zielgenauigkeit nicht zertifiziert.",
+      "artifacts": [
+        {
+          "filename": "CST_DUST_Analytische_Reduktion_v0_1.pdf",
+          "kind": "report",
+          "bytes": 367959,
+          "sha256": "812c58b315ecd25c6d18ede9db3b4cd3686c0fbbea1316ed08559322ec2f616b",
+          "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/releases/download/cst-dust-research-2026-11-13-v0.1/CST_DUST_Analytische_Reduktion_v0_1.pdf"
+        },
+        {
+          "filename": "CST_DUST_Analytische_Reduktion_v0_1_Pruefpaket.zip",
+          "kind": "reproduction_archive",
+          "bytes": 717289,
+          "sha256": "6c323d6bf0ff4cb511b845afd79a54ce6ec633c5ca9e0eb84b96671dc16c2d53",
+          "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/releases/download/cst-dust-research-2026-11-13-v0.1/CST_DUST_Analytische_Reduktion_v0_1_Pruefpaket.zip"
+        }
+      ],
+      "archive_integrity": {
+        "package": "P02",
+        "zip_crc": "PASS",
+        "original_inventory": "analytic_reduction_v0_1/SHA256SUMS.json",
+        "inventory_prefix": "analytic_reduction_v0_1/",
+        "verified_original_entries": 46,
+        "standalone_pdf_pages": 7,
+        "embedded_pdf_path": "analytic_reduction_v0_1/CST_DUST_Analytische_Reduktion_v0_1.pdf",
+        "embedded_pdf_sha256": "42a6515d76dbbfda628132a2ebbc7cca94210b7e62ae3a0e9e9e6bfcf8af4b73",
+        "standalone_embedded_pdf_bytes_equal": false,
+        "normalized_extracted_pdf_text_equal": true
+      }
+    },
+    {
+      "id": "P03",
+      "title": "Physikalische Constraint-Prüfung",
+      "artifact_date": "2026-11-12",
+      "version": "v0.1",
+      "base_commit": "338a3ebb28507790fe916ae577920d0c264acab9",
+      "status": "SPECIFIC_CANDIDATE_REJECTED",
+      "note": "Der ausdrücklich geprüfte universelle Dichte-Constraint-Kandidat besitzt nur den trivialen Zustandsraum.",
+      "artifacts": [
+        {
+          "filename": "CST_DUST_Physikalische_Constraint_Pruefung_v0_1.pdf",
+          "kind": "report",
+          "bytes": 367580,
+          "sha256": "5625700499dd12602bc627b7fdae52a3277d325de3aed8fa03b2f3fb89505603",
+          "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/releases/download/cst-dust-research-2026-11-13-v0.1/CST_DUST_Physikalische_Constraint_Pruefung_v0_1.pdf"
+        },
+        {
+          "filename": "CST_DUST_Physikalische_Constraint_Pruefung_v0_1_Pruefpaket.zip",
+          "kind": "reproduction_archive",
+          "bytes": 460549,
+          "sha256": "fdddb5f4aa778fa874e5793bae27a43922ad4113ca9b798f47bf67d0afdce5ab",
+          "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/releases/download/cst-dust-research-2026-11-13-v0.1/CST_DUST_Physikalische_Constraint_Pruefung_v0_1_Pruefpaket.zip"
+        }
+      ],
+      "archive_integrity": {
+        "package": "P03",
+        "zip_crc": "PASS",
+        "original_inventory": "constraint_raq_v0_1/SHA256SUMS.json",
+        "inventory_prefix": "constraint_raq_v0_1/",
+        "verified_original_entries": 31,
+        "standalone_pdf_pages": 7,
+        "embedded_pdf_path": "constraint_raq_v0_1/CST_DUST_Physikalische_Constraint_Pruefung_v0_1.pdf",
+        "embedded_pdf_sha256": "31b60a856bdde4406e8ac69163b7dc9c7e081a0f3f66fa4ac6035ede4ab9788d",
+        "standalone_embedded_pdf_bytes_equal": false,
+        "normalized_extracted_pdf_text_equal": true
+      }
+    },
+    {
+      "id": "P04",
+      "title": "Etappe 1: physikalischer Ausgangspunkt",
+      "artifact_date": "2026-11-13",
+      "version": "v0.1",
+      "base_commit": "338a3ebb28507790fe916ae577920d0c264acab9",
+      "status": "PHYSICAL_SECTOR_HOLD",
+      "note": "Analytische Prüfung und begrenzte stationäre Zeugen; keine physikalische Zustandsraumkonstruktion.",
+      "artifacts": [
+        {
+          "filename": "CST_DUST_Etappe1_Physikalischer_Ausgangspunkt_v0_1.pdf",
+          "kind": "report",
+          "bytes": 230831,
+          "sha256": "ccd10d468793f306c4bc104eabecee9aa9bb763c5be8a94c2e696dbbd5808999",
+          "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/releases/download/cst-dust-research-2026-11-13-v0.1/CST_DUST_Etappe1_Physikalischer_Ausgangspunkt_v0_1.pdf"
+        },
+        {
+          "filename": "CST_DUST_Etappe1_Physikalischer_Ausgangspunkt_v0_1_Pruefpaket.zip",
+          "kind": "reproduction_archive",
+          "bytes": 244855,
+          "sha256": "9e8db3f927b97f8672c45515de680ba622727b62dcb3e7722bf4acc0ee695b33",
+          "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/releases/download/cst-dust-research-2026-11-13-v0.1/CST_DUST_Etappe1_Physikalischer_Ausgangspunkt_v0_1_Pruefpaket.zip"
+        }
+      ],
+      "archive_integrity": {
+        "package": "P04",
+        "zip_crc": "PASS",
+        "original_inventory": "CST_DUST_Etappe1_v0_1/MANIFEST.sha256.json",
+        "inventory_prefix": "CST_DUST_Etappe1_v0_1/",
+        "verified_original_entries": 20,
+        "standalone_pdf_pages": 9,
+        "embedded_pdf_path": "CST_DUST_Etappe1_v0_1/CST_DUST_Etappe1_Physikalischer_Ausgangspunkt_v0_1.pdf",
+        "embedded_pdf_sha256": "006e6bac705cec2b22c84c6c502328d30358308145dc39ac4613086d996bb92f",
+        "standalone_embedded_pdf_bytes_equal": false,
+        "normalized_extracted_pdf_text_equal": true
+      }
+    },
+    {
+      "id": "P05",
+      "title": "Etappe 2: klassische Korrespondenz",
+      "artifact_date": "2026-11-13",
+      "version": "v0.1",
+      "base_commit": "338a3ebb28507790fe916ae577920d0c264acab9",
+      "status": "PHYSICAL_CORRESPONDENCE_NOT_RUN",
+      "note": "Variationsidentitäten und Referenzkontrollen; keine neu erzeugte CST-Kollapskurve.",
+      "artifacts": [
+        {
+          "filename": "CST_DUST_Etappe2_Klassische_Korrespondenz_v0_1.pdf",
+          "kind": "report",
+          "bytes": 203798,
+          "sha256": "8035d6cfacfe72f2e3024ea5e8af1efd0572e4ad15f15ef14e3254450e3f1a46",
+          "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/releases/download/cst-dust-research-2026-11-13-v0.1/CST_DUST_Etappe2_Klassische_Korrespondenz_v0_1.pdf"
+        },
+        {
+          "filename": "CST_DUST_Etappe2_Klassische_Korrespondenz_v0_1_Pruefpaket.zip",
+          "kind": "reproduction_archive",
+          "bytes": 224286,
+          "sha256": "2fc30aa8fd5b8b8c176cbbcab573b0fe46004afc06ef024df29018a5a4bb9c1d",
+          "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/releases/download/cst-dust-research-2026-11-13-v0.1/CST_DUST_Etappe2_Klassische_Korrespondenz_v0_1_Pruefpaket.zip"
+        }
+      ],
+      "archive_integrity": {
+        "package": "P05",
+        "zip_crc": "PASS",
+        "original_inventory": "CST_DUST_Etappe2_v0_1/MANIFEST.sha256.json",
+        "inventory_prefix": "CST_DUST_Etappe2_v0_1/",
+        "verified_original_entries": 20,
+        "standalone_pdf_pages": 7,
+        "embedded_pdf_path": "CST_DUST_Etappe2_v0_1/CST_DUST_Etappe2_Klassische_Korrespondenz_v0_1.pdf",
+        "embedded_pdf_sha256": "9c57dd92e7c7add92dd67d6a735222754ae3cedc5d2470412cee4dc54a395da4",
+        "standalone_embedded_pdf_bytes_equal": false,
+        "normalized_extracted_pdf_text_equal": true
+      }
+    },
+    {
+      "id": "P06",
+      "title": "Etappe 3: kontrollierte Reduktion",
+      "artifact_date": "2026-11-13",
+      "version": "v0.1",
+      "base_commit": "338a3ebb28507790fe916ae577920d0c264acab9",
+      "status": "INHERITED_BASIS_BUDGET_STOP",
+      "note": "Die geerbte rechteckige Basis und Schranke zertifizieren das Ziel im Budget nicht; kein allgemeines Reduktions-No-go.",
+      "artifacts": [
+        {
+          "filename": "CST_DUST_Etappe3_Kontrollierte_Reduktion_v0_1.pdf",
+          "kind": "report",
+          "bytes": 174587,
+          "sha256": "826569318dbffb5f25835a28612fb875f6676e605353700500402521b90b4bae",
+          "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/releases/download/cst-dust-research-2026-11-13-v0.1/CST_DUST_Etappe3_Kontrollierte_Reduktion_v0_1.pdf"
+        },
+        {
+          "filename": "CST_DUST_Etappe3_Kontrollierte_Reduktion_v0_1_Pruefpaket.zip",
+          "kind": "reproduction_archive",
+          "bytes": 203589,
+          "sha256": "345fb202f04b45c576cc75b5b90e56c9bce539c936b2b74edaf61aa92983dd61",
+          "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/releases/download/cst-dust-research-2026-11-13-v0.1/CST_DUST_Etappe3_Kontrollierte_Reduktion_v0_1_Pruefpaket.zip"
+        }
+      ],
+      "archive_integrity": {
+        "package": "P06",
+        "zip_crc": "PASS",
+        "original_inventory": "CST_DUST_Etappe3_v0_1/MANIFEST.sha256.json",
+        "inventory_prefix": "CST_DUST_Etappe3_v0_1/",
+        "verified_original_entries": 26,
+        "standalone_pdf_pages": 7,
+        "embedded_pdf_path": "CST_DUST_Etappe3_v0_1/CST_DUST_Etappe3_Kontrollierte_Reduktion_v0_1.pdf",
+        "embedded_pdf_sha256": "df722b83fab16853811c0a289b36d73ff4561551339b1f274f2d9bd08b534534",
+        "standalone_embedded_pdf_bytes_equal": false,
+        "normalized_extracted_pdf_text_equal": true
+      }
+    },
+    {
+      "id": "P07",
+      "title": "Etappe 4: Singularitätsprüfung",
+      "artifact_date": "2026-11-13",
+      "version": "v0.1",
+      "base_commit": "338a3ebb28507790fe916ae577920d0c264acab9",
+      "status": "SINGULARITY_RESOLUTION_NOT_ESTABLISHED",
+      "note": "Analytische Kriterien und Gegenbeispiele; physikalische globale Tests nicht ausgeführt.",
+      "artifacts": [
+        {
+          "filename": "CST_DUST_Etappe4_Singularitaetspruefung_v0_1.pdf",
+          "kind": "report",
+          "bytes": 166786,
+          "sha256": "1c2a94726fee0e8bfa1c90968135ecae615935a739383e4e2b038b73c3fd9fdb",
+          "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/releases/download/cst-dust-research-2026-11-13-v0.1/CST_DUST_Etappe4_Singularitaetspruefung_v0_1.pdf"
+        },
+        {
+          "filename": "CST_DUST_Etappe4_Singularitaetspruefung_v0_1_Pruefpaket.zip",
+          "kind": "reproduction_archive",
+          "bytes": 188931,
+          "sha256": "3d01876bc68d5c25d66858eb68a604563db0c3abbb075c6e556edaa844cd2410",
+          "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/releases/download/cst-dust-research-2026-11-13-v0.1/CST_DUST_Etappe4_Singularitaetspruefung_v0_1_Pruefpaket.zip"
+        }
+      ],
+      "archive_integrity": {
+        "package": "P07",
+        "zip_crc": "PASS",
+        "original_inventory": "CST_DUST_Etappe4_v0_1/MANIFEST.sha256.json",
+        "inventory_prefix": "CST_DUST_Etappe4_v0_1/",
+        "verified_original_entries": 22,
+        "standalone_pdf_pages": 6,
+        "embedded_pdf_path": "CST_DUST_Etappe4_v0_1/CST_DUST_Etappe4_Singularitaetspruefung_v0_1.pdf",
+        "embedded_pdf_sha256": "1c02f45087405e77f5279477bd99aef67e76887f44286a3691a3bd1b0c549a75",
+        "standalone_embedded_pdf_bytes_equal": false,
+        "normalized_extracted_pdf_text_equal": true
+      }
+    },
+    {
+      "id": "P08",
+      "title": "Erster interner Agentenabgleich",
+      "artifact_date": "2026-11-13",
+      "version": "v0.1",
+      "base_commit": "338a3ebb28507790fe916ae577920d0c264acab9",
+      "status": "HISTORICAL_INTERNAL_AI_REVIEW",
+      "note": "Historische Richtungsentscheidung; Empfehlungen werden durch P09 präzisiert und durch P10/P11 fortgeführt.",
+      "artifacts": [
+        {
+          "filename": "CST_DUST_Agentenschwarm_Fazit_Roadmap_v0_1.pdf",
+          "kind": "report",
+          "bytes": 89081,
+          "sha256": "0b241a6321fff6beab08869315e8cabcaba2d2391e116430e69c7dcfcfb24616",
+          "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/releases/download/cst-dust-research-2026-11-13-v0.1/CST_DUST_Agentenschwarm_Fazit_Roadmap_v0_1.pdf"
+        },
+        {
+          "filename": "CST_DUST_Agentenschwarm_Pruefpaket_v0_1.zip",
+          "kind": "reproduction_archive",
+          "bytes": 176096,
+          "sha256": "bd8dee86593dc0b16b59f9b9d9224fe22d0af4e6e83a65818484b67f9da43200",
+          "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/releases/download/cst-dust-research-2026-11-13-v0.1/CST_DUST_Agentenschwarm_Pruefpaket_v0_1.zip"
+        }
+      ],
+      "archive_integrity": {
+        "package": "P08",
+        "zip_crc": "PASS",
+        "original_inventory": "CST_DUST_Agentenschwarm_v0_1/MANIFEST.sha256.json",
+        "inventory_prefix": "CST_DUST_Agentenschwarm_v0_1/",
+        "verified_original_entries": 45,
+        "standalone_pdf_pages": 6,
+        "embedded_pdf_path": "CST_DUST_Agentenschwarm_v0_1/CST_DUST_Agentenschwarm_Fazit_Roadmap_v0_1.pdf",
+        "embedded_pdf_sha256": "fbf807af1c8a5af89496950d20c6b8adb4b3c6a48e67b92b5b2d7a1e1be16a68",
+        "standalone_embedded_pdf_bytes_equal": false,
+        "normalized_extracted_pdf_text_equal": true
+      }
+    },
+    {
+      "id": "P09",
+      "title": "Witten–Dowker–Einstein–Hilbert-Prüfperspektiven",
+      "artifact_date": "2026-11-13",
+      "version": "v0.1",
+      "base_commit": "338a3ebb28507790fe916ae577920d0c264acab9",
+      "status": "HISTORICAL_INTERNAL_AI_REVIEW",
+      "note": "Interne KI-Perspektiven; die genannten Wissenschaftler waren nicht beteiligt. Kein externes Gutachten.",
+      "artifacts": [
+        {
+          "filename": "CST_DUST_Witten_Dowker_Einstein_Hilbert_Fazit_Roadmap_v0_1.pdf",
+          "kind": "report",
+          "bytes": 109823,
+          "sha256": "97362dc5dcaeb00bd8f4ab2421bc7eb393ab138469049d930ddcc9d05de94fe5",
+          "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/releases/download/cst-dust-research-2026-11-13-v0.1/CST_DUST_Witten_Dowker_Einstein_Hilbert_Fazit_Roadmap_v0_1.pdf"
+        },
+        {
+          "filename": "CST_DUST_Witten_Dowker_Einstein_Hilbert_Pruefpaket_v0_1.zip",
+          "kind": "reproduction_archive",
+          "bytes": 739142,
+          "sha256": "0b7e9e6139bb216a3b26c4397e577c5e45291cd23e3ed8033715f12d3dd196c2",
+          "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/releases/download/cst-dust-research-2026-11-13-v0.1/CST_DUST_Witten_Dowker_Einstein_Hilbert_Pruefpaket_v0_1.zip"
+        }
+      ],
+      "archive_integrity": {
+        "package": "P09",
+        "zip_crc": "PASS",
+        "original_inventory": "FILE_MANIFEST.json",
+        "inventory_prefix": "",
+        "verified_original_entries": 88,
+        "standalone_pdf_pages": 5,
+        "embedded_pdf_path": "CST_DUST_Witten_Dowker_Einstein_Hilbert_Fazit_Roadmap_v0_1.pdf",
+        "embedded_pdf_sha256": "a1bc551033ad435cb5400bb03806c0510aaa6c968d16639ad100d0343fa59179",
+        "standalone_embedded_pdf_bytes_equal": false,
+        "normalized_extracted_pdf_text_equal": true
+      }
+    },
+    {
+      "id": "P10",
+      "title": "Erste gemeinsame Ausführung",
+      "artifact_date": "2026-11-13",
+      "version": "v0.1",
+      "base_commit": "338a3ebb28507790fe916ae577920d0c264acab9",
+      "status": "AUXILIARY_PILOT_PREPARATION_BLIND",
+      "note": "Endliche Hilfskonstruktion und konkrete Hindernisse; identische bedingte Antwort für die getesteten Präparationen.",
+      "artifacts": [
+        {
+          "filename": "CST_DUST_Ausfuehrung_fuenf_Schritte_v0_1.pdf",
+          "kind": "report",
+          "bytes": 116855,
+          "sha256": "cd4613625fedff3b95adf981f81639e4ecaef359a9d4c7d03c14c0530a3ef021",
+          "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/releases/download/cst-dust-research-2026-11-13-v0.1/CST_DUST_Ausfuehrung_fuenf_Schritte_v0_1.pdf"
+        },
+        {
+          "filename": "CST_DUST_Ausfuehrung_Pruefpaket_v0_1.zip",
+          "kind": "reproduction_archive",
+          "bytes": 709496,
+          "sha256": "012a8cb0c0e37690baba861dfadf00dff4f51cc63e0967073e23ed1d2850f387",
+          "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/releases/download/cst-dust-research-2026-11-13-v0.1/CST_DUST_Ausfuehrung_Pruefpaket_v0_1.zip"
+        }
+      ],
+      "archive_integrity": {
+        "package": "P10",
+        "zip_crc": "PASS",
+        "original_inventory": "FILE_MANIFEST.json",
+        "inventory_prefix": "",
+        "verified_original_entries": 97,
+        "standalone_pdf_pages": 7,
+        "embedded_pdf_path": "CST_DUST_Ausfuehrung_fuenf_Schritte_v0_1.pdf",
+        "embedded_pdf_sha256": "578cb284b51c820545cecc2cda99ac602fb1b759c2c7a44d0baf856255f8e1dc",
+        "standalone_embedded_pdf_bytes_equal": false,
+        "normalized_extracted_pdf_text_equal": true
+      }
+    },
+    {
+      "id": "P11",
+      "title": "Quellen, Kausalordnung und Ereignisantwort",
+      "artifact_date": "2026-11-13",
+      "version": "v0.1",
+      "base_commit": "338a3ebb28507790fe916ae577920d0c264acab9",
+      "status": "AUXILIARY_RESPONSE_NONZERO_PHYSICS_OPEN",
+      "note": "Neuer eingefrorener Sechs-Historien-Pilot mit unterscheidbaren bedingten Records; keine gravitative Rückwirkung hergeleitet.",
+      "artifacts": [
+        {
+          "filename": "CST_DUST_Kausalordnung_Quellen_und_Antwort_v0_1.pdf",
+          "kind": "report",
+          "bytes": 93207,
+          "sha256": "a3615b53cd9292d78ad360bc342a99279d90a4575fc3f300f3e17e45fc3a58f2",
+          "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/releases/download/cst-dust-research-2026-11-13-v0.1/CST_DUST_Kausalordnung_Quellen_und_Antwort_v0_1.pdf"
+        },
+        {
+          "filename": "CST_DUST_Kausalordnung_Quellen_Pruefpaket_v0_1.zip",
+          "kind": "reproduction_archive",
+          "bytes": 1072652,
+          "sha256": "95b10da8c4b46c3b58516fda2e1d2d378f1307f831f83a564c8de6585c6c6ceb",
+          "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/releases/download/cst-dust-research-2026-11-13-v0.1/CST_DUST_Kausalordnung_Quellen_Pruefpaket_v0_1.zip"
+        }
+      ],
+      "archive_integrity": {
+        "package": "P11",
+        "zip_crc": "PASS",
+        "original_inventory": "causal_order_execution_v0_1/FILE_MANIFEST.json",
+        "inventory_prefix": "",
+        "verified_original_entries": 191,
+        "standalone_pdf_pages": 7,
+        "embedded_pdf_path": "causal_order_execution_v0_1/CST_DUST_Kausalordnung_Quellen_und_Antwort_v0_1.pdf",
+        "embedded_pdf_sha256": "81024a4c275f21dc927a1cb149b755dd88dfe0c167891767c42cf7d3b1a812fb",
+        "standalone_embedded_pdf_bytes_equal": false,
+        "normalized_extracted_pdf_text_equal": true
+      }
+    }
+  ]
+}
