@@ -1,0 +1,46 @@
+{
+  "schema": "cst-dust.stationary-geometry-publication/1",
+  "publication_date": "2026-11-13",
+  "base_commit": "f5ee44d7cb4dc1f924eee580f1eaf0cfcb4a5bc6",
+  "original_package_files": 37,
+  "original_manifest_entries": 36,
+  "original_artifacts_modified": false,
+  "artifacts": [
+    {
+      "path": "packages/CST_DUST_Geometriedynamik_Stationaerer_Kandidat_v0_1_Pruefpaket.zip",
+      "bytes": 171681,
+      "sha256": "b6e5541ac231363cdd3a9c792078601abdc96150026dfa8488c8dcb139b53c7e"
+    },
+    {
+      "path": "reports/CST_DUST_Geometriedynamik_Stationaerer_Kandidat_v0_1.pdf",
+      "bytes": 66080,
+      "sha256": "56f83be327297e7b62d9aa6cbae7f5abc7efc0f093208b6d184771490e58b72a"
+    },
+    {
+      "path": "geometry_dynamics_v0_1/report/CST_DUST_Geometriedynamik_Stationaerer_Kandidat_v0_1.pdf",
+      "bytes": 66080,
+      "sha256": "56f83be327297e7b62d9aa6cbae7f5abc7efc0f093208b6d184771490e58b72a"
+    },
+    {
+      "path": "geometry_dynamics_v0_1/MANIFEST.json",
+      "bytes": 6024,
+      "sha256": "677884ee564cb80b40f529892b1bab49fdcd6dba5319b60a3d95fad1feac37f1"
+    }
+  ],
+  "standalone_embedded_pdf_bytes_equal": true,
+  "reproduction": {
+    "command": "python -B research/rax_cqg/dust_collapse/verify_geometry_dynamics_publication.py",
+    "isolated_programs": 9,
+    "byte_identical_json_files": 13,
+    "large_integrations": 0,
+    "new_clock_quadratures": 0
+  },
+  "scientific_scope": "Finite stationary source-dependent geometric action comparison with common outer data; revised history family, positive collar preparation and clock support.",
+  "derived_result": "Delta S=8+23*rho/19 for 0<rho<1/2; joint scalar Gaussian Abel pairing exists.",
+  "physical_geometry_dynamics": "NOT_DERIVED",
+  "retained_obstructions": [
+    "Original compact density integral is not a constraint projector.",
+    "Affine clock recurrence has an unstable multiplier in (-6,-5).",
+    "No physical history measure, geometric transition probabilities or 4D collapse law is derived."
+  ]
+}

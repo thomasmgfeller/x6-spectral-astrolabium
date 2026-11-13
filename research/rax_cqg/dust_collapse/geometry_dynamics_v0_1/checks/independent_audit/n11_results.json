@@ -1,0 +1,82 @@
+{
+  "id": "CST-DUST-N11-INDEPENDENT-AUDIT-0.1",
+  "all_checks_pass": true,
+  "same_outer_order_and_clock_density_scalar_data": true,
+  "rows": [
+    {
+      "name": "chain",
+      "F4": 10,
+      "inner_u": [
+        4,
+        5,
+        6
+      ],
+      "inner_density_multipliers": [
+        1,
+        1,
+        1
+      ],
+      "inner_constraints": [
+        "0",
+        "0",
+        "0"
+      ],
+      "inner_clock_EL": [
+        "0",
+        "0",
+        "0"
+      ],
+      "on_shell_action": "10 - 151*rho/38",
+      "constraint_jacobian": "Matrix([[-2/19, 0, 0], [-2/19, -2/19, 0], [36/19, -2/19, -2/19]])",
+      "constraint_jacobian_determinant": "-8/6859",
+      "scaled_scalar_inner_block": "Matrix([[0, 1, -9], [1, 0, 1], [-9, 1, 0]])",
+      "scaled_scalar_inner_determinant": "-18",
+      "full_scalar_inner_column_rank": 3,
+      "scalar_inner_nullspace": [],
+      "all_inner_nulls_couple_to_boundary": true
+    },
+    {
+      "name": "two_cover_deletion",
+      "F4": 18,
+      "inner_u": [
+        4,
+        4,
+        5
+      ],
+      "inner_density_multipliers": [
+        2,
+        1,
+        1
+      ],
+      "inner_constraints": [
+        "0",
+        "0",
+        "0"
+      ],
+      "inner_clock_EL": [
+        "0",
+        "0",
+        "0"
+      ],
+      "on_shell_action": "18 - 105*rho/38",
+      "constraint_jacobian": "Matrix([[-2/19, 0, 0], [0, -2/19, 0], [-2/19, 0, -2/19]])",
+      "constraint_jacobian_determinant": "-8/6859",
+      "scaled_scalar_inner_block": "Matrix([[0, 0, 1], [0, 0, 0], [1, 0, 0]])",
+      "scaled_scalar_inner_determinant": "0",
+      "full_scalar_inner_column_rank": 3,
+      "scalar_inner_nullspace": [
+        "Matrix([[0], [1], [0]])"
+      ],
+      "all_inner_nulls_couple_to_boundary": true
+    }
+  ],
+  "action_difference": "23*rho/19 + 8",
+  "derivative_wrt_common_source_density": "23/19",
+  "density_domain": "0<rho<1/2",
+  "clock_halfwidth_required": "5*sqrt(19)*2**(3/4)*3**(1/4)/38",
+  "outside_original_clock_box": true,
+  "scalar_pairing": "Gaussian on all 8 boundary fields; Abel-regulated interior, full column rank excludes unpaired null",
+  "scope": "two stationary geometry-action branches at shared boundary; not physical transition probabilities or an effective gravitational field equation",
+  "new_amplitude_integrations": 0,
+  "physical_evolution_derived": false
+}

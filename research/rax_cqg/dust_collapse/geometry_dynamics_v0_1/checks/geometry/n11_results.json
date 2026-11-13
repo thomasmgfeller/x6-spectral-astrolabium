@@ -1,0 +1,197 @@
+{
+  "id": "CST-DUST-N11-COMMON-BOUNDARY-GEOMETRY-0.1",
+  "status": "PASS_EXACT_STATIC_COMBINATORICS",
+  "nodes": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "boundary": [
+    0,
+    1,
+    2,
+    3,
+    7,
+    8,
+    9,
+    10
+  ],
+  "interior": [
+    4,
+    5,
+    6
+  ],
+  "construction": "Full eleven-node chain, versus exactly deleting (4,5) and (5,6) while retaining (4,6). Both relation sets are already transitive.",
+  "chain": {
+    "relation_count": 55,
+    "internal_relation_count": 3,
+    "internal_height_elements": 3,
+    "global_height_elements": 11,
+    "interval_histogram_n0_to_n3": [
+      10,
+      9,
+      8,
+      7
+    ],
+    "F4": 10,
+    "past_cardinality_layers": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "past_cardinality_filtration_sizes": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "boundary_node_past_cardinalities": {
+      "0": 0,
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "7": 7,
+      "8": 8,
+      "9": 9,
+      "10": 10
+    },
+    "internal_relations": [
+      [
+        4,
+        5
+      ],
+      [
+        4,
+        6
+      ],
+      [
+        5,
+        6
+      ]
+    ]
+  },
+  "modified": {
+    "relation_count": 53,
+    "internal_relation_count": 1,
+    "internal_height_elements": 2,
+    "global_height_elements": 10,
+    "interval_histogram_n0_to_n3": [
+      11,
+      10,
+      8,
+      7
+    ],
+    "F4": 18,
+    "past_cardinality_layers": [
+      1,
+      1,
+      1,
+      1,
+      2,
+      1,
+      0,
+      1,
+      1,
+      1,
+      1
+    ],
+    "past_cardinality_filtration_sizes": [
+      1,
+      2,
+      3,
+      4,
+      6,
+      7,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "boundary_node_past_cardinalities": {
+      "0": 0,
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "7": 7,
+      "8": 8,
+      "9": 9,
+      "10": 10
+    },
+    "internal_relations": [
+      [
+        4,
+        6
+      ]
+    ]
+  },
+  "common_induced_boundary": true,
+  "common_cross_boundary_interior_relations": true,
+  "boundary_relations_count": 28,
+  "cross_boundary_interior_relations_count": 24,
+  "common_outer_Dirichlet_data": {
+    "clock": "T_j=Delta*j for j in B",
+    "density": "r_j=rho for j in B",
+    "scalar": "Same chosen scalar boundary data, e.g. q_j=0, must be used for both histories"
+  },
+  "proposed_internal_data_for_separate_action_audit": {
+    "chain": {
+      "u": [
+        4,
+        5,
+        6
+      ],
+      "r_over_rho": [
+        1,
+        1,
+        1
+      ]
+    },
+    "modified": {
+      "u": [
+        4,
+        4,
+        5
+      ],
+      "r_over_rho": [
+        2,
+        1,
+        1
+      ]
+    },
+    "Delta_squared": "2/(19*beta)",
+    "compact_positive_density_domain": "0<rho<1/2 is sufficient for every proposed density to lie strictly in (0,1)"
+  },
+  "interior_stationarity": "NOT_TESTED_BY_THIS_GEOMETRY_SCRIPT; delegated to independent action audits",
+  "original_pilot_clock_box": {
+    "can_fit_after_global_shift": false,
+    "exact_clock_span_squared": "50*sqrt(6)/19 > 4",
+    "minimum_clock_span_approximate": 2.5389024476933137,
+    "qualification": "Requires an explicit new clock support/contract, or interpretation only as an action-stationary witness outside the old [-1,1] pilot box. A global clock shift is insufficient."
+  },
+  "meaning": "Two distinguishable internal causal geometries can share identical outer Dirichlet data. Geometric probabilities, physical inner product, and global sewing are not established by this combinatorics.",
+  "no_new_integrations": true
+}
