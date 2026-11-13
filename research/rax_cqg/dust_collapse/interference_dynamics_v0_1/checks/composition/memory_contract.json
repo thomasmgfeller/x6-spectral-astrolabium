@@ -1,0 +1,53 @@
+{
+  "id": "CST-DUST-N11-FULL-PAST-MEMORY-0.1",
+  "status": "EXACT_CONDITIONAL_ACTION_AND_REGULATED_PAIRING_COMPOSITION",
+  "parent_contract": "../../contracts/interference_contract.json",
+  "configuration": {
+    "N": 11,
+    "interior": [4, 5, 6],
+    "boundary": [0, 1, 2, 3, 7, 8, 9, 10],
+    "fixed_histories": "C0 chain; C1 removes only (4,5),(5,6), retaining (4,6)",
+    "natural_growth": "Each new point is maximal in the existing prefix; its declared predecessor set is a down-set. Natural labels are bookkeeping, not physical time."
+  },
+  "memory_at_prefix": [
+    "complete prefix vertex set with declared boundary/interior roles",
+    "complete transitive causal relation of the prefix",
+    "all retained clock T, density r and scalar q variables",
+    "the joint conditional amplitude, including all correlations",
+    "common action parameters and ordered b=(1,-9,16,-8,0,...)",
+    "regulator and integration ownership of every interior variable",
+    "history identity until the explicitly chosen final coherent or resolved readout"
+  ],
+  "new_point_rule": "For each stored ancestor y and new point x, count stored z with y<z<x, cap at4 for the coefficient. Multiply by the exact new endpoint action factor. Copy the full earlier memory without independent averaging.",
+  "no_compression_claim": true,
+  "memory_is_not_a_detector": "History identity is computational bookkeeping, not an extra orthogonal apparatus flag; final coherent summation is kept when required by the record contract.",
+  "measure_ownership": {
+    "interior_clock": "Each of 4,5,6 integrated once with dT/3 on[-3/2,3/2]",
+    "interior_density": "Each of 4,5,6 integrated once with(delta0+1_(0,1)dr)/2; all8strata remain",
+    "boundary_clock_density": "Fixed by parent contract, not separately integrated",
+    "boundary_scalar": "Common Gaussian pi^(-2)exp(-sum_B q^2/2) inserted once; dq_B integrated once",
+    "interior_scalar": "Lebesgue dq_I, each with one exp(-epsilon*q_j^2/2)",
+    "quotient_factor": "No factor2 or new seam quotient introduced",
+    "history_weights": "Each omega_C inserted once; no sequential growth prior is derived"
+  },
+  "cuts_tested": [3, 5],
+  "three_shells": [[0, 1, 2, 3], [4, 5], [6, 7, 8, 9, 10]],
+  "copying_kernel": "T_x(m_new;dm_old)=exp(i*s_x(m_new))*exp(-epsilon*1_I(x)*q_x^2/2)*delta_projection(m_new)(dm_old)",
+  "composition": "T_c:b composed with T_b:a equals T_c:a by identity-memory copying and addition of endpoint actions. Final integration of each original field happens once.",
+  "finite_regulator": "For epsilon>0 the common scalarGaussian and three interiorAbel factors make the joint finite-dimensional integral absolutely integrable; finite clock/density measures allow Fubini grouping.",
+  "zero_regulator": "Take epsilon to0 only after the common boundary test pairing; do not compose separately taken singular limits.",
+  "geometry_history_observable": {
+    "definition": "Number of comparable unordered pairs among interior{4,5,6}",
+    "C0": 3,
+    "C1": 1,
+    "scope": "Invariant combinatorial history functional; not radius, curvature, physical proper time or a probability distribution."
+  },
+  "physical_evolution": "NOT_DERIVED",
+  "remaining_requirements": [
+    "physical history measure",
+    "physical state or decoherence pairing",
+    "justified geometric measurement/readout",
+    "source and clock calibration",
+    "continuum or refinement interpretation"
+  ]
+}

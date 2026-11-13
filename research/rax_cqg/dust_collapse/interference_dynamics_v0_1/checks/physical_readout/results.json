@@ -1,0 +1,778 @@
+{
+  "id": "N11-CONDITIONAL-PHYSICAL-READOUT-0.1",
+  "all_checks_passed": true,
+  "checks": [
+    "symbolic_Gram_congruence_determinant_and_union_sum_rule",
+    "twenty_exact_fixture_checks_strong_positivity_record_vectors_ports_and_zero_success",
+    "negative_control_naive_history_probabilities_equal_4_and_1",
+    "weak_additivity_is_weaker_than_decoherent_records",
+    "negative_control_gamma_outside_unit_disk_rejected",
+    "five_CP_instruments_same_amplitude_map_fixed_gain_complete_failure_and_fifteen_normalized_inputs",
+    "resolved_fraction_arbitrary_in_0_1_for_free_positive_relative_weight",
+    "original_density_factor_has_nonzero_CJ_and_is_not_a_projection"
+  ],
+  "new_N11_clock_or_density_integrations": 0,
+  "actual_amplitude_convention": "a_c=omega_c*W_c*g_c; W_c already contains exp(iF_c) and complete inner clock/dust integrals. No extra stationary action phase.",
+  "fixture_scope": "Exact finite algebra examples only; fixture amplitudes are not presented as computed N11 amplitudes.",
+  "record_Gram_convention": "eta_cd=<e_d|e_c>, eta_01=gamma; E^dagger E=eta^T",
+  "determinant_formula": "det D=|a0*a1|^2*(1-|gamma|^2)",
+  "normalization": "Z=D(Omega,Omega)=sum_cd D_cd, not trace D; condition only if Z>0",
+  "coherent_rank_if_both_amplitudes_nonzero": 1,
+  "resolved_rank_if_both_amplitudes_nonzero": 2,
+  "fixtures": [
+    {
+      "amplitudes": [
+        [
+          "1",
+          "1"
+        ]
+      ],
+      "gamma": "0",
+      "rank": 2,
+      "Z_union": "2",
+      "trace_D": "2",
+      "physical_detector_port_weights": [
+        "1",
+        "1"
+      ],
+      "diagonal_history_entries_sum_to_one_after_union_normalization": true,
+      "conditional_defined": true
+    },
+    {
+      "amplitudes": [
+        [
+          "1",
+          "1"
+        ]
+      ],
+      "gamma": "1",
+      "rank": 1,
+      "Z_union": "4",
+      "trace_D": "2",
+      "physical_detector_port_weights": [
+        "4",
+        "0"
+      ],
+      "diagonal_history_entries_sum_to_one_after_union_normalization": false,
+      "conditional_defined": true
+    },
+    {
+      "amplitudes": [
+        [
+          "1",
+          "1"
+        ]
+      ],
+      "gamma": "-1",
+      "rank": 1,
+      "Z_union": "0",
+      "trace_D": "2",
+      "physical_detector_port_weights": [
+        "0",
+        "0"
+      ],
+      "diagonal_history_entries_sum_to_one_after_union_normalization": false,
+      "conditional_defined": false
+    },
+    {
+      "amplitudes": [
+        [
+          "1",
+          "1"
+        ]
+      ],
+      "gamma": "I/2",
+      "rank": 2,
+      "Z_union": "2",
+      "trace_D": "2",
+      "physical_detector_port_weights": [
+        "5/4",
+        "3/4"
+      ],
+      "diagonal_history_entries_sum_to_one_after_union_normalization": true,
+      "conditional_defined": true
+    },
+    {
+      "amplitudes": [
+        [
+          "1",
+          "1"
+        ]
+      ],
+      "gamma": "3/5 + 4*I/5",
+      "rank": 1,
+      "Z_union": "16/5",
+      "trace_D": "2",
+      "physical_detector_port_weights": [
+        "16/5",
+        "0"
+      ],
+      "diagonal_history_entries_sum_to_one_after_union_normalization": false,
+      "conditional_defined": true
+    },
+    {
+      "amplitudes": [
+        [
+          "1",
+          "-1/2"
+        ]
+      ],
+      "gamma": "0",
+      "rank": 2,
+      "Z_union": "5/4",
+      "trace_D": "5/4",
+      "physical_detector_port_weights": [
+        "1",
+        "1/4"
+      ],
+      "diagonal_history_entries_sum_to_one_after_union_normalization": true,
+      "conditional_defined": true
+    },
+    {
+      "amplitudes": [
+        [
+          "1",
+          "-1/2"
+        ]
+      ],
+      "gamma": "1",
+      "rank": 1,
+      "Z_union": "1/4",
+      "trace_D": "5/4",
+      "physical_detector_port_weights": [
+        "1/4",
+        "0"
+      ],
+      "diagonal_history_entries_sum_to_one_after_union_normalization": false,
+      "conditional_defined": true
+    },
+    {
+      "amplitudes": [
+        [
+          "1",
+          "-1/2"
+        ]
+      ],
+      "gamma": "-1",
+      "rank": 1,
+      "Z_union": "9/4",
+      "trace_D": "5/4",
+      "physical_detector_port_weights": [
+        "9/4",
+        "0"
+      ],
+      "diagonal_history_entries_sum_to_one_after_union_normalization": false,
+      "conditional_defined": true
+    },
+    {
+      "amplitudes": [
+        [
+          "1",
+          "-1/2"
+        ]
+      ],
+      "gamma": "I/2",
+      "rank": 2,
+      "Z_union": "5/4",
+      "trace_D": "5/4",
+      "physical_detector_port_weights": [
+        "17/16",
+        "3/16"
+      ],
+      "diagonal_history_entries_sum_to_one_after_union_normalization": true,
+      "conditional_defined": true
+    },
+    {
+      "amplitudes": [
+        [
+          "1",
+          "-1/2"
+        ]
+      ],
+      "gamma": "3/5 + 4*I/5",
+      "rank": 1,
+      "Z_union": "13/20",
+      "trace_D": "5/4",
+      "physical_detector_port_weights": [
+        "13/20",
+        "0"
+      ],
+      "diagonal_history_entries_sum_to_one_after_union_normalization": false,
+      "conditional_defined": true
+    },
+    {
+      "amplitudes": [
+        [
+          "1",
+          "I"
+        ]
+      ],
+      "gamma": "0",
+      "rank": 2,
+      "Z_union": "2",
+      "trace_D": "2",
+      "physical_detector_port_weights": [
+        "1",
+        "1"
+      ],
+      "diagonal_history_entries_sum_to_one_after_union_normalization": true,
+      "conditional_defined": true
+    },
+    {
+      "amplitudes": [
+        [
+          "1",
+          "I"
+        ]
+      ],
+      "gamma": "1",
+      "rank": 1,
+      "Z_union": "2",
+      "trace_D": "2",
+      "physical_detector_port_weights": [
+        "2",
+        "0"
+      ],
+      "diagonal_history_entries_sum_to_one_after_union_normalization": true,
+      "conditional_defined": true
+    },
+    {
+      "amplitudes": [
+        [
+          "1",
+          "I"
+        ]
+      ],
+      "gamma": "-1",
+      "rank": 1,
+      "Z_union": "2",
+      "trace_D": "2",
+      "physical_detector_port_weights": [
+        "2",
+        "0"
+      ],
+      "diagonal_history_entries_sum_to_one_after_union_normalization": true,
+      "conditional_defined": true
+    },
+    {
+      "amplitudes": [
+        [
+          "1",
+          "I"
+        ]
+      ],
+      "gamma": "I/2",
+      "rank": 2,
+      "Z_union": "3",
+      "trace_D": "2",
+      "physical_detector_port_weights": [
+        "9/4",
+        "3/4"
+      ],
+      "diagonal_history_entries_sum_to_one_after_union_normalization": false,
+      "conditional_defined": true
+    },
+    {
+      "amplitudes": [
+        [
+          "1",
+          "I"
+        ]
+      ],
+      "gamma": "3/5 + 4*I/5",
+      "rank": 1,
+      "Z_union": "18/5",
+      "trace_D": "2",
+      "physical_detector_port_weights": [
+        "18/5",
+        "0"
+      ],
+      "diagonal_history_entries_sum_to_one_after_union_normalization": false,
+      "conditional_defined": true
+    },
+    {
+      "amplitudes": [
+        [
+          "1 + I",
+          "2 - I"
+        ]
+      ],
+      "gamma": "0",
+      "rank": 2,
+      "Z_union": "7",
+      "trace_D": "7",
+      "physical_detector_port_weights": [
+        "2",
+        "5"
+      ],
+      "diagonal_history_entries_sum_to_one_after_union_normalization": true,
+      "conditional_defined": true
+    },
+    {
+      "amplitudes": [
+        [
+          "1 + I",
+          "2 - I"
+        ]
+      ],
+      "gamma": "1",
+      "rank": 1,
+      "Z_union": "9",
+      "trace_D": "7",
+      "physical_detector_port_weights": [
+        "9",
+        "0"
+      ],
+      "diagonal_history_entries_sum_to_one_after_union_normalization": false,
+      "conditional_defined": true
+    },
+    {
+      "amplitudes": [
+        [
+          "1 + I",
+          "2 - I"
+        ]
+      ],
+      "gamma": "-1",
+      "rank": 1,
+      "Z_union": "5",
+      "trace_D": "7",
+      "physical_detector_port_weights": [
+        "5",
+        "0"
+      ],
+      "diagonal_history_entries_sum_to_one_after_union_normalization": false,
+      "conditional_defined": true
+    },
+    {
+      "amplitudes": [
+        [
+          "1 + I",
+          "2 - I"
+        ]
+      ],
+      "gamma": "I/2",
+      "rank": 2,
+      "Z_union": "4",
+      "trace_D": "7",
+      "physical_detector_port_weights": [
+        "1/4",
+        "15/4"
+      ],
+      "diagonal_history_entries_sum_to_one_after_union_normalization": false,
+      "conditional_defined": true
+    },
+    {
+      "amplitudes": [
+        [
+          "1 + I",
+          "2 - I"
+        ]
+      ],
+      "gamma": "3/5 + 4*I/5",
+      "rank": 1,
+      "Z_union": "17/5",
+      "trace_D": "7",
+      "physical_detector_port_weights": [
+        "17/5",
+        "0"
+      ],
+      "diagonal_history_entries_sum_to_one_after_union_normalization": false,
+      "conditional_defined": true
+    }
+  ],
+  "conditional_abstract_instruments": [
+    {
+      "gamma": "0",
+      "success_effect": [
+        [
+          "5/64",
+          "1/32 + I/32"
+        ],
+        [
+          "1/32 - I/32",
+          "5/64"
+        ]
+      ],
+      "failure_effect": [
+        [
+          "59/64",
+          "-1/32 - I/32"
+        ],
+        [
+          "-1/32 + I/32",
+          "59/64"
+        ]
+      ],
+      "cases": [
+        {
+          "input": [
+            [
+              "1"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "success": "5/64",
+          "failure": "59/64",
+          "port_probabilities": [
+            "1/16",
+            "1/64"
+          ],
+          "full_D_union_normalized": true
+        },
+        {
+          "input": [
+            [
+              "0"
+            ],
+            [
+              "1"
+            ]
+          ],
+          "success": "5/64",
+          "failure": "59/64",
+          "port_probabilities": [
+            "1/64",
+            "1/16"
+          ],
+          "full_D_union_normalized": true
+        },
+        {
+          "input": [
+            [
+              "sqrt(2)/2"
+            ],
+            [
+              "sqrt(2)*I/2"
+            ]
+          ],
+          "success": "3/64",
+          "failure": "61/64",
+          "port_probabilities": [
+            "5/128",
+            "1/128"
+          ],
+          "full_D_union_normalized": true
+        }
+      ]
+    },
+    {
+      "gamma": "1",
+      "success_effect": [
+        [
+          "9/64",
+          "3/64 + 3*I/32"
+        ],
+        [
+          "3/64 - 3*I/32",
+          "5/64"
+        ]
+      ],
+      "failure_effect": [
+        [
+          "55/64",
+          "-3/64 - 3*I/32"
+        ],
+        [
+          "-3/64 + 3*I/32",
+          "59/64"
+        ]
+      ],
+      "cases": [
+        {
+          "input": [
+            [
+              "1"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "success": "9/64",
+          "failure": "55/64",
+          "port_probabilities": [
+            "9/64",
+            "0"
+          ],
+          "full_D_union_normalized": true
+        },
+        {
+          "input": [
+            [
+              "0"
+            ],
+            [
+              "1"
+            ]
+          ],
+          "success": "5/64",
+          "failure": "59/64",
+          "port_probabilities": [
+            "5/64",
+            "0"
+          ],
+          "full_D_union_normalized": true
+        },
+        {
+          "input": [
+            [
+              "sqrt(2)/2"
+            ],
+            [
+              "sqrt(2)*I/2"
+            ]
+          ],
+          "success": "1/64",
+          "failure": "63/64",
+          "port_probabilities": [
+            "1/64",
+            "0"
+          ],
+          "full_D_union_normalized": true
+        }
+      ]
+    },
+    {
+      "gamma": "-1",
+      "success_effect": [
+        [
+          "1/64",
+          "1/64 - I/32"
+        ],
+        [
+          "1/64 + I/32",
+          "5/64"
+        ]
+      ],
+      "failure_effect": [
+        [
+          "63/64",
+          "-1/64 + I/32"
+        ],
+        [
+          "-1/64 - I/32",
+          "59/64"
+        ]
+      ],
+      "cases": [
+        {
+          "input": [
+            [
+              "1"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "success": "1/64",
+          "failure": "63/64",
+          "port_probabilities": [
+            "1/64",
+            "0"
+          ],
+          "full_D_union_normalized": true
+        },
+        {
+          "input": [
+            [
+              "0"
+            ],
+            [
+              "1"
+            ]
+          ],
+          "success": "5/64",
+          "failure": "59/64",
+          "port_probabilities": [
+            "5/64",
+            "0"
+          ],
+          "full_D_union_normalized": true
+        },
+        {
+          "input": [
+            [
+              "sqrt(2)/2"
+            ],
+            [
+              "sqrt(2)*I/2"
+            ]
+          ],
+          "success": "5/64",
+          "failure": "59/64",
+          "port_probabilities": [
+            "5/64",
+            "0"
+          ],
+          "full_D_union_normalized": true
+        }
+      ]
+    },
+    {
+      "gamma": "I/2",
+      "success_effect": [
+        [
+          "5/64",
+          "1/16 + 5*I/128"
+        ],
+        [
+          "1/16 - 5*I/128",
+          "7/64"
+        ]
+      ],
+      "failure_effect": [
+        [
+          "59/64",
+          "-1/16 - 5*I/128"
+        ],
+        [
+          "-1/16 + 5*I/128",
+          "57/64"
+        ]
+      ],
+      "cases": [
+        {
+          "input": [
+            [
+              "1"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "success": "5/64",
+          "failure": "59/64",
+          "port_probabilities": [
+            "17/256",
+            "3/256"
+          ],
+          "full_D_union_normalized": true
+        },
+        {
+          "input": [
+            [
+              "0"
+            ],
+            [
+              "1"
+            ]
+          ],
+          "success": "7/64",
+          "failure": "57/64",
+          "port_probabilities": [
+            "1/16",
+            "3/64"
+          ],
+          "full_D_union_normalized": true
+        },
+        {
+          "input": [
+            [
+              "sqrt(2)/2"
+            ],
+            [
+              "sqrt(2)*I/2"
+            ]
+          ],
+          "success": "7/128",
+          "failure": "121/128",
+          "port_probabilities": [
+            "25/512",
+            "3/512"
+          ],
+          "full_D_union_normalized": true
+        }
+      ]
+    },
+    {
+      "gamma": "3/5 + 4*I/5",
+      "success_effect": [
+        [
+          "37/320",
+          "29/320 + 13*I/160"
+        ],
+        [
+          "29/320 - 13*I/160",
+          "41/320"
+        ]
+      ],
+      "failure_effect": [
+        [
+          "283/320",
+          "-29/320 - 13*I/160"
+        ],
+        [
+          "-29/320 + 13*I/160",
+          "279/320"
+        ]
+      ],
+      "cases": [
+        {
+          "input": [
+            [
+              "1"
+            ],
+            [
+              "0"
+            ]
+          ],
+          "success": "37/320",
+          "failure": "283/320",
+          "port_probabilities": [
+            "37/320",
+            "0"
+          ],
+          "full_D_union_normalized": true
+        },
+        {
+          "input": [
+            [
+              "0"
+            ],
+            [
+              "1"
+            ]
+          ],
+          "success": "41/320",
+          "failure": "279/320",
+          "port_probabilities": [
+            "41/320",
+            "0"
+          ],
+          "full_D_union_normalized": true
+        },
+        {
+          "input": [
+            [
+              "sqrt(2)/2"
+            ],
+            [
+              "sqrt(2)*I/2"
+            ]
+          ],
+          "success": "13/320",
+          "failure": "307/320",
+          "port_probabilities": [
+            "13/320",
+            "0"
+          ],
+          "full_D_union_normalized": true
+        }
+      ]
+    }
+  ],
+  "external_assumptions": [
+    "chosen physical interpretation of input preparation space and norm",
+    "specified omega_c history weights",
+    "fixed preparation-independent gamma and phase reference",
+    "chosen detector ports",
+    "fixed gain and orthogonal failure flag"
+  ],
+  "N11_boundary_data_limit": "Fixed outer T_B and r_B=rho are Dirichlet kernel data, not normalized physical clock/density packets. Scalar Gaussian pairing alone does not supply the missing physical clock/dust pairing.",
+  "derived_physical_history_measure": false,
+  "derived_physical_pairing": false,
+  "derived_geometry_dynamics": false,
+  "scope": "Constructs internally consistent conditional readouts and demonstrates finite-ansatz underdetermination; not a general impossibility theorem."
+}

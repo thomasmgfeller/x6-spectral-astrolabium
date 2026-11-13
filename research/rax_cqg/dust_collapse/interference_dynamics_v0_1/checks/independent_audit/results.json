@@ -1,0 +1,118 @@
+{
+  "id": "INTERFERENCE-FULLWEIGHT-INDEPENDENT-AUDIT-0.1",
+  "all_checks_pass": true,
+  "new_amplitude_quadratures": 0,
+  "density_factor": "1/2 - I/C + I*exp(-I*C/2)/C",
+  "density_factor_at_zero": "1",
+  "density_moments_n0_to_6": [
+    "1",
+    "1/4",
+    "1/6",
+    "1/8",
+    "1/10",
+    "1/12",
+    "1/14"
+  ],
+  "density_derivative_bound_n_ge_1": "1/(2^(n+1)*(n+1))",
+  "strata": [
+    {
+      "positive_nodes": [],
+      "weight": "1/8",
+      "integrand_factor": "1/8"
+    },
+    {
+      "positive_nodes": [
+        6
+      ],
+      "weight": "1/8",
+      "integrand_factor": "E6/8"
+    },
+    {
+      "positive_nodes": [
+        5
+      ],
+      "weight": "1/8",
+      "integrand_factor": "E5/8"
+    },
+    {
+      "positive_nodes": [
+        5,
+        6
+      ],
+      "weight": "1/8",
+      "integrand_factor": "E5*E6/8"
+    },
+    {
+      "positive_nodes": [
+        4
+      ],
+      "weight": "1/8",
+      "integrand_factor": "E4/8"
+    },
+    {
+      "positive_nodes": [
+        4,
+        6
+      ],
+      "weight": "1/8",
+      "integrand_factor": "E4*E6/8"
+    },
+    {
+      "positive_nodes": [
+        4,
+        5
+      ],
+      "weight": "1/8",
+      "integrand_factor": "E4*E5/8"
+    },
+    {
+      "positive_nodes": [
+        4,
+        5,
+        6
+      ],
+      "weight": "1/8",
+      "integrand_factor": "E4*E5*E6/8"
+    }
+  ],
+  "histories": [
+    {
+      "history": "chain",
+      "F4": 10,
+      "outer_constraint_sum": "8*sqrt(6)*x4**2/3 - 16*sqrt(19)*2**(1/4)*3**(3/4)*x4/57 - sqrt(6)*x5**2/3 + 4*sqrt(19)*2**(1/4)*3**(3/4)*x5/57 + 2*sqrt(19)*2**(1/4)*3**(3/4)*x6/57 + 125/19",
+      "outer_constraint_sum_minimum": "-3*sqrt(19)*2**(1/4)*3**(3/4)/19 - 3*sqrt(6)/4 + 117/19",
+      "strict_rational_minimum_lower_bound": "183/76",
+      "outer_constraint_sum_mean": "7*sqrt(6)/4 + 125/19",
+      "source_derivative_absolute_bound": "7*sqrt(6)/8 + 125/38",
+      "source_derivative_bound_decimal": "5.43277720914580715",
+      "all_outer_action_terms_included": true,
+      "full_action_exactly_split_into_F_outer_and_inner": true
+    },
+    {
+      "history": "two_cover_deletion",
+      "F4": 18,
+      "outer_constraint_sum": "-sqrt(6)*x4**2/3 + 4*sqrt(19)*2**(1/4)*3**(3/4)*x4/57 + 2*sqrt(19)*2**(1/4)*3**(3/4)*x5/57 + 2*sqrt(19)*2**(1/4)*3**(3/4)*x6/57 + 112/19",
+      "outer_constraint_sum_minimum": "-4*sqrt(19)*2**(1/4)*3**(3/4)/19 - 3*sqrt(6)/4 + 112/19",
+      "strict_rational_minimum_lower_bound": "231/152",
+      "outer_constraint_sum_mean": "112/19 - sqrt(6)/4",
+      "source_derivative_absolute_bound": "56/19 - sqrt(6)/8",
+      "source_derivative_bound_decimal": "2.64118220320473432",
+      "all_outer_action_terms_included": true,
+      "full_action_exactly_split_into_F_outer_and_inner": true
+    }
+  ],
+  "clock_contract": {
+    "inner_domain": "[-3/2,3/2]^3",
+    "normalization": "1/27",
+    "outer_values": "T_j=(j-5)*sqrt(2/(19*beta)), j in B",
+    "clock_order_indicator": false,
+    "new_vs_original_clock_box": true
+  },
+  "norm_bound": "|W_c(rho)|<=1 for real rho before scalar factor",
+  "source_derivative": "W_c prime = -i/2 e^(iF4) E_T[P_B exp(-i*rho*P_B/2) product D(C_i)]",
+  "no_double_counting": "W already contains e^(iF4) and complete off-shell dust phase; never multiply by exp(i*S_on_shell)",
+  "double_counting_negative_control": "an extra exp(i*DeltaS_on) spuriously adds i*23/19 to d log(relative weight)/d rho",
+  "boundary_scope": "fixed outer Dirichlet coordinates, all outer action terms, no outer state-packet or atom integration",
+  "physical_scope": "conditional auxiliary full weight; no physical state or history measure derived",
+  "probability_claim": false
+}

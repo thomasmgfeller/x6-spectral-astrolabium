@@ -1,0 +1,34 @@
+{
+  "id": "CST-DUST-INTERFERENCE-EXECUTION-0.1",
+  "date": "2026-11-13",
+  "python": "3.12.14",
+  "dependencies": {
+    "numpy": "2.3.5",
+    "sympy": "1.14.0",
+    "mpmath": "1.3.0",
+    "reportlab": "4.4.9"
+  },
+  "agents": 6,
+  "check_programs": 8,
+  "source_domain": "0<rho<1/2",
+  "numerically_evaluated_sources": [
+    "1/8",
+    "1/4"
+  ],
+  "analytic_quadrature_bound_source_domain": "0<=rho<=1/4",
+  "nodes_per_axis": [
+    64,
+    96,
+    128,
+    160
+  ],
+  "clock_grid_nodes_both_orders_all_resolutions": 14680064,
+  "density_strata_per_order": 8,
+  "external_paid_computation": false,
+  "replay_comparison": "algebraic JSON entries exact; float entries abs_tol=5e-12 and rel_tol=5e-12; runtime_seconds excluded",
+  "fully_certified_float_intervals": false,
+  "physical_geometry_dynamics": "NOT_DERIVED",
+  "artifact_status": "Research report and reproducibility package; publication is not part of this execution",
+  "pdf_pages": 6,
+  "pdf_visual_review": "all six pages rendered and inspected; revised page four re-inspected"
+}

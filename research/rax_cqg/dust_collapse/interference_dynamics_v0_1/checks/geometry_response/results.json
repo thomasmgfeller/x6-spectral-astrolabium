@@ -1,0 +1,303 @@
+{
+  "id": "CST-DUST-N11-GEOMETRY-RESPONSE-AUDIT-0.1",
+  "status": "PASS_EXACT_GEOMETRY_AND_RESPONSE_IDENTITIES",
+  "checks": {
+    "two_transitive_orders": true,
+    "observable_values_3_and_1": true,
+    "common_outer_order": true,
+    "common_cross_incidence": true,
+    "boundary_preserving_relabel_invariance": true,
+    "response_derivative_identity": true,
+    "finite_difference_identity": true,
+    "resolved_phase_blindness": true,
+    "coherent_weak_ratio_can_be_complex": true,
+    "coherent_weak_ratio_can_exceed_geometric_spectrum": true,
+    "resolved_mean_in_geometric_range": true,
+    "same_phase_blind_mean_different_interference": true,
+    "source_values_in_common_positive_density_range": true,
+    "fixed_geometry_independent_of_source": true,
+    "common_clock_box_contains_shifted_stationary_clocks": true,
+    "full_weight_resolved_source_contrast_numerically_nonzero": true,
+    "phase_only_ablation_resolved_source_contrast_zero": true,
+    "computed_class_alternatives_not_numerically_weakly_decoherent": true,
+    "full_weight_quadrature_orders_empirically_agree": true
+  },
+  "geometries": {
+    "C0": {
+      "O": 3,
+      "past_cardinality_filtration": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ]
+    },
+    "C1": {
+      "O": 1,
+      "past_cardinality_filtration": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        7,
+        8,
+        9,
+        10,
+        11
+      ]
+    }
+  },
+  "amplitude_contract": "a_c(rho)=A_c*W_c(rho), A_c=omega_c*g_c contains only fixed history weight and rho-independent scalar Gaussian factor. W_c already includes exp(i F_c), the full inner Dirichlet/clock-box integral and original atom+positive inner density measure. No second gravitational phase is inserted.",
+  "relative_intensity": "lambda_intensity(rho)=|a_1(rho)/a_0(rho)|^2; defined only where a_0 is nonzero",
+  "resolved_mean": "E[O|resolved record,success]=(3+lambda_intensity)/(1+lambda_intensity)",
+  "derivative": "dE/drho=-4*lambda_intensity/(1+lambda_intensity)^2 * d/drho log|W_1/W_0|",
+  "finite_difference": "E_high-E_low=2*(lambda_low-lambda_high)/((1+lambda_low)*(1+lambda_high))",
+  "coherent_ratio": "O_weak=(3*a_0+a_1)/(a_0+a_1), only when denominator is nonzero; generally complex, not a Born mean",
+  "synthetic_controls_only": {
+    "complex_example": {
+      "a0": "1",
+      "a1": "i",
+      "O_weak": "2-i"
+    },
+    "outside_spectrum_example": {
+      "a0": "1",
+      "a1": "-1/2",
+      "O_weak": 5
+    },
+    "phase_only_resolved_mean": 2,
+    "phase_only_coherent_squared_modulus_examples": [
+      4,
+      0
+    ]
+  },
+  "source_parameter": "rho changes fixed boundary density data and is not elapsed time or a calibrated mass",
+  "source_values": [
+    "1/8",
+    "1/4"
+  ],
+  "numerical_original_weight_response": "EVALUATED_FROM_COMPLETE_SIBLING_WEIGHTS_AT_N160_WITH_EQUAL_HISTORY_WEIGHTS",
+  "numeric_diagnostic": {
+    "history_weight_assumption": {
+      "omega0": 1,
+      "omega1": 1,
+      "physical_measure_derivation": false
+    },
+    "source_files_sha256": {
+      "full_weight/results.json": "3b9f03d4a99c62e14abb39a09f5cfa1d83fe5266513c4e7cfbde059e81cb5dae",
+      "scalar_response/results.json": "a0ea24ea8ee58ffe9d5ab81551da098743c270f5a0059edd5f776396b849cfc1"
+    },
+    "g1_over_g0_used": {
+      "real": 0.3297873431218699,
+      "imag": 0.17268215485161972
+    },
+    "g_ratio_modulus_squared": 0.13857881828758073,
+    "source_results": [
+      {
+        "rho": "1/8",
+        "quadrature_orders": [
+          {
+            "nodes_per_axis": 64,
+            "lambda_intensity": 0.3572261045034625,
+            "resolved_conditional_O": 2.473593820044962,
+            "d_resolved_O_drho": -0.6937849161534925,
+            "d_log_modulus_Wratio_drho": 0.8943882452089496,
+            "relative_amplitude_R": {
+              "real": -0.4831383375908405,
+              "imag": 0.35185714608832597
+            },
+            "accepted_additivity_defect_divided_by_abs_a0_squared": -0.966276675181681,
+            "coherent_amplitude_ratio_O": {
+              "real": 3.6441356535847116,
+              "imag": -1.8000136063568486
+            },
+            "phase_only_unit_modulus_W_control_O": 2.756575801232623
+          },
+          {
+            "nodes_per_axis": 96,
+            "lambda_intensity": 0.357226104503462,
+            "resolved_conditional_O": 2.4735938200449628,
+            "d_resolved_O_drho": -0.6937849161534883,
+            "d_log_modulus_Wratio_drho": 0.8943882452089444,
+            "relative_amplitude_R": {
+              "real": -0.4831383375908398,
+              "imag": 0.35185714608832624
+            },
+            "accepted_additivity_defect_divided_by_abs_a0_squared": -0.9662766751816796,
+            "coherent_amplitude_ratio_O": {
+              "real": 3.644135653584709,
+              "imag": -1.800013606356846
+            },
+            "phase_only_unit_modulus_W_control_O": 2.756575801232623
+          },
+          {
+            "nodes_per_axis": 128,
+            "lambda_intensity": 0.3572261045034657,
+            "resolved_conditional_O": 2.4735938200449583,
+            "d_resolved_O_drho": -0.6937849161535148,
+            "d_log_modulus_Wratio_drho": 0.8943882452089744,
+            "relative_amplitude_R": {
+              "real": -0.4831383375908439,
+              "imag": 0.35185714608832575
+            },
+            "accepted_additivity_defect_divided_by_abs_a0_squared": -0.9662766751816878,
+            "coherent_amplitude_ratio_O": {
+              "real": 3.6441356535847196,
+              "imag": -1.8000136063568646
+            },
+            "phase_only_unit_modulus_W_control_O": 2.756575801232623
+          },
+          {
+            "nodes_per_axis": 160,
+            "lambda_intensity": 0.35722610450346487,
+            "resolved_conditional_O": 2.473593820044959,
+            "d_resolved_O_drho": -0.6937849161535091,
+            "d_log_modulus_Wratio_drho": 0.894388245208968,
+            "relative_amplitude_R": {
+              "real": -0.4831383375908429,
+              "imag": 0.351857146088326
+            },
+            "accepted_additivity_defect_divided_by_abs_a0_squared": -0.9662766751816858,
+            "coherent_amplitude_ratio_O": {
+              "real": 3.644135653584717,
+              "imag": -1.8000136063568608
+            },
+            "phase_only_unit_modulus_W_control_O": 2.756575801232623
+          }
+        ],
+        "selected": {
+          "nodes_per_axis": 160,
+          "lambda_intensity": 0.35722610450346487,
+          "resolved_conditional_O": 2.473593820044959,
+          "d_resolved_O_drho": -0.6937849161535091,
+          "d_log_modulus_Wratio_drho": 0.894388245208968,
+          "relative_amplitude_R": {
+            "real": -0.4831383375908429,
+            "imag": 0.351857146088326
+          },
+          "accepted_additivity_defect_divided_by_abs_a0_squared": -0.9662766751816858,
+          "coherent_amplitude_ratio_O": {
+            "real": 3.644135653584717,
+            "imag": -1.8000136063568608
+          },
+          "phase_only_unit_modulus_W_control_O": 2.756575801232623
+        }
+      },
+      {
+        "rho": "1/4",
+        "quadrature_orders": [
+          {
+            "nodes_per_axis": 64,
+            "lambda_intensity": 0.4842698346876682,
+            "resolved_conditional_O": 2.347463886457583,
+            "d_resolved_O_drho": -1.3184399339733273,
+            "d_log_modulus_Wratio_drho": 1.4994730423582947,
+            "relative_amplitude_R": {
+              "real": -0.6477872228649357,
+              "imag": 0.25424702275661426
+            },
+            "accepted_additivity_defect_divided_by_abs_a0_squared": -1.2955744457298715,
+            "coherent_amplitude_ratio_O": {
+              "real": 4.733136025002069,
+              "imag": -2.6947878711914757
+            },
+            "phase_only_unit_modulus_W_control_O": 2.756575801232623
+          },
+          {
+            "nodes_per_axis": 96,
+            "lambda_intensity": 0.4842698346876662,
+            "resolved_conditional_O": 2.3474638864575854,
+            "d_resolved_O_drho": -1.3184399339733168,
+            "d_log_modulus_Wratio_drho": 1.4994730423582852,
+            "relative_amplitude_R": {
+              "real": -0.647787222864934,
+              "imag": 0.25424702275661487
+            },
+            "accepted_additivity_defect_divided_by_abs_a0_squared": -1.295574445729868,
+            "coherent_amplitude_ratio_O": {
+              "real": 4.733136025002056,
+              "imag": -2.6947878711914592
+            },
+            "phase_only_unit_modulus_W_control_O": 2.756575801232623
+          },
+          {
+            "nodes_per_axis": 128,
+            "lambda_intensity": 0.4842698346876761,
+            "resolved_conditional_O": 2.347463886457576,
+            "d_resolved_O_drho": -1.318439933973366,
+            "d_log_modulus_Wratio_drho": 1.4994730423583302,
+            "relative_amplitude_R": {
+              "real": -0.6477872228649423,
+              "imag": 0.25424702275661304
+            },
+            "accepted_additivity_defect_divided_by_abs_a0_squared": -1.2955744457298846,
+            "coherent_amplitude_ratio_O": {
+              "real": 4.733136025002103,
+              "imag": -2.694787871191537
+            },
+            "phase_only_unit_modulus_W_control_O": 2.756575801232623
+          },
+          {
+            "nodes_per_axis": 160,
+            "lambda_intensity": 0.48426983468767343,
+            "resolved_conditional_O": 2.3474638864575783,
+            "d_resolved_O_drho": -1.3184399339733524,
+            "d_log_modulus_Wratio_drho": 1.499473042358318,
+            "relative_amplitude_R": {
+              "real": -0.6477872228649401,
+              "imag": 0.2542470227566136
+            },
+            "accepted_additivity_defect_divided_by_abs_a0_squared": -1.2955744457298801,
+            "coherent_amplitude_ratio_O": {
+              "real": 4.733136025002089,
+              "imag": -2.694787871191516
+            },
+            "phase_only_unit_modulus_W_control_O": 2.7565758012326222
+          }
+        ],
+        "selected": {
+          "nodes_per_axis": 160,
+          "lambda_intensity": 0.48426983468767343,
+          "resolved_conditional_O": 2.3474638864575783,
+          "d_resolved_O_drho": -1.3184399339733524,
+          "d_log_modulus_Wratio_drho": 1.499473042358318,
+          "relative_amplitude_R": {
+            "real": -0.6477872228649401,
+            "imag": 0.2542470227566136
+          },
+          "accepted_additivity_defect_divided_by_abs_a0_squared": -1.2955744457298801,
+          "coherent_amplitude_ratio_O": {
+            "real": 4.733136025002089,
+            "imag": -2.694787871191516
+          },
+          "phase_only_unit_modulus_W_control_O": 2.7565758012326222
+        }
+      }
+    ],
+    "resolved_O_source_contrast_1over4_minus_1over8": -0.1261299335873809,
+    "maximum_observed_resolved_mean_spread_across_quadrature_orders": 7.105427357601002e-15,
+    "phase_only_control": {
+      "rule": "Replace each complete W_c by W_c/|W_c| while retaining its actual phase and the fixed scalar factor; this is a diagnostic ablation, not a new derived action.",
+      "resolved_O_at_both_sources": 2.756575801232623,
+      "source_contrast": 0
+    },
+    "modulus_frozen_control": {
+      "rule": "Freeze both |W_c| to their rho=1/8 values while retaining each source-dependent phase.",
+      "resolved_O_at_both_sources": 2.473593820044959,
+      "source_contrast": 0
+    },
+    "qualification": "Float64 diagnostic propagated from the full-weight quadrature and high-precision scalar factor. Analytic quadrature truncation bounds do not certify floating-point evaluation; the contrast is numerically stable, not a rigorous interval certificate.",
+    "causal_source_qualification": "rho is changed on all eight outer boundary densities, including the later boundary. This is a two-sided Dirichlet boundary-parameter response, not an isolated initial-source change with fixed final filter."
+  },
+  "normalization": "All displayed means condition on successful resolved records. They do not supply a total success probability or a physical instrument completion.",
+  "clock_domain": "Declared new common clock box [-3/2,3/2]; no causal-order theta restriction. Centered stationary witnesses fit, but the integral still includes nonmonotone clocks.",
+  "physical_geometry_dynamics": "NOT_DERIVED_FROM_THESE_IDENTITIES_ALONE"
+}

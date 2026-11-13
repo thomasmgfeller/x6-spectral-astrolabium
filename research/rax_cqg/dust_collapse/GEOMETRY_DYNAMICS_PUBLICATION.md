@@ -1,5 +1,7 @@
 # Stationärer Geometriekandidat v0.1
 
+> **Nachfolgende Arbeit:** [Interferenz und vollständige innere Randamplitude v0.1](INTERFERENCE_DYNAMICS_PUBLICATION.md) integriert die drei inneren Uhren und alle acht Dichtestrata dieses N11-Paars. Bedingte Auslese und vollständige Zusammensetzung sind geprüft; die physikalische Dynamik bleibt offen. Dieser stationäre Ausgangsbefund und seine Originalartefakte bleiben erhalten.
+
 13. November 2026 · Anschluss an die [kohärente Endrandmessung](BOUNDARY_COHERENCE_PUBLICATION.md), PR 290 / `f5ee44d7cb4dc1f924eee580f1eaf0cfcb4a5bc6`.
 
 **Zwei verschiedene Kausalordnungen mit elf Ereignissen besitzen bei identischen äußeren Randdaten positive stationäre innere Staubquellen. Ihre stationäre Wirkungsdifferenz ist exakt ΔS = 8 + 23ρ/19 für 0 < ρ < 1/2. Die gemeinsame gaußsche Skalar-Randpaarung besitzt einen endlichen Abel-Grenzwert. Physikalische Geometriedynamik ist weiterhin nicht hergeleitet.**
