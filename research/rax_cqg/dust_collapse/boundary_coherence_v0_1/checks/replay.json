@@ -1,0 +1,37 @@
+{
+  "id": "BOUNDARY-COHERENCE-REPLAY-0.1",
+  "all_scripts_passed": true,
+  "runs": [
+    {
+      "script": "interference.py",
+      "exit_code": 0
+    },
+    {
+      "script": "root_exact_audit.py",
+      "exit_code": 0
+    },
+    {
+      "script": "r_records.py",
+      "exit_code": 0
+    },
+    {
+      "script": "extended_R.py",
+      "exit_code": 0
+    },
+    {
+      "script": "root_R_audit.py",
+      "exit_code": 0
+    },
+    {
+      "script": "physical_gate.py",
+      "exit_code": 0
+    },
+    {
+      "script": "hilbert_audit.py",
+      "exit_code": 0
+    }
+  ],
+  "new_clock_integrations": 0,
+  "physical_eligibility": "HOLD_NOT_DERIVED",
+  "qualification": "Passing replay confirms the declared finite calculations. It does not make the physical gates pass or independently regenerate inherited amplitude enclosures."
+}

@@ -1,0 +1,309 @@
+{
+  "contract_sha256": "ef597edb45b45882dc2efdcb80926b28b86e920cfce78dcff172450d73f51e19",
+  "verified_reused_git_sources": 6,
+  "status": "EXACT_RESTRICTED_CURRENT_CALIBRATION_OBSTRUCTION_AND_LEGAL_CHARGE_TEST_EXECUTED",
+  "physical_CST_measurements": 0,
+  "current_derivation": {
+    "six_node_derivative_identities": 6,
+    "global_shift_identity": "sum q_z=0",
+    "stationary_interior_identity": "q_t=0",
+    "two_complete_cuts": "F_after_d=F_after_t=-Qcharge",
+    "charge": "Qcharge=p_out=v*(t-t_star)/2>0",
+    "collar_reaction": "p_in-p_out=q_a+q_b+q_c"
+  },
+  "intervals": {
+    "t": {
+      "lower_exact": "24995312500/1768790171351",
+      "upper_exact": "49971875000/1154193447567",
+      "decimal_display": [
+        0.014131304495495137,
+        0.043295926783624525
+      ]
+    },
+    "u": {
+      "lower_exact": "298954023758607117021930016541/486633279955268605682274164000",
+      "upper_exact": "102901231862375284166590384541/157300470326923764394091388000",
+      "decimal_display": [
+        0.6143312347772166,
+        0.6541698931256315
+      ]
+    },
+    "r": {
+      "lower_exact": "1171177426842885778429248863393750000000/91626839678217556767543573592196101899",
+      "upper_exact": "1403330716653086467375658907515625000000/106596773128485366942234957982129791041",
+      "decimal_display": [
+        12.782034510367486,
+        13.164851763022842
+      ]
+    },
+    "jparam": {
+      "lower_exact": "34071513457841/3537580342702000",
+      "upper_exact": "68780526915691/2308386895134000",
+      "decimal_display": [
+        0.009631304495495136,
+        0.02979592678362452
+      ]
+    },
+    "Q_upper_envelope": {
+      "lower_exact": "2053331960475312669449565116995206880631/5613322866612345869502635630062500000000000",
+      "upper_exact": "5460213212934145048009061561929455248727/4684709707371543113716995453575000000000000",
+      "decimal_display": [
+        0.00036579616196466953,
+        0.0011655392871712674
+      ]
+    },
+    "J_tu_over_v": {
+      "lower_exact": "320732797909208887430825121496520626205747/1123337886184817095075890207136105517976000",
+      "upper_exact": "178078913125861323076184036105085621484891/556463051726304752422677717744946850376000",
+      "decimal_display": [
+        0.2855176539967961,
+        0.32001929431506815
+      ]
+    },
+    "minus_abs_rectification_defect_over_w": {
+      "lower_exact": "918132497942273089602944933/22109877141887500000000000",
+      "upper_exact": "1212529164592209640321780511/28854836189175000000000000",
+      "decimal_display": [
+        41.525897771854055,
+        42.02169635075227
+      ]
+    }
+  },
+  "charge_bound": "0<Qcharge<jparam/(2*r); a conservative uniform upper bound is the upper endpoint of Q_upper_envelope",
+  "record_preserving_aggregation": {
+    "partitions_tested": 8,
+    "all_failed_for_both_global_orientations": true,
+    "partitions": [
+      {
+        "cells": [
+          [
+            "a",
+            "b",
+            "c",
+            "d"
+          ],
+          [
+            "t"
+          ],
+          [
+            "u"
+          ]
+        ],
+        "orientation_plus": "FAIL: complete final cut=-Qcharge<0",
+        "orientation_minus": "FAIL: aggregate edge t->u=-v*(U-T)/2<0"
+      },
+      {
+        "cells": [
+          [
+            "a",
+            "b",
+            "c"
+          ],
+          [
+            "d"
+          ],
+          [
+            "t"
+          ],
+          [
+            "u"
+          ]
+        ],
+        "orientation_plus": "FAIL: complete final cut=-Qcharge<0",
+        "orientation_minus": "FAIL: aggregate edge t->u=-v*(U-T)/2<0"
+      },
+      {
+        "cells": [
+          [
+            "a",
+            "b"
+          ],
+          [
+            "c",
+            "d"
+          ],
+          [
+            "t"
+          ],
+          [
+            "u"
+          ]
+        ],
+        "orientation_plus": "FAIL: complete final cut=-Qcharge<0",
+        "orientation_minus": "FAIL: aggregate edge t->u=-v*(U-T)/2<0"
+      },
+      {
+        "cells": [
+          [
+            "a",
+            "b"
+          ],
+          [
+            "c"
+          ],
+          [
+            "d"
+          ],
+          [
+            "t"
+          ],
+          [
+            "u"
+          ]
+        ],
+        "orientation_plus": "FAIL: complete final cut=-Qcharge<0",
+        "orientation_minus": "FAIL: aggregate edge t->u=-v*(U-T)/2<0"
+      },
+      {
+        "cells": [
+          [
+            "a"
+          ],
+          [
+            "b",
+            "c",
+            "d"
+          ],
+          [
+            "t"
+          ],
+          [
+            "u"
+          ]
+        ],
+        "orientation_plus": "FAIL: complete final cut=-Qcharge<0",
+        "orientation_minus": "FAIL: aggregate edge t->u=-v*(U-T)/2<0"
+      },
+      {
+        "cells": [
+          [
+            "a"
+          ],
+          [
+            "b",
+            "c"
+          ],
+          [
+            "d"
+          ],
+          [
+            "t"
+          ],
+          [
+            "u"
+          ]
+        ],
+        "orientation_plus": "FAIL: complete final cut=-Qcharge<0",
+        "orientation_minus": "FAIL: aggregate edge t->u=-v*(U-T)/2<0"
+      },
+      {
+        "cells": [
+          [
+            "a"
+          ],
+          [
+            "b"
+          ],
+          [
+            "c",
+            "d"
+          ],
+          [
+            "t"
+          ],
+          [
+            "u"
+          ]
+        ],
+        "orientation_plus": "FAIL: complete final cut=-Qcharge<0",
+        "orientation_minus": "FAIL: aggregate edge t->u=-v*(U-T)/2<0"
+      },
+      {
+        "cells": [
+          [
+            "a"
+          ],
+          [
+            "b"
+          ],
+          [
+            "c"
+          ],
+          [
+            "d"
+          ],
+          [
+            "t"
+          ],
+          [
+            "u"
+          ]
+        ],
+        "orientation_plus": "FAIL: complete final cut=-Qcharge<0",
+        "orientation_minus": "FAIL: aggregate edge t->u=-v*(U-T)/2<0"
+      }
+    ],
+    "scope": "Exact order-convex aggregation retaining initial d and later t,u in distinct cells; other derived current observables are not excluded"
+  },
+  "absolute_value_control": {
+    "interior_divergence": "-w*(8*(t-a)+9*(t-c))<0",
+    "status": "FAIL_CONSERVATION"
+  },
+  "legal_charge_comparison": {
+    "h_exact": "1/1000",
+    "preparations": [
+      {
+        "w": "1/64",
+        "v_at_h0": 0.0012041560967997115,
+        "Q_exact_formula": "1/64*jparam/(2*r)",
+        "Q_at_h0": 1.17766819614091e-05,
+        "t_at_h0": 0.028560058687919308,
+        "u_at_h0": 0.6341156064009794,
+        "physical_mass": null
+      },
+      {
+        "w": "1/4",
+        "v_at_h0": 0.019266497548795385,
+        "Q_exact_formula": "1/4*jparam/(2*r)",
+        "Q_at_h0": 0.0001884269113825456,
+        "t_at_h0": 0.028560058687919308,
+        "u_at_h0": 0.6341156064009794,
+        "physical_mass": null
+      }
+    ],
+    "charge_ratio_exact": "16",
+    "all_clock_records_unchanged": true,
+    "all_orders_unchanged": true,
+    "meaning": "Legal charge response, not physical M-to-R data; both boundary momenta vary consistently with the same family"
+  },
+  "count_geometry_identifiability": {
+    "identity": "lambda*A*V3=lambda*(s*A)*(V3/s)",
+    "status": "VOLUME_NOT_IDENTIFIABLE_WITHOUT_INDEPENDENT_EXPOSURE",
+    "additional_limit": "fixed cardinality is a spacetime count, not an independently measured areal radius"
+  },
+  "fixed_order_clock_adapter_obstruction": {
+    "assumptions": "Same F(C,T) for radius, same G(C,T) for physical time; hypothetical common M=c*Q with c>0",
+    "configuration_identity": "The executed Q and 16Q preparations have exactly identical C and all T",
+    "nonzero_reconstructed_Y_secant_ratio": "1",
+    "classical_nonzero_Y_slope_ratio_required": "4",
+    "zero_secant_case": "Both zero, incompatible with nonzero collapsing slopes at positive mass",
+    "status": "EXCLUDED_ADAPTER_CLASS_ONLY",
+    "not_excluded": "A different independently derived geometry observable involving additional degrees of freedom, or an enlarged dynamical order family"
+  },
+  "actual_six_history_pilot_current_parity": {
+    "orders_checked": 6,
+    "nonzero_edge_current_parities_checked": 68,
+    "action_parity": "S_d(-T)=S_d(T)",
+    "current_parity": "J_yx(-T)=-J_yx(T)",
+    "other_factors": "Original scalar/gravity factors are clock independent; clock packets and measures are reflection invariant; four event flags depend only on order class and density stratum",
+    "conclusion": "Every single-current-inserted event amplitude and oriented cut-charge insertion vanishes exactly for every positive Abel regulator and for an existing paired Abel limit",
+    "not_claimed": "No physical mean-current, probability, mass-zero or universal no-go statement; even current correlations may remain nonzero",
+    "status": "EXACT_ORIENTED_CURRENT_INSERTION_ZERO"
+  },
+  "physical_correspondence": {
+    "status": "NOT_DEFINED_FOR_THIS_CURRENT_AND_RECORD_ADAPTER",
+    "specific_obstruction": "No globally oriented positive record-preserving current from exact aggregation; rectification breaks conservation. A conserved scalar charge alone and count/exposure product leave mass normalization and radius unidentified.",
+    "scope": "Does not exclude a different derived positive current, enlarged coupled geometry family, or future physical calibration"
+  },
+  "checks_passed": true
+}

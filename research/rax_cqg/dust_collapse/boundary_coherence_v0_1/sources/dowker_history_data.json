@@ -1,0 +1,2936 @@
+{
+  "id": "SIX-HISTORY-ORDER-AND-SEWING-EXACT-AUDIT",
+  "frozen_contract_sha256": "442cc81227921135ccb046cdc238f8c2d9cae88f2082614490e59cfceba77ba3",
+  "status": "PASS_DECLARED_FINITE_INFLUENCE_INTEGRAL_RECONSTRUCTION",
+  "histories": [
+    {
+      "type": 1,
+      "edge_bits": "111110011111010",
+      "pair_encoding": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "relations": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          5
+        ]
+      ],
+      "relation_count": 11,
+      "orbit_size": 4,
+      "automorphisms_preserving_roles": 1,
+      "full_poset_automorphisms": 1,
+      "weight": "1/6",
+      "F4": 9,
+      "coefficient_pairs": [
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          2,
+          1
+        ],
+        [
+          0,
+          3,
+          -9
+        ],
+        [
+          0,
+          4,
+          16
+        ],
+        [
+          0,
+          5,
+          -8
+        ],
+        [
+          1,
+          4,
+          1
+        ],
+        [
+          1,
+          5,
+          1
+        ],
+        [
+          2,
+          3,
+          1
+        ],
+        [
+          2,
+          4,
+          1
+        ],
+        [
+          2,
+          5,
+          -9
+        ],
+        [
+          3,
+          5,
+          1
+        ]
+      ],
+      "B_future_past_over_beta": [
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "-9",
+          "0",
+          "1",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "16",
+          "1",
+          "1",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "-8",
+          "1",
+          "-9",
+          "1",
+          "0",
+          "0"
+        ]
+      ],
+      "B_orientation": "row=future j, column=past i, B[j,i]/beta=c_ij; this is the directed pair coefficient matrix",
+      "H0": [
+        [
+          "-1/2",
+          "1/2",
+          "1/2",
+          "-9/2",
+          "8",
+          "-4"
+        ],
+        [
+          "1/2",
+          "-3/2",
+          "0",
+          "0",
+          "1/2",
+          "1/2"
+        ],
+        [
+          "1/2",
+          "0",
+          "3",
+          "1/2",
+          "1/2",
+          "-9/2"
+        ],
+        [
+          "-9/2",
+          "0",
+          "1/2",
+          "7/2",
+          "0",
+          "1/2"
+        ],
+        [
+          "8",
+          "1/2",
+          "1/2",
+          "0",
+          "-9",
+          "0"
+        ],
+        [
+          "-4",
+          "1/2",
+          "-9/2",
+          "1/2",
+          "0",
+          "15/2"
+        ]
+      ],
+      "H33": "7/2",
+      "boundary_paired_inner_real_damping": "205786502/172557261",
+      "sewing": [
+        {
+          "name": "matter_layer",
+          "left": [
+            0,
+            1,
+            2
+          ],
+          "right": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "shared": [
+            1,
+            2
+          ],
+          "F4_left": 1,
+          "F4_right": 9,
+          "F4_shared": 2,
+          "cross_F4": 1,
+          "cross_pairs": [
+            {
+              "pair": [
+                0,
+                3
+              ],
+              "exists": true,
+              "left_footprint": [
+                1,
+                2
+              ],
+              "right_footprint": [
+                2
+              ],
+              "reconstructed_interval": 1,
+              "coefficient": -9
+            },
+            {
+              "pair": [
+                0,
+                4
+              ],
+              "exists": true,
+              "left_footprint": [
+                1,
+                2
+              ],
+              "right_footprint": [
+                1,
+                2
+              ],
+              "reconstructed_interval": 2,
+              "coefficient": 16
+            },
+            {
+              "pair": [
+                0,
+                5
+              ],
+              "exists": true,
+              "left_footprint": [
+                1,
+                2
+              ],
+              "right_footprint": [
+                1,
+                2
+              ],
+              "reconstructed_interval": 3,
+              "coefficient": -8
+            }
+          ],
+          "local_interval_changes": [],
+          "exact_total_action_residual": "0",
+          "omitting_cross_action_fails": true
+        },
+        {
+          "name": "matter_and_inner",
+          "left": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "right": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "shared": [
+            1,
+            2,
+            3
+          ],
+          "F4_left": 10,
+          "F4_right": 9,
+          "F4_shared": 2,
+          "cross_F4": -8,
+          "cross_pairs": [
+            {
+              "pair": [
+                0,
+                4
+              ],
+              "exists": true,
+              "left_footprint": [
+                1,
+                2,
+                3
+              ],
+              "right_footprint": [
+                1,
+                2
+              ],
+              "reconstructed_interval": 2,
+              "coefficient": 16
+            },
+            {
+              "pair": [
+                0,
+                5
+              ],
+              "exists": true,
+              "left_footprint": [
+                1,
+                2,
+                3
+              ],
+              "right_footprint": [
+                1,
+                2,
+                3
+              ],
+              "reconstructed_interval": 3,
+              "coefficient": -8
+            }
+          ],
+          "local_interval_changes": [],
+          "exact_total_action_residual": "0",
+          "omitting_cross_action_fails": true
+        }
+      ],
+      "scalar_cases": [
+        {
+          "epsilon": 0.0,
+          "inner_first": [
+            0.544073720478599,
+            0.21810726604403285
+          ],
+          "past_matter_first": [
+            0.5440737204785994,
+            0.21810726604403408
+          ],
+          "terminal_first": [
+            0.5440737204785996,
+            0.21810726604403277
+          ],
+          "max_difference": 1.2658490090568385e-15
+        },
+        {
+          "epsilon": 0.015625,
+          "inner_first": [
+            0.5418890197518383,
+            0.21554545060902777
+          ],
+          "past_matter_first": [
+            0.541889019751838,
+            0.21554545060902913
+          ],
+          "terminal_first": [
+            0.5418890197518383,
+            0.21554545060902774
+          ],
+          "max_difference": 1.4002130849932114e-15
+        },
+        {
+          "epsilon": 0.000244140625,
+          "inner_first": [
+            0.5440394868676937,
+            0.21806679926529032
+          ],
+          "past_matter_first": [
+            0.5440394868676928,
+            0.2180667992652918
+          ],
+          "terminal_first": [
+            0.544039486867693,
+            0.21806679926529043
+          ],
+          "max_difference": 1.7183817360337924e-15
+        }
+      ]
+    },
+    {
+      "type": 1,
+      "edge_bits": "111110011111100",
+      "pair_encoding": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "relations": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "relation_count": 11,
+      "orbit_size": 4,
+      "automorphisms_preserving_roles": 1,
+      "full_poset_automorphisms": 1,
+      "weight": "1/6",
+      "F4": 9,
+      "coefficient_pairs": [
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          2,
+          1
+        ],
+        [
+          0,
+          3,
+          -9
+        ],
+        [
+          0,
+          4,
+          -8
+        ],
+        [
+          0,
+          5,
+          16
+        ],
+        [
+          1,
+          4,
+          1
+        ],
+        [
+          1,
+          5,
+          1
+        ],
+        [
+          2,
+          3,
+          1
+        ],
+        [
+          2,
+          4,
+          -9
+        ],
+        [
+          2,
+          5,
+          1
+        ],
+        [
+          3,
+          4,
+          1
+        ]
+      ],
+      "B_future_past_over_beta": [
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "-9",
+          "0",
+          "1",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "-8",
+          "1",
+          "-9",
+          "1",
+          "0",
+          "0"
+        ],
+        [
+          "16",
+          "1",
+          "1",
+          "0",
+          "0",
+          "0"
+        ]
+      ],
+      "B_orientation": "row=future j, column=past i, B[j,i]/beta=c_ij; this is the directed pair coefficient matrix",
+      "H0": [
+        [
+          "-1/2",
+          "1/2",
+          "1/2",
+          "-9/2",
+          "-4",
+          "8"
+        ],
+        [
+          "1/2",
+          "-3/2",
+          "0",
+          "0",
+          "1/2",
+          "1/2"
+        ],
+        [
+          "1/2",
+          "0",
+          "3",
+          "1/2",
+          "-9/2",
+          "1/2"
+        ],
+        [
+          "-9/2",
+          "0",
+          "1/2",
+          "7/2",
+          "1/2",
+          "0"
+        ],
+        [
+          "-4",
+          "1/2",
+          "-9/2",
+          "1/2",
+          "15/2",
+          "0"
+        ],
+        [
+          "8",
+          "1/2",
+          "1/2",
+          "0",
+          "0",
+          "-9"
+        ]
+      ],
+      "H33": "7/2",
+      "boundary_paired_inner_real_damping": "205786502/172557261",
+      "sewing": [
+        {
+          "name": "matter_layer",
+          "left": [
+            0,
+            1,
+            2
+          ],
+          "right": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "shared": [
+            1,
+            2
+          ],
+          "F4_left": 1,
+          "F4_right": 9,
+          "F4_shared": 2,
+          "cross_F4": 1,
+          "cross_pairs": [
+            {
+              "pair": [
+                0,
+                3
+              ],
+              "exists": true,
+              "left_footprint": [
+                1,
+                2
+              ],
+              "right_footprint": [
+                2
+              ],
+              "reconstructed_interval": 1,
+              "coefficient": -9
+            },
+            {
+              "pair": [
+                0,
+                4
+              ],
+              "exists": true,
+              "left_footprint": [
+                1,
+                2
+              ],
+              "right_footprint": [
+                1,
+                2
+              ],
+              "reconstructed_interval": 3,
+              "coefficient": -8
+            },
+            {
+              "pair": [
+                0,
+                5
+              ],
+              "exists": true,
+              "left_footprint": [
+                1,
+                2
+              ],
+              "right_footprint": [
+                1,
+                2
+              ],
+              "reconstructed_interval": 2,
+              "coefficient": 16
+            }
+          ],
+          "local_interval_changes": [],
+          "exact_total_action_residual": "0",
+          "omitting_cross_action_fails": true
+        },
+        {
+          "name": "matter_and_inner",
+          "left": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "right": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "shared": [
+            1,
+            2,
+            3
+          ],
+          "F4_left": 10,
+          "F4_right": 9,
+          "F4_shared": 2,
+          "cross_F4": -8,
+          "cross_pairs": [
+            {
+              "pair": [
+                0,
+                4
+              ],
+              "exists": true,
+              "left_footprint": [
+                1,
+                2,
+                3
+              ],
+              "right_footprint": [
+                1,
+                2,
+                3
+              ],
+              "reconstructed_interval": 3,
+              "coefficient": -8
+            },
+            {
+              "pair": [
+                0,
+                5
+              ],
+              "exists": true,
+              "left_footprint": [
+                1,
+                2,
+                3
+              ],
+              "right_footprint": [
+                1,
+                2
+              ],
+              "reconstructed_interval": 2,
+              "coefficient": 16
+            }
+          ],
+          "local_interval_changes": [],
+          "exact_total_action_residual": "0",
+          "omitting_cross_action_fails": true
+        }
+      ],
+      "scalar_cases": [
+        {
+          "epsilon": 0.0,
+          "inner_first": [
+            0.5440737204785997,
+            0.21810726604403263
+          ],
+          "past_matter_first": [
+            0.5440737204785979,
+            0.21810726604403285
+          ],
+          "terminal_first": [
+            0.5440737204785997,
+            0.21810726604403274
+          ],
+          "max_difference": 1.790180836524724e-15
+        },
+        {
+          "epsilon": 0.015625,
+          "inner_first": [
+            0.5418890197518382,
+            0.21554545060902808
+          ],
+          "past_matter_first": [
+            0.5418890197518366,
+            0.21554545060902786
+          ],
+          "terminal_first": [
+            0.5418890197518383,
+            0.21554545060902772
+          ],
+          "max_difference": 1.680072297996111e-15
+        },
+        {
+          "epsilon": 0.000244140625,
+          "inner_first": [
+            0.5440394868676937,
+            0.21806679926529018
+          ],
+          "past_matter_first": [
+            0.5440394868676914,
+            0.21806679926529052
+          ],
+          "terminal_first": [
+            0.544039486867693,
+            0.21806679926529038
+          ],
+          "max_difference": 2.2452871135843694e-15
+        }
+      ]
+    },
+    {
+      "type": 1,
+      "edge_bits": "111110111011010",
+      "pair_encoding": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "relations": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          5
+        ]
+      ],
+      "relation_count": 11,
+      "orbit_size": 4,
+      "automorphisms_preserving_roles": 1,
+      "full_poset_automorphisms": 1,
+      "weight": "1/6",
+      "F4": 9,
+      "coefficient_pairs": [
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          2,
+          1
+        ],
+        [
+          0,
+          3,
+          -9
+        ],
+        [
+          0,
+          4,
+          16
+        ],
+        [
+          0,
+          5,
+          -8
+        ],
+        [
+          1,
+          3,
+          1
+        ],
+        [
+          1,
+          4,
+          1
+        ],
+        [
+          1,
+          5,
+          -9
+        ],
+        [
+          2,
+          4,
+          1
+        ],
+        [
+          2,
+          5,
+          1
+        ],
+        [
+          3,
+          5,
+          1
+        ]
+      ],
+      "B_future_past_over_beta": [
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "-9",
+          "1",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "16",
+          "1",
+          "1",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "-8",
+          "-9",
+          "1",
+          "1",
+          "0",
+          "0"
+        ]
+      ],
+      "B_orientation": "row=future j, column=past i, B[j,i]/beta=c_ij; this is the directed pair coefficient matrix",
+      "H0": [
+        [
+          "-1/2",
+          "1/2",
+          "1/2",
+          "-9/2",
+          "8",
+          "-4"
+        ],
+        [
+          "1/2",
+          "3",
+          "0",
+          "1/2",
+          "1/2",
+          "-9/2"
+        ],
+        [
+          "1/2",
+          "0",
+          "-3/2",
+          "0",
+          "1/2",
+          "1/2"
+        ],
+        [
+          "-9/2",
+          "1/2",
+          "0",
+          "7/2",
+          "0",
+          "1/2"
+        ],
+        [
+          "8",
+          "1/2",
+          "1/2",
+          "0",
+          "-9",
+          "0"
+        ],
+        [
+          "-4",
+          "-9/2",
+          "1/2",
+          "1/2",
+          "0",
+          "15/2"
+        ]
+      ],
+      "H33": "7/2",
+      "boundary_paired_inner_real_damping": "205786502/172557261",
+      "sewing": [
+        {
+          "name": "matter_layer",
+          "left": [
+            0,
+            1,
+            2
+          ],
+          "right": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "shared": [
+            1,
+            2
+          ],
+          "F4_left": 1,
+          "F4_right": 9,
+          "F4_shared": 2,
+          "cross_F4": 1,
+          "cross_pairs": [
+            {
+              "pair": [
+                0,
+                3
+              ],
+              "exists": true,
+              "left_footprint": [
+                1,
+                2
+              ],
+              "right_footprint": [
+                1
+              ],
+              "reconstructed_interval": 1,
+              "coefficient": -9
+            },
+            {
+              "pair": [
+                0,
+                4
+              ],
+              "exists": true,
+              "left_footprint": [
+                1,
+                2
+              ],
+              "right_footprint": [
+                1,
+                2
+              ],
+              "reconstructed_interval": 2,
+              "coefficient": 16
+            },
+            {
+              "pair": [
+                0,
+                5
+              ],
+              "exists": true,
+              "left_footprint": [
+                1,
+                2
+              ],
+              "right_footprint": [
+                1,
+                2
+              ],
+              "reconstructed_interval": 3,
+              "coefficient": -8
+            }
+          ],
+          "local_interval_changes": [],
+          "exact_total_action_residual": "0",
+          "omitting_cross_action_fails": true
+        },
+        {
+          "name": "matter_and_inner",
+          "left": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "right": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "shared": [
+            1,
+            2,
+            3
+          ],
+          "F4_left": 10,
+          "F4_right": 9,
+          "F4_shared": 2,
+          "cross_F4": -8,
+          "cross_pairs": [
+            {
+              "pair": [
+                0,
+                4
+              ],
+              "exists": true,
+              "left_footprint": [
+                1,
+                2,
+                3
+              ],
+              "right_footprint": [
+                1,
+                2
+              ],
+              "reconstructed_interval": 2,
+              "coefficient": 16
+            },
+            {
+              "pair": [
+                0,
+                5
+              ],
+              "exists": true,
+              "left_footprint": [
+                1,
+                2,
+                3
+              ],
+              "right_footprint": [
+                1,
+                2,
+                3
+              ],
+              "reconstructed_interval": 3,
+              "coefficient": -8
+            }
+          ],
+          "local_interval_changes": [],
+          "exact_total_action_residual": "0",
+          "omitting_cross_action_fails": true
+        }
+      ],
+      "scalar_cases": [
+        {
+          "epsilon": 0.0,
+          "inner_first": [
+            0.5440737204786004,
+            0.21810726604403183
+          ],
+          "past_matter_first": [
+            0.5440737204785991,
+            0.21810726604403274
+          ],
+          "terminal_first": [
+            0.5440737204785998,
+            0.21810726604403274
+          ],
+          "max_difference": 1.5265566588595902e-15
+        },
+        {
+          "epsilon": 0.015625,
+          "inner_first": [
+            0.5418890197518391,
+            0.2155454506090281
+          ],
+          "past_matter_first": [
+            0.5418890197518379,
+            0.21554545060902774
+          ],
+          "terminal_first": [
+            0.5418890197518385,
+            0.21554545060902774
+          ],
+          "max_difference": 1.2734335527125286e-15
+        },
+        {
+          "epsilon": 0.000244140625,
+          "inner_first": [
+            0.5440394868676929,
+            0.2180667992652907
+          ],
+          "past_matter_first": [
+            0.5440394868676927,
+            0.21806679926529043
+          ],
+          "terminal_first": [
+            0.5440394868676931,
+            0.2180667992652904
+          ],
+          "max_difference": 3.775166431889533e-16
+        }
+      ]
+    },
+    {
+      "type": 1,
+      "edge_bits": "111110111011100",
+      "pair_encoding": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "relations": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "relation_count": 11,
+      "orbit_size": 4,
+      "automorphisms_preserving_roles": 1,
+      "full_poset_automorphisms": 1,
+      "weight": "1/6",
+      "F4": 9,
+      "coefficient_pairs": [
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          2,
+          1
+        ],
+        [
+          0,
+          3,
+          -9
+        ],
+        [
+          0,
+          4,
+          -8
+        ],
+        [
+          0,
+          5,
+          16
+        ],
+        [
+          1,
+          3,
+          1
+        ],
+        [
+          1,
+          4,
+          -9
+        ],
+        [
+          1,
+          5,
+          1
+        ],
+        [
+          2,
+          4,
+          1
+        ],
+        [
+          2,
+          5,
+          1
+        ],
+        [
+          3,
+          4,
+          1
+        ]
+      ],
+      "B_future_past_over_beta": [
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "-9",
+          "1",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "-8",
+          "-9",
+          "1",
+          "1",
+          "0",
+          "0"
+        ],
+        [
+          "16",
+          "1",
+          "1",
+          "0",
+          "0",
+          "0"
+        ]
+      ],
+      "B_orientation": "row=future j, column=past i, B[j,i]/beta=c_ij; this is the directed pair coefficient matrix",
+      "H0": [
+        [
+          "-1/2",
+          "1/2",
+          "1/2",
+          "-9/2",
+          "-4",
+          "8"
+        ],
+        [
+          "1/2",
+          "3",
+          "0",
+          "1/2",
+          "-9/2",
+          "1/2"
+        ],
+        [
+          "1/2",
+          "0",
+          "-3/2",
+          "0",
+          "1/2",
+          "1/2"
+        ],
+        [
+          "-9/2",
+          "1/2",
+          "0",
+          "7/2",
+          "1/2",
+          "0"
+        ],
+        [
+          "-4",
+          "-9/2",
+          "1/2",
+          "1/2",
+          "15/2",
+          "0"
+        ],
+        [
+          "8",
+          "1/2",
+          "1/2",
+          "0",
+          "0",
+          "-9"
+        ]
+      ],
+      "H33": "7/2",
+      "boundary_paired_inner_real_damping": "205786502/172557261",
+      "sewing": [
+        {
+          "name": "matter_layer",
+          "left": [
+            0,
+            1,
+            2
+          ],
+          "right": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "shared": [
+            1,
+            2
+          ],
+          "F4_left": 1,
+          "F4_right": 9,
+          "F4_shared": 2,
+          "cross_F4": 1,
+          "cross_pairs": [
+            {
+              "pair": [
+                0,
+                3
+              ],
+              "exists": true,
+              "left_footprint": [
+                1,
+                2
+              ],
+              "right_footprint": [
+                1
+              ],
+              "reconstructed_interval": 1,
+              "coefficient": -9
+            },
+            {
+              "pair": [
+                0,
+                4
+              ],
+              "exists": true,
+              "left_footprint": [
+                1,
+                2
+              ],
+              "right_footprint": [
+                1,
+                2
+              ],
+              "reconstructed_interval": 3,
+              "coefficient": -8
+            },
+            {
+              "pair": [
+                0,
+                5
+              ],
+              "exists": true,
+              "left_footprint": [
+                1,
+                2
+              ],
+              "right_footprint": [
+                1,
+                2
+              ],
+              "reconstructed_interval": 2,
+              "coefficient": 16
+            }
+          ],
+          "local_interval_changes": [],
+          "exact_total_action_residual": "0",
+          "omitting_cross_action_fails": true
+        },
+        {
+          "name": "matter_and_inner",
+          "left": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "right": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "shared": [
+            1,
+            2,
+            3
+          ],
+          "F4_left": 10,
+          "F4_right": 9,
+          "F4_shared": 2,
+          "cross_F4": -8,
+          "cross_pairs": [
+            {
+              "pair": [
+                0,
+                4
+              ],
+              "exists": true,
+              "left_footprint": [
+                1,
+                2,
+                3
+              ],
+              "right_footprint": [
+                1,
+                2,
+                3
+              ],
+              "reconstructed_interval": 3,
+              "coefficient": -8
+            },
+            {
+              "pair": [
+                0,
+                5
+              ],
+              "exists": true,
+              "left_footprint": [
+                1,
+                2,
+                3
+              ],
+              "right_footprint": [
+                1,
+                2
+              ],
+              "reconstructed_interval": 2,
+              "coefficient": 16
+            }
+          ],
+          "local_interval_changes": [],
+          "exact_total_action_residual": "0",
+          "omitting_cross_action_fails": true
+        }
+      ],
+      "scalar_cases": [
+        {
+          "epsilon": 0.0,
+          "inner_first": [
+            0.5440737204786005,
+            0.21810726604403144
+          ],
+          "past_matter_first": [
+            0.5440737204785998,
+            0.21810726604403236
+          ],
+          "terminal_first": [
+            0.5440737204785998,
+            0.21810726604403274
+          ],
+          "max_difference": 1.464747745534152e-15
+        },
+        {
+          "epsilon": 0.015625,
+          "inner_first": [
+            0.5418890197518387,
+            0.21554545060902788
+          ],
+          "past_matter_first": [
+            0.5418890197518386,
+            0.2155454506090273
+          ],
+          "terminal_first": [
+            0.5418890197518385,
+            0.21554545060902774
+          ],
+          "max_difference": 5.933464366067994e-16
+        },
+        {
+          "epsilon": 0.000244140625,
+          "inner_first": [
+            0.544039486867694,
+            0.2180667992652907
+          ],
+          "past_matter_first": [
+            0.5440394868676933,
+            0.21806679926529002
+          ],
+          "terminal_first": [
+            0.5440394868676931,
+            0.2180667992652904
+          ],
+          "max_difference": 9.618818769909475e-16
+        }
+      ]
+    },
+    {
+      "type": 2,
+      "edge_bits": "111110111111010",
+      "pair_encoding": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "relations": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          5
+        ]
+      ],
+      "relation_count": 12,
+      "orbit_size": 2,
+      "automorphisms_preserving_roles": 2,
+      "full_poset_automorphisms": 2,
+      "weight": "1/6",
+      "F4": -7,
+      "coefficient_pairs": [
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          2,
+          1
+        ],
+        [
+          0,
+          3,
+          16
+        ],
+        [
+          0,
+          4,
+          16
+        ],
+        [
+          0,
+          5,
+          -8
+        ],
+        [
+          1,
+          3,
+          1
+        ],
+        [
+          1,
+          4,
+          1
+        ],
+        [
+          1,
+          5,
+          -9
+        ],
+        [
+          2,
+          3,
+          1
+        ],
+        [
+          2,
+          4,
+          1
+        ],
+        [
+          2,
+          5,
+          -9
+        ],
+        [
+          3,
+          5,
+          1
+        ]
+      ],
+      "B_future_past_over_beta": [
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "16",
+          "1",
+          "1",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "16",
+          "1",
+          "1",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "-8",
+          "-9",
+          "-9",
+          "1",
+          "0",
+          "0"
+        ]
+      ],
+      "B_orientation": "row=future j, column=past i, B[j,i]/beta=c_ij; this is the directed pair coefficient matrix",
+      "H0": [
+        [
+          "-13",
+          "1/2",
+          "1/2",
+          "8",
+          "8",
+          "-4"
+        ],
+        [
+          "1/2",
+          "3",
+          "0",
+          "1/2",
+          "1/2",
+          "-9/2"
+        ],
+        [
+          "1/2",
+          "0",
+          "3",
+          "1/2",
+          "1/2",
+          "-9/2"
+        ],
+        [
+          "8",
+          "1/2",
+          "1/2",
+          "-19/2",
+          "0",
+          "1/2"
+        ],
+        [
+          "8",
+          "1/2",
+          "1/2",
+          "0",
+          "-9",
+          "0"
+        ],
+        [
+          "-4",
+          "-9/2",
+          "-9/2",
+          "1/2",
+          "0",
+          "25/2"
+        ]
+      ],
+      "H33": "-19/2",
+      "boundary_paired_inner_real_damping": "3898315874/1626610039",
+      "sewing": [
+        {
+          "name": "matter_layer",
+          "left": [
+            0,
+            1,
+            2
+          ],
+          "right": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "shared": [
+            1,
+            2
+          ],
+          "F4_left": 1,
+          "F4_right": 18,
+          "F4_shared": 2,
+          "cross_F4": -24,
+          "cross_pairs": [
+            {
+              "pair": [
+                0,
+                3
+              ],
+              "exists": true,
+              "left_footprint": [
+                1,
+                2
+              ],
+              "right_footprint": [
+                1,
+                2
+              ],
+              "reconstructed_interval": 2,
+              "coefficient": 16
+            },
+            {
+              "pair": [
+                0,
+                4
+              ],
+              "exists": true,
+              "left_footprint": [
+                1,
+                2
+              ],
+              "right_footprint": [
+                1,
+                2
+              ],
+              "reconstructed_interval": 2,
+              "coefficient": 16
+            },
+            {
+              "pair": [
+                0,
+                5
+              ],
+              "exists": true,
+              "left_footprint": [
+                1,
+                2
+              ],
+              "right_footprint": [
+                1,
+                2
+              ],
+              "reconstructed_interval": 3,
+              "coefficient": -8
+            }
+          ],
+          "local_interval_changes": [],
+          "exact_total_action_residual": "0",
+          "omitting_cross_action_fails": true
+        },
+        {
+          "name": "matter_and_inner",
+          "left": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "right": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "shared": [
+            1,
+            2,
+            3
+          ],
+          "F4_left": -16,
+          "F4_right": 18,
+          "F4_shared": 1,
+          "cross_F4": -8,
+          "cross_pairs": [
+            {
+              "pair": [
+                0,
+                4
+              ],
+              "exists": true,
+              "left_footprint": [
+                1,
+                2,
+                3
+              ],
+              "right_footprint": [
+                1,
+                2
+              ],
+              "reconstructed_interval": 2,
+              "coefficient": 16
+            },
+            {
+              "pair": [
+                0,
+                5
+              ],
+              "exists": true,
+              "left_footprint": [
+                1,
+                2,
+                3
+              ],
+              "right_footprint": [
+                1,
+                2,
+                3
+              ],
+              "reconstructed_interval": 3,
+              "coefficient": -8
+            }
+          ],
+          "local_interval_changes": [],
+          "exact_total_action_residual": "0",
+          "omitting_cross_action_fails": true
+        }
+      ],
+      "scalar_cases": [
+        {
+          "epsilon": 0.0,
+          "inner_first": [
+            0.2412022380293744,
+            -0.06128967820729693
+          ],
+          "past_matter_first": [
+            0.24120223802937382,
+            -0.06128967820729703
+          ],
+          "terminal_first": [
+            0.24120223802937407,
+            -0.06128967820729665
+          ],
+          "max_difference": 5.909070137656227e-16
+        },
+        {
+          "epsilon": 0.015625,
+          "inner_first": [
+            0.24056286484175476,
+            -0.06087188572502518
+          ],
+          "past_matter_first": [
+            0.240562864841755,
+            -0.06087188572502568
+          ],
+          "terminal_first": [
+            0.2405628648417553,
+            -0.060871885725025304
+          ],
+          "max_difference": 5.4672143489065705e-16
+        },
+        {
+          "epsilon": 0.000244140625,
+          "inner_first": [
+            0.24119221450803702,
+            -0.06128310733956836
+          ],
+          "past_matter_first": [
+            0.24119221450803632,
+            -0.06128310733956926
+          ],
+          "terminal_first": [
+            0.24119221450803663,
+            -0.06128310733956892
+          ],
+          "max_difference": 1.1325711859351309e-15
+        }
+      ]
+    },
+    {
+      "type": 2,
+      "edge_bits": "111110111111100",
+      "pair_encoding": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "relations": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "relation_count": 12,
+      "orbit_size": 2,
+      "automorphisms_preserving_roles": 2,
+      "full_poset_automorphisms": 2,
+      "weight": "1/6",
+      "F4": -7,
+      "coefficient_pairs": [
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          2,
+          1
+        ],
+        [
+          0,
+          3,
+          16
+        ],
+        [
+          0,
+          4,
+          -8
+        ],
+        [
+          0,
+          5,
+          16
+        ],
+        [
+          1,
+          3,
+          1
+        ],
+        [
+          1,
+          4,
+          -9
+        ],
+        [
+          1,
+          5,
+          1
+        ],
+        [
+          2,
+          3,
+          1
+        ],
+        [
+          2,
+          4,
+          -9
+        ],
+        [
+          2,
+          5,
+          1
+        ],
+        [
+          3,
+          4,
+          1
+        ]
+      ],
+      "B_future_past_over_beta": [
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "16",
+          "1",
+          "1",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "-8",
+          "-9",
+          "-9",
+          "1",
+          "0",
+          "0"
+        ],
+        [
+          "16",
+          "1",
+          "1",
+          "0",
+          "0",
+          "0"
+        ]
+      ],
+      "B_orientation": "row=future j, column=past i, B[j,i]/beta=c_ij; this is the directed pair coefficient matrix",
+      "H0": [
+        [
+          "-13",
+          "1/2",
+          "1/2",
+          "8",
+          "-4",
+          "8"
+        ],
+        [
+          "1/2",
+          "3",
+          "0",
+          "1/2",
+          "-9/2",
+          "1/2"
+        ],
+        [
+          "1/2",
+          "0",
+          "3",
+          "1/2",
+          "-9/2",
+          "1/2"
+        ],
+        [
+          "8",
+          "1/2",
+          "1/2",
+          "-19/2",
+          "1/2",
+          "0"
+        ],
+        [
+          "-4",
+          "-9/2",
+          "-9/2",
+          "1/2",
+          "25/2",
+          "0"
+        ],
+        [
+          "8",
+          "1/2",
+          "1/2",
+          "0",
+          "0",
+          "-9"
+        ]
+      ],
+      "H33": "-19/2",
+      "boundary_paired_inner_real_damping": "3898315874/1626610039",
+      "sewing": [
+        {
+          "name": "matter_layer",
+          "left": [
+            0,
+            1,
+            2
+          ],
+          "right": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "shared": [
+            1,
+            2
+          ],
+          "F4_left": 1,
+          "F4_right": 18,
+          "F4_shared": 2,
+          "cross_F4": -24,
+          "cross_pairs": [
+            {
+              "pair": [
+                0,
+                3
+              ],
+              "exists": true,
+              "left_footprint": [
+                1,
+                2
+              ],
+              "right_footprint": [
+                1,
+                2
+              ],
+              "reconstructed_interval": 2,
+              "coefficient": 16
+            },
+            {
+              "pair": [
+                0,
+                4
+              ],
+              "exists": true,
+              "left_footprint": [
+                1,
+                2
+              ],
+              "right_footprint": [
+                1,
+                2
+              ],
+              "reconstructed_interval": 3,
+              "coefficient": -8
+            },
+            {
+              "pair": [
+                0,
+                5
+              ],
+              "exists": true,
+              "left_footprint": [
+                1,
+                2
+              ],
+              "right_footprint": [
+                1,
+                2
+              ],
+              "reconstructed_interval": 2,
+              "coefficient": 16
+            }
+          ],
+          "local_interval_changes": [],
+          "exact_total_action_residual": "0",
+          "omitting_cross_action_fails": true
+        },
+        {
+          "name": "matter_and_inner",
+          "left": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "right": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "shared": [
+            1,
+            2,
+            3
+          ],
+          "F4_left": -16,
+          "F4_right": 18,
+          "F4_shared": 1,
+          "cross_F4": -8,
+          "cross_pairs": [
+            {
+              "pair": [
+                0,
+                4
+              ],
+              "exists": true,
+              "left_footprint": [
+                1,
+                2,
+                3
+              ],
+              "right_footprint": [
+                1,
+                2,
+                3
+              ],
+              "reconstructed_interval": 3,
+              "coefficient": -8
+            },
+            {
+              "pair": [
+                0,
+                5
+              ],
+              "exists": true,
+              "left_footprint": [
+                1,
+                2,
+                3
+              ],
+              "right_footprint": [
+                1,
+                2
+              ],
+              "reconstructed_interval": 2,
+              "coefficient": 16
+            }
+          ],
+          "local_interval_changes": [],
+          "exact_total_action_residual": "0",
+          "omitting_cross_action_fails": true
+        }
+      ],
+      "scalar_cases": [
+        {
+          "epsilon": 0.0,
+          "inner_first": [
+            0.24120223802937354,
+            -0.06128967820729661
+          ],
+          "past_matter_first": [
+            0.24120223802937385,
+            -0.06128967820729697
+          ],
+          "terminal_first": [
+            0.24120223802937407,
+            -0.06128967820729665
+          ],
+          "max_difference": 5.289968061524241e-16
+        },
+        {
+          "epsilon": 0.015625,
+          "inner_first": [
+            0.24056286484175488,
+            -0.06087188572502526
+          ],
+          "past_matter_first": [
+            0.24056286484175507,
+            -0.06087188572502562
+          ],
+          "terminal_first": [
+            0.2405628648417553,
+            -0.060871885725025304
+          ],
+          "max_difference": 4.184101240945297e-16
+        },
+        {
+          "epsilon": 0.000244140625,
+          "inner_first": [
+            0.24119221450803693,
+            -0.0612831073395686
+          ],
+          "past_matter_first": [
+            0.2411922145080364,
+            -0.06128310733956921
+          ],
+          "terminal_first": [
+            0.24119221450803663,
+            -0.06128310733956892
+          ],
+          "max_difference": 8.068235998053638e-16
+        }
+      ]
+    }
+  ],
+  "number_histories": 6,
+  "orbit_sizes": [
+    4,
+    2
+  ],
+  "automorphisms": [
+    1,
+    2
+  ],
+  "identical_induced_outer_boundary": true,
+  "identical_preparation_past": true,
+  "exact_full_action_sewing_cases": 12,
+  "cross_profile_checks": 30,
+  "two_cuts_change_no_local_interval_counts": true,
+  "family_change_requires_interval_updates": [
+    {
+      "pair": [
+        0,
+        3
+      ],
+      "from": -9,
+      "to": 16
+    },
+    {
+      "pair": [
+        2,
+        3
+      ],
+      "from": 0,
+      "to": 1
+    },
+    {
+      "pair": [
+        2,
+        4
+      ],
+      "from": 1,
+      "to": -9
+    }
+  ],
+  "gaussian_cases": 18,
+  "gaussian_pair_comparisons": 36,
+  "max_double_precision_difference": 2.2452871135843694e-15,
+  "exact_damping_min": "205786502/172557261",
+  "exact_damping_max": "3898315874/1626610039",
+  "scalar_norm_prefactor": "(2*pi)^3*pi^(-5/4)",
+  "measure_contract": "muP*muA*muR*dm3; muA and muR carry1/2 each; global quotient1/4",
+  "sewing_measure_correction": "1: local W factors contain no measures; shared variables integrated once. No inherited factor2.",
+  "density_factor_per_inner_stratum_g0": "sqrt(2)/32 before history weight1/6",
+  "inner_atom_control": "Exact symbolic removal of r0,r3,r4,r5 leaves the same dust action on P+A for every history. Hence class probabilities conditioned on the inner atom cannot depend on g0/gplus.",
+  "gravity_phase_record_blindness": "Exact: each orthogonally recorded class has constant F4, so exp(iF4) cancels from every complete 2x2 Kraus effect, all record contrasts and the failure completion. The frozen experiment does not test gravitational-action phase interference.",
+  "domain": "After all five boundary Gaussian pairings Re(zeta)=J*(I+B^2)^(-1)*J^T>0. Both raw H33 signs retained; atom and positive strata included.",
+  "nonclaims": [
+    "physical geometric dynamics",
+    "serial composition of reduced kernels/instruments",
+    "physical mass calibration",
+    "large-N refinement",
+    "singularity resolution"
+  ]
+}

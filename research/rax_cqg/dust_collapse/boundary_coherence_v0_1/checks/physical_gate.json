@@ -1,0 +1,470 @@
+{
+  "id": "BOUNDARY-COHERENCE-PHYSICAL-ELIGIBILITY-0.1",
+  "checks_passed": true,
+  "status": "NOT_ELIGIBLE_FOR_PHYSICAL_TWO_SOURCE_GEOMETRY_RESPONSE",
+  "new_amplitude_integrations": 0,
+  "physical_CST_trajectory_computed": false,
+  "physical_data_points": 0,
+  "six_history_exact_checks": {
+    "histories": [
+      {
+        "class": 1,
+        "relations": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "F4": 9,
+        "A_constraints_verified": 2,
+        "current_edges_verified": 11,
+        "R_induced_relations": []
+      },
+      {
+        "class": 1,
+        "relations": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            5
+          ]
+        ],
+        "F4": 9,
+        "A_constraints_verified": 2,
+        "current_edges_verified": 11,
+        "R_induced_relations": []
+      },
+      {
+        "class": 1,
+        "relations": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "F4": 9,
+        "A_constraints_verified": 2,
+        "current_edges_verified": 11,
+        "R_induced_relations": []
+      },
+      {
+        "class": 1,
+        "relations": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            5
+          ]
+        ],
+        "F4": 9,
+        "A_constraints_verified": 2,
+        "current_edges_verified": 11,
+        "R_induced_relations": []
+      },
+      {
+        "class": 2,
+        "relations": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "F4": -7,
+        "A_constraints_verified": 2,
+        "current_edges_verified": 12,
+        "R_induced_relations": []
+      },
+      {
+        "class": 2,
+        "relations": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            5
+          ]
+        ],
+        "F4": -7,
+        "A_constraints_verified": 2,
+        "current_edges_verified": 12,
+        "R_induced_relations": []
+      }
+    ],
+    "history_count": 6,
+    "A_constraint_identities": 12,
+    "A_constraint": "C_i=1+beta*(T_i-T_0)^2/2 >= 1, i=1,2; beta=4/sqrt(6)>0",
+    "current": "J_ij=beta*r_j*b_ij*(T_j-T_i)/2",
+    "derivative_divergence_identities": 36,
+    "global_shift_identities": 6,
+    "nonzero_edge_current_parities": 68,
+    "action_parity": "S(-T)=S(T)",
+    "current_parity": "J_ij(-T)=-J_ij(T)",
+    "endpoint_clock_derivatives_zero": 12,
+    "common_outer_boundary_order": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        0,
+        5
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        1,
+        5
+      ],
+      [
+        2,
+        4
+      ],
+      [
+        2,
+        5
+      ]
+    ],
+    "common_intrinsic_R_order": "two-element antichain",
+    "oriented_insertion_result": "Every single-current or oriented-cut-current amplitude insertion is exactly zero under the frozen reflection-even clock packets. Holds before Abel removal and in an existing paired Abel limit.",
+    "new_records_preserve_obstruction": "T-independent class recombination and q-only f0/f2 terminal packets are even under T reflection.",
+    "not_claimed": "No physical mean-current, probability, mass-zero, or exclusion of even current correlations."
+  },
+  "oriented_clock_candidate": {
+    "status": "OUTSIDE_FROZEN_CONTRACT",
+    "adopted": false,
+    "chi": "(T1+T2)/2-T0",
+    "chi_range": [
+      -2,
+      2
+    ],
+    "chi_variance_exact": "1/2",
+    "state_factor": "h_eta=(1+eta*chi/2)/sqrt(1+eta^2/8), -1<eta<1",
+    "kinematic_norm_squared": "1",
+    "biased_kinematic_chi_mean": "eta/[2*(1+eta^2/8)]",
+    "symmetries": [
+      "S2(A) invariant",
+      "relative under common clock shift",
+      "reflection sends eta to -eta"
+    ],
+    "support": "Entire original clock cube; no half-clock cut",
+    "source_space": "Multiplication preserves g0/gplus orthogonality through disjoint density strata; weighted scalar input norm unchanged.",
+    "current_insertion_identity": "A_J[h_eta*g]=eta/(2*sqrt(1+eta^2/8))*A_(J*chi)[g]",
+    "nonzero_current_established": false,
+    "physical_selection": "Not derived. The reflection-symmetric action does not select the sign of this new boundary datum; proper-time, current-positivity and physical constraint pairing remain unresolved.",
+    "new_values_computed": "Only exact polynomial clock moments; no new action-weighted integral."
+  },
+  "eligibility": {
+    "same_instrument_for_two_preparations": {
+      "kinematic_status": "PASS_DECLARED_COMMON_INSTRUMENT",
+      "evidence": "The R-record contract fixes one pair f0/f2, one gain and one failure completion on E for both g0/gplus.",
+      "R_bound_exact": "548451/1638400",
+      "physical_status": "UNRESOLVED_DETECTOR_REALIZATION_AND_COHERENCE"
+    },
+    "admissible_physical_sources": {
+      "status": "HOLD_NOT_DERIVED",
+      "rigorous_scope": "Freely varied positive stationary A densities are excluded by C_A>=1. Fixed boundary/off-shell quantum packets are not excluded, but g0/gplus is not a calibrated physical source pair."
+    },
+    "relational_physical_clock": {
+      "status": "HOLD_NOT_DERIVED",
+      "rigorous_scope": "Frozen oriented single-current insertions vanish. A relative kinematic clock exists, but no proper-time/current/mass calibration follows."
+    },
+    "geometric_R_observable": {
+      "status": "HOLD_NOT_DERIVED",
+      "rigorous_scope": "Any intrinsic-order-only function of the common two-element R antichain is constant over the six histories.",
+      "allowed_result": "f0/f2 is a pair of terminal scalar matter records; it is not an areal radius, volume, curvature or energy observable. Full-history geometric observables are not excluded."
+    },
+    "scale_and_refinement": {
+      "status": "HOLD_NOT_DEFINED",
+      "evidence": "Only N=6; no independent geometric scale or continuum/refinement family in the contract."
+    },
+    "global_exterior": {
+      "status": "HOLD_NOT_DEFINED",
+      "evidence": "Original global_exterior adapter is null; no matching solution supplied."
+    }
+  },
+  "separate_canonical_patch": {
+    "status": "SEPARATE_ALTERNATIVE_NOT_TRANSPLANTED",
+    "rederived_now": [
+      "C4=C5=0",
+      "q_t=0",
+      "q_u=Q",
+      "both complete cuts=-Q",
+      "Q2/Q1=16",
+      "identical order and clocks for charge variation"
+    ],
+    "reused_certificate": "sources/prior_einstein_calibration.json",
+    "prior_script_scope": "sources/prior_einstein_check.py is a pinned provenance copy, not a standalone replay target without its original source package. This physical_gate.py re-derives the explicitly listed identities and only reuses the stated interval certificate.",
+    "reused_restricted_obstruction": "Complete-cut flux=-Q<0 while J_tu>0; both global orientations fail a positive local flow for all eight order-convex partitions preserving d,t,u. Absolute-value rectification breaks interior conservation.",
+    "restricted_adapter_exclusion": "Same F(C,T), G(C,T) yield identical curves for Q and 16Q; under hypothetical M=cQ, cannot reproduce nonzero reference collapse slope ratio4.",
+    "limitations": "Different clock normalization, order and boundary roles from six-history quantum pilot. No physical M(Q), radius, exterior or continuum limit follows. Broader derived observables and other order families remain open."
+  },
+  "tests_executable_now": [
+    "Exact source, current, clock-parity and intrinsic R-order exclusions (executed here)",
+    "Finite coherent/dephased instrument comparison using existing amplitudes (separate agent check)",
+    "Two terminal scalar-record diagnostic using analytic Gaussian moments and inherited clock amplitudes (separate agent check)",
+    "Kinematic normalization and parity analysis of an unadopted boundary-clock candidate (executed here)"
+  ],
+  "physical_response_test_executable_now": false,
+  "stop_rule": "Do not increase histories, clock quadrature or precision to stand in for an absent physical source/clock/geometry calibration. Reopen a physical comparison only with one independently derived common source-to-observable adapter and justified scale/refinement/exterior scope.",
+  "source_sha256": {
+    "sources/pilot.json": "442cc81227921135ccb046cdc238f8c2d9cae88f2082614490e59cfceba77ba3",
+    "contracts/r_records.json": "d82df374d7aa839c49a8b9acba15835285b99e45cf92a294727d3e3bf8e80e44",
+    "sources/prior_einstein_check.py": "24ad63b52036c7c1caf16c9e66b197b6bc7241f6a13054ff173bc28bb877c85d",
+    "sources/prior_einstein_contract.json": "ef597edb45b45882dc2efdcb80926b28b86e920cfce78dcff172450d73f51e19",
+    "sources/prior_einstein_calibration.json": "8ad992fb2376e357341965e5ddbfce1537cd94e7b7f2e9438fd9cee8c5e22a68"
+  }
+}

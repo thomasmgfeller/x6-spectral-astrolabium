@@ -1,0 +1,556 @@
+{
+  "id": "HILBERT-INDEPENDENT-BOUNDARY-COHERENCE-AUDIT-0.1",
+  "status": "PASS_CONDITIONAL_FINITE_INSTRUMENT; PHYSICAL_COHERENCE_AND_GEOMETRY_HOLD",
+  "checks": {
+    "original_contract_hash": true,
+    "inherited_amplitude_hash": true,
+    "class1_orbit_size": true,
+    "class1_orbit0_paired_real_damping": true,
+    "class1_orbit0_gravity_value": true,
+    "class1_orbit0_terminal_maximal": true,
+    "class1_orbit1_moment_covariance": true,
+    "class1_orbit1_paired_real_damping": true,
+    "class1_orbit1_gravity_value": true,
+    "class1_orbit1_terminal_maximal": true,
+    "class1_orbit2_moment_covariance": true,
+    "class1_orbit2_paired_real_damping": true,
+    "class1_orbit2_gravity_value": true,
+    "class1_orbit2_terminal_maximal": true,
+    "class1_orbit3_moment_covariance": true,
+    "class1_orbit3_paired_real_damping": true,
+    "class1_orbit3_gravity_value": true,
+    "class1_orbit3_terminal_maximal": true,
+    "class2_orbit_size": true,
+    "class2_orbit0_paired_real_damping": true,
+    "class2_orbit0_gravity_value": true,
+    "class2_orbit0_terminal_maximal": true,
+    "class2_orbit1_moment_covariance": true,
+    "class2_orbit1_paired_real_damping": true,
+    "class2_orbit1_gravity_value": true,
+    "class2_orbit1_terminal_maximal": true,
+    "all_boundary_orders_equal": true,
+    "class_moment_factors_distinct": true,
+    "f0_f2_orthogonal": true,
+    "f2_unit_kinematic_norm": true,
+    "f2_terminal_swap_invariant": true,
+    "f2_global_scalar_parity_even": true,
+    "weighted_f0_norm": true,
+    "weighted_f2_norm": true,
+    "weighted_cross": true,
+    "weighted_gram_positive": true,
+    "class1_independent_exact_eta_agreement": true,
+    "class1_real_eta_interval_certified_by_exact_squares": true,
+    "class1_imag_eta_interval_certified_by_exact_squares": true,
+    "class2_independent_exact_eta_agreement": true,
+    "class2_real_eta_interval_certified_by_exact_squares": true,
+    "class2_imag_eta_interval_certified_by_exact_squares": true,
+    "new_gain_frozen_1_over_1024": true,
+    "old_gain_unchanged_1_over_256": true,
+    "old_bound_exact": true,
+    "direct_old_f0_full_E_contraction": true,
+    "new_two_packet_direct_full_E_contraction": true,
+    "new_two_packet_bound_agrees_dowker": true,
+    "cannot_reuse_old_majorant_for_two_packets": true,
+    "positive_stratum_input_minor_excludes_zero": true,
+    "two_terminal_rows_full_rank_conditional": true,
+    "root_exact_interval_audit_passed": true,
+    "root_two_R_interval_audit_passed": true,
+    "two_R_preparation_contrast_positive": true,
+    "informatik_interval_run_passed": true,
+    "informatik_extended_R_run_passed": true,
+    "exact_Taylor_phase_source_interaction_negative": true,
+    "independent_phase_source_intervals_overlap": true,
+    "dephased_terminal_source_contrast_already_nonzero": true,
+    "no_new_clock_integrals": true,
+    "input0_gamma_nonidentifiability_response_witness": true,
+    "input0_independent_interval_results_overlap": true,
+    "input0_two_R_independent_interval_results_overlap": true,
+    "input0_gamma0_phase_blind_interval_consistency": true,
+    "input0_source_box_order_64": true,
+    "input0_source_box_order_65": true,
+    "input0_source_box_order_66": true,
+    "input0_source_box_order_67": true,
+    "input1_gamma_nonidentifiability_response_witness": true,
+    "input1_independent_interval_results_overlap": true,
+    "input1_two_R_independent_interval_results_overlap": true,
+    "input1_gamma0_phase_blind_interval_consistency": true,
+    "input1_source_box_order_72": true,
+    "input1_source_box_order_73": true,
+    "input1_source_box_order_74": true,
+    "input1_source_box_order_75": true
+  },
+  "all_checks_pass": true,
+  "independence": "History closures/Hessians/Schur damping and terminal moments rebuilt from pilot.json using rational arithmetic in Q(i sqrt6), independently of Dowker symbolic matrices. Inherited amplitude boxes are not reintegrated.",
+  "class_variance_ell_Qinverse_ell": {
+    "1": {
+      "rational_real": "321401222/385831753",
+      "coefficient_i_sqrt6": "-8175324/385831753"
+    },
+    "2": {
+      "rational_real": "4685098522/5224594259",
+      "coefficient_i_sqrt6": "-47339214/5224594259"
+    }
+  },
+  "eta_exact": {
+    "1": {
+      "coefficient_sqrt2_real": "-64430531/771663506",
+      "coefficient_i_sqrt3": "-8175324/385831753"
+    },
+    "2": {
+      "coefficient_sqrt2_real": "-539495737/10449188518",
+      "coefficient_i_sqrt3": "-47339214/5224594259"
+    }
+  },
+  "moment_relation": "a_f2(c,s;g)=((ell^T Q_c^-1 ell-1)/sqrt2)*a_f0(c,s;g); ell=(0,0,0,0,1,1)",
+  "branch_and_factor_audit": {
+    "gaussian_source_identity": "Z(J)=Z(0)*exp(J^2 ell^T Q^-1 ell/2); apply (d_J^2-1)/sqrt2 at J=0.",
+    "branch": "No new square-root determinant choice. The polynomial insertion multiplies the inherited Abel-limit Gaussian; all six boundary-first Schur coefficients have strictly positive rational real part.",
+    "clock_factors": "f2 changes scalar q4,q5 only. Terminal density atoms and constant clock packets stay fixed, scalar action is clock independent, and there is no scalar-dust coupling; all old clock/density/quotient/history-weight factors survive unchanged.",
+    "domain": "Polynomial times Gaussian is Schwartz and has finite inherited weighted norm. All adjoint products and failures here act only on E."
+  },
+  "norms": {
+    "kinematic_Gram": "I_2",
+    "weighted_Gram": "[[65,98sqrt2],[98sqrt2,799]]",
+    "new_gain": "1/1024",
+    "new_separate_bound": "548451/3276800",
+    "new_direct_bound": "548451/1638400",
+    "new_failure_effect_lower": "1089949/1638400",
+    "old_gain_two_packet_majorant": "548451/204800",
+    "old_majorant_warning": "A bound above one does not prove the actual old-gain map fails to contract; it only invalidates transfer of this analytic guarantee."
+  },
+  "two_R_probability_audit": {
+    "source": "checks/root_R_audit.json",
+    "eta_interval_validation": "Both real and imaginary interval endpoints independently certified by exact rational squaring against the derived radical coefficients.",
+    "coherent_R2_given_success": [
+      [
+        "0.0158864389275891530852605660759",
+        "0.0158864417436716739553439772560"
+      ],
+      [
+        "0.0158889612052831849244822598984",
+        "0.0158889628171642011298812245610"
+      ]
+    ],
+    "gplus_minus_g0": [
+      "0.00000251946161151096913828264242232",
+      "0.00000252388957504804462065848500136"
+    ],
+    "source_contrast_kappa1_minus_kappa0": [
+      "-0.00000107494965022938313366827948582",
+      "-0.00000106653359015853120934773109453"
+    ],
+    "phase_control_audit": "Independent exact rational Taylor sin/cos with valid real Lagrange remainder through degree160/161 agrees with interval transcendental propagation. Counterfactual action ablation, not a physical control.",
+    "nonzero_source_alone_not_interference_witness": "The dephased two-terminal-record instrument already has a nonzero source contrast. Separate gamma and gravity-phase controls identify the conditional interference dependence.",
+    "scope": "Conditional terminal matter-mode probabilities, not geometric observables."
+  },
+  "full_E_completion": "For any normalized g in E, each row is bounded by (3/5)*||g||_V*||f_r||_V. Summing four class/stratum rows per terminal packet and using |a+b|^2<=2(|a|^2+|b|^2) gives Q_direct<=new_direct_bound I_E. The new failure sqrt(I_E-Q_direct) therefore exists with a separate flag for every input and makes the CP instrument trace preserving.",
+  "gamma_nonidentifiability": "In the premeasurement class register choose normalized environment markers with arbitrary overlap gamma_s. Measuring the class gives the same old diagonal CP instrument for every overlap, while the coherent analyzer has the cross term gamma_s*a1s*a2s*. Negative certified real cross sums witness differing predictions for gamma=0 and gamma=1. Thus old data cannot select physical gamma or its phase reference.",
+  "rank_scope": {
+    "old_terminal": "The fixed f0 projector has rank one in the terminal scalar space. It gives one tested terminal matrix element, not an arbitrary R distribution.",
+    "not_global_rank_one": "The old map into class/stratum flags already has rank two on E; terminal-projector rank must not be confused with full instrument rank.",
+    "extension": "The quadratic scalar action supplies new information beyond the old f0 matrix: eta1!=eta2 and the certified positive-stratum minor imply rank two for the new coherent f0/f2 map on E.",
+    "no_general_impossibility": "The one-packet obstruction restricts recovery from the old fixed-f matrix alone, not all expanded theories or all possible future terminal observables."
+  },
+  "independent_ledger": [
+    {
+      "item": "Classical versus coherent sum, gamma and phase transport",
+      "decision": "PASS",
+      "qualification": "Explicit new instrument assumption; old classical forgetting cannot generate interference."
+    },
+    {
+      "item": "Inherited interval propagation and complete finite instruments",
+      "decision": "PASS_CONDITIONAL",
+      "qualification": "Depends on inherited source enclosures; exact identity proofs are separate from interval overlap checks."
+    },
+    {
+      "item": "Two normalized invariant even terminal packets and exact moments",
+      "decision": "PASS",
+      "qualification": "Scalar matter-mode records only; no new clock quadrature."
+    },
+    {
+      "item": "New gain and new Failure on all E",
+      "decision": "PASS",
+      "qualification": "lambda_R=1/1024; direct coherent sum bound 0.3347479248046875."
+    },
+    {
+      "item": "Physical gamma, relative detector phase and history measure",
+      "decision": "HOLD",
+      "qualification": "Not identified by the six-history classical instrument or equality of induced boundaries."
+    },
+    {
+      "item": "Geometric R observable / gravitational backreaction",
+      "decision": "HOLD",
+      "qualification": "Both histories induce the same R antichain; scalar Hermite labels do not supply mass, radius, curvature or physical clock calibration."
+    }
+  ],
+  "stop_criteria": [
+    "Do not enlarge phase or packet searches to fit an effect while physical coherence and detector meaning remain unspecified.",
+    "Do not transfer the old failure after direct coherent summation or terminal-packet extension.",
+    "Do not infer a physical history scalar product, gravitational backreaction or arbitrary R distribution from this finite kinematic construction."
+  ],
+  "history_checks": [
+    {
+      "class": 1,
+      "relations": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "variance": {
+        "rational_real": "321401222/385831753",
+        "coefficient_i_sqrt6": "-8175324/385831753"
+      },
+      "boundary_paired_inner_coefficient": {
+        "rational_real": "205786502/172557261",
+        "coefficient_i_sqrt6": "-133607899/517671783"
+      },
+      "F4": 9,
+      "H33_over_beta": "7/2"
+    },
+    {
+      "class": 1,
+      "relations": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          5
+        ]
+      ],
+      "variance": {
+        "rational_real": "321401222/385831753",
+        "coefficient_i_sqrt6": "-8175324/385831753"
+      },
+      "boundary_paired_inner_coefficient": {
+        "rational_real": "205786502/172557261",
+        "coefficient_i_sqrt6": "-133607899/517671783"
+      },
+      "F4": 9,
+      "H33_over_beta": "7/2"
+    },
+    {
+      "class": 1,
+      "relations": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "variance": {
+        "rational_real": "321401222/385831753",
+        "coefficient_i_sqrt6": "-8175324/385831753"
+      },
+      "boundary_paired_inner_coefficient": {
+        "rational_real": "205786502/172557261",
+        "coefficient_i_sqrt6": "-133607899/517671783"
+      },
+      "F4": 9,
+      "H33_over_beta": "7/2"
+    },
+    {
+      "class": 1,
+      "relations": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          5
+        ]
+      ],
+      "variance": {
+        "rational_real": "321401222/385831753",
+        "coefficient_i_sqrt6": "-8175324/385831753"
+      },
+      "boundary_paired_inner_coefficient": {
+        "rational_real": "205786502/172557261",
+        "coefficient_i_sqrt6": "-133607899/517671783"
+      },
+      "F4": 9,
+      "H33_over_beta": "7/2"
+    },
+    {
+      "class": 2,
+      "relations": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "variance": {
+        "rational_real": "4685098522/5224594259",
+        "coefficient_i_sqrt6": "-47339214/5224594259"
+      },
+      "boundary_paired_inner_coefficient": {
+        "rational_real": "3898315874/1626610039",
+        "coefficient_i_sqrt6": "547705561/1626610039"
+      },
+      "F4": -7,
+      "H33_over_beta": "-19/2"
+    },
+    {
+      "class": 2,
+      "relations": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          5
+        ]
+      ],
+      "variance": {
+        "rational_real": "4685098522/5224594259",
+        "coefficient_i_sqrt6": "-47339214/5224594259"
+      },
+      "boundary_paired_inner_coefficient": {
+        "rational_real": "3898315874/1626610039",
+        "coefficient_i_sqrt6": "547705561/1626610039"
+      },
+      "F4": -7,
+      "H33_over_beta": "-19/2"
+    }
+  ],
+  "new_clock_integrals": 0
+}

@@ -1,5 +1,11 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Kohärente Endrandmessung v0.1 · 13. November 2026
+
+Der [neue Anschluss](BOUNDARY_COHERENCE_PUBLICATION.md) ersetzt die unterscheidenden Klassenrecords des Sechshistorienpiloten durch einen ausdrücklich bedingten kohärenten Recordvertrag. Zwei terminale Skalarmoden zeigen unter ideal angenommener Kohärenz eine phasenabhängige Randverteilung; der neue bedingte Präparationskontrast liegt bei etwa 2,52 × 10⁻⁶. Erfolgs- und Misserfolgswahrscheinlichkeiten sind vollständig bilanziert. **Endliches Hilfsinstrument; physische Kohärenz und Geometriedynamik weiterhin offen.**
+
+Alle sieben kleinen Prüfprogramme bestehen und reproduzieren die gespeicherten Ergebnisse bytegleich. Keine neue Uhrquadratur oder große Integration. [Bericht](reports/CST_DUST_Kohaerente_Endrandmessung_v0_1.pdf) · [Originalprüfpaket](packages/CST_DUST_Kohaerente_Endrandmessung_v0_1_Pruefpaket.zip) · [Code und Reproduktion](boundary_coherence_v0_1/README.md).
+
 ## Konsolidierter Forschungsstand · 13. November 2026
 
 Die [neue Übersicht](research_update_2026_11_13/README.md) verbindet die nachfolgenden Arbeiten zur positiven 1.089er-Amplitude, Reduktion, Constraint-Prüfung und den beiden Quellen-/Ordnungsversuchen. Elf Berichte und elf ursprüngliche Prüfpakete sind über ein [gemeinsames Artefaktverzeichnis](research_update_2026_11_13/ARTIFACTS.md) zugänglich.

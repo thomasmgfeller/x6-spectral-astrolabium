@@ -1,5 +1,7 @@
 # CST-DUST: geprüfte Hilfsamplituden, physikalische Hindernisse und neue Kausalordnungsantwort
 
+> **Nachfolgende Arbeit vom selben Tag:** Die [kohärente Endrandmessung v0.1](../BOUNDARY_COHERENCE_PUBLICATION.md) untersucht einen neuen klassenblinden Recordvertrag mit phasenabhängigen terminalen Skalarmoden. Der folgende Archivstand und seine Phasenblindheit beziehen sich auf das frühere klassenauflösende Instrument. Die elf archivierten Pakete bleiben unverändert.
+
 Forschungsstand vom 13. November 2026 · konsolidierte Archivveröffentlichung
 
 **Im neuen endlichen Hilfsversuch sind zwei Präparationen an ihren bedingten Records unterscheidbar. Eine physikalische CST-Kollapsdynamik, gravitative Rückwirkung oder Singularitätsauflösung ist damit weiterhin nicht hergeleitet.**

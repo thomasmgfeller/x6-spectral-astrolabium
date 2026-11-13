@@ -1,0 +1,264 @@
+{
+  "id": "BOUNDARY-COHERENCE-EXACT-RATIONAL-AUDIT-0.1",
+  "inherited_input_sha256": "5085b0f3d5bf2d9a70a184853c9d236fc2d41d7d2f7003b9c57ad980bdb34eae",
+  "scope": "Independent propagation of inherited boxes, not independent reintegration or physical detector derivation. theta=0; gamma specified as auxiliary assumption.",
+  "arithmetic": "Exact rational interval endpoints, decimal display rounded outwards to 30 significant digits.",
+  "results": [
+    {
+      "input": "g0",
+      "Z": [
+        "0.000430064715666910789116122574047",
+        "0.000430064738880311854525049654463"
+      ],
+      "cross": {
+        "real": [
+          "-0.0000298689804006332976527109562167",
+          "-0.0000298689747141883285253016688404"
+        ],
+        "imag": [
+          "-0.0000664184161567224027260240148438",
+          "-0.0000664184104702774335986147274685"
+        ]
+      },
+      "ports": [
+        {
+          "stratum": "atom",
+          "plus_unconditional": [
+            "1.79438810215844798980520280215E-9",
+            "1.79438822507557098356546822765E-9"
+          ],
+          "minus_unconditional": [
+            "2.96167469816623866322366450391E-9",
+            "2.96167486109065214140557271048E-9"
+          ],
+          "plus_conditional": [
+            "0.273440270804865047005577168223",
+            "0.273440304295115982405899179874"
+          ],
+          "minus_conditional": [
+            "0.451318825915277212077499722475",
+            "0.451318875103361017657475923880"
+          ]
+        },
+        {
+          "stratum": "positive",
+          "plus_unconditional": [
+            "1.03098083619270295370968296789E-9",
+            "1.03098093714074891510102957677E-9"
+          ],
+          "minus_unconditional": [
+            "7.75223091080264446319373697837E-10",
+            "7.75223162474627913559818104648E-10"
+          ],
+          "plus_conditional": [
+            "0.157107416563925451473050237612",
+            "0.157107440427144723623233701723"
+          ],
+          "minus_conditional": [
+            "0.118133424817177074563555125101",
+            "0.118133442073137173946150340537"
+          ]
+        }
+      ],
+      "plus_given_success": [
+        "0.430547687368790498478627405835",
+        "0.430547744722260706029132881596"
+      ],
+      "success": [
+        "6.56226677958543074212833517529E-9",
+        "6.56226713379382102241591879979E-9"
+      ],
+      "failure": [
+        "0.999999993437732866206178977584",
+        "0.999999993437733220414569257872"
+      ],
+      "direct_classblind_success": [
+        "5.65073787670230188702977154011E-9",
+        "5.65073832443263979733299560882E-9"
+      ],
+      "direct_classblind_failure": [
+        "0.999999994349261675567360202667",
+        "0.999999994349262123297698112971"
+      ],
+      "partial_coherence": {
+        "0": {
+          "plus_given_success": [
+            "0.5",
+            "0.5"
+          ],
+          "minus_given_success": [
+            "0.5",
+            "0.5"
+          ]
+        },
+        "1/2": {
+          "plus_given_success": [
+            "0.465273853779988885515041593978",
+            "0.465273862265535628375251269450"
+          ],
+          "minus_given_success": [
+            "0.534726137734464371624748730550",
+            "0.534726146220011114484958406022"
+          ]
+        },
+        "1": {
+          "plus_given_success": [
+            "0.430547707559977771030083187956",
+            "0.430547724531071256750502538900"
+          ],
+          "minus_given_success": [
+            "0.569452275468928743249497461100",
+            "0.569452292440022228969916812044"
+          ]
+        }
+      }
+    },
+    {
+      "input": "gplus",
+      "Z": [
+        "0.00112041325275441296688646345392",
+        "0.00112041329837819536697277933438"
+      ],
+      "cross": {
+        "real": [
+          "-0.0000778848956588465553985220644361",
+          "-0.0000778848857985363524636970872365"
+        ],
+        "imag": [
+          "-0.000172335766900790385663323398055",
+          "-0.000172335757040480182728498420855"
+        ]
+      },
+      "ports": [
+        {
+          "stratum": "atom",
+          "plus_unconditional": [
+            "4.66454301233768119405808818639E-9",
+            "4.66454323635022415355489825016E-9"
+          ],
+          "minus_unconditional": [
+            "7.69892475158046010378587375203E-9",
+            "7.69892506705819310964751629725E-9"
+          ],
+          "plus_conditional": [
+            "0.272841719478926427835002518380",
+            "0.272841743692275554036385304397"
+          ],
+          "minus_conditional": [
+            "0.450330903113989969975644156999",
+            "0.450330939904832760028337354433"
+          ]
+        },
+        {
+          "stratum": "positive",
+          "plus_unconditional": [
+            "2.69510259553751830266251683154E-9",
+            "2.69510275289556892286507198191E-9"
+          ],
+          "minus_unconditional": [
+            "2.03757904903640209915947125412E-9",
+            "2.03757920458579538819988433550E-9"
+          ],
+          "plus_conditional": [
+            "0.157643830144478197090093158005",
+            "0.157643845768110785904532342310"
+          ],
+          "minus_conditional": [
+            "0.119183501972836277158143228763",
+            "0.119183515924552003342840039499"
+          ]
+        }
+      ],
+      "plus_given_success": [
+        "0.430485549623404624925095676385",
+        "0.430485589460386339940917646707"
+      ],
+      "success": [
+        "1.70961494866090845777353432300E-8",
+        "1.70961501827727564540524190426E-8"
+      ],
+      "failure": [
+        "0.999999982903849817227243545947",
+        "0.999999982903850513390915422265"
+      ],
+      "direct_classblind_success": [
+        "1.47192912157503989934412100358E-8",
+        "1.47192919784915861528399404642E-8"
+      ],
+      "direct_classblind_failure": [
+        "0.999999985280708021508413847160",
+        "0.999999985280708784249601006559"
+      ],
+      "partial_coherence": {
+        "0": {
+          "plus_given_success": [
+            "0.5",
+            "0.5"
+          ],
+          "minus_given_success": [
+            "0.5",
+            "0.5"
+          ]
+        },
+        "1/2": {
+          "plus_given_success": [
+            "0.465242781863131710223732494607",
+            "0.465242787678763199075250904196"
+          ],
+          "minus_given_success": [
+            "0.534757212321236800924749095804",
+            "0.534757218136868289776267505393"
+          ]
+        },
+        "1": {
+          "plus_given_success": [
+            "0.430485563726263420447464989215",
+            "0.430485575357526398150501808391"
+          ],
+          "minus_given_success": [
+            "0.569514424642473601849498191609",
+            "0.569514436273736579552535010785"
+          ]
+        }
+      }
+    }
+  ],
+  "delta_plus_gplus_minus_g0": [
+    "-0.0000621950988560811040372052096075",
+    "-0.0000620979084041585377097591299610"
+  ],
+  "delta_plus_percentage_points": [
+    "-0.00621950988560811040372052096075",
+    "-0.00620979084041585377097591299610"
+  ],
+  "uniform_bounds": {
+    "old": "264069/1310720",
+    "direct": "264069/655360"
+  },
+  "checks": {
+    "input0_stratum0_two_port_identity_exact": true,
+    "input0_stratum0_phase_covariance_exact": true,
+    "input0_stratum1_two_port_identity_exact": true,
+    "input0_stratum1_phase_covariance_exact": true,
+    "input0_cross_real_excludes_zero": true,
+    "input0_normalizer_positive": true,
+    "input0_gamma0_probability_in_unit_interval": true,
+    "input0_gamma1/2_probability_in_unit_interval": true,
+    "input0_gamma1_probability_in_unit_interval": true,
+    "input1_stratum0_two_port_identity_exact": true,
+    "input1_stratum0_phase_covariance_exact": true,
+    "input1_stratum1_two_port_identity_exact": true,
+    "input1_stratum1_phase_covariance_exact": true,
+    "input1_cross_real_excludes_zero": true,
+    "input1_normalizer_positive": true,
+    "input1_gamma0_probability_in_unit_interval": true,
+    "input1_gamma1/2_probability_in_unit_interval": true,
+    "input1_gamma1_probability_in_unit_interval": true,
+    "source_contrast_excludes_zero": true,
+    "source_contrast_negative": true,
+    "old_effect_bound_below_one": true,
+    "direct_effect_bound_below_one": true,
+    "coherent_input_completeness_exact": true
+  },
+  "all_checks_pass": true
+}

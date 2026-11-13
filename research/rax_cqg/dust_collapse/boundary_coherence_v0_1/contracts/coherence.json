@@ -1,0 +1,109 @@
+{
+  "id": "BOUNDARY-COHERENCE-SIX-HISTORY-0.1",
+  "status": "POSTHOC_CONDITIONAL_INSTRUMENT_CONTRACT_WITH_INHERITED_DIAGNOSTICS",
+  "purpose": "Determine exactly what a class-blind common terminal event adds to the frozen pilot, and propagate existing amplitudes without new quadrature. This is not a physical gravitational detector derivation.",
+  "provenance": {
+    "frozen_pilot_path": "causal_order_execution_v0_1/contracts/pilot.json",
+    "frozen_pilot_id": "SIX-NODE-PAST-COLLAR-FOUR-RECORD-PILOT-0.1",
+    "frozen_pilot_sha256": "442cc81227921135ccb046cdc238f8c2d9cae88f2082614490e59cfceba77ba3",
+    "amplitudes_path": "causal_order_execution_v0_1/checks/informatik/result_64.json",
+    "amplitudes_sha256": "5085b0f3d5bf2d9a70a184853c9d236fc2d41d7d2f7003b9c57ad980bdb34eae",
+    "original_source_commit": "338a3ebb28507790fe916ae577920d0c264acab9",
+    "prior_diagnostics_known": true,
+    "theta_selection": "theta=0 inherits the previously discussed diagnostic; its numerical results were already known, so no fresh blind preregistration is claimed."
+  },
+  "immutable_inputs": {
+    "roles": {"P": [0], "A": [1, 2], "I": [3], "R": [4, 5]},
+    "retained": ["six labelled histories and their 1/6 amplitude weights", "original action and kappa=1", "all original measures and quotient factors", "P and A preparation packets", "E=span(g0,gplus) and its kinematic norm", "terminal f0=R_f", "separate inner-density atom and positive strata", "gain lambda=1/256"],
+    "unchanged_gravity_values": [9, -7],
+    "common_boundary_statement": "Both classes have the same induced order on P union A union R and use the same preparation and terminal packet. Their amplitudes are complex linear functionals on the same E. This supplies a mathematical pairing, not proof of indistinguishable physical environments.",
+    "sum_over_R_I_meaning": "R and I specify terminal and internal variables in an amplitude with retained P/A preparation; they do not remove the initial boundary, its packets, or its integrations.",
+    "interior_record_choice": "Retain the atom/positive I flag in this first comparison. Classical forgetting of that flag sums probabilities. Coherent fusion across its strata is an additional unassessed instrument change.",
+    "terminal_event_count": 1,
+    "terminal_event": "The inherited f0 is one fixed terminal matter packet. Its success event and I strata are not distinct geometric R events."
+  },
+  "notation": {
+    "class": "c in {1,2}",
+    "interior_stratum": "s in {atom,positive}",
+    "amplitude": "a_cs:E->C, with a_cs=exp(i*kappa*F_c)*b_cs and F_1=9,F_2=-7",
+    "state": "rho is positive trace one on E; formulas for g use rho=|g><g| with ||g||_E=1",
+    "lambda": "1/256",
+    "B": "264069/1310720",
+    "B_origin": "4*(3/5)^2*(2257/16)*65/256^2 < 0.202"
+  },
+  "old_classical_instrument": {
+    "accepted_maps": "M_cs=lambda*a_cs*|c,s>",
+    "accepted_effect": "Q_old=lambda^2*sum_cs a_cs^dagger*a_cs <= B*I_E",
+    "failure": "F_old=(I_E-Q_old)^(1/2)",
+    "classical_forgetting": "p_s=lambda^2*sum_c a_cs*rho*a_cs^dagger",
+    "label": "THEOREM",
+    "consequence": "Dropping the displayed class label after the classical record has been formed leaves the class phase invisible."
+  },
+  "coherence_model": {
+    "label": "CONDITIONAL_NEW_INSTRUMENT_ASSUMPTION",
+    "environment": "For each s choose two normalized, preparation-independent environment vectors e_1s,e_2s.",
+    "gamma_definition": "gamma_s=<e_2s|e_1s>",
+    "gamma_domain": "complex, |gamma_s|<=1; fixed independently of rho and g",
+    "environment_realization": "e_1s=(1,0); e_2s=(conjugate(gamma_s),sqrt(1-|gamma_s|^2))",
+    "Gram_matrix": "G_s=[[1,conjugate(gamma_s)],[gamma_s,1]], eigenvalues 1+|gamma_s| and 1-|gamma_s|",
+    "D12_definition": "D_12,s(rho)=lambda^2*gamma_s*a_1s*rho*a_2s^dagger",
+    "D12_pure_input": "lambda^2*gamma_s*a_1s(g)*conjugate(a_2s(g))",
+    "gravity_cross_phase": "D_12,s(g)=lambda^2*gamma_s*exp(16*i*kappa)*b_1s(g)*conjugate(b_2s(g))",
+    "nonidentifiability_label": "NO_GO_FROM_OLD_CLASSICAL_DATA",
+    "nonidentifiability": "The old classical CP instrument is invariant under independent phases of its four Kraus rows. It is also the measured-class reduction of coherent extensions with arbitrary environment overlaps. Therefore neither physical gamma_s nor the relative detector phase reference, hence no physical D_12,s, is identified by the old classical instrument. Existing complex amplitudes fix a computational convention only.",
+    "unknown_overlap_bound": "With x_s=a_1s*rho*a_2s^dagger and q_cs=a_cs*rho*a_cs^dagger, |D_12,s|<=lambda^2*|x_s|<=lambda^2*sqrt(q_1s*q_2s). Hence the direct event probability lies between lambda^2*(q_1s+q_2s-2|x_s|) and lambda^2*(q_1s+q_2s+2|x_s|) when gamma is unspecified.",
+    "candidates": [
+      {"gamma": "0", "interpretation": "Orthogonal unobserved class markers: reproduces old classical coarse-graining; no cross term."},
+      {"gamma": "1", "interpretation": "Identical environment states with declared relative phase reference: maximal coherent class-blind candidate; not established by the pilot."},
+      {"gamma": "complex |gamma| between 0 and 1", "interpretation": "Partial coherence and an environment-induced phase; overlap magnitude and phase require independent physical specification."}
+    ],
+    "input_dependence_warning": "Selecting gamma separately to fit each input need not define a linear CP map and is outside this contract.",
+    "conditional_nonzero": "A nonzero cross term requires gamma_s*a_1s*rho*a_2s^dagger to have a nonzero real part for the selected detector phase. A nonzero gamma alone does not guarantee a nonzero contribution at a particular phase."
+  },
+  "direct_common_event_instrument": {
+    "label": "CONDITIONAL_EXISTENCE_THEOREM_ON_E",
+    "environment_map": "N_s(g)=lambda*[a_1s(g)*e_1s+a_2s(g)*e_2s], with common visible flag s; trace its environment to obtain the accepted outcome map",
+    "gamma_one_Kraus": "C_s(g)=lambda*[a_1s(g)+a_2s(g)]*|s>",
+    "probability": "p_s(rho)=lambda^2*[a_1s*rho*a_1s^dagger+a_2s*rho*a_2s^dagger+2*Re(gamma_s*a_1s*rho*a_2s^dagger)]",
+    "effect_bound": "Q_gamma=sum_s N_s^dagger*N_s <= (1+max_s|gamma_s|)*Q_old <= 2*B*I_E",
+    "uniform_upper_exact": "264069/655360",
+    "new_failure": "F_gamma=(I_E-Q_gamma)^(1/2), with a separate failure flag",
+    "failure_effect_lower_exact": "391291/655360",
+    "complete_positivity": "Each N_s is a bounded linear operator on E; tracing its environment is CP. Adding the positive-square-root failure map makes the total map trace preserving on E.",
+    "normalization_distinction": "This is a separately declared new instrument. It is not deterministic erasure of the old orthogonal class register. Its gamma=1 C_s is sqrt(2) times the diagnostic plus-port Kraus row at theta=0, so its success rate and failure map generally change.",
+    "scope": "The bound here applies only to the inherited terminal f0; adding further terminal packets requires its own bound."
+  },
+  "plus_minus_diagnostic": {
+    "label": "CONDITIONAL_COHERENT_REGISTER_DIAGNOSTIC",
+    "required_resource": "A coherent, accessible class register before irreversible class measurement; partial environment marking is described by the same gamma_s.",
+    "pure_gamma_one_Kraus": "M_+/-s(g)=lambda/sqrt(2)*[a_1s(g)+/-exp(i*theta)*a_2s(g)]*|+/-,s>",
+    "probability": "p_+/-s(rho)=lambda^2/2*[a_1s*rho*a_1s^dagger+a_2s*rho*a_2s^dagger+/-2*Re(exp(-i*theta)*gamma_s*a_1s*rho*a_2s^dagger)]",
+    "operator_identity": "sum_+/-s M_+/-s^dagger*M_+/-s=Q_old for gamma=1; the same accepted effect follows from the register/environment dilation for every allowed gamma_s",
+    "failure": "F_old is preserved exactly",
+    "theta": 0,
+    "gamma_diagnostic_values": [0, 0.5, 1],
+    "interpretation": "Port-resolved interference is a coherence diagnostic. Summing the two ports cancels the cross term, so total success remains phase blind. These ports are not automatically geometric end-boundary records."
+  },
+  "phase_covariance": {
+    "label": "THEOREM",
+    "rephasing": "a_cs -> exp(i*chi_cs)*a_cs",
+    "environment_overlap_transport": "gamma_s -> exp(-i*(chi_1s-chi_2s))*gamma_s",
+    "diagnostic_phase_alternative": "If gamma is held as a physical overlap and the computational row convention changes, theta_s -> theta_s+chi_1s-chi_2s transports the detector coefficients. Use either an overlap transport or the corresponding detector transport, not both to compensate the same change.",
+    "general_detector_transport": "For an amplitude-row basis change D=diag(exp(i*chi_1),exp(i*chi_2)), the fixed physical readout has U -> U*D^dagger.",
+    "meaning": "The invariant is the full phase-referenced cross term. Rephasing amplitude rows while holding a convention-dependent detector matrix fixed changes the experiment."
+  },
+  "controlled_calculations": {
+    "allowed": ["exact algebra on E", "interval propagation of the existing outward complex amplitude rectangles", "theta=0 plus/minus diagnostic", "gamma sensitivity at 0,1/2,1", "kappa=0 by removing only the inherited gravity phases as a counterfactual action ablation"],
+    "forbidden": ["new broad clock integration", "fitting gamma or theta to maximize a desired source contrast", "changing history weights or original packets", "claiming fresh blind selection for an already inspected diagnostic"],
+    "kappa_zero_label": "Counterfactual removal of the F4 phases while holding matter amplitudes fixed; not a calibrated scan of Newton's constant.",
+    "report_all": ["unconditional accepted probabilities", "failure probabilities", "conditional probabilities only when denominator is certified positive", "source contrast intervals", "intervals containing zero as unresolved rather than exact zero"]
+  },
+  "physical_limits": {
+    "T_reflection": "Every T-independent class mixer retains the original global clock reflection; all original oriented one-current amplitudes remain zero.",
+    "A_constraint": "C_i=1+beta/2*(t_i-t0)^2>=1 remains unchanged for i=1,2.",
+    "no_adapter_created": ["mass", "physical clock", "areal radius", "geometrical curvature", "global exterior"],
+    "physical_eligibility": false,
+    "gravity_claim": "Conditional sensitivity to the finite action's relative F4 phase is not a demonstration of physical gravitational backreaction.",
+    "stop_rule": "If no independent common detector/environment and phase reference can be justified, retain the result only as a conditional instrument theorem and gamma sensitivity bound. Do not infer a physical D12 or enlarge scans to manufacture one."
+  }
+}
