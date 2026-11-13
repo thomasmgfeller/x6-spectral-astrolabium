@@ -1,0 +1,37 @@
+name: CST-DUST coherent end-boundary records
+on:
+  pull_request:
+    paths:
+      - 'research/rax_cqg/dust_collapse/boundary_coherence_v0_1/**'
+      - 'research/rax_cqg/dust_collapse/boundary_coherence_publication.json'
+      - 'research/rax_cqg/dust_collapse/verify_boundary_coherence_publication.py'
+      - 'research/rax_cqg/dust_collapse/packages/CST_DUST_Kohaerente_Endrandmessung_v0_1_Pruefpaket.zip'
+      - 'research/rax_cqg/dust_collapse/reports/CST_DUST_Kohaerente_Endrandmessung_v0_1.pdf'
+      - '.github/workflows/cst-dust-boundary-coherence.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'research/rax_cqg/dust_collapse/boundary_coherence_v0_1/**'
+      - 'research/rax_cqg/dust_collapse/boundary_coherence_publication.json'
+      - 'research/rax_cqg/dust_collapse/verify_boundary_coherence_publication.py'
+      - 'research/rax_cqg/dust_collapse/packages/CST_DUST_Kohaerente_Endrandmessung_v0_1_Pruefpaket.zip'
+      - 'research/rax_cqg/dust_collapse/reports/CST_DUST_Kohaerente_Endrandmessung_v0_1.pdf'
+      - '.github/workflows/cst-dust-boundary-coherence.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  boundary-coherence:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Install pinned finite-algebra dependencies
+        run: python -m pip install -r research/rax_cqg/dust_collapse/boundary_coherence_v0_1/requirements.txt
+      - name: Verify original package and replay seven finite programs in isolation
+        run: python -B research/rax_cqg/dust_collapse/verify_boundary_coherence_publication.py

@@ -1,0 +1,27 @@
+{
+  "id": "TERMINAL-SYMMETRIC-EVEN-HERMITE-PAIR-0.1",
+  "frozen_utc": "2026-11-13T12:38:27Z",
+  "freeze_order": "Packet fixed in agents/dowker.md before new Gaussian moments; this gain contract also fixed before any new Gaussian moments or R response values.",
+  "source_contract_sha256": "442cc81227921135ccb046cdc238f8c2d9cae88f2082614490e59cfceba77ba3",
+  "original_action_measures_histories_preparations_unchanged": true,
+  "terminal_packets": {
+    "f0": "original R_f",
+    "f2": "[((q4+q5)^2-1)/sqrt(2)] * original R_f",
+    "choice_rule": "Lowest nonconstant even Hermite mode in the symmetric terminal scalar coordinate; inherited Gaussian width; no fitted parameter."
+  },
+  "terminal_density": "Original r4=r5=0 atomic packet in both records",
+  "terminal_clocks": "Original constant packets in both records",
+  "inner_strata": ["atom", "positive"],
+  "class_combination": "Direct coherent sum of the two class amplitudes, retaining original labelled-history weights; no fitted class phase. Requires the separately declared common-endstate coherence assumption.",
+  "accepted_records": [["f0", "atom"], ["f0", "positive"], ["f2", "atom"], ["f2", "positive"]],
+  "gain": "1/1024",
+  "gain_selection": "Analytic weighted-domain majorant, fixed before new output values; not inherited from old four-record instrument.",
+  "input_weighted_norm_squared": "2257/16",
+  "output_weighted_norm_squared": {"f0": "65", "f2": "799"},
+  "output_weighted_gram_cross": "98*sqrt(2)",
+  "operator_bound_each_original_class_stratum": "C_star < 3/5",
+  "coherent_class_sum_accepted_effect_norm_upper": "2*4*(3/5)^2*(2257/16)*(65+799)/1024^2 = 0.3347479248046875 < 1",
+  "failure": "Recompute (I_E - sum accepted M^dagger M)^(1/2) on E; old Failure is not retained.",
+  "physical_interpretation": "Two terminal scalar matter mode records in the declared finite auxiliary instrument; no derived detector hardware, energy observable, areal radius, curvature, source calibration, or physical CST history measure.",
+  "no_new_clock_quadrature": true
+}

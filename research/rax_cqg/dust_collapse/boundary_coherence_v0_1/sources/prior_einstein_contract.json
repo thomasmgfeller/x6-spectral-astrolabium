@@ -1,0 +1,43 @@
+{
+  "id": "CAUSAL-ORDER-EINSTEIN-CALIBRATION-001",
+  "frozen_before_evaluation": true,
+  "single_comparison_question": "Can the exact signed clock-shift current from the original dust action on the existing admissible positive six-chain family be identified, by orientation and record-preserving aggregation, with the positive conserved dust-mass current required by the established physical reference?",
+  "source_action": "S_d=-(w*C_t+v*C_u)/2 with the original B coefficients 1,-9,16,-8 on the fixed six-chain a<b<c<d<t<u",
+  "source_provenance": [
+    "../execution_v0_1/contracts/hilbert_boundary.json",
+    "../execution_v0_1/checks/hilbert/check.py",
+    "../execution_v0_1/checks/einstein/sources/current_calibration_v0_1__DERIVATION.md",
+    "../execution_v0_1/checks/einstein/sources/current_calibration_v0_1__observables.py",
+    "../execution_v0_1/contracts/physical_target.json"
+  ],
+  "domain": {
+    "h": "1/2000<h<3/2000",
+    "a": "-sqrt(305)/6",
+    "b": "-5/2",
+    "c": "-2",
+    "d": "-4/3+h",
+    "inner_solution": "t=T(h),u=U(h),w=r(h)*v",
+    "v": "0<v<1/r(h)",
+    "fixed_record_roles": {"initial": "d", "later": ["t", "u"]}
+  },
+  "current_convention": "J_yx=w_x*B_yx*(T_x-T_y)/2 for y<x; q_z=outgoing J minus incoming J; complete global cut-pair sums",
+  "allowed_first_adapter_attempts": [
+    "One global orientation sign, identical for all edges and preparations",
+    "Exact sum over edges between order-convex cells, keeping d,t,u in different cells",
+    "Absolute value as an explicit negative control, not a claimed admissible replacement"
+  ],
+  "checks": [
+    "Derive every edge current and node divergence from the original action",
+    "Check complete cut conservation around the stationary interior node t and collar reaction",
+    "Prove signs on the complete predeclared h interval with rational enclosures",
+    "Enumerate all order-convex six-chain partitions preserving d,t,u as separate record cells",
+    "Check whether absolute-value rectification preserves interior conservation",
+    "Use two admissible charge preparations at fixed h with w=1/64 and w=1/4; derive their charge ratio without calling them physical masses",
+    "Test identifiability of spatial volume from count N=lambda*A*V3 when candidate exposure A is uncalibrated"
+  ],
+  "held_fixed": ["original action", "six-chain order", "same prepared a,b,c", "h-domain", "record identities", "clock normalization convention"],
+  "mass_comparison_limit": "The two legal charge preparations have different canonical momenta. They are not assumed to be M=1/4 and M=4 until a physical calibration is derived.",
+  "no_substitution": "No classical R(T;M), no inferred positive current, no metric, no physical CST points are inserted.",
+  "scope_of_possible_no_go": "Only global orientation plus exact order-convex aggregation preserving the declared records, or absolute-value rectification. Does not exclude a different derived current observable or a larger coupled model.",
+  "correspondence_action": "Execute the legal charge response and count-exposure identifiability tests; use their actual result to decide whether physical mass-time-radius comparison is defined. Never substitute target curves."
+}

@@ -1,0 +1,70 @@
+{
+  "schema": "cst-dust.boundary-coherence-publication/1",
+  "publication_date": "2026-11-13",
+  "base_commit": "9f31ae8034c398efc979e47d7fa5b66b61e13517",
+  "original_package_files": 37,
+  "original_manifest_entries": 36,
+  "original_package_modified": false,
+  "artifacts": [
+    {
+      "path": "packages/CST_DUST_Kohaerente_Endrandmessung_v0_1_Pruefpaket.zip",
+      "bytes": 214100,
+      "sha256": "5826255e1d8bc8784354920a8afa29a80bad574eb562f84b2998f9d428dab745"
+    },
+    {
+      "path": "reports/CST_DUST_Kohaerente_Endrandmessung_v0_1.pdf",
+      "bytes": 83063,
+      "sha256": "ff168ae4234bd123b549ce3f70987bf3c3ceefbcd2c5a79bc3d005478e29d666"
+    },
+    {
+      "path": "boundary_coherence_v0_1/report/CST_DUST_Kohaerente_Endrandmessung_v0_1.pdf",
+      "bytes": 58094,
+      "sha256": "3a363c2e5dbb064d70a2ff0caa47f199691e955d9afd2c5d25461000e0153774"
+    },
+    {
+      "path": "boundary_coherence_v0_1/MANIFEST.json",
+      "bytes": 5821,
+      "sha256": "3ec0a4257ecbc6ceb050a1091024ee72750378ca61d26e826019e7524cedb19a"
+    }
+  ],
+  "standalone_embedded_pdf_text_equal": true,
+  "standalone_embedded_pdf_bytes_equal": false,
+  "inherited_source_archive": {
+    "url": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/releases/download/cst-dust-research-2026-11-13-v0.1/CST_DUST_Kausalordnung_Quellen_Pruefpaket_v0_1.zip",
+    "sha256": "95b10da8c4b46c3b58516fda2e1d2d378f1307f831f83a564c8de6585c6c6ceb"
+  },
+  "inherited_source_matches": [
+    {
+      "path": "sources/pilot.json",
+      "sha256": "442cc81227921135ccb046cdc238f8c2d9cae88f2082614490e59cfceba77ba3",
+      "prior_archive_entries": [
+        "causal_order_execution_v0_1/contracts/pilot.json"
+      ]
+    },
+    {
+      "path": "sources/result_64.json",
+      "sha256": "5085b0f3d5bf2d9a70a184853c9d236fc2d41d7d2f7003b9c57ad980bdb34eae",
+      "prior_archive_entries": [
+        "causal_order_execution_v0_1/checks/informatik/result_64.json"
+      ]
+    },
+    {
+      "path": "sources/dowker_history_data.json",
+      "sha256": "72b42d685400088c19ac58a268333f4c1c281ec6ad54639c49962acb9c0f7210",
+      "prior_archive_entries": [
+        "causal_order_execution_v0_1/results/dowker.json"
+      ]
+    }
+  ],
+  "validation": {
+    "original_manifest": "PASS",
+    "zip_crc_and_exact_source_parity": "PASS",
+    "isolated_seven_program_replay": "PASS",
+    "frozen_output_byte_comparison": "PASS",
+    "new_clock_integrations": 0,
+    "inherited_amplitude_quadrature_rerun": false
+  },
+  "scientific_status": "CONDITIONAL_FINITE_AUXILIARY_PHASE_SENSITIVITY",
+  "physical_geometry_comparison": "HOLD_NOT_DERIVED",
+  "scope": "Publication preserves the original package. Reproduction checks its finite calculations under inherited amplitude enclosures, not physical CST evolution."
+}
