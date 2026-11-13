@@ -1,0 +1,316 @@
+{
+  "id": "N11-FULL-MEMORY-COMPOSITION-0.1",
+  "all_checks_pass": true,
+  "parent_contract_sha256": "4a82dce7343045a3adb8d9f15c565cf1e02afda2afc70628a8e59d2f30cd2348",
+  "parent_commit": "da48df345a20b3922b5764ad795e3bf2444d9bb4",
+  "prefix_action_identities": 22,
+  "two_cut_checks": 4,
+  "comparison": "all exact rational monomial coefficients in each action sector",
+  "field_example": {
+    "t0": "-1",
+    "t1": "-4/5",
+    "t2": "-3/5",
+    "t3": "-2/5",
+    "t4": "-1/5",
+    "t5": "0",
+    "t6": "1/5",
+    "t7": "2/5",
+    "t8": "3/5",
+    "t9": "4/5",
+    "t10": "1",
+    "r0": "1/8",
+    "r1": "1/4",
+    "r2": "3/8",
+    "r3": "1/2",
+    "r4": "1/8",
+    "r5": "1/4",
+    "r6": "3/8",
+    "r7": "1/2",
+    "r8": "1/8",
+    "r9": "1/4",
+    "r10": "3/8",
+    "q0": "-17/11",
+    "q1": "-16/11",
+    "q2": "-13/11",
+    "q3": "-8/11",
+    "q4": "-1/11",
+    "q5": "8/11",
+    "q6": "19/11",
+    "q7": "32/11",
+    "q8": "47/11",
+    "q9": "64/11",
+    "q10": "83/11"
+  },
+  "models": {
+    "chain": {
+      "F4": "10",
+      "comparable_interior_pairs": 3,
+      "direct_action_polynomial_sha256": "fe15bf1d59febcc1a3dfd7fc5669d3dae61f1d9c4bbb4cf432dbcc0d31b45652",
+      "cuts": [
+        {
+          "after_vertex": 3,
+          "left": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "right": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "crossing_pairs": 28,
+          "nonzero_crossing_pairs": 10,
+          "direct_action_coefficients": {
+            "gravity": "10",
+            "dust_constant": "-13/8",
+            "dust_beta": "-29/800",
+            "scalar_beta": "2127/242"
+          },
+          "naive_local_sum_coefficients": {
+            "gravity": "9",
+            "dust_constant": "-13/8",
+            "dust_beta": "-69/100",
+            "scalar_beta": "-4625/484"
+          },
+          "required_cross_action_coefficients": {
+            "gravity": "1",
+            "dust_constant": "0",
+            "dust_beta": "523/800",
+            "scalar_beta": "8879/484"
+          },
+          "exact_all_monomial_equality": true,
+          "naive_product_rejected": true,
+          "dropped_pair_negative_control": [
+            0,
+            4,
+            -8
+          ],
+          "zero_weight_long_interval": {
+            "source": 0,
+            "target": 10,
+            "open_interval_size": 9,
+            "b": 0
+          },
+          "Abel_regulator_owners": [
+            [],
+            [
+              4,
+              5,
+              6
+            ]
+          ]
+        },
+        {
+          "after_vertex": 5,
+          "left": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "right": [
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "crossing_pairs": 30,
+          "nonzero_crossing_pairs": 10,
+          "direct_action_coefficients": {
+            "gravity": "10",
+            "dust_constant": "-13/8",
+            "dust_beta": "-29/800",
+            "scalar_beta": "2127/242"
+          },
+          "naive_local_sum_coefficients": {
+            "gravity": "9",
+            "dust_constant": "-13/8",
+            "dust_beta": "-203/400",
+            "scalar_beta": "-15497/484"
+          },
+          "required_cross_action_coefficients": {
+            "gravity": "1",
+            "dust_constant": "0",
+            "dust_beta": "377/800",
+            "scalar_beta": "19751/484"
+          },
+          "exact_all_monomial_equality": true,
+          "naive_product_rejected": true,
+          "dropped_pair_negative_control": [
+            2,
+            6,
+            -8
+          ],
+          "zero_weight_long_interval": {
+            "source": 0,
+            "target": 10,
+            "open_interval_size": 9,
+            "b": 0
+          },
+          "Abel_regulator_owners": [
+            [
+              4,
+              5
+            ],
+            [
+              6
+            ]
+          ]
+        }
+      ],
+      "three_shell_associativity": true,
+      "alternate_natural_labelling_invariant": "unique chain order"
+    },
+    "two_relation_variant": {
+      "F4": "18",
+      "comparable_interior_pairs": 1,
+      "direct_action_polynomial_sha256": "2ac987d8afc59bd11339cde7ae7dcb1e14072caadb802fc279a9341e46b6ab36",
+      "cuts": [
+        {
+          "after_vertex": 3,
+          "left": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "right": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "crossing_pairs": 28,
+          "nonzero_crossing_pairs": 12,
+          "direct_action_coefficients": {
+            "gravity": "18",
+            "dust_constant": "-13/8",
+            "dust_beta": "397/400",
+            "scalar_beta": "2819/121"
+          },
+          "naive_local_sum_coefficients": {
+            "gravity": "9",
+            "dust_constant": "-13/8",
+            "dust_beta": "73/400",
+            "scalar_beta": "-63/44"
+          },
+          "required_cross_action_coefficients": {
+            "gravity": "9",
+            "dust_constant": "0",
+            "dust_beta": "81/100",
+            "scalar_beta": "11969/484"
+          },
+          "exact_all_monomial_equality": true,
+          "naive_product_rejected": true,
+          "dropped_pair_negative_control": [
+            0,
+            4,
+            -8
+          ],
+          "zero_weight_long_interval": {
+            "source": 0,
+            "target": 10,
+            "open_interval_size": 9,
+            "b": 0
+          },
+          "Abel_regulator_owners": [
+            [],
+            [
+              4,
+              5,
+              6
+            ]
+          ]
+        },
+        {
+          "after_vertex": 5,
+          "left": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "right": [
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "crossing_pairs": 29,
+          "nonzero_crossing_pairs": 12,
+          "direct_action_coefficients": {
+            "gravity": "18",
+            "dust_constant": "-13/8",
+            "dust_beta": "397/400",
+            "scalar_beta": "2819/121"
+          },
+          "naive_local_sum_coefficients": {
+            "gravity": "9",
+            "dust_constant": "-13/8",
+            "dust_beta": "-201/400",
+            "scalar_beta": "-15775/484"
+          },
+          "required_cross_action_coefficients": {
+            "gravity": "9",
+            "dust_constant": "0",
+            "dust_beta": "299/200",
+            "scalar_beta": "27051/484"
+          },
+          "exact_all_monomial_equality": true,
+          "naive_product_rejected": true,
+          "dropped_pair_negative_control": [
+            1,
+            6,
+            -8
+          ],
+          "zero_weight_long_interval": {
+            "source": 0,
+            "target": 10,
+            "open_interval_size": 9,
+            "b": 0
+          },
+          "Abel_regulator_owners": [
+            [
+              4,
+              5
+            ],
+            [
+              6
+            ]
+          ]
+        }
+      ],
+      "three_shell_associativity": true,
+      "alternate_natural_labelling_invariant": true
+    }
+  },
+  "memory": "complete causal prefix relation plus all retained fields; no compression asserted",
+  "density_and_clock_measure": "must be supplied once for each integrated variable; no AA seam factor2 transferred",
+  "finite_epsilon_kernel_composition": "exact formal copying kernels; absolute convergence and Fubini as specified in report",
+  "Abel_limit": "joint boundary test pairing, never a product of separately taken singular limits",
+  "geometrical_observable": "number of comparable unordered pairs inside I, a history observable; no radius or physical time calibration",
+  "new_integrations": 0,
+  "physical_evolution": "NOT_DERIVED",
+  "not_proved": [
+    "physical history weights",
+    "physical state pairing",
+    "normalised geometric probabilities",
+    "clock calibration",
+    "finite-memory Markov closure"
+  ]
+}

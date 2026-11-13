@@ -1,0 +1,109 @@
+{
+  "id": "FULLWEIGHT-QUADRATURE-INDEPENDENT-AUDIT-0.1",
+  "all_checks_pass": true,
+  "source_range_for_analytic_truncation": "0<=rho<=1/4 only",
+  "method": "exact Fraction Taylor exponential upper bound with geometric remainder, independently reconstructed ellipse constants",
+  "histories": [
+    {
+      "history": "chain",
+      "exact_incident_weight_sums": [
+        "50",
+        "173/4",
+        "85/2"
+      ],
+      "analytic_truncation_certificates": [
+        {
+          "nodes_per_axis": 64,
+          "rational_exponential_majorant_terms": 513,
+          "reported_W_decimal_bound_certified": true,
+          "reported_dW_decimal_bound_certified": true,
+          "W_bound": "5.2e+21",
+          "dW_bound": "6.4e+24"
+        },
+        {
+          "nodes_per_axis": 96,
+          "rational_exponential_majorant_terms": 513,
+          "reported_W_decimal_bound_certified": true,
+          "reported_dW_decimal_bound_certified": true,
+          "W_bound": "1600000.0",
+          "dW_bound": "1900000000.0"
+        },
+        {
+          "nodes_per_axis": 128,
+          "rational_exponential_majorant_terms": 513,
+          "reported_W_decimal_bound_certified": true,
+          "reported_dW_decimal_bound_certified": true,
+          "W_bound": "4.1e-10",
+          "dW_bound": "5.0e-7"
+        },
+        {
+          "nodes_per_axis": 160,
+          "rational_exponential_majorant_terms": 513,
+          "reported_W_decimal_bound_certified": true,
+          "reported_dW_decimal_bound_certified": true,
+          "W_bound": "1.2e-25",
+          "dW_bound": "1.5e-22"
+        }
+      ],
+      "few_point_float_constraint_discrepancies": [
+        1.4210854715202004e-14,
+        1.7763568394002505e-15,
+        3.3306690738754696e-15
+      ],
+      "few_point_eight_stratum_vs_product_check": true,
+      "stored_W_and_strata_obey_rigorous_norm_bounds_numerically": true
+    },
+    {
+      "history": "two_cover_deleted",
+      "exact_incident_weight_sums": [
+        "173/4",
+        "85/2",
+        "85/2"
+      ],
+      "analytic_truncation_certificates": [
+        {
+          "nodes_per_axis": 64,
+          "rational_exponential_majorant_terms": 513,
+          "reported_W_decimal_bound_certified": true,
+          "reported_dW_decimal_bound_certified": true,
+          "W_bound": "6.9e+14",
+          "dW_bound": "8.9e+17"
+        },
+        {
+          "nodes_per_axis": 96,
+          "rational_exponential_majorant_terms": 513,
+          "reported_W_decimal_bound_certified": true,
+          "reported_dW_decimal_bound_certified": true,
+          "W_bound": "0.2",
+          "dW_bound": "260.0"
+        },
+        {
+          "nodes_per_axis": 128,
+          "rational_exponential_majorant_terms": 513,
+          "reported_W_decimal_bound_certified": true,
+          "reported_dW_decimal_bound_certified": true,
+          "W_bound": "5.4e-17",
+          "dW_bound": "7.0e-14"
+        },
+        {
+          "nodes_per_axis": 160,
+          "rational_exponential_majorant_terms": 513,
+          "reported_W_decimal_bound_certified": true,
+          "reported_dW_decimal_bound_certified": true,
+          "W_bound": "1.6e-32",
+          "dW_bound": "2.1e-29"
+        }
+      ],
+      "few_point_float_constraint_discrepancies": [
+        1.687538997430238e-14,
+        3.552713678800501e-15,
+        3.3306690738754696e-15
+      ],
+      "few_point_eight_stratum_vs_product_check": true,
+      "stored_W_and_strata_obey_rigorous_norm_bounds_numerically": true
+    }
+  ],
+  "new_full_quadratures": 0,
+  "floating_point_evaluation_error_certified": false,
+  "physical_probabilities_certified": false
+}

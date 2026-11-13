@@ -1,5 +1,11 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Interferenz und vollständige innere Randamplitude v0.1 · 13. November 2026
+
+Die [Fortsetzung des stationären Geometriekandidaten](INTERFERENCE_DYNAMICS_PUBLICATION.md) integriert alle drei inneren Uhren und acht Dichtesektoren des N11-Paars unter einem gemeinsamen expliziten Dirichlet-/Boxvertrag. **Das vollständige relative Gewicht ändert Betrag und Phase:** |W₁/W₀| steigt zwischen ρ=1/8 und ρ=1/4 von 1,60555 auf 1,86937. Die skalare Randantwort, konsistente bedingte Recordmodelle und die Zusammensetzung mit vollständigen Schnittdaten sind ausgearbeitet.
+
+**Endliche Randamplitude und bedingte Auslese; physikalische Geometriedynamik weiterhin NOT_DERIVED.** Acht isolierte Prüfprogramme reproduzieren neun JSON-Ergebnisdateien. Analytische Quadraturreste und nicht vollständig zertifizierte Float64-Rundung bleiben getrennt. ρ variiert beide äußeren Dichtekragen und ist keine Zeitvariable. [Bericht](reports/CST_DUST_Interferenz_Dynamik_v0_1.pdf) · [Originalprüfpaket](packages/CST_DUST_Interferenz_Dynamik_v0_1_Pruefpaket.zip) · [Quellen und Reproduktion](interference_dynamics_v0_1/README.md).
+
 ## Stationärer Geometriekandidat v0.1 · 13. November 2026
 
 Der [neue Geometrievergleich](GEOMETRY_DYNAMICS_PUBLICATION.md) konstruiert zwei unterschiedliche Kausalordnungen mit elf Ereignissen, demselben äußeren Kragen und jeweils positiven stationären inneren Staubquellen. Die unveränderte Wirkung liefert **ΔS = 8 + 23ρ/19** für 0 < ρ < 1/2. Die gemeinsame Skalar-Randpaarung besitzt einen endlichen Abel-Grenzwert. Historienfamilie, Quellenpräparation und Uhrsupport sind ausdrücklich neu.

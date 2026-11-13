@@ -1,0 +1,74 @@
+{
+  "schema": "cst-dust.full-interference-publication/1",
+  "publication_date": "2026-11-13",
+  "base_commit": "da48df345a20b3922b5764ad795e3bf2444d9bb4",
+  "original_package_files": 37,
+  "original_manifest_entries": 36,
+  "original_artifacts_modified": false,
+  "artifacts": [
+    {
+      "path": "packages/CST_DUST_Interferenz_Dynamik_v0_1_Pruefpaket.zip",
+      "bytes": 179943,
+      "sha256": "5ab219d6af09e29fc7c6873b3297bda8c77df1590a16516e06aac18f4157c3de"
+    },
+    {
+      "path": "reports/CST_DUST_Interferenz_Dynamik_v0_1.pdf",
+      "bytes": 64754,
+      "sha256": "6c9d01e619149f1fdfe6576bd8be3eba08d6e257a59ff4902c0487234d4f36b1"
+    },
+    {
+      "path": "interference_dynamics_v0_1/report/CST_DUST_Interferenz_Randantwort_Dynamikpruefung_v0_1.pdf",
+      "bytes": 64754,
+      "sha256": "6c9d01e619149f1fdfe6576bd8be3eba08d6e257a59ff4902c0487234d4f36b1"
+    },
+    {
+      "path": "interference_dynamics_v0_1/MANIFEST.json",
+      "bytes": 6036,
+      "sha256": "258fc9efbd70c8a5940ff7da9557f38d8ce37c47d76c976ff2bc3de0e271a4fb"
+    }
+  ],
+  "standalone_embedded_pdf_bytes_equal": true,
+  "reproduction": {
+    "command": "python -B research/rax_cqg/dust_collapse/verify_interference_dynamics_publication.py",
+    "isolated_programs": 8,
+    "json_outputs": 9,
+    "algebraic_comparison": "exact",
+    "float_comparison": {
+      "abs_tol": 5e-12,
+      "rel_tol": 5e-12
+    },
+    "runtime_metadata_compared": false,
+    "source_hashes": "validated independently against original and replay source bytes",
+    "clock_quadrature_nodes_per_axis": [
+      64,
+      96,
+      128,
+      160
+    ],
+    "density_strata": 8,
+    "large_historical_integrations": 0
+  },
+  "scientific_scope": "Full inner dust/clock amplitudes under a declared finite Dirichlet/box contract; conditional scalar response, positive readout family and exact full-memory composition.",
+  "diagnostic_equal_fixed_history_weights": {
+    "source_values": [
+      "1/8",
+      "1/4"
+    ],
+    "abs_W1_over_W0": [
+      1.6055475309572584,
+      1.8693700567978586
+    ],
+    "resolved_geometry_means": [
+      2.473593820044959,
+      2.3474638864575788
+    ]
+  },
+  "numerical_qualification": "Analytic quadrature truncation is bounded and independently rationally certified; Float64 nodes, arithmetic and elementary functions are not fully interval-certified.",
+  "physical_geometry_dynamics": "NOT_DERIVED",
+  "retained_obstructions": [
+    "Physical clock/density boundary pairing and preferred history weights not derived.",
+    "Record overlaps are additional assumptions; positive constructions do not select a physical detector.",
+    "rho changes both past and future collar densities; not time or isolated initial perturbation.",
+    "Exact full-memory composition is not a calibrated four-dimensional geometric evolution."
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "id": "CST-DUST-FULL-WEIGHT-READOUT-COMPOSITION-0.1",
+  "date": "2026-11-13",
+  "parent_commit": "da48df345a20b3922b5764ad795e3bf2444d9bb4",
+  "status": "CONDITIONAL_FINITE_COMPLETION_WITH_EXPLICIT_PHYSICAL_OBSTRUCTIONS",
+  "N": 11,
+  "boundary": [
+    0,
+    1,
+    2,
+    3,
+    7,
+    8,
+    9,
+    10
+  ],
+  "interior": [
+    4,
+    5,
+    6
+  ],
+  "orders": {
+    "C0": "full chain",
+    "C1": "full chain except (4,5),(5,6); retains (4,6)"
+  },
+  "action": "unchanged parent action",
+  "boundary_data": "T_j=(j-5)*Delta, Delta^2=sqrt(6)/38, r_j=rho; scalar boundary integrated against common Schwartz Gaussian",
+  "source_domain": "0<rho<1/2",
+  "audit_sources": [
+    "1/8",
+    "1/4"
+  ],
+  "chosen_optional_quantum_completion": {
+    "interior_clock_measure": "product dT_j/3 on [-3/2,3/2]^3",
+    "ordering_indicator": "none: all clock triples in the box are integrated; classical monotone witnesses do not impose an added quantum indicator",
+    "interior_density_measure": "product (delta_0+1_(0,1) dr)/2, all 8 strata retained",
+    "boundary_densities": "fixed rho, not integrated with nu",
+    "scalar_pairing": "pi^(-2)*exp(-sum_B q_j^2/2), interior Lebesgue dq, common exp(-epsilon*sum_I q_j^2/2), epsilon down to 0",
+    "history_weights": "not derived; equal weights only an explicit diagnostic reference; alternatives parameterized",
+    "record_overlap": "not derived; coherent gamma=1 and resolved gamma=0 analyzed separately"
+  },
+  "exact_amplitude_factorization": "a_c=omega_c*W_c(rho)*g_c; W already contains exp(iF_c) and all clock/density phases; do not multiply by exp(iS_on) again",
+  "physical_status": {
+    "preferred_history_measure": "NOT_DERIVED",
+    "physical_pairing": "NOT_DERIVED",
+    "conditional_finite_decoherence_model": "CONSTRUCTED_AND_CHECKED; not derived uniquely from action",
+    "finite_composition_with_full_memory": "EXACT_AT_COMMON_ABEL_REGULATOR_AND_PAIRED_LIMIT",
+    "four_dimensional_geometric_evolution": "NOT_DERIVED"
+  },
+  "numerical_policy": "bounded local deterministic quadrature; report analytic discretization bounds separately from floating point checks; no external paid compute; analytic quadrature bound certified on 0<=rho<=1/4, actual computed audit points 1/8 and 1/4",
+  "sources": [
+    {
+      "path": "sources/geometry_candidate.json",
+      "original_workspace_path": "geometry_dynamics_v0_1/contracts/geometry_candidate.json",
+      "sha256": "ae78247561a6b734dcde86b6add55b6b9fe76a7d344caa45126320bcec94d7cf"
+    },
+    {
+      "path": "sources/stationary_order_results.json",
+      "original_workspace_path": "geometry_dynamics_v0_1/checks/order_variation/results.json",
+      "sha256": "0a8067f5ad746e0c39c911d6ba1b22e2e6a23c75f0e71b123e2f478568e4b44b"
+    },
+    {
+      "path": "sources/original_pilot.json",
+      "original_workspace_path": "geometry_dynamics_v0_1/checks/geometry/sources/pilot.json",
+      "sha256": "442cc81227921135ccb046cdc238f8c2d9cae88f2082614490e59cfceba77ba3"
+    }
+  ],
+  "source_interpretation": "rho changes densities on BOTH past and future boundary collars; a two-sided boundary-parameter response, not elapsed time, calibrated mass, or a controlled initial perturbation with fixed final filter"
+}

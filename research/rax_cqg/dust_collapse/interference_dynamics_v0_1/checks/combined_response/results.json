@@ -1,0 +1,149 @@
+{
+  "id": "CST-DUST-FULL-WEIGHT-COMBINED-RESPONSE-0.1",
+  "assumptions": [
+    "omega0=omega1=1 fixed independently of rho",
+    "frozen common scalar Gaussian",
+    "fixed Dirichlet boundary clock/density data and chosen inner box measure",
+    "coherent and resolved readouts are separate conditional constructions"
+  ],
+  "rho_is_time": false,
+  "physical_history_weights_derived": false,
+  "results": {
+    "1/8": {
+      "W": [
+        {
+          "real": -0.5905773987344514,
+          "imag": 0.060125310133624266
+        },
+        {
+          "real": 0.333544605520279,
+          "imag": -0.8928326929746065
+        }
+      ],
+      "amplitudes_omega_equal_one": [
+        {
+          "real": -0.009606354731740737,
+          "imag": 0.005653514674351517
+        },
+        {
+          "real": 0.0026519687167153505,
+          "imag": -0.006111494241534008
+        }
+      ],
+      "relative_amplitude_R": {
+        "real": -0.48313833759084285,
+        "imag": 0.35185714608832597
+      },
+      "abs_R": 0.5976839503478948,
+      "phase_R_radians": 2.5121417162395607,
+      "log_R_source_derivative": {
+        "real": 0.894388245208968,
+        "imag": 2.298401541807125
+      },
+      "abs_1_plus_R": 0.6252594895895456,
+      "complex_q0q10_insertion": {
+        "real": 0.04695082480679355,
+        "imag": 0.025161083761862903
+      },
+      "insertion_source_derivative": {
+        "real": -0.1778252471142902,
+        "imag": 0.29686054994104316
+      },
+      "resolved_geometry_mean": 2.473593820044959,
+      "resolved_geometry_mean_derivative": -0.6937849161535088,
+      "unnormalized_coherent_event_weight": 4.857323012993734e-05,
+      "unnormalized_resolved_event_weight": 0.0001686275793438858,
+      "coherent_history_cross_term": {
+        "real": -6.0027174606974224e-05,
+        "imag": -4.3716237569295094e-05
+      },
+      "density_omission_controls_R": {
+        "positive_only": {
+          "real": -0.8246324802271515,
+          "imag": 0.7749869611326853
+        },
+        "atom_only": {
+          "real": -0.32410552450923896,
+          "imag": 0.22160156211965998
+        }
+      },
+      "uncorrected_stationary_phase_only_R": {
+        "real": -0.2617236012383649,
+        "imag": 0.2647254707095675
+      },
+      "phase_only_geometry_mean": 2.756575801232623
+    },
+    "1/4": {
+      "W": [
+        {
+          "real": -0.39442276030044804,
+          "imag": 0.32368735522058123
+        },
+        {
+          "real": 0.025950440709210994,
+          "imag": -0.9534705621904004
+        }
+      ],
+      "amplitudes_omega_equal_one": [
+        {
+          "real": -0.004194041125379955,
+          "imag": 0.008613879242939753
+        },
+        {
+          "real": 0.0005267931012888031,
+          "imag": -0.006646283382324545
+        }
+      ],
+      "relative_amplitude_R": {
+        "real": -0.64778722286494,
+        "imag": 0.2542470227566136
+      },
+      "abs_R": 0.6958949882616438,
+      "phase_R_radians": 2.7675811245925255,
+      "log_R_source_derivative": {
+        "real": 1.499473042358318,
+        "imag": 1.7266117228421662
+      },
+      "abs_1_plus_R": 0.4343908251307726,
+      "complex_q0q10_insertion": {
+        "real": 0.01725347422726517,
+        "imag": 0.08261838909379532
+      },
+      "insertion_source_derivative": {
+        "real": -0.29859080086098194,
+        "imag": 0.7141159117251232
+      },
+      "resolved_geometry_mean": 2.3474638864575788,
+      "resolved_geometry_mean_derivative": -1.3184399339733526,
+      "unnormalized_coherent_event_weight": 1.7320141540910557e-05,
+      "unnormalized_resolved_event_weight": 0.00013623949034305557,
+      "coherent_history_cross_term": {
+        "real": -5.94596744010725e-05,
+        "imag": -2.3337053675883044e-05
+      },
+      "density_omission_controls_R": {
+        "positive_only": {
+          "real": -1.04134841443745,
+          "imag": 0.6519660726545804
+        },
+        "atom_only": {
+          "real": -0.4392576271327218,
+          "imag": 0.13469051288764283
+        }
+      },
+      "uncorrected_stationary_phase_only_R": {
+        "real": -0.2986374981460876,
+        "imag": 0.2222486512639081
+      },
+      "phase_only_geometry_mean": 2.756575801232623
+    }
+  },
+  "high_minus_low_complex_insertion": {
+    "real": -0.02969735057952838,
+    "imag": 0.05745730533193241
+  },
+  "high_minus_low_resolved_geometry_mean": -0.12612993358738045,
+  "numerical_status": "float64 combination of controlled quadrature and high-precision scalar factors; not a rigorous interval enclosure",
+  "interpretation": "Nonzero conditional source response, not a derived physical covariance or four-dimensional geometric evolution.",
+  "all_checks_passed": true
+}

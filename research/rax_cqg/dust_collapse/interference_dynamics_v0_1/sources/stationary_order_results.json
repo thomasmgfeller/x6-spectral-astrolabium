@@ -1,0 +1,615 @@
+{
+  "id": "CST-DUST-MINIMAL-ORDER-VARIATION-0.1",
+  "status": "EXACT_CLASSICAL_STATIONARY_PAIR_AND_JOINT_SCALAR_PAIRING",
+  "action_unchanged": true,
+  "new_finite_history_family": true,
+  "clock_support_change": "N11 affine boundary needs centered support [-5*Delta,5*Delta]; not the original [-1,1] pilot.",
+  "Delta_squared": "sqrt(6)/38",
+  "family_selection": "All subsets of interior covers for N=10 and N=11, four fixed collar layers at each end. Structural admissibility uses real monotone stationary clocks, positive density and absence of boundary-decoupled internal scalar nulls; no probability or phase fit.",
+  "cases": [
+    {
+      "N": 10,
+      "bulk": [
+        4,
+        5
+      ],
+      "boundary": [
+        0,
+        1,
+        2,
+        3,
+        6,
+        7,
+        8,
+        9
+      ],
+      "removed_covers": [],
+      "F4": 9,
+      "equations": [
+        "(u0 - 4)/19",
+        "-(u0**2 - 2*u0*u1 + 6*u1 - 6)/38",
+        "(r0 - r1*u0 + r1*u1 + rho*u0 - 6*rho)/19",
+        "(r1*u0 - 3*r1 - rho)/19"
+      ],
+      "scalar_L_II": [
+        [
+          "0",
+          "-1"
+        ],
+        [
+          "-1",
+          "0"
+        ]
+      ],
+      "scalar_L_IB": [
+        [
+          "8",
+          "-16",
+          "9",
+          "-1",
+          "9",
+          "-16",
+          "8",
+          "0"
+        ],
+        [
+          "0",
+          "8",
+          "-16",
+          "9",
+          "-1",
+          "9",
+          "-16",
+          "8"
+        ]
+      ],
+      "scalar_full_internal_column_rank": 2,
+      "solutions": [
+        {
+          "clock_u_bulk": [
+            "4",
+            "5"
+          ],
+          "density_to_boundary_rho_ratios": [
+            "1",
+            "1"
+          ],
+          "real_clock": true,
+          "positive_density": true,
+          "strict_on_existing_order_relations": true,
+          "action_on_stationary_fields": "-(151*rho - 342)/38",
+          "dust_hessian_determinant": "1/130321",
+          "admissible_classical_and_scalar_structure": true
+        }
+      ],
+      "relabeling_covariance": true
+    },
+    {
+      "N": 10,
+      "bulk": [
+        4,
+        5
+      ],
+      "boundary": [
+        0,
+        1,
+        2,
+        3,
+        6,
+        7,
+        8,
+        9
+      ],
+      "removed_covers": [
+        [
+          4,
+          5
+        ]
+      ],
+      "F4": 8,
+      "equations": [
+        "(u0 - 4)/19",
+        "(u1 - 4)/19",
+        "(r0 - rho)/19",
+        "(r1 - rho)/19"
+      ],
+      "scalar_L_II": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0"
+        ]
+      ],
+      "scalar_L_IB": [
+        [
+          "8",
+          "-16",
+          "9",
+          "-1",
+          "-1",
+          "9",
+          "-16",
+          "8"
+        ],
+        [
+          "8",
+          "-16",
+          "9",
+          "-1",
+          "-1",
+          "9",
+          "-16",
+          "8"
+        ]
+      ],
+      "scalar_full_internal_column_rank": 1,
+      "solutions": [
+        {
+          "clock_u_bulk": [
+            "4",
+            "4"
+          ],
+          "density_to_boundary_rho_ratios": [
+            "1",
+            "1"
+          ],
+          "real_clock": true,
+          "positive_density": true,
+          "strict_on_existing_order_relations": true,
+          "action_on_stationary_fields": "-2*(37*rho - 76)/19",
+          "dust_hessian_determinant": "1/130321",
+          "admissible_classical_and_scalar_structure": false
+        }
+      ],
+      "relabeling_covariance": true
+    },
+    {
+      "N": 11,
+      "bulk": [
+        4,
+        5,
+        6
+      ],
+      "boundary": [
+        0,
+        1,
+        2,
+        3,
+        7,
+        8,
+        9,
+        10
+      ],
+      "removed_covers": [],
+      "F4": 10,
+      "equations": [
+        "(u0 - 4)/19",
+        "-(u0**2 - 2*u0*u1 + 6*u1 - 6)/38",
+        "(9*u0**2 - 18*u0*u2 - u1**2 + 2*u1*u2 + 64*u2 - 131)/38",
+        "(r0 - r1*u0 + r1*u1 + 9*r2*u0 - 9*r2*u2 - 8*rho*u0 + 48*rho)/19",
+        "(r1*u0 - 3*r1 - r2*u1 + r2*u2 + rho*u1 - 7*rho)/19",
+        "-(9*r2*u0 - r2*u1 - 32*r2 + rho)/19"
+      ],
+      "scalar_L_II": [
+        [
+          "0",
+          "-1",
+          "9"
+        ],
+        [
+          "-1",
+          "0",
+          "-1"
+        ],
+        [
+          "9",
+          "-1",
+          "0"
+        ]
+      ],
+      "scalar_L_IB": [
+        [
+          "8",
+          "-16",
+          "9",
+          "-1",
+          "-16",
+          "8",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "8",
+          "-16",
+          "9",
+          "9",
+          "-16",
+          "8",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "8",
+          "-16",
+          "-1",
+          "9",
+          "-16",
+          "8"
+        ]
+      ],
+      "scalar_full_internal_column_rank": 3,
+      "solutions": [
+        {
+          "clock_u_bulk": [
+            "4",
+            "5",
+            "6"
+          ],
+          "density_to_boundary_rho_ratios": [
+            "1",
+            "1",
+            "1"
+          ],
+          "real_clock": true,
+          "positive_density": true,
+          "strict_on_existing_order_relations": true,
+          "action_on_stationary_fields": "-(151*rho - 380)/38",
+          "dust_hessian_determinant": "-1/47045881",
+          "admissible_classical_and_scalar_structure": true
+        }
+      ],
+      "relabeling_covariance": true,
+      "joint_scalar_gaussian": {
+        "boundary_widths": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "matrix_at_epsilon_zero": "diag(1_boundary,0_interior)+i*beta*L/2",
+        "determinant_polynomial_in_z": "-2*z**3*(355740*z**3 + 30461*z**2 - 2512*z - 1)*(104761*z**4 - 122923*z**3 - 173*z**2 + 483*z + 9)",
+        "determinant_at_z_i_beta_over_2": "926142035288/81 + 1320078770660*sqrt(6)*I/243",
+        "no_boundary_decoupled_internal_null": true,
+        "paired_Abel_limit_exists": true,
+        "square_root_convention": "Analytic Gaussian branch from positive interior Abel damping; never an arbitrary principal square root of the final determinant."
+      }
+    },
+    {
+      "N": 11,
+      "bulk": [
+        4,
+        5,
+        6
+      ],
+      "boundary": [
+        0,
+        1,
+        2,
+        3,
+        7,
+        8,
+        9,
+        10
+      ],
+      "removed_covers": [
+        [
+          5,
+          6
+        ]
+      ],
+      "F4": 9,
+      "equations": [
+        "(u0 - 4)/19",
+        "-(u0**2 - 2*u0*u1 + 6*u1 - 6)/38",
+        "-(u0**2 - 2*u0*u2 + 6*u2 - 6)/38",
+        "(r0 - r1*u0 + r1*u1 - r2*u0 + r2*u2 - 8*rho*u0 + 48*rho)/19",
+        "(r1*u0 - 3*r1 - rho)/19",
+        "(r2*u0 - 3*r2 - rho)/19"
+      ],
+      "scalar_L_II": [
+        [
+          "10",
+          "-1",
+          "-1"
+        ],
+        [
+          "-1",
+          "0",
+          "0"
+        ],
+        [
+          "-1",
+          "0",
+          "0"
+        ]
+      ],
+      "scalar_L_IB": [
+        [
+          "8",
+          "-16",
+          "9",
+          "-1",
+          "-16",
+          "8",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "8",
+          "-16",
+          "9",
+          "-1",
+          "9",
+          "-16",
+          "8"
+        ],
+        [
+          "0",
+          "8",
+          "-16",
+          "9",
+          "-1",
+          "9",
+          "-16",
+          "8"
+        ]
+      ],
+      "scalar_full_internal_column_rank": 2,
+      "solutions": [
+        {
+          "clock_u_bulk": [
+            "4",
+            "5",
+            "5"
+          ],
+          "density_to_boundary_rho_ratios": [
+            "-18",
+            "1",
+            "1"
+          ],
+          "real_clock": true,
+          "positive_density": false,
+          "strict_on_existing_order_relations": true,
+          "action_on_stationary_fields": "-(74*rho - 171)/19",
+          "dust_hessian_determinant": "-1/47045881",
+          "admissible_classical_and_scalar_structure": false
+        }
+      ],
+      "relabeling_covariance": true
+    },
+    {
+      "N": 11,
+      "bulk": [
+        4,
+        5,
+        6
+      ],
+      "boundary": [
+        0,
+        1,
+        2,
+        3,
+        7,
+        8,
+        9,
+        10
+      ],
+      "removed_covers": [
+        [
+          4,
+          5
+        ]
+      ],
+      "F4": 9,
+      "equations": [
+        "(u0 - 4)/19",
+        "(u1 - 4)/19",
+        "-(u0**2 - 2*u0*u2 + u1**2 - 2*u1*u2 + 10*u2**2 - 64*u2 + 131)/38",
+        "(r0 - r2*u0 + r2*u2 + rho*u0 - 7*rho)/19",
+        "(r1 - r2*u1 + r2*u2 + rho*u1 - 7*rho)/19",
+        "(r2*u0 + r2*u1 - 10*r2*u2 + 32*r2 - rho)/19"
+      ],
+      "scalar_L_II": [
+        [
+          "0",
+          "0",
+          "-1"
+        ],
+        [
+          "0",
+          "0",
+          "-1"
+        ],
+        [
+          "-1",
+          "-1",
+          "10"
+        ]
+      ],
+      "scalar_L_IB": [
+        [
+          "8",
+          "-16",
+          "9",
+          "-1",
+          "9",
+          "-16",
+          "8",
+          "0"
+        ],
+        [
+          "8",
+          "-16",
+          "9",
+          "-1",
+          "9",
+          "-16",
+          "8",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "8",
+          "-16",
+          "-1",
+          "9",
+          "-16",
+          "8"
+        ]
+      ],
+      "scalar_full_internal_column_rank": 2,
+      "solutions": [],
+      "relabeling_covariance": true
+    },
+    {
+      "N": 11,
+      "bulk": [
+        4,
+        5,
+        6
+      ],
+      "boundary": [
+        0,
+        1,
+        2,
+        3,
+        7,
+        8,
+        9,
+        10
+      ],
+      "removed_covers": [
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "F4": 18,
+      "equations": [
+        "(u0 - 4)/19",
+        "(u1 - 4)/19",
+        "-(u0**2 - 2*u0*u2 + 6*u2 - 6)/38",
+        "(r0 - r2*u0 + r2*u2 + rho*u0 - 7*rho)/19",
+        "(r1 - rho)/19",
+        "(r2*u0 - 3*r2 - rho)/19"
+      ],
+      "scalar_L_II": [
+        [
+          "0",
+          "0",
+          "-1"
+        ],
+        [
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "-1",
+          "0",
+          "0"
+        ]
+      ],
+      "scalar_L_IB": [
+        [
+          "8",
+          "-16",
+          "9",
+          "-1",
+          "9",
+          "-16",
+          "8",
+          "0"
+        ],
+        [
+          "8",
+          "-16",
+          "9",
+          "-1",
+          "-1",
+          "9",
+          "-16",
+          "8"
+        ],
+        [
+          "0",
+          "8",
+          "-16",
+          "9",
+          "-1",
+          "9",
+          "-16",
+          "8"
+        ]
+      ],
+      "scalar_full_internal_column_rank": 3,
+      "solutions": [
+        {
+          "clock_u_bulk": [
+            "4",
+            "4",
+            "5"
+          ],
+          "density_to_boundary_rho_ratios": [
+            "2",
+            "1",
+            "1"
+          ],
+          "real_clock": true,
+          "positive_density": true,
+          "strict_on_existing_order_relations": true,
+          "action_on_stationary_fields": "-3*(35*rho - 228)/38",
+          "dust_hessian_determinant": "-1/47045881",
+          "admissible_classical_and_scalar_structure": true
+        }
+      ],
+      "relabeling_covariance": true,
+      "joint_scalar_gaussian": {
+        "boundary_widths": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "matrix_at_epsilon_zero": "diag(1_boundary,0_interior)+i*beta*L/2",
+        "determinant_polynomial_in_z": "-2*z**4*(334620*z**2 + 77129*z + 402)*(1312573*z**4 - 191273*z**3 - 34556*z**2 + 1380*z - 1)",
+        "determinant_at_z_i_beta_over_2": "10199528741360/81 - 1300970404216*sqrt(6)*I/243",
+        "no_boundary_decoupled_internal_null": true,
+        "paired_Abel_limit_exists": true,
+        "square_root_convention": "Analytic Gaussian branch from positive interior Abel damping; never an arbitrary principal square root of the final determinant."
+      }
+    }
+  ],
+  "stationary_action_difference": "(23*rho + 152)/19",
+  "source_domain": "0<rho<1/2",
+  "audit_sources": [
+    "1/8",
+    "1/4"
+  ],
+  "relative_action_change_between_audit_sources": "23/152",
+  "new_clock_integrations": 0,
+  "physical_history_measure_derived": false,
+  "saddle_dominance_proved": false,
+  "geometry_probability_computed": false,
+  "physical_4d_geometry_dynamics_derived": false,
+  "all_checks_passed": true
+}
