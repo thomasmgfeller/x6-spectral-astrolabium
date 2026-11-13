@@ -1,0 +1,163 @@
+{
+  "id": "TERMINAL-SYMMETRIC-EVEN-HERMITE-PAIR-0.1",
+  "status": "PASS_TWO_ORTHOGONAL_TERMINAL_MATTER_RECORDS",
+  "source_hashes": {
+    "boundary_coherence_v0_1/contracts/r_records.json": "d82df374d7aa839c49a8b9acba15835285b99e45cf92a294727d3e3bf8e80e44",
+    "boundary_coherence_v0_1/sources/pilot.json": "442cc81227921135ccb046cdc238f8c2d9cae88f2082614490e59cfceba77ba3",
+    "boundary_coherence_v0_1/sources/dowker_history_data.json": "72b42d685400088c19ac58a268333f4c1c281ec6ad54639c49962acb9c0f7210",
+    "boundary_coherence_v0_1/sources/result_64.json": "5085b0f3d5bf2d9a70a184853c9d236fc2d41d7d2f7003b9c57ad980bdb34eae"
+  },
+  "packet": "f2=[((q4+q5)^2-1)/sqrt(2)]f0",
+  "orthonormality": {
+    "f0_norm_squared": "1",
+    "f2_norm_squared": "1",
+    "inner_product": "0"
+  },
+  "terminal_swap_invariant": true,
+  "global_scalar_parity": "even",
+  "weighted_norm_squared": {
+    "f0": "65",
+    "f2": "799"
+  },
+  "weighted_gram_cross": "98*sqrt(2)",
+  "eta_definition": "(ell^T Q_C^-1 ell-1)/sqrt(2), ell=(0,0,0,0,1,1)",
+  "eta_exact_by_class": {
+    "1": "-64430531*sqrt(2)/771663506 - 8175324*sqrt(3)*I/385831753",
+    "2": "-539495737*sqrt(2)/10449188518 - 47339214*sqrt(3)*I/5224594259"
+  },
+  "eta_by_class": {
+    "1": {
+      "real": [
+        "-0.1180806531119020342887171836755791876880",
+        "-0.1180806531119020342887171836755791876879"
+      ],
+      "imag": [
+        "-0.0367001327035341857693863178089055684912",
+        "-0.0367001327035341857693863178089055684911"
+      ]
+    },
+    "2": {
+      "real": [
+        "-0.0730164057040001795021991223598384319480",
+        "-0.0730164057040001795021991223598384319479"
+      ],
+      "imag": [
+        "-0.0156938356882223687981196392525576165006",
+        "-0.0156938356882223687981196392525576165005"
+      ]
+    }
+  },
+  "eta_independent_of_preparation_and_inner_stratum": true,
+  "amplitude_relation": "a_f2(c,s;g)=eta_c*a_f0(c,s;g) for c=1,2; s=atom,positive; g in E",
+  "terminal_packet_rank_on_class_response_space": 2,
+  "class_response_determinant_eta2_minus_eta1": {
+    "real": [
+      "0.0450642474079018547865180613157407557400",
+      "0.0450642474079018547865180613157407557401"
+    ],
+    "imag": [
+      "0.0210062970153118169712666785563479519906",
+      "0.0210062970153118169712666785563479519907"
+    ]
+  },
+  "coherent_positive_stratum_input_output_rank": 2,
+  "positive_stratum_R_amplitude_minor": {
+    "real": [
+      "-0.0000000078128233272241004517248315895644",
+      "-0.0000000078124510077136251214649294118372"
+    ],
+    "imag": [
+      "-0.0000000235782174977180291994983385812019",
+      "-0.0000000235778451782075538692384123455243"
+    ]
+  },
+  "positive_stratum_R_amplitude_minor_excludes_zero": true,
+  "minor_identity": "det[[a10+a20, a1plus+a2plus],[eta1*a10+eta2*a20,eta1*a1plus+eta2*a2plus]]=(eta2-eta1)*(a10*a2plus-a1plus*a20), all a at inner positive stratum",
+  "atom_stratum_input_output_rank": 1,
+  "domain_existence": "Polynomial times the original Gaussian is Schwartz; the inherited paired Re(zeta)>0 and Abel/Fresnel branch remain valid. Gaussian differentiation introduces no new clock integral.",
+  "gain": "1/1024",
+  "separate_or_unitarily_mixed_classes_effect_norm_upper_exact": "548451/3276800",
+  "separate_or_unitarily_mixed_classes_effect_norm_upper_decimal": 0.16737396240234376,
+  "direct_coherent_class_sum_effect_norm_upper_exact": "548451/1638400",
+  "direct_coherent_class_sum_effect_norm_upper_decimal": 0.3347479248046875,
+  "old_gain_two_packet_majorant": 2.6779833984375,
+  "old_gain_majorant_above_one_is_not_proof_of_actual_noncontraction": true,
+  "failure_recomputed_on_E": true,
+  "induced_R_geometry_identical_for_all_histories": true,
+  "pure_induced_R_order_observables_constant": true,
+  "density_record_obstruction": "With original atom packet only the 00 endpoint density sector is probed. Other sectors require new endpoint packets and new dust/clock integrals.",
+  "terminal_clock_record_obstruction": "On 00 density support the amplitude is independent of t4,t5; constant-orthogonal clock packets have exactly zero amplitude, and clock bins alone factor identically for every class/preparation.",
+  "one_f_matrix_obstruction": "The old matrix gives only <f0,K_C g>. Orthogonal terminal rows are not recoverable from those entries alone. This extension additionally uses the original quadratic scalar action to derive eta_c.",
+  "physical_interpretation": "Terminal scalar matter mode projections; neither energy eigenstates of a derived physical Hamiltonian nor radius/curvature measurements.",
+  "physical_geometric_eligibility": false,
+  "new_clock_integrations": 0,
+  "history_checks": [
+    {
+      "class": 1,
+      "edge_bits": "111110011111010",
+      "terminal_order": "two-element antichain",
+      "terminal_clock_derivatives_on_density_atoms": [
+        "0",
+        "0"
+      ],
+      "eta_exact": "-64430531*sqrt(2)/771663506 - 8175324*sqrt(3)*I/385831753",
+      "paired_inner_real_damping": "205786502/172557261"
+    },
+    {
+      "class": 1,
+      "edge_bits": "111110011111100",
+      "terminal_order": "two-element antichain",
+      "terminal_clock_derivatives_on_density_atoms": [
+        "0",
+        "0"
+      ],
+      "eta_exact": "-64430531*sqrt(2)/771663506 - 8175324*sqrt(3)*I/385831753",
+      "paired_inner_real_damping": "205786502/172557261"
+    },
+    {
+      "class": 1,
+      "edge_bits": "111110111011010",
+      "terminal_order": "two-element antichain",
+      "terminal_clock_derivatives_on_density_atoms": [
+        "0",
+        "0"
+      ],
+      "eta_exact": "-64430531*sqrt(2)/771663506 - 8175324*sqrt(3)*I/385831753",
+      "paired_inner_real_damping": "205786502/172557261"
+    },
+    {
+      "class": 1,
+      "edge_bits": "111110111011100",
+      "terminal_order": "two-element antichain",
+      "terminal_clock_derivatives_on_density_atoms": [
+        "0",
+        "0"
+      ],
+      "eta_exact": "-64430531*sqrt(2)/771663506 - 8175324*sqrt(3)*I/385831753",
+      "paired_inner_real_damping": "205786502/172557261"
+    },
+    {
+      "class": 2,
+      "edge_bits": "111110111111010",
+      "terminal_order": "two-element antichain",
+      "terminal_clock_derivatives_on_density_atoms": [
+        "0",
+        "0"
+      ],
+      "eta_exact": "-539495737*sqrt(2)/10449188518 - 47339214*sqrt(3)*I/5224594259",
+      "paired_inner_real_damping": "3898315874/1626610039"
+    },
+    {
+      "class": 2,
+      "edge_bits": "111110111111100",
+      "terminal_order": "two-element antichain",
+      "terminal_clock_derivatives_on_density_atoms": [
+        "0",
+        "0"
+      ],
+      "eta_exact": "-539495737*sqrt(2)/10449188518 - 47339214*sqrt(3)*I/5224594259",
+      "paired_inner_real_damping": "3898315874/1626610039"
+    }
+  ],
+  "scope": "Exact finite auxiliary record extension, conditional on the separately declared coherent common-endstate assumption. No source or geometric calibration is supplied."
+}

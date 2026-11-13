@@ -1,0 +1,235 @@
+{
+  "all_checks_pass": true,
+  "exact_sector_sewing_checks": 75,
+  "fixed_boundary": [
+    0,
+    1,
+    2,
+    3,
+    7,
+    8,
+    9,
+    10
+  ],
+  "free_interior": [
+    4,
+    5,
+    6
+  ],
+  "beta": "4/sqrt(6)",
+  "clock_scale": "beta*Delta^2=2/19; T_j=Delta*(u_j-5)",
+  "rho_range_for_both_saddles": "0<rho<1/2",
+  "clock_support_required": "|T|<=5*Delta, approximately1.26945, beyond original[-1,1]",
+  "models": {
+    "chain": {
+      "F4": "10",
+      "on_shell_action_q0": "10 - 151*rho/38",
+      "inner_density_constraints": [
+        "0",
+        "0",
+        "0"
+      ],
+      "inner_clock_stationarity": [
+        "0",
+        "0",
+        "0"
+      ],
+      "inner_scalar_stationarity": [
+        "0",
+        "0",
+        "0"
+      ],
+      "inner_shell_clock_gradient": [
+        "-16*rho/19",
+        "2*rho/19",
+        "rho/19"
+      ],
+      "future_shell_clock_gradient": [
+        "16*rho/19",
+        "-2*rho/19",
+        "-rho/19"
+      ],
+      "boundary_clock_derivative_in_u_units": [
+        "-rho/19",
+        "-2*rho/19",
+        "16*rho/19",
+        "-32*rho/19",
+        "32*rho/19",
+        "-16*rho/19",
+        "2*rho/19",
+        "rho/19"
+      ],
+      "boundary_density_derivative": [
+        "-1/2",
+        "-10/19",
+        "8/19",
+        "-64/19",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "source_derivative_of_stationary_action": "-151/38",
+      "HII_over_beta": [
+        [
+          "0",
+          "1/2",
+          "-9/2"
+        ],
+        [
+          "1/2",
+          "0",
+          "1/2"
+        ],
+        [
+          "-9/2",
+          "1/2",
+          "0"
+        ]
+      ],
+      "HIB_over_beta": [
+        [
+          "-4",
+          "8",
+          "-9/2",
+          "1/2",
+          "8",
+          "-4",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "-4",
+          "8",
+          "-9/2",
+          "-9/2",
+          "8",
+          "-4",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "-4",
+          "8",
+          "1/2",
+          "-9/2",
+          "8",
+          "-4"
+        ]
+      ],
+      "rank_inner_scalar": 3,
+      "rank_including_boundary_coupling": 3,
+      "boundary_decoupled_inner_scalar_null_mode": false
+    },
+    "two_relation_variant": {
+      "F4": "18",
+      "on_shell_action_q0": "18 - 105*rho/38",
+      "inner_density_constraints": [
+        "0",
+        "0",
+        "0"
+      ],
+      "inner_clock_stationarity": [
+        "0",
+        "0",
+        "0"
+      ],
+      "inner_scalar_stationarity": [
+        "0",
+        "0",
+        "0"
+      ],
+      "inner_shell_clock_gradient": [
+        "3*rho/19",
+        "rho/19",
+        "rho/19"
+      ],
+      "future_shell_clock_gradient": [
+        "-3*rho/19",
+        "-rho/19",
+        "-rho/19"
+      ],
+      "boundary_clock_derivative_in_u_units": [
+        "-65*rho/19",
+        "94*rho/19",
+        "12*rho/19",
+        "-78*rho/19",
+        "85*rho/19",
+        "-rho",
+        "-86*rho/19",
+        "3*rho"
+      ],
+      "boundary_density_derivative": [
+        "-1/2",
+        "-10/19",
+        "8/19",
+        "-64/19",
+        "177/38",
+        "-51/38",
+        "-220/19",
+        "180/19"
+      ],
+      "source_derivative_of_stationary_action": "-105/38",
+      "HII_over_beta": [
+        [
+          "0",
+          "0",
+          "1/2"
+        ],
+        [
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "1/2",
+          "0",
+          "0"
+        ]
+      ],
+      "HIB_over_beta": [
+        [
+          "-4",
+          "8",
+          "-9/2",
+          "1/2",
+          "-9/2",
+          "8",
+          "-4",
+          "0"
+        ],
+        [
+          "-4",
+          "8",
+          "-9/2",
+          "1/2",
+          "1/2",
+          "-9/2",
+          "8",
+          "-4"
+        ],
+        [
+          "0",
+          "-4",
+          "8",
+          "-9/2",
+          "1/2",
+          "-9/2",
+          "8",
+          "-4"
+        ]
+      ],
+      "rank_inner_scalar": 2,
+      "rank_including_boundary_coupling": 3,
+      "boundary_decoupled_inner_scalar_null_mode": false
+    }
+  },
+  "variant_minus_chain_action": "23*rho/19 + 8",
+  "derivative_of_difference_wrt_rho": "23/19",
+  "future_collar_required_for_stationarity": true,
+  "alternate_natural_labelling_action_invariance": true,
+  "new_integrations": 0,
+  "physical_scope": "Exact stationary-action source response and conditional sewing. Not a normalized physical geometric probability or calibrated mass/radius dynamics."
+}

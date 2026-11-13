@@ -1,5 +1,7 @@
 # Kohärente Endrandmessung v0.1
 
+> **Nachfolgende Arbeit:** Der [stationäre Geometriekandidat v0.1](GEOMETRY_DYNAMICS_PUBLICATION.md) führt zu einem expliziten Vergleich zweier geometrischer Ordnungen mit positiven gelösten Quellen und gemeinsamem äußerem Rand. Der hier dokumentierte Endrandversuch und sein Originalpaket bleiben unverändert.
+
 Publikation vom 13. November 2026 · Anschluss an den [konsolidierten Forschungsstand](research_update_2026_11_13/README.md).
 
 **Eine klassenblinde kohärente Auslese macht im erklärten endlichen Hilfsmodell die relative Gravitationsphase in terminalen Skalarmodenwahrscheinlichkeiten sichtbar. Physikalische Geometriedynamik, Rückwirkung und Singularitätsauflösung bleiben offen.**

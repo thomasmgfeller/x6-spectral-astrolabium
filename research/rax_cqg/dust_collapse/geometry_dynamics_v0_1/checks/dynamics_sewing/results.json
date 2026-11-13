@@ -1,0 +1,286 @@
+{
+  "all_checks_pass": true,
+  "exact_prefix_sector_identities_checked": 66,
+  "fixed_boundary": [
+    0,
+    1,
+    2,
+    3,
+    6,
+    7,
+    8,
+    9
+  ],
+  "free_interior": [
+    4,
+    5
+  ],
+  "clock_normalization": "T_j=Delta*(u_j-9/2), beta*Delta^2=2/19",
+  "beta": "4/sqrt(6)",
+  "rho_range": "0<rho<1",
+  "clock_support_qualification": "Affine chain/fork collar requires |T|<=4.5*Delta, approximately1.1425; exceeds original [-1,1] box.",
+  "results": {
+    "chain": {
+      "F4": "9",
+      "on_shell_total_action_q0": "9 - 151*rho/38",
+      "inner_density_constraints": [
+        "0",
+        "0"
+      ],
+      "inner_clock_stationarity": [
+        "0",
+        "0"
+      ],
+      "inner_scalar_stationarity": [
+        "0",
+        "0"
+      ],
+      "inner_shell_clock_gradient": [
+        "2*rho/19",
+        "rho/19"
+      ],
+      "future_shell_clock_gradient": [
+        "-2*rho/19",
+        "-rho/19"
+      ],
+      "boundary_clock_derivative_in_u_units": [
+        "-rho/19",
+        "-2*rho/19",
+        "16*rho/19",
+        "-32*rho/19",
+        "32*rho/19",
+        "-16*rho/19",
+        "2*rho/19",
+        "rho/19"
+      ],
+      "HII_over_beta": [
+        [
+          "0",
+          "1/2"
+        ],
+        [
+          "1/2",
+          "0"
+        ]
+      ],
+      "HIB_over_beta": [
+        [
+          "-4",
+          "8",
+          "-9/2",
+          "1/2",
+          "-9/2",
+          "8",
+          "-4",
+          "0"
+        ],
+        [
+          "0",
+          "-4",
+          "8",
+          "-9/2",
+          "1/2",
+          "-9/2",
+          "8",
+          "-4"
+        ]
+      ],
+      "full_scalar_rank": 9,
+      "incoming_nonzero_predecessors_by_vertex": [
+        [],
+        [
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          1,
+          2,
+          3
+        ],
+        [
+          1,
+          2,
+          3,
+          4
+        ],
+        [
+          2,
+          3,
+          4,
+          5
+        ],
+        [
+          3,
+          4,
+          5,
+          6
+        ],
+        [
+          4,
+          5,
+          6,
+          7
+        ],
+        [
+          5,
+          6,
+          7,
+          8
+        ]
+      ]
+    },
+    "fork": {
+      "F4": "8",
+      "on_shell_total_action_q0": "8 - 74*rho/19",
+      "inner_density_constraints": [
+        "0",
+        "0"
+      ],
+      "inner_clock_stationarity": [
+        "0",
+        "0"
+      ],
+      "inner_scalar_stationarity": [
+        "0",
+        "0"
+      ],
+      "inner_shell_clock_gradient": [
+        "rho/19",
+        "rho/19"
+      ],
+      "future_shell_clock_gradient": [
+        "-rho/19",
+        "-rho/19"
+      ],
+      "boundary_clock_derivative_in_u_units": [
+        "-33*rho/19",
+        "78*rho/19",
+        "-50*rho/19",
+        "-13*rho/19",
+        "11*rho/19",
+        "68*rho/19",
+        "-110*rho/19",
+        "49*rho/19"
+      ],
+      "HII_over_beta": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0"
+        ]
+      ],
+      "HIB_over_beta": [
+        [
+          "-4",
+          "8",
+          "-9/2",
+          "1/2",
+          "1/2",
+          "-9/2",
+          "8",
+          "-4"
+        ],
+        [
+          "-4",
+          "8",
+          "-9/2",
+          "1/2",
+          "1/2",
+          "-9/2",
+          "8",
+          "-4"
+        ]
+      ],
+      "full_scalar_rank": 8,
+      "incoming_nonzero_predecessors_by_vertex": [
+        [],
+        [
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          1,
+          2,
+          3
+        ],
+        [
+          0,
+          1,
+          2,
+          3
+        ],
+        [
+          2,
+          3,
+          4,
+          5
+        ],
+        [
+          3,
+          4,
+          5,
+          6
+        ],
+        [
+          4,
+          5,
+          6,
+          7
+        ],
+        [
+          4,
+          5,
+          6,
+          7,
+          8
+        ]
+      ],
+      "full_null_vector": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "1",
+        "-1",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "unpaired_scalar_contrast": "(q4-q5)/sqrt(2)",
+      "Abel_zero_mode_factor": "sqrt(2*pi/epsilon)",
+      "full_amplitude_status": "DIVERGENT_FOR_GENERIC_BOUNDARY_PACKETS_WITH_UNCHANGED_SCALAR_MEASURE"
+    },
+    "on_shell_action_difference_chain_minus_fork": "1 - 3*rho/38"
+  },
+  "density_factor": {
+    "D(C)": "1/2+i*(exp(-i*C/2)-1)/C; D(0)=1",
+    "C_D(C)": "C/2+i*(exp(-i*C/2)-1)",
+    "D(2*pi)": "1/2 - I/pi",
+    "D_squared_minus_D_at_2pi": "-1/4 - 1/pi**2",
+    "automatic_constraint_projector": false
+  },
+  "new_integrations": 0,
+  "scope": "Exact action composition and stationary boundary response only. No physical state pairing, normalized geometry dynamics, or finite fork amplitude derived."
+}

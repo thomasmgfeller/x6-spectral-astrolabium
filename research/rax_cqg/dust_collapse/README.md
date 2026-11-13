@@ -1,5 +1,11 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Stationärer Geometriekandidat v0.1 · 13. November 2026
+
+Der [neue Geometrievergleich](GEOMETRY_DYNAMICS_PUBLICATION.md) konstruiert zwei unterschiedliche Kausalordnungen mit elf Ereignissen, demselben äußeren Kragen und jeweils positiven stationären inneren Staubquellen. Die unveränderte Wirkung liefert **ΔS = 8 + 23ρ/19** für 0 < ρ < 1/2. Die gemeinsame Skalar-Randpaarung besitzt einen endlichen Abel-Grenzwert. Historienfamilie, Quellenpräparation und Uhrsupport sind ausdrücklich neu.
+
+**Stationärer geometrischer Wirkungsvergleich; physikalische Geometriedynamik weiterhin NOT_DERIVED.** Neun isolierte Prüfprogramme reproduzieren 13 JSON-Dateien bytegleich. Die fehlende physikalische Paarung und die instabile Vorwärts-Uhrrekursion bleiben ausgewiesen. [Bericht](reports/CST_DUST_Geometriedynamik_Stationaerer_Kandidat_v0_1.pdf) · [Originalprüfpaket](packages/CST_DUST_Geometriedynamik_Stationaerer_Kandidat_v0_1_Pruefpaket.zip) · [Quellen und neuer Vertrag](geometry_dynamics_v0_1/README.md).
+
 ## Kohärente Endrandmessung v0.1 · 13. November 2026
 
 Der [neue Anschluss](BOUNDARY_COHERENCE_PUBLICATION.md) ersetzt die unterscheidenden Klassenrecords des Sechshistorienpiloten durch einen ausdrücklich bedingten kohärenten Recordvertrag. Zwei terminale Skalarmoden zeigen unter ideal angenommener Kohärenz eine phasenabhängige Randverteilung; der neue bedingte Präparationskontrast liegt bei etwa 2,52 × 10⁻⁶. Erfolgs- und Misserfolgswahrscheinlichkeiten sind vollständig bilanziert. **Endliches Hilfsinstrument; physische Kohärenz und Geometriedynamik weiterhin offen.**

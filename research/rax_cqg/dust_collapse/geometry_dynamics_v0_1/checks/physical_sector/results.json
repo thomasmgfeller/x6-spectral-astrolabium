@@ -1,0 +1,301 @@
+{
+  "status": "PASS_EXACT_FINITE_REGULARITY_AND_SCOPE_CHECKS",
+  "chain_checks": [
+    {
+      "N": 9,
+      "inner_nodes": [
+        4
+      ],
+      "C_jacobian_in_scaled_clocks": [
+        [
+          "-2/19"
+        ]
+      ],
+      "dust_Hessian_determinant_scaled_clocks": "-1/361",
+      "dust_Hessian_inertia": [
+        1,
+        1,
+        0
+      ],
+      "scalar_Hessian_divided_by_beta": [
+        [
+          "0"
+        ]
+      ],
+      "scalar_Hessian_determinant_divided_by_beta_power_m": "0",
+      "joint_Hessian_nondegenerate": false,
+      "outer_clock_max_abs_squared": "8*sqrt(6)/19",
+      "original_clock_box_supported": false,
+      "local_C_coarea_factor_in_scaled_clocks": "19/2"
+    },
+    {
+      "N": 10,
+      "inner_nodes": [
+        4,
+        5
+      ],
+      "C_jacobian_in_scaled_clocks": [
+        [
+          "-2/19",
+          "0"
+        ],
+        [
+          "-2/19",
+          "-2/19"
+        ]
+      ],
+      "dust_Hessian_determinant_scaled_clocks": "1/130321",
+      "dust_Hessian_inertia": [
+        2,
+        2,
+        0
+      ],
+      "scalar_Hessian_divided_by_beta": [
+        [
+          "0",
+          "1/2"
+        ],
+        [
+          "1/2",
+          "0"
+        ]
+      ],
+      "scalar_Hessian_determinant_divided_by_beta_power_m": "-1/4",
+      "joint_Hessian_nondegenerate": true,
+      "outer_clock_max_abs_squared": "81*sqrt(6)/152",
+      "original_clock_box_supported": false,
+      "local_C_coarea_factor_in_scaled_clocks": "361/4"
+    },
+    {
+      "N": 11,
+      "inner_nodes": [
+        4,
+        5,
+        6
+      ],
+      "C_jacobian_in_scaled_clocks": [
+        [
+          "-2/19",
+          "0",
+          "0"
+        ],
+        [
+          "-2/19",
+          "-2/19",
+          "0"
+        ],
+        [
+          "36/19",
+          "-2/19",
+          "-2/19"
+        ]
+      ],
+      "dust_Hessian_determinant_scaled_clocks": "-1/47045881",
+      "dust_Hessian_inertia": [
+        3,
+        3,
+        0
+      ],
+      "scalar_Hessian_divided_by_beta": [
+        [
+          "0",
+          "1/2",
+          "-9/2"
+        ],
+        [
+          "1/2",
+          "0",
+          "1/2"
+        ],
+        [
+          "-9/2",
+          "1/2",
+          "0"
+        ]
+      ],
+      "scalar_Hessian_determinant_divided_by_beta_power_m": "-9/4",
+      "joint_Hessian_nondegenerate": true,
+      "outer_clock_max_abs_squared": "25*sqrt(6)/38",
+      "original_clock_box_supported": false,
+      "local_C_coarea_factor_in_scaled_clocks": "6859/8"
+    },
+    {
+      "N": 12,
+      "inner_nodes": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "C_jacobian_in_scaled_clocks": [
+        [
+          "-2/19",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "-2/19",
+          "-2/19",
+          "0",
+          "0"
+        ],
+        [
+          "36/19",
+          "-2/19",
+          "-2/19",
+          "0"
+        ],
+        [
+          "-96/19",
+          "36/19",
+          "-2/19",
+          "-2/19"
+        ]
+      ],
+      "dust_Hessian_determinant_scaled_clocks": "1/16983563041",
+      "dust_Hessian_inertia": [
+        4,
+        4,
+        0
+      ],
+      "scalar_Hessian_divided_by_beta": [
+        [
+          "0",
+          "1/2",
+          "-9/2",
+          "8"
+        ],
+        [
+          "1/2",
+          "0",
+          "1/2",
+          "-9/2"
+        ],
+        [
+          "-9/2",
+          "1/2",
+          "0",
+          "1/2"
+        ],
+        [
+          "8",
+          "-9/2",
+          "1/2",
+          "0"
+        ]
+      ],
+      "scalar_Hessian_determinant_divided_by_beta_power_m": "252",
+      "joint_Hessian_nondegenerate": true,
+      "outer_clock_max_abs_squared": "121*sqrt(6)/152",
+      "original_clock_box_supported": false,
+      "local_C_coarea_factor_in_scaled_clocks": "130321/16"
+    }
+  ],
+  "new_N11_pair_independent_checks": [
+    {
+      "removed_covers": [],
+      "F4": 10,
+      "stationary_action": "-(151*rho - 380)/38",
+      "dust_Hessian_determinant_in_u_coordinates": "-1/47045881",
+      "constraint_Coarea_factor_in_u_coordinates": "6859/8",
+      "scalar_internal_nullity": 0,
+      "scalar_full_internal_column_rank": 3,
+      "scalar_Gaussian_Abel_pairing_exists": "Follows exactly from full internal column rank: if (E_B+i beta L/2)x=0, its real quadratic form gives x_B=0 and then L[:,I]x_I=0.",
+      "full_physical_pairing_constructed": false
+    },
+    {
+      "removed_covers": [
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "F4": 18,
+      "stationary_action": "-3*(35*rho - 228)/38",
+      "dust_Hessian_determinant_in_u_coordinates": "-1/47045881",
+      "constraint_Coarea_factor_in_u_coordinates": "6859/8",
+      "scalar_internal_nullity": 1,
+      "scalar_full_internal_column_rank": 3,
+      "scalar_Gaussian_Abel_pairing_exists": "Follows exactly from full internal column rank: if (E_B+i beta L/2)x=0, its real quadratic form gives x_B=0 and then L[:,I]x_I=0.",
+      "full_physical_pairing_constructed": false
+    }
+  ],
+  "stationary_phase_local_diagnostic": {
+    "dimension": 6,
+    "signature": 0,
+    "assumption": "Compact smooth interior localization equal to one near this positive saddle; fixed prepared boundary; semiclassical parameter epsilon -> 0+. Not a physical pairing or full-amplitude result.",
+    "measure": "Each inner clock dt/2, positive density dr/2, scalar dq; x=T/Delta.",
+    "coefficient_of_(2pi_epsilon)^3_exp(i_Sstar/epsilon)": "57/32",
+    "relative_remainder": "O(epsilon) for a smooth localized nondegenerate interior saddle",
+    "full_original_measure_or_history_sum_evaluated": false
+  },
+  "finite_metric_nonuniqueness_examples": [
+    {
+      "input_metric": [
+        [
+          "1",
+          "0"
+        ],
+        [
+          "0",
+          "1"
+        ]
+      ],
+      "output_metric": [
+        [
+          "5/9",
+          "-2/9",
+          "-2/9"
+        ],
+        [
+          "-2/9",
+          "8/9",
+          "-1/9"
+        ],
+        [
+          "-2/9",
+          "-1/9",
+          "8/9"
+        ]
+      ]
+    },
+    {
+      "input_metric": [
+        [
+          "2",
+          "0"
+        ],
+        [
+          "0",
+          "3"
+        ]
+      ],
+      "output_metric": [
+        [
+          "26/9",
+          "-17/9",
+          "-20/9"
+        ],
+        [
+          "-17/9",
+          "35/9",
+          "11/9"
+        ],
+        [
+          "-20/9",
+          "11/9",
+          "32/9"
+        ]
+      ]
+    }
+  ],
+  "derived_physical_Hilbert_space": false,
+  "derived_gauge_constraints": false,
+  "new_large_integrations": 0,
+  "physical_geometry_status": "HOLD_NOT_DERIVED"
+}

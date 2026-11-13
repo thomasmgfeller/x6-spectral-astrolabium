@@ -1,0 +1,239 @@
+{
+  "id": "SOURCE-CLOCK-REGULAR-CHAIN-0.1",
+  "checks_passed": true,
+  "checks": [
+    "affine_constraints_full_clock_balances_and_cut_flux_N9_to_N16",
+    "exact_clock_recursion_and_growing_linearized_mode_interval_minus6_minus5",
+    "boxed_N9_stationary_regular_dust_but_scalar_null_mode",
+    "boxed_N10_quartic_root_exists_unique_in_rational_interval",
+    "boxed_N10_positive_density_causal_monotone_clock_stationary_all_fields",
+    "boxed_N10_nonzero_constraint_jacobian_and_scalar_hessian",
+    "full_action_independent_partial_derivative_checks_all_six_inner_fields",
+    "boxed_N10_complete_cut_flux_negative_so_Q_minus_flux_positive"
+  ],
+  "original_action": "F4(C)-sum(r)/2-beta/4*sum_{i<j}b_ij*(r_j*(Tj-Ti)^2+(qj-qi)^2)",
+  "beta": "2*sqrt(6)/3",
+  "interval_coefficients": [
+    1,
+    -9,
+    16,
+    -8
+  ],
+  "layer_moments": [
+    "0",
+    "-1",
+    "-19"
+  ],
+  "affine_family": [
+    {
+      "N": 9,
+      "free_nodes": [
+        4
+      ],
+      "clock_half_extent": "2*sqrt(19)*2**(3/4)*3**(1/4)/19",
+      "clock_half_extent_decimal": "1.0155609790773255391",
+      "all_constraints_and_clock_balances_zero": true,
+      "complete_bulk_cut_current": "-19*beta*rho*Delta/2"
+    },
+    {
+      "N": 10,
+      "free_nodes": [
+        4,
+        5
+      ],
+      "clock_half_extent": "9*sqrt(19)*2**(3/4)*3**(1/4)/76",
+      "clock_half_extent_decimal": "1.1425061014619912315",
+      "all_constraints_and_clock_balances_zero": true,
+      "complete_bulk_cut_current": "-19*beta*rho*Delta/2"
+    },
+    {
+      "N": 11,
+      "free_nodes": [
+        4,
+        5,
+        6
+      ],
+      "clock_half_extent": "5*sqrt(19)*2**(3/4)*3**(1/4)/38",
+      "clock_half_extent_decimal": "1.2694512238466569239",
+      "all_constraints_and_clock_balances_zero": true,
+      "complete_bulk_cut_current": "-19*beta*rho*Delta/2"
+    },
+    {
+      "N": 12,
+      "free_nodes": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "clock_half_extent": "11*sqrt(19)*2**(3/4)*3**(1/4)/76",
+      "clock_half_extent_decimal": "1.3963963462313226162",
+      "all_constraints_and_clock_balances_zero": true,
+      "complete_bulk_cut_current": "-19*beta*rho*Delta/2"
+    },
+    {
+      "N": 13,
+      "free_nodes": [
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "clock_half_extent": "3*sqrt(19)*2**(3/4)*3**(1/4)/19",
+      "clock_half_extent_decimal": "1.5233414686159883086",
+      "all_constraints_and_clock_balances_zero": true,
+      "complete_bulk_cut_current": "-19*beta*rho*Delta/2"
+    },
+    {
+      "N": 14,
+      "free_nodes": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "clock_half_extent": "13*sqrt(19)*2**(3/4)*3**(1/4)/76",
+      "clock_half_extent_decimal": "1.6502865910006540010",
+      "all_constraints_and_clock_balances_zero": true,
+      "complete_bulk_cut_current": "-19*beta*rho*Delta/2"
+    },
+    {
+      "N": 15,
+      "free_nodes": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "clock_half_extent": "7*sqrt(19)*2**(3/4)*3**(1/4)/38",
+      "clock_half_extent_decimal": "1.7772317133853196934",
+      "all_constraints_and_clock_balances_zero": true,
+      "complete_bulk_cut_current": "-19*beta*rho*Delta/2"
+    },
+    {
+      "N": 16,
+      "free_nodes": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "clock_half_extent": "15*sqrt(19)*2**(3/4)*3**(1/4)/76",
+      "clock_half_extent_decimal": "1.9041768357699853858",
+      "all_constraints_and_clock_balances_zero": true,
+      "complete_bulk_cut_current": "-19*beta*rho*Delta/2"
+    }
+  ],
+  "Delta": "sqrt(19)*2**(3/4)*3**(1/4)/38",
+  "Delta_decimal": "0.2538902447693313847700825",
+  "clock_recursion": "(2*p1**2 - 18*p2**2 + 32*p3**2 - 16*p4**2 + sqrt(6))/(4*(p1 - 9*p2 + 16*p3 - 8*p4))",
+  "denominator_required_nonzero": true,
+  "recursion_linearized_polynomial": "z**4 + z**3 - 18*z**2 + 48*z - 32",
+  "growing_real_multiplier_interval": [
+    "-6",
+    "-5"
+  ],
+  "recursion_scope": "Algebraic stationary-field continuation on a fixed order; not stable physical Cauchy evolution.",
+  "boxed_N9": {
+    "a": "sqrt(163 - 8*sqrt(6))/16",
+    "a_decimal": "0.7484465214950402082143355",
+    "C4": 0,
+    "clock_Euler4": 0,
+    "constraint_derivative": "sqrt(6)*(-49 + 4*sqrt(163 - 8*sqrt(6)))/6",
+    "scalar_H44": 0
+  },
+  "boxed_N10": {
+    "clock": "(-1,-a,-b,-1/4,-d,d,1/4,b,a,1)",
+    "free_nodes": [
+      4,
+      5
+    ],
+    "boundary_nodes": [
+      0,
+      1,
+      2,
+      3,
+      6,
+      7,
+      8,
+      9
+    ],
+    "density": "r_j=rho with 0<rho<1",
+    "scalar": "q_j=0",
+    "a_definition": "25*b/24 + d/24 + 11/48",
+    "quartic_P": "d**4 - 51005557*d**3/19740809 + d**2*(35776683/157926472 + 16786337*sqrt(6)/19740809) + d*(319522123/315852944 - 27770925*sqrt(6)/39481618) - 1495146359/5053647104 + 45523425*sqrt(6)/315852944",
+    "b_of_d": "-8305238123922333759*d**3/1389190616741856743 - 1300197438105771150*sqrt(6)*d**3/1389190616741856743 + 5701095382512127275*sqrt(6)*d**2/2778381233483713486 + 72833484102135969603*d**2/5556762466967426972 - 49929509501422412421*sqrt(6)*d/11113524933934853944 - 25090037747746174337*d/22227049867869707888 - 7551647286224769877/3865573890064297024 + 66685405871751705225*sqrt(6)/44454099735739415776",
+    "d_interval": [
+      "12321176887857/100000000000000",
+      "6160588443929/50000000000000"
+    ],
+    "b_interval": [
+      "3373787126789246518463732850425919246498419691030076249360695127618531945097322581169238820270113674989986571819203957/6945953083709283715000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "73343198408480392017926502917915939037475444606942529717041831715585070662848898679789289769091206615712892319041667/150998980080636602500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    ],
+    "a_interval": [
+      "4936129731844944089575461790965421246498419691030076249360695127618531945097322581169238820270113674989986571819203957/6668114960360912366400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "107307168083604312659077859966893939037475444606942529717041831715585070662848898679789289769091206615712892319041667/144959020877411138400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    ],
+    "root_existence": "opposite rationally enclosed endpoint signs; polynomial derivative interval excludes zero",
+    "P_at_left_interval": [
+      "2566655066695073554460300517780638547358537841018884340739418028519699374159559/4486547500000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "112932822934583236396253222782348096083775665052939932899949315340961677387609909/197408090000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    ],
+    "P_at_right_interval": [
+      "-24085274157480354563738045763546042326734104221713495984224270270933539302218659/12338005625000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "-96341096629921418254952183054184169306936416874826728460042900011934192884125819/49352022500000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    ],
+    "P_derivative_interval": [
+      "-62287151181789387354713406673145394554985021709417223278382165179484638218531043/246760112500000000000000000000000000000000000000000000000000000000000000000000000",
+      "-124574302363555679998604163922546812505631555529038976813296577885656186114399411/493520225000000000000000000000000000000000000000000000000000000000000000000000000"
+    ],
+    "constraint_jacobian_over_beta": "Matrix([[23*b/3 + 2*d/3 - 49/12, 0], [-2*d, 23*b/3 + 2*d/3 - 49/12]])",
+    "constraint_diagonal_over_beta_interval": [
+      "-251268479447969473630334670140380753501580308969923750639304872381468054902677418830761179729886325010013428180796043/905993880483819615000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "-125634239723555959655122580439033402138064774040321816508037870541543374754475330364846335310902247838603476662041659/452996940241909807500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    ],
+    "all_inner_Euler_equations": "ZERO_EXACT_ON_QUARTIC_ROOT",
+    "scalar_hessian": "Matrix([[0, sqrt(6)/3], [sqrt(6)/3, 0]])",
+    "scalar_determinant": "-2/3",
+    "cut_current_over_beta_rho": "-b/3 - d/3 - 25/12",
+    "cut_current_over_beta_rho_interval": [
+      "-345230558449018116643969874258780313012491814868980843239013943905195023554282966226596429923030402205237630773013889/150998980080636602500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "-15880605688654572680679264485583539748832806563676692083120231709206177315032440860389746273423371224996662190606401319/6945953083709283715000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    ],
+    "full_positive_particle_edge_flow": false
+  },
+  "new_assumptions": [
+    "thick four-layer fixed past and future collars",
+    "chain control family replaces six-history pilot",
+    "directed boundary clock data and positive terminal densities"
+  ],
+  "unchanged": [
+    "full action formula",
+    "beta",
+    "massless scalar",
+    "positive density range (0,1)",
+    "clock box [-1,1] for boxed witnesses"
+  ],
+  "not_established": [
+    "physical quantum pairing",
+    "physical mass normalization",
+    "four-dimensional continuum approximation",
+    "order/metric evolution",
+    "physical geometry response",
+    "stable clock Cauchy evolution",
+    "global exterior",
+    "singularity resolution"
+  ],
+  "new_large_integrations": 0
+}
