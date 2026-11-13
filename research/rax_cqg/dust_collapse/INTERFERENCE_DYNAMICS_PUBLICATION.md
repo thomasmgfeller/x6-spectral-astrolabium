@@ -32,14 +32,14 @@ Die Unterbestimmtheit ist konkret: Bei gleichen Wirkungsamplituden verändern zu
 
 Die Uhrquadraturen mit 64, 96, 128 und 160 Knoten pro Achse besitzen unabhängig hergeleitete Bernstein-/Chebyshev-Restschranken für `0≤ρ≤1/4`. Bei n=160 liegen die W-Reste unter `1,2×10^-25` bzw. `1,6×10^-32`; ein unabhängiger rationaler Taylor-Audit bestätigt die Obergrenzen. **Diese Schranken enthalten nicht die Rundungsfehler der Float64-Auswertung.** Die Zahlen sind kontrollierte Näherungen, keine vollständigen Intervallzertifikate.
 
-Alle 37 Dateien des Originalpakets, das ursprüngliche ZIP und der separate Bericht werden unverändert veröffentlicht. Der separate Bericht stimmt bytegleich mit dem eingebetteten PDF überein. Die sechs Fachberichte dokumentieren KI-gestützte interne Gegenprüfungen, keine externe Begutachtung.
+Das ursprüngliche ZIP mit seinen 37 Einträgen und der separate Bericht werden unverändert veröffentlicht. Im entpackten Git-Quellbaum wird ausschließlich eine automatisch erzeugte Python-Bytecodedatei unter `__pycache__` weggelassen und das zugehörige Manifest entsprechend abgeleitet. Alle wissenschaftlichen Dateien bleiben bytegleich; der bereinigte Quellbaum umfasst 36 Dateien. Der separate Bericht stimmt bytegleich mit dem eingebetteten PDF überein. Die sechs Fachberichte dokumentieren KI-gestützte interne Gegenprüfungen, keine externe Begutachtung.
 
 ```sh
 python -m pip install -r research/rax_cqg/dust_collapse/interference_dynamics_v0_1/requirements.txt
 python -B research/rax_cqg/dust_collapse/verify_interference_dynamics_publication.py
 ```
 
-Die Publikationsprüfung kontrolliert Dateigrößen, SHA-256, vollständige ZIP/Quellcode-Parität und beide PDF-Kopien. Anschließend laufen acht Programme isoliert; neun JSON-Dateien werden reproduziert. Algebraische Angaben stimmen exakt, Floatwerte innerhalb `abs_tol=rel_tol=5e-12`; Laufzeiten werden ausgenommen, Quellhashes gegen die jeweiligen Original-/Replaydateien validiert. Diese Reproduktionstoleranz ist keine wissenschaftliche Fehlerschranke.
+Die Publikationsprüfung kontrolliert Dateigrößen, SHA-256, alle Originalarchiveinträge, die bytegleiche Übernahme sämtlicher wissenschaftlicher Dateien, die exakt begrenzte Cache-Auslassung, das daraus abgeleitete Manifest und beide PDF-Kopien. Anschließend laufen acht Programme isoliert; neun JSON-Dateien werden reproduziert. Algebraische Angaben stimmen exakt, Floatwerte innerhalb `abs_tol=rel_tol=5e-12`; Laufzeiten werden ausgenommen, Quellhashes gegen die jeweiligen Original-/Replaydateien validiert. Diese Reproduktionstoleranz ist keine wissenschaftliche Fehlerschranke.
 
 Die auf diese Veröffentlichung begrenzte CI wiederholt nur die kleinen Rechnungen dieses Pakets. Angaben zum früheren Publikationsstatus in den Originaldateien beschreiben den Stand vor dieser Veröffentlichung.
 
