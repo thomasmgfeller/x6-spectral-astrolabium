@@ -1,0 +1,503 @@
+{
+  "id": "COMPACT-WARD-AND-ONE-SIDED-SOURCE-0.1",
+  "exact_checks_pass": true,
+  "exact": {
+    "positive_density_Ward": "integral_0^1 (fprime-i*C*f/2)*exp(-i*r*C/2) dr/2 = [f(1)*exp(-i*C/2)-f(0)]/2",
+    "full_density_atom_not_differentiated": true,
+    "D_at_C4pi": "1/2",
+    "C_D_at_C4pi": "2*pi",
+    "clock_Ward": "integral (partial_T psi+i*E_T*psi)*exp(iS) dT/(2L) = [psi*exp(iS)]_-L^L/(2L)",
+    "global_shift_fixed_box": "sum_B partial_TB K = -sum_I boundary_face_integrals/(2L)",
+    "nonzero_toy_shift_flux": "for S=-(t-tau)^2/2,L=3/2,tau=1/4: Kprime=(exp(-49i/32)-exp(-25i/32))/3, abs=2*sin(3/8)/3>0",
+    "packet_polynomial_integral": "2048/3003",
+    "positive_density_amplitude_squared": "3003/(1024*eps)",
+    "clock_amplitude_squared": "3003*L/(1024*eta)",
+    "scaled_variance": "1/15",
+    "polynomial_packet_regularities": "C2 compact support, sufficient for the displayed first-order integration by parts; not called C-infinity",
+    "smooth_packet": "b(u)=exp(-1/(1-u^2))*1_|u|<1, J=integral_-1^1 b(u)^2 du; density prefactor sqrt(2/(eps*J)), clock prefactor sqrt(2L/(eta*J))",
+    "packet_centers": [
+      "1/8",
+      "1/4"
+    ],
+    "density_half_width": "1/32",
+    "clock_half_width": "1/16",
+    "packet_mean_density": "center",
+    "packet_mean_clock": "center",
+    "normalization_scope": "exact in declared positive auxiliary product measure; no physical inner product derived",
+    "past_constraints": {
+      "chain": {
+        "C_past": [
+          "1",
+          "20/19",
+          "-16/19",
+          "128/19"
+        ],
+        "sum_C_past": "151/19",
+        "global_action_shift_derivative": 0
+      },
+      "two_cover_deleted": {
+        "C_past": [
+          "1",
+          "20/19",
+          "-16/19",
+          "128/19"
+        ],
+        "sum_C_past": "151/19",
+        "global_action_shift_derivative": 0
+      }
+    },
+    "one_sided_factorization": "Wc(rhoP,rhoF)=exp(-i*151*rhoP/38)*Vc(rhoF)",
+    "relative_past_density_response": "EXACT_ZERO_AT_FIXED_PAST_CLOCKS_AND_FUTURE_DATA",
+    "scope": "Not a general no-go: integrating common past-clock packets can couple a past density preparation to future amplitudes."
+  },
+  "new_experiment": "Separate past/future collar densities with fixed affine boundary clocks; common fixed future in each one-sided comparison.",
+  "source_pairs": [
+    [
+      "1/8",
+      "1/8"
+    ],
+    [
+      "1/8",
+      "1/4"
+    ],
+    [
+      "1/4",
+      "1/8"
+    ],
+    [
+      "1/4",
+      "1/4"
+    ]
+  ],
+  "original_inner_density_measure": "(delta0+dr_(0,1))/2 at each of3innernodes",
+  "original_inner_clock_measure": "dT/3 on[-3/2,3/2] at eachof3innernodes",
+  "all_8_density_strata_in_product_D": true,
+  "added_clock_theta_restriction": false,
+  "quadrature": {
+    "chain": [
+      {
+        "nodes_per_axis": 128,
+        "sources": {
+          "1/8|1/8": {
+            "rho_past": "1/8",
+            "rho_future": "1/8",
+            "W": {
+              "real": -0.5905773987344501,
+              "imag": 0.06012531013362503
+            },
+            "partial_past": {
+              "real": 0.23891899553098322,
+              "imag": 2.3467680844447893
+            },
+            "partial_future": {
+              "real": 0.5727677365837377,
+              "imag": 0.518184912620986
+            },
+            "past_derivative_identity_discrepancy": 6.280369834735101e-16
+          },
+          "1/8|1/4": {
+            "rho_past": "1/8",
+            "rho_future": "1/4",
+            "W": {
+              "real": -0.5010074210493793,
+              "imag": 0.09661460462149375
+            },
+            "partial_past": {
+              "real": 0.3839159288906725,
+              "imag": 1.9908452783804296
+            },
+            "partial_future": {
+              "real": 0.7949733313063472,
+              "imag": 0.05290396031841441
+            },
+            "past_derivative_identity_discrepancy": 1.1116099371267112e-15
+          },
+          "1/4|1/8": {
+            "rho_past": "1/4",
+            "rho_future": "1/8",
+            "W": {
+              "real": -0.4905571107424005,
+              "imag": 0.33429094799991554
+            },
+            "partial_past": {
+              "real": 1.3283666617891385,
+              "imag": 1.9493190453184868
+            },
+            "partial_future": {
+              "real": 0.7504853954136926,
+              "imag": 0.18262024808336683
+            },
+            "past_derivative_identity_discrepancy": 6.280369834735101e-16
+          },
+          "1/4|1/4": {
+            "rho_past": "1/4",
+            "rho_future": "1/4",
+            "W": {
+              "real": -0.39442276030044626,
+              "imag": 0.32368735522058084
+            },
+            "partial_past": {
+              "real": 1.2862313325870454,
+              "imag": 1.5673114948780889
+            },
+            "partial_future": {
+              "real": 0.7241153251134259,
+              "imag": -0.3323227684669844
+            },
+            "past_derivative_identity_discrepancy": 4.965068306494546e-16
+          }
+        },
+        "past_common_phase_residual": {
+          "1/8": 2.2887833992611187e-16,
+          "1/4": 2.830524433501838e-16
+        }
+      },
+      {
+        "nodes_per_axis": 160,
+        "sources": {
+          "1/8|1/8": {
+            "rho_past": "1/8",
+            "rho_future": "1/8",
+            "W": {
+              "real": -0.5905773987344515,
+              "imag": 0.06012531013362404
+            },
+            "partial_past": {
+              "real": 0.23891899553097992,
+              "imag": 2.346768084444794
+            },
+            "partial_future": {
+              "real": 0.5727677365837337,
+              "imag": 0.5181849126209841
+            },
+            "past_derivative_identity_discrepancy": 4.847302891456678e-16
+          },
+          "1/8|1/4": {
+            "rho_past": "1/8",
+            "rho_future": "1/4",
+            "W": {
+              "real": -0.5010074210493812,
+              "imag": 0.0966146046214932
+            },
+            "partial_past": {
+              "real": 0.3839159288906698,
+              "imag": 1.9908452783804365
+            },
+            "partial_future": {
+              "real": 0.7949733313063433,
+              "imag": 0.052903960318416536
+            },
+            "past_derivative_identity_discrepancy": 7.108895957933346e-16
+          },
+          "1/4|1/8": {
+            "rho_past": "1/4",
+            "rho_future": "1/8",
+            "W": {
+              "real": -0.490557110742402,
+              "imag": 0.3342909479999157
+            },
+            "partial_past": {
+              "real": 1.328366661789138,
+              "imag": 1.9493190453184914
+            },
+            "partial_future": {
+              "real": 0.7504853954136881,
+              "imag": 0.1826202480833671
+            },
+            "past_derivative_identity_discrepancy": 9.42055475210265e-16
+          },
+          "1/4|1/4": {
+            "rho_past": "1/4",
+            "rho_future": "1/4",
+            "W": {
+              "real": -0.39442276030044787,
+              "imag": 0.32368735522058106
+            },
+            "partial_past": {
+              "real": 1.2862313325870458,
+              "imag": 1.5673114948780957
+            },
+            "partial_future": {
+              "real": 0.7241153251134238,
+              "imag": -0.3323227684669806
+            },
+            "past_derivative_identity_discrepancy": 2.220446049250313e-16
+          }
+        },
+        "past_common_phase_residual": {
+          "1/8": 2.482534153247273e-16,
+          "1/4": 2.2887833992611187e-16
+        }
+      }
+    ],
+    "two_cover_deleted": [
+      {
+        "nodes_per_axis": 128,
+        "sources": {
+          "1/8|1/8": {
+            "rho_past": "1/8",
+            "rho_future": "1/8",
+            "W": {
+              "real": 0.3335446055202787,
+              "imag": -0.8928326929746061
+            },
+            "partial_past": {
+              "real": -3.5478351747148817,
+              "imag": -1.3254009324621598
+            },
+            "partial_future": {
+              "real": 1.1971226907779051,
+              "imag": 0.4239163664374408
+            },
+            "past_derivative_identity_discrepancy": 4.965068306494546e-16
+          },
+          "1/8|1/4": {
+            "rho_past": "1/8",
+            "rho_future": "1/4",
+            "W": {
+              "real": 0.4771776616563871,
+              "imag": -0.8258819634504811
+            },
+            "partial_past": {
+              "real": -3.28179411792165,
+              "imag": -1.8961533397398553
+            },
+            "partial_future": {
+              "real": 1.0931138053626326,
+              "imag": 0.6434229875151196
+            },
+            "past_derivative_identity_discrepancy": 1.6011864169946884e-15
+          },
+          "1/4|1/8": {
+            "rho_past": "1/4",
+            "rho_future": "1/8",
+            "W": {
+              "real": -0.13222970381157814,
+              "imag": -0.9438842762467592
+            },
+            "partial_past": {
+              "real": -3.7506980450858043,
+              "imag": 0.5254390861986397
+            },
+            "partial_future": {
+              "real": 1.2544677217171165,
+              "imag": -0.19778411887388503
+            },
+            "past_derivative_identity_discrepancy": 2.2315206618374916e-15
+          },
+          "1/4|1/4": {
+            "rho_past": "1/4",
+            "rho_future": "1/4",
+            "W": {
+              "real": 0.0259504407092108,
+              "imag": -0.9534705621903999
+            },
+            "partial_past": {
+              "real": -3.7887909181776425,
+              "imag": -0.10311885650239128
+            },
+            "partial_future": {
+              "real": 1.2676306471616376,
+              "imag": 0.0447601911727713
+            },
+            "past_derivative_identity_discrepancy": 1.080775883923609e-15
+          }
+        },
+        "past_common_phase_residual": {
+          "1/8": 3.3422138886441676e-16,
+          "1/4": 3.290674871864012e-16
+        }
+      },
+      {
+        "nodes_per_axis": 160,
+        "sources": {
+          "1/8|1/8": {
+            "rho_past": "1/8",
+            "rho_future": "1/8",
+            "W": {
+              "real": 0.3335446055202787,
+              "imag": -0.8928326929746064
+            },
+            "partial_past": {
+              "real": -3.5478351747148817,
+              "imag": -1.32540093246216
+            },
+            "partial_future": {
+              "real": 1.1971226907779031,
+              "imag": 0.42391636643744035
+            },
+            "past_derivative_identity_discrepancy": 1.7763568394002505e-15
+          },
+          "1/8|1/4": {
+            "rho_past": "1/8",
+            "rho_future": "1/4",
+            "W": {
+              "real": 0.4771776616563876,
+              "imag": -0.825881963450482
+            },
+            "partial_past": {
+              "real": -3.281794117921652,
+              "imag": -1.8961533397398556
+            },
+            "partial_future": {
+              "real": 1.093113805362632,
+              "imag": 0.6434229875151191
+            },
+            "past_derivative_identity_discrepancy": 6.280369834735101e-16
+          },
+          "1/4|1/8": {
+            "rho_past": "1/4",
+            "rho_future": "1/8",
+            "W": {
+              "real": -0.13222970381157803,
+              "imag": -0.9438842762467594
+            },
+            "partial_past": {
+              "real": -3.7506980450858074,
+              "imag": 0.5254390861986379
+            },
+            "partial_future": {
+              "real": 1.2544677217171158,
+              "imag": -0.19778411887388467
+            },
+            "past_derivative_identity_discrepancy": 1.1102230246251565e-15
+          },
+          "1/4|1/4": {
+            "rho_past": "1/4",
+            "rho_future": "1/4",
+            "W": {
+              "real": 0.02595044070921133,
+              "imag": -0.9534705621904007
+            },
+            "partial_past": {
+              "real": -3.788790918177644,
+              "imag": -0.10311885650239183
+            },
+            "partial_future": {
+              "real": 1.2676306471616365,
+              "imag": 0.044760191172771246
+            },
+            "past_derivative_identity_discrepancy": 1.4486841824216799e-15
+          }
+        },
+        "past_common_phase_residual": {
+          "1/8": 3.3422138886441676e-16,
+          "1/4": 2.3245294578089215e-16
+        }
+      }
+    ]
+  },
+  "relative_weight_summary": {
+    "1/8|1/8": {
+      "W1_over_W0": {
+        "real": -0.7113169223550934,
+        "imag": 1.4393787236631728
+      },
+      "abs_ratio": 1.6055475309572576,
+      "partial_past_log_ratio": {
+        "real": 1.0268385070547474e-15,
+        "imag": 1.7763568394002505e-15
+      },
+      "partial_future_log_ratio": {
+        "real": 0.8943882452089674,
+        "imag": 2.298401541807125
+      }
+    },
+    "1/8|1/4": {
+      "W1_over_W0": {
+        "real": -1.2247766684694938,
+        "imag": 1.412255827258362
+      },
+      "abs_ratio": 1.8693700567978597,
+      "partial_past_log_ratio": {
+        "real": -1.4834855981103987e-15,
+        "imag": 1.3322676295501878e-15
+      },
+      "partial_future_log_ratio": {
+        "real": 1.499473042358318,
+        "imag": 1.7266117228421658
+      }
+    },
+    "1/4|1/8": {
+      "W1_over_W0": {
+        "real": -0.7113169223550947,
+        "imag": 1.4393787236631728
+      },
+      "abs_ratio": 1.6055475309572582,
+      "partial_past_log_ratio": {
+        "real": 9.598477395708049e-16,
+        "imag": -1.7763568394002505e-15
+      },
+      "partial_future_log_ratio": {
+        "real": 0.8943882452089675,
+        "imag": 2.2984015418071255
+      }
+    },
+    "1/4|1/4": {
+      "W1_over_W0": {
+        "real": -1.224776668469494,
+        "imag": 1.412255827258362
+      },
+      "abs_ratio": 1.8693700567978597,
+      "partial_past_log_ratio": {
+        "real": -8.890820145787844e-16,
+        "imag": 1.3322676295501878e-15
+      },
+      "partial_future_log_ratio": {
+        "real": 1.4994730423583194,
+        "imag": 1.7266117228421647
+      }
+    }
+  },
+  "n128_n160_discrepancies": {
+    "chain": {
+      "1/8|1/8": {
+        "W": 1.6611804756156511e-15,
+        "partial_past": 5.534506320125793e-15,
+        "partial_future": 4.420026397643358e-15
+      },
+      "1/8|1/4": {
+        "W": 1.967320211922957e-15,
+        "partial_past": 7.40132492153905e-15,
+        "partial_future": 4.4280582844867804e-15
+      },
+      "1/4|1/8": {
+        "W": 1.508024561581292e-15,
+        "partial_past": 4.6840360722841785e-15,
+        "partial_future": 4.560368615744908e-15
+      },
+      "1/4|1/4": {
+        "W": 1.6250646570963809e-15,
+        "partial_past": 6.897693335176787e-15,
+        "partial_future": 4.324172596470543e-15
+      }
+    },
+    "two_cover_deleted": {
+      "1/8|1/8": {
+        "W": 3.3306690738754696e-16,
+        "partial_past": 2.220446049250313e-16,
+        "partial_future": 2.0471501066083613e-15
+      },
+      "1/8|1/4": {
+        "W": 1.0190492755571723e-15,
+        "partial_past": 2.2315206618374916e-15,
+        "partial_future": 8.671119018262734e-16
+      },
+      "1/4|1/8": {
+        "W": 2.482534153247273e-16,
+        "partial_past": 3.580361673049448e-15,
+        "partial_future": 7.575797802392804e-16
+      },
+      "1/4|1/4": {
+        "W": 9.411414444629682e-16,
+        "partial_past": 1.4432899320127035e-15,
+        "partial_future": 1.1116099371267112e-15
+      }
+    }
+  },
+  "analytic_truncation": "Same W bounds as prior full_weight hold because all future densities<=1/4 and past density only gives a unit-modulus constant phase: chain1.2e-25,alternative1.6e-32 atn160; not a float roundoff certificate.",
+  "numerical_scope": "Float64 diagnostic. Exact zero past response is proved algebraically, not inferred from numerical cancellation.",
+  "physical_boundary_norm_derived": false,
+  "physical_initial_value_evolution_derived": false,
+  "runtime_seconds": 2.52
+}

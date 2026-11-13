@@ -1,0 +1,173 @@
+{
+  "id": "CST-DUST-HISTORY-MEASURE-NONUNIQUENESS-0.1",
+  "status": "STRONG_REQUIREMENTS_DO_NOT_SELECT_UNIQUE_PRIOR",
+  "raw_covariant_composed_family": {
+    "mu_lambda": "exp(-lambda*R(C)), lambda real, R=#strict comparable pairs",
+    "prefix_factor": "exp(-lambda*|past(newborn)|)",
+    "positive": true,
+    "label_covariant": true,
+    "exact_prefix_composition": true,
+    "stochastic_normalization_claimed": false,
+    "N11_fixed_representative_ratio_C1_over_C0": "exp(2*lambda)",
+    "lambda_derived_from_CST_DUST_action": false
+  },
+  "normalized_classical_family": {
+    "name": "Transitive percolation",
+    "parameter_domain": "0<p<1",
+    "transition_for_specified_precursor_A": "p^m*(1-p)^(n-|A|), m=#maximal elements of A",
+    "fixed_natural_representative_probability": "p^L*(1-p)^I",
+    "properties": [
+      "internal temporality",
+      "positive probabilities",
+      "discrete general covariance",
+      "exact prefix product",
+      "Markov normalization",
+      "classical Bell causality"
+    ],
+    "N11_chain": {
+      "relations_R": 55,
+      "covers_L": 10,
+      "incomparable_pairs_I": 0,
+      "natural_linear_extensions_interior": [
+        [
+          4,
+          5,
+          6
+        ]
+      ],
+      "boundary_preserving_automorphisms": 1,
+      "all_S3_interior_label_images": 6,
+      "distinct_natural_label_images": 1,
+      "fixed_natural_representative_probability": "p**10"
+    },
+    "N11_changed_order": {
+      "relations_R": 53,
+      "covers_L": 11,
+      "incomparable_pairs_I": 2,
+      "natural_linear_extensions_interior": [
+        [
+          4,
+          5,
+          6
+        ],
+        [
+          4,
+          6,
+          5
+        ],
+        [
+          5,
+          4,
+          6
+        ]
+      ],
+      "boundary_preserving_automorphisms": 1,
+      "all_S3_interior_label_images": 6,
+      "distinct_natural_label_images": 3,
+      "fixed_natural_representative_probability": "p**11*(1 - p)**2"
+    },
+    "fixed_representative_ratio": "p*(1-p)^2",
+    "unlabeled_growth_pushforward_ratio": "3*p*(1-p)^2",
+    "all_label_S3_quotient_rule": "For a separately declared invariant endpoint weight, sum all six interior-label images then divide by 6: each orbit contributes weight/Aut_B; both Aut_B=1. This is not the stochastic growth law, which uses only natural labels. Extending its formula to nonnatural labels changes conventions.",
+    "distinct_parameter_witnesses": [
+      {
+        "p": "1/2",
+        "fixed_representative_ratio": "1/8",
+        "unlabeled_growth_ratio": "3/8"
+      },
+      {
+        "p": "3/4",
+        "fixed_representative_ratio": "3/64",
+        "unlabeled_growth_ratio": "9/64"
+      }
+    ],
+    "p_derived_from_CST_DUST_action": false,
+    "classical_probability_is_quantum_amplitude_weight": false
+  },
+  "finite_exact_checks": [
+    {
+      "N": 0,
+      "forward_DAGs_enumerated": 1,
+      "distinct_naturally_labeled_posets": 1,
+      "unlabeled_isomorphism_classes": 1,
+      "closure_preimage_histograms_exact": true,
+      "symbolic_total_probability": "1 for every p",
+      "natural_extension_prefix_checks": 1,
+      "normalized_parent_families_checked": 1,
+      "Bell_spectator_ratio_checks": 1,
+      "pushforward_multiplicity_e_over_aut_checked": true
+    },
+    {
+      "N": 1,
+      "forward_DAGs_enumerated": 1,
+      "distinct_naturally_labeled_posets": 1,
+      "unlabeled_isomorphism_classes": 1,
+      "closure_preimage_histograms_exact": true,
+      "symbolic_total_probability": "1 for every p",
+      "natural_extension_prefix_checks": 1,
+      "normalized_parent_families_checked": 1,
+      "Bell_spectator_ratio_checks": 4,
+      "pushforward_multiplicity_e_over_aut_checked": true
+    },
+    {
+      "N": 2,
+      "forward_DAGs_enumerated": 2,
+      "distinct_naturally_labeled_posets": 2,
+      "unlabeled_isomorphism_classes": 2,
+      "closure_preimage_histograms_exact": true,
+      "symbolic_total_probability": "1 for every p",
+      "natural_extension_prefix_checks": 3,
+      "normalized_parent_families_checked": 2,
+      "Bell_spectator_ratio_checks": 25,
+      "pushforward_multiplicity_e_over_aut_checked": true
+    },
+    {
+      "N": 3,
+      "forward_DAGs_enumerated": 8,
+      "distinct_naturally_labeled_posets": 7,
+      "unlabeled_isomorphism_classes": 5,
+      "closure_preimage_histograms_exact": true,
+      "symbolic_total_probability": "1 for every p",
+      "natural_extension_prefix_checks": 20,
+      "normalized_parent_families_checked": 7,
+      "Bell_spectator_ratio_checks": 238,
+      "pushforward_multiplicity_e_over_aut_checked": true
+    },
+    {
+      "N": 4,
+      "forward_DAGs_enumerated": 64,
+      "distinct_naturally_labeled_posets": 40,
+      "unlabeled_isomorphism_classes": 16,
+      "closure_preimage_histograms_exact": true,
+      "symbolic_total_probability": "1 for every p",
+      "natural_extension_prefix_checks": 260,
+      "normalized_parent_families_checked": 40,
+      "Bell_spectator_ratio_checks": 3377,
+      "pushforward_multiplicity_e_over_aut_checked": true
+    },
+    {
+      "N": 5,
+      "forward_DAGs_enumerated": 1024,
+      "distinct_naturally_labeled_posets": 357,
+      "unlabeled_isomorphism_classes": 63,
+      "closure_preimage_histograms_exact": true,
+      "symbolic_total_probability": "1 for every p",
+      "natural_extension_prefix_checks": 6105,
+      "normalized_parent_families_checked": 0,
+      "Bell_spectator_ratio_checks": 0,
+      "pushforward_multiplicity_e_over_aut_checked": true
+    }
+  ],
+  "total_natural_extension_checks": 6390,
+  "total_normalized_parent_checks": 51,
+  "total_Bell_ratio_checks": 3645,
+  "measure_detector_distinction": "Prior construction does not select an environmental overlap or detector; changing the detector does not determine the prior parameter.",
+  "primary_source": {
+    "authors": "D. P. Rideout and R. D. Sorkin",
+    "title": "A Classical Sequential Growth Dynamics for Causal Sets",
+    "doi": "10.1103/PhysRevD.61.024002",
+    "url": "https://arxiv.org/pdf/gr-qc/9904062",
+    "locations": "Sections 2, 3 and 4.2; equation (6); pages 15-16 of the PDF for transitive-percolation transition and invariant finite-causet weight."
+  },
+  "all_checks_passed": true
+}

@@ -1,0 +1,50 @@
+{
+  "id": "CST-DUST-STATIONARY-GEOMETRY-PAIR-0.1",
+  "date": "2026-11-13",
+  "source_commit": "f5ee44d7cb4dc1f924eee580f1eaf0cfcb4a5bc6",
+  "status": "EXPLORATORY_DERIVED_FINITE_COMPARISON_NOT_PHYSICAL_EVOLUTION",
+  "selection": "The minimal buffered cover-deletion families were inspected analytically. No blind prediction or pre-result registration is claimed. N=11 is minimal only in the explicitly examined N=9,10,11 family, not among all causal sets.",
+  "unchanged_action": {
+    "beta": "4/sqrt(6)",
+    "kappa": 1,
+    "interval_coefficients_by_cardinality": [1, -9, 16, -8],
+    "gravity": "F(C)=N-sum_(i<j in C) b_(|interval(i,j)|)",
+    "dust": "S_d=-1/2 sum_j r_j [1+beta/2 sum_(i<j in C) b_(|interval(i,j)|)(T_j-T_i)^2]",
+    "scalar": "S_phi=-beta/4 sum_(i<j in C) b_(|interval(i,j)|)(q_j-q_i)^2",
+    "coefficient_for_interval_cardinality_ge_4": 0,
+    "scalar_mass": 0
+  },
+  "new_boundary_problem": {
+    "N": 11,
+    "boundary": [0, 1, 2, 3, 7, 8, 9, 10],
+    "interior": [4, 5, 6],
+    "chain": "All pairs i<j",
+    "competitor": "All pairs i<j except (4,5) and (5,6); retain (4,6)",
+    "fixed_boundary_data": "u_j=j, T_j=(u_j-5)*Delta, r_j=rho, q_j=0 for j in boundary",
+    "Delta_squared": "2/(19*beta)",
+    "source_domain": "0<rho<1/2",
+    "clock_support_for_optional_finite_pairing": "[-3/2,3/2] at every node, common to both orders; this explicitly enlarges the previous [-1,1] support",
+    "clock_measure_for_optional_pairing": "dt/3 if normalized uniform support is selected; no new integrated clock amplitude is computed here",
+    "density_measure": "Original (delta_0+1_(0,1) dr)/2 retained for discussing the quantum kernel; stationary witnesses lie in its positive interior, and do not replace the atom-plus-continuum integral by a delta constraint",
+    "stationary_boundary_scalar_data": "q_B=0",
+    "separate_scalar_test_pairing": "Schwartz boundary weight exp(-sum_B q_j^2/2), Lebesgue interior dq and common Abel factor exp(-epsilon sum_I q_j^2/2); this is not the same as holding q_B=0 inside the scalar integral"
+  },
+  "exact_stationary_results": {
+    "chain": {"u_I": [4, 5, 6], "r_I_over_rho": [1, 1, 1], "F": 10, "S_on": "10-151*rho/38"},
+    "competitor": {"u_I": [4, 4, 5], "r_I_over_rho": [2, 1, 1], "F": 18, "S_on": "18-105*rho/38"},
+    "difference": "8+23*rho/19",
+    "source_derivative_of_difference": "23/19",
+    "interior_scalar_column_rank_both": 3,
+    "competitor_internal_scalar_null_direction": "q5, coupled to boundary; not a free null volume"
+  },
+  "geometric_observable": "Number of comparable pairs in the three-element interior, invariant under boundary-preserving relabeling: 3 for the chain, 1 for the competitor. This is not areal radius or spatial volume.",
+  "not_derived": [
+    "a preferred physical history measure or cutoff family",
+    "physical constraint pairing from the original density integral",
+    "normalized physical geometry probabilities or a total decoherence functional",
+    "a stable causal initial-value dynamics",
+    "a calibrated mass, proper time, areal radius or four-dimensional continuum limit",
+    "dust-ball collapse, exterior matching or singularity resolution"
+  ],
+  "next_decisive_task": "Derive a common physical pairing/history interpretation for this explicit pair, retaining the source constraint boundary terms and full cut memory. Determine whether normalized geometric responses follow without substituting an arbitrary K-dagger-K, per-input renormalization or an unproved density-projector rule."
+}

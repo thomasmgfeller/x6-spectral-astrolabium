@@ -1,0 +1,53 @@
+{
+  "id": "CST-DUST-PHYSICAL-BOUNDARY-READOUT-0.1",
+  "status": "CONDITIONAL_POSITIVE_SCALAR_CONTRACT_CONSTRUCTED_FULL_PHYSICAL_SELECTION_OPEN",
+  "parent_commit": "06ca1444d582f2c3563e0be015b5ae7c3dbc9c49",
+  "date": "2026-11-13",
+  "model": {
+    "N": 11,
+    "C0": "full chain",
+    "C1": "remove only relations (4,5) and (5,6), retain (4,6)",
+    "past": [0, 1, 2, 3],
+    "inner": [4, 5, 6],
+    "future": [7, 8, 9, 10],
+    "beta": "4/sqrt(6)",
+    "interval_coefficients": [1, -9, 16, -8],
+    "action": "F(C)-sum_j r_j C_j(T)/2-beta*sum_ij b_ij(q_j-q_i)^2/4",
+    "clock_boundary": "T_j=(j-5)Delta, Delta^2=sqrt(6)/38",
+    "inner_clock_measure": "(dT/3 on [-3/2,3/2])^3; no order Theta",
+    "inner_density_measure": "((delta_0+dr on (0,1))/2)^3",
+    "double_on_shell_phase": false
+  },
+  "selected_candidate": {
+    "Hilbert_space": "L2(R3,dx) with declared CCR [q,pi]=i/beta",
+    "input_section": "q0=0 and Aminus=0",
+    "output_section": "q10=0 and Aplus=0",
+    "operators": "V0,V1 from common quotient, computed positive normalization and inherited Fourier/Abel phases",
+    "pointer": "q7, normalized Gaussian width sigma; U=exp(-i g q7 p_y)",
+    "reference_input": "(beta/pi)^(3/4) exp(-beta |x|^2/2)",
+    "reference_apparatus": {"g": 1, "sigma": 1, "middle_bin": [-1, 1]},
+    "reference_control": {"omega0": 0.5, "omega1": 0.5, "fixed_independent_of_source": true},
+    "accepted_operator": "K=sum_c omega_c W_c V_c",
+    "accepted_pointer": "M_y K",
+    "failure_effect": "I-Kdagger K",
+    "dilation": "Declared order control and L2(mu) environment, both prepared and accepted in the same normalized ancilla state"
+  },
+  "not_selected_by_original_action": [
+    "Common C1 quotient imposed also on regular C0",
+    "Scalar CCR/Lebesgue pairing and Fourier/quotient convention",
+    "Physical interpretation and selection of the added control/environment",
+    "Preparation weights, input packet, pointer coupling and resolution",
+    "Full compact clock/density physical pairing and boundary packets",
+    "Fundamental quantum history measure"
+  ],
+  "exact_source_statement": "At fixed past clocks Wc(rhoP,rhoF)=exp(-i151rhoP/38) Wtilde_c(rhoF). All record and failure probabilities of the fixed contract are rhoP-independent.",
+  "source_scope": "Does not cover integrated variable past clocks or source-dependent preparation/instrument. Existing diagonal rho response is a future-boundary response in this fixed-clock contract.",
+  "excluded_candidates": [
+    "Nonzero C1 output in common unreduced L2(R4)",
+    "Simultaneous strong Aminus and pulled-back Aplus kernel for C0",
+    "Unrestricted unitary Weyl density translations on original compact measure"
+  ],
+  "not_excluded": ["Other quantizations", "Other common quotients", "Different physical preparations", "Source response with properly defined initial boundary packets"],
+  "full_physical_geometrodynamics_derived": false,
+  "external_peer_review": false
+}

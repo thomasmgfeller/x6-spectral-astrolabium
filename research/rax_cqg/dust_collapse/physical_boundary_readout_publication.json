@@ -1,0 +1,54 @@
+{
+  "schema": "cst-dust.physical-boundary-readout-publication/1",
+  "publication_date": "2026-11-13",
+  "base_commit": "06ca1444d582f2c3563e0be015b5ae7c3dbc9c49",
+  "original_archive_files": 40,
+  "original_manifest_entries": 39,
+  "original_archive_modified": false,
+  "original_scientific_files_modified": false,
+  "original_standalone_report_modified": false,
+  "standalone_embedded_pdf_bytes_equal": false,
+  "standalone_embedded_pdf_poppler_text_equal": true,
+  "artifacts": [
+    {
+      "path": "packages/CST_DUST_Physikalischer_Rand_Auslesevertrag_v0_1_Pruefpaket.zip",
+      "bytes": 297764,
+      "sha256": "1a2a56103558886e48caeee05587c19638c37f832c701f1cd391aa8b39e6f420"
+    },
+    {
+      "path": "reports/CST_DUST_Physikalischer_Rand_Auslesevertrag_v0_1.pdf",
+      "bytes": 156986,
+      "sha256": "83fb6819c3e44a6c06167935c506feb512e37d8440b1dd557ee57fc74a45afe1"
+    },
+    {
+      "path": "physical_boundary_readout_v0_1/report/CST_DUST_Physikalischer_Rand_Auslesevertrag_v0_1.pdf",
+      "bytes": 132013,
+      "sha256": "c79346bf6cd34d56541837c5fee58ddaac12d20a1c0d0b0a79d1b8078515718a"
+    },
+    {
+      "path": "physical_boundary_readout_v0_1/MANIFEST.json",
+      "bytes": 4416,
+      "sha256": "81c5432088b222e9a986f62c84ae1b370e16b285908a988dda9131a8bb677543"
+    }
+  ],
+  "reproduction": {
+    "isolated_programs": 10,
+    "compared_json_outputs": 10,
+    "manifest_files": 39,
+    "exact_algebraic_fields": true,
+    "float_absolute_tolerance": 5e-12,
+    "float_relative_tolerance": 5e-12,
+    "runtime_metadata_compared": false,
+    "dependency_hashes_validated": true,
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "sympy": "1.14.0",
+    "mpmath": "1.3.0"
+  },
+  "parent_source_bytes_verified_against_base_commit": true,
+  "physical_geometry_dynamics": "NOT_DERIVED",
+  "scientific_status": "CONDITIONAL_POSITIVE_SCALAR_CONTRACT_CONSTRUCTED_FULL_PHYSICAL_SELECTION_OPEN",
+  "source_scope": "At fixed past boundary clocks, all record and failure probabilities are independent of isolated past density. The previous diagonal response is a future-boundary response in this contract.",
+  "numerical_qualification": "Float64 weights are not fully interval-certified.",
+  "external_peer_review": false
+}

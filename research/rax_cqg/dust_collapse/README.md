@@ -1,5 +1,11 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Physikalischer Rand- und Auslesevertrag v0.1 · 13. November 2026
+
+Der [neue Randvertrag](PHYSICAL_BOUNDARY_READOUT_PUBLICATION.md) konstruiert für das N11-Paar einen gemeinsamen positiven **bedingten skalaren Drei-Moden-Vertrag** mit berechneten Normierungen, Fresnelphasen, lokalem Gaußdetektor und vollständiger Erfolgs-/Fehlschlagbilanz. Gemeinsame Projektion und Präparation bleiben zusätzliche Annahmen; die ursprüngliche Wirkung wählt sie nicht eindeutig.
+
+**Neue Quellenklärung:** Bei festen vergangenen Randuhren erzeugt eine isolierte Anfangsdichteänderung exakt keine Recordantwort. Der bisherige diagonale Kontrast ist innerhalb dieses Vertrags eine Zukunftsrandantwort. **Physikalische Geometriedynamik bleibt NOT_DERIVED.** Zehn isolierte Prüfprogramme reproduzieren zehn Ergebnisdateien. [Bericht](reports/CST_DUST_Physikalischer_Rand_Auslesevertrag_v0_1.pdf) · [Originalprüfpaket](packages/CST_DUST_Physikalischer_Rand_Auslesevertrag_v0_1_Pruefpaket.zip) · [Quellen und Reproduktion](physical_boundary_readout_v0_1/README.md).
+
 ## Interferenz und vollständige innere Randamplitude v0.1 · 13. November 2026
 
 Die [Fortsetzung des stationären Geometriekandidaten](INTERFERENCE_DYNAMICS_PUBLICATION.md) integriert alle drei inneren Uhren und acht Dichtesektoren des N11-Paars unter einem gemeinsamen expliziten Dirichlet-/Boxvertrag. **Das vollständige relative Gewicht ändert Betrag und Phase:** |W₁/W₀| steigt zwischen ρ=1/8 und ρ=1/4 von 1,60555 auf 1,86937. Die skalare Randantwort, konsistente bedingte Recordmodelle und die Zusammensetzung mit vollständigen Schnittdaten sind ausgearbeitet.
@@ -839,4 +845,3 @@ python3 evaluate.py
 ```
 
 Erwartet werden sechs bestandene Vergleiche je höherer Dichtestufe und fünf von sechs im Belastungstest. Die vier ursprünglichen ZIP-Pakete der Reihe und der ergänzenden Pulsstudie enthalten eigene Prüfsummen. Wer Ergebnisse zitiert, kann Berichtstitel, Datum und den verwendeten Git-Commit angeben. [Zitationsmetadaten](../../../CITATION.cff) · [Lizenzumfang](../../../LICENSE_SCOPE.md)
-

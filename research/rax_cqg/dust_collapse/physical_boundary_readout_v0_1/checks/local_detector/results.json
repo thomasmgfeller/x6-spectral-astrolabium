@@ -1,0 +1,369 @@
+{
+  "id": "CST-DUST-COMMON-LOCAL-GAUSSIAN-DETECTOR-0.1",
+  "status": "PASS_EXACT_LOCAL_DETECTOR_AND_CONDITIONAL_REDUCED_N11_INSTRUMENT",
+  "checks": {
+    "pointer_and_POVM_normalization": true,
+    "exact_nonselective_dephasing_exponent": true,
+    "Borel_bin_POVM_density": true,
+    "complete_real_line_outcomes": true,
+    "dephasing_not_a_free_class_constant": true,
+    "normalized_Gaussian_record_mean_variance": true,
+    "normalized_Gaussian_record_prefactor": true,
+    "same_field_space_can_have_distinct_record_laws": true,
+    "C1_exact_off_shell_postconstraint": true,
+    "C1_gauge_direction_nonzero": true,
+    "q10_not_postconstraint_invariant": true,
+    "q7_is_postconstraint_invariant": true,
+    "constraint_solution_has_constant_orbit_modulus": true,
+    "gauge_variant_readout_is_unnormalizable_uniform_density": true,
+    "inclusive_detector_does_not_repair_infinite_norm": true,
+    "gauge_invariant_readout_does_not_damp_orbit": true,
+    "extended_constraint_relative_pointer_commutes": true,
+    "chain_reduced_map_symplectic": true,
+    "chain_pure_Gaussian_covariance": true,
+    "chain_position_covariance_positive": true,
+    "variant_reduced_map_symplectic": true,
+    "variant_pure_Gaussian_covariance": true,
+    "variant_position_covariance_positive": true,
+    "actual_N11_q7_variances_distinct": true,
+    "actual_N11_chain_q7_variance_larger": true,
+    "declared_reduced_input_normalized": true,
+    "pure_overlap_strictly_between_zero_and_one": true,
+    "Gaussian_overlap_hbar_cancels": true,
+    "positive_control_weights_normalize": true,
+    "convex_modulus_bound_has_positive_deficit": true,
+    "accepted_and_failure_effects_complete": true,
+    "past_source_is_common_unit_modulus_phase": true,
+    "past_source_partial_generator_is_common": true,
+    "past_clock_contract_exact_source_coefficient": true,
+    "coherent_C0_precision_real_part_positive": true,
+    "coherent_C0_precision_matches_q_covariance": true,
+    "coherent_C0_fixed_phase_state_normalized_numeric": true,
+    "coherent_C1_precision_real_part_positive": true,
+    "coherent_C1_precision_matches_q_covariance": true,
+    "coherent_C1_fixed_phase_state_normalized_numeric": true,
+    "coherent_overlap_independent_root_continuation_agrees": true,
+    "coherent_overlap_matches_pure_covariance_magnitude": true,
+    "coherent_cross_covariance_independent_exact_reconstruction": true,
+    "coherent_cross_covariance_in_right_half_plane": true,
+    "coherent_record_bin_direct_1D_Gaussian_check": true,
+    "coherent_record_total_direct_1D_Gaussian_check": true,
+    "coherent_record_second_moment_direct_1D_Gaussian_check": true,
+    "coherent_clock_128_160_agreement_empirical": true,
+    "coherent_past_source_cancels_in_numeric_records": true
+  },
+  "future_coordinates": [
+    7,
+    8,
+    9,
+    10
+  ],
+  "introduced_apparatus": {
+    "Hilbert_space": "L2(R,dy)",
+    "initial_pointer": "phi_sigma(y)=(2*pi*sigma^2)^(-1/4) exp(-y^2/(4*sigma^2)); sigma>0",
+    "coupling": "U_g=exp(-i*g*Q_ell tensor p_y), Q_ell=ell^T q_F, same ell,g,sigma for both histories",
+    "derived_M_y": "(2*pi*sigma^2)^(-1/4) exp(-(y-g*Q_ell)^2/(4*sigma^2))",
+    "chosen_kinematic_example": "ell=(0,0,0,1), Q=q10; g=sigma=1 only as a declared dimensionless apparatus example, not selected by the gravitational action",
+    "alternative_reduced_candidate": "ell=(1,0,0,0), Q=q7 commutes with the C1 postconstraint"
+  },
+  "POVM": {
+    "normalization": "Integral_R dy M_y^dagger M_y=I on the declared kinematic L2(R4,dqF)",
+    "bins": "E_[l,u]=Phi((u-gQ)/sigma)-Phi((l-gQ)/sigma); all bins partitioning R sum to I",
+    "bin_instrument": "rho -> integral_[l,u] dy M_y rho M_y^dagger, not generally sqrt(E_bin) rho sqrt(E_bin)",
+    "dephasing_kernel": "exp(-g^2*(ell.q-ell.qprime)^2/(8*sigma^2))"
+  },
+  "normalized_state_conditional_formula": {
+    "assumption": "A separately established normalized outgoing state with Q marginal N(m,v)",
+    "pointer_law": "N(g*m,sigma^2+g^2*v)",
+    "synthetic_distinguishability_control": "For g=sigma=a=1 and centered variances v=1/2 versus v=1, P(|y|<=a)=erf(1/sqrt(3)) versus erf(1/2). These are not N11 predictions."
+  },
+  "C1_action_derived_constraint": {
+    "Hbar_definition": "H=beta*Hbar, Hbar=-L/2 from original interval coefficients (1,-9,16,-8)",
+    "a": [
+      "-232",
+      "119",
+      "241",
+      "-128"
+    ],
+    "b": [
+      "0",
+      "16",
+      "32",
+      "46"
+    ],
+    "scaled_momentum": "pi=p/beta=-i partial_q/beta",
+    "Aplus": "-232q7+119q8+241q9-128q10+16pi8+32pi9+46pi10",
+    "identity": "a_embedded+b*Hbar_F,:=0 in all eleven columns, off shell",
+    "consequence": "Every nonzero bare C1 outgoing distribution obeys Aplus psi=0 and has constant modulus along the noncompact b direction; it is not in L2(R4)."
+  },
+  "measurement_constraint_consequence": {
+    "q10_commutator": "[q10,Aplus]=i*46/beta, so q10 is not an observable of this proposed reduced constraint sector",
+    "q7_commutator": "[q7,Aplus]=0; q7 is the first position observable in the explicitly postulated common H3 reduction below",
+    "variant_detector": "For a normalized transverse amplitude and ell.e nonzero, ||M_y psi||^2=1/|g ell.e| independent of y; the integral over all y is infinite",
+    "invariant_detector": "For ell.e=0 the detector does not damp the gauge direction, so the orbit-volume divergence remains inside each nonzero record",
+    "complete_measurement": "Tonelli positivity gives integral dy ||M_y psi||^2=||psi||^2, including infinity; a complete detector cannot manufacture finite state norm",
+    "extended_constraint": "U Aplus Udagger=Aplus+(g b.ell/beta)p_y. For b.ell nonzero, y alone is not invariant; y-gQ is invariant and pulls back to the initial pointer y under U."
+  },
+  "history_blindness": "At fixed q_F the apparatus applies exactly the same M_y in both histories. Distinct normalizable history-dependent field states could nevertheless yield distinguishable y laws.",
+  "gamma_qualification": "The environmental overlap is a kernel depending on q_F and q_Fprime. Integrating it with different outgoing states does not generally yield an arbitrary, state-independent constant gamma_c.",
+  "derived_from_gravity_action": "Only the postconstraint and its norm/observable obstruction are derived here from the N11 scalar action. Pointer state, width, coupling and chosen scalar coordinate are introduced apparatus data.",
+  "N11_normalized_pointer_predictions": "NOT_DEFINED_UNDER_COMMON_FOUR_MODE_KINEMATIC_L2_NORM",
+  "physical_pairing_and_common_reduced_output_space": "CONDITIONAL_COMMON_H3_INSTRUMENT_CONSTRUCTED; original bare L2(R4) obstruction remains",
+  "conditional_reduced_detector": {
+    "status": "CONDITIONAL_COMMON_H3_INSTRUMENT_CONSTRUCTED",
+    "scope": "Requires the explicit common rigging/quotient, normalization, metaplectic phases, preparation and control-environment postulates; not the unreduced bare N11 physical norm.",
+    "dependencies": {
+      "checks/independent_audit/results.json": "6e3f559ea91734f0b2e6d5602fc49ca6818197792cf7de7a5f7272431b7ab225",
+      "checks/ward_clock/results.json": "f640fd540d2ced8bd1875c1b57da56e2794b95021374439bc1fd89bcfbf73b6a"
+    },
+    "input_section": "q0=0, Q=(q1,q2,q3), Pi=(pi1,pi2,pi3)",
+    "output_section": "q10=0, Q=(q7,q8,q9), Pi=(pi7,pi8,pi9)",
+    "commutator": "[Qj,Pik]=i delta_jk/beta; beta=4/sqrt(6)",
+    "new_normalized_input": "psi(Q)=(beta/pi)^(3/4) exp(-beta |Q|^2/2), Sigma_in=I6/(2 beta)",
+    "fixed_local_apparatus": "Q=q7, g=sigma=1 in declared coordinates; no order-label coupling in the pointer",
+    "actual_branch_records": [
+      {
+        "order": "chain",
+        "q7_row_norm_squared": "402923015552527127/6000671296000000",
+        "q7_variance_exact": "402923015552527127*sqrt(6)/48005370368000000",
+        "q7_variance_decimal": "20.5592788090450618144384970891",
+        "pointer_variance_exact": "1 + 402923015552527127*sqrt(6)/48005370368000000",
+        "pointer_variance_decimal": "21.5592788090450618144384970891",
+        "P_abs_y_le_1_exact": "erf(1/sqrt(2 + 402923015552527127*sqrt(6)/24002685184000000))",
+        "P_abs_y_le_1_decimal": "0.170520244385344987640293751354"
+      },
+      {
+        "order": "variant",
+        "q7_row_norm_squared": "9990583/2166784",
+        "q7_variance_exact": "9990583*sqrt(6)/17334272",
+        "q7_variance_decimal": "1.41175992755415351702235415037",
+        "pointer_variance_exact": "1 + 9990583*sqrt(6)/17334272",
+        "pointer_variance_decimal": "2.41175992755415351702235415038",
+        "P_abs_y_le_1_exact": "erf(1/sqrt(2 + 9990583*sqrt(6)/8667136))",
+        "P_abs_y_le_1_decimal": "0.480373695919891031308704396509"
+      }
+    ],
+    "branch_overlap": {
+      "det_gram_sum_exact": "48302375511159976015329778787094473/3328552589678608384000000",
+      "squared_magnitude_exact": "14595457024000*sqrt(48302375511159976015329778787094473)/48302375511159976015329778787094473",
+      "squared_magnitude_decimal": "0.0000664099959194010862051099756637",
+      "magnitude_decimal": "0.00814923284238467972154684920558",
+      "phase": "Not inferred from covariance; requires relative metaplectic convention.",
+      "meaning": "Nonorthogonal branch states; different record laws do not implement an ideal history projective measurement."
+    },
+    "pointer_record_overlap": {
+      "definition": "Classical Bhattacharyya coefficient integral sqrt(p0(y)*p1(y)) dy, not the full quantum-state overlap",
+      "exact": "sqrt(2)*(1 + 9990583*sqrt(6)/17334272)**(1/4)*(1 + 402923015552527127*sqrt(6)/48005370368000000)**(1/4)/sqrt(2 + 215295421225505751*sqrt(6)/24002685184000000)",
+      "decimal": "0.775646160294958162623382085486"
+    },
+    "unitary_completion": {
+      "environment": "E=L2(mu), mu=(dT/3 on [-3/2,3/2])^3 tensor ((delta0+dr_(0,1))/2)^3; ||e=1||=1",
+      "control": "C2 with |w>=sqrt(omega0)|0>+sqrt(omega1)|1>, omega>=0, sum omega=1",
+      "controlled_unitary": "U=sum_c |c><c| tensor multiplication_by_exp(i S_c(T,r)) tensor V_c; S_c includes all order-only and dust-clock phases exactly once",
+      "accepted_ancilla": "Project onto the same |w,e>; K=<w,e|U|w,e>=sum_c omega_c W_c V_c",
+      "W_contract": "Wc is the FULL existing inner clock/density integral, already including exp(i F_c); do not multiply that gravitational phase twice",
+      "failure_instrument": "Orthogonal ancilla complement I-|w,e><w,e|, with full environment/control trace; effect I-Kdagger K",
+      "local_accepted_record": "K_y=M_y K; integral K_y^dagger K_y+E_failure=I",
+      "norm_bound": "||K||<=sum omega_c |Wc|<=1; p_failure>=1-(sum omega_c |Wc|)^2 for every normalized input",
+      "failure_Kraus_qualification": "sqrt(I-Kdagger K) gives one alternative completion with the same failure probability, but generally a different post-failure state from the explicit ancilla complement."
+    },
+    "source_response": {
+      "exact": "K(rhoP,rhoF)=exp(-i151rhoP/38) Ktilde(rhoF); every accepted pointer probability and failure probability is rhoP-independent at fixed clocks and rhoF.",
+      "future_density": "Changing rhoF changes a future boundary filter/condition; it is not a demonstrated initial-source backreaction.",
+      "not_integrated": "Full normalizable boundary clock/density packets are not integrated into this H3 experiment."
+    },
+    "numerical_success_bounds": [
+      {
+        "rhoP_rhoF": "1/8|1/8",
+        "omega0": 0.5,
+        "omega1": 0.5,
+        "actual_W_moduli": [
+          0.5936301178466401,
+          0.9531013700105389
+        ],
+        "operator_success_upper_bound": 0.5980945738822206,
+        "all_input_failure_lower_bound": 0.40190542611777935,
+        "chosen_Gaussian_success_lower_bound_unknown_relative_phase": 0.31289435866728427,
+        "chosen_Gaussian_success_upper_bound_unknown_relative_phase": 0.3175051104980067
+      },
+      {
+        "rhoP_rhoF": "1/8|1/4",
+        "omega0": 0.5,
+        "omega1": 0.5,
+        "actual_W_moduli": [
+          0.5102380011060715,
+          0.953823641108083
+        ],
+        "operator_success_upper_bound": 0.5358691230507018,
+        "all_input_failure_lower_bound": 0.4641308769492982,
+        "chosen_Gaussian_success_lower_bound_unknown_relative_phase": 0.29054756665406933,
+        "chosen_Gaussian_success_upper_bound_unknown_relative_phase": 0.29451361140063104
+      },
+      {
+        "rhoP_rhoF": "1/4|1/8",
+        "omega0": 0.5,
+        "omega1": 0.5,
+        "actual_W_moduli": [
+          0.5936301178466399,
+          0.9531013700105391
+        ],
+        "operator_success_upper_bound": 0.5980945738822206,
+        "all_input_failure_lower_bound": 0.40190542611777935,
+        "chosen_Gaussian_success_lower_bound_unknown_relative_phase": 0.31289435866728427,
+        "chosen_Gaussian_success_upper_bound_unknown_relative_phase": 0.3175051104980067
+      },
+      {
+        "rhoP_rhoF": "1/4|1/4",
+        "omega0": 0.5,
+        "omega1": 0.5,
+        "actual_W_moduli": [
+          0.5102380011060713,
+          0.9538236411080829
+        ],
+        "operator_success_upper_bound": 0.5358691230507017,
+        "all_input_failure_lower_bound": 0.46413087694929833,
+        "chosen_Gaussian_success_lower_bound_unknown_relative_phase": 0.2905475666540692,
+        "chosen_Gaussian_success_upper_bound_unknown_relative_phase": 0.2945136114006309
+      }
+    ],
+    "coherent_pointer": {
+      "status": "CONDITIONAL_PHASE_FIXED_COHERENT_N11_POINTER_COMPUTED",
+      "dependencies": {
+        "checks/canonical_scalar/gaussian_outputs.json": "955098e34257133903fdc3a397de0ce0ed7d9c2cc9f723f3ac9ef8f4227fe660",
+        "checks/ward_clock/results.json": "f640fd540d2ced8bd1875c1b57da56e2794b95021374439bc1fd89bcfbf73b6a"
+      },
+      "phase_convention": {
+        "C0_reduced_kernel": "exp(-i*pi/4) times positive amplitude",
+        "C1_reduced_kernel": "positive delta-kernel amplitude; phase zero"
+      },
+      "root_rule": "Successive complex Gaussian Schur pivots, each with positive real part; square root continued from positive real Gaussian. Independently checked against canonical-scalar whitening continuation.",
+      "omega0": "1/2",
+      "omega1": "1/2",
+      "g": "1",
+      "sigma": "1",
+      "bin": "|y|<=1",
+      "overlap_z_equals_inner_psi0_psi1": {
+        "real": "0.003116950321176916772940885987745514717672",
+        "imag": "0.007529582764982147507124294158722381455257"
+      },
+      "cross_variance_u": {
+        "real": "1.155962288800485326312979298429033249447",
+        "imag": "-0.006322405604619811128914921201688583409688"
+      },
+      "cross_bin_integral": {
+        "real": "0.002008856410134274439351654140931641272193",
+        "imag": "0.004880828509447462158732410150380231077316"
+      },
+      "formula": {
+        "T": "P0.conjugate()+P1",
+        "u": "sigma^2+g^2*(T^-1)[0,0]",
+        "cross_record_density": "D01(y)=z*exp(-y^2/(2u))/sqrt(2*pi*u)",
+        "amplitudes": "a_c=omega_c*W_c; W contains the gravitational phase exactly once",
+        "success": "Z=|a0|^2+|a1|^2+2 Re(conj(a0)*a1*z)",
+        "conditional_variance": "[sum_c |ac|^2*(sigma^2+g^2*vc)+2 Re(conj(a0)*a1*z*u)]/Z",
+        "conditional_bin": "[sum_c |ac|^2*erf(1/sqrt(2*(sigma^2+g^2*vc)))+2 Re(conj(a0)*a1*z*erf(1/sqrt(2*u)))]/Z"
+      },
+      "quadrature": {
+        "128": [
+          {
+            "rhoP_rhoF": "1/8|1/8",
+            "success_probability": "0.31289945431142512030351048609834723",
+            "failure_probability": "0.68710054568857487969648951390165277",
+            "accepted_pointer_mean": "0 (exact even parity)",
+            "accepted_pointer_variance": "7.8121158308104006560428560546980989",
+            "accepted_P_abs_y_le_1": "0.39190286924246984410293536489535587",
+            "joint_accepted_abs_y_le_1": "0.12262619392905060603240070611630459",
+            "coherent_success_interference": "-0.002300280271219836768636307367505498"
+          },
+          {
+            "rhoP_rhoF": "1/8|1/4",
+            "success_probability": "0.29064944748039308532772963695251326",
+            "failure_probability": "0.70935055251960691467227036304748674",
+            "accepted_pointer_mean": "0 (exact even parity)",
+            "accepted_pointer_variance": "6.7076157488227495017278700653557454",
+            "accepted_P_abs_y_le_1": "0.40990763467262674130741744771203528",
+            "joint_accepted_abs_y_le_1": "0.11913942753559378171818794378114507",
+            "coherent_success_interference": "-0.0018811415469561239476292238127798689"
+          },
+          {
+            "rhoP_rhoF": "1/4|1/8",
+            "success_probability": "0.31289945431142519820887692441760406",
+            "failure_probability": "0.68710054568857480179112307558239594",
+            "accepted_pointer_mean": "0 (exact even parity)",
+            "accepted_pointer_variance": "7.8121158308103957668953832838506323",
+            "accepted_P_abs_y_le_1": "0.39190286924246992349634623097302185",
+            "joint_accepted_abs_y_le_1": "0.12262619392905066140589227859811246",
+            "coherent_success_interference": "-0.0023002802712198367492592679934562401"
+          },
+          {
+            "rhoP_rhoF": "1/4|1/4",
+            "success_probability": "0.29064944748039319401805335869063269",
+            "failure_probability": "0.70935055251960680598194664130936731",
+            "accepted_pointer_mean": "0 (exact even parity)",
+            "accepted_pointer_variance": "6.7076157488227507782564304883686133",
+            "accepted_P_abs_y_le_1": "0.40990763467262672033277720330657542",
+            "joint_accepted_abs_y_le_1": "0.11913942753559382017491385422444406",
+            "coherent_success_interference": "-0.0018811415469561252688114270293031134"
+          }
+        ],
+        "160": [
+          {
+            "rhoP_rhoF": "1/8|1/8",
+            "success_probability": "0.31289945431142563187619834432273111",
+            "failure_probability": "0.68710054568857436812380165567726889",
+            "accepted_pointer_mean": "0 (exact even parity)",
+            "accepted_pointer_variance": "7.8121158308104153274499051918362363",
+            "accepted_P_abs_y_le_1": "0.39190286924246960561726360297755011",
+            "joint_accepted_abs_y_le_1": "0.12262619392905073189716834843900532",
+            "coherent_success_interference": "-0.0023002802712198427630029933054742918"
+          },
+          {
+            "rhoP_rhoF": "1/8|1/4",
+            "success_probability": "0.29064944748039401601470335714485055",
+            "failure_probability": "0.70935055251960598398529664285514945",
+            "accepted_pointer_mean": "0 (exact even parity)",
+            "accepted_pointer_variance": "6.7076157488227653926263821954407",
+            "accepted_P_abs_y_le_1": "0.40990763467262648231350129374528734",
+            "joint_accepted_abs_y_le_1": "0.11913942753559408793744533111638073",
+            "coherent_success_interference": "-0.0018811415469561335899881964345094531"
+          },
+          {
+            "rhoP_rhoF": "1/4|1/8",
+            "success_probability": "0.31289945431142567423036546641787513",
+            "failure_probability": "0.68710054568857432576963453358212487",
+            "accepted_pointer_mean": "0 (exact even parity)",
+            "accepted_pointer_variance": "7.8121158308104117251725856031278522",
+            "accepted_P_abs_y_le_1": "0.39190286924246966418399819113281314",
+            "joint_accepted_abs_y_le_1": "0.12262619392905076682138726139904522",
+            "coherent_success_interference": "-0.002300280271219842504673537826507597"
+          },
+          {
+            "rhoP_rhoF": "1/4|1/4",
+            "success_probability": "0.2906494474803939279778341253550487",
+            "failure_probability": "0.7093505525196060720221658746449513",
+            "accepted_pointer_mean": "0 (exact even parity)",
+            "accepted_pointer_variance": "6.7076157488227632249599508797915692",
+            "accepted_P_abs_y_le_1": "0.40990763467262651755796486667477354",
+            "joint_accepted_abs_y_le_1": "0.11913942753559406209424436454492143",
+            "coherent_success_interference": "-0.0018811415469561326900534405897311531"
+          }
+        ]
+      },
+      "max_128_160_spread": "1.59582772023192772199e-14",
+      "max_past_source_record_residual": "3.6022773195887083841e-15",
+      "scope": "These are actual coherent accepted scalar records for the explicitly added common H3, input, phase, control/environment and local-pointer contract. They are not fundamental history probabilities.",
+      "source_qualification": "Fixed-clock rhoP dependence is exactly a common phase; rhoF dependence changes a future boundary filter. Full physical clock/density boundary packets remain unintegrated.",
+      "precision_qualification": "Exact rational/scalar formulas and phase-followed high-precision Gaussian evaluation; final probabilities inherit existing Float64 W quadrature without a certified roundoff interval."
+    },
+    "numerical_qualification": "Branch covariance and special-function formulas are exact; displayed decimals are evaluations. W-based bounds use existing n160 Float64 quadrature, not a roundoff-certified interval.",
+    "not_derived_from_action": [
+      "Common physical quotient/rigging and normalization choice",
+      "Choice of relative metaplectic phases",
+      "New common input state",
+      "Control/environment Hilbert interpretation and coherent erasure preparation",
+      "Positive normalized control weights",
+      "Pointer coupling, width and coordinate choice"
+    ]
+  },
+  "new_large_integrations": 0
+}
