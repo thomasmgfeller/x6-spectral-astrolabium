@@ -1,0 +1,83 @@
+{
+  "id": "INDEPENDENT-COHERENT-GAUSSIAN-AUDIT-0.1",
+  "all_checks_pass": true,
+  "phase_convention": "C0 reduced kernel exp(-i*pi/4); C1 delta kernel positive real",
+  "root_method": "successive complex Schur pivots with positive real part",
+  "root_pivots_C0": [
+    [
+      "1.0",
+      "-2.0278697421981004070556309362279511533242876526459"
+    ],
+    [
+      "3525.085913479195474923078340903011476847198984886",
+      "6292.094669106101499445776802731596706386991547994"
+    ],
+    [
+      "2.6310518771208908815191808711959822459116239716552",
+      "-14.145136830344335071672970743065665069910238772475"
+    ]
+  ],
+  "root_pivots_C1": [
+    [
+      "1.31640625",
+      "-2.373046875"
+    ],
+    [
+      "1.5197516085202753067726978644403706602586582446733",
+      "-3.0051955425042514870492167577224772222340211167982"
+    ]
+  ],
+  "root_pivots_overlap": [
+    [
+      "458.20066035077105191458321364600002024183763168125",
+      "1075.3506655704678065010642699506598847577026467693"
+    ],
+    [
+      "34.197311352576543750998870095210842832874882521561",
+      "-32.182023415939403337193753742555503611913747266829"
+    ],
+    [
+      "11.662401032845276684692270306659265433926656140797",
+      "-5.9430778278565844942108383507934895358751054172805"
+    ]
+  ],
+  "overlap_z": {
+    "real": "0.0031169503211769167729408859877455147176715674310582",
+    "imag": "0.0075295827649821475071242941587223814552574914096481"
+  },
+  "cross_pointer_u_g_sigma_1": {
+    "real": "1.1559622888004853263129792984290332494472098115877",
+    "imag": "-0.0063224056046198111289149212016885834096883921089253"
+  },
+  "cross_record_density": "z*exp(-y^2/(2*u))/sqrt(2*pi*u), continuation on Re(u)>0",
+  "cross_record_integral": "z",
+  "cross_record_second_moment": "z*u",
+  "cross_record_symmetric_bin": "z*erf(a/sqrt(2*u))",
+  "source_diagnostics": [
+    {
+      "rhoP_rhoF": "1/8|1/8",
+      "accept_probability": "0.31289945431142563187619834432273111",
+      "conditional_pointer_variance": "7.8121158308104153274499051918362363",
+      "conditional_P_abs_y_le_1": "0.39190286924246960561726360297755011"
+    },
+    {
+      "rhoP_rhoF": "1/8|1/4",
+      "accept_probability": "0.29064944748039401601470335714485055",
+      "conditional_pointer_variance": "6.7076157488227653926263821954407",
+      "conditional_P_abs_y_le_1": "0.40990763467262648231350129374528734"
+    },
+    {
+      "rhoP_rhoF": "1/4|1/8",
+      "accept_probability": "0.31289945431142567423036546641787513",
+      "conditional_pointer_variance": "7.8121158308104117251725856031278522",
+      "conditional_P_abs_y_le_1": "0.39190286924246966418399819113281314"
+    },
+    {
+      "rhoP_rhoF": "1/4|1/4",
+      "accept_probability": "0.2906494474803939279778341253550487",
+      "conditional_pointer_variance": "6.7076157488227632249599508797915692",
+      "conditional_P_abs_y_le_1": "0.40990763467262651755796486667477354"
+    }
+  ],
+  "numerical_scope": "Scalar Gaussian evaluation at 70 digits; W inputs retain existing Float64 quadrature uncertainty. Not interval-certified physical predictions."
+}

@@ -1,0 +1,405 @@
+{
+  "id": "PHYSICAL-BOUNDARY-INDEPENDENT-AUDIT-0.1",
+  "all_checks_pass": true,
+  "source_and_clock_density": [
+    {
+      "order": "chain",
+      "past_C_at_affine_clock": [
+        "1",
+        "20/19",
+        "-16/19",
+        "128/19"
+      ],
+      "past_action_derivative": "-151/38",
+      "exact_zero_past_density_rows": 4,
+      "full_clock_density_Legendre_rank_at_stationary_family": 10,
+      "fixed_future_density_minor_determinant": "134217728*rho**4/6131066257801",
+      "inner_clock_density_Hessian_determinant": "-1/47045881",
+      "exact_distinct_output_family": null
+    },
+    {
+      "order": "variant",
+      "past_C_at_affine_clock": [
+        "1",
+        "20/19",
+        "-16/19",
+        "128/19"
+      ],
+      "past_action_derivative": "-151/38",
+      "exact_zero_past_density_rows": 4,
+      "full_clock_density_Legendre_rank_at_stationary_family": 9,
+      "fixed_future_density_minor_determinant": "0",
+      "inner_clock_density_Hessian_determinant": "-1/47045881",
+      "exact_distinct_output_family": {
+        "future_clock_direction": [
+          0,
+          8,
+          16,
+          23
+        ],
+        "all_inner_Euler_residuals_zero": true,
+        "all_initial_canonical_data_unchanged": true,
+        "action_change": "-alpha*rho*(932*alpha + 217)/19",
+        "future_clock_momentum_change": [
+          [
+            "232*alpha*rho/19"
+          ],
+          [
+            "-119*alpha*rho/19"
+          ],
+          [
+            "-241*alpha*rho/19"
+          ],
+          [
+            "128*alpha*rho/19"
+          ]
+        ],
+        "future_density_momentum_change": [
+          [
+            "0"
+          ],
+          [
+            "16*alpha*(2*alpha - 1)/19"
+          ],
+          [
+            "8*alpha*(-244*alpha - 173)/19"
+          ],
+          [
+            "13*alpha*(76*alpha + 91)/19"
+          ]
+        ],
+        "gauge_equivalence_derived": false
+      }
+    }
+  ],
+  "scalar_boundary": [
+    {
+      "order": "chain",
+      "scalar_Legendre_rank": 7,
+      "scalar_Legendre_determinant_divided_by_beta7": "-16384",
+      "endpoint_map_in_q_pi": [
+        [
+          "7/64",
+          "-25/32",
+          "-51/32",
+          "209/64",
+          "29/32",
+          "23/32",
+          "1/2",
+          "1/4"
+        ],
+        [
+          "7/32",
+          "97/512",
+          "-1201/512",
+          "47/16",
+          "273/256",
+          "29/32",
+          "23/32",
+          "1/2"
+        ],
+        [
+          "105/512",
+          "155/512",
+          "-659/512",
+          "911/512",
+          "79/64",
+          "273/256",
+          "29/32",
+          "23/32"
+        ],
+        [
+          "99/512",
+          "695/4096",
+          "-551/4096",
+          "395/512",
+          "2383/2048",
+          "79/64",
+          "273/256",
+          "29/32"
+        ],
+        [
+          "-721/1024",
+          "965/256",
+          "2429/256",
+          "-12855/1024",
+          "395/512",
+          "911/512",
+          "47/16",
+          "209/64"
+        ],
+        [
+          "2611/512",
+          "-6551/8192",
+          "-112953/8192",
+          "2429/256",
+          "-551/4096",
+          "-659/512",
+          "-1201/512",
+          "-51/32"
+        ],
+        [
+          "-4039/512",
+          "40295/8192",
+          "-6551/8192",
+          "965/256",
+          "695/4096",
+          "155/512",
+          "97/512",
+          "-25/32"
+        ],
+        [
+          "3577/1024",
+          "-4039/512",
+          "2611/512",
+          "-721/1024",
+          "99/512",
+          "105/512",
+          "7/32",
+          "7/64"
+        ]
+      ],
+      "endpoint_map_symplectic": true
+    },
+    {
+      "order": "variant",
+      "scalar_Legendre_rank": 6,
+      "scalar_Legendre_determinant_divided_by_beta7": "0",
+      "pre_constraint_q_pi": [
+        [
+          "128",
+          "-241",
+          "-119",
+          "232",
+          "46",
+          "32",
+          "16",
+          "0"
+        ]
+      ],
+      "post_constraint_q_pi": [
+        [
+          "232",
+          "-119",
+          "-241",
+          "128",
+          "0",
+          "-16",
+          "-32",
+          "-46"
+        ]
+      ],
+      "chain_pullback_of_post_constraint": [
+        [
+          "-971/64",
+          "-18823/512",
+          "109559/512",
+          "-10371/64",
+          "-19807/256",
+          "-309/8",
+          "-961/32",
+          "-53/4"
+        ]
+      ],
+      "pre_vs_chain_pullback_Poisson_bracket_q_pi": "-52625/32",
+      "original_q_p_bracket": "-52625/32/beta",
+      "scope": "No common nonzero simultaneous strong-constraint vector on a compatible CCR domain; not a no-go for second-class reduction or other boundary contracts."
+    }
+  ],
+  "source_factorization": "W_c(rho_P,rho_F)=exp(-i*151*rho_P/38)*V_c(rho_F)",
+  "source_scope": "Fixed past clocks and common preparations/history weights. Integrating variable clock wavepackets can defeat cancellation.",
+  "conditional_common_scalar_reduction": {
+    "input_section": "q0=0 and Apre=0; coordinates (q1,q2,q3,pi1,pi2,pi3)",
+    "output_section": "q10=0 and Apost=0; coordinates (q7,q8,q9,pi7,pi8,pi9)",
+    "chain_extra_operation": "Gauge-fix B=Apost composed with M0 to zero along Apre flow before evolution; then quotient output.",
+    "chain_reduced_map": [
+      [
+        "583217423/77464000",
+        "49520953/77464000",
+        "-48700301/15492800",
+        "-1322239/38732000",
+        "1016313/4841500",
+        "75097/210500"
+      ],
+      [
+        "7903071767/1781672000",
+        "-1092862863/1781672000",
+        "-392275429/356334400",
+        "-10895431/890836000",
+        "13762577/111354500",
+        "1016313/4841500"
+      ],
+      [
+        "-23874476001/14253376000",
+        "477990889/14253376000",
+        "3444166787/2850675200",
+        "374617393/7126688000",
+        "-10895431/890836000",
+        "-1322239/38732000"
+      ],
+      [
+        "-485370695059/5701350400",
+        "-6274382549/5701350400",
+        "46659742553/1140270080",
+        "3444166787/2850675200",
+        "-392275429/356334400",
+        "-48700301/15492800"
+      ],
+      [
+        "313222199527/28506752000",
+        "-187600649503/28506752000",
+        "-6274382549/5701350400",
+        "477990889/14253376000",
+        "-1092862863/1781672000",
+        "49520953/77464000"
+      ],
+      [
+        "4489707258257/28506752000",
+        "313222199527/28506752000",
+        "-485370695059/5701350400",
+        "-23874476001/14253376000",
+        "7903071767/1781672000",
+        "583217423/77464000"
+      ]
+    ],
+    "variant_reduced_map": [
+      [
+        "-2625/1472",
+        "1473/1472",
+        "839/1472",
+        "65/736",
+        "17/92",
+        "1/4"
+      ],
+      [
+        "-117473/33856",
+        "67233/33856",
+        "8807/33856",
+        "1249/16928",
+        "321/2116",
+        "17/92"
+      ],
+      [
+        "-769289/270848",
+        "437961/270848",
+        "13055/270848",
+        "4873/135424",
+        "1249/16928",
+        "65/736"
+      ],
+      [
+        "-61810431/541696",
+        "65850687/541696",
+        "-27922119/541696",
+        "13055/270848",
+        "8807/33856",
+        "839/1472"
+      ],
+      [
+        "147486007/541696",
+        "-160537463/541696",
+        "65850687/541696",
+        "437961/270848",
+        "67233/33856",
+        "1473/1472"
+      ],
+      [
+        "-130078967/541696",
+        "147486007/541696",
+        "-61810431/541696",
+        "-769289/270848",
+        "-117473/33856",
+        "-2625/1472"
+      ]
+    ],
+    "both_maps_symplectic": true,
+    "maps_distinct": true,
+    "chain_reduced_qp_block_determinant": "737/35633440",
+    "variant_reduced_qp_block_determinant": "0",
+    "explicit_unitary_factorizations": [
+      {
+        "order": "chain",
+        "A_determinant": "-68229107961/14253376000",
+        "position_chirp_matrix_C_Ainv": [
+          [
+            "-794244563755/136458215922",
+            "-466475342869/136458215922",
+            "2130198192151/136458215922"
+          ],
+          [
+            "-466475342869/136458215922",
+            "476073551059/68229107961",
+            "-470384394407/136458215922"
+          ],
+          [
+            "2130198192151/136458215922",
+            "-470384394407/136458215922",
+            "-4501574544697/136458215922"
+          ]
+        ],
+        "momentum_chirp_matrix_Ainv_B": [
+          [
+            "1476248660/68229107961",
+            "3194423044/68229107961",
+            "4926438494/68229107961"
+          ],
+          [
+            "3194423044/68229107961",
+            "2783114372/68229107961",
+            "3660723088/68229107961"
+          ],
+          [
+            "4926438494/68229107961",
+            "3660723088/68229107961",
+            "4800415394/68229107961"
+          ]
+        ],
+        "exact_lower_dilation_upper_factorization": true,
+        "L2_construction": "U=position_chirp(C*A^-1) times unitary_dilation(A) times Fourier_momentum_chirp(A^-1*B). Each factor unitary under declared Lebesgue L2; no inverse of B required."
+      },
+      {
+        "order": "variant",
+        "A_determinant": "3303/135424",
+        "position_chirp_matrix_C_Ainv": [
+          [
+            "-1021605/734",
+            "1272346/367",
+            "-2437759/734"
+          ],
+          [
+            "1272346/367",
+            "-114554969/13212",
+            "54959243/6606"
+          ],
+          [
+            "-2437759/734",
+            "54959243/6606",
+            "-52806199/6606"
+          ]
+        ],
+        "momentum_chirp_matrix_Ainv_B": [
+          [
+            "66/367",
+            "368/1101",
+            "48/367"
+          ],
+          [
+            "368/1101",
+            "2063/3303",
+            "301/1101"
+          ],
+          [
+            "48/367",
+            "301/1101",
+            "135/367"
+          ]
+        ],
+        "exact_lower_dilation_upper_factorization": true,
+        "L2_construction": "U=position_chirp(C*A^-1) times unitary_dilation(A) times Fourier_momentum_chirp(A^-1*B). Each factor unitary under declared Lebesgue L2; no inverse of B required."
+      }
+    ],
+    "scope": "Conditional shared scalar three-pair reduction exists. Quantizing these maps requires declared rigging, normalization and phase conventions; full compact dust-clock physical norm is not derived."
+  },
+  "physical_Hilbert_space_derived": false,
+  "universal_no_go_claimed": false
+}
