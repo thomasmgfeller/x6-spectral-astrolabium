@@ -1,0 +1,38 @@
+name: CST-DUST two-step N13 extension stability
+on:
+  pull_request:
+    paths:
+      - 'research/rax_cqg/dust_collapse/extension_stability_v0_3/**'
+      - 'research/rax_cqg/dust_collapse/extension_stability_v0_3_publication.sha256'
+      - 'research/rax_cqg/dust_collapse/reports/CST_DUST_Erweiterungsstabilitaet_N13_v0_3.pdf'
+      - 'research/rax_cqg/dust_collapse/packages/CST_DUST_Erweiterungsstabilitaet_N13_v0_3_Pruefpaket.zip'
+      - '.github/workflows/cst-dust-n13-extension-stability.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  n13-extension-replay:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    env:
+      OPENBLAS_NUM_THREADS: 1
+      OMP_NUM_THREADS: 1
+    defaults:
+      run:
+        working-directory: research/rax_cqg/dust_collapse
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Verify publication hashes and all archive entries
+        run: |
+          sha256sum -c extension_stability_v0_3_publication.sha256
+          unzip -q packages/CST_DUST_Erweiterungsstabilitaet_N13_v0_3_Pruefpaket.zip -d "$RUNNER_TEMP/n13-extension"
+          diff -qr extension_stability_v0_3 "$RUNNER_TEMP/n13-extension"
+      - name: Replay both insertion steps, quadrature and detector tests
+        run: |
+          python -m pip install -r extension_stability_v0_3/upstream/requirements.txt
+          python -B "$RUNNER_TEMP/n13-extension/verify.py"

@@ -1,5 +1,13 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Erweiterungsstabilität von elf bis dreizehn Ereignissen · 18. November 2026
+
+Bei gleichem Rand, gleichen Dichtepaketen und demselben Detektor führen 408 markierte Zwei-Schritt-Wege zu 58 verschiedenen Endgeometrien. Davon bestehen 24 die skalare Endprüfung. Zu 23 führt mindestens ein zulässiger Zwischenweg. Für sieben dieser Geometrien wurde die Dichteantwort berechnet. Geben beide N11-Ausgangshistorien denselben Anteil von höchstens 5 % ihres Gewichts ab, halten im berechneten Sektor alle Aufteilungen auf N12- und N13-Nachkommen die bisherigen Toleranzen ein. Der gesamte abgegebene Anteil darf bis N13 weiterlaufen.
+
+Die Zwischengewichte entscheiden beim vollständigen Ersatz mit. Werden die beiden Standardgewichtungen aus [PR #296](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/296) jeweils beibehalten, verfehlt jede Verteilung auf die sieben berechneten N13-Endtypen die Niveautoleranz. Eine nachträglich ausgewählte Verteilung auf zwei Endtypen kehrt dagegen bei N13 in alle Toleranzen zurück, obwohl sie bei N12 gescheitert ist. Die dynamische Auslese der 16 weiteren erreichbaren Endtypen und die physikalische Auswahl der Gewichte bleiben offen.
+
+[Rechnung und Reproduktion](extension_stability_v0_3/README.md) · [Bericht (PDF)](reports/CST_DUST_Erweiterungsstabilitaet_N13_v0_3.pdf) · [Prüfpaket (ZIP)](packages/CST_DUST_Erweiterungsstabilitaet_N13_v0_3_Pruefpaket.zip) · [Ergebnisdaten und alle 408 Wege](extension_stability_v0_3/results.json) · [Prüfsummen der Originaldateien](extension_stability_v0_3_publication.sha256)
+
 ## Erweiterungsstabilität bei erhaltenem Elterngewicht · 18. November 2026
 
 Beim Übergang von elf auf zwölf Ereignisse gibt es für die Kette zehn und für die Ein-Kanten-Ordnung zwölf mögliche Einfügungen. Je sieben sind mit der bisherigen Skalarpaarung auswertbar. Zusammen ergeben sie fünf verschiedene Tochtergeometrien. Für die kohärente Anfangspräparation bleibt die Änderung der Erfolgswahrscheinlichkeit beim Wechsel des Dichtezentrums von 1/8 auf 1/4 auf diesem auswertbaren Träger negativ.
