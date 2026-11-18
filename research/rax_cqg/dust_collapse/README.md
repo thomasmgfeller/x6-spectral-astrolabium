@@ -1,5 +1,11 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Erste Geburtsrate und P3-Vorbereitung für M=1 · 18. November 2026
+
+Für M=1 auf der ersten Dichtestufe sind 38 der 524 P3-Vergleiche vorbereitet. Das Aufheben der Ereigniszahlgrenze erhält zwei normierte Uhrpaarungen mit unterschiedlichen frühen Vorhersagen. Der vollständige Ein-Geburts-Zähler lässt beide Raten zu. In den 33 einzeln geprüften Geometrien mit Skalarfeld fällt das Betragsquadrat des festen Randmatrixelements quadratisch mit der Uhrfensterbreite. Die physikalische Festlegung der Rate bleibt offen. Der dynamische P3-Pilot steht bei 0 von 38 Vergleichen.
+
+[M=1-Pilot mit Referenzwerten und Uhrtest](m1_pilot_clock_v0_1/README.md) · [Erste Geburtsrate mit Herleitung und Gegenrechnung](first_birth_rate_v0_1/README.md)
+
 ## Enduhrunabhängige Paarungen im endlichen CST-Uhrmodell · 18. November 2026
 
 Zwei positive Paarungen liefern bei verschobenem Enduhrwert jeweils dieselbe frühe Auslese. Für dieselbe leere Anfangspräparation sagen sie jedoch verschiedene Wahrscheinlichkeiten voraus: 1/2 bzw. 11/24 für keine Geburt bis zur Uhrmarke 1/2. Ein unabhängiger Audit mit überlappenden Uhrpaketen prüft auch die komplexen Kreuzterme. Die physikalische Auswahl der Paarung und des N14-Orbittransfers bleibt offen.
