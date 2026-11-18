@@ -1,5 +1,13 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Pfadgedächtnis bei N14 · 18. November 2026
+
+Wie viel muss eine N13-Geometrie über ihre Entstehung behalten, um das Gewicht jedes nächsten Endtyps vorhersagen zu können? Für sämtliche zulässigen Fortsetzungen braucht die Dreierkette 35 unterscheidbare Vorgeschichten und die Ein-Kanten-Ordnung 38. Eine geometrische Wachstumsregel erhält alle vorgegebenen N13-Gewichte und gibt allen 924 beziehungsweise 1026 zulässigen markierten Pfaden positives Gewicht. Die relativen Gewichte der Endtypen 1790 und 5374 bleiben dabei frei.
+
+Bei gemeinsamer Präparation beider Anfangsordnungen hat die Variation der skalaren Randamplitude bei fester N13-Marginale die komplexe Dimension 98. Nach Kopplung an die Staubuhr sind auf den beiden gemeinsamen archivierten Gittern mindestens sechs unabhängige Richtungen gesichert. Eine gemeinsame eindimensionale Projektion, die am Paar 1790/5374 für beide Dichten alle akzeptierten Detektorausgänge erhält, scheidet aus. Die dynamische Auswahl des physikalischen Historienmasses bleibt offen.
+
+[Studie und Rechendaten](history_measure_state_space_v0_2/README.md) · [Bericht (PDF)](reports/CST_DUST_Pfadgedaechtnis_N14_v0_2.pdf) · [Prüfpaket (ZIP)](packages/CST_DUST_Pfadgedaechtnis_N14_v0_2_Pruefpaket.zip) · [Prüfsummen](history_measure_state_space_v0_2_publication.sha256) · [Vorgängerstudie v0.1](history_measure_state_space_v0_1/README.md)
+
 ## Historienmass und Zustandsraum am N14-Paar · 18. November 2026
 
 Zwei Fortsetzungen über die N14-Endtypen 1790 und 5374 erhalten dieselbe markierte N13-Paarverteilung. Eine Übergangsrate pro markierter Einfügung, die nur den unmarkierten Eltern- und Tochtertyp kennt, scheitert an der Normierung und der Symmetrie unter den sechs Einfügungsreihenfolgen. Mit gespeicherter Einfügungsgeschichte gibt es mehrere exakt normierte Fortsetzungen.
