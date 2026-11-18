@@ -1,5 +1,9 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Anfangspräparation am Vergangenheitskragen · 18. November 2026
+
+Bei festem Uhrprofil bleibt die Auslese gegenüber der Anfangsdichte exakt unempfindlich. Für zwei kohärente Uhrpakete und denselben Zukunftsdetektor sinkt die Erfolgswahrscheinlichkeit beim Wechsel des Dichtezentrums von 1/8 auf 1/4 um 0,000006680475. Dephasierung schwächt die Antwort ab, ein relativer Phasenwechsel kehrt ihr Vorzeichen um. Die physikalische Auswahl der Randpaarung und die Geometriedynamik bleiben offen. [Herleitung, Kontrollen und Reproduktion](initial_preparation_v0_1/README.md) · [Kurzbericht (PDF)](reports/CST_DUST_Anfangspraeparation_v0_1.pdf) · [Prüfpaket (ZIP)](packages/CST_DUST_Anfangspraeparation_v0_1_Pruefpaket.zip).
+
 ## Physikalischer Rand- und Auslesevertrag v0.1 · 13. November 2026
 
 Der [neue Randvertrag](PHYSICAL_BOUNDARY_READOUT_PUBLICATION.md) konstruiert für das N11-Paar einen gemeinsamen positiven **bedingten skalaren Drei-Moden-Vertrag** mit berechneten Normierungen, Fresnelphasen, lokalem Gaußdetektor und vollständiger Erfolgs-/Fehlschlagbilanz. Gemeinsame Projektion und Präparation bleiben zusätzliche Annahmen; die ursprüngliche Wirkung wählt sie nicht eindeutig.
