@@ -1,5 +1,11 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Geburtsuhr und vollständige Randnorm · 18. November 2026
+
+Wird der innere Uhrwert als unterscheidbarer Messwert erhalten, wächst das Gewicht des festen Atom-/Skalargrundpakets im kurzen Uhrfenster linear. Für die kohärente Summe der 33 Ordnungen liegt der Koeffizient zwischen 0,0239574543165 und 0,0239574543166. Die vollständige ausgehende Randnorm divergiert im untersuchten Skalarprodukt für jedes positive Uhrfenster. Die physikalische Geburtsrate bleibt offen. Der M=1-Pilot steht weiterhin bei 0 von 38 physikalischen Vergleichen.
+
+[Herleitung und Nachrechnung](clock_record_norm_v0_1/README.md) · [Kurzbericht (PDF)](reports/CST_DUST_Geburtsuhr_Randnorm.pdf) · [Offline-Prüfpaket (ZIP)](packages/CST_DUST_Geburtsuhr_Randnorm_Pruefpaket.zip)
+
 ## Erste Geburtsrate und P3-Vorbereitung für M=1 · 18. November 2026
 
 Für M=1 auf der ersten Dichtestufe sind 38 der 524 P3-Vergleiche vorbereitet. Das Aufheben der Ereigniszahlgrenze erhält zwei normierte Uhrpaarungen mit unterschiedlichen frühen Vorhersagen. Der vollständige Ein-Geburts-Zähler lässt beide Raten zu. In den 33 einzeln geprüften Geometrien mit Skalarfeld fällt das Betragsquadrat des festen Randmatrixelements quadratisch mit der Uhrfensterbreite. Die physikalische Festlegung der Rate bleibt offen. Der dynamische P3-Pilot steht bei 0 von 38 Vergleichen.
