@@ -1,5 +1,11 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Fortsetzung und Regularität · Prüfberichte zu den Etappen 8 und 9
+
+Etappe 8 prüft, wie sich ein physikalischer Transport über die klassische Singularitätszeit von einer formalen Fortsetzung der Volumenkurve unterscheiden lässt. Etappe 9 untersucht inverse Volumenmomente, geglättete Krümmungsindikatoren, Trapping und den Innen-/Aussenraum-Anschluss. Die Referenz- und Gegenbeispiele sind nachrechenbar. Die dynamischen Prüfungen 8A–8C und 9A–9D stehen auf `HOLD_NOT_ELIGIBLE / NOT_RUN`.
+
+[Übersicht und Nachrechnung](stage_reviews_8_9/README.md) · [8 · Kritische Fortsetzung (PDF)](reports/CST_DUST_Etappe_8_Artefaktpruefung.pdf) · [9 · Regularität und Trapping (PDF)](reports/CST_DUST_Etappe_9_Artefaktpruefung.pdf)
+
 ## Prüfberichte zu den Etappen 4 bis 7 · 18. November 2026
 
 Vier Berichte prüfen den Weg vom physikalischen Zustandsraum bis zum klassischen Staubkollaps. Für die Uhrreferenz stimmen pro Zahlgewicht alle 26 Unterteilungen überein. Für die klassische Einstein-Staub-Lösung enthalten alle 240 archivierten Intervalle den analytischen Wert. Der gekoppelte physikalische Transport und die daraus vorhergesagte Kollapsbewegung bleiben offen.
