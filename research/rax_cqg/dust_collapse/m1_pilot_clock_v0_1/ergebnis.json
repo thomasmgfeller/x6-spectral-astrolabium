@@ -1,0 +1,490 @@
+{
+  "M1": {
+    "source_commit": "b595e3c971f4f80ea56c41ea1de0b942d67dce1a",
+    "mass": "1",
+    "density_ratio": 1,
+    "familywise_alpha": "1/20",
+    "alpha_per_comparison": "1/10480",
+    "physical_eligibility": {
+      "decision": "HOLD_NOT_ELIGIBLE",
+      "reasons": [
+        "D1 unresolved",
+        "D2 unresolved",
+        "D3 unresolved",
+        "D4 unresolved",
+        "D5 unresolved",
+        "D6 unresolved",
+        "D7 unresolved",
+        "lambda0 not frozen",
+        "Lk not frozen",
+        "Lcg not frozen",
+        "ensemble_size not frozen",
+        "seed_manifest not frozen",
+        "matched_couplings not frozen",
+        "physical_observable_adapters not frozen",
+        "total_uncertainty_method not frozen",
+        "reference or synthetic data cannot qualify CST dynamics"
+      ],
+      "physical_pass": false,
+      "execution": "NOT_RUN",
+      "regularity": "HOLD",
+      "candidate": "CST-DUST-C1",
+      "reference_checks_cannot_close_eligibility": true
+    },
+    "physical_comparisons_performed": 0,
+    "physical_runtime_estimate_seconds": null,
+    "rows": [
+      {
+        "family": "dynamics",
+        "observable": "r",
+        "x_start": "0",
+        "x_end": "0",
+        "classical_reference": "(1)^(1/3)",
+        "tolerance": "1/20",
+        "error_scale": "abs(reference)",
+        "physical_value": null,
+        "status": "NOT_RUN"
+      },
+      {
+        "family": "dynamics",
+        "observable": "rho_over_rho0",
+        "x_start": "0",
+        "x_end": "0",
+        "classical_reference": "1",
+        "tolerance": "1/20",
+        "error_scale": "abs(reference)",
+        "physical_value": null,
+        "status": "NOT_RUN"
+      },
+      {
+        "family": "dynamics",
+        "observable": "H_times_Tend",
+        "x_start": "0",
+        "x_end": "0",
+        "classical_reference": "-1/6",
+        "tolerance": "1/20",
+        "error_scale": "abs(reference)",
+        "physical_value": null,
+        "status": "NOT_RUN"
+      },
+      {
+        "family": "dynamics",
+        "observable": "acceleration_times_Tend_squared",
+        "x_start": "0",
+        "x_end": "0",
+        "classical_reference": "-1/72",
+        "tolerance": "1/20",
+        "error_scale": "abs(reference)",
+        "physical_value": null,
+        "status": "NOT_RUN"
+      },
+      {
+        "family": "mass",
+        "observable": "whole_ball_mass",
+        "x_start": "0",
+        "x_end": "0",
+        "classical_reference": "1",
+        "tolerance": "1/50",
+        "error_scale": "M",
+        "physical_value": null,
+        "status": "NOT_RUN"
+      },
+      {
+        "family": "dynamics",
+        "observable": "r",
+        "x_start": "1/4",
+        "x_end": "1/4",
+        "classical_reference": "(225/256)^(1/3)",
+        "tolerance": "1/20",
+        "error_scale": "abs(reference)",
+        "physical_value": null,
+        "status": "NOT_RUN"
+      },
+      {
+        "family": "dynamics",
+        "observable": "rho_over_rho0",
+        "x_start": "1/4",
+        "x_end": "1/4",
+        "classical_reference": "256/225",
+        "tolerance": "1/20",
+        "error_scale": "abs(reference)",
+        "physical_value": null,
+        "status": "NOT_RUN"
+      },
+      {
+        "family": "dynamics",
+        "observable": "H_times_Tend",
+        "x_start": "1/4",
+        "x_end": "1/4",
+        "classical_reference": "-8/45",
+        "tolerance": "1/20",
+        "error_scale": "abs(reference)",
+        "physical_value": null,
+        "status": "NOT_RUN"
+      },
+      {
+        "family": "dynamics",
+        "observable": "acceleration_times_Tend_squared",
+        "x_start": "1/4",
+        "x_end": "1/4",
+        "classical_reference": "-32/2025",
+        "tolerance": "1/20",
+        "error_scale": "abs(reference)",
+        "physical_value": null,
+        "status": "NOT_RUN"
+      },
+      {
+        "family": "mass",
+        "observable": "whole_ball_mass",
+        "x_start": "1/4",
+        "x_end": "1/4",
+        "classical_reference": "1",
+        "tolerance": "1/50",
+        "error_scale": "M",
+        "physical_value": null,
+        "status": "NOT_RUN"
+      },
+      {
+        "family": "dynamics",
+        "observable": "r",
+        "x_start": "1/2",
+        "x_end": "1/2",
+        "classical_reference": "(49/64)^(1/3)",
+        "tolerance": "1/20",
+        "error_scale": "abs(reference)",
+        "physical_value": null,
+        "status": "NOT_RUN"
+      },
+      {
+        "family": "dynamics",
+        "observable": "rho_over_rho0",
+        "x_start": "1/2",
+        "x_end": "1/2",
+        "classical_reference": "64/49",
+        "tolerance": "1/20",
+        "error_scale": "abs(reference)",
+        "physical_value": null,
+        "status": "NOT_RUN"
+      },
+      {
+        "family": "dynamics",
+        "observable": "H_times_Tend",
+        "x_start": "1/2",
+        "x_end": "1/2",
+        "classical_reference": "-4/21",
+        "tolerance": "1/20",
+        "error_scale": "abs(reference)",
+        "physical_value": null,
+        "status": "NOT_RUN"
+      },
+      {
+        "family": "dynamics",
+        "observable": "acceleration_times_Tend_squared",
+        "x_start": "1/2",
+        "x_end": "1/2",
+        "classical_reference": "-8/441",
+        "tolerance": "1/20",
+        "error_scale": "abs(reference)",
+        "physical_value": null,
+        "status": "NOT_RUN"
+      },
+      {
+        "family": "mass",
+        "observable": "whole_ball_mass",
+        "x_start": "1/2",
+        "x_end": "1/2",
+        "classical_reference": "1",
+        "tolerance": "1/50",
+        "error_scale": "M",
+        "physical_value": null,
+        "status": "NOT_RUN"
+      },
+      {
+        "family": "dynamics",
+        "observable": "r",
+        "x_start": "3/4",
+        "x_end": "3/4",
+        "classical_reference": "(169/256)^(1/3)",
+        "tolerance": "1/20",
+        "error_scale": "abs(reference)",
+        "physical_value": null,
+        "status": "NOT_RUN"
+      },
+      {
+        "family": "dynamics",
+        "observable": "rho_over_rho0",
+        "x_start": "3/4",
+        "x_end": "3/4",
+        "classical_reference": "256/169",
+        "tolerance": "1/20",
+        "error_scale": "abs(reference)",
+        "physical_value": null,
+        "status": "NOT_RUN"
+      },
+      {
+        "family": "dynamics",
+        "observable": "H_times_Tend",
+        "x_start": "3/4",
+        "x_end": "3/4",
+        "classical_reference": "-8/39",
+        "tolerance": "1/20",
+        "error_scale": "abs(reference)",
+        "physical_value": null,
+        "status": "NOT_RUN"
+      },
+      {
+        "family": "dynamics",
+        "observable": "acceleration_times_Tend_squared",
+        "x_start": "3/4",
+        "x_end": "3/4",
+        "classical_reference": "-32/1521",
+        "tolerance": "1/20",
+        "error_scale": "abs(reference)",
+        "physical_value": null,
+        "status": "NOT_RUN"
+      },
+      {
+        "family": "mass",
+        "observable": "whole_ball_mass",
+        "x_start": "3/4",
+        "x_end": "3/4",
+        "classical_reference": "1",
+        "tolerance": "1/50",
+        "error_scale": "M",
+        "physical_value": null,
+        "status": "NOT_RUN"
+      },
+      {
+        "family": "dynamics",
+        "observable": "r",
+        "x_start": "1",
+        "x_end": "1",
+        "classical_reference": "(9/16)^(1/3)",
+        "tolerance": "1/20",
+        "error_scale": "abs(reference)",
+        "physical_value": null,
+        "status": "NOT_RUN"
+      },
+      {
+        "family": "dynamics",
+        "observable": "rho_over_rho0",
+        "x_start": "1",
+        "x_end": "1",
+        "classical_reference": "16/9",
+        "tolerance": "1/20",
+        "error_scale": "abs(reference)",
+        "physical_value": null,
+        "status": "NOT_RUN"
+      },
+      {
+        "family": "dynamics",
+        "observable": "H_times_Tend",
+        "x_start": "1",
+        "x_end": "1",
+        "classical_reference": "-2/9",
+        "tolerance": "1/20",
+        "error_scale": "abs(reference)",
+        "physical_value": null,
+        "status": "NOT_RUN"
+      },
+      {
+        "family": "dynamics",
+        "observable": "acceleration_times_Tend_squared",
+        "x_start": "1",
+        "x_end": "1",
+        "classical_reference": "-2/81",
+        "tolerance": "1/20",
+        "error_scale": "abs(reference)",
+        "physical_value": null,
+        "status": "NOT_RUN"
+      },
+      {
+        "family": "mass",
+        "observable": "whole_ball_mass",
+        "x_start": "1",
+        "x_end": "1",
+        "classical_reference": "1",
+        "tolerance": "1/50",
+        "error_scale": "M",
+        "physical_value": null,
+        "status": "NOT_RUN"
+      },
+      {
+        "family": "side_flux",
+        "observable": "material_surface",
+        "x_start": "0",
+        "x_end": "1/4",
+        "classical_reference": "0",
+        "tolerance": "1/50",
+        "error_scale": "M",
+        "physical_value": null,
+        "status": "NOT_RUN"
+      },
+      {
+        "family": "side_flux",
+        "observable": "fixed_R4",
+        "x_start": "0",
+        "x_end": "1/4",
+        "classical_reference": "-248/28125",
+        "tolerance": "1/50",
+        "error_scale": "M",
+        "physical_value": null,
+        "status": "NOT_RUN"
+      },
+      {
+        "family": "side_flux",
+        "observable": "shrinking_chi_0.8_to_0.6",
+        "x_start": "0",
+        "x_end": "1/4",
+        "classical_reference": "721/8000",
+        "tolerance": "1/50",
+        "error_scale": "M",
+        "physical_value": null,
+        "status": "NOT_RUN"
+      },
+      {
+        "family": "side_flux",
+        "observable": "material_surface",
+        "x_start": "1/4",
+        "x_end": "1/2",
+        "classical_reference": "0",
+        "tolerance": "1/50",
+        "error_scale": "M",
+        "physical_value": null,
+        "status": "NOT_RUN"
+      },
+      {
+        "family": "side_flux",
+        "observable": "fixed_R4",
+        "x_start": "1/4",
+        "x_end": "1/2",
+        "classical_reference": "-14848/1378125",
+        "tolerance": "1/50",
+        "error_scale": "M",
+        "physical_value": null,
+        "status": "NOT_RUN"
+      },
+      {
+        "family": "side_flux",
+        "observable": "shrinking_chi_0.8_to_0.6",
+        "x_start": "1/4",
+        "x_end": "1/2",
+        "classical_reference": "631/8000",
+        "tolerance": "1/50",
+        "error_scale": "M",
+        "physical_value": null,
+        "status": "NOT_RUN"
+      },
+      {
+        "family": "side_flux",
+        "observable": "material_surface",
+        "x_start": "1/2",
+        "x_end": "3/4",
+        "classical_reference": "0",
+        "tolerance": "1/50",
+        "error_scale": "M",
+        "physical_value": null,
+        "status": "NOT_RUN"
+      },
+      {
+        "family": "side_flux",
+        "observable": "fixed_R4",
+        "x_start": "1/2",
+        "x_end": "3/4",
+        "classical_reference": "-13824/1035125",
+        "tolerance": "1/50",
+        "error_scale": "M",
+        "physical_value": null,
+        "status": "NOT_RUN"
+      },
+      {
+        "family": "side_flux",
+        "observable": "shrinking_chi_0.8_to_0.6",
+        "x_start": "1/2",
+        "x_end": "3/4",
+        "classical_reference": "547/8000",
+        "tolerance": "1/50",
+        "error_scale": "M",
+        "physical_value": null,
+        "status": "NOT_RUN"
+      },
+      {
+        "family": "side_flux",
+        "observable": "material_surface",
+        "x_start": "3/4",
+        "x_end": "1",
+        "classical_reference": "0",
+        "tolerance": "1/50",
+        "error_scale": "M",
+        "physical_value": null,
+        "status": "NOT_RUN"
+      },
+      {
+        "family": "side_flux",
+        "observable": "fixed_R4",
+        "x_start": "3/4",
+        "x_end": "1",
+        "classical_reference": "-128/7605",
+        "tolerance": "1/50",
+        "error_scale": "M",
+        "physical_value": null,
+        "status": "NOT_RUN"
+      },
+      {
+        "family": "side_flux",
+        "observable": "shrinking_chi_0.8_to_0.6",
+        "x_start": "3/4",
+        "x_end": "1",
+        "classical_reference": "469/8000",
+        "tolerance": "1/50",
+        "error_scale": "M",
+        "physical_value": null,
+        "status": "NOT_RUN"
+      },
+      {
+        "family": "initial_velocity",
+        "observable": "dr/dx",
+        "x_start": "0",
+        "x_end": "0",
+        "classical_reference": "-1/6",
+        "tolerance": "1/20",
+        "error_scale": "abs(reference)",
+        "physical_value": null,
+        "status": "NOT_RUN"
+      }
+    ]
+  },
+  "Uhr": {
+    "order_counts": [
+      1,
+      1,
+      2,
+      7,
+      40,
+      357,
+      4824
+    ],
+    "parent_rows": 408,
+    "checked_edges": 5231,
+    "rows_detecting_missing_multiplicity": 402,
+    "sewn_raw_coefficients": 280,
+    "interval_norm_checks": 60,
+    "empty_half_intervals": {
+      "5/4": [
+        "51593829604200548054471801/107145471557284795514880000",
+        "1228424514385727334630281/2551082656125828464640000"
+      ],
+      "4/3": [
+        "47129434955980348241351801/107145471557284795514880000",
+        "1122129403713817815270281/2551082656125828464640000"
+      ]
+    },
+    "beta_contrast": "1/24",
+    "empty_start_tail_N_gt_6_at_s1": [
+      "697668146752867/8381289214771200000",
+      "619851314999663/7446453110046720000"
+    ],
+    "uniform_upper_tail_probability": "1/12000",
+    "physical_histories": 0
+  }
+}
