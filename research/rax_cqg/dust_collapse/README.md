@@ -1,5 +1,13 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Erweiterungsstabilität auf allen 23 erreichbaren N13-Endtypen · 18. November 2026
+
+Die Dichteantwort ist für alle 23 Dreizehn-Ereignis-Geometrien berechnet, die von den beiden N11-Ausgangshistorien über eine zulässige N12-Zwischenordnung erreichbar sind. Die Studie ergänzt die 16 in v0.3 noch offenen Auswertungen und verwendet dieselbe Uhrenpräparation, dieselben Dichtepakete und denselben Detektor wie der [Ausgangsversuch](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/297).
+
+Geben beide Ausgangshistorien denselben Anteil ihres Amplitudengewichts ab, halten bis einschliesslich 5,1179 % alle zulässigen Aufteilungen auf erreichbare N12- und N13-Nachkommen die drei Detektortoleranzen ein. Bei 5,1180 % überschreitet eine explizite Aufteilung die Niveautoleranz. Diese Eingrenzung gilt auf beiden geprüften Auslesegittern. Bei vollständigem Ersatz durch N13 und festgehaltenen N12-Zwischengewichten erreicht die günstigste Fortsetzung bei Dichte 1/8 noch 31,04 % des ursprünglichen Erfolgs für gleiche markierte Einfügungen oder 44,66 % für gleiche Tochtertypen. Die Niveautoleranz erfordert mindestens 90 %.
+
+[Rechnung und Reproduktionsanleitung](extension_stability_v0_4/README.md) · [Bericht (PDF)](reports/CST_DUST_Erweiterungsstabilitaet_23_Endtypen_v0_4.pdf) · [Prüfpaket (ZIP)](packages/CST_DUST_Erweiterungsstabilitaet_23_Endtypen_v0_4_Pruefpaket.zip) · [Ergebnisdaten](extension_stability_v0_4/results.json) · [Prüfsummen](extension_stability_v0_4_publication.sha256)
+
 ## Erweiterungsstabilität von elf bis dreizehn Ereignissen · 18. November 2026
 
 Bei gleichem Rand, gleichen Dichtepaketen und demselben Detektor führen 408 markierte Zwei-Schritt-Wege zu 58 verschiedenen Endgeometrien. Davon bestehen 24 die skalare Endprüfung. Zu 23 führt mindestens ein zulässiger Zwischenweg. Für sieben dieser Geometrien wurde die Dichteantwort berechnet. Geben beide N11-Ausgangshistorien denselben Anteil von höchstens 5 % ihres Gewichts ab, halten im berechneten Sektor alle Aufteilungen auf N12- und N13-Nachkommen die bisherigen Toleranzen ein. Der gesamte abgegebene Anteil darf bis N13 weiterlaufen.
