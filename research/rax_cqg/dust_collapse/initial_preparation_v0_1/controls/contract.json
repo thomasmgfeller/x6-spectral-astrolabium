@@ -1,0 +1,63 @@
+{
+  "id": "CST-DUST-INITIAL-CONTROLS-0.1",
+  "date": "2026-11-13",
+  "frozen_before_outcome_computation": true,
+  "external_preregistration": false,
+  "parent_commit": "3ff8475e856758e9072c48e6db1006c085adbafe",
+  "scalar_input": "normalized Gaussian translated by d in reduced x=(q1,q2,q3), zero mean momentum",
+  "scalar_displacements": [
+    [
+      "-1/4",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "1/4",
+      "0",
+      "0"
+    ]
+  ],
+  "future_density": "1/8",
+  "past_density_control": [
+    "1/8",
+    "1/4"
+  ],
+  "omega0": "1/2",
+  "omega1": "1/2",
+  "pointer": {
+    "observable": "q7",
+    "g": "1",
+    "sigma": "1",
+    "bins": [
+      "(-infinity,-1)",
+      "[-1,1]",
+      "(1,infinity)"
+    ]
+  },
+  "clock_inputs": "Parent affine external clocks and complete inner W integrals reused, n128 and n160",
+  "comparison": "Full joint accepted pointer bins and failure; conditional bin probabilities reported separately",
+  "phase_convention": "Inherited C0 exp(-i pi/4) and C1 delta-kernel zero phase; Weyl translation exp(i beta p dot (y-q/2))",
+  "scope": "Conditional H3 common quotient, not four-mode bare physical dynamics or gravitational backreaction",
+  "sources": [
+    {
+      "path": "sources/canonical_results.json",
+      "parent_path": "checks/canonical_scalar/results.json",
+      "sha256": "a3e40698682df221ad7990d90e8688d94ef3524f8df1df5cf8f858143dbf2705"
+    },
+    {
+      "path": "sources/gaussian_outputs.json",
+      "parent_path": "checks/canonical_scalar/gaussian_outputs.json",
+      "sha256": "955098e34257133903fdc3a397de0ce0ed7d9c2cc9f723f3ac9ef8f4227fe660"
+    },
+    {
+      "path": "sources/clock_results.json",
+      "parent_path": "checks/ward_clock/results.json",
+      "sha256": "f640fd540d2ced8bd1875c1b57da56e2794b95021374439bc1fd89bcfbf73b6a"
+    }
+  ]
+}
