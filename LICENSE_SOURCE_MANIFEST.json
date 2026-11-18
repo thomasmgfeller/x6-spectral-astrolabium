@@ -34,6 +34,7 @@
     ".github/workflows/cst-dust-model-contract.yml": "3f49418aa5c0f52ecce2600a5ffee441af1d0b3550f4f4986d1c8df085d5603f",
     ".github/workflows/cst-dust-n13-extension-stability.yml": "ad95a187204c899e69fe35d8501683cf54c7a35437ccfa5638b6ece207a3ea10",
     ".github/workflows/cst-dust-n13-full-support.yml": "501411165457af348b6138a6d9a9ff30e77ca3e71931b3222d07afc4617f8d37",
+    ".github/workflows/cst-dust-n14-extension-stability.yml": "9c39d112b12734a35e06b261164ef60da7ca1a615aa6b7464ea11f822d37ad8e",
     ".github/workflows/cst-dust-normpath.yml": "769ff96d125a2c64d64d61a81207b8bb41b63a956c290372d2f563f304fb6e99",
     ".github/workflows/cst-dust-operational-matter.yml": "903745cf095634d19479045bf6baba0abe3a4210968e554297fe3f5d55e13f10",
     ".github/workflows/cst-dust-parent-weights.yml": "5c560567e5c4d8f808f38150fad96fa19604107264b4ac0ccb8859362142034b",
@@ -3188,7 +3189,7 @@
     "research/rax_cqg/dust_collapse/GEOMETRY_DYNAMICS_PUBLICATION.md": "9c32125e10aa76ab13776fe43655ae74eb8420de71b2a3c0e514a3089f180bac",
     "research/rax_cqg/dust_collapse/INTERFERENCE_DYNAMICS_PUBLICATION.md": "db1f3dae1dc821990160ddbc73afef9fd98e15da4306d92d6d17fc545b6fb44b",
     "research/rax_cqg/dust_collapse/PHYSICAL_BOUNDARY_READOUT_PUBLICATION.md": "5799c871d8b0681a14a0ac8d2d3fee7472d6505c6528861d66bf0fa645a4e0f0",
-    "research/rax_cqg/dust_collapse/README.md": "9a2cb8de21af1a84d735eb285b0dea4240c234fef1a2aa6d48df24263f3b0d3a",
+    "research/rax_cqg/dust_collapse/README.md": "0e688da618a1d2f30e13d54f96e4e73ce63a7849dcf20cff9ce0375bd6759c42",
     "research/rax_cqg/dust_collapse/additional_windows/results.csv": "2d7c141381e91bea341c464c0475368910f152b03170482d1a58bd4bf16e5435",
     "research/rax_cqg/dust_collapse/alpha_normtail_v0_1/CST_DUST_Alpha_Abhaengige_Normrestschranke_v0_1.pdf": "b18c24053a8a0eefe7b4f3cd4310c6c89a37360dd276c73296b9b83ac2f5f1ef",
     "research/rax_cqg/dust_collapse/alpha_normtail_v0_1/DERIVATION.md": "3cbe25aa23440c1db48d53db6a4cc8945425ceea5bd53fa592ef53de2c13fc5a",
@@ -4066,6 +4067,61 @@
     "research/rax_cqg/dust_collapse/extension_stability_v0_4/v03/upstream/v02_results.json": "7a01800e39825e66034611d2acba74264e6f86d83f6f16c824ca22e3dcc62a02",
     "research/rax_cqg/dust_collapse/extension_stability_v0_4/verify.py": "c587e26f000ebc09ecddc922677bd28851dff7d7495582f41ab49eea585b1701",
     "research/rax_cqg/dust_collapse/extension_stability_v0_4_publication.sha256": "e998d4f28d1ebeb4c2b64072d0ff2abee361a91890bd37022209096d12a4d166",
+    "research/rax_cqg/dust_collapse/extension_stability_v0_5/CST_DUST_Erweiterungsstabilitaet_N14_v0_5.pdf": "57c15d55562bd3eefe5f2d814e589369706e8a32d21fd45337a84b3c29f93e60",
+    "research/rax_cqg/dust_collapse/extension_stability_v0_5/LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "research/rax_cqg/dust_collapse/extension_stability_v0_5/LICENSE_SCOPE.md": "fe958f097f83f676f1009a12dceaedf6d1cbd4773d2ed3b0c9b3e9958ad704a7",
+    "research/rax_cqg/dust_collapse/extension_stability_v0_5/NOTICE": "1699e29d2ca9ce0518f79446a7714fa41c2b8ce66451729eafe9657c589e760d",
+    "research/rax_cqg/dust_collapse/extension_stability_v0_5/README.md": "d68b6dfa5a02b930d11864348f878f81822edb4ac00147c6717aef02c01a438d",
+    "research/rax_cqg/dust_collapse/extension_stability_v0_5/SHA256SUMS": "7c5713424b542d0d3ba9671fd1b4309f27b981e82c174433cd7d1c11f8fa95a7",
+    "research/rax_cqg/dust_collapse/extension_stability_v0_5/Schranke.md": "86cef96cd83936a79d06e429ae4397770d6922b473f14b56470af40972ae3755",
+    "research/rax_cqg/dust_collapse/extension_stability_v0_5/analytic.json": "f2fcdbece2a11047f238c91681bf2447f0412307dfb862453eae77ba713532de",
+    "research/rax_cqg/dust_collapse/extension_stability_v0_5/analytic.py": "75b6c5d5fb83521affaf65e0cb825ea307df00dfad61247779ee17683e85e19b",
+    "research/rax_cqg/dust_collapse/extension_stability_v0_5/clock14.json": "1ee25dce9b85f13a6cbb741ffbb36efdaf0e5700943d29e86982642f4da93c76",
+    "research/rax_cqg/dust_collapse/extension_stability_v0_5/clock14.py": "d76fe03b6e3ffd0a50a3541567a51eb2b19e119f25d3a915b562f0641c6410cb",
+    "research/rax_cqg/dust_collapse/extension_stability_v0_5/clock14_extra.json": "82ee5818e0d4153718d7043867a9d68dcd9bb1665340ba12ff3064b80b07f302",
+    "research/rax_cqg/dust_collapse/extension_stability_v0_5/exchange.json": "0c22adf501cb2ec8f651b55bde143b59bf30256a0b4702b30b985b3deea1a1f7",
+    "research/rax_cqg/dust_collapse/extension_stability_v0_5/exchange.py": "bf1a2c5e294762c2b6965f45873003030b05ab69c9cada7ee9e3f3cfe866dfa1",
+    "research/rax_cqg/dust_collapse/extension_stability_v0_5/exchange_certificate.json": "631bc64ddb7707f93939862d21aa0b6a3bcb14927ea3dd5998756f98d8363697",
+    "research/rax_cqg/dust_collapse/extension_stability_v0_5/growth.json": "84d470140b070456fd974a8befba9b6fab1afe4c900d8a0f894aa49315c1288d",
+    "research/rax_cqg/dust_collapse/extension_stability_v0_5/growth.py": "9a761e946a6dcee8bcbcef02bd767b472b1cf4ba59ecd3284054d07e3a30d368",
+    "research/rax_cqg/dust_collapse/extension_stability_v0_5/readout14.json": "a334434a1e047aefaf693e68f233cbd89148239d5fd7b9f6c48a4186d2f4562f",
+    "research/rax_cqg/dust_collapse/extension_stability_v0_5/readout14.py": "c39c9c4b20935bdc301fa4e543c98eff70ead4d15fe37b09c9ed88e2c3c3e1ec",
+    "research/rax_cqg/dust_collapse/extension_stability_v0_5/readout14_extra.json": "3c7a746aaff301371b526e766f877a5a66e781cfd679708cea451c595e148b9f",
+    "research/rax_cqg/dust_collapse/extension_stability_v0_5/upstream/CST_DUST_Erweiterungsstabilitaet_23_Endtypen_v0_4.pdf": "9129d956b2feb62f9e7972f9667b6bc05ff2261e0ff05331956be5aec5b13249",
+    "research/rax_cqg/dust_collapse/extension_stability_v0_5/upstream/LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "research/rax_cqg/dust_collapse/extension_stability_v0_5/upstream/LICENSE_SCOPE.md": "fe958f097f83f676f1009a12dceaedf6d1cbd4773d2ed3b0c9b3e9958ad704a7",
+    "research/rax_cqg/dust_collapse/extension_stability_v0_5/upstream/NOTICE": "1699e29d2ca9ce0518f79446a7714fa41c2b8ce66451729eafe9657c589e760d",
+    "research/rax_cqg/dust_collapse/extension_stability_v0_5/upstream/README.md": "dd8a72a547056eb20e8462c942c1f4b6e604a9516e3f27a9732b063c36dc0212",
+    "research/rax_cqg/dust_collapse/extension_stability_v0_5/upstream/SHA256SUMS": "e270c53bab9428cf7558062f6cb4aa2ae523c6b33b33533fdf522df21d23c810",
+    "research/rax_cqg/dust_collapse/extension_stability_v0_5/upstream/analysis_full.py": "1332512d3155b984146da2ecc7537b4263be4d057a5b071f006b7840d868250c",
+    "research/rax_cqg/dust_collapse/extension_stability_v0_5/upstream/certify.py": "4b2aa1a673b53d5703fdb87d73e6b8101bcc8e2b3204c59e8fa956deb89b0db5",
+    "research/rax_cqg/dust_collapse/extension_stability_v0_5/upstream/clocks_all.json": "7871e21173b3e70b8ae282031d7cb47ca71f97530e7059f4441ca9364d02d570",
+    "research/rax_cqg/dust_collapse/extension_stability_v0_5/upstream/contraction.c": "47ae6588c5d6fce4106544c6bebaf45f4ad84bf73cacd84ccfea9309362498e6",
+    "research/rax_cqg/dust_collapse/extension_stability_v0_5/upstream/quadrature.py": "44145865e8bd6b39c6f186327553dfa239aec697d87cae61407402c14f7afe7f",
+    "research/rax_cqg/dust_collapse/extension_stability_v0_5/upstream/readout.py": "634adcaec4707aa2fb41a0bf751bf12bb1b6da0bce5dd584b36d23dc1ff134d5",
+    "research/rax_cqg/dust_collapse/extension_stability_v0_5/upstream/results.json": "3fc4c75636620c493c95219dca1300d4f47ccfa9c0ebff8db103c8ae21a5214f",
+    "research/rax_cqg/dust_collapse/extension_stability_v0_5/upstream/study.json": "40962cb379afe1f8544d96625136b9a6475f97a745fe1d3f86770d2b8568dca7",
+    "research/rax_cqg/dust_collapse/extension_stability_v0_5/upstream/tangent_points.json": "ac6f71b322f45a5fd7c4b58e4c7472325c83b7e485740a830046348a8e814625",
+    "research/rax_cqg/dust_collapse/extension_stability_v0_5/upstream/v03/ORIGIN.json": "e97f92017ad19830c43ac7334d19f3b5652bd615de67d953376307a7a204e95f",
+    "research/rax_cqg/dust_collapse/extension_stability_v0_5/upstream/v03/analyze.py": "116611a536929675db08e2bbc0f618c8e0e6ef31c454ee89555abb69ac834f44",
+    "research/rax_cqg/dust_collapse/extension_stability_v0_5/upstream/v03/clock_network.py": "64cfe3f0cb55975eefc92e51b248739741c4e6498a100dd2444c94a6c770936a",
+    "research/rax_cqg/dust_collapse/extension_stability_v0_5/upstream/v03/clocks_n13.json": "0b01cb70a87f5de6ac19eef4094a5f084ceac49e50a85b3f698e80f7a8bb0013",
+    "research/rax_cqg/dust_collapse/extension_stability_v0_5/upstream/v03/compute.py": "7d92b02d179fbf4d520309c78820ba1704c42258349fdfac283aa97c3350c29b",
+    "research/rax_cqg/dust_collapse/extension_stability_v0_5/upstream/v03/endpoint_tests.py": "af41bcbf8db2dc1f3971b10ef327826c5d40850cc1a6a9d7ac846008b84f8299",
+    "research/rax_cqg/dust_collapse/extension_stability_v0_5/upstream/v03/orders.py": "4afb2afe6cd3b95bd855f3696f9b069ba379746c1a10110a240f2750d7b7031e",
+    "research/rax_cqg/dust_collapse/extension_stability_v0_5/upstream/v03/path_laws.py": "d9519e7777b7c8ea4567bdf4630ccda4098ca10549a9b8e142cc7e61ac73c4f8",
+    "research/rax_cqg/dust_collapse/extension_stability_v0_5/upstream/v03/results.json": "099f423d27b7566319ec936ecd124dc1f0af6f326415328d7aedf0413a4ec88d",
+    "research/rax_cqg/dust_collapse/extension_stability_v0_5/upstream/v03/upstream/abel_check.py": "e8618ad27062766698f666b8699da2731f87e9d894b3a8079ac3817286c3f4fa",
+    "research/rax_cqg/dust_collapse/extension_stability_v0_5/upstream/v03/upstream/clocks.py": "5e86d18846b7ec4484a1b1b846b54f35b1d284ce9622c636bf0f092df31c27c1",
+    "research/rax_cqg/dust_collapse/extension_stability_v0_5/upstream/v03/upstream/contract.json": "9df8c47f1f7d26be411626867e6ed1bdeb2dba9f4f5219ffb3528366b0e6f013",
+    "research/rax_cqg/dust_collapse/extension_stability_v0_5/upstream/v03/upstream/geometry.py": "31601eedb47dc19dd3d0f5bf73b8130470a43f98387d3666a58af31a176e5e7f",
+    "research/rax_cqg/dust_collapse/extension_stability_v0_5/upstream/v03/upstream/requirements.txt": "4b9e8258d2945cac6b69a295c9871188b18adf1233b8920bc0677d86dfc5e723",
+    "research/rax_cqg/dust_collapse/extension_stability_v0_5/upstream/v03/upstream/run.py": "e1450b4d6c2000216f7eb8e5a2c9d61660c0bc50fbb7432f8eef4ee42c35b86f",
+    "research/rax_cqg/dust_collapse/extension_stability_v0_5/upstream/v03/upstream/v02_grids.json": "cd41e4cc392d4e06de11d07542835f5be5f093b1343d99d2ccf1901a26ae165b",
+    "research/rax_cqg/dust_collapse/extension_stability_v0_5/upstream/v03/upstream/v02_results.json": "7a01800e39825e66034611d2acba74264e6f86d83f6f16c824ca22e3dcc62a02",
+    "research/rax_cqg/dust_collapse/extension_stability_v0_5/upstream/verify.py": "c587e26f000ebc09ecddc922677bd28851dff7d7495582f41ab49eea585b1701",
+    "research/rax_cqg/dust_collapse/extension_stability_v0_5/verify.py": "b591610c6e01b6fd9f45e17679fc2021215f195b4775fc715b3cec3d16eb7d61",
+    "research/rax_cqg/dust_collapse/extension_stability_v0_5_publication.sha256": "ae34ab7c0e378b2719a2e86c3f7f2fd3c15542bdf6f94b3dcba073a0a305cbee",
     "research/rax_cqg/dust_collapse/four_element_matter_v0_1/CST_DUST_Vier_Elemente_Kontinuierliche_Materiephase_v0_1.pdf": "e35a7201a66d7301808acdd6fcce4207e3cde98d5a6822a58c8e82839301c19d",
     "research/rax_cqg/dust_collapse/four_element_matter_v0_1/DERIVATION.md": "eb55a9eb6da2aaf795cd3b0bf1ff0ce349a97dc3a180eced3e9138200896ef74",
     "research/rax_cqg/dust_collapse/four_element_matter_v0_1/LICENSE": "8c6db340475136df3c1201d458fa5755698eace76e510471ecc9d857d6083dac",
@@ -4612,6 +4668,7 @@
     "research/rax_cqg/dust_collapse/packages/CST_DUST_Erweiterte_Verklebungsregel_v0_1_Pruefpaket.zip": "1d5e502474a796ddd95ff8a0f1555e26aa4713c2b0a96d3383587f20dd6ba188",
     "research/rax_cqg/dust_collapse/packages/CST_DUST_Erweiterungsstabilitaet_23_Endtypen_v0_4_Pruefpaket.zip": "192bcab3ca1e2726504852c400bf05305fe7e24ac491ed4a1554da96afd496a6",
     "research/rax_cqg/dust_collapse/packages/CST_DUST_Erweiterungsstabilitaet_N13_v0_3_Pruefpaket.zip": "6ec70f293d9b47b39bbd00526e888d99d23edea8f28a95c47f4b07dc413f8a81",
+    "research/rax_cqg/dust_collapse/packages/CST_DUST_Erweiterungsstabilitaet_N14_v0_5_Pruefpaket.zip": "4d69dbe7c3639675d52ae78b7835f38360f5dedc89f7bac842be4acaf767cf09",
     "research/rax_cqg/dust_collapse/packages/CST_DUST_Erweiterungsstabilitaet_v0_1_Pruefpaket.zip": "ade095127b44f7777fb4bb0f6e668538089bd1ac294d7f52724abf08d81f7345",
     "research/rax_cqg/dust_collapse/packages/CST_DUST_Expansion_Trapping_v0_1_Pruefpaket.zip": "d5d8f64665595182d445f9d1dfceebf7021c4004641a23801aa0879b89f4eb70",
     "research/rax_cqg/dust_collapse/packages/CST_DUST_Gekoppelter_Kern_Definitionsbereich_v0_1_Pruefpaket.zip": "c82438feebecc0a92ada332cfcfcbda935781d46b05e0f1ada40cb8befb499ee",
@@ -4943,6 +5000,7 @@
     "research/rax_cqg/dust_collapse/reports/CST_DUST_Elterngewichte_Erweiterungsstabilitaet_v0_2.pdf": "66294c2766de9b193b1be0441e1c059754754fbe8b7890ef07a012bf97bcd267",
     "research/rax_cqg/dust_collapse/reports/CST_DUST_Erweiterungsstabilitaet_23_Endtypen_v0_4.pdf": "a2e51add9d35d7193608e8ddcb5413773163405da08e76243027b82a08ebc66f",
     "research/rax_cqg/dust_collapse/reports/CST_DUST_Erweiterungsstabilitaet_N13_v0_3.pdf": "e7c3204657a13a110c986b9115634ba7bdccc5373b0ec24fc73da72ac6830355",
+    "research/rax_cqg/dust_collapse/reports/CST_DUST_Erweiterungsstabilitaet_N14_v0_5.pdf": "8a0a5d772cee116f501eac8acb78a2f639da562a445b2d1b4a97e07d83f2bdad",
     "research/rax_cqg/dust_collapse/reports/CST_DUST_Erweiterungsstabilitaet_v0_1.pdf": "01c2bb50f156f28b9b1f037bc2a965c38be05efade6880ef693ee3bcb3838ce1",
     "research/rax_cqg/dust_collapse/reports/CST_DUST_Expansion_Trapping_v0_1.pdf": "a6be2b5f6e35c147ffb94b65f3b037228907b420704f36f50498a820c3339941",
     "research/rax_cqg/dust_collapse/reports/CST_DUST_Geometriedynamik_Stationaerer_Kandidat_v0_1.pdf": "56f83be327297e7b62d9aa6cbae7f5abc7efc0f093208b6d184771490e58b72a",
@@ -10591,6 +10649,307 @@
           "sha256": "9a2cb8de21af1a84d735eb285b0dea4240c234fef1a2aa6d48df24263f3b0d3a"
         }
       ]
+    },
+    {
+      "date": "2026-11-18",
+      "scope": "Publish the N14 extension stability study v0.5, including the 139-type admissible census, ten numerical readouts, the N14_760 counterexample, exchangeable path weights and conditional full-support bound.",
+      "files": [
+        {
+          "path": ".github/workflows/cst-dust-n14-extension-stability.yml",
+          "previous_sha256": null,
+          "sha256": "9c39d112b12734a35e06b261164ef60da7ca1a615aa6b7464ea11f822d37ad8e"
+        },
+        {
+          "path": "research/rax_cqg/dust_collapse/extension_stability_v0_5/CST_DUST_Erweiterungsstabilitaet_N14_v0_5.pdf",
+          "previous_sha256": null,
+          "sha256": "57c15d55562bd3eefe5f2d814e589369706e8a32d21fd45337a84b3c29f93e60"
+        },
+        {
+          "path": "research/rax_cqg/dust_collapse/extension_stability_v0_5/LICENSE",
+          "previous_sha256": null,
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        },
+        {
+          "path": "research/rax_cqg/dust_collapse/extension_stability_v0_5/LICENSE_SCOPE.md",
+          "previous_sha256": null,
+          "sha256": "fe958f097f83f676f1009a12dceaedf6d1cbd4773d2ed3b0c9b3e9958ad704a7"
+        },
+        {
+          "path": "research/rax_cqg/dust_collapse/extension_stability_v0_5/NOTICE",
+          "previous_sha256": null,
+          "sha256": "1699e29d2ca9ce0518f79446a7714fa41c2b8ce66451729eafe9657c589e760d"
+        },
+        {
+          "path": "research/rax_cqg/dust_collapse/extension_stability_v0_5/README.md",
+          "previous_sha256": null,
+          "sha256": "d68b6dfa5a02b930d11864348f878f81822edb4ac00147c6717aef02c01a438d"
+        },
+        {
+          "path": "research/rax_cqg/dust_collapse/extension_stability_v0_5/SHA256SUMS",
+          "previous_sha256": null,
+          "sha256": "7c5713424b542d0d3ba9671fd1b4309f27b981e82c174433cd7d1c11f8fa95a7"
+        },
+        {
+          "path": "research/rax_cqg/dust_collapse/extension_stability_v0_5/Schranke.md",
+          "previous_sha256": null,
+          "sha256": "86cef96cd83936a79d06e429ae4397770d6922b473f14b56470af40972ae3755"
+        },
+        {
+          "path": "research/rax_cqg/dust_collapse/extension_stability_v0_5/analytic.json",
+          "previous_sha256": null,
+          "sha256": "f2fcdbece2a11047f238c91681bf2447f0412307dfb862453eae77ba713532de"
+        },
+        {
+          "path": "research/rax_cqg/dust_collapse/extension_stability_v0_5/analytic.py",
+          "previous_sha256": null,
+          "sha256": "75b6c5d5fb83521affaf65e0cb825ea307df00dfad61247779ee17683e85e19b"
+        },
+        {
+          "path": "research/rax_cqg/dust_collapse/extension_stability_v0_5/clock14.json",
+          "previous_sha256": null,
+          "sha256": "1ee25dce9b85f13a6cbb741ffbb36efdaf0e5700943d29e86982642f4da93c76"
+        },
+        {
+          "path": "research/rax_cqg/dust_collapse/extension_stability_v0_5/clock14.py",
+          "previous_sha256": null,
+          "sha256": "d76fe03b6e3ffd0a50a3541567a51eb2b19e119f25d3a915b562f0641c6410cb"
+        },
+        {
+          "path": "research/rax_cqg/dust_collapse/extension_stability_v0_5/clock14_extra.json",
+          "previous_sha256": null,
+          "sha256": "82ee5818e0d4153718d7043867a9d68dcd9bb1665340ba12ff3064b80b07f302"
+        },
+        {
+          "path": "research/rax_cqg/dust_collapse/extension_stability_v0_5/exchange.json",
+          "previous_sha256": null,
+          "sha256": "0c22adf501cb2ec8f651b55bde143b59bf30256a0b4702b30b985b3deea1a1f7"
+        },
+        {
+          "path": "research/rax_cqg/dust_collapse/extension_stability_v0_5/exchange.py",
+          "previous_sha256": null,
+          "sha256": "bf1a2c5e294762c2b6965f45873003030b05ab69c9cada7ee9e3f3cfe866dfa1"
+        },
+        {
+          "path": "research/rax_cqg/dust_collapse/extension_stability_v0_5/exchange_certificate.json",
+          "previous_sha256": null,
+          "sha256": "631bc64ddb7707f93939862d21aa0b6a3bcb14927ea3dd5998756f98d8363697"
+        },
+        {
+          "path": "research/rax_cqg/dust_collapse/extension_stability_v0_5/growth.json",
+          "previous_sha256": null,
+          "sha256": "84d470140b070456fd974a8befba9b6fab1afe4c900d8a0f894aa49315c1288d"
+        },
+        {
+          "path": "research/rax_cqg/dust_collapse/extension_stability_v0_5/growth.py",
+          "previous_sha256": null,
+          "sha256": "9a761e946a6dcee8bcbcef02bd767b472b1cf4ba59ecd3284054d07e3a30d368"
+        },
+        {
+          "path": "research/rax_cqg/dust_collapse/extension_stability_v0_5/readout14.json",
+          "previous_sha256": null,
+          "sha256": "a334434a1e047aefaf693e68f233cbd89148239d5fd7b9f6c48a4186d2f4562f"
+        },
+        {
+          "path": "research/rax_cqg/dust_collapse/extension_stability_v0_5/readout14.py",
+          "previous_sha256": null,
+          "sha256": "c39c9c4b20935bdc301fa4e543c98eff70ead4d15fe37b09c9ed88e2c3c3e1ec"
+        },
+        {
+          "path": "research/rax_cqg/dust_collapse/extension_stability_v0_5/readout14_extra.json",
+          "previous_sha256": null,
+          "sha256": "3c7a746aaff301371b526e766f877a5a66e781cfd679708cea451c595e148b9f"
+        },
+        {
+          "path": "research/rax_cqg/dust_collapse/extension_stability_v0_5/upstream/CST_DUST_Erweiterungsstabilitaet_23_Endtypen_v0_4.pdf",
+          "previous_sha256": null,
+          "sha256": "9129d956b2feb62f9e7972f9667b6bc05ff2261e0ff05331956be5aec5b13249"
+        },
+        {
+          "path": "research/rax_cqg/dust_collapse/extension_stability_v0_5/upstream/LICENSE",
+          "previous_sha256": null,
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        },
+        {
+          "path": "research/rax_cqg/dust_collapse/extension_stability_v0_5/upstream/LICENSE_SCOPE.md",
+          "previous_sha256": null,
+          "sha256": "fe958f097f83f676f1009a12dceaedf6d1cbd4773d2ed3b0c9b3e9958ad704a7"
+        },
+        {
+          "path": "research/rax_cqg/dust_collapse/extension_stability_v0_5/upstream/NOTICE",
+          "previous_sha256": null,
+          "sha256": "1699e29d2ca9ce0518f79446a7714fa41c2b8ce66451729eafe9657c589e760d"
+        },
+        {
+          "path": "research/rax_cqg/dust_collapse/extension_stability_v0_5/upstream/README.md",
+          "previous_sha256": null,
+          "sha256": "dd8a72a547056eb20e8462c942c1f4b6e604a9516e3f27a9732b063c36dc0212"
+        },
+        {
+          "path": "research/rax_cqg/dust_collapse/extension_stability_v0_5/upstream/SHA256SUMS",
+          "previous_sha256": null,
+          "sha256": "e270c53bab9428cf7558062f6cb4aa2ae523c6b33b33533fdf522df21d23c810"
+        },
+        {
+          "path": "research/rax_cqg/dust_collapse/extension_stability_v0_5/upstream/analysis_full.py",
+          "previous_sha256": null,
+          "sha256": "1332512d3155b984146da2ecc7537b4263be4d057a5b071f006b7840d868250c"
+        },
+        {
+          "path": "research/rax_cqg/dust_collapse/extension_stability_v0_5/upstream/certify.py",
+          "previous_sha256": null,
+          "sha256": "4b2aa1a673b53d5703fdb87d73e6b8101bcc8e2b3204c59e8fa956deb89b0db5"
+        },
+        {
+          "path": "research/rax_cqg/dust_collapse/extension_stability_v0_5/upstream/clocks_all.json",
+          "previous_sha256": null,
+          "sha256": "7871e21173b3e70b8ae282031d7cb47ca71f97530e7059f4441ca9364d02d570"
+        },
+        {
+          "path": "research/rax_cqg/dust_collapse/extension_stability_v0_5/upstream/contraction.c",
+          "previous_sha256": null,
+          "sha256": "47ae6588c5d6fce4106544c6bebaf45f4ad84bf73cacd84ccfea9309362498e6"
+        },
+        {
+          "path": "research/rax_cqg/dust_collapse/extension_stability_v0_5/upstream/quadrature.py",
+          "previous_sha256": null,
+          "sha256": "44145865e8bd6b39c6f186327553dfa239aec697d87cae61407402c14f7afe7f"
+        },
+        {
+          "path": "research/rax_cqg/dust_collapse/extension_stability_v0_5/upstream/readout.py",
+          "previous_sha256": null,
+          "sha256": "634adcaec4707aa2fb41a0bf751bf12bb1b6da0bce5dd584b36d23dc1ff134d5"
+        },
+        {
+          "path": "research/rax_cqg/dust_collapse/extension_stability_v0_5/upstream/results.json",
+          "previous_sha256": null,
+          "sha256": "3fc4c75636620c493c95219dca1300d4f47ccfa9c0ebff8db103c8ae21a5214f"
+        },
+        {
+          "path": "research/rax_cqg/dust_collapse/extension_stability_v0_5/upstream/study.json",
+          "previous_sha256": null,
+          "sha256": "40962cb379afe1f8544d96625136b9a6475f97a745fe1d3f86770d2b8568dca7"
+        },
+        {
+          "path": "research/rax_cqg/dust_collapse/extension_stability_v0_5/upstream/tangent_points.json",
+          "previous_sha256": null,
+          "sha256": "ac6f71b322f45a5fd7c4b58e4c7472325c83b7e485740a830046348a8e814625"
+        },
+        {
+          "path": "research/rax_cqg/dust_collapse/extension_stability_v0_5/upstream/v03/ORIGIN.json",
+          "previous_sha256": null,
+          "sha256": "e97f92017ad19830c43ac7334d19f3b5652bd615de67d953376307a7a204e95f"
+        },
+        {
+          "path": "research/rax_cqg/dust_collapse/extension_stability_v0_5/upstream/v03/analyze.py",
+          "previous_sha256": null,
+          "sha256": "116611a536929675db08e2bbc0f618c8e0e6ef31c454ee89555abb69ac834f44"
+        },
+        {
+          "path": "research/rax_cqg/dust_collapse/extension_stability_v0_5/upstream/v03/clock_network.py",
+          "previous_sha256": null,
+          "sha256": "64cfe3f0cb55975eefc92e51b248739741c4e6498a100dd2444c94a6c770936a"
+        },
+        {
+          "path": "research/rax_cqg/dust_collapse/extension_stability_v0_5/upstream/v03/clocks_n13.json",
+          "previous_sha256": null,
+          "sha256": "0b01cb70a87f5de6ac19eef4094a5f084ceac49e50a85b3f698e80f7a8bb0013"
+        },
+        {
+          "path": "research/rax_cqg/dust_collapse/extension_stability_v0_5/upstream/v03/compute.py",
+          "previous_sha256": null,
+          "sha256": "7d92b02d179fbf4d520309c78820ba1704c42258349fdfac283aa97c3350c29b"
+        },
+        {
+          "path": "research/rax_cqg/dust_collapse/extension_stability_v0_5/upstream/v03/endpoint_tests.py",
+          "previous_sha256": null,
+          "sha256": "af41bcbf8db2dc1f3971b10ef327826c5d40850cc1a6a9d7ac846008b84f8299"
+        },
+        {
+          "path": "research/rax_cqg/dust_collapse/extension_stability_v0_5/upstream/v03/orders.py",
+          "previous_sha256": null,
+          "sha256": "4afb2afe6cd3b95bd855f3696f9b069ba379746c1a10110a240f2750d7b7031e"
+        },
+        {
+          "path": "research/rax_cqg/dust_collapse/extension_stability_v0_5/upstream/v03/path_laws.py",
+          "previous_sha256": null,
+          "sha256": "d9519e7777b7c8ea4567bdf4630ccda4098ca10549a9b8e142cc7e61ac73c4f8"
+        },
+        {
+          "path": "research/rax_cqg/dust_collapse/extension_stability_v0_5/upstream/v03/results.json",
+          "previous_sha256": null,
+          "sha256": "099f423d27b7566319ec936ecd124dc1f0af6f326415328d7aedf0413a4ec88d"
+        },
+        {
+          "path": "research/rax_cqg/dust_collapse/extension_stability_v0_5/upstream/v03/upstream/abel_check.py",
+          "previous_sha256": null,
+          "sha256": "e8618ad27062766698f666b8699da2731f87e9d894b3a8079ac3817286c3f4fa"
+        },
+        {
+          "path": "research/rax_cqg/dust_collapse/extension_stability_v0_5/upstream/v03/upstream/clocks.py",
+          "previous_sha256": null,
+          "sha256": "5e86d18846b7ec4484a1b1b846b54f35b1d284ce9622c636bf0f092df31c27c1"
+        },
+        {
+          "path": "research/rax_cqg/dust_collapse/extension_stability_v0_5/upstream/v03/upstream/contract.json",
+          "previous_sha256": null,
+          "sha256": "9df8c47f1f7d26be411626867e6ed1bdeb2dba9f4f5219ffb3528366b0e6f013"
+        },
+        {
+          "path": "research/rax_cqg/dust_collapse/extension_stability_v0_5/upstream/v03/upstream/geometry.py",
+          "previous_sha256": null,
+          "sha256": "31601eedb47dc19dd3d0f5bf73b8130470a43f98387d3666a58af31a176e5e7f"
+        },
+        {
+          "path": "research/rax_cqg/dust_collapse/extension_stability_v0_5/upstream/v03/upstream/requirements.txt",
+          "previous_sha256": null,
+          "sha256": "4b9e8258d2945cac6b69a295c9871188b18adf1233b8920bc0677d86dfc5e723"
+        },
+        {
+          "path": "research/rax_cqg/dust_collapse/extension_stability_v0_5/upstream/v03/upstream/run.py",
+          "previous_sha256": null,
+          "sha256": "e1450b4d6c2000216f7eb8e5a2c9d61660c0bc50fbb7432f8eef4ee42c35b86f"
+        },
+        {
+          "path": "research/rax_cqg/dust_collapse/extension_stability_v0_5/upstream/v03/upstream/v02_grids.json",
+          "previous_sha256": null,
+          "sha256": "cd41e4cc392d4e06de11d07542835f5be5f093b1343d99d2ccf1901a26ae165b"
+        },
+        {
+          "path": "research/rax_cqg/dust_collapse/extension_stability_v0_5/upstream/v03/upstream/v02_results.json",
+          "previous_sha256": null,
+          "sha256": "7a01800e39825e66034611d2acba74264e6f86d83f6f16c824ca22e3dcc62a02"
+        },
+        {
+          "path": "research/rax_cqg/dust_collapse/extension_stability_v0_5/upstream/verify.py",
+          "previous_sha256": null,
+          "sha256": "c587e26f000ebc09ecddc922677bd28851dff7d7495582f41ab49eea585b1701"
+        },
+        {
+          "path": "research/rax_cqg/dust_collapse/extension_stability_v0_5/verify.py",
+          "previous_sha256": null,
+          "sha256": "b591610c6e01b6fd9f45e17679fc2021215f195b4775fc715b3cec3d16eb7d61"
+        },
+        {
+          "path": "research/rax_cqg/dust_collapse/extension_stability_v0_5_publication.sha256",
+          "previous_sha256": null,
+          "sha256": "ae34ab7c0e378b2719a2e86c3f7f2fd3c15542bdf6f94b3dcba073a0a305cbee"
+        },
+        {
+          "path": "research/rax_cqg/dust_collapse/packages/CST_DUST_Erweiterungsstabilitaet_N14_v0_5_Pruefpaket.zip",
+          "previous_sha256": null,
+          "sha256": "4d69dbe7c3639675d52ae78b7835f38360f5dedc89f7bac842be4acaf767cf09"
+        },
+        {
+          "path": "research/rax_cqg/dust_collapse/reports/CST_DUST_Erweiterungsstabilitaet_N14_v0_5.pdf",
+          "previous_sha256": null,
+          "sha256": "8a0a5d772cee116f501eac8acb78a2f639da562a445b2d1b4a97e07d83f2bdad"
+        },
+        {
+          "path": "research/rax_cqg/dust_collapse/README.md",
+          "previous_sha256": "9a2cb8de21af1a84d735eb285b0dea4240c234fef1a2aa6d48df24263f3b0d3a",
+          "sha256": "0e688da618a1d2f30e13d54f96e4e73ce63a7849dcf20cff9ce0375bd6759c42"
+        }
+      ]
     }
   ],
   "publication_additions": [
@@ -13158,6 +13517,70 @@
         "research/rax_cqg/dust_collapse/extension_stability_v0_4_publication.sha256",
         "research/rax_cqg/dust_collapse/packages/CST_DUST_Erweiterungsstabilitaet_23_Endtypen_v0_4_Pruefpaket.zip",
         "research/rax_cqg/dust_collapse/reports/CST_DUST_Erweiterungsstabilitaet_23_Endtypen_v0_4.pdf"
+      ]
+    },
+    {
+      "date": "2026-11-18",
+      "scope": "Publish the N14 extension stability study v0.5, including the 139-type admissible census, ten numerical readouts, the N14_760 counterexample, exchangeable path weights and conditional full-support bound.",
+      "files": [
+        ".github/workflows/cst-dust-n14-extension-stability.yml",
+        "research/rax_cqg/dust_collapse/extension_stability_v0_5/CST_DUST_Erweiterungsstabilitaet_N14_v0_5.pdf",
+        "research/rax_cqg/dust_collapse/extension_stability_v0_5/LICENSE",
+        "research/rax_cqg/dust_collapse/extension_stability_v0_5/LICENSE_SCOPE.md",
+        "research/rax_cqg/dust_collapse/extension_stability_v0_5/NOTICE",
+        "research/rax_cqg/dust_collapse/extension_stability_v0_5/README.md",
+        "research/rax_cqg/dust_collapse/extension_stability_v0_5/SHA256SUMS",
+        "research/rax_cqg/dust_collapse/extension_stability_v0_5/Schranke.md",
+        "research/rax_cqg/dust_collapse/extension_stability_v0_5/analytic.json",
+        "research/rax_cqg/dust_collapse/extension_stability_v0_5/analytic.py",
+        "research/rax_cqg/dust_collapse/extension_stability_v0_5/clock14.json",
+        "research/rax_cqg/dust_collapse/extension_stability_v0_5/clock14.py",
+        "research/rax_cqg/dust_collapse/extension_stability_v0_5/clock14_extra.json",
+        "research/rax_cqg/dust_collapse/extension_stability_v0_5/exchange.json",
+        "research/rax_cqg/dust_collapse/extension_stability_v0_5/exchange.py",
+        "research/rax_cqg/dust_collapse/extension_stability_v0_5/exchange_certificate.json",
+        "research/rax_cqg/dust_collapse/extension_stability_v0_5/growth.json",
+        "research/rax_cqg/dust_collapse/extension_stability_v0_5/growth.py",
+        "research/rax_cqg/dust_collapse/extension_stability_v0_5/readout14.json",
+        "research/rax_cqg/dust_collapse/extension_stability_v0_5/readout14.py",
+        "research/rax_cqg/dust_collapse/extension_stability_v0_5/readout14_extra.json",
+        "research/rax_cqg/dust_collapse/extension_stability_v0_5/upstream/CST_DUST_Erweiterungsstabilitaet_23_Endtypen_v0_4.pdf",
+        "research/rax_cqg/dust_collapse/extension_stability_v0_5/upstream/LICENSE",
+        "research/rax_cqg/dust_collapse/extension_stability_v0_5/upstream/LICENSE_SCOPE.md",
+        "research/rax_cqg/dust_collapse/extension_stability_v0_5/upstream/NOTICE",
+        "research/rax_cqg/dust_collapse/extension_stability_v0_5/upstream/README.md",
+        "research/rax_cqg/dust_collapse/extension_stability_v0_5/upstream/SHA256SUMS",
+        "research/rax_cqg/dust_collapse/extension_stability_v0_5/upstream/analysis_full.py",
+        "research/rax_cqg/dust_collapse/extension_stability_v0_5/upstream/certify.py",
+        "research/rax_cqg/dust_collapse/extension_stability_v0_5/upstream/clocks_all.json",
+        "research/rax_cqg/dust_collapse/extension_stability_v0_5/upstream/contraction.c",
+        "research/rax_cqg/dust_collapse/extension_stability_v0_5/upstream/quadrature.py",
+        "research/rax_cqg/dust_collapse/extension_stability_v0_5/upstream/readout.py",
+        "research/rax_cqg/dust_collapse/extension_stability_v0_5/upstream/results.json",
+        "research/rax_cqg/dust_collapse/extension_stability_v0_5/upstream/study.json",
+        "research/rax_cqg/dust_collapse/extension_stability_v0_5/upstream/tangent_points.json",
+        "research/rax_cqg/dust_collapse/extension_stability_v0_5/upstream/v03/ORIGIN.json",
+        "research/rax_cqg/dust_collapse/extension_stability_v0_5/upstream/v03/analyze.py",
+        "research/rax_cqg/dust_collapse/extension_stability_v0_5/upstream/v03/clock_network.py",
+        "research/rax_cqg/dust_collapse/extension_stability_v0_5/upstream/v03/clocks_n13.json",
+        "research/rax_cqg/dust_collapse/extension_stability_v0_5/upstream/v03/compute.py",
+        "research/rax_cqg/dust_collapse/extension_stability_v0_5/upstream/v03/endpoint_tests.py",
+        "research/rax_cqg/dust_collapse/extension_stability_v0_5/upstream/v03/orders.py",
+        "research/rax_cqg/dust_collapse/extension_stability_v0_5/upstream/v03/path_laws.py",
+        "research/rax_cqg/dust_collapse/extension_stability_v0_5/upstream/v03/results.json",
+        "research/rax_cqg/dust_collapse/extension_stability_v0_5/upstream/v03/upstream/abel_check.py",
+        "research/rax_cqg/dust_collapse/extension_stability_v0_5/upstream/v03/upstream/clocks.py",
+        "research/rax_cqg/dust_collapse/extension_stability_v0_5/upstream/v03/upstream/contract.json",
+        "research/rax_cqg/dust_collapse/extension_stability_v0_5/upstream/v03/upstream/geometry.py",
+        "research/rax_cqg/dust_collapse/extension_stability_v0_5/upstream/v03/upstream/requirements.txt",
+        "research/rax_cqg/dust_collapse/extension_stability_v0_5/upstream/v03/upstream/run.py",
+        "research/rax_cqg/dust_collapse/extension_stability_v0_5/upstream/v03/upstream/v02_grids.json",
+        "research/rax_cqg/dust_collapse/extension_stability_v0_5/upstream/v03/upstream/v02_results.json",
+        "research/rax_cqg/dust_collapse/extension_stability_v0_5/upstream/verify.py",
+        "research/rax_cqg/dust_collapse/extension_stability_v0_5/verify.py",
+        "research/rax_cqg/dust_collapse/extension_stability_v0_5_publication.sha256",
+        "research/rax_cqg/dust_collapse/packages/CST_DUST_Erweiterungsstabilitaet_N14_v0_5_Pruefpaket.zip",
+        "research/rax_cqg/dust_collapse/reports/CST_DUST_Erweiterungsstabilitaet_N14_v0_5.pdf"
       ]
     }
   ]

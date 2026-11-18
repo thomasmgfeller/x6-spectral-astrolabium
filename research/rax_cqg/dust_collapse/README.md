@@ -1,5 +1,13 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Erweiterungsstabilität bei 14 Ereignissen · 18. November 2026
+
+Die dritte Einfügung führt von 23 zulässigen N13-Elterntypen zu 139 zulässigen N14-Endtypen. Für zehn davon wurden die Uhrintegrale und Detektorantworten auf zwei Gittern ausgewertet. Innerhalb dieses erweiterten Trägers halten alle erlaubten Aufteilungen bis einschliesslich 5,0282 % übertragenem Amplitudengewicht die drei Toleranzen ein. Geben beide N11-Eltern je 5,0283 % an N14-Typ 760, fällt der Detektorerfolg bei Dichte 1/4 auf 89,99987 % des Referenzwerts. Damit scheitert auch die bisherige N13-Garantie von 5,1179 % auf dem vollen N14-Träger.
+
+Für alle 139 zulässigen Endtypen ergibt die analytische Abschätzung eine hinreichende Untergrenze von 1,6 % unter den auf beiden N11-Referenzgittern geprüften Voraussetzungen. Ob 5 % auf dem vollen Träger stabil bleiben, ist offen. Die bisherige austauschsymmetrische N13-Pfadverteilung lässt sich über 1 950 in allen sechs Einfügungsreihenfolgen zulässige Pfade exakt fortsetzen.
+
+[Studie mit Rechendaten](extension_stability_v0_5/README.md) · [Herleitung der Untergrenze](extension_stability_v0_5/Schranke.md) · [Bericht (PDF)](reports/CST_DUST_Erweiterungsstabilitaet_N14_v0_5.pdf) · [Prüfpaket (ZIP)](packages/CST_DUST_Erweiterungsstabilitaet_N14_v0_5_Pruefpaket.zip) · [Prüfsummen](extension_stability_v0_5_publication.sha256)
+
 ## Erweiterungsstabilität auf allen 23 erreichbaren N13-Endtypen · 18. November 2026
 
 Die Dichteantwort ist für alle 23 Dreizehn-Ereignis-Geometrien berechnet, die von den beiden N11-Ausgangshistorien über eine zulässige N12-Zwischenordnung erreichbar sind. Die Studie ergänzt die 16 in v0.3 noch offenen Auswertungen und verwendet dieselbe Uhrenpräparation, dieselben Dichtepakete und denselben Detektor wie der [Ausgangsversuch](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/297).
