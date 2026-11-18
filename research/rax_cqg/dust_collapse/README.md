@@ -1,5 +1,17 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Norm und Interferenz am gemeinsamen Zwischenrand · 18. November 2026
+
+Die erweiterte Verklebung ergibt für ein festes späteres Grundpaket ein endliches kohärentes Gewicht. Bei der vollständigen skalaren Auslese am Zwischenrand sind 1.078 der 1.089 geordneten Paare absolut konvergent. Vier besitzen einen endlichen Fresnel-Grenzwert, sieben wachsen mit der regulierten Feldlänge. Eine endliche positive Norm der Geburtsantwort scheidet aus, wenn alle bisherigen Testpaketnormen und gemischten Paarungen erhalten bleiben. Die physikalische Norm relativ zum leeren Zweig bleibt offen.
+
+[Herleitung, Ergebnisse und Gegenprobe](seam_pairing_v0_1/README.md) · [Bericht (PDF)](reports/CST_DUST_Zwischenrand_Norm_Interferenz.pdf) · [Offline-Prüfpaket (ZIP)](packages/CST_DUST_Zwischenrand_Pruefpaket.zip)
+
+## Etappe 10 · Prüfvertrag für die physikalische Endklassifikation · 18. November 2026
+
+Der Entwurf legt fest, wann sich eine Endklasse, eine robuste Phase oder ein Interferenzbefund ausweisen lässt. Der physikalische Endlauf steht auf HOLD. Für den P3-Piloten bei M = 1 sind auf der ersten Dichtestufe weiterhin 0 von 38 Vergleichen ausgeführt.
+
+[Prüfvertrag 10A–10D](stage_review_10/README.md) · [Artefaktprüfung (PDF)](reports/CST_DUST_Etappe_10_Artefaktpruefung.pdf)
+
 ## Skalare Randbedingungen der 33 AA-Ordnungen · 18. November 2026
 
 In fünf der 33 Ordnungen legt die skalare Wirkung jeweils eine Impulsbedingung am Ausgang fest. Zwei dieser Bedingungen haben einen von null verschiedenen konstanten Kommutator. Daher erfüllt nur der Nullzustand alle Bedingungen gleichzeitig. Für jede der fünf Ordnungen ist das skalare Grundpaketgewicht pro Einheitslänge der ungedämpften Feldrichtung endlich. Die gemeinsame Paarung mit Interferenz und die Norm relativ zum leeren Zweig bleiben offen.
