@@ -1,0 +1,1459 @@
+{
+  "families": {
+    "chain": [
+      {
+        "relations_to_new": [
+          -1,
+          -1,
+          -1
+        ],
+        "mask": 63
+      },
+      {
+        "relations_to_new": [
+          -1,
+          -1,
+          0
+        ],
+        "mask": 31
+      },
+      {
+        "relations_to_new": [
+          -1,
+          -1,
+          1
+        ],
+        "mask": 63
+      },
+      {
+        "relations_to_new": [
+          -1,
+          0,
+          0
+        ],
+        "mask": 15
+      },
+      {
+        "relations_to_new": [
+          -1,
+          0,
+          1
+        ],
+        "mask": 55
+      },
+      {
+        "relations_to_new": [
+          -1,
+          1,
+          1
+        ],
+        "mask": 63
+      },
+      {
+        "relations_to_new": [
+          0,
+          0,
+          0
+        ],
+        "mask": 11
+      },
+      {
+        "relations_to_new": [
+          0,
+          0,
+          1
+        ],
+        "mask": 53
+      },
+      {
+        "relations_to_new": [
+          0,
+          1,
+          1
+        ],
+        "mask": 62
+      },
+      {
+        "relations_to_new": [
+          1,
+          1,
+          1
+        ],
+        "mask": 63
+      }
+    ],
+    "one": [
+      {
+        "relations_to_new": [
+          -1,
+          -1,
+          -1
+        ],
+        "mask": 53
+      },
+      {
+        "relations_to_new": [
+          -1,
+          -1,
+          0
+        ],
+        "mask": 14
+      },
+      {
+        "relations_to_new": [
+          -1,
+          0,
+          -1
+        ],
+        "mask": 11
+      },
+      {
+        "relations_to_new": [
+          -1,
+          0,
+          0
+        ],
+        "mask": 3
+      },
+      {
+        "relations_to_new": [
+          -1,
+          0,
+          1
+        ],
+        "mask": 11
+      },
+      {
+        "relations_to_new": [
+          0,
+          -1,
+          0
+        ],
+        "mask": 12
+      },
+      {
+        "relations_to_new": [
+          0,
+          0,
+          0
+        ],
+        "mask": 1
+      },
+      {
+        "relations_to_new": [
+          0,
+          0,
+          1
+        ],
+        "mask": 10
+      },
+      {
+        "relations_to_new": [
+          0,
+          1,
+          0
+        ],
+        "mask": 12
+      },
+      {
+        "relations_to_new": [
+          0,
+          1,
+          1
+        ],
+        "mask": 14
+      },
+      {
+        "relations_to_new": [
+          1,
+          0,
+          1
+        ],
+        "mask": 11
+      },
+      {
+        "relations_to_new": [
+          1,
+          1,
+          1
+        ],
+        "mask": 15
+      }
+    ]
+  },
+  "rank_audit": {
+    "chain": {
+      "inner": [
+        4,
+        5,
+        6
+      ],
+      "F4": 10,
+      "bulk_gauge_signature": -1,
+      "integration_rank": 5,
+      "free_directions": 0,
+      "external_gauge_rank": 0,
+      "delta_constraints": 0,
+      "delta_rows": [],
+      "legendre_rank": 3,
+      "legendre_size": 3,
+      "pure_bulk_null_vectors": [],
+      "reduced_mixed_null_vectors": [],
+      "status": "ADMISSIBLE",
+      "symplectic_both_directions": true,
+      "gaussian_phase_radians": -0.06568308999440288
+    },
+    "one": {
+      "inner": [
+        4,
+        5,
+        6
+      ],
+      "F4": 18,
+      "bulk_gauge_signature": 0,
+      "integration_rank": 2,
+      "free_directions": 2,
+      "external_gauge_rank": 2,
+      "delta_constraints": 1,
+      "delta_rows": [
+        [
+          "8",
+          "-9/2",
+          "1/2",
+          "1/2",
+          "-9/2",
+          "8"
+        ]
+      ],
+      "legendre_rank": 4,
+      "legendre_size": 4,
+      "pure_bulk_null_vectors": [],
+      "reduced_mixed_null_vectors": [],
+      "status": "ADMISSIBLE",
+      "symplectic_both_directions": true,
+      "gaussian_phase_radians": 1.0834598382722713
+    },
+    "poset01_lift": {
+      "inner": [
+        4,
+        5,
+        6,
+        11
+      ],
+      "F4": 11,
+      "bulk_gauge_signature": 2,
+      "integration_rank": 4,
+      "free_directions": 1,
+      "external_gauge_rank": 0,
+      "delta_constraints": 1,
+      "delta_rows": [
+        [
+          "8",
+          "-9/2",
+          "1/2",
+          "1/2",
+          "-9/2",
+          "8"
+        ]
+      ],
+      "legendre_rank": 3,
+      "legendre_size": 4,
+      "pure_bulk_null_vectors": [
+        [
+          "0",
+          "0",
+          "-1",
+          "1"
+        ]
+      ],
+      "reduced_mixed_null_vectors": [
+        [
+          "184/65",
+          "136/65",
+          "1",
+          "0"
+        ]
+      ],
+      "status": "OBSTRUCTION",
+      "reasons": [
+        "independent pure bulk zero mode with no inherited quotient",
+        "reduced mixed Legendre system is singular"
+      ],
+      "canonical_mask": 1,
+      "inner_relations": [
+        [
+          4,
+          5
+        ]
+      ]
+    },
+    "poset03_lift": {
+      "inner": [
+        4,
+        5,
+        6,
+        11
+      ],
+      "F4": 2,
+      "bulk_gauge_signature": 2,
+      "integration_rank": 4,
+      "free_directions": 1,
+      "external_gauge_rank": 0,
+      "delta_constraints": 1,
+      "delta_rows": [
+        [
+          "8",
+          "-9/2",
+          "1/2",
+          "1/2",
+          "-9/2",
+          "8"
+        ]
+      ],
+      "legendre_rank": 3,
+      "legendre_size": 4,
+      "pure_bulk_null_vectors": [
+        [
+          "0",
+          "-1",
+          "1",
+          "0"
+        ]
+      ],
+      "reduced_mixed_null_vectors": [
+        [
+          "-368/689",
+          "1184/689",
+          "1",
+          "0"
+        ]
+      ],
+      "status": "OBSTRUCTION",
+      "reasons": [
+        "independent pure bulk zero mode with no inherited quotient",
+        "reduced mixed Legendre system is singular"
+      ],
+      "canonical_mask": 3,
+      "inner_relations": [
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          6
+        ]
+      ]
+    },
+    "poset10_lift": {
+      "inner": [
+        4,
+        5,
+        6,
+        11
+      ],
+      "F4": 2,
+      "bulk_gauge_signature": 2,
+      "integration_rank": 4,
+      "free_directions": 1,
+      "external_gauge_rank": 0,
+      "delta_constraints": 1,
+      "delta_rows": [
+        [
+          "8",
+          "-9/2",
+          "1/2",
+          "1/2",
+          "-9/2",
+          "8"
+        ]
+      ],
+      "legendre_rank": 3,
+      "legendre_size": 4,
+      "pure_bulk_null_vectors": [
+        [
+          "-1",
+          "1",
+          "0",
+          "0"
+        ]
+      ],
+      "reduced_mixed_null_vectors": [
+        [
+          "184/65",
+          "136/65",
+          "1",
+          "0"
+        ]
+      ],
+      "status": "OBSTRUCTION",
+      "reasons": [
+        "independent pure bulk zero mode with no inherited quotient",
+        "reduced mixed Legendre system is singular"
+      ],
+      "canonical_mask": 10,
+      "inner_relations": [
+        [
+          4,
+          6
+        ],
+        [
+          5,
+          6
+        ]
+      ]
+    },
+    "poset11_lift": {
+      "inner": [
+        4,
+        5,
+        6,
+        11
+      ],
+      "F4": 3,
+      "bulk_gauge_signature": 3,
+      "integration_rank": 5,
+      "free_directions": 0,
+      "external_gauge_rank": 0,
+      "delta_constraints": 1,
+      "delta_rows": [
+        [
+          "8",
+          "-9/2",
+          "1/2",
+          "1/2",
+          "-9/2",
+          "8"
+        ]
+      ],
+      "legendre_rank": 4,
+      "legendre_size": 4,
+      "pure_bulk_null_vectors": [],
+      "reduced_mixed_null_vectors": [],
+      "status": "ADMISSIBLE",
+      "symplectic_both_directions": true,
+      "gaussian_phase_radians": 0.7975493878390293,
+      "canonical_mask": 11,
+      "inner_relations": [
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          5,
+          6
+        ]
+      ]
+    },
+    "poset12_lift": {
+      "inner": [
+        4,
+        5,
+        6,
+        11
+      ],
+      "F4": 12,
+      "bulk_gauge_signature": 2,
+      "integration_rank": 6,
+      "free_directions": 0,
+      "external_gauge_rank": 0,
+      "delta_constraints": 0,
+      "delta_rows": [],
+      "legendre_rank": 2,
+      "legendre_size": 3,
+      "pure_bulk_null_vectors": [],
+      "reduced_mixed_null_vectors": [
+        [
+          "184/65",
+          "136/65",
+          "1"
+        ]
+      ],
+      "status": "OBSTRUCTION",
+      "reasons": [
+        "reduced mixed Legendre system is singular"
+      ],
+      "canonical_mask": 12,
+      "inner_relations": [
+        [
+          4,
+          11
+        ],
+        [
+          5,
+          6
+        ]
+      ]
+    },
+    "poset14_lift": {
+      "inner": [
+        4,
+        5,
+        6,
+        11
+      ],
+      "F4": -7,
+      "bulk_gauge_signature": 2,
+      "integration_rank": 6,
+      "free_directions": 0,
+      "external_gauge_rank": 0,
+      "delta_constraints": 0,
+      "delta_rows": [],
+      "legendre_rank": 3,
+      "legendre_size": 3,
+      "pure_bulk_null_vectors": [],
+      "reduced_mixed_null_vectors": [],
+      "status": "ADMISSIBLE",
+      "symplectic_both_directions": true,
+      "gaussian_phase_radians": -0.36450070828646197,
+      "canonical_mask": 14,
+      "inner_relations": [
+        [
+          4,
+          6
+        ],
+        [
+          4,
+          11
+        ],
+        [
+          5,
+          6
+        ]
+      ]
+    },
+    "poset15_lift": {
+      "inner": [
+        4,
+        5,
+        6,
+        11
+      ],
+      "F4": 19,
+      "bulk_gauge_signature": 1,
+      "integration_rank": 5,
+      "free_directions": 1,
+      "external_gauge_rank": 1,
+      "delta_constraints": 0,
+      "delta_rows": [],
+      "legendre_rank": 3,
+      "legendre_size": 3,
+      "pure_bulk_null_vectors": [],
+      "reduced_mixed_null_vectors": [],
+      "status": "ADMISSIBLE",
+      "symplectic_both_directions": true,
+      "gaussian_phase_radians": 0.12400050578873896,
+      "canonical_mask": 15,
+      "inner_relations": [
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          4,
+          11
+        ],
+        [
+          5,
+          6
+        ]
+      ]
+    },
+    "poset31_lift": {
+      "inner": [
+        4,
+        5,
+        6,
+        11
+      ],
+      "F4": 10,
+      "bulk_gauge_signature": -1,
+      "integration_rank": 5,
+      "free_directions": 1,
+      "external_gauge_rank": 0,
+      "delta_constraints": 0,
+      "delta_rows": [],
+      "legendre_rank": 3,
+      "legendre_size": 3,
+      "pure_bulk_null_vectors": [
+        [
+          "0",
+          "0",
+          "-1",
+          "1"
+        ]
+      ],
+      "reduced_mixed_null_vectors": [],
+      "status": "OBSTRUCTION",
+      "reasons": [
+        "independent pure bulk zero mode with no inherited quotient"
+      ],
+      "canonical_mask": 31,
+      "inner_relations": [
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          4,
+          11
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          5,
+          11
+        ]
+      ]
+    },
+    "poset53_lift": {
+      "inner": [
+        4,
+        5,
+        6,
+        11
+      ],
+      "F4": 19,
+      "bulk_gauge_signature": 1,
+      "integration_rank": 5,
+      "free_directions": 1,
+      "external_gauge_rank": 1,
+      "delta_constraints": 0,
+      "delta_rows": [],
+      "legendre_rank": 3,
+      "legendre_size": 3,
+      "pure_bulk_null_vectors": [],
+      "reduced_mixed_null_vectors": [],
+      "status": "ADMISSIBLE",
+      "symplectic_both_directions": true,
+      "gaussian_phase_radians": 1.2229641995157845,
+      "canonical_mask": 53,
+      "inner_relations": [
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          11
+        ],
+        [
+          5,
+          11
+        ],
+        [
+          6,
+          11
+        ]
+      ]
+    },
+    "poset55_lift": {
+      "inner": [
+        4,
+        5,
+        6,
+        11
+      ],
+      "F4": 10,
+      "bulk_gauge_signature": 1,
+      "integration_rank": 5,
+      "free_directions": 1,
+      "external_gauge_rank": 0,
+      "delta_constraints": 0,
+      "delta_rows": [],
+      "legendre_rank": 3,
+      "legendre_size": 3,
+      "pure_bulk_null_vectors": [
+        [
+          "0",
+          "-1",
+          "1",
+          "0"
+        ]
+      ],
+      "reduced_mixed_null_vectors": [],
+      "status": "OBSTRUCTION",
+      "reasons": [
+        "independent pure bulk zero mode with no inherited quotient"
+      ],
+      "canonical_mask": 55,
+      "inner_relations": [
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          4,
+          11
+        ],
+        [
+          5,
+          11
+        ],
+        [
+          6,
+          11
+        ]
+      ]
+    },
+    "poset62_lift": {
+      "inner": [
+        4,
+        5,
+        6,
+        11
+      ],
+      "F4": 10,
+      "bulk_gauge_signature": -1,
+      "integration_rank": 5,
+      "free_directions": 1,
+      "external_gauge_rank": 0,
+      "delta_constraints": 0,
+      "delta_rows": [],
+      "legendre_rank": 3,
+      "legendre_size": 3,
+      "pure_bulk_null_vectors": [
+        [
+          "-1",
+          "1",
+          "0",
+          "0"
+        ]
+      ],
+      "reduced_mixed_null_vectors": [],
+      "status": "OBSTRUCTION",
+      "reasons": [
+        "independent pure bulk zero mode with no inherited quotient"
+      ],
+      "canonical_mask": 62,
+      "inner_relations": [
+        [
+          4,
+          6
+        ],
+        [
+          4,
+          11
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          5,
+          11
+        ],
+        [
+          6,
+          11
+        ]
+      ]
+    },
+    "poset63_lift": {
+      "inner": [
+        4,
+        5,
+        6,
+        11
+      ],
+      "F4": 11,
+      "bulk_gauge_signature": 0,
+      "integration_rank": 6,
+      "free_directions": 0,
+      "external_gauge_rank": 0,
+      "delta_constraints": 0,
+      "delta_rows": [],
+      "legendre_rank": 3,
+      "legendre_size": 3,
+      "pure_bulk_null_vectors": [],
+      "reduced_mixed_null_vectors": [],
+      "status": "ADMISSIBLE",
+      "symplectic_both_directions": true,
+      "gaussian_phase_radians": 0.015108142739533925,
+      "canonical_mask": 63,
+      "inner_relations": [
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          4,
+          11
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          5,
+          11
+        ],
+        [
+          6,
+          11
+        ]
+      ]
+    }
+  },
+  "grids": {
+    "chain": [
+      {
+        "grid": [
+          32,
+          6
+        ],
+        "amplitudes": {
+          "lobes": [
+            [
+              [
+                -0.014765901854268213,
+                -0.00021452625975456588
+              ],
+              [
+                -0.014679402456008987,
+                0.0031716805592404396
+              ]
+            ],
+            [
+              [
+                -0.013392073509754866,
+                0.006204161940855996
+              ],
+              [
+                -0.01086513478356059,
+                0.01035490341430023
+              ]
+            ]
+          ],
+          "compensated": [
+            -0.019427864010149867,
+            -0.008185599805591377
+          ],
+          "B": 7.947368421052632,
+          "fixed": [
+            -0.5478608801904526,
+            -0.22857202972270987
+          ]
+        }
+      },
+      {
+        "grid": [
+          48,
+          8
+        ],
+        "amplitudes": {
+          "lobes": [
+            [
+              [
+                -0.014765901854268182,
+                -0.00021452625975453614
+              ],
+              [
+                -0.014679402456008954,
+                0.0031716805592404544
+              ]
+            ],
+            [
+              [
+                -0.01339207350975482,
+                0.006204161940856007
+              ],
+              [
+                -0.01086513478356055,
+                0.010354903414300221
+              ]
+            ]
+          ],
+          "compensated": [
+            -0.019427864010149835,
+            -0.008185599805591325
+          ],
+          "B": 7.947368421052632,
+          "fixed": [
+            -0.5478608801904518,
+            -0.22857202972270863
+          ]
+        },
+        "change_including_sharp_amplitude": 1.532600456797098e-15
+      }
+    ],
+    "one": [
+      {
+        "grid": [
+          32,
+          6
+        ],
+        "amplitudes": {
+          "lobes": [
+            [
+              [
+                0.011393929190588762,
+                -0.020750510641228317
+              ],
+              [
+                0.005191599653881671,
+                -0.023550852464939286
+              ]
+            ],
+            [
+              [
+                0.0012715355284753016,
+                -0.02362315454368643
+              ],
+              [
+                -0.007845456378003837,
+                -0.0227859867120527
+              ]
+            ]
+          ],
+          "compensated": [
+            0.0255152311927693,
+            -0.022094886885118983
+          ],
+          "B": 7.947368421052632,
+          "fixed": [
+            0.7187044315831989,
+            -0.625992141754701
+          ]
+        }
+      },
+      {
+        "grid": [
+          48,
+          8
+        ],
+        "amplitudes": {
+          "lobes": [
+            [
+              [
+                0.011393929190588774,
+                -0.0207505106412283
+              ],
+              [
+                0.0051915996538816865,
+                -0.02355085246493927
+              ]
+            ],
+            [
+              [
+                0.0012715355284753141,
+                -0.02362315454368642
+              ],
+              [
+                -0.007845456378003822,
+                -0.022785986712052696
+              ]
+            ]
+          ],
+          "compensated": [
+            0.025515231192769307,
+            -0.022094886885118962
+          ],
+          "B": 7.947368421052632,
+          "fixed": [
+            0.7187044315831987,
+            -0.6259921417547005
+          ]
+        },
+        "change_including_sharp_amplitude": 4.577566798522237e-16
+      }
+    ],
+    "poset11_lift": [
+      {
+        "grid": [
+          32,
+          6
+        ],
+        "amplitudes": {
+          "lobes": [
+            [
+              [
+                -0.006675809032188555,
+                0.01316196619722765
+              ],
+              [
+                -0.005250509387945708,
+                0.014020521018518115
+              ]
+            ],
+            [
+              [
+                -0.0003103230532063534,
+                0.014750434342333162
+              ],
+              [
+                0.002829965529592545,
+                0.014696074691610906
+              ]
+            ]
+          ],
+          "compensated": [
+            -0.016671632746664833,
+            0.012899477585521122
+          ],
+          "B": 7.947368421052632,
+          "fixed": [
+            -0.4678371880949285,
+            0.3634112244763953
+          ]
+        }
+      },
+      {
+        "grid": [
+          48,
+          8
+        ],
+        "amplitudes": {
+          "lobes": [
+            [
+              [
+                -0.006675809032188525,
+                0.01316196619722763
+              ],
+              [
+                -0.005250509387945681,
+                0.01402052101851809
+              ]
+            ],
+            [
+              [
+                -0.0003103230532063321,
+                0.014750434342333129
+              ],
+              [
+                0.0028299655295925576,
+                0.014696074691610873
+              ]
+            ]
+          ],
+          "compensated": [
+            -0.01667163274666478,
+            0.012899477585521115
+          ],
+          "B": 7.947368421052632,
+          "fixed": [
+            -0.467837188094927,
+            0.36341122447639507
+          ]
+        },
+        "change_including_sharp_amplitude": 1.5151595604785607e-15
+      }
+    ],
+    "poset14_lift": [
+      {
+        "grid": [
+          32,
+          6
+        ],
+        "amplitudes": {
+          "lobes": [
+            [
+              [
+                -0.005579475539144974,
+                -0.01326932383886668
+              ],
+              [
+                -0.0076819416690743275,
+                -0.013462732836212707
+              ]
+            ],
+            [
+              [
+                -0.010777320493468665,
+                -0.009534797104467868
+              ],
+              [
+                -0.01357142766661541,
+                -0.007477045259273373
+              ]
+            ]
+          ],
+          "compensated": [
+            0.0008459452946722372,
+            -0.021179602054772623
+          ],
+          "B": 7.947368421052632,
+          "fixed": [
+            0.020834987812514777,
+            -0.5936539907794951
+          ]
+        }
+      },
+      {
+        "grid": [
+          48,
+          8
+        ],
+        "amplitudes": {
+          "lobes": [
+            [
+              [
+                -0.0055794755391449765,
+                -0.013269323838866644
+              ],
+              [
+                -0.007681941669074326,
+                -0.013462732836212667
+              ]
+            ],
+            [
+              [
+                -0.010777320493468651,
+                -0.009534797104467831
+              ],
+              [
+                -0.013571427666615387,
+                -0.007477045259273341
+              ]
+            ]
+          ],
+          "compensated": [
+            0.000845945294672212,
+            -0.021179602054772567
+          ],
+          "B": 7.947368421052632,
+          "fixed": [
+            0.020834987812514194,
+            -0.5936539907794938
+          ]
+        },
+        "change_including_sharp_amplitude": 1.4541908674370035e-15
+      }
+    ],
+    "poset15_lift": [
+      {
+        "grid": [
+          32,
+          6
+        ],
+        "amplitudes": {
+          "lobes": [
+            [
+              [
+                0.013704533910900938,
+                -0.0018964419248010003
+              ],
+              [
+                0.013036186403025904,
+                -0.006590340621843161
+              ]
+            ],
+            [
+              [
+                0.011517527177174147,
+                -0.007646121870750288
+              ],
+              [
+                0.00768135275447783,
+                -0.012411271105967316
+              ]
+            ]
+          ],
+          "compensated": [
+            0.01967200785948629,
+            0.0038352230776932195
+          ],
+          "B": 7.947368421052632,
+          "fixed": [
+            0.5659798291122778,
+            0.10740088924421445
+          ]
+        }
+      },
+      {
+        "grid": [
+          48,
+          8
+        ],
+        "amplitudes": {
+          "lobes": [
+            [
+              [
+                0.013704533910900912,
+                -0.0018964419248009778
+              ],
+              [
+                0.013036186403025882,
+                -0.006590340621843133
+              ]
+            ],
+            [
+              [
+                0.011517527177174133,
+                -0.007646121870750256
+              ],
+              [
+                0.007681352754477826,
+                -0.012411271105967278
+              ]
+            ]
+          ],
+          "compensated": [
+            0.01967200785948624,
+            0.003835223077693236
+          ],
+          "B": 7.947368421052632,
+          "fixed": [
+            0.5659798291122766,
+            0.10740088924421487
+          ]
+        },
+        "change_including_sharp_amplitude": 1.2902611533826501e-15
+      }
+    ],
+    "poset53_lift": [
+      {
+        "grid": [
+          32,
+          6
+        ],
+        "amplitudes": {
+          "lobes": [
+            [
+              [
+                0.010630035684909283,
+                -0.008253918491119746
+              ],
+              [
+                0.009726694538748942,
+                -0.010057314654449995
+              ]
+            ],
+            [
+              [
+                0.0059988055524502785,
+                -0.012041945637458999
+              ],
+              [
+                0.0030528015559708557,
+                -0.013648120506785754
+              ]
+            ]
+          ],
+          "compensated": [
+            0.01893408457703144,
+            -0.004494689627713486
+          ],
+          "B": 7.947368421052632,
+          "fixed": [
+            0.5309021609297662,
+            -0.12664513814422407
+          ]
+        }
+      },
+      {
+        "grid": [
+          48,
+          8
+        ],
+        "amplitudes": {
+          "lobes": [
+            [
+              [
+                0.01063003568490825,
+                -0.008253918491119753
+              ],
+              [
+                0.009726694538748958,
+                -0.010057314654449685
+              ]
+            ],
+            [
+              [
+                0.005998805552449346,
+                -0.01204194563745856
+              ],
+              [
+                0.0030528015559710283,
+                -0.013648120506785495
+              ]
+            ]
+          ],
+          "compensated": [
+            0.018934084577030674,
+            -0.004494689627713613
+          ],
+          "B": 7.947368421052632,
+          "fixed": [
+            0.5309021609297443,
+            -0.12664513814421524
+          ]
+        },
+        "change_including_sharp_amplitude": 2.3585185037084638e-14
+      }
+    ],
+    "poset63_lift": [
+      {
+        "grid": [
+          32,
+          6
+        ],
+        "amplitudes": {
+          "lobes": [
+            [
+              [
+                -0.004671797849210807,
+                -0.006789450310770757
+              ],
+              [
+                -0.006414300015583386,
+                -0.006075642512509473
+              ]
+            ],
+            [
+              [
+                -0.0071500215841494566,
+                -0.004090208739489173
+              ],
+              [
+                -0.008636812182273355,
+                -0.0018374491688609574
+              ]
+            ]
+          ],
+          "compensated": [
+            -0.0025321413065600173,
+            -0.011824411292904716
+          ],
+          "B": 7.947368421052632,
+          "fixed": [
+            -0.07222675777075514,
+            -0.3330984434235611
+          ]
+        }
+      },
+      {
+        "grid": [
+          48,
+          8
+        ],
+        "amplitudes": {
+          "lobes": [
+            [
+              [
+                -0.00467179786481205,
+                -0.006789450305849279
+              ],
+              [
+                -0.006414300021132079,
+                -0.006075642507159531
+              ]
+            ],
+            [
+              [
+                -0.007150021596078059,
+                -0.004090208728323142
+              ],
+              [
+                -0.008636812184228642,
+                -0.0018374491614127643
+              ]
+            ]
+          ],
+          "compensated": [
+            -0.0025321413233870527,
+            -0.011824411293342772
+          ],
+          "B": 7.947368421052632,
+          "fixed": [
+            -0.07222675821318937,
+            -0.33309844339058603
+          ]
+        },
+        "change_including_sharp_amplitude": 4.436613587906834e-10
+      },
+      {
+        "grid": [
+          64,
+          10
+        ],
+        "amplitudes": {
+          "lobes": [
+            [
+              [
+                -0.004671797864812079,
+                -0.006789450305849322
+              ],
+              [
+                -0.006414300021132114,
+                -0.006075642507159572
+              ]
+            ],
+            [
+              [
+                -0.007150021596078103,
+                -0.004090208728323169
+              ],
+              [
+                -0.008636812184228694,
+                -0.0018374491614127834
+              ]
+            ]
+          ],
+          "compensated": [
+            -0.0025321413233870627,
+            -0.011824411293342848
+          ],
+          "B": 7.947368421052632,
+          "fixed": [
+            -0.07222675821318969,
+            -0.33309844339058825
+          ]
+        },
+        "change_including_sharp_amplitude": 2.2432704588812755e-15
+      }
+    ]
+  },
+  "direct_clock_checks": {
+    "chain": {
+      "direct_point_check": 2.7755575615628914e-16,
+      "relabelled_clock_check": 0.0
+    },
+    "one": {
+      "direct_point_check": 8.455206652451151e-16,
+      "relabelled_clock_check": 0.0
+    },
+    "poset11_lift": {
+      "direct_point_check": 5.551115123125783e-17,
+      "relabelled_clock_check": 0.0
+    },
+    "poset14_lift": {
+      "direct_point_check": 1.1443916996305594e-16,
+      "relabelled_clock_check": 0.0
+    },
+    "poset15_lift": {
+      "direct_point_check": 9.777686967753793e-16,
+      "relabelled_clock_check": 0.0
+    },
+    "poset53_lift": {
+      "direct_point_check": 8.881784197001252e-16,
+      "relabelled_clock_check": 0.0
+    },
+    "poset63_lift": {
+      "direct_point_check": 6.938893903907228e-17,
+      "relabelled_clock_check": 1.3877787807814457e-17
+    }
+  }
+}
