@@ -16,7 +16,18 @@ def compare(a,b,path=()):
     if isinstance(a,dict):
         assert a.keys()==b.keys(),path
         for k in a:
-            compare(a[k],b[k],(*path,k))
+            if k == 'contrast_change_relative':
+                # The failure bin is close to one. Its contrast change
+                # subtracts four unit-scale probabilities before normalization.
+                # Half the L1 reference contrast is at least the absolute
+                # change in total success for a normalized distribution.
+                s0, s1 = a['base_success']
+                scale = abs(s1 - s0)
+                assert scale > 0, path
+                tolerance = max(5e-13, 4 * math.ulp(1.0) / scale)
+                assert math.isclose(a[k], b[k], rel_tol=3e-8, abs_tol=tolerance), (path, k, a[k], b[k])
+            else:
+                compare(a[k],b[k],(*path,k))
     elif isinstance(a,list):
         assert len(a)==len(b),path
         for i,(x,y) in enumerate(zip(a,b)):
