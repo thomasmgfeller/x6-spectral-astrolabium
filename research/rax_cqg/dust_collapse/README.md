@@ -1,5 +1,11 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Skalare Randbedingungen der 33 AA-Ordnungen · 18. November 2026
+
+In fünf der 33 Ordnungen legt die skalare Wirkung jeweils eine Impulsbedingung am Ausgang fest. Zwei dieser Bedingungen haben einen von null verschiedenen konstanten Kommutator. Daher erfüllt nur der Nullzustand alle Bedingungen gleichzeitig. Für jede der fünf Ordnungen ist das skalare Grundpaketgewicht pro Einheitslänge der ungedämpften Feldrichtung endlich. Die gemeinsame Paarung mit Interferenz und die Norm relativ zum leeren Zweig bleiben offen.
+
+[Herleitung und Nachrechnung](scalar_boundary_conditions_v0_1/README.md) · [Kurzbericht (PDF)](reports/CST_DUST_Skalare_Randbedingungen.pdf) · [Offline-Prüfpaket (ZIP)](packages/CST_DUST_Skalare_Randbedingungen_Pruefpaket.zip)
+
 ## Geburtsuhr und vollständige Randnorm · 18. November 2026
 
 Wird der innere Uhrwert als unterscheidbarer Messwert erhalten, wächst das Gewicht des festen Atom-/Skalargrundpakets im kurzen Uhrfenster linear. Für die kohärente Summe der 33 Ordnungen liegt der Koeffizient zwischen 0,0239574543165 und 0,0239574543166. Die vollständige ausgehende Randnorm divergiert im untersuchten Skalarprodukt für jedes positive Uhrfenster. Die physikalische Geburtsrate bleibt offen. Der M=1-Pilot steht weiterhin bei 0 von 38 physikalischen Vergleichen.
