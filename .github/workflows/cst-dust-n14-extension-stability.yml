@@ -1,0 +1,38 @@
+name: CST-DUST N14 extension stability
+on:
+  pull_request:
+    paths:
+      - 'research/rax_cqg/dust_collapse/extension_stability_v0_5/**'
+      - 'research/rax_cqg/dust_collapse/extension_stability_v0_5_publication.sha256'
+      - 'research/rax_cqg/dust_collapse/reports/CST_DUST_Erweiterungsstabilitaet_N14_v0_5.pdf'
+      - 'research/rax_cqg/dust_collapse/packages/CST_DUST_Erweiterungsstabilitaet_N14_v0_5_Pruefpaket.zip'
+      - '.github/workflows/cst-dust-n14-extension-stability.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  n14-extension-stability-replay:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    env:
+      OPENBLAS_NUM_THREADS: 1
+      OMP_NUM_THREADS: 1
+    defaults:
+      run:
+        working-directory: research/rax_cqg/dust_collapse
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Verify publication hashes and all archive entries
+        run: |
+          sha256sum -c extension_stability_v0_5_publication.sha256
+          unzip -q packages/CST_DUST_Erweiterungsstabilitaet_N14_v0_5_Pruefpaket.zip -d "$RUNNER_TEMP/n14-extension-stability"
+          diff -qr extension_stability_v0_5 "$RUNNER_TEMP/n14-extension-stability"
+      - name: Replay the N14 census, ten clock integrals and stability certificates
+        run: |
+          python -m pip install -r extension_stability_v0_5/upstream/v03/upstream/requirements.txt
+          python -B "$RUNNER_TEMP/n14-extension-stability/verify.py"

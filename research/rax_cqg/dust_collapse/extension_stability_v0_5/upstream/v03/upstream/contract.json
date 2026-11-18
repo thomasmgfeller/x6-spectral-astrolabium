@@ -1,0 +1,18 @@
+{
+  "title": "CST-DUST Erweiterungsstabilitaet v0.1",
+  "base_commit": "82758d4983ada37d71b6ac92df629a7f495df6a6",
+  "fixed": "same named past/future nodes, all past-to-inner and inner-to-future relations, same collar preparation, H3 sections, positive normalization, Fresnel rule and q7 detector as PR 294",
+  "interior": {"chain": [[4,5],[4,6],[5,6]], "one": [[4,6]], "fork": [[4,5],[4,6]], "join": [[4,6],[5,6]], "anti": []},
+  "lift": "in the chain and one-edge base orders add a fourth inner event 11, incomparable to 4,5,6, above every past and below every future node; fixed outer clocks, same normalized independent inner clock/density measure",
+  "stages": {"F2":["chain","one"],"F4":["chain","one","fork","join"],"F5":["chain","one","fork","join","anti"],"F7":["chain","one","fork","join","anti","chain_lift","one_lift"]},
+  "sensitivity": "also test every singleton addition to F2, and paired N12 additions to F2 independent of F4/F5 status",
+  "weights": "equal positive amplitude per unlabelled interior isomorphism type in each support, normalized to sum 1, zero weights in embedded support recover the parent; this extends 1/2,1/2 and entails renormalization",
+  "admissibility": "apply the inherited scalar boundary rigging, positive magnitude and action phase. Remove pure redundant gauge volumes only with specified parent gauge justification. Require full-rank reduced canonical graph and both symplectic pairings. Report an obstruction when these fail; never drop an inadmissible member to score a stage.",
+  "events": ["left","middle","right","failure"],
+  "primary": "equal-phase two-lobe preparation; densities 1/8 and 1/4, use unconditional four-outcome distributions",
+  "controls": ["dephased clock lobes","relative pi phase","compensated phase","fixed-clock density null"],
+  "metric_absolute": "at each density, TV(p_family,p_F2) <= 0.10 times F2 success at that density; compare to original anchor and also report consecutive changes when valid",
+  "metric_contrast": "half-L1 change in the signed four-outcome density contrast <= 0.25 times half-L1 of the F2 contrast; same nonzero sign of success change required",
+  "scope": "exploratory engineering tolerances fixed before numerical results; no claim of physical weight selection or infinite-size convergence",
+  "quadrature": {"grids":[[64,8],[96,12]],"joint_probability_tolerance":5e-12,"anchor_tolerance":5e-12}
+}
