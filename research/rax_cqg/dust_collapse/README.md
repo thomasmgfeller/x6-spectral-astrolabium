@@ -1,5 +1,11 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Prüfberichte zu den Etappen 4 bis 7 · 18. November 2026
+
+Vier Berichte prüfen den Weg vom physikalischen Zustandsraum bis zum klassischen Staubkollaps. Für die Uhrreferenz stimmen pro Zahlgewicht alle 26 Unterteilungen überein. Für die klassische Einstein-Staub-Lösung enthalten alle 240 archivierten Intervalle den analytischen Wert. Der gekoppelte physikalische Transport und die daraus vorhergesagte Kollapsbewegung bleiben offen.
+
+[Übersicht, Status und Nachrechnung](stage_reviews_4_7/README.md) · [4 · Zustandsraum (PDF)](reports/CST_DUST_Etappe_4_Artefaktpruefung.pdf) · [5 · Rückwirkung (PDF)](reports/CST_DUST_Etappe_5_Artefaktpruefung.pdf) · [6 · Staubuhr (PDF)](reports/CST_DUST_Etappe_6_Artefaktpruefung.pdf) · [7 · Klassische Korrespondenz (PDF)](reports/CST_DUST_Etappe_7_Artefaktpruefung.pdf)
+
 ## Pfadgedächtnis bei N14 · 18. November 2026
 
 Wie viel muss eine N13-Geometrie über ihre Entstehung behalten, um das Gewicht jedes nächsten Endtyps vorhersagen zu können? Für sämtliche zulässigen Fortsetzungen braucht die Dreierkette 35 unterscheidbare Vorgeschichten und die Ein-Kanten-Ordnung 38. Eine geometrische Wachstumsregel erhält alle vorgegebenen N13-Gewichte und gibt allen 924 beziehungsweise 1026 zulässigen markierten Pfaden positives Gewicht. Die relativen Gewichte der Endtypen 1790 und 5374 bleiben dabei frei.
