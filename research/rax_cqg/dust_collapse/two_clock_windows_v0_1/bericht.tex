@@ -1,0 +1,145 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\IfFileExists{ngerman.ldf}{\usepackage[ngerman]{babel}}{}
+\usepackage{lmodern,amsmath,amssymb,booktabs,tabularx,array,microtype}
+\usepackage[top=21mm,bottom=19mm,left=20mm,right=20mm,headheight=14pt]{geometry}
+\usepackage{xcolor,hyperref,fancyhdr}
+\pdfmapfile{+lm.map}
+\pdfmapfile{+cm.map}
+\pdfmapfile{+symbols.map}
+\pdfmapfile{+cmextra.map}
+\definecolor{teal}{HTML}{13665E}
+\definecolor{ink}{HTML}{173139}
+\definecolor{soft}{HTML}{E9F3F0}
+\hypersetup{colorlinks=true,urlcolor=teal,pdfauthor={CST-DUST, interne Modellrechnung},pdftitle={CST-DUST: Zwei Uhrfenster am verklebten Rand}}
+\pagestyle{fancy}\fancyhf{}\fancyhead[L]{\small\textcolor{teal}{\bfseries X6 / CST-DUST}}
+\fancyhead[R]{\small CST-DUST · Etappen 3 und 4\enspace |\enspace Quellenstand PR 309}
+\fancyfoot[L]{\small Zwei Uhrfenster am verklebten Rand · v0.1}
+\fancyfoot[R]{\small\thepage\ / 5}
+\renewcommand{\headrulewidth}{0.3pt}\color{ink}
+\linespread{1.04}\setlength{\parindent}{0pt}\setlength{\parskip}{5.4pt}\raggedbottom
+\newcommand{\sect}[1]{\par\vspace{4pt}{\large\bfseries\color{teal}#1}\par}
+\newcommand{\titleline}[1]{{\LARGE\bfseries #1}\par\vspace{5pt}}
+\newcommand{\callout}[1]{\par\noindent\colorbox{soft}{\parbox{\dimexpr\linewidth-2\fboxsep\relax}{\vspace{3pt}#1\vspace{3pt}}}\par}
+\newcommand{\repo}{https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/f461985f67aa0c1aef972d529a9b09575fe8df77/research/rax_cqg/dust_collapse}
+\newcommand{\dd}{\mathrm{d}}
+\newcommand{\ketnorm}[1]{\|#1\|^2}
+\newcommand{\G}{\mathcal G}
+\begin{document}
+\titleline{Kann der spätere Rand den Geburtszeitpunkt unterscheiden?}
+\callout{Beim Halbieren des frühen Uhrfensters stammen im gemeinsamen späteren Messkanal rund \textbf{49,91\,\%} des Gewichts aus der Interferenz zwischen früher und später Geburt. Das Normquadrat des gesamten Fensters wächst für kurze Zeiten quadratisch. Die erste physikalische Geburtsrate bleibt auf \textbf{HOLD}.}
+
+\sect{Versuch}
+In \href{\repo/zero_one_pairing_v0_1/README.md}{PR 309} liessen selbst drei kalibrierte Randpakete die relative Norm einer einzelnen Geburt offen. Hier wird dieselbe linke Uhr $u$ auf die zwei Alternativen $L=(0,c)$ und $R=(c,d)$ beschränkt. Primär sind $d=1/8$ und $c=1/16$. Präparation und physikalische Wirkung bleiben beim Wechsel des Schnitts fest. Im zweiten Versuch wird eine weitere AA-Hälfte wirklich angefügt. AA bezeichnet hier die endliche Familie mit je zwei unvergleichbaren Randereignissen vor und nach einem inneren Ereignis. Die neue Hälfte stellt ein späteres inneres Ereignis mit auslesbarer Uhr $v$ und Dichte $r$ bereit.
+
+Für die Antwortvektoren $G_L,G_R$ messen zwei Grössen verschiedene Eigenschaften:
+\[
+ f=\frac{2\operatorname{Re}\langle G_L,G_R\rangle}{\|G_L+G_R\|^2},
+ \qquad \eta^2=\frac{|\langle G_L,G_R\rangle|^2}{\|G_L\|^2\|G_R\|^2}.
+\]
+$f$ ist der Anteil am kohärenten Gesamtgewicht, der beim blossen Addieren der beiden Einzelgewichte fehlt. $\eta^2$ vergleicht die normierten Antworten. Ein vollständig unterscheidendes Zeitrecord hat verschwindenden Kreuzterm.
+\begin{center}\begin{tabularx}{\linewidth}{@{}Xrr@{}}\toprule
+Auslese für die beiden gleich langen Fenster & $f$ & $\eta^2$\\\midrule
+Skalarer Rand, runder Regulator ($t=1$) & 0,49991130 & 0,99993148\\
+Skalarer Rand, gedehnter Regulator ($t=4$) & 0,49992815 & 0,99996721\\
+Verklebter Rand mit späterer Uhr und Dichte & 0,49908832 & 0,99315036\\
+Offene Referenzuhr, vollständiges Uhrrecord & 0 & 0\\\bottomrule
+\end{tabularx}\end{center}
+Die ersten zwei Zeilen sind rational eingeschlossen, die dritte ist eine numerische Quadratur, die vierte eine analytische Referenz für beide Uhrpaarungen. Die absoluten Gewichte verschiedener Zeilen haben unterschiedliche Normierungen. Das spätere Record verwendet hier das vorgegebene Produkt $L^2(\dd v\,\dd\nu(r))$. Seine physikalische Auszeichnung und die Zuordnung zum leeren Anfang der offenen Uhr sind offene Voraussetzungen.
+
+\newpage\titleline{Uhrinformation am skalaren Rand}
+In der linken Hälfte werden alle 33 Ordnungen kohärent summiert. Der äussere Eingang ist das normierte Atom-/Grundpaket, der skalare Ausgang liegt auf dem Dichteatom. Nach Integration der früheren Randuhren hängt die Uhrantwort einer Ordnung nur noch von ihrer Vorgängerzahl $p=1,2$ ab. Mit $b=4/\sqrt6$ und $\nu=(\delta_0+\mathbf1_{(0,1)}\dd w)/2$ gilt
+\[
+ Z_p(u)=\int\dd\nu(w)\int_{[0,1]^p}\!\dd^py\,
+ e^{-iw[1/2+b\sum_j(y_j-u)^2]}.\]
+\[
+ D_p(I)=\int_I Z_p(u)\,\dd u,\quad
+ G_I=D_1(I)A_1+D_2(I)A_2 .
+\]
+$A_p$ summiert die skalaren Wirkungsamplituden der Ordnungen mit $p$ Vorgängern. Für die beiden Längenprodukte aus PR 309 ist die Paarung zweier Fenster
+\[D_t(I,J)=\sum_{p=1}^2 w_p(t)\,\overline{D_p(I)}D_p(J).\]
+Die positiven Faktoren $w_p(t)$ sind die beiden Koeffizienten von $|D_p|^2$ in der veröffentlichten Normquotientenformel. Die Norm des unveränderten Vierpunkt-Nullzweigs ist eins. Die Rechnung bildet die Intervallintegrale durch Subtraktion zweier rational eingeschlossener Stammwerte. Sie prüft die Reproduktion des ursprünglichen Gesamtfensters und zusätzlich die Schnitte bei einem und zwei Dritteln. Am Mittelschnitt für $t=1$ ist die Gram-Determinante strikt positiv, rund $2{,}96417\cdot10^{-13}$. Die Fensterantworten sind also linear unabhängig und gleichzeitig fast parallel.
+
+\sect{Eine Grenze für jede feste Paarung auf diesem Ausgang}
+Alle Fensterantworten liegen in einem komplexen Raum der Dimension höchstens zwei. Jede feste positive Paarung und jede nachgeschaltete lineare Abbildung desselben reduzierten Ausgangs bewahren diese Ranggrenze. Drei nichtverschwindende Zeitfenster können dann keine paarweise orthogonalen Records sein. Unter den drei normierten Antworten gibt es ein Paar mit $|D_{ij}|/\sqrt{D_{ii}D_{jj}}\geq1/2$.
+
+Der Beweis benutzt die Gram-Matrix $H$ von $n$ normierten Antworten. Bei Rang $r$ ist $\operatorname{tr}H^2\geq n^2/r$. Zieht man die $n$ Diagonalbeiträge ab und mittelt über die übrigen $n(n-1)$ Einträge, ergibt sich $\max_{i\ne j}|H_{ij}|^2\geq(n-r)/(r(n-1))$. Für die schwächere Bedingung verschwindender \emph{reeller} Kreuzterme hat der reelle Raum höchstens Dimension vier. Bei fünf nichtverschwindenden Zeitfenstern gilt folglich für mindestens ein Paar $|\operatorname{Re}H_{ij}|\geq1/4$. Falls ein Fenster Norm null hat, scheitert bereits die Übereinstimmung mit seinem positiven Referenzgewicht. \href{https://doi.org/10.1109/TIT.1974.1055219}{Welch, 1974.}
+
+Die vollständige Verklebungsregel hält zusätzliche frühere Feldwerte am Schnitt fest. Die folgende Rechnung untersucht daher den zusätzlichen Phasenterm und das kohärente Gewicht der vollständigen Summe.
+
+\newpage\titleline{Was die gemeinsame Wirkung weiterträgt}
+Zwei der veröffentlichten AA-Hälften werden am Zweipunktrand $\{3,4\}$ mit der minimalen transitiven Ordnung verklebt. Links liegen Aussenpunkte $0,1$ und das innere Ereignis $2$, rechts das innere Ereignis $5$ und Aussenpunkte $6,7$. Alle $33^2=1\,089$ geordneten Paare gehen mit Gewicht $1/1\,089$ ein. Die skalaren Felder werden mit den festen äusseren Grundpaketen und dem inneren Abel-Grenzwert integriert. Die sechs äusseren und gemeinsamen Dichten liegen auf ihren Atomen. Die linke innere Dichte $w$ wird mit ihrem vollen Mass integriert. Die rechte Dichte $r$ und Uhr $v$ bleiben als spätere Recordkoordinaten erhalten. Alle reskalierten Uhrkoordinaten haben wie im AA-Paket Mass $\dd y$ auf $[0,1]$. Eine zusätzliche zeitliche Ordnungsbedingung $u<v$ gehört nicht zu diesem Vertrag. \href{\repo/extended_sewing_v0_1/README.md}{Veröffentlichte Verklebungsregel.}
+
+Die Koeffizienten $c_{jk}$ entstammen den Intervallen der \emph{gemeinsamen} Ordnung. Aus ihnen ergibt sich der direkte Speicherterm $-b\,c_{25}r(v-u)^2$ in der Phase. Zwei Rekonstruktionen stimmen für alle Paare überein.
+\begin{center}\begin{tabular}{@{}lrrr@{}}\toprule
+Koeffizient $c_{25}$ & $-9$ & $0$ & $16$\\\midrule
+Zahl der geordneten Paare & 702 & 338 & 49\\\bottomrule\end{tabular}\end{center}
+Für $c_{25}\ne0$ entsteht bereits für eine einzelne Ordnung bei festem $r>0$ der Faktor $e^{-ibc_{25}r(v-u)^2}$. Nach Ausklammern der gemeinsamen quadratischen Phase in $v$ bleiben für unterschiedliche $u$ Exponentialfunktionen mit verschiedenen Frequenzen. Beliebig viele solcher Faktoren sind linear unabhängig. Dies beschreibt den einzelnen Phasenterm. Über die Interferenz der kohärenten Gesamtsumme entscheidet die folgende Rechnung.
+
+Sei $a_C$ die skalare Vorwärtsamplitude samt Gravitationsphase und Ordnungsgewicht im früheren Acht-Atom-Versuch. Für $k\in\{0,1,3,4\}$ setzen wir
+\[
+ B_k=\int_0^1\exp\!\big[-ib\{w c_{k2}(u-y)^2+
+                                  r c_{k5}(v-y)^2\}\big],\dd y.
+\]
+Fehlende Relationen tragen den Koeffizienten null. Der spätere Antwortvektor lautet
+\[
+ F_u(v,r)=4e^{-ir/2}\sum_C a_C e^{-ib c_{25}r(v-u)^2}
+             \int\dd\nu(w)\,e^{-iw/2}\prod_{k=0,1,3,4}B_k .
+\]
+Der Faktor vier hebt die zwei bereits in $a_C$ enthaltenen inneren Atommassen von je $1/2$ auf. Erst danach werden die vollen Dichtemasse eingesetzt. Das Quadrat der Summe enthält sämtliche Kreuzterme. Es gibt 17 verschiedene Kombinationen der Uhrenkoeffizienten. Diese gestatten eine Gruppierung der Amplituden vor der Quadratur.
+
+\newpage\titleline{Der zweite Schnitt und die Kurzzeitgrenze}
+Mit $G_I=\int_I F_u\,\dd u$ verwenden wir den inneren Produktraum der späteren Uhr und Dichte. Die frühe und die späte Alternative haben am Mittelschnitt numerisch die Gram-Matrix
+\[
+ 10^{-9}\begin{pmatrix}
+ 1{,}283747405 & 1{,}299277252-0{,}017357604i\\
+ 1{,}299277252+0{,}017357604i & 1{,}324300638
+ \end{pmatrix}.
+\]
+Die kohärente Summe besitzt das Gewicht $5{,}206602547\cdot10^{-9}$. Beim versetzten Schnitt $c=1/24$ erhält man denselben Gesamtwert und einen Interferenzanteil von $44{,}1204\,\%$. Die Zeitteilung ist damit sowohl auf Amplitudenebene als auch nach Einbezug des Kreuzterms konsistent.
+
+\sect{Die Ordnung des Kurzzeitgesetzes lässt sich beweisen}
+Jeder Staubphasenfaktor hat Betrag eins. Es gilt daher gleichmässig $\|F_u\|\leq C=4\sum_C |a_C|$. Aus den 1\,089 vollständigen skalaren Determinanten folgt die Schranke\[0{,}006130223115\le C\le0{,}006130223116.\] Im Einzelterm enthält $a_C$ den Faktor $\pi^3/(8\cdot1089\sqrt{\det M_C})$ mit $M_C=D-i\sqrt{2/3}\,H_C$, der äusseren Diagonaldämpfung $D$ und der ganzzahligen doppelten Hesse-Matrix $H_C$. Die Entwicklung nach den vier äusseren Diagonaleinträgen ergibt 16 ganzzahlige Hauptminoren. So wird $|\det M_C|^2$ exakt rational berechnet, auch bei singulärer innerer Teilmatrix.
+
+Stetigkeit der Phasen und die einheitliche Schranke liefern $F_u\to F_0$ in $L^2$. Folglich ist das Normquadrat des Fensters
+\[
+ W(d)=\left\|\int_0^d F_u\,\dd u\right\|^2
+      =d^2\|F_0\|^2+o(d^2).
+\]
+Das rechte Dichteatom allein gibt einen \emph{positiven} unteren Beitrag. Dort entfällt jede $v$-Abhängigkeit und $F_0(v,0)=4\sum_p Z_p(0)\sum_{C:p_C=p}a_C$. Aus der direkten Gesamtordnung, rationalen komplexen Intervallen für alle Gaußwurzeln und den Staubmomenten folgt
+\[
+ 2{,}26692725409\cdot10^{-7}
+ \ \leq\ \tfrac12 |F_0(v,0)|^2
+ \ \leq\ 2{,}26692725410\cdot10^{-7}.
+\]
+Die numerisch bestimmte volle Anfangsnorm ist $\|F_0\|^2\simeq3{,}2276004414\cdot10^{-7}$. Der Exponent zwei und die verschwindende lineare Anfangsrate folgen bereits aus den Schranken. Das Ergebnis betrifft diesen gewählten Messkanal. Eine beliebige feste positive, endliche Umnormierung lässt den Exponenten unverändert.
+
+\newpage\titleline{Gegenprobe am wirklichen leeren Anfang}
+Die offene Referenzuhr startet mit der leeren inneren Ordnung am festen äusseren Anker und der Norm eins. Für $\beta\in\{5/4,4/3\}$ seien $h_0(s)=(1-\beta)s+e^{-s}$ und $h_1(s)=\beta-1+e^{-s}$. Der vererbte Ein-Geburts-Kern hat auf einem Intervall die rohe diagonale Zeitdichte eins. Für $a<b$ lauten die normierten Zweiggewichte des bisherigen Referenzprodukts
+\[
+ P_{00}(a,b)=h_0(b)/h_0(a),\quad P_{01}(a,b)=(b-a)h_1(b)/h_0(a),
+ \quad P_{11}(a,b)=h_1(b)/h_1(a).
+\]
+Die Indizes geben die exakte Geburtszahl an beiden Endschnitten an. Pfade, die bis $d$ mehrmals geboren haben, gehören nicht zur Endalternative $N_d=1$. Für eine einzelne Geburt im frühen bzw. späten Fenster folgt
+\[
+ P_{01}(0,c)P_{11}(c,d)=c h_1(d),\qquad
+ P_{00}(0,c)P_{01}(c,d)=(d-c)h_1(d).
+\]
+Im historischen Uhrrecord haben die beiden Antworten disjunkte Träger. Bedingt auf $N_d=1$ beträgt der frühe Anteil für jedes $c$ genau $c/d$. Er ist für beide Paarungen gleich. Ihr Gesamtgewicht $P(N_d=1)=d h_1(d)=\beta d+O(d^2)$ unterscheidet sich bereits linear.
+\begin{center}\begin{tabular}{@{}lrr@{}}\toprule
+Wert bei $d=1/8$, $c=1/16$ & $\beta=5/4$ & $\beta=4/3$\\\midrule
+Genau eine Geburt bis $d$ & 0,14156211 & 0,15197878\\
+Im frühen Fenster und genau eine bis $d$ & 0,07078106 & 0,07598939\\
+Bedingter früher Anteil & $1/2$ & $1/2$\\\bottomrule\end{tabular}\end{center}
+
+\sect{Was für die physikalische Rate fehlt}
+Das vollständige Referenzrecord integriert über unterscheidbare Uhrwerte und liefert dadurch eine lineare Anfangsrate. Die geprüfte spätere Dichte und Uhr der gemeinsamen Wirkung tragen Information über $u$, behalten aber die Interferenz. Keine dieser Prüfungen wählt $\beta$ oder identifiziert die beiden Anfangspräparationen. Offen ist, ob die Theorie für denselben physikalischen leeren Anfang ein uhrmarkiertes, relativ zur Vakuumnorm bestimmtes Randprodukt herleitet. Auf der ersten P3-Dichtestufe bei $M=1$ wurden keine neuen dynamischen Historien gestartet.
+
+\sect{Nachrechnung und Quellen}
+Hauptrechnung mit Quadraturordnungen 30, 40 und 50. Eine separate Implementierung verwendet Eigenwerte der vollen Gaußmatrizen und eine zusammengesetzte Quadratur. Die exakte Untergrenze stammt aus einer dritten, nach aussen rundenden Rechnung. Die Eingaben sind im Paket an ihre Git-Kennungen gebunden.
+\href{\repo/m1_pilot_clock_v0_1/README.md}{Uhrpaarungen} ·
+\href{\repo/first_birth_rate_v0_1/README.md}{Erste Geburtsrate} ·
+\href{\repo/seam_pairing_v0_1/README.md}{Skalarer Abel-Grenzwert} ·
+\href{https://doi.org/10.1103/PhysRevD.46.1580}{Dowker und Halliwell, 1992}.
+\end{document}

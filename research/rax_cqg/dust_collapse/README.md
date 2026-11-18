@@ -1,5 +1,11 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Zwei Uhrfenster am verklebten Rand
+
+In 751 von 1 089 verklebten Historienpaaren koppelt die Wirkung die frühere Uhr direkt an das spätere innere Ereignis. Am Mittelschnitt des Fensters `(0, 1/8)` liefert die Interferenz zwischen den beiden Zeitfenstern rund 49,91 % des Gesamtgewichts. Beim versetzten Schnitt ändert sich die Verteilung der Beiträge, das kohärente Gesamtgewicht bleibt gleich. Für die geprüfte spätere Uhr- und Dichteauslese wächst das Kurzzeitgewicht quadratisch mit positivem Anfangskoeffizienten. Die physikalische Geburtsrate relativ zum leeren Anfang bleibt auf **HOLD**.
+
+[Herleitung und Nachrechnung](two_clock_windows_v0_1/README.md) · [Bericht (PDF)](reports/CST_DUST_Zwei_Uhrfenster_Am_Verklebten_Rand.pdf) · [Offline-Prüfpaket (ZIP)](packages/CST_DUST_Zwei_Uhrfenster_Pruefpaket.zip)
+
 ## Gemeinsame Norm für null und ein inneres Ereignis
 
 Zwei positive Skalarprodukte normieren dieselbe Null-Ereignis-Antwort auf eins und erhalten dieselben drei Messpakete. Sie liefern bei Uhrfenster `d = 1/8` für die Ein-Ereignis-Antwort die Normquadrate 0,000636203548 und 0,000614789365. In der geprüften Hermite-Folge überschreitet die Bessel-Summe beim 2 238. Paket erstmals eins. Der Nullzweig hat vier äussere Randereignisse und übernimmt die Häufigkeiten der eingeschränkten Ordnungen. Die Verbindung zum leeren Anfang der offenen Uhr und die physikalische Geburtsrate bleiben auf **HOLD**.
