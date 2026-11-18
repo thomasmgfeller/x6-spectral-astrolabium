@@ -1,5 +1,15 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Erweiterungsstabilität bei erhaltenem Elterngewicht · 18. November 2026
+
+Beim Übergang von elf auf zwölf Ereignisse gibt es für die Kette zehn und für die Ein-Kanten-Ordnung zwölf mögliche Einfügungen. Je sieben sind mit der bisherigen Skalarpaarung auswertbar. Zusammen ergeben sie fünf verschiedene Tochtergeometrien. Für die kohärente Anfangspräparation bleibt die Änderung der Erfolgswahrscheinlichkeit beim Wechsel des Dichtezentrums von 1/8 auf 1/4 auf diesem auswertbaren Träger negativ.
+
+Der Vergleich mit [PR #295](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/295) verwendet dieselbe einzelne Tochter und gibt ihr in beiden Fällen ein Drittel des Amplitudengewichts. Wird dieses Drittel vollständig von ihrer Elternhistorie abgezogen, sinkt die Abweichung des Dichtekontrasts über die vier Detektorausgänge von 49,60 % auf 16,13 %. Die Niveauabstände bei den einzelnen Dichten liegen bei 14,46 % und 14,45 % und überschreiten die vereinbarten 10 %.
+
+Geben beide Eltern denselben Anteil von höchstens 5 % ihres Gewichts ab, erfüllt jede Aufteilung auf ihre zulässigen Töchter alle drei Kriterien. Bei vollständigem Ersatz erreicht für jede Mischung der fünf Tochtergeometrien mindestens eine Abweichung das 1,6688-Fache der zugehörigen Toleranz. Die Bereichsprüfungen beziehen sich auf die numerischen Auslesematrizen und stimmen auf zwei Quadraturgittern überein. Die acht weiteren Einfügungen, ein physikalisches Historienmass und die Stabilität für grössere Ereigniszahlen bleiben offen.
+
+[Rechnung und Reproduktion](extension_stability_v0_2/README.md) · [Bericht (PDF)](reports/CST_DUST_Elterngewichte_Erweiterungsstabilitaet_v0_2.pdf) · [Prüfpaket (ZIP)](packages/CST_DUST_Elterngewichte_Erweiterungsstabilitaet_v0_2_Pruefpaket.zip) · [Ergebnisdaten](extension_stability_v0_2/results.json) · [Prüfsummen der Originaldateien](extension_stability_v0_2_publication.sha256)
+
 ## Erweiterungsstabilität der Anfangspräparation · 18. November 2026
 
 Der Zukunftsdetektor aus [PR #294](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/294) liest dieselben beiden Anfangsdichtepakete auf einer erweiterten Historienfamilie aus. Bei Gleichgewichtung der zwei ursprünglichen Elf-Ereignis-Historien und einer zusätzlichen Zwölf-Ereignis-Historie sinkt der Betrag des Erfolgskontrasts von 6,6805 × 10⁻⁶ auf 3,3669 × 10⁻⁶. Das Vorzeichen bleibt negativ. Über alle drei Zeigerintervalle und den Fehlschlag ändert sich der Dichtekontrast in halber L¹-Norm um 49,60 %. Die festgelegte Toleranz beträgt 25 %. Ein grosser Teil der Abschwächung stammt aus dem veränderten Gewicht der beiden ursprünglichen Historien.

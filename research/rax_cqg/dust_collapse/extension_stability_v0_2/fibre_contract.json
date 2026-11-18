@@ -1,0 +1,15 @@
+{
+  "version": "CST-DUST-PARENT-FIBRES-0.1",
+  "base": "90afbd33cbbe6fd3c6482090c65aa326dbaa4d8a",
+  "comparison": "PR 295 F2: chain C0 and one-edge C1, each with positive real amplitude weight 1/2. Preserve all collars, phases, preparation and 4 q7 outcomes.",
+  "extensions": "One marked node 11, with each old inner node below, above or incomparable. Keep the induced old order EXACTLY. All new-to-collar relations are as in PR 295. Mark is counted in the growth law only; dynamics uses the unmarked four-node inner order.",
+  "screen": "Enumerate every transitive assignment for each parent, identify unmarked child isomorphisms separately, apply the unsupplemented PR 295 scalar admissibility rules. Never assign a readout to an obstructed history.",
+  "primary": "Test the unfiltered positive uniform child law for definability. Conditional comparisons: restrict to the exact admissible sector within each parent, then split each parent's own 1/2 according to (A) equally weighted marked admissible extensions or (B) equally weighted distinct unmarked admissible shapes within that parent. For both parents replace fraction lambda of its own amplitude weight; do not interpret such consistency as physical amplitude consistency.",
+  "special": "For the single comparable-to-neither-inner-node chain lift of PR 295 keep the other parent exactly at 1/2. Evaluate at total new weight 1/3 against published global-uniform allocation and at 1/2 (replace the chain fully).",
+  "lambda": [0,0.05,0.1,0.25,0.5,1],
+  "gates": "Inherit PR 295 two relative level-TV bounds 10%, signed contrast half-L1 bound 25%, unchanged sign. Compare to F2. Record first gate loss along each mixture; scan each admissible deterministic parent-child pair at full replacement for witnesses. Pair scans give witnesses, not unrestricted extrema.",
+  "all_weights": "Additionally bound a uniform interval around lambda=0 by convexity/polarization for all admissible within-parent allocations. Separate this conservative sufficient bound from actual example crossings.",
+  "quadrature": "Normalized Gauss-Legendre (inner, outer per lobe) = (32,6), (48,8), then (64,10) or (80,12) on unconverged branches. Require max normalized-lobe amplitude change <3e-10 and final same-design outcome comparison <5e-12; otherwise identify as unresolved. These are empirical precision checks.",
+  "controls": "Compare base probabilities to PR 295, reproduce its original single-lift equal-weight result; verify input-order counting by independent 4-node enumeration; direct low-order 4D quadrature and relabelling, phase, plus/minus lobe dephasing identities. Estimate numeric uncertainty honestly.",
+  "compute": "local CPU only. No hosted jobs."
+}

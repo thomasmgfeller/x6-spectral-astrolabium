@@ -34,6 +34,7 @@
     ".github/workflows/cst-dust-model-contract.yml": "3f49418aa5c0f52ecce2600a5ffee441af1d0b3550f4f4986d1c8df085d5603f",
     ".github/workflows/cst-dust-normpath.yml": "769ff96d125a2c64d64d61a81207b8bb41b63a956c290372d2f563f304fb6e99",
     ".github/workflows/cst-dust-operational-matter.yml": "903745cf095634d19479045bf6baba0abe3a4210968e554297fe3f5d55e13f10",
+    ".github/workflows/cst-dust-parent-weights.yml": "5c560567e5c4d8f808f38150fad96fa19604107264b4ac0ccb8859362142034b",
     ".github/workflows/cst-dust-parity-mixing.yml": "ec4b25e3a6e5ae5147bc1a8c174301cfa8e60f8cb385babdcce6e019d6b234d0",
     ".github/workflows/cst-dust-physical-boundary-readout.yml": "6b43fb9f6124f9d2a0625910b8152fe14560a74e5688e7f42f65f83056fd3ad4",
     ".github/workflows/cst-dust-quantum-structure.yml": "827dbc4dbde2736b3f553e3bf85f313a981a97afd13599facf5274ca2d630862",
@@ -3185,7 +3186,7 @@
     "research/rax_cqg/dust_collapse/GEOMETRY_DYNAMICS_PUBLICATION.md": "9c32125e10aa76ab13776fe43655ae74eb8420de71b2a3c0e514a3089f180bac",
     "research/rax_cqg/dust_collapse/INTERFERENCE_DYNAMICS_PUBLICATION.md": "db1f3dae1dc821990160ddbc73afef9fd98e15da4306d92d6d17fc545b6fb44b",
     "research/rax_cqg/dust_collapse/PHYSICAL_BOUNDARY_READOUT_PUBLICATION.md": "5799c871d8b0681a14a0ac8d2d3fee7472d6505c6528861d66bf0fa645a4e0f0",
-    "research/rax_cqg/dust_collapse/README.md": "cca2d4b8862ffe5b92353f7f4d9911a5dce225e336aa3f48003a6cc1c7af381c",
+    "research/rax_cqg/dust_collapse/README.md": "9efcbf46af21e079e6ff7fa144bfc8693a4b8cbbc9ed20ee8d2ed1021eb0e8ee",
     "research/rax_cqg/dust_collapse/additional_windows/results.csv": "2d7c141381e91bea341c464c0475368910f152b03170482d1a58bd4bf16e5435",
     "research/rax_cqg/dust_collapse/alpha_normtail_v0_1/CST_DUST_Alpha_Abhaengige_Normrestschranke_v0_1.pdf": "b18c24053a8a0eefe7b4f3cd4310c6c89a37360dd276c73296b9b83ac2f5f1ef",
     "research/rax_cqg/dust_collapse/alpha_normtail_v0_1/DERIVATION.md": "3cbe25aa23440c1db48d53db6a4cc8945425ceea5bd53fa592ef53de2c13fc5a",
@@ -3978,6 +3979,30 @@
     "research/rax_cqg/dust_collapse/extension_stability_v0_1/run.py": "e1450b4d6c2000216f7eb8e5a2c9d61660c0bc50fbb7432f8eef4ee42c35b86f",
     "research/rax_cqg/dust_collapse/extension_stability_v0_1/supplement.json": "62cd17587191f4413bf99f92def2eac7659e6ed2eb084bc9b3f64e92ef7d3a3f",
     "research/rax_cqg/dust_collapse/extension_stability_v0_1/verify.py": "e29aedb97834cc8adeddc0261a7c1ada1c754ea3bceca36f1e9b455bfb64122e",
+    "research/rax_cqg/dust_collapse/extension_stability_v0_2/CST_DUST_Elterngewichte_Erweiterungsstabilitaet_v0_2.pdf": "f325e70362e8758e6e2d2366f772f739295fa8827a456947a17bb18e273b4cb3",
+    "research/rax_cqg/dust_collapse/extension_stability_v0_2/LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "research/rax_cqg/dust_collapse/extension_stability_v0_2/LICENSE_SCOPE.md": "fe958f097f83f676f1009a12dceaedf6d1cbd4773d2ed3b0c9b3e9958ad704a7",
+    "research/rax_cqg/dust_collapse/extension_stability_v0_2/NOTICE": "1699e29d2ca9ce0518f79446a7714fa41c2b8ce66451729eafe9657c589e760d",
+    "research/rax_cqg/dust_collapse/extension_stability_v0_2/README.md": "b3b687c4aadd9c5c04bdb4a08d9f17fdd0be42f63785942bde023c50a296b220",
+    "research/rax_cqg/dust_collapse/extension_stability_v0_2/SHA256SUMS": "2f260db4ff4b82be6d0d972b3098b83e153a860c7caebb22b2e491e72846ef5a",
+    "research/rax_cqg/dust_collapse/extension_stability_v0_2/analysis.py": "e19b5a5d76933b46ae200a3784b5d2b96728df3b2b5f314c40275a2574d66d44",
+    "research/rax_cqg/dust_collapse/extension_stability_v0_2/certificates.py": "69fdacff7e2bea234872a58a11eb3c82a768197c2969d25066973b0ca3ab06c4",
+    "research/rax_cqg/dust_collapse/extension_stability_v0_2/compute_grids.py": "ca1f1694474f06cc52a5e88ba66e989a6e0cbe26c914400b18214d409fb7c515",
+    "research/rax_cqg/dust_collapse/extension_stability_v0_2/families.py": "5940b59210ef1497557a237b35d9900569a90fcada730151bdf85202d8f6022c",
+    "research/rax_cqg/dust_collapse/extension_stability_v0_2/fibre_contract.json": "b45c76f5b6dfcdc4261ebc679fed5c8e69007ea442eded0a769bd84b4be3e180",
+    "research/rax_cqg/dust_collapse/extension_stability_v0_2/grids.json": "cd41e4cc392d4e06de11d07542835f5be5f093b1343d99d2ccf1901a26ae165b",
+    "research/rax_cqg/dust_collapse/extension_stability_v0_2/integrals.py": "bee8de77a69d629a8631f9231d357dc2dffeb64cc34620dc1cebf4fd8a703d3a",
+    "research/rax_cqg/dust_collapse/extension_stability_v0_2/reference/ORIGIN.json": "9b0eb33d7a09732f63a1e9b586fb4cd5adbb047c194fa262984887e5c40b5b67",
+    "research/rax_cqg/dust_collapse/extension_stability_v0_2/reference/abel_check.py": "e8618ad27062766698f666b8699da2731f87e9d894b3a8079ac3817286c3f4fa",
+    "research/rax_cqg/dust_collapse/extension_stability_v0_2/reference/clocks.py": "5e86d18846b7ec4484a1b1b846b54f35b1d284ce9622c636bf0f092df31c27c1",
+    "research/rax_cqg/dust_collapse/extension_stability_v0_2/reference/contract.json": "9df8c47f1f7d26be411626867e6ed1bdeb2dba9f4f5219ffb3528366b0e6f013",
+    "research/rax_cqg/dust_collapse/extension_stability_v0_2/reference/extension_results.json": "7d05208c2342c688d7317f3fe76093108ef1efb6764eefe892d882fd515866b2",
+    "research/rax_cqg/dust_collapse/extension_stability_v0_2/reference/geometry.py": "31601eedb47dc19dd3d0f5bf73b8130470a43f98387d3666a58af31a176e5e7f",
+    "research/rax_cqg/dust_collapse/extension_stability_v0_2/reference/requirements.txt": "4b9e8258d2945cac6b69a295c9871188b18adf1233b8920bc0677d86dfc5e723",
+    "research/rax_cqg/dust_collapse/extension_stability_v0_2/reference/run.py": "e1450b4d6c2000216f7eb8e5a2c9d61660c0bc50fbb7432f8eef4ee42c35b86f",
+    "research/rax_cqg/dust_collapse/extension_stability_v0_2/results.json": "7a01800e39825e66034611d2acba74264e6f86d83f6f16c824ca22e3dcc62a02",
+    "research/rax_cqg/dust_collapse/extension_stability_v0_2/verify.py": "d459d9c9907360cf34f382e4b2e561ae0dc7dcfcee3a28e40cd8dc8603368937",
+    "research/rax_cqg/dust_collapse/extension_stability_v0_2_publication.sha256": "e56871badfb4f3958d70c834ba7fe12af8929729d11d234c9acf92aa1c652b37",
     "research/rax_cqg/dust_collapse/four_element_matter_v0_1/CST_DUST_Vier_Elemente_Kontinuierliche_Materiephase_v0_1.pdf": "e35a7201a66d7301808acdd6fcce4207e3cde98d5a6822a58c8e82839301c19d",
     "research/rax_cqg/dust_collapse/four_element_matter_v0_1/DERIVATION.md": "eb55a9eb6da2aaf795cd3b0bf1ff0ce349a97dc3a180eced3e9138200896ef74",
     "research/rax_cqg/dust_collapse/four_element_matter_v0_1/LICENSE": "8c6db340475136df3c1201d458fa5755698eace76e510471ecc9d857d6083dac",
@@ -4520,6 +4545,7 @@
     "research/rax_cqg/dust_collapse/packages/CST_DUST_Basisunabhaengiger_Kopplungsbefund_v0_1_Pruefpaket.zip": "c9ff745204eaedf649d5243ee8eec8120682feda7e5765259f88d46a43c275ee",
     "research/rax_cqg/dust_collapse/packages/CST_DUST_Drei_Elemente_Kontinuierliche_Materiephase_v0_1_Pruefpaket.zip": "e4afc101569a203e335e1286a833fa5ce9c115ce62ae2cb9e6df5598c01b3a5f",
     "research/rax_cqg/dust_collapse/packages/CST_DUST_Eichstruktur_Randkonsistenz_v0_1_Pruefpaket.zip": "80c948a0e53ca2c0f6a29e8e2354ad97b92dd1df786a0f0b3fbcc59fa0024606",
+    "research/rax_cqg/dust_collapse/packages/CST_DUST_Elterngewichte_Erweiterungsstabilitaet_v0_2_Pruefpaket.zip": "46703e5bcbded4e3cfff09c9c0007f2f775c34ac48e15b7c65b4bd917fdbffdb",
     "research/rax_cqg/dust_collapse/packages/CST_DUST_Erweiterte_Verklebungsregel_v0_1_Pruefpaket.zip": "1d5e502474a796ddd95ff8a0f1555e26aa4713c2b0a96d3383587f20dd6ba188",
     "research/rax_cqg/dust_collapse/packages/CST_DUST_Erweiterungsstabilitaet_v0_1_Pruefpaket.zip": "ade095127b44f7777fb4bb0f6e668538089bd1ac294d7f52724abf08d81f7345",
     "research/rax_cqg/dust_collapse/packages/CST_DUST_Expansion_Trapping_v0_1_Pruefpaket.zip": "d5d8f64665595182d445f9d1dfceebf7021c4004641a23801aa0879b89f4eb70",
@@ -4849,6 +4875,7 @@
     "research/rax_cqg/dust_collapse/reports/CST_DUST_Anfangspraeparation_v0_1.pdf": "460e528494e825163c0a1191293b8dc0f686ae5c8b7a6ebb50b943f1ffecc4c3",
     "research/rax_cqg/dust_collapse/reports/CST_DUST_Drei_Elemente_Kontinuierliche_Materiephase_v0_1.pdf": "eade58888523f3640ffc3a8aa70e935a53d7e7f4d0534c513d8bf5dedb654c01",
     "research/rax_cqg/dust_collapse/reports/CST_DUST_Eichstruktur_Randkonsistenz_v0_1.pdf": "dcb47289b9ad298f2846aaa92553a79d927a6c2e7aa89af8c1680dd043658272",
+    "research/rax_cqg/dust_collapse/reports/CST_DUST_Elterngewichte_Erweiterungsstabilitaet_v0_2.pdf": "66294c2766de9b193b1be0441e1c059754754fbe8b7890ef07a012bf97bcd267",
     "research/rax_cqg/dust_collapse/reports/CST_DUST_Erweiterungsstabilitaet_v0_1.pdf": "01c2bb50f156f28b9b1f037bc2a965c38be05efade6880ef693ee3bcb3838ce1",
     "research/rax_cqg/dust_collapse/reports/CST_DUST_Expansion_Trapping_v0_1.pdf": "a6be2b5f6e35c147ffb94b65f3b037228907b420704f36f50498a820c3339941",
     "research/rax_cqg/dust_collapse/reports/CST_DUST_Geometriedynamik_Stationaerer_Kandidat_v0_1.pdf": "56f83be327297e7b62d9aa6cbae7f5abc7efc0f093208b6d184771490e58b72a",
@@ -9994,6 +10021,152 @@
           "sha256": "cca2d4b8862ffe5b92353f7f4d9911a5dce225e336aa3f48003a6cc1c7af381c"
         }
       ]
+    },
+    {
+      "date": "2026-11-18",
+      "scope": "Publish CST-DUST extension stability v0.2 with parent-preserving amplitude weights, all marked N11 to N12 insertions, conditional weight bounds and a reproducible CPU replay.",
+      "files": [
+        {
+          "path": ".github/workflows/cst-dust-parent-weights.yml",
+          "previous_sha256": null,
+          "sha256": "5c560567e5c4d8f808f38150fad96fa19604107264b4ac0ccb8859362142034b"
+        },
+        {
+          "path": "research/rax_cqg/dust_collapse/extension_stability_v0_2/CST_DUST_Elterngewichte_Erweiterungsstabilitaet_v0_2.pdf",
+          "previous_sha256": null,
+          "sha256": "f325e70362e8758e6e2d2366f772f739295fa8827a456947a17bb18e273b4cb3"
+        },
+        {
+          "path": "research/rax_cqg/dust_collapse/extension_stability_v0_2/LICENSE",
+          "previous_sha256": null,
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        },
+        {
+          "path": "research/rax_cqg/dust_collapse/extension_stability_v0_2/LICENSE_SCOPE.md",
+          "previous_sha256": null,
+          "sha256": "fe958f097f83f676f1009a12dceaedf6d1cbd4773d2ed3b0c9b3e9958ad704a7"
+        },
+        {
+          "path": "research/rax_cqg/dust_collapse/extension_stability_v0_2/NOTICE",
+          "previous_sha256": null,
+          "sha256": "1699e29d2ca9ce0518f79446a7714fa41c2b8ce66451729eafe9657c589e760d"
+        },
+        {
+          "path": "research/rax_cqg/dust_collapse/extension_stability_v0_2/README.md",
+          "previous_sha256": null,
+          "sha256": "b3b687c4aadd9c5c04bdb4a08d9f17fdd0be42f63785942bde023c50a296b220"
+        },
+        {
+          "path": "research/rax_cqg/dust_collapse/extension_stability_v0_2/SHA256SUMS",
+          "previous_sha256": null,
+          "sha256": "2f260db4ff4b82be6d0d972b3098b83e153a860c7caebb22b2e491e72846ef5a"
+        },
+        {
+          "path": "research/rax_cqg/dust_collapse/extension_stability_v0_2/analysis.py",
+          "previous_sha256": null,
+          "sha256": "e19b5a5d76933b46ae200a3784b5d2b96728df3b2b5f314c40275a2574d66d44"
+        },
+        {
+          "path": "research/rax_cqg/dust_collapse/extension_stability_v0_2/certificates.py",
+          "previous_sha256": null,
+          "sha256": "69fdacff7e2bea234872a58a11eb3c82a768197c2969d25066973b0ca3ab06c4"
+        },
+        {
+          "path": "research/rax_cqg/dust_collapse/extension_stability_v0_2/compute_grids.py",
+          "previous_sha256": null,
+          "sha256": "ca1f1694474f06cc52a5e88ba66e989a6e0cbe26c914400b18214d409fb7c515"
+        },
+        {
+          "path": "research/rax_cqg/dust_collapse/extension_stability_v0_2/families.py",
+          "previous_sha256": null,
+          "sha256": "5940b59210ef1497557a237b35d9900569a90fcada730151bdf85202d8f6022c"
+        },
+        {
+          "path": "research/rax_cqg/dust_collapse/extension_stability_v0_2/fibre_contract.json",
+          "previous_sha256": null,
+          "sha256": "b45c76f5b6dfcdc4261ebc679fed5c8e69007ea442eded0a769bd84b4be3e180"
+        },
+        {
+          "path": "research/rax_cqg/dust_collapse/extension_stability_v0_2/grids.json",
+          "previous_sha256": null,
+          "sha256": "cd41e4cc392d4e06de11d07542835f5be5f093b1343d99d2ccf1901a26ae165b"
+        },
+        {
+          "path": "research/rax_cqg/dust_collapse/extension_stability_v0_2/integrals.py",
+          "previous_sha256": null,
+          "sha256": "bee8de77a69d629a8631f9231d357dc2dffeb64cc34620dc1cebf4fd8a703d3a"
+        },
+        {
+          "path": "research/rax_cqg/dust_collapse/extension_stability_v0_2/reference/ORIGIN.json",
+          "previous_sha256": null,
+          "sha256": "9b0eb33d7a09732f63a1e9b586fb4cd5adbb047c194fa262984887e5c40b5b67"
+        },
+        {
+          "path": "research/rax_cqg/dust_collapse/extension_stability_v0_2/reference/abel_check.py",
+          "previous_sha256": null,
+          "sha256": "e8618ad27062766698f666b8699da2731f87e9d894b3a8079ac3817286c3f4fa"
+        },
+        {
+          "path": "research/rax_cqg/dust_collapse/extension_stability_v0_2/reference/clocks.py",
+          "previous_sha256": null,
+          "sha256": "5e86d18846b7ec4484a1b1b846b54f35b1d284ce9622c636bf0f092df31c27c1"
+        },
+        {
+          "path": "research/rax_cqg/dust_collapse/extension_stability_v0_2/reference/contract.json",
+          "previous_sha256": null,
+          "sha256": "9df8c47f1f7d26be411626867e6ed1bdeb2dba9f4f5219ffb3528366b0e6f013"
+        },
+        {
+          "path": "research/rax_cqg/dust_collapse/extension_stability_v0_2/reference/extension_results.json",
+          "previous_sha256": null,
+          "sha256": "7d05208c2342c688d7317f3fe76093108ef1efb6764eefe892d882fd515866b2"
+        },
+        {
+          "path": "research/rax_cqg/dust_collapse/extension_stability_v0_2/reference/geometry.py",
+          "previous_sha256": null,
+          "sha256": "31601eedb47dc19dd3d0f5bf73b8130470a43f98387d3666a58af31a176e5e7f"
+        },
+        {
+          "path": "research/rax_cqg/dust_collapse/extension_stability_v0_2/reference/requirements.txt",
+          "previous_sha256": null,
+          "sha256": "4b9e8258d2945cac6b69a295c9871188b18adf1233b8920bc0677d86dfc5e723"
+        },
+        {
+          "path": "research/rax_cqg/dust_collapse/extension_stability_v0_2/reference/run.py",
+          "previous_sha256": null,
+          "sha256": "e1450b4d6c2000216f7eb8e5a2c9d61660c0bc50fbb7432f8eef4ee42c35b86f"
+        },
+        {
+          "path": "research/rax_cqg/dust_collapse/extension_stability_v0_2/results.json",
+          "previous_sha256": null,
+          "sha256": "7a01800e39825e66034611d2acba74264e6f86d83f6f16c824ca22e3dcc62a02"
+        },
+        {
+          "path": "research/rax_cqg/dust_collapse/extension_stability_v0_2/verify.py",
+          "previous_sha256": null,
+          "sha256": "d459d9c9907360cf34f382e4b2e561ae0dc7dcfcee3a28e40cd8dc8603368937"
+        },
+        {
+          "path": "research/rax_cqg/dust_collapse/extension_stability_v0_2_publication.sha256",
+          "previous_sha256": null,
+          "sha256": "e56871badfb4f3958d70c834ba7fe12af8929729d11d234c9acf92aa1c652b37"
+        },
+        {
+          "path": "research/rax_cqg/dust_collapse/packages/CST_DUST_Elterngewichte_Erweiterungsstabilitaet_v0_2_Pruefpaket.zip",
+          "previous_sha256": null,
+          "sha256": "46703e5bcbded4e3cfff09c9c0007f2f775c34ac48e15b7c65b4bd917fdbffdb"
+        },
+        {
+          "path": "research/rax_cqg/dust_collapse/reports/CST_DUST_Elterngewichte_Erweiterungsstabilitaet_v0_2.pdf",
+          "previous_sha256": null,
+          "sha256": "66294c2766de9b193b1be0441e1c059754754fbe8b7890ef07a012bf97bcd267"
+        },
+        {
+          "path": "research/rax_cqg/dust_collapse/README.md",
+          "previous_sha256": "cca2d4b8862ffe5b92353f7f4d9911a5dce225e336aa3f48003a6cc1c7af381c",
+          "sha256": "9efcbf46af21e079e6ff7fa144bfc8693a4b8cbbc9ed20ee8d2ed1021eb0e8ee"
+        }
+      ]
     }
   ],
   "publication_additions": [
@@ -12449,6 +12622,39 @@
         "research/rax_cqg/dust_collapse/extension_stability_v0_1/verify.py",
         "research/rax_cqg/dust_collapse/packages/CST_DUST_Erweiterungsstabilitaet_v0_1_Pruefpaket.zip",
         "research/rax_cqg/dust_collapse/reports/CST_DUST_Erweiterungsstabilitaet_v0_1.pdf"
+      ]
+    },
+    {
+      "date": "2026-11-18",
+      "scope": "Publish CST-DUST extension stability v0.2 with parent-preserving amplitude weights, all marked N11 to N12 insertions, conditional weight bounds and a reproducible CPU replay.",
+      "files": [
+        ".github/workflows/cst-dust-parent-weights.yml",
+        "research/rax_cqg/dust_collapse/extension_stability_v0_2/CST_DUST_Elterngewichte_Erweiterungsstabilitaet_v0_2.pdf",
+        "research/rax_cqg/dust_collapse/extension_stability_v0_2/LICENSE",
+        "research/rax_cqg/dust_collapse/extension_stability_v0_2/LICENSE_SCOPE.md",
+        "research/rax_cqg/dust_collapse/extension_stability_v0_2/NOTICE",
+        "research/rax_cqg/dust_collapse/extension_stability_v0_2/README.md",
+        "research/rax_cqg/dust_collapse/extension_stability_v0_2/SHA256SUMS",
+        "research/rax_cqg/dust_collapse/extension_stability_v0_2/analysis.py",
+        "research/rax_cqg/dust_collapse/extension_stability_v0_2/certificates.py",
+        "research/rax_cqg/dust_collapse/extension_stability_v0_2/compute_grids.py",
+        "research/rax_cqg/dust_collapse/extension_stability_v0_2/families.py",
+        "research/rax_cqg/dust_collapse/extension_stability_v0_2/fibre_contract.json",
+        "research/rax_cqg/dust_collapse/extension_stability_v0_2/grids.json",
+        "research/rax_cqg/dust_collapse/extension_stability_v0_2/integrals.py",
+        "research/rax_cqg/dust_collapse/extension_stability_v0_2/reference/ORIGIN.json",
+        "research/rax_cqg/dust_collapse/extension_stability_v0_2/reference/abel_check.py",
+        "research/rax_cqg/dust_collapse/extension_stability_v0_2/reference/clocks.py",
+        "research/rax_cqg/dust_collapse/extension_stability_v0_2/reference/contract.json",
+        "research/rax_cqg/dust_collapse/extension_stability_v0_2/reference/extension_results.json",
+        "research/rax_cqg/dust_collapse/extension_stability_v0_2/reference/geometry.py",
+        "research/rax_cqg/dust_collapse/extension_stability_v0_2/reference/requirements.txt",
+        "research/rax_cqg/dust_collapse/extension_stability_v0_2/reference/run.py",
+        "research/rax_cqg/dust_collapse/extension_stability_v0_2/results.json",
+        "research/rax_cqg/dust_collapse/extension_stability_v0_2/verify.py",
+        "research/rax_cqg/dust_collapse/extension_stability_v0_2_publication.sha256",
+        "research/rax_cqg/dust_collapse/packages/CST_DUST_Elterngewichte_Erweiterungsstabilitaet_v0_2_Pruefpaket.zip",
+        "research/rax_cqg/dust_collapse/reports/CST_DUST_Elterngewichte_Erweiterungsstabilitaet_v0_2.pdf"
       ]
     }
   ]
