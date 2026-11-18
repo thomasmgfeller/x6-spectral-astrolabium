@@ -1,5 +1,13 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Erweiterungsstabilität der Anfangspräparation · 18. November 2026
+
+Der Zukunftsdetektor aus [PR #294](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/294) liest dieselben beiden Anfangsdichtepakete auf einer erweiterten Historienfamilie aus. Bei Gleichgewichtung der zwei ursprünglichen Elf-Ereignis-Historien und einer zusätzlichen Zwölf-Ereignis-Historie sinkt der Betrag des Erfolgskontrasts von 6,6805 × 10⁻⁶ auf 3,3669 × 10⁻⁶. Das Vorzeichen bleibt negativ. Über alle drei Zeigerintervalle und den Fehlschlag ändert sich der Dichtekontrast in halber L¹-Norm um 49,60 %. Die festgelegte Toleranz beträgt 25 %. Ein grosser Teil der Abschwächung stammt aus dem veränderten Gewicht der beiden ursprünglichen Historien.
+
+Zwei weitere Elf-Ereignis-Typen erfordern eine zusätzliche Normierung freier innerer Feldrichtungen. Ihr Ergebnis ist als separater Vergleich ausgewiesen. Für weitere Typen bleibt das reduzierte System singulär. Die physikalische Gewichtung und die Stabilität bei unbegrenzt wachsender Ereigniszahl bleiben offen.
+
+[Rechnung und Reproduktion](extension_stability_v0_1/README.md) · [Bericht mit Gewichtskurve (PDF)](reports/CST_DUST_Erweiterungsstabilitaet_v0_1.pdf) · [Prüfpaket (ZIP)](packages/CST_DUST_Erweiterungsstabilitaet_v0_1_Pruefpaket.zip) · [Vollständige Ergebnisdaten](extension_stability_v0_1/results.json) · [Prüfsummen der veröffentlichten Dateien](extension_stability_publication.sha256). Der Einzelbericht und die im ZIP enthaltene PDF-Fassung sind als jeweilige Originaldatei erhalten. Auf allen drei Seiten stimmen Text, gerenderte Darstellung und Linkziele überein.
+
 ## Anfangspräparation am Vergangenheitskragen · 18. November 2026
 
 Bei festem Uhrprofil bleibt die Auslese gegenüber der Anfangsdichte exakt unempfindlich. Für zwei kohärente Uhrpakete und denselben Zukunftsdetektor sinkt die Erfolgswahrscheinlichkeit beim Wechsel des Dichtezentrums von 1/8 auf 1/4 um 0,000006680475. Dephasierung schwächt die Antwort ab, ein relativer Phasenwechsel kehrt ihr Vorzeichen um. Die physikalische Auswahl der Randpaarung und die Geometriedynamik bleiben offen. [Herleitung, Kontrollen und Reproduktion](initial_preparation_v0_1/README.md) · [Kurzbericht (PDF)](reports/CST_DUST_Anfangspraeparation_v0_1.pdf) · [Prüfpaket (ZIP)](packages/CST_DUST_Anfangspraeparation_v0_1_Pruefpaket.zip).
