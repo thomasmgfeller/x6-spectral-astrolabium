@@ -1,0 +1,115 @@
+{
+  "M1": {
+    "RK4_largest_relative_discrepancy": "8.9250085659849096783143898798459264562499999999999E-14",
+    "RK4_samples": {
+      "0": {
+        "H_times_Tend": "-0.16666666666666666666666666666666666666666666666667",
+        "acceleration_times_Tend_squared": "-0.013888888888888888888888888888888888888888888888889",
+        "r": "1",
+        "rho_over_rho0": "1"
+      },
+      "1": {
+        "H_times_Tend": "-0.22222222222222950599321300778965989479357692775603",
+        "acceleration_times_Tend_squared": "-0.024691358024689154318872596318597947064227198536678",
+        "r": "0.82548181222368122907613635917184719090320629720738",
+        "rho_over_rho0": "1.7777777777776191109588269349390521886243582946408"
+      },
+      "1/2": {
+        "H_times_Tend": "-0.19047619047619258092708643237757391011417192055564",
+        "acceleration_times_Tend_squared": "-0.018140589569160447165484009224974274546639253801435",
+        "r": "0.91482642750575213430436477234765505080973811861779",
+        "rho_over_rho0": "1.3061224489795521959148486641981477673580262737033"
+      },
+      "1/4": {
+        "H_times_Tend": "-0.17777777777777861163431053587472686066345529929070",
+        "acceleration_times_Tend_squared": "-0.015802469135802264679610038717609273261475760969029",
+        "r": "0.95788679049194551437243895054025073087516107443031",
+        "rho_over_rho0": "1.1377777777777630569319227876678676748262547897701"
+      },
+      "3/4": {
+        "H_times_Tend": "-0.20512820512820921791541747209409797022653470066644",
+        "acceleration_times_Tend_squared": "-0.021038790269558353214026968708138959938703731005926",
+        "r": "0.87072747098534286917511584730013205269382354070538",
+        "rho_over_rho0": "1.5147928994082014314099417469860051155866686324267"
+      }
+    },
+    "classical_rows": 20,
+    "cohort_slots": {
+      "dynamics": 20,
+      "initial_velocity": 1,
+      "mass": 5,
+      "side_flux": 12
+    },
+    "largest_archived_relative_enclosure_percent": "0.30950763585120920860794350068242799752382814756575",
+    "physical_P3": "HOLD_NOT_ELIGIBLE / NOT_RUN",
+    "physical_observations": 0
+  },
+  "actions": {
+    "arms": 5,
+    "branch_comparisons": 1080,
+    "changed_relative_exponents_under_reference_dust": 72,
+    "example": {
+      "T": [
+        "-7/8",
+        "-3/8"
+      ],
+      "chain_minus_antichain_phase_exponents": {
+        "both_off": "0",
+        "coupled": "3141/256",
+        "dust_on_reference_antichain": "9",
+        "no_dust_phase": "9",
+        "no_gravity_phase": "837/256"
+      },
+      "density_marks": [
+        "0",
+        "1/2"
+      ]
+    },
+    "marks_and_clock_configurations": 108,
+    "max_float_modulus_squared_error": 2.220446049250313e-16,
+    "orders": 2,
+    "scope": "diagonal path effect; no scalar field, no claim of physical backreaction"
+  },
+  "audit": {
+    "N11_fixed_clock_max_difference": 1.1102230246251565e-16,
+    "permutations": 24,
+    "physical_small_volume_tail": null,
+    "tail_checks": 60,
+    "wrong_index_cases_exposed": 12
+  },
+  "orbit": {
+    "F4_A_B": [
+      52,
+      -32
+    ],
+    "physical_target_for_F4": null,
+    "prefix_column": {
+      "1564": "1/3",
+      "4195868": "1/3",
+      "134219292": "1/3"
+    },
+    "samples": [
+      {
+        "A": "3/98000000",
+        "B": "1/98000000",
+        "change_in_weighted_F4": "3/3500000",
+        "t": "-1/98000000",
+        "theta": "-1/2"
+      },
+      {
+        "A": "1/49000000",
+        "B": "1/49000000",
+        "change_in_weighted_F4": "0",
+        "t": "0",
+        "theta": "0"
+      },
+      {
+        "A": "1/98000000",
+        "B": "3/98000000",
+        "change_in_weighted_F4": "-3/3500000",
+        "t": "1/98000000",
+        "theta": "1/2"
+      }
+    ]
+  }
+}

@@ -1,5 +1,11 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Enduhrunabhängige Paarungen im endlichen CST-Uhrmodell · 18. November 2026
+
+Zwei positive Paarungen liefern bei verschobenem Enduhrwert jeweils dieselbe frühe Auslese. Für dieselbe leere Anfangspräparation sagen sie jedoch verschiedene Wahrscheinlichkeiten voraus: 1/2 bzw. 11/24 für keine Geburt bis zur Uhrmarke 1/2. Ein unabhängiger Audit mit überlappenden Uhrpaketen prüft auch die komplexen Kreuzterme. Die physikalische Auswahl der Paarung und des N14-Orbittransfers bleibt offen.
+
+[Studie, Daten und Nachrechnung](clock_pairing_v0_1/README.md) · [Bericht (PDF)](reports/CST_DUST_Uhrpaarung_Erster_Lauf.pdf) · [Prüfpaket (ZIP)](packages/CST_DUST_Uhrpaarung_Erster_Lauf_Pruefpaket.zip) · [Lokaler Vortest (ZIP)](packages/CST_DUST_Lokaler_Vortest.zip)
+
 ## Fortsetzung und Regularität · Prüfberichte zu den Etappen 8 und 9
 
 Etappe 8 prüft, wie sich ein physikalischer Transport über die klassische Singularitätszeit von einer formalen Fortsetzung der Volumenkurve unterscheiden lässt. Etappe 9 untersucht inverse Volumenmomente, geglättete Krümmungsindikatoren, Trapping und den Innen-/Aussenraum-Anschluss. Die Referenz- und Gegenbeispiele sind nachrechenbar. Die dynamischen Prüfungen 8A–8C und 9A–9D stehen auf `HOLD_NOT_ELIGIBLE / NOT_RUN`.
