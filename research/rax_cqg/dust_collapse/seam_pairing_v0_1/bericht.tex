@@ -1,0 +1,120 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\IfFileExists{ngerman.ldf}{\usepackage[ngerman]{babel}}{}
+\usepackage{lmodern,amsmath,amssymb,booktabs,tabularx,array,microtype}
+\usepackage[top=21mm,bottom=19mm,left=20mm,right=20mm,headheight=14pt]{geometry}
+\usepackage{xcolor,hyperref,fancyhdr}
+\pdfmapfile{+lm.map}
+\pdfmapfile{+cm.map}
+\pdfmapfile{+symbols.map}
+\pdfmapfile{+cmextra.map}
+\definecolor{teal}{HTML}{13665E}
+\definecolor{ink}{HTML}{173139}
+\definecolor{soft}{HTML}{E9F3F0}
+\hypersetup{colorlinks=true,urlcolor=teal,pdfauthor={CST-DUST, interne Modellrechnung},pdftitle={CST-DUST: Norm und Interferenz am gemeinsamen Zwischenrand}}
+\pagestyle{fancy}\fancyhf{}\fancyhead[L]{\small\textcolor{teal}{\bfseries X6 / CST-DUST}}
+\fancyhead[R]{\small Etappen 3 und 4\enspace |\enspace 18. November 2026}
+\fancyfoot[L]{\small Norm und Interferenz am gemeinsamen Zwischenrand · v0.1}
+\fancyfoot[R]{\small\thepage\ / 4}
+\renewcommand{\headrulewidth}{0.3pt}\color{ink}
+\setlength{\parindent}{0pt}\setlength{\parskip}{5.4pt}\raggedbottom
+\newcommand{\sect}[1]{\par\vspace{4pt}{\large\bfseries\color{teal}#1}\par}
+\newcommand{\titleline}[1]{{\LARGE\bfseries #1}\par\vspace{5pt}}
+\newcommand{\callout}[1]{\par\noindent\colorbox{soft}{\parbox{\dimexpr\linewidth-2\fboxsep\relax}{\vspace{3pt}#1\vspace{3pt}}}\par}
+\newcommand{\repo}{https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/bc13f4e7e1119d1afaeff62780a4081109af8f98/research/rax_cqg/dust_collapse}
+\newcommand{\dd}{\mathrm{d}}
+\begin{document}
+\titleline{Was bestimmt die Verklebung am Zwischenrand?}
+\callout{\textbf{Ergebnis.} Die erweiterte Verklebung liefert ein endliches, kohärentes Gewicht für die Auslese eines festen zukünftigen Grundpakets. Für die vollständige skalare Auslese scheitert jede positive Erweiterung, die zugleich alle bisherigen Testpaketnormen und ihre Paarungen mit der Geburtsantwort erhält. Die Norm relativ zum leeren Zweig bleibt offen.}
+
+\sect{Ein späteres, fest vorgegebenes Record}
+Wir übernehmen die veröffentlichte minimale transitive Verklebung zweier AA-Hälften am Zweipunktrand. Jede Hälfte hat 33 beschriftete Ordnungen mit gleichen Gewichten. Der Kontrollsektor setzt alle acht Staubdichten auf ihr Atom und verwendet die normierten skalaren Grundpakete an beiden äusseren Rändern. Die Rekonstruktion behält die kausalen Schnittdaten und alle Beiträge der gemeinsamen Wirkung. Die 32 rangdefizienten inneren Blöcke sind im Abel-Grenzwert mit den äusseren Paketen enthalten.
+
+Sei $J_{ij}$ die so gewonnene Vorwärtsamplitude einer linken Ordnung $i$ und einer rechten Ordnung $j$, hier ohne das Gewicht $1/1089$. Für das feste Endrecord bilden wir $a_i=\sum_j J_{ij}/1089$. Die Form $D^{(h_0)}_{ik}=\overline{a_i}a_k$ ist positiv semidefinit und hat auf den 33 Koeffizienten Rang eins. Der Index bezeichnet Summanden der Auswertung. Der Detektor liest die einzelnen Ordnungen nicht aus.
+
+\begin{center}\begin{tabularx}{\linewidth}{@{}Xr@{}}\toprule
+Auslese im Acht-Atom-/Grundpaketsektor & Gewicht (gerundet)\\\midrule
+Kohärentes Gewicht des festen Records $|\sum_i a_i|^2$ & $3{,}271542442\cdot10^{-8}$\\
+Diagonalsumme $\sum_i|a_i|^2$ als Rechenkontrolle & $9{,}992283476\cdot10^{-9}$\\
+Summe aller Kreuzterme zwischen linken Ordnungen & $2{,}272314094\cdot10^{-8}$\\\bottomrule\end{tabularx}\end{center}
+\textbf{Kontrolle.} Die komplexe Gesamtsumme reproduziert den publizierten Abel-Wert innerhalb seiner Fehlerhülle. Ein zweiter Rechenweg baut die globalen Ordnungen direkt aus ihren Relationen auf und verwendet Eigenwerte der komplexen Hesse-Matrix für die Gaußintegration. Er bestätigt alle 33 partiellen Amplituden auf $4\cdot10^{-16}$ absolut gegenüber den gerundeten Archivwerten. Das ist eine interne numerische Gegenprobe.
+
+Dieses Gewicht gehört zu einem einzelnen späteren Ausgang. Im Folgenden prüfen wir am gemeinsamen Rand eine andere, vollständige skalare Auslese. Dafür gelten der Ein-Geburts-Vertrag, das volle innere Dichtemass und das aufgelöste Uhrrecord aus PR~306. Die Zahlen der beiden Versuche lassen sich daher nicht dividieren, um eine Rate zu gewinnen.
+
+\newpage\titleline{Alle Kreuzterme der vollständigen skalaren Auslese}
+Wir paaren im zweiten Versuch eine Amplitude mit der konjugierten Amplitude am gleichen Feld $y=(q_3,q_4)$ und gleichem Uhrrecord $u$. Die Eingabe ist das normierte Atom-/Grundpaket. Am Ausgang genügt das Staubatom $r_3=r_4=0$, eine Komponente mit positivem Mass. Die innere Staubdichte wird über das volle Mass integriert. Für $0<u<d=1/8$ schreiben wir den mit beiden Randmassen normierten Summanden als
+\[
+ g_i(u,y)=e^{iF_4(i)} Z_{p_i}(u) I_i(y)/264,\qquad G=\sum_{i=1}^{33}g_i .
+\]
+$Z_p$ und $I_i$ sind die veröffentlichten Staub- und Skalarantworten. Der Faktor $1/264$ enthält $1/33$, den normierten Eingang und die Quadratwurzel der ausgehenden Atommasse. Mit dem vorgegebenen Vergleichsmass $\dd u\,\dd^2y$ ist die regulierte Matrix
+\[
+ D_{ij}(\epsilon)=\int_0^d\!\dd u\int_{\mathbb R^2}\!\dd^2y\,
+ e^{-\epsilon|y|^2}\overline{g_i(u,y)}g_j(u,y),\qquad W_\epsilon=\sum_{ij}D_{ij}(\epsilon).
+\]
+$\epsilon>0$ reguliert hier die \emph{Ausgangsfelder}. Die inneren Integrale in $I_i$ stehen bereits im Abel-Grenzwert. Bei jedem positiven $\epsilon$ ist $D(\epsilon)$ eine positive Gram-Matrix.
+
+\sect{Exakte Klassifikation der 1\,089 geordneten Paare}
+Nach Elimination des inneren Feldes seien $L_i,X_i,R_i$ die rationalen Eingangs-, Kreuz- und Ausgangsblöcke. Mit $b=4/\sqrt6$ und $U_i=(1+b^2L_i^2)^{-1}$ hat $I_i$ bis auf einen von $y$ unabhängigen Faktor den Exponenten $-y^T(Q_i-i b P_i)y/2$, wobei
+\[
+ Q_i=b^2 X_i^T U_i X_i,\qquad P_i=R_i-b^2 X_i^T L_i U_i X_i .
+\]
+Der Exponent des Paars ist $-y^TH_{ij}y$ mit $H_{ij}=(Q_i+Q_j+i b(P_i-P_j))/2$. Für $\epsilon>0$ liefert das Feldintegral $\pi/\sqrt{\det(\epsilon I+H_{ij})}$, vor den Faktoren der Einzelamplituden. Die Wurzel ist durch die positive Dämpfung festgelegt. Alle Rang- und Nulltests erfolgen in rationaler Arithmetik, Real- und Imaginärteil über $i b$ getrennt.
+\begin{center}\begin{tabularx}{\linewidth}{@{}rX@{}}\toprule
+Anzahl & Verhalten für $\epsilon\downarrow0$\\\midrule
+1\,078 & Positive Gesamtdämpfung in beiden Feldrichtungen. Das unregulierte Integral ist absolut konvergent.\\
+4 & Gleiche ungedämpfte Achse und verschiedene quadratische Phasen. Es bleibt ein endlicher Fresnel-Grenzwert. Die Paare verbinden 25500 mit 25372 oder 25496, jeweils in beiden Richtungen.\\
+7 & Wachstum proportional zu $1/\sqrt\epsilon$. Es betrifft die fünf singulären Diagonalen und beide Kreuzterme 25372 $\leftrightarrow$ 25496. Die letzten zwei Antworten sind beim symmetrischen Eingang identisch.\\\bottomrule\end{tabularx}\end{center}
+Dies ist eine Paarung von Vorwärts- und konjugierter Amplitude. Die ebenfalls 1\,089 gemeinsamen Vorwärtswirkungen auf Seite 1 haben andere Indizes und eine andere Bedeutung.
+
+\newpage\titleline{Warum eine endliche positive Gesamtnorm scheitert}
+Die sieben wachsenden Beiträge ergeben zusammen
+\[
+ W_\epsilon=A_d\sqrt{\pi/\epsilon}+B_d+O(\sqrt\epsilon),\qquad A_d>0 .
+\]
+Die übrigen 1\,082 Einträge besitzen einen endlichen Grenzwert. Für die sieben singulären Einträge folgt die Entwicklung aus $\det(\epsilon I+H)=\epsilon(\epsilon+\operatorname{tr} H)$. Mit $J_p=\int_0^d |Z_p(u)|^2\dd u$ und den veröffentlichten transversalen Normen gilt exakt
+\[
+ A_d=\frac{8\pi^{5/2}}{264^2 b}
+ \left[4\sqrt{\frac{9}{12871}}\,J_1+
+ \left(2\sqrt{\frac{9}{69185}}+\sqrt{\frac{9}{1423450}}\right)J_2\right].
+\]
+Der Faktor vier enthält die konstruktive Interferenz der beiden identischen Antworten. Aus $\Re Z_p(u)\geq 1/3$ folgt $J_p\geq d/9$. Damit ist $A_d$ für jedes $0<d\leq1$ strikt positiv. Für $d=1/8$ liefert die Formel numerisch $A_d\simeq 1{,}74267514\cdot10^{-5}$.
+
+\sect{Eine Folge zulässiger Testpakete}
+Im Uhr-/Feldraum der Ausgangsatome bilde man die symmetrischen Testpakete
+\[
+ f_\epsilon=e^{-\epsilon|y|^2}G/\sqrt{W_{2\epsilon}} .
+\]
+Sie haben im bisherigen Produkt Norm eins. Die Gaußhülle macht sie in den Feldern zu Schwartz-Funktionen. Das Uhrfenster ist Teil des $L^2(\dd u)$-Records. Für jede positive sesquilineare Form, die dieses Testprodukt und alle bisherigen gemischten Paarungen mit $G$ erhält, verlangt Cauchy--Schwarz
+\[
+ \|G\|^2_{\rm neu}\ \geq\ |\langle f_\epsilon,G\rangle|^2
+ =\frac{W_\epsilon^2}{W_{2\epsilon}}\ \sim\ A_d\sqrt{2\pi/\epsilon}.
+\]
+Dies schliesst eine endliche Norm für den \emph{kohärenten} Ausgang unter genau diesen Annahmen aus. Schon die auf das positive Ausgangsatom beschränkten Tests genügen. Weitere Dichtestrata können den Widerspruch nicht beseitigen.
+\begin{center}\begin{tabular}{@{}rrr@{}}\toprule
+$\epsilon$ & $W_\epsilon$ & Untergrenze für $\|G\|^2_{\rm neu}$\\\midrule
+$10^{-4}$ & $0{,}00882695$ & $0{,}00986973$\\
+$10^{-8}$ & $0{,}314648$ & $0{,}441627$\\
+$10^{-12}$ & $30{,}8939$ & $43{,}6872$\\
+$10^{-16}$ & $3088{,}82$ & $4368{,}24$\\\bottomrule\end{tabular}\end{center}
+Die numerischen Werte veranschaulichen den analytischen Ausschluss. Der Grenzwert $\sqrt{\epsilon/\pi}\,W_\epsilon=A_d+o(1)$ ist ein Gewicht je Feldlänge. Die gleiche Reskalierung schickt jeden festen, bereits normierbaren Ausgang und ein mit demselben Faktor behandeltes Vakuumgewicht eins auf null. Ein separat normierter Geburtssektor benötigt eine zusätzliche physikalische Beziehung zum Vakuum.
+
+\newpage\titleline{Positivität, Reichweite und offene Entscheidung}
+\sect{Auch der einfache endliche Rest genügt nicht}
+Nach eintragsweiser Subtraktion des führenden $1/\sqrt\epsilon$-Anteils verschwinden die endlichen Teile der singulären Diagonalen. Der Kreuzterm zwischen 25372 und 25500 bleibt endlich und ist ungleich null. Seine Feldintegration enthält ein nichtverschwindendes Gauß-/Fresnelintegral. Für die Uhrintegration gilt $\Re Z_p\ge1/3$ und $\Im Z_p\le0$ aus $\chi(k)=(1+\int_0^1 e^{-ikr}\dd r)/2$ bei $k>0$. Damit hat $\int_0^d\overline{Z_1}Z_2\dd u$ strikt positiven Realteil. Der endliche $2\times2$-Block besitzt daher Determinante $-|D_{25372,25500}(0^+)|^2<0$. Für $d=1/8$ ergibt sich numerisch $-8{,}22627\cdot10^{-13}$.
+
+Diese Gegenprobe betrifft den Raum der beschrifteten Summanden. Der stärkere Ausschluss auf Seite~3 benutzt die ursprüngliche symmetrische Gesamtsumme und kommt ohne Auslese einer einzelnen Ordnung aus.
+
+\sect{Was als physikalischer Schritt übrig bleibt}
+\begin{tabularx}{\linewidth}{@{}p{.30\linewidth}X@{}}\toprule
+Gegenstand & Entscheidung\\\midrule
+Fester zukünftiger Ausgang & Endliches kohärentes Recordgewicht mit der veröffentlichten erweiterten Schnittwirkung.\\
+Vollständiges bisheriges Randprodukt & Die unveränderten Testnormen und gemischten Amplituden lassen eine endliche positive Geburtsnorm gemeinsam nicht zu.\\
+Physikalisches Randprodukt und Geburtsrate & HOLD. Zur Prüfung eines neuen Kandidaten muss eine hergeleitete Schnittregel angeben, welche Testnormen oder zugelassenen Ausgänge sich ändern, und den leeren und den Ein-Geburts-Zweig mit derselben Regel paaren.\\
+Physikalischer P3-Pilot & $M=1$, erste Dichtestufe: 0 von 38 Vergleichen. Diese endlichen Rechnungen liefern keine P3-Korrespondenz.\\\bottomrule\end{tabularx}
+
+\sect{Quellen und Reproduktion}
+Quellstand \texttt{bc13f4e}, PR~307. Grundlage sind die \href{\repo/extended_sewing_v0_1/README.md}{erweiterte Schnittwirkung}, die \href{\repo/coupled_kernel_domain_v0_1/DERIVATION.tex}{skalare Gaußantwort}, das \href{\repo/clock_record_norm_v0_1/README.md}{aufgelöste Uhrrecord} und die \href{\repo/scalar_boundary_conditions_v0_1/README.md}{fünf singulären Ausgangsbedingungen}. Zum Zusammenhang zwischen positiver Historienpaarung und Zustandsraum siehe \href{https://doi.org/10.1088/1751-8113/43/27/275302}{Dowker, Johnston und Sorkin (2010)}.
+
+Das Prüfpaket enthält Quellkennungen, Eingaben, Hauptrechnung, Gegenprobe und Ergebnisse. Die Hauptrechnung benötigt Python ab 3.10 mit Standardbibliothek. Die Gegenprobe verwendet NumPy. Die algebraischen Paartypen und der Positivitätsausschluss sind exakt. Die neuen Dezimalwerte sind Gleitkommawerte. Die Gegenprobe prüft die 33 Teilamplituden, zwei direkt integrierte Feldnormen, die führende Dichte und den Fresnel-Kreuzterm.
+\end{document}
