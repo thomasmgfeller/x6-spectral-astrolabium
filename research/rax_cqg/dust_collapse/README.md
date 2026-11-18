@@ -1,5 +1,13 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Historienmass und Zustandsraum am N14-Paar · 18. November 2026
+
+Zwei Fortsetzungen über die N14-Endtypen 1790 und 5374 erhalten dieselbe markierte N13-Paarverteilung. Eine Übergangsrate pro markierter Einfügung, die nur den unmarkierten Eltern- und Tochtertyp kennt, scheitert an der Normierung und der Symmetrie unter den sechs Einfügungsreihenfolgen. Mit gespeicherter Einfügungsgeschichte gibt es mehrere exakt normierte Fortsetzungen.
+
+Zwei verschiedene kausale Schnitte liefern für jeden Endtyp denselben skalaren Randkern wie die direkte Rechnung. Unter dem geprüften Randvertrag hat das Gram-Produkt der zwei skalaren Ausgänge Rang zwei. Eine Verschiebung des Amplitudengewichts zwischen den Zweigen ist am gemeinsamen Detektor unterscheidbar. Die zweite Differenz des Erfolgs für drei Fortsetzungen der vollen austauschsymmetrischen Familie beträgt auf beiden feinen Gittern bei Dichte 1/8 rund 1,48109 × 10⁻¹¹. Die physikalische Auswahl des Historienmasses und des Zustandsraums für die gekoppelte Geometrie-Staub-Feld-Theorie bleibt offen.
+
+[Studie und Rechendaten](history_measure_state_space_v0_1/README.md) · [Bedingter Randsektor](history_measure_state_space_v0_1/Randsektor.md) · [Marginale und Detektorauslese](history_measure_state_space_v0_1/Quotient_und_Auslese.md) · [Bericht (PDF)](reports/CST_DUST_Historienmass_Zustandsraum_N14_v0_1.pdf) · [Prüfpaket (ZIP)](packages/CST_DUST_Historienmass_Zustandsraum_N14_v0_1_Pruefpaket.zip) · [Prüfsummen](history_measure_state_space_v0_1_publication.sha256)
+
 ## Erweiterungsstabilität bei 14 Ereignissen · 18. November 2026
 
 Die dritte Einfügung führt von 23 zulässigen N13-Elterntypen zu 139 zulässigen N14-Endtypen. Für zehn davon wurden die Uhrintegrale und Detektorantworten auf zwei Gittern ausgewertet. Innerhalb dieses erweiterten Trägers halten alle erlaubten Aufteilungen bis einschliesslich 5,0282 % übertragenem Amplitudengewicht die drei Toleranzen ein. Geben beide N11-Eltern je 5,0283 % an N14-Typ 760, fällt der Detektorerfolg bei Dichte 1/4 auf 89,99987 % des Referenzwerts. Damit scheitert auch die bisherige N13-Garantie von 5,1179 % auf dem vollen N14-Träger.

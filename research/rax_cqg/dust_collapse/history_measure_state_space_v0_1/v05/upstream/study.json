@@ -1,0 +1,10 @@
+{
+  "version":"CST-DUST N13 full sequential support v0.4",
+  "base":"cf35adb4ce5d35f6fc79ce05e2db07b8e2a3dd60",
+  "target":"All 23 N13 endpoint types reachable through at least one originally admissible N12, retaining the full v0.3 scalar, clock, density, action, readout and deleted-mark conventions. Account separately for endpoint-only type 510.",
+  "clock_method":"Exact rearrangement of finite Gauss-Legendre sums. First integrate the last topologically labelled inner clock conditional on its parents. Cache this tensor across outer clock values only when the varied past clock has zero coefficient into the last event. Use the exact exp(-iC/2) product and a continuous small-C evaluation of the inherited density factor.",
+  "quadrature":"Recompute all 23 at (32,6), (48,8), then (64,10) and (80,12) as needed. Require max final branch amplitude change <3e-10 and all five readout-mode effect grids to differ by <5e-12. Compare each geometry to direct Cartesian summation on a 4-node inner grid; compare full low-order packet with independent v0.3 factor elimination and all seven prior fine results.",
+  "laws":"For each of the two N11 parents retain mass 1/2. Evaluate full readouts for equal marked insertion at each level, equal distinct daughter type at each level, uniform sequentially admissible complete marked paths per parent, and the exact exchange-symmetric path completion from v0.3. Preserve coherent summation on shared final shapes; list differences between weight and readout metrics.",
+  "robustness":"Re-evaluate common transferred-weight radius including arbitrary admissible allocations on the full N12/N13 sequential support, sign of the density response, both fixed-N12-marginal full-replacement feasibility tests and the unchanged two-type witness. An upper success bound alone does not prove feasibility; exhibit an explicit passing mixture or distinguish unresolved gates. Thresholds inherited from PR 297.",
+  "compute":"Local CPU only, one thread. No GitHub or hosted compute jobs initiated for this study. Numerical grid checks are empirical rather than rigorous bounds on exact integrals."
+}
