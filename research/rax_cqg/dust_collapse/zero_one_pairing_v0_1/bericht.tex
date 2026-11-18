@@ -1,0 +1,142 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\IfFileExists{ngerman.ldf}{\usepackage[ngerman]{babel}}{}
+\usepackage{lmodern,amsmath,amssymb,booktabs,tabularx,array,microtype}
+\usepackage[top=21mm,bottom=19mm,left=20mm,right=20mm,headheight=14pt]{geometry}
+\usepackage{xcolor,hyperref,fancyhdr}
+\pdfmapfile{+lm.map}
+\pdfmapfile{+cm.map}
+\pdfmapfile{+symbols.map}
+\pdfmapfile{+cmextra.map}
+\definecolor{teal}{HTML}{13665E}
+\definecolor{ink}{HTML}{173139}
+\definecolor{soft}{HTML}{E9F3F0}
+\hypersetup{colorlinks=true,urlcolor=teal,pdfauthor={CST-DUST, interne Modellrechnung},pdftitle={CST-DUST: Gemeinsame Normierung der Null- und Ein-Ereignis-Antwort}}
+\pagestyle{fancy}\fancyhf{}\fancyhead[L]{\small\textcolor{teal}{\bfseries X6 / CST-DUST}}
+\fancyhead[R]{\small Etappen 3 und 4\enspace |\enspace 18. November 2026}
+\fancyfoot[L]{\small Gemeinsame Normierung zweier Ereigniszweige · v0.1}
+\fancyfoot[R]{\small\thepage\ / 5}
+\renewcommand{\headrulewidth}{0.3pt}\color{ink}
+\setlength{\parindent}{0pt}\setlength{\parskip}{5.4pt}\raggedbottom
+\newcommand{\sect}[1]{\par\vspace{4pt}{\large\bfseries\color{teal}#1}\par}
+\newcommand{\titleline}[1]{{\LARGE\bfseries #1}\par\vspace{5pt}}
+\newcommand{\callout}[1]{\par\noindent\colorbox{soft}{\parbox{\dimexpr\linewidth-2\fboxsep\relax}{\vspace{3pt}#1\vspace{3pt}}}\par}
+\newcommand{\repo}{https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/8222202f6b27a60218afe6cfbf1a5b8c7be423ea/research/rax_cqg/dust_collapse}
+\newcommand{\dd}{\mathrm{d}}
+\newcommand{\ketnorm}[1]{\|#1\|^2}
+\newcommand{\G}{\mathcal G}
+\begin{document}
+\titleline{Gemeinsame Norm für null und ein inneres Ereignis}
+\callout{\textbf{Entscheidung.} Zwei positive Randprodukte normieren dieselbe Antwort ohne inneres Ereignis auf eins und erhalten die ursprünglichen Amplituden von drei festgelegten Messpaketen. Dennoch weisen sie der Ein-Ereignis-Antwort verschiedene Normquadrate zu. Die Schnittwirkung, diese Paketdaten und die Einheitsnorm genügen zur physikalischen Auswahl noch nicht.}
+
+\sect{Was in beiden Rechnungen gleich bleibt}
+Die Kontrolle schliesst an \href{\repo/seam_pairing_v0_1/README.md}{PR 308} an. Eingangs- und Ausgangsrand bestehen je aus zwei unvergleichbaren Ereignissen. Eingangspräparation, äussere Dichteatome, ursprüngliche Wirkungskoeffizienten, Randmass und Einheitsbreite der Gaußpakete stimmen in beiden Zweigen überein. Im Ein-Ereignis-Zweig werden alle 33 beschrifteten AA-Ordnungen mit Gewicht $1/33$ summiert. Nur seine innere Uhr liegt in $0<u<d$, primär $d=1/8$. Ihre Werte werden in der Amplitude integriert. Das gemeinsame spätere Messergebnis besteht aus den skalaren Randfeldern.
+
+Der Nullzweig entsteht durch Entfernen des inneren Ereignisses und Einschränken der transitiven Ordnung auf die vier verbleibenden Randpunkte. Die Wirkung wird auf dieser kleineren Ordnung neu berechnet. Die 33 Einschränkungen liefern sieben verschiedene bipartite Ordnungen. Wir übernehmen die Häufigkeiten der Einschränkungen als Gewichte der Nullfamilie. Dies ist eine zusätzliche Vergleichsregel. Der Nullzweig hat einen äusseren Rand und ein Skalarfeld. Seine Gleichsetzung mit dem leeren Anfang des offenen Uhrmodells ist nicht hergeleitet.
+
+\begin{center}\begin{tabular}{@{}lrrr@{}}\toprule
+Randgraph & Beschriftete Ordnungen & Häufigkeit je Ordnung & Gesamtgewicht\\\midrule
+Zwei getrennte Kanten & 2 & 2 & $4/33$\\
+Drei Kanten (Pfad) & 4 & 5 & $20/33$\\
+Alle vier Kanten & 1 & 9 & $9/33$\\\bottomrule\end{tabular}\end{center}
+
+\sect{Was die drei gemeinsamen Messpakete entscheiden}
+Die aus der Wirkung berechneten Überlappungen mit dem Grundpaket und zwei orthogonalen quadratischen Anregungen bleiben in beiden Produkten erhalten. Gemessen wird jeweils das Normquadrat der unnormierten Ein-Ereignis-Antwort bei identisch normiertem Nullzweig. Für die zwei auf Seite 2 definierten Feldregulatoren ergibt sich
+\[
+ \ketnorm{G_1}_{t=1}\simeq 0{,}000636203548,\qquad
+ \ketnorm{G_1}_{t=4}\simeq 0{,}000614789365 .
+\]
+Der Ursprung des Unterschieds ist nachweisbar. Zwei der fünf singulären Ein-Ereignis-Ordnungen besitzen eine schräge ungedämpfte Feldrichtung. Der Nullzweig hat nur eine ungedämpfte Achse. Die relative Grösse des Beitrags ändert sich unter einer randvertauschungsinvarianten Dehnung.
+
+\newpage
+\titleline{Die vollständige gemeinsame Feldpaarung}
+Setze $y=(q_3,q_4)$, $s=(q_3+q_4)/\sqrt2$ und $a=(q_3-q_4)/\sqrt2$. Für beide Antworten $G_0,G_1$ verwenden wir das gleiche Integral über $\dd^2y$. Das Dichteatom am Ausgang ist eine positive Masskomponente. Für den Nullzweig ist der innere Staubfaktor eins. Für jeden Ein-Ereignis-Beitrag ist er $D_p(d)=\int_0^d Z_p(u)\dd u$ mit der unveränderten Staubantwort aus \href{\repo/clock_record_norm_v0_1/README.md}{PR 306}. Das innere Dichtemass umfasst Atom und kontinuierlichen Anteil. Für beide Zweige ergibt der Übergang vom normierten Eingangsatom zum skalaren Ausgang mit Lebesgue-Mass denselben Faktor $1/8$.
+
+Die positiv definite Matrix $W_t$ hat in den Achsen $(s,a)$ die Eigenwerte $(t,1/t)$. Sie hat Determinante eins und ist unter Vertauschung der Randpunkte invariant. Mit $M_{ij}(\epsilon,t)=\int e^{-\epsilon y^T W_t y}\overline{G_i(y)}G_j(y)\dd^2y$ gilt für die einzelnen geordneten Historienpaare:
+\begin{center}\begin{tabular}{@{}lrrr@{}}\toprule
+Sektoren & Absolut konvergent & Endlicher Fresnel-Grenzwert & Wachstum $\epsilon^{-1/2}$\\\midrule
+$0,0$ & 48 & 0 & 1\\ $0,1$ & 228 & 3 & 0\\ $1,0$ & 228 & 3 & 0\\ $1,1$ & 1078 & 4 & 7\\\bottomrule\end{tabular}\end{center}
+Der einzige singuläre Nullzweig ist der Vierkantengraph. Seine ungedämpfte Achse $a$ trägt die Phase $\exp(-i b a^2/2)$, $b=4/\sqrt6$. Die drei parallelen Ein-Ereignis-Antworten tragen die Frequenzen $7b/4$ oder $17b/4$. Deshalb bleibt jedes sektorübergreifende Integral endlich. Der unskalierte Kreuzterm bei $d=1/8$ beträgt numerisch etwa $-0{,}010474+0{,}002025i$. Er ist bei der Berechnung mitgeführt.
+
+\sect{Was die Normierung auf gemeinsame Feldlänge auswählt}
+Setze $L_t(F,H)=\lim_{\epsilon\downarrow0}\sqrt{\epsilon/\pi}\,M_{FH}(\epsilon,t)$. Pro ungedämpfter Einheitsrichtung $v$ multipliziert der Faktor $(v^TW_tv)^{-1/2}$ die transversale Norm. Das folgt durch Integration zuerst entlang dieser Geraden. Die endlichen Kreuzterme verschwinden unter der gemeinsamen Skalierung. $L_t$ ist positiv als Grenzwert positiver Formen. Auf $(G_0,G_1)$ ist $L_t/L_t(G_0,G_0)=\operatorname{diag}(1,R_t)$ mit
+\[
+ R_t=\frac{2\pi\sqrt{1+b^2}}{81}
+ \left[4\sqrt{\tfrac9{12871}}|D_1|^2+
+ \left(\sqrt{\tfrac9{1423450}}+2\sqrt{\tfrac9{69185}}
+ \sqrt{\tfrac{1370}{841t^2+529}}\right)|D_2|^2\right].
+\]
+Die schräge Richtung ist proportional zu $(3,26)$ oder $(26,3)$. Der Faktor vier enthält die zwei identischen axialen Amplituden. Der Vierkantengraph im Nullzweig hat transversales Normquadrat $4\pi^{3/2}/(b\sqrt{1+b^2})$ vor dem Gewicht und den gemeinsamen Randfaktoren. Würden alle sieben Nullordnungen gleich gewichtet, änderte sich $R_t$ um den Faktor $(21/11)^2$.
+
+\newpage
+\titleline{Zwei positive Produkte mit identischen Paketdaten}
+Die gemeinsame Längenskalierung gibt jedem festen quadratintegrierbaren Paket Norm null. Für einen aussagekräftigeren Test verlangen wir daher drei Bedingungen gleichzeitig:
+\begin{itemize}\setlength\itemsep{0pt}
+\item Alle gewöhnlichen Testpakete behalten ihr ursprüngliches $L^2$-Produkt.
+\item Für $E=\operatorname{span}(h_{00},h_{20},h_{02})$ bleiben die ursprünglichen komplexen Paarungen mit beiden Zweigantworten erhalten.
+\item Der Nullzweig $G_0$ hat Norm eins.
+\end{itemize}
+Die Hermite-Pakete beziehen sich auf die Achsen $(s,a)$ und wurden bereits im \href{\repo/reduction_gluing_v0_1/DERIVATION.md}{Reduktionstest} verwendet. Für die orthonormale Basis $\mathcal B=\{h_{00},h_{20},h_{02}\}$ ergibt sich der Paketvektor $v_i=\sum_{h\in\mathcal B}h\langle h,G_i\rangle$ aus diesen drei Wirkungsmatrixelementen. Für $h_{00}$ gilt $h_{00}(y)=\pi^{-1/2}e^{-|y|^2/2}$. Die beiden quadratischen Pakete entstehen durch Multiplikation mit $(2s^2-1)/\sqrt2$ bzw. $(2a^2-1)/\sqrt2$.
+
+Auf Vektoren $f+c_0G_0+c_1G_1$ mit gewöhnlichem Testanteil $f$ definieren wir das Normquadrat
+\[
+ \left\| f+ c_0 v_0+c_1 v_1\right\|_{L^2}^2
+ +(1-\|v_0\|_{L^2}^2)\left(|c_0|^2+R_t |c_1|^2\right).
+\]
+Die Zerlegung ist eindeutig. Jede nichtverschwindende Linearkombination der Zweigantworten hat positive Längendichte und kann damit kein $L^2$-Vektor sein. Der Vorfaktor ist strikt positiv. Die rationale Hülle für $\|v_0\|^2$ lautet $[0{,}242651218702,\,0{,}242651218703]$. Polarisation liefert das positive Skalarprodukt. Die Paarungen mit Paketen orthogonal zu $E$ werden in diesem Kandidaten auf null gesetzt. Gerade dadurch unterscheidet er sich von der in PR 308 ausgeschlossenen Erweiterung.
+
+\begin{center}\begin{tabular}{@{}lrr@{}}\toprule
+$d=1/8$ & $t=1$ & $t=4$\\\midrule
+Längendichtequotient $R_t$ & $0{,}000263076333$ & $0{,}000234801140$\\
+Ein-Ereignis-Normquadrat bei Erhalt von $h_{00}$ & $0{,}000595477859$ & $0{,}000572562544$\\
+Ein-Ereignis-Normquadrat bei Erhalt aller drei Pakete & $0{,}000636203548$ & $0{,}000614789365$\\\bottomrule\end{tabular}\end{center}
+Die letzten beiden Zeilen sind gerundet. Die Ungleichheit ist analytisch strikt, weil $\Re Z_2(u)\geq1/3$, der schräge Beitrag bei $t=1$ grösser ist als bei $t=4$ und $1-\|v_0\|^2>0$. Der gemeinsame komplexe Kreuzterm im Dreipaketprodukt ist für beide Formen gleich, numerisch $-0{,}010020+0{,}001427i$. Die Produkte erfüllen die drei lokalen Bedingungen. Eine Erhaltung dieser Formen durch den vollständigen physikalischen Uhrtransport ist offen.
+
+\newpage
+\titleline{Ein endlicher Ausschluss für die Einheitsnorm}
+Wie viele ursprüngliche Paketpaarungen darf ein Produkt erhalten, das $G_0$ auf eins normiert? Bereits die Austausch-symmetrische orthonormale Folge
+\[
+ e_k(y)=h_0(s)h_{2k}(a),\qquad k=0,1,2,\ldots
+\]
+liefert einen endlichen Gegenbeweis. Erhält man die Testnormen und alle jeweiligen Überlappungen, so muss nach Bessel für jedes $K$ gelten
+\[
+ S_K=\sum_{k=0}^K|\langle e_k,G_0\rangle|^2\leq1.
+\]
+\begin{center}\begin{tabular}{@{}rrl@{}}\toprule
+$K$ & Zahl der Pakete & Rationale Einschliessung von $S_K$\\\midrule
+2236 & 2237 & $[0{,}999965704704,\ 0{,}999965704705]$\\
+2237 & 2238 & $[1{,}000140496028,\ 1{,}000140496029]$\\\bottomrule\end{tabular}\end{center}
+Weil die Teilsummen wachsen, ist $k=2237$ die erste Überschreitung dieser Folge. Das letzte Paket hat Hermite-Index $4474$ in der antisymmetrischen Feldkoordinate. Dies ist eine Aussage über die erklärte Auswahl der Pakete und die Gewichte $4:20:9$ der drei Graphentypen.
+
+\sect{Wie die Grenze eingeschlossen wurde}
+Setze $x=i b$ und $c_k=\binom{2k}{k}/4^k$. Für jeden der drei Graphentypen hat die ursprüngliche Paarung mit $e_k$ die Form $A_j\sqrt{c_k}\,z_j^k$. Dies folgt durch den Koeffizientenvergleich mit der \href{https://dlmf.nist.gov/18.12}{erzeugenden Funktion der Hermite-Polynome} im vollständigen Gaußintegral. $A_j$ enthält das Gewicht des ganzen Typs. Für die vierdimensionale Gaußmatrix $K=I-i b H_j$ und $v=(0,0,1,-1)^T$ ist $z_j=v^TK^{-1}v-1$. In der Reihenfolge getrennte Kanten, Pfad, vollständiger Graph:
+\[
+ z_1=(1+x)^{-1},\quad
+ z_2=-\frac{(x+2)(x^2-x-1)}{(x+1)(x^2+4x+2)},\quad
+ z_3=\frac{1-x}{1+x}.
+\]
+Für den letzten Typ gilt $|z_3|=1$. Die übrigen erfüllen $|z_j|<5/6$. In der Quadratsumme lässt sich der Anteil $|A_3|^2$ exakt mit $\sum_{k=0}^K c_k=(2K+1)c_K$ aufsummieren. Bei den anderen Paaren verwendet die Rechnung $(1-\overline{z_i}z_j)^{-1/2}$. Der gesamte Fehler durch die dortige Verlängerung der Reihe ist höchstens $6(5/6)^{K+1}$, da $\sum|A_j|<1$ und $c_k\leq1$. Alle genannten Schranken werden mit rationalen Intervallen kontrolliert.
+
+Eine separate Gegenprobe rekonstruiert die sieben einzelnen komplexen Amplituden aus den Ordnungsrelationen und summiert die Folge direkt bis $k=2237$. Für den analytischen Ausschluss wird kein grosser Kollapslauf benötigt.
+
+\newpage
+\titleline{Uhrvergleich und Reichweite}
+\sect{Die frühe Uhr liefert eine eigenständige Gegenprobe}
+In der vorliegenden AA-Auslese enthält jede Ein-Ereignis-Amplitude das Integral $D_p(d)$. Es gilt $D_p(d)=d\,Z_p(0)+o(d)$. Bei Normierung desselben Nullzweigs wachsen sowohl die Längendichte als auch der Beitrag jedes der erhaltenen Pakete quadratisch mit $d$. Im primären runden Feldregulator ist
+\[
+ \lim_{d\downarrow0}R_1(d)/d^2\in
+ [0{,}0163006411921,\ 0{,}0163006411922].
+\]
+Damit ist die lineare Anfangsrate der untersuchten unmarkierten AA-Normquotienten null. Die beiden Zweige können im ergänzten Produkt interferieren. Diese Normquotienten allein sind keine Wahrscheinlichkeiten zweier klassischer Alternativen.
+
+Die publizierte offene Uhr hat dagegen einen normierten leeren inneren Anfang am Anker. Für die beiden positiven Referenzpaarungen gelten auf $0\leq u\leq1$ die Gewichte $P_0(u)=(1-\beta)u+e^{-u}$ und $P_1(u)=u(\beta-1+e^{-u})$. Damit ist $P_1/P_0=\beta u+O(u^2)$, für $\beta=5/4$ oder $4/3$. Ein konstanter positiver Normfaktor und eine Uhrumrechnung $u=c d+O(d^2)$ mit $c>0$ können die beiden Potenzgesetze nicht ineinander überführen. Ein physikalisch begründetes uhrdiagonales Recordprodukt wäre eine andere Auslese und gesondert zu prüfen. Die physikalische Rate und der dynamische P3-Pilot bei $M=1$ bleiben offen (0 von 38 Vergleichen auf der ersten Dichtestufe).
+
+\sect{Fehlerkontrolle und Wiederholung}
+Für die Hüllen von $R_t$ wird die Dichtephase $e^{-ikr}$ bis Grad 28 entwickelt. Dabei gilt $k=1/2+b\sum_j(y_j-u)^2<4$. Der Fehler jedes Real- und Imaginärteils im Zeitmittel $D_p/d$ ist höchstens $4^{29}/(2\cdot29!\cdot30)$. Die Momente der gleichverteilten Vorgängeruhren werden als Polynome exakt integriert. Alle Potenzen von $b$ liegen in $\mathbb Q(\sqrt{8/3})$. Rational eingeschlossene Wurzeln und eine Machin-Reihe für $\pi$ liefern die ausgewiesenen Dezimalgrenzen.
+
+Die Hauptrechnung und die Bessel-Zertifikate benötigen nur die Python-Standardbibliothek. Die separate NumPy-Gegenprobe integriert beide Kopien der vollen Wirkungen gemeinsam, einschliesslich ihrer Kreuzterme. Sie überprüft vier komplette $2\times2$-Grammatrizen mit insgesamt 6\,400 Paarintegralen, die sechs Paketwerte und die beiden entscheidenden Bessel-Summen. Die grösste Abweichung der vier Matrizen von den gerundeten Ausgaben beträgt $6{,}4\cdot10^{-12}$. Numerische Gegenproben und rationale Einschliessungen sind im Prüfpaket getrennt.
+
+\sect{Anschluss an das Programm}
+Eine physikalische Auswahl muss festlegen, welche Randmessungen zulässig sind, wie sie die Null- und Ein-Ereignis-Antwort koppeln und wie der resultierende Wert unter einem weiteren Uhr- oder Gebietsschnitt erhalten bleibt. Insbesondere benötigt die Rate einen Vergleich mit dem \emph{wirklichen} leeren Präfix bei derselben physikalischen Uhr. Quellenstand ist \href{\repo/README.md}{\texttt{8222202} nach PR 308}. Die Eingabedateien und ihre Git-Kennungen sind im Prüfpaket enthalten.
+\end{document}
