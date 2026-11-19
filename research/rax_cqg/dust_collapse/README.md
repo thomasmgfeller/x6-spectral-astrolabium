@@ -1,5 +1,13 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Der Nullzweig am leeren Anfang der Staubuhr · 19. November 2026
+
+Bei fest präpariertem Rand lässt sich der leere Anfang der Staubuhr normtreu auf die Nullantwort der sieben Randordnungen abbilden. Für die gemeinsame Null- und Ein-Geburts-Antwort ergibt sich ein Ausschluss. Ein einzelner Messausgang, der den Nullzweig mit Sicherheit akzeptiert, kann die komplexe Paarung zwischen beiden Zweigen nicht erhalten. Ein ergänzender Ausgang ermöglicht eine konsistente Auslese. Die Prüfung an den Schnitten 1/24 und 1/16 erhält das Gesamtgewicht und die komplexe Null–Geburts-Paarung.
+
+Im Fenster bis 1/8 würde eine unabhängig kalibrierte Nullakzeptanz von 99,94 % im untersuchten Messvertrag β = 5/4 ausschliessen und β = 4/3 bei beiden Randprodukten zulassen. Die physikalische Kalibrierung und die erste Geburtsrate bleiben offen. Der dynamische P3-Pilot bei M = 1 steht auf der ersten Dichtestufe bei 0 von 38 Vergleichen.
+
+[Studie und Nachrechnung](empty_prefix_bridge_v0_1/README.md) · [Zertifikate und Schnittbilanzen](empty_prefix_bridge_v0_1/ergebnis.json) · [Bericht (PDF)](reports/CST_DUST_Nullzweig_Staubuhr.pdf) · [Offline-Prüfpaket (ZIP)](packages/CST_DUST_Nullzweig_Staubuhr_Pruefpaket.zip)
+
 ## N15-Stabilität bei fünf Prozent · 19. November 2026
 
 Für alle **1 217 Zustände** sind die drei Detektorkriterien bis **4,6904 %** übertragenem Amplitudengewicht auf beiden Referenzgittern gesichert. Bei **5 %** bestehen alle zulässigen Mischungen auf einem ausgewiesenen Träger mit **1 098 Zuständen**. Bis zu 0,0685 % des übertragenen Gewichts dürfen auf die übrigen 119 Typen entfallen. Für einen engeren Träger mit 1 022 Zuständen gilt eine zweite Garantie, die bis zu 5,7642 % des Transfers auf den übrigen 195 Typen erlaubt.
