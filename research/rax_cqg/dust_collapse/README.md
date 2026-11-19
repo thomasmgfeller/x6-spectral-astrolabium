@@ -1,5 +1,13 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## N14-Endgewichte und verschobene Staubuhrschnitte · v0.1 · 19. November 2026
+
+Ein gemeinsamer Koeffizient für alle markierten Pfade mit demselben N14-Endtyp kann die vorgegebene N13-Marginale bei keiner der beiden Elternordnungen reproduzieren. Für normierte, nichtnegative Koeffizienten beträgt der kleinste erreichbare Abstand in Totalvariation bei der Kette **214/3255**, bei der Ein-Kanten-Ordnung **109/1568**.
+
+Für die Endordnungen 1790 und 5374 stimmen die kohärenten Endpaarungen über die Schnitte 0 und 1/4 auf dem feinsten Gitter bis auf **4,97 × 10⁻¹⁷** mit der direkten Rechnung überein. Bei Dichte 1/8 und gleichen Historiengewichten sinkt die Trefferwahrscheinlichkeit relativ um **28,43 %**, wenn ein hypothetisches Register am Schnitt 0 die Alternative «genau zwei freigegebene Ereignisse» unterscheidbar macht. Das relative physikalische Historiengewicht bleibt offen. **Etappe 6 und der P3-Pilot bleiben auf HOLD.**
+
+[Herleitung und Rechencode](n14_relational_pair_v0_1/README.md) · [Ergebnisse und exakte Zeugnisse](n14_relational_pair_v0_1/result.json) · [Prüfpaket (ZIP)](packages/CST_DUST_N14_Endgewichte_und_Staubuhrschnitte_v0_1_Pruefpaket.zip)
+
 ## Kausale Staubuhrschnitte und Endinterferenz · v0.2 · 19. November 2026
 
 Auf jeder der beiden festen N11-Ordnungen genügen die bereits freigegebenen inneren Ereignisse und ihre Uhrwerte, um den Übergang über die Schnitte 0 und 1/4 zu berechnen. Auch bei zwei aufeinanderfolgenden Schnitten stimmen die komplexen Endpaarungen mit dem Direktweg überein. Wird am Schnitt ideal markiert, ob das Innere noch leer oder schon besetzt ist, sinkt beim geteilten Uhrpaket die eindeutige Ein-Paar-Trefferquote von **11,00179 %** auf **6,95097 %** bei 0 beziehungsweise **7,94042 %** bei 1/4. Das Register bleibt dabei ungelesen.
