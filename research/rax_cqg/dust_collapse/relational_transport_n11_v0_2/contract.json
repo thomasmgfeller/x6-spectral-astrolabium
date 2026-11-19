@@ -1,0 +1,14 @@
+{
+  "status": "Design fixed locally before computing the new outputs.",
+  "geometry": "N11 C0/C1 and the same C0-dust control as v0.1. Reuse the conditioned scalar maps and inclusive detector. Exact time split on each fixed causal order.",
+  "cut_state": "Only the released order ideal and clock values of released interior events. Given the geometry, unreleased clock coordinates are integrated, including all signs of hidden clocks. No intermediate projection on a geometry branch.",
+  "cuts": ["0", "1/4"],
+  "routes": ["direct", "0 alone", "1/4 alone", "0 followed by 1/4"],
+  "preparations": ["sharp", "narrow", "split"],
+  "readout": "Inherited one-pulse readout at t1=0, t2=1; common input clock marginal for centers 1/8 and 1/4. Compare complex dust coefficient Gram and all three endpoint weights including residual.",
+  "absolute_tolerance": 5e-9,
+  "grids": {"full_axis":64,"partial_axis":40,"outer_per_lobe":8},
+  "structural_checks": "Prove conditional composition for arbitrary finite posets with independent uniform marks. Test the empty-ideal wait law, and enumerate fixed rational intervals on an eight-event 1+3 Minkowski example and both N11 interiors. Verify normalization and three-time composition exactly; test loss of the frontier condition.",
+  "four_dimensional_example": "Four tetrahedral sites at time 0, reflected sites at time 3, tetrahedral vectors (1,1,1), (1,-1,-1), (-1,1,-1), (-1,-1,1). Same-level points spacelike. Three normalized thresholds 1/2,7/12,2/3. No sprinkling or geometric parameters fitted.",
+  "scope": "Finite marked orders and a conditional norm. Physical norm, coupled 4D growth and P3 admission are separate."
+}

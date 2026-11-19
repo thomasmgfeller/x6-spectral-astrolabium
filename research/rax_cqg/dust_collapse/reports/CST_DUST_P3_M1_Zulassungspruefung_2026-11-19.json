@@ -1,0 +1,86 @@
+{
+  "Titel": "CST-DUST · P3-Zulassungsprüfung für den 15-Minuten-Ressourcenpiloten bei M=1",
+  "Stand": "2026-11-19",
+  "Repository": "thomasmgfeller/x6-spectral-astrolabium",
+  "Main_Commit": "502214f03c7fe72b1540634cd136f256d31d2847",
+  "Ziel": {
+    "M": "1",
+    "relative_Zaehldichte": "lambda/lambda0 = 1",
+    "vorgesehenes_Limit_Sekunden": 900
+  },
+  "Physikalischer_Pilot": {
+    "Zulassung": "HOLD_NOT_ELIGIBLE",
+    "Ausfuehrung": "NOT_RUN",
+    "dynamische_4D_Historien": 0,
+    "Vergleiche_ausgefuehrt": 0,
+    "Vergleiche_vorgesehen": 38,
+    "Laufzeit_je_physikalischer_Historie_s": null,
+    "physikalische_Stichprobenstreuung": null,
+    "Aufwand_fuer_38_Vergleiche_s": null
+  },
+  "Zulassung_nach_PR_322": {
+    "N11": "Positive bedingte Schnittpaarung am N11-Paar. Physikalische Norm und Verfügbarkeit der Schnittdaten aus der gemeinsamen Wirkung bleiben offen.",
+    "Gruende_aus_dem_P3_Pruefer": [
+      "D1 unresolved",
+      "D2 unresolved",
+      "D3 unresolved",
+      "D4 unresolved",
+      "D5 unresolved",
+      "D6 unresolved",
+      "D7 unresolved",
+      "lambda0 not frozen",
+      "Lk not frozen",
+      "Lcg not frozen",
+      "ensemble_size not frozen",
+      "seed_manifest not frozen",
+      "matched_couplings not frozen",
+      "physical_observable_adapters not frozen",
+      "total_uncertainty_method not frozen",
+      "reference or synthetic data cannot qualify CST dynamics"
+    ],
+    "Pruefplan_Status": {
+      "D1": "OPEN",
+      "D2": "OPEN",
+      "D3": "OPEN",
+      "D4": "OPEN",
+      "D5": "PARTIAL_REFERENCE_ONLY",
+      "D6": "OPEN",
+      "D7": "OPEN"
+    }
+  },
+  "Ausgefuehrte_Referenzpruefungen": {
+    "P3_Vertragskontrollen": 26,
+    "klassische_Euler_Vergleiche_gesamt": 240,
+    "klassische_Dynamikwerte_M1_128_Schritte": 20,
+    "M1_Vergleichszeilen_nach_Familie": {
+      "dynamics": 20,
+      "mass": 5,
+      "side_flux": 12,
+      "initial_velocity": 1
+    },
+    "physikalische_Werte_aller_38_Zeilen_fehlend": true,
+    "klassische_Referenztabelle_bytegleich_zum_Archiv": true,
+    "Zulassungsentscheid_bytegleich_zum_Archiv": true,
+    "M1_Quellen_gegen_Git_Blobs_auf_Main_geprueft": 7,
+    "Wiederholungen_M1_mit_Uhrkontrolle": 5,
+    "Sekunden_je_lokalem_Prozess": [
+      0.114379648,
+      0.114344975,
+      0.114271245,
+      0.164480882,
+      0.116279907
+    ],
+    "Median_lokale_Vorbereitung_s": 0.114379648,
+    "Zeitmessung": "Lokale Wandzeit des Python-Prozesses inkl. Start und JSON-Ausgabe. Keine Messung einer physikalischen Historie.",
+    "Python": "3.12.14",
+    "SHA256_M1_Ausgabe": "8bfc4f536ea63939abd04f1ce0c9322be9970445afd32b711d35870c174aeef8",
+    "SHA256_Referenztabelle": "a669ffb4105922a62939218618d7078c6a3a4a2ef9b5cae02b57b19dd16fbe06",
+    "SHA256_Pilotarchiv": "990488afb7f7ce3ed81a428c2844db971790b2be0bb9fbda5eae84c4f25fde9b"
+  },
+  "Quellen": {
+    "Pilotvertrag": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/502214f03c7fe72b1540634cd136f256d31d2847/research/rax_cqg/dust_collapse/m1_pilot_clock_v0_1/README.md",
+    "Pruefer": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/502214f03c7fe72b1540634cd136f256d31d2847/research/rax_cqg/dust_collapse/correspondence_v0_1/run.py",
+    "Zulassungsbefund": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/502214f03c7fe72b1540634cd136f256d31d2847/research/rax_cqg/dust_collapse/correspondence_v0_1/results/eligibility.json",
+    "N11_Transport": "https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/502214f03c7fe72b1540634cd136f256d31d2847/research/rax_cqg/dust_collapse/relational_transport_n11_v0_1/README.md"
+  }
+}
