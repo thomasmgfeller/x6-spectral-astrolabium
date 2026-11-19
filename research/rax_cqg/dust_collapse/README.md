@@ -1,5 +1,13 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Geometrische Auslese am skalaren N11-Zukunftsrand · v0.2 · 19. November 2026
+
+Am gemeinsamen Skalar-Zukunftsrand kann ein Treffer die Ordnung mit einem vergleichbaren inneren Paar von der Kette mit drei Paaren unterscheiden. Für das zentrierte Eingangspaket erreicht die gemeinsame Messung der reduzierten Moden 7 und 8 **49,5041 % eindeutige Treffer je normiertem Einzelzweig**. Die übrigen Fälle bleiben unentschieden. Für jede der drei benannten Randmoden allein ist eine fehlerfreie Zuordnung mit positiver Trefferwahrscheinlichkeit ausgeschlossen. Für das feste Zweimodeninstrument ist auch der grösste Eingangsunterraum ohne Fehlzuordnungen bestimmt. Zwei Kombinationen von Eingangsmoden müssen im Vakuum liegen, die dritte darf beliebig besetzt sein.
+
+Bei vollständiger Summe über die kollektiven Randmoden bleibt die Änderung der Anfangsdichte von 1/8 auf 1/4 in allen vier Ausgängen **exakt unsichtbar**. Der Wechsel von einem auf zwei Uhrfenster bei gleicher mittlerer Uhrzeit verändert den signierten Trefferkontrast numerisch um −0,00178913. In der entkoppelten Kontrolle ist dieser Kontrast für das kalibrierte Eingangspaket exakt null. Bei Auswahl der konstanten Randmode wechselt das Vorzeichen des Uhrkontrasts. Eine vollständige numerische Fehlereinschliessung steht aus. **Etappe 5A bleibt physikalisch auf HOLD.** Die Auswahl der gemeinsamen Randpaarung und der Präparation aus der vollständigen CST-Wirkung und ihren Constraints ist offen.
+
+[Studie und Nachrechnung](geometric_readout_n11_v0_2/README.md) · [Ergebnisse und exakte Schranken](geometric_readout_n11_v0_2/results.json) · [Bericht (PDF)](reports/CST_DUST_N11_Randrecord_v0_2.pdf) · [Offline-Prüfpaket (ZIP)](packages/CST_DUST_N11_Randrecord_v0_2_Pruefpaket.zip) · [Registervergleich aus v0.1](geometric_readout_n11_v0_1/README.md)
+
 ## Rückwirkung an einer geometrischen Auslese · N11 · 19. November 2026
 
 Die beiden N11-Ordnungen haben denselben äusseren Kragen. Ihr Inneres enthält entweder ein oder drei vergleichbare Paare. Beim Wechsel des Anfangsdichtezentrums von 1/8 auf 1/4 bleibt die unbedingte Wahrscheinlichkeit für ein Paar **exakt gleich**, wenn die Auslese über alle Uhr- und Dichtemoden summiert. Sie beträgt im gekoppelten Modell rund 22,079492 % und bei gemeinsamem Staubtransfer der Kette rund 8,571866 %. Die gemeinsame Wirkungsphase erklärt die Nullantwort. Der Rückgang in der konstanten Randmode wird vom Zuwachs in den übrigen Moden ausgeglichen.
