@@ -1,5 +1,13 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Geometrische N11-Auslese bei unbekannten Randpulsen · v0.5 · 19. November 2026
+
+Ein neu konstruierter Detektor erkennt beim neutralen Störpuls aus v0.4 für jede Pulsstärke in beiden normierten Zweigen mindestens **49,56 %** der Ordnungen eindeutig. Falsche Zweigmeldungen sind im Modell ausgeschlossen. Variieren beide untersuchten Stärken unabhängig in einer offenen Menge, muss jeder feste ladungsinvariante Detektor bei verlangter Fehlerfreiheit stets „unentschieden“ melden. Das exakte Protokoll der ersten Pulsstärke stellt die Garantie von 49,56 % wieder her. Bei Kenntnis beider Stärken steigen die garantierten eindeutigen Treffer auf mindestens 95,99 % je Zweig.
+
+Der geometrische Uhrkontrast bleibt beim Einpulsdetektor nach Abzug der Staubkontrolle für die archivierte Uhrquadratur negativ. Die inklusive Antwort auf den separaten Dichtewechsel bleibt exakt null. **Etappe 5A bleibt auf HOLD.** Offen ist, welche Präparationen, Modenmessungen und Staub-/Uhrpaarungen aus der vollständigen Wirkung folgen.
+
+[Studie und Nachrechnung](geometric_readout_n11_v0_5/README.md) · [Ergebnisse und exakte Schranken](geometric_readout_n11_v0_5/results.json) · [Bericht (PDF)](reports/CST_DUST_N11_Pulsrobuste_Auslese_v0_5.pdf) · [Offline-Prüfpaket (ZIP)](packages/CST_DUST_N11_Pulsrobuste_Auslese_v0_5_Pruefpaket.zip) · [Störpuls aus v0.4](geometric_readout_n11_v0_4/README.md)
+
 ## N11-Randquellen und Zuverlässigkeit der geometrischen Auslese · v0.4 · 19. November 2026
 
 Unter der Annahme, dass die untersuchten neutralen Randquellen reversibel realisierbar sind, lassen die beiden N11-Skalarzweige genau die positiven, zur Referenznorm äquivalenten Randmetriken $G_\pm=f(Q_\pm)$ zu. Die Gewichtung der Skalarladung bleibt frei. Bei festgehaltenen transversalen Zuständen bleibt der geometrische Uhrkontrast für jede normierte Ladungsdichte negativ. Die inklusive Antwort auf die Dichtevariation ist in dieser Präparationsklasse exakt null. Der Uhrkontrast verwendet die archivierte numerische Uhrquadratur.
