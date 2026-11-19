@@ -1,5 +1,13 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Rückwirkung an einer geometrischen Auslese · N11 · 19. November 2026
+
+Die beiden N11-Ordnungen haben denselben äusseren Kragen. Ihr Inneres enthält entweder ein oder drei vergleichbare Paare. Beim Wechsel des Anfangsdichtezentrums von 1/8 auf 1/4 bleibt die unbedingte Wahrscheinlichkeit für ein Paar **exakt gleich**, wenn die Auslese über alle Uhr- und Dichtemoden summiert. Sie beträgt im gekoppelten Modell rund 22,079492 % und bei gemeinsamem Staubtransfer der Kette rund 8,571866 %. Die gemeinsame Wirkungsphase erklärt die Nullantwort. Der Rückgang in der konstanten Randmode wird vom Zuwachs in den übrigen Moden ausgeglichen.
+
+Bei fester Dichte und gleicher mittlerer Uhrzeit ändert der Wechsel von einem auf zwei Uhrfenster die Differenz der Wahrscheinlichkeiten für ein und drei Paare numerisch um **−0,00361410**. Die entkoppelte Kontrolle ergibt für diesen Kontrast exakt null. Für die Dezimalwerte steht eine vollständige Fehlerschranke aus. **Etappe 5A bleibt physikalisch auf HOLD.** Das untersuchte Register speichert die beiden Ordnungen unterscheidbar und führt die kollektiven Randkoordinaten mit. Seine physikalische Auswahl aus der CST-Wirkung und den Constraints bleibt offen.
+
+[Studie und Nachrechnung](geometric_readout_n11_v0_1/README.md) · [Dichtevergleich](geometric_readout_n11_v0_1/results.json) · [Uhrvergleich](geometric_readout_n11_v0_1/clock_sensitivity_results.json) · [Bericht (PDF)](reports/CST_DUST_Geometrische_Auslese_N11.pdf) · [Offline-Prüfpaket (ZIP)](packages/CST_DUST_Geometrische_Auslese_N11_Pruefpaket.zip)
+
 ## N15 bei 5 % Amplitudengewicht · v0.10 · 19. November 2026
 
 Auf beiden Referenzgittern erfüllen alle zulässigen Mischungen der **1 217 Zustände** die drei Detektorkriterien bis einschliesslich **5 % Transfer**. Die Aussage setzt die dokumentierten numerischen Fehlerradien und unabhängige, gleichverteilte Zufallswörter voraus. Für die 119 zusätzlich geschätzten Uhrantworten beträgt die gemeinsame Irrtumswahrscheinlichkeit höchstens 10⁻¹². Bei Anfangsdichte 1/4 liegt die untere Schranke für den Gesamterfolg bei 90,000454179 % des N11-Referenzwerts. Die Schwelle beträgt 90 %.
