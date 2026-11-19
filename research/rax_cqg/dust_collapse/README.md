@@ -1,5 +1,11 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Erweiterungsstabilität auf dem vollständigen N14-Träger · 19. November 2026
+
+Alle 139 zulässigen N14-Endtypen sind in der Prüfung erfasst. Auf beiden Quadraturgittern bestehen die drei ursprünglichen Toleranzen für jede erlaubte Aufteilung, wenn jede der beiden N11-Ausgangshistorien bis zu **5,0210 %** ihres Amplitudengewichts auf erreichbare Nachkommen überträgt. Bei **5,0211 %** verletzt die Mischung der Endtypen 734, 760 und 8191 im Verhältnis 21:70:9 bei Anfangsdichte 1/4 die Niveautoleranz. Die Aussage gilt für diese endliche Familie und die geprüften Uhrdaten. Der kontinuierliche Grenzwert und das physikalische Historienmass bleiben offen.
+
+[Studie und Nachrechnung](extension_stability_v0_6/README.md) · [Bericht (PDF)](reports/CST_DUST_N14_Volltraeger_v0_6.pdf) · [Offline-Prüfpaket (ZIP)](packages/CST_DUST_N14_Volltraeger_v0_6_Pruefpaket.zip)
+
 ## Zwei Uhrfenster am verklebten Rand
 
 In 751 von 1 089 verklebten Historienpaaren koppelt die Wirkung die frühere Uhr direkt an das spätere innere Ereignis. Am Mittelschnitt des Fensters `(0, 1/8)` liefert die Interferenz zwischen den beiden Zeitfenstern rund 49,91 % des Gesamtgewichts. Beim versetzten Schnitt ändert sich die Verteilung der Beiträge, das kohärente Gesamtgewicht bleibt gleich. Für die geprüfte spätere Uhr- und Dichteauslese wächst das Kurzzeitgewicht quadratisch mit positivem Anfangskoeffizienten. Die physikalische Geburtsrate relativ zum leeren Anfang bleibt auf **HOLD**.
