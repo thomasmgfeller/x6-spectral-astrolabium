@@ -1,5 +1,13 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## N11-Skalarladung und Auslese ohne festen Feldnullpunkt · v0.3 · 19. November 2026
+
+Die N11-Kette und die Ordnung mit einem vergleichbaren inneren Paar transportieren dieselbe Skalarladung. Sie ist bis auf einen Faktor die einzige lineare Randgrösse mit identischem Transport in beiden Zweigen. Soll die Auslese unter einer gemeinsamen Verschiebung aller Skalarfeldwerte invariant sein, ist auf jedem Paar der drei benannten Randmoden die eindeutige Trefferwahrscheinlichkeit exakt null. Mit allen drei Moden erreicht die optimale invariante Auslese bei zentrierter Präparation und der bisherigen Randpaarung **98,67761033 % eindeutige Treffer je normiertem Einzelzweig**. Zwei unabhängige Rechnungen bestätigen die rationale Schranke.
+
+Bei vollständiger Summe über die kollektiven Randmoden bleiben alle vier Ausgangswahrscheinlichkeiten beim Dichtewechsel von 1/8 auf 1/4 exakt gleich. Für den Wechsel von einem auf zwei Uhrfenster ergibt sich aus den veröffentlichten Uhrintegralen eine Änderung des signierten Trefferkontrasts um −0,00356631. In der entkoppelten Kontrolle ist sie exakt null. **Etappe 5A bleibt physikalisch auf HOLD.** Die erhaltene Ladung lässt mehrere positive Randpaarungen zu. Welche Paarung und welche Ladungsverteilung die physikalische Präparation bestimmen, bleibt offen.
+
+[Studie und Nachrechnung](geometric_readout_n11_v0_3/README.md) · [Ergebnisse und exakte Schranken](geometric_readout_n11_v0_3/results.json) · [Bericht (PDF)](reports/CST_DUST_N11_Skalarladung_v0_3.pdf) · [Offline-Prüfpaket (ZIP)](packages/CST_DUST_N11_Skalarladung_v0_3_Pruefpaket.zip) · [Zweimoden-Auslese aus v0.2](geometric_readout_n11_v0_2/README.md)
+
 ## Geometrische Auslese am skalaren N11-Zukunftsrand · v0.2 · 19. November 2026
 
 Am gemeinsamen Skalar-Zukunftsrand kann ein Treffer die Ordnung mit einem vergleichbaren inneren Paar von der Kette mit drei Paaren unterscheiden. Für das zentrierte Eingangspaket erreicht die gemeinsame Messung der reduzierten Moden 7 und 8 **49,5041 % eindeutige Treffer je normiertem Einzelzweig**. Die übrigen Fälle bleiben unentschieden. Für jede der drei benannten Randmoden allein ist eine fehlerfreie Zuordnung mit positiver Trefferwahrscheinlichkeit ausgeschlossen. Für das feste Zweimodeninstrument ist auch der grösste Eingangsunterraum ohne Fehlzuordnungen bestimmt. Zwei Kombinationen von Eingangsmoden müssen im Vakuum liegen, die dritte darf beliebig besetzt sein.
