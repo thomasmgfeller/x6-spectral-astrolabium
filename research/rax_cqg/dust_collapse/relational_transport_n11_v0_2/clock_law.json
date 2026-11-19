@@ -1,0 +1,83 @@
+{
+  "cases": {
+    "C0": {
+      "ideals": 4,
+      "three_time_ideal_triples_tested": 64,
+      "clock_bin_assignments": 64,
+      "positive_triples": 20,
+      "empty_frontier_size": 1,
+      "no_release_from_0_to_quarter_given_empty": "5/6",
+      "mass_sum_ignoring_frontier_at_zero": "15/8"
+    },
+    "C1": {
+      "ideals": 6,
+      "three_time_ideal_triples_tested": 216,
+      "clock_bin_assignments": 64,
+      "positive_triples": 40,
+      "empty_frontier_size": 2,
+      "no_release_from_0_to_quarter_given_empty": "25/36",
+      "mass_sum_ignoring_frontier_at_zero": "21/8"
+    },
+    "flat_1plus3": {
+      "ideals": 35,
+      "three_time_ideal_triples_tested": 42875,
+      "clock_bin_assignments": 65536,
+      "positive_triples": 3226,
+      "empty_frontier_size": 4,
+      "no_release_from_0_to_quarter_given_empty": "625/1296",
+      "mass_sum_ignoring_frontier_at_zero": "1425/256"
+    }
+  },
+  "empty_prefix_gap": "5/36",
+  "common_probability_minimax_error": "5/72",
+  "flat_events_txyz": [
+    [
+      0,
+      1,
+      1,
+      1
+    ],
+    [
+      0,
+      1,
+      -1,
+      -1
+    ],
+    [
+      0,
+      -1,
+      1,
+      -1
+    ],
+    [
+      0,
+      -1,
+      -1,
+      1
+    ],
+    [
+      3,
+      -1,
+      -1,
+      -1
+    ],
+    [
+      3,
+      -1,
+      1,
+      1
+    ],
+    [
+      3,
+      1,
+      -1,
+      1
+    ],
+    [
+      3,
+      1,
+      1,
+      -1
+    ]
+  ]
+}

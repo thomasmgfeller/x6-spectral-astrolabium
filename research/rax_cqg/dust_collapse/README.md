@@ -1,5 +1,13 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Kausale Staubuhrschnitte und Endinterferenz · v0.2 · 19. November 2026
+
+Auf jeder der beiden festen N11-Ordnungen genügen die bereits freigegebenen inneren Ereignisse und ihre Uhrwerte, um den Übergang über die Schnitte 0 und 1/4 zu berechnen. Auch bei zwei aufeinanderfolgenden Schnitten stimmen die komplexen Endpaarungen mit dem Direktweg überein. Wird am Schnitt ideal markiert, ob das Innere noch leer oder schon besetzt ist, sinkt beim geteilten Uhrpaket die eindeutige Ein-Paar-Trefferquote von **11,00179 %** auf **6,95097 %** bei 0 beziehungsweise **7,94042 %** bei 1/4. Das Register bleibt dabei ungelesen.
+
+Auf einem festen Träger mit acht Ereignissen im flachen 1+3-dimensionalen Raum bestätigen alle 65 536 Uhrzuweisungen das Zusammensetzungsgesetz des Referenzmasses. **Die physikalische Etappe 6 bleibt auf HOLD.** Offen ist die kohärente Gewichtung möglicher Fortsetzungen derselben Vergangenheit aus der gemeinsamen Wirkung. Der P3-Ressourcenpilot bei M=1 steht auf der ersten Dichtestufe bei 0 von 38 physikalischen Vergleichen.
+
+[Herleitung und Nachrechnung](relational_transport_n11_v0_2/README.md) · [Interferenzrechnung](relational_transport_n11_v0_2/record.json) · [Bericht (PDF)](reports/CST_DUST_Kausale_Staubuhrschnitte_v0_2.pdf) · [Offline-Prüfpaket (ZIP)](packages/CST_DUST_Kausale_Staubuhrschnitte_v0_2_Pruefpaket.zip) · [P3-Zulassungsprotokoll](reports/CST_DUST_P3_M1_Zulassungspruefung_2026-11-19.json)
+
 ## Relationaler Transport am N11-Paar · Etappe 6 · 19. November 2026
 
 Für dieselbe Präparation und denselben geometrischen Detektor stimmen der direkte Übergang und die Verklebung bei den Staubuhrwerten 0 und 1/4 überein, wenn die Teilkarten die erforderlichen inneren Uhrdaten mitführen. Die konstruierte Schnittnorm ist positiv. Auch die komplexe Paarung der beiden Zweigkoeffizienten bleibt erhalten.
