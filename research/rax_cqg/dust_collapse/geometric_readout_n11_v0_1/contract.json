@@ -1,0 +1,15 @@
+{
+  "study": "CST-DUST Etappe 5A, N11, v0.1",
+  "source_commit": "17a3396d958bd79f77d03470b8255538ea0669c7",
+  "geometry": "Number of strictly comparable pairs in the three-event marked interior, C1=1, C0=3. The two orders share past, future and collar incidences.",
+  "primary_event": "O=1, orthogonal two-outcome order tag with an additional failure outcome; sum over all retained collective density/clock modes and all scalar outputs. Per-branch amplitude coefficient 1/2 as in PR 294.",
+  "model_assumption": "Carry the incoming collective labels (r,t) to orthogonal output modes and explicitly attach a tag to the two histories. These are choices of instrument/dilation, not determined by the action.",
+  "source": "Two equal-phase, equal-width packets of PR 294 differing only by positive past density center 1/8 versus 1/4. Fixed future density 1/8. Common centered scalar input. Same preparation of geometry/control.",
+  "coupled": "Use each history's integrated dust action and unitary scalar map, with its own gravity phase already included.",
+  "decoupled": "Use the full C0 dust/clock action and its integration on both branches. Retain each original gravity phase, scalar map, history coefficient, measure, normalization and detector.",
+  "primary_response": "Unconditional difference high minus low. At analytic resolution tau=epsilon0=0. A proven null excludes a nonzero response for this instrument and intervention. A physical 5A PASS additionally requires a physically selected instrument and pairing.",
+  "diagnostic": "Resolve the normalized constant collective mode and its entire orthogonal complement within each tag. Test their unconditional differences and the null control. Separately test perfect binary discrimination on the inherited scalar output.",
+  "grids_inner_outer": [[32,6],[64,8],[96,12]],
+  "direct_density_quadrature": 12,
+  "numerical_replay_absolute_tolerance": 5e-12
+}
