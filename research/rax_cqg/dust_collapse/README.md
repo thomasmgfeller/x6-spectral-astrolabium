@@ -1,5 +1,13 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## N15 bei 5 % Amplitudengewicht · v0.10 · 19. November 2026
+
+Auf beiden Referenzgittern erfüllen alle zulässigen Mischungen der **1 217 Zustände** die drei Detektorkriterien bis einschliesslich **5 % Transfer**. Die Aussage setzt die dokumentierten numerischen Fehlerradien und unabhängige, gleichverteilte Zufallswörter voraus. Für die 119 zusätzlich geschätzten Uhrantworten beträgt die gemeinsame Irrtumswahrscheinlichkeit höchstens 10⁻¹². Bei Anfangsdichte 1/4 liegt die untere Schranke für den Gesamterfolg bei 90,000454179 % des N11-Referenzwerts. Die Schwelle beträgt 90 %.
+
+Deterministisch sind alle 1 217 Zustände bis **4,7074 %** abgesichert. Bei genau 5 % deckt diese Rechnung **1 100 Zustände** ab. Bei **5,0211 %** verletzt eine feste Mischung aus drei Nachkommen die Niveautoleranz auf beiden Gittern. Der genaue kritische Transfer und der Nachweis für kontinuierliche Uhrzeiten über den gesamten Träger bleiben offen.
+
+[Studie und Nachrechnung](extension_stability_v0_10/README.md) · [Zertifikat](extension_stability_v0_10/certificate.json) · [Bericht (PDF)](reports/CST_DUST_N15_Fuenf_Prozent_v0_10.pdf) · [Offline-Prüfpaket (ZIP)](packages/CST_DUST_N15_Fuenf_Prozent_v0_10_Pruefpaket.zip)
+
 ## Der Nullzweig am leeren Anfang der Staubuhr · 19. November 2026
 
 Bei fest präpariertem Rand lässt sich der leere Anfang der Staubuhr normtreu auf die Nullantwort der sieben Randordnungen abbilden. Für die gemeinsame Null- und Ein-Geburts-Antwort ergibt sich ein Ausschluss. Ein einzelner Messausgang, der den Nullzweig mit Sicherheit akzeptiert, kann die komplexe Paarung zwischen beiden Zweigen nicht erhalten. Ein ergänzender Ausgang ermöglicht eine konsistente Auslese. Die Prüfung an den Schnitten 1/24 und 1/16 erhält das Gesamtgewicht und die komplexe Null–Geburts-Paarung.
