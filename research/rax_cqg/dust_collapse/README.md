@@ -1,5 +1,13 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## N11-Randquellen und Zuverlässigkeit der geometrischen Auslese · v0.4 · 19. November 2026
+
+Unter der Annahme, dass die untersuchten neutralen Randquellen reversibel realisierbar sind, lassen die beiden N11-Skalarzweige genau die positiven, zur Referenznorm äquivalenten Randmetriken $G_\pm=f(Q_\pm)$ zu. Die Gewichtung der Skalarladung bleibt frei. Bei festgehaltenen transversalen Zuständen bleibt der geometrische Uhrkontrast für jede normierte Ladungsdichte negativ. Die inklusive Antwort auf die Dichtevariation ist in dieser Präparationsklasse exakt null. Der Uhrkontrast verwendet die archivierte numerische Uhrquadratur.
+
+Ein neutraler Puls am vergangenen Rand erhält die gesamte Ladungsverteilung. Am fest kalibrierten Detektor erzeugt er im normierten Dreipaar-Zweig eine Falschmeldung mit Wahrscheinlichkeit **grösser als 19/900000**. Ohne Puls ist diese Wahrscheinlichkeit exakt null. **Etappe 5A bleibt auf HOLD.** Die Gesamtwirkung muss die realisierbaren Randquellen, die transversale Präparation und die Staub-/Uhrpaarung noch begründen.
+
+[Studie und Nachrechnung](geometric_readout_n11_v0_4/README.md) · [Ergebnisse und exakte Schranken](geometric_readout_n11_v0_4/results.json) · [Bericht (PDF)](reports/CST_DUST_N11_Randquellen_v0_4.pdf) · [Offline-Prüfpaket (ZIP)](packages/CST_DUST_N11_Randquellen_v0_4_Pruefpaket.zip) · [Kalibrierung aus v0.3](geometric_readout_n11_v0_3/README.md)
+
 ## N11-Skalarladung und Auslese ohne festen Feldnullpunkt · v0.3 · 19. November 2026
 
 Die N11-Kette und die Ordnung mit einem vergleichbaren inneren Paar transportieren dieselbe Skalarladung. Sie ist bis auf einen Faktor die einzige lineare Randgrösse mit identischem Transport in beiden Zweigen. Soll die Auslese unter einer gemeinsamen Verschiebung aller Skalarfeldwerte invariant sein, ist auf jedem Paar der drei benannten Randmoden die eindeutige Trefferwahrscheinlichkeit exakt null. Mit allen drei Moden erreicht die optimale invariante Auslese bei zentrierter Präparation und der bisherigen Randpaarung **98,67761033 % eindeutige Treffer je normiertem Einzelzweig**. Zwei unabhängige Rechnungen bestätigen die rationale Schranke.
