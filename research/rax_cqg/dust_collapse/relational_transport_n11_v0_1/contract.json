@@ -1,0 +1,11 @@
+{
+  "scope": "N11 C0/C1, inherited common conditional scalar quotient and inclusive collective dust readout, v0.5 one-unknown-pulse instrument at t1=0,t2=1. Retain the original equal amplitudes, measure and input. No intermediate measurement.",
+  "endpoints": "Past collar with variable T3 around -2 Delta, readout on the same future collar with T7=2 Delta. Sharp central T3, and the narrow and split preparations at centers r=1/8 and 1/4. Other external times fixed.",
+  "cuts": ["0","1/4"],
+  "candidate": "Raw sublevel T<=s required to be a causal past set, no reweighting or normalization. Compare with the direct integral and a complete history register with causal delayed release.",
+  "exact_tests": "All rectangle volumes sum to one. Physical closure requires a positive inner product selected by the joint constraints and cut-independent endpoint pairings. A single proven different endpoint effect excludes the proposed raw causal-prefix rule.",
+  "numerical_tests": "Maximum absolute difference for every complex entry of the 2x2 endpoint coefficient Gram matrix and every detector probability, direct vs retained history, must be <=5e-9. Same bound against inherited direct branch weights where available. Numerical checks are independent of the analytic counterexample.",
+  "grids": {"direct_inner":64,"cell_inner":36,"outer_per_lobe":8},
+  "reference_control": "Replace the C1 dust action by C0 dust, keep actual C1 causal relations, gravity and scalar response. The source density phase is common and drops out of every inclusive endpoint pairing.",
+  "admission": "A history register is a conditional dilation. It supplies no independent physical selection of a norm or a clock."
+}

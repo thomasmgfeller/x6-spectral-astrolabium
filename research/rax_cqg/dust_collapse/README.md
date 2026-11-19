@@ -1,5 +1,13 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Relationaler Transport am N11-Paar · Etappe 6 · 19. November 2026
+
+Für dieselbe Präparation und denselben geometrischen Detektor stimmen der direkte Übergang und die Verklebung bei den Staubuhrwerten 0 und 1/4 überein, wenn die Teilkarten die erforderlichen inneren Uhrdaten mitführen. Die konstruierte Schnittnorm ist positiv. Auch die komplexe Paarung der beiden Zweigkoeffizienten bleibt erhalten.
+
+Beim geteilten Uhrpaket erkennt der Detektor die Ordnung mit einem inneren Paar in **11,00179 %** aller Versuche. Beschränkt man die Summe auf Verläufe, deren rohe Uhrwerte am Schnitt eine kausal abgeschlossene Vergangenheit bilden, sinkt die Trefferquote auf **6,38973 %** bei 0 und **6,50441 %** bei 1/4. Eine exakte Momentenschranke belegt an beiden Schnitten einen Verlust von mehr als 2,9 Prozentpunkten. **Die physikalische Etappe 6 bleibt auf HOLD.** Die gemeinsame Wirkung und ihre Constraints müssen die Verfügbarkeit der Schnittdaten und ihre Norm noch begründen.
+
+[Herleitung und Vergleich](relational_transport_n11_v0_1/README.md) · [Exakte Schranken](relational_transport_n11_v0_1/exact.json) · [Endpaarungen](relational_transport_n11_v0_1/numerical.json) · [Bericht (PDF)](reports/CST_DUST_Relationaler_Transport_N11.pdf) · [Offline-Prüfpaket (ZIP)](packages/CST_DUST_Relationaler_Transport_N11_Pruefpaket.zip)
+
 ## Geometrische N11-Auslese bei unbekannten Randpulsen · v0.5 · 19. November 2026
 
 Ein neu konstruierter Detektor erkennt beim neutralen Störpuls aus v0.4 für jede Pulsstärke in beiden normierten Zweigen mindestens **49,56 %** der Ordnungen eindeutig. Falsche Zweigmeldungen sind im Modell ausgeschlossen. Variieren beide untersuchten Stärken unabhängig in einer offenen Menge, muss jeder feste ladungsinvariante Detektor bei verlangter Fehlerfreiheit stets „unentschieden“ melden. Das exakte Protokoll der ersten Pulsstärke stellt die Garantie von 49,56 % wieder her. Bei Kenntnis beider Stärken steigen die garantierten eindeutigen Treffer auf mindestens 95,99 % je Zweig.
