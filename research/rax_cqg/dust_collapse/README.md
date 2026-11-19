@@ -1,5 +1,13 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## N15-Stabilität bei fünf Prozent · 19. November 2026
+
+Für alle **1 217 Zustände** sind die drei Detektorkriterien bis **4,6904 %** übertragenem Amplitudengewicht auf beiden Referenzgittern gesichert. Bei **5 %** bestehen alle zulässigen Mischungen auf einem ausgewiesenen Träger mit **1 098 Zuständen**. Bis zu 0,0685 % des übertragenen Gewichts dürfen auf die übrigen 119 Typen entfallen. Für einen engeren Träger mit 1 022 Zuständen gilt eine zweite Garantie, die bis zu 5,7642 % des Transfers auf den übrigen 195 Typen erlaubt.
+
+Bei freier Mischung über alle Zustände bleiben bei 5 % der Dichtekontrast und das Vorzeichen der Erfolgsdifferenz gesichert. Die obere Schranke für die Niveauabweichung bei Dichte 1/4 beträgt 10,6417 % gegenüber 10 % Toleranz. Ob eine Mischung diese Toleranz bei 5 % verletzt, bleibt offen.
+
+[Studie und Nachrechnung](extension_stability_v0_9/README.md) · [Typenlisten und Zertifikate](extension_stability_v0_9/planes.json) · [Bericht (PDF)](reports/CST_DUST_N15_Fuenf_Prozent_v0_9.pdf) · [Offline-Prüfpaket (ZIP)](packages/CST_DUST_N15_Fuenf_Prozent_v0_9_Pruefpaket.zip)
+
 ## Vier Uhrantworten und die N15-Stabilitätsgrenze · 19. November 2026
 
 Auf dem vollständigen Träger aus 1 217 Zuständen besteht jede zulässige Mischung alle drei Detektorkriterien bis **4,4357 %** übertragenem Amplitudengewicht. Die direkte Uhrrechnung für die N15-Endtypen 47037 und 45950 erhöht die Garantie von 4,0008 % auf 4,1639 %. Die anschliessende Rechnung für 46509 und 46525 ergibt die neue Grenze auf beiden Referenzgittern.
