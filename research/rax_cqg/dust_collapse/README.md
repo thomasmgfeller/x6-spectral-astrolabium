@@ -1,5 +1,13 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Vier Uhrantworten und die N15-Stabilitätsgrenze · 19. November 2026
+
+Auf dem vollständigen Träger aus 1 217 Zuständen besteht jede zulässige Mischung alle drei Detektorkriterien bis **4,4357 %** übertragenem Amplitudengewicht. Die direkte Uhrrechnung für die N15-Endtypen 47037 und 45950 erhöht die Garantie von 4,0008 % auf 4,1639 %. Die anschliessende Rechnung für 46509 und 46525 ergibt die neue Grenze auf beiden Referenzgittern.
+
+Bei **5 %** sind Dichtekontrast und Vorzeichen der Erfolgsdifferenz auf dem gesamten Träger gesichert. Für die höhere Anfangsdichte liegt die obere Schranke der Niveauabweichung bei rund 11,2349 % gegenüber 10 % Toleranz. Ob eine zulässige Mischung die Toleranz bei 5 % verletzt, bleibt offen. Auf dem Teilträger mit 196 Zuständen gilt die Garantie bis **5,0210 %**. Bei 5,0211 % verletzt die bekannte N14-Mischung die Niveautoleranz.
+
+[Studie und Nachrechnung](extension_stability_v0_8/README.md) · [Vollträgerzertifikate](extension_stability_v0_8/volltraeger.json) · [Bericht (PDF)](reports/CST_DUST_N15_Uhrantworten_v0_8.pdf) · [Offline-Prüfpaket (ZIP)](packages/CST_DUST_N15_Uhrantworten_v0_8_Pruefpaket.zip)
+
 ## Vierte Einfügung und Erweiterungsstabilität bei N15 · 19. November 2026
 
 Von 1 652 erreichbaren N15-Endtypen erfüllen 1 048 die skalaren Randbedingungen. Alle 139 zugelassenen N14-Elterntypen besitzen mindestens eine zulässige Tochter. Über den gesamten erweiterten Träger halten auf beiden Referenzgittern alle erlaubten Gewichtsaufteilungen die drei Detektortoleranzen bis **4,0008 %** übertragenem Amplitudengewicht ein. Bei **5 %** bleiben der vierteilige Dichtekontrast und das Vorzeichen der Erfolgsdifferenz gesichert. Ob auch das absolute Detektorniveau die ursprüngliche Toleranz einhält, bleibt offen. Für den Teilträger aus allen 169 bisherigen Zuständen und den 23 direkt integrierten N15-Typen gilt die bisherige Garantie bis **5,0210 %**.
