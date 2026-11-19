@@ -1,0 +1,110 @@
+{
+  "A": {
+    "codes": [
+      12586556,
+      671092284,
+      25769807420
+    ],
+    "end": 1790,
+    "orbit": 12586556
+  },
+  "B": {
+    "codes": [
+      545263164,
+      8724155964,
+      17184067132
+    ],
+    "end": 5374,
+    "orbit": 545263164
+  },
+  "base_mass_per_selected_orbit": "1/882",
+  "baseline_conditional_F4_coefficient_average": "7741/441",
+  "closed_nonnegative_interval": [
+    "-1/882",
+    "1/882"
+  ],
+  "common_unit_column_in_each_of_six_marked_cuts": {
+    "134219292": "1/3",
+    "1564": "1/3",
+    "4195868": "1/3"
+  },
+  "condition": "one-edge N11 root; real nonnegative path coefficients, normalized per root",
+  "conditional_average_change": "-1/21",
+  "conditional_average_slope": -84,
+  "example_shift": "1/1764",
+  "fully_admissible_orbits": 191,
+  "geometry": {
+    "1790": {
+      "F4": 52,
+      "interior_automorphisms": 2,
+      "interior_relations": 9,
+      "open_intervals_by_size": {
+        "0": 16,
+        "1": 14,
+        "10": 3,
+        "11": 2,
+        "12": 1,
+        "2": 10,
+        "3": 11,
+        "4": 7,
+        "5": 6,
+        "6": 5,
+        "7": 3,
+        "8": 3,
+        "9": 4
+      }
+    },
+    "5374": {
+      "F4": -32,
+      "interior_automorphisms": 2,
+      "interior_relations": 9,
+      "open_intervals_by_size": {
+        "0": 17,
+        "1": 11,
+        "10": 3,
+        "11": 2,
+        "12": 1,
+        "2": 13,
+        "3": 10,
+        "4": 8,
+        "5": 5,
+        "6": 4,
+        "7": 4,
+        "8": 3,
+        "9": 4
+      }
+    }
+  },
+  "marked_pair_entries_checked_including_zeros": 238,
+  "positive_marked_pairs": 72,
+  "source_v05_commit": "8fe1fd9bef3e793ffae8fa7cefe66aea4af87d98",
+  "strict_positivity": "open interior of the closed nonnegative interval",
+  "transfer_checks": {
+    "-1/882": {
+      "F4_coefficient_average": "7783/441",
+      "all_orbit_masses_strictly_positive": false,
+      "orbit_A": "1/441",
+      "orbit_B": "0"
+    },
+    "0": {
+      "F4_coefficient_average": "7741/441",
+      "all_orbit_masses_strictly_positive": true,
+      "orbit_A": "1/882",
+      "orbit_B": "1/882"
+    },
+    "1/1764": {
+      "F4_coefficient_average": "7720/441",
+      "all_orbit_masses_strictly_positive": true,
+      "orbit_A": "1/1764",
+      "orbit_B": "1/588"
+    },
+    "1/882": {
+      "F4_coefficient_average": "7699/441",
+      "all_orbit_masses_strictly_positive": false,
+      "orbit_A": "0",
+      "orbit_B": "1/441"
+    }
+  },
+  "transfer_convention": "t from A to B",
+  "two_root_coefficient_average_change_at_equal_root_coefficients": "-1/42"
+}

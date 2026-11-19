@@ -1,5 +1,13 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Selektionsgleichung am Präfix 1564 · v0.1 · 19. November 2026
+
+Am markierten N13-Präfix 1564 gehören 16 Fortsetzungen zu zehn N14-Endordnungen. Die aus der Integration über das zusätzliche Skalarfeld hergeleitete Identität gilt je Zweig und lässt das relative Historiengewicht frei.
+
+Bei identischen äusseren Randkoordinaten liegen mindestens **97,52 % des Normquadrats** des separat berechneten N13-Skalarzustands ausserhalb des von den zehn N14-Zuständen aufgespannten Raums. Damit scheidet die direkte Gleichsetzung als Selektionsregel aus. Die vorhandenen Bedingungen lassen weiterhin **1:1 und 1:3** zu. Etappe 6 und P3 bleiben auf **HOLD**.
+
+[Herleitung und Rechencode](prefix_1564_selection_v0_1/README.md) · [Ergebnis und rationaler Nachweis](prefix_1564_selection_v0_1/result.json) · [Prüfpaket (ZIP)](packages/CST_DUST_Praefix_1564_Selektionsgleichung_v0_1_Pruefpaket.zip)
+
 ## N14-Endgewichte und verschobene Staubuhrschnitte · v0.1 · 19. November 2026
 
 Ein gemeinsamer Koeffizient für alle markierten Pfade mit demselben N14-Endtyp kann die vorgegebene N13-Marginale bei keiner der beiden Elternordnungen reproduzieren. Für normierte, nichtnegative Koeffizienten beträgt der kleinste erreichbare Abstand in Totalvariation bei der Kette **214/3255**, bei der Ein-Kanten-Ordnung **109/1568**.
