@@ -1,5 +1,13 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Randpräparation für den Massensektor des Staubstroms · 20. November 2026
+
+Eine gemeinsame Verschiebung der vier Anfangsuhren liest die Stromladung der einzelnen Feldgeschichte aus der gekoppelten Wirkung aus. Bei der probeweisen Umrechnung $M=p$ sind die beiden 1-%-Fenster um 1/4 und 4 im ursprünglichen Uhrenbereich auf allen 1 048 N15-Endtypen erreichbar. Unter der Zusatzbedingung streng kausal wachsender Uhren bleibt das leichte Fenster auf 1 048 und das schwere auf 957 Endtypen erreichbar.
+
+Für den markierten Referenzstrom ist die Massenskala kalibriert. Für den gekoppelten Wirkungsstrom fehlt die unabhängige Kalibrierung auf die physikalischen P3-Massen. **P3 steht auf HOLD_NOT_ELIGIBLE / NOT_RUN.**
+
+[Herleitung und Nachrechnung](boundary_mass_sector_v0_1/README.md) · [Gesamtergebnis](boundary_mass_sector_v0_1/results.json) · [Ergebnisse für jeden Ordnungstyp](boundary_mass_sector_v0_1/by_type.json) · [Offline-Prüfpaket](packages/CST_DUST_Randpraeparation_Massensektor_v0_1.zip)
+
 ## Massenstrom und materielle Oberfläche · 20. November 2026
 
 Im klassischen Einstein-Staub-Vergleich trägt die mitbewegte Oberfläche bis zur gemeinsamen Staubeigenzeit $T_*$ die Anfangsmassen 1/4 und 4. Ihre Flächen betragen dann rund 1 153,0237 und 856,2979 in den geometrisierten Referenzeinheiten.
