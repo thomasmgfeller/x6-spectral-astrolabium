@@ -1,5 +1,13 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Massenstrom und materielle Oberfläche · 20. November 2026
+
+Im klassischen Einstein-Staub-Vergleich trägt die mitbewegte Oberfläche bis zur gemeinsamen Staubeigenzeit $T_*$ die Anfangsmassen 1/4 und 4. Ihre Flächen betragen dann rund 1 153,0237 und 856,2979 in den geometrisierten Referenzeinheiten.
+
+Auf allen 1 048 untersuchten N15-Endtypen lässt der direkte Wirkungsstrom bei denselben Randdaten unterschiedliche Schnittladungen zu. Eine zusätzlich gewählte positive Transportregel erhält jede vorgegebene Masse auf 21 792 geprüften kausalen Schnitten. Die Flächenauslese aus den gekoppelten Historien und der Massenvergleich über alle zulässigen Gewichte bleiben offen. **P3 steht auf HOLD_NOT_ELIGIBLE / NOT_RUN.**
+
+[Herleitung und Nachrechnung](material_current_surface_v0_1/README.md) · [Ergebnisse](material_current_surface_v0_1/results.json) · [Offline-Prüfpaket](packages/CST_DUST_Massenstrom_Materialoberflaeche_v0_1.zip)
+
 ## Früher Arealradius bei zwei Staubmassen · 20. November 2026
 
 Bei der gemeinsamen Staubeigenzeit $T_*=5\sqrt{5}/6$ sind die klassischen 5-%-Radiusbänder für $M=1/4$ und $M=4$ erstmals auf dem P3-Gitter getrennt. Zwischen ihnen liegen rund 0,4324 Radiuseinheiten. Für die gekoppelten Historien fehlt eine kalibrierte Flächenauslese der materiellen Oberfläche. **P3 steht auf HOLD_NOT_ELIGIBLE / NOT_RUN.**
