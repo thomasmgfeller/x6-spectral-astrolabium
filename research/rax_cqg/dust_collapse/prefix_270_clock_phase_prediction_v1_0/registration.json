@@ -1,0 +1,61 @@
+{
+  "study": "Prospective dust-clock transfer to chain prefix 270",
+  "version": "1.0",
+  "registered_at": "2026-11-20T10:30:56+01:00",
+  "status_at_lock": "REGISTERED / NOT_RUN",
+  "modulated_physical_amplitudes_evaluated_at_lock": 0,
+  "source_main_commit": "8723cba93224931a6fdffc525c798524ab38bebb",
+  "prefix": 270,
+  "selected_marked_paths": 15,
+  "end_types": [
+    623,
+    662,
+    718,
+    726,
+    751,
+    760,
+    764,
+    767,
+    5295,
+    5307,
+    26935
+  ],
+  "densities": [
+    "1/8",
+    "1/4"
+  ],
+  "mask": "sign(U6(u)), identical in both lobes",
+  "primary_endpoint": "Maximum over both densities of supremum over nonzero q in C^11 of unnormalized exterior squared norm with the phase mask divided by reference norm at the same q.",
+  "decision": {
+    "threshold_ratio": "1/100",
+    "target_disk_radius": "1/50000",
+    "reference_disk_radius": "1/60000",
+    "required_target_rows": 22,
+    "required_unmodulated_split_controls": 22,
+    "PASS": "Full qualified run, both upper bounds <= 1/100.",
+    "FAIL": "Full qualified run, at least one lower bound > 1/100.",
+    "HOLD": "Incomplete run, failed controls or budget, or unresolved interval."
+  },
+  "stage_6": "HOLD",
+  "P3": "HOLD",
+  "frozen_files_sha256": {
+    "CST_DUST_Praefix_1564_Neun_Richtungen_v0_1_Pruefpaket.zip": "05968e2c6afeb263c66faa15255e1499b7cd6a90a6ff2b6510fd6b48cbc4c1c5",
+    "Protokoll.md": "8c30c48afaa45cd6173604bd5cbdc401e661fcaf73da4adaf5fd46418c9d79c2",
+    "README.md": "fd5c0f3f802d7a06a291b3ad76d57f4ca3688fb689b4973e51607a2a64d2d049",
+    "gram/README.md": "4e4c65dc5ea61baef7c61a4a71cf4f15f6dec5dbc0579287d0d0e4fd7f4d1a34",
+    "gram/gram.json": "6596495a80ac46fad866c88e3b09dd27c2fac55fa5ce4e41538c01d02f775100",
+    "gram/gram270.py": "cdc96fd3f84cf23cb09d7a921cce11bd0057d9366e0bd5f7cd0af5bf70d64c56",
+    "gram/verify_gram.py": "c920d37e7b96e0c78a3603ff316f1e94e1edb39f5351575f72b91c45790f4912",
+    "packet270.py": "dfbc4db98219ef35e1d427bce43abbf9cd5d40750a05ae77ca752a4054b9d01d",
+    "qualification.json": "b71c8d687fb36b2ffdc43b4083be444bd64308e8a8e4b23b8d861029ed58f0e9",
+    "qualification270.py": "c90c7007fc41fbd059df84486df6711259735fffd4e21cdea3a06fb79e8190cf",
+    "reference.json": "eaa8142b1f5a6e8221bf333c063f526fef03f35ac3919d03c785c9a785cc8e78",
+    "reference270.py": "fab01c9a3d08a04f392755fe812dd4142171507f7f6c941310ccfd25fa95e1f1",
+    "run_later.py": "26231c7a17108173bc7ac165d615fbe9b35408bec4c45ff08b64b981bfe51890",
+    "score.py": "fe7cdf172e021723623dcced7e7edea80c1dba1068b3b15269fdee2d8c3fa0f1",
+    "select270.py": "958d84b83394e4e24c573025766c6d0409fc62dcec2bbe7f571593de324432f1",
+    "selection.json": "342d2fc1c8bd3038cbb7d40ab0160ea7bf569ed449a89d26a520f81e3908e821",
+    "study.py": "d2c9bba0ded43e96da0249d02b2374d1a6428107bc54bf584821b59a3dc3f0fb",
+    "verify_registration.py": "6e8ce1e2c2b51f45e187732ca3a74d442d748d081ce3719f0b4987ced6d42327"
+  }
+}

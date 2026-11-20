@@ -1,5 +1,19 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Welche Historiengewichte erreichen N15? · 20. November 2026
+
+Für zwei zulässige N15-Ordnungen am Präfix 1564 stimmen die direkte skalare Reduktion auf N13 und beide Integrationsfolgen exakt überein. Beim Typ 59006 bleibt eine Fourier-Delta-Bedingung mit Jacobi-Faktor 2/9 erhalten. A und B selbst erzwingen eine kausale Reihenfolge. Aus der Übereinstimmung der Rechenwege folgt kein relatives A:B-Gewicht.
+
+Die zusätzliche Annahme, dass alle vier Einfügungsmarken austauschbar sind, schliesst beide archivierten **vollständigen N14-Gewichtstabellen** aus. Zwei neue streng positive Fortsetzungen erhalten sämtliche 72 N13-Präfixmassen und alle zehn jeweiligen lokalen Koeffizienten. Damit sind **1:1, 1:3 und alle lokalen A/B-Quotienten dazwischen** auf diesem endlichen Träger möglich. Etappe 6 und P3 bleiben auf **HOLD**.
+
+| Studie | Nachrechnen | Datenpaket |
+| --- | --- | --- |
+| Zwei-Ereignis-Reduktion am Präfix 1564 | [Herleitung und Ergebnisse](prefix_1564_two_event_v0_1/README.md) · [Ergebnisdaten](prefix_1564_two_event_v0_1/result.json) | [ZIP](packages/CST_DUST_Praefix_1564_Zwei_Ereignisse_v0_1.zip) |
+| N15-Fortsetzungen bei vier austauschbaren Marken | [Beweis und Gegenbeispiele](prefix_1564_four_mark_extension_v0_1/README.md) · [Exakte Zertifikate](prefix_1564_four_mark_extension_v0_1/result.json) | [ZIP](packages/CST_DUST_Praefix_1564_Vier_Marken_v0_1.zip) |
+| Vorregistrierter Transfertest am Kettenpräfix 270 | [Protokoll](prefix_270_clock_phase_prediction_v1_0/Protokoll.md) · [Versiegelte Registrierung](prefix_270_clock_phase_prediction_v1_0/registration.json) | [ZIP](packages/CST_DUST_Praefix_270_Uhrphase_Vorregistrierung_v1_0.zip) |
+
+**Präfix 270 · REGISTERED / NOT_RUN.** Alle elf Endtypen liegen ausserhalb des früheren Zehnerträgers. Die 22 unmodulierten Referenzamplituden und die skalare Gram-Matrix sind qualifiziert. Vor der Zielintegration gilt für die beiden Dichten erneut die Schwelle von **1 %**. Die rein analytischen Vorabschätzungen betragen höchstens 0,061613 % bei 1/8 und 0,062473 % bei 1/4. Die künftige direkte Auswertung erfordert 22 modulierte Amplituden und 22 Kontrollen. [Nachrechnung der Vorregistrierung](prefix_270_clock_phase_prediction_v1_0/README.md)
+
 ## Vorregistrierter Staubuhrtest am Präfix 1564 · Ziellauf 001 · 20. November 2026
 
 **PASS.** Für sechs Phasenumkehrungen je Staubuhrlappen beträgt die Obergrenze des äusseren Normquadrats bei Dichte 1/8 **0,002197 %** und bei Dichte 1/4 **0,002217 %** des jeweiligen Referenzwerts. Die vorab festgelegte Schwelle lag bei **1 %**. Die Grenzen gelten für jeden festen, von null verschiedenen komplexen Gewichtsvektor der zehn Endtypen. Alle 20 Kontrollen ohne Phasenumkehr stimmen innerhalb der Fehlerkreise mit der Referenz überein. Beide Intervalle haben die Untergrenze null.
