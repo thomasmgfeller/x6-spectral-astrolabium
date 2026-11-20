@@ -1,5 +1,13 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Synchronisierte, verteilte Staubpfade für zwei Massen · 20. November 2026
+
+Über alle maximalen Staubpfade derselben N15-Ordnung verteilt, trägt die markierte Referenzpräparation die Masse $M=1/4$ auf allen 1 048 Typen über beide vollständigen Randuhrfenster. Für $M=4$ gelingt dies auf 998 Typen. Weitere 35 tragen einen Teil der Fenster, 15 bleiben leer. Zwei unabhängig implementierte Kapazitätsprüfungen stimmen typweise überein.
+
+Bei endlich breiten Uhren und Dichten passt der gesamte geprüfte Bereich für beide Massen auf 164 Typen. Die Wirkungsstromladung ist bei 94 davon auf beiden Uhrfenstern strikt positiv, bei 26 strikt negativ. Beim Typ 2324 bleibt der Staubfaktor kohärent, während der positive Ladungsselektor auf diesem Bereich exakt verschwindet. Die unabhängige physikalische Massenkalibrierung und die Sektornorm sind offen. Die 60 P3-Checkpoints stehen auf **NOT_RUN**.
+
+[Herleitung und Nachrechnung](synchronized_distributed_dust_v0_1/README.md) · [Gesamtergebnis](synchronized_distributed_dust_v0_1/result.json) · [Ladungsgrenzen je Typ](synchronized_distributed_dust_v0_1/census.json) · [Offline-Prüfpaket](packages/CST_DUST_Synchronisierte_Staubpfade_Zwei_Massen_v0_1.zip)
+
 ## Unabhängige Schnittmasse, Wirkungsstrom und Vakuum · 20. November 2026
 
 Bei eingespeister markierter Schnittmasse $M=1/4$ kann die Stromladung am selben N15-Anfangskragen ihr Vorzeichen wechseln, wenn sich die inneren Uhrwerte ändern. Sowohl die staubfreie Kontrolle als auch die Kontrolle mit leerem Inneren und positivem Randpaket ergeben exakt null. Die Zusatzannahme der Studie ordnet dem markierten Fluss die Dichtegewichte über seine Verweildauer zu.
