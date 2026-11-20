@@ -1,5 +1,18 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Präfix 1564 vom Rangtest zur vorregistrierten Uhrvorhersage · 20. November 2026
+
+Am markierten N13-Präfix 1564 führen 16 Fortsetzungen zu zehn N14-Endtypen. Bei fester N13-Marginale und austauschbaren Einfügungsmarken bleiben neun unabhängige Verschiebungen der normierten Gewichte möglich. Die aus der Wirkung hergeleitete Randabbildung unterscheidet alle neun auch am äusseren skalaren Rand, sowohl bei Dichte 1/8 als auch bei 1/4. Welche Gewichte die Physik auswählt, bleibt offen. **Etappe 6 und P3 bleiben auf HOLD.**
+
+| Arbeit | Nachrechnen | Originalpaket |
+| --- | --- | --- |
+| Exakter Rang und neun Gewichtsverschiebungen | [Rangtest und rationale Zeugen](prefix_1564_rank_v0_1/README.md) | [ZIP](packages/CST_DUST_Praefix_1564_Rangtest_v0_1.zip) |
+| Ein Ereignis ausintegrieren, mit 14 regulären und zwei singulären Beiträgen | [Herleitung](prefix_1564_boundary_map_v0_1/Herleitung.md) · [Prüfer](prefix_1564_boundary_map_v0_1/README.md) · [PDF](reports/CST_DUST_Randabbildung_1564_v0_1.pdf) | [ZIP](packages/CST_DUST_Randabbildung_1564_v0_1_Pruefpaket.zip) |
+| Alle neun Richtungen am äusseren Rand prüfen | [Ergebnis und Prüfer](prefix_1564_nine_directions_v0_1/README.md) · [PDF](reports/CST_DUST_Praefix_1564_Neun_Richtungen_v0_1.pdf) | [ZIP](packages/CST_DUST_Praefix_1564_Neun_Richtungen_v0_1_Pruefpaket.zip) |
+| Vorhersage für sechs Phasenumkehrungen je Staubuhrlappen | [Protokoll](prefix_1564_clock_phase_prediction_v1_0/Protokoll.md) · [Registrierung](prefix_1564_clock_phase_prediction_v1_0/registration.json) · [PDF](reports/CST_DUST_Praefix_1564_Vorhersage_Uhrphase_v1_0.pdf) | [ZIP](packages/CST_DUST_Praefix_1564_Vorhersage_Uhrphase_v1_0_Pruefpaket.zip) |
+
+Die Vorhersage gilt für beide Dichten und jeden festen, von null verschiedenen komplexen Gewichtsvektor. Nach sechs Phasenumkehrungen je Lappen soll das unnormierte äussere Normquadrat höchstens **1 %** seines Referenzwerts betragen. Der Zieltest steht bei Veröffentlichung auf **REGISTERED / NOT_RUN**. Die am 20. November 2026 um 09:35:33 Uhr Schweizer Zeit festgelegte Registrierung hat SHA-256 `8665610801ec890ead3da7659fd55d79a2ed56efd3fe3635b7baf283afbd619a`.
+
 ## Selektionsgleichung am Präfix 1564 · v0.1 · 19. November 2026
 
 Am markierten N13-Präfix 1564 gehören 16 Fortsetzungen zu zehn N14-Endordnungen. Die aus der Integration über das zusätzliche Skalarfeld hergeleitete Identität gilt je Zweig und lässt das relative Historiengewicht frei.
