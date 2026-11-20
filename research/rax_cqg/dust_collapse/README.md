@@ -1,5 +1,13 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Kettenpräfix 270 · Erster vorregistrierter Staubuhr-Ziellauf · 20. November 2026
+
+**PASS.** Bei sechs Phasenumkehrungen je Staubuhrlappen beträgt die obere Grenze des äusseren skalaren Normquadrats bei Dichte 1/8 **0,000786 %** und bei Dichte 1/4 **0,000797 %** des jeweiligen Referenzwerts. Die Vorregistrierung legte für beide Dichten **1 %** fest. Die angegebenen Obergrenzen sind nach aussen gerundet. Die Untergrenzen betragen null.
+
+Alle 22 unmodulierten Kontrollen stimmten innerhalb der registrierten Fehlerkreise mit ihren Referenzen überein. Die Einschliessungen gelten für jeden festen, von null verschiedenen komplexen Gewichtsvektor der elf Endtypen. Damit hat dieselbe Vorhersage an den beiden untersuchten Präfixen mit disjunkten Endtypmengen bestanden. Die physikalische Auswahl der Historiengewichte bleibt offen. **Etappe 6 und P3 bleiben auf HOLD.**
+
+[Bericht und Nachrechnung](prefix_270_clock_phase_run_001/README.md) · [Direkte Zielamplituden und Kontrollen](prefix_270_clock_phase_run_001/target_001.json) · [Exakte Auswertung](prefix_270_clock_phase_run_001/score_001.json) · [Offline-Prüfpaket (ZIP)](packages/CST_DUST_Praefix_270_Uhrphase_Ziellauf_001.zip) · [Versiegelte Vorregistrierung](prefix_270_clock_phase_prediction_v1_0/registration.json)
+
 ## Welche Historiengewichte erreichen N15? · 20. November 2026
 
 Für zwei zulässige N15-Ordnungen am Präfix 1564 stimmen die direkte skalare Reduktion auf N13 und beide Integrationsfolgen exakt überein. Beim Typ 59006 bleibt eine Fourier-Delta-Bedingung mit Jacobi-Faktor 2/9 erhalten. A und B selbst erzwingen eine kausale Reihenfolge. Aus der Übereinstimmung der Rechenwege folgt kein relatives A:B-Gewicht.
@@ -12,7 +20,7 @@ Die zusätzliche Annahme, dass alle vier Einfügungsmarken austauschbar sind, sc
 | N15-Fortsetzungen bei vier austauschbaren Marken | [Beweis und Gegenbeispiele](prefix_1564_four_mark_extension_v0_1/README.md) · [Exakte Zertifikate](prefix_1564_four_mark_extension_v0_1/result.json) | [ZIP](packages/CST_DUST_Praefix_1564_Vier_Marken_v0_1.zip) |
 | Vorregistrierter Transfertest am Kettenpräfix 270 | [Protokoll](prefix_270_clock_phase_prediction_v1_0/Protokoll.md) · [Versiegelte Registrierung](prefix_270_clock_phase_prediction_v1_0/registration.json) | [ZIP](packages/CST_DUST_Praefix_270_Uhrphase_Vorregistrierung_v1_0.zip) |
 
-**Präfix 270 · REGISTERED / NOT_RUN.** Alle elf Endtypen liegen ausserhalb des früheren Zehnerträgers. Die 22 unmodulierten Referenzamplituden und die skalare Gram-Matrix sind qualifiziert. Vor der Zielintegration gilt für die beiden Dichten erneut die Schwelle von **1 %**. Die rein analytischen Vorabschätzungen betragen höchstens 0,061613 % bei 1/8 und 0,062473 % bei 1/4. Die künftige direkte Auswertung erfordert 22 modulierte Amplituden und 22 Kontrollen. [Nachrechnung der Vorregistrierung](prefix_270_clock_phase_prediction_v1_0/README.md)
+**Präfix 270 bei der Vorregistrierung in PR #329 · REGISTERED / NOT_RUN.** Alle elf Endtypen liegen ausserhalb des früheren Zehnerträgers. Die 22 unmodulierten Referenzamplituden und die skalare Gram-Matrix sind qualifiziert. Vor der Zielintegration gilt für die beiden Dichten erneut die Schwelle von **1 %**. Die rein analytischen Vorabschätzungen betragen höchstens 0,061613 % bei 1/8 und 0,062473 % bei 1/4. Die Vorregistrierung verlangte 22 modulierte Amplituden und 22 Kontrollen. [Nachrechnung der Vorregistrierung](prefix_270_clock_phase_prediction_v1_0/README.md)
 
 ## Vorregistrierter Staubuhrtest am Präfix 1564 · Ziellauf 001 · 20. November 2026
 
