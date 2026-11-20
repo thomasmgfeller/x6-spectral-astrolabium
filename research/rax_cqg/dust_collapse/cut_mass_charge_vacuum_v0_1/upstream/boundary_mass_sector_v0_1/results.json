@@ -1,0 +1,187 @@
+{
+  "commit": "7ea519b2e1e13379eab78d822cea5ced5320dcf3",
+  "design_sha256": "78454f4fa72a6c1de9ea8be1795e32a50bba89ffeba781683fdc0f0c799cf0cf",
+  "raw_charge": {
+    "types": 1048,
+    "visible_density_histogram": {
+      "4": 21,
+      "5": 291,
+      "6": 534,
+      "7": 202
+    },
+    "distinct_visible_signatures": 89,
+    "raw_zero_atom_range": [
+      "1/128",
+      "1/16"
+    ],
+    "boundary_source_identities_verified": 1048,
+    "curvature_possible": 1048,
+    "trial_gain_one_window_support_counts": {
+      "1/4": 1048,
+      "4": 1048
+    },
+    "minimum_of_type_suprema": [
+      "266563780418453489218384/24494897427831780981973",
+      "66640945104613372304602/6123724356957945245493"
+    ],
+    "maximum_of_type_suprema": [
+      "1295376220292398246292984/24494897427831780981973",
+      "647688110146199123146553/12247448713915890490986"
+    ],
+    "types_attaining_or_within_enclosure_of_minimum": [
+      522107,
+      522110,
+      1046395,
+      1046398,
+      1832827,
+      1832830,
+      2094971,
+      2094974
+    ],
+    "limiting_signatures": [
+      [
+        2,
+        1,
+        1,
+        0
+      ]
+    ],
+    "strict_all_types_gain_threshold": [
+      "606248711338836579303807/1666023627615334307615050",
+      "2424994845355346317215327/6664094510461337230459600"
+    ]
+  },
+  "supplement_ordered_clocks": {
+    "ideal_vertices_all_orders": 21792,
+    "gain_one_trials": {
+      "1/4": 1048,
+      "4": 957
+    },
+    "minimum_type_sup_bounds": [
+      "69528048953866276954000/24494897427831780981973",
+      "5794004079488856412835/2041241452319315081831"
+    ],
+    "strict_gain_threshold_for_both_on_all": [
+      "202082903779612193101269/144850101987221410320875",
+      "2424994845355346317215327/1738201223846656923850000"
+    ]
+  },
+  "tagged_calibration": {
+    "calibration_controls": [
+      "0",
+      "1"
+    ],
+    "validation_masses": [
+      "1/4",
+      "4"
+    ],
+    "orders": 1048,
+    "exact_source_readings": 4192,
+    "reference_gain": "1",
+    "reference_offset": "0",
+    "gain_for_coupled_P3_mass": null
+  },
+  "conditional_amplitude": {
+    "N15_end_type": 2452,
+    "active_inner_event": 11,
+    "other_six_inner_densities": "on their null atoms",
+    "boundary_density": "1/8 on both collars",
+    "source_charge_per_unit_density": 6.212662760446,
+    "causally_increasing_clocks": true,
+    "scalar_field": "fixed to zero",
+    "F4": 3,
+    "bands": {
+      "1/4": {
+        "window": [
+          0.2475,
+          0.2525
+        ],
+        "selected_density_interval": [
+          0.039837990495,
+          0.040642798384
+        ],
+        "reference_measure_given_clocks_including_stratum": 6.287561631e-06,
+        "complex_amplitude_given_clocks_including_stratum": [
+          "-4.40739340116e-06",
+          "4.48422847098e-06"
+        ]
+      },
+      "4": {
+        "window": [
+          3.96,
+          4.04
+        ],
+        "selected_density_interval": [
+          0.637407847922,
+          0.650284774143
+        ],
+        "reference_measure_given_clocks_including_stratum": 0.000100600986099,
+        "complex_amplitude_given_clocks_including_stratum": [
+          "-8.86446545775e-05",
+          "-4.75609963695e-05"
+        ]
+      }
+    },
+    "independent_integration": "128-panel composite Simpson within 1e-13 absolute",
+    "scope": "Conditional density contraction including all seven density measures on the specified stratum; clocks fixed; no coherent integration over histories or clocks."
+  },
+  "ordinary_boundary_momentum_test": {
+    "test_order": 2324,
+    "active_vertex": 12,
+    "single_active_density": "1/2",
+    "offset": "1/16",
+    "inner_clock": "-2 Delta + 9/16",
+    "p_original": "0",
+    "source_curvature": "beta/4",
+    "two_packets": {
+      "1/4": {
+        "momentum_window": [
+          "99/400",
+          "101/400"
+        ],
+        "fourier_packet_norm_squared": "1",
+        "relative_overlap_lower_bound_for_zero_initial_charge": "819199/819200"
+      },
+      "4": {
+        "momentum_window": [
+          "99/25",
+          "101/25"
+        ],
+        "fourier_packet_norm_squared": "1",
+        "relative_overlap_lower_bound_for_zero_initial_charge": "23/25"
+      }
+    },
+    "overlap_between_distinct_prepared_momentum_modes": "0",
+    "representation": "Additional collective translation tau on the full real line, standard L2(d tau). Test of the one-amplitude Fourier proposal, not the published compact packet.",
+    "relative_overlap_normalization": "Magnitude of the complex integral averaged over each momentum band, divided by the constant Fourier modulus of a single chirp. Not a probability."
+  },
+  "supplement_scale_matching": {
+    "units": "c=1; dimensionless p=-d(S/hbar)/d tau. If equal to physical rest momentum, g=G*hbar/(L_tau*L_P3).",
+    "hypotheses_for_equal_length_control": [
+      "unrenormalised identification of the finite F4 coefficient with kappa=1",
+      "L_tau=ell",
+      "ell=L_P3",
+      "same physical mass observable and orientation"
+    ],
+    "hypothetical_gain": "1/(2*pi*sqrt(6))",
+    "enclosure": [
+      "7/110",
+      "5/72"
+    ],
+    "max_mass_all_raw_types_upper_under_these_hypotheses": "3238440550730995615732765/881816307401944115350992",
+    "number_of_types_with_heavy_band_in_equal_length_control": 0,
+    "physical_gain": null
+  },
+  "physical": {
+    "calibrated_CST_mass_per_unit_charge": null,
+    "accepted_CST_mass_sector": {
+      "1/4": null,
+      "4": null
+    },
+    "CST_surface_areas": null,
+    "mass_contrast_uniform_in_weights": null,
+    "P3_eligibility": "HOLD_NOT_ELIGIBLE",
+    "P3_dynamics": "NOT_RUN",
+    "new_physical_4D_histories": 0
+  }
+}
