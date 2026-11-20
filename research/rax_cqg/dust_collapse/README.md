@@ -1,5 +1,13 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Ladungsverteilung des gemeinsam präparierten N15-Ensembles · 20. November 2026
+
+Im H3-Referenzraum tragen beide Elternordnungen gemeinsam zu 453 N15-Endtypen bei. Bei markierter Masse $M=1/4$, Anfangsdichtezentrum $r=1/8$ und lokalem Verhältnis $A:B=1:1$ entfallen im Sechsklassenregister 92,20 % auf positive Ladungen. Eine zweite zulässige Fortsetzung des Kettenzweigs ergibt bei denselben 70 älteren Präfixgewichten 97,05 %. Die Wachstumsgewichte beeinflussen also die Verteilung bei gleicher Präparation und Auslese.
+
+Die physikalische Ladungsregistrierung, die Paarung und die unabhängige Eichung auf P3-Ruhemasse sind offen. Alle 60 P3-Checkpoints stehen auf **NOT_RUN**.
+
+[Herleitung und Nachrechnung](joint_charge_distribution_v0_1/README.md) · [Verteilung je Messklasse](joint_charge_distribution_v0_1/distribution.csv) · [Gewichtsvariation](joint_charge_distribution_v0_1/sensitivity.json) · [Offline-Prüfpaket](packages/CST_DUST_Gemeinsame_Ladungsverteilung_N15_v0_1.zip)
+
 ## Synchronisierte, verteilte Staubpfade für zwei Massen · 20. November 2026
 
 Über alle maximalen Staubpfade derselben N15-Ordnung verteilt, trägt die markierte Referenzpräparation die Masse $M=1/4$ auf allen 1 048 Typen über beide vollständigen Randuhrfenster. Für $M=4$ gelingt dies auf 998 Typen. Weitere 35 tragen einen Teil der Fenster, 15 bleiben leer. Zwei unabhängig implementierte Kapazitätsprüfungen stimmen typweise überein.
