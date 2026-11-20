@@ -1,0 +1,193 @@
+{
+  "id": "CST-DUST-PRE-SINGULARITY-001",
+  "version": "0.1.0",
+  "date": "2026-11-06",
+  "freeze_status": "LOCAL_PRECALCULATION_FREEZE_NOT_EXTERNAL_PREREGISTRATION",
+  "parent_contract_sha256": "01a0c7820769995a09813e50f35085a74b0dab2318e05e1833f62bd4b26678bf",
+  "physical_candidate": "CST-DUST-C1",
+  "reference_id": "REF-DUST-FB-01",
+  "scope": "Eligibility decision, executable tolerance/refinement guards, certified classical numerical reference and conditional volume-derivative budget; no new physical CST validation data",
+  "reference": {
+    "G": 1,
+    "c": 1,
+    "R0": 10,
+    "masses": [
+      "1/4",
+      "1",
+      "4"
+    ],
+    "T_end": "5*sqrt(5)/3",
+    "time_coordinate": "x=T/T_end; the same physical T_end for every mass",
+    "time_fractions": [
+      "0",
+      "1/4",
+      "1/2",
+      "3/4",
+      "1"
+    ],
+    "kappa": "M/72",
+    "ODE": "r_prime=u; u_prime=-kappa/r^2",
+    "initial": "r(0)=1; u(0)=-sqrt(M)/6",
+    "analytic": "q=sqrt(M)/4; r=(1-q*x)^(2/3); u=-sqrt(M)*r/(6*(1-q*x))"
+  },
+  "primary_tolerances": {
+    "R": 0.05,
+    "rho": 0.05,
+    "H": 0.05,
+    "a_ddot_over_a": 0.05,
+    "mass_or_flux_over_M": 0.02,
+    "initial_velocity_and_mass_response": 0.05,
+    "last_two_physical_levels": 0.025
+  },
+  "error_budget_fractions": {
+    "sampling": 0.4,
+    "operator": 0.15,
+    "coarse_map": 0.1,
+    "initial_state": 0.1,
+    "boundary": 0.15,
+    "numerical": 0.1
+  },
+  "decision": "PASS only if complete simultaneous uncertainty interval is contained in the closed tolerance band; FAIL if disjoint; otherwise HOLD. Any unknown required uncertainty is HOLD, never zero.",
+  "family": {
+    "dynamical_observables": 240,
+    "mass": 60,
+    "side_flux": 144,
+    "initial_velocities": 12,
+    "initial_mass_response_ratios": 8,
+    "last_two_level_differences": 60,
+    "total": 524,
+    "familywise_alpha": 0.05,
+    "fixed_Bonferroni_alpha_per_comparison": 9.541984732824427e-05,
+    "no_independence_assumed": true,
+    "claim": "finite family at declared times, not whole-time continuum convergence"
+  },
+  "physical_refinement": {
+    "density_ratios": [
+      1,
+      2,
+      4,
+      8
+    ],
+    "discreteness_length_ratio": "density_ratio^(-1/4)",
+    "required_mode": "regulated candidate with predeclared physical matching; physical-constant scans are a different model-family claim",
+    "invariants": [
+      "units",
+      "G",
+      "R0",
+      "masses",
+      "physical_time_grid",
+      "domain_definition",
+      "outer_boundary_and_error_rule",
+      "Lk",
+      "Lcg",
+      "detector_definition",
+      "clock_definition",
+      "initial_state_preparation",
+      "renormalization_trajectory_hash",
+      "observable_calibration_hash",
+      "tolerances_hash"
+    ],
+    "allowed_to_change": [
+      "counting density",
+      "element count implied by fixed physical domain",
+      "microscopic couplings along the frozen matching trajectory",
+      "numerical budget under separate accuracy certification"
+    ],
+    "actual_lambda0": null,
+    "actual_Lk": null,
+    "actual_Lcg": null,
+    "actual_sample_size": null,
+    "actual_seeds": null,
+    "missing_parameter_status": "HOLD_NOT_ELIGIBLE_NOT_RUN"
+  },
+  "numerical_reference": {
+    "scheme": "forward Euler with outward Decimal intervals; separate analytic exact-arithmetic global error enclosure",
+    "steps": [
+      128,
+      256,
+      512,
+      1024
+    ],
+    "decimal_precision": 60,
+    "root_bisections": 100,
+    "state_domain": "3/5 <= r <= 21/20; -1/2 <= u <= 0",
+    "lipschitz_bound": 1,
+    "second_derivative_bound": "B=(125/27)*kappa",
+    "global_error": "E_n=(B/(2N))*((1+1/N)^n-1)",
+    "observables": [
+      "r",
+      "rho_over_rho0",
+      "H_times_Tend",
+      "acceleration_times_Tend_squared"
+    ],
+    "numerical_relative_cap": 0.005,
+    "last_two_numerical_comparison_only": 0.025,
+    "negative_force_multiplier": "6/5",
+    "interpretation": "checks inserted classical Einstein-dust dynamics; not physical lambda refinement",
+    "negative_force_scope": "exact initial acceleration only; no modified-force evolution"
+  },
+  "volume_derivative_budget": {
+    "scope": "conditional diagnostic of the prior whole-ball Poisson volume adapter, not primary CST data",
+    "prior_density_ratios": [
+      1,
+      2,
+      4,
+      8
+    ],
+    "prior_lambda0": "read unchanged from current_verification.json",
+    "window": "prior symmetric (1,1) time windows, clipped to [0,T_end]",
+    "grid_step_x": "1/4",
+    "D1": "three-point central inside, three-point one-sided at endpoints",
+    "D2": "three-point central inside, three-point one-sided at endpoints",
+    "reference_V_over_V0": "(1-q*x)^2",
+    "H_adapter": "D1(V)/(3*V)",
+    "acceleration_adapter": "D2(V)/(3*V)-2*(D1(V)/V)^2/9",
+    "fixed_relative_volume_errors": [
+      0.01,
+      0.001,
+      0.0001,
+      1e-05,
+      5e-06,
+      1e-06
+    ],
+    "prospective_sufficient_volume_error": 5e-06,
+    "event_family": 60,
+    "familywise_alpha": 0.05,
+    "concentration": "P(abs(N/mu-1)>epsilon) <= 2*exp(-mu*epsilon^2/(2*(1+epsilon/3)))",
+    "interpretation": "sufficient bound; failure to certify is not an impossibility theorem, and covariance-aware or direct estimators may improve it"
+  },
+  "controls": [
+    "perfect declared interval",
+    "disjoint 6 percent deviation",
+    "overlap is HOLD",
+    "unknown uncertainty cannot pass",
+    "perfect classical data cannot qualify CST",
+    "shrinking Lcg with discreteness",
+    "shrinking domain at fixed expected N",
+    "mass-dependent time normalization",
+    "changed physical G",
+    "wrong density/length scaling",
+    "retuned tolerances",
+    "missing matching trajectory",
+    "shared initial velocity violates mass response",
+    "6/5 force violates target dynamics"
+  ],
+  "physical_eligibility": {
+    "D1": "OPEN",
+    "D2": "OPEN",
+    "D3": "OPEN",
+    "D4": "OPEN",
+    "D5": "PARTIAL_REFERENCE_ONLY",
+    "D6": "OPEN",
+    "D7": "OPEN",
+    "execution": "NOT_RUN",
+    "correspondence": "HOLD_NOT_ELIGIBLE",
+    "regularity": "HOLD_SEPARATE_DECISION"
+  },
+  "budget": {
+    "paid_runs": false,
+    "new_random_draws": 0,
+    "new_CST_ensembles": 0,
+    "allowed": "local deterministic and analytic controls only"
+  }
+}
