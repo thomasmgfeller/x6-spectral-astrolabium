@@ -1,0 +1,257 @@
+{
+  "git_base": "024a3de4ee7e616789c0103fc4e563becaf125b5",
+  "design_sha256": "a59330e20e6c8e105ec9593c4adcb820965ffb0bc1fe87ee007ee6453a197648",
+  "finite_currents": {
+    "orders": 1048,
+    "tested_masses": [
+      "1/4",
+      "4"
+    ],
+    "balance_tests_both_masses": 43584,
+    "inner_rows_with_both_coefficient_signs": 7259,
+    "minimal_inner_rows_with_exact_hidden_density_response": 2438,
+    "ideal_cuts_per_mass": 21792,
+    "orders_with_nonunique_positive_routing": 1047,
+    "maximal_path_histogram": {
+      "1": 1,
+      "2": 24,
+      "3": 122,
+      "4": 250,
+      "5": 289,
+      "6": 211,
+      "7": 95,
+      "8": 44,
+      "9": 10,
+      "10": 2
+    },
+    "mandatory_inner_vertices_histogram": {
+      "0": 786,
+      "1": 197,
+      "2": 51,
+      "3": 8,
+      "4": 5,
+      "7": 1
+    },
+    "mixed_incoming_coefficient_counts": {
+      "5": 5,
+      "6": 67,
+      "7": 976
+    },
+    "examples": {
+      "branching_order": {
+        "type": 2324,
+        "maximal_paths": 5,
+        "mandatory_inner_events": 0
+      }
+    },
+    "inherited_raw_flux": {
+      "empty_inner_densities": "0",
+      "only_one_minimal_density_positive": "-beta*w*(3*Delta+T3)/2",
+      "fixed_positive_mass_on_inherited_boundary_preparation": false
+    },
+    "marked_positive_flux": {
+      "initial_and_all_ideal_cut_masses": [
+        "1/4",
+        "4"
+      ],
+      "status": "CONDITIONAL_EXACT",
+      "comoving_area_from_marks": null
+    }
+  },
+  "reference": {
+    "masses": {
+      "1/4": {
+        "R_cubed_exact": "28125/32",
+        "radius": {
+          "bounds_exact": [
+            "47894339524597069/5000000000000000",
+            "95788679049194139/10000000000000000"
+          ],
+          "approx": 9.578867904919413
+        },
+        "area": {
+          "bounds_exact": [
+            "360319904920092907750777223504963760756171901951693403/312500000000000000000000000000000000000000000000000",
+            "2882559239360743322201195338677468871529341060758451887/2500000000000000000000000000000000000000000000000000"
+          ],
+          "approx": 1153.0236957442974
+        },
+        "initial_mass_and_comoving_surface": [
+          {
+            "shells": 8,
+            "angular_material_sectors": 128,
+            "Q0": "1/4",
+            "Q_star": "1/4",
+            "material_crossing_out": "0",
+            "material_crossing_in": "0",
+            "fixed_R9_tracer_crossing_in": "169/2048",
+            "fixed_R9_tracer_crossing_out": "0"
+          },
+          {
+            "shells": 16,
+            "angular_material_sectors": 128,
+            "Q0": "1/4",
+            "Q_star": "1/4",
+            "material_crossing_out": "0",
+            "material_crossing_in": "0",
+            "fixed_R9_tracer_crossing_in": "631/16384",
+            "fixed_R9_tracer_crossing_out": "0"
+          },
+          {
+            "shells": 32,
+            "angular_material_sectors": 128,
+            "Q0": "1/4",
+            "Q_star": "1/4",
+            "material_crossing_out": "0",
+            "material_crossing_in": "0",
+            "fixed_R9_tracer_crossing_in": "2611/131072",
+            "fixed_R9_tracer_crossing_out": "0"
+          }
+        ],
+        "rk4_checks_steps": [
+          32,
+          64,
+          128
+        ]
+      },
+      "4": {
+        "R_cubed_exact": "1125/2",
+        "radius": {
+          "bounds_exact": [
+            "82548181222365667/10000000000000000",
+            "20637045305591417/2500000000000000"
+          ],
+          "approx": 8.254818122236566
+        },
+        "area": {
+          "bounds_exact": [
+            "1070372382211533720068225463096401142638921049410191547/1250000000000000000000000000000000000000000000000000",
+            "133796547776441718250613566718281418441272849284648983/156250000000000000000000000000000000000000000000000"
+          ],
+          "approx": 856.297905769227
+        },
+        "initial_mass_and_comoving_surface": [
+          {
+            "shells": 8,
+            "angular_material_sectors": 128,
+            "Q0": "4",
+            "Q_star": "4",
+            "material_crossing_out": "0",
+            "material_crossing_in": "0",
+            "fixed_R9_tracer_crossing_in": "169/128",
+            "fixed_R9_tracer_crossing_out": "0"
+          },
+          {
+            "shells": 16,
+            "angular_material_sectors": 128,
+            "Q0": "4",
+            "Q_star": "4",
+            "material_crossing_out": "0",
+            "material_crossing_in": "0",
+            "fixed_R9_tracer_crossing_in": "169/128",
+            "fixed_R9_tracer_crossing_out": "0"
+          },
+          {
+            "shells": 32,
+            "angular_material_sectors": 128,
+            "Q0": "4",
+            "Q_star": "4",
+            "material_crossing_out": "0",
+            "material_crossing_in": "0",
+            "fixed_R9_tracer_crossing_in": "8379/8192",
+            "fixed_R9_tracer_crossing_out": "0"
+          }
+        ],
+        "rk4_checks_steps": [
+          32,
+          64,
+          128
+        ]
+      }
+    },
+    "Tstar": "5*sqrt(5)/6",
+    "radius_contrast_heavy_minus_light": {
+      "bounds_exact": [
+        "-1655062228353559/1250000000000000",
+        "-1324049782682847/1000000000000000"
+      ],
+      "approx": -1.324049782682847
+    },
+    "area_contrast_heavy_minus_light": {
+      "bounds_exact": [
+        "-741814474937675882064744412484666586251498961938068793/2500000000000000000000000000000000000000000000000000",
+        "-92726809367209471249550090068400923873626203382395437/312500000000000000000000000000000000000000000000000"
+      ],
+      "approx": -296.7257899750703
+    }
+  },
+  "same_current_metric_controls": {
+    "radii": {
+      "1/4": {
+        "0": {
+          "bounds_exact": [
+            "47894339524597069/5000000000000000",
+            "95788679049194139/10000000000000000"
+          ],
+          "approx": 9.578867904919413
+        },
+        "1": {
+          "bounds_exact": [
+            "335260376672179483/40000000000000000",
+            "670520753344358973/80000000000000000"
+          ],
+          "approx": 8.381509416804487
+        }
+      },
+      "4": {
+        "0": {
+          "bounds_exact": [
+            "82548181222365667/10000000000000000",
+            "20637045305591417/2500000000000000"
+          ],
+          "approx": 8.254818122236566
+        },
+        "1": {
+          "bounds_exact": [
+            "742933631001291003/80000000000000000",
+            "185733407750322753/20000000000000000"
+          ],
+          "approx": 9.286670387516137
+        }
+      }
+    },
+    "radius_contrast": {
+      "0": {
+        "bounds_exact": [
+          "-1655062228353559/1250000000000000",
+          "-1324049782682847/1000000000000000"
+        ],
+        "approx": -1.324049782682847
+      },
+      "1": {
+        "bounds_exact": [
+          "7241287765693203/8000000000000000",
+          "36206438828466023/40000000000000000"
+        ],
+        "approx": 0.9051609707116505
+      }
+    },
+    "qualification": "Auxiliary metrics preserve dust current, all comoving proper volumes and proper time. Only k=0 is asserted to satisfy the specified Einstein-dust evolution."
+  },
+  "physical_CST": {
+    "candidate": "CST-DUST-C1",
+    "status": "HOLD_NOT_ELIGIBLE",
+    "execution": "NOT_RUN",
+    "physical_mass_prepared": {
+      "1/4": null,
+      "4": null
+    },
+    "material_surface_at_Tstar": null,
+    "area_at_Tstar": {
+      "1/4": null,
+      "4": null
+    },
+    "radius_contrast_for_all_global_weights": null,
+    "new_dynamical_4D_histories": 0
+  }
+}

@@ -1,5 +1,13 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Unabhängige Schnittmasse, Wirkungsstrom und Vakuum · 20. November 2026
+
+Bei eingespeister markierter Schnittmasse $M=1/4$ kann die Stromladung am selben N15-Anfangskragen ihr Vorzeichen wechseln, wenn sich die inneren Uhrwerte ändern. Sowohl die staubfreie Kontrolle als auch die Kontrolle mit leerem Inneren und positivem Randpaket ergeben exakt null. Die Zusatzannahme der Studie ordnet dem markierten Fluss die Dichtegewichte über seine Verweildauer zu.
+
+Auf 956 der 1 048 Ordnungstypen lässt sich für die beiden untersuchten Uhrprofile keine gemeinsame positive Verstärkung innerhalb von ±2 % finden. Für die physikalische P3-Präparation fehlt weiterhin ein unabhängig kalibriertes Messpaar. **P3 steht auf HOLD_NOT_ELIGIBLE / NOT_RUN.**
+
+[Herleitung und Nachrechnung](cut_mass_charge_vacuum_v0_1/README.md) · [Gesamtergebnis](cut_mass_charge_vacuum_v0_1/results.json) · [Ergebnisse je Ordnungstyp](cut_mass_charge_vacuum_v0_1/by_type.json) · [Offline-Prüfpaket](packages/CST_DUST_Schnittmasse_Stromladung_Vakuum_v0_1.zip)
+
 ## Randpräparation für den Massensektor des Staubstroms · 20. November 2026
 
 Eine gemeinsame Verschiebung der vier Anfangsuhren liest die Stromladung der einzelnen Feldgeschichte aus der gekoppelten Wirkung aus. Bei der probeweisen Umrechnung $M=p$ sind die beiden 1-%-Fenster um 1/4 und 4 im ursprünglichen Uhrenbereich auf allen 1 048 N15-Endtypen erreichbar. Unter der Zusatzbedingung streng kausal wachsender Uhren bleibt das leichte Fenster auf 1 048 und das schwere auf 957 Endtypen erreichbar.

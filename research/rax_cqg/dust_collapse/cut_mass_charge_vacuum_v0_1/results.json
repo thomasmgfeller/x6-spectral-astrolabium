@@ -1,0 +1,475 @@
+{
+  "repo_commit": "9f2842a1e25deeeb3e5c1a923902392a05e47e75",
+  "design_sha256": "5eb987cf59fb78f9f19807e8e385c09add57eb3b25080ac41d5bbd3cac8446dd",
+  "supplement_sha256": "e7560b7ee31b025ee948f507b7ca2251f7f6b8935ad44c0c91704bc61a3c4a8e",
+  "upstream_P3": {
+    "checkpoints": 60,
+    "initial_time_records": 12,
+    "executions": {
+      "NOT_RUN": 60
+    }
+  },
+  "initial_density_insertion": {
+    "readout": "W=sum of seven inner integrated density weights; local unit-term source gives W=-2*dS/dzeta.",
+    "conditional_variable": "m_occ=W/(T7-T3), dimensionless probe only",
+    "scope": "symmetric auxiliary field measure at fixed outer clock; no imposed marks, no coherent Born pairing",
+    "lobe_centres": {
+      "1/16": {
+        "positive_conditional_means": 765,
+        "negative_conditional_means": 283,
+        "zero_conditional_means": 0,
+        "min_mean_p_over_m_occ": {
+          "exact_bounds": [
+            "-3379961049262170133101724074179504762234224/8573214099741123343688297338088161905153141",
+            "-1126653683087390044366708024726501587411408/2857738033247041114562765779362720635051047"
+          ],
+          "approx": -0.3942466629130645
+        },
+        "max_mean_p_over_m_occ": {
+          "exact_bounds": [
+            "3679191194302058983335757153946592290457308/2857738033247041114562765779362720635051047",
+            "1576796226129453850001193244548539553053132/1224744871391589049098328191155451700736163"
+          ],
+          "approx": 1.2874487274544406
+        }
+      },
+      "-1/16": {
+        "positive_conditional_means": 677,
+        "negative_conditional_means": 371,
+        "zero_conditional_means": 0,
+        "min_mean_p_over_m_occ": {
+          "exact_bounds": [
+            "-115044488818807744457388805034380882507248/85732140997411233436849205978327297977357",
+            "-18261029971239324517057408960191938529751824/13608276348795433878875673140227927004080291"
+          ],
+          "approx": -1.3419061682162077
+        },
+        "max_mean_p_over_m_occ": {
+          "exact_bounds": [
+            "249649248626007197563943419809045790194978088/122474487139158904909881058262051343036722619",
+            "174754474038205038294637338280591701978264/85732140997411233436849205978327297977357"
+          ],
+          "approx": 2.038377579343107
+        }
+      }
+    }
+  },
+  "tagged_finite_calibration": {
+    "orders": 1048,
+    "cuts_per_mass": 21792,
+    "marked_flux_checks": 65376,
+    "known_conditional_masses": [
+      "0",
+      "1/4",
+      "1"
+    ],
+    "all_cover_chain_profiles": {
+      "linear": {
+        "min_mean_p_per_M": {
+          "exact_bounds": [
+            "-9855430840186448933124433/7330098055278660458855121",
+            "-39421723360745795732499313/29320392221114641835421681"
+          ],
+          "approx": -1.3445155529794321
+        },
+        "max_mean_p_per_M": {
+          "exact_bounds": [
+            "59810310905781910629140309/25131764760955407287504298",
+            "14952577726445477657284469/6282941190238851821875818"
+          ],
+          "approx": 2.379869120798987
+        },
+        "positive_means": 735,
+        "negative_means": 313,
+        "zero_means": 0,
+        "max_density_weight_upper_at_M1": 0.5546554895386627
+      },
+      "square": {
+        "min_mean_p_per_M": {
+          "exact_bounds": [
+            "-60469637722297858455279985/56546470712149666396882362",
+            "-241878550889191433821129585/226185882848598665587538682"
+          ],
+          "approx": -1.069379520255457
+        },
+        "max_mean_p_per_M": {
+          "exact_bounds": [
+            "18735292235548735327281453/7446448818060861418519792",
+            "4683823058887183831820173/1861612204515215354629872"
+          ],
+          "approx": 2.516003627139361
+        },
+        "positive_means": 834,
+        "negative_means": 214,
+        "zero_means": 0,
+        "max_density_weight_upper_at_M1": 0.6714926412701866
+      }
+    },
+    "types_without_common_positive_gain_across_two_profiles_at_2pct": 956,
+    "two_event_routes": {
+      "types": 243,
+      "routes": 267
+    },
+    "selected_order": 2324,
+    "selected_route": [
+      3,
+      4,
+      13,
+      7
+    ]
+  },
+  "paired_readings": {
+    "end_type": 2324,
+    "route": [
+      3,
+      4,
+      13,
+      7
+    ],
+    "profiles": {
+      "1/3": {
+        "response": {
+          "0": {
+            "known_inlet_mass": "0",
+            "p_at_right_center": {
+              "exact_bounds": [
+                "0",
+                "0"
+              ],
+              "approx": 0.0
+            },
+            "p_at_left_center": {
+              "exact_bounds": [
+                "0",
+                "0"
+              ],
+              "approx": 0.0
+            },
+            "auxiliary_mean_p": {
+              "exact_bounds": [
+                "0",
+                "0"
+              ],
+              "approx": 0.0
+            },
+            "coherent": {
+              "1/8": {
+                "complex_charge_insertion_over_amplitude": [
+                  -0.0,
+                  -0.0
+                ],
+                "amplitude_with_common_packet_normalization_removed": [
+                  -0.83895380075,
+                  0.53855574151
+                ],
+                "128_to_256_absolute_change_below": 3e-09
+              },
+              "1/4": {
+                "complex_charge_insertion_over_amplitude": [
+                  0.0,
+                  -0.0
+                ],
+                "amplitude_with_common_packet_normalization_removed": [
+                  -0.47804362422,
+                  0.87151900665
+                ],
+                "128_to_256_absolute_change_below": 3e-09
+              }
+            }
+          },
+          "1/4": {
+            "known_inlet_mass": "1/4",
+            "p_at_right_center": {
+              "exact_bounds": [
+                "-18310586860482026223233793538995464847705/1632993161855452065464437588207268934314884",
+                "-54931760581446078669543568116986394543115/4898979485566356196393312764621806802944652"
+              ],
+              "approx": -0.01121289867477279
+            },
+            "p_at_left_center": {
+              "exact_bounds": [
+                "8293436938575067827900596550059980790547445/54433105395181735515502692560911708016321164",
+                "7464093244717561045106419867606289397645/48989794855663561963913831987615598844204"
+              ],
+              "approx": 0.15236016535094063
+            },
+            "auxiliary_mean_p": {
+              "exact_bounds": [
+                "132122924639158904909865/1861612204515215354629948",
+                "33030731159789726227465/465403051128803838657468"
+              ],
+              "approx": 0.07097231330924003
+            },
+            "coherent": {
+              "1/8": {
+                "complex_charge_insertion_over_amplitude": [
+                  0.0710189419,
+                  0.00478656108
+                ],
+                "amplitude_with_common_packet_normalization_removed": [
+                  -0.83340161845,
+                  0.54504984423
+                ],
+                "128_to_256_absolute_change_below": 3e-09
+              },
+              "1/4": {
+                "complex_charge_insertion_over_amplitude": [
+                  0.07101995035,
+                  0.00925906055
+                ],
+                "amplitude_with_common_packet_normalization_removed": [
+                  -0.46943907125,
+                  0.87335390715
+                ],
+                "128_to_256_absolute_change_below": 3e-09
+              }
+            }
+          },
+          "1": {
+            "known_inlet_mass": "1",
+            "p_at_right_center": {
+              "exact_bounds": [
+                "-18310586860482026223233793538995464847705/408248290463863016366109397051817233578721",
+                "-54931760581446078669543568116986394543115/1224744871391589049098328191155451700736163"
+              ],
+              "approx": -0.04485159469909116
+            },
+            "p_at_left_center": {
+              "exact_bounds": [
+                "8293436938575067827900596550059980790547445/13608276348795433878875673140227927004080291",
+                "7464093244717561045106419867606289397645/12247448713915890490978457996903899711051"
+              ],
+              "approx": 0.6094406614037625
+            },
+            "auxiliary_mean_p": {
+              "exact_bounds": [
+                "132122924639158904909865/465403051128803838657487",
+                "33030731159789726227465/116350762782200959664367"
+              ],
+              "approx": 0.2838892532369601
+            },
+            "coherent": {
+              "1/8": {
+                "complex_charge_insertion_over_amplitude": [
+                  0.28400969192,
+                  0.04624483436
+                ],
+                "amplitude_with_common_packet_normalization_removed": [
+                  -0.81305485602,
+                  0.56185811157
+                ],
+                "128_to_256_absolute_change_below": 3e-09
+              },
+              "1/4": {
+                "complex_charge_insertion_over_amplitude": [
+                  0.28398866935,
+                  0.0644336639
+                ],
+                "amplitude_with_common_packet_normalization_removed": [
+                  -0.44179703969,
+                  0.87470845452
+                ],
+                "128_to_256_absolute_change_below": 3e-09
+              }
+            }
+          }
+        },
+        "gain_from_positive_standard": {
+          "exact_bounds": [
+            "116350762782200959664367/33030731159789726227465",
+            "465403051128803838657487/132122924639158904909865"
+          ],
+          "approx": 3.5225003715280048
+        },
+        "independent_action_difference_validation": {
+          "gain_from_quarter": 3.5225003715,
+          "inferred_mass_at_held_out_unit_dose": 1.0
+        }
+      },
+      "11/24": {
+        "response": {
+          "0": {
+            "known_inlet_mass": "0",
+            "p_at_right_center": {
+              "exact_bounds": [
+                "0",
+                "0"
+              ],
+              "approx": 0.0
+            },
+            "p_at_left_center": {
+              "exact_bounds": [
+                "0",
+                "0"
+              ],
+              "approx": 0.0
+            },
+            "auxiliary_mean_p": {
+              "exact_bounds": [
+                "0",
+                "0"
+              ],
+              "approx": 0.0
+            },
+            "coherent": {
+              "1/8": {
+                "complex_charge_insertion_over_amplitude": [
+                  -0.0,
+                  -0.0
+                ],
+                "amplitude_with_common_packet_normalization_removed": [
+                  -0.79844608774,
+                  0.59740114521
+                ],
+                "128_to_256_absolute_change_below": 3e-09
+              },
+              "1/4": {
+                "complex_charge_insertion_over_amplitude": [
+                  0.0,
+                  -0.0
+                ],
+                "amplitude_with_common_packet_normalization_removed": [
+                  -0.41475056267,
+                  0.90424949792
+                ],
+                "128_to_256_absolute_change_below": 3e-09
+              }
+            }
+          },
+          "1/4": {
+            "known_inlet_mass": "1/4",
+            "p_at_right_center": {
+              "exact_bounds": [
+                "20149153144025344363589324298611791395967/3265986323710904130928875176414537868629768",
+                "60447459432076033091092972895835374187901/9797958971132712392786625529243613605889304"
+              ],
+              "approx": 0.006169392994007188
+            },
+            "p_at_left_center": {
+              "exact_bounds": [
+                "57024468347757667803224934340467850166270071/326598632371090413093016155365470248097926984",
+                "17107340504327300340957629155776352433877/97979589711327123927827663975231197688408"
+              ],
+              "approx": 0.17460106288187052
+            },
+            "auxiliary_mean_p": {
+              "exact_bounds": [
+                "338032055233688152765649/3723224409030430709259896",
+                "84508013808422038191409/930806102257607677314936"
+              ],
+              "approx": 0.09079013728364428
+            },
+            "coherent": {
+              "1/8": {
+                "complex_charge_insertion_over_amplitude": [
+                  0.09083690097,
+                  0.0048610174
+                ],
+                "amplitude_with_common_packet_normalization_removed": [
+                  -0.78978612687,
+                  0.60659990643
+                ],
+                "128_to_256_absolute_change_below": 3e-09
+              },
+              "1/4": {
+                "complex_charge_insertion_over_amplitude": [
+                  0.09083680637,
+                  0.00946588488
+                ],
+                "amplitude_with_common_packet_normalization_removed": [
+                  -0.4020143493,
+                  0.90646238273
+                ],
+                "128_to_256_absolute_change_below": 3e-09
+              }
+            }
+          },
+          "1": {
+            "known_inlet_mass": "1",
+            "p_at_right_center": {
+              "exact_bounds": [
+                "20149153144025344363589324298611791395967/816496580927726032732218794103634467157442",
+                "60447459432076033091092972895835374187901/2449489742783178098196656382310903401472326"
+              ],
+              "approx": 0.024677571976028753
+            },
+            "p_at_left_center": {
+              "exact_bounds": [
+                "57024468347757667803224934340467850166270071/81649658092772603273254038841367562024481746",
+                "17107340504327300340957629155776352433877/24494897427831780981956915993807799422102"
+              ],
+              "approx": 0.6984042515274821
+            },
+            "auxiliary_mean_p": {
+              "exact_bounds": [
+                "338032055233688152765649/930806102257607677314974",
+                "84508013808422038191409/232701525564401919328734"
+              ],
+              "approx": 0.3631605491345771
+            },
+            "coherent": {
+              "1/8": {
+                "complex_charge_insertion_over_amplitude": [
+                  0.36317500994,
+                  0.05789494559
+                ],
+                "amplitude_with_common_packet_normalization_removed": [
+                  -0.75718608311,
+                  0.62850342319
+                ],
+                "128_to_256_absolute_change_below": 3e-09
+              },
+              "1/4": {
+                "complex_charge_insertion_over_amplitude": [
+                  0.36312258328,
+                  0.07678811191
+                ],
+                "amplitude_with_common_packet_normalization_removed": [
+                  -0.36098551526,
+                  0.90488347035
+                ],
+                "128_to_256_absolute_change_below": 3e-09
+              }
+            }
+          }
+        },
+        "gain_from_positive_standard": {
+          "exact_bounds": [
+            "232701525564401919328734/84508013808422038191409",
+            "930806102257607677314974/338032055233688152765649"
+          ],
+          "approx": 2.7536030617395832
+        },
+        "independent_action_difference_validation": {
+          "gain_from_quarter": 2.7536030617,
+          "inferred_mass_at_held_out_unit_dose": 1.0
+        }
+      }
+    },
+    "positive_mass_zero_charge": {
+      "offset": "1/16",
+      "k_exact": "(23/16 - Delta)/(3*(4*Delta - 1/16))",
+      "k_approx": 0.41396782969631923,
+      "p": "0"
+    },
+    "true_dust_vacuum": {
+      "scope": "all w=0, separate collar preparation",
+      "p": "0"
+    },
+    "matched_empty_interior": {
+      "scope": "same positive outer packet with w_inner=0",
+      "p": "0"
+    },
+    "tag_of_known_unit_validates_same_profile_mean_gain": true,
+    "common_2pct_gain_for_the_two_route_profiles": false
+  },
+  "physical": {
+    "independent_positive_cut_mass_same_CST_preparation": null,
+    "measured_physical_charge_for_that_mass": null,
+    "physical_vacuum_readout_same_protocol": null,
+    "physical_gain": null,
+    "physical_area": null,
+    "P3": "HOLD_NOT_ELIGIBLE",
+    "dynamics": "NOT_RUN"
+  }
+}
