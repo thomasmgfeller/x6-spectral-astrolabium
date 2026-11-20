@@ -1,5 +1,13 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## N15-Ladungsverteilung über das Gewichtsintervall und Überlapp der Vorzeichenzweige · 20. November 2026
+
+Für die primäre Kettenfortsetzung bei markierter Masse $M=1/4$ und Dichtezentrum $r=1/8$ liegt der positive Anteil im Sechsklassenregister zwischen 92,2049 % und 92,2307 %, wenn $A/B$ entlang der geprüften Verbindung von 1 auf 1/3 sinkt. Bei festem $A/B=1$ verschiebt ein zweiter Kettenzeuge mit denselben 70 N13-Präfixgewichten diesen Anteil um 4,84 Prozentpunkte.
+
+Der normierte Betrag des Überlapps zwischen den beiden unregistrierten Vorzeichenzweigen liegt in den zwölf H3-Basisfällen zwischen 0,01130 und 0,07696. Offen ist, ob die Stromselektion mit den Nullrichtungen des gekoppelten physikalischen Skalarprodukts verträglich ist und die Randdaten einen messbaren Vorzeichenrecord tragen. Alle 60 P3-Checkpoints stehen auf **NOT_RUN**.
+
+[Herleitung und Nachrechnung](n15_charge_interval_record_v0_1/README.md) · [144 Intervallwerte](n15_charge_interval_record_v0_1/intervalle.csv) · [Zwölf Vorzeichenüberlapps](n15_charge_interval_record_v0_1/ueberlapp.csv) · [Original-Prüfpaket](packages/CST_DUST_N15_Intervall_und_Ladungsrecord_Pruefung.zip)
+
 ## Ladungsverteilung des gemeinsam präparierten N15-Ensembles · 20. November 2026
 
 Im H3-Referenzraum tragen beide Elternordnungen gemeinsam zu 453 N15-Endtypen bei. Bei markierter Masse $M=1/4$, Anfangsdichtezentrum $r=1/8$ und lokalem Verhältnis $A:B=1:1$ entfallen im Sechsklassenregister 92,20 % auf positive Ladungen. Eine zweite zulässige Fortsetzung des Kettenzweigs ergibt bei denselben 70 älteren Präfixgewichten 97,05 %. Die Wachstumsgewichte beeinflussen also die Verteilung bei gleicher Präparation und Auslese.
