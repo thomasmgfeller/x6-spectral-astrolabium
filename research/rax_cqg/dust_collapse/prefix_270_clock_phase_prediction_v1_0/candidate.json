@@ -1,0 +1,24 @@
+{
+  "source_commit": "8723cba93224931a6fdffc525c798524ab38bebb",
+  "study": "Prospective transfer of the dust-clock phase prediction",
+  "prefix": 270,
+  "family": "chain",
+  "selection": "Smallest marked prefix in the chain family with an inner five-point order non-isomorphic to prefix 1564, at least two end types and full disjointness from the original ten end types. Selection uses only archived incidence data.",
+  "dimensions": {
+    "marked_paths": 15,
+    "distinct_end_types": 11
+  },
+  "densities": [
+    "1/8",
+    "1/4"
+  ],
+  "endpoint": "Worst ratio of unnormalized inclusive exterior squared norms over nonzero complex weights at both densities, the same weights in numerator and denominator.",
+  "mask": "sign(U6) on both lobes, six reversals per lobe; same preparation as prefix 1564",
+  "threshold_ratio": "1/100",
+  "data_for_future_run": {
+    "targets": 22,
+    "unmodulated_split_controls": 22
+  },
+  "stop_rule": "HOLD if integrator applicability, scalar Gram bounds, nonzero reference denominator or total error qualification fails. Do not replace the prefix on an unfavourable outcome. No modulated targets in the present work.",
+  "stage": "Prospective candidate and qualification rule; final registration follows qualification."
+}
