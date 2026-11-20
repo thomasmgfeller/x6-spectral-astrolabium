@@ -1,0 +1,64 @@
+{
+  "study": "CST-DUST, prefix 1564, six within-lobe phase reversals",
+  "version": "1.0",
+  "registered_at": "2026-11-20T09:35:33+01:00",
+  "status_at_lock": "REGISTERED / NOT_RUN",
+  "physical_target_integrals_evaluated_at_lock": 0,
+  "source_main_commit": "1638acd19961c840fb0b3d35135a947e4dba0f4e",
+  "reference_bundle_sha256": "05968e2c6afeb263c66faa15255e1499b7cd6a90a6ff2b6510fd6b48cbc4c1c5",
+  "densities": [
+    "1/8",
+    "1/4"
+  ],
+  "end_types": [
+    766,
+    926,
+    990,
+    1790,
+    2013,
+    2014,
+    2015,
+    5374,
+    5566,
+    27006
+  ],
+  "preparation": {
+    "lobe": "T3=-2*Delta+h/16+u/32, h=+/-1, |u|<=1",
+    "amplitude_mask": "sign(U6(u)); value +1 at the roots",
+    "U6_coefficients_degree_0_through_6": [
+      -1,
+      0,
+      24,
+      0,
+      -80,
+      0,
+      64
+    ],
+    "applied_to": "both lobes",
+    "held_fixed": "incoming pointwise intensity, both lobe supports and amplitudes, scalar preparation, all field measures, collar pairing, all history coefficients for each comparison"
+  },
+  "primary_endpoint": "maximum over both densities and nonzero complex q of the ratio of unnormalized inclusive exterior squared norms, modulated / reference",
+  "decision": {
+    "threshold_ratio": "1/100",
+    "new_amplitude_radius_max": "1/50000",
+    "control": "same seven intervals with positive signs; all 20 reference disks must overlap their archived disks",
+    "PASS": "complete qualified run, U_rho <= 1/100 for both densities",
+    "FAIL": "complete qualified run, L_rho > 1/100 for at least one density",
+    "HOLD": "incomplete data, invalid control or error budget, or an interval that leaves the joint decision unresolved"
+  },
+  "primary_analysis": "score.py, qualified new complex disks from the seven-segment integration described in Protokoll.md",
+  "research_gates": {
+    "stage_6": "HOLD",
+    "P3": "HOLD"
+  },
+  "frozen_files_sha256": {
+    "Protokoll.md": "783114616630ab3803cfc2bbfcfe2effda2c871f9a68397455382547006519d2",
+    "README.md": "93be33d9a53b408e48fe3676cf964da9be5c9ed9c02d5b27542d9aa09e9d4309",
+    "baseline.py": "422b1c86cff204381efc07fe03736bf418c0b595c58d79b717d755f6d64368b8",
+    "certificate.json": "6adc28db5e2ba0039794d6563edde132aace60cde423c40fa6867c9f2514a88e",
+    "run_later.py": "3cc1fbd7aa4f7a2dc48292566a47abe52ab440b34048da13db45b5baaf94cf38",
+    "score.py": "fd12cdb4b12a86f451d57afcfb6e5dc3130154a2787251302f0d5f7e41574aea",
+    "verify_registration.py": "efda147607cfb3c6afd85214e70791d84e3fb7851147e60820fc76eca568fab4",
+    "reference.zip": "05968e2c6afeb263c66faa15255e1499b7cd6a90a6ff2b6510fd6b48cbc4c1c5"
+  }
+}
