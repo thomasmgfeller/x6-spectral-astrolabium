@@ -1,0 +1,17 @@
+{
+  "parent_commit": "3ff8475e856758e9072c48e6db1006c085adbafe",
+  "common_collar": "one collective past density r for nodes 0..3 and one variable clock t=T3; other external clocks affine and all future densities 1/8",
+  "density_measure": "(delta_0+dr on (0,1))/2",
+  "clock_measure": "dt/3 on [-3/2,3/2]",
+  "density_centers": [0.125, 0.25],
+  "density_half_width": 0.03125,
+  "clock_offsets_from_affine_T3": [-0.0625, 0.0625],
+  "clock_lobe_half_width": 0.03125,
+  "preparation": "Normalized indicators on the density window and two disjoint clock lobes, equal real superposition. Change density center only. Also run separate sign-flip and action-phase compensation controls.",
+  "dephasing": "Equiprobable mixture of the two individually normalized clock lobes, same density wavefunction and future instrument. Equivalent to randomizing the relative sign.",
+  "analyser": "Constant normalized 1 on the full probability space of (r,t). Inherited H3 quotient, omega0=omega1=1/2, centered scalar Gaussian, q7 pointer g=sigma=1.",
+  "fixed_clock_controls": "Evaluate the two lobe centers and affine T3 at sharp r=1/8 and 1/4, unchanged scalar input.",
+  "quadrature_inner_outer": [[64, 8], [96, 12]],
+  "absolute_replay_tolerance": 5e-12,
+  "scope": "Conditional collective-coordinate preparation on two finite N11 histories; physical boundary measure and geometric dynamics remain open."
+}
