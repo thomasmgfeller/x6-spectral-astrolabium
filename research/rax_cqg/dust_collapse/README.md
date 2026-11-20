@@ -1,5 +1,13 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Bleibt das Stromvorzeichen am Zukunftsrand erhalten? · 20. November 2026
+
+Für den N15-Typ 375841 bei markierter Masse $M=1/4$ und Anfangsdichtezentrum $r=1/8$ tragen zwei offene Bereiche innerer Feldbelegungen strikt entgegengesetzte Stromvorzeichen. Beide haben dieselben inneren Uhren und dieselbe Gesamtdichte, und ihre Wirkungen stimmen paarweise überein. Auch wenn drei späte Uhren und vier Zukunftsdichten einzeln ausgelesen werden, liefern die zwei Pakete an jedem getesteten Randwert dieselbe nichtverschwindende Amplitude. Ihre Differenz hat Randnorm null. Die positive Vorzeichenselektion gibt dieser Differenz positive Norm und ist daher auf dem Quotienten der untersuchten Referenzpaarung nicht wohldefiniert.
+
+Die vorausgehende Standortprüfung enthält die Einzeltyp-Zeugen 375841 und 42429 sowie den gepaarten Vergleich der Historiengewichte. Ob die physikalischen Constraints beide Pakete im selben Zustandsraum zulassen und welche zusätzliche Randinformation eine Strommessung tragen kann, bleibt offen. Alle 60 P3-Checkpoints stehen auf **NOT_RUN**.
+
+[Teilartikel (PDF)](reports/CST_DUST_N15_Erster_Randtest.pdf) · [Randtest und Nachrechnung](n15_future_boundary_v0_1/README.md) · [Prüfpaket zum Randtest](packages/CST_DUST_N15_Erster_Randtest_Pruefpaket.zip) · [Standortprüfung und Vorzeichenzeugen](n15_sign_record_audit_v0_1/README.md) · [Prüfpaket zur Standortprüfung](packages/CST_DUST_N15_Standortpruefung_und_Vorzeichenzeugen.zip)
+
 ## N15-Ladungsverteilung über das Gewichtsintervall und Überlapp der Vorzeichenzweige · 20. November 2026
 
 Für die primäre Kettenfortsetzung bei markierter Masse $M=1/4$ und Dichtezentrum $r=1/8$ liegt der positive Anteil im Sechsklassenregister zwischen 92,2049 % und 92,2307 %, wenn $A/B$ entlang der geprüften Verbindung von 1 auf 1/3 sinkt. Bei festem $A/B=1$ verschiebt ein zweiter Kettenzeuge mit denselben 70 N13-Präfixgewichten diesen Anteil um 4,84 Prozentpunkte.
