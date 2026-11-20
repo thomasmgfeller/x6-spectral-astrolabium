@@ -1,5 +1,13 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Früher Arealradius bei zwei Staubmassen · 20. November 2026
+
+Bei der gemeinsamen Staubeigenzeit $T_*=5\sqrt{5}/6$ sind die klassischen 5-%-Radiusbänder für $M=1/4$ und $M=4$ erstmals auf dem P3-Gitter getrennt. Zwischen ihnen liegen rund 0,4324 Radiuseinheiten. Für die gekoppelten Historien fehlt eine kalibrierte Flächenauslese der materiellen Oberfläche. **P3 steht auf HOLD_NOT_ELIGIBLE / NOT_RUN.**
+
+Am Präfix 1564 haben die zulässigen lokalen Gewichte unter den geprüften Vier-Marken-Bedingungen weiterhin neun unabhängige Richtungen. Von den 1 048 geprüften N15-Endtypen enthalten 147 eine Vierer-Antikette. Keiner enthält zwei disjunkte Vierer-Antiketten für die untersuchte direkte Darstellung zweier Oberflächenschnitte.
+
+[Herleitung und Nachrechnung](early_areal_radius_two_masses_v0_1/README.md) · [Ergebnisse](early_areal_radius_two_masses_v0_1/results.json) · [Rationale Gewichtszertifikate](early_areal_radius_two_masses_v0_1/weight_certificates.json) · [Offline-Prüfpaket](packages/CST_DUST_Frueher_Arealradius_Zwei_Massen_v0_1.zip)
+
 ## Kettenpräfix 270 · Erster vorregistrierter Staubuhr-Ziellauf · 20. November 2026
 
 **PASS.** Bei sechs Phasenumkehrungen je Staubuhrlappen beträgt die obere Grenze des äusseren skalaren Normquadrats bei Dichte 1/8 **0,000786 %** und bei Dichte 1/4 **0,000797 %** des jeweiligen Referenzwerts. Die Vorregistrierung legte für beide Dichten **1 %** fest. Die angegebenen Obergrenzen sind nach aussen gerundet. Die Untergrenzen betragen null.
