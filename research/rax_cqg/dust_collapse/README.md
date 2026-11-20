@@ -1,5 +1,13 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Vorregistrierter Staubuhrtest am Präfix 1564 · Ziellauf 001 · 20. November 2026
+
+**PASS.** Für sechs Phasenumkehrungen je Staubuhrlappen beträgt die Obergrenze des äusseren Normquadrats bei Dichte 1/8 **0,002197 %** und bei Dichte 1/4 **0,002217 %** des jeweiligen Referenzwerts. Die vorab festgelegte Schwelle lag bei **1 %**. Die Grenzen gelten für jeden festen, von null verschiedenen komplexen Gewichtsvektor der zehn Endtypen. Alle 20 Kontrollen ohne Phasenumkehr stimmen innerhalb der Fehlerkreise mit der Referenz überein. Beide Intervalle haben die Untergrenze null.
+
+Das Ergebnis gilt für das endliche Modell und die registrierte Randpräparation. Die physikalische Wahl der Historiengewichte bleibt offen. **Etappe 6 und P3 bleiben auf HOLD.**
+
+[Bericht und Reproduktion](prefix_1564_clock_phase_run_001/README.md) · [Rohdaten](prefix_1564_clock_phase_run_001/target_run_001.json) · [Exakte Auswertung](prefix_1564_clock_phase_run_001/score_001.json) · [Originalpaket (ZIP)](packages/CST_DUST_Praefix_1564_Uhrphase_Ziellauf_001.zip) · [Vorregistrierung](prefix_1564_clock_phase_prediction_v1_0/registration.json)
+
 ## Präfix 1564 vom Rangtest zur vorregistrierten Uhrvorhersage · 20. November 2026
 
 Am markierten N13-Präfix 1564 führen 16 Fortsetzungen zu zehn N14-Endtypen. Bei fester N13-Marginale und austauschbaren Einfügungsmarken bleiben neun unabhängige Verschiebungen der normierten Gewichte möglich. Die aus der Wirkung hergeleitete Randabbildung unterscheidet alle neun auch am äusseren skalaren Rand, sowohl bei Dichte 1/8 als auch bei 1/4. Welche Gewichte die Physik auswählt, bleibt offen. **Etappe 6 und P3 bleiben auf HOLD.**
@@ -11,7 +19,7 @@ Am markierten N13-Präfix 1564 führen 16 Fortsetzungen zu zehn N14-Endtypen. Be
 | Alle neun Richtungen am äusseren Rand prüfen | [Ergebnis und Prüfer](prefix_1564_nine_directions_v0_1/README.md) · [PDF](reports/CST_DUST_Praefix_1564_Neun_Richtungen_v0_1.pdf) | [ZIP](packages/CST_DUST_Praefix_1564_Neun_Richtungen_v0_1_Pruefpaket.zip) |
 | Vorhersage für sechs Phasenumkehrungen je Staubuhrlappen | [Protokoll](prefix_1564_clock_phase_prediction_v1_0/Protokoll.md) · [Registrierung](prefix_1564_clock_phase_prediction_v1_0/registration.json) · [PDF](reports/CST_DUST_Praefix_1564_Vorhersage_Uhrphase_v1_0.pdf) | [ZIP](packages/CST_DUST_Praefix_1564_Vorhersage_Uhrphase_v1_0_Pruefpaket.zip) |
 
-Die Vorhersage gilt für beide Dichten und jeden festen, von null verschiedenen komplexen Gewichtsvektor. Nach sechs Phasenumkehrungen je Lappen soll das unnormierte äussere Normquadrat höchstens **1 %** seines Referenzwerts betragen. Der Zieltest steht bei Veröffentlichung auf **REGISTERED / NOT_RUN**. Die am 20. November 2026 um 09:35:33 Uhr Schweizer Zeit festgelegte Registrierung hat SHA-256 `8665610801ec890ead3da7659fd55d79a2ed56efd3fe3635b7baf283afbd619a`.
+Die Vorhersage gilt für beide Dichten und jeden festen, von null verschiedenen komplexen Gewichtsvektor. Nach sechs Phasenumkehrungen je Lappen soll das unnormierte äussere Normquadrat höchstens **1 %** seines Referenzwerts betragen. Bei Veröffentlichung der Vorregistrierung in PR #327 stand der Zieltest auf **REGISTERED / NOT_RUN**. Die am 20. November 2026 um 09:35:33 Uhr Schweizer Zeit festgelegte Registrierung hat SHA-256 `8665610801ec890ead3da7659fd55d79a2ed56efd3fe3635b7baf283afbd619a`.
 
 ## Selektionsgleichung am Präfix 1564 · v0.1 · 19. November 2026
 
