@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "source_commit": "397f867ba5318127cd9f7fbefbb0b388c8cdae05",
+  "type": 375841,
+  "mass": "1/4",
+  "initial_density_center": "1/8",
+  "cell_halfwidth": "1/10000000",
+  "future_halfwidth": "1/1048576",
+  "reference_inner_order": [4,5,6,11,12,13,14],
+  "ordered_packet_axes": [5,12,13],
+  "number_of_extensions": 35,
+  "exact_tests": [
+    "Enumerate every topological birth order and check against all order-preserving shuffles of the two chains. Keep every decorated input attached to its event.",
+    "On each new relation independently reconstruct all interval coefficients, the scalar Hessian, the gravitational action, maximal dust paths, dwell profiles, packet axes and pulled-back ordered collars. Require exact equality after transport.",
+    "Recompute charge at both centers and bound each entire cell with rational intervals. Match the published centers and bounds exactly.",
+    "For both packets prove pointwise transport of complex integrands, domain and absolute Jacobian. Pullback equality of both functions on the complete future box entails equality of all four unnormalized Gram entries. Determine positive rank and selector descent on the published two-packet space.",
+    "Check the archived fixed endpoint-weight (basis, local A:B = 1:1) by isomorphism lookup from each new order. Compare the conditional type with unit weight separately. PR #338 does not specify elementary birth transition factors."
+  ],
+  "numerical_check": {
+    "inner_sobol_seed": 375841,
+    "outer_sobol_seed": 338,
+    "inner_points": [64,128],
+    "outer_points": [16,32],
+    "absolute_plus_relative_tolerance": 2e-8,
+    "compare": ["two complex packet functions at common future points", "H3 Gaussian precision and complex prefactor", "all four complex entries of the future-integrated Gram matrix before trace normalization"],
+    "scaling": "Common coordinate volumes and the central DT^14 factor are removed in every labeling. Use the normalized outer measure. No phase fit and no independent rescaling by labeling.",
+    "resolution_change": "Diagnostic only. Pointwise algebraic transport supplies the exact covariance statement."
+  },
+  "negative_controls": [
+    "At the adjacent birth exchange of 5 and 6, leave the density-translation mark for 5 on its old birth slot. Its exact center current must disagree with the reference.",
+    "Reverse the sign selectors. Exact center sign identification must fail even when the two-by-two Gram matrix is unchanged."
+  ],
+  "classification": "PASS only if all 35 comparisons meet all applicable checks and both deliberate faults are detected. On failure report first labeling and affected quantity. No general quantum growth or P3 gate is implied."
+}

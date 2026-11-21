@@ -1,12 +1,20 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Welche Information über das Stromvorzeichen bleibt nach der skalaren Randreduktion erhalten? · 21. November 2026
+
+Auf Typ 375841 liefern zwei Pakete mit entgegengesetztem Stromvorzeichen dasselbe Randbild. Der Vergleich aller 35 zulässigen Geburtsreihenfolgen bestätigt das Ergebnis für beide Randamplituden und alle vier Einträge der Dekohärenzmatrix. Im Ensemble aus 453 Endtypen bleibt das Vorzeichen statistisch unterscheidbar. Die überarbeitete Fassung nennt die Messregel und die Historiengewichte zu jeder Verteilung.
+
+Die heutige Randpaarung bestimmt kein physikalisches Verhältnis der Sektornormen. Eine bei der Markermasse $M=1/4$ geeichte Ladungsauslese reproduziert bei gleichem Uhrprofil die Prüfmassen $1/2$ und $1$ exakt. Bei den zwei geprüften Profilwechseln beträgt der Fehler ohne Nachanpassung +9,31 % beziehungsweise +27,92 %. Die physikalische Ruhemasse und die intrinsische Fläche derselben mitbewegten Stauboberfläche bleiben offen. Die acht frühen physischen Radiuswerte bei $T_*=5\sqrt{5}/6$ stehen auf `NOT_RUN`.
+
+[Teilartikel (PDF)](reports/CST_DUST_N15_Erster_Randtest.pdf) · [Editierbares Manuskript](reports/CST_DUST_N15_Stromvorzeichen_Teilartikel.md) · [Kovarianzprüfung mit Ergebnissen für alle 35 Beschriftungen](n15_birth_covariance_v0_1/README.md) · [Kovarianzprüfung (ZIP)](packages/CST_DUST_N15_Kovarianz_35_Geburtsreihenfolgen.zip) · [Sektornorm und Ruhemasse mit Transfertest](n15_sector_norm_rest_mass_v0_1/README.md) · [Sektornorm und Ruhemasse (ZIP)](packages/CST_DUST_N15_Sektornorm_und_Ruhemasse_v0_1.zip)
+
 ## Bleibt das Stromvorzeichen am Zukunftsrand erhalten? · 20. November 2026
 
 Für den N15-Typ 375841 bei markierter Masse $M=1/4$ und Anfangsdichtezentrum $r=1/8$ tragen zwei offene Bereiche innerer Feldbelegungen strikt entgegengesetzte Stromvorzeichen. Beide haben dieselben inneren Uhren und dieselbe Gesamtdichte, und ihre Wirkungen stimmen paarweise überein. Auch wenn drei späte Uhren und vier Zukunftsdichten einzeln ausgelesen werden, liefern die zwei Pakete an jedem getesteten Randwert dieselbe nichtverschwindende Amplitude. Ihre Differenz hat Randnorm null. Die positive Vorzeichenselektion gibt dieser Differenz positive Norm und ist daher auf dem Quotienten der untersuchten Referenzpaarung nicht wohldefiniert.
 
 Die vorausgehende Standortprüfung enthält die Einzeltyp-Zeugen 375841 und 42429 sowie den gepaarten Vergleich der Historiengewichte. Ob die physikalischen Constraints beide Pakete im selben Zustandsraum zulassen und welche zusätzliche Randinformation eine Strommessung tragen kann, bleibt offen. Alle 60 P3-Checkpoints stehen auf **NOT_RUN**.
 
-[Teilartikel (PDF)](reports/CST_DUST_N15_Erster_Randtest.pdf) · [Randtest und Nachrechnung](n15_future_boundary_v0_1/README.md) · [Prüfpaket zum Randtest](packages/CST_DUST_N15_Erster_Randtest_Pruefpaket.zip) · [Standortprüfung und Vorzeichenzeugen](n15_sign_record_audit_v0_1/README.md) · [Prüfpaket zur Standortprüfung](packages/CST_DUST_N15_Standortpruefung_und_Vorzeichenzeugen.zip)
+[Erstfassung des Teilartikels (PDF)](n15_future_boundary_v0_1/CST_DUST_N15_Erster_Randtest.pdf) · [Randtest und Nachrechnung](n15_future_boundary_v0_1/README.md) · [Prüfpaket zum Randtest](packages/CST_DUST_N15_Erster_Randtest_Pruefpaket.zip) · [Standortprüfung und Vorzeichenzeugen](n15_sign_record_audit_v0_1/README.md) · [Prüfpaket zur Standortprüfung](packages/CST_DUST_N15_Standortpruefung_und_Vorzeichenzeugen.zip)
 
 ## N15-Ladungsverteilung über das Gewichtsintervall und Überlapp der Vorzeichenzweige · 20. November 2026
 
