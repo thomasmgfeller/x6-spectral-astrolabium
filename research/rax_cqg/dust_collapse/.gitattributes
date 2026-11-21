@@ -55,3 +55,8 @@ joint_charge_distribution_v0_1/distribution.csv -text whitespace=cr-at-eol
 n15_charge_interval_record_v0_1/*.csv -text whitespace=cr-at-eol
 n15_sign_record_audit_v0_1/studie/distribution.csv -text whitespace=cr-at-eol
 n15_future_boundary_v0_1/quellen/Quellvertrag.md whitespace=-blank-at-eol
+# Preserve byte-verified offline inputs and result tables on checkout.
+n15_birth_covariance_v0_1/** -text
+n15_sector_norm_rest_mass_v0_1/** -text
+n15_birth_covariance_v0_1/**/*.csv whitespace=cr-at-eol
+n15_sector_norm_rest_mass_v0_1/**/*.csv whitespace=cr-at-eol

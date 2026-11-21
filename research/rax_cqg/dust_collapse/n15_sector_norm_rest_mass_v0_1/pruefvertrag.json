@@ -1,0 +1,16 @@
+{
+  "source_commit": "397f867ba5318127cd9f7fbefbb0b388c8cdae05",
+  "sector": {"six_bin_gram_rows":12,"reference_type":375841,"compare_published_overlaps_abs_tol":"1e-12","require_null_space_preservation":true,"physical_sector_ratio_requires":"Two physical sectors with specified internal forms and an independent relative normalization."},
+  "tagged_model": {
+    "type":2324, "path":[3,4,13,7], "readout":"Uniform diagonal mean of the signed frozen-field charge over the two complete PR 334 boundary-clock windows, conditional on this path. Same marked flux and midpoint residence rule.",
+    "clock_windows":[["-3/32","-1/32"],["1/32","3/32"]],
+    "model":"M_hat = g * mean(p), positive g, zero intercept after checking both vacua",
+    "calibration":{"M":"1/4","k":"1/3"},
+    "no_refit_transfers":[{"M":"1/2","k":"1/3"},{"M":"1/2","k":"3/8"},{"M":"1","k":"1/3"},{"M":"1","k":"11/24"}],
+    "new_local_controls":"The half dose and the 3/8 profile are held out of the gain determination. M=1 and both endpoint profiles are published and serve as archival comparisons. This protocol is local and informed by knowledge of PR 334.",
+    "acceptance":"Full analytic relative-error interval inside [-1/50,1/50] gives PASS, disjoint gives FAIL, overlap gives HOLD. Calibrate once. No second profile-specific gain. Raw current deduced from symmetrically shifted past clocks at fixed weights.",
+    "gain_interval_precision":"Rational enclosure of Delta^2 = sqrt(3/722), using integer square root at 10^-40 absolute resolution."
+  },
+  "charge_witness":{"type":375841,"normalized_masses":["1/4","1"],"path":"Convex segment between the two published normalized-density centers at e=-1/4. Recalculate fine current; test zero and common positive charge at distinct markers; use strictly admissible densities. This is a pointwise obstruction, not a test of a distributional estimator."},
+  "physical_transfer":{"gain":null,"measured_charge":null,"fit_mass":"1/4","withheld_masses":["1","4"],"gate":"Independent physical standard and matched charge, vacuum, calibrated physical readout and uncertainty are required. Exclude all held-out rows from fit; apply frozen g, same preparation prescription with mass varied, then admissible profile variation. Use inherited 2 percent mass criterion with full simultaneous uncertainty. Missing inputs imply NOT_RUN."}
+}
