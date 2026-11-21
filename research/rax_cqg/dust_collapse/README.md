@@ -1,5 +1,11 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Welche Randinformation braucht der Vorzeichendetektor bei der Weiterverklebung? · 21. November 2026
+
+Bei der geprüften quellenfreien Fortsetzung des N15-Typs 375841 wird die frühere Zukunftsdichte $w_7$ über ihr Fenster kohärent integriert. Für die beiden Pakete aus PR #345 sinkt der grösstmögliche Unterschied einer Ausgangswahrscheinlichkeit damit auf unter $4{,}658 \cdot 10^{-18}$. Führt die Naht zusätzlich die Amplitudendifferenz der beiden Dichtehälften mit, erreicht der Detektor wieder rund $5{,}803 \cdot 10^{-12}$. Ob die gekoppelte Dynamik diese zweite Amplitude transportiert, bleibt offen.
+
+[Herleitung und Geltungsbereich](n15_dichte_weiterverklebung_v0_1/README.md) · [Analytische Schranken](n15_dichte_weiterverklebung_v0_1/ergebnis.json) · [Hochpräzisionskontrolle](n15_dichte_weiterverklebung_v0_1/gegenprobe.json) · [Offline-Prüfpaket (ZIP)](packages/CST_DUST_N15_Vorzeichendetektor_und_Weiterverklebung_v0_1.zip)
+
 ## Wie viel vom Stromvorzeichen bleibt am offenen Zukunftsrand? · 21. November 2026
 
 Für zwei vorzeichenreine Pakete um das Gegenpaar aus PR #344 liefert derselbe Detektor nach kohärenter Summation unterschiedliche Ausgangswahrscheinlichkeiten. Er vergleicht die Phasen zweier benachbarter Werte der Zukunftsdichte $w_7$. Ihr Wahrscheinlichkeitsabstand beträgt rund $5{,}803 \cdot 10^{-12}$, entsprechend 86,60 % des grösstmöglichen Abstands für diese beiden Zustände in der gewählten flachen Randpaarung. Für jeden mit $w_7$ kommutierenden Effekt bleibt der Abstand unter $4{,}658 \cdot 10^{-18}$. Offen ist, ob die physikalischen Constraints einen Effekt zulassen, der die Dichtewerte kohärent mischt.
