@@ -1,5 +1,11 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Trägt ein Quellzeiger das Stromvorzeichen über einen Zwischenschnitt? · 21. November 2026
+
+Auf dem N15-Typ 375841 koppelt derselbe Zweiniveau-Zeiger vor der skalaren Randreduktion an die aus der Wirkung abgeleitete Ladung. Bei abgeschalteter Quelle beträgt die Wahrscheinlichkeit für den Ausgang $Y=+1$ in beiden Paketen genau 50 %. Mit Quelle ergeben sich für die gewählte Hilfspaarung 50,094051 % beim positiven und 49,933909 % beim negativen Paket. Über die ganzen Pakete ist ein Abstand von mehr als 0,140625 Prozentpunkten bewiesen. Der Direktweg und die Verklebung über die Antikette $\{5,11\}$ liefern exakt dieselbe Dekohärenzmatrix einschliesslich der Kreuzterme. Die physikalische Zulässigkeit des Zeigertransports und die Paarung des erweiterten Randes bleiben auf `HOLD`.
+
+[Bericht und Nachrechnung](n15_quellzeiger_zwischenrand_v0_1/README.md) · [Rationaler Nachweis](n15_quellzeiger_zwischenrand_v0_1/nachweis.json) · [Offline-Prüfpaket (ZIP)](packages/CST_DUST_N15_Quellzeiger_Zwischenschnitt_v0_1.zip)
+
 ## Welche Information über das Stromvorzeichen bleibt nach der skalaren Randreduktion erhalten? · 21. November 2026
 
 Auf Typ 375841 liefern zwei Pakete mit entgegengesetztem Stromvorzeichen dasselbe Randbild. Der Vergleich aller 35 zulässigen Geburtsreihenfolgen bestätigt das Ergebnis für beide Randamplituden und alle vier Einträge der Dekohärenzmatrix. Im Ensemble aus 453 Endtypen bleibt das Vorzeichen statistisch unterscheidbar. Die überarbeitete Fassung nennt die Messregel und die Historiengewichte zu jeder Verteilung.
