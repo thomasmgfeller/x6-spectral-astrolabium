@@ -1,5 +1,13 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Wie verändert sich der Staubstrom zwischen Anfang und Zukunftsrand? · 21. November 2026
+
+Auf dem N15-Typ 375841 tragen die zwei Pakete aus dem Quellzeigerversuch entgegengesetzte Anfangsströme. Am Zwischenschnitt $Y=0$ sind beide Ströme negativ. Vor dem Zukunftskragen sind beide positiv und auf gepaarten Historien exakt gleich. Die Uhrvariation erklärt die Änderung auf allen 130 strikt verschachtelten Paaren der 20 Ordnungsideale. Im kohärenten Integral liefert der Rand der präparierten Dichtefenster den entsprechenden Beitrag.
+
+Am Zwischenschnitt trennt eine lokale Staubdichte das ursprüngliche Paar. Zwei weitere Pakete derselben Präparation stimmen auf der Antikette und am gewählten Zukunftsrand in allen Feldkoordinaten überein und besitzen dennoch entgegengesetzte Anfangsströme. Damit ist die allgemeine Vorzeichenauslese allein aus diesen Koordinaten ausgeschlossen. Die physikalische Paarung und der physikalische Vorzeichenrecord bleiben offen.
+
+[Bericht und Nachrechnung](n15_stromtransport_ward_v0_1/README.md) · [Alle 20 Schnittladungsvergleiche](n15_stromtransport_ward_v0_1/schnitte.json) · [Konstruktives Gegenpaar](n15_stromtransport_ward_v0_1/schnittkoordinaten.json) · [Offline-Prüfpaket (ZIP)](packages/CST_DUST_N15_Stromtransport_Ward_und_Schnittauslese_v0_1.zip)
+
 ## Trägt ein Quellzeiger das Stromvorzeichen über einen Zwischenschnitt? · 21. November 2026
 
 Auf dem N15-Typ 375841 koppelt derselbe Zweiniveau-Zeiger vor der skalaren Randreduktion an die aus der Wirkung abgeleitete Ladung. Bei abgeschalteter Quelle beträgt die Wahrscheinlichkeit für den Ausgang $Y=+1$ in beiden Paketen genau 50 %. Mit Quelle ergeben sich für die gewählte Hilfspaarung 50,094051 % beim positiven und 49,933909 % beim negativen Paket. Über die ganzen Pakete ist ein Abstand von mehr als 0,140625 Prozentpunkten bewiesen. Der Direktweg und die Verklebung über die Antikette $\{5,11\}$ liefern exakt dieselbe Dekohärenzmatrix einschliesslich der Kreuzterme. Die physikalische Zulässigkeit des Zeigertransports und die Paarung des erweiterten Randes bleiben auf `HOLD`.
