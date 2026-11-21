@@ -1,5 +1,11 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Stromvorzeichen am neuen N16-Rand · 21. November 2026
+
+Beim quellenfreien Anschluss über die vollständige innere Viererkette bleibt der aus der Wirkung bestimmte Anfangsstrom auf jeder Feinhistorie exakt erhalten. Ein gemeinsamer Dichtedetektor unterscheidet die beiden ganzen Vorzeichenpakete nach der Integration der alten Zukunftsdichte um rund $1{,}25639 \cdot 10^{-11}$. Am kleinsten aktiven Anschluss sind beide neuen Anfangsströme positiv. Hinter dem vollständigen alten Zukunftskragen liegt der Unterschied am selben Detektortyp unter $1{,}494 \cdot 10^{-29}$. Die bedingte Rechnung verwendet eine festgelegte positive Randpaarung. Ihre physikalische Herleitung bleibt offen.
+
+[N16-Studie und Nachrechnung](n16_quellenfreier_anschluss_v0_1/README.md) · [Teilartikel bis PR #346 (PDF)](n16_quellenfreier_anschluss_v0_1/manuskript/Teilartikel.pdf) · [Forschungsplan und Prüfvertrag (PDF)](reports/CST_DUST_Pruefung_der_Fuenf_Phasen.pdf) · [Offline-Prüfarchiv (ZIP)](packages/CST_DUST_N16_Quellenfreier_Anschluss_und_Teilartikel.zip)
+
 ## Welche Randinformation braucht der Vorzeichendetektor bei der Weiterverklebung? · 21. November 2026
 
 Bei der geprüften quellenfreien Fortsetzung des N15-Typs 375841 wird die frühere Zukunftsdichte $w_7$ über ihr Fenster kohärent integriert. Für die beiden Pakete aus PR #345 sinkt der grösstmögliche Unterschied einer Ausgangswahrscheinlichkeit damit auf unter $4{,}658 \cdot 10^{-18}$. Führt die Naht zusätzlich die Amplitudendifferenz der beiden Dichtehälften mit, erreicht der Detektor wieder rund $5{,}803 \cdot 10^{-12}$. Ob die gekoppelte Dynamik diese zweite Amplitude transportiert, bleibt offen.
