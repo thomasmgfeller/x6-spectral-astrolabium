@@ -1,5 +1,11 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Was verraten die Uhrimpulse am Zwischenschnitt über den Anfangsstrom? · 21. November 2026
+
+Auf dem N15-Typ 375841 gibt es zwei Pakete mit gleichen ersten Uhrimpulsen, gleicher Wirkung und gleicher innerer Dichtesumme, die entgegengesetzte Anfangsströme tragen. Sind Uhrprofil, Schnitt- und Zukunftsdichten sowie die tatsächliche Summe der sieben inneren Dichten bekannt, erlaubt die zusätzliche zweite Uhrableitung bei Ereignis 11 eine exakte Rückrechnung. Auf den geprüften Zellen liefert auch der Gesamtfluss des Schnitts die zusätzliche Gleichung. Beide Wege ergeben in je 232 rationalen Prüfungen die direkte Anfangsladung. Bei variabler Dichtesumme bleibt selbst die vollständige lokale Quellenantwort für ein weiteres Gegenpaar gleich. Die physikalische Auslese bleibt offen.
+
+[Bericht und Herleitung](n15_schnittimpulse_v0_1/README.md) · [Exakte Gegenprobe](n15_schnittimpulse_v0_1/gegenprobe.json) · [Offline-Prüfpaket (ZIP)](packages/CST_DUST_N15_Schnittimpulse_und_Rueckrechnung_v0_1.zip)
+
 ## Wie verändert sich der Staubstrom zwischen Anfang und Zukunftsrand? · 21. November 2026
 
 Auf dem N15-Typ 375841 tragen die zwei Pakete aus dem Quellzeigerversuch entgegengesetzte Anfangsströme. Am Zwischenschnitt $Y=0$ sind beide Ströme negativ. Vor dem Zukunftskragen sind beide positiv und auf gepaarten Historien exakt gleich. Die Uhrvariation erklärt die Änderung auf allen 130 strikt verschachtelten Paaren der 20 Ordnungsideale. Im kohärenten Integral liefert der Rand der präparierten Dichtefenster den entsprechenden Beitrag.
