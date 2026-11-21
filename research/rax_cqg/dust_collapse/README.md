@@ -1,5 +1,11 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Wie viel vom Stromvorzeichen bleibt am offenen Zukunftsrand? · 21. November 2026
+
+Für zwei vorzeichenreine Pakete um das Gegenpaar aus PR #344 liefert derselbe Detektor nach kohärenter Summation unterschiedliche Ausgangswahrscheinlichkeiten. Er vergleicht die Phasen zweier benachbarter Werte der Zukunftsdichte $w_7$. Ihr Wahrscheinlichkeitsabstand beträgt rund $5{,}803 \cdot 10^{-12}$, entsprechend 86,60 % des grösstmöglichen Abstands für diese beiden Zustände in der gewählten flachen Randpaarung. Für jeden mit $w_7$ kommutierenden Effekt bleibt der Abstand unter $4{,}658 \cdot 10^{-18}$. Offen ist, ob die physikalischen Constraints einen Effekt zulassen, der die Dichtewerte kohärent mischt.
+
+[Studie und Herleitung](n15_zukunftsdichte_interferenz_v0_1/README.md) · [Analytische Schranken](n15_zukunftsdichte_interferenz_v0_1/ergebnis.json) · [Sechs numerische Gegenrechnungen](n15_zukunftsdichte_interferenz_v0_1/quadratur.json) · [Offline-Prüfpaket (ZIP)](packages/CST_DUST_N15_Vorzeichen_am_offenen_Zukunftsrand_v0_1.zip)
+
 ## Den Anfangsstrom ohne vorgegebenes inneres Uhrprofil rekonstruieren · 21. November 2026
 
 Auf N15-Typ 375841 bestimmen drei Uhrantworten und zwei Dichteantworten am Zukunftsrand zusammen mit zwei bekannten Schnittuhren alle fünf verborgenen Uhrwerte. Ein zweiter Weg gewinnt den Anfangsstrom allein aus Uhrvariationen an Eingang, Schnitt und Zukunft. Beide Verfahren liefern in 216 von 216 Feldbelegungen Betrag und Vorzeichen exakt. Ein Gegenpaar mit gleicher Wirkung und entgegengesetzten Strömen zeigt, welche Quellen die beiden Historien unterscheiden. Der Nachweis eines auslesbaren Vorzeichens nach der kohärenten Summation ganzer Pakete bleibt offen.
