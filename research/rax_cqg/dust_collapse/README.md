@@ -1,5 +1,11 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Den Anfangsstrom ohne vorgegebenes inneres Uhrprofil rekonstruieren · 21. November 2026
+
+Auf N15-Typ 375841 bestimmen drei Uhrantworten und zwei Dichteantworten am Zukunftsrand zusammen mit zwei bekannten Schnittuhren alle fünf verborgenen Uhrwerte. Ein zweiter Weg gewinnt den Anfangsstrom allein aus Uhrvariationen an Eingang, Schnitt und Zukunft. Beide Verfahren liefern in 216 von 216 Feldbelegungen Betrag und Vorzeichen exakt. Ein Gegenpaar mit gleicher Wirkung und entgegengesetzten Strömen zeigt, welche Quellen die beiden Historien unterscheiden. Der Nachweis eines auslesbaren Vorzeichens nach der kohärenten Summation ganzer Pakete bleibt offen.
+
+[Herleitung und Gegenpaar](n15_uhrrekonstruktion_v0_1/README.md) · [Exakte Ergebnisse](n15_uhrrekonstruktion_v0_1/ergebnis.json) · [Offline-Prüfpaket (ZIP)](packages/CST_DUST_N15_Uhrrekonstruktion_aus_Randantworten_v0_1.zip)
+
 ## Die innere Dichtesumme aus vier Eingangsuhren · 21. November 2026
 
 Auf N15-Typ 375841 bestimmt eine gemischte Variation der vier Eingangsuhren die Summe aller sieben inneren Staubdichten. Mit dieser Summe, dem Uhrprofil und den Schnitt- und Zukunftsdaten ergibt die Rückrechnung in allen 224 geprüften Feldbelegungen exakt den Anfangsstrom. Beim Gegenpaar aus PR #342 mit identischer Schnitt- und Zukunftsantwort trennt die neue Quelle die ganzen Pakete auch nach der kohärenten Summation. Im Katalog erfasst die Quelle auf 202 von 1 048 Typen alle sieben Dichten, im gewichteten Ensemble auf 35 von 453. Die physikalische Auslese bleibt offen.
