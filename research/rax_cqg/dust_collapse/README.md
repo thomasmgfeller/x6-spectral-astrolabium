@@ -1,5 +1,11 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Die innere Dichtesumme aus vier Eingangsuhren · 21. November 2026
+
+Auf N15-Typ 375841 bestimmt eine gemischte Variation der vier Eingangsuhren die Summe aller sieben inneren Staubdichten. Mit dieser Summe, dem Uhrprofil und den Schnitt- und Zukunftsdaten ergibt die Rückrechnung in allen 224 geprüften Feldbelegungen exakt den Anfangsstrom. Beim Gegenpaar aus PR #342 mit identischer Schnitt- und Zukunftsantwort trennt die neue Quelle die ganzen Pakete auch nach der kohärenten Summation. Im Katalog erfasst die Quelle auf 202 von 1 048 Typen alle sieben Dichten, im gewichteten Ensemble auf 35 von 453. Die physikalische Auslese bleibt offen.
+
+[Herleitung und Geltungsbereich](n15_dichtesumme_randquelle_v0_1/README.md) · [Prüfergebnisse](n15_dichtesumme_randquelle_v0_1/ergebnis.json) · [Offline-Prüfpaket (ZIP)](packages/CST_DUST_N15_Dichtesumme_Randquelle_v0_1.zip)
+
 ## Was verraten die Uhrimpulse am Zwischenschnitt über den Anfangsstrom? · 21. November 2026
 
 Auf dem N15-Typ 375841 gibt es zwei Pakete mit gleichen ersten Uhrimpulsen, gleicher Wirkung und gleicher innerer Dichtesumme, die entgegengesetzte Anfangsströme tragen. Sind Uhrprofil, Schnitt- und Zukunftsdichten sowie die tatsächliche Summe der sieben inneren Dichten bekannt, erlaubt die zusätzliche zweite Uhrableitung bei Ereignis 11 eine exakte Rückrechnung. Auf den geprüften Zellen liefert auch der Gesamtfluss des Schnitts die zusätzliche Gleichung. Beide Wege ergeben in je 232 rationalen Prüfungen die direkte Anfangsladung. Bei variabler Dichtesumme bleibt selbst die vollständige lokale Quellenantwort für ein weiteres Gegenpaar gleich. Die physikalische Auslese bleibt offen.

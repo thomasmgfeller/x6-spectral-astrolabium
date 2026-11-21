@@ -1,0 +1,14 @@
+{
+  "frage": "Liefert die Eingangsrand-Wirkung die für die Schnittinversion benötigte tatsächliche innere Dichtesumme?",
+  "basis": "GitHub PR 342, 6822acb3788b6ba2ef83ba8ee666c72fa86f7ace",
+  "typ": 375841,
+  "festlegung": "Lokal vor den neuen Prüfläufen. Vorarbeiten, Geometrie und Gegenpaare sind bekannt.",
+  "quelle": "Nur vier Eingangsuhrwerte ändern, alle übrigen Felder und Integrationsfenster festhalten. u konstant eins auf dem Eingang. Zweites Profil allein aus der Inzidenzmatrix so bestimmen, dass jede erreichbare Tiefenklasse dieselbe Antwort hat. RHS für ganzzahlige Normierung -64.",
+  "schrittpaare": [["1/256", "1/16384"], ["1/512", "1/32768"]],
+  "proben": {"startwert": 219342, "paare_je_bekannter_familie": 20, "weitere_feldbelegungen": 64},
+  "erfolg": "Exakte Gleichheit der vierpunktbestimmten Summe mit der verdeckten Summe und der vorhergesagten Ladung mit der erst zur Bewertung berechneten ersten Anfangsvariation, ohne Nachanpassung.",
+  "negativkontrolle": "Beide Profile konstant am Eingang. Beim Zusatzpaar aus PR 342 muss der Summenkontrast verschwinden.",
+  "reichweite": "Jede der 1048 ursprünglichen zulässigen Ordnungen mit expliziter Intervallzählung prüfen. Bei tiefen Empfängern zwischen sichtbarer Summe und voller Summe unterscheiden.",
+  "kohaerenz": "Kontrast über die gesamte gepaarte Zelle einschliessen. Für die ursprüngliche amplitudenwertige Quelle auch den Term aus den ersten Ableitungen mitführen. Eine Detektor- oder Wahrscheinlichkeitsaussage benötigt eine gesonderte Realisierung.",
+  "grenze": "Keine Bestimmung einer Ruhemasse oder eines P3-Radius."
+}
