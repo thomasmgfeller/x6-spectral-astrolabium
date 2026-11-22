@@ -1,5 +1,11 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Welche Gewichte bestimmen die Massenauslese auf Typ 6840? · 22. November 2026
+
+Bei markierter Masse 4 und Eingangsdichtezentrum 1/8 liefern dieselben vier Feinhistorien bei gleichen äusseren Gewichten je nach innerer Präparation rund 3,65800 % oder 0,00486 % systematischen Massenfehler. Für das konditionierte kontinuierliche Produktmass über den ganzen Feldbereich bleibt der Fehler an beiden untersuchten Dichtezentren unter 0,00446 %. Ob die physikalische Präparation diese Gewichtung ergibt, ist offen. Die 60 physischen P3-Prüfpunkte stehen auf `NOT_RUN`.
+
+[Herleitung und Nachrechnung](n15_randgewichte_6840_v0_1/README.md) · [Kurzbericht (PDF)](n15_randgewichte_6840_v0_1/Kurzbericht.pdf) · [Ergebnisse (JSON)](n15_randgewichte_6840_v0_1/ergebnis.json) · [Offline-Prüfpaket (ZIP)](packages/CST_DUST_Typ_6840_Randgewichte_Pruefpaket.zip)
+
 ## Wie genau misst der Randzeiger die markierte Masse auf 61 Ordnungstypen? · 22. November 2026
 
 Bei markierter Masse 4 halten 46 von 61 Typen die Zwei-Prozent-Grenze an beiden Eingangsdichtezentren für jede zugelassene positive Verteilung der Feinhistorien ein. Für die übrigen 15 gibt es konkrete Präparationen mit grösserem Fehler. Auf Typ 6840 liegt er bei einer solchen Präparation zwischen 3,6562 % und 3,6684 %. Alle 122 Kombinationen aus Typ und Dichtezentrum sind im Modell entschieden. Die 60 physischen P3-Prüfpunkte stehen auf `NOT_RUN`.
