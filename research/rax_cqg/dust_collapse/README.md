@@ -1,5 +1,11 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Was lässt sich am gemeinsamen N17-Zukunftsereignis auslesen? · 22. November 2026
+
+Am stromerhaltenden Anschluss von N15-Typ 375841 liegt ein neues Ereignis in der Zukunft aller 16 bisherigen Ereignisse. Bei festgehaltener früherer Uhr unterscheiden sich die beiden Vorzeichenpakete in jeder binären Messung am neuen Ausgang um weniger als $6{,}203 \cdot 10^{-29}$. Wird die frühere Uhr über ein schmales Fenster kohärent integriert, hat das Paket mit negativem Anfangsstrom eine geringfügig höhere Wahrscheinlichkeit für eine Enddichte über $1/8$. Die Differenz zwischen positivem und negativem Paket liegt in $[-3{,}569;\,-3{,}178] \cdot 10^{-27}$. Der Befund gilt für die angegebene Randpräparation und positive Paarung. Alle 60 physikalischen P3-Prüfpunkte sind weiterhin offen.
+
+[Herleitung und Nachrechnung](n17_stromvorzeichen_v0_1/README.md) · [Kurzbericht (PDF)](n17_stromvorzeichen_v0_1/Kurzbericht.pdf) · [Offline-Prüfpaket (ZIP)](packages/CST_DUST_N17_Pruefpaket.zip)
+
 ## Stromvorzeichen am neuen N16-Rand · 21. November 2026
 
 Beim quellenfreien Anschluss über die vollständige innere Viererkette bleibt der aus der Wirkung bestimmte Anfangsstrom auf jeder Feinhistorie exakt erhalten. Ein gemeinsamer Dichtedetektor unterscheidet die beiden ganzen Vorzeichenpakete nach der Integration der alten Zukunftsdichte um rund $1{,}25639 \cdot 10^{-11}$. Am kleinsten aktiven Anschluss sind beide neuen Anfangsströme positiv. Hinter dem vollständigen alten Zukunftskragen liegt der Unterschied am selben Detektortyp unter $1{,}494 \cdot 10^{-29}$. Die bedingte Rechnung verwendet eine festgelegte positive Randpaarung. Ihre physikalische Herleitung bleibt offen.
