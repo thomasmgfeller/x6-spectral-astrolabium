@@ -1,5 +1,11 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Randsteuerung und stationäre Staubuhr auf der N15-Kette · 22. November 2026
+
+In beiden Randuhrfenstern aus PR #357 erzwingen die ersten zwei stationären Dichtegleichungen auf Typ 2097151 die Reihenfolge Y₅ < Y₄. Damit ist ein durchgehend vorwärts laufender stationärer Staubpfad im vollständig positiven Sektor auch bei freigegebenen inneren Uhrfenstern ausgeschlossen. Mit geänderten Randuhren und einer Randdauer von 8Δ erfüllt eine gleichmässig vorwärts laufende Kontrolllösung alle 14 inneren Stationaritätsgleichungen. Zwei Feinhistorien mit identischen äusseren Randwirkungsfunktionen und unterschiedlichen inneren Quellantworten grenzen ein, was die Randdaten bestimmen. Die physikalische Ansteuerung im nichtstationären Kern und die unabhängige Ruhemasse-Eichung bleiben offen. Alle 60 physischen P3-Prüfpunkte stehen auf `NOT_RUN`.
+
+[Studie und Nachrechnung](n15_randsteuerung_stationaere_staubuhr_v0_1/README.md) · [Kurzbericht (PDF)](n15_randsteuerung_stationaere_staubuhr_v0_1/Kurzbericht.pdf) · [Herleitung](n15_randsteuerung_stationaere_staubuhr_v0_1/HERLEITUNG.md) · [Offline-Prüfpaket (ZIP)](packages/CST_DUST_N15_Randsteuerung_und_stationaere_Staubuhr_Pruefpaket.zip)
+
 ## Ausgangsfenster der beiden inneren Uhren · 22. November 2026
 
 Auf der N15-Siebenerkette 2097151 lassen sich die vierte und die sechste Uhr durch Zählen ihrer inneren Vorgänger adressieren. Bei Quellschritt 1/8 verwirft ein Ausgangsfenster der Halbbreite D/64 bei jeder inneren Verschiebung das gesamte rechte Randuhrfenster. Bei Verschiebung beider Uhren passieren je nach Vorzeichen nur 0,827 bis 0,865 % des positiven Eingangsreferenzmasses. Mit der vorab gewählten Halbbreite 7D/128 ist der vollständige Durchlass exakt nachgewiesen. Für die markierte Masse 1 ergibt dieselbe Eichung wie in PR #356 numerisch 0,999855920 und 0,999812474 an den beiden Dichtezentren. Die physikalische Quellenansteuerung, der kohärente Phasenvergleich und der unabhängige Ruhemasse-Standard bleiben offen. Alle 60 physischen P3-Prüfpunkte stehen auf `NOT_RUN`.
