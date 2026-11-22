@@ -1,5 +1,11 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Massentransfer und Vakuum der N15-Auslese · 22. November 2026
+
+Dieselbe am N15-Typ 2097151 festgeschriebene Eichung rekonstruiert vier weitere markierte Massen an zwei Anfangsdichtezentren mit einem maximalen beobachteten relativen Fehler von rund 0,02031 %. Für Masse 1 ergeben sich 0,999855920 und 0,999812474. Für positive Massen nahe null liefert die Intervallrechnung an den beiden Zentren verschiedene Grenzwerte. Ein gemeinsamer Nullpunkt und eine feste Verstärkung ungleich null können deshalb die relative Zwei-Prozent-Toleranz dort nicht für beliebig kleine Massen einhalten. Die physikalische Ruhemasse-Eichung und der Zugriff auf die beiden inneren Uhren sind offen. Alle 60 physischen P3-Prüfpunkte stehen auf `NOT_RUN`.
+
+[Studie und Nachrechnung](n15_massentransfer_vakuum_v0_1/README.md) · [Kurzbericht (PDF)](n15_massentransfer_vakuum_v0_1/Kurzbericht.pdf) · [Herleitung der Fehlerschranken](n15_massentransfer_vakuum_v0_1/BEWEIS.md) · [Offline-Prüfpaket (ZIP)](packages/CST_DUST_N15_Massentransfer_und_Vakuum_Pruefpaket.zip)
+
 ## Zwei innere Uhren am integrierten Randkern · 22. November 2026
 
 Auf der N15-Siebenerkette 2097151 liefern 15 Phaseneinstellungen für die markierte Masse 4 die numerischen Werte 4,002411 und 3,999286 bei den Anfangsdichtezentren 1/8 und 1/4. Die Verklebung der drei Teilstücke reproduziert die gemeinsame Wirkung exakt, wenn alle 17 Paarbeiträge über die Schnittgrenzen erfasst werden. Eine garantierte Fehlergrenze für diese Massenauslese, der physikalische Zugriff auf die zwei relationalen Zeiten und die unabhängige Ruhemasse-Eichung sind offen. Alle 60 physischen P3-Prüfpunkte stehen auf `NOT_RUN`.
