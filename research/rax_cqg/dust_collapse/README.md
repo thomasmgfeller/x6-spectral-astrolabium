@@ -1,5 +1,11 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Welche Staubmasse erreicht den Rand der Siebenerkette? · 22. November 2026
+
+Auf dem N15-Typ 2097151 unterschätzt die bisherige Randquelle die markierte Masse 4 bei zwei Anfangsdichtezentren um mindestens 41,39 %. Zwei zusätzliche innere Uhren genügen, um die drei fehlenden Dichten aus der Staubwirkung zu rekonstruieren. Im selben kontinuierlichen Referenzmass bleibt der relative Fehler damit unter 0,00295 %. Die physikalische Auslese über zwei relationale Zeiten und die unabhängige Ruhemasse-Eichung sind offen. Alle 60 physischen P3-Prüfpunkte stehen auf `NOT_RUN`.
+
+[Herleitung und Nachrechnung](n15_traeger_uhrzugriff_v0_1/README.md) · [Kurzbericht (PDF)](n15_traeger_uhrzugriff_v0_1/Kurzbericht.pdf) · [Ergebnisse (JSON)](n15_traeger_uhrzugriff_v0_1/ergebnis.json) · [Offline-Prüfpaket (ZIP)](packages/CST_DUST_N15_Traeger_und_Uhrzugriff_Pruefpaket.zip)
+
 ## Welche Gewichte bestimmen die Massenauslese auf Typ 6840? · 22. November 2026
 
 Bei markierter Masse 4 und Eingangsdichtezentrum 1/8 liefern dieselben vier Feinhistorien bei gleichen äusseren Gewichten je nach innerer Präparation rund 3,65800 % oder 0,00486 % systematischen Massenfehler. Für das konditionierte kontinuierliche Produktmass über den ganzen Feldbereich bleibt der Fehler an beiden untersuchten Dichtezentren unter 0,00446 %. Ob die physikalische Präparation diese Gewichtung ergibt, ist offen. Die 60 physischen P3-Prüfpunkte stehen auf `NOT_RUN`.
