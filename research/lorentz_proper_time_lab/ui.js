@@ -130,7 +130,9 @@
   $('repeat').addEventListener('click',repeat);$('export').addEventListener('click',exportData);
   $('export-html').addEventListener('click',()=>{
     const doc=document.documentElement.cloneNode(true),base=document.createElement('base');
-    base.href='https://thomasmgfeller.github.io/x6-spectral-astrolabium/app/';doc.querySelector('head').prepend(base);
+    base.href='https://thomasmgfeller.github.io/x6-spectral-astrolabium/app/';
+    doc.querySelector('base')?.remove();doc.querySelector('head').prepend(base);
+    doc.dataset.initialExperiment=document.getElementById('lab-two').hidden?'01':'02';
     download('<!doctype html>\n'+doc.outerHTML,'eigenzeit-demonstrator.html','text/html');
   });
   run();

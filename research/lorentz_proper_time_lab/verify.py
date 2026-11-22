@@ -31,6 +31,8 @@ def main():
     parser.add_argument('--report', type=Path)
     parser.add_argument('--in-process', action='store_true', help='Execute ordinary Python cells without a Jupyter transport; reported separately')
     args = parser.parse_args()
+    subprocess.run([sys.executable, str(HERE/'order_geometry/verify.py')], check=True,
+                   stdout=sys.stderr)
     cases = []
     for m in [1, 2, 8, 64, 256, 1024, 4096, 16384]:
         ks = range(m+1) if m <= 256 else sorted({0,1,2,3,8,m//100,m//16,m//4,m//2,m-8,m-3,m-2,m-1,m})

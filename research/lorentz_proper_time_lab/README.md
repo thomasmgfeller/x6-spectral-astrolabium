@@ -166,3 +166,60 @@ Vorab begrenzte Dichteunsicherheit ermöglicht konservativere Intervalle
 im flachen Modell. Diese Erweiterung ist separat dokumentiert; der
 Browser-Demonstrator verwendet weiterhin seine ursprünglichen festen
 Stichproben und uniformen flachen Modellannahmen.
+
+## Experiment 02 · Ordnungsgeometrie
+
+[Experiment 02 im Eigenzeit-Labor öffnen](https://thomasmgfeller.github.io/x6-spectral-astrolabium/app/proper-time.html#experiment-02).
+Die zweite Ansicht derselben Offline-HTML verarbeitet Knotenlisten und gerichtete
+Kanten, zeichnet das Hasse-Diagramm und zählt alle vergleichbaren Paare, die
+Kettenhöhe und die ersten vier Intervallschichten. Für ein offenes Intervall
+werden beide Endpunkte ausgeschlossen. Knotennamen und isolierte Knoten
+bleiben im JSON erhalten. Das Prüfnotebook zählt die exportierte Matrix auf
+einem unabhängigen Python-Pfad nach.
+
+**CST-DUST-Kontrolle.** Der gesamte Typ 375841 liefert 93 Paare, Höhe 12 und
+Schichten (15,15,15,14). Das offene Intervall (3,7) liefert bei sieben Knoten
+9 Paare, Höhe 4 und (5,3,1,0). Die drei N16-Anschlüsse besitzen bei 98/101/108
+Paaren dasselbe Schichttupel (16,16,16,15).
+[Publizierte Randrollen und Ordnungen](../rax_cqg/dust_collapse/n16_quellenfreier_anschluss_v0_1/README.md).
+
+**Flaches Referenzmodell.** Für ungeordnete vergleichbare Paare ist
+E[R / choose(K,2) | K,d] = Γ(d+1) Γ(d/2) / (2 Γ(3d/2)). Die kontinuierliche
+Dimensionsanzeige interpoliert diese Formel zwischen 2 und 4 in Schritten
+von 0,01. Für K < 2 fehlt der Paaranteil. Die separate Dimensionsauswahl
+verwendet je K und d die drittkleinste bis drittgrösste Paarzahl von 255
+Referenzordnungen einschliesslich der Grenzen. Gemeinsame Zufallswolken für
+verschiedene K liefern verschachtelte, volumenuniforme Präfixe. Die Bank
+deckt K = 0 bis 128 ab und wurde unabhängig vom Browsergenerator erzeugt.
+
+Bei gegebenem äusserem m und d wird die mittlere Höhe über K ~ Bin(m,θ^d)
+integriert und im Intervall [0,1] invertiert. Übersteigt die beobachtete Höhe
+den mittleren oberen Kalibrierwert, meldet die App die Sättigung bei T.
+Die Kettenzeit verwendet bei festem d nur die beobachtete Höhe und die externen
+Parameter. Bei unbekanntem d können mehrere Zeitwerte übrig bleiben.
+Die Hülle der 97,5%-Clopper–Pearson-Intervalle über die vereinbaren Dimensionen
+hat im idealen flachen Modell bei festem Budget eine Fehlwahrscheinlichkeit
+von höchstens 0,025 + 6/256. Das Rangargument gilt über neue Referenzbank und
+Zielwolke unter Austauschbarkeit. Es garantiert keine bedingte Überdeckung
+für genau diese eine eingefrorene Pseudozufallsbank. Die 200 gepaarten
+Wiederholungen berichten alle Fälle im Vergleich bei bekannter Dimension.
+Der blinde Vergleich berichtet seinen eigenen Nenner (genau eine kompatible
+Dimension). Bei Importen fehlen die externen Zeitparameter.
+
+Die Skalierungstabelle enthält je Dimension 48 unabhängige Ordnungen je K bis
+1 024, danach 12. Fehlerbalken in Tabellenform geben den Standardfehler des
+Mittelwerts an. Für K=15 in 2D verwendet die separate exakte Referenz
+Robinson–Schensted und die Hakenlängenformel. Die 4D-Wirkungskombination ist
+ein globaler Vergleichswert. Der interaktive de-Sitter-Dichtezwilling nutzt
+dieselben Koordinaten und Relationen in beiden Metriken. Die beiden Uhren und
+Ricci-Werte stammen aus der vorgegebenen Geometrie.
+[Krümmungsbenchmark](../lorentz_curvature/RESULTS.md) ·
+[Exakte Vergleichstabelle zu K=15](https://www-users.cse.umn.edu/~odlyzko/tables/incr.subs.15).
+
+```sh
+python research/lorentz_proper_time_lab/order_geometry/verify.py
+python research/lorentz_proper_time_lab/order_geometry/reference.py eigenzeit-ordnung.json
+# Referenzbank separat reproduzieren
+python research/lorentz_proper_time_lab/order_geometry/reference.py --build
+python research/lorentz_proper_time_lab/build.py --check
+```
