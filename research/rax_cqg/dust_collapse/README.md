@@ -1,5 +1,11 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Schnitttransport und Randpaarung auf der N15-Kette · 22. November 2026
+
+Die Massenauslese aus PR #359 ergibt an den vier Rechenschnitten hinter 11, 12, 13 und 14 dieselbe Wirkung auf jeder Geschichte, wenn die bereits durchlaufenen Paarphasen mitgenommen werden. Uhr 6 bestimmt auch das noch offene Dichteintervall von Ereignis 11. Bei markierter Masse 1 und Randdichte 1/4 ergibt sich die Massenschätzung 1,00016863, wenn die vorbereitete Dichte festgehalten wird, und 1,01617872, wenn das Dichteintervall mitverschoben wird. Die unverschobene Paarung entscheidet zwischen den beiden Vorschriften nicht. Eine physikalisch hergeleitete Kopplung und eine unabhängige positive Masseneichung bleiben offen. Alle 60 physischen P3-Prüfpunkte stehen auf `NOT_RUN`.
+
+[Studie und Nachrechnung](n15_schnitttransport_randpaarung_v0_1/README.md) · [Kurzbericht (PDF)](n15_schnitttransport_randpaarung_v0_1/Kurzbericht.pdf) · [Herleitung](n15_schnitttransport_randpaarung_v0_1/HERLEITUNG.md) · [Offline-Prüfpaket (ZIP)](packages/CST_DUST_N15_Schnitttransport_und_Randpaarung_Pruefpaket.zip)
+
 ## Kohärente Schnittantwort auf der N15-Kette · 22. November 2026
 
 Eine Verschiebung der gespeicherten Uhr 4 am Schnitt hinter Ereignis 11 macht zwei am äusseren Rand ununterscheidbare Präparationen unterscheidbar. Für beide geprüften Randdichten liegt die Differenz der Ausgangsbalancen nach kohärenter Integration über 6,24 × 10⁻⁵. Mit den drei Uhren 4, 5 und 6 und einer äusseren Eingangsquelle ergibt sich die gesamte innere Dichte vor der Integration exakt. Nach der Integration liegt der grösste relative Fehler der fünf positiven Massenübertragungen bei 0,02258 %. Der kohärente Zugriff auf die drei Uhren und eine unabhängige positive Masseneichung sind physikalisch offen. Alle 60 physischen P3-Prüfpunkte stehen auf `NOT_RUN`.
