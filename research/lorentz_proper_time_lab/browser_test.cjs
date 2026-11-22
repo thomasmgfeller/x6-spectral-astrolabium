@@ -79,6 +79,54 @@ async function main(){
     assert.notEqual(await offlinePage.locator('#count').innerText(),'—');
     assert.equal(await offlinePage.locator('base').getAttribute('href'),'https://thomasmgfeller.github.io/x6-spectral-astrolabium/app/');
     checks.push('Exported single HTML runs directly from disk');
+    await page.locator('#lab-switch-two').click();
+    await page.waitForFunction(()=>document.querySelector('#og-pairs').textContent==='93');
+    assert.equal(await page.locator('#og-h').innerText(),'12');
+    await page.locator('#og-scope').selectOption('interval');
+    assert.equal(await page.locator('#og-k').innerText(),'7');
+    assert.equal(await page.locator('#og-pairs').innerText(),'9');
+    assert.equal(await page.locator('#og-layers').innerText(),'5 · 3 · 1 · 0');
+    checks.push('N15 changes from full order to marked open interval');
+    for (const [mode,pairs] of [['minimal','98'],['long','101'],['all','108']]) {
+      await page.locator('#og-source').selectOption(mode);
+      assert.equal(await page.locator('#og-pairs').innerText(),pairs);
+    }
+    await page.locator('#og-source').selectOption('twins');
+    const twins=await page.locator('#og-pairs').innerText();
+    await page.locator('#og-metric').selectOption('flat');
+    assert.equal(await page.locator('#og-pairs').innerText(),twins);
+    assert.match(await page.locator('#og-twin-note').innerText(),/Ricci-Skalar = 0/);
+    await page.locator('#og-source').selectOption('flat');
+    await page.locator('#og-repeat').click();
+    await page.waitForFunction(()=>document.querySelector('#og-repeat-out tbody')!==null,{},{timeout:60000});
+    const saving=page.waitForEvent('download');await page.locator('#og-export').click();
+    const orderPath=path.join(out,'eigenzeit-ordnung.json');await (await saving).saveAs(orderPath);
+    const order=JSON.parse(fs.readFileSync(orderPath));
+    assert.equal(order.repetitions.rows.length,200);assert.equal(order.inference.byDimension.length,3);
+    const savingBook=page.waitForEvent('download');await page.locator('#og-notebook').click();
+    const bookPath=path.join(out,'eigenzeit-ordnung.ipynb');await (await savingBook).saveAs(bookPath);
+    assert.equal(JSON.parse(fs.readFileSync(bookPath)).nbformat,4);
+    await page.locator('#og-source').selectOption('import');
+    await page.locator('#og-file').setInputFiles(orderPath);
+    await page.waitForFunction(()=>!document.querySelector('#og-export').disabled);
+    assert.equal(await page.locator('#og-pairs').innerText(),String(order.observables.pairs));
+    assert.match(await page.locator('#og-time').innerText(),/Zeitkalibrierung/);
+    await page.locator('#og-file').setInputFiles({name:'cycle.json',mimeType:'application/json',
+      buffer:Buffer.from(JSON.stringify({nodes:[0,1,2],edges:[[0,1],[1,0]]}))});
+    await page.waitForFunction(()=>document.querySelector('#og-error').textContent.includes('Zyklus'));
+    assert.equal(await page.locator('#og-export').isDisabled(),true);
+    await page.locator('#og-source').selectOption('n15');
+    for(const width of [360,390,768,1440]){
+      await page.setViewportSize({width,height:900});
+      assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
+    }
+    await page.screenshot({path:path.join(out,'order-geometry.png'),fullPage:true});
+    const savingApp=page.waitForEvent('download');await page.locator('#og-html').click();
+    const appPath=path.join(out,'order-offline.html');await (await savingApp).saveAs(appPath);
+    await offlinePage.goto('file://'+appPath);
+    assert.equal(await offlinePage.locator('#og-pairs').innerText(),'93');
+    assert.equal(await offlinePage.locator('#lab-two').isVisible(),true);
+    checks.push('N16, density twins, 200 paired trials, notebook, import, cycle rejection, mobile and offline Experiment 02');
     assert.deepEqual(errors,[]);
     fs.writeFileSync(path.join(out,'result.json'),JSON.stringify({status:'PASS_PROPER_TIME_LAB_BROWSER',checks,errors},null,2));
     console.log(JSON.stringify({status:'PASS_PROPER_TIME_LAB_BROWSER',checks},null,2));

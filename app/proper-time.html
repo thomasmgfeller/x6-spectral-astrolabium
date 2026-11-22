@@ -2,12 +2,36 @@
 <html lang="de">
 <head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Eigenzeit-Labor · X6 Spectral Astrolabium</title>
-<meta name="description" content="Eigenzeit aus gezählten Ereignissen: interaktives Minkowski-Modell mit Unsicherheitsintervallen, Wiederholungen und Jupyter-Notebook.">
+<meta name="description" content="Eigenzeit und Dimension im interaktiven Labor mit Minkowski-Diamanten, Poset-Import, Kettendiagnose und Prüfnotebook.">
 <meta name="color-scheme" content="dark"><style>:root{--bg:#0a101b;--panel:#111b2b;--line:#27354b;--text:#edf3fa;--muted:#a8b8ce;--cyan:#68e6d2;--purple:#b8a3ff;--orange:#ffb077;--radius:18px;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--text);background:var(--bg)}*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 80% 0%,#172542 0,transparent 43%),var(--bg);font-size:15px;line-height:1.55}a{color:var(--cyan);text-decoration:none}a:hover{text-decoration:underline}button,input,select{font:inherit}button,a,input,select,summary{-webkit-tap-highlight-color:transparent}button{cursor:pointer}button:disabled{opacity:.5;cursor:wait}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid var(--purple);outline-offset:4px}.skip{position:absolute;top:-100px;left:12px;background:var(--cyan);color:#081a20;padding:10px;z-index:10}.skip:focus{top:10px}.top{max-width:1344px;margin:auto;padding:24px 32px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line)}.brand{display:flex;gap:12px;align-items:center;color:var(--text);font-size:10px;letter-spacing:2px;font-weight:700;line-height:1.4}.mark{border:1px solid var(--cyan);border-radius:10px;padding:5px 9px;font-size:22px;color:var(--cyan);letter-spacing:-1px}nav{display:flex;gap:25px;align-items:center;font-size:13px}.download{color:var(--text)}main{max-width:1344px;margin:auto;padding:0 32px}.intro{display:flex;justify-content:space-between;gap:25px;align-items:flex-end;padding:50px 0 34px}.eyebrow,.section-label{font-size:10px;letter-spacing:1.8px;font-weight:700;color:var(--muted)}.eyebrow{color:var(--cyan);margin:0 0 17px}h1{font-size:clamp(32px,4.6vw,56px);line-height:1.1;font-weight:600;letter-spacing:-2px;margin:0}h2{font-size:23px;line-height:1.25;letter-spacing:-.6px;margin:10px 0 15px}.lead{color:var(--muted);font-size:17px;margin-bottom:0}.model{font-size:12px;color:var(--cyan);padding-bottom:5px;white-space:nowrap}.model>span:last-child{display:block;margin-top:7px;font-size:11px;color:var(--muted)}.dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--cyan);margin-right:6px}.workspace{display:grid;grid-template-columns:292px minmax(0,1fr);gap:20px}.panel{border:1px solid var(--line);border-radius:var(--radius);background:linear-gradient(140deg,#131e30,#101928);padding:25px;min-width:0}.section-label{display:flex;align-items:center;gap:10px}.section-label>span{letter-spacing:0;font-size:11px;color:var(--cyan);border:1px solid #365855;border-radius:6px;padding:1px 5px}.controls label{display:block;font-size:12px;margin:20px 0 8px;color:#d5e0ef}.controls select,.controls input[type=number]{width:100%;border:1px solid #34445d;background:#0b1423;color:var(--text);padding:10px;border-radius:8px;min-height:42px}.controls input[type=range]{width:100%;accent-color:var(--cyan);margin:10px 0;cursor:pointer}.label-line{display:flex;justify-content:space-between;align-items:baseline;gap:4px}.label-line output{font-variant-numeric:tabular-nums;font-size:13px;color:var(--cyan)}.range-ends{display:flex;justify-content:space-between;font-size:10px;color:var(--muted);margin-top:-5px}.hint{font-size:12px;color:var(--muted);line-height:1.6}.scale{margin:17px 0;font-size:12px}.scale summary{color:var(--muted);cursor:pointer}.primary,.secondary{display:inline-flex;justify-content:center;align-items:center;gap:12px;border-radius:9px;padding:11px 16px;min-height:44px;font-size:13px;font-weight:600;text-decoration:none!important}.primary{background:var(--cyan);border:1px solid var(--cyan);color:#06251f}.primary:hover{background:#92f2e2}.secondary{border:1px solid #425472;background:transparent;color:var(--text)}.secondary:hover{background:#22324a}.controls .primary,.controls .secondary{width:100%;margin-top:8px}.controls .primary{justify-content:space-between}.presets{border-top:1px solid var(--line);padding-top:20px;margin-top:23px;display:flex;gap:7px;flex-wrap:wrap}.presets>span{width:100%;font-size:10px;letter-spacing:1.5px;color:var(--muted);margin-bottom:4px}.presets button{font-size:11px;background:#1b293f;border:1px solid #364965;color:#d4e3f5;border-radius:20px;padding:6px 10px}.presets button:hover{border-color:var(--cyan)}.panel-head{display:flex;justify-content:space-between;align-items:flex-start;gap:15px}.badge{font-size:10px;border:1px solid #3e4c67;border-radius:20px;padding:5px 10px;color:#c3d1e7;white-space:nowrap}.legend{display:flex;gap:18px;flex-wrap:wrap;font-size:10px;color:var(--muted);margin:5px 0}.legend>span{display:flex;gap:6px;align-items:center}.swatch{display:inline-block;width:7px;height:7px;border-radius:50%}.outer{background:#8194b5}.inner{background:var(--cyan)}.chain{background:var(--purple)}.truth{background:#fff}svg{display:block;max-width:100%;width:100%;overflow:visible}#cloud{height:auto;max-height:460px;margin:12px 0 0}.plot-note{display:flex;justify-content:space-between;gap:20px;border-bottom:1px solid var(--line);padding-bottom:10px;color:var(--muted);font-size:10px}.plot-note p{margin:5px 0}.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;padding-top:20px}.metrics>div>span,.repeat-metrics>div>span{display:block;font-size:11px;color:var(--muted)}.metrics strong{display:block;font-size:30px;font-weight:500;font-variant-numeric:tabular-nums;margin:4px 0}.metrics>div:nth-child(2) strong{color:var(--cyan)}small{display:block;font-size:10px;color:var(--muted)}.uncertainty,.repeats{margin-top:20px}.interval-layout{display:grid;grid-template-columns:1fr 1.5fr;gap:30px;align-items:center}.interval-text{font-size:28px;letter-spacing:-.6px;color:var(--cyan);font-variant-numeric:tabular-nums}.interval-layout p{font-size:12px}.explain{font-size:13px;line-height:1.65;color:var(--muted)}.uncertainty>.explain{border-top:1px solid var(--line);padding-top:18px;margin-bottom:0}.repeat-metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;padding:16px 0 10px}.repeat-metrics strong{display:block;font-size:25px;font-weight:500;margin:4px 0}#repeat-status{font-size:12px;color:var(--muted);padding:14px 0}#repeat-plot{margin-top:12px}.bottom-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:20px}.formula{font-size:24px;color:var(--cyan);background:#0b1423;border-radius:10px;padding:18px 22px;line-height:1.6;margin:17px 0}.formula span{font-size:13px;color:var(--muted)}.method>p{font-size:13px}.export-bar{display:flex;align-items:center;justify-content:space-between;gap:30px;border:1px solid #37524e;border-radius:var(--radius);background:#142725;padding:28px;margin:30px 0}.export-bar h2{font-size:21px;margin:0 0 6px}.export-bar p{font-size:12px;color:var(--muted);margin:0}.export-actions{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}footer{font-size:11px;color:var(--muted);padding:0 0 30px}footer p{margin:6px 0}.notice{padding:18px;background:#38271a;border:1px solid var(--orange);border-radius:10px;color:#ffdbbb;margin-bottom:20px}[hidden]{display:none!important}.error{color:#ffd6d0;border-color:#e6867b}.busy{opacity:.65}sup{font-size:.65em}@media(max-width:1000px){.intro{display:block}.model{margin-top:20px}.workspace{grid-template-columns:255px minmax(0,1fr)}.panel{padding:20px}.metrics strong{font-size:24px}.interval-layout{grid-template-columns:1fr 1.5fr}.export-bar{display:block}.export-actions{justify-content:flex-start;margin-top:20px}.badge{white-space:normal}}@media(max-width:700px){.top{padding:18px}main{padding:0 16px}.top nav{gap:15px;font-size:11px}.brand{font-size:8px}.intro{padding:34px 0 25px}h1{letter-spacing:-1.3px}.lead{font-size:15px}.workspace,.bottom-grid{grid-template-columns:1fr}.controls{display:grid;grid-template-columns:1fr 1fr;gap:8px 18px}.controls>*{grid-column:1/-1}.controls label{margin-top:12px}.controls .primary,.controls .secondary{grid-column:auto;margin-top:2px}.presets{margin-top:12px}.controls>.hint{margin:3px 0}.panel{padding:18px}.panel-head{flex-wrap:wrap;gap:8px}.panel-head h2{font-size:21px;margin-bottom:10px}.panel-head .badge{font-size:9px}.legend{gap:10px;font-size:9px}#cloud{margin-top:0}.metrics{gap:8px}.metrics strong{font-size:24px}.metrics>div>span{font-size:10px}.metrics small{font-size:9px}.interval-layout{grid-template-columns:1fr;gap:6px}.interval-layout p{margin:5px 0}.interval-text{font-size:25px}.repeat-metrics{grid-template-columns:1fr 1fr;gap:15px}.repeat-metrics>div:first-child{grid-column:1/-1}.repeat-metrics strong{font-size:23px}.export-bar{padding:22px}.export-actions{display:grid;grid-template-columns:1fr}.plot-note{display:block}.hint,.explain{overflow-wrap:anywhere}.formula{font-size:21px}}
+
+.lab-switch {display:flex;width:fit-content;max-width:100%;margin-top:24px;padding:4px;background:#101a28;border:1px solid var(--line);border-radius:12px;gap:4px}
+.lab-switch button {border:0;background:transparent;color:var(--muted);font:inherit;font-size:13px;text-align:left;padding:10px 15px;border-radius:8px}
+.lab-switch button[aria-pressed="true"] {background:#1b393c;color:var(--cyan)}
+#lab-two canvas {display:block;width:100%;height:auto;margin:12px auto}
+#lab-two #og-graph {height:clamp(265px,38vw,420px);background:#0e1929;border-radius:10px}
+#lab-two select {max-width:100%}
+#lab-two .controls input[type=file] {max-width:100%;font-size:13px}
+#lab-two summary {cursor:pointer;color:var(--cyan);font-size:13px;padding-block:6px}
+#og-path {overflow-wrap:anywhere}
+#og-curve-d {background:#111b2b;color:var(--text);padding:6px;border-radius:6px}
+.og-metrics {grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--line)}
+.og-layers {display:flex;gap:16px;align-items:baseline;flex-wrap:wrap;margin:14px 0 4px}
+.og-layers span {color:var(--muted);font-size:12px}
+#lab-two table {border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums;font-size:13px;margin:12px 0}
+#lab-two th,#lab-two td {padding:7px 5px;text-align:right;border-bottom:1px solid var(--line)}
+#lab-two th {color:var(--muted);font-weight:500}
+#lab-two td:first-child,#lab-two th:first-child {text-align:left}
+#lab-two pre {white-space:pre-wrap;overflow-wrap:anywhere}
+#og-diagnosis strong {color:var(--cyan)}
+#lab-two .og-scroll {overflow-x:auto}
+@media(max-width:600px){.lab-switch button{font-size:12px;padding:9px 10px}.og-metrics{grid-template-columns:repeat(2,1fr)}#lab-two table{font-size:11px}}
 </style></head>
 <body><a class="skip" href="#main">Zum Experiment</a>
-<header class="top"><a href="../de/" class="brand"><span class="mark">X6</span><span>SPECTRAL<br>ASTROLABIUM</span></a><nav aria-label="Hauptnavigation"><a href="../wiki/de/causal-orders.html#time-domain">Hintergrund</a><a class="download" href="../research/lorentz_proper_time_lab/eigenzeit.ipynb" download>Notebook ↓</a></nav></header>
+<header class="top"><a href="../de/" class="brand"><span class="mark">X6</span><span>SPECTRAL<br>ASTROLABIUM</span></a><nav aria-label="Hauptnavigation"><a id="lab-background" href="../wiki/de/causal-orders.html#time-domain">Hintergrund</a><a id="lab-notebook" class="download" href="../research/lorentz_proper_time_lab/eigenzeit.ipynb" download>Notebook ↓</a></nav></header>
 <main id="main">
+<nav class="lab-switch" aria-label="Experimente"><button id="lab-switch-one" aria-controls="lab-one" aria-pressed="true">01 · Volumenuhr</button><button id="lab-switch-two" aria-controls="lab-two" aria-pressed="false">02 · Ordnungsgeometrie</button></nav>
+<div id="lab-one">
 <section class="intro"><div><p class="eyebrow">KAUSALE ORDNUNGEN / EXPERIMENT 01</p><h1>Wie viel Zeit steckt<br>zwischen Ereignissen?</h1><p class="lead">Zähle Punkte. Schätze Eigenzeit. Sieh die Unsicherheit.</p></div><div class="model"><span class="dot"></span> Bekanntes flaches Modell<span>Simulation · feste Stichprobe · c = 1</span></div></section>
 <noscript><p class="notice">Für das Experiment bitte JavaScript aktivieren. Das <a href="../research/lorentz_proper_time_lab/README.md">Modell und die Bedienung</a> sowie das <a href="../research/lorentz_proper_time_lab/eigenzeit.ipynb">Notebook</a> sind auch ohne JavaScript zugänglich.</p></noscript>
 <div id="error" class="notice error" role="alert" hidden></div>
@@ -37,7 +61,45 @@
 <section class="bottom-grid"><article class="panel"><div class="section-label"><span>05</span> AUFLÖSUNG VERSTEHEN</div><h2>Mehr Punkte, kleinere Fehler.</h2><p class="explain">Die Kurve berechnet den RMSE / T aus der vollständigen Binomialverteilung – ohne Monte-Carlo-Streuung. Nur das Budget m wird verändert.</p><svg id="resolution" viewBox="0 0 600 250" role="img" aria-label="Theoretischer Eigenzeitfehler in Abhängigkeit vom Stichprobenbudget"></svg><p id="resolution-note" class="hint"></p></article>
 <article class="panel method"><div class="section-label"><span>06</span> DAS MODELL DAHINTER</div><h2>Zählen wird zu Zeit.</h2><div class="formula">K ∼ Binomial(m, θ<sup>d</sup>)<br><span>θ = τ / T</span><br>τ̂ = T · (K / m)<sup>1/d</sup></div><p>Das Volumen eines flachen d-dimensionalen Raumzeitdiamanten wächst wie τ<sup>d</sup>. Der Anteil der Punkte im inneren Diamanten schätzt deshalb θ<sup>d</sup>.</p><p class="hint">Festgelegt: flache Minkowski-Geometrie, bekannte Dimension, unabhängige uniforme Volumenbeprobung, vollständig enthaltenes Intervall und vorab gewählte Endpunkte. Dies entspricht auch einer homogenen Poisson-Beprobung, bedingt auf ihre Gesamtzahl m.</p><p class="hint">Die längste Kette wird nur veranschaulicht. Hier gibt es keine daraus kalibrierte Eigenzeit, keine Krümmungsdiagnose und keine physikalische Planck-Uhr.</p></article></section>
 <section class="export-bar"><div><h2>Nachvollziehen. Verändern. Wiederholen.</h2><p>Das Notebook erklärt dieselben Formeln und führt die Referenzrechnung in Python aus.</p></div><div class="export-actions"><a class="primary" href="../research/lorentz_proper_time_lab/eigenzeit.ipynb" download>Jupyter-Notebook ↓</a><button id="export" class="secondary">Versuch als JSON ↓</button><button id="export-html" class="secondary">Demonstrator offline ↓</button></div></section>
-<footer><p>X6 Eigenzeit-Labor · Version 1.1 · <a href="../research/lorentz_proper_time_lab/README.md">Bedienung & Reproduktion</a> · <a href="../research/lorentz_proper_time_domain/README.md">Gültigkeitsvertrag</a> · <a href="https://www.itl.nist.gov/div898/software/dataplot/refman2/auxillar/exacbici.htm">Statistische Referenz: NIST</a></p><p>Berechnung lokal im Browser. Endliche Pseudozufallszahlen und Gleitkommaarithmetik approximieren das ideale Modell. Darstellung höchstens 1 400 Punkte; gezählt werden alle m.</p></footer>
+</div>
+<div id="lab-two" hidden>
+<section class="intro"><div><p class="eyebrow">KAUSALE ORDNUNGEN / EXPERIMENT 02</p><h1>Geometrie aus<br>kausaler Ordnung</h1><p class="lead">Wähle den Rand. Vergleiche Dimension und Eigenzeit.</p></div></section>
+<div class="workspace">
+<aside class="panel controls"><div class="section-label"><span>01</span> ORDNUNG WÄHLEN</div>
+<label for="og-source">Datenquelle</label><select id="og-source">
+<option value="n15">CST-DUST · N15 Typ 375841</option><option value="minimal">N16 · erstes Ereignis der Viererkette</option><option value="long">N16 · vollständige Viererkette</option><option value="all">N16 · alle alten Ereignisse</option><option value="flat">Flacher Minkowski-Diamant</option><option value="twins">Krümmungsvergleich · Dichtezwillinge</option><option value="import">Eigene Ordnung importieren</option></select>
+<div id="og-upload" hidden><label for="og-file">JSON mit Knoten und gerichteten Kanten</label><input type="file" id="og-file" accept=".json,application/json"><details class="og-file-format"><summary>Dateiformat ansehen</summary><pre>{"nodes":[0,1,2],
+ "edges":[[0,1],[1,2]]}</pre><p class="hint">Zahlen oder kurze Namen, maximal 256 Knoten. Auch isolierte Knoten angeben. Hasse-Kanten und strikte Relationen werden unterstützt. Ein eigener Export lässt sich wieder öffnen.</p></details></div>
+<div id="og-flat" hidden><label for="og-d">Dimension des Simulators</label><select id="og-d"><option>2</option><option selected>3</option><option>4</option></select>
+<label for="og-m">Äusseres Budget m</label><select id="og-m"><option>32</option><option>64</option><option selected>128</option></select>
+<label for="og-theta">Innere Eigenzeit τ / T</label><input id="og-theta" type="number" min="0.05" max="1" step="0.05" value="0.8">
+<label for="og-scale">Externer Zeitmassstab T</label><input id="og-scale" type="number" min="0.001" max="1000000" step="any" value="1">
+<p class="hint">Nur der Generator kennt d und τ. Die Auswertung erhält die innere Ordnung, m und T.</p></div>
+<div id="og-random" hidden><label for="og-seed">Zufallsstart (Seed)</label><input id="og-seed" type="number" min="0" max="4294967295" step="1" value="20261122"><button id="og-next" class="secondary">Neue Ordnung ziehen</button></div>
+<div id="og-twin-controls" hidden><label for="og-metric">Geometrie derselben Wolke</label><select id="og-metric"><option value="curved">De Sitter · uniforme Volumendichte</option><option value="flat">Flach · angepasste Beprobungsdichte</option></select><p id="og-twin-note" class="hint"></p></div>
+<div id="og-selection"><label for="og-scope">Ausschnitt</label><select id="og-scope"><option value="whole">Gesamte Ordnung</option><option value="interval">Offenes Intervall (p, q)</option></select>
+<div id="og-ends" hidden><label for="og-p">Früher Randpunkt p</label><select id="og-p"></select><label for="og-q">Später Randpunkt q</label><select id="og-q"></select><p class="hint">Gezählt werden die Ereignisse strikt zwischen p und q.</p></div></div>
+</aside>
+<section class="panel experiment"><div class="panel-head"><div><div class="section-label"><span>02</span> ORDNUNG LESEN</div><h2>Hasse-Diagramm</h2></div><span id="og-context" class="badge"></span></div>
+<div class="legend"><span><i class="swatch inner"></i>Ereignis</span><span><i class="swatch chain"></i>Eine längste Kette</span></div>
+<div id="og-error" class="notice error" role="alert" hidden></div>
+<div id="og-observation"><canvas id="og-graph" width="880" height="400" role="img" aria-label="Hasse-Diagramm, Zukunft oben"></canvas><p id="og-path" class="hint"></p>
+<div class="metrics og-metrics"><div><span>Ereignisse K</span><strong id="og-k">—</strong></div><div><span>Kausale Paare R</span><strong id="og-pairs">—</strong></div><div><span>Paaranteil r</span><strong id="og-r">—</strong></div><div><span>Kettenhöhe L</span><strong id="og-h">—</strong></div></div>
+<div class="og-layers"><span>Intervallschichten N₀ … N₃</span><b id="og-layers"></b></div><small id="og-action"></small></div>
+</section></div>
+<section class="panel uncertainty"><div class="section-label"><span>03</span> DIMENSION UND EIGENZEIT</div><h2>Welche flache Dimension passt?</h2><div id="og-diagnosis" aria-live="polite"></div><div id="og-time"></div></section>
+<section id="og-repeat-panel" class="panel repeats" hidden><div class="panel-head"><div><div class="section-label"><span>04</span> ZUVERLÄSSIGKEIT ERKUNDEN</div><h2>Volumen und Kette im selben Versuch</h2></div><button class="secondary" id="og-repeat">200 Ordnungen ziehen</button></div><p class="explain">Jede neue Wolke liefert beide Schätzungen. Bias und RMSE sind in derselben Zeiteinheit wie τ angegeben.</p><p id="og-progress" role="status"></p><div id="og-repeat-out"></div></section>
+<div class="bottom-grid"><section class="panel"><div class="section-label"><span>05</span> ENDLICHE GRÖSSE</div><h2>Wie wächst die längste Kette?</h2><label for="og-curve-d">Flache Referenzdimension</label> <select id="og-curve-d"><option>2</option><option>3</option><option>4</option></select>
+<canvas id="og-curve" width="680" height="270" role="img" aria-label="Mittlere Höhe geteilt durch K hoch eins durch d, nach Punktzahl"></canvas><details><summary>Referenzwerte und Stichproben</summary><div id="og-curve-values"></div></details>
+<p class="hint">Bei 15 inneren Ereignissen in 2D ist die mittlere Höhe exakt 5,56153. Der führende Grenzwert 2√15 ergibt 7,74597. Relativer Unterschied: −28,20 %.</p>
+<details><summary>Exakte 2D-Verteilung bei K = 15</summary><canvas id="og-lis" width="680" height="200" role="img" aria-label="Exakte Wahrscheinlichkeitsverteilung der längsten Kette für 15 Punkte"></canvas><p class="hint">Die Höhe entspricht der längsten steigenden Teilfolge einer zufälligen Permutation. Tracy–Widom F₂ beschreibt den Grenzfall der mit K¹⁄⁶ skalierten Schwankung.</p></details></section>
+<section id="og-contract" class="panel method"><div class="section-label"><span>06</span> GÜLTIGKEITSVERTRAG</div><h2>Was die Ordnung trägt</h2><p>R zählt alle vergleichbaren Paare. Eine Linie im Diagramm zeigt einen unmittelbaren Nachfolger. Nⱼ zählt Paare mit genau j Zwischenereignissen.</p><p>Die flachen Referenzen setzen unabhängige, volumenuniforme Punkte voraus. In einem Import sind absolute Zeit, Dichte und Krümmung offen. Die 4D-Wirkungskombination enthält auch Randbeiträge.</p>
+<p>Der Dichtezwilling verwendet dieselben Koordinaten in zwei konform verwandten Metriken. Im veröffentlichten Benchmark lieferten alle 3 072 Zwillinge dieselbe Ordnung. Im stärksten primären de-Sitter-Fall warnte die Höhe in 5/512, die kombinierte Kettenstatistik in 118/512 Fällen.</p>
+<p><a href="https://github.com/thomasmgfeller/x6-spectral-astrolabium/tree/ebf8b6cbadd05d90470514ec5f284faafc23cd9c/research/lorentz_curvature">Krümmungsbenchmark</a> · <a href="https://github.com/thomasmgfeller/x6-spectral-astrolabium/tree/ebf8b6cbadd05d90470514ec5f284faafc23cd9c/research/lorentz_de_sitter_c2">Modellgebundene Intervalle für RT²</a></p></section></div>
+<section class="export-bar"><div><h2>Ordnung nachrechnen</h2><p>JSON enthält Ausgangsgraph, Randwahl, strikte Ordnungsmatrix und Ergebnisse.</p></div><div class="export-actions"><button class="primary" id="og-export">Ordnung als JSON ↓</button><button class="secondary" id="og-notebook">Prüfnotebook ↓</button><button class="secondary" id="og-html">App offline ↓</button></div></section>
+</div>
+
+<footer><p>X6 Eigenzeit-Labor · Volumenuhr und Ordnungsgeometrie · <a href="../research/lorentz_proper_time_lab/README.md">Bedienung & Reproduktion</a> · <a href="../research/lorentz_proper_time_domain/README.md">Gültigkeitsvertrag</a> · <a href="https://www.itl.nist.gov/div898/software/dataplot/refman2/auxillar/exacbici.htm">Statistische Referenz: NIST</a></p><p>Berechnung lokal im Browser. Endliche Pseudozufallszahlen und Gleitkommaarithmetik approximieren das ideale Modell. Darstellung höchstens 1 400 Punkte; gezählt werden alle m.</p></footer>
 </main><script>/* SPDX-License-Identifier: Apache-2.0
  * Fixed-budget Minkowski proper-time demonstrator. No adaptive stopping.
  * The estimator receives counts, dimension and an external scale, not truth.
@@ -327,9 +389,479 @@
   $('repeat').addEventListener('click',repeat);$('export').addEventListener('click',exportData);
   $('export-html').addEventListener('click',()=>{
     const doc=document.documentElement.cloneNode(true),base=document.createElement('base');
-    base.href='https://thomasmgfeller.github.io/x6-spectral-astrolabium/app/';doc.querySelector('head').prepend(base);
+    base.href='https://thomasmgfeller.github.io/x6-spectral-astrolabium/app/';
+    doc.querySelector('base')?.remove();doc.querySelector('head').prepend(base);
+    doc.dataset.initialExperiment=document.getElementById('lab-two').hidden?'01':'02';
     download('<!doctype html>\n'+doc.outerHTML,'eigenzeit-demonstrator.html','text/html');
   });
   run();
+})();
+</script><script id="og-bank" type="application/json">{"version":"flat-bank/1","generator":"NumPy PCG64","seed":20261122,"samples":255,"maxK":128,"conditional":{"2":[[0,0,0],[0,0,255],[0,1,389],[0,3,521],[0,6,625],[1,10,716],[2,13,801],[3,17,886],[5,23,972],[6,29,1046],[10,34,1110],[13,43,1178],[16,50,1253],[17,57,1320],[22,64,1378],[31,74,1439],[35,83,1493],[39,94,1537],[43,105,1581],[48,117,1632],[55,129,1689],[68,142,1736],[72,159,1785],[82,174,1827],[88,181,1861],[95,201,1897],[104,220,1944],[117,231,1989],[126,242,2024],[134,259,2072],[140,276,2117],[157,291,2161],[171,316,2204],[185,333,2252],[197,347,2291],[207,369,2329],[233,401,2367],[244,420,2406],[253,448,2452],[268,470,2486],[289,490,2530],[309,512,2569],[324,545,2593],[340,573,2628],[354,607,2653],[379,630,2688],[400,651,2724],[415,662,2762],[452,693,2798],[470,721,2830],[494,736,2868],[505,762,2888],[527,798,2921],[555,827,2956],[579,864,2987],[607,901,3026],[619,932,3060],[652,973,3078],[679,1012,3107],[702,1053,3133],[731,1087,3154],[761,1116,3177],[778,1159,3207],[803,1191,3231],[840,1218,3259],[866,1249,3299],[887,1292,3340],[921,1329,3371],[933,1366,3395],[959,1418,3419],[990,1461,3441],[1042,1489,3469],[1073,1539,3499],[1101,1563,3525],[1137,1612,3545],[1175,1656,3572],[1205,1706,3603],[1230,1724,3626],[1261,1760,3653],[1298,1805,3684],[1326,1852,3702],[1374,1891,3736],[1407,1932,3761],[1454,1980,3787],[1490,2041,3814],[1512,2088,3840],[1552,2114,3864],[1594,2179,3898],[1631,2240,3932],[1666,2273,3961],[1710,2319,3988],[1757,2377,4012],[1802,2427,4038],[1855,2480,4064],[1885,2534,4083],[1932,2617,4114],[1970,2671,4143],[2011,2730,4172],[2052,2793,4198],[2092,2813,4222],[2147,2843,4242],[2186,2891,4264],[2224,2965,4292],[2252,3025,4308],[2308,3078,4335],[2353,3133,4363],[2386,3184,4388],[2427,3250,4412],[2470,3303,4432],[2527,3374,4447],[2577,3423,4470],[2611,3503,4493],[2693,3575,4521],[2737,3630,4537],[2776,3702,4558],[2822,3760,4584],[2884,3818,4602],[2904,3896,4621],[2990,3960,4646],[3041,4031,4664],[3089,4094,4683],[3161,4167,4704],[3202,4240,4722],[3276,4299,4747],[3365,4382,4763],[3400,4428,4778],[3423,4483,4796],[3467,4530,4815],[3521,4643,4843]],"3":[[0,0,0],[0,0,255],[0,1,311],[0,3,389],[0,5,453],[0,7,509],[0,9,550],[0,11,593],[0,15,619],[0,18,656],[1,21,693],[1,26,728],[1,31,754],[1,37,783],[3,41,812],[4,45,846],[6,51,868],[7,58,896],[8,64,915],[10,71,944],[11,79,960],[15,85,986],[17,97,1010],[18,106,1028],[23,112,1046],[30,115,1065],[31,122,1088],[35,133,1113],[43,138,1134],[49,142,1148],[54,158,1163],[55,163,1188],[65,179,1205],[67,183,1227],[72,194,1243],[77,201,1257],[80,219,1271],[87,223,1291],[91,236,1301],[94,247,1322],[99,253,1330],[102,268,1338],[118,284,1354],[127,295,1365],[130,304,1379],[136,320,1393],[147,332,1400],[150,339,1407],[167,353,1421],[174,379,1430],[179,391,1437],[185,406,1454],[188,411,1468],[197,432,1484],[213,448,1496],[217,463,1506],[227,483,1518],[233,518,1531],[245,536,1540],[256,544,1552],[272,565,1556],[290,578,1569],[293,586,1581],[304,595,1592],[315,607,1607],[327,625,1623],[332,650,1633],[346,666,1646],[352,695,1655],[364,708,1678],[368,719,1681],[383,743,1687],[386,751,1693],[392,772,1704],[409,810,1712],[422,832,1724],[424,852,1732],[434,872,1740],[458,888,1747],[471,911,1751],[485,933,1759],[492,962,1769],[509,991,1780],[516,1014,1789],[526,1022,1805],[551,1040,1815],[571,1077,1820],[588,1096,1831],[603,1131,1840],[621,1146,1849],[639,1161,1860],[646,1201,1867],[664,1242,1879],[680,1268,1885],[693,1294,1893],[702,1308,1903],[720,1334,1907],[733,1388,1913],[784,1408,1922],[796,1426,1932],[806,1427,1938],[806,1464,1947],[833,1482,1955],[865,1526,1962],[898,1533,1970],[905,1561,1979],[928,1587,1988],[945,1625,1991],[969,1676,1996],[987,1702,2002],[998,1738,2007],[1004,1766,2011],[1009,1796,2018],[1024,1804,2025],[1056,1846,2037],[1074,1911,2047],[1103,1944,2051],[1135,1969,2059],[1138,2006,2066],[1151,2023,2074],[1171,2070,2082],[1190,2119,2088],[1218,2153,2093],[1246,2190,2105],[1261,2237,2113],[1279,2269,2119],[1288,2300,2125],[1299,2329,2129],[1333,2362,2137]],"4":[[0,0,0],[0,0,255],[0,1,283],[0,2,323],[0,4,375],[0,5,415],[0,7,448],[0,8,480],[0,10,497],[0,12,523],[0,15,542],[0,16,564],[0,18,582],[0,21,595],[0,23,609],[0,29,626],[1,30,637],[1,32,658],[1,37,671],[2,41,682],[2,46,693],[3,52,703],[5,57,712],[5,61,723],[6,63,734],[7,74,747],[7,78,759],[9,81,768],[9,92,787],[10,92,796],[10,97,810],[10,102,818],[11,106,829],[13,113,840],[13,120,846],[14,125,855],[19,128,861],[22,133,870],[22,142,873],[22,145,883],[24,158,891],[28,164,900],[29,167,905],[29,175,916],[34,178,923],[37,184,930],[37,195,944],[39,217,953],[41,222,956],[45,235,962],[48,237,974],[49,240,984],[53,256,987],[56,256,995],[60,269,1002],[62,273,1005],[64,280,1016],[68,294,1021],[75,310,1026],[77,322,1031],[79,322,1033],[88,344,1043],[90,348,1049],[97,359,1058],[97,364,1064],[101,370,1070],[102,374,1075],[103,393,1080],[112,401,1080],[112,414,1082],[131,424,1083],[134,445,1089],[135,457,1094],[139,463,1097],[140,468,1099],[146,482,1108],[149,489,1112],[151,501,1117],[162,526,1124],[165,526,1133],[167,538,1140],[167,542,1144],[172,558,1149],[180,567,1154],[180,576,1158],[185,589,1161],[188,599,1165],[191,599,1172],[198,614,1175],[199,622,1176],[219,627,1183],[219,644,1186],[234,669,1192],[234,669,1196],[243,690,1200],[246,708,1206],[256,714,1209],[276,719,1215],[276,720,1219],[282,745,1220],[293,748,1231],[301,764,1236],[301,769,1240],[315,782,1243],[328,793,1247],[329,807,1249],[331,822,1251],[331,839,1254],[331,850,1258],[347,872,1262],[358,882,1267],[359,906,1271],[383,941,1275],[406,945,1279],[412,958,1286],[415,975,1291],[428,983,1294],[430,1008,1296],[430,1011,1299],[437,1030,1302],[440,1038,1306],[444,1050,1308],[458,1059,1312],[460,1079,1313],[470,1104,1319],[471,1104,1324],[502,1126,1333],[520,1155,1338],[532,1158,1344]]},"scaling":{"2":[{"k":15,"trials":48,"heightMean":5.375,"heightSE":0.1647720325025927,"pairMean":52.083333333333336},{"k":30,"trials":48,"heightMean":8.5,"heightSE":0.19750213213679887,"pairMean":216.3125},{"k":50,"trials":48,"heightMean":11.3125,"heightSE":0.22112753051525053,"pairMean":614.3125},{"k":100,"trials":48,"heightMean":16.8125,"heightSE":0.21191513171466872,"pairMean":2476.5416666666665},{"k":256,"trials":48,"heightMean":28.8125,"heightSE":0.2881468209533673,"pairMean":16472.5},{"k":1024,"trials":48,"heightMean":59.270833333333336,"heightSE":0.3691801143829282,"pairMean":262680.4583333333},{"k":4096,"trials":12,"heightMean":121.0,"heightSE":1.0871146130092182,"pairMean":4185052.0833333335},{"k":16384,"trials":12,"heightMean":245.33333333333334,"heightSE":1.2329647278823594,"pairMean":67144642.58333333}],"3":[{"k":15,"trials":48,"heightMean":3.375,"heightSE":0.10990405228752877,"pairMean":24.333333333333332},{"k":30,"trials":48,"heightMean":4.604166666666667,"heightSE":0.11812506645025463,"pairMean":96.54166666666667},{"k":50,"trials":48,"heightMean":5.666666666666667,"heightSE":0.10872134550890702,"pairMean":276.4375},{"k":100,"trials":48,"heightMean":7.5625,"heightSE":0.14557982017626342,"pairMean":1122.1458333333333},{"k":256,"trials":48,"heightMean":11.145833333333334,"heightSE":0.14884181513877798,"pairMean":7477.479166666667},{"k":1024,"trials":48,"heightMean":19.1875,"heightSE":0.16485607843129316,"pairMean":120340.79166666667},{"k":4096,"trials":12,"heightMean":32.25,"heightSE":0.47871355387816905,"pairMean":1910668.9166666667},{"k":16384,"trials":12,"heightMean":53.0,"heightSE":0.3892494720807615,"pairMean":30784159.0}],"4":[{"k":15,"trials":48,"heightMean":2.6041666666666665,"heightSE":0.10201682230444607,"pairMean":10.958333333333334},{"k":30,"trials":48,"heightMean":3.1666666666666665,"heightSE":0.08595177052156612,"pairMean":42.145833333333336},{"k":50,"trials":48,"heightMean":3.7291666666666665,"heightSE":0.09292137745269846,"pairMean":113.1875},{"k":100,"trials":48,"heightMean":4.729166666666667,"heightSE":0.08283316209294912,"pairMean":471.0625},{"k":256,"trials":48,"heightMean":6.583333333333333,"heightSE":0.0980000964924502,"pairMean":3203.9583333333335},{"k":1024,"trials":48,"heightMean":10.104166666666666,"heightSE":0.11623368234952187,"pairMean":52410.875},{"k":4096,"trials":12,"heightMean":15.083333333333334,"heightSE":0.19299604852813634,"pairMean":827156.9166666666},{"k":16384,"trials":12,"heightMean":23.0,"heightSE":0.24618298195866548,"pairMean":13492372.916666666}]},"lis15":[0,1,9694844,8017098273,164161815768,485534447114,434119587475,172912977525,37558353900,4927007100,410474625,22128576,766221,16381,196,1],"mmGrid":[0.5,0.49626198736277455,0.49254789195763804,0.48885762677083405,0.48519110378645924,0.48154823402242647,0.4779289275656341,0.474333093606387,0.4707606404720638,0.4672114756600568,0.4636855058699949,0.46018263703526674,0.45670277435385376,0.45324582231849303,0.44981168474617633,0.4464002648070073,0.4430114650524189,0.43964518744277464,0.43630133337435656,0.4329798037057629,0.4296804987837135,0.4264033184682901,0.42314816215760415,0.419914928811929,0.4167035169772792,0.41351382480847076,0.4103457500916526,0.40719919026634255,0.40407404244695877,0.4009702034438577,0.39788756978391004,0.39482603773059016,0.3917855033036156,0.38876586229813603,0.38576701030347926,0.3827888427214611,0.3798312547842795,0.3768941415719839,0.3739773980295428,0.3710809189835105,0.36820459915830317,0.3653483331920863,0.36251201565229346,0.35969554105077217,0.3568988038585663,0.35412169852035086,0.35136411946851137,0.34862596113688815,0.3459071179741885,0.3432074844570625,0.3405269551028727,0.3378654244821353,0.33522278723066234,0.33259893806139823,0.3299937717759639,0.3274071832759037,0.32483906757365766,0.3222893198032467,0.31975783523069023,0.3172445092641511,0.31474923746382655,0.31227191555156886,0.3098124394202689,0.3073707051429811,0.3049466089818117,0.30254004739656787,0.3001509170531762,0.2977791148318715,0.2954245378351632,0.29308708339558126,0.2907666490832105,0.2884631327130129,0.28617643235194107,0.2839064463258589,0.2816530732262504,0.2794162119167507,0.27719576153947373,0.27499162152116163,0.2728036915791478,0.27063187172714415,0.2684760622808544,0.2663361638634054,0.2642120774106291,0.26210370417616297,0.2600109457363969,0.2579337039952606,0.25587188118885856,0.25382537988994824,0.2517941030122772,0.24977795381476586,0.24777683590555452,0.24579065324591096,0.243819310153997,0.24186271130850182,0.2399207617521504,0.23799336689507591,0.23608043251807231,0.23418186477571606,0.2322975701993799,0.23042745570011477,0.22857142857142845,0.22672939649194002,0.22490126752793244,0.22308695013579316,0.2212863531643465,0.2194993858570906,0.2177259578543157,0.215965979195146,0.21421936031946565,0.2124860120697555,0.2107658456928404,0.2090587728415386,0.20736470557622952,0.20568355636632416,0.2040152380916623,0.2023596640438137,0.20071674792730956,0.1990864038607831,0.19746854637803887,0.19586309042904543,0.19426995138084757,0.19268904501841433,0.19112028754540447,0.18956359558487515,0.18801888617990828,0.18648607679418322,0.18496508531247427,0.18345583004108856,0.1819582297082428,0.18047220346437645,0.1789976708824072,0.17753455195792608,0.17608276710933843,0.174642237177949,0.1732128834279903,0.17179462754660196,0.170387391643754,0.1689910982521247,0.16760567032692134,0.16623103124566813,0.16486710480792544,0.16351381523498337,0.1621710871694987,0.1608388456750932,0.1595170162359075,0.15820552475611538,0.1569042975593958,0.1556132613883641,0.15433234340397198,0.1530614711848596,0.15180057272668157,0.15054957644138744,0.14930841115647792,0.14807700611421784,0.14685529097082156,0.1456431957956077,0.1444406510701168,0.14324758768720428,0.1420639369501034,0.14088963057145498,0.13972460067231413,0.1385687797811288,0.13742210083268994,0.1362844971670564,0.13515590252846083,0.13403625106418005,0.13292547732339316,0.13182351625601052,0.1307303032114817,0.12964577393758467,0.1285698645791885,0.12750251167700336,0.1264436521663035,0.12539322337563827,0.12435116302551796,0.12331740922708809,0.12229190048078149,0.12127457567495757,0.12026537408452363,0.11926423536953859,0.11827109957380821,0.11728590712345784,0.11630859882549718,0.11533911586636844,0.11437739981048199,0.11342339259874135,0.1124770365470537,0.11153827434482945,0.11060704905347182,0.10968330410485494,0.10876698329979058,0.10785803080648723,0.1069563911589982,0.1060620092556609,0.10517483035752838,0.10429480008679103,0.10342186442519274,0.1025559697124358,0.10169706264458386,0.10084509027245277,0.1]}
+</script>
+<script>/* SPDX-License-Identifier: Apache-2.0 */
+(function (root) {
+  'use strict';
+  const P = typeof module === 'object' ? require('../core.js') : root.ProperTime;
+  const limit = 256, dimensions = [2, 3, 4];
+
+  function graphOrder(graph) {
+    if (!graph || !Array.isArray(graph.nodes) || graph.nodes.length > limit || !Array.isArray(graph.edges))
+      throw Error('Erwartet werden nodes und edges, mit höchstens 256 Knoten.');
+    const nodes = graph.nodes.slice(), n = nodes.length;
+    const validId = x => Number.isSafeInteger(x) || (typeof x === 'string' && x.length > 0 && x.length <= 80);
+    const index = new Map(nodes.map((v,i) => [v,i]));
+    if (!nodes.every(validId) || index.size !== n) throw Error('Knoten brauchen eindeutige Zahlen oder kurze Namen.');
+    if (graph.edges.length > n*(n-1)/2) throw Error('Zu viele Kanten für eine strikte Ordnung.');
+    const rel = nodes.map(() => new Uint8Array(n));
+    const children = nodes.map(() => []), degree = new Uint16Array(n);
+    for (const edge of graph.edges) {
+      if (!Array.isArray(edge) || edge.length !== 2 || !edge.every(x => index.has(x)))
+        throw Error('Eine Kante verweist auf einen unbekannten Knoten oder hat das falsche Format.');
+      const [i,j] = edge.map(x => index.get(x));
+      if (i === j || rel[i][j]) throw Error('Selbstkanten und doppelte Kanten sind unzulässig.');
+      rel[i][j] = 1;
+      children[i].push(j);
+      degree[j]++;
+    }
+    const topo = nodes.map((_,i) => i).filter(i => degree[i] === 0);
+    for (let t = 0; t < topo.length; t++)
+      for (const j of children[topo[t]]) if (--degree[j] === 0) topo.push(j);
+    if (topo.length !== n) throw Error('Die Kanten enthalten einen gerichteten Zyklus.');
+    for (let t = n-1; t >= 0; t--) {
+      const i = topo[t];
+      for (const j of children[i]) for (let h = 0; h < n; h++) rel[i][h] |= rel[j][h];
+    }
+    return {nodes, index, rel, topo};
+  }
+
+  function analyse(order, endpoints = null) {
+    const {nodes, index, rel, topo} = order;
+    let selected = nodes.map((_,i) => i);
+    if (endpoints !== null) {
+      if (!Array.isArray(endpoints) || endpoints.length !== 2 || !endpoints.every(x => index.has(x)))
+        throw Error('Das Intervall braucht zwei bekannte Endpunkte.');
+      const [a,b] = endpoints.map(x => index.get(x));
+      if (!rel[a][b]) throw Error('Für ein offenes Intervall muss p strikt vor q liegen.');
+      selected = selected.filter(j => rel[a][j] && rel[j][b]);
+    }
+    const local = new Map(selected.map((v,i) => [v,i]));
+    const sequence = topo.filter(v => local.has(v)).map(v => local.get(v));
+    const ids = selected.map(v => nodes[v]);
+    const matrix = selected.map(i => selected.map(j => rel[i][j]));
+    const k = ids.length, ranks = Array(k).fill(1), previous = Array(k).fill(-1);
+    let pairs = 0, top = -1;
+    const layers = [0,0,0,0], covers = [];
+    for (const j of sequence) {
+      for (const i of sequence) {
+        if (!matrix[i][j]) continue;
+        pairs++;
+        if (ranks[i]+1 > ranks[j]) { ranks[j] = ranks[i]+1; previous[j] = i; }
+        let count = 0;
+        for (let h = 0; h < k && count < 4; h++) count += matrix[i][h] * matrix[h][j];
+        if (count < 4) layers[count]++;
+        if (count === 0) covers.push([i,j]);
+      }
+      if (top === -1 || ranks[j] > ranks[top]) top = j;
+    }
+    const path = [];
+    for (let v = top; v !== -1; v = previous[v]) path.push(v);
+    path.reverse();
+    return {k, ids, matrix, pairs, fraction:k < 2 ? null : 2*pairs/(k*(k-1)),
+      height:path.length, path, ranks, covers, layers, action4:k-layers[0]+9*layers[1]-16*layers[2]+8*layers[3]};
+  }
+
+  function dust(kind) {
+    const chains = [[0,1,2,3],[4,5,14],[6,11,12,13],[7,8,9,10]];
+    const edges = chains.flatMap(chain => chain.slice(1).map((v,i) => [chain[i],v]));
+    edges.push([3,4],[3,6],[14,7],[13,7]);
+    const nodes = Array.from({length:15}, (_,i) => i);
+    if (kind !== 'n15') {
+      const last = {minimal:6, long:13, all:10}[kind];
+      if (last === undefined) throw Error('Unbekannter N16-Anschluss.');
+      nodes.push(15);
+      edges.push([last,15]);
+    }
+    return {nodes, edges};
+  }
+
+  // Hidden simulator settings stop here. Only the resulting order reaches inference.
+  function fromPoints(points) {
+    const nodes = points.map((_,i) => i), edges = [];
+    for (let i = 0; i < points.length; i++)
+      for (let j = i+1; j < points.length; j++) {
+        if (P.precedes(points[i],points[j])) edges.push([i,j]);
+        else if (P.precedes(points[j],points[i])) edges.push([j,i]);
+      }
+    return {nodes, edges};
+  }
+
+  function simulation(random, settings) {
+    const inner = [];
+    for (let i = 0; i < settings.m; i++) {
+      const {point} = P.samplePoint(random,settings.d);
+      if (P.insideDiamond(point,settings.theta)) inner.push(point);
+    }
+    return fromPoints(inner);
+  }
+
+  function twin(random, n = 32, h = 1.25) {
+    // Uniform de Sitter 4-volume in a fixed conformal-coordinate diamond.
+    const points = [], upper = (1-h/2)**(-4);
+    while (points.length < n) {
+      const {point} = P.samplePoint(random,4);
+      if (random()*upper < (1-h*point[0])**(-4)) points.push(point);
+    }
+    return {graph:fromPoints(points), h, properTime:Math.log((1+h/2)/(1-h/2))/h, ricci:12*h*h};
+  }
+
+  function mm(fraction, bank) {
+    if (fraction === null) return {value:null, status:'TOO_FEW'};
+    if (fraction === 0) return {value:null, status:'NO_FINITE_ROOT'};
+    if (fraction === 1) return {value:1, status:'BELOW_RANGE'};
+    if (fraction > .5) return {value:null, status:'BELOW_RANGE'};
+    if (fraction < .1) return {value:null, status:'ABOVE_RANGE'};
+    const grid = bank.mmGrid;
+    let i = 0;
+    while (i < grid.length-2 && grid[i+1] > fraction) i++;
+    const value = 2+(i+(grid[i]-fraction)/(grid[i]-grid[i+1]))/(grid.length-1)*2;
+    return {value, status:'IN_RANGE'};
+  }
+
+  function candidates(k, pairs, bank) {
+    if (k > bank.maxK) return null;
+    return dimensions.filter(d => {
+      const [low, high] = bank.conditional[d][k];
+      return pairs >= low && pairs <= high;
+    });
+  }
+
+  // E[H | m,d,theta] integrates the independent conditional means over the
+  // binomial law. Inverting this curve uses only H, m, d and the external T.
+  function meanHeight(p, m, d, bank) {
+    const rows = bank.conditional[d];
+    if (p === 0 || p === 1) return rows[p*m][2]/bank.samples;
+    const mode = Math.floor((m+1)*p);
+    let sum = rows[mode][2], mass = 1, weight = 1;
+    for (let k=mode; k<m; k++) {
+      weight *= (m-k)/(k+1)*p/(1-p);
+      sum += weight*rows[k+1][2]; mass += weight;
+    }
+    weight = 1;
+    for (let k=mode; k>0; k--) {
+      weight *= k/(m-k+1)*(1-p)/p;
+      sum += weight*rows[k-1][2]; mass += weight;
+    }
+    return sum/(mass*bank.samples);
+  }
+
+  function chainTime(height, m, d, bank) {
+    if (height === 0) return {theta:0, upperLimit:false};
+    if (height >= meanHeight(1,m,d,bank)) return {theta:1, upperLimit:true};
+    let lo = 0, hi = 1;
+    for (let step=0; step<36; step++) {
+      const mid = (lo+hi)/2;
+      if (meanHeight(mid,m,d,bank) < height) lo=mid; else hi=mid;
+    }
+    return {theta:((lo+hi)/2)**(1/d), upperLimit:false};
+  }
+
+  function infer(stats, calibration, bank) {
+    const {k,pairs,height,fraction} = stats;
+    const compatible = candidates(k,pairs,bank);
+    const result = {mm:mm(fraction,bank), compatible, byDimension:[], interval:null};
+    if (calibration === null) return result;
+    const {m,T} = calibration;
+    if (!Number.isInteger(m) || m < k || m > bank.maxK) throw Error('Budget ausserhalb der Kalibrierung.');
+    for (const d of dimensions) {
+      const volume = P.infer(k,m,d,.025,T), chain = chainTime(height,m,d,bank);
+      result.byDimension.push({d, volume:volume.estimate, lower:volume.lower, upper:volume.upper,
+        chain:T*chain.theta, upperLimit:chain.upperLimit});
+    }
+    const valid = result.byDimension.filter(row => compatible.includes(row.d));
+    if (valid.length) result.interval = [Math.min(...valid.map(x=>x.lower)),Math.max(...valid.map(x=>x.upper))];
+    return result;
+  }
+
+  const api = {graphOrder, analyse, dust, fromPoints, simulation, twin, mm, candidates, meanHeight, chainTime, infer};
+  if (typeof module === 'object') module.exports=api; else root.OrderGeometry=api;
+})(globalThis);
+</script><script>/* SPDX-License-Identifier: Apache-2.0 */
+(() => {
+  'use strict';
+  const $ = id => document.getElementById(id);
+  const O = OrderGeometry, P = ProperTime, bank = JSON.parse($('og-bank').textContent);
+  const fmt = (x,n=3) => x.toLocaleString('de-CH',{maximumFractionDigits:n});
+  const set = (id,s) => { $(id).textContent=s; };
+  const show = (id,visible) => { $(id).hidden=!visible; };
+  const colors = {text:'#ccd9ed', grid:'#32435c', edge:'#667993', cyan:'#68e6d2', purple:'#b8a3ff'};
+  let order, graph, settings, current, trials, ticket=0, fileTicket=0, loaded=null, twin=null, started=false;
+
+  function navigate() {
+    const second = location.hash === '#experiment-02' || (!location.hash && document.documentElement.dataset.initialExperiment==='02');
+    show('lab-one',!second); show('lab-two',second);
+    $('lab-switch-one').setAttribute('aria-pressed',String(!second));
+    $('lab-switch-two').setAttribute('aria-pressed',String(second));
+    document.title=(second?'Ordnungsgeometrie':'Eigenzeit-Labor')+' · X6 Spectral Astrolabium';
+    $('lab-notebook').onclick=second?e=>{e.preventDefault();notebook();}:null;
+    $('lab-background').onclick=second?e=>{e.preventDefault();$('og-contract').scrollIntoView();}:null;
+    if (second && !started) { started=true; sourceChange(); drawScaling(); drawLis(); }
+    if (!second && started && $('og-repeat').disabled) cancelTrials();
+  }
+  $('lab-switch-one').onclick = () => { location.hash='experiment-01'; };
+  $('lab-switch-two').onclick = () => { location.hash='experiment-02'; };
+  window.addEventListener('hashchange',navigate);
+
+  function table(head,rows) {
+    const wrapper=document.createElement('div'), el=document.createElement('table');
+    wrapper.className='og-scroll'; wrapper.append(el);
+    const tr=el.createTHead().insertRow();
+    for (const col of head) { const th=document.createElement('th'); th.scope='col'; th.textContent=col; tr.append(th); }
+    const body=el.createTBody();
+    for (const row of rows) { const tr=body.insertRow(); for (const col of row) tr.insertCell().textContent=col; }
+    return wrapper;
+  }
+  function note(text) { const p=document.createElement('p'); p.className='explain'; p.textContent=text; return p; }
+  function cancelTrials() {
+    ticket++; trials=null; $('og-repeat').disabled=false;
+    set('og-progress',''); $('og-repeat-out').replaceChildren();
+  }
+  function invalidate(message) {
+    current=null; cancelTrials(); $('og-export').disabled=true; show('og-observation',false);
+    show('og-repeat-panel',false); set('og-error',message); show('og-error',Boolean(message));
+    set('og-diagnosis','Für die Auswertung eine gültige Ordnung wählen.'); set('og-time','');
+  }
+  function inputNumber(id) {
+    const el=$(id);
+    if (!el.value || !el.checkValidity()) throw Error('Bitte eine gültige Zahl für '+el.labels[0].textContent+' eingeben.');
+    return Number(el.value);
+  }
+  function options(id,nodes) {
+    $(id).replaceChildren(...nodes.map((v,i) => new Option(String(v),String(i))));
+  }
+  function restrictFuture(wanted) {
+    const a=Number($('og-p').value), select=$('og-q');
+    select.replaceChildren();
+    order.nodes.forEach((v,i) => { if (order.rel[a]?.[i]) select.add(new Option(String(v),String(i))); });
+    if (Array.from(select.options).some(o => o.value===String(wanted))) select.value=String(wanted);
+  }
+  function initialiseSelection(endpoints) {
+    const nodes=order.nodes;
+    options('og-p',nodes);
+    const a=endpoints ? order.index.get(endpoints[0]) : nodes.indexOf(3);
+    $('og-p').value=String(a >= 0 ? a : 0);
+    restrictFuture(endpoints ? order.index.get(endpoints[1]) : nodes.indexOf(7));
+    $('og-scope').value=endpoints?'interval':'whole';
+  }
+  function sourceChange() {
+    const mode=$('og-source').value, flat=mode==='flat', twins=mode==='twins', file=mode==='import';
+    fileTicket++; order=null; graph=null; settings=null; twin=null;
+    show('og-flat',flat); show('og-upload',file); show('og-random',flat||twins);
+    show('og-selection',!flat&&!twins); show('og-twin-controls',twins);
+    set('og-context',flat?'Uniformer Diamant':twins?'32 identische Ereignisse':file?'JSON-Import':'CST-DUST');
+    try {
+      let ep=null;
+      if (file) {
+        if (!loaded) { show('og-selection',false); invalidate('Eine JSON-Datei zum Auswerten wählen.'); return; }
+        graph=loaded.graph; ep=loaded.endpoints;
+      } else if (flat || twins) {
+        const seed=inputNumber('og-seed'), random=P.rng(seed);
+        if (flat) {
+          settings={seed, m:inputNumber('og-m'),d:inputNumber('og-d'),theta:inputNumber('og-theta'),T:inputNumber('og-scale')};
+          graph=O.simulation(random,settings);
+        } else { twin=O.twin(random); graph=twin.graph; }
+      } else graph=O.dust(mode);
+      order=O.graphOrder(graph);
+      if (ep) O.analyse(order,ep);
+      initialiseSelection(ep); render();
+    } catch (e) { invalidate(e.message); }
+  }
+
+  function mmText(result) {
+    return ({TOO_FEW:'zu wenige Paare', NO_FINITE_ROOT:'kein endlicher Wert', BELOW_RANGE:result.value===1?'1 (unter 2)':'unter 2',
+      ABOVE_RANGE:'über 4', IN_RANGE:result.value===null?'':fmt(result.value,2)})[result.status];
+  }
+  function drawOrder(s) {
+    const c=$('og-graph'), ctx=c.getContext('2d'), w=c.clientWidth, h=c.clientHeight;
+    if (!w || !h) return;
+    const ratio=Math.min(window.devicePixelRatio||1,2);
+    c.width=Math.round(w*ratio); c.height=Math.round(h*ratio); ctx.setTransform(ratio,0,0,ratio,0,0);
+    ctx.clearRect(0,0,w,h);
+    const groups=Array.from({length:s.height},()=>[]);
+    s.ranks.forEach((rank,i)=>groups[rank-1].push(i));
+    const pos=[], active=new Set(s.path), segments=new Set(s.path.slice(1).map((v,i)=>s.path[i]+','+v));
+    // Keep successor branches near their already placed parents to reduce crossings.
+    const parents=s.ids.map(()=>[]);
+    for (const [a,b] of s.covers) parents[b].push(a);
+    groups.forEach((row,rank)=>{
+      const centre=v=>parents[v].length?parents[v].reduce((sum,a)=>sum+pos[a][0],0)/parents[v].length:w/2;
+      row.sort((a,b)=>centre(a)-centre(b)||a-b);
+      row.forEach((v,i)=>{
+        pos[v]=[20+(w-40)*(i+.5)/row.length,h-20-(h-40)*(s.height===1?.5:rank/(s.height-1))];
+      });
+    });
+    function line(i,j) {
+      ctx.beginPath(); ctx.moveTo(...pos[i]); ctx.lineTo(...pos[j]); ctx.stroke();
+    }
+    ctx.lineWidth=1.4; ctx.strokeStyle=colors.edge;
+    for (const [i,j] of s.covers) if (!segments.has(i+','+j)) line(i,j);
+    ctx.lineWidth=4; ctx.strokeStyle=colors.purple;
+    s.path.slice(1).forEach((j,i)=>line(s.path[i],j));
+    const radius=s.k<35?6:Math.max(2,Math.min(4,250/Math.max(...groups.map(g=>g.length))));
+    ctx.textAlign='left'; ctx.font=(w<450?'12':'15')+'px system-ui';
+    for (const [i,p] of pos.entries()) {
+      ctx.fillStyle=active.has(i)?colors.purple:colors.cyan;
+      ctx.beginPath(); ctx.arc(...p,radius,0,2*Math.PI); ctx.fill();
+      if (s.k<=35) { ctx.fillStyle=colors.text; ctx.fillText(String(s.ids[i]).slice(0,12),p[0]+9,p[1]+4,69); }
+    }
+    if (!s.k) { ctx.fillStyle=colors.text;ctx.textAlign='center';ctx.fillText('Keine inneren Ereignisse',w/2,h/2); }
+  }
+  function render() {
+    if (!order) return;
+    cancelTrials();
+    try {
+      const mode=$('og-source').value;
+      const scoped= !settings && !twin && $('og-scope').value==='interval';
+      show('og-ends',scoped);
+      if (scoped && (!$('og-q').value || !$('og-p').value)) throw Error('Dieser Randpunkt hat keinen strikten Nachfolger. Bitte p neu wählen.');
+      const ep=scoped?[order.nodes[+$('og-p').value],order.nodes[+$('og-q').value]]:null;
+      const s=O.analyse(order,ep);
+      const inference=O.infer(s,settings ? {m:settings.m,T:settings.T} : null,bank);
+      current={schema:'x6.order-geometry/1', source:mode, graph:{nodes:graph.nodes,edges:graph.edges}, endpoints:ep,
+        convention:'Strict order. Open interval excludes endpoints. Height counts selected events. Matrix follows observables.ids.',
+        reference:bank.version, observables:s, inference, simulation:settings, twin:null};
+      if (twin) {
+        const curved=$('og-metric').value==='curved';
+        current.twin={seed:inputNumber('og-seed'), h:twin.h, metric:curved?'de_sitter':'flat_density_twin',
+          referenceTime:curved?twin.properTime:1, referenceRicci:curved?twin.ricci:0};
+        set('og-twin-note','Vorgegebene Referenz: τ = '+fmt(current.twin.referenceTime)+', Ricci-Skalar = '+fmt(current.twin.referenceRicci)+'. Beim Umschalten bleiben alle Relationen gleich.');
+      }
+      show('og-error',false); show('og-observation',true); $('og-export').disabled=false;
+      set('og-k',s.k); set('og-pairs',s.pairs); set('og-r',s.fraction===null?'—':fmt(s.fraction));
+      set('og-h',s.height); set('og-layers',s.layers.join(' · ')); set('og-action','4D-Wirkungskombination K − N₀ + 9N₁ − 16N₂ + 8N₃ = '+s.action4+' (ohne Vorfaktor).');
+      set('og-path','Zukunft oben. '+(s.path.length?'Eine längste Kette: '+s.path.map(i=>s.ids[i]).join(' → '):'Die Auswahl ist leer.'));
+      drawOrder(s);
+      const diag=$('og-diagnosis'), value=document.createElement('strong');
+      value.textContent='Myrheim–Meyer: '+mmText(inference.mm); diag.replaceChildren(value);
+      let compatible='Ausserhalb der endlichen Vergleichstabelle (K > 128).';
+      if (inference.compatible) compatible=s.k<2?'Bei K < 2 fehlt die Paarinformation. Alle drei Dimensionen bleiben offen.':
+        inference.compatible.length?'Mit der endlichen flachen Paarreferenz vereinbar: '+inference.compatible.map(d=>d+'D').join(', ')+'.':
+        'Die beobachtete Paarzahl liegt ausserhalb aller drei Referenzbereiche.';
+      diag.append(note(compatible+' Die Inversion vergleicht mit flachen Diamanten. Eine einzelne Ordnung kann zu mehreren Referenzdimensionen passen.'));
+      const time=$('og-time');time.replaceChildren();show('og-repeat-panel',Boolean(settings));
+      if (settings) {
+        time.append(table(['Dimension','Volumenzeit','Kettenzeit','Volumenintervall¹'],inference.byDimension.map(row=>[
+          row.d+'D',fmt(row.volume),fmt(row.chain)+(row.upperLimit?' *':''),fmt(row.lower)+' – '+fmt(row.upper)])));
+        time.append(note('¹ Je angenommener Dimension: 97,5%-Zählintervall. Äussere Hülle über vereinbare Dimensionen: '+
+          (inference.interval?inference.interval.map(x=>fmt(x)).join(' – '):'keine Zeitfreigabe')+
+          '. Generatorreferenz τ = '+fmt(settings.theta*settings.T)+'. * Obergrenze T der Kettenkalibrierung.'));
+        time.append(note('Kettenzeit durch Inversion der vorab berechneten mittleren Höhe über alle möglichen K bei festem m und d. Die Dimension stammt aus der Paarstatistik. Die Hülle berücksichtigt beide Unsicherheiten; Details im Prüfnotebook.'));
+      } else time.append(note('Der Ausschnitt liefert eine Höhe in Ereignissen. Eine unabhängige Zeitkalibrierung ist für diese Ordnung nicht hinterlegt.'));
+    } catch (e) { invalidate(e.message); }
+  }
+
+  async function repeat() {
+    if (!current || !settings) return;
+    cancelTrials(); const id=ticket, p={...settings}, n=200, rows=[];
+    const seed=(p.seed^0x9e3779b9)>>>0, random=P.rng(seed);
+    $('og-repeat').disabled=true;
+    try {
+      for (let i=0;i<n;i++) {
+        if (id!==ticket) return;
+        const s=O.analyse(O.graphOrder(O.simulation(random,p)));
+        const result=O.infer(s,{m:p.m,T:p.T},bank);
+        const match=result.compatible.length===1?result.compatible[0]:null;
+        rows.push({k:s.k,pairs:s.pairs,height:s.height,compatible:result.compatible,
+          conditional:result.byDimension[p.d-2], blind:match===null?null:result.byDimension[match-2]});
+        if (i%5===4) {set('og-progress',(i+1)+' / 200');await new Promise(resolve=>setTimeout(resolve,0));}
+      }
+      if (id!==ticket) return;
+      const stats=[], truth=p.theta*p.T;
+      for (const [key,name] of [['conditional','Bei bekanntem d'],['blind','Blind, eindeutige Fälle']]) {
+        const subset=rows.map(row=>row[key]).filter(Boolean);
+        for (const [field,title] of [['volume','Volumen'],['chain','Kette']]) {
+          const err=subset.map(row=>row[field]-truth);
+          stats.push({scope:name,estimator:title,n:err.length,bias:err.length?err.reduce((a,b)=>a+b,0)/err.length:null,
+            rmse:err.length?Math.sqrt(err.reduce((a,b)=>a+b*b,0)/err.length):null});
+        }
+      }
+      trials={seed,truth,rows,stats};
+      const nBlind=rows.filter(r=>r.blind).length, nNone=rows.filter(r=>!r.compatible.length).length;
+      set('og-progress','200 / 200 abgeschlossen. Blind eindeutig: '+nBlind+', mehrdeutig: '+(n-nBlind-nNone)+', ohne passende Dimension: '+nNone+'.');
+      $('og-repeat-out').replaceChildren(table(['Vergleich','Schätzer','Fälle','Bias','RMSE'],stats.map(r=>[r.scope,r.estimator,r.n,r.bias===null?'—':fmt(r.bias),r.rmse===null?'—':fmt(r.rmse)])));
+    } catch(e) { if(id===ticket)set('og-progress','Abgebrochen: '+e.message); }
+    finally {if(id===ticket)$('og-repeat').disabled=false;}
+  }
+
+  function drawScaling() {
+    const d=Number($('og-curve-d').value), rows=bank.scaling[d], c=$('og-curve'), ctx=c.getContext('2d');
+    const w=c.width,h=c.height, x=k=>54+(w-100)*Math.log(k/15)/Math.log(16384/15);
+    const norm=r=>r.heightMean/r.k**(1/d), y=v=>h-43-v*(h-76)/2.25;
+    ctx.clearRect(0,0,w,h); ctx.font='16px system-ui';ctx.fillStyle=colors.text;ctx.textAlign='right';
+    for(const val of [0,.5,1,1.5,2]) {
+      ctx.fillText(fmt(val,1),44,y(val)+4); ctx.strokeStyle=colors.grid;
+      ctx.beginPath();ctx.moveTo(54,y(val));ctx.lineTo(w-30,y(val));ctx.stroke();
+    }
+    ctx.textAlign='left';ctx.fillText('Mittlere Höhe / K¹ᐟᵈ',54,18);
+    ctx.beginPath();rows.forEach((r,i)=>{if(i===0)ctx.moveTo(x(r.k),y(norm(r)));else ctx.lineTo(x(r.k),y(norm(r)));});
+    ctx.strokeStyle=colors.cyan;ctx.lineWidth=2;ctx.stroke();ctx.textAlign='center';
+    for(const r of rows) {
+      ctx.fillStyle=colors.cyan;ctx.beginPath();ctx.arc(x(r.k),y(norm(r)),4,0,2*Math.PI);ctx.fill();
+      if ([15,100,1024,16384].includes(r.k)) {ctx.fillStyle=colors.text;ctx.fillText(fmt(r.k,0),x(r.k),h-17);}
+    }
+    $('og-curve-values').replaceChildren(table(['K','Wolken','L̄ / K¹ᐟᵈ','Standardfehler','dMM aus mittl. r'],rows.map(r=>[
+      fmt(r.k,0),r.trials,fmt(norm(r)),fmt(r.heightSE/r.k**(1/d),4),mmText(O.mm(2*r.pairMean/(r.k*(r.k-1)),bank))])));
+  }
+  function drawLis() {
+    const c=$('og-lis'),ctx=c.getContext('2d'),counts=bank.lis15,total=counts.reduce((a,b)=>a+b,0);
+    ctx.clearRect(0,0,c.width,c.height);ctx.font='14px system-ui';ctx.textAlign='center';
+    counts.slice(1).forEach((n,i)=>{const x=22+43*i, height=350*n/total;
+      ctx.fillStyle=colors.purple;ctx.fillRect(x,166-height,28,height);
+      ctx.fillStyle=colors.text;ctx.fillText(i+1,x+14,188);});
+    ctx.textAlign='left';ctx.fillText('Häufigkeit · Maximum '+fmt(100*Math.max(...counts)/total,1)+' %',20,18);
+  }
+  function download(data,name,type) {
+    const a=document.createElement('a'),url=URL.createObjectURL(new Blob([data],{type}));
+    a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),2000);
+  }
+  function notebook() {
+    const markdown=text=>({cell_type:'markdown',metadata:{},source:text});
+    const code=text=>({cell_type:'code',execution_count:null,metadata:{},outputs:[],source:text});
+    const cells=[
+      markdown('# Eigenzeit-Labor · Experiment 02\nDie exportierte Datei eigenzeit-ordnung.json neben dieses Notebook legen. Die Matrix ist strikt und folgt observables.ids. Endpunkte eines offenen Intervalls sind ausgeschlossen.'),
+      code('import json\nfrom collections import Counter\nfrom pathlib import Path\nimport numpy as np\ndata = json.loads(Path("eigenzeit-ordnung.json").read_text())'),
+      code("def analyse(nodes, edges, endpoints=None):\n    ids = list(nodes)\n    if len(set(ids)) != len(ids):\n        raise ValueError('duplicate node ID')\n    index = {v:i for i,v in enumerate(ids)}\n    rel = np.zeros((len(ids),len(ids)), dtype=bool)\n    for a,b in edges:\n        rel[index[a],index[b]] = True\n    for mid in range(len(ids)):\n        rel |= rel[:, mid, None] & rel[mid, None, :]\n    if rel.diagonal().any():\n        raise ValueError('cyclic order')\n    if endpoints is not None:\n        a,b = (index[x] for x in endpoints)\n        if not rel[a,b]:\n            raise ValueError('unordered endpoints')\n        keep = rel[a] & rel[:,b]\n        rel = rel[np.ix_(keep,keep)]\n    between = rel.astype(int) @ rel.astype(int)\n    layers = Counter(between[rel].tolist())\n    heights = np.ones(len(rel), dtype=int)\n    for j in np.argsort(rel.sum(axis=0)):\n        heights[j] += heights.max(where=rel[:,j], initial=0)\n    return dict(k=len(rel), pairs=int(rel.sum()), height=int(heights.max(initial=0)),\n                layers=[layers[i] for i in range(4)], matrix=rel.astype(int).tolist())"),
+      code("g = data['graph']\naudit = analyse(g['nodes'],g['edges'],data['endpoints'])\nassert audit == {k:data['observables'][k] for k in audit}\n{k:v for k,v in audit.items() if k != 'matrix'}"),
+      markdown('## Modell und Kalibrierung\nIm flachen Modell gilt K ~ Bin(m, (τ/T)^d). Für die endliche Dimensionsdiagnose werden je K und d die drittkleinste und drittgrösste Paarzahl aus 255 Referenzwolken verwendet. Dieser inklusive Rangbereich schliesst unter Austauschbarkeit die wahre Dimension mit Wahrscheinlichkeit höchstens 6/256 aus (über Kalibrierung und neue Beobachtung). Zusammen mit dem Fehlerbudget 0,025 für das Zählintervall beträgt die Fehlwahrscheinlichkeit höchstens 0,025 + 6/256. Das ist eine Modellrechnung über beide Stichproben; die realisierte, pseudozufällige Referenzbank hat keine separat bewiesene bedingte Überdeckung. Die Kettenpunktschätzung invertiert E[L|m,d,τ/T] mit einer unabhängig simulierten Höhenreferenz.\n\nKettenhöhen zählen Ereignisse. N₀ zählt direkte Nachfolger. Die 4D-Kombination ist K−N₀+9N₁−16N₂+8N₃. Eine Krümmungsauslese verlangt zusätzliche Modellannahmen.'),
+      code("data['inference']")];
+    const nb={nbformat:4,nbformat_minor:4,metadata:{kernelspec:{display_name:'Python 3',language:'python',name:'python3'}},cells};
+    download(JSON.stringify(nb,null,2),'eigenzeit-ordnung.ipynb','application/x-ipynb+json');
+  }
+  $('og-source').onchange=sourceChange;
+  for (const id of ['og-m','og-d','og-theta','og-seed','og-scale']) $(id).addEventListener('input',sourceChange);
+  $('og-metric').onchange=render; $('og-scope').onchange=render; $('og-q').onchange=render;
+  $('og-p').onchange=()=>{restrictFuture(Number($('og-q').value));render();};
+  $('og-next').onclick=()=>{ $('og-seed').value=String((Number($('og-seed').value)+1)>>>0);sourceChange(); };
+  $('og-file').onchange=async()=>{
+    const file=$('og-file').files[0],version=++fileTicket;
+    if (!file) return;
+    loaded=null;order=null;show('og-selection',false);invalidate('Datei wird gelesen …');
+    try {
+      if (file.size>4*1024*1024) throw Error('Die Datei überschreitet 4 MiB.');
+      const value=JSON.parse(await file.text());
+      if (version!==fileTicket) return;
+      const exported=value.schema==='x6.order-geometry/1';
+      const g=exported?value.graph:value, endpoints=value.endpoints??null;
+      const candidate=O.graphOrder(g);
+      if (endpoints!==null) O.analyse(candidate,endpoints);
+      loaded={graph:{nodes:candidate.nodes,edges:g.edges},endpoints};sourceChange();
+    } catch(e) { if(version===fileTicket)invalidate(e.message); }
+  };
+  $('og-curve-d').onchange=drawScaling; $('og-repeat').onclick=repeat; $('og-notebook').onclick=notebook;
+  $('og-html').onclick=()=>$('export-html').click();
+  $('og-export').onclick=()=>{ if(current)download(JSON.stringify({...current,repetitions:trials}),'eigenzeit-ordnung.json','application/json'); };
+  new ResizeObserver(()=>{
+    if (current && !$('lab-two').hidden) drawOrder(current.observables);
+  }).observe($('og-graph').parentElement);
+  navigate();
 })();
 </script></body></html>

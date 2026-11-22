@@ -1,0 +1,21 @@
+.lab-switch {display:flex;width:fit-content;max-width:100%;margin-top:24px;padding:4px;background:#101a28;border:1px solid var(--line);border-radius:12px;gap:4px}
+.lab-switch button {border:0;background:transparent;color:var(--muted);font:inherit;font-size:13px;text-align:left;padding:10px 15px;border-radius:8px}
+.lab-switch button[aria-pressed="true"] {background:#1b393c;color:var(--cyan)}
+#lab-two canvas {display:block;width:100%;height:auto;margin:12px auto}
+#lab-two #og-graph {height:clamp(265px,38vw,420px);background:#0e1929;border-radius:10px}
+#lab-two select {max-width:100%}
+#lab-two .controls input[type=file] {max-width:100%;font-size:13px}
+#lab-two summary {cursor:pointer;color:var(--cyan);font-size:13px;padding-block:6px}
+#og-path {overflow-wrap:anywhere}
+#og-curve-d {background:#111b2b;color:var(--text);padding:6px;border-radius:6px}
+.og-metrics {grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--line)}
+.og-layers {display:flex;gap:16px;align-items:baseline;flex-wrap:wrap;margin:14px 0 4px}
+.og-layers span {color:var(--muted);font-size:12px}
+#lab-two table {border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums;font-size:13px;margin:12px 0}
+#lab-two th,#lab-two td {padding:7px 5px;text-align:right;border-bottom:1px solid var(--line)}
+#lab-two th {color:var(--muted);font-weight:500}
+#lab-two td:first-child,#lab-two th:first-child {text-align:left}
+#lab-two pre {white-space:pre-wrap;overflow-wrap:anywhere}
+#og-diagnosis strong {color:var(--cyan)}
+#lab-two .og-scroll {overflow-x:auto}
+@media(max-width:600px){.lab-switch button{font-size:12px;padding:9px 10px}.og-metrics{grid-template-columns:repeat(2,1fr)}#lab-two table{font-size:11px}}
