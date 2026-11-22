@@ -1,5 +1,11 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Zwei innere Uhren am integrierten Randkern · 22. November 2026
+
+Auf der N15-Siebenerkette 2097151 liefern 15 Phaseneinstellungen für die markierte Masse 4 die numerischen Werte 4,002411 und 3,999286 bei den Anfangsdichtezentren 1/8 und 1/4. Die Verklebung der drei Teilstücke reproduziert die gemeinsame Wirkung exakt, wenn alle 17 Paarbeiträge über die Schnittgrenzen erfasst werden. Eine garantierte Fehlergrenze für diese Massenauslese, der physikalische Zugriff auf die zwei relationalen Zeiten und die unabhängige Ruhemasse-Eichung sind offen. Alle 60 physischen P3-Prüfpunkte stehen auf `NOT_RUN`.
+
+[Herleitung und Nachrechnung](n15_zwei_zeiten_randkern_v0_1/README.md) · [Kurzbericht (PDF)](n15_zwei_zeiten_randkern_v0_1/Kurzbericht.pdf) · [Exakte Ergebnisse](n15_zwei_zeiten_randkern_v0_1/exakt.json) · [Phasen und Quadraturwerte](n15_zwei_zeiten_randkern_v0_1/quadratur.json) · [Offline-Prüfpaket (ZIP)](packages/CST_DUST_N15_Zwei_Zeiten_Randkern_Pruefpaket.zip)
+
 ## Welche Staubmasse erreicht den Rand der Siebenerkette? · 22. November 2026
 
 Auf dem N15-Typ 2097151 unterschätzt die bisherige Randquelle die markierte Masse 4 bei zwei Anfangsdichtezentren um mindestens 41,39 %. Zwei zusätzliche innere Uhren genügen, um die drei fehlenden Dichten aus der Staubwirkung zu rekonstruieren. Im selben kontinuierlichen Referenzmass bleibt der relative Fehler damit unter 0,00295 %. Die physikalische Auslese über zwei relationale Zeiten und die unabhängige Ruhemasse-Eichung sind offen. Alle 60 physischen P3-Prüfpunkte stehen auf `NOT_RUN`.
