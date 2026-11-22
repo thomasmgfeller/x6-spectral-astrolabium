@@ -1,5 +1,11 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Ausgangsfenster der beiden inneren Uhren · 22. November 2026
+
+Auf der N15-Siebenerkette 2097151 lassen sich die vierte und die sechste Uhr durch Zählen ihrer inneren Vorgänger adressieren. Bei Quellschritt 1/8 verwirft ein Ausgangsfenster der Halbbreite D/64 bei jeder inneren Verschiebung das gesamte rechte Randuhrfenster. Bei Verschiebung beider Uhren passieren je nach Vorzeichen nur 0,827 bis 0,865 % des positiven Eingangsreferenzmasses. Mit der vorab gewählten Halbbreite 7D/128 ist der vollständige Durchlass exakt nachgewiesen. Für die markierte Masse 1 ergibt dieselbe Eichung wie in PR #356 numerisch 0,999855920 und 0,999812474 an den beiden Dichtezentren. Die physikalische Quellenansteuerung, der kohärente Phasenvergleich und der unabhängige Ruhemasse-Standard bleiben offen. Alle 60 physischen P3-Prüfpunkte stehen auf `NOT_RUN`.
+
+[Studie und Nachrechnung](n15_uhrzugriff_ausgangsfenster_v0_1/README.md) · [Kurzbericht (PDF)](n15_uhrzugriff_ausgangsfenster_v0_1/Kurzbericht.pdf) · [Herleitung der Fenstergrenzen](n15_uhrzugriff_ausgangsfenster_v0_1/HERLEITUNG.md) · [Offline-Prüfpaket (ZIP)](packages/CST_DUST_N15_Uhrzugriff_und_Ausgangsfenster_Pruefpaket.zip)
+
 ## Massentransfer und Vakuum der N15-Auslese · 22. November 2026
 
 Dieselbe am N15-Typ 2097151 festgeschriebene Eichung rekonstruiert vier weitere markierte Massen an zwei Anfangsdichtezentren mit einem maximalen beobachteten relativen Fehler von rund 0,02031 %. Für Masse 1 ergeben sich 0,999855920 und 0,999812474. Für positive Massen nahe null liefert die Intervallrechnung an den beiden Zentren verschiedene Grenzwerte. Ein gemeinsamer Nullpunkt und eine feste Verstärkung ungleich null können deshalb die relative Zwei-Prozent-Toleranz dort nicht für beliebig kleine Massen einhalten. Die physikalische Ruhemasse-Eichung und der Zugriff auf die beiden inneren Uhren sind offen. Alle 60 physischen P3-Prüfpunkte stehen auf `NOT_RUN`.
