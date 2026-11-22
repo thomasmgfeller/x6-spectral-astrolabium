@@ -1,5 +1,11 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Kohärente Schnittantwort auf der N15-Kette · 22. November 2026
+
+Eine Verschiebung der gespeicherten Uhr 4 am Schnitt hinter Ereignis 11 macht zwei am äusseren Rand ununterscheidbare Präparationen unterscheidbar. Für beide geprüften Randdichten liegt die Differenz der Ausgangsbalancen nach kohärenter Integration über 6,24 × 10⁻⁵. Mit den drei Uhren 4, 5 und 6 und einer äusseren Eingangsquelle ergibt sich die gesamte innere Dichte vor der Integration exakt. Nach der Integration liegt der grösste relative Fehler der fünf positiven Massenübertragungen bei 0,02258 %. Der kohärente Zugriff auf die drei Uhren und eine unabhängige positive Masseneichung sind physikalisch offen. Alle 60 physischen P3-Prüfpunkte stehen auf `NOT_RUN`.
+
+[Studie und Nachrechnung](n15_kohaerente_schnittantwort_v0_1/README.md) · [Kurzbericht (PDF)](n15_kohaerente_schnittantwort_v0_1/Kurzbericht.pdf) · [Herleitung](n15_kohaerente_schnittantwort_v0_1/HERLEITUNG.md) · [Offline-Prüfpaket (ZIP)](packages/CST_DUST_N15_Kohaerente_Schnittantwort_Pruefpaket.zip)
+
 ## Randsteuerung und stationäre Staubuhr auf der N15-Kette · 22. November 2026
 
 In beiden Randuhrfenstern aus PR #357 erzwingen die ersten zwei stationären Dichtegleichungen auf Typ 2097151 die Reihenfolge Y₅ < Y₄. Damit ist ein durchgehend vorwärts laufender stationärer Staubpfad im vollständig positiven Sektor auch bei freigegebenen inneren Uhrfenstern ausgeschlossen. Mit geänderten Randuhren und einer Randdauer von 8Δ erfüllt eine gleichmässig vorwärts laufende Kontrolllösung alle 14 inneren Stationaritätsgleichungen. Zwei Feinhistorien mit identischen äusseren Randwirkungsfunktionen und unterschiedlichen inneren Quellantworten grenzen ein, was die Randdaten bestimmen. Die physikalische Ansteuerung im nichtstationären Kern und die unabhängige Ruhemasse-Eichung bleiben offen. Alle 60 physischen P3-Prüfpunkte stehen auf `NOT_RUN`.
