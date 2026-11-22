@@ -1,5 +1,11 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Wie verändert die Uhrkohärenz den Dichtekontrast auf einer zweiten Ordnung? · 22. November 2026
+
+Auf Typ 42429 erhalten zwei markierte Pakete mit entgegengesetztem Anfangsstrom dieselbe Dichteauslese wie auf Typ 375841. Für die ganzen Pakete liegt der kohärente minus zeitgemischte Vorzeichenkontrast in $[-2{,}639788;\,-2{,}639503]\times10^{-23}$. Das bestätigt die vor der Zielrechnung öffentlich festgelegte zweiseitige Vorhersage. An den Paketzentren unterscheidet der Detektor die Präparationen bereits bei scharfer früherer Uhr. Kohärenz verkleinert diesen Abstand. Die separate Massenkontrolle auf Typ 2324 zeigt, wann zwei Ladungsmittel die markierte Modellmasse bestimmen. Alle 60 physikalischen P3-Prüfpunkte stehen auf `NOT_RUN`.
+
+[Studie und Nachrechnung](n17_koharenztransfer_v0_1/README.md) · [Öffentlicher Prüfvertrag vor der Zielauswertung](https://github.com/thomasmgfeller/x6-spectral-astrolabium/blob/7baa149a5c42de920d9249f30caeba6d527ebc9b/research/rax_cqg/dust_collapse/n17_koharenztransfer_v0_1/TRANSFER_42429.md) · [Kurzbericht (PDF)](n17_koharenztransfer_v0_1/Kurzbericht.pdf) · [Offline-Prüfpaket (ZIP)](packages/CST_DUST_N17_Kohaerenztransfer_Pruefpaket.zip)
+
 ## Was lässt sich am gemeinsamen N17-Zukunftsereignis auslesen? · 22. November 2026
 
 Am stromerhaltenden Anschluss von N15-Typ 375841 liegt ein neues Ereignis in der Zukunft aller 16 bisherigen Ereignisse. Bei festgehaltener früherer Uhr unterscheiden sich die beiden Vorzeichenpakete in jeder binären Messung am neuen Ausgang um weniger als $6{,}203 \cdot 10^{-29}$. Wird die frühere Uhr über ein schmales Fenster kohärent integriert, hat das Paket mit negativem Anfangsstrom eine geringfügig höhere Wahrscheinlichkeit für eine Enddichte über $1/8$. Die Differenz zwischen positivem und negativem Paket liegt in $[-3{,}569;\,-3{,}178] \cdot 10^{-27}$. Der Befund gilt für die angegebene Randpräparation und positive Paarung. Alle 60 physikalischen P3-Prüfpunkte sind weiterhin offen.
