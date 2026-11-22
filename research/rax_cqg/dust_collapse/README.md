@@ -1,5 +1,11 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Dichteantwort auf den Uhrpuls an Ereignis 6 · 22. November 2026
+
+Auf der N15-Kette messen zwei Profile der vier äusseren Eingangsuhren gezielt die skalierten Dichten an den Ereignissen 11 und 5. Bei markierter Masse 1 und Randdichte 1/4 beträgt die integrierte Dichteantwort an 11 rund 0,00000035 bei festgehaltenem Fenster und 0,02898052 bei mitverschobenem Fenster. Bei gemeinsamer Neupräparation beider Zellen antwortet Ereignis 5 mit umgekehrtem Vorzeichen. Beim allein mitverschobenen Fenster liegen je nach Pulsrichtung rund 35 bis 37 % des positiven Präparationsmasses ausserhalb des gesamten vor dem Puls zulässigen Dichtebereichs. Die physikalische Registrierung einer früheren Dichte und die unabhängige Masseneichung sind offen. Alle 60 physischen P3-Prüfpunkte stehen auf `NOT_RUN`.
+
+[Studie und Nachrechnung](n15_dichteantwort_am_uhrpuls_v0_1/README.md) · [Kurzbericht (PDF)](n15_dichteantwort_am_uhrpuls_v0_1/Kurzbericht.pdf) · [Herleitung](n15_dichteantwort_am_uhrpuls_v0_1/HERLEITUNG.md) · [Offline-Prüfpaket (ZIP)](packages/CST_DUST_N15_Dichteantwort_am_Uhrpuls_Pruefpaket.zip)
+
 ## Schnitttransport und Randpaarung auf der N15-Kette · 22. November 2026
 
 Die Massenauslese aus PR #359 ergibt an den vier Rechenschnitten hinter 11, 12, 13 und 14 dieselbe Wirkung auf jeder Geschichte, wenn die bereits durchlaufenen Paarphasen mitgenommen werden. Uhr 6 bestimmt auch das noch offene Dichteintervall von Ereignis 11. Bei markierter Masse 1 und Randdichte 1/4 ergibt sich die Massenschätzung 1,00016863, wenn die vorbereitete Dichte festgehalten wird, und 1,01617872, wenn das Dichteintervall mitverschoben wird. Die unverschobene Paarung entscheidet zwischen den beiden Vorschriften nicht. Eine physikalisch hergeleitete Kopplung und eine unabhängige positive Masseneichung bleiben offen. Alle 60 physischen P3-Prüfpunkte stehen auf `NOT_RUN`.
