@@ -1,5 +1,11 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Welche Randmessung trennt zwei Massen mit gleicher Ladungskurve? · 22. November 2026
+
+Auf Typ 2324 können die markierten Massen 1 und 19/20 bei jedem Eingangsuhrwert dieselbe feine Ladung liefern. Vier Wirkungswerte derselben Feldbelegung bestimmen die sichtbare innere Dichtesumme. Geteilt durch die am unverschobenen Rand gemessene Uhrdauer ergibt sie auf der exakt markierten Familie die Masse. Für die verteilte Präparation mit ±1 % Dichtevariation bleibt der systematische Modellfehler des ergänzten Phasenzeigers auf Typ 2324 auch bei M = 4 unter 1,316 %. Von 61 vollständig sichtbaren und dichtezulässigen Katalogtypen bestehen bei dieser Masse 19 die bedingte 2-%-Prüfung an beiden Eingangsdichtezentren. Die übrigen 42 bleiben mit der gewählten Schranke unentschieden. Alle 60 physischen P3-Prüfpunkte stehen auf `NOT_RUN`.
+
+[Herleitung und Nachrechnung](n15_massenquelle_v0_1/README.md) · [Kurzbericht (PDF)](n15_massenquelle_v0_1/Kurzbericht.pdf) · [366 Katalogprüfungen](n15_massenquelle_v0_1/katalog.json) · [Offline-Prüfpaket (ZIP)](packages/CST_DUST_Randquelle_Massenvergleich_Pruefpaket.zip)
+
 ## Wie verändert die Uhrkohärenz den Dichtekontrast auf einer zweiten Ordnung? · 22. November 2026
 
 Auf Typ 42429 erhalten zwei markierte Pakete mit entgegengesetztem Anfangsstrom dieselbe Dichteauslese wie auf Typ 375841. Für die ganzen Pakete liegt der kohärente minus zeitgemischte Vorzeichenkontrast in $[-2{,}639788;\,-2{,}639503]\times10^{-23}$. Das bestätigt die vor der Zielrechnung öffentlich festgelegte zweiseitige Vorhersage. An den Paketzentren unterscheidet der Detektor die Präparationen bereits bei scharfer früherer Uhr. Kohärenz verkleinert diesen Abstand. Die separate Massenkontrolle auf Typ 2324 zeigt, wann zwei Ladungsmittel die markierte Modellmasse bestimmen. Alle 60 physikalischen P3-Prüfpunkte stehen auf `NOT_RUN`.
