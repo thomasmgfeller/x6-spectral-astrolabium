@@ -1,0 +1,85 @@
+{
+  "basis": "f6d78fd5ef60b120da406a92b65b847494fa9cdf",
+  "phase": {
+    "direct_phase_comparisons": 180,
+    "upstream_fine_checks": 45,
+    "scaled_jacobian_rows_A_B_cols_x4_x5": [
+      [
+        "-5/76",
+        "17/304"
+      ],
+      [
+        "-53/608",
+        "-47/608"
+      ]
+    ],
+    "scaled_determinant": "1841/184832",
+    "chi_over_h_squared_x11": "1/19"
+  },
+  "codes": {
+    "1": {
+      "distinct_nuisance_frequencies": 4,
+      "same_nuisance_different_mixed": {}
+    },
+    "2": {
+      "distinct_nuisance_frequencies": 9,
+      "same_nuisance_different_mixed": {
+        "(0, 0)": [
+          -2,
+          2
+        ]
+      }
+    },
+    "contrast_phase_per_x11": "1/304",
+    "independent_histories_residual_per_sqrt_D": "-53/24320000"
+  },
+  "witness": {
+    "low": "19/160",
+    "high": "21/160",
+    "difference": "1/80",
+    "threshold": "1/8",
+    "g": "15/8",
+    "max_abs_source_shift": "9/64",
+    "phase_arc_rad": [
+      "2708188211/1000000000000",
+      "677047053/250000000000"
+    ],
+    "optimal_single_use_equal_prior_probability": [
+      "100135409369/200000000000",
+      "250338523423/500000000000"
+    ],
+    "conditional_two_use_sine_bit_probability_difference": [
+      "2569901/125000000000",
+      "20559209/1000000000000"
+    ]
+  },
+  "support": {
+    "original_global_band": [
+      "693/6400",
+      "909/6400"
+    ],
+    "moved_jitter_band_clearance": {
+      "plus": [
+        "1398858379/250000000000",
+        "5595433517/1000000000000"
+      ],
+      "minus": [
+        "4816316021/1000000000000",
+        "2408158011/500000000000"
+      ]
+    },
+    "two_use_pointer_effects_on_original_band": {
+      "-1": [
+        "249883197987/500000000000",
+        "62477738231/125000000000"
+      ],
+      "1": [
+        "62522261769/125000000000",
+        "250116802013/500000000000"
+      ]
+    }
+  },
+  "P3_source": {
+    "NOT_RUN": 60
+  }
+}

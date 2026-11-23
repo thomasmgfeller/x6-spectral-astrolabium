@@ -1,0 +1,61 @@
+# Von der Dichtephase zum frühen Messbit
+
+## 1 · Gleiche Uhrpakete und gleiche spätere Auswahl wie in der Vorstudie
+
+Wir verwenden die N15-Kette (0,1,2,3,4,5,6,11,12,13,14,7,8,9,10) mit Dosis M=1. Es gelten e=1/4, K=4−e, Δ⁴=3/722, D=ΔK sowie Yⱼ=Y₃+Kuⱼ im Inneren. Die Zellbreiten fⱼ folgen aus Mittelpunkten benachbarter Uhren und den Rändern 0 und 1. Die präparierten Dichtebänder sind wⱼ/D ∈ [0,99 fⱼ; 1,01 fⱼ]. Wir halten u₆=3/8 und u₁₁=1/2 fest. Mit s=1/(72DK²), h=1/16384 und |z|≤1/64 wählen wir u₄=1/8+z, zwei disjunkte Uhrpakete u₅=1/4+t±s mit |t|≤h und flache, aufeinander abgestimmte Paketamplituden. Die beiden Dichtefenster x=w₁₁/D haben Halbbreite h und liegen um x₀±1/2048, x₀=1/8. Beide Fenster sind am späteren Zentralwert u₁₂=5/8 und an den beiden Vergleichsfortsetzungen 5/8±1/1024 zulässig. Kein späterer Uhrwert geht in die Einstellung der ersten Messung ein. Die Referenzwirkungs- und Datenquellen stehen in `quellen/herkunft.json`.
+
+Der Wirkungskoeffizient einer Zieldichte ist cⱼ=−1/2−Σᵢ bᵢⱼ(Yⱼ−Yᵢ)²/38. Die Gewichte nach Paarabstand sind 1, −9, 16, −8. Die Normierung gemeinsamer Randfaktoren kürzt sich in den verglichenen Quotienten. Auf dem fixierten Typ liefert das faktorisierte masselose Skalarfeld denselben Faktor in beiden Armen.
+
+## 2 · Welche Wahrscheinlichkeit am frühen Schnitt gemeint ist
+
+Am Schnitt hinter 11 liefert die kohärente Integration der abgeschlossenen Dichten j=4,5,6 für jeden Arm a∈{−,+} die Amplitude Lₐ=Vₐ exp[i(φₐ+γₐx)]. Dabei sind φₐ=Σⱼ Dfⱼcⱼ, γₐ=Dc₁₁ und Vₐ=∏ⱼ fⱼ sinc(Dfⱼcⱼ/100), jeweils mit den zum Arm gehörenden Uhren. Beide Volumenfaktoren sind positiv. Die Integrationsfaktoren der äusseren frühen Dichten sind den Armen gemeinsam. Aus dem einzigen variierenden Paar 5→11 folgt γ₊−γ₋=−κ(t), κ(t)=4(1/4−t)/304. Das Vorzeichen bezieht sich auf die Reihenfolge Plusarm minus Minusarm.
+
+Als zusätzliche positive Paarung verwenden wir die Summe der beiden Betragsquadrate, integriert mit gemeinsamem flachem Mass in z,t und in x über das jeweilige Dichtefenster. Für das frühe Plusbit ist der Zähler das entsprechend integrierte L†E₊L, der Nenner das integrierte L†L. Dies ist eine untersuchbare frühe Normwahl. Das ursprüngliche Gesamtmass korreliert die Zelle 11 mit der späteren Uhr 12. Eine physikalische Herleitung der frühen Norm bleibt offen. Die Trefferquoten gelten für ein einziges Bit und gleiche Vorwahrscheinlichkeit der beiden Dichtefenster.
+
+Die Messung paart gleiches t der beiden Uhrpakete. Der selbstadjungierte Operator A(θ) hat auf der Diagonale Nullen, oben rechts −i exp(−iθ) und unten links i exp(iθ). Es gilt A²=I. Wir setzen die Effekte Eᵣ=(I+rηA)/2 und die Operationen Kᵣ=√Eᵣ, r=±1, 0≤η≤1. Die Kopplung dieser kohärenten Messung an ein auslesbares Ergebnis ist eine Annahme.
+
+Mit θc(z,t)=φ₊−φ₋−κ(t)x₀ und gleichphasiger Präparation ist p₊=(1−ηV sin[κ(t)(x−x₀)])/2, V=2V₋V₊/(V₋²+V₊²). `modelltest.py` schliesst das Verhältnis der positiven Volumina mit den Zellbreiten und einer rationalen sinc-Schranke ein. V>0,99973779683. Bei voller Stärke liegt der Abstand von ½ in beiden Fenstern zwischen 7,023516×10⁻⁷ und 9,037016×10⁻⁷. Der Ausschlag ist für das niedrige Fenster positiv und für das hohe negativ. Diese punktweise Schranke erhält sich bei positiver Mittelung im jeweiligen Fenster. Mit der angegebenen Präparation ergeben zwei Quadraturen 0,500000803091106 und 0,499999196908894. Die Regel »Plus bedeutet niedrige Dichte« ergibt die im Bericht genannte Trefferquote.
+
+## 3 · Eine frühe Basis, deren Ergebnisräume die nächste Verklebung erhält
+
+Nach Ereignis 12 ist Uhr 4 aus dem gewöhnlichen Randzustand integriert. Für ein festes t könnte eine von z abhängige frühe Basis daher beim Zusammenfassen verschiedener z fachlich verschiedene Ausgänge mischen. Wir werten die Kompensationsphase stattdessen für alle z bei derselben Referenz θf(t)=θc(0,t) aus. Aus den Wirkungs- und Zellpolynomen folgt exakt
+
+    θc(z,t)−θf(t) = −15 z(660z−389)/(2432 · 72 K²).
+
+`transport.py` verifiziert die Identität in z,t und der symbolischen Paketverschiebung über je vier rationale Werte. Jede Variable tritt höchstens kubisch auf. Nach Einsetzen von Ds=1/(72K²) ist die Drift auf |z|≤1/64 monoton und betragsmässig kleiner als 4×10⁻⁵ rad. Der frühe normierte Ausschlag ist jetzt V sin[θc−θf−κ(x−x₀)]. Bei gleichem z,t in den zwei Fenstern ist der paarweise Unterschied der Plusbitwahrscheinlichkeiten für η=1 strikt grösser als 1,40470×10⁻⁶. Dies folgt aus der Sinusdifferenzformel, positiver Kosinusschranke und dem Mindestabstand der Tagfenster. Die Schranke gilt für dieselben normierten z,t-Gewichte in beiden Präparationen. Eine Trennung bei jeder einzelnen Koordinate durch die gemeinsame Schwelle ½ folgt bei dieser Kalibrierung nicht. Für die gewählten flachen Präparationen ergeben sich p₊,niedrig=0,5000003825823992 und p₊,hoch=0,4999987764001875. Ihre Differenz bestimmt mit gleichen Priors die Trefferquote (1+p₊,niedrig−p₊,hoch)/2.
+
+Auf dem nächsten Schnitt ist x₁₂=w₁₂/D offen. Bei festem t unterscheidet nur das Paar 5→12 (Gewicht 16) die rechten Wirkungsfaktoren der beiden Uhrpakete. Ihr Verhältnis ist exp(iδ₁₂), wobei
+
+    δ₁₂ = (4/171) x₁₂ (u₁₂−1/4−t).
+
+Alle übrigen rechten Faktoren und das Integrationsmass in den nun vergessenen Koordinaten sind für beide Arme identisch. Insbesondere verwendet die ursprüngliche Zelle f₁₁=(u₁₂−u₆)/2 keinen der zwei Werte der Uhr 5. Auch ein reiner Wirkungspuls an der rechten Kopie von Uhr 6 trägt in beiden Armen dieselbe zusätzliche Phase bei. Damit gilt für die gewöhnliche Integralabbildung T von 11 nach 12 und Pᵣ(θ)=(I+rA(θ))/2
+
+    T Pᵣ(θf) = Pᵣ(θf+δ₁₂) T,   r=±1.
+
+Zum Beweis schreibt man den rechten diagonalen Faktor als gemeinsame Funktion der Integrationsvariablen mal diag(1,exp(iδ₁₂)). Die gemeinsame Funktion integriert gegen jede linke Testwelle. θf und δ₁₂ hängen nur von festen bzw. am Zielschnitt vorhandenen Variablen ab. Man zieht Pᵣ durch das Integral und konjugiert mit der Diagonalmatrix. Die Identität gilt auch dann, wenn das Integral links eine Komponente auslöscht. Für einen Zweig mit nichtverschwindender Amplitude impliziert sie P₋ᵣ(θf+δ₁₂) T Pᵣ(θf)=0. Ein bereits projektiv geschriebenes Ergebnis wäre somit am zweiten Schnitt ideal wiederholbar. Der Vergleich setzt die zweite phasenempfindliche Auslese voraus. Er liefert keine physische Erzeugung des ersten Messvorgangs, keinen Nachweis eines dauerhaft lesbaren klassischen Registers und keine Normerhaltung von T. Für die z-abhängige Basis gelingt dieses Herausziehen nicht. 36 numerische Prüfungen auf Testwellen, Pulsen und zwei zulässigen Fortsetzungen ergänzen die algebraische Rechnung.
+
+## 4 · Rückwirkung auf die Auslese hinter 13
+
+Hier wählen wir u₁₂=5/8, u₁₃=3/4 und w₁₃/D=1/8. Die Dichte w₁₂ wird nun übers ursprüngliche Band integriert. Der Kragen wird bei zwei Zentren 1/8 und 1/4 geprüft und ergibt denselben gemeinsamen Intensitätsfaktor. Hinter 13 wurde auch über die beiden Uhrpakete an 5 summiert. Die späte Balance verwendet zwei verschiedene Präparationen mit relativer Phase −π/2 und +π/2. Für jedes Dichtefenster ist B=(I₋−I₊)/(I₋+I₊). Die Tabelle zeigt B_hoch−B_niedrig für die z-abhängige Kalibrierung. Die gleichphasige Präparation zur frühen Dichteentscheidung ist separat ausgewertet.
+
+Das frühe Ergebnis sei in orthogonalen Zuständen aufgezeichnet und bei der späteren Auswertung über beide Ergebnisse summiert. Mit Z=T′L und W=T′AL, T′ der linearen Endauswahl hinter 13, ergibt die Summe über beide Kᵣ genau c|Z|²+(1−c)|W|² mit c=(1+√(1−η²))/2. `messung.py` rechnet beide Formen und vergleicht bei η=0 die Endintensitäten unmittelbar mit der Vorstudie. Bei drei Pulswahlen benutzt es je eine Gauss- und eine Clenshaw-Curtis-Rechnung für die zwei Uhrkoordinaten. Für den pulsfreien Lauf sichert `rueckwirkung.py` das Ergebnis mit nach aussen gerundeter 256-Bit-Festkommaarithmetik.
+
+| η | B_hoch−B_niedrig, pulsfreier Lauf | Verhältnis zum ursprünglichen vorzeichenbehafteten Kontrast |
+|---|---:|---:|
+| 0 | −3,217325254 × 10⁻⁶ | 1 |
+| ½ | −2,786285401 × 10⁻⁶ | 0,8660254035110 bis 0,8660254035111 |
+| 1 | +6,7182 bis +6,7183, jeweils × 10⁻¹⁵ | −2,0882 bis −2,0881, jeweils × 10⁻⁹ |
+
+Die ersten beiden Kontraste sind gerundet. Die enge Schranke beim vollständigen Auslesen stammt aus den Intervallen. Bei diesem Rest sind reine Gleitkommawerte durch Auslöschung empfindlich. Die 24-Punkt-Gaussregel auf jeder Achse integriert bis Grad 47 exakt. Auf den beiden komplexen Scheiben mit Radius 4 ist der Betrag jeder analytisch fortgesetzten normalisierten Integrandenfamilie kleiner als 3. Dazu stellt man die sinc-Faktoren als Mittel über ursprüngliche reelle Dichteschwankungen dar. `majorant()` schliesst die Summe der imaginären Wirkungsbeiträge unter eins und die Volumenfaktoren unter eins ein. Cauchys Koeffizientenschranke und Positivität der normierten Gaussgewichte ergeben durch sukzessiven eindimensionalen Fehlervergleich höchstens 4·3·4⁻⁴⁸/(1−1/4) je komplexem Integral. Die vier Kombinationen von Eingangs- und Ausgangsarm werden für jedes Dichtefenster einzeln eingeschlossen. Diese Zertifizierung gilt für θc. Für θf enthält `transport.json` ergänzend zwei numerische Endauswertungen.
+
+## 5 · Schranke für eine vollständig störungsfreie Messung
+
+Die frühe N15-Wirkung multipliziert bei festem Uhrwert mit einer Phase. Auch beim Integrieren anderer Variablen und beim Weiterreichen von Uhr 5 bleiben ihre beiden disjunkten Paketträger getrennt. Eine zusätzliche konstante Umphasung eines ganzen Arms kommutiert mit diesen Operationen. Rein diagonale Beobachtungen bei noch vorhandener Uhr 5 sind deshalb gegenüber dieser relativen Umphasung blind. Das erklärt, weshalb die hier verwendete Auslese eine zusätzliche kohärente Operation benötigt. Verschiedene Anfangsamplituden oder ein physikalisches Skalarprodukt mit Kreuztermen wären eigene Annahmen.
+
+Als zweite Prüfung konditionieren wir beim zentralen alten Uhrwert u₄=1/8 auf zwei verschiedene zulässige Uhren u₁₂=639/1024 und 641/1024. Am gleichen Endausgang gelten die festen Werte von u₁₃ und w₁₃ wie oben. Die Dichte w₁₂ wird je Fortsetzung ausintegriert. Auf demselben zweidimensionalen Raum der flachen Pakete induzieren die beiden Übergangszeilen rᵢ normierte Rang-eins-Effekte Gᵢ=rᵢ†rᵢ/‖rᵢ‖². Der gemeinsame Normierungsfaktor pro Zeile beeinflusst die Invarianzforderung nicht. `paarung.py` integriert die endlichen Uhrpakete mit Gaussordnung 12 und einem analytischen Rest. Die normierte Determinante liegt zwischen 0,0000028554459 und 0,0000028554460, der Betrag der normierten Überlappung zwischen 0,999999999995923 und 0,999999999995924. Die Richtungen sind verschieden und nichtorthogonal.
+
+Eine spurerhaltende Operation auf genau diesem zweidimensionalen Raum, die für *jeden* Eingang *beide* ausgewählten Ausgangsintensitäten exakt erhält, fixiert im dualen Bild G₁ und G₂ sowie ihre Komplemente. Für den zu Gᵢ orthogonalen Vektor v ist die Summe Σₐ‖GᵢKₐv‖² null. Dasselbe Argument mit dem Komplement erhält auch den Bildraum. Damit kommutiert jeder Krausoperator mit beiden Projektoren. In der Eigenbasis des ersten Projektors ist er diagonal. Der zweite hat dort einen nichtverschwindenden Nebendiagonaleintrag, der die beiden Diagonalelemente gleichsetzt. Folglich ist jeder Krausoperator skalar, und die Wahrscheinlichkeit jedes zugeordneten Ergebnisses ist zustandsunabhängig. Die Aussage betrifft diese beiden Endauswahlen, diesen Modenraum und die Forderung exakter Erhaltung für sämtliche Eingänge. Sie quantifiziert keine universelle untere Schranke für die Störung beliebiger Instrumente.
+
+## Forschungsstand
+
+Die gespeicherte Phaseninformation kann in der positiven Hilfspaarung vor der Pulswahl ausgelesen werden, wenn eine geeignete kohärente Randoperation zugelassen wird. Eine feste frühe Kalibrierung macht ihre beiden Ergebnisräume mit der gewöhnlichen Verklebung bis hinter 12 verträglich. Der nächste physikalische Nachweis wäre eine Kopplung aus der zugelassenen Randdynamik, die die disjunkten Uhr-5-Pakete tatsächlich mischt und ein auslesbares Ergebnis erzeugt, zusammen mit einer positiven Paarung, in der diese Operation normiert ist. Die unabhängige Eichung des positiven Massensektors steht ebenfalls aus. `quellen/p3.json` führt alle 60 P3-Prüfpunkte als NOT_RUN.

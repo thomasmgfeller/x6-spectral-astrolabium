@@ -1,5 +1,18 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Früher Dichtezeiger und Transport der Staubuhr 5 · 23. November 2026
+
+Bei der N15-Referenz mit markierter Dosis 1 und e = 1/4 bleiben nach der hypothetischen frühen Impulsmessung 97,48 % der Hilfsnorm im ursprünglichen Uhrfenster. Hinter Ereignis 12 lässt sich das erste Messbit in 97,41 % dieses Anteils fehlerfrei wiederlesen, wenn die zweite Auslese „unentschieden“ melden darf. Ein separat untersuchter Detektor mit offenen Fensterenden unterscheidet die beiden Dichtepräparationen mit 50,00004648 % Trefferquote. Die physikalische Kopplung, das Skalarprodukt und die unabhängige Masseneichung sind offen. Das physische P3-Register führt 60 Einträge mit `NOT_RUN`.
+
+| Studie | Fragestellung oder Befund | Dateien |
+|---|---|---|
+| [Früher Dichteeintrag](n15_frueher_dichterecord_v0_1/README.md) | Welche Dichteinformation liefern die vier äusseren Uhrquellen? | [PDF](n15_frueher_dichterecord_v0_1/Kurzbericht.pdf) · [Prüfpaket](packages/CST_DUST_N15_Frueher_Dichteeintrag_Pruefpaket.zip) |
+| [Dichtezeiger an der Verklebung](n15_zeiger_an_der_verklebung_v0_1/README.md) | Ein lokaler Eingriff schreibt eine dichteabhängige Phase an Ereignis 11. | [PDF](n15_zeiger_an_der_verklebung_v0_1/Kurzbericht.pdf) · [Prüfpaket](packages/CST_DUST_N15_Zeiger_an_der_Verklebung_Pruefpaket.zip) |
+| [Staubuhr 5 als Dichtezeiger](n15_natuerlicher_uhrzeiger_v0_1/README.md) | Die Wirkung koppelt zwei Uhrpakete an die Dichte. Ihr Phasenkontrast erreicht den Ausgang hinter 13. | [PDF](n15_natuerlicher_uhrzeiger_v0_1/Kurzbericht.pdf) · [Prüfpaket](packages/CST_DUST_N15_Staubuhr_5_als_Dichtezeiger_Pruefpaket.zip) |
+| [Frühe Phasenmessung](n15_fruehe_phasenmessung_uhr5_v0_1/README.md) | Eine geeignete Messbasis transportiert die beiden Ergebnisräume von 11 nach 12. | [PDF](n15_fruehe_phasenmessung_uhr5_v0_1/Kurzbericht.pdf) · [Prüfpaket](packages/CST_DUST_N15_Fruehe_Phasenmessung_der_Staubuhr_5_Pruefpaket.zip) |
+| [Randimpuls der Staubuhr 5](n15_uhr5_randimpuls_v0_1/README.md) | Ein hypothetischer Impulsfilter kann die Phase vor der Pulswahl auslesen. | [PDF](n15_uhr5_randimpuls_v0_1/Kurzbericht.pdf) · [Prüfpaket](packages/CST_DUST_N15_Randimpuls_der_Staubuhr_5_Pruefpaket.zip) |
+| [Fenstertransport der Staubuhr 5](n15_uhr5_fenstertransport_v0_1/README.md) | Wie gut lässt sich das erste Bit nach dem Transport wiederlesen? | [PDF](n15_uhr5_fenstertransport_v0_1/Kurzbericht.pdf) · [Prüfpaket](packages/CST_DUST_N15_Fenstertransport_der_Staubuhr_5_Pruefpaket.zip) |
+
 ## Dichteantwort auf den Uhrpuls an Ereignis 6 · 22. November 2026
 
 Auf der N15-Kette messen zwei Profile der vier äusseren Eingangsuhren gezielt die skalierten Dichten an den Ereignissen 11 und 5. Bei markierter Masse 1 und Randdichte 1/4 beträgt die integrierte Dichteantwort an 11 rund 0,00000035 bei festgehaltenem Fenster und 0,02898052 bei mitverschobenem Fenster. Bei gemeinsamer Neupräparation beider Zellen antwortet Ereignis 5 mit umgekehrtem Vorzeichen. Beim allein mitverschobenen Fenster liegen je nach Pulsrichtung rund 35 bis 37 % des positiven Präparationsmasses ausserhalb des gesamten vor dem Puls zulässigen Dichtebereichs. Die physikalische Registrierung einer früheren Dichte und die unabhängige Masseneichung sind offen. Alle 60 physischen P3-Prüfpunkte stehen auf `NOT_RUN`.
