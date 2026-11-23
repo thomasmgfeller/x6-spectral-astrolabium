@@ -1,0 +1,14 @@
+Erster Hintergrundtest des Projekts, 24.11.2026. Lokale Festlegung vor Auswertung, ohne externen Zeitstempel.
+Everpresent Λ, Modell 2, Realraum-Gleichungen (2.9) und (2.10) von Zwane, Afshordi und Sorkin (1703.06265).
+alpha=0.8824, mu=0.9804 aus deren Tabelle 1. Prozesse in ln(a); unbedingte Ziehungen, kein Zwang auf Omega_DE(0).
+Flach, vernachlässigbare Strahlung im Beobachtungsfenster wie in der kalibrierten Hauptpipeline; E(0)=1.
+131072 Historien in 16 voneinander unabhängigen PCG64-Strömen mittels SeedSequence(20261124).spawn(16);
+8192 Historien pro Strom, 18 geordnete Standardnormalvariaten pro Historie.
+Erste global gezogene Historie vorab als einzelnes Beispiel, zusätzlich Ensemble, keine Seedoptimierung.
+Kovarianz-Reihenentwicklung im zentrierten logarithmischen Zeitfenster [−ln(3.33),0].
+Gemeinsame Original-Likelihood auf 13 DESI-DR2-BAO-Observablen und Pantheon+ (zHD>0.01, volle STAT+SYS-Kovarianz).
+SN-Nullpunkt frei. Für jedes Modell h r_d gleichverteilt 10..1000 Mpc. Beim LambdaCDM-Referenzmodell zusätzlich Omega_m gleichverteilt 0.01..0.99.
+Primär: über Historien und Skala gemittelte gemeinsame Likelihood relativ zur über Omega_m und Skala gemittelten Referenz.
+Kontrollen: ESS, Monte-Carlo-Standardfehler der Mittelwerte, 16 Blockschätzungen, Beiträge BAO und bedingt SN|BAO. Profil-chi² nach Anpassung der zwei Distanznullpunkte; Anteile für Delta chi² <=0 und <=4, Differenz bezogen auf das gemeinsame LambdaCDM-Minimum; erste und beste gezogene Historie klar unterschieden.
+Modell- und Om-Priors differieren wie oben festgelegt. Keine Aussage zur absoluten Hubble-Skala, zum CMB oder zu P3.
+Numerik: 513 gleichmässige logarithmische Stützstellen, Simpson und kubische Hermite-Interpolation für die Stammfunktion. Separater direkter 48-Punkt-Gauss-Legendre-Weg für erste und beste Historie und eine weitere feste Historie. Referenzminimum aus kalibrierter Pipeline nachrechnen. Kein Austausch von Referenz, Hyperparametern oder Historien nach Datensicht.
