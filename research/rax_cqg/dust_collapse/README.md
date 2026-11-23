@@ -1,5 +1,16 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Uhr 11 als früher Zeiger und die Dichte an Ereignis 12 · 24. November 2026
+
+Auf dem geprüften N15-Ordnungstyp 2097151 wurde untersucht, ob die beiden präparierten Pakete der Uhr 5 schon an Uhr 11 unterscheidbar sind und wie die ursprüngliche Wirkung sie bis hinter Ereignis 13 transportiert.
+
+| Untersuchung | Ergebnis | Unterlagen |
+|---|---|---|
+| Uhr 11 als früher Zeiger | Eine diagonale Auslese ist unter der positiven Hilfsnorm phasenblind, solange Uhr 5 erhalten bleibt. Die kohärente Zusammenfassung beider Pakete erfordert für eine vollständige Messung einen zweiten Ausgang. | [Herleitung](n15_uhr5_gemeinsamer_zeigerausgang_v0_1/HERLEITUNG.md) · [Kurzbericht](n15_uhr5_gemeinsamer_zeigerausgang_v0_1/Kurzbericht.pdf) · [Prüfpaket](packages/CST_DUST_N15_Uhr_11_als_frueher_Zeiger_Pruefpaket.zip) |
+| Randpaarung hinter Ereignis 13 | Die normierte Überlappung der beiden Pakete beträgt im pulsfreien Fall mindestens 0,99998747 bei gemeinsamer positiver diagonaler Randgewichtung. Bei festgehaltener Dichte an Ereignis 12 fällt die spätere Pulsphase aus der Uhr-11-Statistik exakt heraus. | [Herleitung](n15_uhr5_randpaarung_hinter_13_v0_1/HERLEITUNG.md) · [Kurzbericht](n15_uhr5_randpaarung_hinter_13_v0_1/Kurzbericht.pdf) · [Prüfpaket](packages/CST_DUST_N15_Randpaarung_hinter_13_und_Dichte_12_Pruefpaket.zip) |
+
+Die Dichteauflösung ist eine Vergleichsannahme. Ihre physikalische Realisierung und die unabhängige Masseneichung sind offen. Alle 60 physischen P3-Prüfpunkte stehen auf `NOT_RUN`.
+
 ## Vierphasentest an Uhr 5 und kosmologischer Referenzfit · 23. November 2026
 
 Das ursprüngliche Wirkungspaar 5→11 ergibt auf der festen N15-Referenz für den Wechsel der zwei vorbereiteten Dichtemitten eine Änderung der relativen Phase von exakt 1/311296 rad an den Paketmitten. Der Vierphasentest zeigt, wie die Präparationsnormen in die Auswertung eingehen. Der physikalische frühe Messeffekt und die unabhängige Masseneichung sind offen. Alle 60 physischen P3-Prüfpunkte stehen auf `NOT_RUN`. [Herleitung](n15_uhr5_vierphasentest_v0_1/uhr5/HERLEITUNG.md)
