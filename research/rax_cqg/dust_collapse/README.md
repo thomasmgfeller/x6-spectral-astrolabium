@@ -1,5 +1,11 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Everpresent Λ mit DESI DR2 und Pantheon+ · 24. November 2026
+
+Der erste kosmologische Lauf des Projekts vergleicht 131 072 Historien aus Modell 2 von Zwane, Afshordi und Sorkin mit 13 BAO-Messwerten und 1 590 Supernova-Lichtkurven. Bei α = 0,8824, μ = 0,9804 und den dokumentierten Priors beträgt das gemeinsame Evidenzverhältnis zu flachem ΛCDM 0,0845 ± 0,0129 (Monte-Carlo-Standardfehler). 50 der Ziehungen erreichen das χ²-Minimum der Referenz oder einen kleineren Wert. Die Ableitung eines kosmologischen H(z) aus dem N15-Staubball bleibt offen.
+
+[Methode und Reproduktion](everpresent_lambda_dr2_pantheon_v0_1/README.md) · [Kurzbericht mit Distanzgrafik](everpresent_lambda_dr2_pantheon_v0_1/Kurzbericht.pdf) · [Distanzvergleich ohne Kalibrierung](everpresent_lambda_dr2_pantheon_v0_1/resultate/DESI_skalenfrei.csv) · [Vollständiges Prüfpaket](packages/CST_DUST_Everpresent_Lambda_DESI_DR2_PantheonPlus_Erstlauf_Pruefpaket.zip)
+
 ## Uhr 11 als früher Zeiger und die Dichte an Ereignis 12 · 24. November 2026
 
 Auf dem geprüften N15-Ordnungstyp 2097151 wurde untersucht, ob die beiden präparierten Pakete der Uhr 5 schon an Uhr 11 unterscheidbar sind und wie die ursprüngliche Wirkung sie bis hinter Ereignis 13 transportiert.
