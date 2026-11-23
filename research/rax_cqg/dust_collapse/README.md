@@ -1,5 +1,13 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Vierphasentest an Uhr 5 und kosmologischer Referenzfit · 23. November 2026
+
+Das ursprüngliche Wirkungspaar 5→11 ergibt auf der festen N15-Referenz für den Wechsel der zwei vorbereiteten Dichtemitten eine Änderung der relativen Phase von exakt 1/311296 rad an den Paketmitten. Der Vierphasentest zeigt, wie die Präparationsnormen in die Auswertung eingehen. Der physikalische frühe Messeffekt und die unabhängige Masseneichung sind offen. Alle 60 physischen P3-Prüfpunkte stehen auf `NOT_RUN`. [Herleitung](n15_uhr5_vierphasentest_v0_1/uhr5/HERLEITUNG.md)
+
+Der eigenständige Datenpilot reproduziert die veröffentlichte DESI-DR2-Referenz für flaches ΛCDM. Zusammen mit 1 590 unkalibrierten Pantheon+-Lichtkurven ergeben sich Ωₘ = 0,30447 ± 0,00795 und h r_d = 101,00 ± 0,67 Mpc. [Daten, Priors und Gegenrechnungen](n15_uhr5_vierphasentest_v0_1/daten/README.md) · [Vorausgehende Prüfung der fünf Datenangebote](reports/CST_DUST_Pruefung_oeffentlicher_Beobachtungsdaten.pdf)
+
+[Kurzbericht](n15_uhr5_vierphasentest_v0_1/Kurzbericht.pdf) · [Anleitung](n15_uhr5_vierphasentest_v0_1/README.md) · [Vollständiges Prüfpaket](packages/CST_DUST_Uhr5_Vierphasentest_und_DESI_Pantheon_Pruefpaket.zip)
+
 ## Früher Dichtezeiger und Transport der Staubuhr 5 · 23. November 2026
 
 Bei der N15-Referenz mit markierter Dosis 1 und e = 1/4 bleiben nach der hypothetischen frühen Impulsmessung 97,48 % der Hilfsnorm im ursprünglichen Uhrfenster. Hinter Ereignis 12 lässt sich das erste Messbit in 97,41 % dieses Anteils fehlerfrei wiederlesen, wenn die zweite Auslese „unentschieden“ melden darf. Ein separat untersuchter Detektor mit offenen Fensterenden unterscheidet die beiden Dichtepräparationen mit 50,00004648 % Trefferquote. Die physikalische Kopplung, das Skalarprodukt und die unabhängige Masseneichung sind offen. Das physische P3-Register führt 60 Einträge mit `NOT_RUN`.
