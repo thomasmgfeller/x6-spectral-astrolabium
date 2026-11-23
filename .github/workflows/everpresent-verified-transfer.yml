@@ -1,0 +1,40 @@
+name: Assemble verified Everpresent research files
+on:
+  push:
+    branches: [research/transfer-everpresent-dr2-20261124]
+permissions:
+  contents: write
+jobs:
+  assemble:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - name: Verify the uploaded bytes and store the original Git objects
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: python
+        run: |
+          import base64, hashlib, io, json, os, urllib.request, zipfile
+          api = os.environ['GITHUB_API_URL'] + '/repos/' + os.environ['GITHUB_REPOSITORY'] + '/git/blobs'
+          headers = {'Authorization': 'Bearer ' + os.environ['GH_TOKEN'], 'Accept': 'application/vnd.github+json', 'Content-Type': 'application/json'}
+          def object_id(raw):
+              return hashlib.sha1(f'blob {len(raw)}\0'.encode()+raw).hexdigest()
+          def get(oid):
+              with urllib.request.urlopen(urllib.request.Request(api+'/'+oid,headers=headers),timeout=60) as response:
+                  obj=json.load(response)
+              raw=base64.b64decode(obj['content'])
+              assert obj['sha']==oid and object_id(raw)==oid
+              return raw
+          def put(raw, expected, checksum):
+              assert hashlib.sha256(raw).hexdigest()==checksum and object_id(raw)==expected
+              body=json.dumps({'encoding':'base64','content':base64.b64encode(raw).decode('ascii')}).encode()
+              req=urllib.request.Request(api,data=body,headers=headers)
+              with urllib.request.urlopen(req,timeout=90) as response:
+                  assert json.load(response)['sha']==expected
+              print('Verified original Git blob',expected)
+          archive=b''.join(get(oid) for oid in ['25d86a5d6ab2aaf1a7953acf379406545505615f', '10dec63ab3edb6d2531aabcfe3f58efe4618fcd4', 'cd4a93f0fa91ed17b48be7abaa8274e7f8d9599e'])
+          with zipfile.ZipFile(io.BytesIO(archive)) as z:
+              assert z.testzip() is None
+              histories=z.read('everpresent_lambda_dr2_pantheon_v0_1/resultate/historien.npz')
+          put(histories, 'a9a901cd65a37988017229716fac246308dc7952', 'fcc2241eadd580ec66ba0a3fa45499bb855771fec2792cf81887f4be219aa976')
+          put(archive, '6429e3904c99a5b61cb5c25b042d76f51cb4d893', '9e7c10d85dad3d7c19d9db27eb5a3aaa94d55be00683f939617506d02e35a2dd')
