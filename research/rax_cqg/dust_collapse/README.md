@@ -1,5 +1,11 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Materieprior und kosmologische Expansion · 24. November 2026
+
+Wie stark hängt der Distanztest vom heutigen Materieanteil ab? Für das publizierte Everpresent-Λ-Modell 2 ergibt die gewichtete Nachrechnung auf DESI DR2 und Pantheon+ ein Evidenzverhältnis gegenüber flachem ΛCDM von 0,06185 ± 0,00134. Mit demselben flachen Materieprior für beide Modelle beträgt es 0,12484 ± 0,00261. Die Unsicherheiten geben jeweils einen numerischen Standardfehler an. [Studie und Rechenprotokolle](everpresent_lambda_priorrobustheit_v0_1/README.md) · [Kurzbericht](everpresent_lambda_priorrobustheit_v0_1/Kurzbericht.pdf) · [Prüfpaket](packages/CST_DUST_Everpresent_Lambda_Replikation_und_Materieprior_Pruefpaket.zip)
+
+Welche Expansion folgt aus dem lokalen Staubball? Dieselbe klassische Kollapsbahn und dasselbe heutige H₀ lassen zwei kosmologische Anschlüsse mit unterschiedlichen Steigungen von H(z)/H₀ zu. Im endlichen Katalog besitzen 883 von 1 048 Typen unterschiedlich grosse inklusionsmaximale innere Antiketten. Eine äussere Volumenauslese kann die zwei klassischen Vergleichsräume unterscheiden. Ihre Herleitung aus N15 bleibt offen. Alle 60 physischen P3-Einträge stehen auf `NOT_RUN`. [Herleitung und Katalogauswertung](n15_kosmologische_expansion_v0_1/README.md) · [Kurzbericht](n15_kosmologische_expansion_v0_1/Kurzbericht.pdf) · [Prüfpaket](packages/CST_DUST_N15_Staubball_und_kosmologische_Expansion_Pruefpaket.zip)
+
 ## Everpresent Λ mit DESI DR2 und Pantheon+ · 24. November 2026
 
 Der erste kosmologische Lauf des Projekts vergleicht 131 072 Historien aus Modell 2 von Zwane, Afshordi und Sorkin mit 13 BAO-Messwerten und 1 590 Supernova-Lichtkurven. Bei α = 0,8824, μ = 0,9804 und den dokumentierten Priors beträgt das gemeinsame Evidenzverhältnis zu flachem ΛCDM 0,0845 ± 0,0129 (Monte-Carlo-Standardfehler). 50 der Ziehungen erreichen das χ²-Minimum der Referenz oder einen kleineren Wert. Die Ableitung eines kosmologischen H(z) aus dem N15-Staubball bleibt offen.

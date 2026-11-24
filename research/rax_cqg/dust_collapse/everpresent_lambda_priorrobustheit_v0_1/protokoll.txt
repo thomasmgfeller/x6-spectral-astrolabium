@@ -1,0 +1,10 @@
+24.11.2026. Lokale Festlegung nach Kenntnis von PR 365, vor Auswertung der neuen Folgen. Kein externer Zeitstempel.
+Basis d00c21965fd37f08d4979653ef6e5ad96e5a785a, everpresent_lambda_dr2_pantheon_v0_1.
+Primär: Z(Everpresent Λ, Modell 2) / Z(flach ΛCDM) aus DESI DR2 + Pantheon+. Sekundär: DESI allein.
+Ursprüngliches Modell (nativ): unverändertes Prozessgesetz, α=0.8824, μ=0.9804, 18 Moden, 513 Knoten.
+Referenz: Ωm0 uniform [0.01,0.99], h rd uniform [10,1000] Mpc. Referenzintegral nachrechnen.
+Gleicher gemeinsamer relativer SN-Nullpunkt, Datenschnitt und vollständige Kovarianzen wie in PR 365.
+Sensitivitätsvariante: nur die Randverteilung von Ωm0 auf uniform [0.01,0.99] setzen; bedingte Verteilung der Historien bei gegebenem Ωm0 beibehalten. Direkte Ziehung.
+Zerlegung: (1) nur auf dasselbe Intervall konditionieren, mit analytischer Normalisierung; (2) flache Dichte innerhalb. Direkten flachen Prior separat durch Dichtegewichtung nativer Pfade kontrollieren.
+Integration: 16 unabhängig gescrambelte Sobol-Netze, 18 Dimensionen, SeedSequence(36520261124).spawn(16), 52 bits, je 2^14 Punkte, gleiche Punkte für beide Priors. Verschachtelte Diagnosen bei 2^12 und 2^13. Kein Stoppen, keine Selektion. Fehler aus 16 Netzmitteln, Nenner sqrt(16), gepaarte Differenzen aus Differenzen je Netz. Alte Stichprobe nur externer numerischer Vergleich, keine Poolung.
+Numerischer Prüfvertrag: alte und neue native Schätzung innerhalb 3 kombinierter Standardfehler, direkte und umgewichtete flache Schätzung innerhalb 3 gepaarter Standardfehler. Beide Aussagen primär gemeinsam. Referenz log Z innerhalb 1e-8, direkte Distanzquadratur bei Index 0 und 127 des ersten Netzes für beide Priorvarianten auf relative Distanzabweichung <1e-7. Ziel: relativer Integrationsfehler <10% für die zwei primären direkten Punktschätzungen. Richtung je Variante stabil, falls Schätzer + 3 numerische Standardfehler <1. Diese Grössen beschreiben Integrationspräzision; sie sind keine physikalischen Konfidenzniveaus.

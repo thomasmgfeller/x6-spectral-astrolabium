@@ -1,0 +1,331 @@
+{
+  "seed": 36520261124,
+  "replicates": 16,
+  "levels": [
+    12,
+    13,
+    14
+  ],
+  "histories_per_direct_variant": 262144,
+  "observations": {
+    "DESI": 13,
+    "PantheonPlus": 1590
+  },
+  "versions": {
+    "numpy": "2.3.5",
+    "scipy": "1.17.0"
+  },
+  "endpoint_sigma": 0.8824,
+  "native_interval_mass": 0.49412619050256434,
+  "log_reference": [
+    -16.197330072682547,
+    -719.2188282108851
+  ],
+  "reference_error": 0.0,
+  "distances": [
+    {
+      "uniform": false,
+      "index": 0,
+      "relative_max": 7.029088422427776e-11
+    },
+    {
+      "uniform": false,
+      "index": 127,
+      "relative_max": 2.641207252906952e-10
+    },
+    {
+      "uniform": true,
+      "index": 0,
+      "relative_max": 8.960387987144713e-11
+    },
+    {
+      "uniform": true,
+      "index": 127,
+      "relative_max": 2.405682320016922e-10
+    }
+  ],
+  "prior_replication_z": 2.1795809318683417,
+  "paired_method_z": 1.1371968761439972,
+  "gates": {
+    "reference": true,
+    "independent_distance": true,
+    "repeat_native": true,
+    "methods_uniform": true,
+    "precision_native": true,
+    "precision_uniform": true,
+    "direction_native": true,
+    "direction_uniform": true
+  },
+  "levels_results": {
+    "4096": {
+      "native": {
+        "DESI": {
+          "mean": 0.25827667780081953,
+          "se": 0.019911993223148346
+        },
+        "DESI_Pantheon": {
+          "mean": 0.05367871566464124,
+          "se": 0.010365915727271868
+        }
+      },
+      "restricted": {
+        "DESI": {
+          "mean": 0.5226937627777477,
+          "se": 0.04029738476905327
+        },
+        "DESI_Pantheon": {
+          "mean": 0.10863361767981951,
+          "se": 0.02097827625111094
+        }
+      },
+      "uniform_weighted": {
+        "DESI": {
+          "mean": 0.5251654703769006,
+          "se": 0.04114291641939233
+        },
+        "DESI_Pantheon": {
+          "mean": 0.10775334030939883,
+          "se": 0.02098503746940655
+        }
+      },
+      "uniform_direct": {
+        "DESI": {
+          "mean": 0.5028876995362103,
+          "se": 0.027236185242776996
+        },
+        "DESI_Pantheon": {
+          "mean": 0.12667979617537994,
+          "se": 0.01886283609685565
+        }
+      },
+      "paired": {
+        "DESI": {
+          "direct_minus_reweighted": {
+            "mean": -0.02227777084069029,
+            "se": 0.05432102727887856
+          },
+          "restriction_factor": {
+            "mean": 2.0237745321350467,
+            "se": 1.5924460714281447e-16
+          },
+          "within_interval_factor": {
+            "mean": 0.9621077107630246,
+            "se": 0.09985665718337985
+          },
+          "uniform_to_native": {
+            "mean": 1.9470890822129607,
+            "se": 0.20208735967186425
+          }
+        },
+        "DESI_Pantheon": {
+          "direct_minus_reweighted": {
+            "mean": 0.0189264558659811,
+            "se": 0.032396275702571975
+          },
+          "restriction_factor": {
+            "mean": 2.023774532135046,
+            "se": 1.6520589633915763e-16
+          },
+          "within_interval_factor": {
+            "mean": 1.1661196495245947,
+            "se": 0.3229172731814528
+          },
+          "uniform_to_native": {
+            "mean": 2.359963248130121,
+            "se": 0.6535117534511197
+          }
+        }
+      },
+      "weight_means": {
+        "mean_restriction_weight": {
+          "mean": 1.0000600925170158,
+          "se": 0.00010547647090752588
+        },
+        "mean_uniform_weight": {
+          "mean": 1.0001034409738825,
+          "se": 0.00016530164004766618
+        }
+      }
+    },
+    "8192": {
+      "native": {
+        "DESI": {
+          "mean": 0.24963920049034014,
+          "se": 0.013577804199691332
+        },
+        "DESI_Pantheon": {
+          "mean": 0.04983173965169636,
+          "se": 0.007532894150452621
+        }
+      },
+      "restricted": {
+        "DESI": {
+          "mean": 0.5052134561749053,
+          "se": 0.027478414341651578
+        },
+        "DESI_Pantheon": {
+          "mean": 0.10084820559908723,
+          "se": 0.01524487933495508
+        }
+      },
+      "uniform_weighted": {
+        "DESI": {
+          "mean": 0.5116628916775747,
+          "se": 0.028208248003518663
+        },
+        "DESI_Pantheon": {
+          "mean": 0.10053923276985063,
+          "se": 0.015353767975505046
+        }
+      },
+      "uniform_direct": {
+        "DESI": {
+          "mean": 0.4950674686670615,
+          "se": 0.01562805490628616
+        },
+        "DESI_Pantheon": {
+          "mean": 0.12372465538090185,
+          "se": 0.012500629986595553
+        }
+      },
+      "paired": {
+        "DESI": {
+          "direct_minus_reweighted": {
+            "mean": -0.016595423010513137,
+            "se": 0.03713072959171822
+          },
+          "restriction_factor": {
+            "mean": 2.023774532135047,
+            "se": 2.456684103846122e-16
+          },
+          "within_interval_factor": {
+            "mean": 0.9799174242415046,
+            "se": 0.07119392584032609
+          },
+          "uniform_to_native": {
+            "mean": 1.9831319267753316,
+            "se": 0.14408045395836325
+          }
+        },
+        "DESI_Pantheon": {
+          "direct_minus_reweighted": {
+            "mean": 0.023185422611051214,
+            "se": 0.0238257960458451
+          },
+          "restriction_factor": {
+            "mean": 2.023774532135046,
+            "se": 2.0570298572191326e-16
+          },
+          "within_interval_factor": {
+            "mean": 1.2268404246353954,
+            "se": 0.2643267170064013
+          },
+          "uniform_to_native": {
+            "mean": 2.482848406370859,
+            "se": 0.5349376780404225
+          }
+        }
+      },
+      "weight_means": {
+        "mean_restriction_weight": {
+          "mean": 1.0000137719938655,
+          "se": 1.544017434795819e-05
+        },
+        "mean_uniform_weight": {
+          "mean": 1.0000224402810303,
+          "se": 3.0729116148083844e-05
+        }
+      }
+    },
+    "16384": {
+      "native": {
+        "DESI": {
+          "mean": 0.24305072760313462,
+          "se": 0.008721554138476334
+        },
+        "DESI_Pantheon": {
+          "mean": 0.054042875265668845,
+          "se": 0.005231021769615615
+        }
+      },
+      "restricted": {
+        "DESI": {
+          "mean": 0.4918798725401165,
+          "se": 0.0176504591460854
+        },
+        "DESI_Pantheon": {
+          "mean": 0.10937059460601165,
+          "se": 0.010586408634392077
+        }
+      },
+      "uniform_weighted": {
+        "DESI": {
+          "mean": 0.49976037906242976,
+          "se": 0.01949531626327239
+        },
+        "DESI_Pantheon": {
+          "mean": 0.10921590896514746,
+          "se": 0.010596660278020564
+        }
+      },
+      "uniform_direct": {
+        "DESI": {
+          "mean": 0.48052358042906373,
+          "se": 0.016132551907510118
+        },
+        "DESI_Pantheon": {
+          "mean": 0.12599705085392138,
+          "se": 0.010612862879374949
+        }
+      },
+      "paired": {
+        "DESI": {
+          "direct_minus_reweighted": {
+            "mean": -0.019236798633366067,
+            "se": 0.024947334731044535
+          },
+          "restriction_factor": {
+            "mean": 2.023774532135047,
+            "se": 5.468611121257487e-16
+          },
+          "within_interval_factor": {
+            "mean": 0.9769124683788996,
+            "se": 0.04761612113713282
+          },
+          "uniform_to_native": {
+            "mean": 1.9770505736304014,
+            "se": 0.0963642932763867
+          }
+        },
+        "DESI_Pantheon": {
+          "direct_minus_reweighted": {
+            "mean": 0.016781141888773905,
+            "se": 0.014756584581620848
+          },
+          "restriction_factor": {
+            "mean": 2.0237745321350467,
+            "se": 3.4068844729235426e-16
+          },
+          "within_interval_factor": {
+            "mean": 1.152019437288456,
+            "se": 0.1442893125663672
+          },
+          "uniform_to_native": {
+            "mean": 2.3314275977089247,
+            "se": 0.29200903603108735
+          }
+        }
+      },
+      "weight_means": {
+        "mean_restriction_weight": {
+          "mean": 1.0000137719940367,
+          "se": 1.0547647090747848e-05
+        },
+        "mean_uniform_weight": {
+          "mean": 1.000018573742854,
+          "se": 2.0754166230388258e-05
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "software": {
+    "numpy": "2.3.5",
+    "scipy": "1.17.0"
+  },
+  "parameters": {
+    "omega_r": 0,
+    "prior_omega_m": [
+      0.01,
+      0.99
+    ],
+    "prior_h_rd_Mpc": [
+      10,
+      1000
+    ],
+    "prior_measure": "uniform in Omega_m and h*r_d"
+  },
+  "inputs": {
+    "bao_data_points": 13,
+    "pantheon_rows": 1701,
+    "pantheon_after_zHD_gt_0.01": 1590,
+    "flagged_in_selection_without_Cepheid_anchor": 10,
+    "max_cov_asymmetry_selected_mag2": 0.0
+  },
+  "posteriors": {
+    "DESI_DR2": {
+      "omega_m_mean": 0.2978258521000865,
+      "omega_m_sd": 0.008631758829719205,
+      "h_rd_mean_Mpc": 101.52332484000975,
+      "h_rd_sd_Mpc": 0.7358433007205901,
+      "correlation": -0.9238849653993219,
+      "best_fit": {
+        "omega_m": 0.2974618194560226,
+        "h_rd_Mpc": 101.53977318424073,
+        "chi2_bao": 10.271041002565044,
+        "chi2_min": 10.271041002565044,
+        "nominal_dof": 11
+      }
+    },
+    "PantheonPlus": {
+      "omega_m_mean": 0.3322584813588912,
+      "omega_m_sd": 0.018210061725033484,
+      "best_fit": {
+        "omega_m": 0.33157579451597985,
+        "chi2_sn": 1402.9191282618867,
+        "chi2_min": 1402.9191282618867,
+        "nominal_dof": 1588
+      }
+    },
+    "DESI_DR2_plus_PantheonPlus": {
+      "omega_m_mean": 0.3044739396113175,
+      "omega_m_sd": 0.007945505326487131,
+      "h_rd_mean_Mpc": 101.00334535752488,
+      "h_rd_sd_Mpc": 0.6731781804604184,
+      "correlation": -0.9093753629383284,
+      "best_fit": {
+        "omega_m": 0.3042142011496104,
+        "h_rd_Mpc": 101.01299115826829,
+        "chi2_bao": 10.869899507160353,
+        "chi2_sn": 1405.2692733736812,
+        "chi2_min": 1416.1391728808417,
+        "nominal_dof": 1600
+      }
+    }
+  },
+  "abs_change_quadrature_24_to_40": {
+    "DESI_DR2": {
+      "omega_m_mean": 3.885780586188048e-16,
+      "omega_m_sd": 8.673617379884035e-18,
+      "h_rd_mean_Mpc": 8.526512829121202e-14,
+      "h_rd_sd_Mpc": 1.5210055437364645e-14,
+      "correlation": 3.5083047578154947e-14
+    },
+    "PantheonPlus": {
+      "omega_m_mean": 1.4432899320127035e-15,
+      "omega_m_sd": 6.512151928816934e-15
+    },
+    "DESI_DR2_plus_PantheonPlus": {
+      "omega_m_mean": 6.8833827526759706e-15,
+      "omega_m_sd": 3.0826036168107862e-15,
+      "h_rd_mean_Mpc": 4.547473508864641e-13,
+      "h_rd_sd_Mpc": 2.148281552649678e-13,
+      "correlation": 2.09277040141842e-13
+    }
+  },
+  "reference_DESI_eq17": {
+    "omega_m_mean": 0.2975,
+    "omega_m_sd": 0.0086,
+    "h_rd_mean_Mpc": 101.54,
+    "h_rd_sd_Mpc": 0.73,
+    "correlation": -0.92
+  },
+  "DESI_minus_eq17": {
+    "omega_m_mean": 0.00032585210008651,
+    "omega_m_sd": 3.175882971920459e-05,
+    "h_rd_mean_Mpc": -0.016675159990256816,
+    "h_rd_sd_Mpc": 0.005843300720590139,
+    "correlation": -0.003884965399321816
+  },
+  "DESI_with_fixed_omega_r_0_00009": {
+    "omega_m_mean": 0.29750764133818375,
+    "omega_m_sd": 0.008631548028389056,
+    "h_rd_mean_Mpc": 101.53243495678083,
+    "h_rd_sd_Mpc": 0.7360259808039179,
+    "correlation": -0.9239099508616136
+  }
+}

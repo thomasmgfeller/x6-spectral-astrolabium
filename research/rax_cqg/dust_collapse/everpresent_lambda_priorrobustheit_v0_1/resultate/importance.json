@@ -1,0 +1,71 @@
+{
+  "seed": 936520261124,
+  "count": 131072,
+  "streams": 16,
+  "per_stream": [
+    1024,
+    2048,
+    5120
+  ],
+  "estimates": {
+    "prior_weight_mean": {
+      "mean": 1.0002556762773203,
+      "se": 0.00257252654552253
+    },
+    "native_DESI": {
+      "mean": 0.23477216349524066,
+      "se": 0.005688338188848976,
+      "weight_ess": 2323.3150078883677
+    },
+    "native_DESI_Pantheon": {
+      "mean": 0.06185449766445424,
+      "se": 0.0013433923553621404,
+      "weight_ess": 3192.8608551553466
+    },
+    "restricted_DESI": {
+      "mean": 0.4751259253356229,
+      "se": 0.011511913956760217,
+      "weight_ess": 2323.315007885524
+    },
+    "restricted_DESI_Pantheon": {
+      "mean": 0.12517955707132922,
+      "se": 0.0027187232354468445,
+      "weight_ess": 3192.860855155343
+    },
+    "uniform_DESI": {
+      "mean": 0.47877245708200955,
+      "se": 0.011528794829177633,
+      "weight_ess": 2527.4604511527714
+    },
+    "uniform_DESI_Pantheon": {
+      "mean": 0.12484100342451032,
+      "se": 0.002611186899730604,
+      "weight_ess": 3353.255733693448
+    }
+  },
+  "joint_factors": {
+    "restriction": {
+      "mean": 2.0237745321350467,
+      "se": 9.190323150298269e-16
+    },
+    "within_interval": {
+      "mean": 0.997295455785756,
+      "se": 0.0014402504114402934
+    },
+    "total": {
+      "mean": 2.0183011444332264,
+      "se": 0.0029147421025699557
+    }
+  },
+  "joint_difference_from_sobol_in_standard_errors": {
+    "native": 1.446391111286081,
+    "uniform": 0.10577437666780852
+  },
+  "gates": {
+    "sobol_native": true,
+    "precision_native": true,
+    "sobol_uniform": true,
+    "precision_uniform": true,
+    "mean_prior_weight": true
+  }
+}

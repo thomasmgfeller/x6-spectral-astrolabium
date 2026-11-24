@@ -1,0 +1,95 @@
+{
+  "local": [
+    {
+      "x": "0",
+      "R_cubed": "1000",
+      "TE_times_Hlocal": "-1/6"
+    },
+    {
+      "x": "1/4",
+      "R_cubed": "28125/32",
+      "TE_times_Hlocal": "-8/45"
+    },
+    {
+      "x": "1/2",
+      "R_cubed": "6125/8",
+      "TE_times_Hlocal": "-4/21"
+    },
+    {
+      "x": "3/4",
+      "R_cubed": "21125/32",
+      "TE_times_Hlocal": "-8/39"
+    },
+    {
+      "x": "1",
+      "R_cubed": "1125/2",
+      "TE_times_Hlocal": "-2/9"
+    }
+  ],
+  "exteriors": [
+    {
+      "Rb0": "40",
+      "spatial_curvature_sign": 0,
+      "omega_m": "1",
+      "omega_k": "0",
+      "pi_rho_background": "3/256000",
+      "H0_squared": "1/32000",
+      "epsilon": "0",
+      "Eprime_at_zero": "3/2",
+      "E2_at_z_one_percent": "1030301/1000000",
+      "V_Vsecond_over_Vprime_squared": "1/2",
+      "junction_checks": [
+        {
+          "relative_scale": "1",
+          "matching_radius": "40",
+          "radial_speed_squared": "1/20"
+        },
+        {
+          "relative_scale": "100/101",
+          "matching_radius": "4000/101",
+          "radial_speed_squared": "101/2000"
+        },
+        {
+          "relative_scale": "9/10",
+          "matching_radius": "36",
+          "radial_speed_squared": "1/18"
+        }
+      ]
+    },
+    {
+      "Rb0": "50",
+      "spatial_curvature_sign": -1,
+      "omega_m": "64/125",
+      "omega_k": "61/125",
+      "pi_rho_background": "3/500000",
+      "H0_squared": "1/32000",
+      "epsilon": "61/1600",
+      "Eprime_at_zero": "157/125",
+      "E2_at_z_one_percent": "32041341/31250000",
+      "V_Vsecond_over_Vprime_squared": "218/375",
+      "junction_checks": [
+        {
+          "relative_scale": "1",
+          "matching_radius": "50",
+          "radial_speed_squared": "5/64"
+        },
+        {
+          "relative_scale": "100/101",
+          "matching_radius": "5000/101",
+          "radial_speed_squared": "3141/40000"
+        },
+        {
+          "relative_scale": "9/10",
+          "matching_radius": "45",
+          "radial_speed_squared": "1189/14400"
+        }
+      ]
+    }
+  ],
+  "delta_Eprime": "61/250",
+  "delta_volume_curvature": "61/750",
+  "flat_control_H0_squared": {
+    "40": "1/32000",
+    "50": "1/62500"
+  }
+}
