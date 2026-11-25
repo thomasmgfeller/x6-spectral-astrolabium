@@ -1,0 +1,5 @@
+# Prüfung am Schnitt hinter 11
+
+Am publizierten zweiten Paar zwei Fortsetzungen berechnen. Im ersten Fall wirkt der Versatz nur auf den Paarterm 4→12, im zweiten auf den einzigen weitergereichten Uhrwert und alle noch offenen, von ihm abhängigen Selektoren. Als Kontrolle eine neue Präparation verwenden, die allein im Nenner des hinteren Dichteprofils den nominalen Mittelpunkt der Uhr 4 benutzt. Denselben wirklichen Registerversatz darauf anwenden.
+
+Der ursprüngliche Schritt h=1/8 dient als Anschlusskontrolle. Für die reale Umordnung des Uhrarguments h=1/32 im breiteren ursprünglichen Uhrfenster wählen. Zusätzlich die untere Hälfte des sehr schmalen Anfangspakets gemeinsam selektieren und durch einen Austausch der beiden Nachbarhälften vollständig im ursprünglichen Paket bleiben. Den festen binären Plusausgang und die gleiche Vorchance aus PR #370 übernehmen. Wo die Skala sinnvoll ist, auch den Drei-Stellungs-Schätzer von Ereignis 12 prüfen. Keine Anpassung an das spätere Detektorergebnis. Explorative Untersuchung ohne unabhängigen Zeitstempel.

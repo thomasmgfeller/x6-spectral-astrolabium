@@ -1,0 +1,125 @@
+{
+  "phase_readouts": {
+    "hoch": {
+      "dichte12": {
+        "coherence_after_inlet_factor_lower": "0.9999998854500",
+        "margin_at_threshold": "0.0000601648269",
+        "max_phase_spread_rad": "0.0004786438139",
+        "mean": [
+          "0.1250601703731",
+          "0.1250601722094"
+        ],
+        "phase_bias_bound": "0.0000000055463",
+        "phase_error_tolerance_rad": "0.000000197910615",
+        "readout": [
+          "0.1250601648269",
+          "0.1250601777556"
+        ],
+        "sum_abs_stencil_weights": "304"
+      },
+      "summe": {
+        "coherence_after_inlet_factor_lower": "0.9999998198184",
+        "margin_at_threshold": "0.0001947890361",
+        "max_phase_spread_rad": "0.0006003024942",
+        "mean": [
+          "0.9997072713008",
+          "0.9997072795925"
+        ],
+        "phase_bias_bound": "0.0000007635147",
+        "phase_error_tolerance_rad": "0.000000004695169",
+        "readout": [
+          "0.9997065077861",
+          "0.9997080431071"
+        ],
+        "sum_abs_stencil_weights": "373384/9"
+      }
+    },
+    "niedrig": {
+      "dichte12": {
+        "coherence_after_inlet_factor_lower": "0.9999998854573",
+        "margin_at_threshold": "0.0000601648271",
+        "max_phase_spread_rad": "0.0004786285787",
+        "mean": [
+          "0.1249398277906",
+          "0.1249398296269"
+        ],
+        "phase_bias_bound": "0.0000000055461",
+        "phase_error_tolerance_rad": "0.000000197910615",
+        "readout": [
+          "0.1249398222446",
+          "0.1249398351729"
+        ],
+        "sum_abs_stencil_weights": "304"
+      },
+      "summe": {
+        "coherence_after_inlet_factor_lower": "0.9999998198217",
+        "margin_at_threshold": "0.0001947890732",
+        "max_phase_spread_rad": "0.0006002970807",
+        "mean": [
+          "0.9993161579075",
+          "0.9993161661992"
+        ],
+        "phase_bias_bound": "0.0000007634776",
+        "phase_error_tolerance_rad": "0.000000004695170",
+        "readout": [
+          "0.9993153944299",
+          "0.9993169296768"
+        ],
+        "sum_abs_stencil_weights": "373384/9"
+      }
+    }
+  },
+  "shifted_selection": {
+    "-1,-1": {
+      "absolute_shift_x12": [
+        "0.0000053996494",
+        "0.0000054000042"
+      ],
+      "clear_gap_x12": [
+        "0.0000034923008",
+        "0.0000034926556"
+      ]
+    },
+    "-1,1": {
+      "absolute_shift_x12": [
+        "0.0000042965865",
+        "0.0000042968482"
+      ],
+      "clear_gap_x12": [
+        "0.0000023892379",
+        "0.0000023894996"
+      ]
+    },
+    "1,-1": {
+      "absolute_shift_x12": [
+        "0.0000054194467",
+        "0.0000054198038"
+      ],
+      "clear_gap_x12": [
+        "0.0000035120980",
+        "0.0000035124552"
+      ]
+    },
+    "1,1": {
+      "absolute_shift_x12": [
+        "0.0000043111206",
+        "0.0000043113839"
+      ],
+      "clear_gap_x12": [
+        "0.0000024037720",
+        "0.0000024040353"
+      ]
+    }
+  },
+  "single_output": {
+    "P_plus_high_minus_low": [
+      "-0.0000055959394",
+      "-0.0000055953646"
+    ],
+    "equal_prior_accuracy_percent_fixed_reversed_assignment": [
+      "50.0002797682",
+      "50.0002797970"
+    ],
+    "fully_dephased_P_plus": "1/2"
+  }
+}
