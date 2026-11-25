@@ -1,5 +1,9 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Dichte an Ereignis 12 bei Variation der Eingangsuhren · 25. November 2026
+
+Auf N15-Typ 2097151 erreicht ein fester Detektor beim Gegenpaar aus PR #368 mit zwei phasenstabil gekoppelten Einstellungen der vier Eingangsuhren rund 50,000014 % Treffer bei gleichen Vorchancen. Bei einem zweiten Paar mit identischen frühen Dichten bleibt der Wirkungsunterschied für beliebige Eingangsuhren eine konstante globale Phase. Eine unabhängig gemessene innere Dichtesumme mit absolutem Fehler bis 0,0001883 würde dieses zweite Paar trennen. Der physische Zugriff auf diese Summe ist offen. Alle 60 P3-Prüfpunkte stehen auf `NOT_RUN`. [Herleitung und Ergebnisse](n15_dichte12_eingangsuhren_v0_1/README.md) · [Kurzbericht](n15_dichte12_eingangsuhren_v0_1/Kurzbericht.pdf) · [Offline-Prüfpaket](packages/CST_DUST_Ereignis_12_Eingangsuhren_Pruefpaket.zip)
+
 ## Dichte an Ereignis 12 am offenen Zukunftsrand · 25. November 2026
 
 Auf Typ 2097151 unterscheiden drei offene Zukunftsuhren und vier Zukunftsdichten die absolute Dichteschwelle bei gleichen Vorchancen, gleichphasiger Präparation, Nullpuls und flacher Hilfspaarung mit einer optimalen Trefferquote von 50,00000222 %. Zwei zulässige Pakete auf verschiedenen Seiten der Schwelle ergeben bei jeder Zukunftsbelegung exakt dieselbe Randwelle. Die Gleichheit bleibt für gewöhnliche Zukunftsanbauten mit demselben, unter dem Dichteaustausch invarianten Fortsetzungsmass erhalten. Die physikalische Auslese bleibt auf HOLD. Alle 60 physischen P3-Prüfpunkte stehen auf `NOT_RUN`. [Herleitung und Gegenproben](n15_dichte12_offener_zukunftsrand_v0_1/README.md) · [Kurzbericht](n15_dichte12_offener_zukunftsrand_v0_1/Kurzbericht.pdf) · [Prüfpaket](packages/CST_DUST_Ereignis_12_Offener_Zukunftsrand_Pruefpaket.zip)
