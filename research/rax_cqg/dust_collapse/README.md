@@ -1,5 +1,9 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Kohärenz am N15-Endrand · 25. November 2026
+
+Zwei Zählungen der Enddichten an 8 und 9 bestimmen im kalibrierten Modell Stärke und Phase der Eingangskohärenz der kollektiv verschobenen Uhrenzweige aus PR #373. Vorausgesetzt sind gleiche Zweigpopulationen und eine bekannte Dichteklasse. Im ursprünglichen Fenster unterscheiden sich gleichphasiger Eingang und Mischung um rund 6,44 × 10⁻¹⁶ in der Wahrscheinlichkeit, dass beide Dichten auf derselben Seite ihrer jeweiligen Fenstermitte liegen. Die separate Rechnung prüft auch zwei grössere Fenster. Eine physische Kalibrierung steht aus. Alle 60 P3-Prüfpunkte stehen auf `NOT_RUN`. [Herleitung und Ergebnisse](n15_kohaerenz_am_endrand_v0_1/README.md) · [Kurzbericht](n15_kohaerenz_am_endrand_v0_1/Kurzbericht.pdf) · [Offline-Prüfpaket](packages/CST_DUST_Kohaerenz_am_Endrand_N15_Pruefpaket.zip)
+
 ## Kohärenz und Dichtespur auf N15 · 25. November 2026
 
 Wird Uhr 4 gleichphasig über das ganze Referenzfenster präpariert, liegt die Endintensität der hohen Dichteklasse beim festen Profil um 5,67 bis 6,50 Milliardstel höher. Beim ursprünglichen mitlaufenden Profil verschwindet der Unterschied exakt. Für die beiden getrennten Fenster aus PR #372 lässt sich der Vorzeichenwechsel mit abnehmender Kohärenz eingrenzen. Eine zusätzliche Kontrolle hält alle sieben vorbereiteten Staubdichten innerhalb jeder Klasse in beiden Uhrenzweigen paarweise gleich. Die physische Randpräparation ist offen. Alle 60 P3-Prüfpunkte stehen auf `NOT_RUN`. [Herleitung und Ergebnisse](n15_kohaerenz_dichtespur_v0_1/README.md) · [Kurzbericht](n15_kohaerenz_dichtespur_v0_1/Kurzbericht.pdf) · [Offline-Prüfpaket](packages/CST_DUST_Kohaerenz_und_Dichtespur_N15_Pruefpaket.zip)
