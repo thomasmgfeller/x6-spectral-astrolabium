@@ -1,5 +1,9 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Dichte an Ereignis 12 am offenen Zukunftsrand · 25. November 2026
+
+Auf Typ 2097151 unterscheiden drei offene Zukunftsuhren und vier Zukunftsdichten die absolute Dichteschwelle bei gleichen Vorchancen, gleichphasiger Präparation, Nullpuls und flacher Hilfspaarung mit einer optimalen Trefferquote von 50,00000222 %. Zwei zulässige Pakete auf verschiedenen Seiten der Schwelle ergeben bei jeder Zukunftsbelegung exakt dieselbe Randwelle. Die Gleichheit bleibt für gewöhnliche Zukunftsanbauten mit demselben, unter dem Dichteaustausch invarianten Fortsetzungsmass erhalten. Die physikalische Auslese bleibt auf HOLD. Alle 60 physischen P3-Prüfpunkte stehen auf `NOT_RUN`. [Herleitung und Gegenproben](n15_dichte12_offener_zukunftsrand_v0_1/README.md) · [Kurzbericht](n15_dichte12_offener_zukunftsrand_v0_1/Kurzbericht.pdf) · [Prüfpaket](packages/CST_DUST_Ereignis_12_Offener_Zukunftsrand_Pruefpaket.zip)
+
 ## Dichte an Ereignis 12 und Kausaldiamanten · 25. November 2026
 
 Auf Typ 2097151 beträgt die optimale Trefferquote hinter Ereignis 13 für die relative Dichtehälfte 50,0012 % und für die absolute Schwelle bei 1/8 rund 99,9250 %. Die Werte gelten bei gleichen Vorchancen, gleichphasiger Präparation und der geprüften Hilfspaarung. Die Kontrolle mit ausgeschalteter Staubphase reproduziert die hohe Trefferquote. Am festen Zukunftsrand haben beide normierten Zustände dieselbe Dichtematrix. Alle 60 physischen P3-Prüfpunkte stehen auf `NOT_RUN`. [Herleitung und Rechnungen](n15_ereignis12_dichte_und_rand_v0_1/README.md) · [Kurzbericht](n15_ereignis12_dichte_und_rand_v0_1/Kurzbericht.pdf) · [Prüfpaket](packages/CST_DUST_Ereignis_12_Dichte_und_Rand_Pruefpaket.zip)
