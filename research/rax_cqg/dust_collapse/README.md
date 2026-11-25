@@ -1,5 +1,14 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Nicht-radiale Kausalabfrage
+
+Die erste Studie prüft die Wirkungsphasen der N16- und N17-Kandidaten und konstruiert eine winkelaufgelöste Abfrage für das kinematische Radienpaar 8,5 und 9,9. Die zweite Studie testet dieselbe Abfrage blind an 120 neuen Geometrien. Bei den festgelegten Uhr- und Winkelfehlern sind alle 60 Fälle in den beiden äusseren Radiusbereichen eindeutig. Von den übrigen 60 bleiben 31 offen. Für den positiven N15-Zweig fehlen die benötigten Grenzereignisse. Alle 60 physischen P3-Prüfpunkte stehen auf `NOT_RUN`.
+
+| Studie | Quelltext und Ergebnisse | Offline-Paket |
+|---|---|---|
+| Phasensumme über 54 N16- und 131 N17-Kandidaten | [Studie und unabhängige Gegenrechnung](ensemblemittel_und_nichtradiale_kausalabfrage_v0_1/README.md) | [ZIP](packages/CST_DUST_Ensemblemittel_und_nichtradiale_Kausalabfrage.zip) |
+| Blinde Winkelabfrage und Übertragung auf die klassische Staubkontrolle | [Studie, Blindurteile und Fehlergrenzen](blindtest_der_nichtradialen_kausalabfrage_v0_1/README.md) | [ZIP](packages/CST_DUST_Blindtest_der_nichtradialen_Kausalabfrage.zip) |
+
 ## Schalenvolumen und Seitenfluss
 
 Auf dem positiven N15-Zweig vom Typ 1767356 wurden 182 zweiseitig erreichbare Einfügungen einer Vakuumuhr geprüft. Keine erfüllt in den drei Uhrfenstern alle freien Gleichungen. Bei einem zusätzlichen früheren Materieereignis ergeben sich am mittleren Schnitt 11 943 N17-Ordnungen. Bei allen 131 Kandidaten, die die übrigen Bedingungen erfüllen, ist der Aussenuhrgradient von null getrennt.
