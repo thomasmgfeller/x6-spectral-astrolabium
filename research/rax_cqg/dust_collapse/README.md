@@ -1,5 +1,14 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Bewegte Staubkante und Seitenfluss
+
+25. November 2026 · Zwei Studien prüfen auf demselben offenen Zeit-Raum-Gitter die Staubwirkung und ihren Strom. Die Ordnung ist vorgegeben. Eine intrinsische Oberfläche, deren Fläche und eine unabhängige physische Masseneichung bleiben offen. Alle 60 physischen P3-Prüfpunkte stehen auf `NOT_RUN`.
+
+| Studie | Befund | Dateien |
+| --- | --- | --- |
+| [Innen und aussen auf derselben Historie](innen_und_aussen_auf_derselben_historie_v0_1/README.md) | Auf fünf Schnitten beträgt das Verhältnis von äusserer zu innerer Dichte rund 0,655 % bei 3 072 Stationsabständen. Auch aussen bleibt die Dichte positiv. | [Kurzbericht](innen_und_aussen_auf_derselben_historie_v0_1/Kurzbericht.pdf) · [Prüfpaket](packages/CST_DUST_Innen_und_Aussen_auf_derselben_Historie_Pruefpaket.zip) |
+| [Bewegte Staubkante und Seitenfluss](bewegte_staubkante_und_seitenfluss_v0_1/README.md) | Bei allen 701 Rückzugsfolgen mit der festgelegten Ruhephase verletzt eine scharfe Kante zum Vakuum die freie Uhrgleichung. Beim glatten Profil wandert die auf den Anfangswert fixierte Schwelle in 7 680 Ticks um 396 Stationen. | [Kurzbericht](bewegte_staubkante_und_seitenfluss_v0_1/Kurzbericht.pdf) · [Prüfpaket](packages/CST_DUST_Bewegte_Staubkante_und_Seitenfluss_Pruefpaket.zip) |
+
 ## Strom und Vakuum im stationären N15-Katalog
 
 25. November 2026 · Unter den geprüften Randbedingungen (Randversatz 1/6, uniforme Zukunftsdichte 1/64, streng kausal geordnete Uhren und freie innere Uhrvariation) lässt keiner der 1 048 Typen ein stationäres inneres Ereignis zu, dessen Dichte und sämtliche einzelnen Kantenströme verschwinden. Die Prüfung umfasst 134 144 Belegungsmuster. Für die letzten beiden Muster bestätigen zwei rationale Rechnungen den Ausschluss in allen 136 Teilzellen. Auf Typ 1767356 machen gemischte Uhrpulse die gegenläufigen Ströme am Nullatom sichtbar. Ein räumlich gemitteltes Vakuum bleibt eine offene Frage. Die 60 physischen P3-Prüfpunkte stehen auf `NOT_RUN`. [Studie und Beweis](n15_strom_und_vakuum_im_katalog_v0_1/README.md) · [Kurzbericht als PDF](n15_strom_und_vakuum_im_katalog_v0_1/Kurzbericht.pdf) · [Offline-Prüfpaket](packages/CST_DUST_Strom_und_Vakuum_im_N15_Katalog_Pruefpaket.zip)

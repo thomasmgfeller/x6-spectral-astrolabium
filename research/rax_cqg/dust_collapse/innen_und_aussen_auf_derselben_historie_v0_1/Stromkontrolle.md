@@ -1,0 +1,3 @@
+## Ergänzung nach dem Dichteversuch
+
+Nach Feststellung eines positiven räumlichen Profils wird auf denselben Feldern die Summe der Beträge aller inzidenten Kantenströme kontrolliert. Dies prüft, ob die gefundene Aussenabschwächung auch ohne Auslöschung positiver und negativer Ströme auftritt. Geometrie, Prüfbereiche, Wurzel, Zeiten und Schwelle bleiben fest. Eine gemischte Uhrverschiebung an den Endpunkten jeder gerichteten Kante liefert b·w des Empfängers. Mit dem beobachteten positiven Uhrabstand ergibt sich der Kantenstrom. Als Gegenprobe werden im scharfen Kontrollprofil die Stationen 32 bis 37 untersucht. Geprüft werden die Signale vor Bildung von Beträgen und räumlichen Mittelwerten. Der Zusatz ist explorativ.
