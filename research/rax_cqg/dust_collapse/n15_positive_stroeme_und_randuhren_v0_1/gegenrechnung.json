@@ -1,0 +1,450 @@
+{
+  "empty_interior": {
+    "0": {
+      "Y_port_probability": 0.5,
+      "charge_from_phase": 0.0,
+      "relative_phase_rad": 0.0,
+      "visibility": 1.0
+    },
+    "01": {
+      "Y_port_probability": 0.5,
+      "charge_from_phase": 0.0,
+      "relative_phase_rad": 0.0,
+      "visibility": 1.0
+    },
+    "012": {
+      "Y_port_probability": 0.5,
+      "charge_from_phase": 0.0,
+      "relative_phase_rad": 0.0,
+      "visibility": 1.0
+    },
+    "0123": {
+      "Y_port_probability": 0.5,
+      "charge_from_phase": 0.0,
+      "relative_phase_rad": 0.0,
+      "visibility": 1.0
+    },
+    "013": {
+      "Y_port_probability": 0.5,
+      "charge_from_phase": 0.0,
+      "relative_phase_rad": 0.0,
+      "visibility": 1.0
+    },
+    "02": {
+      "Y_port_probability": 0.5,
+      "charge_from_phase": 0.0,
+      "relative_phase_rad": 0.0,
+      "visibility": 1.0
+    },
+    "023": {
+      "Y_port_probability": 0.5,
+      "charge_from_phase": 0.0,
+      "relative_phase_rad": 0.0,
+      "visibility": 1.0
+    },
+    "03": {
+      "Y_port_probability": 0.5,
+      "charge_from_phase": 0.0,
+      "relative_phase_rad": 0.0,
+      "visibility": 1.0
+    },
+    "1": {
+      "Y_port_probability": 0.5,
+      "charge_from_phase": 0.0,
+      "relative_phase_rad": 0.0,
+      "visibility": 1.0
+    },
+    "12": {
+      "Y_port_probability": 0.5,
+      "charge_from_phase": 0.0,
+      "relative_phase_rad": 0.0,
+      "visibility": 1.0
+    },
+    "123": {
+      "Y_port_probability": 0.5,
+      "charge_from_phase": 0.0,
+      "relative_phase_rad": 0.0,
+      "visibility": 1.0
+    },
+    "13": {
+      "Y_port_probability": 0.5,
+      "charge_from_phase": 0.0,
+      "relative_phase_rad": 0.0,
+      "visibility": 1.0
+    },
+    "2": {
+      "Y_port_probability": 0.5,
+      "charge_from_phase": 0.0,
+      "relative_phase_rad": 0.0,
+      "visibility": 1.0
+    },
+    "23": {
+      "Y_port_probability": 0.5,
+      "charge_from_phase": 0.0,
+      "relative_phase_rad": 0.0,
+      "visibility": 1.0
+    },
+    "3": {
+      "Y_port_probability": 0.5,
+      "charge_from_phase": 0.0,
+      "relative_phase_rad": 0.0,
+      "visibility": 1.0
+    }
+  },
+  "future_density_scale_controls": {
+    "0.5": {
+      "0123": {
+        "Y_port_probability": 0.5001296359801266,
+        "charge_from_phase": 0.15763735360000428,
+        "relative_phase_rad": 0.0002592719631579018,
+        "visibility": 1.0
+      },
+      "1": {
+        "Y_port_probability": 0.4941006415979688,
+        "charge_from_phase": -7.173786266896188,
+        "relative_phase_rad": -0.01179899057055294,
+        "visibility": 1.0
+      }
+    },
+    "2.0": {
+      "0123": {
+        "Y_port_probability": 0.5005185438333628,
+        "charge_from_phase": 0.6305494144004881,
+        "relative_phase_rad": 0.0010370878526323817,
+        "visibility": 1.0
+      },
+      "1": {
+        "Y_port_probability": 0.47641077847197694,
+        "charge_from_phase": -28.695145067529694,
+        "relative_phase_rad": -0.04719596228212121,
+        "visibility": 1.0
+      }
+    }
+  },
+  "linear_programs": [
+    {
+      "all": {
+        "dual_objective": 1.623677186554734,
+        "max_balance_or_moment_residual": 6.938893903907228e-17,
+        "objective": 1.623677186554734
+      },
+      "cover": {
+        "infeasible": true
+      },
+      "kernel": {
+        "dual_objective": 1.6886525337404263,
+        "max_balance_or_moment_residual": 6.938893903907228e-18,
+        "objective": 1.6886525337404266
+      }
+    },
+    {
+      "all": {
+        "dual_objective": 1.6236768010105627,
+        "max_balance_or_moment_residual": 4.163336342344337e-17,
+        "objective": 1.6236768010105629
+      },
+      "cover": {
+        "infeasible": true
+      },
+      "kernel": {
+        "dual_objective": 1.6886518042352574,
+        "max_balance_or_moment_residual": 2.7755575615628914e-17,
+        "objective": 1.6886518042352572
+      }
+    },
+    {
+      "all": {
+        "dual_objective": 1.6236764154673917,
+        "max_balance_or_moment_residual": 1.1102230246251565e-16,
+        "objective": 1.6236764154673915
+      },
+      "cover": {
+        "infeasible": true
+      },
+      "kernel": {
+        "dual_objective": 1.688651074732625,
+        "max_balance_or_moment_residual": 1.1102230246251565e-16,
+        "objective": 1.688651074732625
+      }
+    }
+  ],
+  "quadrature_by_level_order": {
+    "0_3": {
+      "0": {
+        "Y_port_probability": 0.5079554152069117,
+        "charge_from_phase": 9.674193098511436,
+        "relative_phase_rad": 0.01591150180676223,
+        "visibility": 1.0
+      },
+      "01": {
+        "Y_port_probability": 0.4961567981770747,
+        "charge_from_phase": -4.673379435280883,
+        "relative_phase_rad": -0.007686479334343558,
+        "visibility": 1.0
+      },
+      "012": {
+        "Y_port_probability": 0.5009872408445027,
+        "charge_from_phase": 1.200485646947382,
+        "relative_phase_rad": 0.001974482971952931,
+        "visibility": 1.0
+      },
+      "0123": {
+        "Y_port_probability": 0.5002592719515389,
+        "charge_from_phase": 0.3152747072002278,
+        "relative_phase_rad": 0.0005185439263161642,
+        "visibility": 1.0
+      },
+      "013": {
+        "Y_port_probability": 0.4954288544895935,
+        "charge_from_phase": -5.558590375027851,
+        "relative_phase_rad": -0.009142418379980019,
+        "visibility": 1.0
+      },
+      "02": {
+        "Y_port_probability": 0.5127848385073854,
+        "charge_from_phase": 15.548058180732633,
+        "relative_phase_rad": 0.025572464113047096,
+        "visibility": 1.0
+      },
+      "023": {
+        "Y_port_probability": 0.5120570937064863,
+        "charge_from_phase": 14.662847240986562,
+        "relative_phase_rad": 0.024116525067412107,
+        "visibility": 1.0
+      },
+      "03": {
+        "Y_port_probability": 0.5072275296596911,
+        "charge_from_phase": 8.788982158764517,
+        "relative_phase_rad": 0.014455562761125852,
+        "visibility": 1.0
+      },
+      "1": {
+        "Y_port_probability": 0.4882021044725465,
+        "charge_from_phase": -14.347572533786746,
+        "relative_phase_rad": -0.02359798114109662,
+        "visibility": 1.0
+      },
+      "12": {
+        "Y_port_probability": 0.493031716174856,
+        "charge_from_phase": -8.473707451564419,
+        "relative_phase_rad": -0.0139370188348099,
+        "visibility": 1.0
+      },
+      "123": {
+        "Y_port_probability": 0.4923038249941732,
+        "charge_from_phase": -9.35891839131114,
+        "relative_phase_rad": -0.015392957880445951,
+        "visibility": 1.0
+      },
+      "13": {
+        "Y_port_probability": 0.4874743503920508,
+        "charge_from_phase": -15.232783473532788,
+        "relative_phase_rad": -0.025053920186731558,
+        "visibility": 1.0
+      },
+      "2": {
+        "Y_port_probability": 0.5048304060119888,
+        "charge_from_phase": 5.873865082227936,
+        "relative_phase_rad": 0.009660962306295947,
+        "visibility": 1.0
+      },
+      "23": {
+        "Y_port_probability": 0.5041024655986585,
+        "charge_from_phase": 4.988654142480772,
+        "relative_phase_rad": 0.008205023260659165,
+        "visibility": 1.0
+      },
+      "3": {
+        "Y_port_probability": 0.49927203073436816,
+        "charge_from_phase": -0.885210939747178,
+        "relative_phase_rad": -0.001455939045636806,
+        "visibility": 1.0
+      }
+    },
+    "0_4": {
+      "0": {
+        "Y_port_probability": 0.5079554152069116,
+        "charge_from_phase": 9.67419309851128,
+        "relative_phase_rad": 0.015911501806761975,
+        "visibility": 1.0
+      },
+      "01": {
+        "Y_port_probability": 0.49615679817707453,
+        "charge_from_phase": -4.67337943528111,
+        "relative_phase_rad": -0.007686479334343932,
+        "visibility": 1.0
+      },
+      "012": {
+        "Y_port_probability": 0.5009872408445026,
+        "charge_from_phase": 1.2004856469472727,
+        "relative_phase_rad": 0.001974482971952751,
+        "visibility": 1.0
+      },
+      "0123": {
+        "Y_port_probability": 0.5002592719515389,
+        "charge_from_phase": 0.31527470720017287,
+        "relative_phase_rad": 0.0005185439263160738,
+        "visibility": 1.0
+      },
+      "013": {
+        "Y_port_probability": 0.49542885448959345,
+        "charge_from_phase": -5.558590375027911,
+        "relative_phase_rad": -0.009142418379980116,
+        "visibility": 1.0
+      },
+      "02": {
+        "Y_port_probability": 0.5127848385073854,
+        "charge_from_phase": 15.548058180732653,
+        "relative_phase_rad": 0.025572464113047127,
+        "visibility": 1.0
+      },
+      "023": {
+        "Y_port_probability": 0.5120570937064863,
+        "charge_from_phase": 14.662847240986567,
+        "relative_phase_rad": 0.024116525067412117,
+        "visibility": 1.0
+      },
+      "03": {
+        "Y_port_probability": 0.5072275296596909,
+        "charge_from_phase": 8.788982158764194,
+        "relative_phase_rad": 0.014455562761125317,
+        "visibility": 1.0
+      },
+      "1": {
+        "Y_port_probability": 0.4882021044725469,
+        "charge_from_phase": -14.347572533786256,
+        "relative_phase_rad": -0.023597981141095816,
+        "visibility": 1.0
+      },
+      "12": {
+        "Y_port_probability": 0.4930317161748559,
+        "charge_from_phase": -8.47370745156454,
+        "relative_phase_rad": -0.013937018834810097,
+        "visibility": 1.0
+      },
+      "123": {
+        "Y_port_probability": 0.492303824994173,
+        "charge_from_phase": -9.358918391311365,
+        "relative_phase_rad": -0.015392957880446324,
+        "visibility": 1.0
+      },
+      "13": {
+        "Y_port_probability": 0.48747435039205067,
+        "charge_from_phase": -15.232783473532914,
+        "relative_phase_rad": -0.025053920186731766,
+        "visibility": 1.0
+      },
+      "2": {
+        "Y_port_probability": 0.5048304060119886,
+        "charge_from_phase": 5.873865082227553,
+        "relative_phase_rad": 0.009660962306295318,
+        "visibility": 1.0
+      },
+      "23": {
+        "Y_port_probability": 0.5041024655986585,
+        "charge_from_phase": 4.988654142480834,
+        "relative_phase_rad": 0.008205023260659266,
+        "visibility": 1.0
+      },
+      "3": {
+        "Y_port_probability": 0.499272030734368,
+        "charge_from_phase": -0.8852109397474002,
+        "relative_phase_rad": -0.0014559390456371714,
+        "visibility": 1.0
+      }
+    },
+    "3_3": {
+      "0": {
+        "Y_port_probability": 0.5079554152069126,
+        "charge_from_phase": 9.674193098512475,
+        "relative_phase_rad": 0.01591150180676394,
+        "visibility": 1.0
+      },
+      "01": {
+        "Y_port_probability": 0.49615679817707425,
+        "charge_from_phase": -4.673379435281434,
+        "relative_phase_rad": -0.007686479334344464,
+        "visibility": 1.0
+      },
+      "012": {
+        "Y_port_probability": 0.5009872408445027,
+        "charge_from_phase": 1.2004856469472882,
+        "relative_phase_rad": 0.0019744829719527766,
+        "visibility": 1.0
+      },
+      "0123": {
+        "Y_port_probability": 0.5002592719515387,
+        "charge_from_phase": 0.31527470720008943,
+        "relative_phase_rad": 0.0005185439263159366,
+        "visibility": 1.0
+      },
+      "013": {
+        "Y_port_probability": 0.4954288544895928,
+        "charge_from_phase": -5.558590375028773,
+        "relative_phase_rad": -0.009142418379981535,
+        "visibility": 1.0
+      },
+      "02": {
+        "Y_port_probability": 0.5127848385073925,
+        "charge_from_phase": 15.548058180741277,
+        "relative_phase_rad": 0.02557246411306131,
+        "visibility": 1.0
+      },
+      "023": {
+        "Y_port_probability": 0.5120570937064927,
+        "charge_from_phase": 14.66284724099417,
+        "relative_phase_rad": 0.02411652506742462,
+        "visibility": 1.0
+      },
+      "03": {
+        "Y_port_probability": 0.5072275296596919,
+        "charge_from_phase": 8.788982158765341,
+        "relative_phase_rad": 0.014455562761127205,
+        "visibility": 1.0
+      },
+      "1": {
+        "Y_port_probability": 0.4882021044725406,
+        "charge_from_phase": -14.347572533793917,
+        "relative_phase_rad": -0.023597981141108417,
+        "visibility": 1.0
+      },
+      "12": {
+        "Y_port_probability": 0.49303171617485536,
+        "charge_from_phase": -8.473707451565213,
+        "relative_phase_rad": -0.013937018834811205,
+        "visibility": 1.0
+      },
+      "123": {
+        "Y_port_probability": 0.4923038249941722,
+        "charge_from_phase": -9.35891839131237,
+        "relative_phase_rad": -0.015392957880447977,
+        "visibility": 1.0
+      },
+      "13": {
+        "Y_port_probability": 0.4874743503920439,
+        "charge_from_phase": -15.232783473541154,
+        "relative_phase_rad": -0.02505392018674532,
+        "visibility": 1.0
+      },
+      "2": {
+        "Y_port_probability": 0.5048304060119896,
+        "charge_from_phase": 5.873865082228815,
+        "relative_phase_rad": 0.009660962306297394,
+        "visibility": 1.0
+      },
+      "23": {
+        "Y_port_probability": 0.504102465598659,
+        "charge_from_phase": 4.988654142481492,
+        "relative_phase_rad": 0.008205023260660348,
+        "visibility": 1.0
+      },
+      "3": {
+        "Y_port_probability": 0.49927203073436827,
+        "charge_from_phase": -0.8852109397470312,
+        "relative_phase_rad": -0.0014559390456365645,
+        "visibility": 1.0
+      }
+    }
+  },
+  "rational_source_checks": 90
+}

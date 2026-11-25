@@ -1,5 +1,18 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## N15-Staubstrom und Stauboberfläche
+
+25. November 2026 · Vier aufeinander aufbauende Studien auf Typ 1767356. Die ersten beiden untersuchen die Wirkungsladung. Die beiden folgenden prüfen, welche geometrischen Messdaten den Oberflächenradius bestimmen.
+
+| Studie | Befund | Downloads |
+| --- | --- | --- |
+| [Kohärente Schnittladung](n15_kohaerente_schnittladung_v0_1/README.md) | Auf den 15 Schnitten weicht die kohärente Ladung bei voller Paketbreite um weniger als 1,11 × 10⁻⁹ relativ vom Eingang ab. | [PDF](n15_kohaerente_schnittladung_v0_1/Kurzbericht.pdf) · [ZIP](packages/CST_DUST_P3_Kohaerente_Schnittladung_N15_Pruefpaket.zip) |
+| [Positiver Staubstrom und Randuhren](n15_positive_stroeme_und_randuhren_v0_1/README.md) | Am stationären Mittelpunkt braucht ein positiver Transport mit denselben sieben Dichtemomenten mindestens das 5,150-Fache der Eingangsladung. | [PDF](n15_positive_stroeme_und_randuhren_v0_1/Kurzbericht.pdf) · [ZIP](packages/CST_DUST_P3_Positive_Stroeme_und_Randuhren_N15_Pruefpaket.zip) |
+| [Arealradius und Schalenauslese](n15_arealradius_und_schalenauslese_v0_1/README.md) | Zwei schrumpfende Kontrollgeometrien mit derselben N15-Ordnung und denselben Uhr- und Dichtewerten liefern bei halber Eigenzeit die Radien 8,5 und 9,9. Zwei lokale Schalenvolumina trennen das Paar. | [PDF](n15_arealradius_und_schalenauslese_v0_1/Kurzbericht.pdf) · [ZIP](packages/CST_DUST_P3_Arealradius_und_Schalenauslese_N15_Pruefpaket.zip) |
+| [Schalenzählung und Zähldichte](n15_schalenzaehlung_und_zaehldichte_v0_1/README.md) | Alle sechs synthetischen Radiusintervalle liegen innerhalb von ±5 %. Auf dem geprüften Raster erreicht die 128-fache Referenzzähldichte erstmals die geforderte gemeinsame Erfolgsuntergrenze von 95 %. | [PDF](n15_schalenzaehlung_und_zaehldichte_v0_1/Kurzbericht.pdf) · [ZIP](packages/CST_DUST_P3_Schalenzaehlung_und_Zaehldichte_N15_Pruefpaket.zip) |
+
+Für P3 fehlen eine unabhängige Ruhemasse-Eichung und die Oberflächenmessung auf dem gekoppelten Ensemble. Alle 60 physischen Prüfpunkte stehen auf `NOT_RUN`.
+
 ## Stationärer Staubstrom auf N15 · 25. November 2026
 
 Bei der ursprünglichen Zukunftsdichte 1/8 liefert auf keinem der 1 048 Katalogtypen eines der beiden Uhrfenster eine stationäre Lösung mit sieben positiven inneren Dichten im zulässigen Bereich und streng kausal geordneten Uhren. Bei Zukunftsdichte 1/64 trägt Typ 1767356 eine positive, auf allen 15 Schnitten exakt erhaltene Gesamtladung. Im Paket mit einem Achtel beider Referenzbreiten weicht jede Schnittladung höchstens 1,728 % vom eigenen Eingang ab. Bei voller Breite gibt es ein Gegenbeispiel mit 13,488 % Abweichung. Die physikalische Ruhemasse-Eichung, die kohärente Stromauslese und die Oberflächengeometrie sind offen. P3 steht auf `HOLD`, alle 60 Prüfpunkte auf `NOT_RUN`. [Herleitung und Ergebnisse](n15_stationaerer_staubstrom_v0_1/README.md) · [Kurzbericht](n15_stationaerer_staubstrom_v0_1/Kurzbericht.pdf) · [Offline-Prüfpaket](packages/CST_DUST_P3_Stationaerer_Staubstrom_N15_Pruefpaket.zip)
