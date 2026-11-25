@@ -1,5 +1,9 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Materie, Vakuum und Masseneichung auf N15
+
+25. November 2026 · Auf Typ 1767356 gibt es bei gleichen äusseren Randdaten stationäre Belegungen mit einem oder zwei inneren Dichte-Nullatomen. An jedem leeren Ereignis kompensieren sich positive und negative Kantenströme. Für einen positiven Transport mit denselben Dichtemomenten braucht es mehr als das 4,8088- bzw. 4,7911-Fache der vorhandenen Eingangsladung. In der separaten Einstein-Staub-Kontrolle gelingt die Oberflächenauslese an allen 15 positiven Masse-Zeit-Kombinationen und die bei einer Masse geeichte Übertragung auf zwei weitere. Die physische CST-Masseneichung bleibt offen. Alle 60 P3-Prüfpunkte stehen auf `NOT_RUN`. [Bericht und Existenznachweise](n15_materie_vakuum_und_masseneichung_v0_1/README.md) · [Offline-Prüfpaket](packages/CST_DUST_Materie_Vakuum_und_Masseneichung_Pruefpaket.zip)
+
 ## N15-Staubstrom und Stauboberfläche
 
 25. November 2026 · Vier aufeinander aufbauende Studien auf Typ 1767356. Die ersten beiden untersuchen die Wirkungsladung. Die beiden folgenden prüfen, welche geometrischen Messdaten den Oberflächenradius bestimmen.
