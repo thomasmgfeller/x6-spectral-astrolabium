@@ -1,5 +1,11 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Materialmarker aus Lichtechos
+
+In drei klassischen Einstein-Staub-Kontrollen mit geeichter Anfangslänge bestimmen die 21 Paar-Echos von sieben mitbewegten Sonden ein Markerpaar und seine Senderichtung. Alle 5 040 Umbenennungen je Masse erhalten die Auswahl. Beim späteren Signal ist die Verbindung für M=1/4 ausgeschlossen, für M=4 gesichert und für M=1 offen.
+
+Auf dem geprüften positiven N15-Zweig verfehlt bei allen 1 656 zulässigen Vergangenheiten mit einem früheren neuen positiven Vorfahren jede mögliche Uhrwurzel das Messzeitband. Alle 60 physischen P3-Prüfpunkte stehen auf `NOT_RUN`. [Studie und Rechenweg](materialmarker_aus_echos_und_vorlaeufertest_v0_1/README.md) · [Prüfpaket (ZIP)](packages/CST_DUST_Zwei_Materialmarker_aus_Echos_und_Vorlaeufertest.zip)
+
 ## Nicht-radiale Kausalabfrage
 
 Die erste Studie prüft die Wirkungsphasen der N16- und N17-Kandidaten und konstruiert eine winkelaufgelöste Abfrage für das kinematische Radienpaar 8,5 und 9,9. Die zweite Studie testet dieselbe Abfrage blind an 120 neuen Geometrien. Bei den festgelegten Uhr- und Winkelfehlern sind alle 60 Fälle in den beiden äusseren Radiusbereichen eindeutig. Von den übrigen 60 bleiben 31 offen. Für den positiven N15-Zweig fehlen die benötigten Grenzereignisse. Alle 60 physischen P3-Prüfpunkte stehen auf `NOT_RUN`.
