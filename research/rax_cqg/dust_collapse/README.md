@@ -1,5 +1,9 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Von Uhr 4 zu Ereignis 12 · 25. November 2026
+
+Bei gleicher Vorwahrscheinlichkeit lässt sich aus Uhr und Dichte an Ereignis 12 das frühere Uhrfenster im geprüften Fall höchstens mit 50,000001915 % Trefferquote bestimmen. Werden die beiden getrennten Fenster bereits am Eingang kohärent und gleichphasig präpariert, liegt die gemeinsame Endintensität der hohen Dichteklasse bei festem Referenzprofil um 1,3296 bis 1,3890 Milliardstel über der niedrigen. Beim ursprünglichen mitlaufenden Profil sind beide Intensitäten exakt gleich. Die physische Präparation bleibt offen. Alle 60 P3-Prüfpunkte stehen auf `NOT_RUN`. [Herleitung und Ergebnisse](n15_uhr4_ereignis12_v0_1/README.md) · [Kurzbericht](n15_uhr4_ereignis12_v0_1/Kurzbericht.pdf) · [Offline-Prüfpaket](packages/CST_DUST_Uhr_4_zu_Ereignis_12_Pruefpaket.zip)
+
 ## Uhr 4 am Schnitt und die Dichte an Ereignis 12 · 25. November 2026
 
 Beim Gegenpaar aus PR #370 liefert ein gemeinsamer verschobener Uhrwert für Wirkung und Dichteauswahl exakt dieselben Ausgangswahrscheinlichkeiten für beide Klassen. Mit einem festgelegten Uhrwert in der Dichtepräparation ergibt ein reversibler Tausch zweier Uhrintervalle im breiten Modellfenster rund 50,0000718 % Treffer bei gleichen Vorchancen. Die gewöhnliche Verklebung gibt die Uhr unverändert weiter. Der physische Übergang zwischen den Intervallen ist offen. Alle 60 physischen P3-Prüfpunkte stehen auf `NOT_RUN`. [Herleitung und Ergebnisse](n15_uhr4_register_dichtefenster_v0_1/README.md) · [Kurzbericht](n15_uhr4_register_dichtefenster_v0_1/Kurzbericht.pdf) · [Offline-Prüfpaket](packages/CST_DUST_Uhr_4_Register_und_Dichtefenster_Pruefpaket.zip)
