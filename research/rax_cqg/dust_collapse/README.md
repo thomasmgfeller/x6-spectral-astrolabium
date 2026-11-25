@@ -1,5 +1,9 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Kohärenz und Dichtespur auf N15 · 25. November 2026
+
+Wird Uhr 4 gleichphasig über das ganze Referenzfenster präpariert, liegt die Endintensität der hohen Dichteklasse beim festen Profil um 5,67 bis 6,50 Milliardstel höher. Beim ursprünglichen mitlaufenden Profil verschwindet der Unterschied exakt. Für die beiden getrennten Fenster aus PR #372 lässt sich der Vorzeichenwechsel mit abnehmender Kohärenz eingrenzen. Eine zusätzliche Kontrolle hält alle sieben vorbereiteten Staubdichten innerhalb jeder Klasse in beiden Uhrenzweigen paarweise gleich. Die physische Randpräparation ist offen. Alle 60 P3-Prüfpunkte stehen auf `NOT_RUN`. [Herleitung und Ergebnisse](n15_kohaerenz_dichtespur_v0_1/README.md) · [Kurzbericht](n15_kohaerenz_dichtespur_v0_1/Kurzbericht.pdf) · [Offline-Prüfpaket](packages/CST_DUST_Kohaerenz_und_Dichtespur_N15_Pruefpaket.zip)
+
 ## Von Uhr 4 zu Ereignis 12 · 25. November 2026
 
 Bei gleicher Vorwahrscheinlichkeit lässt sich aus Uhr und Dichte an Ereignis 12 das frühere Uhrfenster im geprüften Fall höchstens mit 50,000001915 % Trefferquote bestimmen. Werden die beiden getrennten Fenster bereits am Eingang kohärent und gleichphasig präpariert, liegt die gemeinsame Endintensität der hohen Dichteklasse bei festem Referenzprofil um 1,3296 bis 1,3890 Milliardstel über der niedrigen. Beim ursprünglichen mitlaufenden Profil sind beide Intensitäten exakt gleich. Die physische Präparation bleibt offen. Alle 60 P3-Prüfpunkte stehen auf `NOT_RUN`. [Herleitung und Ergebnisse](n15_uhr4_ereignis12_v0_1/README.md) · [Kurzbericht](n15_uhr4_ereignis12_v0_1/Kurzbericht.pdf) · [Offline-Prüfpaket](packages/CST_DUST_Uhr_4_zu_Ereignis_12_Pruefpaket.zip)
