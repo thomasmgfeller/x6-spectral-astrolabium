@@ -1,5 +1,11 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Schalenvolumen und Seitenfluss
+
+Auf dem positiven N15-Zweig vom Typ 1767356 wurden 182 zweiseitig erreichbare Einfügungen einer Vakuumuhr geprüft. Keine erfüllt in den drei Uhrfenstern alle freien Gleichungen. Bei einem zusätzlichen früheren Materieereignis ergeben sich am mittleren Schnitt 11 943 N17-Ordnungen. Bei allen 131 Kandidaten, die die übrigen Bedingungen erfüllen, ist der Aussenuhrgradient von null getrennt.
+
+In der klassischen Einstein-Staub-Kontrolle enthalten alle 15 aus lokalen Volumina und Radarzeiten gewonnenen Intervalle den Kontrollradius. In zwölf Zeitabschnitten zählt der unabhängige Flusskanal an beiden mitbewegten Grenzmarken keine Übertritte. Die feste Kontrollfläche bei `R=6` registriert in jedem Abschnitt einströmenden Staub. Die physische CST-Oberfläche und die Masseneichung bleiben offen. Alle 60 P3-Prüfpunkte stehen auf `NOT_RUN`. [Studie und Rechenweg](schalenvolumen_und_seitenfluss_v0_1/README.md) · [Kurzbericht (PDF)](schalenvolumen_und_seitenfluss_v0_1/Kurzbericht.pdf) · [Offline-Prüfpaket (ZIP)](packages/CST_DUST_Schalenvolumen_und_Seitenfluss_auf_derselben_Historie_Pruefpaket.zip)
+
 ## Bewegte Staubkante und Seitenfluss
 
 25. November 2026 · Zwei Studien prüfen auf demselben offenen Zeit-Raum-Gitter die Staubwirkung und ihren Strom. Die Ordnung ist vorgegeben. Eine intrinsische Oberfläche, deren Fläche und eine unabhängige physische Masseneichung bleiben offen. Alle 60 physischen P3-Prüfpunkte stehen auf `NOT_RUN`.
