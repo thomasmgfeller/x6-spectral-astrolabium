@@ -1,5 +1,7 @@
 # X6 Spectral Astrolabium
 
+**CST-DUST radius from echo timing · 26 November 2026.** Across three classical LTB dust controls, 501 timing windows per mass bound the material support radius at the chosen dust proper time to within 1.969% under the specified clock errors and initial length calibration. All 60 physical CST checkpoints remain unrun. [Study, data and reproducible packages](research/rax_cqg/dust_collapse/README.md#arealradius-aus-mehreren-echo-zeitfenstern)
+
 **CST-DUST material markers from light echoes · 25 November 2026.** In the three classical Einstein-dust controls, 21 pairwise echoes from seven comoving probes identify one material pair and its signal direction with a calibrated initial length. On the tested positive N15 branch, none of the 1,656 possible causal pasts with one earlier new positive ancestor yields a clock root in the marker window. All 60 physical P3 checkpoints remain unrun. [Study, data and offline package](research/rax_cqg/dust_collapse/README.md#materialmarker-aus-lichtechos)
 
 **CST-DUST nonradial causal query · 25 November 2026.** The equal-prefactor phase sums of the exterior-clock gradient exclude zero on both tested finite families. With the specified clock and angle errors, a nonradial signal has an unambiguous causal classification in 89 of 120 blinded control geometries. The published N15 clock intervals miss both marker windows. All 60 physical P3 checkpoints remain unrun. [Studies, data and offline packages](research/rax_cqg/dust_collapse/README.md#nicht-radiale-kausalabfrage)

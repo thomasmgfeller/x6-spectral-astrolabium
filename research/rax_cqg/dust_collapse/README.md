@@ -1,5 +1,14 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Arealradius aus mehreren Echo-Zeitfenstern
+
+In den klassischen LTB-Kontrollen mit M=1/4, 1 und 4 klammern 501 synthetische Zeitfenster pro Masse die Lichtlaufzeit desselben früh kalibrierten Sondenpaars ein. Bei M=1 ergibt sich für den Radius der Stützfläche eine Schätzung von 9,14839 bei einer Referenz von 9,14826. Über alle drei Kontrollen beträgt die garantierte relative Fehlergrenze höchstens 1,969 %. Die Rechnung setzt den exakten Anfangsradius und die angegebenen Uhr- und Ausbreitungsgrenzen voraus. Die 60 physischen P3-Prüfpunkte stehen auf `NOT_RUN`.
+
+| Untersuchung | Rechenweg und Ergebnisse | Offline-Paket |
+|---|---|---|
+| Etappe 2a · Spektrum der Kugelkappe, Invertierbarkeit im Winkelband und erforderliche Sondenzahl | [Spektrale Echo-Prüfung](spektral_echo_und_winkelband_v0_1/README.md) | [ZIP](packages/CST_DUST_Etappe_2a_Spektral_Echo_Pruefpaket.zip) |
+| Etappe 2b · Rekonstruktion des Arealradius aus der Lichtlaufzeit | [Mehrfenster-Versuch](mehrfenster_echo_radius_v0_1/README.md) | [ZIP](packages/CST_DUST_Mehrfenster_Echo_Radius_Pruefpaket.zip) |
+
 ## Materialmarker aus Lichtechos
 
 In drei klassischen Einstein-Staub-Kontrollen mit geeichter Anfangslänge bestimmen die 21 Paar-Echos von sieben mitbewegten Sonden ein Markerpaar und seine Senderichtung. Alle 5 040 Umbenennungen je Masse erhalten die Auswahl. Beim späteren Signal ist die Verbindung für M=1/4 ausgeschlossen, für M=4 gesichert und für M=1 offen.
