@@ -1,5 +1,9 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Dichte an Ereignis 12 am geschlossenen Zwischenschnitt · 25. November 2026
+
+Beim zweiten Paketpaar aus PR #369 trennen drei Einstellungen der hinter Ereignis 11 weitergereichten Uhr 4 die Ensembleantworten an der Dichteschwelle 1/8. Die Summe der sieben inneren Dichten liegt bei der Auslese mit 15 Einstellungen auf verschiedenen Seiten von 2047/2048. Der feste binäre Detektor erreicht bei gleichen Vorchancen rund 50,000280 % Treffer. Ein Puls, der auch die Dichtepräparation verschiebt, führt bei gleichen übrigen Uhren zu disjunkten Dichtefenstern. Alle 60 physischen P3-Prüfpunkte stehen auf `NOT_RUN`. [Herleitung und Ergebnisse](n15_dichte12_schnittauslese_v0_1/README.md) · [Kurzbericht](n15_dichte12_schnittauslese_v0_1/Kurzbericht.pdf) · [Offline-Prüfpaket](packages/CST_DUST_Ereignis_12_Schnittauslese_Pruefpaket.zip)
+
 ## Dichte an Ereignis 12 bei Variation der Eingangsuhren · 25. November 2026
 
 Auf N15-Typ 2097151 erreicht ein fester Detektor beim Gegenpaar aus PR #368 mit zwei phasenstabil gekoppelten Einstellungen der vier Eingangsuhren rund 50,000014 % Treffer bei gleichen Vorchancen. Bei einem zweiten Paar mit identischen frühen Dichten bleibt der Wirkungsunterschied für beliebige Eingangsuhren eine konstante globale Phase. Eine unabhängig gemessene innere Dichtesumme mit absolutem Fehler bis 0,0001883 würde dieses zweite Paar trennen. Der physische Zugriff auf diese Summe ist offen. Alle 60 P3-Prüfpunkte stehen auf `NOT_RUN`. [Herleitung und Ergebnisse](n15_dichte12_eingangsuhren_v0_1/README.md) · [Kurzbericht](n15_dichte12_eingangsuhren_v0_1/Kurzbericht.pdf) · [Offline-Prüfpaket](packages/CST_DUST_Ereignis_12_Eingangsuhren_Pruefpaket.zip)
