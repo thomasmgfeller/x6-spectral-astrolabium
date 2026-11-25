@@ -1,5 +1,9 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Uhr 4 am Schnitt und die Dichte an Ereignis 12 · 25. November 2026
+
+Beim Gegenpaar aus PR #370 liefert ein gemeinsamer verschobener Uhrwert für Wirkung und Dichteauswahl exakt dieselben Ausgangswahrscheinlichkeiten für beide Klassen. Mit einem festgelegten Uhrwert in der Dichtepräparation ergibt ein reversibler Tausch zweier Uhrintervalle im breiten Modellfenster rund 50,0000718 % Treffer bei gleichen Vorchancen. Die gewöhnliche Verklebung gibt die Uhr unverändert weiter. Der physische Übergang zwischen den Intervallen ist offen. Alle 60 physischen P3-Prüfpunkte stehen auf `NOT_RUN`. [Herleitung und Ergebnisse](n15_uhr4_register_dichtefenster_v0_1/README.md) · [Kurzbericht](n15_uhr4_register_dichtefenster_v0_1/Kurzbericht.pdf) · [Offline-Prüfpaket](packages/CST_DUST_Uhr_4_Register_und_Dichtefenster_Pruefpaket.zip)
+
 ## Dichte an Ereignis 12 am geschlossenen Zwischenschnitt · 25. November 2026
 
 Beim zweiten Paketpaar aus PR #369 trennen drei Einstellungen der hinter Ereignis 11 weitergereichten Uhr 4 die Ensembleantworten an der Dichteschwelle 1/8. Die Summe der sieben inneren Dichten liegt bei der Auslese mit 15 Einstellungen auf verschiedenen Seiten von 2047/2048. Der feste binäre Detektor erreicht bei gleichen Vorchancen rund 50,000280 % Treffer. Ein Puls, der auch die Dichtepräparation verschiebt, führt bei gleichen übrigen Uhren zu disjunkten Dichtefenstern. Alle 60 physischen P3-Prüfpunkte stehen auf `NOT_RUN`. [Herleitung und Ergebnisse](n15_dichte12_schnittauslese_v0_1/README.md) · [Kurzbericht](n15_dichte12_schnittauslese_v0_1/Kurzbericht.pdf) · [Offline-Prüfpaket](packages/CST_DUST_Ereignis_12_Schnittauslese_Pruefpaket.zip)
