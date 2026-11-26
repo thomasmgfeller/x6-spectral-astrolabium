@@ -1,0 +1,7 @@
+# Lokaler Prüfplan für die 42 716 N21-Anordnungen
+
+Ausgangspunkt ist das offline reproduzierbare Ankerpaket (SHA-256 c6e266b6a00e25e1e94287fbe6272392a3168c62e518c8821ac9e8219652a5a4). Untersucht wird das gesamte Register nach seinen drei Vorprüfungen. Es gelten dieselbe endliche Wirkung, unveränderte Gerätekanäle, der Sektor w15=w17=w20=0 mit freien Uhren, beide neuen Uhren in x=1/2±1/64 und strikt zunehmende Uhren. Alte Innenfelder und das neue positive Gewicht sind frei.
+
+Für jede etikettierte Ordnung werden die Intervallkoeffizienten neu gebildet. Geprüft werden die Kausalordnung, die notwendigen Dichtegleichungen freier positiver Ereignisse und die notwendigen Uhrgleichungen, insbesondere die neue Nulluhr. Die Reihenfolge der Tests dient der effizienten Auswertung. Ein Ausschluss verlangt einen strikten Widerspruch auch bei nach aussen erweiterten Wertebereichen. Offene Intervalle gelten als unentschieden. Eine Null enthaltende Hülle ist kein Existenzbeweis. Es gibt keine Anpassung der physikalischen Parameter an das Ergebnis.
+
+Kontrollen: Rekonstruktion des Registers aus der partiellen Ordnung, Vergleich mit dem gesicherten Eingabestand, rationale Variationen der Wirkung auf unterschiedlichen Ordnungen, unabhängige Kontrolle wichtiger Ausschlussgruppen, erneuter Lauf aus dem fertigen Archiv. Alle 60 physischen P3-Einträge werden anhand des Ausgangsregisters ausgewiesen. Bei Restfällen werden die exakten Anbindungen und die noch benötigten Feldbedingungen für den Anschluss festgehalten.

@@ -1,0 +1,3 @@
+# Ergänzung nach dem ersten vollständigen Ausschluss
+
+Als Sensitivitätskontrolle werden die vier künftigen Randgewichte unabhängig um je 10⁻⁶ nach beiden Seiten erweitert und die drei künftigen Randuhren 8 bis 10 um je 10⁻⁴. Die Normierungsuhr 7 und die vergangenen Kragenfelder bleiben im ursprünglichen Bereich. Das Geräte- und Wirkungsmodell bleibt identisch. Die Gleichungen werden in einer anderen Reihenfolge kontrahiert. Der Nachlauf betrifft dieselben etikettierten Fälle und die vorausgehenden Kragentests. Ein verbleibender Fall wird als offen gemeldet. Der Ausschluss im ursprünglichen Bereich erhält seinen Nachweis aus dem ersten Lauf.
