@@ -1,0 +1,249 @@
+{
+  "actual_n19_failure_witnesses": [
+    {
+      "kappa": "1",
+      "route": "positive_bridge",
+      "true_J": "0",
+      "two_sites_by_sign": [
+        [
+          "-1/1000000",
+          "-1/1000000"
+        ],
+        [
+          "1/1000000",
+          "1/1000000"
+        ]
+      ]
+    },
+    {
+      "kappa": "1/100000000000",
+      "route": "positive_bridge",
+      "true_J": "0",
+      "two_sites_by_sign": [
+        [
+          "-1/1000000",
+          "-1/1000000"
+        ],
+        [
+          "1/1000000",
+          "1/1000000"
+        ]
+      ]
+    },
+    {
+      "kappa": "1",
+      "route": "cover_probes",
+      "true_J": "0",
+      "two_sites_by_sign": [
+        [
+          "-1/1000000",
+          "-1/1000000"
+        ],
+        [
+          "1/1000000",
+          "1/1000000"
+        ]
+      ]
+    },
+    {
+      "kappa": "1/100000000000",
+      "route": "cover_probes",
+      "true_J": "0",
+      "two_sites_by_sign": [
+        [
+          "-1/1000000",
+          "-1/1000000"
+        ],
+        [
+          "1/1000000",
+          "1/1000000"
+        ]
+      ]
+    }
+  ],
+  "distribution_free_fourth_moment_success_lower_if_each_radial_fourth_at_most_8_over_81": "53/54",
+  "distribution_free_second_moment_success_lower": "5/6",
+  "early_codes_are_ambiguous": [
+    {
+      "E": "0",
+      "early_codes": [
+        0,
+        0,
+        0
+      ],
+      "kappa": "1",
+      "p": "0"
+    },
+    {
+      "E": "29/4",
+      "early_codes": [
+        0,
+        0,
+        0
+      ],
+      "kappa": "1",
+      "p": "1/10000000000000000000000000"
+    },
+    {
+      "E": "0",
+      "early_codes": [
+        0,
+        0,
+        0
+      ],
+      "kappa": "1/100000000000",
+      "p": "0"
+    },
+    {
+      "E": "29/4",
+      "early_codes": [
+        0,
+        0,
+        0
+      ],
+      "kappa": "1/100000000000",
+      "p": "1/10000000000000000000000000"
+    }
+  ],
+  "moments": [
+    {
+      "normalized_second_moments": [
+        "1/9",
+        "0",
+        "1/9"
+      ],
+      "radial_fourth": "4/81",
+      "rounding_test": [
+        {
+          "gain": 1,
+          "normalized_raw_second_moment_intervals": [
+            [
+              "0",
+              "1"
+            ],
+            [
+              "-1/4",
+              "1/4"
+            ],
+            [
+              "-1",
+              "1"
+            ]
+          ]
+        },
+        {
+          "gain": 32,
+          "normalized_raw_second_moment_intervals": [
+            [
+              "81/1024",
+              "121/1024"
+            ],
+            [
+              "-89/8192",
+              "89/8192"
+            ],
+            [
+              "199/2048",
+              "23/128"
+            ]
+          ]
+        }
+      ],
+      "slope": "0"
+    },
+    {
+      "normalized_second_moments": [
+        "1/9",
+        "1/36",
+        "17/144"
+      ],
+      "radial_fourth": "1153/20736",
+      "rounding_test": [
+        {
+          "gain": 1,
+          "normalized_raw_second_moment_intervals": [
+            [
+              "0",
+              "1"
+            ],
+            [
+              "-1/4",
+              "1/4"
+            ],
+            [
+              "-1",
+              "1"
+            ]
+          ]
+        },
+        {
+          "gain": 32,
+          "normalized_raw_second_moment_intervals": [
+            [
+              "81/1024",
+              "121/1024"
+            ],
+            [
+              "5/256",
+              "43/1024"
+            ],
+            [
+              "21/256",
+              "85/512"
+            ]
+          ]
+        }
+      ],
+      "slope": "1/4"
+    },
+    {
+      "normalized_second_moments": [
+        "1/9",
+        "-1/36",
+        "17/144"
+      ],
+      "radial_fourth": "1153/20736",
+      "rounding_test": [
+        {
+          "gain": 1,
+          "normalized_raw_second_moment_intervals": [
+            [
+              "0",
+              "1"
+            ],
+            [
+              "-1/4",
+              "1/4"
+            ],
+            [
+              "-1",
+              "1"
+            ]
+          ]
+        },
+        {
+          "gain": 32,
+          "normalized_raw_second_moment_intervals": [
+            [
+              "81/1024",
+              "121/1024"
+            ],
+            [
+              "-43/1024",
+              "-5/256"
+            ],
+            [
+              "21/256",
+              "85/512"
+            ]
+          ]
+        }
+      ],
+      "slope": "-1/4"
+    }
+  ],
+  "nonzero_probability_each": "1/36864",
+  "spike_amplitude": "64",
+  "target_variance_each_normalized": "1/9",
+  "wrong_at_both_sites_probability_lower": "68069628639870110060543/2509659166022727122011815936"
+}

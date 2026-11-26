@@ -1,5 +1,11 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Impulseichung und Verteilungsprüfung auf N19
+
+Im Referenzhintergrund kann eine Präparation mit exakt derselben Kovarianz wie der Gaußzustand aus PR #391 bei ausgeschalteter Quelle an 18 und 7 einen Puls vortäuschen. Für den ausgewählten gemeinsamen Gaußzustand benötigt ein kanonischer Quantenzeiger eine Wirkungsskala von mindestens rund 2 373 J·s. Das Paket enthält eine unabhängige Impulseichung sowie einen klassischen Verteilungstest mit zufällig gewählter Messeinstellung. Unter den geprüften Modell- und Stichprobenannahmen genügen 119 unabhängige Dreierpräparationen ohne Auffälligkeit für eine gemeinsame Auslesezuverlässigkeit von mindestens 95 % bei einseitig 95 % Konfidenz. Die vorliegenden Rohdaten sind synthetisch. Alle 60 physischen P3-Prüfpunkte stehen auf `NOT_RUN`.
+
+[Studie, Herleitung und Ergebnisse](n19_impulseichung_und_verteilungspruefung_v0_1/README.md) · [Offline-Prüfpaket](packages/CST_DUST_N19_Impulseichung_und_Verteilungspruefung_Pruefpaket.zip)
+
 ## Gemeinsame Speicherpräparation auf N19
 
 Eine vor der Pulswahl festgelegte klassische Verteilung von Position und kanonischem Impuls genügt für die zwölf geprüften Hintergründe, beide Geräteträgheiten und beide Transportregeln. Bei der angegebenen Gaußpräparation und einer Rundungsschrittweite von 2·10⁻¹² Modelluhreinheiten beträgt die gemeinsame Wahrscheinlichkeit für richtige Auslese an 18 und 7 mindestens 99,999995 % je Familie. Ein 33-Bit-Gegenbeispiel liefert für Nullpuls und negativen Puls an beiden Orten exakt dieselben Anzeigen. Die unabhängige physische Impulskalibrierung ist offen. Alle 60 physischen P3-Prüfpunkte stehen auf `NOT_RUN`.
