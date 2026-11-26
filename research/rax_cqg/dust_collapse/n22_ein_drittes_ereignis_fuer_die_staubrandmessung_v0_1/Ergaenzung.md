@@ -1,0 +1,3 @@
+# Ergänzende Existenzkontrolle nach dem ersten Intervalllauf
+
+Für die offenen Klassen wird zusätzlich eine stationäre Lösung an einem konkreten Punkt der veröffentlichten Randfamilie gesucht. Verwendet werden J = 0, drei verschwindende Nachimpulse, Drift-Offset null bezogen auf 6·STEP und dieselben Geräteparameter. Ein vorläufig numerisch bestimmter Punkt zählt erst als Zeuge, wenn ein nach aussen abgesichertes Einschlussverfahren alle freien Uhr- und Dichtegleichungen gleichzeitig, strikte Zeitordnung und zulässige Gewichte bestätigt. Die Zielfenster beider Messpunkte werden getrennt nachgewiesen. Ein stationärer Punkt ausserhalb des Fensters darf nur als Positivkontrolle ausgewiesen werden. Die vier Hauptversuche und ihr Zielfenster bleiben unverändert.
