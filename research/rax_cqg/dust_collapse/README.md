@@ -1,5 +1,17 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## N21-Messpaar zur halben Modellzeit
+
+Für die feste N19-Ordnung gibt es 406 142 Anbindungen eines neuen positiven und eines neuen leeren Ereignisses, die kausal unvergleichbar sind und gemeinsame alte positive Anker haben. 42 716 Anordnungen erreichen die Feldprüfung. Unter den übernommenen Rand- und Gerätebedingungen scheiden im Fenster x = 1/2 ± 1/64 alle aus. Die alten Innenfelder dürfen variieren. Der Arealradius bleibt offen, alle 60 physischen P3-Checkpoints stehen auf `NOT_RUN`.
+
+[Forschungsbericht (PDF)](reports/CST_DUST_N21_Vollstaendige_Pruefung_des_Messpaars.pdf) · [Vollständiges Fallregister](n21_vollstaendige_pruefung_des_messpaars_v0_1/Register.tsv) · [Methode und Nachrechnung](n21_vollstaendige_pruefung_des_messpaars_v0_1/README.md) · [Offline-Prüfpaket](packages/CST_DUST_N21_Vollstaendige_Pruefung_des_Messpaars_Pruefpaket.zip)
+
+### Vorstudie mit versetzten Ankern auf N20 und N21
+
+Die Vorstudie prüft 570 N20-Anbindungen mit einem neuen leeren Ereignis sowie die vier N21-Anbindungen zwischen den äusseren Ankern 12 und 14. Sie leitet die Vorbedingungen für die anschliessende vollständige N21-Rechnung her.
+
+[Forschungsbericht (PDF)](reports/CST_DUST_Versetzte_Anker_N20_und_N21.pdf) · [Herleitung](versetzte_anker_n20_und_n21_v0_1/README.md) · [Offline-Prüfpaket](packages/CST_DUST_Versetzte_Anker_N20_und_N21_Pruefpaket.zip)
+
 ## Gemeinsame Stationarität auf den vier N21-Ordnungen
 
 Bei den veröffentlichten N19-Randdaten und Gerätekopplungen besitzt keine der vier Anbindungen zwischen Sender 16 und Empfänger 18 im Zielfenster x = 1/2 ± 1/64 eine stationäre Lösung. Alle freien Innenfelder dürfen variieren. In zwei Fällen scheitert die Dichtegleichung am neuen positiven Ereignis, in zwei Fällen am Empfänger. Das physische P3-Register steht bei 60 Einträgen auf `NOT_RUN`.
