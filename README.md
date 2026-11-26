@@ -1,5 +1,7 @@
 # X6 Spectral Astrolabium
 
+**N19 fifth-tick readout and clock calibration · 26 November 2026.** A fourth source-off reading reduces the fifth-tick reference uncertainty from twelve to six steps in the tested model. Two independently calibrated precursor clocks protect accepted source decisions across the studied continuous drift interval. A stale clock reading can produce a false pulse. All 60 physical P3 checkpoints are unrun. [Fifth-tick test](research/rax_cqg/dust_collapse/README.md#fünfter-takt-und-verdeckter-pulstest-auf-n19) · [Clock calibration and offline packages](research/rax_cqg/dust_collapse/README.md#driftfenster-und-voruhreneichung-auf-n19)
+
 **N19 receiver clock calibration · 26 November 2026.** Three earlier source-off runs predict the receiver’s baseline when the drift is independently bounded. With a reference uncertainty of up to 11 readout steps, the model distinguishes silence and both pulse directions in all 192 tested families through normalized momentum 112. [Study and offline package](research/rax_cqg/dust_collapse/README.md#kausale-nulluhr-und-kontrollläufe-auf-n19)
 
 **N19 source ambiguity at memory site 7 · 26 November 2026.** A negative pulse and a silent source can leave the same seven readings at site 7. With an independently calibrated reference clock, one bit sent from site 18 resolves the ambiguity in all 144 tested classical model families over the stated momentum range. [Study and offline package](research/rax_cqg/dust_collapse/README.md#speicherkollision-und-empfangsbit-auf-n19)

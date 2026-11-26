@@ -1,0 +1,3 @@
+# Ergänzende Auswertung nach den vier Primärprofilen
+
+Bei Offsetgrenze 10⁻¹² für beide Uhren blieb die Freigabe in beiden Rastereinstellungen aus. Bestimme explorativ bei ungestörter fünfter Präparation die grösste gleich grosse Offsetgrenze, für die jede tatsächlich mögliche digitale Beobachtung freigegeben wird. Isoliere ferner die Wirkung einer einzelnen Offsetgrenze an 15 oder 17 bei exakt abgeglichenem Partner. Prüfe die asymmetrischen Eckfälle (0,10⁻¹²) und (10⁻¹²,0). Bei der Suche bis 10⁻¹² soll die rationale Einschliessung weniger als 10⁻¹⁸ breit sein. Die Fehlerbänder werden vor der Quellentscheidung ausgewertet.
