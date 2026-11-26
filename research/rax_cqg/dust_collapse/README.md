@@ -1,5 +1,13 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Kausale Nulluhr und Kontrollläufe auf N19
+
+Zwei stationäre Nullzustände haben am Sender denselben Vorlauf. Ihre Empfangsuhren liegen dennoch eine Million Rasterschritte auseinander. Drei frühere Läufe mit ausgeschalteter Quelle erlauben eine Eichung am angeschlossenen Gerät, wenn die Drift bis zur Pulswahl unabhängig begrenzt ist. Im Modell lag die zurückgehaltene vierte Nullablesung zwei Schritte vom vorhergesagten Wert entfernt. Ein unabhängiger Vergleich mit den Knotenuhren 15 und 17 deckte einen nachträglichen Hintergrundsprung auf.
+
+Bei normierten Nachimpulsen bis 112 erkennt der Leser die Nullquelle und beide Pulsrichtungen in allen 192 Modellfamilien mit bis zu elf Schritten Referenzfehler. Bei exakt bekannter Nullziffer reicht die Regel bis zur ganzzahligen Grenze 117. Bei 118 führt ein konkretes Gegenbeispiel für jede Pulsrichtung zur selben Vorzeichenziffer null. Alle 60 physischen P3-Prüfpunkte stehen auf `NOT_RUN`.
+
+[Studie, Herleitung und Ergebnisse](n19_kausale_nulluhr_und_kontrolllaeufe_v0_1/README.md) · [Offline-Prüfpaket](packages/CST_DUST_N19_Kausale_Nulluhr_und_Kontrolllaeufe_Pruefpaket.zip)
+
 ## Speicherkollision und Empfangsbit auf N19
 
 Ein negativer Puls und eine ausgeschaltete Quelle hinterlassen auf demselben Viertelhintergrund exakt dieselben sieben Ziffern am Speicherort 7. Ein zusätzliches Bit aus der Empfangsuhr an 18 genügt bei unabhängig geeichter Nulluhr, um die drei Quellen in allen 144 geprüften Modellfamilien für normierte Nachimpulse bis zum Betrag 96 zu unterscheiden. Für die speziell präparierte Verteilung aus 729 Zuständen reichen die vorhandenen Ziffern mit der passenden Referenz bereits aus.
