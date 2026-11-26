@@ -1,5 +1,11 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Gemeinsame Speicherpräparation auf N19
+
+Eine vor der Pulswahl festgelegte klassische Verteilung von Position und kanonischem Impuls genügt für die zwölf geprüften Hintergründe, beide Geräteträgheiten und beide Transportregeln. Bei der angegebenen Gaußpräparation und einer Rundungsschrittweite von 2·10⁻¹² Modelluhreinheiten beträgt die gemeinsame Wahrscheinlichkeit für richtige Auslese an 18 und 7 mindestens 99,999995 % je Familie. Ein 33-Bit-Gegenbeispiel liefert für Nullpuls und negativen Puls an beiden Orten exakt dieselben Anzeigen. Die unabhängige physische Impulskalibrierung ist offen. Alle 60 physischen P3-Prüfpunkte stehen auf `NOT_RUN`.
+
+[Studie, Herleitung und Ergebnisse](n19_gemeinsame_speicherpraeparation_und_auslese_v0_1/README.md) · [Offline-Prüfpaket](packages/CST_DUST_N19_Gemeinsame_Speicherpraeparation_und_Auslese_Pruefpaket.zip)
+
 ## Quellenauslese und materieller Speicher auf N19
 
 Für die drei festgelegten Dichtequellen erkennt der passive Empfänger 18 im stationären N19-Modell die Pulswahl aus seiner eigenen Uhr und zwei früheren Leeruhren. Für den Vergleich der Stromänderungen aus zwei Läufen werden zusätzlich vier Staubgewichte benötigt. Diese Daten kommen erst bei Ereignis 7 zusammen. Die unabhängige Normierung bringt alle 144 untersuchten Paarungen in die publizierte Polungsschranke.
