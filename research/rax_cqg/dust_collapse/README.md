@@ -1,5 +1,11 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Schalenfläche im Zeitfenster und Verfeinerung von N19
+
+Zeitlich gemittelte Eigenvolumina und radiale Eigendicken begrenzen den Arealradius bei beiden klassischen Kontrollmassen auf höchstens 2,04 % relativen Fehler. Im N19-Fenster um die halbe Modellzeit liegen nur die Ereignisse 16 und 18. Für ein zusätzliches positives Ereignis zwischen diesen Ankern scheitern beide möglichen Vergangenheiten an der Dichtegleichung, wenn die Felder der bisherigen Lösung übernommen werden. Das gemeinsame Lösen der Felder auf der erweiterten Ordnung bleibt offen. Alle 60 physischen P3-Prüfpunkte stehen auf `NOT_RUN`.
+
+[Forschungsbericht (PDF)](reports/CST_DUST_Zeitblock_Schalenflaeche_und_N19_Verfeinerung.pdf) · [Herleitung und Nachrechnung](zeitblock_schalenflaeche_und_n19_verfeinerung_v0_1/README.md) · [Offline-Prüfpaket](packages/CST_DUST_Zeitblock_Schalenflaeche_und_N19_Verfeinerung_Pruefpaket.zip)
+
 ## Leitartikel zum Arealradius des Staubballs
 
 Der Leitartikel beweist die scharfe relative Fehlerschranke 7/92 für das kinematische N15-Paar. Im frühen Zwei-Massen-Piloten liegen beide aus Schalendaten bestimmten klassischen Radiusintervalle im jeweiligen 5-%-Zielband. Im geprüften N19-Zweig schliesst die Kausalordnung ein direktes materielles Dreiecksnetz zur Zielzeit aus. Die acht physischen Radiuswerte an diesem Schnitt sind offen. Alle 60 physischen P3-Prüfpunkte stehen auf `NOT_RUN`.

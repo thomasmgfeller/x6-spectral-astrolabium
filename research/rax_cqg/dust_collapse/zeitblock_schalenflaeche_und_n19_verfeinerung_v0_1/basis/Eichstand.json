@@ -1,0 +1,642 @@
+{
+  "stationary_null_sectors": {
+    "certificates": [
+      {
+        "active": [
+          4,
+          6,
+          11,
+          12,
+          13,
+          14
+        ],
+        "null": [
+          5
+        ],
+        "cube_radius": "1/1000000000",
+        "eta_upper": 2.8656832877786805e-13,
+        "lipschitz_upper": 3.9843006059884505e-05,
+        "inlet_interval": [
+          "57368911644242488052911446451/187500000000000000000000000000",
+          "57369008377071112461453946451/187500000000000000000000000000"
+        ],
+        "positive_inlet_lower": "22025498710822990693823074908039/14969529486196164102473927807260",
+        "min_positive_to_available_ratio_lower": 4.80885331025377,
+        "signed_outflow_certificate": {
+          "5": {
+            "positive_lower": "24354258067220738432414867123/500000000000000000000000000000",
+            "negative_magnitude_lower": "48708541290644258145933170487/1000000000000000000000000000000"
+          }
+        },
+        "first_min_gap": 0.030091708882372
+      },
+      {
+        "active": [
+          5,
+          6,
+          11,
+          12,
+          13,
+          14
+        ],
+        "null": [
+          4
+        ],
+        "cube_radius": "1/1000000000",
+        "eta_upper": 2.95568328777869e-13,
+        "lipschitz_upper": 3.9843006059884566e-05,
+        "inlet_interval": [
+          "57368911644242601676935346891/187500000000000000000000000000",
+          "57369008377071226085309846891/187500000000000000000000000000"
+        ],
+        "positive_inlet_lower": "96603064521153293745158157871/65655831079807533657467049280",
+        "min_positive_to_available_ratio_lower": 4.808853310253768,
+        "signed_outflow_certificate": {
+          "4": {
+            "positive_lower": "6088564516805179613332375551/125000000000000000000000000000",
+            "negative_magnitude_lower": "30442838306652494643102283/625000000000000000000000000"
+          }
+        },
+        "first_min_gap": 0.030091708882374
+      },
+      {
+        "active": [
+          6,
+          11,
+          12,
+          13,
+          14
+        ],
+        "null": [
+          4,
+          5
+        ],
+        "cube_radius": "1/1000000000",
+        "eta_upper": 5.047619047619047e-15,
+        "lipschitz_upper": 3.7676691058167284e-05,
+        "inlet_interval": [
+          "28643759376430115554031757463/93750000000000000000000000000",
+          "28643790022950912952558507463/93750000000000000000000000000"
+        ],
+        "positive_inlet_lower": "2831848082955646/1934523810023807",
+        "min_positive_to_available_ratio_lower": 4.7911157931250905,
+        "signed_outflow_certificate": {
+          "4": {
+            "positive_lower": "5149246589793930490982069789/125000000000000000000000000000",
+            "negative_magnitude_lower": "20596997199266746384618357629/500000000000000000000000000000"
+          },
+          "5": {
+            "positive_lower": "5149246589793930490982069789/125000000000000000000000000000",
+            "negative_magnitude_lower": "20596997199266746384618357629/500000000000000000000000000000"
+          }
+        },
+        "first_min_gap": 0.023801610830681
+      }
+    ],
+    "inequivalent_supports_shown": 2,
+    "terminal_clock_residual_when_w14_zero": "-1/64",
+    "complete_sector_classification": false
+  },
+  "finite_action": {
+    "type": 1767356,
+    "rank_boundary": 3,
+    "tested_access_sets": 128,
+    "min_extra_clocks": 2,
+    "all_minimal_full_sets": [
+      [
+        4,
+        6
+      ],
+      [
+        5,
+        6
+      ]
+    ],
+    "selected": [
+      4,
+      6
+    ],
+    "selected_responses": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        0,
+        6
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        3,
+        3
+      ],
+      [
+        4,
+        4
+      ],
+      [
+        6,
+        6
+      ]
+    ],
+    "invisible_boundary_support_pair": [
+      [
+        "0",
+        "1/2",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "1/2",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    ],
+    "element_order": [
+      4,
+      5,
+      6,
+      11,
+      12,
+      13,
+      14
+    ],
+    "automorphisms_fixing_collars": [
+      [
+        4,
+        5,
+        6,
+        11,
+        12,
+        13,
+        14
+      ],
+      [
+        5,
+        4,
+        6,
+        11,
+        12,
+        13,
+        14
+      ]
+    ],
+    "same_outer_action_supports": [
+      [
+        "1/2",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "1/6",
+        "1/6",
+        "1/6",
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    ],
+    "support_masks": 128,
+    "correct_local_decisions": 896,
+    "min_stationary_w_full_packet": "1655303859297/1250000000000000",
+    "vacuum_events_in_stationary_packet": 0,
+    "physical_surface": "MISSING_EXTERIOR_OBSERVATION"
+  },
+  "order_symmetry_follow_up": {
+    "orbits": [
+      [
+        4,
+        5
+      ],
+      [
+        6
+      ],
+      [
+        11
+      ],
+      [
+        12
+      ],
+      [
+        13
+      ],
+      [
+        14
+      ]
+    ],
+    "access_sets": 64,
+    "minimum_extra_orbit_sources": 2,
+    "selected_intrinsic_sites": [
+      6,
+      11
+    ],
+    "rank_selected": 6,
+    "selected_responses": [
+      [
+        [
+          0
+        ],
+        [
+          0
+        ]
+      ],
+      [
+        [
+          0
+        ],
+        [
+          6
+        ]
+      ],
+      [
+        [
+          2
+        ],
+        [
+          2
+        ]
+      ],
+      [
+        [
+          3
+        ],
+        [
+          3
+        ]
+      ],
+      [
+        [
+          6
+        ],
+        [
+          6
+        ]
+      ],
+      [
+        [
+          11
+        ],
+        [
+          11
+        ]
+      ]
+    ],
+    "test_orbit_sums": [
+      "11/32",
+      "7/32",
+      "3/8",
+      "13/32",
+      "7/16",
+      "15/32"
+    ],
+    "unresolved_split_equal_clocks": [
+      [
+        "1/2",
+        "0"
+      ],
+      [
+        "1/4",
+        "1/4"
+      ]
+    ]
+  },
+  "classical_surface": {
+    "observations": [
+      {
+        "M": "0",
+        "x": "0",
+        "state": "VACUUM_CONTROL"
+      },
+      {
+        "M": "0",
+        "x": "1/4",
+        "state": "VACUUM_CONTROL"
+      },
+      {
+        "M": "0",
+        "x": "1/2",
+        "state": "VACUUM_CONTROL"
+      },
+      {
+        "M": "0",
+        "x": "3/4",
+        "state": "VACUUM_CONTROL"
+      },
+      {
+        "M": "0",
+        "x": "1",
+        "state": "VACUUM_CONTROL"
+      },
+      {
+        "M": "1/4",
+        "x": "0",
+        "state": "BRACKET",
+        "marks": [
+          492,
+          493
+        ],
+        "radius": [
+          9.99375,
+          10.0140625
+        ],
+        "rk_target": 10.0,
+        "max_relative_endpoint_error": 0.0014062500000000533
+      },
+      {
+        "M": "1/4",
+        "x": "1/4",
+        "state": "BRACKET",
+        "marks": [
+          492,
+          493
+        ],
+        "radius": [
+          9.784250028231078,
+          9.804778197547357
+        ],
+        "rk_target": 9.79056624623659,
+        "max_relative_endpoint_error": 0.0014515964606469645
+      },
+      {
+        "M": "1/4",
+        "x": "1/2",
+        "state": "BRACKET",
+        "marks": [
+          492,
+          493
+        ],
+        "radius": [
+          9.572482549609429,
+          9.59323587043486
+        ],
+        "rk_target": 9.578867904919415,
+        "max_relative_endpoint_error": 0.0014999648870892557
+      },
+      {
+        "M": "1/4",
+        "x": "3/4",
+        "state": "BRACKET",
+        "marks": [
+          492,
+          493
+        ],
+        "radius": [
+          9.3583460849744,
+          9.379334793519503
+        ],
+        "rk_target": 9.364803729348706,
+        "max_relative_endpoint_error": 0.0015516677755089692
+      },
+      {
+        "M": "1/4",
+        "x": "1",
+        "state": "BRACKET",
+        "marks": [
+          492,
+          493
+        ],
+        "radius": [
+          9.141730930023817,
+          9.162966105195018
+        ],
+        "rk_target": 9.14826427505742,
+        "max_relative_endpoint_error": 0.0016070622465162998
+      },
+      {
+        "M": "1",
+        "x": "0",
+        "state": "BRACKET",
+        "marks": [
+          492,
+          493
+        ],
+        "radius": [
+          9.99375,
+          10.0140625
+        ],
+        "rk_target": 10.0,
+        "max_relative_endpoint_error": 0.0014062500000000533
+      },
+      {
+        "M": "1",
+        "x": "1/4",
+        "state": "BRACKET",
+        "marks": [
+          492,
+          493
+        ],
+        "radius": [
+          9.572482549609429,
+          9.59323587043486
+        ],
+        "rk_target": 9.578867904919415,
+        "max_relative_endpoint_error": 0.0014999648870892557
+      },
+      {
+        "M": "1",
+        "x": "1/2",
+        "state": "BRACKET",
+        "marks": [
+          492,
+          493
+        ],
+        "radius": [
+          9.141730930023817,
+          9.162966105195018
+        ],
+        "rk_target": 9.14826427505742,
+        "max_relative_endpoint_error": 0.0016070622465162998
+      },
+      {
+        "M": "1",
+        "x": "3/4",
+        "state": "BRACKET",
+        "marks": [
+          492,
+          493
+        ],
+        "radius": [
+          8.700578525559154,
+          8.722343772050541
+        ],
+        "rk_target": 8.70727470985326,
+        "max_relative_endpoint_error": 0.0017306290084344589
+      },
+      {
+        "M": "1",
+        "x": "1",
+        "state": "BRACKET",
+        "marks": [
+          492,
+          493
+        ],
+        "radius": [
+          8.247941434054345,
+          8.27029409510098
+        ],
+        "rk_target": 8.25481812223653,
+        "max_relative_endpoint_error": 0.0018747805990735333
+      },
+      {
+        "M": "4",
+        "x": "0",
+        "state": "BRACKET",
+        "marks": [
+          492,
+          493
+        ],
+        "radius": [
+          9.99375,
+          10.0140625
+        ],
+        "rk_target": 10.0,
+        "max_relative_endpoint_error": 0.0014062500000000533
+      },
+      {
+        "M": "4",
+        "x": "1/4",
+        "state": "BRACKET",
+        "marks": [
+          492,
+          493
+        ],
+        "radius": [
+          9.141730930023817,
+          9.162966105195018
+        ],
+        "rk_target": 9.14826427505742,
+        "max_relative_endpoint_error": 0.0016070622465162998
+      },
+      {
+        "M": "4",
+        "x": "1/2",
+        "state": "BRACKET",
+        "marks": [
+          492,
+          493
+        ],
+        "radius": [
+          8.247941434054345,
+          8.27029409510098
+        ],
+        "rk_target": 8.25481812223653,
+        "max_relative_endpoint_error": 0.0018747805990735333
+      },
+      {
+        "M": "4",
+        "x": "3/4",
+        "state": "BRACKET",
+        "marks": [
+          492,
+          493
+        ],
+        "radius": [
+          7.302737896254039,
+          7.326488481899736
+        ],
+        "rk_target": 7.310044345531739,
+        "max_relative_endpoint_error": 0.002249526212251718
+      },
+      {
+        "M": "4",
+        "x": "1",
+        "state": "BRACKET",
+        "marks": [
+          492,
+          493
+        ],
+        "radius": [
+          6.291735660766685,
+          6.317316673488297
+        ],
+        "rk_target": 6.299605249471151,
+        "max_relative_endpoint_error": 0.002811513311668623
+      }
+    ],
+    "grid_cells": 640,
+    "max_abs_conservation_residual": 8.257283745649602e-16,
+    "mass_gain_at_fixed_R6": {
+      "1/4": 0.0353914311842992,
+      "1": 0.3178845891860344,
+      "4": 2.2894751824810244
+    },
+    "null_flux_inner_decoy_mass_fraction": "17/64",
+    "negative_controls": [
+      "DISCONNECTED",
+      "MISSING_EXPOSURE",
+      "NO_EXTERIOR",
+      "MISSING_EXPOSURE"
+    ],
+    "max_relative_endpoint_error": 0.002811513311668623
+  },
+  "classical_mass": {
+    "vacuum_charge": [
+      0,
+      0
+    ],
+    "one_standard": "1/4",
+    "reference_charge": [
+      "53483064863444047/214748364800000000",
+      "538920103792693311/2147483648000000000"
+    ],
+    "gain_interval": [
+      "536870912000000000/538920103792693311",
+      "53687091200000000/53483064863444047"
+    ],
+    "held_out": [
+      {
+        "external_mass": "1",
+        "mass_bounds": [
+          "243436799560510/245298181061763",
+          "245298181061763/243436799560510"
+        ],
+        "relative_error_bounds": [
+          -0.007588240129609145,
+          0.007646261800243248
+        ]
+      },
+      {
+        "external_mass": "4",
+        "mass_bounds": [
+          "973747198242040/245298181061763",
+          "490596362123526/121718399780255"
+        ],
+        "relative_error_bounds": [
+          -0.007588240129609145,
+          0.007646261800243248
+        ]
+      }
+    ]
+  },
+  "physical_CST": {
+    "register": {
+      "NOT_RUN": 60
+    },
+    "initial_records": 12,
+    "physical_vacuum": null,
+    "independent_mass_pair": null,
+    "gain": null,
+    "M1_transfer": "NOT_RUN",
+    "M4_transfer": "NOT_RUN",
+    "P3": "HOLD_NOT_ELIGIBLE"
+  }
+}
