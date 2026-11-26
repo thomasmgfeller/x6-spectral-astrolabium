@@ -1,5 +1,16 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Quellenauslese und materieller Speicher auf N19
+
+Für die drei festgelegten Dichtequellen erkennt der passive Empfänger 18 im stationären N19-Modell die Pulswahl aus seiner eigenen Uhr und zwei früheren Leeruhren. Für den Vergleich der Stromänderungen aus zwei Läufen werden zusätzlich vier Staubgewichte benötigt. Diese Daten kommen erst bei Ereignis 7 zusammen. Die unabhängige Normierung bringt alle 144 untersuchten Paarungen in die publizierte Polungsschranke.
+
+Drei vollständige Lösungen mit unterschiedlichen Quellen haben im Empfängerkegel dieselben Uhren und Gewichte an sämtlichen positiven Staubereignissen. In einer erweiterten Wirkung erfassen zwei Gerätespuren die nötigen Uhrdifferenzen auf unmittelbaren Kausalverbindungen. Bei zwölf Hintergründen mit je drei Quellen bleibt die Pulswahl unter den geprüften Last- und Ablesefehlern sowohl bei 18 als auch aus dem gespeicherten Datensatz bei 7 eindeutig. Die gemeinsame physische Präparation mit der benötigten Auflösung und Impulsstreuung ist offen. Alle 60 physischen P3-Prüfpunkte stehen auf `NOT_RUN`.
+
+| Untersuchung | Herleitung und Daten | Offline-Prüfpaket |
+|---|---|---|
+| Paarungskontrolle und Quellenauslese | [Studie](n19_paarungskontrolle_und_quellenauslese_v0_1/README.md) | [ZIP](packages/CST_DUST_N19_Paarungskontrolle_und_Quellenauslese_Pruefpaket.zip) |
+| Materielle Leeruhrauslese und Speicher | [Studie](n19_materielle_leeruhrauslese_und_speicher_v0_1/README.md) | [ZIP](packages/CST_DUST_N19_Materielle_Leeruhrauslese_und_Speicher_Pruefpaket.zip) |
+
 ## Sendeschnitt, Stromvorhersage und Amplitudeneichung auf N19
 
 Die drei Studien verfolgen den Strom vom leeren Vorläufer zum positiven Sender. Die erste zerlegt die Staubwirkung an allen 121 kausal abgeschlossenen Teilmengen. Die zweite zeigt, dass die positiven Daten im Sendervorlauf den Wert der leeren Uhr nicht eindeutig bestimmen. Die dritte prüft, welche Eichung für die absolute Stromänderung und für den Vergleich entgegengesetzter Pulse erforderlich ist.

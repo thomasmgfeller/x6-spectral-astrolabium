@@ -1,0 +1,3 @@
+# Gegenversuch ohne Ausgleichsterm
+
+Der Ausgleichsterm der starken Kopplung ist ein zusätzlicher Ansatz. Teste die einfachere Wirkung κw[(ΔX)²−2ΔXΔY] mit positiver Geräteträgheit κw, g=1 und ohne Ausgleichsterm auf allen vier Uhrverbindungen. Sie ist algebraisch die quadratisch geschlossene Wirkung mit demselben κ und δ=−κ. Wähle κ=10⁻¹¹ und unabhängige physikalisch dimensionslose Modellimpulse |p|≤κ·10⁻¹⁴. Führe dieselben Quellen und Hintergründe mit denselben Ablesefehlern fort. Wiederhole am nominalen Nullarm einen Test mit einem absoluten Lastimpuls 10⁻¹⁴, wie ihn die starke Variante verträgt. Damit wird geprüft, ob das Entfernen der Abstimmung den Empfänger in anderer Form empfindlich macht.
