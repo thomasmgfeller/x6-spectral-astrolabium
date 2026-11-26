@@ -1,5 +1,7 @@
 # X6 Spectral Astrolabium
 
+**CST-DUST send and receive markers on one N19 order · 26 November 2026.** After fitting two future boundary weights to the target times, a forward solve with fixed, rounded weights places a positive material event in each window. The events are joined by a causal link. A pulse-on/pulse-off response remains to be tested. All 60 physical P3 checkpoints remain unrun. [Derivation, data and offline packages](research/rax_cqg/dust_collapse/README.md#sende--und-empfangsmarke-auf-einer-n19-ordnung)
+
 **CST-DUST material markers in the echo window · 26 November 2026.** On the tested N15 branch, none of the 158,018 causal pasts with two new positive ancestors reaches the echo window. A separate mixed N17 order admits a stationary material marker at dust time 11/23. All 193 attachments in the tested mixed family miss the target window around 1/2. The 60 physical P3 checkpoints remain unrun. [Studies, data and offline packages](research/rax_cqg/dust_collapse/README.md#materialmarker-im-echo-zeitfenster)
 
 **CST-DUST radius from echo timing · 26 November 2026.** Across three classical LTB dust controls, 501 timing windows per mass bound the material support radius at the chosen dust proper time to within 1.969% under the specified clock errors and initial length calibration. All 60 physical CST checkpoints remain unrun. [Study, data and reproducible packages](research/rax_cqg/dust_collapse/README.md#arealradius-aus-mehreren-echo-zeitfenstern)
