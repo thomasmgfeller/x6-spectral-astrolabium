@@ -1,10 +1,16 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Sendepuls auf der N19-Ordnung
+
+Auf der festgehaltenen N19-Ordnung ergibt ein skalarer Einheitspuls im stationären masselosen Wirkungsansatz am Empfänger den Wert 1/5. Bei vertauschten Rollen reagiert der frühere Sender ebenfalls mit 1/5. Zwei innere Gleichungen schliessen eine rein vorwärts gerichtete Lösung für diese lokale Quelle auch bei frei wählbaren künftigen Skalar-Randwerten aus.
+
+Mit dem retardierten Benincasa-Dowker-Operator als zusätzlichem Testgesetz beträgt die Antwort in den gewählten Einheiten vorwärts −1 und rückwärts 0. Staubuhr und Dichte am Empfänger bleiben auf dem festgehaltenen Zweig gleich. Für eine Lichtlaufzeitmessung fehlt die materielle Aufzeichnung des Pulses. Alle 60 physischen P3-Prüfpunkte stehen auf `NOT_RUN`. [Herleitung und Rechenweg](n19_sendepuls_und_kausale_empfangsantwort_v0_1/README.md) · [Offline-Prüfpaket](packages/CST_DUST_N19_Sendepuls_und_kausale_Empfangsantwort_Pruefpaket.zip)
+
 ## Sende- und Empfangsmarke auf einer N19-Ordnung
 
 Auf der gemischten N17-Ordnung ergibt ein auf den Sendeschnitt abgestimmtes Zukunftsrandgewicht eine stationäre positive Marke bei normierter Staubzeit x = 1/2. Alle 20 geprüften N18-Vergangenheiten eines einzelnen zusätzlichen positiven Empfängers verfehlen das Empfangsfenster.
 
-Bei N19 scheiden alle 3 816 geprüften Vergangenheitskegel mit zusätzlichem positivem Vorläufer aus. Mit leerem Vorläufer und den bisherigen Randgewichten liefert keine der 8 165 untersuchten Anbindungen beide Marken. Nach Anpassung zweier Randgewichte an die Zielzeiten belegt eine Vorwärtsrechnung mit festen, gerundeten Werten eine lokal eindeutige stationäre Lösung. Der Sender bei x ≈ 0,500000 und der Empfänger bei x ≈ 0,500268 sind durch einen unmittelbaren Kausallink verbunden. Die Signalantwort auf einen Sendepuls und eine physische Radiusmessung bleiben offen. Alle 60 physischen P3-Prüfpunkte stehen auf `NOT_RUN`.
+Bei N19 scheiden alle 3 816 geprüften Vergangenheitskegel mit zusätzlichem positivem Vorläufer aus. Mit leerem Vorläufer und den bisherigen Randgewichten liefert keine der 8 165 untersuchten Anbindungen beide Marken. Nach Anpassung zweier Randgewichte an die Zielzeiten belegt eine Vorwärtsrechnung mit festen, gerundeten Werten eine lokal eindeutige stationäre Lösung. Der Sender bei x ≈ 0,500000 und der Empfänger bei x ≈ 0,500268 sind durch einen unmittelbaren Kausallink verbunden. Die physische Radiusmessung bleibt offen. Alle 60 physischen P3-Prüfpunkte stehen auf `NOT_RUN`.
 
 | Untersuchung | Herleitung und Daten | Offline-Prüfpaket |
 |---|---|---|
