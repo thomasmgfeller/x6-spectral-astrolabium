@@ -1,0 +1,3 @@
+# Gespeicherte Klassifikation am Folgeereignis
+
+Für einen späteren Leser sind die beiden gespeicherten Positionen allein unvollständig, weil der Klassifikator die lokale Empfängeruhr t benötigt. Ergänze ausschliesslich auf der bereits genutzten unmittelbaren Relation 18→7 eine dritte Position am positiven Ereignis 7, die Y₇−t aufnimmt. Prüfe die Klassifikation am Empfänger und getrennt ausschliesslich mit den drei gespeicherten Positionen und Y₇ am Folgeereignis. Erlaube auch dieser Spur eine unabhängige vorzeichenoffene Last bis 10⁻¹⁴ und denselben Ablesefehler. Der gemeinsame Abgleichfehler der drei Abtastverbindungen wird auch auf diese vierte Uhrdifferenz angewandt.
