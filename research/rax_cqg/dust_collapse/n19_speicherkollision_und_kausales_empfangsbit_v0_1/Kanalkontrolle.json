@@ -1,0 +1,106 @@
+{
+  "concrete_trials": 288,
+  "examples": {
+    "late": {
+      "baseline_code": 42180625650,
+      "baseline_error_q": "1/100000000000",
+      "baseline_id": "null_quarter",
+      "clock7": 1000000000000,
+      "device": "positive_bridge_1/100000000000",
+      "initial_t": 335000000000,
+      "kind": "synthetic",
+      "pointer7_t": 1292819374332,
+      "saturated": false,
+      "shot": "example",
+      "usable": true
+    },
+    "packet": {
+      "baseline_id": "null_quarter",
+      "bit": 1,
+      "device": "positive_bridge_1/100000000000",
+      "kind": "synthetic",
+      "shot": "example"
+    },
+    "receiver": {
+      "baseline_code": 42180625650,
+      "baseline_error_q": "1/100000000000",
+      "baseline_id": "null_quarter",
+      "device": "positive_bridge_1/100000000000",
+      "kind": "synthetic",
+      "receiver_clock": 42180625895,
+      "saturated": false,
+      "shot": "example",
+      "usable": true
+    },
+    "result": {
+      "kind": "synthetic",
+      "physical_P3": "60 NOT_RUN",
+      "source_label": "1/1000000",
+      "status": "MODEL_CLASSIFICATION"
+    }
+  },
+  "extra_common_reference_code_error_guarantee": {
+    "0": 89,
+    "32": 89,
+    "48": 89,
+    "56": 89,
+    "58": 89,
+    "59": 89,
+    "60": 89,
+    "64": 89,
+    "96": 14
+  },
+  "input_controls": {
+    "missing": "absent or mismatched receiver packet",
+    "missing_bit": {
+      "kind": "synthetic",
+      "physical_P3": "60 NOT_RUN",
+      "source_label": null,
+      "status": "UNRESOLVED"
+    },
+    "saturated": "unusable reading",
+    "too_coarse": "missing or imprecise paired null calibration",
+    "wrong_bit": {
+      "kind": "synthetic",
+      "physical_P3": "60 NOT_RUN",
+      "source_label": "0",
+      "status": "MODEL_CLASSIFICATION"
+    },
+    "wrong_origin": "absent or mismatched receiver packet",
+    "wrong_reference": "absent or mismatched receiver packet",
+    "wrong_shot": "absent or mismatched receiver packet"
+  },
+  "native_edge": [
+    18,
+    7
+  ],
+  "physical_P3": "60 NOT_RUN",
+  "register": {
+    "receiver_force_examples": {
+      "-125/-1/8": "-3/800",
+      "-125/0": "0",
+      "-125/1/8": "3/800",
+      "-250/-1/8": "0",
+      "-250/0": "0",
+      "-250/1/8": "0",
+      "-36/-1/8": "0",
+      "-36/0": "0",
+      "-36/1/8": "0",
+      "0/-1/8": "0",
+      "0/0": "0",
+      "0/1/8": "0",
+      "125/-1/8": "3/800",
+      "125/0": "0",
+      "125/1/8": "-3/800",
+      "250/-1/8": "0",
+      "250/0": "0",
+      "250/1/8": "0",
+      "36/-1/8": "0",
+      "36/0": "0",
+      "36/1/8": "0"
+    },
+    "remaining_threshold_margin": "3/16",
+    "stationary_and_derivative_checks": 21,
+    "total_output_error_bound": "5/16"
+  }
+}

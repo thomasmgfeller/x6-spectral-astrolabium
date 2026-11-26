@@ -1,5 +1,7 @@
 # X6 Spectral Astrolabium
 
+**N19 source ambiguity at memory site 7 · 26 November 2026.** A negative pulse and a silent source can leave the same seven readings at site 7. With an independently calibrated reference clock, one bit sent from site 18 resolves the ambiguity in all 144 tested classical model families over the stated momentum range. [Study and offline package](research/rax_cqg/dust_collapse/README.md#speicherkollision-und-empfangsbit-auf-n19)
+
 **N19 source readout with a stored initial position · 26 November 2026.** Subtracting the initial pointer reading removes all eight position-induced false pulses from the previous model test. For the full 729-state test distribution, rare initial momenta still produce errors in the device with lower inertia. The study also tests an eight-reading calibration against quadratic drift. [Study and offline package](research/rax_cqg/dust_collapse/README.md#nullreferenz-drift-und-impulstest-auf-n19)
 
 **N19 memory calibration and false pulses · 26 November 2026.** Two classical preparations with identical covariances can give different source readings. In the reference background, a rare initial displacement causes both readers to report a pulse with the source switched off. The study provides an independent impulse calibration and a test of preparation reliability. The available calibration records are synthetic. [Study and offline package](research/rax_cqg/dust_collapse/README.md#impulseichung-und-verteilungsprüfung-auf-n19)
