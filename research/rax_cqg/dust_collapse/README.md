@@ -1,5 +1,11 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Leitartikel zum Arealradius des Staubballs
+
+Das dreiseitige Exposé ordnet die exakte N15-Fehleruntergrenze von 7/92, die klassischen Echo-Kontrollen und die bedingte N19-Quellenauslese ein. Für den nächsten Radiuspiloten sollen Anfangsmasse, materielle Oberfläche und Geometrie auf derselben gekoppelten Historie bestimmt werden. Alle 60 physischen P3-Prüfpunkte stehen auf `NOT_RUN`.
+
+[Flagship-Exposé und Forschungspriorität (PDF)](reports/CST_DUST_Flagship_Expose_und_Forschungsprioritaet.pdf)
+
 ## Driftfenster und Voruhreneichung auf N19
 
 Auf dem geprüften Viertelhintergrund schützt die Gegenprüfung mit aktuellen Voruhren 15 und 17 jede freigegebene Quellenentscheidung für alle reellen Hintergrundverschiebungen zwischen −10⁻⁶ und +10⁻⁶ und normierte Nachimpulse bis 112. Bei einem Voruhrenraster von 10⁻¹² genügt für die ungestörte fünfte Präparation ein unabhängig belegter Offset von höchstens 4,6·10⁻¹³ je Uhr. Stehen die Voruhranzeigen still, kann der Leser bei ausgeschalteter Quelle einen Puls melden. Alle 60 physischen P3-Prüfpunkte stehen auf `NOT_RUN`.
