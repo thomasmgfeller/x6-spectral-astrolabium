@@ -1,5 +1,7 @@
 # X6 Spectral Astrolabium
 
+**CST-DUST detector and initial data on N19 · 26 November 2026.** On the tested dust branch, fixing the four early clock momenta excludes a causal change in the passive receiver’s clock or density, even when the future boundary data can vary. Fixing only their sum admits counterexamples. A separate detector model stores a directed pulse after adding canonical memories and a kinetic step. All 60 physical P3 checkpoints remain unrun. [Studies, data and offline packages](research/rax_cqg/dust_collapse/README.md#staubantwort-und-detektor-auf-n19)
+
 **CST-DUST pulse test on the fixed N19 order · 26 November 2026.** A unit scalar source gives a receiver response of 1/5 in the stationary massless action model. Exchanging source and receiver gives the same response at the earlier event. The retarded scalar test equation gives −1 forward and zero in reverse. On this fixed order the receiver’s dust clock and density have zero change. [Derivation, exact checks and offline package](research/rax_cqg/dust_collapse/README.md#sendepuls-auf-der-n19-ordnung)
 
 **CST-DUST send and receive markers on one N19 order · 26 November 2026.** After fitting two future boundary weights to the target times, a forward solve with fixed, rounded weights places a positive material event in each window. The events are joined by a causal link. All 60 physical P3 checkpoints remain unrun. [Derivation, data and offline packages](research/rax_cqg/dust_collapse/README.md#sende--und-empfangsmarke-auf-einer-n19-ordnung)
