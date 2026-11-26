@@ -1,0 +1,135 @@
+{
+  "blind_comparison": {
+    "A": {
+      "correct": true,
+      "opened": "-1/1000000",
+      "read": "-1/1000000"
+    },
+    "B": {
+      "correct": true,
+      "opened": "0",
+      "read": "0"
+    },
+    "C": {
+      "correct": true,
+      "opened": "1/1000000",
+      "read": "1/1000000"
+    }
+  },
+  "empty_physical_input": {
+    "kind": "no_observations",
+    "physical_P3": "60 NOT_RUN",
+    "status": "NOT_MEASURED"
+  },
+  "integer_validation": {
+    "cases": 5184,
+    "empty": 1522,
+    "fourth_hulls_with_holes": 278,
+    "gap_example": {
+      "C": 0,
+      "bands": [
+        [
+          -2,
+          -2
+        ],
+        [
+          -2,
+          -1
+        ],
+        [
+          -2,
+          0
+        ]
+      ],
+      "possible_fourth": [
+        -2,
+        1
+      ]
+    }
+  },
+  "kind": "synthetic",
+  "minimum_fifth_radii": {
+    "fourth_error_one": {
+      "B": 42180625620,
+      "budget": 11,
+      "interval": [
+        42180625615,
+        42180625626
+      ],
+      "max_witness": [
+        42180625597,
+        42180625602,
+        42180625609,
+        42180625616,
+        42180625626
+      ],
+      "min_witness": [
+        42180625597,
+        42180625603,
+        42180625610,
+        42180625614,
+        42180625615
+      ],
+      "radius": 6
+    },
+    "fourth_exact": {
+      "B": 42180625620,
+      "budget": 11,
+      "interval": [
+        42180625617,
+        42180625624
+      ],
+      "max_witness": [
+        42180625597,
+        42180625602,
+        42180625609,
+        42180625615,
+        42180625624
+      ],
+      "min_witness": [
+        42180625597,
+        42180625602,
+        42180625610,
+        42180625615,
+        42180625617
+      ],
+      "radius": 4
+    },
+    "unseen_fourth": {
+      "B": 42180625624,
+      "budget": 11,
+      "interval": [
+        42180625612,
+        42180625636
+      ],
+      "max_witness": [
+        42180625597,
+        42180625603,
+        42180625611,
+        42180625622,
+        42180625636
+      ],
+      "min_witness": [
+        42180625597,
+        42180625603,
+        42180625609,
+        42180625612,
+        42180625612
+      ],
+      "radius": 12
+    }
+  },
+  "negative_controls": [
+    "flipped_bit",
+    "swapped_packet",
+    "wrong_tick",
+    "source_on_control",
+    "wrong_reference",
+    "wrong_opening",
+    "partial_holdout",
+    "incompatible_holdout"
+  ],
+  "old_fourth_reference": 42180625617,
+  "physical_P3": "60 NOT_RUN",
+  "physical_observations": 0
+}

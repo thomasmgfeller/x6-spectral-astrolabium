@@ -1,5 +1,17 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Driftfenster und Voruhreneichung auf N19
+
+Auf dem geprüften Viertelhintergrund schützt die Gegenprüfung mit aktuellen Voruhren 15 und 17 jede freigegebene Quellenentscheidung für alle reellen Hintergrundverschiebungen zwischen −10⁻⁶ und +10⁻⁶ und normierte Nachimpulse bis 112. Bei einem Voruhrenraster von 10⁻¹² genügt für die ungestörte fünfte Präparation ein unabhängig belegter Offset von höchstens 4,6·10⁻¹³ je Uhr. Stehen die Voruhranzeigen still, kann der Leser bei ausgeschalteter Quelle einen Puls melden. Alle 60 physischen P3-Prüfpunkte stehen auf `NOT_RUN`.
+
+[Studie und Eichgrenzen](n19_driftfenster_und_voruhreneichung_v0_1/README.md) · [Offline-Prüfpaket](packages/CST_DUST_N19_Driftfenster_und_Voruhreneichung_Pruefpaket.zip)
+
+## Fünfter Takt und verdeckter Pulstest auf N19
+
+Nach den drei früheren Modellkontrollen beträgt der kleinste garantierte Fehler der Nullreferenz für den fünften Takt zwölf Rasterschritte. Eine vierte Nullablesung mit einem Schritt Unsicherheit senkt ihn auf sechs. Damit liegt er unter dem Budget von elf Schritten. Der Leser erkannte die Nullquelle sowie beide Pulsrichtungen in drei verdeckten Modellfällen.
+
+[Studie und Reproduktion](n19_fuenfter_takt_und_verdeckter_pulstest_v0_1/README.md) · [Offline-Prüfpaket](packages/CST_DUST_N19_Fuenfter_Takt_und_verdeckter_Pulstest.zip)
+
 ## Kausale Nulluhr und Kontrollläufe auf N19
 
 Zwei stationäre Nullzustände haben am Sender denselben Vorlauf. Ihre Empfangsuhren liegen dennoch eine Million Rasterschritte auseinander. Drei frühere Läufe mit ausgeschalteter Quelle erlauben eine Eichung am angeschlossenen Gerät, wenn die Drift bis zur Pulswahl unabhängig begrenzt ist. Im Modell lag die zurückgehaltene vierte Nullablesung zwei Schritte vom vorhergesagten Wert entfernt. Ein unabhängiger Vergleich mit den Knotenuhren 15 und 17 deckte einen nachträglichen Hintergrundsprung auf.
