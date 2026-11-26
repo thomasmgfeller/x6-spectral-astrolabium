@@ -1,5 +1,7 @@
 # X6 Spectral Astrolabium
 
+**CST-DUST flagship exposé · 26 November 2026.** Which finite observations determine the areal radius of a collapsing dust surface? The research outline connects the N15 identifiability bound, classical echo controls and the conditional N19 source readout. It defines a two-mass pilot and records the open physical P3 criteria. [Read the exposé (PDF)](research/rax_cqg/dust_collapse/reports/CST_DUST_Flagship_Expose_und_Forschungsprioritaet.pdf)
+
 **N19 fifth-tick readout and clock calibration · 26 November 2026.** A fourth source-off reading reduces the fifth-tick reference uncertainty from twelve to six steps in the tested model. Two independently calibrated precursor clocks protect accepted source decisions across the studied continuous drift interval. A stale clock reading can produce a false pulse. All 60 physical P3 checkpoints are unrun. [Fifth-tick test](research/rax_cqg/dust_collapse/README.md#fünfter-takt-und-verdeckter-pulstest-auf-n19) · [Clock calibration and offline packages](research/rax_cqg/dust_collapse/README.md#driftfenster-und-voruhreneichung-auf-n19)
 
 **N19 receiver clock calibration · 26 November 2026.** Three earlier source-off runs predict the receiver’s baseline when the drift is independently bounded. With a reference uncertainty of up to 11 readout steps, the model distinguishes silence and both pulse directions in all 192 tested families through normalized momentum 112. [Study and offline package](research/rax_cqg/dust_collapse/README.md#kausale-nulluhr-und-kontrollläufe-auf-n19)
