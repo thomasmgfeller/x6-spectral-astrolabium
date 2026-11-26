@@ -1,5 +1,11 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## N22-Staubrandmessung mit einem dritten Ereignis
+
+Der Versuch fügt ein Ereignis unmittelbar vor dem materiellen oder nach dem leeren Messpunkt ein und prüft jeweils leeres und positives Gewicht. Im Zeitfenster x = 1/2 ± 1/64 sind 1 624 495 von 1 624 568 Fällen ausgeschlossen. Offen bleiben 6 mit leerem Vorgänger, 15 mit positivem Vorgänger und 52 mit positivem Nachfolger. Für zwei Anbindungen mit positivem Nachfolger liegen zertifizierte stationäre Lösungen ausserhalb des Fensters. Der Arealradius bleibt offen. Alle 60 physischen P3-Checkpoints stehen auf `NOT_RUN`.
+
+[Forschungsbericht (PDF)](reports/CST_DUST_N22_Ein_drittes_Ereignis_fuer_die_Staubrandmessung.pdf) · [73 offene Fälle](n22_ein_drittes_ereignis_fuer_die_staubrandmessung_v0_1/Offene_Faelle.tsv) · [Vollständiges Register (TSV.GZ)](n22_ein_drittes_ereignis_fuer_die_staubrandmessung_v0_1/Register.tsv.gz) · [Methode und Nachrechnung](n22_ein_drittes_ereignis_fuer_die_staubrandmessung_v0_1/README.md) · [Offline-Prüfpaket](packages/CST_DUST_N22_Ein_drittes_Ereignis_fuer_die_Staubrandmessung_Pruefpaket.zip)
+
 ## N21-Messpaar zur halben Modellzeit
 
 Für die feste N19-Ordnung gibt es 406 142 Anbindungen eines neuen positiven und eines neuen leeren Ereignisses, die kausal unvergleichbar sind und gemeinsame alte positive Anker haben. 42 716 Anordnungen erreichen die Feldprüfung. Unter den übernommenen Rand- und Gerätebedingungen scheiden im Fenster x = 1/2 ± 1/64 alle aus. Die alten Innenfelder dürfen variieren. Der Arealradius bleibt offen, alle 60 physischen P3-Checkpoints stehen auf `NOT_RUN`.
