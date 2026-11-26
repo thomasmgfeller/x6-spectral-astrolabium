@@ -1,5 +1,16 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Materialmarker im Echo-Zeitfenster
+
+Auf dem N15-Ausgangszweig 1767356 erreicht bei genau zwei neuen positiven Vorfahren keiner von 158 018 Vergangenheitskegeln das Messband `0,4995 ≤ T/T_end ≤ 0,5005`. In einer gemischten N17-Ordnung mit einem leeren Vorfahren existiert eine stationäre Lösung bei `T/T_end = 11/23`. Sie dient als Positivkontrolle. Bei festgehaltener gemeinsamer alter Vergangenheit {0,1,2} wurden alle 193 Anbindungen der gemischten Familie geprüft. Keine liefert im Messband einen stationären positiven Marker. Mit den festen Kragen ergibt ein vollständig geleertes Inneres an Ereignis 14 den Uhrgradienten −1/64.
+
+Im klassischen Kontrollfall mit M=1 liefern Schalenvolumen und Radar am mittleren Schnitt eine Radiusklammer von [8,9813969; 9,3268589], vereinbar mit den früheren Echo-Zeitfenstern. Die unabhängige physische Masseneichung und die diskrete Schalenmessung bleiben offen. Alle 60 physischen P3-Prüfpunkte stehen auf `NOT_RUN`.
+
+| Untersuchung | Herleitung und Daten | Offline-Prüfpaket |
+|---|---|---|
+| Zwei positive Vorfahren und stationäre N17-Positivkontrolle bei 11/23 | [Erste Studie](zwei_positive_vorfahren_und_freie_vakuumuhr_v0_1/README.md) | [ZIP](packages/CST_DUST_Zwei_positive_Vorfahren_und_freie_Vakuumuhr_Pruefpaket.zip) |
+| Kopplung an alte Materie, Schnittstrom und Schalenmessung | [Zweite Studie](n17_materiekopplung_strom_und_schalen_v0_1/README.md) | [ZIP](packages/CST_DUST_N17_Materiekopplung_Strom_und_Schalen_Pruefpaket.zip) |
+
 ## Arealradius aus mehreren Echo-Zeitfenstern
 
 In den klassischen LTB-Kontrollen mit M=1/4, 1 und 4 klammern 501 synthetische Zeitfenster pro Masse die Lichtlaufzeit desselben früh kalibrierten Sondenpaars ein. Bei M=1 ergibt sich für den Radius der Stützfläche eine Schätzung von 9,14839 bei einer Referenz von 9,14826. Über alle drei Kontrollen beträgt die garantierte relative Fehlergrenze höchstens 1,969 %. Die Rechnung setzt den exakten Anfangsradius und die angegebenen Uhr- und Ausbreitungsgrenzen voraus. Die 60 physischen P3-Prüfpunkte stehen auf `NOT_RUN`.
