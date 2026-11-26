@@ -1,5 +1,13 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Nullreferenz, Drift und Impulstest auf N19
+
+Wird die Anfangsanzeige derselben Spur und desselben Versuchs gespeichert, verschwinden im Modell alle acht bekannten Fehlpulse durch Ortsverschiebung. Für die untersuchte Verteilung aus 729 Zuständen ist die Quellwahl bei κ=1 in allen 72 Familien fehlerfrei. Bei κ=10⁻¹¹ bleibt durch seltene Anfangsimpulse eine Fehlerwahrscheinlichkeit von 0,00271 % bis 0,00814 %. Eine synthetische Gegenprobe zeigt ausserdem, wie quadratische Drift eine Vierpunkt-Eichung auf die falsche Seite der Wirkungsschwelle verschiebt. Die Eichung mit acht Messungen schliesst den vorgegebenen Wert ein.
+
+Das Paket enthält die vollständige Auswertung, die Eichsoftware und einen Test des Impulses nach der Ortsaufnahme. Alle 60 physischen P3-Prüfpunkte stehen auf `NOT_RUN`.
+
+[Studie, Herleitung und Ergebnisse](n19_nullreferenz_drift_und_impulstest_v0_1/README.md) · [Offline-Prüfpaket](packages/CST_DUST_N19_Nullreferenz_Drift_und_Impulstest_Pruefpaket.zip)
+
 ## Impulseichung und Verteilungsprüfung auf N19
 
 Im Referenzhintergrund kann eine Präparation mit exakt derselben Kovarianz wie der Gaußzustand aus PR #391 bei ausgeschalteter Quelle an 18 und 7 einen Puls vortäuschen. Für den ausgewählten gemeinsamen Gaußzustand benötigt ein kanonischer Quantenzeiger eine Wirkungsskala von mindestens rund 2 373 J·s. Das Paket enthält eine unabhängige Impulseichung sowie einen klassischen Verteilungstest mit zufällig gewählter Messeinstellung. Unter den geprüften Modell- und Stichprobenannahmen genügen 119 unabhängige Dreierpräparationen ohne Auffälligkeit für eine gemeinsame Auslesezuverlässigkeit von mindestens 95 % bei einseitig 95 % Konfidenz. Die vorliegenden Rohdaten sind synthetisch. Alle 60 physischen P3-Prüfpunkte stehen auf `NOT_RUN`.
