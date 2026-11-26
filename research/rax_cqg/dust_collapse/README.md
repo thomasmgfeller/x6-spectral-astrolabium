@@ -1,5 +1,16 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Sende- und Empfangsmarke auf einer N19-Ordnung
+
+Auf der gemischten N17-Ordnung ergibt ein auf den Sendeschnitt abgestimmtes Zukunftsrandgewicht eine stationäre positive Marke bei normierter Staubzeit x = 1/2. Alle 20 geprüften N18-Vergangenheiten eines einzelnen zusätzlichen positiven Empfängers verfehlen das Empfangsfenster.
+
+Bei N19 scheiden alle 3 816 geprüften Vergangenheitskegel mit zusätzlichem positivem Vorläufer aus. Mit leerem Vorläufer und den bisherigen Randgewichten liefert keine der 8 165 untersuchten Anbindungen beide Marken. Nach Anpassung zweier Randgewichte an die Zielzeiten belegt eine Vorwärtsrechnung mit festen, gerundeten Werten eine lokal eindeutige stationäre Lösung. Der Sender bei x ≈ 0,500000 und der Empfänger bei x ≈ 0,500268 sind durch einen unmittelbaren Kausallink verbunden. Die Signalantwort auf einen Sendepuls und eine physische Radiusmessung bleiben offen. Alle 60 physischen P3-Prüfpunkte stehen auf `NOT_RUN`.
+
+| Untersuchung | Herleitung und Daten | Offline-Prüfpaket |
+|---|---|---|
+| N17-Vakuumrand, Sendemarke und N18-Empfangstest | [Vorstudie](vakuumrand_sendemarke_und_empfangstest_v0_1/README.md) | [ZIP](packages/CST_DUST_Vakuumrand_Sendemarke_und_Empfangstest_Pruefpaket.zip) |
+| Gemeinsames stationäres Sende- und Empfangspaar bei N19 | [N19-Studie](n19_stationaeres_sende_und_empfangspaar_v0_1/README.md) | [ZIP](packages/CST_DUST_N19_Stationaeres_Sende_und_Empfangspaar_Pruefpaket.zip) |
+
 ## Materialmarker im Echo-Zeitfenster
 
 Auf dem N15-Ausgangszweig 1767356 erreicht bei genau zwei neuen positiven Vorfahren keiner von 158 018 Vergangenheitskegeln das Messband `0,4995 ≤ T/T_end ≤ 0,5005`. In einer gemischten N17-Ordnung mit einem leeren Vorfahren existiert eine stationäre Lösung bei `T/T_end = 11/23`. Sie dient als Positivkontrolle. Bei festgehaltener gemeinsamer alter Vergangenheit {0,1,2} wurden alle 193 Anbindungen der gemischten Familie geprüft. Keine liefert im Messband einen stationären positiven Marker. Mit den festen Kragen ergibt ein vollständig geleertes Inneres an Ereignis 14 den Uhrgradienten −1/64.
