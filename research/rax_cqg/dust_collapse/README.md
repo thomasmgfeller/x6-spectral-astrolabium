@@ -1,5 +1,17 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Sendeschnitt, Stromvorhersage und Amplitudeneichung auf N19
+
+Die drei Studien verfolgen den Strom vom leeren Vorläufer zum positiven Sender. Die erste zerlegt die Staubwirkung an allen 121 kausal abgeschlossenen Teilmengen. Die zweite zeigt, dass die positiven Daten im Sendervorlauf den Wert der leeren Uhr nicht eindeutig bestimmen. Die dritte prüft, welche Eichung für die absolute Stromänderung und für den Vergleich entgegengesetzter Pulse erforderlich ist.
+
+Bei identischem Sendervorlauf und gleichen Anfangsimpulsen G₀ und G₁ können die absoluten Antworten auf denselben Puls fast um den Faktor drei auseinanderliegen. Für die beiden geprüften Quellen J_w=±10⁻⁶ genügt eine Vorbereitung des ungepulsten Stroms auf ±3,1 % um 1/8 für weniger als 4,94 % Fehler der vorhergesagten Modellstromänderung. Bei entgegengesetzten Pulsen am selben ungepulsten Ausgangszustand weichen die Beträge über die geprüften Fenster um weniger als 0,095 % voneinander ab. Eine physische Realisierung der Präparation bleibt offen. Alle 60 physischen P3-Prüfpunkte stehen auf `NOT_RUN`.
+
+| Untersuchung | Herleitung und Daten | Offline-Prüfpaket |
+|---|---|---|
+| Kausaler Sendeschnitt und Leeruhrströme | [Studie](n19_kausaler_sendeschnitt_und_leeruhrstroeme_v0_1/README.md) | [ZIP](packages/CST_DUST_N19_Kausaler_Sendeschnitt_und_Leeruhrstroeme_Pruefpaket.zip) |
+| Leeruhrpräparation und Stromvorhersage | [Studie](n19_leeruhrpraeparation_und_stromvorhersage_v0_1/README.md) | [ZIP](packages/CST_DUST_N19_Leeruhrpraeparation_und_Stromvorhersage_Pruefpaket.zip) |
+| Amplitudeneichung und Polungsvergleich | [Studie](n19_amplitudeneichung_und_polungsvergleich_v0_1/README.md) | [ZIP](packages/CST_DUST_N19_Amplitudeneichung_und_Polungsvergleich_Pruefpaket.zip) |
+
 ## Früher Uhrimpuls und Impulsspeicher auf N19
 
 Zwei stationäre Staubzustände ohne Sendepuls stimmen im kausalen Vorlauf des Senders und in der Summe der Anfangsimpulse überein. Bei freien Zukunftsgewichten unterscheiden sich ihre frühesten Uhrimpulse G₀ am nominalen Hintergrund um rund 0,00149394. Bei festem Zukunftskragen lässt sich G₀ in einem gemischten Randwertproblem lokal unabhängig von der Summe vorgeben.
