@@ -1,5 +1,16 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Früher Uhrimpuls und Impulsspeicher auf N19
+
+Zwei stationäre Staubzustände ohne Sendepuls stimmen im kausalen Vorlauf des Senders und in der Summe der Anfangsimpulse überein. Bei freien Zukunftsgewichten unterscheiden sich ihre frühesten Uhrimpulse G₀ am nominalen Hintergrund um rund 0,00149394. Bei festem Zukunftskragen lässt sich G₀ in einem gemischten Randwertproblem lokal unabhängig von der Summe vorgeben.
+
+Ein zusätzliches klassisches Gerät kann einen vorbereiteten Impuls vor dem Sender aufzeichnen. Bei gleicher Anzeige und zwei entgegengesetzten Senderquellen ändert sich die früheste Staubuhr gegenüber dem Nullarm um jeweils mehr als 9,49·10⁻⁸ im Betrag. Die Eichwerte stammen aus der vollständigen Referenzlösung. Eine gerichtete Pulsübertragung und die physische P3-Messung bleiben offen. Alle 60 Prüfpunkte stehen auf `NOT_RUN`.
+
+| Untersuchung | Herleitung und Daten | Offline-Prüfpaket |
+|---|---|---|
+| Früher Uhrimpuls und gemischte Randpräparation | [Studie](n19_frueher_uhrimpuls_und_gemischte_randpraeparation_v0_1/README.md) | [ZIP](packages/CST_DUST_N19_Frueher_Uhrimpuls_und_gemischte_Randpraeparation_Pruefpaket.zip) |
+| Materieller Impulsspeicher vor dem Sender | [Studie](n19_materieller_impulsspeicher_vor_dem_sender_v0_1/README.md) | [ZIP](packages/CST_DUST_N19_Materieller_Impulsspeicher_vor_dem_Sender_Pruefpaket.zip) |
+
 ## Staubantwort und Detektor auf N19
 
 Bei der nativen Staubwirkung bleiben Uhr und Dichte eines passiven Empfängers auf dem geprüften Zweig unverändert, wenn die Feldänderung auf den Sender und dessen kausale Zukunft beschränkt ist und die vier frühen Uhrimpulse einzeln gleich bleiben. Das gilt auch bei freien Zukunftsranddaten. Die Impulssumme allein lässt eine kleine Empfängerantwort bei veränderten frühen Einzelimpulsen zu. In den beiden geprüften Zeitfenstern genügen die Impulssumme und der Einzelimpuls am frühesten Randereignis, um diese Möglichkeit auszuschliessen.
