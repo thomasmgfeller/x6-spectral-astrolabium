@@ -1,0 +1,5 @@
+# Ergänzende Anschlussprüfung nach den ersten Quellenläufen
+
+Untersuche, ob die Schnittströme der beiden Leeruhren auf jedem Weg durch die Ordnungsideale vorwärts mitgeführt werden können. Prüfe Vertauschungsschritte und die Unabhängigkeit von zwei Auslesekomponenten bei frei variierten Endpunktgewichten vor Auferlegung der globalen Gleichungen.
+
+Die ersten beiden numerischen Läufe mit eingefrorenem Vorlauf ergaben für die beiden Quellvorzeichen unterschiedliche Ströme am ersten Sendeschnitt. Prüfe, ob diese Änderung nur zur gewählten Zukunftskonstruktion gehört. Nutze die ungetriebenen Uhrgleichungen an 12,13,h und z sowie die Dichtegleichungen an z,r. Alle Felder ausser z und seiner Zukunft sind dem Nullarm gleich, alle vier Zukunftsuhren und -gewichte dürfen variieren, der Empfänger bleibt passiv. Schliesse im ursprünglichen Empfangsfenster eine zweite Uhrwurzel aus. Prüfe für J_w=±10⁻⁶ mittels gepaarter Differenzen auf dem gesamten archivierten Hintergrundintervall, ob ein gemeinsamer Wert des ersten Schnittstroms an 15 für diese beiden Pulse und den Nullarm möglich ist. Dies ist eine nachträgliche Verschärfung der vorab beschriebenen Versuche.
