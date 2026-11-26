@@ -1,0 +1,140 @@
+{
+  "all_arms": [
+    [
+      "-1/1000000",
+      1,
+      "-1/1000000"
+    ],
+    [
+      "0",
+      0,
+      "0"
+    ],
+    [
+      "1/1000000",
+      1,
+      "1/1000000"
+    ]
+  ],
+  "bad_controls": {
+    "curve_violation": "past null digits incompatible with curvature contract",
+    "different_device": "unmatched null calibration",
+    "future_reference": "controls must precede target at registered cadence with source gated off",
+    "imprecise": "forecast outside usable range or plateau budget",
+    "negative_curvature": "three time-ordered controls and nonnegative integer curvature required",
+    "saturation": "unusable control",
+    "target_pulsed": "controls must precede target at registered cadence with source gated off"
+  },
+  "example": {
+    "control_input": {
+      "cadence_reference": "unit-spaced synthetic run clock",
+      "campaign": "quarter_run",
+      "clock_reference": "common_adc",
+      "controls": [
+        {
+          "campaign": "quarter_run",
+          "clock_reference": "common_adc",
+          "code": 42180625598,
+          "device": "weak_positive_bridge",
+          "extra_error_codes": 1,
+          "index": 7,
+          "saturated": false,
+          "source_setting": "zero",
+          "usable": true
+        },
+        {
+          "campaign": "quarter_run",
+          "clock_reference": "common_adc",
+          "code": 42180625602,
+          "device": "weak_positive_bridge",
+          "extra_error_codes": 1,
+          "index": 8,
+          "saturated": false,
+          "source_setting": "zero",
+          "usable": true
+        },
+        {
+          "campaign": "quarter_run",
+          "clock_reference": "common_adc",
+          "code": 42180625610,
+          "device": "weak_positive_bridge",
+          "extra_error_codes": 1,
+          "index": 9,
+          "saturated": false,
+          "source_setting": "zero",
+          "usable": true
+        }
+      ],
+      "curvature_codes": 3,
+      "curvature_reference": "synthetic bound on the ideal loaded null codes",
+      "device": "weak_positive_bridge",
+      "kind": "synthetic",
+      "momentum_bound": 112,
+      "momentum_reference": "synthetic post-copy bound",
+      "shot": "blind_target",
+      "target_index": 10
+    },
+    "forecast": {
+      "allowed_error_codes": 11,
+      "baseline_code": 42180625617,
+      "campaign": "quarter_run",
+      "clock_reference": "common_adc",
+      "control_record_sha256": "0a2107cdf324093393f6d8bbe59c55f73706c93574015997669ed82ac489afc5",
+      "device": "weak_positive_bridge",
+      "kind": "synthetic",
+      "momentum_bound": 112,
+      "range_codes": [
+        42180625612,
+        42180625622
+      ],
+      "reference_id": "0f612706ca36335b02b6b7bf1e2dca24de9d2bc9b178dd1ae32e8692ae7e426b",
+      "shot": "blind_target",
+      "status": "CONDITIONAL_MODEL_REFERENCE",
+      "target_index": 10,
+      "worst_error_codes": 5
+    },
+    "late": {
+      "campaign": "quarter_run",
+      "clock7": 1000000000000,
+      "clock_reference": "common_adc",
+      "device": "weak_positive_bridge",
+      "initial_t": 166666666667,
+      "kind": "synthetic",
+      "pointer7_t": 1124486041037,
+      "reference_id": "0f612706ca36335b02b6b7bf1e2dca24de9d2bc9b178dd1ae32e8692ae7e426b",
+      "saturated": false,
+      "shot": "blind_target",
+      "target_index": 10,
+      "usable": true
+    },
+    "packet": {
+      "bit": 1,
+      "campaign": "quarter_run",
+      "clock_reference": "common_adc",
+      "device": "weak_positive_bridge",
+      "kind": "synthetic",
+      "reference_id": "0f612706ca36335b02b6b7bf1e2dca24de9d2bc9b178dd1ae32e8692ae7e426b",
+      "shot": "blind_target",
+      "target_index": 10
+    },
+    "receiver": {
+      "campaign": "quarter_run",
+      "clock_reference": "common_adc",
+      "device": "weak_positive_bridge",
+      "kind": "synthetic",
+      "receiver_clock": 42180625895,
+      "reference_id": "0f612706ca36335b02b6b7bf1e2dca24de9d2bc9b178dd1ae32e8692ae7e426b",
+      "saturated": false,
+      "shot": "blind_target",
+      "target_index": 10,
+      "usable": true
+    }
+  },
+  "geometric_finite_trials": 384,
+  "hidden_jump_quiet_classified_as": "1/1000000",
+  "integer_solver": {
+    "enumerated_cases": 10125,
+    "infeasible": 3940
+  },
+  "true_target_null_code": 42180625615
+}
