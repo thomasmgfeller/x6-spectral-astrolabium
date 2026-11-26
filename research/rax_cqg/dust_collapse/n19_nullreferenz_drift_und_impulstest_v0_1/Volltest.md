@@ -1,0 +1,3 @@
+# Zusatz vor der vollständigen Auswertung der Dreipunktverteilung
+
+Klassifiziere alle 729 Atome der aus PR 392 übernommenen sechsdimensionalen Dreipunktverteilung mit ihren exakten rationalen Gewichten. Auf den 12 nominalen Referenzfamilien vergleiche alte und neue Leseregel, getrennt nach falscher und unentscheidbarer Auslese. Für die neue Leseregel werte alle 144 nominalen Hintergrund-, Quell-, Wege- und Gerätefamilien aus. Nutze nur die nachgewiesene ganzzahlige Translationssymmetrie des Digitalrasters zum Zusammenfassen identischer Anzeigen. Ein Scheitern ausserhalb des beschränkten Impulsbereichs wird als Ergebnis protokolliert. Diese Auswertung nimmt perfekte Übermittlung der Anfangsziffern und keinen zusätzlichen Kopierfehler an.
