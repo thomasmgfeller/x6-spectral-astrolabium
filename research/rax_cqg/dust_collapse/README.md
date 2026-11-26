@@ -1,8 +1,14 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Gemeinsame Stationarität auf den vier N21-Ordnungen
+
+Bei den veröffentlichten N19-Randdaten und Gerätekopplungen besitzt keine der vier Anbindungen zwischen Sender 16 und Empfänger 18 im Zielfenster x = 1/2 ± 1/64 eine stationäre Lösung. Alle freien Innenfelder dürfen variieren. In zwei Fällen scheitert die Dichtegleichung am neuen positiven Ereignis, in zwei Fällen am Empfänger. Das physische P3-Register steht bei 60 Einträgen auf `NOT_RUN`.
+
+[Forschungsbericht (PDF)](reports/CST_DUST_N21_Gemeinsame_Stationaritaet_im_Zielfenster.pdf) · [Herleitung und Nachrechnung](n21_gemeinsame_stationaritaet_im_zielfenster_v0_1/README.md) · [Offline-Prüfpaket](packages/CST_DUST_N21_Gemeinsame_Stationaritaet_im_Zielfenster_Pruefpaket.zip)
+
 ## Schalenfläche im Zeitfenster und Verfeinerung von N19
 
-Zeitlich gemittelte Eigenvolumina und radiale Eigendicken begrenzen den Arealradius bei beiden klassischen Kontrollmassen auf höchstens 2,04 % relativen Fehler. Im N19-Fenster um die halbe Modellzeit liegen nur die Ereignisse 16 und 18. Für ein zusätzliches positives Ereignis zwischen diesen Ankern scheitern beide möglichen Vergangenheiten an der Dichtegleichung, wenn die Felder der bisherigen Lösung übernommen werden. Das gemeinsame Lösen der Felder auf der erweiterten Ordnung bleibt offen. Alle 60 physischen P3-Prüfpunkte stehen auf `NOT_RUN`.
+Zeitlich gemittelte Eigenvolumina und radiale Eigendicken begrenzen den Arealradius bei beiden klassischen Kontrollmassen auf höchstens 2,04 % relativen Fehler. Im N19-Fenster um die halbe Modellzeit liegen nur die Ereignisse 16 und 18. Für ein zusätzliches positives Ereignis zwischen diesen Ankern scheitern beide möglichen Vergangenheiten an der Dichtegleichung, wenn die Felder der bisherigen Lösung übernommen werden. Die anschliessende N21-Studie prüft die gemeinsame Stationarität bei frei variierenden Innenfeldern. Alle 60 physischen P3-Prüfpunkte stehen auf `NOT_RUN`.
 
 [Forschungsbericht (PDF)](reports/CST_DUST_Zeitblock_Schalenflaeche_und_N19_Verfeinerung.pdf) · [Herleitung und Nachrechnung](zeitblock_schalenflaeche_und_n19_verfeinerung_v0_1/README.md) · [Offline-Prüfpaket](packages/CST_DUST_Zeitblock_Schalenflaeche_und_N19_Verfeinerung_Pruefpaket.zip)
 
