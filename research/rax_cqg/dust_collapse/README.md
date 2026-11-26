@@ -1,5 +1,13 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Speicherkollision und Empfangsbit auf N19
+
+Ein negativer Puls und eine ausgeschaltete Quelle hinterlassen auf demselben Viertelhintergrund exakt dieselben sieben Ziffern am Speicherort 7. Ein zusätzliches Bit aus der Empfangsuhr an 18 genügt bei unabhängig geeichter Nulluhr, um die drei Quellen in allen 144 geprüften Modellfamilien für normierte Nachimpulse bis zum Betrag 96 zu unterscheiden. Für die speziell präparierte Verteilung aus 729 Zuständen reichen die vorhandenen Ziffern mit der passenden Referenz bereits aus.
+
+Die Studie enthält die beiden Kollisionszustände, den ausführbaren Leser und die vollständige Offline-Prüfung. Alle 60 physischen P3-Prüfpunkte stehen auf `NOT_RUN`.
+
+[Studie, Herleitung und Ergebnisse](n19_speicherkollision_und_kausales_empfangsbit_v0_1/README.md) · [Offline-Prüfpaket](packages/CST_DUST_N19_Speicherkollision_und_kausales_Empfangsbit_Pruefpaket.zip)
+
 ## Nullreferenz, Drift und Impulstest auf N19
 
 Wird die Anfangsanzeige derselben Spur und desselben Versuchs gespeichert, verschwinden im Modell alle acht bekannten Fehlpulse durch Ortsverschiebung. Für die untersuchte Verteilung aus 729 Zuständen ist die Quellwahl bei κ=1 in allen 72 Familien fehlerfrei. Bei κ=10⁻¹¹ bleibt durch seltene Anfangsimpulse eine Fehlerwahrscheinlichkeit von 0,00271 % bis 0,00814 %. Eine synthetische Gegenprobe zeigt ausserdem, wie quadratische Drift eine Vierpunkt-Eichung auf die falsche Seite der Wirkungsschwelle verschiebt. Die Eichung mit acht Messungen schliesst den vorgegebenen Wert ein.
