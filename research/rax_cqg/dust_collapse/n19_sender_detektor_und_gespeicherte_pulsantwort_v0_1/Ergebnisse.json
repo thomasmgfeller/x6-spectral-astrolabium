@@ -1,0 +1,231 @@
+{
+  "P3": {
+    "NOT_RUN": 60
+  },
+  "arms": {
+    "active_zero": {
+      "mean": "0",
+      "p_left_middle_right": [
+        "0.4333560433",
+        "0.1332879134",
+        "0.4333560433"
+      ],
+      "read_event": 18,
+      "record_row": {
+        "15": -8,
+        "16": 1,
+        "17": 1,
+        "18": 1,
+        "A": -1,
+        "D": 1
+      },
+      "source_event": 16,
+      "variance": "71/2"
+    },
+    "disconnected": {
+      "mean": "0",
+      "p_left_middle_right": [
+        "0.1586552539",
+        "0.6826894921",
+        "0.1586552539"
+      ],
+      "read_event": 18,
+      "record_row": {
+        "D": 1
+      },
+      "source_event": 16,
+      "variance": "1"
+    },
+    "late": {
+      "mean": "0",
+      "p_left_middle_right": [
+        "0.4324062521",
+        "0.1351874958",
+        "0.4324062521"
+      ],
+      "read_event": 18,
+      "record_row": {
+        "15": -8,
+        "16": 1,
+        "17": 1,
+        "18": 1,
+        "D": 1
+      },
+      "source_event": 7,
+      "variance": "69/2"
+    },
+    "negative": {
+      "mean": "1",
+      "p_left_middle_right": [
+        "0.3685589064",
+        "0.1314410936",
+        "0.5000000000"
+      ],
+      "read_event": 18,
+      "record_row": {
+        "15": -8,
+        "16": 1,
+        "17": 1,
+        "18": 1,
+        "A": -1,
+        "D": 1
+      },
+      "source_event": 16,
+      "variance": "71/2"
+    },
+    "off": {
+      "mean": "0",
+      "p_left_middle_right": [
+        "0.4324062521",
+        "0.1351874958",
+        "0.4324062521"
+      ],
+      "read_event": 18,
+      "record_row": {
+        "15": -8,
+        "16": 1,
+        "17": 1,
+        "18": 1,
+        "D": 1
+      },
+      "source_event": 16,
+      "variance": "69/2"
+    },
+    "on": {
+      "mean": "-1",
+      "p_left_middle_right": [
+        "0.5000000000",
+        "0.1314410936",
+        "0.3685589064"
+      ],
+      "read_event": 18,
+      "record_row": {
+        "15": -8,
+        "16": 1,
+        "17": 1,
+        "18": 1,
+        "A": -1,
+        "D": 1
+      },
+      "source_event": 16,
+      "variance": "71/2"
+    },
+    "reversed": {
+      "mean": "0",
+      "p_left_middle_right": [
+        "0.2397500611",
+        "0.5204998778",
+        "0.2397500611"
+      ],
+      "read_event": 16,
+      "record_row": {
+        "15": 1,
+        "16": 1,
+        "D": 1
+      },
+      "source_event": 18,
+      "variance": "2"
+    },
+    "reversed_off": {
+      "mean": "0",
+      "p_left_middle_right": [
+        "0.2397500611",
+        "0.5204998778",
+        "0.2397500611"
+      ],
+      "read_event": 16,
+      "record_row": {
+        "15": 1,
+        "16": 1,
+        "D": 1
+      },
+      "source_event": 18,
+      "variance": "2"
+    }
+  },
+  "canonical_modes": 17,
+  "endpoint": {
+    "columns_future_free": [
+      16,
+      18,
+      7,
+      8,
+      9,
+      10
+    ],
+    "common_row": [
+      "0",
+      "1/2",
+      "-9/2",
+      "8",
+      "-4",
+      "0"
+    ],
+    "minor": "1/4",
+    "null_dimension_on_two_endpoints": 0,
+    "support": [
+      16,
+      18
+    ],
+    "twin_rows": [
+      16,
+      17
+    ],
+    "two_rows": [
+      [
+        "1/2",
+        "-9/2"
+      ],
+      [
+        "0",
+        "1/2"
+      ]
+    ],
+    "unforced_rows": [
+      15,
+      17
+    ],
+    "with_receiver_reaction": {
+      "field": [
+        "18",
+        "2"
+      ],
+      "source": {
+        "16": "1",
+        "17": "1",
+        "18": "8"
+      }
+    },
+    "without_receiver_reaction": {
+      "field": [
+        "2",
+        "2"
+      ],
+      "source": {
+        "15": "-8",
+        "16": "1",
+        "17": "1"
+      }
+    }
+  },
+  "incomparable_event_blocks": 36,
+  "on_future_mean_changes": {
+    "10": 48,
+    "7": 8,
+    "8": 1,
+    "9": -79
+  },
+  "past_inputs_zero": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "receiver": 18,
+  "receiver_momentum_pointer_coefficient": -1,
+  "source": 16,
+  "source_final_momentum_row": {
+    "16": 1,
+    "A": 1
+  }
+}

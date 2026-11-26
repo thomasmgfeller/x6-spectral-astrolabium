@@ -1,5 +1,16 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## Staubantwort und Detektor auf N19
+
+Bei der nativen Staubwirkung bleiben Uhr und Dichte eines passiven Empfängers auf dem geprüften Zweig unverändert, wenn die Feldänderung auf den Sender und dessen kausale Zukunft beschränkt ist und die vier frühen Uhrimpulse einzeln gleich bleiben. Das gilt auch bei freien Zukunftsranddaten. Die Impulssumme allein lässt eine kleine Empfängerantwort bei veränderten frühen Einzelimpulsen zu. In den beiden geprüften Zeitfenstern genügen die Impulssumme und der Einzelimpuls am frühesten Randereignis, um diese Möglichkeit auszuschliessen.
+
+Das erweiterte Detektormodell führt eigene Speicher und einen internen Bewegungsschritt ein. Bei λ=1 steigt die Wahrscheinlichkeit für das vorab festgelegte linke Zeigerband von 45,16 % auf 50,00 %. Ein erst nach dem Empfang ausgelöster Puls lässt die Zeigerverteilung unverändert. Die physische Pulsaufzeichnung und die Lichtlaufzeitmessung bleiben offen. Alle 60 physischen P3-Prüfpunkte stehen auf `NOT_RUN`.
+
+| Untersuchung | Herleitung und Daten | Offline-Prüfpaket |
+|---|---|---|
+| Endpunktsonden und gespeicherte Pulsantwort | [Detektorstudie](n19_sender_detektor_und_gespeicherte_pulsantwort_v0_1/README.md) | [ZIP](packages/CST_DUST_N19_Sender_Detektor_und_gespeicherte_Pulsantwort_Pruefpaket.zip) |
+| Native Staubantwort und frühe Uhrimpulse | [Staubstudie](n19_staubantwort_und_anfangsimpulse_v0_1/README.md) | [ZIP](packages/CST_DUST_N19_Staubantwort_und_Anfangsimpulse_Pruefpaket.zip) |
+
 ## Sendepuls auf der N19-Ordnung
 
 Auf der festgehaltenen N19-Ordnung ergibt ein skalarer Einheitspuls im stationären masselosen Wirkungsansatz am Empfänger den Wert 1/5. Bei vertauschten Rollen reagiert der frühere Sender ebenfalls mit 1/5. Zwei innere Gleichungen schliessen eine rein vorwärts gerichtete Lösung für diese lokale Quelle auch bei frei wählbaren künftigen Skalar-Randwerten aus.
