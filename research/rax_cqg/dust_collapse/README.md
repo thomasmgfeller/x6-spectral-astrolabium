@@ -1,6 +1,12 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
-## N22-Staubrandmessung mit einem dritten Ereignis
+## N22 · Stationäre Lösungen im gemeinsamen Messfenster
+
+Für die Anbindungen 216427 und 217269 schliesst die Prüfung eine zweite stationäre Lösung mit beiden Messuhren im Fenster [31/64, 33/64] aus. Zehn weitere Anbindungen sind ebenfalls ausgeschlossen, darunter 337411 über den gesamten Bereich der positiven Gerätegewichte. Damit bleiben 61 von 1 624 568 Fällen offen. Der physische Arealradius ist offen. Alle 60 P3-Prüfpunkte stehen auf `NOT_RUN`.
+
+[Kurzbericht (PDF)](reports/CST_DUST_N22_Stationaere_Zweige_im_Messfenster.pdf) · [61 offene Fälle (TSV)](n22_stationaere_zweige_im_messfenster_v0_1/Offene_Faelle.tsv) · [Gleichungen und Nachrechnung](n22_stationaere_zweige_im_messfenster_v0_1/README.md) · [Offline-Prüfpaket (ZIP)](packages/CST_DUST_N22_Stationaere_Zweige_im_Messfenster_Pruefpaket.zip)
+
+## Erstprüfung der N22-Staubrandmessung mit einem dritten Ereignis
 
 Der Versuch fügt ein Ereignis unmittelbar vor dem materiellen oder nach dem leeren Messpunkt ein und prüft jeweils leeres und positives Gewicht. Im Zeitfenster x = 1/2 ± 1/64 sind 1 624 495 von 1 624 568 Fällen ausgeschlossen. Offen bleiben 6 mit leerem Vorgänger, 15 mit positivem Vorgänger und 52 mit positivem Nachfolger. Für zwei Anbindungen mit positivem Nachfolger liegen zertifizierte stationäre Lösungen ausserhalb des Fensters. Der Arealradius bleibt offen. Alle 60 physischen P3-Checkpoints stehen auf `NOT_RUN`.
 
