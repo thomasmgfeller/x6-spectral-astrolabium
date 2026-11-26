@@ -1,0 +1,3 @@
+# Ergänzung nach der Antikettenzählung
+
+Die beiden materiellen Vierer-Antiketten enthalten entweder 16 oder 18. Ergänzend untersuchen wir die alternative Auslese über eine ausdrücklich registrierte Rückkehr eines bei 16 ausgesendeten und bei 18 reflektierten Signals. Eine notwendige Bedingung ist ein weiteres Ereignis in der strikten Zukunft von 18. Prüfe die ganze Relation, den frühesten Kandidaten gemessen in x=(Y−Y₃)/(Y₇−Y₃) und seine Rolle. Diese Zusatzfrage betrifft eine Zweiwegablesung. Die klassischen Mehrfenster-Kontrollen verwenden die Ankunft an der zweiten Sonde. Alle Ordnungs- und Zeitdaten waren vor dieser explorativen Frage öffentlich.

@@ -2,9 +2,9 @@
 
 ## Leitartikel zum Arealradius des Staubballs
 
-Das dreiseitige Exposé ordnet die exakte N15-Fehleruntergrenze von 7/92, die klassischen Echo-Kontrollen und die bedingte N19-Quellenauslese ein. Für den nächsten Radiuspiloten sollen Anfangsmasse, materielle Oberfläche und Geometrie auf derselben gekoppelten Historie bestimmt werden. Alle 60 physischen P3-Prüfpunkte stehen auf `NOT_RUN`.
+Der Leitartikel beweist die scharfe relative Fehlerschranke 7/92 für das kinematische N15-Paar. Im frühen Zwei-Massen-Piloten liegen beide aus Schalendaten bestimmten klassischen Radiusintervalle im jeweiligen 5-%-Zielband. Im geprüften N19-Zweig schliesst die Kausalordnung ein direktes materielles Dreiecksnetz zur Zielzeit aus. Die acht physischen Radiuswerte an diesem Schnitt sind offen. Alle 60 physischen P3-Prüfpunkte stehen auf `NOT_RUN`.
 
-[Flagship-Exposé und Forschungspriorität (PDF)](reports/CST_DUST_Flagship_Expose_und_Forschungsprioritaet.pdf)
+[Leitartikel (PDF)](reports/CST_DUST_Leitartikel_Arealradius_v0_1.pdf) · [Editierbares Manuskript](leitartikel_arealradius_und_zwei_massen_pilot_v0_1/Leitartikel.md) · [Prüfung und Reproduktion](leitartikel_arealradius_und_zwei_massen_pilot_v0_1/README.md) · [Offline-Prüfpaket](packages/CST_DUST_Leitartikel_und_Zwei_Massen_Pilot_v0_1.zip) · [Ursprüngliches Exposé (PDF)](reports/CST_DUST_Flagship_Expose_und_Forschungsprioritaet.pdf)
 
 ## Driftfenster und Voruhreneichung auf N19
 
