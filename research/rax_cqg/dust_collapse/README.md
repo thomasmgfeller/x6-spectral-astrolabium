@@ -1,5 +1,11 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## N22 · Quellenauslese am gemeinsamen Nachfolger
+
+Auf der Anbindung 216141/229383/0/+ unterscheidet Uhr 21 bei drei verschwindenden Nachimpulsen die drei stationären Quellenpräparationen für jede Drift zwischen −10⁻⁶ und +10⁻⁶. Die drei materiellen Vorgänger des Senders stimmen in Uhr und Gewicht überein. Die leere Uhr 15 im Sendervorlauf unterscheidet die Präparationen ebenfalls. Ein Sendeversuch mit identischem vollständigem Vorlauf bleibt offen.
+
+[Kurzbericht (PDF)](reports/CST_DUST_N22_Quellenauslese_am_gemeinsamen_Nachfolger.pdf) · [Driftregister (TSV)](n22_quellenauslese_am_gemeinsamen_nachfolger_v0_1/Driftregister.tsv) · [Offline-Reproduktion](n22_quellenauslese_am_gemeinsamen_nachfolger_v0_1/README.md) · [Prüfpaket (ZIP)](packages/CST_DUST_N22_Quellenauslese_am_gemeinsamen_Nachfolger_Pruefpaket.zip)
+
 ## N22 · Randpräparation und Schranken für das stationäre Uhrenfenster
 
 Die gemeinsam präparierten Randuhren schliessen den letzten offenen Fall bei der Halbbreite 27/1024. Bei 55/2048 sind alle 1 342 Fälle mit gemeinsamem Nachfolger auf den drei Referenzordnungen neu geprüft und ausgeschlossen. Für das Infimum der benötigten Halbbreite gilt 0,02685546875 ≤ h* ≤ 0,02687714. Die obere Schranke folgt aus einer zertifizierten stationären Lösung. Der physische Arealradius bleibt offen. Die 60 physischen P3-Prüfpunkte stehen auf `NOT_RUN`.
