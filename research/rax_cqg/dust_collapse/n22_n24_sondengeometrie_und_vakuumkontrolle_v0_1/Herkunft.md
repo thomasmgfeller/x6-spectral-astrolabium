@@ -1,0 +1,11 @@
+# Herkunft und Abgrenzung
+
+Geprüfter Projektstand ist [PR 418](https://github.com/thomasmgfeller/x6-spectral-astrolabium/pull/418). Die N22-Ordnung trägt die Kennung 216141/229383/0/+. Die veröffentlichten Eingaben stammen aus folgenden Verzeichnissen des Commits 2c08c72af7fa7d075f50decc48c9531d64d61c66.
+
+- [Vergleichspaar, Uhren, Gewichte und Transfer](https://github.com/thomasmgfeller/x6-spectral-astrolabium/tree/2c08c72af7fa7d075f50decc48c9531d64d61c66/research/rax_cqg/dust_collapse/n22_anfangsladung_zwei_massen_transfer_v0_1)
+- [Ortskoordinaten, drei Sonden und geometrische Vergleichskugeln](https://github.com/thomasmgfeller/x6-spectral-astrolabium/tree/2c08c72af7fa7d075f50decc48c9531d64d61c66/research/rax_cqg/dust_collapse/n22_aeussere_materiegrenze_und_n23_sonden_v0_1)
+- [Alte Feldfilter für die positive/leer-Präparation](https://github.com/thomasmgfeller/x6-spectral-astrolabium/tree/2c08c72af7fa7d075f50decc48c9531d64d61c66/research/rax_cqg/dust_collapse/n23_gekoppelte_innenfelder_und_leere_sonde_v0_1)
+- [P3-Vertrag und physische Zulassung](https://github.com/thomasmgfeller/x6-spectral-astrolabium/tree/2c08c72af7fa7d075f50decc48c9531d64d61c66/research/rax_cqg/dust_collapse/correspondence_v0_1)
+- [Klassischer Positivversuch für den getrennten Massenstandard](https://github.com/thomasmgfeller/x6-spectral-astrolabium/tree/2c08c72af7fa7d075f50decc48c9531d64d61c66/research/rax_cqg/dust_collapse/n15_materie_vakuum_und_masseneichung_v0_1)
+
+Das Vergleichspaar hat SHA-256 c75c0c97c1b536d0140d77b4f01d8bfa0a2aab487a1b05a2b58f2ebf23159c2f und die Ortskoordinaten a8bdf817687174d3c47d6ebf105974b41008a9037555e66da62a581c9f9601f4. Wiederholte Eingaben in den Teilversuchen dienen der isolierten Offline-Ausführung. Der neue synthetische Sehnenversuch wurde separat lokal festgelegt, siehe Pruefplan.md. Das nach den geometrischen Daten ausgewählte Gegenpaar mit Radien 1 und 357/200 ist eine explorative Konstruktion, deren Aussagen durch exakte Ungleichungen überprüft werden. Die Modellrechnungen betreffen diskrete stationäre Staubfelder auf endlichen Ordnungen, weitere Ergebnisse betreffen ausdrücklich geometrische Kontrollen. Eine gekoppelte metrische CST-Geschichte mit unabhängig dimensionierten Messdaten ist im Paket nicht als Eingabe vorhanden.

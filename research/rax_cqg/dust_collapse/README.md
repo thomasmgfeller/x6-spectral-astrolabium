@@ -1,5 +1,13 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## N22–N24 · Sondengeometrie und Vakuumkontrolle
+
+Am Halbschnitt schliessen die Feldgleichungen alle 1 514 Kombinationen aus Ordnung und Präparation für die drei untersuchten Sonden mit genau einem neuen positiven Nachfolger aus. Auf derselben N22-Grundordnung besitzt das Staubfeld bei eigens leer präpariertem Rand einen exakten Nullpunkt. Ein Gegenpaar mit Radien 1 und 1,785 liefert auf allen drei Bahnen im gesamten Fenster dieselbe Materieseite. Die Messung mit sechs Richtungen besteht den flachen synthetischen Kontrollversuch. Die acht physischen Pilotradien und alle 60 P3-Prüfpunkte stehen auf `NOT_RUN`.
+
+[Forschungsbericht (PDF)](reports/CST_DUST_Sondengeometrie_und_Vakuumkontrolle.pdf) · [Prüfcode und Nachweise](n22_n24_sondengeometrie_und_vakuumkontrolle_v0_1/README.md) · [Alle 1 514 Fälle (TSV)](n22_n24_sondengeometrie_und_vakuumkontrolle_v0_1/positive_probe_next/Fallregister.tsv) · [Prüfpaket (ZIP)](packages/CST_DUST_Sondengeometrie_und_Vakuumkontrolle_Pruefpaket.zip)
+
+Die vorangehende Prüfung der Flächen- und Masseneichung zählt die Kreuzungslinks und Kettenprofile der schweren und leichten N22-Präparation nach. [Prüfbericht (PDF)](reports/CST_DUST_Pruefung_Flaechen_und_Masseneichung.pdf) · [Kontrollrechnung](n22_pruefung_flaechen_und_masseneichung_v0_1/README.md) · [Prüfpaket (ZIP)](packages/CST_DUST_N22_Flaeche_und_Masse_Pruefpaket.zip)
+
 ## N25 · Erweiterte Vergangenheit des Zukunftsankers
 
 Ein oder zwei zusätzliche Vorgänger aus der alten N22-Ordnung reichen für einen stationären Kontakt der Sonde 22 mit Materieereignis 18 oder 19 im frühen Fenster nicht aus. Alle 748 Fälle mit einem zusätzlichen Vorgänger des Ankers 24 und alle 3 366 Fälle mit zwei solchen Vorgängern sind ausgeschlossen. Die 4 114 rationalen Zertifikate erfassen jeweils beide Randpräparationen. Für drei zusätzliche Vorgänger sind 10 272 Fälle je Präparation gezählt, ihre Feldgleichungen sind offen. Die acht physischen Pilotradien und 60 P3-Prüfpunkte stehen auf NOT_RUN.
