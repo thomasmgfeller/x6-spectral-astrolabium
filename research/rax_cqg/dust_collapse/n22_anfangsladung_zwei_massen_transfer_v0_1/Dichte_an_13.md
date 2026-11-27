@@ -1,0 +1,3 @@
+# Dichtegleichung zur Entscheidung der kleinen Zielladung
+
+Nach der linearen Ordnungsrechnung wird die notwendige Uhrlage an Ereignis 13 mit dessen positiver Dichtegleichung verglichen. Die vier eingehenden Koeffizienten werden unmittelbar aus der archivierten Wirkung rekonstruiert. Für stationäre Lösungen des positiven Gewichtssektors soll eine globale obere Uhrgrenze aus der kausalen Lage der drei positiven Vorgänger relativ zur Normierungsuhr 3 folgen. Entscheidend ist der exakte Vergleich der oberen Uhrgrenze mit der aus der Schnittladung nötigen unteren Uhrgrenze. Dieser Nachweis muss von numerischen Startpunkten unabhängig sein.

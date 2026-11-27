@@ -1,5 +1,11 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## N22 · Anfangsladung und Zwei-Massen-Vergleich
+
+Bei festen späten Randfeldern schliesst die Dichtegleichung an Ereignis 13 auf der geprüften Ordnung eine Verringerung der Referenzladung um den Faktor 16 aus. Nach Teilung der vier späten Gewichte durch 16 liegen beide Modellmassen in vier von sechs Fällen innerhalb von 2 % um 1/4. In zwei dieser Fälle bleiben im frühen Messfenster Kontakte zwischen besetzten und leeren Ereignissen erhalten. Die physische Masseneichung und alle acht Pilotradien bleiben offen.
+
+[Kurzbericht (PDF)](reports/CST_DUST_N22_Anfangsladung_und_Zwei_Massen_Transfer.pdf) · [Vergleichspaar (JSON)](n22_anfangsladung_zwei_massen_transfer_v0_1/Vergleichspaar.json) · [Transferregister (TSV)](n22_anfangsladung_zwei_massen_transfer_v0_1/Transferregister.tsv) · [Offline-Reproduktion](n22_anfangsladung_zwei_massen_transfer_v0_1/README.md) · [Prüfpaket (ZIP)](packages/CST_DUST_N22_Anfangsladung_und_Zwei_Massen_Transfer_Pruefpaket.zip)
+
 ## N22 · Früher Radiuspilot und Massentransport
 
 Bei halber Referenzzeit trennt die klassische Schalenmessung beide Massen innerhalb der 5-%-Toleranz. Auf den 81 N22-Fällen erfasst die geprüfte Verweildauerregel höchstens 28,207 % der Modellmasse mit positiven Ereignissen auf beiden Seiten des Schnitts. Alle acht physischen Radiuswerte des Piloten stehen auf NOT_RUN.
