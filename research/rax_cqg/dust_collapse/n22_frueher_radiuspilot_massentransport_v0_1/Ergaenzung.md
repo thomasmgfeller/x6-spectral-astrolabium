@@ -1,0 +1,3 @@
+# Gezielte Kontrolle des Anfangskragens
+
+Nach der Pfadrechnung wird zusätzlich geprüft, was geschieht, wenn beim Skalieren ausschliesslich die vier Anfangsgewichte geändert werden und der gesamte Zukunftsrand fest bleibt. Zu testen sind die Idealbedingung für die vier Anfangsknoten, die direkten Kantenterme sowie alle stationären freien Gleichungen und die gemeinsame Anfangsladung. Die vier individuellen frühen Impulsziele werden in dieser geänderten Präparation freigegeben. Der Kontrollfall soll eine Änderung der nominell präparierten Dichte von einer Änderung der Ladung auf dem Anfangsschnitt unterscheiden.
