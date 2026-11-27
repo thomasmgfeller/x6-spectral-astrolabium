@@ -1,0 +1,3 @@
+# Ergänzender Umfang nach Auswertung der 27 Pilotordnungen
+
+Der erste Lauf mit P22={0} ergab in beiden Präparationen 27 Ausschlüsse. Erweitere jetzt ausschließlich die alte Vergangenheit P von 22. Bei B=Hauptideal(q), q in {18,19}, gelten P ⊆ A ⊆ B für die alten Vergangenheiten von 22,23,24. Die Unvergleichbarkeit mit q erfordert q ∉ P. Ein gemeinsamer positiver Vergangenheitsanker ist genau dann möglich, wenn P nicht leer ist, da 0 einziges minimales altes Ereignis ist und positives Gewicht hat. Prüfe alle solchen verschachtelten Ideale. Verfahren und Prüffrage bleiben gleich. Ein nicht zertifiziertes Ergebnis bleibt offen. Die allgemeine Wahl zusätzlicher alter Vorfahren von 24 liegt ausserhalb dieses Tests.
