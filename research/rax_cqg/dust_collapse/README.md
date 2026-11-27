@@ -1,5 +1,11 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## N22 · Quantenpixel und Radiusinformation
+
+Bei festgehaltener Präparation ist die Differenz der archivierten N22-Wirkung für die Radien 1 und 1,785 exakt null. Ein an den Term 17→18 gekoppelter Zeiger unterscheidet schwere und leichte Präparation. Beim Wechsel des Radius bleibt sein Signal für jede Präparation gleich. Die physische Innen-/Außen-Verschränkung ist für schwer, leicht und Nullstaub unbestimmt. Die acht physischen Pilotradien und alle 60 P3-Prüfpunkte stehen auf `NOT_RUN`.
+
+[Prüfbericht (PDF)](reports/CST_DUST_Quantenpixel_und_Radiusinformation.pdf) · [Python-Prototyp und Reproduktion](n22_quantenpixel_und_radiusinformation_v0_1/README.md) · [Prüfpaket (ZIP)](packages/CST_DUST_Quantenpixel_N22_Pruefpaket.zip)
+
 ## N22–N24 · Sondengeometrie und Vakuumkontrolle
 
 Am Halbschnitt schliessen die Feldgleichungen alle 1 514 Kombinationen aus Ordnung und Präparation für die drei untersuchten Sonden mit genau einem neuen positiven Nachfolger aus. Auf derselben N22-Grundordnung besitzt das Staubfeld bei eigens leer präpariertem Rand einen exakten Nullpunkt. Ein Gegenpaar mit Radien 1 und 1,785 liefert auf allen drei Bahnen im gesamten Fenster dieselbe Materieseite. Die Messung mit sechs Richtungen besteht den flachen synthetischen Kontrollversuch. Die acht physischen Pilotradien und alle 60 P3-Prüfpunkte stehen auf `NOT_RUN`.
