@@ -1,5 +1,11 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## N22 · Gemeinsamer Nachfolger und Messfenster
+
+Für die drei N21-Referenzordnungen wurden alle 671 Anbindungen mit Ereignis 21 in der gemeinsamen Zukunft der Messpunkte geprüft. Bei beiden Gewichtsvorgaben ist im ursprünglichen Fenster [31/64, 33/64] ein stationäres Messpaar ausgeschlossen. In einer zertifizierten Lösung der Referenz 216141 liegt Uhr 20 im Fenster und Uhr 19 knapp darüber. Bei der erweiterten Halbbreite 27/1024 bleibt einer der 1 342 Fälle offen. Der physische Arealradius ist offen. Die 60 physischen P3-Prüfpunkte stehen auf `NOT_RUN`.
+
+[Kurzbericht (PDF)](reports/CST_DUST_N22_Gemeinsamer_Nachfolger_und_Messfenster.pdf) · [Fallregister (TSV)](n22_gemeinsamer_nachfolger_und_messfenster_v0_1/Fallregister.tsv) · [Fenstervergleich](n22_gemeinsamer_nachfolger_und_messfenster_v0_1/Fenstervergleich.tsv) · [Offline-Reproduktion](n22_gemeinsamer_nachfolger_und_messfenster_v0_1/README.md) · [Prüfpaket (ZIP)](packages/CST_DUST_N22_Gemeinsamer_Nachfolger_und_Messfenster_Pruefpaket.zip)
+
 ## N22 · Eigenständige Anbindung von Ereignis 21
 
 Bei drei N21-Referenzordnungen mit bekannter stationärer Lösung ihrer seriellen Erweiterung darf Ereignis 21 eigene Vorgänger und Nachfolger unter den alten Ereignissen haben. Für alle 482 zusätzlichen Anbindungen ist bei leerem und bei positivem Gewicht ausgeschlossen, dass beide Messuhren im Fenster [31/64, 33/64] stationär sind. Das sind 964 neue Fälle. Der physische Arealradius bleibt offen. Alle 60 physischen P3-Prüfpunkte stehen auf `NOT_RUN`.
