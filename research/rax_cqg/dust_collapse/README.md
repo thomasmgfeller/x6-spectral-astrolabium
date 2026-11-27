@@ -1,5 +1,11 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## N22 · Gemeinsame Zukunftsrandwerte
+
+Bei gleichem Sendervorlauf und denselben vier frühen Randimpulsen lässt sich jedes der 21 Randwertpaare für alle drei Quellen auf die Werte der Nullquelle festlegen. Im zertifizierten Gebiet unterscheiden sich zwei verschiedene Quellen in mindestens fünf der sieben Zukunftsrandwerte. Zwischen benachbarten Quellen verschiebt sich mindestens eine der drei Zukunftsuhren um mehr als 4,276 · 10⁻⁶ lokale Uhreinheiten.
+
+[Kurzbericht (PDF)](reports/CST_DUST_N22_Gemeinsame_Zukunftsrandwerte.pdf) · [Paarregister (TSV)](n22_gemeinsame_zukunftsrandwerte_v0_1/Paarregister.tsv) · [Dreierregister (TSV)](n22_gemeinsame_zukunftsrandwerte_v0_1/Dreierregister.tsv) · [Offline-Reproduktion](n22_gemeinsame_zukunftsrandwerte_v0_1/README.md) · [Prüfpaket (ZIP)](packages/CST_DUST_N22_Gemeinsame_Zukunftsrandwerte_Pruefpaket.zip)
+
 ## N22 · Gleicher Sendervorlauf und gleiche frühe Randimpulse
 
 Auf der Anbindung 216141/229383/0/+ unterscheidet Uhr 21 die drei Quellenwerte auch bei exakt gleichen Uhren und Staubgewichten aller vier Sendervorgänger und gleichen frühen Randimpulsen G₀ bis G₃. Die stationären Lösungen bestimmen für jede Quelle zwei Zukunftsuhren und drei Zukunftsgewichte mit. Ob die Quelle bei unabhängig festgelegten Zukunftsranddaten umgeschaltet werden kann, bleibt offen.
