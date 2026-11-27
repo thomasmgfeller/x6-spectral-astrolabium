@@ -1,0 +1,3 @@
+# Ergänzende Kontrolle am strikten Vorlauf des Senders
+
+Die bereits vorhandenen Näherungen zeigen, dass die freie Uhr 15 neben der Enduhr auch auf das Quelllabel anspricht. Ereignis 15 hat Staubgewicht null. In einem Zusatztest wird die Relation 15 ≺ 16 aus der Ordnung geprüft. Für jede Quelle wird die ganze Uhr-15-Hülle über den zugelassenen Driftbereich eingeschlossen. Sind die drei Hüllen paarweise disjunkt, gibt es zwischen den drei zertifizierten lokalen Zweigen kein Paar mit identischer vollständiger Vergangenheit des Senders, auch bei unterschiedlich gewählter Drift. Dies ist eine nach Sichtung der Näherungen ergänzte Gegenprobe. Die digitale Leseregel und ihr Fehlerbudget bleiben wie im ersten Plan bestimmt.
