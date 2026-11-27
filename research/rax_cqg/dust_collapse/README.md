@@ -1,5 +1,11 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## N23 · Alle Anbindungen einer freien leeren Sonde
+
+Für die schwere und die leichte Randpräparation sind alle 2 657 Ein-Ereignis-Erweiterungen der N22-Grundordnung geprüft. In keiner bildet die neue leere Sonde 22 mit einem positiven Ereignis im frühen Fenster ein kausal unvergleichbares Paar mit gemeinsamem positivem Vergangenheits- und Zukunftsanker. Bei 279 terminalen Anbindungen je Präparation liegen Sonde und Materie gemeinsam im Fenster. Bei nichtleerer Zukunft bleibt die Existenz der Sonde im Fenster in 15 Anbindungen je Präparation offen. Die 60 physischen P3-Prüfpunkte stehen auf NOT_RUN.
+
+[Kurzbericht (PDF)](reports/CST_DUST_N23_Alle_Anbindungen_der_leeren_Sonde.pdf) · [Gesamtregister (TSV)](n23_alle_anbindungen_der_leeren_sonde_v0_1/Gesamtregister.tsv) · [Beweis und Offline-Reproduktion](n23_alle_anbindungen_der_leeren_sonde_v0_1/README.md) · [Prüfpaket (ZIP)](packages/CST_DUST_N23_Alle_Anbindungen_der_leeren_Sonde_Pruefpaket.zip)
+
 ## N23 · Abstand der Materie zum frühen Messfenster
 
 In allen 25 ausgewählten Ordnungen und beiden Randpräparationen ist ein gleichzeitiger Treffer der leeren Sonde 22 und eines positiven Ereignisses im frühen Fenster ausgeschlossen. Der Nachweis umfasst alle stationären Zweige des geprüften Sektors. Liegt die Sonde im Fenster, beträgt der Abstand jedes positiven Ereignisses zum Fenster mindestens 1/1280 der normierten Uhr. Acht physische Pilotradien und alle 60 P3-Prüfpunkte stehen weiterhin auf NOT_RUN.
