@@ -1,5 +1,11 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## N23 · Gekoppelte Innenfelder und freie leere Sonde
+
+Für die schwere und die leichte Präparation erlauben fünf der 25 in PR 413 ausgewählten Ordnungen eine stationäre leere Sonde im frühen Fenster. Für die übrigen 20 liegt ein Ausschlussbeweis vor. Auf den nachgewiesenen Zweigen enthält das Fenster nur die leeren Ereignisse 17, 20 und 22. Die acht physischen Pilotradien und alle 60 P3-Prüfpunkte bleiben offen.
+
+[Kurzbericht (PDF)](reports/CST_DUST_N23_Gekoppelte_Innenfelder_und_leere_Sonde.pdf) · [Fallregister (TSV)](n23_gekoppelte_innenfelder_und_leere_sonde_v0_1/Fallregister.tsv) · [Stationäre Feldintervalle (JSON)](n23_gekoppelte_innenfelder_und_leere_sonde_v0_1/Stationaere_Feldboxen.json) · [Offline-Reproduktion](n23_gekoppelte_innenfelder_und_leere_sonde_v0_1/README.md) · [Prüfpaket (ZIP)](packages/CST_DUST_N23_Gekoppelte_Innenfelder_und_leere_Sonde_Pruefpaket.zip)
+
 ## N22 · Äussere Materiegrenze und N23-Sonden
 
 Zwei kontrahierende Kugeln mit Radien 1 und 2 sind in der flachen Kontrolle mit denselben 22 Ereignissen vereinbar. Drei Messbahnen unterscheiden die Kugelgrenzen. Für beide Präparationen schliessen die diskreten Feldgleichungen auf diesen Bahnen ein freies Ereignis im frühen Fenster aus. Die acht physischen Pilotradien und die 60 P3-Prüfpunkte bleiben offen.
