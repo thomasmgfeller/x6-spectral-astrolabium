@@ -1,0 +1,5 @@
+# Zweite Gruppe nach Abschluss der 21 vorgesehenen Anbindungen
+
+Die erste Gruppe ist vollständig im gemeinsamen Fenster ausgeschlossen. In den zehn weiteren entkoppelten B+-Fällen enthalten die echten Anbindungen 20≺21≺8. Die Messuhren 19 und 20 sind durch das Fenster begrenzt. Die Uhr 21 bleibt frei; falls 21≺7 fehlt, reicht ihre Ausgangshülle vom unteren Rand von Uhr 0 bis zum oberen Rand der tatsächlich nachfolgenden Uhr 8. Dieser Endpunkt wird direkt aus der verifizierten Randhülle verwendet. Die Abweichungen der Gerätebedingungen betreffen die Uhren 15 bis 18 im bisherigen Zeitbereich. Es wird keine neue Ordnungsrelation angesetzt.
+
+Die zweite Gruppe besteht aus allen zehn entkoppelten Restfällen des Eingangsregisters. Drei haben die fehlenden Relationen (20,7) und (21,7), sieben zusätzlich (19,7). Die vier Gewichtsbereiche, der unabhängige algebraische Vergleich und die Entscheidungsregeln bleiben dieselben. Die übrigen neun B+-Fälle koppeln an die freien Staubereignisse und sind ausserhalb dieses reduzierten Tests.
