@@ -1,0 +1,3 @@
+# Ergänzende Prüfung der drei trennenden Sonden
+
+Nach Bestimmung der drei unterscheidenden Bahnen werden die beiden entstandenen N23-Ordnungen in die unveränderte diskrete Feldregel eingesetzt. Ereignis 22 liegt im bisherigen Uhrfenster. Alle alten Randfelder, Geräteglieder, Quellen und die positive Besetzung der frühen Vorläufer 4,5,6,11 bleiben erhalten. Bei positivem Gewicht muss die Dichtevariation an 22 verschwinden, bei leerem Gewicht bleibt die Uhrvariation am freien Ereignis 22 erforderlich. Es wird geprüft, ob schon diese notwendigen Bedingungen eine dynamische Realisierung ausschliessen, auch falls die übrigen Innenfelder neu gelöst werden.
