@@ -1,5 +1,11 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## N22 · Eigenständige Anbindung von Ereignis 21
+
+Bei drei N21-Referenzordnungen mit bekannter stationärer Lösung ihrer seriellen Erweiterung darf Ereignis 21 eigene Vorgänger und Nachfolger unter den alten Ereignissen haben. Für alle 482 zusätzlichen Anbindungen ist bei leerem und bei positivem Gewicht ausgeschlossen, dass beide Messuhren im Fenster [31/64, 33/64] stationär sind. Das sind 964 neue Fälle. Der physische Arealradius bleibt offen. Alle 60 physischen P3-Prüfpunkte stehen auf `NOT_RUN`.
+
+[Kurzbericht (PDF)](reports/CST_DUST_N22_Eigenstaendige_Anbindung.pdf) · [Fallregister (TSV)](n22_eigenstaendige_anbindung_v0_1/Fallregister.tsv) · [Offline-Reproduktion](n22_eigenstaendige_anbindung_v0_1/README.md) · [Prüfpaket (ZIP)](packages/CST_DUST_N22_Eigenstaendige_Anbindung_Pruefpaket.zip)
+
 ## N22 · Abschluss der seriellen Messfamilie
 
 In allen 1 624 568 Kombinationen aus Anbindung, Lage und Gewicht ist ein stationäres Messpaar im gemeinsamen Fenster [31/64, 33/64] ausgeschlossen. Die Aussage gilt für die feste N19-Basis, die beiden seriellen Anbindungen und die geprüfte Randfamilie. Der physische Arealradius bleibt offen. Alle 60 physischen P3-Prüfpunkte stehen auf `NOT_RUN`.
