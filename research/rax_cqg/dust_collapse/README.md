@@ -1,8 +1,14 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## N25 · Erweiterte Vergangenheit des Zukunftsankers
+
+Ein oder zwei zusätzliche Vorgänger aus der alten N22-Ordnung reichen für einen stationären Kontakt der Sonde 22 mit Materieereignis 18 oder 19 im frühen Fenster nicht aus. Alle 748 Fälle mit einem zusätzlichen Vorgänger des Ankers 24 und alle 3 366 Fälle mit zwei solchen Vorgängern sind ausgeschlossen. Die 4 114 rationalen Zertifikate erfassen jeweils beide Randpräparationen. Für drei zusätzliche Vorgänger sind 10 272 Fälle je Präparation gezählt, ihre Feldgleichungen sind offen. Die acht physischen Pilotradien und 60 P3-Prüfpunkte stehen auf NOT_RUN.
+
+[Kurzbericht (PDF)](reports/CST_DUST_N25_Erweiterte_Vergangenheit_des_Zukunftsankers.pdf) · [Ein Zusatzvorgänger (TSV)](n25_erweiterte_vergangenheit_des_zukunftsankers_v0_1/Fallregister_Stufe1.tsv) · [Zwei Zusatzvorgänger (TSV)](n25_erweiterte_vergangenheit_des_zukunftsankers_v0_1/Fallregister_Stufe2.tsv) · [Beweis und Offline-Reproduktion](n25_erweiterte_vergangenheit_des_zukunftsankers_v0_1/README.md) · [Prüfpaket (ZIP)](packages/CST_DUST_N25_Erweiterte_Vergangenheit_des_Zukunftsankers_Pruefpaket.zip)
+
 ## N24/N25 · Zukunftsanker für terminale leere Sonden
 
-Für die terminale leere N23-Sonde scheitert ein einzelner positiver Nachfolger in allen 23 356 Anbindungen an der Uhrgleichung. Bei zwei Nachfolgern schliessen die gekoppelten Gleichungen auch die 175 Ordnungen aus, in denen die alte Vergangenheit des letzten Ankers nur das Partnerereignis 18 oder 19 und dessen Vorgänger enthält. Der Ausschluss gilt bei schwerer und leichter Randpräparation. Für 748 Fälle je Präparation mit einem weiteren alten Vorfahren ist die Feldprüfung offen. Die acht physischen Pilotradien und alle 60 P3-Prüfpunkte stehen auf NOT_RUN.
+Für die terminale leere N23-Sonde scheitert ein einzelner positiver Nachfolger in allen 23 356 Anbindungen an der Uhrgleichung. Bei zwei Nachfolgern schliessen die gekoppelten Gleichungen auch die 175 Ordnungen aus, in denen die alte Vergangenheit des letzten Ankers nur das Partnerereignis 18 oder 19 und dessen Vorgänger enthält. Der Ausschluss gilt bei schwerer und leichter Randpräparation. Die anschliessende N25-Studie prüft die 748 Fälle je Präparation mit einem weiteren alten Vorfahren. Die acht physischen Pilotradien und alle 60 P3-Prüfpunkte stehen auf NOT_RUN.
 
 [Kurzbericht (PDF)](reports/CST_DUST_N24_N25_Zukunftsanker.pdf) · [N24-Register](n24_n25_zukunftsanker_terminaler_sonden_v0_1/N24_Register.tsv) · [N25-Register](n24_n25_zukunftsanker_terminaler_sonden_v0_1/N25_Register.tsv) · [Beweis und Offline-Reproduktion](n24_n25_zukunftsanker_terminaler_sonden_v0_1/README.md) · [Prüfpaket (ZIP)](packages/CST_DUST_N24_N25_Zukunftsanker_Pruefpaket.zip)
 
