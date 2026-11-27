@@ -1,8 +1,14 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## N22 · Randpräparation und Schranken für das stationäre Uhrenfenster
+
+Die gemeinsam präparierten Randuhren schliessen den letzten offenen Fall bei der Halbbreite 27/1024. Bei 55/2048 sind alle 1 342 Fälle mit gemeinsamem Nachfolger auf den drei Referenzordnungen neu geprüft und ausgeschlossen. Für das Infimum der benötigten Halbbreite gilt 0,02685546875 ≤ h* ≤ 0,02687714. Die obere Schranke folgt aus einer zertifizierten stationären Lösung. Der physische Arealradius bleibt offen. Die 60 physischen P3-Prüfpunkte stehen auf `NOT_RUN`.
+
+[Kurzbericht (PDF)](reports/CST_DUST_N22_Randpraeparation_und_Fensterschranke.pdf) · [Fallregister (TSV)](n22_randpraeparation_und_fensterschranke_v0_1/Fallregister_55_2048.tsv) · [Offline-Reproduktion](n22_randpraeparation_und_fensterschranke_v0_1/README.md) · [Prüfpaket (ZIP)](packages/CST_DUST_N22_Randpraeparation_und_Fensterschranke_Pruefpaket.zip)
+
 ## N22 · Gemeinsamer Nachfolger und Messfenster
 
-Für die drei N21-Referenzordnungen wurden alle 671 Anbindungen mit Ereignis 21 in der gemeinsamen Zukunft der Messpunkte geprüft. Bei beiden Gewichtsvorgaben ist im ursprünglichen Fenster [31/64, 33/64] ein stationäres Messpaar ausgeschlossen. In einer zertifizierten Lösung der Referenz 216141 liegt Uhr 20 im Fenster und Uhr 19 knapp darüber. Bei der erweiterten Halbbreite 27/1024 bleibt einer der 1 342 Fälle offen. Der physische Arealradius ist offen. Die 60 physischen P3-Prüfpunkte stehen auf `NOT_RUN`.
+Für die drei N21-Referenzordnungen wurden alle 671 Anbindungen mit Ereignis 21 in der gemeinsamen Zukunft der Messpunkte geprüft. Bei beiden Gewichtsvorgaben ist im ursprünglichen Fenster [31/64, 33/64] ein stationäres Messpaar ausgeschlossen. In einer zertifizierten Lösung der Referenz 216141 liegt Uhr 20 im Fenster und Uhr 19 knapp darüber. Bei der erweiterten Halbbreite 27/1024 blieb in dieser ersten Prüfung einer der 1 342 Fälle offen. Der physische Arealradius ist offen. Die 60 physischen P3-Prüfpunkte stehen auf `NOT_RUN`.
 
 [Kurzbericht (PDF)](reports/CST_DUST_N22_Gemeinsamer_Nachfolger_und_Messfenster.pdf) · [Fallregister (TSV)](n22_gemeinsamer_nachfolger_und_messfenster_v0_1/Fallregister.tsv) · [Fenstervergleich](n22_gemeinsamer_nachfolger_und_messfenster_v0_1/Fenstervergleich.tsv) · [Offline-Reproduktion](n22_gemeinsamer_nachfolger_und_messfenster_v0_1/README.md) · [Prüfpaket (ZIP)](packages/CST_DUST_N22_Gemeinsamer_Nachfolger_und_Messfenster_Pruefpaket.zip)
 
