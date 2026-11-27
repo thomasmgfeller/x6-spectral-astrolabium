@@ -1,5 +1,11 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## N24/N25 · Zukunftsanker für terminale leere Sonden
+
+Für die terminale leere N23-Sonde scheitert ein einzelner positiver Nachfolger in allen 23 356 Anbindungen an der Uhrgleichung. Bei zwei Nachfolgern schliessen die gekoppelten Gleichungen auch die 175 Ordnungen aus, in denen die alte Vergangenheit des letzten Ankers nur das Partnerereignis 18 oder 19 und dessen Vorgänger enthält. Der Ausschluss gilt bei schwerer und leichter Randpräparation. Für 748 Fälle je Präparation mit einem weiteren alten Vorfahren ist die Feldprüfung offen. Die acht physischen Pilotradien und alle 60 P3-Prüfpunkte stehen auf NOT_RUN.
+
+[Kurzbericht (PDF)](reports/CST_DUST_N24_N25_Zukunftsanker.pdf) · [N24-Register](n24_n25_zukunftsanker_terminaler_sonden_v0_1/N24_Register.tsv) · [N25-Register](n24_n25_zukunftsanker_terminaler_sonden_v0_1/N25_Register.tsv) · [Beweis und Offline-Reproduktion](n24_n25_zukunftsanker_terminaler_sonden_v0_1/README.md) · [Prüfpaket (ZIP)](packages/CST_DUST_N24_N25_Zukunftsanker_Pruefpaket.zip)
+
 ## N23 · Alle Anbindungen einer freien leeren Sonde
 
 Für die schwere und die leichte Randpräparation sind alle 2 657 Ein-Ereignis-Erweiterungen der N22-Grundordnung geprüft. In keiner bildet die neue leere Sonde 22 mit einem positiven Ereignis im frühen Fenster ein kausal unvergleichbares Paar mit gemeinsamem positivem Vergangenheits- und Zukunftsanker. Bei 279 terminalen Anbindungen je Präparation liegen Sonde und Materie gemeinsam im Fenster. Bei nichtleerer Zukunft bleibt die Existenz der Sonde im Fenster in 15 Anbindungen je Präparation offen. Die 60 physischen P3-Prüfpunkte stehen auf NOT_RUN.
