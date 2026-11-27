@@ -1,0 +1,5 @@
+# Ergänzung nach der Strukturanalyse
+
+Beim Freigeben von Uhr 3 ist der Jacobiblock des gemischten Problems singulär. Die sieben Ereignisse 15 bis 21 bilden mit ihren vier positiven Dichtegleichungen einen abgeschlossenen Teil des stationären Systems bei festen Randfeldern. Dies wird an sämtlichen wirksamen Kanten überprüft. Ein eigener Intervallnachweis soll ausschliessen, dass die Wahl der freien Uhr 3 den Quellunterschied in Uhr 15 auf den untersuchten Zweigen ausgleichen kann.
+
+Als ausdrücklich veränderte Randbedingung wird die Zukunftsranduhr 8 freigegeben. Alle frühen Randuhren und Gewichte sowie alle übrigen äusseren Variablen stammen aus derselben zentralen Nullpräparation. Die Wahl von Uhr 8 folgt aus der vorläufigen linearen Ansprechbarkeit und lässt die Normierungsuhren 3 und 7 fest. Die Zieluhr 15, alle Quellen, die digitale Leseregel und die Toleranz des Zielwertes bleiben wie im ersten Plan festgelegt. Die Zukunftsranduhr wird für jede Quellenwahl mitbestimmt. Dies ist ein Randwertnachweis mit gemeinsamem Vorlauf, kein Versuch bei identischen Zukunftsdaten. Digitale Fehlentscheidungen oder Mehrdeutigkeiten sind als solche auszuweisen.
