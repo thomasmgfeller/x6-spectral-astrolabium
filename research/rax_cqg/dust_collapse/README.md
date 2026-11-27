@@ -1,5 +1,11 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## N22 · Gleicher Sendervorlauf und gleiche frühe Randimpulse
+
+Auf der Anbindung 216141/229383/0/+ unterscheidet Uhr 21 die drei Quellenwerte auch bei exakt gleichen Uhren und Staubgewichten aller vier Sendervorgänger und gleichen frühen Randimpulsen G₀ bis G₃. Die stationären Lösungen bestimmen für jede Quelle zwei Zukunftsuhren und drei Zukunftsgewichte mit. Ob die Quelle bei unabhängig festgelegten Zukunftsranddaten umgeschaltet werden kann, bleibt offen.
+
+[Kurzbericht (PDF)](reports/CST_DUST_N22_Gleicher_Sendervorlauf_und_Randimpulse.pdf) · [Versuchsregister (TSV)](n22_gleicher_sendervorlauf_und_randimpulse_v0_1/Versuchsregister.tsv) · [Offline-Reproduktion](n22_gleicher_sendervorlauf_und_randimpulse_v0_1/README.md) · [Prüfpaket (ZIP)](packages/CST_DUST_N22_Gleicher_Sendervorlauf_und_Randimpulse_Pruefpaket.zip)
+
 ## N22 · Quellenauslese am gemeinsamen Nachfolger
 
 Auf der Anbindung 216141/229383/0/+ unterscheidet Uhr 21 bei drei verschwindenden Nachimpulsen die drei stationären Quellenpräparationen für jede Drift zwischen −10⁻⁶ und +10⁻⁶. Die drei materiellen Vorgänger des Senders stimmen in Uhr und Gewicht überein. Die leere Uhr 15 im Sendervorlauf unterscheidet die Präparationen ebenfalls. Ein Sendeversuch mit identischem vollständigem Vorlauf bleibt offen.

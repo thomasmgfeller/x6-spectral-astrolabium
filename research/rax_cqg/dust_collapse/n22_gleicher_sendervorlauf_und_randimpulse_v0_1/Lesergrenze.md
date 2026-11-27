@@ -1,0 +1,3 @@
+# Kontrolle des unveränderten Lesers am Rand des Zielbandes
+
+Die erste Einschliessung für die Nullquelle über das ganze Zielband von ±10⁻⁸ lässt mehrere Ziffernentscheidungen zu. Nach diesem Zwischenbefund werden die beiden exakten Randpunkte getrennt zertifiziert. Eine Fehlentscheidung gilt nur als nachgewiesen, wenn konkrete zulässige Ablese- und Referenzfehler für die gesamte Uhrhülle am betreffenden Punkt zum falschen Label führen. Zusätzlich wird auf den vorab für diese Ergänzung gewählten inneren Bereich ±5·10⁻⁹ geprüft. Die Schwellen, das Raster und die Fehlerbudgets aus PR 408 gelten weiter. Die Auswertung gibt keine optimale Toleranz an.
