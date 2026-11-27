@@ -1,5 +1,17 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## N22 · Früher Radiuspilot und Massentransport
+
+Bei halber Referenzzeit trennt die klassische Schalenmessung beide Massen innerhalb der 5-%-Toleranz. Auf den 81 N22-Fällen erfasst die geprüfte Verweildauerregel höchstens 28,207 % der Modellmasse mit positiven Ereignissen auf beiden Seiten des Schnitts. Alle acht physischen Radiuswerte des Piloten stehen auf NOT_RUN.
+
+[Kurzbericht (PDF)](reports/CST_DUST_Frueher_Radiuspilot_Massentransport_auf_N22.pdf) · [Fallregister (TSV)](n22_frueher_radiuspilot_massentransport_v0_1/Fallregister.tsv) · [Offline-Reproduktion](n22_frueher_radiuspilot_massentransport_v0_1/README.md) · [Prüfpaket (ZIP)](packages/CST_DUST_Frueher_Radiuspilot_Massentransport_auf_N22_Pruefpaket.zip)
+
+## N22 · Gemeinsame späte Randimpulse
+
+Bei gleichem Sendervorlauf und vier gleichen frühen Randimpulsen unterscheidet Uhr 21 alle drei Quellen für jedes der sechs Paare vorgegebener später Impulse. Stimmen drei späte Impulse überein, ist im zertifizierten Gebiet auch die Quelle dieselbe.
+
+[Kurzbericht (PDF)](reports/CST_DUST_N22_Gemeinsame_spaete_Randimpulse.pdf) · [Fallregister (TSV)](n22_gemeinsame_spaete_randimpulse_v0_1/Fallregister.tsv) · [Offline-Reproduktion](n22_gemeinsame_spaete_randimpulse_v0_1/README.md) · [Prüfpaket (ZIP)](packages/CST_DUST_N22_Gemeinsame_spaete_Randimpulse_Pruefpaket.zip)
+
 ## N22 · Gemeinsame Zukunftsrandwerte
 
 Bei gleichem Sendervorlauf und denselben vier frühen Randimpulsen lässt sich jedes der 21 Randwertpaare für alle drei Quellen auf die Werte der Nullquelle festlegen. Im zertifizierten Gebiet unterscheiden sich zwei verschiedene Quellen in mindestens fünf der sieben Zukunftsrandwerte. Zwischen benachbarten Quellen verschiebt sich mindestens eine der drei Zukunftsuhren um mehr als 4,276 · 10⁻⁶ lokale Uhreinheiten.
