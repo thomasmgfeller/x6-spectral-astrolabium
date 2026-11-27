@@ -1,0 +1,180 @@
+{
+  "P3_count": 60,
+  "combinations": 50,
+  "commit": "caf68f68454809c9b7e464eb681623f8afff530f",
+  "infimum_distance_lower": "1/1280",
+  "infimum_distance_upper": "3446618352171301017585135498305015179589227489465151134602467171716061267425322893469938915656970182093245894392021195970009627061285225538290906747962641672548515453979493837887431217804953432706177164388954604936046375423/4380623748702734397606147739961659513761903825475236474933856317311556758825666010561668729998271906313558346211320102144968659401885040603762655859542236989683291081936338560205092221491077032000000000000000000000000000000000",
+  "input_sha256": "d9fbaa44c5db7dc31c06c4521a3059c6ca8c762f3a300cd3da1db12e89189f18",
+  "mixed_contacts_excluded": 50,
+  "orders": 25,
+  "original_window": [
+    "15/32",
+    "17/32"
+  ],
+  "physical_P3": "NOT_RUN",
+  "physical_pilot_radii": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+  ],
+  "preparations": [
+    "heavy",
+    "light"
+  ],
+  "runs": {
+    "14_heavy": {
+      "0": {
+        "bounds": {
+          "feasible_leaves": 14,
+          "rejected_leaves": 33
+        },
+        "coverage": {
+          "depth": 18,
+          "leaves": 1373,
+          "reasons": {
+            "21 vor Sonde": 1,
+            "G15": 189,
+            "leerer Schnitt": 1131,
+            "negative Diskriminante": 52
+          }
+        },
+        "unresolved": 0
+      },
+      "1/1280": {
+        "bounds": {
+          "feasible_leaves": 14,
+          "rejected_leaves": 33
+        },
+        "coverage": {
+          "depth": 18,
+          "leaves": 1451,
+          "reasons": {
+            "21 vor Sonde": 1,
+            "G15": 223,
+            "leerer Schnitt": 1175,
+            "negative Diskriminante": 52
+          }
+        },
+        "unresolved": 0
+      }
+    },
+    "14_light": {
+      "0": {
+        "bounds": {
+          "feasible_leaves": 17,
+          "rejected_leaves": 31
+        },
+        "coverage": {
+          "depth": 18,
+          "leaves": 1661,
+          "reasons": {
+            "21 vor Sonde": 1,
+            "G15": 460,
+            "leerer Schnitt": 1149,
+            "negative Diskriminante": 51
+          }
+        },
+        "unresolved": 0
+      },
+      "1/1280": {
+        "bounds": {
+          "feasible_leaves": 17,
+          "rejected_leaves": 31
+        },
+        "coverage": {
+          "depth": 18,
+          "leaves": 1796,
+          "reasons": {
+            "21 vor Sonde": 1,
+            "G15": 567,
+            "leerer Schnitt": 1177,
+            "negative Diskriminante": 51
+          }
+        },
+        "unresolved": 0
+      }
+    },
+    "18_heavy": {
+      "0": {
+        "bounds": {
+          "feasible_leaves": 14,
+          "rejected_leaves": 33
+        },
+        "coverage": {
+          "depth": 15,
+          "leaves": 127,
+          "reasons": {
+            "G15": 15,
+            "leerer Schnitt": 103,
+            "negative Diskriminante": 7,
+            "positives Gewicht unm\u00f6glich": 2
+          }
+        },
+        "unresolved": 0
+      },
+      "1/1280": {
+        "bounds": {
+          "feasible_leaves": 14,
+          "rejected_leaves": 33
+        },
+        "coverage": {
+          "depth": 15,
+          "leaves": 156,
+          "reasons": {
+            "G15": 22,
+            "leerer Schnitt": 124,
+            "negative Diskriminante": 8,
+            "positives Gewicht unm\u00f6glich": 2
+          }
+        },
+        "unresolved": 0
+      }
+    },
+    "18_light": {
+      "0": {
+        "bounds": {
+          "feasible_leaves": 17,
+          "rejected_leaves": 31
+        },
+        "coverage": {
+          "depth": 21,
+          "leaves": 316,
+          "reasons": {
+            "G15": 92,
+            "leerer Schnitt": 212,
+            "negative Diskriminante": 9,
+            "positives Gewicht unm\u00f6glich": 3
+          }
+        },
+        "unresolved": 0
+      },
+      "1/1280": {
+        "bounds": {
+          "feasible_leaves": 17,
+          "rejected_leaves": 31
+        },
+        "coverage": {
+          "depth": 35,
+          "leaves": 770,
+          "reasons": {
+            "G15": 265,
+            "leerer Schnitt": 493,
+            "negative Diskriminante": 9,
+            "positives Gewicht unm\u00f6glich": 3
+          }
+        },
+        "unresolved": 0
+      }
+    }
+  },
+  "upper_witness": {
+    "family": 18,
+    "positive_event": 19,
+    "side": "light"
+  }
+}

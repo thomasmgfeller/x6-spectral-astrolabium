@@ -1,5 +1,11 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## N23 · Abstand der Materie zum frühen Messfenster
+
+In allen 25 ausgewählten Ordnungen und beiden Randpräparationen ist ein gleichzeitiger Treffer der leeren Sonde 22 und eines positiven Ereignisses im frühen Fenster ausgeschlossen. Der Nachweis umfasst alle stationären Zweige des geprüften Sektors. Liegt die Sonde im Fenster, beträgt der Abstand jedes positiven Ereignisses zum Fenster mindestens 1/1280 der normierten Uhr. Acht physische Pilotradien und alle 60 P3-Prüfpunkte stehen weiterhin auf NOT_RUN.
+
+[Kurzbericht (PDF)](reports/CST_DUST_N23_Abstand_zum_fruehen_Messfenster.pdf) · [Fallregister (TSV)](n23_abstand_zum_fruehen_messfenster_v0_1/Fallregister.tsv) · [Beweis und Offline-Reproduktion](n23_abstand_zum_fruehen_messfenster_v0_1/README.md) · [Prüfpaket (ZIP)](packages/CST_DUST_N23_Abstand_zum_fruehen_Messfenster_Pruefpaket.zip)
+
 ## N23 · Gekoppelte Innenfelder und freie leere Sonde
 
 Für die schwere und die leichte Präparation erlauben fünf der 25 in PR 413 ausgewählten Ordnungen eine stationäre leere Sonde im frühen Fenster. Für die übrigen 20 liegt ein Ausschlussbeweis vor. Auf den nachgewiesenen Zweigen enthält das Fenster nur die leeren Ereignisse 17, 20 und 22. Die acht physischen Pilotradien und alle 60 P3-Prüfpunkte bleiben offen.
