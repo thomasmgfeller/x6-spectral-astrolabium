@@ -1,0 +1,3 @@
+# Ergänzende kugelförmige Geometriekontrolle
+
+Nach dem ersten zulässigen Vorschlag für die Ordnungseinbettung wird zusätzlich eine direkte Gegenprobe für den Arealradius versucht. Alle 22 Ereignisse sollen gemeinsame räumliche Koordinaten für beide Präparationen erhalten. Zwei glatte, kontrahierende Kugelränder mit verschiedenen Zentren und den Radien 1 bzw. 2 am Schnitt x=1/2 sollen jedes positive Feld innen und jedes Nullfeld aussen einordnen. Die Zentren sind unbeobachtet. Die versuchte Geschwindigkeit beträgt 1/8 in Einheiten mit c=1. Die Parameter dienen ausschliesslich einem Gegenbeispiel in flacher Raumzeit und sind keine Vorhersage. Bei Erfolg werden auch Feldwerte, Stetigkeitsgleichung und Geltungsbereich geprüft.

@@ -1,5 +1,11 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## N22 · Äussere Materiegrenze und N23-Sonden
+
+Zwei kontrahierende Kugeln mit Radien 1 und 2 sind in der flachen Kontrolle mit denselben 22 Ereignissen vereinbar. Drei Messbahnen unterscheiden die Kugelgrenzen. Für beide Präparationen schliessen die diskreten Feldgleichungen auf diesen Bahnen ein freies Ereignis im frühen Fenster aus. Die acht physischen Pilotradien und die 60 P3-Prüfpunkte bleiben offen.
+
+[Kurzbericht (PDF)](reports/CST_DUST_N22_Aeussere_Materiegrenze_und_N23_Sonden.pdf) · [Sondenregister (TSV)](n22_aeussere_materiegrenze_und_n23_sonden_v0_1/Sondenregister.tsv) · [N23-Feldgleichungen (JSON)](n22_aeussere_materiegrenze_und_n23_sonden_v0_1/Sonden_auf_N23.json) · [Offline-Reproduktion](n22_aeussere_materiegrenze_und_n23_sonden_v0_1/README.md) · [Prüfpaket (ZIP)](packages/CST_DUST_N22_Aeussere_Materiegrenze_und_N23_Sonden_Pruefpaket.zip)
+
 ## N22 · Anfangsladung und Zwei-Massen-Vergleich
 
 Bei festen späten Randfeldern schliesst die Dichtegleichung an Ereignis 13 auf der geprüften Ordnung eine Verringerung der Referenzladung um den Faktor 16 aus. Nach Teilung der vier späten Gewichte durch 16 liegen beide Modellmassen in vier von sechs Fällen innerhalb von 2 % um 1/4. In zwei dieser Fälle bleiben im frühen Messfenster Kontakte zwischen besetzten und leeren Ereignissen erhalten. Die physische Masseneichung und alle acht Pilotradien bleiben offen.

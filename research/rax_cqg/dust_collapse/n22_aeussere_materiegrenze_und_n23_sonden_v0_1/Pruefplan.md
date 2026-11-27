@@ -1,0 +1,7 @@
+# Vergleichspaar aus PR 412 · Geometrie am frühen Schnitt
+
+Eingang ist ausschliesslich das veröffentlichte Vergleichspaar der Ordnung 216141/229383/0/+. Vor der Suche bleiben das Zeitfenster [15/32,17/32], die Feldboxen und alle strikten Kausalrelationen fest. Die Schichten werden ausschliesslich aus Uhren und Ordnung ausgewählt, ohne Anpassung an einen klassischen Sollradius.
+
+1. Die vergleichbaren und unvergleichbaren Paare im Fenster bestimmen. Alle simultan möglichen Erweiterungen der gemischten Antiketten auf der vollständigen Ordnung enumerieren. Für jeden Schnitt die durch gemeinsame Vergangenheits- und Zukunftsanker aufgespannten Teilmengen untersuchen. Welche Randpunkte können Ordnungs- und Besetzungsdaten unterscheiden?
+2. Eine geometrische Gegenprobe auf allen 22 Ereignissen versuchen. Die normierten Uhren werden für diese Kontrolle als Minkowski-Koordinatenzeiten übernommen. Eine räumliche Koordinatenzuordnung muss alle 231 Paarentscheidungen auf beiden Uhrboxen strikt reproduzieren. Gesucht werden unterschiedliche räumliche Abstände an denselben Kontakten bei gemeinsamen Einheiten und einer unveränderten Referenzstrecke. Numerische Vorschläge nur mit rationalem Intervallnachweis annehmen. Misserfolg einer Suche gilt als offen.
+3. Geometrische Kontrolle, geschlossene äussere Materiefläche und physische P3-Radien getrennt ausweisen. Messungen der Schalenvolumina und Eigendicken nur angeben, wenn aus den vorhandenen Daten begründet. Keine Radiusanpassung, keine Übernahme einer Fläche aus dem klassischen Sollwert.
