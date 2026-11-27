@@ -1,8 +1,18 @@
 # Staubkollaps auf Kausalsets · Dust collapse on causal sets
 
+## N22 · Abschluss der seriellen Messfamilie
+
+In allen 1 624 568 Kombinationen aus Anbindung, Lage und Gewicht ist ein stationäres Messpaar im gemeinsamen Fenster [31/64, 33/64] ausgeschlossen. Die Aussage gilt für die feste N19-Basis, die beiden seriellen Anbindungen und die geprüfte Randfamilie. Der physische Arealradius bleibt offen. Alle 60 physischen P3-Prüfpunkte stehen auf `NOT_RUN`.
+
+Der Nachfolgertest schloss die letzten 40 Fälle mit positivem Nachfolger aus. Im Anschluss wurden die 21 verbliebenen Vorgängerfälle entschieden, darunter fünf Anbindungen mit direktem Vergleich zwischen leerem und positivem Gewicht. Bei ID 216141 ist eine stationäre Lösung aller 25 freien Feldgleichungen zertifiziert. In dieser Lösung liegt nur die Vorgängeruhr im Fenster.
+
+[Kurzbericht (PDF)](reports/CST_DUST_N22_Abschluss_der_seriellen_Messfamilie.pdf) · [Vorgängerfälle im Vergleich](n22_abschluss_der_seriellen_messfamilie_v0_1/Vorgaengervergleich.tsv) · [Reproduktion](n22_abschluss_der_seriellen_messfamilie_v0_1/README.md) · [Abschluss-Prüfpaket (ZIP)](packages/CST_DUST_N22_Abschluss_der_seriellen_Messfamilie_Pruefpaket.zip)
+
+[Nachfolgerbericht (PDF)](reports/CST_DUST_N22_Ausschluss_der_Nachfolger.pdf) · [21 damals offene Fälle](n22_ausschluss_der_nachfolger_v0_1/Offene_Faelle.tsv) · [Nachfolgerprüfung](n22_ausschluss_der_nachfolger_v0_1/README.md) · [Nachfolger-Prüfpaket (ZIP)](packages/CST_DUST_N22_Ausschluss_der_Nachfolger_Pruefpaket.zip)
+
 ## N22 · Stationäre Lösungen im gemeinsamen Messfenster
 
-Für die Anbindungen 216427 und 217269 schliesst die Prüfung eine zweite stationäre Lösung mit beiden Messuhren im Fenster [31/64, 33/64] aus. Zehn weitere Anbindungen sind ebenfalls ausgeschlossen, darunter 337411 über den gesamten Bereich der positiven Gerätegewichte. Damit bleiben 61 von 1 624 568 Fällen offen. Der physische Arealradius ist offen. Alle 60 P3-Prüfpunkte stehen auf `NOT_RUN`.
+Für die Anbindungen 216427 und 217269 schliesst die Prüfung eine zweite stationäre Lösung mit beiden Messuhren im Fenster [31/64, 33/64] aus. Zehn weitere Anbindungen sind ebenfalls ausgeschlossen, darunter 337411 über den gesamten Bereich der positiven Gerätegewichte. Nach dieser Zwischenprüfung waren 61 von 1 624 568 Fällen offen. Der physische Arealradius ist offen. Alle 60 P3-Prüfpunkte stehen auf `NOT_RUN`.
 
 [Kurzbericht (PDF)](reports/CST_DUST_N22_Stationaere_Zweige_im_Messfenster.pdf) · [61 offene Fälle (TSV)](n22_stationaere_zweige_im_messfenster_v0_1/Offene_Faelle.tsv) · [Gleichungen und Nachrechnung](n22_stationaere_zweige_im_messfenster_v0_1/README.md) · [Offline-Prüfpaket (ZIP)](packages/CST_DUST_N22_Stationaere_Zweige_im_Messfenster_Pruefpaket.zip)
 
